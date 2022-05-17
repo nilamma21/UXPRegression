@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="93424" started-at="2022-05-17T10:26:23Z" finished-at="2022-05-17T10:27:57Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="93424" started-at="2022-05-17T10:26:23Z" finished-at="2022-05-17T10:27:57Z">
+      <class name="atlantamarket.AtlantaMarketRegressTest_UAT">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket.AtlantaMarketRegressTest_UAT@4501b7af]" name="initialize" is-config="true" duration-ms="58434" started-at="2022-05-17T15:56:23Z" finished-at="2022-05-17T15:57:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest()[pri:0, instance:atlantamarket.AtlantaMarketRegressTest_UAT@4501b7af]" name="TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest" duration-ms="9599" started-at="2022-05-17T15:57:22Z" finished-at="2022-05-17T15:57:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest -->
+        <test-method status="PASS" signature="TS002_VerifySelectionOfLineFromAutoSuggestionListTest()[pri:0, instance:atlantamarket.AtlantaMarketRegressTest_UAT@4501b7af]" name="TS002_VerifySelectionOfLineFromAutoSuggestionListTest" duration-ms="12873" started-at="2022-05-17T15:57:32Z" finished-at="2022-05-17T15:57:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifySelectionOfLineFromAutoSuggestionListTest -->
+        <test-method status="PASS" signature="TS003_VerifySelectionOfProductFromAutoSuggestionListTest()[pri:0, instance:atlantamarket.AtlantaMarketRegressTest_UAT@4501b7af]" name="TS003_VerifySelectionOfProductFromAutoSuggestionListTest" duration-ms="12427" started-at="2022-05-17T15:57:44Z" finished-at="2022-05-17T15:57:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifySelectionOfProductFromAutoSuggestionListTest -->
+      </class> <!-- atlantamarket.AtlantaMarketRegressTest_UAT -->
+    </test> <!-- Test -->
+  </suite> <!-- ATLMrkt_RegressionTestSuite -->
+</testng-results>

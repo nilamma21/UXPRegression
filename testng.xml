@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="ATLMrkt_RegressionTestSuite">
+	<listners>
+		<listner class-name="atlantamarket.TestListeners" />
+	</listners>
+
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="atlantamarket.AtlantaMarketRegressTest_UAT" />
+		</classes>
+	</test>
+</suite>
