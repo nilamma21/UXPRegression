@@ -5,8 +5,7 @@
     <classes>
       <class name="atlantamarket.AtlantaMarketRegressTest_UAT">
         <methods>
-          <include name="TS002_VerifySelectionOfLineFromAutoSuggestionListTest"/>
-          <include name="TS003_VerifySelectionOfProductFromAutoSuggestionListTest"/>
+          <include name="TS005_VerifyAddToFavoriteForExhibitorTest"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- atlantamarket.AtlantaMarketRegressTest_UAT -->

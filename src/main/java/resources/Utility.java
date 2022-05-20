@@ -7,12 +7,15 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import pageObjects.AtlantaMarket.ATLLandingPage;
+import pageObjects.AtlantaMarket.ATLLoginPage;
+
 
 public class Utility extends base {
 
 	// public WebDriver driver;
-	/*UXPLandingPage lap;
-	UXPLoginPage lp;*/
+	ATLLandingPage lap;
+	ATLLoginPage lp;
 
 	@SuppressWarnings("static-access")
 	public Utility(WebDriver driver) {
@@ -28,13 +31,13 @@ public class Utility extends base {
 	}
 
 	
-	/*public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
+	public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
 
 		// The purpose of this test case to verify:-
 		// TS1- Login to Market Planner
 		
-		lap = new UXPLandingPage(driver);
-		lp = new UXPLoginPage(driver);		
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);		
 		
 		// Click on Login button from Landing Page
 		lap.getLogin().click();
@@ -45,5 +48,5 @@ public class Utility extends base {
 		
 		lp.getSignInBtn().click();
 
-	}*/
+	}
 }
