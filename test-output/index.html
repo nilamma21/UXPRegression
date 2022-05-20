@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-ATLMrkt_RegressionTestSuite">
-                    <span>C:\Users\nilamma\eclipse-workspaceUXPRegress\uxpRegression\testng.xml</span>
+                    <span>C:\Users\nilamma\UXPRegression\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,17 +101,12 @@
                     <div class="method-list-content passed suite-ATLMrkt_RegressionTestSuite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket.AtlantaMarketRegressTest_UAT" hash-for-method="TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest">TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket.AtlantaMarketRegressTest_UAT" hash-for-method="TS001_VerifyMarketPlannerLoginTest">TS001_VerifyMarketPlannerLoginTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket.AtlantaMarketRegressTest_UAT" hash-for-method="TS002_VerifySelectionOfLineFromAutoSuggestionListTest">TS002_VerifySelectionOfLineFromAutoSuggestionListTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket.AtlantaMarketRegressTest_UAT" hash-for-method="TS003_VerifySelectionOfProductFromAutoSuggestionListTest">TS003_VerifySelectionOfProductFromAutoSuggestionListTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket.AtlantaMarketRegressTest_UAT" hash-for-method="TS005_VerifyAddToFavoriteForExhibitorTest">TS005_VerifyAddToFavoriteForExhibitorTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-ATLMrkt_RegressionTestSuite -->
@@ -134,23 +129,16 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest">
-                  </a> <!-- TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest -->
-                  <span class="method-name">TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest</span>
+                  <a name="TS001_VerifyMarketPlannerLoginTest">
+                  </a> <!-- TS001_VerifyMarketPlannerLoginTest -->
+                  <span class="method-name">TS001_VerifyMarketPlannerLoginTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TS002_VerifySelectionOfLineFromAutoSuggestionListTest">
-                  </a> <!-- TS002_VerifySelectionOfLineFromAutoSuggestionListTest -->
-                  <span class="method-name">TS002_VerifySelectionOfLineFromAutoSuggestionListTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TS003_VerifySelectionOfProductFromAutoSuggestionListTest">
-                  </a> <!-- TS003_VerifySelectionOfProductFromAutoSuggestionListTest -->
-                  <span class="method-name">TS003_VerifySelectionOfProductFromAutoSuggestionListTest</span>
+                  <a name="TS005_VerifyAddToFavoriteForExhibitorTest">
+                  </a> <!-- TS005_VerifyAddToFavoriteForExhibitorTest -->
+                  <span class="method-name">TS005_VerifyAddToFavoriteForExhibitorTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -158,7 +146,7 @@
         </div> <!-- panel ATLMrkt_RegressionTestSuite -->
         <div panel-name="test-xml-ATLMrkt_RegressionTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\nilamma\eclipse-workspaceUXPRegress\uxpRegression\testng.xml</span>
+            <span class="header-content">C:\Users\nilamma\UXPRegression\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -167,7 +155,12 @@
 &lt;suite name=&quot;ATLMrkt_RegressionTestSuite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;atlantamarket.AtlantaMarketRegressTest_UAT&quot;/&gt;
+      &lt;class name=&quot;atlantamarket.AtlantaMarketRegressTest_UAT&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;TS001_VerifyMarketPlannerLoginTest&quot;/&gt;
+          &lt;include name=&quot;TS005_VerifyAddToFavoriteForExhibitorTest&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- atlantamarket.AtlantaMarketRegressTest_UAT --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- ATLMrkt_RegressionTestSuite --&gt;
@@ -207,24 +200,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TS002_VerifySelectionOfLineFromAutoSuggestionListTest')
+data.setCell(0, 1, 'TS001_VerifyMarketPlannerLoginTest')
 data.setCell(0, 2, 'atlantamarket.AtlantaMarketRegressTest_UAT')
-data.setCell(0, 3, 12873);
+data.setCell(0, 3, 57724);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'TS003_VerifySelectionOfProductFromAutoSuggestionListTest')
+data.setCell(1, 1, 'TS005_VerifyAddToFavoriteForExhibitorTest')
 data.setCell(1, 2, 'atlantamarket.AtlantaMarketRegressTest_UAT')
-data.setCell(1, 3, 12427);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest')
-data.setCell(2, 2, 'atlantamarket.AtlantaMarketRegressTest_UAT')
-data.setCell(2, 3, 9599);
+data.setCell(1, 3, 28992);
 window.suiteTableData['ATLMrkt_RegressionTestSuite']= { tableData: data, tableDiv: 'times-div-ATLMrkt_RegressionTestSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 34 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-ATLMrkt_RegressionTestSuite">
               </div> <!-- times-div-ATLMrkt_RegressionTestSuite -->
             </div> <!-- times-div -->
@@ -239,9 +228,24 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-ATLMrkt_RegressionTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">5 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">atlantamarket.AtlantaMarketRegressTest_UAT</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">TS006_VerifyAddToNewListForExhibitorTest</span>
+                <br/>
+                <span class="ignored-method-name">TS003_VerifySelectionOfLineFromAutoSuggestionListTest</span>
+                <br/>
+                <span class="ignored-method-name">TS002_VerifySelectionOfExhibitorFromAutoSuggestionListTest</span>
+                <br/>
+                <span class="ignored-method-name">TS004_VerifySelectionOfProductFromAutoSuggestionListTest</span>
+                <br/>
+                <span class="ignored-method-name">TS007_VerifyAddToExistingListForExhibitorTest</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-ATLMrkt_RegressionTestSuite" class="panel">
@@ -256,16 +260,12 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest</span>
-                <span class="method-start">58468 ms</span>
+                <span class="method-name">TS001_VerifyMarketPlannerLoginTest</span>
+                <span class="method-start">67515 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">TS002_VerifySelectionOfLineFromAutoSuggestionListTest</span>
-                <span class="method-start">68095 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TS003_VerifySelectionOfProductFromAutoSuggestionListTest</span>
-                <span class="method-start">80978 ms</span>
+                <span class="method-name">TS005_VerifyAddToFavoriteForExhibitorTest</span>
+                <span class="method-start">125259 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
