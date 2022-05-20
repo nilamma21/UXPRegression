@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="154268" started-at="2022-05-20T10:13:00Z" finished-at="2022-05-20T10:15:35Z">
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="78127" started-at="2022-05-20T12:38:08Z" finished-at="2022-05-20T12:39:26Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="154268" started-at="2022-05-20T10:13:00Z" finished-at="2022-05-20T10:15:35Z">
+    <test name="Test" duration-ms="78127" started-at="2022-05-20T12:38:08Z" finished-at="2022-05-20T12:39:26Z">
       <class name="atlantamarket.AtlantaMarketRegressTest_UAT">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket.AtlantaMarketRegressTest_UAT@29774679]" name="initialize" is-config="true" duration-ms="67498" started-at="2022-05-20T15:43:00Z" finished-at="2022-05-20T15:44:08Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket.AtlantaMarketRegressTest_UAT@3ffc5af1]" name="initialize" is-config="true" duration-ms="62479" started-at="2022-05-20T18:08:08Z" finished-at="2022-05-20T18:09:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:atlantamarket.AtlantaMarketRegressTest_UAT@29774679]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="57724" started-at="2022-05-20T15:44:08Z" finished-at="2022-05-20T15:45:06Z">
+        <test-method status="PASS" signature="TS009_VerifyClickOnLocationLinksForExhibitorTest()[pri:0, instance:atlantamarket.AtlantaMarketRegressTest_UAT@3ffc5af1]" name="TS009_VerifyClickOnLocationLinksForExhibitorTest" duration-ms="15571" started-at="2022-05-20T18:09:11Z" finished-at="2022-05-20T18:09:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS001_VerifyMarketPlannerLoginTest -->
-        <test-method status="PASS" signature="TS005_VerifyAddToFavoriteForExhibitorTest()[pri:0, instance:atlantamarket.AtlantaMarketRegressTest_UAT@29774679]" name="TS005_VerifyAddToFavoriteForExhibitorTest" duration-ms="28992" started-at="2022-05-20T15:45:06Z" finished-at="2022-05-20T15:45:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS005_VerifyAddToFavoriteForExhibitorTest -->
+        </test-method> <!-- TS009_VerifyClickOnLocationLinksForExhibitorTest -->
       </class> <!-- atlantamarket.AtlantaMarketRegressTest_UAT -->
     </test> <!-- Test -->
   </suite> <!-- ATLMrkt_RegressionTestSuite -->
