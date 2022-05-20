@@ -222,7 +222,6 @@ public class AtlantaMarketRegressTest_UAT extends base {
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
-		lap = new ATLLandingPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
 		genData = new GenerateData();
 
@@ -280,10 +279,8 @@ public class AtlantaMarketRegressTest_UAT extends base {
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
-		lap = new ATLLandingPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
-		genData = new GenerateData();
-
+		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
@@ -335,7 +332,65 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(8000);
 
-		//		//Verify that the added exhibitor should be removed from Existing list
-		//		Assert.assertFalse(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
+		//Verify that the added exhibitor should be removed from Existing list
+		//Assert.assertFalse(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
+	}
+	
+	@Test(priority=8)
+	public void TS008_VerifyClickOnContactExhIconForExhibitorTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//T323: The click on 'Contact Exhibitor' functionality for an Exhibitor
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys("IMC Test");
+		atlgs.getATLSearchButton().click();
+
+		//Click on Contact Exhibitor icon
+		atlexhact.getContactExhibitorIcon().click();
+		Assert.assertTrue(atlexhact.getContactExhibitorModal().isDisplayed());
+		
+		//Enter Postal code
+		atlexhact.getPostalCodeTxtBx().sendKeys("99950");
+		
+		//Enter Message
+		atlexhact.getMessageTxtBx().sendKeys("This is a Test Exhibitor");
+		
+		//Select 1st two Product Category
+		atlexhact.getProductCateg1().click();
+		atlexhact.getProductCateg2().click();
+		
+		utl.scrollToElement(atlexhact.getSendMessageBtn());
+		
+		//Click on Send Message button
+		//Will send msg once test exhibitor will get
+		//atlexhact.getSendMessageBtn().click();
+	}
+	
+	@Test(priority=9)
+	public void TS009_VerifyClickOnLocationLinksForExhibitorTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//T356: The click on 'Location Links' functionality for an Exhibitor
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLSearchButton().click();
+		
+		//Click on any of the Location link present in Exhibitor card
+		String locationlink = atlexhact.getLocationLinkInExhCard().getAttribute("href");
+		atlexhact.getLocationLinkInExhCard().click();
+		Thread.sleep(5000);
+		
+		//Verify that selected building-floor plan page should be opened
+		Assert.assertTrue(locationlink.equals(driver.getCurrentUrl()));
 	}
 }
