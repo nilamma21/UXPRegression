@@ -23,6 +23,13 @@ public class ATLExhLineProdActionsPage {
 	By prodcatg2 = By.xpath("//div[@class='imc-formfield imc-content formfield-contact-exhibitor']/div[2]/div[2]"); //Locator for 2nd Product Category on Contact Exhibitor form
 	By sendmessagebtn = By.xpath("//input[@data-xpath='contactExhibitor.send']"); //Locator for end Message button
 	By locationlinkinexhcard = By.xpath("//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div/div/div/div[2]/div[1]/div[1]/a"); //Locator for 1st Location link of an Exhibitor
+	By lineshownseealllink = By.xpath("//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div/div/div/div/div/a[contains(text(), 'See All')]"); //Locator for Lines Shown-See All link for 1st Exhibitor
+	By validatelinespage = By.xpath("//div[@id='Lines']"); //Locator for Lines tab on Lines page
+	By totalprodseealllink = By.xpath("//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div[2]/div[2]/div/div[2]/p[2]"); //Locator for Total Products-See All link for 1st Exhibitor
+	By validateproductspage = By.xpath("//div[@id='Products']"); //Locator for Products tab on Exhibitor products page
+	By totalprodcountonsearchgrid = By.xpath("//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div[2]/div[2]/div/div[2]/p[1]"); //Locator for Total Products count on Search Results grid
+	By matchingprodcountonsearchgrid = By.xpath("//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div[2]/div[2]/div/div[1]/p[1]"); //Locator for Matching Products count on Search Results grid
+	By matchingprodseealllink = By.xpath("//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div[2]/div[2]/div/div[1]/p[2]"); //Locator for Matching Products-See All link for 1st Exhibitor
 			
 	public ATLExhLineProdActionsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -77,6 +84,37 @@ public class ATLExhLineProdActionsPage {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(locationlinkinexhcard));
 		return driver.findElement(locationlinkinexhcard);
+	}
+	public WebElement getLinesShownSeeAlLink() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lineshownseealllink));
+		return driver.findElement(lineshownseealllink);
+	}
+	public WebElement getValidateLinesPage() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(validatelinespage));
+		return driver.findElement(validatelinespage);
+	}
+	public WebElement getTotalProdSeeAllLink() {
+		return driver.findElement(totalprodseealllink);
+	}
+	public WebElement getValidateProductsPage() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(validateproductspage));
+		return driver.findElement(validateproductspage);
+	}
+	public WebElement getTotalProdCountOnSearchGrid() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(totalprodcountonsearchgrid));
+		return driver.findElement(totalprodcountonsearchgrid);
+	}
+	public WebElement getMatchingProdCountOnSearchGrid() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(matchingprodcountonsearchgrid));
+		return driver.findElement(matchingprodcountonsearchgrid);
+	}
+	public WebElement getMatchingProdSeeAllLink() {
+		return driver.findElement(matchingprodseealllink);
 	}
 }
 
