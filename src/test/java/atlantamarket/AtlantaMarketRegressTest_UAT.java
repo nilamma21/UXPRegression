@@ -31,6 +31,7 @@ public class AtlantaMarketRegressTest_UAT extends base {
 	public WebDriverWait wait;
 	public GenerateData genData;
 	public Utility utl;
+	public String exhname;
 	ATLLoginPage lp;
 	ATLLandingPage lap;
 	ATLGlobalSearchPage atlgs;
@@ -280,7 +281,7 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
-		
+
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
@@ -335,7 +336,7 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		//Verify that the added exhibitor should be removed from Existing list
 		//Assert.assertFalse(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 	}
-	
+
 	@Test(priority=8)
 	public void TS008_VerifyClickOnContactExhIconForExhibitorTest() throws InterruptedException, IOException
 	{
@@ -353,24 +354,24 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		//Click on Contact Exhibitor icon
 		atlexhact.getContactExhibitorIcon().click();
 		Assert.assertTrue(atlexhact.getContactExhibitorModal().isDisplayed());
-		
+
 		//Enter Postal code
 		atlexhact.getPostalCodeTxtBx().sendKeys("99950");
-		
+
 		//Enter Message
 		atlexhact.getMessageTxtBx().sendKeys("This is a Test Exhibitor");
-		
+
 		//Select 1st two Product Category
 		atlexhact.getProductCateg1().click();
 		atlexhact.getProductCateg2().click();
-		
+
 		utl.scrollToElement(atlexhact.getSendMessageBtn());
-		
+
 		//Click on Send Message button
 		//Will send msg once test exhibitor will get
 		//atlexhact.getSendMessageBtn().click();
 	}
-	
+
 	@Test(priority=9)
 	public void TS009_VerifyClickOnLocationLinksForExhibitorTest() throws InterruptedException, IOException
 	{
@@ -384,13 +385,119 @@ public class AtlantaMarketRegressTest_UAT extends base {
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
-		
+
 		//Click on any of the Location link present in Exhibitor card
 		String locationlink = atlexhact.getLocationLinkInExhCard().getAttribute("href");
 		atlexhact.getLocationLinkInExhCard().click();
 		Thread.sleep(5000);
-		
+
 		//Verify that selected building-floor plan page should be opened
 		Assert.assertTrue(locationlink.equals(driver.getCurrentUrl()));
+	}
+
+	@Test(priority=10)
+	public void TS010_VerifyClickOnLinesShownLinkForExhibitorTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//T325: The click on 'Lines Shown-See All' functionality for an Exhibitor
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlinesinput")));
+		atlgs.getATLSearchButton().click();
+
+		//Store the 1st Exhibitor name in String variable
+		exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: "+exhname);
+
+		//Click on Lines shown- See All link for an Exhibitor
+		atlexhact.getLinesShownSeeAlLink().click();
+
+		//Verify that user should redirect to the Lines page
+		Assert.assertTrue(atlexhact.getValidateLinesPage().isDisplayed());
+		Assert.assertTrue(driver.getTitle().contains("{"+exhname+"} Lines"));
+	}
+	
+	@Test(priority=11)
+	public void TS011_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//T368: The click on 'Total products-See All' functionality for an Exhibitor
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLSearchButton().click();
+
+		//Store the 1st Exhibitor name in String variable
+		exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: "+exhname);
+		
+		//Get the Total Products count on Search grid
+		String temp = atlexhact.getTotalProdCountOnSearchGrid().getText();
+		String totalprodcountonsearchgrid= temp.replaceAll("[^0-9]", "");
+		System.out.println("Total Products Count on Search Results grid is: "+totalprodcountonsearchgrid);
+		
+		//Click on Total Products-See All link for 1st Exhibitor
+		atlexhact.getTotalProdSeeAllLink().click();
+		
+		//Verify that user should redirect to the Products page
+		Assert.assertTrue(atlexhact.getValidateProductsPage().isDisplayed());
+		Thread.sleep(4000);
+		Assert.assertTrue(driver.getTitle().contains(""+exhname+" Products"));
+		
+		//Get the Total Products count on Products page
+		String producttabtitle = atlexhact.getValidateProductsPage().getText();
+		String totalprodcountonprodpage= producttabtitle.replaceAll("[^0-9]", "");
+		System.out.println("Total Products Count on Products page is: "+totalprodcountonprodpage);
+		
+		//Verify Total Products count on Search grid should match with Products page
+		Assert.assertEquals(totalprodcountonsearchgrid, totalprodcountonprodpage);
+	}
+	
+	@Test(priority=12)
+	public void TS012_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//T327: The click on 'Matching products-See All' functionality for an Exhibitor
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLSearchButton().click();
+
+		//Store the 1st Exhibitor name in String variable
+		exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: "+exhname);
+		
+		//Get the Matching Products count on Search grid
+		String temp = atlexhact.getMatchingProdCountOnSearchGrid().getText();
+		String matchingprodcountonsearchgrid= temp.replaceAll("[^0-9]", "");
+		System.out.println("Matching Products Count on Search Results grid is: "+matchingprodcountonsearchgrid);
+		
+		//Click on Matching Products-See All link for 1st Exhibitor
+		atlexhact.getMatchingProdSeeAllLink().click();
+		
+		//Verify that user should redirect to the Matching Products page
+		Assert.assertTrue(atlexhact.getValidateProductsPage().isDisplayed());
+		Thread.sleep(4000);
+		Assert.assertTrue(driver.getTitle().contains(""+exhname+" Products"));
+		
+		//Get the Matching Products count on Products page
+		String producttabtitle = atlexhact.getValidateProductsPage().getText();
+		String matchingprodcountonprodpage= producttabtitle.replaceAll("[^0-9]", "");
+		System.out.println("Matching Products Count on Products page is: "+matchingprodcountonprodpage);
+		
+		//Verify Matching Products count on Search grid should match with Products page
+		Assert.assertEquals(matchingprodcountonsearchgrid, matchingprodcountonprodpage);
 	}
 }
