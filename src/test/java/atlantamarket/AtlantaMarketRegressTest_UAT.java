@@ -39,7 +39,7 @@ public class AtlantaMarketRegressTest_UAT extends base {
 	ATLProductDetailsPage atlproddet;
 	ATLExhLineProdActionsPage atlexhact;
 	ATLMarketPlannerPage atlmppge;
-	List<WebElement> exhlist, linelist, prodlist, searchtypelist, mplists, mpeditlistoptns;
+	List<WebElement> exhlist, linelist, prodlist, searchtypelist, mplists, mpeditlistoptns, allnoteslist;
 
 	@BeforeTest
 	public void initialize() throws IOException, InterruptedException
@@ -71,10 +71,11 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
 
-		//Verify that Market Planner Home page should be displayed
-		Assert.assertTrue(lap.getMPLinkText().isDisplayed());
 		Thread.sleep(6000);
 		lap.getCloseMarktAdBtn().click();
+
+		//Verify that Market Planner Home page should be displayed
+		Assert.assertTrue(lap.getMPLinkText().isDisplayed());
 	}
 
 	@Test(priority=2)
@@ -370,6 +371,9 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		//Click on Send Message button
 		//Will send msg once test exhibitor will get
 		//atlexhact.getSendMessageBtn().click();
+
+		//Close the pop-up
+		atlexhact.getPopUpCloseBtn().click();
 	}
 
 	@Test(priority=9)
@@ -420,7 +424,7 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		Assert.assertTrue(atlexhact.getValidateLinesPage().isDisplayed());
 		Assert.assertTrue(driver.getTitle().contains("{"+exhname+"} Lines"));
 	}
-	
+
 	@Test(priority=11)
 	public void TS011_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest() throws InterruptedException, IOException
 	{
@@ -438,29 +442,29 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		//Store the 1st Exhibitor name in String variable
 		exhname = atlexhact.getExhibitorName().getText();
 		System.out.println("Exhibitor name: "+exhname);
-		
+
 		//Get the Total Products count on Search grid
 		String temp = atlexhact.getTotalProdCountOnSearchGrid().getText();
 		String totalprodcountonsearchgrid= temp.replaceAll("[^0-9]", "");
 		System.out.println("Total Products Count on Search Results grid is: "+totalprodcountonsearchgrid);
-		
+
 		//Click on Total Products-See All link for 1st Exhibitor
 		atlexhact.getTotalProdSeeAllLink().click();
-		
+
 		//Verify that user should redirect to the Products page
 		Assert.assertTrue(atlexhact.getValidateProductsPage().isDisplayed());
-		Thread.sleep(4000);
+		Thread.sleep(6000);
 		Assert.assertTrue(driver.getTitle().contains(""+exhname+" Products"));
-		
+
 		//Get the Total Products count on Products page
 		String producttabtitle = atlexhact.getValidateProductsPage().getText();
 		String totalprodcountonprodpage= producttabtitle.replaceAll("[^0-9]", "");
 		System.out.println("Total Products Count on Products page is: "+totalprodcountonprodpage);
-		
+
 		//Verify Total Products count on Search grid should match with Products page
 		Assert.assertEquals(totalprodcountonsearchgrid, totalprodcountonprodpage);
 	}
-	
+
 	@Test(priority=12)
 	public void TS012_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest() throws InterruptedException, IOException
 	{
@@ -478,26 +482,122 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		//Store the 1st Exhibitor name in String variable
 		exhname = atlexhact.getExhibitorName().getText();
 		System.out.println("Exhibitor name: "+exhname);
-		
+
 		//Get the Matching Products count on Search grid
 		String temp = atlexhact.getMatchingProdCountOnSearchGrid().getText();
 		String matchingprodcountonsearchgrid= temp.replaceAll("[^0-9]", "");
 		System.out.println("Matching Products Count on Search Results grid is: "+matchingprodcountonsearchgrid);
-		
+
 		//Click on Matching Products-See All link for 1st Exhibitor
 		atlexhact.getMatchingProdSeeAllLink().click();
-		
+
 		//Verify that user should redirect to the Matching Products page
 		Assert.assertTrue(atlexhact.getValidateProductsPage().isDisplayed());
-		Thread.sleep(4000);
+		Thread.sleep(6000);
 		Assert.assertTrue(driver.getTitle().contains(""+exhname+" Products"));
-		
+
 		//Get the Matching Products count on Products page
 		String producttabtitle = atlexhact.getValidateProductsPage().getText();
 		String matchingprodcountonprodpage= producttabtitle.replaceAll("[^0-9]", "");
 		System.out.println("Matching Products Count on Products page is: "+matchingprodcountonprodpage);
-		
+
 		//Verify Matching Products count on Search grid should match with Products page
 		Assert.assertEquals(matchingprodcountonsearchgrid, matchingprodcountonprodpage);
 	}
+	@Test(priority=13)
+	public void TS013_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//T322: The click on 'Matching products-Add Note' functionality for an Exhibitor
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		genData = new GenerateData();
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLSearchButton().click();
+
+		//Store the 1st Exhibitor name in String variable
+		exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: "+exhname);
+
+		//Click on Matching Products-See All link for 1st Exhibitor
+		atlexhact.getMatchingProdSeeAllLink().click();
+
+		//Click on 'Add Note' icon on Matching products page
+		atlexhact.getMatchingProdAddNoteIcon().click();
+
+		//Verify that Add note for selected exhibitor modal should be displayed
+		WebElement addnotemodaltitle = driver.findElement(By.xpath("//h4[contains(text(),'Add a Note For "+exhname+"')]"));
+		Assert.assertTrue(addnotemodaltitle.isDisplayed());
+
+		//Store the new note name
+		String newnotetitle = "CybNote"+genData.generateRandomString(3);
+		System.out.println("Newly added Note is: "+newnotetitle);
+
+		//Enter Note title
+		atlexhact.getNoteTitleTxtBx().sendKeys(newnotetitle);
+		//Enter Note Content
+		atlexhact.getNoteContentTxtBx().sendKeys("TestNote"+genData.generateRandomString(6));
+		//Click on 'Save' button
+		atlexhact.getNoteSaveBtn().click();
+		Thread.sleep(5000);
+		
+		//Click on 'Add Note' icon for the same exhibitor
+		atlexhact.getMatchingProdAddNoteIcon().click();
+		Thread.sleep(4000);
+		
+		//Click on 'View all Notes for an Exhibitor' link on Add Notes pop-up
+		atlexhact.getViewAllNotesLink().click();
+		Thread.sleep(5000);
+		
+		//Verify that Add note for selected exhibitor modal should be displayed
+		WebElement allnotesmodaltitle = driver.findElement(By.xpath("//h4[contains(text(),'All Notes For "+exhname+"')]"));
+		Assert.assertTrue(allnotesmodaltitle.isDisplayed());
+		
+		allnoteslist = atlexhact.getSavedNoteNameInAllNotesList();
+				
+		//Verify that recently added note should be appear on 'All Notes For Exhibitor' modal
+		for(int i=0; i< allnoteslist.size(); i++)
+		{			
+			//System.out.println(allnoteslist.get(i).getText());
+			if(allnoteslist.get(i).getText().equals(newnotetitle))
+			{
+				allnoteslist.get(i).click();
+				break;
+			}
+		}
+		//Delete the saved note
+		atlexhact.getDeleteNoteBtn().click();	
+	}
+	@Test(priority=14)
+	public void TS014_VerifySelectionOfExhibitorFromSearchResultsTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//T383: The selection of an Exhibitor from Search results grid
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+	
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLSearchButton().click();
+
+		//Store the 1st Exhibitor name in String variable
+		exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: "+exhname);
+		
+		//Click on Exhibitor name
+		atlexhact.getExhibitorName().click();
+		
+		//Verify that Selected Exhibitor Digital Showroom page should be opened
+		Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
+		Assert.assertTrue(driver.getTitle().contains(""+exhname+" at Atlanta Market"));
+		Assert.assertTrue(atlexhdgshw.getExhibitorNameOnExhDirectImg().getText().contains(exhname));
+	}
 }
+

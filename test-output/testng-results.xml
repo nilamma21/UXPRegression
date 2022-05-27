@@ -2,19 +2,19 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="148516" started-at="2022-05-25T11:14:56Z" finished-at="2022-05-25T11:17:25Z">
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="122178" started-at="2022-05-27T07:29:54Z" finished-at="2022-05-27T07:31:56Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="148516" started-at="2022-05-25T11:14:56Z" finished-at="2022-05-25T11:17:25Z">
+    <test name="Test" duration-ms="122178" started-at="2022-05-27T07:29:54Z" finished-at="2022-05-27T07:31:56Z">
       <class name="atlantamarket.AtlantaMarketRegressTest_UAT">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket.AtlantaMarketRegressTest_UAT@3ffc5af1]" name="initialize" is-config="true" duration-ms="99287" started-at="2022-05-25T16:44:56Z" finished-at="2022-05-25T16:46:36Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket.AtlantaMarketRegressTest_UAT@3ffc5af1]" name="initialize" is-config="true" duration-ms="100444" started-at="2022-05-27T12:59:54Z" finished-at="2022-05-27T13:01:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS012_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest()[pri:0, instance:atlantamarket.AtlantaMarketRegressTest_UAT@3ffc5af1]" name="TS012_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest" duration-ms="49090" started-at="2022-05-25T16:46:36Z" finished-at="2022-05-25T16:47:25Z">
+        <test-method status="PASS" signature="TS014_VerifySelectionOfExhibitorFromSearchResultsTest()[pri:0, instance:atlantamarket.AtlantaMarketRegressTest_UAT@3ffc5af1]" name="TS014_VerifySelectionOfExhibitorFromSearchResultsTest" duration-ms="21626" started-at="2022-05-27T13:01:35Z" finished-at="2022-05-27T13:01:56Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS012_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest -->
+        </test-method> <!-- TS014_VerifySelectionOfExhibitorFromSearchResultsTest -->
       </class> <!-- atlantamarket.AtlantaMarketRegressTest_UAT -->
     </test> <!-- Test -->
   </suite> <!-- ATLMrkt_RegressionTestSuite -->

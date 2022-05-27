@@ -1,5 +1,7 @@
 package pageObjects.AtlantaMarket;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -30,7 +32,17 @@ public class ATLExhLineProdActionsPage {
 	By totalprodcountonsearchgrid = By.xpath("//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div[2]/div[2]/div/div[2]/p[1]"); //Locator for Total Products count on Search Results grid
 	By matchingprodcountonsearchgrid = By.xpath("//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div[2]/div[2]/div/div[1]/p[1]"); //Locator for Matching Products count on Search Results grid
 	By matchingprodseealllink = By.xpath("//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div[2]/div[2]/div/div[1]/p[2]"); //Locator for Matching Products-See All link for 1st Exhibitor
-			
+	By matchingprodaddnoteicon = By.xpath("//button[@class='imc-addnote__openModal imc-addnote__openModal--hideafter imc-link--alt-darkred imc-content imc-content--delta imc-expand-collapse__heading']"); //Locator for Add Note icon on Matching products page
+	By popupclosebtn = By.xpath("//button[@class='imc-modal--close imc-button--modal-close imc-button--round']"); //Locator for Close pop-up button
+	By notetitletxtbx = By.xpath("//input[@name='title']"); //Locator for Note title text field
+	By notecontenttxtbx = By.xpath("//textarea[@name='notes']"); //Locator for Note Content text field
+	By notesavebtn = By.xpath("//input[@value='Save']"); //Locator for Save Note button
+	By viewallnoteslink = By.xpath("//a[@href='#list']"); //Locator for View All Notes link
+	By savednotenameinallnoteslist = By.xpath("//ul[@class='imc-market-planner-list imc-addnote-modal__list']/li/a"); //Locator for Saved Note name in All Notes list
+	By noteforanexhibitormodal = By.xpath("//h4[contains(text(),'Note For exhibitor')]"); //Locator for Note for an Exhibitor modal
+	By deletenotebtn = By.xpath("//a[@href='#delete']"); //Locator for Delete note button
+	
+	
 	public ATLExhLineProdActionsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
@@ -116,6 +128,44 @@ public class ATLExhLineProdActionsPage {
 	public WebElement getMatchingProdSeeAllLink() {
 		return driver.findElement(matchingprodseealllink);
 	}
+	public WebElement getMatchingProdAddNoteIcon() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(matchingprodaddnoteicon));
+		return driver.findElement(matchingprodaddnoteicon);
+	}
+	public WebElement getPopUpCloseBtn() {
+		return driver.findElement(popupclosebtn);
+	}
+	public WebElement getNoteTitleTxtBx() {
+		return driver.findElement(notetitletxtbx);
+	}
+	public WebElement getNoteContentTxtBx() {
+		return driver.findElement(notecontenttxtbx);
+	}
+	public WebElement getNoteSaveBtn() {
+		return driver.findElement(notesavebtn);
+	}
+	public WebElement getViewAllNotesLink() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(viewallnoteslink));
+		return driver.findElement(viewallnoteslink);
+	}
+	public List <WebElement> getSavedNoteNameInAllNotesList() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(savednotenameinallnoteslist));
+		return driver.findElements(savednotenameinallnoteslist);
+	}
+	public WebElement getNoteForAnExhibitorModal() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(noteforanexhibitormodal));
+		return driver.findElement(noteforanexhibitormodal);
+	}
+	public WebElement getDeleteNoteBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(noteforanexhibitormodal));
+		return driver.findElement(deletenotebtn);
+	}
+	
 }
 
 
