@@ -12,6 +12,7 @@ public class ATLExhDigiShowroomPage {
 	public WebDriverWait wait;
 
 	By atlvalidateexhdigishowpage = By.xpath("//img[@class='imc-image--responsive align-image-content imc-content--full-width imc-exhibitors--directory-image']"); // Locator to validate Exhibitor Digital Showroom page
+	By exhibitornameonexhdirectimg = By.xpath("//span[@class='imc-heading imc-heading--giga-desktop ']"); //Locator for Exhibitor name on Exhibitor Directory image
 	
 	public ATLExhDigiShowroomPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -22,6 +23,9 @@ public class ATLExhDigiShowroomPage {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlvalidateexhdigishowpage));
 		return driver.findElement(atlvalidateexhdigishowpage);
+	}
+	public WebElement getExhibitorNameOnExhDirectImg() {
+		return driver.findElement(exhibitornameonexhdirectimg);
 	}
 }
 
