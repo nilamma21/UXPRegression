@@ -2,19 +2,19 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="122178" started-at="2022-05-27T07:29:54Z" finished-at="2022-05-27T07:31:56Z">
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="48765" started-at="2022-05-31T09:54:51Z" finished-at="2022-05-31T09:55:40Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="122178" started-at="2022-05-27T07:29:54Z" finished-at="2022-05-27T07:31:56Z">
+    <test name="Test" duration-ms="48765" started-at="2022-05-31T09:54:51Z" finished-at="2022-05-31T09:55:40Z">
       <class name="atlantamarket.AtlantaMarketRegressTest_UAT">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket.AtlantaMarketRegressTest_UAT@3ffc5af1]" name="initialize" is-config="true" duration-ms="100444" started-at="2022-05-27T12:59:54Z" finished-at="2022-05-27T13:01:35Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket.AtlantaMarketRegressTest_UAT@5e5792a0]" name="initialize" is-config="true" duration-ms="43135" started-at="2022-05-31T15:24:52Z" finished-at="2022-05-31T15:25:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS014_VerifySelectionOfExhibitorFromSearchResultsTest()[pri:0, instance:atlantamarket.AtlantaMarketRegressTest_UAT@3ffc5af1]" name="TS014_VerifySelectionOfExhibitorFromSearchResultsTest" duration-ms="21626" started-at="2022-05-27T13:01:35Z" finished-at="2022-05-27T13:01:56Z">
+        <test-method status="PASS" signature="TS016_VerifyLineActionsOrderOnJuniperMarketTest()[pri:0, instance:atlantamarket.AtlantaMarketRegressTest_UAT@5e5792a0]" name="TS016_VerifyLineActionsOrderOnJuniperMarketTest" duration-ms="5538" started-at="2022-05-31T15:25:35Z" finished-at="2022-05-31T15:25:40Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS014_VerifySelectionOfExhibitorFromSearchResultsTest -->
+        </test-method> <!-- TS016_VerifyLineActionsOrderOnJuniperMarketTest -->
       </class> <!-- atlantamarket.AtlantaMarketRegressTest_UAT -->
     </test> <!-- Test -->
   </suite> <!-- ATLMrkt_RegressionTestSuite -->
