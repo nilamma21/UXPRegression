@@ -653,17 +653,15 @@ public class AtlantaMarketRegressTest_UAT extends base {
 	public void TS016_VerifyAddToFavoriteForLineTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
-		//T320: The Add to Favorite functionality for an Exhibitor
+		//T360: The Add to Favorite functionality for a Line
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
-		lap = new ATLLandingPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
-		utl = new Utility(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputLine")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
 		atlgs.getATLSearchButton().click();
 
 		//Store the 1st Exhibitor name in String variable
@@ -692,20 +690,18 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		Assert.assertFalse(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 	}
 	@Test(priority=17)
-	public void TS017_VerifyLineActionsOrderOnJuniperMarketTest() throws InterruptedException, IOException
+	public void TS017_VerifyClickOnOrderOnJuniperMarketBtnForLineTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
-		//T320: The Add to Favorite functionality for an Exhibitor
+		//T376: The click on 'Order On JuniperMarket' button functionality for a Line
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
-		lap = new ATLLandingPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
-		utl = new Utility(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputLine")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
 		atlgs.getATLSearchButton().click();
 
 		//Store the 1st Exhibitor name in String variable
