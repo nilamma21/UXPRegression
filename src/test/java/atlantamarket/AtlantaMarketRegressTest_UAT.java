@@ -648,5 +648,85 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		//Close the pop-up
 		atlexhact.getPopUpCloseBtn().click();
 	}
+
+	@Test(priority=16)
+	public void TS016_VerifyAddToFavoriteForLineTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//T320: The Add to Favorite functionality for an Exhibitor
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		utl = new Utility(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputLine")));
+		atlgs.getATLSearchButton().click();
+
+		//Store the 1st Exhibitor name in String variable
+		String exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: "+exhname);
+
+		//Click on Favorite icon of 1st exhibitor
+		atlexhact.getAddFavIcon().click();
+
+		//Click on Market Planner link
+		lap.getMPLinkText().click();
+
+		//Click on Lists tab on MP home page
+		atlmppge.getMPHomeListsTab().click();
+		atlmppge.getATLMPListsPageFavoritesMenu().click();
+
+		//Verify that the added favorites exhibitor should be displayed in to Favorites list
+		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
+
+		//Delete that favorites exhibitor from list
+		atlmppge.getATLEditListItemMoreBtn().click();
+		atlmppge.getATLEditListItemDeleteOptn().click();
+		Thread.sleep(6000);
+
+		//Verify that the added favorites exhibitor should be removed from Favorites list
+		Assert.assertFalse(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
+	}
+	@Test(priority=17)
+	public void TS017_VerifyLineActionsOrderOnJuniperMarketTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//T320: The Add to Favorite functionality for an Exhibitor
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		utl = new Utility(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputLine")));
+		atlgs.getATLSearchButton().click();
+
+		//Store the 1st Exhibitor name in String variable
+		String exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Line name: "+exhname);
+		// Store the current window handle
+		String winHandleBefore = driver.getWindowHandle();
+		atlexhact.getOrderOnJuniperMarketBtn().click();	
+		// Switch to new window opened
+		for(String winHandle : driver.getWindowHandles()){
+			driver.switchTo().window(winHandle);
+		}
+		//Verify that 'Juniper Market' page should be displayed
+		//driver.getTitle().contains("");
+		//Assert.assertTrue(driver.getCurrentUrl().contains("https://dev.junipermarket.com/brands/3594/IPG"));
+		//Assert.assertTrue(driver.getTitle().contains("Title"));
+		// Close the new window, if that window no more required
+		driver.close();
+		// Switch back to original browser (first window)
+		driver.switchTo().window(winHandleBefore);
+
+	}
 }
 

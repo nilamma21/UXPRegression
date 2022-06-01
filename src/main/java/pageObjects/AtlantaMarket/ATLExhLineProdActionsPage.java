@@ -41,7 +41,7 @@ public class ATLExhLineProdActionsPage {
 	By savednotenameinallnoteslist = By.xpath("//ul[@class='imc-market-planner-list imc-addnote-modal__list']/li/a"); //Locator for Saved Note name in All Notes list
 	By noteforanexhibitormodal = By.xpath("//h4[contains(text(),'Note For exhibitor')]"); //Locator for Note for an Exhibitor modal
 	By deletenotebtn = By.xpath("//a[@href='#delete']"); //Locator for Delete note button
-	
+	By orderOnJuniperMarketBtn = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[2]/a[1]"); //Locator for Order On Juniper Market Btn
 	
 	public ATLExhLineProdActionsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -165,7 +165,11 @@ public class ATLExhLineProdActionsPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(noteforanexhibitormodal));
 		return driver.findElement(deletenotebtn);
 	}
-	
+	public WebElement getOrderOnJuniperMarketBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(orderOnJuniperMarketBtn));
+		return driver.findElement(orderOnJuniperMarketBtn);
+	}
 }
 
 
