@@ -11,7 +11,7 @@
 			<class name="atlantamarket.AtlantaMarketRegressTest_UAT" />
 			<methods>
 			<!-- <include name="TS001_VerifyMarketPlannerLoginTest"/> -->
- 			<include name="TS016_VerifyLineActionsOrderOnJuniperMarketTest"/>
+ 			<include name="TS018_VerifyLinesActionsLocationLinksTest"/>
 			</methods>
 		</classes>
 	</test>

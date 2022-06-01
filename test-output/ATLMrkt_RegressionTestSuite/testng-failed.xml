@@ -5,7 +5,7 @@
     <classes>
       <class name="atlantamarket.AtlantaMarketRegressTest_UAT">
         <methods>
-          <include name="TS016_VerifyLineActionsOrderOnJuniperMarketTest"/>
+          <include name="TS017_VerifyLinesActionsShownByExhibitorNameLinkTest"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- atlantamarket.AtlantaMarketRegressTest_UAT -->

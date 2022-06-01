@@ -42,6 +42,8 @@ public class ATLExhLineProdActionsPage {
 	By noteforanexhibitormodal = By.xpath("//h4[contains(text(),'Note For exhibitor')]"); //Locator for Note for an Exhibitor modal
 	By deletenotebtn = By.xpath("//a[@href='#delete']"); //Locator for Delete note button
 	By orderOnJuniperMarketBtn = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[2]/a[1]"); //Locator for Order On Juniper Market Btn
+	By exhibitorNameLink = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/p[1]/a[1]"); //Locator for Order On Juniper Market Btn
+	By lineLocationLink = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/a[1]"); //Locator for Location
 	
 	public ATLExhLineProdActionsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -169,6 +171,16 @@ public class ATLExhLineProdActionsPage {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(orderOnJuniperMarketBtn));
 		return driver.findElement(orderOnJuniperMarketBtn);
+	}
+	public WebElement getExhibitorNameLink() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitorNameLink));
+		return driver.findElement(exhibitorNameLink);
+	}
+	public WebElement getLineLocationLink() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lineLocationLink));
+		return driver.findElement(lineLocationLink);
 	}
 }
 

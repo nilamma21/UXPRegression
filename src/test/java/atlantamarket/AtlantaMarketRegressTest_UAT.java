@@ -603,7 +603,7 @@ public class AtlantaMarketRegressTest_UAT extends base {
 	public void TS015_VerifyAddToFavoriteForLineTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
-		//T320: The Add to Favorite functionality for an Exhibitor
+		//T320: The Add to Favorite functionality for an Line
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
@@ -645,7 +645,7 @@ public class AtlantaMarketRegressTest_UAT extends base {
 	public void TS016_VerifyLineActionsOrderOnJuniperMarketTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
-		//T320: The Add to Favorite functionality for an Exhibitor
+		//T376: Line actions: Order On JuniperMarket
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
@@ -677,5 +677,61 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore);
 	}
+	
+	@Test(priority=17)
+	public void TS017_VerifyLinesActionsShownByExhibitorNameLinkTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//T433: The Lines actions: Shown By <ExhibitorName> link
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		utl = new Utility(driver);
+		atlexhdgshw=new ATLExhDigiShowroomPage(driver);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputLine")));
+		atlgs.getATLSearchButton().click();
+
+		//Store the 1st Exhibitor name in String variable
+		String exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Line name: "+exhname);
+		//Click on ExhibitorName
+		atlexhact.getExhibitorNameLink().click();
+		//Verify DG showroom page
+		Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
+		
+	}
+	
+	@Test(priority=18)
+	public void TS018_VerifyLinesActionsLocationLinksTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//T370: Lines Actions: Location links
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		utl = new Utility(driver);
+		atlexhdgshw=new ATLExhDigiShowroomPage(driver);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputLine")));
+		atlgs.getATLSearchButton().click();
+
+		//Store the 1st Exhibitor name in String variable
+		String exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Line name: "+exhname);
+		String locationLink=atlexhact.getLineLocationLink().getAttribute("href");		
+		//Click on Location Icon 
+		atlexhact.getLineLocationLink().click();
+		//Verify Location page
+		Assert.assertTrue(locationLink.equals(driver.getCurrentUrl()));
+		
+	}
+	
 }
 

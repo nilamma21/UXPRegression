@@ -2,19 +2,19 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="48765" started-at="2022-05-31T09:54:51Z" finished-at="2022-05-31T09:55:40Z">
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="48436" started-at="2022-06-01T09:07:07Z" finished-at="2022-06-01T09:07:56Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="48765" started-at="2022-05-31T09:54:51Z" finished-at="2022-05-31T09:55:40Z">
+    <test name="Test" duration-ms="48436" started-at="2022-06-01T09:07:07Z" finished-at="2022-06-01T09:07:56Z">
       <class name="atlantamarket.AtlantaMarketRegressTest_UAT">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket.AtlantaMarketRegressTest_UAT@5e5792a0]" name="initialize" is-config="true" duration-ms="43135" started-at="2022-05-31T15:24:52Z" finished-at="2022-05-31T15:25:35Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket.AtlantaMarketRegressTest_UAT@5e5792a0]" name="initialize" is-config="true" duration-ms="42681" started-at="2022-06-01T14:37:07Z" finished-at="2022-06-01T14:37:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS016_VerifyLineActionsOrderOnJuniperMarketTest()[pri:0, instance:atlantamarket.AtlantaMarketRegressTest_UAT@5e5792a0]" name="TS016_VerifyLineActionsOrderOnJuniperMarketTest" duration-ms="5538" started-at="2022-05-31T15:25:35Z" finished-at="2022-05-31T15:25:40Z">
+        <test-method status="PASS" signature="TS018_VerifyLinesActionsLocationLinksTest()[pri:0, instance:atlantamarket.AtlantaMarketRegressTest_UAT@5e5792a0]" name="TS018_VerifyLinesActionsLocationLinksTest" duration-ms="5709" started-at="2022-06-01T14:37:50Z" finished-at="2022-06-01T14:37:56Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS016_VerifyLineActionsOrderOnJuniperMarketTest -->
+        </test-method> <!-- TS018_VerifyLinesActionsLocationLinksTest -->
       </class> <!-- atlantamarket.AtlantaMarketRegressTest_UAT -->
     </test> <!-- Test -->
   </suite> <!-- ATLMrkt_RegressionTestSuite -->
