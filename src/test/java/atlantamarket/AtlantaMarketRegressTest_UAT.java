@@ -728,5 +728,127 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		driver.switchTo().window(winHandleBefore);
 
 	}
+	@Test(priority=18)
+	public void TS018_VerifyAddToNewListForLineTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//T423: The Add to Newly created list functionality for Line
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlinesinput")));
+		atlgs.getATLSearchButton().click();
+		atlexhact.getseealllink().click();
+		
+
+		//Store the 1st Exhibitor name in String variable
+		String exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: "+exhname);
+
+		//Click on Add to List button for 1st Exhibitor
+		atlexhact.getSearchResultMoreicon().click();
+		atlexhact.getAddToListOptn().click();
+		utl.scrollToElement(atlmppge.getCreateNewListNameTxtbx());
+		
+
+		//Enter new list name
+		String newlistname = "Cyb"+ genData.generateRandomString(5);
+		atlmppge.getCreateNewListNameTxtbx().sendKeys(newlistname);
+		System.out.println("Newly created list is: "+newlistname);
+
+		//Scroll till Create button
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", atlmppge.getNewListModalCreateBtn());
+
+		//Click on Create button
+		atlexhact.getcreatelistbtn().click();
+		//Click on Go to Market Planner button
+		atlmppge.getGoToMarketPlannerBtn().click();
+
+		//Click on Lists tab on MP home page
+		atlmppge.getMPHomeListsTab().click();
+		atlmppge.getListsPageListsMenu().click();
+
+		mplists = atlmppge.getATLMPListsNames();
+		mpeditlistoptns = atlmppge.getATLMPEditListOptns();
+
+		for(int i=0; i< mplists.size(); i++)
+		{			
+			System.out.println(mplists.get(i).getText());
+			//System.out.println(mpeditlistoptns.get(i).getText());
+			if(mplists.get(i).getText().equals(newlistname))
+			{
+				mpeditlistoptns.get(i).click();
+				break;
+			} 
+		}
+		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
+		System.out.println("New list is added to the line.");
+	}
+	
+	@Test(priority=19)
+	public void TS019_VerifyAddToExistingListForLineTest() throws InterruptedException, IOException
+	{
+		//The purpose of this test case to verify:-
+		//T362: The Add to Newly created list functionality for a Line
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlinesinput")));
+		atlgs.getATLSearchButton().click();
+		atlexhact.getseealllink().click();
+
+		//Store the 1st Exhibitor name in String variable
+		String exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: "+exhname);
+
+		//Click on Add to List button for 1st Exhibitor
+		atlexhact.getSearchResultMoreicon().click();
+		atlexhact.getAddToListOptn().click();
+
+		//Store the existing list name
+		String existinglistname = atlmppge.getATLMPExistingListName().getText();
+		System.out.println("Existing list name: "+existinglistname);
+
+		//Select Existing list name
+		atlmppge.getATLMPExistingListName().click();
+
+		//Scroll till Add to Selected button
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", atlmppge.getATLMPAddToSelectedBtn());
+		atlmppge.getATLMPAddToSelectedBtn().click();
+
+		//Click on Go to Market Planner button
+		atlmppge.getGoToMarketPlannerBtn().click();
+
+		//Click on Lists tab on MP home page
+		atlmppge.getMPHomeListsTab().click();
+		atlmppge.getListsPageListsMenu().click();
+
+		mplists = atlmppge.getATLMPListsNames();
+		mpeditlistoptns = atlmppge.getATLMPEditListOptns();
+
+		for(int i=0; i< mplists.size(); i++)
+		{			
+			System.out.println(mplists.get(i).getText());
+			//System.out.println(mpeditlistoptns.get(i).getText());
+			if(mplists.get(i).getText().equals(existinglistname))
+			{
+				mpeditlistoptns.get(i).click();
+				break;
+			} 
+		}
+		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
+		System.out.println("List added successcfully.");
+
+	}
+
 }
 
