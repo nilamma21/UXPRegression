@@ -5,6 +5,7 @@
     <classes>
       <class name="atlantamarket.AtlantaMarketRegressTest_UAT">
         <methods>
+          <include name="TS006_VerifyAddToNewListForExhibitorTest"/>
           <include name="TS016_VerifyLineActionsOrderOnJuniperMarketTest"/>
           <include name="initialize"/>
         </methods>

@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,6 +101,19 @@
                     <div class="method-list-content passed suite-ATLMrkt_RegressionTestSuite">
                       <span>
                         <img width="3%" src="passed.png"/>
+
+                        <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket.AtlantaMarketRegressTest_UAT" hash-for-method="TS001_VerifyMarketPlannerLoginTest">TS001_VerifyMarketPlannerLoginTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket.AtlantaMarketRegressTest_UAT" hash-for-method="TS006_VerifyAddToNewListForExhibitorTest">TS006_VerifyAddToNewListForExhibitorTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket.AtlantaMarketRegressTest_UAT" hash-for-method="TS007_VerifyAddToExistingListForExhibitorTest">TS007_VerifyAddToExistingListForExhibitorTest</a> <!-- method navigator-link -->
+
                         <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket.AtlantaMarketRegressTest_UAT" hash-for-method="TS016_VerifyLineActionsOrderOnJuniperMarketTest">TS016_VerifyLineActionsOrderOnJuniperMarketTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -124,6 +137,25 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+
+                  <a name="TS001_VerifyMarketPlannerLoginTest">
+                  </a> <!-- TS001_VerifyMarketPlannerLoginTest -->
+                  <span class="method-name">TS001_VerifyMarketPlannerLoginTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TS006_VerifyAddToNewListForExhibitorTest">
+                  </a> <!-- TS006_VerifyAddToNewListForExhibitorTest -->
+                  <span class="method-name">TS006_VerifyAddToNewListForExhibitorTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TS007_VerifyAddToExistingListForExhibitorTest">
+                  </a> <!-- TS007_VerifyAddToExistingListForExhibitorTest -->
+                  <span class="method-name">TS007_VerifyAddToExistingListForExhibitorTest</span>
+
                   <a name="TS016_VerifyLineActionsOrderOnJuniperMarketTest">
                   </a> <!-- TS016_VerifyLineActionsOrderOnJuniperMarketTest -->
                   <span class="method-name">TS016_VerifyLineActionsOrderOnJuniperMarketTest</span>
@@ -145,6 +177,11 @@
     &lt;classes&gt;
       &lt;class name=&quot;atlantamarket.AtlantaMarketRegressTest_UAT&quot;&gt;
         &lt;methods&gt;
+
+          &lt;include name=&quot;TS001_VerifyMarketPlannerLoginTest&quot;/&gt;
+          &lt;include name=&quot;TS006_VerifyAddToNewListForExhibitorTest&quot;/&gt;
+          &lt;include name=&quot;TS007_VerifyAddToExistingListForExhibitorTest&quot;/&gt;
+
           &lt;include name=&quot;TS016_VerifyLineActionsOrderOnJuniperMarketTest&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- atlantamarket.AtlantaMarketRegressTest_UAT --&gt;
@@ -187,8 +224,21 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
+
+data.setCell(0, 1, 'TS007_VerifyAddToExistingListForExhibitorTest')
+data.setCell(0, 2, 'atlantamarket.AtlantaMarketRegressTest_UAT')
+data.setCell(0, 3, 95187);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'TS001_VerifyMarketPlannerLoginTest')
+data.setCell(1, 2, 'atlantamarket.AtlantaMarketRegressTest_UAT')
+data.setCell(1, 3, 91198);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'TS006_VerifyAddToNewListForExhibitorTest')
+data.setCell(2, 2, 'atlantamarket.AtlantaMarketRegressTest_UAT')
+data.setCell(2, 3, 88665);
+
 data.setCell(0, 1, 'TS016_VerifyLineActionsOrderOnJuniperMarketTest')
 data.setCell(0, 2, 'atlantamarket.AtlantaMarketRegressTest_UAT')
 data.setCell(0, 3, 5538);
@@ -196,6 +246,8 @@ window.suiteTableData['ATLMrkt_RegressionTestSuite']= { tableData: data, tableDi
 return data;
 }
               </script>
+
+              <span class="suite-total-time">Total running time: 4 minutes</span>
               <span class="suite-total-time">Total running time: 5 seconds</span>
               <div id="times-div-ATLMrkt_RegressionTestSuite">
               </div> <!-- times-div-ATLMrkt_RegressionTestSuite -->
@@ -211,15 +263,19 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-ATLMrkt_RegressionTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
+
+            <span class="header-content">12 ignored methods</span>
             <span class="header-content">15 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">atlantamarket.AtlantaMarketRegressTest_UAT</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">TS006_VerifyAddToNewListForExhibitorTest</span>
+                <span class="ignored-method-name">TS015_VerifyClickOnContactExhIconForLineTest</span>
                 <br/>
                 <span class="ignored-method-name">TS009_VerifyClickOnLocationLinksForExhibitorTest</span>
+                <br/>
+                <span class="ignored-method-name">TS010_VerifyClickOnLinesShownLinkForExhibitorTest</span>
                 <br/>
                 <span class="ignored-method-name">TS003_VerifySelectionOfLineFromAutoSuggestionListTest</span>
                 <br/>
@@ -241,10 +297,13 @@ return data;
                 <br/>
                 <span class="ignored-method-name">TS004_VerifySelectionOfProductFromAutoSuggestionListTest</span>
                 <br/>
-                <span class="ignored-method-name">TS007_VerifyAddToExistingListForExhibitorTest</span>
+                <span class="ignored-method-name">TS011_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest</span>
                 <br/>
                 <span class="ignored-method-name">TS005_VerifyAddToFavoriteForExhibitorTest</span>
                 <br/>
+
+                <span class="ignored-method-name">TS014_VerifySelectionOfExhibitorFromSearchResultsTest</span>
+
                 <span class="ignored-method-name">TS012_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
@@ -263,6 +322,18 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
+
+                <span class="method-name">TS001_VerifyMarketPlannerLoginTest</span>
+                <span class="method-start">90540 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS006_VerifyAddToNewListForExhibitorTest</span>
+                <span class="method-start">181782 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS007_VerifyAddToExistingListForExhibitorTest</span>
+                <span class="method-start">270450 ms</span>
+
                 <span class="method-name">TS016_VerifyLineActionsOrderOnJuniperMarketTest</span>
                 <span class="method-start">43150 ms</span>
               </div> <!-- test-method -->

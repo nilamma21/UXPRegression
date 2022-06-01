@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
+
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="365660" started-at="2022-06-01T06:51:51Z" finished-at="2022-06-01T06:57:57Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="365660" started-at="2022-06-01T06:51:51Z" finished-at="2022-06-01T06:57:57Z">
+      <class name="atlantamarket.AtlantaMarketRegressTest_UAT">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket.AtlantaMarketRegressTest_UAT@3ffc5af1]" name="initialize" is-config="true" duration-ms="90507" started-at="2022-06-01T12:21:51Z" finished-at="2022-06-01T12:23:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:atlantamarket.AtlantaMarketRegressTest_UAT@3ffc5af1]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="91198" started-at="2022-06-01T12:23:22Z" finished-at="2022-06-01T12:24:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifyMarketPlannerLoginTest -->
+        <test-method status="PASS" signature="TS006_VerifyAddToNewListForExhibitorTest()[pri:0, instance:atlantamarket.AtlantaMarketRegressTest_UAT@3ffc5af1]" name="TS006_VerifyAddToNewListForExhibitorTest" duration-ms="88665" started-at="2022-06-01T12:24:53Z" finished-at="2022-06-01T12:26:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS006_VerifyAddToNewListForExhibitorTest -->
+        <test-method status="PASS" signature="TS007_VerifyAddToExistingListForExhibitorTest()[pri:0, instance:atlantamarket.AtlantaMarketRegressTest_UAT@3ffc5af1]" name="TS007_VerifyAddToExistingListForExhibitorTest" duration-ms="95187" started-at="2022-06-01T12:26:22Z" finished-at="2022-06-01T12:27:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifyAddToExistingListForExhibitorTest -->
+
   <suite name="ATLMrkt_RegressionTestSuite" duration-ms="48765" started-at="2022-05-31T09:54:51Z" finished-at="2022-05-31T09:55:40Z">
     <groups>
     </groups>

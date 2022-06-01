@@ -10,6 +10,11 @@
 		<classes>
 			<class name="atlantamarket.AtlantaMarketRegressTest_UAT" />
 			<methods>
+
+				<include name="TS001_VerifyMarketPlannerLoginTest" />
+				<include name="TS006_VerifyAddToNewListForExhibitorTest" />
+				<include name="TS007_VerifyAddToExistingListForExhibitorTest"/>
+
 			<!-- <include name="TS001_VerifyMarketPlannerLoginTest"/> -->
  			<include name="TS016_VerifyLineActionsOrderOnJuniperMarketTest"/>
 			</methods>
