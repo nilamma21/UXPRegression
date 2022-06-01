@@ -5,7 +5,7 @@
     <classes>
       <class name="atlantamarket.AtlantaMarketRegressTest_UAT">
         <methods>
-          <include name="TS013_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest"/>
+          <include name="TS006_VerifyAddToNewListForExhibitorTest"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- atlantamarket.AtlantaMarketRegressTest_UAT -->

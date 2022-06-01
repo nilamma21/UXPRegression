@@ -19,6 +19,7 @@ public class ATLGlobalSearchPage {
 	By atlverifyglobalseacrh = By.xpath("//div[@class = 'imc-gallery__item']/div[1]/section[1]/span[1]/div[1]"); // Locator for global search verification
 	By atlsearchresultslist = By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li/span/span/span[1]"); //Locator for Search results list
 	By atlsearchresulttypelist = By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li/span/span/span[3]"); //Locator for list of search results types
+	By atlsearchresultlinetypelist = By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li/span/span/span[2]"); //Locator for list of search result Line type
 	By atlproductsearchresultlist = By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li/span/span/span[2]"); //Locator for Product suggestion search list
 	By atlclearsearchbtn = By.xpath("(//button[@aria-label='Clear Search'])[position()=1]"); //Locator for Clear Search button
 	
@@ -52,6 +53,11 @@ public class ATLGlobalSearchPage {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlsearchresulttypelist));
 		return driver.findElements(atlsearchresulttypelist);
+	}
+	public List<WebElement> getATLSearchResultTypeLineList() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlsearchresultlinetypelist));
+		return driver.findElements(atlsearchresultlinetypelist);
 	}
 	public List<WebElement> getATLProductsSearchResultsList() {
 		wait = new WebDriverWait (driver,20);
