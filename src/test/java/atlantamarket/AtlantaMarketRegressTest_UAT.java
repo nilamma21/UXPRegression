@@ -214,7 +214,7 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		Thread.sleep(6000);
 
 		//Verify that the added favorites exhibitor should be removed from Favorites list
-		for(int i=0; i< 10; i++)
+		for(int i=1; i< 10; i++)
 		{			
 			favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']["+i+"]/div/div/div/a"));
 			System.out.println(favlist.get(i).getText());
@@ -225,6 +225,7 @@ public class AtlantaMarketRegressTest_UAT extends base {
 			}*/ 
 		}
 		//Assert.assertFalse(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
+		atlgs.getATLClearSearchBtn().click();
 	}
 
 	@Test(priority=6)
@@ -282,6 +283,7 @@ public class AtlantaMarketRegressTest_UAT extends base {
 			} 
 		}
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
+		atlgs.getATLClearSearchBtn().click();
 	}
 
 	@Test(priority=7)
@@ -338,6 +340,7 @@ public class AtlantaMarketRegressTest_UAT extends base {
 				break;
 			} 
 		}
+		Thread.sleep(5000);
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 
 		//Delete that added exhibitor from list
@@ -347,6 +350,7 @@ public class AtlantaMarketRegressTest_UAT extends base {
 
 		//Verify that the added exhibitor should be removed from Existing list
 		//Assert.assertFalse(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
+		atlgs.getATLClearSearchBtn().click();
 	}
 
 	@Test(priority=8)
@@ -385,6 +389,7 @@ public class AtlantaMarketRegressTest_UAT extends base {
 
 		//Close the pop-up
 		atlexhact.getPopUpCloseBtn().click();
+		atlgs.getATLClearSearchBtn().click();
 	}
 
 	@Test(priority=9)
@@ -408,6 +413,7 @@ public class AtlantaMarketRegressTest_UAT extends base {
 
 		//Verify that selected building-floor plan page should be opened
 		Assert.assertTrue(locationlink.equals(driver.getCurrentUrl()));
+		atlgs.getATLClearSearchBtn().click();
 	}
 
 	@Test(priority=10)
@@ -434,6 +440,7 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		//Verify that user should redirect to the Lines page
 		Assert.assertTrue(atlexhact.getValidateLinesPage().isDisplayed());
 		Assert.assertTrue(driver.getTitle().contains("{"+exhname+"} Lines"));
+		atlgs.getATLClearSearchBtn().click();
 	}
 
 	@Test(priority=11)
@@ -462,7 +469,7 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		//Click on Total Products-See All link for 1st Exhibitor
 		atlexhact.getTotalProdSeeAllLink().click();
 		Thread.sleep(6000);
-		
+
 		//Verify that user should redirect to the Products page
 		Assert.assertTrue(atlexhact.getValidateProductsPage().isDisplayed());
 		Assert.assertTrue(driver.getTitle().contains(""+exhname+" Products"));
@@ -474,6 +481,7 @@ public class AtlantaMarketRegressTest_UAT extends base {
 
 		//Verify Total Products count on Search grid should match with Products page
 		Assert.assertEquals(totalprodcountonsearchgrid, totalprodcountonprodpage);
+		atlgs.getATLClearSearchBtn().click();
 	}
 
 	@Test(priority=12)
@@ -514,6 +522,7 @@ public class AtlantaMarketRegressTest_UAT extends base {
 
 		//Verify Matching Products count on Search grid should match with Products page
 		Assert.assertEquals(matchingprodcountonsearchgrid, matchingprodcountonprodpage);
+		atlgs.getATLClearSearchBtn().click();
 	}
 	@Test(priority=13)
 	public void TS013_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest() throws InterruptedException, IOException
@@ -582,6 +591,7 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		}
 		//Delete the saved note
 		atlexhact.getDeleteNoteBtn().click();	
+		atlgs.getATLClearSearchBtn().click();
 	}
 	@Test(priority=14)
 	public void TS014_VerifySelectionOfExhibitorFromSearchResultsTest() throws InterruptedException, IOException
@@ -609,8 +619,10 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
 		Assert.assertTrue(driver.getTitle().contains(""+exhname+" at Atlanta Market"));
 		Assert.assertTrue(atlexhdgshw.getExhibitorNameOnExhDirectImg().getText().contains(exhname));
+
+		atlgs.getATLClearSearchBtn().click();
 	}
-	
+
 	@Test(priority=15)
 	public void TS015_VerifyClickOnContactExhIconForLineTest() throws InterruptedException, IOException
 	{
@@ -647,6 +659,8 @@ public class AtlantaMarketRegressTest_UAT extends base {
 
 		//Close the pop-up
 		atlexhact.getPopUpCloseBtn().click();
+
+		atlgs.getATLClearSearchBtn().click();
 	}
 
 	@Test(priority=16)
@@ -688,7 +702,10 @@ public class AtlantaMarketRegressTest_UAT extends base {
 
 		//Verify that the added favorites exhibitor should be removed from Favorites list
 		Assert.assertFalse(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
+
+		atlgs.getATLClearSearchBtn().click();
 	}
+
 	@Test(priority=17)
 	public void TS017_VerifyClickOnOrderOnJuniperMarketBtnForLineTest() throws InterruptedException, IOException
 	{
@@ -704,9 +721,10 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
 		atlgs.getATLSearchButton().click();
 
-		//Store the 1st Exhibitor name in String variable
+		//Store the 1st Line name in String variable
 		String exhname = atlexhact.getExhibitorName().getText();
 		System.out.println("Line name: "+exhname);
+
 		// Store the current window handle
 		String winHandleBefore = driver.getWindowHandle();
 		atlexhact.getOrderOnJuniperMarketBtn().click();	
@@ -723,7 +741,9 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore);
 
+		atlgs.getATLClearSearchBtn().click();
 	}
+
 	@Test(priority=18)
 	public void TS018_VerifyAddToNewListForLineTest() throws InterruptedException, IOException
 	{
@@ -736,11 +756,11 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		genData = new GenerateData();
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlinesinput")));
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
 		atlgs.getATLSearchButton().click();
 		atlexhact.getseealllink().click();
-		
+
 
 		//Store the 1st Exhibitor name in String variable
 		String exhname = atlexhact.getExhibitorName().getText();
@@ -750,7 +770,7 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		atlexhact.getSearchResultMoreicon().click();
 		atlexhact.getAddToListOptn().click();
 		utl.scrollToElement(atlmppge.getCreateNewListNameTxtbx());
-		
+
 
 		//Enter new list name
 		String newlistname = "Cyb"+ genData.generateRandomString(5);
@@ -783,9 +803,9 @@ public class AtlantaMarketRegressTest_UAT extends base {
 			} 
 		}
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
-		System.out.println("New list is added to the line.");
+		atlgs.getATLClearSearchBtn().click();
 	}
-	
+
 	@Test(priority=19)
 	public void TS019_VerifyAddToExistingListForLineTest() throws InterruptedException, IOException
 	{
@@ -798,7 +818,7 @@ public class AtlantaMarketRegressTest_UAT extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlinesinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
 		atlgs.getATLSearchButton().click();
 		atlexhact.getseealllink().click();
 
@@ -841,9 +861,15 @@ public class AtlantaMarketRegressTest_UAT extends base {
 				break;
 			} 
 		}
+		Thread.sleep(5000);
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
-		System.out.println("List added successcfully.");
 
+		//Delete that added line from list
+		atlmppge.getATLEditListItemMoreBtn().click();
+		atlmppge.getATLEditListItemDeleteOptn().click();
+		Thread.sleep(8000);
+		
+		atlgs.getATLClearSearchBtn().click();
 	}
 
 }

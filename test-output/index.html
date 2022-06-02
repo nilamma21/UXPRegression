@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite">
-              <span class="suite-name border-passed">ATLMrkt_RegressionTestSuite</span>
+              <span class="suite-name border-failed">ATLMrkt_RegressionTestSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-ATLMrkt_RegressionTestSuite">
-                    <span>C:\Users\swapnili\UXPRegression\testng.xml</span>
+                    <span>C:\Users\nilamma\UXPRegression\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,34 +90,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">2 methods, 2 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-ATLMrkt_RegressionTestSuite" class="hide-methods passed suite-ATLMrkt_RegressionTestSuite"> (hide)</a> <!-- hide-methods passed suite-ATLMrkt_RegressionTestSuite -->
-                      <a href="#" panel-name="suite-ATLMrkt_RegressionTestSuite" class="show-methods passed suite-ATLMrkt_RegressionTestSuite"> (show)</a> <!-- show-methods passed suite-ATLMrkt_RegressionTestSuite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-ATLMrkt_RegressionTestSuite" class="hide-methods failed suite-ATLMrkt_RegressionTestSuite"> (hide)</a> <!-- hide-methods failed suite-ATLMrkt_RegressionTestSuite -->
+                      <a href="#" panel-name="suite-ATLMrkt_RegressionTestSuite" class="show-methods failed suite-ATLMrkt_RegressionTestSuite"> (show)</a> <!-- show-methods failed suite-ATLMrkt_RegressionTestSuite -->
                     </span>
-                    <div class="method-list-content passed suite-ATLMrkt_RegressionTestSuite">
+                    <div class="method-list-content failed suite-ATLMrkt_RegressionTestSuite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-
+                        <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket.AtlantaMarketRegressTest_UAT" hash-for-method="TS001_VerifyMarketPlannerLoginTest">TS001_VerifyMarketPlannerLoginTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket.AtlantaMarketRegressTest_UAT" hash-for-method="TS006_VerifyAddToNewListForExhibitorTest">TS006_VerifyAddToNewListForExhibitorTest</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket.AtlantaMarketRegressTest_UAT" hash-for-method="TS005_VerifyAddToFavoriteForExhibitorTest">TS005_VerifyAddToFavoriteForExhibitorTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket.AtlantaMarketRegressTest_UAT" hash-for-method="TS007_VerifyAddToExistingListForExhibitorTest">TS007_VerifyAddToExistingListForExhibitorTest</a> <!-- method navigator-link -->
-
-                        <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket.AtlantaMarketRegressTest_UAT" hash-for-method="TS016_VerifyLineActionsOrderOnJuniperMarketTest">TS016_VerifyLineActionsOrderOnJuniperMarketTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-ATLMrkt_RegressionTestSuite -->
+                    </div> <!-- method-list-content failed suite-ATLMrkt_RegressionTestSuite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -129,44 +121,170 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-ATLMrkt_RegressionTestSuite" class="panel ATLMrkt_RegressionTestSuite">
-          <div class="suite-ATLMrkt_RegressionTestSuite-class-passed">
+          <div class="suite-ATLMrkt_RegressionTestSuite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">atlantamarket.AtlantaMarketRegressTest_UAT</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-
                   <a name="TS001_VerifyMarketPlannerLoginTest">
                   </a> <!-- TS001_VerifyMarketPlannerLoginTest -->
                   <span class="method-name">TS001_VerifyMarketPlannerLoginTest</span>
+                  <div class="stack-trace"><b>"org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos; contact-exit&apos;]&quot;}
+  (Session info: chrome=102.0.5005.61)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=101.0.4951.41 (93c720db8323b3ec10d056025ab95c23a31997c9-refs/branch-heads/4951@{#904}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir62364_1297266434}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:53691}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=102.0.5005.61, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 8efc95a20d4bebb49c65671e209c7f1e
+*** Element info: {Using=xpath, value=//div[@class=&apos; contact-exit&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at pageObjects.AtlantaMarket.ATLLandingPage.getCloseMarktAdBtn(ATLLandingPage.java:48)
+	at atlantamarket.AtlantaMarketRegressTest_UAT.TS001_VerifyMarketPlannerLoginTest(AtlantaMarketRegressTest_UAT.java:75)
+... Removed 28 stack frames<br/> org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos; contact-exit&apos;]&quot;}
+  (Session info: chrome=102.0.5005.61)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=101.0.4951.41 (93c720db8323b3ec10d056025ab95c23a31997c9-refs/branch-heads/4951@{#904}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir62364_1297266434}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:53691}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=102.0.5005.61, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 8efc95a20d4bebb49c65671e209c7f1e
+*** Element info: {Using=xpath, value=//div[@class=&apos; contact-exit&apos;]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at pageObjects.AtlantaMarket.ATLLandingPage.getCloseMarktAdBtn(ATLLandingPage.java:48)
+	at atlantamarket.AtlantaMarketRegressTest_UAT.TS001_VerifyMarketPlannerLoginTest(AtlantaMarketRegressTest_UAT.java:75)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+"</b><br>sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br>sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)<br>sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)<br>java.lang.reflect.Constructor.newInstance(Unknown Source)<br>org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)<br>org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)<br>org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)<br>org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)<br>org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)<br>org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)<br>org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)<br>org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)<br>org.openqa.selenium.By$ByXPath.findElement(By.java:361)<br>org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)<br>pageObjects.AtlantaMarket.ATLLandingPage.getCloseMarktAdBtn(ATLLandingPage.java:48)<br>atlantamarket.AtlantaMarketRegressTest_UAT.TS001_VerifyMarketPlannerLoginTest(AtlantaMarketRegressTest_UAT.java:75)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br>java.lang.reflect.Method.invoke(Unknown Source)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)<br>
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TS006_VerifyAddToNewListForExhibitorTest">
-                  </a> <!-- TS006_VerifyAddToNewListForExhibitorTest -->
-                  <span class="method-name">TS006_VerifyAddToNewListForExhibitorTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TS007_VerifyAddToExistingListForExhibitorTest">
-                  </a> <!-- TS007_VerifyAddToExistingListForExhibitorTest -->
-                  <span class="method-name">TS007_VerifyAddToExistingListForExhibitorTest</span>
-
-                  <a name="TS016_VerifyLineActionsOrderOnJuniperMarketTest">
-                  </a> <!-- TS016_VerifyLineActionsOrderOnJuniperMarketTest -->
-                  <span class="method-name">TS016_VerifyLineActionsOrderOnJuniperMarketTest</span>
+                  <a name="TS005_VerifyAddToFavoriteForExhibitorTest">
+                  </a> <!-- TS005_VerifyAddToFavoriteForExhibitorTest -->
+                  <span class="method-name">TS005_VerifyAddToFavoriteForExhibitorTest</span>
+                  <div class="stack-trace"><b>"org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id=&apos;input-1&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.AtlantaMarket.ATLGlobalSearchPage.getATLGlobalSearchTextBox(ATLGlobalSearchPage.java:33)
+	at atlantamarket.AtlantaMarketRegressTest_UAT.TS005_VerifyAddToFavoriteForExhibitorTest(AtlantaMarketRegressTest_UAT.java:191)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //input[@id=&apos;input-1&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 26 more
+... Removed 24 stack frames<br/> org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id=&apos;input-1&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.AtlantaMarket.ATLGlobalSearchPage.getATLGlobalSearchTextBox(ATLGlobalSearchPage.java:33)
+	at atlantamarket.AtlantaMarketRegressTest_UAT.TS005_VerifyAddToFavoriteForExhibitorTest(AtlantaMarketRegressTest_UAT.java:191)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //input[@id=&apos;input-1&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 26 more
+"</b><br>org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)<br>org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)<br>pageObjects.AtlantaMarket.ATLGlobalSearchPage.getATLGlobalSearchTextBox(ATLGlobalSearchPage.java:33)<br>atlantamarket.AtlantaMarketRegressTest_UAT.TS005_VerifyAddToFavoriteForExhibitorTest(AtlantaMarketRegressTest_UAT.java:191)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br>java.lang.reflect.Method.invoke(Unknown Source)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)<br>
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-ATLMrkt_RegressionTestSuite-class-passed -->
+          </div> <!-- suite-ATLMrkt_RegressionTestSuite-class-failed -->
         </div> <!-- panel ATLMrkt_RegressionTestSuite -->
         <div panel-name="test-xml-ATLMrkt_RegressionTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\swapnili\UXPRegression\testng.xml</span>
+            <span class="header-content">C:\Users\nilamma\UXPRegression\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -177,12 +295,8 @@
     &lt;classes&gt;
       &lt;class name=&quot;atlantamarket.AtlantaMarketRegressTest_UAT&quot;&gt;
         &lt;methods&gt;
-
           &lt;include name=&quot;TS001_VerifyMarketPlannerLoginTest&quot;/&gt;
-          &lt;include name=&quot;TS006_VerifyAddToNewListForExhibitorTest&quot;/&gt;
-          &lt;include name=&quot;TS007_VerifyAddToExistingListForExhibitorTest&quot;/&gt;
-
-          &lt;include name=&quot;TS016_VerifyLineActionsOrderOnJuniperMarketTest&quot;/&gt;
+          &lt;include name=&quot;TS005_VerifyAddToFavoriteForExhibitorTest&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- atlantamarket.AtlantaMarketRegressTest_UAT --&gt;
     &lt;/classes&gt;
@@ -224,31 +338,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(2);
 data.setCell(0, 0, 0)
-
-data.setCell(0, 1, 'TS007_VerifyAddToExistingListForExhibitorTest')
+data.setCell(0, 1, 'TS001_VerifyMarketPlannerLoginTest')
 data.setCell(0, 2, 'atlantamarket.AtlantaMarketRegressTest_UAT')
-data.setCell(0, 3, 95187);
+data.setCell(0, 3, 399945);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'TS001_VerifyMarketPlannerLoginTest')
+data.setCell(1, 1, 'TS005_VerifyAddToFavoriteForExhibitorTest')
 data.setCell(1, 2, 'atlantamarket.AtlantaMarketRegressTest_UAT')
-data.setCell(1, 3, 91198);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'TS006_VerifyAddToNewListForExhibitorTest')
-data.setCell(2, 2, 'atlantamarket.AtlantaMarketRegressTest_UAT')
-data.setCell(2, 3, 88665);
-
-data.setCell(0, 1, 'TS016_VerifyLineActionsOrderOnJuniperMarketTest')
-data.setCell(0, 2, 'atlantamarket.AtlantaMarketRegressTest_UAT')
-data.setCell(0, 3, 5538);
+data.setCell(1, 3, 30541);
 window.suiteTableData['ATLMrkt_RegressionTestSuite']= { tableData: data, tableDiv: 'times-div-ATLMrkt_RegressionTestSuite'}
 return data;
 }
               </script>
-
-              <span class="suite-total-time">Total running time: 4 minutes</span>
-              <span class="suite-total-time">Total running time: 5 seconds</span>
+              <span class="suite-total-time">Total running time: 7 minutes</span>
               <div id="times-div-ATLMrkt_RegressionTestSuite">
               </div> <!-- times-div-ATLMrkt_RegressionTestSuite -->
             </div> <!-- times-div -->
@@ -263,47 +366,44 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-ATLMrkt_RegressionTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-
-            <span class="header-content">12 ignored methods</span>
-            <span class="header-content">15 ignored methods</span>
+            <span class="header-content">17 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">atlantamarket.AtlantaMarketRegressTest_UAT</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">TS015_VerifyClickOnContactExhIconForLineTest</span>
+                <span class="ignored-method-name">TS006_VerifyAddToNewListForExhibitorTest</span>
                 <br/>
                 <span class="ignored-method-name">TS009_VerifyClickOnLocationLinksForExhibitorTest</span>
-                <br/>
-                <span class="ignored-method-name">TS010_VerifyClickOnLinesShownLinkForExhibitorTest</span>
                 <br/>
                 <span class="ignored-method-name">TS003_VerifySelectionOfLineFromAutoSuggestionListTest</span>
                 <br/>
                 <span class="ignored-method-name">TS002_VerifySelectionOfExhibitorFromAutoSuggestionListTest</span>
                 <br/>
+                <span class="ignored-method-name">TS019_VerifyAddToExistingListForLineTest</span>
+                <br/>
                 <span class="ignored-method-name">TS013_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest</span>
                 <br/>
                 <span class="ignored-method-name">TS011_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest</span>
                 <br/>
-                <span class="ignored-method-name">TS015_VerifyAddToFavoriteForLineTest</span>
-                <br/>
-                <span class="ignored-method-name">TS001_VerifyMarketPlannerLoginTest</span>
+                <span class="ignored-method-name">TS017_VerifyClickOnOrderOnJuniperMarketBtnForLineTest</span>
                 <br/>
                 <span class="ignored-method-name">TS014_VerifySelectionOfExhibitorFromSearchResultsTest</span>
                 <br/>
+                <span class="ignored-method-name">TS015_VerifyClickOnContactExhIconForLineTest</span>
+                <br/>
                 <span class="ignored-method-name">TS010_VerifyClickOnLinesShownLinkForExhibitorTest</span>
+                <br/>
+                <span class="ignored-method-name">TS016_VerifyAddToFavoriteForLineTest</span>
                 <br/>
                 <span class="ignored-method-name">TS008_VerifyClickOnContactExhIconForExhibitorTest</span>
                 <br/>
                 <span class="ignored-method-name">TS004_VerifySelectionOfProductFromAutoSuggestionListTest</span>
                 <br/>
-                <span class="ignored-method-name">TS011_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest</span>
+                <span class="ignored-method-name">TS007_VerifyAddToExistingListForExhibitorTest</span>
                 <br/>
-                <span class="ignored-method-name">TS005_VerifyAddToFavoriteForExhibitorTest</span>
+                <span class="ignored-method-name">TS018_VerifyAddToNewListForLineTest</span>
                 <br/>
-
-                <span class="ignored-method-name">TS014_VerifySelectionOfExhibitorFromSearchResultsTest</span>
-
                 <span class="ignored-method-name">TS012_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
@@ -322,20 +422,16 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-
+                <img src="failed.png">
+                </img>
                 <span class="method-name">TS001_VerifyMarketPlannerLoginTest</span>
-                <span class="method-start">90540 ms</span>
+                <span class="method-start">519809 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">TS006_VerifyAddToNewListForExhibitorTest</span>
-                <span class="method-start">181782 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TS007_VerifyAddToExistingListForExhibitorTest</span>
-                <span class="method-start">270450 ms</span>
-
-                <span class="method-name">TS016_VerifyLineActionsOrderOnJuniperMarketTest</span>
-                <span class="method-start">43150 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TS005_VerifyAddToFavoriteForExhibitorTest</span>
+                <span class="method-start">920996 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
