@@ -5,6 +5,7 @@
     <classes>
       <class name="atlantamarket.AtlantaMarketRegressTest_UAT">
         <methods>
+
           <include name="TS018_VerifyLinesActionsLocationLinksTest"/>
           <include name="TS010_VerifyClickOnLinesShownLinkForExhibitorTest"/>
           <include name="TS020_VerifyLinesActionsTotalProductsSeeAllTest"/>
@@ -12,8 +13,11 @@
           <include name="TS015_VerifyAddToFavoriteForLineTest"/>
           <include name="TS017_VerifyLinesActionsShownByExhibitorNameLinkTest"/>
           <include name="TS019_VerifyLinesActionsMatchingProductsSeeAllTest"/>
+
+
           <include name="TS005_VerifyAddToFavoriteForExhibitorTest"/>
           <include name="initialize"/>
+          <include name="TS001_VerifyMarketPlannerLoginTest"/>
         </methods>
       </class> <!-- atlantamarket.AtlantaMarketRegressTest_UAT -->
     </classes>

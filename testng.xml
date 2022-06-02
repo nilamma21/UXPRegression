@@ -10,8 +10,13 @@
 		<classes>
 			<class name="atlantamarket.AtlantaMarketRegressTest_UAT" />
 			<methods>
+
 			<!-- <include name="TS001_VerifyMarketPlannerLoginTest"/> -->
  			<!-- <include name="TS020_VerifyLinesActionsTotalProductsSeeAllTest"/> -->
+
+			<include name="TS001_VerifyMarketPlannerLoginTest"/>
+			<include name="TS005_VerifyAddToFavoriteForExhibitorTest"/>
+
 			</methods>
 		</classes>
 	</test>
