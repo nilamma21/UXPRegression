@@ -126,12 +126,6 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		linelist = atlgs.getATLSearchResultsList();
 		searchlinetypelist = atlgs.getATLSearchResultTypeLineList();
 
-
-		for (int i = 0; i < 10; i++) {
-			// System.out.println(list.get(i).getText());
-			if (linelist.get(i).getText().equals(prop.getProperty("autosuggestline"))
-					&& searchtypelist.get(i).getText().equals("Line")) {
-
 		for(int i=0; i<10; i++)
 		{			
 			//System.out.println(list.get(i).getText());
@@ -281,12 +275,6 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		mplists = atlmppge.getATLMPListsNames();
 		mpeditlistoptns = atlmppge.getATLMPEditListOptns();
 
-
-		for (int i = 0; i < mplists.size(); i++) {
-			System.out.println(mplists.get(i).getText());
-			// System.out.println(mpeditlistoptns.get(i).getText());
-			if (mplists.get(i).getText().equals(newlistname)) {
-
 		for(int i=0; i< mplists.size(); i++)
 		{			
 			//System.out.println(mplists.get(i).getText());
@@ -346,19 +334,12 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		mplists = atlmppge.getATLMPListsNames();
 		mpeditlistoptns = atlmppge.getATLMPEditListOptns();
 
-
-		for (int i = 0; i < mplists.size(); i++) {
-			System.out.println(mplists.get(i).getText());
-			// System.out.println(mpeditlistoptns.get(i).getText());
-			if (mplists.get(i).getText().equals(existinglistname)) {
-
 		for(int i=0; i< mplists.size(); i++)
 		{			
 			//System.out.println(mplists.get(i).getText());
 			//System.out.println(mpeditlistoptns.get(i).getText());
 			if(mplists.get(i).getText().equals(existinglistname))
 			{
-
 				mpeditlistoptns.get(i).click();
 				break;
 			}
@@ -559,11 +540,9 @@ public class AtlantaMarketRegressTest_UAT extends base {
 	}
 
 	@Test(priority = 13)
-	public void TS013_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest()
-			throws InterruptedException, IOException {
+	public void TS013_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// T322: The click on 'Matching products-Add Note' functionality for an
-		// Exhibitor
+		// T322: The click on 'Matching products-Add Note' functionality for an Exhibitor
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
@@ -585,8 +564,7 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		atlexhact.getMatchingProdAddNoteIcon().click();
 
 		// Verify that Add note for selected exhibitor modal should be displayed
-		WebElement addnotemodaltitle = driver
-				.findElement(By.xpath("//h4[contains(text(),'Add a Note For " + exhname + "')]"));
+		WebElement addnotemodaltitle = driver.findElement(By.xpath("//h4[contains(text(),'Add a Note For " + exhname + "')]"));
 		Assert.assertTrue(addnotemodaltitle.isDisplayed());
 
 		// Store the new note name
@@ -601,7 +579,6 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		atlexhact.getNoteSaveBtn().click();
 		Thread.sleep(5000);
 
-
 		// Click on 'Add Note' icon for the same exhibitor
 		atlexhact.getMatchingProdAddNoteIcon().click();
 		Thread.sleep(4000);
@@ -611,38 +588,19 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		Thread.sleep(5000);
 
 		// Verify that Add note for selected exhibitor modal should be displayed
-		WebElement allnotesmodaltitle = driver
-				.findElement(By.xpath("//h4[contains(text(),'All Notes For " + exhname + "')]"));
-
-		//Click on 'Add Note' icon for the same exhibitor
-		atlexhact.getMatchingProdAddNoteIcon().click();
-		Thread.sleep(4000);
-
-		//Click on 'View all Notes for an Exhibitor' link on Add Notes pop-up
-		atlexhact.getViewAllNotesLink().click();
-		Thread.sleep(5000);
-
-		//Verify that Add note for selected exhibitor modal should be displayed
-		WebElement allnotesmodaltitle = driver.findElement(By.xpath("//h4[contains(text(),'All Notes For "+exhname+"')]"));
+		WebElement allnotesmodaltitle = driver.findElement(By.xpath("//h4[contains(text(),'All Notes For " + exhname + "')]"));
 
 		Assert.assertTrue(allnotesmodaltitle.isDisplayed());
 
 		allnoteslist = atlexhact.getSavedNoteNameInAllNotesList();
 
+		// Verify that recently added note should be appear on 'All Notes For Exhibitor' modal
 
-		// Verify that recently added note should be appear on 'All Notes For Exhibitor'
-		// modal
-		for (int i = 0; i < allnoteslist.size(); i++) {
-			// System.out.println(allnoteslist.get(i).getText());
-			if (allnoteslist.get(i).getText().equals(newnotetitle)) {
-
-		//Verify that recently added note should be appear on 'All Notes For Exhibitor' modal
 		for(int i=0; i< allnoteslist.size(); i++)
 		{			
 			//System.out.println(allnoteslist.get(i).getText());
 			if(allnoteslist.get(i).getText().equals(newnotetitle))
 			{
-
 				allnoteslist.get(i).click();
 				break;
 			}
@@ -654,7 +612,6 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		//Delete the saved note
 		atlexhact.getDeleteNoteBtn().click();	
 		atlgs.getATLClearSearchBtn().click();
-
 	}
 
 	@Test(priority = 14)
@@ -694,12 +651,6 @@ public class AtlantaMarketRegressTest_UAT extends base {
 
 		atlgs.getATLClearSearchBtn().click();
 	}
-
-
-	@Test(priority = 15)
-	public void TS015_VerifyAddToFavoriteForLineTest() throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// T320: The Add to Favorite functionality for an Line
 
 	@Test(priority=15)
 	public void TS015_VerifyClickOnContactExhIconForLineTest() throws InterruptedException, IOException
@@ -787,18 +738,11 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		atlgs.getATLClearSearchBtn().click();
 	}
 
-
-	@Test(priority = 16)
-	public void TS016_VerifyLineActionsOrderOnJuniperMarketTest() throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// T376: Line actions: Order On JuniperMarket
-
 	@Test(priority=17)
 	public void TS017_VerifyClickOnOrderOnJuniperMarketBtnForLineTest() throws InterruptedException, IOException
 	{
 		//The purpose of this test case to verify:-
 		//T376: The click on 'Order On JuniperMarket' button functionality for a Line
-
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
@@ -809,19 +753,14 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
 		atlgs.getATLSearchButton().click();
 
-
 		// Store the 1st Exhibitor name in String variable
 		String exhname = atlexhact.getExhibitorName().getText();
 		System.out.println("Line name: " + exhname);
 
-		//Store the 1st Line name in String variable
-		String exhname = atlexhact.getExhibitorName().getText();
-		System.out.println("Line name: "+exhname);
-
-
 		// Store the current window handle
 		String winHandleBefore = driver.getWindowHandle();
 		atlexhact.getOrderOnJuniperMarketBtn().click();
+		
 		// Switch to new window opened
 		for (String winHandle : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle);
@@ -837,8 +776,6 @@ public class AtlantaMarketRegressTest_UAT extends base {
 
 		atlgs.getATLClearSearchBtn().click();
 	}
-
-
 
 	@Test(priority=18)
 	public void TS018_VerifyAddToNewListForLineTest() throws InterruptedException, IOException
@@ -856,7 +793,6 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
 		atlgs.getATLSearchButton().click();
 		atlexhact.getseealllink().click();
-
 
 		//Store the 1st Exhibitor name in String variable
 		String exhname = atlexhact.getExhibitorName().getText();
@@ -964,15 +900,12 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		atlmppge.getATLEditListItemMoreBtn().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(8000);
-		
+
 		atlgs.getATLClearSearchBtn().click();
 	}
 
-}
-
-
-	@Test(priority = 17)
-	public void TS017_VerifyLinesActionsShownByExhibitorNameLinkTest() throws InterruptedException, IOException {
+	@Test(priority = 21)
+	public void TS021_VerifyLinesActionsShownByExhibitorNameLinkTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T433: The Lines actions: Shown By <ExhibitorName> link
 
@@ -997,8 +930,8 @@ public class AtlantaMarketRegressTest_UAT extends base {
 
 	}
 
-	@Test(priority = 18)
-	public void TS018_VerifyLinesActionsLocationLinksTest() throws InterruptedException, IOException {
+	@Test(priority = 22)
+	public void TS022_VerifyLinesActionsLocationLinksTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T370: Lines Actions: Location links
 
@@ -1024,8 +957,8 @@ public class AtlantaMarketRegressTest_UAT extends base {
 
 	}
 
-	@Test(priority = 19)
-	public void TS019_VerifyLinesActionsMatchingProductsSeeAllTest() throws InterruptedException, IOException {
+	@Test(priority = 23)
+	public void TS023_VerifyLinesActionsMatchingProductsSeeAllTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T371: Lines Actions: Matching Products- See All
 
