@@ -1,5 +1,8 @@
 package atlantamarket;
 
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertSame;
+
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -7,6 +10,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -904,8 +908,8 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		atlgs.getATLClearSearchBtn().click();
 	}
 
-	@Test(priority = 21)
-	public void TS021_VerifyLinesActionsShownByExhibitorNameLinkTest() throws InterruptedException, IOException {
+	@Test(priority = 20)
+	public void TS020_VerifyLinesActionsShownByExhibitorNameLinkTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T433: The Lines actions: Shown By <ExhibitorName> link
 
@@ -930,8 +934,8 @@ public class AtlantaMarketRegressTest_UAT extends base {
 
 	}
 
-	@Test(priority = 22)
-	public void TS022_VerifyLinesActionsLocationLinksTest() throws InterruptedException, IOException {
+	@Test(priority = 21)
+	public void TS021_VerifyLinesActionsLocationLinksTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T370: Lines Actions: Location links
 
@@ -957,8 +961,8 @@ public class AtlantaMarketRegressTest_UAT extends base {
 
 	}
 
-	@Test(priority = 23)
-	public void TS023_VerifyLinesActionsMatchingProductsSeeAllTest() throws InterruptedException, IOException {
+	@Test(priority = 22)
+	public void TS022_VerifyLinesActionsMatchingProductsSeeAllTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T371: Lines Actions: Matching Products- See All
 
@@ -997,8 +1001,8 @@ public class AtlantaMarketRegressTest_UAT extends base {
 
 	}
 
-	@Test(priority = 20)
-	public void TS020_VerifyLinesActionsTotalProductsSeeAllTest() throws InterruptedException, IOException {
+	@Test(priority = 23)
+	public void TS023_VerifyLinesActionsTotalProductsSeeAllTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T369: Lines actions: Total Products- See all
 
@@ -1036,5 +1040,99 @@ public class AtlantaMarketRegressTest_UAT extends base {
 		Assert.assertEquals(matchingprodcountonsearchgrid, matchingprodcountonprodpage);
 
 	}
+	@Test(priority = 24)
+	public void TS024_VerifyProductsActionsSeeDetailsTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T379: Products Actions: See Details
 
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		utl = new Utility(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys("   ");
+		atlgs.getATLSearchButton().click();
+
+		// Store the 1st Exhibitor name in String variable
+		String exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: " + exhname);
+		// Instantiating Actions class
+		Actions actions = new Actions(driver);
+		String productName = atlexhact.getExhibitorProdcutName().getText();
+		System.out.println(productName);
+		// Hovering on Product
+		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
+		// To mouseover on See All btn
+		actions.moveToElement(atlexhact.getSeeDetailsbtn());
+		// build()- used to compile all the actions into a single step
+		actions.click().perform();
+		Thread.sleep(5000);
+		String productDetailsPage = atlexhact.getExhibitorProdcutNameDetails().getText();
+		System.out.println(productDetailsPage);
+		// Verify deatils page
+		Assert.assertTrue(productName.equals(productDetailsPage));
+
+	}
+
+	@Test(priority = 25)
+	public void TS025_VerifyProductsActionsProductDetailsIcoToAddToNewlyCreatedListTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T379: Products Actions: See Details
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		utl = new Utility(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys("   ");
+		atlgs.getATLSearchButton().click();
+		
+		// Instantiating Actions class
+		Actions actions = new Actions(driver);
+		String productName = atlexhact.getExhibitorProdcutName().getText();
+		System.out.println(productName);
+		// Hovering on Product
+		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
+		// To mouseover on See All btn
+		actions.moveToElement(atlexhact.getSeeDetailsbtn());
+		// build()- used to compile all the actions into a single step
+		actions.click().perform();
+		Thread.sleep(5000);
+		
+		atlexhact.getAddToList().click();
+		//String listName= (prop.getProperty("listName"));
+		String listName=prop.getProperty("listName");
+		//Enter new List Name 
+		atlexhact.getListName().sendKeys(listName);
+		atlexhact.getcreatelistbtn().click(); //Click on Create List button
+		atlexhact.getGoToMPBtn().click(); //Click on MP button
+		atlexhact.getList().click(); //click on List
+		atlexhact.getListLeftPanel().click(); //click on liist from left panel
+		utl.scrollToElement(atlexhact.getnewListName()); //scroll down to list
+		
+		List<WebElement> ListNames= driver.findElements(By.xpath("//li[@class='imc-market-planner-list-draggable-item']"));
+		for(WebElement ListName : ListNames)
+		{
+			String Name=ListName.getText();
+			//System.out.println("List Items : " +Name);
+			//assertSame(listName,expectedListName);
+			if(Name.contains(listName))
+			{
+				System.out.println("*Pass*" + Name + " = " +listName);
+				
+			}
+			else
+			{
+				System.out.println("Failed");
+			}
+			//assertEquals(listName, expectedListName);
+			
+		}
+	}
 }
