@@ -6,7 +6,9 @@ import java.io.IOException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
+import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
 import pageObjects.AtlantaMarket.ATLLandingPage;
 import pageObjects.AtlantaMarket.ATLLoginPage;
 
@@ -16,6 +18,7 @@ public class Utility extends base {
 	// public WebDriver driver;
 	ATLLandingPage lap;
 	ATLLoginPage lp;
+	ATLExhLineProdActionsPage atlexhact;
 
 	@SuppressWarnings("static-access")
 	public Utility(WebDriver driver) {
@@ -47,6 +50,20 @@ public class Utility extends base {
 		lp.getPassword().sendKeys((prop.getProperty("password")));
 		
 		lp.getSignInBtn().click();
-
+		}
+	
+	public void mouseHover(WebElement mainMenu,WebElement subMenu) throws IOException, InterruptedException {
+		
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);		
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		//Instantiating Actions class
+		Actions actions = new Actions(driver);
+		//Hovering on main menu
+		actions.moveToElement(mainMenu);
+		//To mouseover on sub menu
+		actions.moveToElement(subMenu);
+		//build()- used to compile all the actions into a single step 
+		actions.click().build().perform();
 	}
 }
