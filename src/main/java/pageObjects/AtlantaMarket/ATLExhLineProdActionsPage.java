@@ -50,7 +50,7 @@ public class ATLExhLineProdActionsPage extends base{
 
 	By seealllink = By.xpath("//div[@class = 'imc-exhibitorcard--text-container-row']/a[1]"); //Locator for Sell All link for exhibitors to find LInes
 	By createlistbtn = By.xpath("//div[@class = 'imc-market-planner-quick-add-modal__content']/div[1]/div[2]/form[1]/div[2]/div[2]/div[1]/input[1]"); //Locator for Create and Add form for Add New List to Line page
-	By seeDetailsBtn = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/a[1]"); //Locator for See Details button
+	By seeDetailsBtn = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/a[1]"); //Locator for See Details button
 	By exhibitorProdcut = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]"); //Locator for product
 	By exhibitorProdcutName = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/p[1]"); //Locator for productName
 	By exhibitorProdcutNameDetails = By.xpath("(//div[@class='imc-product-details--section'])[1]/div[1]/h2[1]"); //Locator for productName on Details Page
@@ -58,11 +58,12 @@ public class ATLExhLineProdActionsPage extends base{
 	By listName = By.xpath("//div[@class='imc-formfield imc-content ']/input[1]"); //Locator for List Name
 	By goToMPBtn = By.xpath("//div[@class='imc-modal--content']/div[1]/div[1]/a[1]"); //Locator for MP btn
 	By list = By.xpath("//div[@class='    imc-gallery imc-gallery--space-between-mobile-flex-start-desktop']/div[2]/div[1]/a[2]"); //Locator for List
-	
 	By listLeftPanel = By.xpath("//div[@class='imc-section  imc-section--full-width imc-section--full-width-mobile ']/div[1]/div[1]/div[2]/a[1]"); //Locator for List
-	By newListName = By.xpath("//div[@class='accordion-collapse-transition']/ul[1]/li[26]/div[1]"); //Locator for New List Name
-	
+	By newListName = By.xpath("//span[@class='imc-type--title-2']"); //Locator for New List Name
 	By allListNames = By.xpath("//li[@class='imc-market-planner-list-draggable-item']"); //Locator for All List Names
+	By addToSelectedBtn = By.xpath("//div[@class='imc-button--justify-right']/input[1]"); //Locator for Add to Selected Btn
+	By productNameFromList = By.xpath("(//div[@class='imc-saved-exhibitors__contentItems--item'])[1]/div[1]/div[1]/a[1]"); //Locator for product name from list
+	
 	public ATLExhLineProdActionsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
@@ -273,6 +274,16 @@ public class ATLExhLineProdActionsPage extends base{
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(allListNames));
 		return driver.findElement(allListNames);
+	}
+	public WebElement getAddToSelectedBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(addToSelectedBtn));
+		return driver.findElement(addToSelectedBtn);
+	}
+	public WebElement getProductNameFromList() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(productNameFromList));
+		return driver.findElement(productNameFromList);
 	}
 }
 
