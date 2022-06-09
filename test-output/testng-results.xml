@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="95964" started-at="2022-06-09T09:20:18Z" finished-at="2022-06-09T09:21:54Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="95964" started-at="2022-06-09T09:20:18Z" finished-at="2022-06-09T09:21:54Z">
+      <class name="atlantamarket.AtlantaMarketRegressTest_UAT">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket.AtlantaMarketRegressTest_UAT@3ffc5af1]" name="initialize" is-config="true" duration-ms="85038" started-at="2022-06-09T14:50:18Z" finished-at="2022-06-09T14:51:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS022_VerifyClickOnLocationLinkForLineTest()[pri:0, instance:atlantamarket.AtlantaMarketRegressTest_UAT@3ffc5af1]" name="TS022_VerifyClickOnLocationLinkForLineTest" duration-ms="10878" started-at="2022-06-09T14:51:43Z" finished-at="2022-06-09T14:51:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS022_VerifyClickOnLocationLinkForLineTest -->
+
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>

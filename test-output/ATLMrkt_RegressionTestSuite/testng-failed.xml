@@ -5,6 +5,10 @@
     <classes>
       <class name="atlantamarket.AtlantaMarketRegressTest_UAT">
         <methods>
+
+          <include name="TS023_VerifyClickOnMatchingProductsSeeAllLinkForLineTest"/>
+          <include name="initialize"/>
+
           <include name="initialize"/>
           <include name="TS026_VerifyProductsActionsProductDetaileIconToAddToExistingListTest"/>
         </methods>
