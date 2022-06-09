@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
@@ -15,6 +16,27 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS022_VerifyClickOnLocationLinkForLineTest -->
+
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="115687" started-at="2022-06-07T13:34:25Z" finished-at="2022-06-07T13:36:20Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="115687" started-at="2022-06-07T13:34:25Z" finished-at="2022-06-07T13:36:20Z">
+      <class name="atlantamarket.AtlantaMarketRegressTest_UAT">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket.AtlantaMarketRegressTest_UAT@5e5792a0]" name="initialize" is-config="true" duration-ms="43982" started-at="2022-06-07T19:04:25Z" finished-at="2022-06-07T19:05:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:atlantamarket.AtlantaMarketRegressTest_UAT@5e5792a0]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="35210" started-at="2022-06-07T19:05:09Z" finished-at="2022-06-07T19:05:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifyMarketPlannerLoginTest -->
+        <test-method status="PASS" signature="TS025_VerifyProductsActionsProductDetailsIcoToAddToNewlyCreatedListTest()[pri:0, instance:atlantamarket.AtlantaMarketRegressTest_UAT@5e5792a0]" name="TS025_VerifyProductsActionsProductDetailsIcoToAddToNewlyCreatedListTest" duration-ms="36459" started-at="2022-06-07T19:05:44Z" finished-at="2022-06-07T19:06:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS025_VerifyProductsActionsProductDetailsIcoToAddToNewlyCreatedListTest -->
       </class> <!-- atlantamarket.AtlantaMarketRegressTest_UAT -->
     </test> <!-- Test -->
   </suite> <!-- ATLMrkt_RegressionTestSuite -->

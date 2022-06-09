@@ -4,11 +4,6 @@
   <test name="Test(failed)">
     <classes>
       <class name="atlantamarket.AtlantaMarketRegressTest_UAT">
-        <methods>
-          <include name="TS023_VerifyClickOnMatchingProductsSeeAllLinkForLineTest"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- atlantamarket.AtlantaMarketRegressTest_UAT -->
-    </classes>
+     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->

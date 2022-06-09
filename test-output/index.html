@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-ATLMrkt_RegressionTestSuite">
-                    <span>C:\Users\nilamma\UXPRegression\testng.xml</span>
+                    <span>C:\Users\swapnili\UXPRegression\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,10 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
+
                     <span class="method-stats">1 method,   1 passed</span>
+
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,7 +104,15 @@
                     <div class="method-list-content passed suite-ATLMrkt_RegressionTestSuite">
                       <span>
                         <img width="3%" src="passed.png"/>
+
                         <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket.AtlantaMarketRegressTest_UAT" hash-for-method="TS022_VerifyClickOnLocationLinkForLineTest">TS022_VerifyClickOnLocationLinkForLineTest</a> <!-- method navigator-link -->
+
+                        <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket.AtlantaMarketRegressTest_UAT" hash-for-method="TS001_VerifyMarketPlannerLoginTest">TS001_VerifyMarketPlannerLoginTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket.AtlantaMarketRegressTest_UAT" hash-for-method="TS025_VerifyProductsActionsProductDetailsIcoToAddToNewlyCreatedListTest">TS025_VerifyProductsActionsProductDetailsIcoToAddToNewlyCreatedListTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-ATLMrkt_RegressionTestSuite -->
@@ -124,9 +135,21 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+
                   <a name="TS022_VerifyClickOnLocationLinkForLineTest">
                   </a> <!-- TS022_VerifyClickOnLocationLinkForLineTest -->
                   <span class="method-name">TS022_VerifyClickOnLocationLinkForLineTest</span>
+
+                  <a name="TS001_VerifyMarketPlannerLoginTest">
+                  </a> <!-- TS001_VerifyMarketPlannerLoginTest -->
+                  <span class="method-name">TS001_VerifyMarketPlannerLoginTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TS025_VerifyProductsActionsProductDetailsIcoToAddToNewlyCreatedListTest">
+                  </a> <!-- TS025_VerifyProductsActionsProductDetailsIcoToAddToNewlyCreatedListTest -->
+                  <span class="method-name">TS025_VerifyProductsActionsProductDetailsIcoToAddToNewlyCreatedListTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -134,7 +157,7 @@
         </div> <!-- panel ATLMrkt_RegressionTestSuite -->
         <div panel-name="test-xml-ATLMrkt_RegressionTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\nilamma\UXPRegression\testng.xml</span>
+            <span class="header-content">C:\Users\swapnili\UXPRegression\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -145,7 +168,11 @@
     &lt;classes&gt;
       &lt;class name=&quot;atlantamarket.AtlantaMarketRegressTest_UAT&quot;&gt;
         &lt;methods&gt;
+
           &lt;include name=&quot;TS022_VerifyClickOnLocationLinkForLineTest&quot;/&gt;
+
+          &lt;include name=&quot;TS001_VerifyMarketPlannerLoginTest&quot;/&gt;
+          &lt;include name=&quot;TS025_VerifyProductsActionsProductDetailsIcoToAddToNewlyCreatedListTest&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- atlantamarket.AtlantaMarketRegressTest_UAT --&gt;
     &lt;/classes&gt;
@@ -187,16 +214,30 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
+
 data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'TS022_VerifyClickOnLocationLinkForLineTest')
 data.setCell(0, 2, 'atlantamarket.AtlantaMarketRegressTest_UAT')
 data.setCell(0, 3, 10878);
+
+data.addRows(2);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'TS025_VerifyProductsActionsProductDetailsIcoToAddToNewlyCreatedListTest')
+data.setCell(0, 2, 'atlantamarket.AtlantaMarketRegressTest_UAT')
+data.setCell(0, 3, 36459);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'TS001_VerifyMarketPlannerLoginTest')
+data.setCell(1, 2, 'atlantamarket.AtlantaMarketRegressTest_UAT')
+data.setCell(1, 3, 35210);
 window.suiteTableData['ATLMrkt_RegressionTestSuite']= { tableData: data, tableDiv: 'times-div-ATLMrkt_RegressionTestSuite'}
 return data;
 }
               </script>
+
               <span class="suite-total-time">Total running time: 10 seconds</span>
+
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-ATLMrkt_RegressionTestSuite">
               </div> <!-- times-div-ATLMrkt_RegressionTestSuite -->
             </div> <!-- times-div -->
@@ -211,7 +252,10 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-ATLMrkt_RegressionTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
+
             <span class="header-content">22 ignored methods</span>
+
+            <span class="header-content">24 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
@@ -221,7 +265,11 @@ return data;
                 <br/>
                 <span class="ignored-method-name">TS009_VerifyClickOnLocationLinksForExhibitorTest</span>
                 <br/>
+                <span class="ignored-method-name">TS020_VerifyLinesActionsShownByExhibitorNameLinkTest</span>
+                <br/>
                 <span class="ignored-method-name">TS003_VerifySelectionOfLineFromAutoSuggestionListTest</span>
+                <br/>
+                <span class="ignored-method-name">TS022_VerifyLinesActionsMatchingProductsSeeAllTest</span>
                 <br/>
                 <span class="ignored-method-name">TS002_VerifySelectionOfExhibitorFromAutoSuggestionListTest</span>
                 <br/>
@@ -231,11 +279,16 @@ return data;
                 <br/>
                 <span class="ignored-method-name">TS011_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest</span>
                 <br/>
+
                 <span class="ignored-method-name">TS020_VerifyClickOnTotalProductsSeeAllLinkForLineTest</span>
                 <br/>
                 <span class="ignored-method-name">TS023_VerifyClickOnMatchingProductsSeeAllLinkForLineTest</span>
                 <br/>
                 <span class="ignored-method-name">TS001_VerifyMarketPlannerLoginTest</span>
+
+                <span class="ignored-method-name">TS023_VerifyLinesActionsTotalProductsSeeAllTest</span>
+                <br/>
+                <span class="ignored-method-name">TS026_VerifyProductsActionsProductDetaileIconToAddToExistingListTest</span>
                 <br/>
                 <span class="ignored-method-name">TS017_VerifyClickOnOrderOnJuniperMarketBtnForLineTest</span>
                 <br/>
@@ -253,7 +306,11 @@ return data;
                 <br/>
                 <span class="ignored-method-name">TS004_VerifySelectionOfProductFromAutoSuggestionListTest</span>
                 <br/>
+                <span class="ignored-method-name">TS024_VerifyProductsActionsSeeDetailsTest</span>
+                <br/>
                 <span class="ignored-method-name">TS007_VerifyAddToExistingListForExhibitorTest</span>
+                <br/>
+                <span class="ignored-method-name">TS021_VerifyLinesActionsLocationLinksTest</span>
                 <br/>
                 <span class="ignored-method-name">TS018_VerifyAddToNewListForLineTest</span>
                 <br/>
@@ -277,8 +334,16 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
+
                 <span class="method-name">TS022_VerifyClickOnLocationLinkForLineTest</span>
                 <span class="method-start">85056 ms</span>
+
+                <span class="method-name">TS001_VerifyMarketPlannerLoginTest</span>
+                <span class="method-start">43994 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS025_VerifyProductsActionsProductDetailsIcoToAddToNewlyCreatedListTest</span>
+                <span class="method-start">79217 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
