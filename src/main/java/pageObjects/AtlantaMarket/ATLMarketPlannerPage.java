@@ -29,7 +29,9 @@ public class ATLMarketPlannerPage {
 	By atlmpexistinglistname = By.xpath("//form/div[4]/div[1]/label"); //Locator for existing list name
 	By atladdtoseselectedbtn = By.xpath("//input[@data-xpath='quickAdd.saveList']"); //Locator for Add to Selected button
 	By listspagefavoritesmenu = By.xpath("//div[@class='imc-vertical-tabs-nav']/div[contains(text(),'Favorites')]"); //Locator for Favorites left menu
-	
+	By addlistcreatebtn = By.xpath("//input[@value='Create']"); //Locator for Create button on Add List modal
+	By savedproductnameinlist = By.xpath("//li[@class='imc-list-edit--draggable'][1]/div/div[3]/div/div/div/div/a"); //Locator for Saved Product Name in List
+			
 	public ATLMarketPlannerPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
@@ -101,6 +103,17 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(listspagefavoritesmenu));
 		return driver.findElement(listspagefavoritesmenu);
 	}
+	public WebElement getAddListCreateBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(addlistcreatebtn));
+		return driver.findElement(addlistcreatebtn);
+	}
+	public WebElement getSavedProductNameInList() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(savedproductnameinlist));
+		return driver.findElement(savedproductnameinlist);
+	}
+	
 	
 }
 
