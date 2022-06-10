@@ -1,0 +1,280 @@
+package atlantamarket;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import pageObjects.AtlantaMarket.ATLExhDigiShowroomPage;
+import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
+import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
+import pageObjects.AtlantaMarket.ATLLandingPage;
+import pageObjects.AtlantaMarket.ATLLoginPage;
+import pageObjects.AtlantaMarket.ATLMarketPlannerPage;
+import pageObjects.AtlantaMarket.ATLProductDetailsPage;
+import resources.GenerateData;
+import resources.Utility;
+import resources.base;
+
+@Listeners({ TestListeners.class })
+public class GlobalSearch_ProductActions extends base {
+
+	public WebDriverWait wait;
+	public GenerateData genData;
+	public Utility utl;
+	public String exhname;
+	ATLLoginPage lp;
+	ATLLandingPage lap;
+	ATLGlobalSearchPage atlgs;
+	ATLExhDigiShowroomPage atlexhdgshw;
+	ATLProductDetailsPage atlproddet;
+	ATLExhLineProdActionsPage atlexhact;
+	ATLMarketPlannerPage atlmppge;
+
+	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns, allnoteslist,favlist, searchlinetypelist;
+
+	@BeforeClass
+	public void initialize() throws IOException, InterruptedException {
+		driver = initializeDriver(); // requires for Parallel text execution
+		utl = new Utility(driver);
+		lap = new ATLLandingPage(driver);
+
+		// Navigate to Atlanta Market site
+		driver.manage().window().maximize();
+		driver.get(prop.getProperty("atlmrkturl_uat"));
+		lap.getIUnderstandBtn().click();
+		Thread.sleep(10000);
+		lap.getCloseMarktAdBtn().click();
+	}
+
+	@Test(priority = 1)
+	public void TS001_VerifyMarketPlannerLoginTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP-001: To verify the Market Planner overview and it's functionality
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		// Login to Market Planner
+		utl.verifyMPLoginFunctionality();
+
+		Thread.sleep(6000);
+		lap.getCloseMarktAdBtn().click();
+
+		// Verify that Market Planner Home page should be displayed
+		Assert.assertTrue(lap.getMPLinkText().isDisplayed());	
+	}
+
+	@Test(priority = 2)
+	public void TS002_VerifyClickOnSeeDetailsBtnForProductTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T379: Products Actions: See Details
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		atlproddet = new ATLProductDetailsPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("searchexhwithlinesinput"));
+		atlgs.getATLSearchButton().click();
+
+		//Store the 1st Product name of Exhibitor
+		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
+		System.out.println("Selected Product Name: "+productNameOnSearchGrid);
+
+		//Hover on Product
+		Actions actions = new Actions(driver);
+		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
+		// To mouseover on See Details btn
+		actions.moveToElement(atlexhact.getSeeDetailsbtn());
+
+		//Click on See Details button
+		actions.click().perform();
+		Thread.sleep(5000);
+
+		//Store the Product Name on Product Details page
+		String productNameOnProductDetails = atlproddet.getProductNameOnProductDetails().getText();
+		System.out.println("Product Name On Product Details page: "+productNameOnProductDetails);
+
+		//Verify that selected Product details page should be opened
+		Assert.assertTrue(productNameOnSearchGrid.equals(productNameOnProductDetails));
+	}
+
+	@Test(priority = 3)
+	public void TS003_VerifyAddToNewListForProductDetailsTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T379: Products Actions: See Details
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		atlproddet = new ATLProductDetailsPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("searchexhwithlinesinput"));
+		atlgs.getATLSearchButton().click();
+
+		//Store the 1st Product name of Exhibitor
+		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
+		System.out.println("Selected Product Name: "+productNameOnSearchGrid);
+
+		// Hover on Product
+		Actions actions = new Actions(driver);
+		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
+		// To mouseover on See All btn
+		actions.moveToElement(atlexhact.getSeeDetailsbtn());
+
+		//Click On See Details button
+		actions.click().perform();
+		Thread.sleep(5000);
+
+		//Click on Add to List button
+		atlproddet.getAddToList().click();
+
+		utl.scrollToElement(atlmppge.getCreateNewListNameTxtbx());
+
+		// Enter new list name
+		String newlistname = "CybProduct" + genData.generateRandomString(3);
+		atlmppge.getCreateNewListNameTxtbx().sendKeys(newlistname);
+		System.out.println("Newly created list is: " + newlistname);
+
+		// Scroll till Create button
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",
+				atlmppge.getNewListModalCreateBtn());
+
+		// Click on Create button
+		atlmppge.getAddListCreateBtn().click();
+
+		// Click on Go to Market Planner button
+		atlmppge.getGoToMarketPlannerBtn().click();
+
+		// Click on Lists tab on MP home page
+		atlmppge.getMPHomeListsTab().click();
+		atlmppge.getListsPageListsMenu().click();
+
+		mplists = atlmppge.getATLMPListsNames();
+		mpeditlistoptns = atlmppge.getATLMPEditListOptns();
+
+		for (int i = 0; i < mplists.size(); i++) {
+			// System.out.println(mplists.get(i).getText());
+			// System.out.println(mpeditlistoptns.get(i).getText());
+			if (mplists.get(i).getText().equals(newlistname)) {
+				mpeditlistoptns.get(i).click();
+				break;
+			}
+		}
+		Thread.sleep(10000);
+		Assert.assertTrue(atlmppge.getSavedProductNameInList().getText().contains(productNameOnSearchGrid));
+		atlgs.getATLClearSearchBtn().click();
+	}
+
+	@Test(priority = 4)
+	public void TS004_VerifyAddToExistingListForProductDetailsTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T384: Products Actions: Product Details: + icon to add to existing list
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		utl = new Utility(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		atlproddet = new ATLProductDetailsPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("searchexhwithlinesinput"));
+		atlgs.getATLSearchButton().click();
+
+		//Store the 1st Product name of Exhibitor
+		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
+		System.out.println("Selected Product Name: "+productNameOnSearchGrid);
+
+		// Hovering on Product
+		Actions actions = new Actions(driver);
+		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
+		// To mouseover on See Details btn
+		actions.moveToElement(atlexhact.getSeeDetailsbtn());
+
+		//Click on See Details button
+		actions.click().perform();
+		Thread.sleep(5000);
+
+		//Click on Add to List button
+		atlproddet.getAddToList().click();
+
+		// Store the existing list name
+		String existinglistname = atlmppge.getATLMPExistingListName().getText();
+		System.out.println("Existing list name: " + existinglistname);
+
+		// Select Existing list name
+		atlmppge.getATLMPExistingListName().click();
+
+		// Scroll till Add to Selected button
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",
+				atlmppge.getATLMPAddToSelectedBtn());
+		atlmppge.getATLMPAddToSelectedBtn().click();
+
+		// Click on Go to Market Planner button
+		atlmppge.getGoToMarketPlannerBtn().click();
+
+		// Click on Lists tab on MP home page
+		atlmppge.getMPHomeListsTab().click();
+		atlmppge.getListsPageListsMenu().click();
+
+		mplists = atlmppge.getATLMPListsNames();
+		mpeditlistoptns = atlmppge.getATLMPEditListOptns();
+
+		for (int i = 0; i < mplists.size(); i++) {
+			// System.out.println(mplists.get(i).getText());
+			// System.out.println(mpeditlistoptns.get(i).getText());
+			if (mplists.get(i).getText().equals(existinglistname)) {
+				mpeditlistoptns.get(i).click();
+				break;
+			}
+		}
+		Thread.sleep(10000);
+		System.out.println("Saved Product Name in List:"+atlmppge.getSavedProductNameInList().getText());
+		Assert.assertTrue(atlmppge.getSavedProductNameInList().getText().contains(productNameOnSearchGrid));
+
+		// Delete that added Product from list
+		atlmppge.getATLEditListItemMoreBtn().click();
+		atlmppge.getATLEditListItemDeleteOptn().click();
+		Thread.sleep(8000);
+
+		favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
+
+		//Verify that the added Product should be removed from Existing list
+		for(int i=1; i< favlist.size(); i++)
+		{			
+			//System.out.println(favlist.get(i).getText());
+			Assert.assertFalse(favlist.get(i).getText().contains(productNameOnSearchGrid)); 
+		}
+		atlgs.getATLClearSearchBtn().click();
+	}
+	
+	/*
+	@AfterClass
+	public void tearDown()
+	{
+		driver.quit();
+	}
+	 */
+}
