@@ -5,15 +5,12 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -88,7 +85,6 @@ public class GlobalSearch_SuggestionList extends base {
 		}
 		Thread.sleep(8000);
 		Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
-		atlgs.getATLClearSearchBtn().click();
 	}
 
 	@Test(priority = 2)
@@ -101,26 +97,27 @@ public class GlobalSearch_SuggestionList extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
+		driver.get(prop.getProperty("atlmrkturl_uat"));
+		lap.getCloseMarktAdBtn().click();
+		
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestline")));
 
 		WebDriverWait wait = new WebDriverWait(driver, 30);
-		wait.until(ExpectedConditions
-				.visibilityOfAllElementsLocatedBy(By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li")));
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li")));
 
 		linelist = atlgs.getATLSearchResultsList();
 		//searchlinetypelist = atlgs.getATLSearchResultTypeLineList();
 
 		for (int i = 0; i < 10; i++) {
 			// System.out.println(list.get(i).getText());
-			if (linelist.get(i).getText().equals(prop.getProperty("autosuggestline"))
-					&& searchlinetypelist.get(i).getText().equals("Line")) {
+			if (linelist.get(i).getText().contains(prop.getProperty("autosuggestline"))
+					&& linelist.get(i).getText().contains("Line")) {
 				linelist.get(i).click();
 				break;
 			}
 		}
 		Thread.sleep(8000);
 		Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
-		atlgs.getATLClearSearchBtn().click();
 	}
 
 	@Test(priority = 3)
@@ -133,6 +130,9 @@ public class GlobalSearch_SuggestionList extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
+		driver.get(prop.getProperty("atlmrkturl_uat"));
+		lap.getCloseMarktAdBtn().click();
+		
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestproduct")));
 
 		WebDriverWait wait = new WebDriverWait(driver, 30);
@@ -151,7 +151,8 @@ public class GlobalSearch_SuggestionList extends base {
 		}
 		Thread.sleep(8000);
 		Assert.assertTrue(atlproddet.getATLValidateProdDetailsPage().isDisplayed());
-		atlgs.getATLClearSearchBtn().click();
+		driver.get(prop.getProperty("atlmrkturl_uat"));
+		lap.getCloseMarktAdBtn().click();
 	}
 	
 	@AfterClass

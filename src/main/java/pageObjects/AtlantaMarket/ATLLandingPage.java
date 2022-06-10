@@ -44,7 +44,7 @@ public class ATLLandingPage {
 		return driver.findElement(mpsignoutbtn);		
 	}	
 	public WebElement getCloseMarktAdBtn() throws InterruptedException{
-		Thread.sleep(6000);
+		Thread.sleep(7000);
 		return driver.findElement(closemrktadbtn);		
 	}
 }

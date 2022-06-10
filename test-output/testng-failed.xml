@@ -3,29 +3,6 @@
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-      <class name="atlantamarket.GlobalSearch_ExhibitorActions">
-        <methods>
-          <include name="TS003_VerifyAddToNewListForExhibitorTest"/>
-          <include name="TS010_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest"/>
-          <include name="TS009_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest"/>
-          <include name="TS011_VerifySelectionOfExhibitorFromSearchResultsTest"/>
-          <include name="initialize"/>
-          <include name="TS001_VerifyMarketPlannerLoginTest"/>
-          <include name="TS007_VerifyClickOnLinesShownLinkForExhibitorTest"/>
-          <include name="TS008_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest"/>
-          <include name="TS004_VerifyAddToExistingListForExhibitorTest"/>
-          <include name="TS002_VerifyAddToFavoriteForExhibitorTest"/>
-          <include name="tearDown"/>
-          <include name="TS005_VerifyClickOnContactExhIconForExhibitorTest"/>
-          <include name="TS006_VerifyClickOnLocationLinksForExhibitorTest"/>
-        </methods>
-      </class> <!-- atlantamarket.GlobalSearch_ExhibitorActions -->
-      <class name="atlantamarket.GlobalSearch_ProductActions">
-        <methods>
-          <include name="TS003_VerifyAddToNewListForProductDetailsTest"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- atlantamarket.GlobalSearch_ProductActions -->
       <class name="atlantamarket.GlobalSearch_LineActions">
         <methods>
           <include name="TS009_VerifyClickOnMatchingProductsSeeAllLinkForLineTest"/>
@@ -34,14 +11,6 @@
           <include name="initialize"/>
         </methods>
       </class> <!-- atlantamarket.GlobalSearch_LineActions -->
-      <class name="atlantamarket.GlobalSearch_SuggestionList">
-        <methods>
-          <include name="tearDown"/>
-          <include name="TS002_VerifySelectionOfLineFromAutoSuggestionListTest"/>
-          <include name="TS003_VerifySelectionOfProductFromAutoSuggestionListTest"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- atlantamarket.GlobalSearch_SuggestionList -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->

@@ -87,6 +87,7 @@ public class GlobalSearch_ProductActions extends base {
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		atlproddet = new ATLProductDetailsPage(driver);
+		lap = new ATLLandingPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
@@ -124,9 +125,13 @@ public class GlobalSearch_ProductActions extends base {
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		atlproddet = new ATLProductDetailsPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
+		lap = new ATLLandingPage(driver);
 		genData = new GenerateData();
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		driver.get(prop.getProperty("atlmrkturl_uat"));
+		lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("searchexhwithlinesinput"));
 		atlgs.getATLSearchButton().click();
@@ -182,7 +187,6 @@ public class GlobalSearch_ProductActions extends base {
 		}
 		Thread.sleep(10000);
 		Assert.assertTrue(atlmppge.getSavedProductNameInList().getText().contains(productNameOnSearchGrid));
-		atlgs.getATLClearSearchBtn().click();
 	}
 
 	@Test(priority = 4)
@@ -199,6 +203,9 @@ public class GlobalSearch_ProductActions extends base {
 		atlproddet = new ATLProductDetailsPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		driver.get(prop.getProperty("atlmrkturl_uat"));
+		lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("searchexhwithlinesinput"));
 		atlgs.getATLSearchButton().click();
@@ -267,7 +274,8 @@ public class GlobalSearch_ProductActions extends base {
 			//System.out.println(favlist.get(i).getText());
 			Assert.assertFalse(favlist.get(i).getText().contains(productNameOnSearchGrid)); 
 		}
-		atlgs.getATLClearSearchBtn().click();
+		driver.get(prop.getProperty("atlmrkturl_uat"));
+		lap.getCloseMarktAdBtn().click();
 	}
 	
 	/*

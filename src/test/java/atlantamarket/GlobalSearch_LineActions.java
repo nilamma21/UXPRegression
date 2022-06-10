@@ -87,6 +87,7 @@ public class GlobalSearch_LineActions extends base {
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
@@ -115,8 +116,6 @@ public class GlobalSearch_LineActions extends base {
 
 		// Close the pop-up
 		atlexhact.getPopUpCloseBtn().click();
-
-		atlgs.getATLClearSearchBtn().click();
 	}
 
 	@Test(priority = 3)
@@ -127,8 +126,12 @@ public class GlobalSearch_LineActions extends base {
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
+		lap = new ATLLandingPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		driver.get(prop.getProperty("atlmrkturl_uat"));
+		lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
 		atlgs.getATLSearchButton().click();
@@ -157,8 +160,6 @@ public class GlobalSearch_LineActions extends base {
 
 		// Verify that the added favorites exhibitor should be removed from Favorites list
 		Assert.assertFalse(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
-
-		atlgs.getATLClearSearchBtn().click();
 	}
 
 	@Test(priority = 4)
@@ -169,8 +170,12 @@ public class GlobalSearch_LineActions extends base {
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
-
+		lap = new ATLLandingPage(driver);
+		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		driver.get(prop.getProperty("atlmrkturl_uat"));
+		lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
 		atlgs.getATLSearchButton().click();
@@ -196,8 +201,6 @@ public class GlobalSearch_LineActions extends base {
 		driver.close();
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore);
-
-		atlgs.getATLClearSearchBtn().click();
 	}
 
 	@Test(priority = 5)
@@ -209,9 +212,13 @@ public class GlobalSearch_LineActions extends base {
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
 		genData = new GenerateData();
+		lap = new ATLLandingPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
+		driver.get(prop.getProperty("atlmrkturl_uat"));
+		lap.getCloseMarktAdBtn().click();
+		
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
 		atlgs.getATLSearchButton().click();
 		atlexhact.getseealllink().click();
@@ -247,7 +254,7 @@ public class GlobalSearch_LineActions extends base {
 		mpeditlistoptns = atlmppge.getATLMPEditListOptns();
 
 		for (int i = 0; i < mplists.size(); i++) {
-			System.out.println(mplists.get(i).getText());
+			//System.out.println(mplists.get(i).getText());
 			// System.out.println(mpeditlistoptns.get(i).getText());
 			if (mplists.get(i).getText().equals(newlistname)) {
 				mpeditlistoptns.get(i).click();
@@ -255,7 +262,6 @@ public class GlobalSearch_LineActions extends base {
 			}
 		}
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
-		atlgs.getATLClearSearchBtn().click();
 	}
 
 	@Test(priority = 6)
@@ -266,8 +272,12 @@ public class GlobalSearch_LineActions extends base {
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
+		lap = new ATLLandingPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		driver.get(prop.getProperty("atlmrkturl_uat"));
+		lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
 		atlgs.getATLSearchButton().click();
@@ -318,8 +328,6 @@ public class GlobalSearch_LineActions extends base {
 		atlmppge.getATLEditListItemMoreBtn().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(8000);
-
-		atlgs.getATLClearSearchBtn().click();
 	}
 
 	@Test(priority = 07)
@@ -335,6 +343,9 @@ public class GlobalSearch_LineActions extends base {
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
+		driver.get(prop.getProperty("atlmrkturl_uat"));
+		lap.getCloseMarktAdBtn().click();
+		
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
 		atlgs.getATLSearchButton().click();
 
@@ -359,7 +370,11 @@ public class GlobalSearch_LineActions extends base {
 		atlmppge = new ATLMarketPlannerPage(driver);
 		utl = new Utility(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		driver.get(prop.getProperty("atlmrkturl_uat"));
+		lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
 		atlgs.getATLSearchButton().click();
@@ -386,7 +401,11 @@ public class GlobalSearch_LineActions extends base {
 		atlmppge = new ATLMarketPlannerPage(driver);
 		utl = new Utility(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		driver.get(prop.getProperty("atlmrkturl_uat"));
+		lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
 		atlgs.getATLSearchButton().click();
@@ -429,7 +448,11 @@ public class GlobalSearch_LineActions extends base {
 		atlmppge = new ATLMarketPlannerPage(driver);
 		utl = new Utility(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		driver.get(prop.getProperty("atlmrkturl_uat"));
+		lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
 		atlgs.getATLSearchButton().click();
@@ -458,6 +481,9 @@ public class GlobalSearch_LineActions extends base {
 
 		// Verify Total Products count on Search grid should match with Products page
 		Assert.assertEquals(matchingprodcountonsearchgrid, matchingprodcountonprodpage);
+		
+		driver.get(prop.getProperty("atlmrkturl_uat"));
+		lap.getCloseMarktAdBtn().click();
 	}
 	
 	@AfterClass
