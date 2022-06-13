@@ -353,7 +353,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		// Verify that user should redirect to the Lines page
 		Assert.assertTrue(atlexhact.getValidateLinesPage().isDisplayed());
 
-		Thread.sleep(7000);
+		Thread.sleep(10000);
 		Assert.assertTrue(driver.getTitle().contains("{"+exhname+"} Lines"));
 	}
 
@@ -548,7 +548,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 
 		// Verify that Selected Exhibitor Digital Showroom page should be opened
 		Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
-		Thread.sleep(7000);
+		Thread.sleep(10000);
 		Assert.assertTrue(driver.getTitle().contains(""+exhname+" at Atlanta Market"));
 		Assert.assertTrue(atlexhdgshw.getExhibitorNameOnExhDirectImg().getText().contains(exhname));
 

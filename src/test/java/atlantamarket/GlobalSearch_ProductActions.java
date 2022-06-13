@@ -278,11 +278,10 @@ public class GlobalSearch_ProductActions extends base {
 		lap.getCloseMarktAdBtn().click();
 	}
 	
-	/*
 	@AfterClass
 	public void tearDown()
 	{
 		driver.quit();
 	}
-	 */
+	 
 }
