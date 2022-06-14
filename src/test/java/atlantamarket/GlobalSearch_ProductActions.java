@@ -129,7 +129,7 @@ public class GlobalSearch_ProductActions extends base {
 		genData = new GenerateData();
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
+
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 		lap.getCloseMarktAdBtn().click();
 
@@ -203,7 +203,7 @@ public class GlobalSearch_ProductActions extends base {
 		atlproddet = new ATLProductDetailsPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
+
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 		lap.getCloseMarktAdBtn().click();
 
@@ -277,11 +277,75 @@ public class GlobalSearch_ProductActions extends base {
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 		lap.getCloseMarktAdBtn().click();
 	}
-	
+
+	@Test(priority = 5)
+	public void TS005_VerifyAddToFavoriteOnProductDetailsPageTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T385: Add to Favorite functionality on Product Details page
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		utl = new Utility(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		atlproddet = new ATLProductDetailsPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		driver.get(prop.getProperty("atlmrkturl_uat"));
+		lap.getCloseMarktAdBtn().click();
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("searchexhwithlinesinput"));
+		atlgs.getATLSearchButton().click();
+
+		//Store the 1st Product name of Exhibitor
+		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
+		System.out.println("Selected Product Name: "+productNameOnSearchGrid);
+
+		// Hovering on Product
+		Actions actions = new Actions(driver);
+		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
+		// To mouseover on See Details btn
+		actions.moveToElement(atlexhact.getSeeDetailsbtn());
+
+		//Click on See Details button
+		actions.click().perform();
+		Thread.sleep(5000);
+
+		//Click on 'Favorite' icon
+		atlproddet.getProductAddToFavIcon().click();
+
+		// Click on Market Planner link
+		lap.getMPLinkText().click();
+
+		// Click on Lists tab on MP home page
+		atlmppge.getMPHomeListsTab().click();
+		atlmppge.getATLMPListsPageFavoritesMenu().click();
+
+		Thread.sleep(8000);
+		// Verify that the added favorites exhibitor should be displayed in to Favorites list
+		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(productNameOnSearchGrid));
+
+		// Delete that favorites exhibitor from list
+		atlmppge.getATLEditListItemMoreBtn().click();
+		atlmppge.getATLEditListItemDeleteOptn().click();
+		Thread.sleep(6000);
+
+		favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
+
+		//Verify that the added favorites exhibitor should be removed from Favorites list
+		for(int i=1; i< favlist.size(); i++)
+		{			
+			//System.out.println(favlist.get(i).getText());
+			Assert.assertFalse(favlist.get(i).getText().contains(productNameOnSearchGrid)); 
+		}
+	}
+
 	@AfterClass
 	public void tearDown()
 	{
 		driver.quit();
 	}
-	 
+
 }

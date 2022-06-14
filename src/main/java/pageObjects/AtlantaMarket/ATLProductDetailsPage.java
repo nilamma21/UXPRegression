@@ -22,6 +22,9 @@ public class ATLProductDetailsPage {
 	By allListNames = By.xpath("//li[@class='imc-market-planner-list-draggable-item']"); //Locator for All List Names
 	By addToSelectedBtn = By.xpath("//div[@class='imc-button--justify-right']/input[1]"); //Locator for Add to Selected Btn
 	By productNameFromList = By.xpath("(//div[@class='imc-saved-exhibitors__contentItems--item'])[1]/div[1]/div[1]/a[1]"); //Locator for product name from list
+	By productaddtofavicon = By.xpath("//label[@aria-label='Favorite']"); //Locator for Add To Favorite icon for Product on details page
+	
+	
 	
 	public ATLProductDetailsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -90,6 +93,11 @@ public class ATLProductDetailsPage {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productNameFromList));
 		return driver.findElement(productNameFromList);
+	}
+	public WebElement getProductAddToFavIcon() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(productaddtofavicon));
+		return driver.findElement(productaddtofavicon);
 	}
 }
 
