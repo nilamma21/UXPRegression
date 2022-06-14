@@ -3,37 +3,13 @@
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-      <class name="atlantamarket.GlobalSearch_ExhibitorActions">
-        <methods>
-          <include name="TS010_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest"/>
-          <include name="TS009_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest"/>
-          <include name="TS011_VerifySelectionOfExhibitorFromSearchResultsTest"/>
-          <include name="tearDown"/>
-          <include name="initialize"/>
-          <include name="TS007_VerifyClickOnLinesShownLinkForExhibitorTest"/>
-          <include name="TS008_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest"/>
-        </methods>
-      </class> <!-- atlantamarket.GlobalSearch_ExhibitorActions -->
       <class name="atlantamarket.GlobalSearch_ProductActions">
         <methods>
-          <include name="TS003_VerifyAddToNewListForProductDetailsTest"/>
           <include name="tearDown"/>
+          <include name="TS005_VerifyAddToFavoriteOnProductDetailsPageTest"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- atlantamarket.GlobalSearch_ProductActions -->
-      <class name="atlantamarket.GlobalSearch_LineActions">
-        <methods>
-          <include name="TS009_VerifyClickOnMatchingProductsSeeAllLinkForLineTest"/>
-          <include name="tearDown"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- atlantamarket.GlobalSearch_LineActions -->
-      <class name="atlantamarket.GlobalSearch_SuggestionList">
-        <methods>
-          <include name="tearDown"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- atlantamarket.GlobalSearch_SuggestionList -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->
