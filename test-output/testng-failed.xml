@@ -8,6 +8,7 @@
           <include name="TS003_VerifyAddToFavoriteForLineTest"/>
           <include name="tearDown"/>
           <include name="initialize"/>
+          <include name="TS008_VerifyAddToExistingListForProductActionTest"/>
         </methods>
       </class> <!-- atlantamarket.GlobalSearch_LineActions -->
     </classes>

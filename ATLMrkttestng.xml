@@ -13,8 +13,13 @@
 			<class name="atlantamarket.GlobalSearch_LineActions" /> -->
 			<class name="atlantamarket.GlobalSearch_ProductActions" />
 			<methods>
+
+			<include name="TS001_VerifyMarketPlannerLoginTest"/>
+			<include name="TS008_VerifyAddToExistingListForProductActionTest"/>
+
 			<!-- <include name="TS001_VerifyMarketPlannerLoginTest"/> -->
 			<include name="TS007_VerifyAddToFavoriteOnProductDetailsPageTest"/>
+
 			</methods>
 		</classes>
 	</test>
