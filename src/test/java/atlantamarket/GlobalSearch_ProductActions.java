@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -42,7 +43,8 @@ public class GlobalSearch_ProductActions extends base {
 	ATLExhLineProdActionsPage atlexhact;
 	ATLMarketPlannerPage atlmppge;
 
-	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns, allnoteslist,favlist, searchlinetypelist;
+	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns,
+			allnoteslist, favlist, searchlinetypelist;
 
 	@BeforeClass
 	public void initialize() throws IOException, InterruptedException {
@@ -76,7 +78,7 @@ public class GlobalSearch_ProductActions extends base {
 		lap.getCloseMarktAdBtn().click();
 
 		// Verify that Market Planner Home page should be displayed
-		Assert.assertTrue(lap.getMPLinkText().isDisplayed());	
+		Assert.assertTrue(lap.getMPLinkText().isDisplayed());
 	}
 
 	@Test(priority = 2)
@@ -94,25 +96,25 @@ public class GlobalSearch_ProductActions extends base {
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("searchexhwithlinesinput"));
 		atlgs.getATLSearchButton().click();
 
-		//Store the 1st Product name of Exhibitor
+		// Store the 1st Product name of Exhibitor
 		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
-		System.out.println("Selected Product Name: "+productNameOnSearchGrid);
+		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
 
-		//Hover on Product
+		// Hover on Product
 		Actions actions = new Actions(driver);
 		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
 		// To mouseover on See Details btn
 		actions.moveToElement(atlexhact.getSeeDetailsbtn());
 
-		//Click on See Details button
+		// Click on See Details button
 		actions.click().perform();
 		Thread.sleep(5000);
 
-		//Store the Product Name on Product Details page
+		// Store the Product Name on Product Details page
 		String productNameOnProductDetails = atlproddet.getProductNameOnProductDetails().getText();
-		System.out.println("Product Name On Product Details page: "+productNameOnProductDetails);
+		System.out.println("Product Name On Product Details page: " + productNameOnProductDetails);
 
-		//Verify that selected Product details page should be opened
+		// Verify that selected Product details page should be opened
 		Assert.assertTrue(productNameOnSearchGrid.equals(productNameOnProductDetails));
 	}
 
@@ -136,9 +138,9 @@ public class GlobalSearch_ProductActions extends base {
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("searchexhwithlinesinput"));
 		atlgs.getATLSearchButton().click();
 
-		//Store the 1st Product name of Exhibitor
+		// Store the 1st Product name of Exhibitor
 		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
-		System.out.println("Selected Product Name: "+productNameOnSearchGrid);
+		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
 
 		// Hover on Product
 		Actions actions = new Actions(driver);
@@ -146,11 +148,11 @@ public class GlobalSearch_ProductActions extends base {
 		// To mouseover on See All btn
 		actions.moveToElement(atlexhact.getSeeDetailsbtn());
 
-		//Click On See Details button
+		// Click On See Details button
 		actions.click().perform();
 		Thread.sleep(5000);
 
-		//Click on Add to List button
+		// Click on Add to List button
 		atlproddet.getAddToList().click();
 
 		utl.scrollToElement(atlmppge.getCreateNewListNameTxtbx());
@@ -210,9 +212,9 @@ public class GlobalSearch_ProductActions extends base {
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("searchexhwithlinesinput"));
 		atlgs.getATLSearchButton().click();
 
-		//Store the 1st Product name of Exhibitor
+		// Store the 1st Product name of Exhibitor
 		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
-		System.out.println("Selected Product Name: "+productNameOnSearchGrid);
+		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
 
 		// Hovering on Product
 		Actions actions = new Actions(driver);
@@ -220,11 +222,11 @@ public class GlobalSearch_ProductActions extends base {
 		// To mouseover on See Details btn
 		actions.moveToElement(atlexhact.getSeeDetailsbtn());
 
-		//Click on See Details button
+		// Click on See Details button
 		actions.click().perform();
 		Thread.sleep(5000);
 
-		//Click on Add to List button
+		// Click on Add to List button
 		atlproddet.getAddToList().click();
 
 		// Store the existing list name
@@ -258,7 +260,7 @@ public class GlobalSearch_ProductActions extends base {
 			}
 		}
 		Thread.sleep(10000);
-		System.out.println("Saved Product Name in List:"+atlmppge.getSavedProductNameInList().getText());
+		System.out.println("Saved Product Name in List:" + atlmppge.getSavedProductNameInList().getText());
 		Assert.assertTrue(atlmppge.getSavedProductNameInList().getText().contains(productNameOnSearchGrid));
 
 		// Delete that added Product from list
@@ -268,11 +270,10 @@ public class GlobalSearch_ProductActions extends base {
 
 		favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
 
-		//Verify that the added Product should be removed from Existing list
-		for(int i=1; i< favlist.size(); i++)
-		{			
-			//System.out.println(favlist.get(i).getText());
-			Assert.assertFalse(favlist.get(i).getText().contains(productNameOnSearchGrid)); 
+		// Verify that the added Product should be removed from Existing list
+		for (int i = 1; i < favlist.size(); i++) {
+			// System.out.println(favlist.get(i).getText());
+			Assert.assertFalse(favlist.get(i).getText().contains(productNameOnSearchGrid));
 		}
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 		lap.getCloseMarktAdBtn().click();
@@ -299,9 +300,9 @@ public class GlobalSearch_ProductActions extends base {
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("searchexhwithlinesinput"));
 		atlgs.getATLSearchButton().click();
 
-		//Store the 1st Product name of Exhibitor
+		// Store the 1st Product name of Exhibitor
 		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
-		System.out.println("Selected Product Name: "+productNameOnSearchGrid);
+		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
 
 		// Hovering on Product
 		Actions actions = new Actions(driver);
@@ -309,11 +310,11 @@ public class GlobalSearch_ProductActions extends base {
 		// To mouseover on See Details btn
 		actions.moveToElement(atlexhact.getSeeDetailsbtn());
 
-		//Click on See Details button
+		// Click on See Details button
 		actions.click().perform();
 		Thread.sleep(5000);
 
-		//Click on 'Favorite' icon
+		// Click on 'Favorite' icon
 		atlproddet.getProductAddToFavIcon().click();
 
 		// Click on Market Planner link
@@ -324,7 +325,8 @@ public class GlobalSearch_ProductActions extends base {
 		atlmppge.getATLMPListsPageFavoritesMenu().click();
 
 		Thread.sleep(8000);
-		// Verify that the added favorites exhibitor should be displayed in to Favorites list
+		// Verify that the added favorites exhibitor should be displayed in to Favorites
+		// list
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(productNameOnSearchGrid));
 
 		// Delete that favorites exhibitor from list
@@ -334,18 +336,172 @@ public class GlobalSearch_ProductActions extends base {
 
 		favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
 
-		//Verify that the added favorites exhibitor should be removed from Favorites list
-		for(int i=1; i< favlist.size(); i++)
-		{			
-			//System.out.println(favlist.get(i).getText());
-			Assert.assertFalse(favlist.get(i).getText().contains(productNameOnSearchGrid)); 
+		// Verify that the added favorites exhibitor should be removed from Favorites
+		// list
+		for (int i = 1; i < favlist.size(); i++) {
+			// System.out.println(favlist.get(i).getText());
+			Assert.assertFalse(favlist.get(i).getText().contains(productNameOnSearchGrid));
 		}
 	}
 
+	@Test(priority = 6)
+	public void TS006_VerifyAddNoteOnProductDetailsPageTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T386: Add Note functionality on Product Details page
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlproddet = new ATLProductDetailsPage(driver);
+		genData = new GenerateData();
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		driver.get(prop.getProperty("atlmrkturl_uat"));
+		lap.getCloseMarktAdBtn().click();
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLSearchButton().click();
+
+		// Store the 1st Exhibitor name in String variable
+		exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: " + exhname);
+
+		// Click on Matching Products-See All link for 1st Exhibitor
+		// atlexhact.getMatchingProdSeeAllLink().click();
+
+		// Hovering on Product
+		Actions actions = new Actions(driver);
+		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
+		// To mouseover on See Details btn
+		actions.moveToElement(atlexhact.getProdSeeDetailsBtn());
+		// Click on See Details button
+		actions.click().perform();
+
+		atlproddet.getProductAddNoteIcon().click();
+
+		// Store the new note name
+		String newnotetitle = "CybNote" + genData.generateRandomString(3);
+		System.out.println("Newly added Note is: " + newnotetitle);
+
+		// Enter Note title
+		atlexhact.getNoteTitleTxtBx().sendKeys(newnotetitle);
+		// Enter Note Content
+		atlexhact.getNoteContentTxtBx().sendKeys("TestNote" + genData.generateRandomString(6));
+		// Click on 'Save' button
+		atlexhact.getNoteSaveBtn().click();
+		Thread.sleep(5000);
+
+		// Click on 'Add Note' icon for the same exhibitor
+		atlproddet.getProductAddNoteIcon().click();
+		Thread.sleep(4000);
+
+		// Click on 'View all Notes for an Exhibitor' link on Add Notes pop-up
+		atlexhact.getViewAllNotesLink().click();
+		Thread.sleep(5000);
+
+		allnoteslist = atlexhact.getSavedNoteNameInAllNotesList();
+
+		// Verify that recently added note should be appear on 'All Notes For Exhibitor'
+		// modal
+		for (int i = 0; i < allnoteslist.size(); i++) {
+			//System.out.println(allnoteslist.get(i).getText());
+			if (allnoteslist.get(i).getText().equals(newnotetitle)) {
+				allnoteslist.get(i).click();
+				
+				break;
+			}
+		}
+
+		// Delete the saved note
+		atlexhact.getDeleteNoteBtn().click();
+
+	}
+
+	@Test(priority = 8)
+	public void TS008_VerifyAddToExistingListForProductActionTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T377: Products Actions: + icon to add to existing list
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		utl = new Utility(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		atlproddet = new ATLProductDetailsPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		driver.get(prop.getProperty("atlmrkturl_uat"));
+		lap.getCloseMarktAdBtn().click();
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("searchexhwithlinesinput"));
+		atlgs.getATLSearchButton().click();
+
+		// Store the 1st Product name of Exhibitor
+		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
+		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
+
+		// Click on Add to List button for 1st Exhibitor
+		atlexhact.getSearchResultMoreicon().click();
+		atlexhact.getAddToListOptn().click();
+
+		// Store the existing list name
+		String existinglistname = atlmppge.getATLMPExistingListName().getText();
+		System.out.println("Existing list name: " + existinglistname);
+
+		// Select Existing list name
+		atlmppge.getATLMPExistingListName().click();
+
+		// Scroll till Add to Selected button
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",
+				atlmppge.getATLMPAddToSelectedBtn());
+		atlmppge.getATLMPAddToSelectedBtn().click();
+
+		// Click on Go to Market Planner button
+		atlmppge.getGoToMarketPlannerBtn().click();
+
+		// Click on Lists tab on MP home page
+		atlmppge.getMPHomeListsTab().click();
+		//atlmppge.getListsPageListsMenu().click();
+		atlmppge.getListsPageListsMenu().click();
+
+		mplists = atlmppge.getATLMPListsNames();
+		mpeditlistoptns = atlmppge.getATLMPEditListOptns();
+
+		for (int i = 0; i < mplists.size(); i++) {
+			// System.out.println(mplists.get(i).getText());
+			// System.out.println(mpeditlistoptns.get(i).getText());
+			if (mplists.get(i).getText().equals(existinglistname)) {
+				mpeditlistoptns.get(i).click();
+				break;
+			}
+		}
+		Thread.sleep(10000);
+
+
+		// Delete that added Product from list
+		atlmppge.getATLEditListItemMoreBtn().click();
+		atlmppge.getATLEditListItemDeleteOptn().click();
+		Thread.sleep(8000);
+;
+
+		favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
+
+		// Verify that the added Product should be removed from Existing list
+		for (int i = 1; i < favlist.size(); i++) {
+			// System.out.println(favlist.get(i).getText());
+			Assert.assertFalse(favlist.get(i).getText().contains(productNameOnSearchGrid));
+		}
+		driver.get(prop.getProperty("atlmrkturl_uat"));
+		lap.getCloseMarktAdBtn().click();
+	}
+
+	
 	@AfterClass
-	public void tearDown()
-	{
-		driver.quit();
+	public void tearDown() {
+		 driver.quit();
 	}
 
 }

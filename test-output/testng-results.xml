@@ -1,63 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="2" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="222885" started-at="2022-06-14T12:26:37Z" finished-at="2022-06-14T12:30:20Z">
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="152347" started-at="2022-06-20T10:49:13Z" finished-at="2022-06-20T10:51:46Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="222885" started-at="2022-06-14T12:26:37Z" finished-at="2022-06-14T12:30:20Z">
+    <test name="RegressionTest" duration-ms="152347" started-at="2022-06-20T10:49:13Z" finished-at="2022-06-20T10:51:46Z">
       <class name="atlantamarket.GlobalSearch_ProductActions">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket.GlobalSearch_ProductActions@ae45eb6]" name="initialize" is-config="true" duration-ms="71032" started-at="2022-06-14T17:56:37Z" finished-at="2022-06-14T17:57:48Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket.GlobalSearch_ProductActions@59f99ea]" name="initialize" is-config="true" duration-ms="45961" started-at="2022-06-20T16:19:13Z" finished-at="2022-06-20T16:19:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:atlantamarket.GlobalSearch_ProductActions@ae45eb6]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="64470" started-at="2022-06-14T17:57:48Z" finished-at="2022-06-14T17:58:52Z">
+        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:atlantamarket.GlobalSearch_ProductActions@59f99ea]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="31665" started-at="2022-06-20T16:19:59Z" finished-at="2022-06-20T16:20:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS001_VerifyMarketPlannerLoginTest -->
-        <test-method status="FAIL" signature="TS005_VerifyAddToFavoriteOnProductDetailsPageTest()[pri:0, instance:atlantamarket.GlobalSearch_ProductActions@ae45eb6]" name="TS005_VerifyAddToFavoriteOnProductDetailsPageTest" duration-ms="74826" started-at="2022-06-14T17:58:52Z" finished-at="2022-06-14T18:00:07Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at org.testng.Assert.assertTrue(Assert.java:52)
-	at atlantamarket.GlobalSearch_ProductActions.TS005_VerifyAddToFavoriteOnProductDetailsPageTest(GlobalSearch_ProductActions.java:328)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="TS008_VerifyAddToExistingListForProductActionTest()[pri:0, instance:atlantamarket.GlobalSearch_ProductActions@59f99ea]" name="TS008_VerifyAddToExistingListForProductActionTest" duration-ms="72951" started-at="2022-06-20T16:20:31Z" finished-at="2022-06-20T16:21:44Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS005_VerifyAddToFavoriteOnProductDetailsPageTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket.GlobalSearch_ProductActions@ae45eb6]" name="tearDown" is-config="true" duration-ms="12001" started-at="2022-06-14T18:00:08Z" finished-at="2022-06-14T18:00:20Z">
+        </test-method> <!-- TS008_VerifyAddToExistingListForProductActionTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket.GlobalSearch_ProductActions@59f99ea]" name="tearDown" is-config="true" duration-ms="1669" started-at="2022-06-20T16:21:44Z" finished-at="2022-06-20T16:21:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
