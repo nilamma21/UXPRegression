@@ -80,9 +80,9 @@ public class GlobalSearch_ProductActions extends base {
 	}
 
 	@Test(priority = 2)
-	public void TS002_VerifyClickOnSeeDetailsBtnForProductTest() throws InterruptedException, IOException {
+	public void TS002_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// T379: Products Actions: See Details
+		// T379: See Details functionality on Search Results grid
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
@@ -117,9 +117,9 @@ public class GlobalSearch_ProductActions extends base {
 	}
 
 	@Test(priority = 3)
-	public void TS003_VerifyAddToNewListForProductDetailsTest() throws InterruptedException, IOException {
+	public void TS003_VerifyProductAddToNewListOnProductDetailsPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// T379: Products Actions: See Details
+		// T435: Add to Newly created list functionality on Product details page
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
@@ -190,9 +190,9 @@ public class GlobalSearch_ProductActions extends base {
 	}
 
 	@Test(priority = 4)
-	public void TS004_VerifyAddToExistingListForProductDetailsTest() throws InterruptedException, IOException {
+	public void TS004_VerifyProductAddToExistingListOnProductDetailsPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// T384: Products Actions: Product Details: + icon to add to existing list
+		// T384: Add to existing list functionality on Product details page
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
@@ -342,6 +342,55 @@ public class GlobalSearch_ProductActions extends base {
 		}
 	}
 
+	@Test(priority = 7)
+	public void TS007_VerifyFullScreenViewerOnProductDetailsPageTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T387: Full Screen Viewer functionality on Product Details page
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		utl = new Utility(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		atlproddet = new ATLProductDetailsPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		driver.get(prop.getProperty("atlmrkturl_uat"));
+		lap.getCloseMarktAdBtn().click();
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("searchexhwithlinesinput"));
+		atlgs.getATLSearchButton().click();
+
+		//Store the 1st Product name of Exhibitor
+		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
+		System.out.println("Selected Product Name: "+productNameOnSearchGrid);
+
+		// Hovering on Product
+		Actions actions = new Actions(driver);
+		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
+		// To mouseover on See Details btn
+		actions.moveToElement(atlexhact.getSeeDetailsbtn());
+
+		//Click on See Details button
+		actions.click().perform();
+		Thread.sleep(5000);
+	
+		//Click on Product Full Screen Viewer button
+		atlproddet.getProductFullScreenViewerBtn().click();
+		
+		//Verify that Full Screen viewer should be displayed with Product images
+		Assert.assertTrue(atlproddet.getProductFullScreenViewer().isDisplayed());
+		
+		//Verify the title of the Full screen viewer
+		Assert.assertTrue(atlproddet.getProductFullScreenViewerTitle().getText().equals(productNameOnSearchGrid));
+		
+		//Dismiss the Full Screen Viewer
+		atlproddet.getProductFullScreenViewer().click();
+	}
+	
+	
 	@AfterClass
 	public void tearDown()
 	{
