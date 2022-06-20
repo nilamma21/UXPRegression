@@ -322,19 +322,19 @@ public class GlobalSearch_ProductActions extends base {
 		// Click on Lists tab on MP home page
 		atlmppge.getMPHomeListsTab().click();
 		atlmppge.getATLMPListsPageFavoritesMenu().click();
-
 		Thread.sleep(8000);
-		// Verify that the added favorites exhibitor should be displayed in to Favorites list
-		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(productNameOnSearchGrid));
+		
+		// Verify that the added Product should be displayed in to Favorites list
+		Assert.assertTrue(atlmppge.getSavedProductNameInList().getText().contains(productNameOnSearchGrid));
 
-		// Delete that favorites exhibitor from list
+		// Delete that favorited product from list
 		atlmppge.getATLEditListItemMoreBtn().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(6000);
 
 		favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
 
-		//Verify that the added favorites exhibitor should be removed from Favorites list
+		//Verify that the added product should be removed from Favorites list
 		for(int i=1; i< favlist.size(); i++)
 		{			
 			//System.out.println(favlist.get(i).getText());
@@ -376,21 +376,76 @@ public class GlobalSearch_ProductActions extends base {
 		//Click on See Details button
 		actions.click().perform();
 		Thread.sleep(5000);
-	
+
 		//Click on Product Full Screen Viewer button
 		atlproddet.getProductFullScreenViewerBtn().click();
-		
+
 		//Verify that Full Screen viewer should be displayed with Product images
 		Assert.assertTrue(atlproddet.getProductFullScreenViewer().isDisplayed());
-		
+
 		//Verify the title of the Full screen viewer
 		Assert.assertTrue(atlproddet.getProductFullScreenViewerTitle().getText().equals(productNameOnSearchGrid));
-		
+
 		//Dismiss the Full Screen Viewer
 		atlproddet.getProductFullScreenViewer().click();
 	}
-	
-	
+
+	@Test(priority = 8)
+	public void TS008_VerifyAddToFavoriteOnSearchResultsGridTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T378: Add To Favorite functionality for Product on Search Results grid
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		atlproddet = new ATLProductDetailsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("searchexhwithlinesinput"));
+		atlgs.getATLSearchButton().click();
+
+		//Store the 1st Product name of Exhibitor
+		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
+		System.out.println("Selected Product Name: "+productNameOnSearchGrid);
+
+		// Hovering on Product
+		Actions actions = new Actions(driver);
+		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
+		// To mouseover on Add to Fav btn
+		actions.moveToElement(atlexhact.getProductAddToFavBtnOnSearchGrid());
+
+		//Click on Add To Favorite button
+		actions.click().perform();
+		Thread.sleep(5000);
+
+		// Click on Market Planner link
+		lap.getMPLinkText().click();
+
+		// Click on Lists tab on MP home page
+		atlmppge.getMPHomeListsTab().click();
+		atlmppge.getATLMPListsPageFavoritesMenu().click();
+		Thread.sleep(8000);
+		
+		// Verify that the added product should be displayed in to Favorites list
+		Assert.assertTrue(atlmppge.getSavedProductNameInList().getText().contains(productNameOnSearchGrid));
+
+		// Delete that favorited product from list
+		atlmppge.getATLEditListItemMoreBtn().click();
+		atlmppge.getATLEditListItemDeleteOptn().click();
+		Thread.sleep(6000);
+
+		favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
+
+		//Verify that the added product should be removed from Favorites list
+		for(int i=1; i< favlist.size(); i++)
+		{			
+			//System.out.println(favlist.get(i).getText());
+			Assert.assertFalse(favlist.get(i).getText().contains(productNameOnSearchGrid)); 
+		}
+	}
+
 	@AfterClass
 	public void tearDown()
 	{
