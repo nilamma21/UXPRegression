@@ -3,13 +3,13 @@
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-      <class name="atlantamarket.GlobalSearch_ProductActions">
+      <class name="atlantamarket.GlobalSearch_LineActions">
         <methods>
+          <include name="TS003_VerifyAddToFavoriteForLineTest"/>
           <include name="tearDown"/>
-          <include name="TS005_VerifyAddToFavoriteOnProductDetailsPageTest"/>
           <include name="initialize"/>
         </methods>
-      </class> <!-- atlantamarket.GlobalSearch_ProductActions -->
+      </class> <!-- atlantamarket.GlobalSearch_LineActions -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->

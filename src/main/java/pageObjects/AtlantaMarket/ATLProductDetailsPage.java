@@ -23,7 +23,9 @@ public class ATLProductDetailsPage {
 	By addToSelectedBtn = By.xpath("//div[@class='imc-button--justify-right']/input[1]"); //Locator for Add to Selected Btn
 	By productNameFromList = By.xpath("(//div[@class='imc-saved-exhibitors__contentItems--item'])[1]/div[1]/div[1]/a[1]"); //Locator for product name from list
 	By productaddtofavicon = By.xpath("//label[@aria-label='Favorite']"); //Locator for Add To Favorite icon for Product on details page
-	
+	By productfullscreenviewerbtn = By.xpath("//div[@class='imc-product-details--gallery--image-fullscreen']"); //Locator for Product Full Screen Viewer btn
+	By productfullscreenviewer = By.xpath("//div[@class='imc-modal--gallery--section']"); //Locator for Product Full Screen Viewer
+	By prodfullscreenviewertitle = By.xpath("//div[@class='imc-modal--gallery--section']/h2"); //Locator for Product Full Screen Viewer title
 	
 	
 	public ATLProductDetailsPage(WebDriver driver) {
@@ -98,6 +100,19 @@ public class ATLProductDetailsPage {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productaddtofavicon));
 		return driver.findElement(productaddtofavicon);
+	}
+	public WebElement getProductFullScreenViewerBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(productfullscreenviewerbtn));
+		return driver.findElement(productfullscreenviewerbtn);
+	}
+	public WebElement getProductFullScreenViewer() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(productfullscreenviewer));
+		return driver.findElement(productfullscreenviewer);
+	}
+	public WebElement getProductFullScreenViewerTitle() {
+		return driver.findElement(prodfullscreenviewertitle);
 	}
 }
 
