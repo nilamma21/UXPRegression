@@ -455,8 +455,7 @@ public class GlobalSearch_ProductActions extends base {
 		atlmppge.getATLMPExistingListName().click();
 
 		// Scroll till Add to Selected button
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",
-				atlmppge.getATLMPAddToSelectedBtn());
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",atlmppge.getATLMPAddToSelectedBtn());
 		atlmppge.getATLMPAddToSelectedBtn().click();
 
 		// Click on Go to Market Planner button
@@ -485,7 +484,7 @@ public class GlobalSearch_ProductActions extends base {
 		atlmppge.getATLEditListItemMoreBtn().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(8000);
-;
+
 
 		favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
 
