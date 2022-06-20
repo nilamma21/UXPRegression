@@ -29,7 +29,7 @@ public class ATLMarketPlannerPage {
 	By atlmpexistinglistname = By.xpath("//form/div[4]/div[1]/label"); //Locator for existing list name
 	By atladdtoseselectedbtn = By.xpath("//input[@data-xpath='quickAdd.saveList']"); //Locator for Add to Selected button
 	By listspagefavoritesmenu = By.xpath("//div[@class='imc-vertical-tabs-nav']/div[contains(text(),'Favorites')]"); //Locator for Favorites left menu
-	By addlistcreatebtn = By.xpath("//input[@value='Create']"); //Locator for Create button on Add List modal
+	By addlistcreatebtn = By.xpath("(//input[@type='submit'])[position()=3]"); //Locator for Create button on Add List modal
 	By savedproductnameinlist = By.xpath("//li[@class='imc-list-edit--draggable'][1]/div/div[3]/div/div/div/div/a"); //Locator for Saved Product Name in List
 			
 	public ATLMarketPlannerPage(WebDriver driver) {

@@ -25,6 +25,7 @@ public class ATLProductDetailsPage {
 	By addToSelectedBtn = By.xpath("//div[@class='imc-button--justify-right']/input[1]"); //Locator for Add to Selected Btn
 	By productNameFromList = By.xpath("(//div[@class='imc-saved-exhibitors__contentItems--item'])[1]/div[1]/div[1]/a[1]"); //Locator for product name from list
 	By productaddtofavicon = By.xpath("//label[@aria-label='Favorite']"); //Locator for Add To Favorite icon for Product on details page
+
 	By productAddNote = By.xpath("//div[@class='imc-addnote imc-expand-collapse']/div/button/label[1]"); //Locator for Add Note icon for Product on details page
 	By addNotePopup = By.xpath("//div[@class='imc-addnote imc-expand-collapse']/div/button/label[1]"); //Locator for Add Note Popup 
 	By addNoteTitleTextbox = By.xpath("(//div[@class='imc-formfield imc-content imc-addnote-modal__text-area imc-type--title-5-link'])[1]/input[1]"); //Locator for Add Note Text box
@@ -34,6 +35,12 @@ public class ATLProductDetailsPage {
 	By viewAllNotesPopupHeader= By.xpath("//div[@class='ReactModal__Content ReactModal__Content--after-open imc-modal--box imc-addnote-modal']/div[1]/div[1]/div[1]/h4[1]"); //Locator for View All Notes Header
 	By allNotesList= By.xpath("//ul[@class='imc-market-planner-list imc-addnote-modal__list']/li"); //Locator for All Notes
 	By verifyNoteTitle= By.xpath("//div[@class='imc-addnote-modal__padded-top-bottom']/h5[1]"); //Locator for note title
+
+	By productfullscreenviewerbtn = By.xpath("//div[@class='imc-product-details--gallery--image-fullscreen']"); //Locator for Product Full Screen Viewer btn
+	By productfullscreenviewer = By.xpath("//div[@class='imc-modal--gallery--section']"); //Locator for Product Full Screen Viewer
+	By prodfullscreenviewertitle = By.xpath("//div[@class='imc-modal--gallery--section']/h2"); //Locator for Product Full Screen Viewer title
+	
+
 	
 	public ATLProductDetailsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -108,6 +115,7 @@ public class ATLProductDetailsPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productaddtofavicon));
 		return driver.findElement(productaddtofavicon);
 	}
+
 	public WebElement getProductAddNoteIcon() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productAddNote));
@@ -155,6 +163,21 @@ public class ATLProductDetailsPage {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(verifyNoteTitle));
 			return driver.findElement(verifyNoteTitle);
 		}
+
+	public WebElement getProductFullScreenViewerBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(productfullscreenviewerbtn));
+		return driver.findElement(productfullscreenviewerbtn);
+	}
+	public WebElement getProductFullScreenViewer() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(productfullscreenviewer));
+		return driver.findElement(productfullscreenviewer);
+	}
+	public WebElement getProductFullScreenViewerTitle() {
+		return driver.findElement(prodfullscreenviewertitle);
+	}
+
 }
 
 

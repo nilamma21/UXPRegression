@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
@@ -20,6 +21,25 @@
           </reporter-output>
         </test-method> <!-- TS008_VerifyAddToExistingListForProductActionTest -->
         <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket.GlobalSearch_ProductActions@59f99ea]" name="tearDown" is-config="true" duration-ms="1669" started-at="2022-06-20T16:21:44Z" finished-at="2022-06-20T16:21:46Z">
+
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="112927" started-at="2022-06-17T12:42:52Z" finished-at="2022-06-17T12:44:45Z">
+    <groups>
+    </groups>
+    <test name="RegressionTest" duration-ms="112927" started-at="2022-06-17T12:42:52Z" finished-at="2022-06-17T12:44:45Z">
+      <class name="atlantamarket.GlobalSearch_ProductActions">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket.GlobalSearch_ProductActions@ae45eb6]" name="initialize" is-config="true" duration-ms="63518" started-at="2022-06-17T18:12:52Z" finished-at="2022-06-17T18:13:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS007_VerifyAddToFavoriteOnProductDetailsPageTest()[pri:0, instance:atlantamarket.GlobalSearch_ProductActions@ae45eb6]" name="TS007_VerifyAddToFavoriteOnProductDetailsPageTest" duration-ms="42322" started-at="2022-06-17T18:13:55Z" finished-at="2022-06-17T18:14:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifyAddToFavoriteOnProductDetailsPageTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket.GlobalSearch_ProductActions@ae45eb6]" name="tearDown" is-config="true" duration-ms="7016" started-at="2022-06-17T18:14:38Z" finished-at="2022-06-17T18:14:45Z">
+
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
