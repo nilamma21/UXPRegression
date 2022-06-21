@@ -44,7 +44,6 @@ public class ATLExhLineProdActionsPage extends base{
 	By noteforanexhibitormodal = By.xpath("//h4[contains(text(),'Note For exhibitor')]"); //Locator for Note for an Exhibitor modal
 	By deletenotebtn = By.xpath("//a[@href='#delete']"); //Locator for Delete note button
 	By orderOnJuniperMarketBtn = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[2]/a[1]"); //Locator for Order On Juniper Market Btn
-
 	By exhibitorNameLink = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/p[1]/a[1]"); //Locator for Order On Juniper Market Btn
 	By lineLocationLink = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/a[1]"); //Locator for Location
 	By seealllink = By.xpath("//div[@class = 'imc-exhibitorcard--text-container-row']/a[1]"); //Locator for Sell All link for exhibitors to find LInes
@@ -53,8 +52,8 @@ public class ATLExhLineProdActionsPage extends base{
 	By exhibitorProdcut = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]"); //Locator for product
 	By exhproductnameonsearchgrid = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/p[1]"); //Locator for productName
 	By productaddtofavbtn = By.xpath("(//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div[2]/div/div/div/div/div/div[2]/div/div/span/div/button)[1]"); //Locator for Add to Favorite button for Product on Search Results grid
-	
-	
+	By seeDetailsBtn = By.xpath("(//div[@class='imc-gallery imc-gallery--80-20 imc-exhibitorcard--gallery-nowrap'])[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/a[1]"); //Locator for See Details button
+
 	
 	public ATLExhLineProdActionsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -226,6 +225,11 @@ public class ATLExhLineProdActionsPage extends base{
 		return driver.findElement(productaddtofavbtn);
 	}
 
+	public WebElement getProdSeeDetailsBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(seeDetailsBtn));
+		return driver.findElement(seeDetailsBtn);
+	}
 }
 
 

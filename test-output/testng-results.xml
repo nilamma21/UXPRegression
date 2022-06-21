@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <testng-results skipped="0" failed="1" total="2" passed="1">
+
+
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="152347" started-at="2022-06-20T10:49:13Z" finished-at="2022-06-20T10:51:46Z">
+    <groups>
+    </groups>
+    <test name="RegressionTest" duration-ms="152347" started-at="2022-06-20T10:49:13Z" finished-at="2022-06-20T10:51:46Z">
+      <class name="atlantamarket.GlobalSearch_ProductActions">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket.GlobalSearch_ProductActions@59f99ea]" name="initialize" is-config="true" duration-ms="45961" started-at="2022-06-20T16:19:13Z" finished-at="2022-06-20T16:19:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:atlantamarket.GlobalSearch_ProductActions@59f99ea]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="31665" started-at="2022-06-20T16:19:59Z" finished-at="2022-06-20T16:20:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifyMarketPlannerLoginTest -->
+        <test-method status="PASS" signature="TS008_VerifyAddToExistingListForProductActionTest()[pri:0, instance:atlantamarket.GlobalSearch_ProductActions@59f99ea]" name="TS008_VerifyAddToExistingListForProductActionTest" duration-ms="72951" started-at="2022-06-20T16:20:31Z" finished-at="2022-06-20T16:21:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS008_VerifyAddToExistingListForProductActionTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket.GlobalSearch_ProductActions@59f99ea]" name="tearDown" is-config="true" duration-ms="1669" started-at="2022-06-20T16:21:44Z" finished-at="2022-06-20T16:21:46Z">
+
+<testng-results skipped="0" failed="0" total="1" passed="1">
+
   <reporter-output>
   </reporter-output>
   <suite name="ATLMrkt_RegressionTestSuite" duration-ms="163184" started-at="2022-06-20T10:27:20Z" finished-at="2022-06-20T10:30:03Z">
@@ -14,6 +41,7 @@
         <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:atlantamarket.GlobalSearch_ProductActions@ae45eb6]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="56875" started-at="2022-06-20T15:58:21Z" finished-at="2022-06-20T15:59:18Z">
           <reporter-output>
           </reporter-output>
+
         </test-method> <!-- TS001_VerifyMarketPlannerLoginTest -->
         <test-method status="FAIL" signature="TS008_VerifyAddToFavoriteOnSearchResultsGridTest()[pri:0, instance:atlantamarket.GlobalSearch_ProductActions@ae45eb6]" name="TS008_VerifyAddToFavoriteOnSearchResultsGridTest" duration-ms="37186" started-at="2022-06-20T15:59:18Z" finished-at="2022-06-20T15:59:55Z">
           <exception class="java.lang.AssertionError">
@@ -58,6 +86,11 @@
           </reporter-output>
         </test-method> <!-- TS008_VerifyAddToFavoriteOnSearchResultsGridTest -->
         <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket.GlobalSearch_ProductActions@ae45eb6]" name="tearDown" is-config="true" duration-ms="7816" started-at="2022-06-20T15:59:56Z" finished-at="2022-06-20T16:00:03Z">
+
+        </test-method> <!-- TS007_VerifyAddToFavoriteOnProductDetailsPageTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket.GlobalSearch_ProductActions@ae45eb6]" name="tearDown" is-config="true" duration-ms="7016" started-at="2022-06-17T18:14:38Z" finished-at="2022-06-17T18:14:45Z">
+
+
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
