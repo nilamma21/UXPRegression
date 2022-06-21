@@ -416,8 +416,8 @@ public class GlobalSearch_ProductActions extends base {
 		atlexhact.getDeleteNoteBtn().click();
 	}
 
-	@Test(priority = 7)
-	public void TS007_VerifyAddToExistingListForProductActionTest() throws InterruptedException, IOException {
+	@Test(priority = 8)
+	public void TS008_VerifyProductAddToExistingListOnSearchResultsGridTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T377: Products Actions: + icon to add to existing list
 
@@ -493,8 +493,8 @@ public class GlobalSearch_ProductActions extends base {
 		lap.getCloseMarktAdBtn().click();
 	}
 
-	@Test(priority = 8)
-	public void TS008_VerifyFullScreenViewerOnProductDetailsPageTest() throws InterruptedException, IOException {
+	@Test(priority = 7)
+	public void TS007_VerifyFullScreenViewerOnProductDetailsPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T387: Full Screen Viewer functionality on Product Details page
 
