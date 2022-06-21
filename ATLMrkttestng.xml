@@ -10,11 +10,12 @@
 		<classes>
 			<!-- <class name="atlantamarket.GlobalSearch_SuggestionList" />
 			<class name="atlantamarket.GlobalSearch_ExhibitorActions" />
-			<class name="atlantamarket.GlobalSearch_LineActions" /> -->
-			<class name="atlantamarket.GlobalSearch_ProductActions" />
+			<class name="atlantamarket.GlobalSearch_LineActions" /> 
+			<class name="atlantamarket.GlobalSearch_ProductActions" />-->
+			<class name="atlantamarket.FloorPlans" />
 			<methods>
-				<include name="TS001_VerifyMarketPlannerLoginTest" />
-				<include name="TS010_VerifyProductActionsIconToAddToNewlyCreatedListTest" />
+				<!-- <include name="TS001_VerifyMarketPlannerLoginTest" /> -->
+				<include name="TS002_VerifyFloorPlansNavigationToDifferentFloorBuildingsTest" />
 			</methods>
 		</classes>
 	</test>
