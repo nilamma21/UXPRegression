@@ -596,6 +596,70 @@ public class GlobalSearch_ProductActions extends base {
 			Assert.assertFalse(favlist.get(i).getText().contains(productNameOnSearchGrid)); 
 		}
 	}
+	@Test(priority = 10)
+	public void TS010_VerifyProductActionsIconToAddToNewlyCreatedListTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T435: Add to Newly created list functionality on Product details page
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		atlproddet = new ATLProductDetailsPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		lap = new ATLLandingPage(driver);
+		genData = new GenerateData();
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		driver.get(prop.getProperty("atlmrkturl_uat"));
+		lap.getCloseMarktAdBtn().click();
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("searchexhwithlinesinput"));
+		atlgs.getATLSearchButton().click();
+
+		// Store the 1st Product name of Exhibitor
+		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
+		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
+
+		// Click on Add to List button for 1st Exhibitor
+				atlexhact.getSearchResultMoreicon().click();
+				atlexhact.getAddToListOptn().click();
+
+				utl.scrollToElement(atlmppge.getCreateNewListNameTxtbx());
+
+		// Enter new list name
+		String newlistname = "CybProduct" + genData.generateRandomString(3);
+		atlmppge.getCreateNewListNameTxtbx().sendKeys(newlistname);
+		System.out.println("Newly created list is: " + newlistname);
+
+		// Scroll till Create button
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",
+				atlmppge.getNewListModalCreateBtn());
+
+		// Click on Create button
+		atlmppge.getNewListModalCreateBtn().click();
+
+		// Click on Go to Market Planner button
+		atlmppge.getGoToMarketPlannerBtn().click();
+
+		// Click on Lists tab on MP home page
+		atlmppge.getMPHomeListsTab().click();
+		atlmppge.getListsPageListsMenu().click();
+
+		mplists = atlmppge.getATLMPListsNames();
+		mpeditlistoptns = atlmppge.getATLMPEditListOptns();
+
+		for (int i = 0; i < mplists.size(); i++) {
+			// System.out.println(mplists.get(i).getText());
+			// System.out.println(mpeditlistoptns.get(i).getText());
+			if (mplists.get(i).getText().equals(newlistname)) {
+				mpeditlistoptns.get(i).click();
+				break;
+			}
+		}
+		Thread.sleep(10000);
+		//System.out.println(atlmppge.getNewCreatedListName().getText());
+		Assert.assertTrue(atlmppge.getNewCreatedListName().getText().contains(newlistname));
+	}
 
 	@AfterClass
 	public void tearDown() {
