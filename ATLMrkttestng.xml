@@ -14,7 +14,7 @@
 			<class name="atlantamarket.GlobalSearch_ProductActions" />
 			<methods>
 				<include name="TS001_VerifyMarketPlannerLoginTest" />
-				<include name="TS008_VerifyAddToFavoriteOnSearchResultsGridTest" />
+				<include name="TS010_VerifyProductActionsIconToAddToNewlyCreatedListTest" />
 			</methods>
 		</classes>
 	</test>
