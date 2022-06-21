@@ -275,8 +275,6 @@ public class GlobalSearch_ProductActions extends base {
 			// System.out.println(favlist.get(i).getText());
 			Assert.assertFalse(favlist.get(i).getText().contains(productNameOnSearchGrid));
 		}
-		driver.get(prop.getProperty("atlmrkturl_uat"));
-		lap.getCloseMarktAdBtn().click();
 	}
 
 	@Test(priority = 5)
@@ -489,8 +487,6 @@ public class GlobalSearch_ProductActions extends base {
 			// System.out.println(favlist.get(i).getText());
 			Assert.assertFalse(favlist.get(i).getText().contains(productNameOnSearchGrid));
 		}
-		driver.get(prop.getProperty("atlmrkturl_uat"));
-		lap.getCloseMarktAdBtn().click();
 	}
 
 	@Test(priority = 7)
@@ -555,6 +551,9 @@ public class GlobalSearch_ProductActions extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
+		driver.get(prop.getProperty("atlmrkturl_uat"));
+		lap.getCloseMarktAdBtn().click();
+		
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("searchexhwithlinesinput"));
 		atlgs.getATLSearchButton().click();
 
@@ -602,5 +601,4 @@ public class GlobalSearch_ProductActions extends base {
 	public void tearDown() {
 		 driver.quit();
 	}
-
 }
