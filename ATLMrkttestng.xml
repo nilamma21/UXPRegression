@@ -8,10 +8,14 @@
 
 	<test thread-count="4" name="RegressionTest">
 		<classes>
-			<class name="atlantamarket.GlobalSearch_SuggestionList" /> 
- 			<class name="atlantamarket.GlobalSearch_ExhibitorActions" />
-			<class name="atlantamarket.GlobalSearch_LineActions" />
+			<!-- <class name="atlantamarket.GlobalSearch_SuggestionList" />
+			<class name="atlantamarket.GlobalSearch_ExhibitorActions" />
+			<class name="atlantamarket.GlobalSearch_LineActions" /> -->
 			<class name="atlantamarket.GlobalSearch_ProductActions" />
+			<methods>
+				<include name="TS001_VerifyMarketPlannerLoginTest" />
+				<include name="TS008_VerifyAddToFavoriteOnSearchResultsGridTest" />
+			</methods>
 		</classes>
 	</test>
 </suite>
