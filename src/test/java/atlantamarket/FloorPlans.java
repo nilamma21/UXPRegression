@@ -112,7 +112,7 @@ public class FloorPlans extends base {
 	@Test(priority = 3)
 	public void TS003_VerifyFloorPlansNoExhibitorsLoadingMessageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// UXP-T285: To verify Floor Plans: No Exhibitors or Loading message
+		// UXP-T286: To verify Floor Plans: No Exhibitors or Loading message
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
 		utl = new Utility(driver);
@@ -142,7 +142,7 @@ public class FloorPlans extends base {
 	@Test(priority = 4)
 	public void TS004_VerifyFloorPlansZoomInOutLevelTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// UXP-T285: To verify Floor Plans: No Exhibitors or Loading message
+		// UXP-T287: To verify Floor Plans: Zoom Levels
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
 		utl = new Utility(driver);
