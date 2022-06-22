@@ -2,6 +2,22 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
+
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="66488" started-at="2022-06-22T11:49:59Z" finished-at="2022-06-22T11:51:05Z">
+    <groups>
+    </groups>
+    <test name="RegressionTest" duration-ms="66488" started-at="2022-06-22T11:49:59Z" finished-at="2022-06-22T11:51:05Z">
+      <class name="atlantamarket.FloorPlans">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket.FloorPlans@59f99ea]" name="initialize" is-config="true" duration-ms="53316" started-at="2022-06-22T17:19:59Z" finished-at="2022-06-22T17:20:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS005_VerifyFloorPlansIconsTest()[pri:0, instance:atlantamarket.FloorPlans@59f99ea]" name="TS005_VerifyFloorPlansIconsTest" duration-ms="13114" started-at="2022-06-22T17:20:52Z" finished-at="2022-06-22T17:21:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifyFloorPlansIconsTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket.FloorPlans@59f99ea]" name="tearDown" is-config="true" duration-ms="1" started-at="2022-06-22T17:21:05Z" finished-at="2022-06-22T17:21:05Z">
+
   <suite name="ATLMrkt_RegressionTestSuite" duration-ms="242614" started-at="2022-06-22T08:41:49Z" finished-at="2022-06-22T08:45:51Z">
     <groups>
     </groups>
@@ -16,6 +32,7 @@
           </reporter-output>
         </test-method> <!-- TS001_VerifyFloorPlansNavigationToDifferentFloorBuildingsTest -->
         <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket.FloorPlans@5e5792a0]" name="tearDown" is-config="true" duration-ms="5149" started-at="2022-06-22T14:15:46Z" finished-at="2022-06-22T14:15:51Z">
+
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

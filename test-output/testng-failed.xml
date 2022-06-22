@@ -42,7 +42,7 @@
       </class> <!-- atlantamarket.GlobalSearch_SuggestionList -->
       <class name="atlantamarket.FloorPlans">
         <methods>
-          <include name="TS002_VerifyFloorPlansNavigationToDifferentFloorBuildingsTest"/>
+          <include name="TS005_VerifyFloorPlansIconsTest"/>
           <include name="tearDown"/>
           <include name="initialize"/>
         </methods>
