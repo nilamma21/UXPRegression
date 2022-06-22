@@ -12,6 +12,7 @@
 			<class name="atlantamarket.GlobalSearch_ExhibitorActions" />
 			<class name="atlantamarket.GlobalSearch_LineActions" />
 			<class name="atlantamarket.GlobalSearch_ProductActions" />
+			<class name="atlantamarket.FloorPlans" />
 		</classes>
 	</test>
 </suite>
