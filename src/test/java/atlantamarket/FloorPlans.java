@@ -16,6 +16,7 @@ import org.testng.annotations.Test;
 
 import pageObjects.AtlantaMarket.ATLExhDigiShowroomPage;
 import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
+import pageObjects.AtlantaMarket.ATLFloorPlansPage;
 import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
 import pageObjects.AtlantaMarket.ATLLandingPage;
 import pageObjects.AtlantaMarket.ATLLoginPage;
@@ -39,6 +40,7 @@ public class FloorPlans extends base {
 	ATLProductDetailsPage atlproddet;
 	ATLExhLineProdActionsPage atlexhact;
 	ATLMarketPlannerPage atlmppge;
+	ATLFloorPlansPage atlflpp;
 
 	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns, allnoteslist,favlist, searchlinetypelist;
 
@@ -55,7 +57,56 @@ public class FloorPlans extends base {
 		Thread.sleep(10000);
 		lap.getCloseMarktAdBtn().click();
 	}
+	@Test(priority = 1)
+	public void TS001_VerifyMarketPlannerLoginTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP-001: To verify the Market Planner overview and it's functionality
 
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		// Login to Market Planner
+		utl.verifyMPLoginFunctionality();
+
+		Thread.sleep(6000);
+		lap.getCloseMarktAdBtn().click();
+
+		// Verify that Market Planner Home page should be displayed
+		Assert.assertTrue(lap.getMPLinkText().isDisplayed());
+	}
+	
+	
+	@Test(priority = 2)
+	public void TS002_VerifyFloorPlansNavigationToDifferentFloorBuildingsTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP-T285: To verify Floor Plans: Navigation to different floor/buildings
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlflpp=new ATLFloorPlansPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		// Click on Exh And Product Tab
+		atlflpp.getATLExhibitorsAndProductTab().click();
+		//click on Floor plans link
+		atlflpp.getATLFloorPlansLink().click();
+		String floorPlansPageUrl=prop.getProperty("floorPlansPageURL");
+		driver.getCurrentUrl().contains(floorPlansPageUrl);
+		//Verify Floor plans page URL
+		Assert.assertTrue(driver.getCurrentUrl().contains(floorPlansPageUrl));
+		//Click on Building floor
+		String floorName=atlflpp.getATLBuildingFloor().getText();
+		System.out.println("Floor Name : " +floorName);
+		atlflpp.getATLBuildingFloor().click();
+		//Verify floor name
+		Assert.assertTrue(atlflpp.getATLFloorName().getText().contains(floorName));
+		
+	}
+	
 	@AfterClass
 	public void tearDown()
 	{
