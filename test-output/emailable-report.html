@@ -31,16 +31,160 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">RegressionTest</td><td class="numi">2</td><td class="numi">2</td><td class="numi">0</td><td class="numi">0</td><td class="numi">125.9 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">RegressionTest</td><td class="numi">17</td><td class="numi">17</td><td class="numi_attn">9</td><td class="numi_attn">5</td><td class="numi">1,488.9 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr><th colspan="4">RegressionTest &#8212; failed (configuration methods)</th></tr>
+<tr class="failedodd"><td rowspan="1">atlantamarket.GlobalSearch_ProductActions</td><td><a href="#m1"><b>initialize</b>  </a></td><td class="numi">1</td><td>1655880177933</td><td class="numi">0</td></tr>
+<tr><th colspan="4">RegressionTest &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="3">atlantamarket.GlobalSearch_ExhibitorActions</td><td><a href="#m2"><b>TS002_VerifyAddToFavoriteForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1655879058093</td><td class="numi">40145</td></tr><tr class="failedodd"><td><a href="#m3"><b>TS008_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1655879385499</td><td class="numi">45450</td></tr><tr class="failedodd"><td><a href="#m4"><b>TS009_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1655879431618</td><td class="numi">48522</td></tr>
+<tr class="failedeven"><td rowspan="2">atlantamarket.GlobalSearch_LineActions</td><td><a href="#m5"><b>TS003_VerifyAddToFavoriteForLineTest</b>  </a></td><td class="numi">1</td><td>1655879726773</td><td class="numi">66029</td></tr><tr class="failedeven"><td><a href="#m6"><b>TS009_VerifyClickOnMatchingProductsSeeAllLinkForLineTest</b>  </a></td><td class="numi">1</td><td>1655880061283</td><td class="numi">48442</td></tr>
+<tr><th colspan="4">RegressionTest &#8212; skipped (configuration methods)</th></tr>
+<tr class="skippedodd"><td rowspan="1">atlantamarket.GlobalSearch_ProductActions</td><td><a href="#m7"><b>tearDown</b>  </a></td><td class="numi">1</td><td>1655880283243</td><td class="numi">0</td></tr>
+<tr><th colspan="4">RegressionTest &#8212; skipped</th></tr>
+<tr class="skippedodd"><td rowspan="9">atlantamarket.GlobalSearch_ProductActions</td><td><a href="#m8"><b>TS002_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest</b>  </a></td><td class="numi">1</td><td>1655880283212</td><td class="numi">2</td></tr><tr class="skippedodd"><td><a href="#m9"><b>TS003_VerifyProductAddToNewListOnProductDetailsPageTest</b>  </a></td><td class="numi">1</td><td>1655880283215</td><td class="numi">2</td></tr><tr class="skippedodd"><td><a href="#m10"><b>TS004_VerifyProductAddToExistingListOnProductDetailsPageTest</b>  </a></td><td class="numi">1</td><td>1655880283219</td><td class="numi">3</td></tr><tr class="skippedodd"><td><a href="#m11"><b>TS005_VerifyAddToFavoriteOnProductDetailsPageTest</b>  </a></td><td class="numi">1</td><td>1655880283223</td><td class="numi">3</td></tr><tr class="skippedodd"><td><a href="#m12"><b>TS006_VerifyAddNoteOnProductDetailsPageTest</b>  </a></td><td class="numi">1</td><td>1655880283232</td><td class="numi">1</td></tr><tr class="skippedodd"><td><a href="#m13"><b>TS007_VerifyFullScreenViewerOnProductDetailsPageTest</b>  </a></td><td class="numi">1</td><td>1655880283234</td><td class="numi">1</td></tr><tr class="skippedodd"><td><a href="#m14"><b>TS008_VerifyProductAddToExistingListOnSearchResultsGridTest</b>  </a></td><td class="numi">1</td><td>1655880283237</td><td class="numi">1</td></tr><tr class="skippedodd"><td><a href="#m15"><b>TS009_VerifyAddToFavoriteOnSearchResultsGridTest</b>  </a></td><td class="numi">1</td><td>1655880283239</td><td class="numi">1</td></tr><tr class="skippedodd"><td><a href="#m16"><b>TS010_VerifyProductActionsIconToAddToNewlyCreatedListTest</b>  </a></td><td class="numi">1</td><td>1655880283241</td><td class="numi">1</td></tr>
 <tr><th colspan="4">RegressionTest &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="2">atlantamarket.GlobalSearch_ProductActions</td><td><a href="#m1"><b>TS001_VerifyMarketPlannerLoginTest</b>  </a></td><td class="numi">1</td><td>1655801331098</td><td class="numi">28168</td></tr><tr class="passedodd"><td><a href="#m2"><b>TS010_VerifyProductActionsIconToAddToNewlyCreatedListTest</b>  </a></td><td class="numi">1</td><td>1655801359278</td><td class="numi">51108</td></tr>
+<tr class="passedodd"><td rowspan="3">atlantamarket.GlobalSearch_SuggestionList</td><td><a href="#m17"><b>TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest</b>  </a></td><td class="numi">1</td><td>1655878861629</td><td class="numi">13056</td></tr><tr class="passedodd"><td><a href="#m18"><b>TS002_VerifySelectionOfLineFromAutoSuggestionListTest</b>  </a></td><td class="numi">1</td><td>1655878874703</td><td class="numi">27217</td></tr><tr class="passedodd"><td><a href="#m19"><b>TS003_VerifySelectionOfProductFromAutoSuggestionListTest</b>  </a></td><td class="numi">1</td><td>1655878901923</td><td class="numi">46155</td></tr>
+<tr class="passedeven"><td rowspan="7">atlantamarket.GlobalSearch_ExhibitorActions</td><td><a href="#m20"><b>TS003_VerifyAddToNewListForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1655879098587</td><td class="numi">69140</td></tr><tr class="passedeven"><td><a href="#m21"><b>TS004_VerifyAddToExistingListForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1655879167729</td><td class="numi">110567</td></tr><tr class="passedeven"><td><a href="#m22"><b>TS005_VerifyClickOnContactExhIconForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1655879278299</td><td class="numi">31796</td></tr><tr class="passedeven"><td><a href="#m23"><b>TS006_VerifyClickOnLocationLinksForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1655879310097</td><td class="numi">33297</td></tr><tr class="passedeven"><td><a href="#m24"><b>TS007_VerifyClickOnLinesShownLinkForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1655879343398</td><td class="numi">42097</td></tr><tr class="passedeven"><td><a href="#m25"><b>TS010_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1655879480348</td><td class="numi">53344</td></tr><tr class="passedeven"><td><a href="#m26"><b>TS011_VerifySelectionOfExhibitorFromSearchResultsTest</b>  </a></td><td class="numi">1</td><td>1655879533694</td><td class="numi">61738</td></tr>
+<tr class="passedodd"><td rowspan="7">atlantamarket.GlobalSearch_LineActions</td><td><a href="#m27"><b>TS002_VerifyClickOnContactExhIconForLineTest</b>  </a></td><td class="numi">1</td><td>1655879697763</td><td class="numi">29008</td></tr><tr class="passedodd"><td><a href="#m28"><b>TS004_VerifyClickOnOrderOnJuniperMarketBtnForLineTest</b>  </a></td><td class="numi">1</td><td>1655879793028</td><td class="numi">37592</td></tr><tr class="passedodd"><td><a href="#m29"><b>TS005_VerifyAddToNewListForLineTest</b>  </a></td><td class="numi">1</td><td>1655879830622</td><td class="numi">77338</td></tr><tr class="passedodd"><td><a href="#m30"><b>TS006_VerifyAddToExistingListForLineTest</b>  </a></td><td class="numi">1</td><td>1655879907962</td><td class="numi">83232</td></tr><tr class="passedodd"><td><a href="#m31"><b>TS007_VerifyClickOnShownByExhibitorNameLinkForLineTest</b>  </a></td><td class="numi">1</td><td>1655879991198</td><td class="numi">34792</td></tr><tr class="passedodd"><td><a href="#m32"><b>TS008_VerifyClickOnLocationLinkForLineTest</b>  </a></td><td class="numi">1</td><td>1655880025991</td><td class="numi">35291</td></tr><tr class="passedodd"><td><a href="#m33"><b>TS010_VerifyClickOnTotalProductsSeeAllLinkForLineTest</b>  </a></td><td class="numi">1</td><td>1655880109982</td><td class="numi">63353</td></tr>
 </table>
 <h1>RegressionTest</h1>
-<h2 id="m1">atlantamarket.GlobalSearch_ProductActions:TS001_VerifyMarketPlannerLoginTest</h2>
+<h2 id="m1">atlantamarket.GlobalSearch_ProductActions:initialize</h2>
+<div style="padding-left:3em">
+<p>element not interactable
+  (Session info: chrome=102.0.5005.115)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=102.0.5005.61 (0e59bcc00cc4985ce39ad31c150065f159d95ad3-refs/branch-heads/5005@{#819}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir7436_101769248}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:54541}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=102.0.5005.115, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: ac1ac6e1048ff857009b603995877eb0</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+<br/>at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
+<br/>at atlantamarket.GlobalSearch_ProductActions.initialize(GlobalSearch_ProductActions.java:66)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">atlantamarket.GlobalSearch_ProductActions:TS010_VerifyProductActionsIconToAddToNewlyCreatedListTest</h2>
+<h2 id="m2">atlantamarket.GlobalSearch_ExhibitorActions:TS002_VerifyAddToFavoriteForExhibitorTest</h2>
+<div style="padding-left:3em">
+<p>expected [true] but found [false]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertTrue(Assert.java:42)
+<br/>at org.testng.Assert.assertTrue(Assert.java:52)
+<br/>at atlantamarket.GlobalSearch_ExhibitorActions.TS002_VerifyAddToFavoriteForExhibitorTest(GlobalSearch_ExhibitorActions.java:119)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">atlantamarket.GlobalSearch_LineActions:TS003_VerifyAddToFavoriteForLineTest</h2>
+<div style="padding-left:3em">
+<p>expected [false] but found [true]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertFalse(Assert.java:63)
+<br/>at org.testng.Assert.assertFalse(Assert.java:73)
+<br/>at atlantamarket.GlobalSearch_LineActions.TS003_VerifyAddToFavoriteForLineTest(GlobalSearch_LineActions.java:168)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">atlantamarket.GlobalSearch_ExhibitorActions:TS009_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest</h2>
+<div style="padding-left:3em">
+<p>expected [3394] but found [541709]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertEquals(Assert.java:123)
+<br/>at org.testng.Assert.assertEquals(Assert.java:176)
+<br/>at org.testng.Assert.assertEquals(Assert.java:186)
+<br/>at atlantamarket.GlobalSearch_ExhibitorActions.TS009_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest(GlobalSearch_ExhibitorActions.java:451)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">atlantamarket.GlobalSearch_LineActions:TS009_VerifyClickOnMatchingProductsSeeAllLinkForLineTest</h2>
+<div style="padding-left:3em">
+<p>expected [59727] but found [59730]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertEquals(Assert.java:123)
+<br/>at org.testng.Assert.assertEquals(Assert.java:176)
+<br/>at org.testng.Assert.assertEquals(Assert.java:186)
+<br/>at atlantamarket.GlobalSearch_LineActions.TS009_VerifyClickOnMatchingProductsSeeAllLinkForLineTest(GlobalSearch_LineActions.java:442)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">atlantamarket.GlobalSearch_ExhibitorActions:TS008_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest</h2>
+<div style="padding-left:3em">
+<p>expected [541709] but found [546206]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertEquals(Assert.java:123)
+<br/>at org.testng.Assert.assertEquals(Assert.java:176)
+<br/>at org.testng.Assert.assertEquals(Assert.java:186)
+<br/>at atlantamarket.GlobalSearch_ExhibitorActions.TS008_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest(GlobalSearch_ExhibitorActions.java:408)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">atlantamarket.GlobalSearch_ProductActions:tearDown</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">atlantamarket.GlobalSearch_ProductActions:TS009_VerifyAddToFavoriteOnSearchResultsGridTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m9">atlantamarket.GlobalSearch_ProductActions:TS002_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">atlantamarket.GlobalSearch_ProductActions:TS004_VerifyProductAddToExistingListOnProductDetailsPageTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m11">atlantamarket.GlobalSearch_ProductActions:TS006_VerifyAddNoteOnProductDetailsPageTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m12">atlantamarket.GlobalSearch_ProductActions:TS007_VerifyFullScreenViewerOnProductDetailsPageTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m13">atlantamarket.GlobalSearch_ProductActions:TS003_VerifyProductAddToNewListOnProductDetailsPageTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m14">atlantamarket.GlobalSearch_ProductActions:TS005_VerifyAddToFavoriteOnProductDetailsPageTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m15">atlantamarket.GlobalSearch_ProductActions:TS010_VerifyProductActionsIconToAddToNewlyCreatedListTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m16">atlantamarket.GlobalSearch_ProductActions:TS008_VerifyProductAddToExistingListOnSearchResultsGridTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m17">atlantamarket.GlobalSearch_ExhibitorActions:TS011_VerifySelectionOfExhibitorFromSearchResultsTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m18">atlantamarket.GlobalSearch_ExhibitorActions:TS006_VerifyClickOnLocationLinksForExhibitorTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m19">atlantamarket.GlobalSearch_SuggestionList:TS002_VerifySelectionOfLineFromAutoSuggestionListTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m20">atlantamarket.GlobalSearch_LineActions:TS004_VerifyClickOnOrderOnJuniperMarketBtnForLineTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m21">atlantamarket.GlobalSearch_LineActions:TS005_VerifyAddToNewListForLineTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m22">atlantamarket.GlobalSearch_LineActions:TS002_VerifyClickOnContactExhIconForLineTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m23">atlantamarket.GlobalSearch_LineActions:TS006_VerifyAddToExistingListForLineTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m24">atlantamarket.GlobalSearch_ExhibitorActions:TS003_VerifyAddToNewListForExhibitorTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m25">atlantamarket.GlobalSearch_LineActions:TS008_VerifyClickOnLocationLinkForLineTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m26">atlantamarket.GlobalSearch_ExhibitorActions:TS010_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m27">atlantamarket.GlobalSearch_LineActions:TS010_VerifyClickOnTotalProductsSeeAllLinkForLineTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m28">atlantamarket.GlobalSearch_SuggestionList:TS003_VerifySelectionOfProductFromAutoSuggestionListTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m29">atlantamarket.GlobalSearch_ExhibitorActions:TS005_VerifyClickOnContactExhIconForExhibitorTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m30">atlantamarket.GlobalSearch_LineActions:TS007_VerifyClickOnShownByExhibitorNameLinkForLineTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m31">atlantamarket.GlobalSearch_ExhibitorActions:TS007_VerifyClickOnLinesShownLinkForExhibitorTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m32">atlantamarket.GlobalSearch_ExhibitorActions:TS004_VerifyAddToExistingListForExhibitorTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m33">atlantamarket.GlobalSearch_SuggestionList:TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>
