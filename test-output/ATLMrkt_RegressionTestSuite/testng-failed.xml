@@ -3,6 +3,45 @@
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
+
+      <class name="atlantamarket.GlobalSearch_ExhibitorActions">
+        <methods>
+          <include name="TS002_VerifyAddToFavoriteForExhibitorTest"/>
+          <include name="TS009_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest"/>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+          <include name="TS008_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest"/>
+        </methods>
+      </class> <!-- atlantamarket.GlobalSearch_ExhibitorActions -->
+      <class name="atlantamarket.GlobalSearch_ProductActions">
+        <methods>
+          <include name="TS009_VerifyAddToFavoriteOnSearchResultsGridTest"/>
+          <include name="TS006_VerifyAddNoteOnProductDetailsPageTest"/>
+          <include name="TS005_VerifyAddToFavoriteOnProductDetailsPageTest"/>
+          <include name="initialize"/>
+          <include name="TS003_VerifyProductAddToNewListOnProductDetailsPageTest"/>
+          <include name="TS004_VerifyProductAddToExistingListOnProductDetailsPageTest"/>
+          <include name="TS008_VerifyProductAddToExistingListOnSearchResultsGridTest"/>
+          <include name="TS007_VerifyFullScreenViewerOnProductDetailsPageTest"/>
+          <include name="TS010_VerifyProductActionsIconToAddToNewlyCreatedListTest"/>
+          <include name="TS002_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest"/>
+        </methods>
+      </class> <!-- atlantamarket.GlobalSearch_ProductActions -->
+      <class name="atlantamarket.GlobalSearch_LineActions">
+        <methods>
+          <include name="TS009_VerifyClickOnMatchingProductsSeeAllLinkForLineTest"/>
+          <include name="TS003_VerifyAddToFavoriteForLineTest"/>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- atlantamarket.GlobalSearch_LineActions -->
+      <class name="atlantamarket.GlobalSearch_SuggestionList">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- atlantamarket.GlobalSearch_SuggestionList -->
+
       <class name="atlantamarket.FloorPlans">
         <methods>
           <include name="TS005_VerifyFloorPlansIconsTest"/>
@@ -10,6 +49,7 @@
           <include name="initialize"/>
         </methods>
       </class> <!-- atlantamarket.FloorPlans -->
+
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->

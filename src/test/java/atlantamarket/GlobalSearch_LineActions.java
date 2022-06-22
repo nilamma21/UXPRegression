@@ -57,31 +57,16 @@ public class GlobalSearch_LineActions extends base {
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(10000);
 		lap.getCloseMarktAdBtn().click();
-	}
-	
-	@Test(priority = 1)
-	public void TS001_VerifyMarketPlannerLoginTest() throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// UXP-001: To verify the Market Planner overview and it's functionality
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		// Login to Market Planner
+		
+		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
-
+		
 		Thread.sleep(6000);
 		lap.getCloseMarktAdBtn().click();
-
-		// Verify that Market Planner Home page should be displayed
-		Assert.assertTrue(lap.getMPLinkText().isDisplayed());	
 	}
 
-	@Test(priority = 2)
-	public void TS002_VerifyClickOnContactExhIconForLineTest() throws InterruptedException, IOException {
+	@Test(priority = 1)
+	public void TS001_VerifyClickOnContactExhIconForLineTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T361: The click on 'Contact Exhibitor' functionality for a Line
 
@@ -118,8 +103,8 @@ public class GlobalSearch_LineActions extends base {
 		atlexhact.getPopUpCloseBtn().click();
 	}
 
-	@Test(priority = 3)
-	public void TS003_VerifyAddToFavoriteForLineTest() throws InterruptedException, IOException {
+	@Test(priority = 2)
+	public void TS002_VerifyAddToFavoriteForLineTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T360: The Add to Favorite functionality for a Line
 
@@ -162,8 +147,8 @@ public class GlobalSearch_LineActions extends base {
 		Assert.assertFalse(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 	}
 
-	@Test(priority = 4)
-	public void TS004_VerifyClickOnOrderOnJuniperMarketBtnForLineTest() throws InterruptedException, IOException {
+	@Test(priority = 3)
+	public void TS003_VerifyClickOnOrderOnJuniperMarketBtnForLineTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T376: The click on 'Order On JuniperMarket' button functionality for a Line
 
@@ -203,8 +188,8 @@ public class GlobalSearch_LineActions extends base {
 		driver.switchTo().window(winHandleBefore);
 	}
 
-	@Test(priority = 5)
-	public void TS005_VerifyAddToNewListForLineTest() throws InterruptedException, IOException {
+	@Test(priority = 4)
+	public void TS004_VerifyAddToNewListForLineTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T423: The Add to Newly created list functionality for Line
 
@@ -264,8 +249,8 @@ public class GlobalSearch_LineActions extends base {
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 	}
 
-	@Test(priority = 6)
-	public void TS006_VerifyAddToExistingListForLineTest() throws InterruptedException, IOException {
+	@Test(priority = 5)
+	public void TS005_VerifyAddToExistingListForLineTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T362: The Add to Newly created list functionality for a Line
 
@@ -330,8 +315,8 @@ public class GlobalSearch_LineActions extends base {
 		Thread.sleep(8000);
 	}
 
-	@Test(priority = 07)
-	public void TS007_VerifyClickOnShownByExhibitorNameLinkForLineTest() throws InterruptedException, IOException {
+	@Test(priority = 06)
+	public void TS006_VerifyClickOnShownByExhibitorNameLinkForLineTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T433: The Lines actions: Shown By <ExhibitorName> link
 
@@ -358,8 +343,8 @@ public class GlobalSearch_LineActions extends base {
 		Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
 	}
 
-	@Test(priority = 8)
-	public void TS008_VerifyClickOnLocationLinkForLineTest() throws InterruptedException, IOException {
+	@Test(priority = 7)
+	public void TS007_VerifyClickOnLocationLinkForLineTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
 		// T370: Lines Actions: Location links
@@ -389,8 +374,8 @@ public class GlobalSearch_LineActions extends base {
 		Assert.assertTrue(locationLink.equals(driver.getCurrentUrl()));
 	}
 
-	@Test(priority = 9)
-	public void TS009_VerifyClickOnMatchingProductsSeeAllLinkForLineTest() throws InterruptedException, IOException {
+	@Test(priority = 8)
+	public void TS008_VerifyClickOnMatchingProductsSeeAllLinkForLineTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
 		// T371: Lines Actions: Matching Products- See All
@@ -436,8 +421,8 @@ public class GlobalSearch_LineActions extends base {
 		Assert.assertEquals(matchingprodcountonsearchgrid, matchingprodcountonprodpage);
 	}
 
-	@Test(priority = 10)
-	public void TS010_VerifyClickOnTotalProductsSeeAllLinkForLineTest() throws InterruptedException, IOException {
+	@Test(priority = 9)
+	public void TS009_VerifyClickOnTotalProductsSeeAllLinkForLineTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
 		// T369: Lines actions: Total Products- See all

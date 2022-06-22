@@ -58,31 +58,16 @@ public class FloorPlans extends base {
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(10000);
 		lap.getCloseMarktAdBtn().click();
-	}
-	@Test(priority = 1)
-	public void TS001_VerifyMarketPlannerLoginTest() throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// UXP-001: To verify the Market Planner overview and it's functionality
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		// Login to Market Planner
 		utl.verifyMPLoginFunctionality();
 
 		Thread.sleep(6000);
 		lap.getCloseMarktAdBtn().click();
-
-		// Verify that Market Planner Home page should be displayed
-		Assert.assertTrue(lap.getMPLinkText().isDisplayed());
 	}
 	
-	
-	@Test(priority = 2)
-	public void TS002_VerifyFloorPlansNavigationToDifferentFloorBuildingsTest() throws InterruptedException, IOException {
+	@Test(priority = 1)
+	public void TS001_VerifyNavigationToDifferentFloorBuildingsTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T285: To verify Floor Plans: Navigation to different floor/buildings
 		lap = new ATLLandingPage(driver);
@@ -94,20 +79,23 @@ public class FloorPlans extends base {
 
 		// Click on Exh And Product Tab
 		atlflpp.getATLExhibitorsAndProductTab().click();
+		
 		//click on Floor plans link
 		atlflpp.getATLFloorPlansLink().click();
-		String floorPlansPageUrl=prop.getProperty("floorPlansPageURL");
-		driver.getCurrentUrl().contains(floorPlansPageUrl);
-		//Verify Floor plans page URL
-		Assert.assertTrue(driver.getCurrentUrl().contains(floorPlansPageUrl));
+
+		Thread.sleep(5000);
+		//Verify that user should redirect to Floor plans page
+		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_uat")+"Market-Map"));
+		
 		//Click on Building floor
 		String floorName=atlflpp.getATLBuildingFloor().getText();
 		System.out.println("Floor Name : " +floorName);
 		atlflpp.getATLBuildingFloor().click();
+		
 		//Verify floor name
 		Assert.assertTrue(atlflpp.getATLFloorName().getText().contains(floorName));
-		
 	}
+
 	
 	@Test(priority = 3)
 	public void TS003_VerifyFloorPlansNoExhibitorsLoadingMessageTest() throws InterruptedException, IOException {
@@ -226,6 +214,9 @@ public class FloorPlans extends base {
 	}
 	
 	
+
+
+
 	@AfterClass
 	public void tearDown()
 	{
