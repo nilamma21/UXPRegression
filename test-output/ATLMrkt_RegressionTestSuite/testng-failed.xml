@@ -3,6 +3,7 @@
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
+
       <class name="atlantamarket.GlobalSearch_ExhibitorActions">
         <methods>
           <include name="TS002_VerifyAddToFavoriteForExhibitorTest"/>
@@ -40,6 +41,15 @@
           <include name="initialize"/>
         </methods>
       </class> <!-- atlantamarket.GlobalSearch_SuggestionList -->
+
+      <class name="atlantamarket.FloorPlans">
+        <methods>
+          <include name="TS002_VerifyFloorPlansNavigationToDifferentFloorBuildingsTest"/>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- atlantamarket.FloorPlans -->
+
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->

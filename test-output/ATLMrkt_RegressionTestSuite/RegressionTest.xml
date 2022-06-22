@@ -110,4 +110,7 @@ Session ID: ac1ac6e1048ff857009b603995877eb0
   <testcase name="TS010_VerifyProductActionsIconToAddToNewlyCreatedListTest" time="0.001" classname="atlantamarket.GlobalSearch_ProductActions">
     <skipped/>
   </testcase> <!-- TS010_VerifyProductActionsIconToAddToNewlyCreatedListTest -->
+<testsuite hostname="swapnili" name="RegressionTest" tests="1" failures="0" timestamp="21 Jun 2022 13:02:34 GMT" time="58.759" errors="0">
+  <testcase name="TS002_VerifyFloorPlansNavigationToDifferentFloorBuildingsTest" time="8.534" classname="atlantamarket.FloorPlans"/>
+
 </testsuite> <!-- RegressionTest -->

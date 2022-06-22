@@ -40,6 +40,13 @@
           <include name="initialize"/>
         </methods>
       </class> <!-- atlantamarket.GlobalSearch_SuggestionList -->
+      <class name="atlantamarket.FloorPlans">
+        <methods>
+          <include name="TS002_VerifyFloorPlansNavigationToDifferentFloorBuildingsTest"/>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- atlantamarket.FloorPlans -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->

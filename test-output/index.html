@@ -90,6 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
+
                     <span class="method-stats">31 methods, 5 failed,  9 skipped,  17 passed</span>
                   </li>
                   <li>
@@ -179,6 +180,9 @@
                       </span>
                       <br/>
                     </div> <!-- method-list-content skipped suite-ATLMrkt_RegressionTestSuite -->
+
+                    <span class="method-stats">1 method,   1 passed</span>
+
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -189,6 +193,7 @@
                     <div class="method-list-content passed suite-ATLMrkt_RegressionTestSuite">
                       <span>
                         <img width="3%" src="passed.png"/>
+
                         <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket.GlobalSearch_SuggestionList" hash-for-method="TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest">TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -270,6 +275,9 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket.GlobalSearch_ExhibitorActions" hash-for-method="TS011_VerifySelectionOfExhibitorFromSearchResultsTest">TS011_VerifySelectionOfExhibitorFromSearchResultsTest</a> <!-- method navigator-link -->
+
+                        <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket.FloorPlans" hash-for-method="TS002_VerifyFloorPlansNavigationToDifferentFloorBuildingsTest">TS002_VerifyFloorPlansNavigationToDifferentFloorBuildingsTest</a> <!-- method navigator-link -->
+
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-ATLMrkt_RegressionTestSuite -->
@@ -286,6 +294,7 @@
         <div panel-name="suite-ATLMrkt_RegressionTestSuite" class="panel ATLMrkt_RegressionTestSuite">
           <div class="suite-ATLMrkt_RegressionTestSuite-class-failed">
             <div class="main-panel-header rounded-window-top">
+
               <img src="failed.png"/>
               <span class="class-name">atlantamarket.GlobalSearch_ExhibitorActions</span>
             </div> <!-- main-panel-header rounded-window-top -->
@@ -512,10 +521,15 @@
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
               <span class="class-name">atlantamarket.GlobalSearch_ProductActions</span>
+
+              <img src="passed.png"/>
+              <span class="class-name">atlantamarket.FloorPlans</span>
+
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+
                   <a name="TS002_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest">
                   </a> <!-- TS002_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest -->
                   <span class="method-name">TS002_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest</span>
@@ -575,6 +589,11 @@
                   <a name="TS010_VerifyProductActionsIconToAddToNewlyCreatedListTest">
                   </a> <!-- TS010_VerifyProductActionsIconToAddToNewlyCreatedListTest -->
                   <span class="method-name">TS010_VerifyProductActionsIconToAddToNewlyCreatedListTest</span>
+
+                  <a name="TS002_VerifyFloorPlansNavigationToDifferentFloorBuildingsTest">
+                  </a> <!-- TS002_VerifyFloorPlansNavigationToDifferentFloorBuildingsTest -->
+                  <span class="method-name">TS002_VerifyFloorPlansNavigationToDifferentFloorBuildingsTest</span>
+
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -734,10 +753,18 @@
 &lt;suite name=&quot;ATLMrkt_RegressionTestSuite&quot;&gt;
   &lt;test thread-count=&quot;4&quot; name=&quot;RegressionTest&quot;&gt;
     &lt;classes&gt;
+
       &lt;class name=&quot;atlantamarket.GlobalSearch_SuggestionList&quot;/&gt;
       &lt;class name=&quot;atlantamarket.GlobalSearch_ExhibitorActions&quot;/&gt;
       &lt;class name=&quot;atlantamarket.GlobalSearch_LineActions&quot;/&gt;
       &lt;class name=&quot;atlantamarket.GlobalSearch_ProductActions&quot;/&gt;
+
+      &lt;class name=&quot;atlantamarket.FloorPlans&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;TS002_VerifyFloorPlansNavigationToDifferentFloorBuildingsTest&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- atlantamarket.FloorPlans --&gt;
+
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- RegressionTest --&gt;
 &lt;/suite&gt; &lt;!-- ATLMrkt_RegressionTestSuite --&gt;
@@ -777,6 +804,7 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
+
 data.addRows(31);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'TS004_VerifyAddToExistingListForExhibitorTest')
@@ -902,11 +930,22 @@ data.setCell(30, 0, 30)
 data.setCell(30, 1, 'TS008_VerifyProductAddToExistingListOnSearchResultsGridTest')
 data.setCell(30, 2, 'atlantamarket.GlobalSearch_ProductActions')
 data.setCell(30, 3, 1);
+
+data.addRows(1);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'TS002_VerifyFloorPlansNavigationToDifferentFloorBuildingsTest')
+data.setCell(0, 2, 'atlantamarket.FloorPlans')
+data.setCell(0, 3, 8534);
+
 window.suiteTableData['ATLMrkt_RegressionTestSuite']= { tableData: data, tableDiv: 'times-div-ATLMrkt_RegressionTestSuite'}
 return data;
 }
               </script>
+
               <span class="suite-total-time">Total running time: 18 minutes</span>
+
+              <span class="suite-total-time">Total running time: 8 seconds</span>
+
               <div id="times-div-ATLMrkt_RegressionTestSuite">
               </div> <!-- times-div-ATLMrkt_RegressionTestSuite -->
             </div> <!-- times-div -->
@@ -921,9 +960,22 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-ATLMrkt_RegressionTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
+
             <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+
+            <span class="header-content">1 ignored method</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">atlantamarket.FloorPlans</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">TS001_VerifyMarketPlannerLoginTest</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-ATLMrkt_RegressionTestSuite" class="panel">
@@ -932,12 +984,17 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
+
               <div class="chronological-class-name">atlantamarket.GlobalSearch_SuggestionList</div> <!-- chronological-class-name -->
+
+              <div class="chronological-class-name">atlantamarket.FloorPlans</div> <!-- chronological-class-name -->
+
               <div class="configuration-class before">
                 <span class="method-name">initialize</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+
                 <span class="method-name">TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest</span>
                 <span class="method-start">67275 ms</span>
               </div> <!-- test-method -->
@@ -1060,6 +1117,14 @@ return data;
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
                 <span class="method-start">1378983 ms</span>
+
+                <span class="method-name">TS002_VerifyFloorPlansNavigationToDifferentFloorBuildingsTest</span>
+                <span class="method-start">48586 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">57130 ms</span>
+
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
