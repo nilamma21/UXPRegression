@@ -58,31 +58,16 @@ public class GlobalSearch_ProductActions extends base {
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(10000);
 		lap.getCloseMarktAdBtn().click();
+		
+		//Login to Market Planner
+		utl.verifyMPLoginFunctionality();
+		
+		Thread.sleep(6000);
+		lap.getCloseMarktAdBtn().click();
 	}
 
 	@Test(priority = 1)
-	public void TS001_VerifyMarketPlannerLoginTest() throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// UXP-001: To verify the Market Planner overview and it's functionality
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		// Login to Market Planner
-		utl.verifyMPLoginFunctionality();
-
-		Thread.sleep(6000);
-		lap.getCloseMarktAdBtn().click();
-
-		// Verify that Market Planner Home page should be displayed
-		Assert.assertTrue(lap.getMPLinkText().isDisplayed());
-	}
-
-	@Test(priority = 2)
-	public void TS002_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest() throws InterruptedException, IOException {
+	public void TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T379: See Details functionality on Search Results grid
 
@@ -118,8 +103,8 @@ public class GlobalSearch_ProductActions extends base {
 		Assert.assertTrue(productNameOnSearchGrid.equals(productNameOnProductDetails));
 	}
 
-	@Test(priority = 3)
-	public void TS003_VerifyProductAddToNewListOnProductDetailsPageTest() throws InterruptedException, IOException {
+	@Test(priority = 2)
+	public void TS002_VerifyProductAddToNewListOnProductDetailsPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T435: Add to Newly created list functionality on Product details page
 
@@ -191,8 +176,8 @@ public class GlobalSearch_ProductActions extends base {
 		Assert.assertTrue(atlmppge.getSavedProductNameInList().getText().contains(productNameOnSearchGrid));
 	}
 
-	@Test(priority = 4)
-	public void TS004_VerifyProductAddToExistingListOnProductDetailsPageTest() throws InterruptedException, IOException {
+	@Test(priority = 3)
+	public void TS003_VerifyProductAddToExistingListOnProductDetailsPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T384: Add to existing list functionality on Product details page
 
@@ -275,12 +260,10 @@ public class GlobalSearch_ProductActions extends base {
 			// System.out.println(favlist.get(i).getText());
 			Assert.assertFalse(favlist.get(i).getText().contains(productNameOnSearchGrid));
 		}
-		driver.get(prop.getProperty("atlmrkturl_uat"));
-		lap.getCloseMarktAdBtn().click();
 	}
 
-	@Test(priority = 5)
-	public void TS005_VerifyAddToFavoriteOnProductDetailsPageTest() throws InterruptedException, IOException {
+	@Test(priority = 4)
+	public void TS004_VerifyAddToFavoriteOnProductDetailsPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T385: Add to Favorite functionality on Product Details page
 
@@ -343,8 +326,8 @@ public class GlobalSearch_ProductActions extends base {
 		}
 	}
 
-	@Test(priority = 6)
-	public void TS006_VerifyAddNoteOnProductDetailsPageTest() throws InterruptedException, IOException {
+	@Test(priority = 5)
+	public void TS005_VerifyAddNoteOnProductDetailsPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T386: Add Note functionality on Product Details page
 
@@ -401,8 +384,7 @@ public class GlobalSearch_ProductActions extends base {
 
 		allnoteslist = atlexhact.getSavedNoteNameInAllNotesList();
 
-		// Verify that recently added note should be appear on 'All Notes For Exhibitor'
-		// modal
+		// Verify that recently added note should be appear on 'All Notes For Exhibitor' modal
 		for (int i = 0; i < allnoteslist.size(); i++) {
 			//System.out.println(allnoteslist.get(i).getText());
 			if (allnoteslist.get(i).getText().equals(newnotetitle)) {
@@ -416,8 +398,8 @@ public class GlobalSearch_ProductActions extends base {
 		atlexhact.getDeleteNoteBtn().click();
 	}
 
-	@Test(priority = 8)
-	public void TS008_VerifyProductAddToExistingListOnSearchResultsGridTest() throws InterruptedException, IOException {
+	@Test(priority = 6)
+	public void TS006_VerifyProductAddToExistingListOnSearchResultsGridTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T377: Products Actions: + icon to add to existing list
 
@@ -489,8 +471,6 @@ public class GlobalSearch_ProductActions extends base {
 			// System.out.println(favlist.get(i).getText());
 			Assert.assertFalse(favlist.get(i).getText().contains(productNameOnSearchGrid));
 		}
-		driver.get(prop.getProperty("atlmrkturl_uat"));
-		lap.getCloseMarktAdBtn().click();
 	}
 
 	@Test(priority = 7)
@@ -541,9 +521,8 @@ public class GlobalSearch_ProductActions extends base {
 		atlproddet.getProductFullScreenViewer().click();
 	}
 
-
-	@Test(priority = 9)
-	public void TS009_VerifyAddToFavoriteOnSearchResultsGridTest() throws InterruptedException, IOException {
+	@Test(priority = 8)
+	public void TS008_VerifyAddToFavoriteOnSearchResultsGridTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T378: Add To Favorite functionality for Product on Search Results grid
 
@@ -555,6 +534,9 @@ public class GlobalSearch_ProductActions extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
+		driver.get(prop.getProperty("atlmrkturl_uat"));
+		lap.getCloseMarktAdBtn().click();
+		
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("searchexhwithlinesinput"));
 		atlgs.getATLSearchButton().click();
 
@@ -597,10 +579,74 @@ public class GlobalSearch_ProductActions extends base {
 			Assert.assertFalse(favlist.get(i).getText().contains(productNameOnSearchGrid)); 
 		}
 	}
+	
+	@Test(priority = 9)
+	public void TS009_VerifyProductActionsIconToAddToNewlyCreatedListTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T435: Add to Newly created list functionality on Product details page
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		atlproddet = new ATLProductDetailsPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		lap = new ATLLandingPage(driver);
+		genData = new GenerateData();
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		driver.get(prop.getProperty("atlmrkturl_uat"));
+		lap.getCloseMarktAdBtn().click();
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("searchexhwithlinesinput"));
+		atlgs.getATLSearchButton().click();
+
+		// Store the 1st Product name of Exhibitor
+		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
+		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
+
+		// Click on Add to List button for 1st Exhibitor
+				atlexhact.getSearchResultMoreicon().click();
+				atlexhact.getAddToListOptn().click();
+
+				utl.scrollToElement(atlmppge.getCreateNewListNameTxtbx());
+
+		// Enter new list name
+		String newlistname = "CybProduct" + genData.generateRandomString(3);
+		atlmppge.getCreateNewListNameTxtbx().sendKeys(newlistname);
+		System.out.println("Newly created list is: " + newlistname);
+
+		// Scroll till Create button
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",
+				atlmppge.getNewListModalCreateBtn());
+
+		// Click on Create button
+		atlmppge.getNewListModalCreateBtn().click();
+
+		// Click on Go to Market Planner button
+		atlmppge.getGoToMarketPlannerBtn().click();
+
+		// Click on Lists tab on MP home page
+		atlmppge.getMPHomeListsTab().click();
+		atlmppge.getListsPageListsMenu().click();
+
+		mplists = atlmppge.getATLMPListsNames();
+		mpeditlistoptns = atlmppge.getATLMPEditListOptns();
+
+		for (int i = 0; i < mplists.size(); i++) {
+			// System.out.println(mplists.get(i).getText());
+			// System.out.println(mpeditlistoptns.get(i).getText());
+			if (mplists.get(i).getText().equals(newlistname)) {
+				mpeditlistoptns.get(i).click();
+				break;
+			}
+		}
+		Thread.sleep(10000);
+		//System.out.println(atlmppge.getNewCreatedListName().getText());
+		Assert.assertTrue(atlmppge.getNewCreatedListName().getText().contains(newlistname));
+	}
 
 	@AfterClass
 	public void tearDown() {
 		 driver.quit();
 	}
-
 }

@@ -57,31 +57,16 @@ public class GlobalSearch_ExhibitorActions extends base {
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(10000);
 		lap.getCloseMarktAdBtn().click();
+		
+		//Login to Market Planner
+		utl.verifyMPLoginFunctionality();
+		
+		Thread.sleep(6000);
+		lap.getCloseMarktAdBtn().click();
 	}
 	
 	@Test(priority = 1)
-	public void TS001_VerifyMarketPlannerLoginTest() throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// UXP-001: To verify the Market Planner overview and it's functionality
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		// Login to Market Planner
-		utl.verifyMPLoginFunctionality();
-
-		Thread.sleep(6000);
-		lap.getCloseMarktAdBtn().click();
-
-		// Verify that Market Planner Home page should be displayed
-		Assert.assertTrue(lap.getMPLinkText().isDisplayed());	
-	}
-	
-	@Test(priority = 2)
-	public void TS002_VerifyAddToFavoriteForExhibitorTest() throws InterruptedException, IOException {
+	public void TS001_VerifyAddToFavoriteForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T320: The Add to Favorite functionality for an Exhibitor
 
@@ -127,8 +112,8 @@ public class GlobalSearch_ExhibitorActions extends base {
 		}
 	}
 
-	@Test(priority = 3)
-	public void TS003_VerifyAddToNewListForExhibitorTest() throws InterruptedException, IOException {
+	@Test(priority = 2)
+	public void TS002_VerifyAddToNewListForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T422: The Add to Newly created list functionality for an Exhibitor
 
@@ -185,8 +170,8 @@ public class GlobalSearch_ExhibitorActions extends base {
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 	}
 
-	@Test(priority = 4)
-	public void TS004_VerifyAddToExistingListForExhibitorTest() throws InterruptedException, IOException {
+	@Test(priority = 3)
+	public void TS003_VerifyAddToExistingListForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T321: The Add to Newly created list functionality for an Exhibitor
 
@@ -259,8 +244,8 @@ public class GlobalSearch_ExhibitorActions extends base {
 		}
 	}
 
-	@Test(priority = 5)
-	public void TS005_VerifyClickOnContactExhIconForExhibitorTest() throws InterruptedException, IOException {
+	@Test(priority = 4)
+	public void TS004_VerifyClickOnContactExhIconForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T323: The click on 'Contact Exhibitor' functionality for an Exhibitor
 
@@ -300,8 +285,8 @@ public class GlobalSearch_ExhibitorActions extends base {
 		atlexhact.getPopUpCloseBtn().click();
 	}
 
-	@Test(priority = 6)
-	public void TS006_VerifyClickOnLocationLinksForExhibitorTest() throws InterruptedException, IOException {
+	@Test(priority = 5)
+	public void TS005_VerifyClickOnLocationLinksForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T356: The click on 'Location Links' functionality for an Exhibitor
 
@@ -326,8 +311,8 @@ public class GlobalSearch_ExhibitorActions extends base {
 		Assert.assertTrue(locationlink.equals(driver.getCurrentUrl()));
 	}
 
-	@Test(priority = 7)
-	public void TS007_VerifyClickOnLinesShownLinkForExhibitorTest() throws InterruptedException, IOException {
+	@Test(priority = 6)
+	public void TS006_VerifyClickOnLinesShownLinkForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T325: The click on 'Lines Shown-See All' functionality for an Exhibitor
 
@@ -357,8 +342,8 @@ public class GlobalSearch_ExhibitorActions extends base {
 		Assert.assertTrue(driver.getTitle().contains("{"+exhname+"} Lines"));
 	}
 
-	@Test(priority = 8)
-	public void TS008_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest() throws InterruptedException, IOException {
+	@Test(priority = 7)
+	public void TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T368: The click on 'Total products-See All' functionality for an Exhibitor
 
@@ -402,8 +387,8 @@ public class GlobalSearch_ExhibitorActions extends base {
 		Assert.assertEquals(totalprodcountonsearchgrid, totalprodcountonprodpage);
 	}
 
-	@Test(priority = 9)
-	public void TS009_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest() throws InterruptedException, IOException {
+	@Test(priority = 8)
+	public void TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T327: The click on 'Matching products-See All' functionality for an Exhibitor
 
@@ -445,8 +430,8 @@ public class GlobalSearch_ExhibitorActions extends base {
 		Assert.assertEquals(matchingprodcountonsearchgrid, matchingprodcountonprodpage);
 	}
 
-	@Test(priority = 10)
-	public void TS010_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest()
+	@Test(priority = 9)
+	public void TS009_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T322: The click on 'Matching products-Add Note' functionality for an Exhibitor
@@ -520,8 +505,8 @@ public class GlobalSearch_ExhibitorActions extends base {
 		atlexhact.getDeleteNoteBtn().click();
 	}
 
-	@Test(priority = 11)
-	public void TS011_VerifySelectionOfExhibitorFromSearchResultsTest() throws InterruptedException, IOException {
+	@Test(priority = 10)
+	public void TS010_VerifySelectionOfExhibitorFromSearchResultsTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T383: The selection of an Exhibitor from Search results grid
 
