@@ -1,6 +1,8 @@
 package atlantamarket;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -60,10 +62,9 @@ public class FloorPlans extends base {
 		lap.getCloseMarktAdBtn().click();
 
 		// Login to Market Planner
-		utl.verifyMPLoginFunctionality();
-
+		/*utl.verifyMPLoginFunctionality();
 		Thread.sleep(6000);
-		lap.getCloseMarktAdBtn().click();
+		lap.getCloseMarktAdBtn().click();*/
 	}
 	
 	@Test(priority = 1)
@@ -95,8 +96,6 @@ public class FloorPlans extends base {
 		//Verify floor name
 		Assert.assertTrue(atlflpp.getATLFloorName().getText().contains(floorName));
 	}
-
-	
 	@Test(priority = 3)
 	public void TS003_VerifyFloorPlansNoExhibitorsLoadingMessageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -112,10 +111,6 @@ public class FloorPlans extends base {
 		atlflpp.getATLExhibitorsAndProductTab().click();
 		//click on Floor plans link
 		atlflpp.getATLFloorPlansLink().click();
-		String floorPlansPageUrl=prop.getProperty("floorPlansPageURL");
-		driver.getCurrentUrl().contains(floorPlansPageUrl);
-		//Verify Floor plans page URL
-		Assert.assertTrue(driver.getCurrentUrl().contains(floorPlansPageUrl));
 		//Click on Building floor
 		String floorName=atlflpp.getATLBuildingFloor().getText();
 		System.out.println("Floor Name : " +floorName);
@@ -142,10 +137,6 @@ public class FloorPlans extends base {
 		atlflpp.getATLExhibitorsAndProductTab().click();
 		//click on Floor plans link
 		atlflpp.getATLFloorPlansLink().click();
-		String floorPlansPageUrl=prop.getProperty("floorPlansPageURL");
-		driver.getCurrentUrl().contains(floorPlansPageUrl);
-		//Verify Floor plans page URL
-		Assert.assertTrue(driver.getCurrentUrl().contains(floorPlansPageUrl));
 		//Click on Building floor
 		String floorName=atlflpp.getATLBuildingFloor().getText();
 		System.out.println("Floor Name : " +floorName);
@@ -191,10 +182,6 @@ public class FloorPlans extends base {
 		atlflpp.getATLExhibitorsAndProductTab().click();
 		//click on Floor plans link
 		atlflpp.getATLFloorPlansLink().click();
-		String floorPlansPageUrl=prop.getProperty("floorPlansPageURL");
-		driver.getCurrentUrl().contains(floorPlansPageUrl);
-		//Verify Floor plans page URL
-		Assert.assertTrue(driver.getCurrentUrl().contains(floorPlansPageUrl));
 		//Click on Building floor
 		String floorName=atlflpp.getATLBuildingFloor().getText();
 		System.out.println("Floor Name : " +floorName);
@@ -213,8 +200,117 @@ public class FloorPlans extends base {
 		Assert.assertTrue(atlflpp.getATLIconPopupText().getText().contains(atlIconHeader));
 	}
 	
-	
+	@Test(priority = 6)
+	public void TS006_VerifyFlooPlansFiltersTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP-T290: To verify Floor Plans: Filter
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlflpp=new ATLFloorPlansPage(driver);
 
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		// Click on Exh And Product Tab
+		atlflpp.getATLExhibitorsAndProductTab().click();
+		//click on Floor plans link
+		atlflpp.getATLFloorPlansLink().click();
+		//Click on Building floor
+		String floorName=atlflpp.getATLBuildingFloor().getText();
+		System.out.println("Floor Name : " +floorName);
+		//click on No Exhibitor floor
+		atlflpp.getATLBuildingFloor().click();
+		
+		//Scroll Down to Exhibitor list
+		utl.scrollToElement(atlflpp.getATLSelectBox());
+		
+		//Create current Exhibitor list without sort
+		List<String> currentList=new ArrayList<String>();
+		List<WebElement> elementList= driver.findElements(By.xpath("//a[@class='imc-type--title-5-link']"));
+		for(WebElement we:elementList){
+			
+			currentList.add(we.getText());
+		}
+		System.out.println("Current Exhibitor List : "+currentList);
+		
+		//Create sorted list
+		List<String> sortedList = new ArrayList<String>();   
+		for(String s:currentList){
+		sortedList.add(s);
+		}
+		 Collections.sort(sortedList);
+		System.out.println("Sorted list : "+sortedList);
+		
+		//Select Filter Sort A-Z
+		Select selectFilter=new Select(atlflpp.getATLSelectBox());
+		selectFilter.selectByValue("Sort A-Z");
+		Thread.sleep(10000);
+		//Sorted list from filter Sort A-Z
+		List<String> expectedSortedList = new ArrayList<String>(); 
+		for(WebElement we:elementList){
+			expectedSortedList.add(we.getText());
+		}
+		System.out.println("Expected sorted Exhibitor List : "+expectedSortedList);
+		//Verify Exhibitor List is Sorted or not
+		//Assert.assertEquals(sortedList, expectedSortedList, "Exhibitor List Should be sorted");
+		
+		//Select Exhibitor on JuniperMarket from List
+		selectFilter.selectByValue("Lines on JuniperMarket");
+		Thread.sleep(10000);
+		List<WebElement> currentJuniperMarketList= driver.findElements(By.xpath("//a[@class='imc-type--title-5-link']"));
+		List<String> juniperMarketList = new ArrayList<String>(); 
+		for(WebElement we:currentJuniperMarketList){
+			
+			juniperMarketList.add(we.getText());
+		}
+		System.out.println("Expected sorted Exhibitor List : "+juniperMarketList);
+		//Verify JuniperMarket List is Displayed or not
+		Assert.assertTrue(!juniperMarketList.isEmpty(),"JuniperMarket Exhibitor list should displayed.");
+		
+	}
+
+	@Test(priority = 7)
+	public void TS007_VerifyFloorPlansPaginationTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP-T291: Floor Plans: Pagination
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlflpp=new ATLFloorPlansPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		// Click on Exh And Product Tab
+		atlflpp.getATLExhibitorsAndProductTab().click();
+		//click on Floor plans link
+		atlflpp.getATLFloorPlansLink().click();
+		
+		//Click on Building floor
+		String floorName=atlflpp.getATLBuildingFloor().getText();
+		System.out.println("Floor Name : " +floorName);
+		//click on No Exhibitor floor
+		atlflpp.getATLBuildingFloor().click();
+		
+		//Scroll Down to Exhibitor list
+		utl.scrollToElement(atlflpp.getATLNextFloorBtn());
+		
+		String actualNextFloorNumber=atlflpp.getATLNextFloorBtn().getText();
+		atlflpp.getATLNextFloorBtn().click();
+		Thread.sleep(5000);
+		String exptectedFloorNumber=atlflpp.getATLExpectedFloorNumber().getText();
+		//Verify Next Floor
+		Assert.assertTrue(exptectedFloorNumber.contains(actualNextFloorNumber));
+		
+		//Previous floor Btn
+		String actualPreviousFloorNumber=atlflpp.getATLPreviousFloorBtn().getText();
+		atlflpp.getATLPreviousFloorBtn().click();
+		Thread.sleep(5000);
+		String exptectedPeviousFloorNumber=atlflpp.getATLExpectedFloorNumber().getText();
+		//Verify Previous Floor
+		Assert.assertTrue(exptectedPeviousFloorNumber.contains(actualPreviousFloorNumber));
+		
+		
+	}
 
 
 	@AfterClass
