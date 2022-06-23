@@ -13,7 +13,9 @@ public class ATLFloorPlansPage {
 
 	By atlExhibitorsAndProductTab = By.xpath("//div[@class='imc-section']/div[1]/div[2]/div[1]/a[1]"); // Locator for Exhibitor And Product tab 
 	By atlFloorPlansLink = By.xpath("//div[@class='imc-section']/div[1]/div[2]/div[2]/div[1]/div[2]"); //Locator for floor plans Link
-	By atlBuildingFloor = By.xpath("//div[@class='imc-campus-view']/div[3]/div[12]/div[3]/a[1]"); //Locator for Building floor
+	//By atlBuildingFloor = By.xpath("//div[@class='imc-campus-view']/div[3]/div[12]/div[3]/a[1]"); //Locator for Building floor
+	//By atlBuildingFloor = By.xpath("//div[@class='imc-campus-view']/div[1]/div[23]/div[3]/a[1]"); //Locator for Building floor
+	By atlBuildingFloor = By.xpath("//div[@class='imc-campus-view']/div[3]/div[11]/div[3]/a[1]"); //Locator for Building floor
 	By atlBuildingFloorNumber = By.xpath("//div[@class='imc-campus-view']/div[1]/div[23]/div[2]"); //Locator for Building floor number
 	//By atlFloorName = By.xpath("//div[@class='imc-floor-plan']/div[1]/div[1]/span[1]/div[2]"); //Locator for floor name
 	By atlFloorName = By.xpath("//div[@class='imc-type--title-6']");
@@ -27,6 +29,10 @@ public class ATLFloorPlansPage {
 	By atlIconText = By.xpath("//div[@class='imc-map-container']/div[1]/div[1]/div[5]/div[1]/div[1]/div[19]/div[1]"); //Locator for Icon text
 	By atlIconPopupText = By.xpath("//div[@class='imc-map-container']/div[1]/div[1]/div[3]/div[2]/p[1]"); //Locator for Icon popup Text
 	By atlSelectBox = By.xpath("//select[@class='imc-searchform--dropdown imc-floor-plan--dropdown']"); //Locator Selectbox
+	By atlNextFloorBtn = By.xpath("//div[@class='imc-floor-plan--floorButtons']/a[2]"); //Locator for previous Floor button
+	By atlPreviousFloorBtn = By.xpath("//div[@class='imc-floor-plan--floorButtons']/a[1]"); //Locator for Next Floor button
+	By atlExpectedFloorNumber = By.xpath("//div[@class='imc-content--omni']"); //Locator for expected Floor number
+	
 	
 	public ATLFloorPlansPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -109,7 +115,21 @@ public class ATLFloorPlansPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlSelectBox));
 		return driver.findElement(atlSelectBox);
 	}
-
+	public WebElement getATLNextFloorBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlNextFloorBtn));
+		return driver.findElement(atlNextFloorBtn);
+	}
+	public WebElement getATLPreviousFloorBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlPreviousFloorBtn));
+		return driver.findElement(atlPreviousFloorBtn);
+	}
+	public WebElement getATLExpectedFloorNumber() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlExpectedFloorNumber));
+		return driver.findElement(atlExpectedFloorNumber);
+	}
 }
 
 

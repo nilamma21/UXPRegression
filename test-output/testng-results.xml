@@ -1,38 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="66488" started-at="2022-06-22T11:49:59Z" finished-at="2022-06-22T11:51:05Z">
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="228304" started-at="2022-06-23T11:49:21Z" finished-at="2022-06-23T11:53:09Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="66488" started-at="2022-06-22T11:49:59Z" finished-at="2022-06-22T11:51:05Z">
+    <test name="RegressionTest" duration-ms="228304" started-at="2022-06-23T11:49:21Z" finished-at="2022-06-23T11:53:09Z">
       <class name="atlantamarket.FloorPlans">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket.FloorPlans@59f99ea]" name="initialize" is-config="true" duration-ms="53316" started-at="2022-06-22T17:19:59Z" finished-at="2022-06-22T17:20:52Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket.FloorPlans@26653222]" name="initialize" is-config="true" duration-ms="88133" started-at="2022-06-23T17:19:21Z" finished-at="2022-06-23T17:20:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS005_VerifyFloorPlansIconsTest()[pri:0, instance:atlantamarket.FloorPlans@59f99ea]" name="TS005_VerifyFloorPlansIconsTest" duration-ms="13114" started-at="2022-06-22T17:20:52Z" finished-at="2022-06-22T17:21:05Z">
+        <test-method status="PASS" signature="TS001_VerifyNavigationToDifferentFloorBuildingsTest()[pri:0, instance:atlantamarket.FloorPlans@26653222]" name="TS001_VerifyNavigationToDifferentFloorBuildingsTest" duration-ms="10580" started-at="2022-06-23T17:20:49Z" finished-at="2022-06-23T17:21:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifyNavigationToDifferentFloorBuildingsTest -->
+        <test-method status="PASS" signature="TS003_VerifyFloorPlansNoExhibitorsLoadingMessageTest()[pri:0, instance:atlantamarket.FloorPlans@26653222]" name="TS003_VerifyFloorPlansNoExhibitorsLoadingMessageTest" duration-ms="5220" started-at="2022-06-23T17:21:00Z" finished-at="2022-06-23T17:21:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifyFloorPlansNoExhibitorsLoadingMessageTest -->
+        <test-method status="PASS" signature="TS004_VerifyFloorPlansZoomInOutLevelTest()[pri:0, instance:atlantamarket.FloorPlans@26653222]" name="TS004_VerifyFloorPlansZoomInOutLevelTest" duration-ms="19200" started-at="2022-06-23T17:21:05Z" finished-at="2022-06-23T17:21:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyFloorPlansZoomInOutLevelTest -->
+        <test-method status="PASS" signature="TS005_VerifyFloorPlansIconsTest()[pri:0, instance:atlantamarket.FloorPlans@26653222]" name="TS005_VerifyFloorPlansIconsTest" duration-ms="11217" started-at="2022-06-23T17:21:24Z" finished-at="2022-06-23T17:21:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS005_VerifyFloorPlansIconsTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket.FloorPlans@59f99ea]" name="tearDown" is-config="true" duration-ms="1" started-at="2022-06-22T17:21:05Z" finished-at="2022-06-22T17:21:05Z">
-
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="242614" started-at="2022-06-22T08:41:49Z" finished-at="2022-06-22T08:45:51Z">
-    <groups>
-    </groups>
-    <test name="RegressionTest" duration-ms="242614" started-at="2022-06-22T08:41:49Z" finished-at="2022-06-22T08:45:51Z">
-      <class name="atlantamarket.FloorPlans">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket.FloorPlans@5e5792a0]" name="initialize" is-config="true" duration-ms="225456" started-at="2022-06-22T14:11:49Z" finished-at="2022-06-22T14:15:34Z">
+        <test-method status="PASS" signature="TS006_VerifyFlooPlansFiltersTest()[pri:0, instance:atlantamarket.FloorPlans@26653222]" name="TS006_VerifyFlooPlansFiltersTest" duration-ms="61460" started-at="2022-06-23T17:21:35Z" finished-at="2022-06-23T17:22:37Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyFloorPlansNavigationToDifferentFloorBuildingsTest()[pri:0, instance:atlantamarket.FloorPlans@5e5792a0]" name="TS001_VerifyFloorPlansNavigationToDifferentFloorBuildingsTest" duration-ms="11926" started-at="2022-06-22T14:15:34Z" finished-at="2022-06-22T14:15:46Z">
+        </test-method> <!-- TS006_VerifyFlooPlansFiltersTest -->
+        <test-method status="PASS" signature="TS007_VerifyFloorPlansPaginationTest()[pri:0, instance:atlantamarket.FloorPlans@26653222]" name="TS007_VerifyFloorPlansPaginationTest" duration-ms="32446" started-at="2022-06-23T17:22:37Z" finished-at="2022-06-23T17:23:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS001_VerifyFloorPlansNavigationToDifferentFloorBuildingsTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket.FloorPlans@5e5792a0]" name="tearDown" is-config="true" duration-ms="5149" started-at="2022-06-22T14:15:46Z" finished-at="2022-06-22T14:15:51Z">
-
+        </test-method> <!-- TS007_VerifyFloorPlansPaginationTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket.FloorPlans@26653222]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-06-23T17:23:09Z" finished-at="2022-06-23T17:23:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
