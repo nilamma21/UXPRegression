@@ -13,7 +13,9 @@ public class ATLFloorPlansPage {
 
 	By atlExhibitorsAndProductTab = By.xpath("//div[@class='imc-section']/div[1]/div[2]/div[1]/a[1]"); // Locator for Exhibitor And Product tab 
 	By atlFloorPlansLink = By.xpath("//div[@class='imc-section']/div[1]/div[2]/div[2]/div[1]/div[2]"); //Locator for floor plans Link
-	By atlBuildingFloor = By.xpath("//div[@class='imc-campus-view']/div[3]/div[12]/div[3]/a[1]"); //Locator for Building floor
+	//By atlBuildingFloor = By.xpath("//div[@class='imc-campus-view']/div[3]/div[12]/div[3]/a[1]"); //Locator for Building floor
+	//By atlBuildingFloor = By.xpath("//div[@class='imc-campus-view']/div[1]/div[23]/div[3]/a[1]"); //Locator for Building floor
+	By atlBuildingFloor = By.xpath("//div[@class='imc-campus-view']/div[3]/div[11]/div[3]/a[1]"); //Locator for Building floor
 	By atlBuildingFloorNumber = By.xpath("//div[@class='imc-campus-view']/div[1]/div[23]/div[2]"); //Locator for Building floor number
 	By atlFloorName = By.xpath("//div[@class='imc-type--title-6']");
 	By atlnoexhibitorsmsg = By.xpath("//p[contains(text(),'No Exhibitors on This Floor')]"); //Locator for No exhibitor msg
@@ -23,6 +25,7 @@ public class ATLFloorPlansPage {
 	By atlExhibitorFloorZoomOut = By.xpath("//div[@class='meridian-zoom-controls meridian--private--1qg3nfg']/button[2]"); //Locator for Zoom In Exhibitor
 	By atlfloorplanmapimage = By.xpath("//div[@class='imc-map-container']/div[1]/div[1]/div[5]/div[1]"); //Locator for Zoom In out Attribute
 	By atlSelectBox = By.xpath("//select[@class='imc-searchform--dropdown imc-floor-plan--dropdown']"); //Locator Selectbox
+
 	By vendingmchineicononmap = By.xpath("//button[contains(@class, 'vending_machines')]"); //Locator for Vending Machine icon on Map image
 	By vendingmachineoverlay = By.xpath("//div[contains(@style, 'vending_machines')]"); //Locator for Vending Machine overlay on Map
 	By elevatoricononmap = By.xpath("(//button[contains(@class, 'elevator')])[position()=1]"); //Locator for elevator icon on Map image
@@ -36,6 +39,12 @@ public class ATLFloorPlansPage {
 	By exhibitordetailsmodal = By.xpath("//div[@class='imc-content--padded-medium-desktop']"); //Locator for Exhibitor Details Modal
 	By exhnameonexhdetailsmodal = By.xpath("//div[@class='imc-content--padded-medium-desktop']/div/div/h5"); //Locator for Exhibitor name on Exh Details Modal
 	By overlayclosebtn = By.xpath("//button[@data-testid='meridian--private--close-overlay']"); //Locator for Overlay close btn
+
+	By atlNextFloorBtn = By.xpath("//div[@class='imc-floor-plan--floorButtons']/a[2]"); //Locator for previous Floor button
+	By atlPreviousFloorBtn = By.xpath("//div[@class='imc-floor-plan--floorButtons']/a[1]"); //Locator for Next Floor button
+	By atlExpectedFloorNumber = By.xpath("//div[@class='imc-content--omni']"); //Locator for expected Floor number
+	
+
 	
 	public ATLFloorPlansPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -162,6 +171,24 @@ public class ATLFloorPlansPage {
 	public WebElement getOverlayCloseBtn() {
 		return driver.findElement(overlayclosebtn);
 	}
+
+
+	public WebElement getATLNextFloorBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlNextFloorBtn));
+		return driver.findElement(atlNextFloorBtn);
+	}
+	public WebElement getATLPreviousFloorBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlPreviousFloorBtn));
+		return driver.findElement(atlPreviousFloorBtn);
+	}
+	public WebElement getATLExpectedFloorNumber() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlExpectedFloorNumber));
+		return driver.findElement(atlExpectedFloorNumber);
+	}
+
 }
 
 
