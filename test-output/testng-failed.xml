@@ -5,12 +5,9 @@
     <classes>
       <class name="atlantamarket.FloorPlans">
         <methods>
-          <include name="TS003_VerifyFloorPlansNoExhibitorsLoadingMessageTest"/>
-          <include name="TS006_VerifyFlooPlansFiltersTest"/>
-          <include name="TS007_VerifyFloorPlansPaginationTest"/>
-          <include name="TS005_VerifyFloorPlansIconsTest"/>
+          <include name="TS008_VerifyFloorPlansSelectExhibitorsTest"/>
+          <include name="tearDown"/>
           <include name="TS001_VerifyNavigationToDifferentFloorBuildingsTest"/>
-          <include name="TS004_VerifyFloorPlansZoomInOutLevelTest"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- atlantamarket.FloorPlans -->

@@ -14,10 +14,10 @@
 			<class name="atlantamarket.GlobalSearch_ProductActions" /> -->
 			<class name="atlantamarket.FloorPlans" />
 
-			<!-- <methods>
-				<include name="TS001_VerifyMarketPlannerLoginTest" /> 
-				<include name="TS007_VerifyFloorPlansPaginationTest" />
-			</methods> -->
+			 <methods>
+				<!-- <include name="TS003_VerifyFloorPlansNoExhibitorsLoadingMessageTest" />  -->
+				<!-- <include name="TS008_VerifyFloorPlansSelectExhibitorsTest" /> -->
+			</methods> 
 
 
 		</classes>

@@ -59,12 +59,12 @@ public class FloorPlans extends base {
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(10000);
-		lap.getCloseMarktAdBtn().click();
+		//lap.getCloseMarktAdBtn().click();
 
 		// Login to Market Planner
-		/*utl.verifyMPLoginFunctionality();
+		utl.verifyMPLoginFunctionality();
 		Thread.sleep(6000);
-		lap.getCloseMarktAdBtn().click();*/
+		//lap.getCloseMarktAdBtn().click();
 	}
 	
 	@Test(priority = 1)
@@ -82,6 +82,7 @@ public class FloorPlans extends base {
 		atlflpp.getATLExhibitorsAndProductTab().click();
 		
 		//click on Floor plans link
+		//atlflpp.getATLFloorPlansLink().click();
 		atlflpp.getATLFloorPlansLink().click();
 
 		Thread.sleep(5000);
@@ -311,11 +312,76 @@ public class FloorPlans extends base {
 		
 		
 	}
+	@Test(priority = 8)
+	public void TS008_VerifyFloorPlansSelectExhibitorsTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP-T324: Floor Plans: Select Exhibitors
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlflpp=new ATLFloorPlansPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		// Click on Exh And Product Tab
+		atlflpp.getATLExhibitorsAndProductTab().click();
+		//click on Floor plans link
+		atlflpp.getATLFloorPlansLink().click();
+		
+		//Click on Building floor
+		String floorName=atlflpp.getATLBuildingFloor().getText();
+		System.out.println("Floor Name : " +floorName);
+		//click on No Exhibitor floor
+		atlflpp.getATLBuildingFloor().click();
+		
+		//Scroll Down to Exhibitor list
+		utl.scrollToElement(atlflpp.getATLNextFloorBtn());
+		//Stored 1st Exhibitor Name
+		String exhibitorName=atlflpp.getATLExhibitorName().getText();
+		System.out.println("Exhi Name: "+exhibitorName);
+		//Click on 1st Exhibitor
+		atlflpp.getATLExhibitorName().click();
+		//Store Dg showroom exh title
+		String exhNameOnDGShowroomPage=atlflpp.getATLExhibitorNameOnDGShowroomPage().getText();
+		System.out.println("DG showrrom Exhi Name: "+exhNameOnDGShowroomPage);
+		//Verify Exh Title
+		Assert.assertTrue(exhibitorName.contains(exhNameOnDGShowroomPage));
+		
+	}
+
+	@Test(priority = 9)
+	public void TS009_VerifyFloorPlanReturnToBuildingListTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP-T328: Floor Plans: Return to Building list
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlflpp=new ATLFloorPlansPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		// Click on Exh And Product Tab
+		atlflpp.getATLExhibitorsAndProductTab().click();
+		//click on Floor plans link
+		atlflpp.getATLFloorPlansLink().click();
+		
+		//Click on Building floor
+		String floorName=atlflpp.getATLBuildingFloor().getText();
+		System.out.println("Floor Name : " +floorName);
+		//click on No Exhibitor floor
+		atlflpp.getATLBuildingFloor().click();
+		//Click on Return to Building Page link
+		atlflpp.getATLReturnToBuildingList().click();
+		
+		Thread.sleep(5000);
+		//Verify that user should redirect to Floor plans page
+		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_uat")+"Market-Map"));
+	}
 
 
 	@AfterClass
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 }
