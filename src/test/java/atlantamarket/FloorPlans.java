@@ -60,23 +60,13 @@ public class FloorPlans extends base {
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(10000);
-		//lap.getCloseMarktAdBtn().click();
+		lap.getCloseMarktAdBtn().click();
 
-
-		/*	// Login to Market Planner
+		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
-
 		Thread.sleep(8000);
 
-		// Login to Market Planner
-		utl.verifyMPLoginFunctionality();
-		Thread.sleep(6000);
-<<<<<<< HEAD
-		//lap.getCloseMarktAdBtn().click();
-=======
-
-		lap.getCloseMarktAdBtn().click();*/
->>>>>>> 76f00b53303cac04995ada4b0d8fda66ddb23e0b
+		lap.getCloseMarktAdBtn().click();
 	}
 
 	@Test(priority = 1)
@@ -458,14 +448,10 @@ public class FloorPlans extends base {
 
 
 
-	/*	@AfterClass
+	@AfterClass
 	public void tearDown()
 	{
-<<<<<<< HEAD
 		driver.quit();
 	}
-=======
-		//driver.quit();
-	}*/
->>>>>>> 76f00b53303cac04995ada4b0d8fda66ddb23e0b
+
 }
