@@ -8,11 +8,12 @@
 
 	<test thread-count="4" name="RegressionTest">
 		<classes>
-<!-- 			<class name="atlantamarket.GlobalSearch_SuggestionList" />
+		<!-- <class name="atlantamarket.GlobalSearch_SuggestionList" />
 			<class name="atlantamarket.GlobalSearch_ExhibitorActions" />
 			<class name="atlantamarket.GlobalSearch_LineActions" /> 
 			<class name="atlantamarket.GlobalSearch_ProductActions" /> -->
 			<class name="atlantamarket.FloorPlans" />
+<<<<<<< HEAD
 
 			 <methods>
 				<!-- <include name="TS003_VerifyFloorPlansNoExhibitorsLoadingMessageTest" />  -->
@@ -20,6 +21,8 @@
 			</methods> 
 
 
+=======
+>>>>>>> 76f00b53303cac04995ada4b0d8fda66ddb23e0b
 		</classes>
 	</test>
 </suite>
