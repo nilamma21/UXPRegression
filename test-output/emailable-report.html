@@ -31,6 +31,9 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
+<<<<<<< HEAD
+<tr><td style="text-align:left;padding-right:2em">RegressionTest</td><td class="numi">6</td><td class="numi">6</td><td class="numi">0</td><td class="numi_attn">2</td><td class="numi">294.2 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+=======
 
 <tr><td style="text-align:left;padding-right:2em">RegressionTest</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">104.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
@@ -66,23 +69,64 @@ org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedC
 </div>
 
 <tr><td style="text-align:left;padding-right:2em">RegressionTest</td><td class="numi">6</td><td class="numi">6</td><td class="numi">0</td><td class="numi">0</td><td class="numi">228.3 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+>>>>>>> 76f00b53303cac04995ada4b0d8fda66ddb23e0b
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr><th colspan="4">RegressionTest &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="2">atlantamarket.FloorPlans</td><td><a href="#m1"><b>TS001_VerifyNavigationToDifferentFloorBuildingsTest</b>  </a></td><td class="numi">1</td><td>1656069188605</td><td class="numi">54190</td></tr><tr class="failedodd"><td><a href="#m2"><b>TS008_VerifyFloorPlansSelectExhibitorsTest</b>  </a></td><td class="numi">1</td><td>1656069377848</td><td class="numi">36568</td></tr>
 <tr><th colspan="4">RegressionTest &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="6">atlantamarket.FloorPlans</td><td><a href="#m1"><b>TS001_VerifyNavigationToDifferentFloorBuildingsTest</b>  </a></td><td class="numi">1</td><td>1655985049544</td><td class="numi">10580</td></tr><tr class="passedodd"><td><a href="#m2"><b>TS003_VerifyFloorPlansNoExhibitorsLoadingMessageTest</b>  </a></td><td class="numi">1</td><td>1655985060138</td><td class="numi">5220</td></tr><tr class="passedodd"><td><a href="#m3"><b>TS004_VerifyFloorPlansZoomInOutLevelTest</b>  </a></td><td class="numi">1</td><td>1655985065360</td><td class="numi">19200</td></tr><tr class="passedodd"><td><a href="#m4"><b>TS005_VerifyFloorPlansIconsTest</b>  </a></td><td class="numi">1</td><td>1655985084563</td><td class="numi">11217</td></tr><tr class="passedodd"><td><a href="#m5"><b>TS006_VerifyFlooPlansFiltersTest</b>  </a></td><td class="numi">1</td><td>1655985095782</td><td class="numi">61460</td></tr><tr class="passedodd"><td><a href="#m6"><b>TS007_VerifyFloorPlansPaginationTest</b>  </a></td><td class="numi">1</td><td>1655985157244</td><td class="numi">32446</td></tr>
+<tr class="passedodd"><td rowspan="6">atlantamarket.FloorPlans</td><td><a href="#m3"><b>TS003_VerifyFloorPlansNoExhibitorsLoadingMessageTest</b>  </a></td><td class="numi">1</td><td>1656069243202</td><td class="numi">8676</td></tr><tr class="passedodd"><td><a href="#m4"><b>TS004_VerifyFloorPlansZoomInOutLevelTest</b>  </a></td><td class="numi">1</td><td>1656069251882</td><td class="numi">17399</td></tr><tr class="passedodd"><td><a href="#m5"><b>TS005_VerifyFloorPlansIconsTest</b>  </a></td><td class="numi">1</td><td>1656069269283</td><td class="numi">14677</td></tr><tr class="passedodd"><td><a href="#m6"><b>TS006_VerifyFlooPlansFiltersTest</b>  </a></td><td class="numi">1</td><td>1656069283963</td><td class="numi">59887</td></tr><tr class="passedodd"><td><a href="#m7"><b>TS007_VerifyFloorPlansPaginationTest</b>  </a></td><td class="numi">1</td><td>1656069343854</td><td class="numi">33989</td></tr><tr class="passedodd"><td><a href="#m8"><b>TS009_VerifyFloorPlanReturnToBuildingListTest</b>  </a></td><td class="numi">1</td><td>1656069414616</td><td class="numi">13784</td></tr>
 </table>
 <h1>RegressionTest</h1>
-<h2 id="m1">atlantamarket.FloorPlans:TS003_VerifyFloorPlansNoExhibitorsLoadingMessageTest</h2>
+<h2 id="m1">atlantamarket.FloorPlans:TS001_VerifyNavigationToDifferentFloorBuildingsTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class=&apos;imc-section&apos;]/div[1]/div[2]/div[2]/div[1]/div[2] (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.AtlantaMarket.ATLFloorPlansPage.getATLFloorPlansLink(ATLFloorPlansPage.java:51)
+<br/>at atlantamarket.FloorPlans.TS001_VerifyNavigationToDifferentFloorBuildingsTest(FloorPlans.java:86)
+<br/>25 lines not shown
+<p>Caused by Cannot locate an element using By.xpath: //div[@class=&apos;imc-section&apos;]/div[1]/div[2]/div[2]/div[1]/div[2]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;SWAPNILI&apos;, ip: &apos;172.27.182.57&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: driver.version: unknown</p>
+org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+<br/>at java.util.Optional.orElseThrow(Optional.java:290)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+<br/>at pageObjects.AtlantaMarket.ATLFloorPlansPage.getATLFloorPlansLink(ATLFloorPlansPage.java:51)
+<br/>at atlantamarket.FloorPlans.TS001_VerifyNavigationToDifferentFloorBuildingsTest(FloorPlans.java:86)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">atlantamarket.FloorPlans:TS001_VerifyNavigationToDifferentFloorBuildingsTest</h2>
+<h2 id="m2">atlantamarket.FloorPlans:TS008_VerifyFloorPlansSelectExhibitorsTest</h2>
+<div style="padding-left:3em">
+<p>expected [true] but found [false]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertTrue(Assert.java:42)
+<br/>at org.testng.Assert.assertTrue(Assert.java:52)
+<br/>at atlantamarket.FloorPlans.TS008_VerifyFloorPlansSelectExhibitorsTest(FloorPlans.java:348)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">atlantamarket.FloorPlans:TS006_VerifyFlooPlansFiltersTest</h2>
+<h2 id="m3">atlantamarket.FloorPlans:TS003_VerifyFloorPlansNoExhibitorsLoadingMessageTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">atlantamarket.FloorPlans:TS004_VerifyFloorPlansZoomInOutLevelTest</h2>
+<h2 id="m4">atlantamarket.FloorPlans:TS007_VerifyFloorPlansPaginationTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m5">atlantamarket.FloorPlans:TS005_VerifyFloorPlansIconsTest</h2>
+<h2 id="m5">atlantamarket.FloorPlans:TS004_VerifyFloorPlansZoomInOutLevelTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m6">atlantamarket.FloorPlans:TS007_VerifyFloorPlansPaginationTest</h2>
+<h2 id="m6">atlantamarket.FloorPlans:TS005_VerifyFloorPlansIconsTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">atlantamarket.FloorPlans:TS006_VerifyFlooPlansFiltersTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">atlantamarket.FloorPlans:TS009_VerifyFloorPlanReturnToBuildingListTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

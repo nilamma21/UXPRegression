@@ -18,9 +18,15 @@ public class ATLFloorPlansPage {
 	By atlBuildingFloor = By.xpath("//div[@class='imc-campus-view']/div[3]/div[11]/div[3]/a[1]"); //Locator for Building floor
 	By atlBuildingFloorNumber = By.xpath("//div[@class='imc-campus-view']/div[1]/div[23]/div[2]"); //Locator for Building floor number
 	By atlFloorName = By.xpath("//div[@class='imc-type--title-6']");
+<<<<<<< HEAD
+	By atlNoExpMsg = By.xpath("//div[@class='imc-manufacturing-line--alternated-section imc-lines-overview']/p[2]"); //Locator for No exhibitor msg
+	By atlLoadingExhMsg = By.xpath("(//div[@class='section-wrapper imc-section--'])[1]/section[1]/div[1]/div[1]/div[1]/div[3]/p[]"); //Locator for Exhibitor loading msg
+	By atlNoExhibitorFloor = By.xpath("//div[@class='imc-campus-view']/div[1]/div[18]/div[3]/a[1]"); //Locator for No Exhibitor
+=======
 	By atlnoexhibitorsmsg = By.xpath("//p[contains(text(),'No Exhibitors on This Floor')]"); //Locator for No exhibitor msg
 	By atlloadingexhmsg = By.xpath("//p[contains(text(),'Loading Exhibitors Please Wait ...')]"); //Locator for Loading Exhibitors msg
 	By atlNoExhibitorFloor = By.xpath("//a[contains(text(),'Buying Groups / Meeting Space')]"); //Locator for No Exhibitor
+>>>>>>> 76f00b53303cac04995ada4b0d8fda66ddb23e0b
 	By atlExhibitorFloorZoomIn = By.xpath("//div[@class='meridian-zoom-controls meridian--private--1qg3nfg']/button[1]"); //Locator for Zoom In Exhibitor
 	By atlExhibitorFloorZoomOut = By.xpath("//div[@class='meridian-zoom-controls meridian--private--1qg3nfg']/button[2]"); //Locator for Zoom In Exhibitor
 	By atlfloorplanmapimage = By.xpath("//div[@class='imc-map-container']/div[1]/div[1]/div[5]/div[1]"); //Locator for Zoom In out Attribute
@@ -43,8 +49,14 @@ public class ATLFloorPlansPage {
 	By atlNextFloorBtn = By.xpath("//div[@class='imc-floor-plan--floorButtons']/a[2]"); //Locator for previous Floor button
 	By atlPreviousFloorBtn = By.xpath("//div[@class='imc-floor-plan--floorButtons']/a[1]"); //Locator for Next Floor button
 	By atlExpectedFloorNumber = By.xpath("//div[@class='imc-content--omni']"); //Locator for expected Floor number
+<<<<<<< HEAD
+	By atlExhibitorName = By.xpath("//div[@class='imc-content--padded-top-bottom']/div[1]/div[1]/div[2]/a[1]"); //Locator for Exhibitor Name
+	By atlExhibitorNameOnDGShowroomPage = By.xpath("//div[@class='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[3]/a[1]"); //Locator for Exhibitor Name on DG showroom Page 
+	By atlReturnToBuildingList = By.xpath("//div[@class='imc-floor-plan']/div[1]/div[1]/a[1]"); //Locator for Return to Building list link
+=======
 	
 
+>>>>>>> 76f00b53303cac04995ada4b0d8fda66ddb23e0b
 	
 	public ATLFloorPlansPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -188,7 +200,25 @@ public class ATLFloorPlansPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlExpectedFloorNumber));
 		return driver.findElement(atlExpectedFloorNumber);
 	}
+<<<<<<< HEAD
+	public WebElement getATLExhibitorName() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlExhibitorName));
+		return driver.findElement(atlExhibitorName);
+	}
+	public WebElement getATLExhibitorNameOnDGShowroomPage() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlExhibitorNameOnDGShowroomPage));
+		return driver.findElement(atlExhibitorNameOnDGShowroomPage);
+	}
+	public WebElement getATLReturnToBuildingList() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlReturnToBuildingList));
+		return driver.findElement(atlReturnToBuildingList);
+	}
+=======
 
+>>>>>>> 76f00b53303cac04995ada4b0d8fda66ddb23e0b
 }
 
 
