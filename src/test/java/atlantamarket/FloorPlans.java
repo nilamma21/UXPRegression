@@ -169,19 +169,10 @@ public class FloorPlans extends base {
 		//click on Floor plans link
 		atlflpp.getATLFloorPlansLink().click();
 
-
 		//click on any floor
 		atlflpp.getATLBuildingFloor().click();
 
-		//Click on Zoom In icon
-
-		//Click on Building floor
-		String floorName=atlflpp.getATLBuildingFloor().getText();
-		System.out.println("Floor Name : " +floorName);
-		//click on No Exhibitor floor
-		atlflpp.getATLNoExhibitorFloor().click();
-		
-
+		//Click on Zoom In icon	
 		atlflpp.getATLExhibitorFloorZoomIn().click();
 		//Stored Zoom in Attribute
 		String x1=atlflpp.getATLFloorPlanMapIamge().getAttribute("style");
