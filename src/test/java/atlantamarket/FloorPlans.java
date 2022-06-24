@@ -254,23 +254,8 @@ public class FloorPlans extends base {
 		//Verify that Phone Overlay should appeared on Map
 		Assert.assertTrue(atlflpp.getPhoneOverlayOnMap().isDisplayed());
 
-		//Click on Building floor
-		String floorName=atlflpp.getATLBuildingFloor().getText();
-		System.out.println("Floor Name : " +floorName);
-		//click on No Exhibitor floor
-		atlflpp.getATLNoExhibitorFloor().click();
-		//Click on ZoomIn +button
-		atlflpp.getATLExhibitorFloorZoomIn().click();
-		atlflpp.getATLExhibitorFloorZoomIn().click();
-		String atlIconHeader=atlflpp.getATLIconText().getText();
-		System.out.println("Icon Header : "+atlIconHeader);
-		//Click on Icon
-		atlflpp.getATLIcon().click();
-
-		
 		//Click on Overlay Close btn
 		atlflpp.getOverlayCloseBtn().click();
-		
 		
 		//Not working below code
 		/*//Click on Location pin of any Exhibitor on Map
