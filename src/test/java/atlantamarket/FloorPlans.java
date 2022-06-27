@@ -445,7 +445,50 @@ public class FloorPlans extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_uat")+"Market-Map"));
 	}
 
+	@Test(priority = 10)
+	public void TS010_VerifyFloorPlansNavigationToDifferentFloorBuildingsTestAdnExpSearch() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP-T285: To verify Floor Plans: Navigation to different floor/buildings
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlflpp=new ATLFloorPlansPage(driver);
 
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		// Click on Exh And Product Tab
+		atlflpp.getATLExhibitorsAndProductTab().click();
+		Thread.sleep(5000);
+		//click on Floor plans link
+		atlflpp.getATLFloorPlansLink().click();
+		Thread.sleep(5000);
+		String floorPlansPageUrl=prop.getProperty("floorPlansPageURL");
+		driver.getCurrentUrl().contains(floorPlansPageUrl);
+		//Verify Floor plans page URL
+		Assert.assertTrue(driver.getCurrentUrl().contains(floorPlansPageUrl));
+		//Click on Building floor
+		String floorName=atlflpp.getATLBuildingFloorNumber().getText();
+		System.out.println("Floor Name : " +floorName);
+		atlflpp.getATLBuildingFloorNumber().click();
+		Thread.sleep(5000);
+		//Verify floor name
+		Assert.assertTrue(atlflpp.getATLFloorName().getText().contains(floorName));
+		System.out.println("User is redirected to building floor properly.");
+		utl.scrollToElement(atlflpp.getscrollexhibitorsection());
+		Thread.sleep(5000);
+		Assert.assertTrue(atlflpp.getatlexhibitorsection().isDisplayed());
+		System.out.println("Exhibitors are displayed properly.");
+		Thread.sleep(5000);
+		atlflpp.getatlexhibitorsearch().click();
+		utl.scrollToElement(atlflpp.getscrollexhibitorsection());
+		atlflpp.getatlexhibitorsearch().click();
+		atlflpp.getatlexhibitorsearch().sendKeys(prop.getProperty("floorplanexhibitorseacrch"));
+		Thread.sleep(5000);
+		atlflpp.getatlserachexhibitorbtn().click();
+		Assert.assertTrue(atlflpp.getverifyexhibitor().getText().contains(prop.getProperty("floorplanexhibitorseacrch")));
+		System.out.println("Searched exhibitors are displayed properly.");
+		
+	}
 
 
 	@AfterClass
