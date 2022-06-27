@@ -47,6 +47,11 @@ public class ATLFloorPlansPage {
 	By atlExhibitorName = By.xpath("//div[@class='imc-content--padded-top-bottom']/div[1]/div[1]/div[2]/a[1]"); //Locator for Exhibitor Name
 	By atlExhibitorNameOnDGShowroomPage = By.xpath("//div[@class='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[3]/a[1]"); //Locator for Exhibitor Name on DG showroom Page 
 	By atlReturnToBuildingList = By.xpath("//div[@class='imc-floor-plan']/div[1]/div[1]/a[1]"); //Locator for Return to Building list link
+	By scrollexhibitorsection = By.xpath("//div[@class = 'imc-manufacturing-line--alternated-section imc-lines-overview']"); //Locator for scroll to exhibitor section
+	By atlexhibitorsection = By.xpath("//div[@class = 'imc-content--padded-top-bottom']/div[1]"); //locator for exhibitor section at floor plans
+	By atlexhibitorsearch = By.xpath("//input[@placeholder = 'Filter By Name']"); //Locator for search input box
+	By atlserachexhibitorbtn = By.xpath("//section[@class = 'imc-site-wrapper']/div[1]/section[1]/div[1]/div[1]/div[1]/div[3]/div[3]/div[1]/div[1]/section[1]/div[1]/form[1]/button[2]"); //Locator for Search button for search input field
+	By verifyexhibitor = By.xpath("//div[@class = 'imc-manufacturing-line']/div[2]/a[1]"); //Locator for verification for searched exhibitor
 
 	
 	public ATLFloorPlansPage(WebDriver driver) {
@@ -206,6 +211,28 @@ public class ATLFloorPlansPage {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlReturnToBuildingList));
 		return driver.findElement(atlReturnToBuildingList);
+	}
+	public WebElement getatlexhibitorsection() throws InterruptedException {
+		Thread.sleep(10000);
+		return driver.findElement(atlexhibitorsection);
+	}
+	public WebElement getatlexhibitorsearch() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlexhibitorsearch));
+		return driver.findElement(atlexhibitorsearch);
+	}
+	public WebElement getatlserachexhibitorbtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlserachexhibitorbtn));
+		return driver.findElement(atlserachexhibitorbtn);
+	}
+	public WebElement getverifyexhibitor() throws InterruptedException {
+		Thread.sleep(5000);
+		return driver.findElement(verifyexhibitor);
+	}
+	public WebElement getscrollexhibitorsection() throws InterruptedException {
+		Thread.sleep(10000);
+		return driver.findElement(scrollexhibitorsection);
 	}
 
 }
