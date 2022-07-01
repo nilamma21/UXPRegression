@@ -55,14 +55,14 @@ public class GlobalSearch_LineActions extends base {
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 		lap.getIUnderstandBtn().click();
-		Thread.sleep(10000);
-		lap.getCloseMarktAdBtn().click();
+		Thread.sleep(7000);
+		//lap.getCloseMarktAdBtn().click();
 		
 		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
 		
-		Thread.sleep(6000);
-		lap.getCloseMarktAdBtn().click();
+//		Thread.sleep(6000);
+//		lap.getCloseMarktAdBtn().click();
 	}
 
 	@Test(priority = 1)
@@ -116,7 +116,7 @@ public class GlobalSearch_LineActions extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		lap.getCloseMarktAdBtn().click();
+		//lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
 		atlgs.getATLSearchButton().click();
@@ -160,7 +160,7 @@ public class GlobalSearch_LineActions extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		lap.getCloseMarktAdBtn().click();
+		//lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
 		atlgs.getATLSearchButton().click();
@@ -202,7 +202,7 @@ public class GlobalSearch_LineActions extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		lap.getCloseMarktAdBtn().click();
+		//lap.getCloseMarktAdBtn().click();
 		
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
 		atlgs.getATLSearchButton().click();
@@ -262,7 +262,7 @@ public class GlobalSearch_LineActions extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		lap.getCloseMarktAdBtn().click();
+		//lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
 		atlgs.getATLSearchButton().click();
@@ -329,7 +329,7 @@ public class GlobalSearch_LineActions extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		lap.getCloseMarktAdBtn().click();
+		//lap.getCloseMarktAdBtn().click();
 		
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
 		atlgs.getATLSearchButton().click();
@@ -359,7 +359,7 @@ public class GlobalSearch_LineActions extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		lap.getCloseMarktAdBtn().click();
+		//lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
 		atlgs.getATLSearchButton().click();
@@ -390,7 +390,7 @@ public class GlobalSearch_LineActions extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		lap.getCloseMarktAdBtn().click();
+		//lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
 		atlgs.getATLSearchButton().click();
@@ -437,7 +437,7 @@ public class GlobalSearch_LineActions extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		lap.getCloseMarktAdBtn().click();
+		//lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
 		atlgs.getATLSearchButton().click();
@@ -468,7 +468,7 @@ public class GlobalSearch_LineActions extends base {
 		Assert.assertEquals(matchingprodcountonsearchgrid, matchingprodcountonprodpage);
 		
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		lap.getCloseMarktAdBtn().click();
+		//lap.getCloseMarktAdBtn().click();
 	}
 	
 	@AfterClass
