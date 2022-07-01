@@ -52,8 +52,8 @@ public class GlobalSearch_SuggestionList extends base {
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 		lap.getIUnderstandBtn().click();
-		Thread.sleep(10000);
-		lap.getCloseMarktAdBtn().click();
+//		Thread.sleep(10000);
+//		lap.getCloseMarktAdBtn().click();
 	}
 
 	@Test(priority = 1)
@@ -98,7 +98,7 @@ public class GlobalSearch_SuggestionList extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		lap.getCloseMarktAdBtn().click();
+		//lap.getCloseMarktAdBtn().click();
 		
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestline")));
 
@@ -131,7 +131,7 @@ public class GlobalSearch_SuggestionList extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		lap.getCloseMarktAdBtn().click();
+		//lap.getCloseMarktAdBtn().click();
 		
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestproduct")));
 
@@ -152,7 +152,7 @@ public class GlobalSearch_SuggestionList extends base {
 		Thread.sleep(8000);
 		Assert.assertTrue(atlproddet.getATLValidateProdDetailsPage().isDisplayed());
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		lap.getCloseMarktAdBtn().click();
+		//lap.getCloseMarktAdBtn().click();
 	}
 	
 	@AfterClass

@@ -33,27 +33,28 @@ public class Utility extends base {
 		return element;
 	}
 
-	
+
 	public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
 
 		// The purpose of this test case to verify:-
 		// TS1- Login to Market Planner
-		
+
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);		
-		
+
 		// Click on Login button from Landing Page
 		lap.getLogin().click();
 
 		// Enter the credentials on Login Page and click
 		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
 		lp.getPassword().sendKeys((prop.getProperty("password")));
-		
+
 		lp.getSignInBtn().click();
-		}
-	
+
+	}
+
 	public void mouseHover(WebElement mainMenu,WebElement subMenu) throws IOException, InterruptedException {
-		
+
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);		
 		atlexhact = new ATLExhLineProdActionsPage(driver);
@@ -65,5 +66,6 @@ public class Utility extends base {
 		actions.moveToElement(subMenu);
 		//build()- used to compile all the actions into a single step 
 		actions.click().build().perform();
+
 	}
 }
