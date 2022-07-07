@@ -5,7 +5,7 @@
     <classes>
       <class name="atlantamarket.FloorPlans">
         <methods>
-          <include name="TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest"/>
+          <include name="TS012_VerifyFloorPlansExhibitorsSearchTest"/>
           <include name="tearDown"/>
           <include name="initialize"/>
         </methods>
