@@ -8,11 +8,22 @@
 
 	<test thread-count="4" name="RegressionTest">
 		<classes>
-			<class name="atlantamarket.GlobalSearch_SuggestionList" />
+			<!-- <class name="atlantamarket.GlobalSearch_SuggestionList" />
 			<class name="atlantamarket.GlobalSearch_ExhibitorActions" />
 			<class name="atlantamarket.GlobalSearch_LineActions" />
-			<class name="atlantamarket.GlobalSearch_ProductActions" />
+			<class name="atlantamarket.GlobalSearch_ProductActions" /> -->
 			<class name="atlantamarket.FloorPlans" />
+			<methods>
+			<!-- <include name ="TS003_VerifyZoomInOutLevelOnFloorPlansPageTest"/>
+			<include name ="TS004_VerifyFloorPlansIconsTest"/>
+			<include name ="TS005_VerifyFlooPlansFiltersTest"/> 
+			<include name ="TS006_VerifyFloorPlansPaginationTest"/>
+			<include name ="TS007_VerifyFloorPlansSelectExhibitorsTest"/>
+			<include name ="TS008_VerifyFloorPlanReturnToBuildingListTest"/>
+			<include name ="TS009_VerifyFloorPlansExhibitorAddToListTest"/>
+			<include name ="TS010_VerifyFloorPlansExhibitorAddNoteTest"/> -->
+			<include name ="TS012_VerifyFloorPlansExhibitorsSearchTest"/>	
+		</methods>
 		</classes>
 	</test>
 </suite>

@@ -16,6 +16,7 @@ public class ATLFloorPlansPage {
 	//By atlBuildingFloor = By.xpath("//div[@class='imc-campus-view']/div[3]/div[12]/div[3]/a[1]"); //Locator for Building floor
 	//By atlBuildingFloor = By.xpath("//div[@class='imc-campus-view']/div[1]/div[23]/div[3]/a[1]"); //Locator for Building floor
 	By atlBuildingFloor = By.xpath("//div[@class='imc-campus-view']/div[3]/div[11]/div[3]/a[1]"); //Locator for Building floor
+	By atlBuildingFloorForFilter = By.xpath("//div[@class='imc-campus-view']/div[3]/div[11]/div[3]/a[1]"); //Locator for Building floor
 	By atlBuildingFloorNumber = By.xpath("//div[@class='imc-campus-view']/div[3]/div[10]/div[3]/a"); //Locator for Building floor number
 	By atlFloorName = By.xpath("//div[@class='imc-type--title-6']");
 	By atlNoExpMsg = By.xpath("//div[@class='imc-manufacturing-line--alternated-section imc-lines-overview']/p[2]"); //Locator for No exhibitor msg
@@ -53,6 +54,12 @@ public class ATLFloorPlansPage {
 	By verifyexhibitor = By.xpath("//div[@class = 'imc-manufacturing-line']/div[2]/a[1]"); //Locator for verification for searched exhibitor
 	By viewdgshowroombtn = By.xpath("//a[contains(text(),'View Digital Showroom')]"); //Locator for View Digital Showroom button
 
+	By atlMoreOptions = By.xpath("//div[@class='imc-content--padded-top-bottom']/div[1]/div[1]/div[3]/div[1]"); //Locator for More Options 3dots
+	By atlAddToList = By.xpath("//div[@id='popup-root']/div[2]/div[2]/div[1]/label[1]"); //Locator for Add to List
+	By atlAddNote = By.xpath("//div[@id='popup-root']/div[2]/div[2]/div[2]/div[1]/button[1]/label[1]"); //Locator for Add Note
+	By atlAddFev = By.xpath("//div[@class='imc-content--padded-top-bottom']/div[1]/div[1]/div[3]/div[2]/div[1]/button[1]"); //Locator for Add Fev
+	By atlExhSearchField = By.xpath("(//div[@class='imc-searchform--row'])[2]/form[1]/div[1]/input[1]"); //Locator for Exh Search filed
+	By atlExhSearchFieldBtn = By.xpath("(//div[@class='imc-searchform--row'])[2]/form[1]/button[2]"); //Locator for Exh Search filed Btn
 	public ATLFloorPlansPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
@@ -236,7 +243,42 @@ public class ATLFloorPlansPage {
 	public WebElement getViewDGShowroombtn() {
 		return driver.findElement(viewdgshowroombtn);
 	}
+	public WebElement getATLMoreOptions() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlMoreOptions));
+		return driver.findElement(atlMoreOptions);
+	}
+	public WebElement getATLAddToList() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlAddToList));
+		return driver.findElement(atlAddToList);
+	}
+	public WebElement getATLAddNote() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlAddNote));
+		return driver.findElement(atlAddNote);
+	}
+	public WebElement getATLBuildingFloorForFilter() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlBuildingFloorForFilter));
+		return driver.findElement(atlBuildingFloorForFilter);
+	}
 
+	public WebElement getATLAddFev() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlAddFev));
+		return driver.findElement(atlAddFev);
+	}
+	public WebElement getATLExhSearchField() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlExhSearchField));
+		return driver.findElement(atlExhSearchField);
+	}
+	public WebElement getATLExhSearchFieldBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlExhSearchFieldBtn));
+		return driver.findElement(atlExhSearchFieldBtn);
+	}
 }
 
 
