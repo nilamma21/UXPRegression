@@ -472,7 +472,7 @@ public class FloorPlans extends base {
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 	}
 	@Test(priority = 10)
-	public void TS010_VerifyFloorPlansExhibitorAddToListTest() throws InterruptedException, IOException {
+	public void TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T313: Floor Plans: Exhibitor Options - Add to List
 		lap = new ATLLandingPage(driver);
@@ -506,7 +506,7 @@ public class FloorPlans extends base {
 	}
 
 	@Test(priority = 11)
-	public void TS011_VerifyFloorPlansExhibitorAddNoteTest() throws InterruptedException, IOException {
+	public void TS011_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T314: Floor Plans: Exhibitor Options - Add Note
 		lap = new ATLLandingPage(driver);
@@ -578,7 +578,7 @@ public class FloorPlans extends base {
 	}
 
 	@Test(priority = 12)
-	public void TS011_VerifyFloorPlansExhibitorsOptionAddToFavoriteTest() throws InterruptedException, IOException {
+	public void TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T316: Floor Plans: Exhibitors Option - Add to Favorite
 		lap = new ATLLandingPage(driver);
