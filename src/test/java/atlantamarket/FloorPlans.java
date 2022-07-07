@@ -434,7 +434,7 @@ public class FloorPlans extends base {
 	public void TS009_VerifySearchFunctionalityForExhListOnFloorPlansPageTest() throws InterruptedException, IOException {
 		
 		// The purpose of this test case to verify:-
-		// UXP-T285: To verify Floor Plans: Navigation to different floor/buildings
+		// UXP-T293: Exhibitor functionality on floor plans page
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
 		utl = new Utility(driver);
