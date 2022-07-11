@@ -61,7 +61,7 @@ public class ATLExhLineProdActionsPage extends base{
 	} 
 
 	public WebElement getExhibitorName() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitorname));
 		return driver.findElement(exhibitorname);
 	}
