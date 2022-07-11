@@ -5,6 +5,7 @@
     <classes>
       <class name="atlantamarket_PROD.FloorPlans">
         <methods>
+
           <include name="TS001_VerifyNavigationToDifferentFloorBuildingsTest"/>
           <include name="TS003_VerifyZoomInOutLevelOnFloorPlansPageTest"/>
           <include name="TS006_VerifyPaginationOnFloorPlansPageTest"/>
@@ -63,6 +64,8 @@
       </class> <!-- atlantamarket_PROD.GlobalSearch_LineActions -->
       <class name="atlantamarket_PROD.GlobalSearch_SuggestionList">
         <methods>
+
+          <include name="TS012_VerifyFloorPlansExhibitorsSearchTest"/>
           <include name="tearDown"/>
           <include name="initialize"/>
         </methods>
