@@ -1,4 +1,4 @@
-package atlantamarket;
+package atlantamarket_PROD;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -57,7 +57,7 @@ public class FloorPlans extends base {
 
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
-		driver.get(prop.getProperty("atlmrkturl_uat"));
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(7000);
 		//lap.getCloseMarktAdBtn().click();
@@ -87,7 +87,7 @@ public class FloorPlans extends base {
 		Thread.sleep(5000);
 
 		//Verify that user should redirect to Floor plans page
-		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_uat")+"Market-Map"));
+		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_prod")+"Market-Map"));
 
 		//Click on Building/floor
 		String floorName=atlflpp.getATLBuildingFloor().getText();
@@ -427,7 +427,7 @@ public class FloorPlans extends base {
 		Thread.sleep(5000);
 		
 		//Verify that user should redirect to Floor plans page
-		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_uat")+"Market-Map"));
+		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_prod")+"Market-Map"));
 	}
 
 	@Test(priority = 9)
@@ -463,7 +463,7 @@ public class FloorPlans extends base {
 		Thread.sleep(5000);
 		Assert.assertTrue(atlflpp.getverifyexhibitor().getText().contains(prop.getProperty("floorplanexhibitorseacrch")));
 		
-		driver.get(prop.getProperty("atlmrkturl_uat"));
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
 
 

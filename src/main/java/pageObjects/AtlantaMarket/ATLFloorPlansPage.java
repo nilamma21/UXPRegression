@@ -12,7 +12,7 @@ public class ATLFloorPlansPage {
 	public WebDriverWait wait;
 
 	By atlExhibitorsAndProductTab = By.xpath("//a[contains(text(),'Exhibitors & Products')]"); // Locator for Exhibitor And Product tab 
-	By atlFloorPlansLink = By.xpath("//div[@class='imc-section']/div[1]/div[2]/div[2]/div[1]/div[2]"); //Locator for floor plans Link
+	By atlFloorPlansLink = By.xpath("//a[contains(text(),'Floor Plans')]"); //Locator for floor plans Link
 	//By atlBuildingFloor = By.xpath("//div[@class='imc-campus-view']/div[3]/div[12]/div[3]/a[1]"); //Locator for Building floor
 	//By atlBuildingFloor = By.xpath("//div[@class='imc-campus-view']/div[1]/div[23]/div[3]/a[1]"); //Locator for Building floor
 	By atlBuildingFloor = By.xpath("//div[@class='imc-campus-view']/div[3]/div[11]/div[3]/a[1]"); //Locator for Building floor
@@ -57,7 +57,7 @@ public class ATLFloorPlansPage {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
-	public WebElement getATLExhibitorsAndProductTab(){
+	public WebElement getATLExhibitorsAndProductTab() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlExhibitorsAndProductTab));
 		return driver.findElement(atlExhibitorsAndProductTab);

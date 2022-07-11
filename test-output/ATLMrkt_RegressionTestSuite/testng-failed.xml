@@ -3,12 +3,70 @@
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-      <class name="atlantamarket.GlobalSearch_LeftPaneFilters">
+      <class name="atlantamarket_PROD.FloorPlans">
         <methods>
+          <include name="TS001_VerifyNavigationToDifferentFloorBuildingsTest"/>
+          <include name="TS003_VerifyZoomInOutLevelOnFloorPlansPageTest"/>
+          <include name="TS006_VerifyPaginationOnFloorPlansPageTest"/>
           <include name="initialize"/>
-          <include name="TS001_VerifySelectionOfOneFilterOfProdCatgFromLeftPaneFiltersTest"/>
+          <include name="TS009_VerifySearchFunctionalityForExhListOnFloorPlansPageTest"/>
+          <include name="tearDown"/>
+          <include name="TS008_VerifyClickOnReturnToBuildingListBtnTest"/>
+          <include name="TS002_VerifyNoExhibitorsOnThisFloorMessageTest"/>
+          <include name="TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest"/>
+          <include name="TS004_VerifyIconsOnFloorPlansPageTest"/>
+          <include name="TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest"/>
         </methods>
-      </class> <!-- atlantamarket.GlobalSearch_LeftPaneFilters -->
+      </class> <!-- atlantamarket_PROD.FloorPlans -->
+      <class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions">
+        <methods>
+          <include name="TS001_VerifyAddToFavoriteForExhibitorTest"/>
+          <include name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest"/>
+          <include name="TS006_VerifyClickOnLinesShownLinkForExhibitorTest"/>
+          <include name="TS003_VerifyAddToExistingListForExhibitorTest"/>
+          <include name="TS005_VerifyClickOnLocationLinksForExhibitorTest"/>
+          <include name="TS009_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest"/>
+          <include name="TS004_VerifyClickOnContactExhIconForExhibitorTest"/>
+          <include name="tearDown"/>
+          <include name="TS010_VerifySelectionOfExhibitorFromSearchResultsTest"/>
+          <include name="initialize"/>
+          <include name="TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.GlobalSearch_ExhibitorActions -->
+      <class name="atlantamarket_PROD.GlobalSearch_ProductActions">
+        <methods>
+          <include name="tearDown"/>
+          <include name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest"/>
+          <include name="TS008_VerifyAddToFavoriteOnSearchResultsGridTest"/>
+          <include name="TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest"/>
+          <include name="TS004_VerifyAddToFavoriteOnProductDetailsPageTest"/>
+          <include name="initialize"/>
+          <include name="TS009_VerifyProductActionsIconToAddToNewlyCreatedListTest"/>
+          <include name="TS003_VerifyProductAddToExistingListOnProductDetailsPageTest"/>
+          <include name="TS005_VerifyAddNoteOnProductDetailsPageTest"/>
+          <include name="TS007_VerifyFullScreenViewerOnProductDetailsPageTest"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.GlobalSearch_ProductActions -->
+      <class name="atlantamarket_PROD.GlobalSearch_LineActions">
+        <methods>
+          <include name="TS007_VerifyClickOnLocationLinkForLineTest"/>
+          <include name="TS002_VerifyAddToFavoriteForLineTest"/>
+          <include name="TS009_VerifyClickOnTotalProductsSeeAllLinkForLineTest"/>
+          <include name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForLineTest"/>
+          <include name="TS005_VerifyAddToExistingListForLineTest"/>
+          <include name="TS006_VerifyClickOnShownByExhibitorNameLinkForLineTest"/>
+          <include name="TS004_VerifyAddToNewListForLineTest"/>
+          <include name="tearDown"/>
+          <include name="TS003_VerifyClickOnOrderOnJuniperMarketBtnForLineTest"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.GlobalSearch_LineActions -->
+      <class name="atlantamarket_PROD.GlobalSearch_SuggestionList">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.GlobalSearch_SuggestionList -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->

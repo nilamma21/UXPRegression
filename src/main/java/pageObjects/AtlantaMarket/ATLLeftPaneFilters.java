@@ -12,6 +12,8 @@ public class ATLLeftPaneFilters {
 	public WebDriverWait wait;
 
 	By prodcatgexpandbtn = By.xpath("//a[@aria-label='Product Categories']");
+	By accentfurnexpandbtn = By.xpath("//div[contains(@class,'imc-filter imc-content imc-expand-collapse')]//div[1]//div[1]//div[2]//div[1]//div[1]//div[1]//div[1]//a[1]//div[1]//div[1]//div[1]");
+	
 
 	public ATLLeftPaneFilters(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -21,6 +23,11 @@ public class ATLLeftPaneFilters {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(prodcatgexpandbtn));
 		return driver.findElement(prodcatgexpandbtn);
+	}
+	public WebElement getAccentFurnExpandBtn(){
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(accentfurnexpandbtn));
+		return driver.findElement(accentfurnexpandbtn);
 	}
 
 }

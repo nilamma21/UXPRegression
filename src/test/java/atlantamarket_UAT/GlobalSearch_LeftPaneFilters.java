@@ -1,4 +1,4 @@
-package atlantamarket;
+package atlantamarket_UAT;
 
 import java.io.IOException;
 import java.util.List;
@@ -85,6 +85,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		//Click on Product Categories expand btn
 		atlleftpane.getATLProdCatgExpandBtn().click();
+		
+		atlleftpane.getAccentFurnExpandBtn().click();
 	}
 
 	

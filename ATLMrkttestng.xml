@@ -3,21 +3,17 @@
 
 <suite name="ATLMrkt_RegressionTestSuite">
 	<listners>
-		<listner class-name="atlantamarket.TestListeners" />
+		<listner class-name="atlantamarket_PROD.TestListeners" />
 	</listners>
 
 	<test thread-count="4" name="RegressionTest">
 		<classes>
-			<!-- <class name="atlantamarket.GlobalSearch_SuggestionList" />
-			<class name="atlantamarket.GlobalSearch_ExhibitorActions" />
-			<class name="atlantamarket.GlobalSearch_LineActions" />
-			<class name="atlantamarket.GlobalSearch_ProductActions" /> -->
-			<class name="atlantamarket.FloorPlans" />
-			<methods>
-			<include name="TS001_VerifyNavigationToDifferentFloorBuildingsTest"/>
-			</methods>
-			
-			<!-- <class name="atlantamarket.GlobalSearch_LeftPaneFilters" /> -->
+			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" /> 
+			<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
+			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
+			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
+			<class name="atlantamarket_PROD.FloorPlans" /> 
+			<!-- <class name="atlantamarket.GlobalSearch_LeftPaneFilters" />  -->
 		</classes>
 	</test>
 </suite>

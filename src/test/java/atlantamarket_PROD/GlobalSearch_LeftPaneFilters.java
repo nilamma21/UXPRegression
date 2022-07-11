@@ -1,7 +1,4 @@
-package atlantamarket;
-
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertSame;
+package atlantamarket_PROD;
 
 import java.io.IOException;
 import java.util.List;
@@ -24,6 +21,7 @@ import pageObjects.AtlantaMarket.ATLExhDigiShowroomPage;
 import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
 import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
 import pageObjects.AtlantaMarket.ATLLandingPage;
+import pageObjects.AtlantaMarket.ATLLeftPaneFilters;
 import pageObjects.AtlantaMarket.ATLLoginPage;
 import pageObjects.AtlantaMarket.ATLMarketPlannerPage;
 import pageObjects.AtlantaMarket.ATLProductDetailsPage;
@@ -32,7 +30,7 @@ import resources.Utility;
 import resources.base;
 
 @Listeners({ TestListeners.class })
-public class MarketPlanner extends base {
+public class GlobalSearch_LeftPaneFilters extends base {
 
 	public WebDriverWait wait;
 	public GenerateData genData;
@@ -40,8 +38,15 @@ public class MarketPlanner extends base {
 	public String exhname;
 	ATLLoginPage lp;
 	ATLLandingPage lap;
+	ATLGlobalSearchPage atlgs;
+	ATLExhDigiShowroomPage atlexhdgshw;
+	ATLProductDetailsPage atlproddet;
+	ATLExhLineProdActionsPage atlexhact;
 	ATLMarketPlannerPage atlmppge;
+	ATLLeftPaneFilters atlleftpane;
 	
+	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns, allnoteslist,favlist, searchlinetypelist;
+
 	@BeforeClass
 	public void initialize() throws IOException, InterruptedException {
 		driver = initializeDriver(); // requires for Parallel text execution
@@ -50,37 +55,44 @@ public class MarketPlanner extends base {
 
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
-		driver.get(prop.getProperty("atlmrkturl_uat"));
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 		lap.getIUnderstandBtn().click();
-		Thread.sleep(10000);
-		lap.getCloseMarktAdBtn().click();
-	}
-
-	@Test(priority = 1)
-	public void TS001_VerifyMarketPlannerLoginTest() throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// UXP-001: To verify the Market Planner overview and it's functionality
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		// Login to Market Planner
-		utl.verifyMPLoginFunctionality();
-
-		Thread.sleep(6000);
-		lap.getCloseMarktAdBtn().click();
-
-		// Verify that Market Planner Home page should be displayed
-		Assert.assertTrue(lap.getMPLinkText().isDisplayed());	
+		Thread.sleep(7000);
+		//lap.getCloseMarktAdBtn().click();
+		
+		//Login to Market Planner
+		//utl.verifyMPLoginFunctionality();
+		
+		//Thread.sleep(6000);
+		//lap.getCloseMarktAdBtn().click();
 	}
 	
-	@AfterClass
+	@Test(priority = 1)
+	public void TS001_VerifySelectionOfOneFilterOfProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T404: Selection Of One Filter Of Prod Catg From Left Pane Filters
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		atlleftpane = new ATLLeftPaneFilters(driver);
+		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
+		atlgs.getATLSearchButton().click();
+
+		//Click on Product Categories expand btn
+		atlleftpane.getATLProdCatgExpandBtn().click();
+		
+		atlleftpane.getAccentFurnExpandBtn().click();
+	}
+
+	
+	/*@AfterClass
 	public void tearDown()
 	{
 		driver.quit();
-	}
-
+	}*/
 }
