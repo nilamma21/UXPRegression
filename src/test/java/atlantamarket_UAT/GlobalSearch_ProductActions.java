@@ -80,7 +80,7 @@ public class GlobalSearch_ProductActions extends base {
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("searchexhwithlinesinput"));
 		atlgs.getATLSearchButton().click();
-
+		Thread.sleep(15000);
 		// Store the 1st Product name of Exhibitor
 		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
 		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
@@ -118,11 +118,12 @@ public class GlobalSearch_ProductActions extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
+		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("searchexhwithlinesinput"));
 		atlgs.getATLSearchButton().click();
-
+		Thread.sleep(15000);
 		// Store the 1st Product name of Exhibitor
 		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
 		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
@@ -192,10 +193,12 @@ public class GlobalSearch_ProductActions extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
+		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("searchexhwithlinesinput"));
 		atlgs.getATLSearchButton().click();
+		Thread.sleep(15000);
 
 		// Store the 1st Product name of Exhibitor
 		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
@@ -278,10 +281,12 @@ public class GlobalSearch_ProductActions extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
+		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("searchexhwithlinesinput"));
 		atlgs.getATLSearchButton().click();
+		Thread.sleep(15000);
 
 		// Store the 1st Product name of Exhibitor
 		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
@@ -340,10 +345,12 @@ public class GlobalSearch_ProductActions extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
+		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
+		Thread.sleep(15000);
 
 		// Store the 1st Exhibitor name in String variable
 		exhname = atlexhact.getExhibitorName().getText();
@@ -414,10 +421,12 @@ public class GlobalSearch_ProductActions extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
+		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("searchexhwithlinesinput"));
 		atlgs.getATLSearchButton().click();
+		Thread.sleep(15000);
 
 		// Store the 1st Product name of Exhibitor
 		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
@@ -489,10 +498,12 @@ public class GlobalSearch_ProductActions extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
+		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("searchexhwithlinesinput"));
 		atlgs.getATLSearchButton().click();
+		Thread.sleep(15000);
 
 		//Store the 1st Product name of Exhibitor
 		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
@@ -535,10 +546,12 @@ public class GlobalSearch_ProductActions extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
+		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 		
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("searchexhwithlinesinput"));
 		atlgs.getATLSearchButton().click();
+		Thread.sleep(15000);
 
 		//Store the 1st Product name of Exhibitor
 		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
@@ -595,10 +608,12 @@ public class GlobalSearch_ProductActions extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
+		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("searchexhwithlinesinput"));
 		atlgs.getATLSearchButton().click();
+		Thread.sleep(15000);
 
 		// Store the 1st Product name of Exhibitor
 		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
