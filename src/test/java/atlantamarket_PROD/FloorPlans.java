@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -276,7 +277,7 @@ public class FloorPlans extends base {
 		//Click on Building floorr
 		//atlflpp.getATLBuildingFloor().click();
 		atlflpp.getATLBuildingFloorNumber().click();
-		
+
 		//Scroll Down to Exhibitor list
 		utl.scrollToElement(atlflpp.getATLSelectBox());
 
@@ -300,7 +301,7 @@ public class FloorPlans extends base {
 		Select selectFilter=new Select(atlflpp.getATLSelectBox());
 		selectFilter.selectByValue("Sort A-Z");
 		Thread.sleep(25000);
-		
+
 		//Sorted list from filter Sort A-Z
 		List<String> expectedSortedList = new ArrayList<String>(); 
 		for(WebElement we:elementList){
@@ -415,24 +416,24 @@ public class FloorPlans extends base {
 
 		// Click on Exh And Product Tab
 		atlflpp.getATLExhibitorsAndProductTab().click();
-		
+
 		//click on Floor plans link
 		atlflpp.getATLFloorPlansLink().click();
 
 		//Click on Building floor
 		atlflpp.getATLBuildingFloor().click();
-		
+
 		//Click on Return to Building Page link
 		atlflpp.getATLReturnToBuildingList().click();
 		Thread.sleep(5000);
-		
+
 		//Verify that user should redirect to Floor plans page
 		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_prod")+"Market-Map"));
 	}
 
 	@Test(priority = 9)
 	public void TS009_VerifySearchFunctionalityForExhListOnFloorPlansPageTest() throws InterruptedException, IOException {
-		
+
 		// The purpose of this test case to verify:-
 		// UXP-T293: Exhibitor functionality on floor plans page
 		lap = new ATLLandingPage(driver);
@@ -444,29 +445,220 @@ public class FloorPlans extends base {
 
 		// Click on Exh And Product Tab
 		atlflpp.getATLExhibitorsAndProductTab().click();
-	
+
 		//click on Floor plans link
 		atlflpp.getATLFloorPlansLink().click();
-		
+
 		//Click on building floor
 		atlflpp.getATLBuildingFloor().click();
-		
+
 		utl.scrollToElement(atlflpp.getscrollexhibitorsection());
 		Thread.sleep(5000);
 		Assert.assertTrue(atlflpp.getatlexhibitorsection().isDisplayed());
-	
+
 		atlflpp.getatlexhibitorsearch().click();
 
 		atlflpp.getatlexhibitorsearch().sendKeys(prop.getProperty("floorplanexhibitorseacrch"));
 
 		atlflpp.getatlserachexhibitorbtn().click();
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 		Assert.assertTrue(atlflpp.getverifyexhibitor().getText().contains(prop.getProperty("floorplanexhibitorseacrch")));
-		
+
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		Thread.sleep(8000);
 	}
 
+	@Test(priority = 10)
+	public void TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP-T313: Floor Plans: Exhibitor Options - Add to List
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlflpp = new ATLFloorPlansPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
 
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		// Click on Exh And Product Tab
+		atlflpp.getATLExhibitorsAndProductTab().click();
+		// click on Floor plans link
+		atlflpp.getATLFloorPlansLink().click();
+
+		// click on Exhibitor floor
+		atlflpp.getATLBuildingFloor().click();
+
+		// Scroll Down to Exhibitor list
+		utl.scrollToElement(atlflpp.getATLSelectBox());
+		Thread.sleep(15000);
+
+		// 1st Exhibitor Name
+		String exhnameonfloorplan = atlflpp.getATLExhibitorName().getText();
+		System.out.println("Exhibitor Name : " +exhnameonfloorplan );
+		// Click on More option 3dots
+		atlflpp.getATLMoreOptions().click();
+		// Click on Add To List
+		atlflpp.getATLAddToList().click();
+
+		// Store the existing list name
+		String existinglistname = atlmppge.getATLMPExistingListName().getText();
+		System.out.println("Existing list name: " + existinglistname);
+
+		// Select Existing list name
+		atlmppge.getATLMPExistingListName().click();
+
+		// Scroll till Add to Selected button
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",
+				atlmppge.getATLMPAddToSelectedBtn());
+		atlmppge.getATLMPAddToSelectedBtn().click();
+
+		// Click on Go to Market Planner button
+		atlmppge.getGoToMarketPlannerBtn().click();
+
+		// Click on Lists tab on MP home page
+		atlmppge.getMPHomeListsTab().click();
+		atlmppge.getListsPageListsMenu().click();
+
+		mplists = atlmppge.getATLMPListsNames();
+		mpeditlistoptns = atlmppge.getATLMPEditListOptns();
+
+		for (int i = 0; i < mplists.size(); i++) {
+			// System.out.println(mplists.get(i).getText());
+			// System.out.println(mpeditlistoptns.get(i).getText());
+			if (mplists.get(i).getText().equals(existinglistname)) {
+				mpeditlistoptns.get(i).click();
+				break;
+			}
+		}
+		Thread.sleep(5000);
+		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhnameonfloorplan));
+	}
+
+	@Test(priority = 11)
+	public void TS011_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP-T314: Floor Plans: Exhibitor Options - Add Note
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlflpp = new ATLFloorPlansPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		// Click on Exh And Product Tab
+		atlflpp.getATLExhibitorsAndProductTab().click();
+		// click on Floor plans link
+		atlflpp.getATLFloorPlansLink().click();
+
+		// click on Exhibitor floor
+		atlflpp.getATLBuildingFloor().click();
+		// Scroll Down to Exhibitor list
+		utl.scrollToElement(atlflpp.getATLSelectBox());
+
+		// 1st Exhibitor Name
+		String exhibitorName = atlflpp.getATLExhibitorName().getText();
+		System.out.println("Exhibitor Name : " + exhibitorName);
+		// Click on More option 3dots
+		atlflpp.getATLMoreOptions().click();
+		// Click on Add Note
+		atlflpp.getATLAddNote().click();
+		// Click on More option
+		atlflpp.getATLMoreOptions().click();
+		// Click on Add Note
+		atlflpp.getATLAddNote().click();
+		// Store the new note name
+		String newnotetitle = "CybNote" + genData.generateRandomString(3);
+		System.out.println("Newly added Note is: " + newnotetitle);
+
+		// Enter Note title
+		atlexhact.getNoteTitleTxtBx().sendKeys(newnotetitle);
+		// Enter Note Content
+		atlexhact.getNoteContentTxtBx().sendKeys("TestNote" + genData.generateRandomString(6));
+		// Click on 'Save' button
+		atlexhact.getNoteSaveBtn().click();
+		Thread.sleep(5000);
+
+		// Click on 'Add Note' icon for the same exhibitor
+		atlproddet.getProductAddNoteIcon().click();
+		Thread.sleep(4000);
+
+		// Click on 'View all Notes for an Exhibitor' link on Add Notes pop-up
+		atlexhact.getViewAllNotesLink().click();
+		Thread.sleep(5000);
+
+		allnoteslist = atlexhact.getSavedNoteNameInAllNotesList();
+
+		// Verify that recently added note should be appear on 'All Notes For Exhibitor' modal
+		for (int i = 0; i < allnoteslist.size(); i++) {
+			// System.out.println(allnoteslist.get(i).getText());
+			if (allnoteslist.get(i).getText().equals(newnotetitle)) {
+				allnoteslist.get(i).click();
+				break;
+			}
+		}
+
+		// Delete the saved note
+		atlexhact.getDeleteNoteBtn().click();
+	}
+
+	@Test(priority = 12)
+	public void TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP-T316: Floor Plans: Exhibitors Option - Add to Favorite
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlflpp = new ATLFloorPlansPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		// Click on Exh And Product Tab
+		atlflpp.getATLExhibitorsAndProductTab().click();
+		// click on Floor plans link
+		atlflpp.getATLFloorPlansLink().click();
+
+		// click on Exhibitor floor
+		atlflpp.getATLBuildingFloor().click();
+
+		// Scroll Down to Exhibitor list
+		utl.scrollToElement(atlflpp.getATLSelectBox());
+
+		// 1st Exhibitor Name
+		String exhibitorName = atlflpp.getATLExhibitorName().getText();
+		System.out.println("Exhibitor Name : " + exhibitorName);
+		// Click on More option 3dots
+		atlflpp.getATLMoreOptions().click();
+
+		// New code
+		// Click on Favorite icon of 1st exhibitor
+		atlflpp.getATLAddFev().click();
+
+		// Click on Market Planner link
+		lap.getMPLinkText().click();
+
+		// Click on Lists tab on MP home page
+		atlmppge.getMPHomeListsTab().click();
+		atlmppge.getATLMPListsPageFavoritesMenu().click();
+
+		System.out.println(atlmppge.getATLSavedExhNameInList().getText());
+		// Verify that the added favorites exhibitor should be displayed in to Favorites
+		// list
+		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().equals(exhibitorName));
+
+		// Delete that favorites exhibitor from list
+		atlmppge.getATLEditListItemMoreBtn().click();
+		atlmppge.getATLEditListItemDeleteOptn().click();
+		Thread.sleep(6000);
+
+		favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
+
+		// Verify that the added favorites exhibitor should be removed from Favorites list
+		for (int i = 1; i < favlist.size(); i++) {
+			// System.out.println(favlist.get(i).getText());
+			Assert.assertFalse(favlist.get(i).getText().contains(exhibitorName));
+		}
+	}
 	@AfterClass
 	public void tearDown()
 	{

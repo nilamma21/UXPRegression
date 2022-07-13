@@ -50,7 +50,7 @@ public class Utility extends base {
 		lp.getPassword().sendKeys((prop.getProperty("password")));
 
 		lp.getSignInBtn().click();
-
+		Thread.sleep(15000);
 	}
 
 	public void mouseHover(WebElement mainMenu,WebElement subMenu) throws IOException, InterruptedException {
