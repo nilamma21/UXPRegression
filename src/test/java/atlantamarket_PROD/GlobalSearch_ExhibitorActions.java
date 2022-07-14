@@ -60,8 +60,8 @@ public class GlobalSearch_ExhibitorActions extends base {
 		
 		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
-		
-//		Thread.sleep(6000);
+		driver.navigate().refresh();
+		Thread.sleep(8000);
 //		lap.getCloseMarktAdBtn().click();
 	}
 	
@@ -79,7 +79,6 @@ public class GlobalSearch_ExhibitorActions extends base {
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
-
 		Thread.sleep(15000);
 		// Store the 1st Exhibitor name in String variable
 		String exhname = atlexhact.getExhibitorName().getText();
@@ -126,11 +125,11 @@ public class GlobalSearch_ExhibitorActions extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
-
 		Thread.sleep(15000);
 		// Store the 1st Exhibitor name in String variable
 		String exhname = atlexhact.getExhibitorName().getText();
@@ -185,6 +184,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 		
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
@@ -259,6 +259,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys("IMC Test");
@@ -301,6 +302,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
@@ -328,6 +330,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("searchexhwithlinesinput")));
@@ -360,6 +363,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 		
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
@@ -406,6 +410,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
@@ -452,6 +457,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
@@ -527,6 +533,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
@@ -551,9 +558,9 @@ public class GlobalSearch_ExhibitorActions extends base {
 		//lap.getCloseMarktAdBtn().click();
 	}
 	
-	@AfterClass
+/*	@AfterClass
 	public void tearDown()
 	{
 		driver.quit();
-	}
+	}*/
 }

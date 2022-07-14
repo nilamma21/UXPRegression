@@ -59,9 +59,9 @@ public class GlobalSearch_LineActions extends base {
 		//lap.getCloseMarktAdBtn().click();
 		
 		//Login to Market Planner
-		utl.verifyMPLoginFunctionality();
-		
-//		Thread.sleep(6000);
+		utl.verifyMPLoginFunctionality();		
+		driver.navigate().refresh();
+		Thread.sleep(8000);
 //		lap.getCloseMarktAdBtn().click();
 	}
 
@@ -117,6 +117,7 @@ public class GlobalSearch_LineActions extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
@@ -162,6 +163,7 @@ public class GlobalSearch_LineActions extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
@@ -205,6 +207,7 @@ public class GlobalSearch_LineActions extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 		
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
@@ -266,6 +269,7 @@ public class GlobalSearch_LineActions extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
@@ -334,6 +338,7 @@ public class GlobalSearch_LineActions extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 		
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
@@ -365,6 +370,7 @@ public class GlobalSearch_LineActions extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
@@ -397,6 +403,7 @@ public class GlobalSearch_LineActions extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
@@ -445,6 +452,7 @@ public class GlobalSearch_LineActions extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));

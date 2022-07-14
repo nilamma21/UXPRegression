@@ -11,6 +11,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
@@ -44,6 +45,12 @@ public class base {
 		{
 			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/Drivers/geckodriver.exe");
 			driver = new FirefoxDriver();
+			driver.manage().window().maximize();
+		}
+		else if (browserName.equals("edge")) 
+		{
+			System.setProperty("webdriver.edge.driver",System.getProperty("user.dir") + "/Drivers/msedgedriver.exe");
+			driver = new EdgeDriver();
 			driver.manage().window().maximize();
 		}
 		else if (browserName.equals("IE")) 
