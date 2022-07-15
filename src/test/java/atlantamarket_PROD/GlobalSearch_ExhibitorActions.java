@@ -344,10 +344,9 @@ public class GlobalSearch_ExhibitorActions extends base {
 		// Click on Lines shown- See All link for an Exhibitor
 		atlexhact.getLinesShownSeeAlLink().click();
 
+		Thread.sleep(10000);
 		// Verify that user should redirect to the Lines page
 		Assert.assertTrue(atlexhact.getValidateLinesPage().isDisplayed());
-
-		Thread.sleep(10000);
 		Assert.assertTrue(driver.getTitle().contains("{"+exhname+"} Lines"));
 	}
 
@@ -549,18 +548,18 @@ public class GlobalSearch_ExhibitorActions extends base {
 		atlexhact.getExhibitorName().click();
 
 		// Verify that Selected Exhibitor Digital Showroom page should be opened
-		Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
+		Assert.assertTrue(atlexhdgshw.getATLExhDigiShowPage().isDisplayed());
 		Thread.sleep(10000);
 		Assert.assertTrue(driver.getTitle().contains(""+exhname+" at Atlanta Market"));
-		Assert.assertTrue(atlexhdgshw.getExhibitorNameOnExhDirectImg().getText().contains(exhname));
+		Assert.assertTrue(atlexhdgshw.getExhNameOnExhDirectImg().getText().contains(exhname));
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		//lap.getCloseMarktAdBtn().click();
 	}
 	
-/*	@AfterClass
+	@AfterClass
 	public void tearDown()
 	{
 		driver.quit();
-	}*/
+	}
 }

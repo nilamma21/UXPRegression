@@ -95,12 +95,11 @@ public class GlobalSearch_ProductActions extends base {
 
 		// Click on See Details button
 		actions.click().perform();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 
 		// Store the Product Name on Product Details page
 		String productNameOnProductDetails = atlproddet.getProductNameOnProductDetails().getText();
 		System.out.println("Product Name On Product Details page: " + productNameOnProductDetails);
-		Thread.sleep(6000);
 		// Verify that selected Product details page should be opened
 		Assert.assertTrue(productNameOnSearchGrid.equals(productNameOnProductDetails));
 	}
@@ -385,7 +384,7 @@ public class GlobalSearch_ProductActions extends base {
 		// Enter Note title
 		atlexhact.getNoteTitleTxtBx().sendKeys(newnotetitle);
 		// Enter Note Content
-		atlexhact.getNoteContentTxtBx().sendKeys("TestNote" + genData.generateRandomString(6));
+		atlexhact.getNoteContentTxtBx().sendKeys("TestProdNote" + genData.generateRandomString(6));
 		// Click on 'Save' button
 		atlexhact.getNoteSaveBtn().click();
 		Thread.sleep(5000);
