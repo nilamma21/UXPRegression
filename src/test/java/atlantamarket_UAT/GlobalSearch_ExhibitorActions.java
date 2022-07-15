@@ -60,8 +60,8 @@ public class GlobalSearch_ExhibitorActions extends base {
 		
 		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
-		
-//		Thread.sleep(6000);
+		driver.navigate().refresh();
+		Thread.sleep(8000);
 //		lap.getCloseMarktAdBtn().click();
 	}
 	
@@ -131,7 +131,6 @@ public class GlobalSearch_ExhibitorActions extends base {
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(15000);
-		
 		// Store the 1st Exhibitor name in String variable
 		String exhname = atlexhact.getExhibitorName().getText();
 		System.out.println("Exhibitor name: " + exhname);
@@ -190,6 +189,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
+
 		Thread.sleep(15000);
 		// Store the 1st Exhibitor name in String variable
 		String exhname = atlexhact.getExhibitorName().getText();
@@ -264,6 +264,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys("IMC Test");
 		atlgs.getATLSearchButton().click();
+
 		Thread.sleep(15000);
 		// Click on Contact Exhibitor icon
 		atlexhact.getContactExhibitorIcon().click();
@@ -306,6 +307,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
+
 		Thread.sleep(15000);
 		// Click on any of the Location link present in Exhibitor card
 		String locationlink = atlexhact.getLocationLinkInExhCard().getAttribute("href");
@@ -333,6 +335,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("searchexhwithlinesinput")));
 		atlgs.getATLSearchButton().click();
+
 		Thread.sleep(15000);
 		// Store the 1st Exhibitor name in String variable
 		exhname = atlexhact.getExhibitorName().getText();
@@ -341,10 +344,9 @@ public class GlobalSearch_ExhibitorActions extends base {
 		// Click on Lines shown- See All link for an Exhibitor
 		atlexhact.getLinesShownSeeAlLink().click();
 
+		Thread.sleep(10000);
 		// Verify that user should redirect to the Lines page
 		Assert.assertTrue(atlexhact.getValidateLinesPage().isDisplayed());
-
-		Thread.sleep(10000);
 		Assert.assertTrue(driver.getTitle().contains("{"+exhname+"} Lines"));
 	}
 
@@ -365,8 +367,8 @@ public class GlobalSearch_ExhibitorActions extends base {
 		
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
-		Thread.sleep(15000);
 
+		Thread.sleep(15000);
 		// Store the 1st Exhibitor name in String variable
 		exhname = atlexhact.getExhibitorName().getText();
 		System.out.println("Exhibitor name: " + exhname);
@@ -412,6 +414,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
+
 		Thread.sleep(15000);
 		// Store the 1st Exhibitor name in String variable
 		exhname = atlexhact.getExhibitorName().getText();
@@ -458,6 +461,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
+
 		Thread.sleep(15000);
 		// Store the 1st Exhibitor name in String variable
 		exhname = atlexhact.getExhibitorName().getText();
@@ -533,6 +537,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
+
 		Thread.sleep(15000);
 		// Store the 1st Exhibitor name in String variable
 		exhname = atlexhact.getExhibitorName().getText();
@@ -543,10 +548,10 @@ public class GlobalSearch_ExhibitorActions extends base {
 		atlexhact.getExhibitorName().click();
 
 		// Verify that Selected Exhibitor Digital Showroom page should be opened
-		Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
+		Assert.assertTrue(atlexhdgshw.getATLExhDigiShowPage().isDisplayed());
 		Thread.sleep(10000);
 		Assert.assertTrue(driver.getTitle().contains(""+exhname+" at Atlanta Market"));
-		Assert.assertTrue(atlexhdgshw.getExhibitorNameOnExhDirectImg().getText().contains(exhname));
+		Assert.assertTrue(atlexhdgshw.getExhNameOnExhDirectImg().getText().contains(exhname));
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 		//lap.getCloseMarktAdBtn().click();

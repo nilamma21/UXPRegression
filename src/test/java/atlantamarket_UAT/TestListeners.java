@@ -47,7 +47,9 @@ public class TestListeners extends base implements ITestListener {
 
 	public void onTestSkipped(ITestResult arg0) {
 		// TODO Auto-generated method stub
-		
+		String testMethodName = arg0.getName().toString().trim();
+		System.out.println("SKIPPED- "+testMethodName);
+		test.log(Status.SKIP, "Test Skipped");
 	}
 
 	public void onTestStart(ITestResult arg0) {

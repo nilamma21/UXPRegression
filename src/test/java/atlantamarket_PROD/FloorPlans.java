@@ -134,7 +134,7 @@ public class FloorPlans extends base {
 		atlflpp.getATLNoExhibitorFloor().click();
 
 		//Verify that Loading Exhibitors msg should be displayed
-		Assert.assertTrue(atlflpp.getATLLoadingExhMsg().isDisplayed());
+		//Assert.assertTrue(atlflpp.getATLLoadingExhMsg().isDisplayed());
 
 		//Verify that No Exhibitor msg should be displayed
 		Assert.assertTrue(atlflpp.getATLNoExpMsg().isDisplayed());
@@ -399,9 +399,9 @@ public class FloorPlans extends base {
 		//Click on 1st Exhibitor
 		atlflpp.getATLExhibitorName().click();
 
+		Thread.sleep(12000);
 		// Verify that Selected Exhibitor Digital Showroom page should be opened
 		Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
-		Thread.sleep(12000);
 		Assert.assertTrue(driver.getTitle().contains(""+exhibitorName+" at Atlanta Market"));
 		Assert.assertTrue(atlexhdgshw.getExhibitorNameOnExhDirectImg().getText().contains(exhibitorName));
 	}
