@@ -12,11 +12,9 @@ public class ATLFloorPlansPage {
 	public WebDriverWait wait;
 
 	By atlExhibitorsAndProductTab = By.xpath("//a[contains(text(),'Exhibitors & Products')]"); // Locator for Exhibitor And Product tab 
-	By atlFloorPlansLink = By.xpath("//div[@class='imc-section']/div[1]/div[2]/div[2]/div[1]/div[2]"); //Locator for floor plans Link
-	//By atlBuildingFloor = By.xpath("//div[@class='imc-campus-view']/div[3]/div[12]/div[3]/a[1]"); //Locator for Building floor
-	//By atlBuildingFloor = By.xpath("//div[@class='imc-campus-view']/div[1]/div[23]/div[3]/a[1]"); //Locator for Building floor
+	By atlFloorPlansLink = By.xpath("//a[contains(text(),'Floor Plans')]"); //Locator for floor plans Link
 	By atlBuildingFloor = By.xpath("//div[@class='imc-campus-view']/div[3]/div[11]/div[3]/a[1]"); //Locator for Building floor
-	By atlBuildingFloorForFilter = By.xpath("//div[@class='imc-campus-view']/div[3]/div[11]/div[3]/a[1]"); //Locator for Building floor
+	By atlBuildingFloorForFilter = By.xpath("//div[@class='imc-campus-view']/div[3]/div[4]/div[3]/a"); //Locator for Building floor
 	By atlBuildingFloorNumber = By.xpath("//div[@class='imc-campus-view']/div[3]/div[10]/div[3]/a"); //Locator for Building floor number
 	By atlFloorName = By.xpath("//div[@class='imc-type--title-6']");
 	By atlNoExpMsg = By.xpath("//div[@class='imc-manufacturing-line--alternated-section imc-lines-overview']/p[2]"); //Locator for No exhibitor msg
@@ -28,7 +26,6 @@ public class ATLFloorPlansPage {
 	By atlExhibitorFloorZoomOut = By.xpath("//div[@class='meridian-zoom-controls meridian--private--1qg3nfg']/button[2]"); //Locator for Zoom In Exhibitor
 	By atlfloorplanmapimage = By.xpath("//div[@class='imc-map-container']/div[1]/div[1]/div[5]/div[1]"); //Locator for Zoom In out Attribute
 	By atlSelectBox = By.xpath("//select[@class='imc-searchform--dropdown imc-floor-plan--dropdown']"); //Locator Selectbox
-
 	By vendingmchineicononmap = By.xpath("//button[contains(@class, 'vending_machines')]"); //Locator for Vending Machine icon on Map image
 	By vendingmachineoverlay = By.xpath("//div[contains(@style, 'vending_machines')]"); //Locator for Vending Machine overlay on Map
 	By elevatoricononmap = By.xpath("(//button[contains(@class, 'elevator')])[position()=1]"); //Locator for elevator icon on Map image
@@ -53,18 +50,19 @@ public class ATLFloorPlansPage {
 	By atlserachexhibitorbtn = By.xpath("//section[@class = 'imc-site-wrapper']/div[1]/section[1]/div[1]/div[1]/div[1]/div[3]/div[3]/div[1]/div[1]/section[1]/div[1]/form[1]/button[2]"); //Locator for Search button for search input field
 	By verifyexhibitor = By.xpath("//div[@class = 'imc-manufacturing-line']/div[2]/a[1]"); //Locator for verification for searched exhibitor
 	By viewdgshowroombtn = By.xpath("//a[contains(text(),'View Digital Showroom')]"); //Locator for View Digital Showroom button
-
 	By atlMoreOptions = By.xpath("//div[@class='imc-content--padded-top-bottom']/div[1]/div[1]/div[3]/div[1]"); //Locator for More Options 3dots
-	By atlAddToList = By.xpath("//div[@id='popup-root']/div[2]/div[2]/div[1]/label[1]"); //Locator for Add to List
+	By atlAddToList = By.xpath("//div[@id='popup-root']/div[2]/div[2]/div[1]/label"); //Locator for Add to List
 	By atlAddNote = By.xpath("//div[@id='popup-root']/div[2]/div[2]/div[2]/div[1]/button[1]/label[1]"); //Locator for Add Note
 	By atlAddFev = By.xpath("//div[@class='imc-content--padded-top-bottom']/div[1]/div[1]/div[3]/div[2]/div[1]/button[1]"); //Locator for Add Fev
 	By atlExhSearchField = By.xpath("(//div[@class='imc-searchform--row'])[2]/form[1]/div[1]/input[1]"); //Locator for Exh Search filed
 	By atlExhSearchFieldBtn = By.xpath("(//div[@class='imc-searchform--row'])[2]/form[1]/button[2]"); //Locator for Exh Search filed Btn
+	By noresultsforjuniperlinesmsg = By.xpath("//p[contains(text(),'Sorry, no results found.')]"); //Locator for No results found msg for Lines on Junipermarket filter
+	
 	public ATLFloorPlansPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
-	public WebElement getATLExhibitorsAndProductTab(){
+	public WebElement getATLExhibitorsAndProductTab() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlExhibitorsAndProductTab));
 		return driver.findElement(atlExhibitorsAndProductTab);
@@ -245,12 +243,12 @@ public class ATLFloorPlansPage {
 	}
 	public WebElement getATLMoreOptions() {
 		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlMoreOptions));
+		wait.until(ExpectedConditions.elementToBeClickable(atlMoreOptions));
 		return driver.findElement(atlMoreOptions);
 	}
 	public WebElement getATLAddToList() {
 		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlAddToList));
+		wait.until(ExpectedConditions.elementToBeClickable(atlAddToList));
 		return driver.findElement(atlAddToList);
 	}
 	public WebElement getATLAddNote() {
@@ -278,6 +276,11 @@ public class ATLFloorPlansPage {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlExhSearchFieldBtn));
 		return driver.findElement(atlExhSearchFieldBtn);
+	}
+	public WebElement getNoResultsMsgForLinesOnJuniper() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(noresultsforjuniperlinesmsg));
+		return driver.findElement(noresultsforjuniperlinesmsg);
 	}
 }
 

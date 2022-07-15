@@ -23,13 +23,14 @@ public class ATLGlobalSearchPage {
 	By atlproductsearchresultlist = By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li/span/span"); //Locator for Product suggestion search list
 	By atlclearsearchbtn = By.xpath("(//button[@aria-label='Clear Search'])[position()=1]"); //Locator for Clear Search button
 	By atlsearchresultproducttypelist = By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li/span/span/span[5]"); //Locator for list of search result product type
+	//By atlsearchbtn = By.xpath("//button[@data-xpath='typesearchahead.submitBtn']");
 
 	public ATLGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
 
-	public WebElement getATLGlobalSearchTextBox(){
+	public WebElement getATLGlobalSearchTextBox() throws InterruptedException {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.elementToBeClickable(atlglobalsearchtxtbx));
 		return driver.findElement(atlglobalsearchtxtbx);
@@ -40,6 +41,7 @@ public class ATLGlobalSearchPage {
 		wait.until(ExpectedConditions.elementToBeClickable(atlsearchbtn));
 		return driver.findElement(atlsearchbtn);
 	}
+
 	public WebElement getATLVerifyGlobalSeacrh() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.elementToBeClickable(atlverifyglobalseacrh));
