@@ -55,11 +55,27 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>RegressionTest</h2><table border='1' align="center">
 <tr>
+ 
 <td>Tests passed/Failed/Skipped:</td><td>26/17/0</td>
+
+
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Jul 12 19:26:00 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>72 seconds (72123 ms)</td>
+
+<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
+
 </tr><tr>
 <td>Started on:</td><td>Thu Jul 14 18:34:30 IST 2022</td>
 </tr>
+ 
 <tr><td>Total time:</td><td>2770 seconds (2770442 ms)</td>
+
+<tr><td>Total time:</td><td>64 seconds (64072 ms)</td>
+
+
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,14 +83,24 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+
 <table width='100%' border='1' class='invocation-failed'>
+ 
 <tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+
+
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
+ 
 <td title='atlantamarket_PROD.GlobalSearch_LineActions.TS001_VerifyClickOnContactExhIconForLineTest()'><b>TS001_VerifyClickOnContactExhIconForLineTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_LineActions</td>
 <td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;imc-gallery__item imc-exhibitorcard imc-line&apos;][1]/div/div/div/div[2]/div[2]/ul/li[1]/div/button (tried for 20 second(s) with 500 MILLISECONDS interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
@@ -390,6 +416,59 @@ Session ID: d2c153e28157828f83527846fdd9517e
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+
+
+<td title='atlantamarket_UAT.GlobalSearch_LeftPaneFilters.TS003_VerifySelectionOfProductCategoriesFilterCombinationWithStyleFromLeftPaneFiltersTest()'><b>TS003_VerifySelectionOfProductCategoriesFilterCombinationWithStyleFromLeftPaneFiltersTest</b><br>Test class: atlantamarket_UAT.GlobalSearch_LeftPaneFilters</td>
+<td></td>
+<td>41</td>
+<td>atlantamarket_UAT.GlobalSearch_LeftPaneFilters@68c4039c</td></tr>
+
+<td title='atlantamarket_PROD.GlobalSearch_ProductActions.initialize()'><b>initialize</b><br>Test class: atlantamarket_PROD.GlobalSearch_ProductActions</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: DevToolsActivePort file doesn&apos;t exist
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x0027D953+2414931]
+	Ordinal0 [0x0020F5E1+1963489]
+	Ordinal0 [0x000FC6B8+837304]
+	Ordinal0 [0x0011BED2+966354]
+	Ordinal0 [0x0011851C+951580]
+	Ordinal0 [0x00115FB1+942001]
+	Ordinal0 [0x00149100+1151232]
+	Ordinal0 [0x00148D5A+1150298]
+	Ordinal0 [0x001442B6+1131190]
+	Ordinal0 [0x0011E860+976992]
+	Ordinal0 [0x0011F756+980822]
+	GetHandleVerifier [0x004ECC62+2510274]
+	GetHandleVerifier [0x004DF760+2455744]
+	GetHandleVerifier [0x0030EABA+551962]
+	GetHandleVerifier [0x0030D916+547446]
+	Ordinal0 [0x00215F3B+1990459]
+	Ordinal0 [0x0021A898+2009240]
+	Ordinal0 [0x0021A985+2009477]
+	Ordinal0 [0x00223AD1+2046673]
+	BaseThreadInitThunk [0x77320419+25]
+	RtlGetAppContainerNamedObjectPath [0x778F72ED+237]
+	RtlGetAppContainerNamedObjectPath [0x778F72BD+189]
+	(No symbol) [0x00000000]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$22(ProtocolHandshake.java:365)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:368)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:159)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
@@ -1230,8 +1309,14 @@ Driver info: driver.version: unknown
 <tr>
 <td title='atlantamarket_PROD.FloorPlans.TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest()'><b>TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest</b><br>Test class: atlantamarket_PROD.FloorPlans</td>
 <td></td>
+ 
 <td>39</td>
 <td>atlantamarket_PROD.FloorPlans@6a41eaa2</td></tr>
+
+<td>0</td>
+<td>atlantamarket_PROD.GlobalSearch_ProductActions@59f99ea</td></tr>
+
+
 </table><p>
 </body>
 </html>

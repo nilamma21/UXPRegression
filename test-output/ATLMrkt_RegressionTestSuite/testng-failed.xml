@@ -3,6 +3,7 @@
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
+
       <class name="atlantamarket_PROD.FloorPlans">
         <methods>
           <include name="TS003_VerifyZoomInOutLevelOnFloorPlansPageTest"/>
@@ -24,6 +25,16 @@
           <include name="TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest"/>
         </methods>
       </class> <!-- atlantamarket_PROD.GlobalSearch_ExhibitorActions -->
+
+
+      <class name="atlantamarket_UAT.GlobalSearch_LeftPaneFilters">
+        <methods>
+          <include name="initialize"/>
+          <include name="TS002_VerifySelectionOfMoreThanOneFilterOfProdCatgFromLeftPaneFiltersTest"/>
+        </methods>
+      </class> <!-- atlantamarket_UAT.GlobalSearch_LeftPaneFilters -->
+
+
       <class name="atlantamarket_PROD.GlobalSearch_ProductActions">
         <methods>
           <include name="TS006_VerifyProductAddToExistingListOnSearchResultsGridTest"/>
@@ -33,6 +44,7 @@
           <include name="initialize"/>
         </methods>
       </class> <!-- atlantamarket_PROD.GlobalSearch_ProductActions -->
+
       <class name="atlantamarket_PROD.GlobalSearch_LineActions">
         <methods>
           <include name="TS002_VerifyAddToFavoriteForLineTest"/>
@@ -50,6 +62,9 @@
           <include name="initialize"/>
         </methods>
       </class> <!-- atlantamarket_PROD.GlobalSearch_SuggestionList -->
+
+
+
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->

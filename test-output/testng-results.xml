@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <testng-results skipped="0" failed="17" total="43" passed="26">
+
+
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="72123" started-at="2022-07-12T13:56:00Z" finished-at="2022-07-12T13:57:12Z">
+    <groups>
+    </groups>
+    <test name="RegressionTest" duration-ms="72123" started-at="2022-07-12T13:56:00Z" finished-at="2022-07-12T13:57:12Z">
+      <class name="atlantamarket_UAT.GlobalSearch_LeftPaneFilters">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.GlobalSearch_LeftPaneFilters@68c4039c]" name="initialize" is-config="true" duration-ms="30571" started-at="2022-07-12T19:26:00Z" finished-at="2022-07-12T19:26:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS003_VerifySelectionOfProductCategoriesFilterCombinationWithStyleFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_UAT.GlobalSearch_LeftPaneFilters@68c4039c]" name="TS003_VerifySelectionOfProductCategoriesFilterCombinationWithStyleFromLeftPaneFiltersTest" duration-ms="41520" started-at="2022-07-12T19:26:31Z" finished-at="2022-07-12T19:27:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifySelectionOfProductCategoriesFilterCombinationWithStyleFromLeftPaneFiltersTest -->
+      </class> <!-- atlantamarket_UAT.GlobalSearch_LeftPaneFilters -->
+
+<testng-results skipped="1" failed="0" total="1" passed="0">
+
   <reporter-output>
   </reporter-output>
   <suite name="ATLMrkt_RegressionTestSuite" duration-ms="2770442" started-at="2022-07-14T13:04:30Z" finished-at="2022-07-14T13:50:40Z">
@@ -210,6 +233,7 @@ Session ID: 0de2955572d3f13a469885591b963891
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- atlantamarket_PROD.GlobalSearch_ProductActions -->
+
       <class name="atlantamarket_PROD.GlobalSearch_LineActions">
         <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@6093dd95]" name="initialize" is-config="true" duration-ms="72489" started-at="2022-07-14T18:48:03Z" finished-at="2022-07-14T18:49:16Z">
           <reporter-output>
@@ -1061,6 +1085,9 @@ Driver info: driver.version: unknown
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- atlantamarket_PROD.GlobalSearch_SuggestionList -->
+
+
+
     </test> <!-- RegressionTest -->
   </suite> <!-- ATLMrkt_RegressionTestSuite -->
 </testng-results>
