@@ -37,7 +37,7 @@ public class base {
 		{
 			// you can mention chromedriver.exe path here to execute all the scripts.
 
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/Drivers/chromedriver_102.exe");
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/Drivers/chromedriver_103.exe");
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 		}
