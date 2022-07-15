@@ -166,7 +166,7 @@ public class GlobalSearch_LineActions extends base {
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("searchorderonjuniperline")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -351,7 +351,7 @@ public class GlobalSearch_LineActions extends base {
 		// Click on ExhibitorName
 		atlexhact.getExhibitorNameLink().click();
 		// Verify DG showroom page
-		Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
+		Assert.assertTrue(atlexhdgshw.getATLExhDigiShowPage().isDisplayed());
 	}
 
 	@Test(priority = 7)
