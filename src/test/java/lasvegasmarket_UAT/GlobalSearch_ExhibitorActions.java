@@ -84,7 +84,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 //		atlgs.getATLSearchButton().click();*/
 		Actions action =new Actions(driver);
 		//atlgs.getATLGlobalSearchTextBox().sendKeys("Lamp");
-		action.sendKeys(atlgs.getATLGlobalSearchTextBox(), "Lamp");
+		action.sendKeys(atlgs.getATLGlobalSearchTextBox(), (prop.getProperty("globalsearchinput")));
 		action.sendKeys(Keys.ENTER).build().perform();
 		
 		Thread.sleep(6000);
