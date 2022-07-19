@@ -3,29 +3,20 @@
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-      <class name="atlantamarket_PROD.FloorPlans">
+      <class name="lasvegasmarket_UAT.GlobalSearch_ProductActions">
         <methods>
-          <include name="TS001_VerifyNavigationToDifferentFloorBuildingsTest"/>
+          <include name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest"/>
+          <include name="TS008_VerifyAddToFavoriteOnSearchResultsGridTest"/>
+          <include name="TS005_VerifyAddNoteOnProductDetailsPageTest"/>
+          <include name="TS006_VerifyProductAddToExistingListOnSearchResultsGridTest"/>
+          <include name="TS004_VerifyAddToFavoriteOnProductDetailsPageTest"/>
           <include name="initialize"/>
-          <include name="TS004_VerifyIconsOnFloorPlansPageTest"/>
-          <include name="TS003_VerifyZoomInOutLevelOnFloorPlansPageTest"/>
-          <include name="TS006_VerifyPaginationOnFloorPlansPageTest"/>
-          <include name="TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest"/>
-          <include name="TS011_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest"/>
-          <include name="TS009_VerifySearchFunctionalityForExhListOnFloorPlansPageTest"/>
-          <include name="TS008_VerifyClickOnReturnToBuildingListBtnTest"/>
-          <include name="TS002_VerifyNoExhibitorsOnThisFloorMessageTest"/>
-          <include name="TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest"/>
-          <include name="TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest"/>
-          <include name="TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest"/>
+          <include name="TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest"/>
+          <include name="TS003_VerifyProductAddToExistingListOnProductDetailsPageTest"/>
+          <include name="TS009_VerifyProductActionsIconToAddToNewlyCreatedListTest"/>
+          <include name="TS007_VerifyFullScreenViewerOnProductDetailsPageTest"/>
         </methods>
-      </class> <!-- atlantamarket_PROD.FloorPlans -->
-      <class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions">
-        <methods>
-          <include name="TS001_VerifyAddToFavoriteForExhibitorTest"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- lasvegasmarket_UAT.GlobalSearch_ExhibitorActions -->
+      </class> <!-- lasvegasmarket_UAT.GlobalSearch_ProductActions -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->
