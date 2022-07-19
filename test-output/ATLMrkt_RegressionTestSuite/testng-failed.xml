@@ -20,53 +20,12 @@
           <include name="TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest"/>
         </methods>
       </class> <!-- atlantamarket_PROD.FloorPlans -->
-      <class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions">
+      <class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions">
         <methods>
           <include name="TS001_VerifyAddToFavoriteForExhibitorTest"/>
-          <include name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest"/>
-          <include name="TS006_VerifyClickOnLinesShownLinkForExhibitorTest"/>
-          <include name="TS003_VerifyAddToExistingListForExhibitorTest"/>
-          <include name="TS005_VerifyClickOnLocationLinksForExhibitorTest"/>
-          <include name="TS009_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest"/>
-          <include name="TS004_VerifyClickOnContactExhIconForExhibitorTest"/>
-          <include name="TS010_VerifySelectionOfExhibitorFromSearchResultsTest"/>
-          <include name="TS002_VerifyAddToNewListForExhibitorTest"/>
-          <include name="initialize"/>
-          <include name="TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest"/>
-        </methods>
-      </class> <!-- atlantamarket_PROD.GlobalSearch_ExhibitorActions -->
-      <class name="atlantamarket_PROD.GlobalSearch_ProductActions">
-        <methods>
-          <include name="TS006_VerifyProductAddToExistingListOnSearchResultsGridTest"/>
-          <include name="tearDown"/>
-          <include name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest"/>
-          <include name="TS004_VerifyAddToFavoriteOnProductDetailsPageTest"/>
-          <include name="initialize"/>
-          <include name="TS005_VerifyAddNoteOnProductDetailsPageTest"/>
-        </methods>
-      </class> <!-- atlantamarket_PROD.GlobalSearch_ProductActions -->
-      <class name="atlantamarket_PROD.GlobalSearch_LineActions">
-        <methods>
-          <include name="TS007_VerifyClickOnLocationLinkForLineTest"/>
-          <include name="TS002_VerifyAddToFavoriteForLineTest"/>
-          <include name="TS009_VerifyClickOnTotalProductsSeeAllLinkForLineTest"/>
-          <include name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForLineTest"/>
-          <include name="TS005_VerifyAddToExistingListForLineTest"/>
-          <include name="TS006_VerifyClickOnShownByExhibitorNameLinkForLineTest"/>
-          <include name="TS004_VerifyAddToNewListForLineTest"/>
-          <include name="TS001_VerifyClickOnContactExhIconForLineTest"/>
-          <include name="TS003_VerifyClickOnOrderOnJuniperMarketBtnForLineTest"/>
           <include name="initialize"/>
         </methods>
-      </class> <!-- atlantamarket_PROD.GlobalSearch_LineActions -->
-      <class name="atlantamarket_PROD.GlobalSearch_SuggestionList">
-        <methods>
-          <include name="tearDown"/>
-          <include name="initialize"/>
-          <include name="TS002_VerifySelectionOfLineFromAutoSuggestionListTest"/>
-          <include name="TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest"/>
-        </methods>
-      </class> <!-- atlantamarket_PROD.GlobalSearch_SuggestionList -->
+      </class> <!-- lasvegasmarket_UAT.GlobalSearch_ExhibitorActions -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->
