@@ -3,7 +3,7 @@
 
 <suite name="ATLMrkt_RegressionTestSuite">
 	<listners>
-		<listner class-name="atlantamarket_PROD.TestListeners" />
+		<listner class-name="lasvegasmarket_UAT.TestListeners" />
 	</listners>
 
 	<test thread-count="5" name="RegressionTest">
@@ -13,7 +13,7 @@
 			<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
-			<class name="atlantamarket_PROD.FloorPlans" />  -->
+			<class name="atlantamarket_PROD.FloorPlans" /> 
 			<class name="atlantamarket_UAT.GlobalSearch_LeftPaneFilters" /> 
 			<methods>
 			<include name="TS003_VerifySelectionOfProductCategoriesFilterCombinationWithStyleFromLeftPaneFiltersTest"/>
@@ -23,8 +23,13 @@
 			<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
-			<class name="atlantamarket_PROD.FloorPlans" />
-
+			<class name="atlantamarket_PROD.FloorPlans" /> -->
+			
+		<class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions" />
+		<methods>
+			<include name="TS001_VerifyAddToFavoriteForExhibitorTest" />
+			</methods>
+		
 		</classes>
 
 		<!-- <listners>
