@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
@@ -20,6 +21,740 @@
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- lasvegasmarket_UAT.GlobalSearch_ExhibitorActions -->
+
+<testng-results skipped="31" failed="6" total="43" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="1429857" started-at="2022-07-15T12:35:20Z" finished-at="2022-07-15T12:59:10Z">
+    <groups>
+    </groups>
+    <test name="RegressionTest" duration-ms="1429857" started-at="2022-07-15T12:35:20Z" finished-at="2022-07-15T12:59:10Z">
+      <class name="atlantamarket_PROD.GlobalSearch_ProductActions">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@7cd62f43]" name="initialize" is-config="true" duration-ms="88033" started-at="2022-07-15T18:09:15Z" finished-at="2022-07-15T18:10:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@7cd62f43]" name="TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest" duration-ms="35352" started-at="2022-07-15T18:10:43Z" finished-at="2022-07-15T18:11:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest -->
+        <test-method status="FAIL" signature="TS002_VerifyProductAddToNewListOnProductDetailsPageTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@7cd62f43]" name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest" duration-ms="123441" started-at="2022-07-15T18:11:19Z" finished-at="2022-07-15T18:13:22Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class='imc-list-edit--draggable'][1]/div/div[3]/div/div/div/div/a (tried for 20 second(s) with 500 MILLISECONDS interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class='imc-list-edit--draggable'][1]/div/div[3]/div/div/div/div/a (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getSavedProductNameInList(ATLMarketPlannerPage.java:115)
+	at atlantamarket_PROD.GlobalSearch_ProductActions.TS002_VerifyProductAddToNewListOnProductDetailsPageTest(GlobalSearch_ProductActions.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //li[@class='imc-list-edit--draggable'][1]/div/div[3]/div/div/div/div/a
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 26 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifyProductAddToNewListOnProductDetailsPageTest -->
+        <test-method status="PASS" signature="TS003_VerifyProductAddToExistingListOnProductDetailsPageTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@7cd62f43]" name="TS003_VerifyProductAddToExistingListOnProductDetailsPageTest" duration-ms="270145" started-at="2022-07-15T18:13:23Z" finished-at="2022-07-15T18:17:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifyProductAddToExistingListOnProductDetailsPageTest -->
+        <test-method status="FAIL" signature="TS004_VerifyAddToFavoriteOnProductDetailsPageTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@7cd62f43]" name="TS004_VerifyAddToFavoriteOnProductDetailsPageTest" duration-ms="133156" started-at="2022-07-15T18:17:53Z" finished-at="2022-07-15T18:20:06Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/p[1] (tried for 20 second(s) with 500 MILLISECONDS interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/p[1] (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.AtlantaMarket.ATLExhLineProdActionsPage.getExhProductNameOnSearchGrid(ATLExhLineProdActionsPage.java:219)
+	at atlantamarket_PROD.GlobalSearch_ProductActions.TS004_VerifyAddToFavoriteOnProductDetailsPageTest(GlobalSearch_ProductActions.java:297)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/p[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 26 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyAddToFavoriteOnProductDetailsPageTest -->
+        <test-method status="FAIL" signature="TS005_VerifyAddNoteOnProductDetailsPageTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@7cd62f43]" name="TS005_VerifyAddNoteOnProductDetailsPageTest" duration-ms="239816" started-at="2022-07-15T18:20:07Z" finished-at="2022-07-15T18:24:07Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div/div/div/div/a/h2 (tried for 30 second(s) with 500 MILLISECONDS interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div/div/div/div/a/h2 (tried for 30 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.AtlantaMarket.ATLExhLineProdActionsPage.getExhibitorName(ATLExhLineProdActionsPage.java:65)
+	at atlantamarket_PROD.GlobalSearch_ProductActions.TS005_VerifyAddNoteOnProductDetailsPageTest(GlobalSearch_ProductActions.java:362)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div/div/div/div/a/h2
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 26 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifyAddNoteOnProductDetailsPageTest -->
+        <test-method status="FAIL" signature="TS006_VerifyProductAddToExistingListOnSearchResultsGridTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@7cd62f43]" name="TS006_VerifyProductAddToExistingListOnSearchResultsGridTest" duration-ms="41058" started-at="2022-07-15T18:24:10Z" finished-at="2022-07-15T18:24:51Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: cannot determine loading status
+from unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.114)
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=103.0.5060.53 (a1711811edd74ff1cf2150f36ffa3b0dae40b17f-refs/branch-heads/5060@{#853}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir19576_1482152456}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:54403}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=103.0.5060.114, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: c9895751efed1b543c5a62d26668b0b9]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.114)
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=103.0.5060.53 (a1711811edd74ff1cf2150f36ffa3b0dae40b17f-refs/branch-heads/5060@{#853}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir19576_1482152456}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:54403}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=103.0.5060.114, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: c9895751efed1b543c5a62d26668b0b9
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
+	at atlantamarket_PROD.GlobalSearch_ProductActions.TS006_VerifyProductAddToExistingListOnSearchResultsGridTest(GlobalSearch_ProductActions.java:455)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS006_VerifyProductAddToExistingListOnSearchResultsGridTest -->
+        <test-method status="PASS" signature="TS007_VerifyFullScreenViewerOnProductDetailsPageTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@7cd62f43]" name="TS007_VerifyFullScreenViewerOnProductDetailsPageTest" duration-ms="54185" started-at="2022-07-15T18:24:53Z" finished-at="2022-07-15T18:25:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifyFullScreenViewerOnProductDetailsPageTest -->
+        <test-method status="PASS" signature="TS008_VerifyAddToFavoriteOnSearchResultsGridTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@7cd62f43]" name="TS008_VerifyAddToFavoriteOnSearchResultsGridTest" duration-ms="74462" started-at="2022-07-15T18:25:47Z" finished-at="2022-07-15T18:27:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS008_VerifyAddToFavoriteOnSearchResultsGridTest -->
+        <test-method status="PASS" signature="TS009_VerifyProductActionsIconToAddToNewlyCreatedListTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@7cd62f43]" name="TS009_VerifyProductActionsIconToAddToNewlyCreatedListTest" duration-ms="56544" started-at="2022-07-15T18:27:02Z" finished-at="2022-07-15T18:27:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_VerifyProductActionsIconToAddToNewlyCreatedListTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@7cd62f43]" name="tearDown" is-config="true" duration-ms="3617" started-at="2022-07-15T18:27:58Z" finished-at="2022-07-15T18:28:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_ProductActions -->
+      <class name="atlantamarket_PROD.GlobalSearch_LineActions">
+        <test-method status="FAIL" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@6093dd95]" name="initialize" is-config="true" duration-ms="0" started-at="2022-07-15T18:07:54Z" finished-at="2022-07-15T18:07:54Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.114)
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=103.0.5060.53 (a1711811edd74ff1cf2150f36ffa3b0dae40b17f-refs/branch-heads/5060@{#853}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir3452_1038783811}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:54171}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=103.0.5060.114, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: f8060e165423ec856d2a28d331b1d07a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.114)
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=103.0.5060.53 (a1711811edd74ff1cf2150f36ffa3b0dae40b17f-refs/branch-heads/5060@{#853}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir3452_1038783811}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:54171}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=103.0.5060.114, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: f8060e165423ec856d2a28d331b1d07a
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:953)
+	at atlantamarket_PROD.GlobalSearch_LineActions.initialize(GlobalSearch_LineActions.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:175)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:107)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="SKIP" signature="TS001_VerifyClickOnContactExhIconForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@6093dd95]" name="TS001_VerifyClickOnContactExhIconForLineTest" duration-ms="3" started-at="2022-07-15T18:09:15Z" finished-at="2022-07-15T18:09:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifyClickOnContactExhIconForLineTest -->
+        <test-method status="SKIP" signature="TS002_VerifyAddToFavoriteForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@6093dd95]" name="TS002_VerifyAddToFavoriteForLineTest" duration-ms="2" started-at="2022-07-15T18:09:15Z" finished-at="2022-07-15T18:09:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifyAddToFavoriteForLineTest -->
+        <test-method status="SKIP" signature="TS003_VerifyClickOnOrderOnJuniperMarketBtnForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@6093dd95]" name="TS003_VerifyClickOnOrderOnJuniperMarketBtnForLineTest" duration-ms="1" started-at="2022-07-15T18:09:15Z" finished-at="2022-07-15T18:09:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifyClickOnOrderOnJuniperMarketBtnForLineTest -->
+        <test-method status="SKIP" signature="TS004_VerifyAddToNewListForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@6093dd95]" name="TS004_VerifyAddToNewListForLineTest" duration-ms="2" started-at="2022-07-15T18:09:15Z" finished-at="2022-07-15T18:09:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyAddToNewListForLineTest -->
+        <test-method status="SKIP" signature="TS005_VerifyAddToExistingListForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@6093dd95]" name="TS005_VerifyAddToExistingListForLineTest" duration-ms="1" started-at="2022-07-15T18:09:15Z" finished-at="2022-07-15T18:09:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifyAddToExistingListForLineTest -->
+        <test-method status="SKIP" signature="TS006_VerifyClickOnShownByExhibitorNameLinkForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@6093dd95]" name="TS006_VerifyClickOnShownByExhibitorNameLinkForLineTest" duration-ms="3" started-at="2022-07-15T18:09:15Z" finished-at="2022-07-15T18:09:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS006_VerifyClickOnShownByExhibitorNameLinkForLineTest -->
+        <test-method status="SKIP" signature="TS007_VerifyClickOnLocationLinkForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@6093dd95]" name="TS007_VerifyClickOnLocationLinkForLineTest" duration-ms="2" started-at="2022-07-15T18:09:15Z" finished-at="2022-07-15T18:09:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifyClickOnLocationLinkForLineTest -->
+        <test-method status="SKIP" signature="TS008_VerifyClickOnMatchingProductsSeeAllLinkForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@6093dd95]" name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForLineTest" duration-ms="1" started-at="2022-07-15T18:09:15Z" finished-at="2022-07-15T18:09:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS008_VerifyClickOnMatchingProductsSeeAllLinkForLineTest -->
+        <test-method status="SKIP" signature="TS009_VerifyClickOnTotalProductsSeeAllLinkForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@6093dd95]" name="TS009_VerifyClickOnTotalProductsSeeAllLinkForLineTest" duration-ms="5" started-at="2022-07-15T18:09:15Z" finished-at="2022-07-15T18:09:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_VerifyClickOnTotalProductsSeeAllLinkForLineTest -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@6093dd95]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-07-15T18:09:15Z" finished-at="2022-07-15T18:09:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_LineActions -->
+      <class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions">
+        <test-method status="FAIL" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@59f99ea]" name="initialize" is-config="true" duration-ms="0" started-at="2022-07-15T18:06:30Z" finished-at="2022-07-15T18:06:30Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.114)
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=103.0.5060.53 (a1711811edd74ff1cf2150f36ffa3b0dae40b17f-refs/branch-heads/5060@{#853}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir16528_1465793286}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:53955}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=103.0.5060.114, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: a183e789c0d14f354ef1cb7d1057763c]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.114)
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=103.0.5060.53 (a1711811edd74ff1cf2150f36ffa3b0dae40b17f-refs/branch-heads/5060@{#853}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir16528_1465793286}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:53955}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=103.0.5060.114, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: a183e789c0d14f354ef1cb7d1057763c
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:953)
+	at atlantamarket_PROD.GlobalSearch_ExhibitorActions.initialize(GlobalSearch_ExhibitorActions.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:175)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:107)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="SKIP" signature="TS001_VerifyAddToFavoriteForExhibitorTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@59f99ea]" name="TS001_VerifyAddToFavoriteForExhibitorTest" duration-ms="4" started-at="2022-07-15T18:07:53Z" finished-at="2022-07-15T18:07:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifyAddToFavoriteForExhibitorTest -->
+        <test-method status="SKIP" signature="TS002_VerifyAddToNewListForExhibitorTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@59f99ea]" name="TS002_VerifyAddToNewListForExhibitorTest" duration-ms="1" started-at="2022-07-15T18:07:53Z" finished-at="2022-07-15T18:07:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifyAddToNewListForExhibitorTest -->
+        <test-method status="SKIP" signature="TS003_VerifyAddToExistingListForExhibitorTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@59f99ea]" name="TS003_VerifyAddToExistingListForExhibitorTest" duration-ms="5" started-at="2022-07-15T18:07:53Z" finished-at="2022-07-15T18:07:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifyAddToExistingListForExhibitorTest -->
+        <test-method status="SKIP" signature="TS004_VerifyClickOnContactExhIconForExhibitorTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@59f99ea]" name="TS004_VerifyClickOnContactExhIconForExhibitorTest" duration-ms="13" started-at="2022-07-15T18:07:53Z" finished-at="2022-07-15T18:07:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyClickOnContactExhIconForExhibitorTest -->
+        <test-method status="SKIP" signature="TS005_VerifyClickOnLocationLinksForExhibitorTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@59f99ea]" name="TS005_VerifyClickOnLocationLinksForExhibitorTest" duration-ms="1" started-at="2022-07-15T18:07:54Z" finished-at="2022-07-15T18:07:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifyClickOnLocationLinksForExhibitorTest -->
+        <test-method status="SKIP" signature="TS006_VerifyClickOnLinesShownLinkForExhibitorTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@59f99ea]" name="TS006_VerifyClickOnLinesShownLinkForExhibitorTest" duration-ms="2" started-at="2022-07-15T18:07:54Z" finished-at="2022-07-15T18:07:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS006_VerifyClickOnLinesShownLinkForExhibitorTest -->
+        <test-method status="SKIP" signature="TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@59f99ea]" name="TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest" duration-ms="2" started-at="2022-07-15T18:07:54Z" finished-at="2022-07-15T18:07:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest -->
+        <test-method status="SKIP" signature="TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@59f99ea]" name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest" duration-ms="9" started-at="2022-07-15T18:07:54Z" finished-at="2022-07-15T18:07:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest -->
+        <test-method status="SKIP" signature="TS009_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@59f99ea]" name="TS009_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest" duration-ms="64" started-at="2022-07-15T18:07:54Z" finished-at="2022-07-15T18:07:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest -->
+        <test-method status="SKIP" signature="TS010_VerifySelectionOfExhibitorFromSearchResultsTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@59f99ea]" name="TS010_VerifySelectionOfExhibitorFromSearchResultsTest" duration-ms="4" started-at="2022-07-15T18:07:54Z" finished-at="2022-07-15T18:07:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS010_VerifySelectionOfExhibitorFromSearchResultsTest -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@59f99ea]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-07-15T18:07:54Z" finished-at="2022-07-15T18:07:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_ExhibitorActions -->
+      <class name="atlantamarket_PROD.FloorPlans">
+        <test-method status="FAIL" signature="initialize()[pri:0, instance:atlantamarket_PROD.FloorPlans@6a41eaa2]" name="initialize" is-config="true" duration-ms="0" started-at="2022-07-15T18:28:02Z" finished-at="2022-07-15T18:28:02Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.114)
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=103.0.5060.53 (a1711811edd74ff1cf2150f36ffa3b0dae40b17f-refs/branch-heads/5060@{#853}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir17284_1487483199}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:57195}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=103.0.5060.114, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 4ad24b22904006980e8ed29e1ffc06cb]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.114)
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=103.0.5060.53 (a1711811edd74ff1cf2150f36ffa3b0dae40b17f-refs/branch-heads/5060@{#853}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir17284_1487483199}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:57195}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=103.0.5060.114, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 4ad24b22904006980e8ed29e1ffc06cb
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:953)
+	at atlantamarket_PROD.FloorPlans.initialize(FloorPlans.java:68)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:175)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:107)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="SKIP" signature="TS001_VerifyNavigationToDifferentFloorBuildingsTest()[pri:0, instance:atlantamarket_PROD.FloorPlans@6a41eaa2]" name="TS001_VerifyNavigationToDifferentFloorBuildingsTest" duration-ms="1" started-at="2022-07-15T18:29:09Z" finished-at="2022-07-15T18:29:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifyNavigationToDifferentFloorBuildingsTest -->
+        <test-method status="SKIP" signature="TS002_VerifyNoExhibitorsOnThisFloorMessageTest()[pri:0, instance:atlantamarket_PROD.FloorPlans@6a41eaa2]" name="TS002_VerifyNoExhibitorsOnThisFloorMessageTest" duration-ms="3" started-at="2022-07-15T18:29:09Z" finished-at="2022-07-15T18:29:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifyNoExhibitorsOnThisFloorMessageTest -->
+        <test-method status="SKIP" signature="TS003_VerifyZoomInOutLevelOnFloorPlansPageTest()[pri:0, instance:atlantamarket_PROD.FloorPlans@6a41eaa2]" name="TS003_VerifyZoomInOutLevelOnFloorPlansPageTest" duration-ms="11" started-at="2022-07-15T18:29:09Z" finished-at="2022-07-15T18:29:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifyZoomInOutLevelOnFloorPlansPageTest -->
+        <test-method status="SKIP" signature="TS004_VerifyIconsOnFloorPlansPageTest()[pri:0, instance:atlantamarket_PROD.FloorPlans@6a41eaa2]" name="TS004_VerifyIconsOnFloorPlansPageTest" duration-ms="1" started-at="2022-07-15T18:29:09Z" finished-at="2022-07-15T18:29:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyIconsOnFloorPlansPageTest -->
+        <test-method status="SKIP" signature="TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest()[pri:0, instance:atlantamarket_PROD.FloorPlans@6a41eaa2]" name="TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest" duration-ms="1" started-at="2022-07-15T18:29:09Z" finished-at="2022-07-15T18:29:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest -->
+        <test-method status="SKIP" signature="TS006_VerifyPaginationOnFloorPlansPageTest()[pri:0, instance:atlantamarket_PROD.FloorPlans@6a41eaa2]" name="TS006_VerifyPaginationOnFloorPlansPageTest" duration-ms="1" started-at="2022-07-15T18:29:09Z" finished-at="2022-07-15T18:29:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS006_VerifyPaginationOnFloorPlansPageTest -->
+        <test-method status="SKIP" signature="TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest()[pri:0, instance:atlantamarket_PROD.FloorPlans@6a41eaa2]" name="TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest" duration-ms="1" started-at="2022-07-15T18:29:09Z" finished-at="2022-07-15T18:29:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest -->
+        <test-method status="SKIP" signature="TS008_VerifyClickOnReturnToBuildingListBtnTest()[pri:0, instance:atlantamarket_PROD.FloorPlans@6a41eaa2]" name="TS008_VerifyClickOnReturnToBuildingListBtnTest" duration-ms="21" started-at="2022-07-15T18:29:09Z" finished-at="2022-07-15T18:29:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS008_VerifyClickOnReturnToBuildingListBtnTest -->
+        <test-method status="SKIP" signature="TS009_VerifySearchFunctionalityForExhListOnFloorPlansPageTest()[pri:0, instance:atlantamarket_PROD.FloorPlans@6a41eaa2]" name="TS009_VerifySearchFunctionalityForExhListOnFloorPlansPageTest" duration-ms="1" started-at="2022-07-15T18:29:09Z" finished-at="2022-07-15T18:29:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_VerifySearchFunctionalityForExhListOnFloorPlansPageTest -->
+        <test-method status="SKIP" signature="TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest()[pri:0, instance:atlantamarket_PROD.FloorPlans@6a41eaa2]" name="TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest" duration-ms="8" started-at="2022-07-15T18:29:09Z" finished-at="2022-07-15T18:29:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest -->
+        <test-method status="SKIP" signature="TS011_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest()[pri:0, instance:atlantamarket_PROD.FloorPlans@6a41eaa2]" name="TS011_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest" duration-ms="2" started-at="2022-07-15T18:29:10Z" finished-at="2022-07-15T18:29:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS011_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest -->
+        <test-method status="SKIP" signature="TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest()[pri:0, instance:atlantamarket_PROD.FloorPlans@6a41eaa2]" name="TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest" duration-ms="11" started-at="2022-07-15T18:29:10Z" finished-at="2022-07-15T18:29:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:atlantamarket_PROD.FloorPlans@6a41eaa2]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-07-15T18:29:10Z" finished-at="2022-07-15T18:29:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- atlantamarket_PROD.FloorPlans -->
+      <class name="atlantamarket_PROD.GlobalSearch_SuggestionList">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SuggestionList@6d4b1c02]" name="initialize" is-config="true" duration-ms="24392" started-at="2022-07-15T18:05:20Z" finished-at="2022-07-15T18:05:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="FAIL" signature="TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SuggestionList@6d4b1c02]" name="TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest" duration-ms="3935" started-at="2022-07-15T18:05:44Z" finished-at="2022-07-15T18:05:48Z">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: element is not attached to the page document
+  (Session info: chrome=103.0.5060.114)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=103.0.5060.53 (a1711811edd74ff1cf2150f36ffa3b0dae40b17f-refs/branch-heads/5060@{#853}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir13644_1770747689}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:53769}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=103.0.5060.114, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 788d391c9cdc8682e294d8b75bc65986]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=103.0.5060.114)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=103.0.5060.53 (a1711811edd74ff1cf2150f36ffa3b0dae40b17f-refs/branch-heads/5060@{#853}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir13644_1770747689}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:53769}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=103.0.5060.114, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 788d391c9cdc8682e294d8b75bc65986
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at atlantamarket_PROD.GlobalSearch_SuggestionList.TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest(GlobalSearch_SuggestionList.java:69)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest -->
+        <test-method status="FAIL" signature="TS002_VerifySelectionOfLineFromAutoSuggestionListTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SuggestionList@6d4b1c02]" name="TS002_VerifySelectionOfLineFromAutoSuggestionListTest" duration-ms="3276" started-at="2022-07-15T18:05:49Z" finished-at="2022-07-15T18:05:52Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: cannot determine loading status
+from unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.114)
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=103.0.5060.53 (a1711811edd74ff1cf2150f36ffa3b0dae40b17f-refs/branch-heads/5060@{#853}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir13644_1770747689}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:53769}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=103.0.5060.114, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 788d391c9cdc8682e294d8b75bc65986]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.114)
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=103.0.5060.53 (a1711811edd74ff1cf2150f36ffa3b0dae40b17f-refs/branch-heads/5060@{#853}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir13644_1770747689}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:53769}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=103.0.5060.114, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 788d391c9cdc8682e294d8b75bc65986
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:364)
+	at atlantamarket_PROD.GlobalSearch_SuggestionList.TS002_VerifySelectionOfLineFromAutoSuggestionListTest(GlobalSearch_SuggestionList.java:100)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifySelectionOfLineFromAutoSuggestionListTest -->
+        <test-method status="PASS" signature="TS003_VerifySelectionOfProductFromAutoSuggestionListTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SuggestionList@6d4b1c02]" name="TS003_VerifySelectionOfProductFromAutoSuggestionListTest" duration-ms="30430" started-at="2022-07-15T18:05:56Z" finished-at="2022-07-15T18:06:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifySelectionOfProductFromAutoSuggestionListTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SuggestionList@6d4b1c02]" name="tearDown" is-config="true" duration-ms="3698" started-at="2022-07-15T18:06:26Z" finished-at="2022-07-15T18:06:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_SuggestionList -->
+
     </test> <!-- RegressionTest -->
   </suite> <!-- ATLMrkt_RegressionTestSuite -->
 </testng-results>

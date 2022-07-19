@@ -9,6 +9,7 @@
 	<test thread-count="5" name="RegressionTest">
 		<classes>
 
+
 			<!-- <class name="atlantamarket_PROD.GlobalSearch_SuggestionList" /> 
 			<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
@@ -19,10 +20,13 @@
 			<include name="TS003_VerifySelectionOfProductCategoriesFilterCombinationWithStyleFromLeftPaneFiltersTest"/>
 			</methods>>
 
+
+
 			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
 			<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
+
 			<class name="atlantamarket_PROD.FloorPlans" /> -->
 			
 		<class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions" />
@@ -30,6 +34,9 @@
 			<include name="TS001_VerifyAddToFavoriteForExhibitorTest" />
 			</methods>
 		
+
+			<class name="atlantamarket_PROD.FloorPlans" />
+
 		</classes>
 
 		<!-- <listners>

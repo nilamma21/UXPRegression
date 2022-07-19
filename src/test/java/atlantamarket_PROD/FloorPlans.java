@@ -64,8 +64,9 @@ public class FloorPlans extends base {
 		//lap.getCloseMarktAdBtn().click();
 
 		//Login to Market Planner
-		//		utl.verifyMPLoginFunctionality();
-		//		Thread.sleep(12000);
+		utl.verifyMPLoginFunctionality();
+		driver.navigate().refresh();
+		Thread.sleep(8000);
 		//		lap.getCloseMarktAdBtn().click();
 	}
 
@@ -133,7 +134,7 @@ public class FloorPlans extends base {
 		atlflpp.getATLNoExhibitorFloor().click();
 
 		//Verify that Loading Exhibitors msg should be displayed
-		Assert.assertTrue(atlflpp.getATLLoadingExhMsg().isDisplayed());
+		//Assert.assertTrue(atlflpp.getATLLoadingExhMsg().isDisplayed());
 
 		//Verify that No Exhibitor msg should be displayed
 		Assert.assertTrue(atlflpp.getATLNoExpMsg().isDisplayed());
@@ -275,8 +276,7 @@ public class FloorPlans extends base {
 		atlflpp.getATLFloorPlansLink().click();
 
 		//Click on Building floorr
-		//atlflpp.getATLBuildingFloor().click();
-		atlflpp.getATLBuildingFloorNumber().click();
+		atlflpp.getATLBuildingFloorForFilter().click();
 
 		//Scroll Down to Exhibitor list
 		utl.scrollToElement(atlflpp.getATLSelectBox());
@@ -315,7 +315,8 @@ public class FloorPlans extends base {
 		//Select Exhibitor on JuniperMarket from List
 		selectFilter.selectByValue("Lines on JuniperMarket");
 		Thread.sleep(10000);
-		List<WebElement> currentJuniperMarketList= driver.findElements(By.xpath("//a[@class='imc-type--title-5-link']"));
+		
+		/*List<WebElement> currentJuniperMarketList= driver.findElements(By.xpath("//a[@class='imc-type--title-5-link']"));
 		List<String> juniperMarketList = new ArrayList<String>(); 
 		for(WebElement we:currentJuniperMarketList){
 
@@ -323,7 +324,9 @@ public class FloorPlans extends base {
 		}
 		//System.out.println("Expected sorted Exhibitor List : "+juniperMarketList);
 		//Verify JuniperMarket List is Displayed or not
-		Assert.assertTrue(!juniperMarketList.isEmpty(),"JuniperMarket Exhibitor list should displayed.");		
+		Assert.assertTrue(!juniperMarketList.isEmpty(),"JuniperMarket Exhibitor list should displayed.");	*/
+		
+		Assert.assertTrue(atlflpp.getNoResultsMsgForLinesOnJuniper().isDisplayed());
 	}
 
 	@Test(priority = 6)
@@ -396,9 +399,9 @@ public class FloorPlans extends base {
 		//Click on 1st Exhibitor
 		atlflpp.getATLExhibitorName().click();
 
+		Thread.sleep(12000);
 		// Verify that Selected Exhibitor Digital Showroom page should be opened
 		Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
-		Thread.sleep(12000);
 		Assert.assertTrue(driver.getTitle().contains(""+exhibitorName+" at Atlanta Market"));
 		Assert.assertTrue(atlexhdgshw.getExhibitorNameOnExhDirectImg().getText().contains(exhibitorName));
 	}
@@ -497,9 +500,10 @@ public class FloorPlans extends base {
 		System.out.println("Exhibitor Name : " +exhnameonfloorplan );
 		// Click on More option 3dots
 		atlflpp.getATLMoreOptions().click();
+	
 		// Click on Add To List
 		atlflpp.getATLAddToList().click();
-
+		
 		// Store the existing list name
 		String existinglistname = atlmppge.getATLMPExistingListName().getText();
 		System.out.println("Existing list name: " + existinglistname);
@@ -507,7 +511,7 @@ public class FloorPlans extends base {
 		// Select Existing list name
 		atlmppge.getATLMPExistingListName().click();
 
-		// Scroll till Add to Selected button
+		// Scroll till Add to Selected button5
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",
 				atlmppge.getATLMPAddToSelectedBtn());
 		atlmppge.getATLMPAddToSelectedBtn().click();
@@ -542,6 +546,8 @@ public class FloorPlans extends base {
 		lp = new ATLLoginPage(driver);
 		utl = new Utility(driver);
 		atlflpp = new ATLFloorPlansPage(driver);
+		genData = new GenerateData();
+		atlexhact = new ATLExhLineProdActionsPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
@@ -558,14 +564,12 @@ public class FloorPlans extends base {
 		// 1st Exhibitor Name
 		String exhibitorName = atlflpp.getATLExhibitorName().getText();
 		System.out.println("Exhibitor Name : " + exhibitorName);
+		
 		// Click on More option 3dots
 		atlflpp.getATLMoreOptions().click();
 		// Click on Add Note
 		atlflpp.getATLAddNote().click();
-		// Click on More option
-		atlflpp.getATLMoreOptions().click();
-		// Click on Add Note
-		atlflpp.getATLAddNote().click();
+
 		// Store the new note name
 		String newnotetitle = "CybNote" + genData.generateRandomString(3);
 		System.out.println("Newly added Note is: " + newnotetitle);
@@ -578,8 +582,9 @@ public class FloorPlans extends base {
 		atlexhact.getNoteSaveBtn().click();
 		Thread.sleep(5000);
 
+		atlflpp.getATLMoreOptions().click();
 		// Click on 'Add Note' icon for the same exhibitor
-		atlproddet.getProductAddNoteIcon().click();
+		atlflpp.getATLAddNote().click();
 		Thread.sleep(4000);
 
 		// Click on 'View all Notes for an Exhibitor' link on Add Notes pop-up
@@ -630,7 +635,6 @@ public class FloorPlans extends base {
 		// Click on More option 3dots
 		atlflpp.getATLMoreOptions().click();
 
-		// New code
 		// Click on Favorite icon of 1st exhibitor
 		atlflpp.getATLAddFev().click();
 
@@ -641,9 +645,8 @@ public class FloorPlans extends base {
 		atlmppge.getMPHomeListsTab().click();
 		atlmppge.getATLMPListsPageFavoritesMenu().click();
 
-		System.out.println(atlmppge.getATLSavedExhNameInList().getText());
-		// Verify that the added favorites exhibitor should be displayed in to Favorites
-		// list
+		//System.out.println(atlmppge.getATLSavedExhNameInList().getText());
+		// Verify that the added favorites exhibitor should be displayed in to Favorites list
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().equals(exhibitorName));
 
 		// Delete that favorites exhibitor from list
