@@ -3,6 +3,12 @@
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
+
+      <class name="atlantamarket_PROD.GlobalSearch_SuggestionList">
+        <methods>
+          <include name="initialize"/>
+          <include name="TS003_VerifySelectionOfProductFromAutoSuggestionListTest"/>
+
       <class name="lasvegasmarket_UAT.GlobalSearch_ProductActions">
         <methods>
           <include name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest"/>
@@ -15,6 +21,7 @@
           <include name="TS003_VerifyProductAddToExistingListOnProductDetailsPageTest"/>
           <include name="TS009_VerifyProductActionsIconToAddToNewlyCreatedListTest"/>
           <include name="TS007_VerifyFullScreenViewerOnProductDetailsPageTest"/>
+
         </methods>
       </class> <!-- lasvegasmarket_UAT.GlobalSearch_ProductActions -->
     </classes>

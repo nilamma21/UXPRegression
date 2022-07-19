@@ -23,7 +23,11 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
+
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+
       <span class="top-banner-font-1">1 suite</span>
+
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -90,6 +94,42 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
+
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-ATLMrkt_RegressionTestSuite" class="hide-methods failed suite-ATLMrkt_RegressionTestSuite"> (hide)</a> <!-- hide-methods failed suite-ATLMrkt_RegressionTestSuite -->
+                      <a href="#" panel-name="suite-ATLMrkt_RegressionTestSuite" class="show-methods failed suite-ATLMrkt_RegressionTestSuite"> (show)</a> <!-- show-methods failed suite-ATLMrkt_RegressionTestSuite -->
+                    </span>
+                    <div class="method-list-content failed suite-ATLMrkt_RegressionTestSuite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket_PROD.GlobalSearch_SuggestionList" hash-for-method="TS003_VerifySelectionOfProductFromAutoSuggestionListTest">TS003_VerifySelectionOfProductFromAutoSuggestionListTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-ATLMrkt_RegressionTestSuite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-ATLMrkt_RegressionTestSuite" class="hide-methods passed suite-ATLMrkt_RegressionTestSuite"> (hide)</a> <!-- hide-methods passed suite-ATLMrkt_RegressionTestSuite -->
+                      <a href="#" panel-name="suite-ATLMrkt_RegressionTestSuite" class="show-methods passed suite-ATLMrkt_RegressionTestSuite"> (show)</a> <!-- show-methods passed suite-ATLMrkt_RegressionTestSuite -->
+                    </span>
+                    <div class="method-list-content passed suite-ATLMrkt_RegressionTestSuite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket_PROD.GlobalSearch_SuggestionList" hash-for-method="TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest">TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket_PROD.GlobalSearch_SuggestionList" hash-for-method="TS002_VerifySelectionOfLineFromAutoSuggestionListTest">TS002_VerifySelectionOfLineFromAutoSuggestionListTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-ATLMrkt_RegressionTestSuite -->
+
                     <span class="method-stats">9 methods,  9 skipped,  </span>
                   </li>
                   <li>
@@ -145,6 +185,7 @@
                       </span>
                       <br/>
                     </div> <!-- method-list-content skipped suite-ATLMrkt_RegressionTestSuite -->
+
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -156,14 +197,96 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-ATLMrkt_RegressionTestSuite" class="panel ATLMrkt_RegressionTestSuite">
+
+          <div class="suite-ATLMrkt_RegressionTestSuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">atlantamarket_PROD.GlobalSearch_SuggestionList</span>
+
           <div class="suite-ATLMrkt_RegressionTestSuite-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
               <span class="class-name">lasvegasmarket_UAT.GlobalSearch_ProductActions</span>
+
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+
+                  <a name="TS003_VerifySelectionOfProductFromAutoSuggestionListTest">
+                  </a> <!-- TS003_VerifySelectionOfProductFromAutoSuggestionListTest -->
+                  <span class="method-name">TS003_VerifySelectionOfProductFromAutoSuggestionListTest</span>
+                  <div class="stack-trace"><b>"org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all elements located by By.xpath: //ul[@class=&apos;react-autosuggest__suggestions-list&apos;]/li (tried for 30 second(s) with 500 MILLISECONDS interval)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities [{networkConnectionEnabled=false, msedge={msedgedriverVersion=99.0.1150.55 (c8275fcfc2e02d5ca43c76374fa8200557b8712c), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir19328_642916324}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=99.0.1150.46, browserName=msedge, javascriptEnabled=true, platformName=windows, ms:edgeOptions={debuggerAddress=localhost:63922}, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 29b8b1b78e443aaf49da9a69dce1f55e
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at atlantamarket_PROD.GlobalSearch_SuggestionList.TS003_VerifySelectionOfProductFromAutoSuggestionListTest(GlobalSearch_SuggestionList.java:140)
+... Removed 24 stack frames<br/> org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all elements located by By.xpath: //ul[@class=&apos;react-autosuggest__suggestions-list&apos;]/li (tried for 30 second(s) with 500 MILLISECONDS interval)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities [{networkConnectionEnabled=false, msedge={msedgedriverVersion=99.0.1150.55 (c8275fcfc2e02d5ca43c76374fa8200557b8712c), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir19328_642916324}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=99.0.1150.46, browserName=msedge, javascriptEnabled=true, platformName=windows, ms:edgeOptions={debuggerAddress=localhost:63922}, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 29b8b1b78e443aaf49da9a69dce1f55e
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at atlantamarket_PROD.GlobalSearch_SuggestionList.TS003_VerifySelectionOfProductFromAutoSuggestionListTest(GlobalSearch_SuggestionList.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+"</b><br>org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)<br>org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)<br>atlantamarket_PROD.GlobalSearch_SuggestionList.TS003_VerifySelectionOfProductFromAutoSuggestionListTest(GlobalSearch_SuggestionList.java:140)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br>java.lang.reflect.Method.invoke(Unknown Source)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)<br>
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ATLMrkt_RegressionTestSuite-class-failed -->
+          <div class="suite-ATLMrkt_RegressionTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">atlantamarket_PROD.GlobalSearch_SuggestionList</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest">
+                  </a> <!-- TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest -->
+                  <span class="method-name">TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TS002_VerifySelectionOfLineFromAutoSuggestionListTest">
+                  </a> <!-- TS002_VerifySelectionOfLineFromAutoSuggestionListTest -->
+                  <span class="method-name">TS002_VerifySelectionOfLineFromAutoSuggestionListTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ATLMrkt_RegressionTestSuite-class-passed -->
+
                   <a name="TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest">
                   </a> <!-- TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest -->
                   <span class="method-name">TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest</span>
@@ -227,6 +350,7 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-ATLMrkt_RegressionTestSuite-class-skipped -->
+
         </div> <!-- panel ATLMrkt_RegressionTestSuite -->
         <div panel-name="test-xml-ATLMrkt_RegressionTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -239,7 +363,11 @@
 &lt;suite name=&quot;ATLMrkt_RegressionTestSuite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;RegressionTest&quot;&gt;
     &lt;classes&gt;
+
+      &lt;class name=&quot;atlantamarket_PROD.GlobalSearch_SuggestionList&quot;/&gt;
+
       &lt;class name=&quot;lasvegasmarket_UAT.GlobalSearch_ProductActions&quot;/&gt;
+
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- RegressionTest --&gt;
 &lt;/suite&gt; &lt;!-- ATLMrkt_RegressionTestSuite --&gt;
@@ -279,6 +407,21 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
+
+data.addRows(3);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'TS003_VerifySelectionOfProductFromAutoSuggestionListTest')
+data.setCell(0, 2, 'atlantamarket_PROD.GlobalSearch_SuggestionList')
+data.setCell(0, 3, 37274);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'TS002_VerifySelectionOfLineFromAutoSuggestionListTest')
+data.setCell(1, 2, 'atlantamarket_PROD.GlobalSearch_SuggestionList')
+data.setCell(1, 3, 28629);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest')
+data.setCell(2, 2, 'atlantamarket_PROD.GlobalSearch_SuggestionList')
+data.setCell(2, 3, 16051);
+
 data.addRows(9);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest')
@@ -316,11 +459,16 @@ data.setCell(8, 0, 8)
 data.setCell(8, 1, 'TS009_VerifyProductActionsIconToAddToNewlyCreatedListTest')
 data.setCell(8, 2, 'lasvegasmarket_UAT.GlobalSearch_ProductActions')
 data.setCell(8, 3, 1);
+
 window.suiteTableData['ATLMrkt_RegressionTestSuite']= { tableData: data, tableDiv: 'times-div-ATLMrkt_RegressionTestSuite'}
 return data;
 }
               </script>
+
+              <span class="suite-total-time">Total running time: 1 minutes</span>
+
               <span class="suite-total-time">Total running time: 61 ms</span>
+
               <div id="times-div-ATLMrkt_RegressionTestSuite">
               </div> <!-- times-div-ATLMrkt_RegressionTestSuite -->
             </div> <!-- times-div -->
@@ -346,14 +494,33 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
+
+              <div class="chronological-class-name">atlantamarket_PROD.GlobalSearch_SuggestionList</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+
               <div class="chronological-class-name">lasvegasmarket_UAT.GlobalSearch_ProductActions</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <img src="failed.png">
                 </img>
+
                 <span class="method-name">initialize</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+
+                <span class="method-name">TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest</span>
+                <span class="method-start">55709 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS002_VerifySelectionOfLineFromAutoSuggestionListTest</span>
+                <span class="method-start">71789 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TS003_VerifySelectionOfProductFromAutoSuggestionListTest</span>
+                <span class="method-start">100420 ms</span>
+
                 <span class="method-name">TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest</span>
                 <span class="method-start">6038 ms</span>
               </div> <!-- test-method -->
@@ -388,6 +555,7 @@ return data;
               <div class="test-method">
                 <span class="method-name">TS009_VerifyProductActionsIconToAddToNewlyCreatedListTest</span>
                 <span class="method-start">6118 ms</span>
+
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
