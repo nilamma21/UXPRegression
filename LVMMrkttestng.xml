@@ -23,20 +23,20 @@
 
 
 			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
-			<!-- <class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
+			<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
 
 			<class name="atlantamarket_PROD.FloorPlans" /> -->
-
-
-			<class name="atlantamarket_PROD.FloorPlans" /> -->
 			
-		<class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions" />
-		<methods>
-			<include name="TS001_VerifyAddToFavoriteForExhibitorTest" />
-			</methods>
+		<class name="lasvegasmarket_UAT.GlobalSearch_ProductActions" />
+		<!--  <<methods>
+			<include name="TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest" />
+			</methods>-->
 		
+
+			
+
 		</classes>
 
 		<!-- <listners>
