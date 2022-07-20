@@ -439,9 +439,16 @@ public class GlobalSearch_ProductActions extends base {
 		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
 		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
 
-		// Click on Add to List button for 1st Exhibitor
-		atlexhact.getSearchResultMoreicon().click();
+		// Hovering on Product
+		Actions actions = new Actions(driver);
+		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
+		// To mouseover on More btn
+		actions.moveToElement(atlexhact.getProductMoreBtnOnSearchGrid()).perform();
+
+		//Click on Add To List button
+		actions.click().perform();
 		atlexhact.getAddToListOptn().click();
+		Thread.sleep(5000);
 
 		// Store the existing list name
 		String existinglistname = atlmppge.getATLMPExistingListName().getText();
@@ -603,7 +610,7 @@ public class GlobalSearch_ProductActions extends base {
 	}
 
 	@Test(priority = 9)
-	public void TS009_VerifyProductActionsIconToAddToNewlyCreatedListTest() throws InterruptedException, IOException {
+	public void TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T435: Add to Newly created list functionality on Product details page
 
@@ -628,9 +635,16 @@ public class GlobalSearch_ProductActions extends base {
 		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
 		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
 
-		// Click on Add to List button for 1st Exhibitor
-		atlexhact.getSearchResultMoreicon().click();
+		// Hovering on Product
+		Actions actions = new Actions(driver);
+		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
+		// To mouseover on More btn
+		actions.moveToElement(atlexhact.getProductMoreBtnOnSearchGrid()).perform();
+
+		//Click on Add To List button
+		actions.click().perform();
 		atlexhact.getAddToListOptn().click();
+		Thread.sleep(5000);
 
 		utl.scrollToElement(atlmppge.getCreateNewListNameTxtbx());
 
