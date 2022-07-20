@@ -9,7 +9,6 @@
 	<test thread-count="5" name="RegressionTest">
 		<classes>
 			<class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions" />
-			<class name="lasvegasmarket_UAT.GlobalSearch_ProductActions" />
 		</classes>
 	</test>
 </suite>

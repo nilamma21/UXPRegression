@@ -45,12 +45,13 @@ public class GlobalSearch_SuggestionList extends base {
 	@BeforeClass
 	public void initialize() throws IOException, InterruptedException {
 		driver = initializeDriver(); // requires for Parallel text execution
+		//chromeVersion();
 		utl = new Utility(driver);
 		lap = new ATLLandingPage(driver);
 
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
-		driver.get(prop.getProperty("atlmrkturl_uat"));
+		driver.get(prop.getProperty("lvmurl_uat"));
 		lap.getIUnderstandBtn().click();
 //		Thread.sleep(10000);
 //		lap.getCloseMarktAdBtn().click();
@@ -97,7 +98,7 @@ public class GlobalSearch_SuggestionList extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		driver.get(prop.getProperty("atlmrkturl_uat"));
+		driver.get(prop.getProperty("lvmurl_uat"));
 		//lap.getCloseMarktAdBtn().click();
 		
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestline")));
@@ -130,10 +131,10 @@ public class GlobalSearch_SuggestionList extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		driver.get(prop.getProperty("atlmrkturl_uat"));
+		driver.get(prop.getProperty("lvmurl_uat"));
 		//lap.getCloseMarktAdBtn().click();
 		
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestproduct")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestproduct_lvm")));
 
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li")));
@@ -143,7 +144,7 @@ public class GlobalSearch_SuggestionList extends base {
 
 		for (int i = 0; i < prodlist.size(); i++) {
 			//System.out.println(prodlist.get(i).getText());			
-			if (prodlist.get(i).getText().contains(prop.getProperty("autosuggestproduct"))
+			if (prodlist.get(i).getText().contains(prop.getProperty("autosuggestproduct_lvm"))
 					&& prodlist.get(i).getText().contains("Product")) {	
 				prodlist.get(i).click();
 				break;
@@ -151,13 +152,13 @@ public class GlobalSearch_SuggestionList extends base {
 		}
 		Thread.sleep(8000);
 		Assert.assertTrue(atlproddet.getATLValidateProdDetailsPage().isDisplayed());
-		driver.get(prop.getProperty("atlmrkturl_uat"));
+		driver.get(prop.getProperty("lvmurl_uat"));
 		//lap.getCloseMarktAdBtn().click();
 	}
 	
-	@AfterClass
+	/*@AfterClass
 	public void tearDown()
 	{
 		driver.quit();
-	}
+	}*/
 }

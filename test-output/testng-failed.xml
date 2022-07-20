@@ -1,37 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
+<suite name="Failed suite [LVM_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-
       <class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions">
         <methods>
           <include name="TS009_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest"/>
+          <include name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest"/>
+          <include name="TS006_VerifyClickOnLinesShownLinkForExhibitorTest"/>
           <include name="initialize"/>
+          <include name="TS002_VerifyAddToNewListForExhibitorTest"/>
           <include name="tearDown"/>
-
-
-      <class name="atlantamarket_PROD.GlobalSearch_SuggestionList">
-        <methods>
-          <include name="initialize"/>
-          <include name="TS003_VerifySelectionOfProductFromAutoSuggestionListTest"/>
-
-      <class name="lasvegasmarket_UAT.GlobalSearch_ProductActions">
-        <methods>
-          <include name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest"/>
-          <include name="TS008_VerifyAddToFavoriteOnSearchResultsGridTest"/>
-          <include name="TS005_VerifyAddNoteOnProductDetailsPageTest"/>
-          <include name="TS006_VerifyProductAddToExistingListOnSearchResultsGridTest"/>
-          <include name="TS004_VerifyAddToFavoriteOnProductDetailsPageTest"/>
-          <include name="initialize"/>
-          <include name="TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest"/>
-          <include name="TS003_VerifyProductAddToExistingListOnProductDetailsPageTest"/>
-          <include name="TS009_VerifyProductActionsIconToAddToNewlyCreatedListTest"/>
-          <include name="TS007_VerifyFullScreenViewerOnProductDetailsPageTest"/>
-
-
         </methods>
-      </class> <!-- lasvegasmarket_UAT.GlobalSearch_ProductActions -->
+      </class> <!-- lasvegasmarket_UAT.GlobalSearch_ExhibitorActions -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
-</suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->
+</suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
