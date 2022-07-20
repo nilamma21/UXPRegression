@@ -3,27 +3,11 @@
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-      <class name="atlantamarket_PROD.FloorPlans">
-        <methods>
-          <include name="TS001_VerifyNavigationToDifferentFloorBuildingsTest"/>
-          <include name="initialize"/>
-          <include name="TS004_VerifyIconsOnFloorPlansPageTest"/>
-          <include name="TS003_VerifyZoomInOutLevelOnFloorPlansPageTest"/>
-          <include name="TS006_VerifyPaginationOnFloorPlansPageTest"/>
-          <include name="TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest"/>
-          <include name="TS011_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest"/>
-          <include name="TS009_VerifySearchFunctionalityForExhListOnFloorPlansPageTest"/>
-          <include name="TS008_VerifyClickOnReturnToBuildingListBtnTest"/>
-          <include name="TS002_VerifyNoExhibitorsOnThisFloorMessageTest"/>
-          <include name="TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest"/>
-          <include name="TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest"/>
-          <include name="TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest"/>
-        </methods>
-      </class> <!-- atlantamarket_PROD.FloorPlans -->
       <class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions">
         <methods>
-          <include name="TS001_VerifyAddToFavoriteForExhibitorTest"/>
+          <include name="TS009_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest"/>
           <include name="initialize"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- lasvegasmarket_UAT.GlobalSearch_ExhibitorActions -->
     </classes>

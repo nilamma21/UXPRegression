@@ -12,7 +12,11 @@ public class ATLExhDigiShowroomPage {
 	public WebDriverWait wait;
 
 	By atlvalidateexhdigishowpage = By.xpath("//img[@class='imc-image--responsive align-image-content imc-content--full-width imc-exhibitors--directory-image']"); // Locator to validate Exhibitor Digital Showroom page
+	By atlvalidateexhdigishowpage_lvmUAT = By.xpath("//img[@class='imc-exhibitors--detail-image']"); // Locator to validate Exhibitor Digital Showroom page LVM UAT
+	
 	By exhibitornameonexhdirectimg = By.xpath("//span[@class='imc-heading imc-heading--giga-desktop ']"); //Locator for Exhibitor name on Exhibitor Directory image
+	By exhibitornameonexhdirectimg_lvmUAT = By.xpath("//span[@class='imc-heading imc-heading--giga-desktop imc-vr--medium imc-content--inline-block']"); //Locator for Exhibitor name on Exhibitor Directory image LVM UAT
+	
 	By exhdigishowroompage = By.xpath("//div[@class='imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1 imc-section--divided-bottom']"); //Locator for Exhibitor Digital Showroom page
 	By exhnameonexhdirectimg = By.xpath("//span[@class='imc-heading imc-heading--giga-desktop imc-vr--medium imc-content--inline-block']"); //Locator for Exhibitor name on Exhibitor Directory image
 	
@@ -36,6 +40,16 @@ public class ATLExhDigiShowroomPage {
 	}
 	public WebElement getExhNameOnExhDirectImg() {
 		return driver.findElement(exhnameonexhdirectimg);
+	}
+	public WebElement getAtlvalidateexhdigishowpage_lvmUAT() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlvalidateexhdigishowpage_lvmUAT));
+		return driver.findElement(atlvalidateexhdigishowpage_lvmUAT);
+	}
+	public WebElement getExhibitornameonexhdirectimg_lvmUAT() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitornameonexhdirectimg_lvmUAT));
+		return driver.findElement(exhibitornameonexhdirectimg_lvmUAT);
 	}
 }
 

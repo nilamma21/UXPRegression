@@ -19,9 +19,6 @@
 			<methods>
 			<include name="TS003_VerifySelectionOfProductCategoriesFilterCombinationWithStyleFromLeftPaneFiltersTest"/>
 			</methods>>
-
-
-
 			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
 			<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
