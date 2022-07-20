@@ -53,7 +53,7 @@ public class MarketPlanner extends base {
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(10000);
-		lap.getCloseMarktAdBtn().click();
+		//lap.getCloseMarktAdBtn().click();
 	}
 
 	@Test(priority = 1)
@@ -71,7 +71,7 @@ public class MarketPlanner extends base {
 		utl.verifyMPLoginFunctionality();
 
 		Thread.sleep(6000);
-		lap.getCloseMarktAdBtn().click();
+		//lap.getCloseMarktAdBtn().click();
 
 		// Verify that Market Planner Home page should be displayed
 		Assert.assertTrue(lap.getMPLinkText().isDisplayed());	

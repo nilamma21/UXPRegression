@@ -31,11 +31,16 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
+
 <tr><td style="text-align:left;padding-right:2em">RegressionTest</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">108.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+
+<tr><td style="text-align:left;padding-right:2em">RegressionTest</td><td class="numi">7</td><td class="numi">7</td><td class="numi">0</td><td class="numi_attn">5</td><td class="numi">650.7 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
 <tr><th colspan="4">RegressionTest &#8212; failed</th></tr>
+
 <tr class="failedodd"><td rowspan="1">lasvegasmarket_UAT.GlobalSearch_ExhibitorActions</td><td><a href="#m1"><b>TS001_VerifyAddToFavoriteForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1658318989897</td><td class="numi">49255</td></tr>
 </table>
 <h1>RegressionTest</h1>
@@ -64,4 +69,155 @@ org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedC
 <br/>25 lines not shown
 </div>
 <p class="totop"><a href="#summary">back to summary</a></p>
+
+<tr class="failedodd"><td rowspan="5">lasvegasmarket_UAT.FloorPlans</td><td><a href="#m1"><b>TS004_VerifyIconsOnFloorPlansPageTest</b>  </a></td><td class="numi">1</td><td>1658318270290</td><td class="numi">46425</td></tr><tr class="failedodd"><td><a href="#m2"><b>TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest</b>  </a></td><td class="numi">1</td><td>1658318423503</td><td class="numi">80661</td></tr><tr class="failedodd"><td><a href="#m3"><b>TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest</b>  </a></td><td class="numi">1</td><td>1658318582155</td><td class="numi">64789</td></tr><tr class="failedodd"><td><a href="#m4"><b>TS011_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest</b>  </a></td><td class="numi">1</td><td>1658318647206</td><td class="numi">67878</td></tr><tr class="failedodd"><td><a href="#m5"><b>TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest</b>  </a></td><td class="numi">1</td><td>1658318715358</td><td class="numi">59253</td></tr>
+<tr><th colspan="4">RegressionTest &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="7">lasvegasmarket_UAT.FloorPlans</td><td><a href="#m6"><b>TS001_VerifyNavigationToDifferentFloorBuildingsTest</b>  </a></td><td class="numi">1</td><td>1658318222547</td><td class="numi">11589</td></tr><tr class="passedodd"><td><a href="#m7"><b>TS002_VerifyNoExhibitorsOnThisFloorMessageTest</b>  </a></td><td class="numi">1</td><td>1658318234154</td><td class="numi">11291</td></tr><tr class="passedodd"><td><a href="#m8"><b>TS003_VerifyZoomInOutLevelOnFloorPlansPageTest</b>  </a></td><td class="numi">1</td><td>1658318245447</td><td class="numi">24841</td></tr><tr class="passedodd"><td><a href="#m9"><b>TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest</b>  </a></td><td class="numi">1</td><td>1658318317122</td><td class="numi">72824</td></tr><tr class="passedodd"><td><a href="#m10"><b>TS006_VerifyPaginationOnFloorPlansPageTest</b>  </a></td><td class="numi">1</td><td>1658318389948</td><td class="numi">33554</td></tr><tr class="passedodd"><td><a href="#m11"><b>TS008_VerifyClickOnReturnToBuildingListBtnTest</b>  </a></td><td class="numi">1</td><td>1658318504365</td><td class="numi">14554</td></tr><tr class="passedodd"><td><a href="#m12"><b>TS009_VerifySearchFunctionalityForExhListOnFloorPlansPageTest</b>  </a></td><td class="numi">1</td><td>1658318518922</td><td class="numi">63229</td></tr>
+</table>
+<h1>RegressionTest</h1>
+<h2 id="m1">lasvegasmarket_UAT.FloorPlans:TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for visibility of element located by By.xpath: //form/div[4]/div[1]/label (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getATLMPExistingListName(ATLMarketPlannerPage.java:99)
+<br/>at lasvegasmarket_UAT.FloorPlans.TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest(FloorPlans.java:513)
+<br/>25 lines not shown
+<p>Caused by Cannot locate an element using By.xpath: //form/div[4]/div[1]/label
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;SHRADHAMA-WIN10&apos;, ip: &apos;172.27.182.74&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_333&apos;
+Driver info: driver.version: unknown</p>
+org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+<br/>at java.util.Optional.orElseThrow(Unknown Source)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getATLMPExistingListName(ATLMarketPlannerPage.java:99)
+<br/>at lasvegasmarket_UAT.FloorPlans.TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest(FloorPlans.java:513)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">lasvegasmarket_UAT.FloorPlans:TS011_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for visibility of element located by By.xpath: //ul[@class=&apos;imc-market-planner-list imc-addnote-modal__list&apos;]/li/a (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.AtlantaMarket.ATLExhLineProdActionsPage.getSavedNoteNameInAllNotesList(ATLExhLineProdActionsPage.java:167)
+<br/>at lasvegasmarket_UAT.FloorPlans.TS011_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest(FloorPlans.java:599)
+<br/>25 lines not shown
+<p>Caused by Cannot locate an element using By.xpath: //ul[@class=&apos;imc-market-planner-list imc-addnote-modal__list&apos;]/li/a
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;SHRADHAMA-WIN10&apos;, ip: &apos;172.27.182.74&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_333&apos;
+Driver info: driver.version: unknown</p>
+org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+<br/>at java.util.Optional.orElseThrow(Unknown Source)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+<br/>at pageObjects.AtlantaMarket.ATLExhLineProdActionsPage.getSavedNoteNameInAllNotesList(ATLExhLineProdActionsPage.java:167)
+<br/>at lasvegasmarket_UAT.FloorPlans.TS011_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest(FloorPlans.java:599)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">lasvegasmarket_UAT.FloorPlans:TS004_VerifyIconsOnFloorPlansPageTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for visibility of element located by By.xpath: //button[contains(@class, &apos;vending_machines&apos;)] (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.AtlantaMarket.ATLFloorPlansPage.getVendingMachineIconOnMap(ATLFloorPlansPage.java:134)
+<br/>at lasvegasmarket_UAT.FloorPlans.TS004_VerifyIconsOnFloorPlansPageTest(FloorPlans.java:216)
+<br/>25 lines not shown
+<p>Caused by Cannot locate an element using By.xpath: //button[contains(@class, &apos;vending_machines&apos;)]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;SHRADHAMA-WIN10&apos;, ip: &apos;172.27.182.74&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_333&apos;
+Driver info: driver.version: unknown</p>
+org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+<br/>at java.util.Optional.orElseThrow(Unknown Source)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+<br/>at pageObjects.AtlantaMarket.ATLFloorPlansPage.getVendingMachineIconOnMap(ATLFloorPlansPage.java:134)
+<br/>at lasvegasmarket_UAT.FloorPlans.TS004_VerifyIconsOnFloorPlansPageTest(FloorPlans.java:216)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">lasvegasmarket_UAT.FloorPlans:TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest</h2>
+<div style="padding-left:3em">
+<p>no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[@class=&apos;imc-heading imc-heading--giga-desktop &apos;]&quot;}
+  (Session info: chrome=102.0.5005.63)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;SHRADHAMA-WIN10&apos;, ip: &apos;172.27.182.74&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_333&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=102.0.5005.61 (0e59bcc00cc4985ce39ad31c150065f159d95ad3-refs/branch-heads/5005@{#819}), userDataDir=C:\Users\SHRADH~1\AppData\Local\Temp\scoped_dir12576_933740216}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:51510}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=102.0.5005.63, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: c65c4e8adb3521796fea8ccff6e42bbc
+*** Element info: {Using=xpath, value=//span[@class=&apos;imc-heading imc-heading--giga-desktop &apos;]}</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+<br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+<br/>at pageObjects.AtlantaMarket.ATLExhDigiShowroomPage.getExhibitorNameOnExhDirectImg(ATLExhDigiShowroomPage.java:40)
+<br/>at lasvegasmarket_UAT.FloorPlans.TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest(FloorPlans.java:410)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">lasvegasmarket_UAT.FloorPlans:TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest</h2>
+<div style="padding-left:3em">
+<p>element not interactable
+  (Session info: chrome=102.0.5005.63)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;SHRADHAMA-WIN10&apos;, ip: &apos;172.27.182.74&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_333&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=102.0.5005.61 (0e59bcc00cc4985ce39ad31c150065f159d95ad3-refs/branch-heads/5005@{#819}), userDataDir=C:\Users\SHRADH~1\AppData\Local\Temp\scoped_dir12576_933740216}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:51510}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=102.0.5005.63, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: c65c4e8adb3521796fea8ccff6e42bbc</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+<br/>at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
+<br/>at lasvegasmarket_UAT.FloorPlans.TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest(FloorPlans.java:660)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">lasvegasmarket_UAT.FloorPlans:TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">lasvegasmarket_UAT.FloorPlans:TS003_VerifyZoomInOutLevelOnFloorPlansPageTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">lasvegasmarket_UAT.FloorPlans:TS002_VerifyNoExhibitorsOnThisFloorMessageTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m9">lasvegasmarket_UAT.FloorPlans:TS001_VerifyNavigationToDifferentFloorBuildingsTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">lasvegasmarket_UAT.FloorPlans:TS006_VerifyPaginationOnFloorPlansPageTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m11">lasvegasmarket_UAT.FloorPlans:TS008_VerifyClickOnReturnToBuildingListBtnTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m12">lasvegasmarket_UAT.FloorPlans:TS009_VerifySearchFunctionalityForExhListOnFloorPlansPageTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+
 </body></html>
