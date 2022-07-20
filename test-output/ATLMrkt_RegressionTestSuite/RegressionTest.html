@@ -56,6 +56,13 @@ function toggleAllBoxes() {
 <h2 align='center'>RegressionTest</h2><table border='1' align="center">
 <tr>
 
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Jul 19 21:55:59 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>117 seconds (117503 ms)</td>
+
+
 <td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
 </tr><tr>
 <td>Started on:</td><td>Tue Jul 19 18:04:39 IST 2022</td>
@@ -67,6 +74,7 @@ function toggleAllBoxes() {
 <td>Started on:</td><td>Tue Jul 19 17:02:04 IST 2022</td>
 </tr>
 <tr><td>Total time:</td><td>278 seconds (278118 ms)</td>
+
 
 </tr><tr>
 <td>Included groups:</td><td></td>
@@ -83,6 +91,46 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
+
+<td title='lasvegasmarket_UAT.GlobalSearch_ExhibitorActions.TS009_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest()'><b>TS009_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest</b><br>Test class: lasvegasmarket_UAT.GlobalSearch_ExhibitorActions</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: element click intercepted: Element &lt;button id=&quot;&quot; class=&quot;imc-addnote__openModal imc-addnote__openModal--hideafter imc-link--alt-darkred imc-content imc-content--delta imc-expand-collapse__heading&quot;&gt;...&lt;/button&gt; is not clickable at point (1316, 250). Other element would receive the click: &lt;div class=&quot;ReactModal__Overlay ReactModal__Overlay--after-open imc-modal--overlay&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=102.0.5005.63)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;SWAPNILI&apos;, ip: &apos;172.27.182.57&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=102.0.5005.61 (0e59bcc00cc4985ce39ad31c150065f159d95ad3-refs/branch-heads/5005@{#819}), userDataDir=C:\Users\swapnili\AppData\Local\Temp\scoped_dir9528_1173370433}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:52204}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=102.0.5005.63, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: c5cb27b45b36e9574788fee732823ac9
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
+	at lasvegasmarket_UAT.GlobalSearch_ExhibitorActions.TS009_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest(GlobalSearch_ExhibitorActions.java:512)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1582028874", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1582028874'><pre>org.openqa.selenium.WebDriverException: element click intercepted: Element &lt;button id=&quot;&quot; class=&quot;imc-addnote__openModal imc-addnote__openModal--hideafter imc-link--alt-darkred imc-content imc-content--delta imc-expand-collapse__heading&quot;&gt;...&lt;/button&gt; is not clickable at point (1316, 250). Other element would receive the click: &lt;div class=&quot;ReactModal__Overlay ReactModal__Overlay--after-open imc-modal--overlay&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=102.0.5005.63)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;SWAPNILI&apos;, ip: &apos;172.27.182.57&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=102.0.5005.61 (0e59bcc00cc4985ce39ad31c150065f159d95ad3-refs/branch-heads/5005@{#819}), userDataDir=C:\Users\swapnili\AppData\Local\Temp\scoped_dir9528_1173370433}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:52204}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=102.0.5005.63, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: c5cb27b45b36e9574788fee732823ac9
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
+	at lasvegasmarket_UAT.GlobalSearch_ExhibitorActions.TS009_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest(GlobalSearch_ExhibitorActions.java:512)
+
 
 <td title='atlantamarket_PROD.GlobalSearch_SuggestionList.TS003_VerifySelectionOfProductFromAutoSuggestionListTest()'><b>TS003_VerifySelectionOfProductFromAutoSuggestionListTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_SuggestionList</td>
 <td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all elements located by By.xpath: //ul[@class=&apos;react-autosuggest__suggestions-list&apos;]/li (tried for 30 second(s) with 500 MILLISECONDS interval)
@@ -196,6 +244,7 @@ Driver info: driver.version: unknown
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
 	at pageObjects.AtlantaMarket.ATLExhLineProdActionsPage.getExhProductNameOnSearchGrid(ATLExhLineProdActionsPage.java:219)
 	at lasvegasmarket_UAT.GlobalSearch_ProductActions.TS002_VerifyProductAddToNewListOnProductDetailsPageTest(GlobalSearch_ProductActions.java:128)
+
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -234,6 +283,10 @@ Driver info: driver.version: unknown
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
 	... 26 more
 </pre></div></td>
+
+<td>49</td>
+<td>lasvegasmarket_UAT.GlobalSearch_ExhibitorActions@27efef64</td></tr>
+
 <td>57</td>
 <td>lasvegasmarket_UAT.GlobalSearch_ProductActions@5e5792a0</td></tr>
 <tr>
@@ -329,6 +382,7 @@ Driver info: driver.version: unknown
 </pre></div></td>
 <td>59</td>
 <td>lasvegasmarket_UAT.GlobalSearch_ProductActions@5e5792a0</td></tr>
+
 
 </table><p>
 </body>

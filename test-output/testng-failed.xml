@@ -4,6 +4,13 @@
   <test name="RegressionTest(failed)">
     <classes>
 
+      <class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions">
+        <methods>
+          <include name="TS009_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest"/>
+          <include name="initialize"/>
+          <include name="tearDown"/>
+
+
       <class name="atlantamarket_PROD.GlobalSearch_SuggestionList">
         <methods>
           <include name="initialize"/>
@@ -21,6 +28,7 @@
           <include name="TS003_VerifyProductAddToExistingListOnProductDetailsPageTest"/>
           <include name="TS009_VerifyProductActionsIconToAddToNewlyCreatedListTest"/>
           <include name="TS007_VerifyFullScreenViewerOnProductDetailsPageTest"/>
+
 
         </methods>
       </class> <!-- lasvegasmarket_UAT.GlobalSearch_ProductActions -->
