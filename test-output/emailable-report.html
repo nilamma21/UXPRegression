@@ -31,11 +31,45 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
+
+<tr><td style="text-align:left;padding-right:2em">RegressionTest</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">108.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+
 <tr><td style="text-align:left;padding-right:2em">RegressionTest</td><td class="numi">7</td><td class="numi">7</td><td class="numi">0</td><td class="numi_attn">5</td><td class="numi">650.7 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
 <tr><th colspan="4">RegressionTest &#8212; failed</th></tr>
+
+<tr class="failedodd"><td rowspan="1">lasvegasmarket_UAT.GlobalSearch_ExhibitorActions</td><td><a href="#m1"><b>TS001_VerifyAddToFavoriteForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1658318989897</td><td class="numi">49255</td></tr>
+</table>
+<h1>RegressionTest</h1>
+<h2 id="m1">lasvegasmarket_UAT.GlobalSearch_ExhibitorActions:TS001_VerifyAddToFavoriteForExhibitorTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;imc-gallery__item imc-exhibitorcard imc-line&apos;][1]/div/div/div/div/a/h2 (tried for 30 second(s) with 500 MILLISECONDS interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.AtlantaMarket.ATLExhLineProdActionsPage.getExhibitorName(ATLExhLineProdActionsPage.java:65)
+<br/>at lasvegasmarket_UAT.GlobalSearch_ExhibitorActions.TS001_VerifyAddToFavoriteForExhibitorTest(GlobalSearch_ExhibitorActions.java:98)
+<br/>25 lines not shown
+<p>Caused by Cannot locate an element using By.xpath: //div[@class=&apos;imc-gallery__item imc-exhibitorcard imc-line&apos;][1]/div/div/div/div/a/h2
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;SWAPNILI&apos;, ip: &apos;172.27.182.57&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: driver.version: unknown</p>
+org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+<br/>at java.util.Optional.orElseThrow(Optional.java:290)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+<br/>at pageObjects.AtlantaMarket.ATLExhLineProdActionsPage.getExhibitorName(ATLExhLineProdActionsPage.java:65)
+<br/>at lasvegasmarket_UAT.GlobalSearch_ExhibitorActions.TS001_VerifyAddToFavoriteForExhibitorTest(GlobalSearch_ExhibitorActions.java:98)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+
 <tr class="failedodd"><td rowspan="5">lasvegasmarket_UAT.FloorPlans</td><td><a href="#m1"><b>TS004_VerifyIconsOnFloorPlansPageTest</b>  </a></td><td class="numi">1</td><td>1658318270290</td><td class="numi">46425</td></tr><tr class="failedodd"><td><a href="#m2"><b>TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest</b>  </a></td><td class="numi">1</td><td>1658318423503</td><td class="numi">80661</td></tr><tr class="failedodd"><td><a href="#m3"><b>TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest</b>  </a></td><td class="numi">1</td><td>1658318582155</td><td class="numi">64789</td></tr><tr class="failedodd"><td><a href="#m4"><b>TS011_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest</b>  </a></td><td class="numi">1</td><td>1658318647206</td><td class="numi">67878</td></tr><tr class="failedodd"><td><a href="#m5"><b>TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest</b>  </a></td><td class="numi">1</td><td>1658318715358</td><td class="numi">59253</td></tr>
 <tr><th colspan="4">RegressionTest &#8212; passed</th></tr>
 <tr class="passedodd"><td rowspan="7">lasvegasmarket_UAT.FloorPlans</td><td><a href="#m6"><b>TS001_VerifyNavigationToDifferentFloorBuildingsTest</b>  </a></td><td class="numi">1</td><td>1658318222547</td><td class="numi">11589</td></tr><tr class="passedodd"><td><a href="#m7"><b>TS002_VerifyNoExhibitorsOnThisFloorMessageTest</b>  </a></td><td class="numi">1</td><td>1658318234154</td><td class="numi">11291</td></tr><tr class="passedodd"><td><a href="#m8"><b>TS003_VerifyZoomInOutLevelOnFloorPlansPageTest</b>  </a></td><td class="numi">1</td><td>1658318245447</td><td class="numi">24841</td></tr><tr class="passedodd"><td><a href="#m9"><b>TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest</b>  </a></td><td class="numi">1</td><td>1658318317122</td><td class="numi">72824</td></tr><tr class="passedodd"><td><a href="#m10"><b>TS006_VerifyPaginationOnFloorPlansPageTest</b>  </a></td><td class="numi">1</td><td>1658318389948</td><td class="numi">33554</td></tr><tr class="passedodd"><td><a href="#m11"><b>TS008_VerifyClickOnReturnToBuildingListBtnTest</b>  </a></td><td class="numi">1</td><td>1658318504365</td><td class="numi">14554</td></tr><tr class="passedodd"><td><a href="#m12"><b>TS009_VerifySearchFunctionalityForExhListOnFloorPlansPageTest</b>  </a></td><td class="numi">1</td><td>1658318518922</td><td class="numi">63229</td></tr>
@@ -185,4 +219,5 @@ sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 <p class="totop"><a href="#summary">back to summary</a></p>
 <h2 id="m12">lasvegasmarket_UAT.FloorPlans:TS009_VerifySearchFunctionalityForExhListOnFloorPlansPageTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
+
 </body></html>
