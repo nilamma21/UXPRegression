@@ -89,7 +89,78 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		atlleftpane.getAccentFurnExpandBtn().click();
 	}
 
-	
+	@Test(priority = 2)
+	public void TS002_VerifySelectionOfMoreThanOneFilterOfProdCatgFromLeftPaneFiltersTest()
+			throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T405: Left pane Filters : Product Categories Filter : Combined within
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		atlleftpane = new ATLLeftPaneFilters(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
+		atlgs.getATLSearchButton().click();
+
+		// Click on Product Categories expand btn
+		atlleftpane.getATLProdCatgExpandBtn().click();
+		// Store All the filter list
+		List<WebElement> filter = driver.findElements(By.xpath("//div[@class='imc-filteritem__option']"));
+		boolean var=false;
+		for (WebElement fl : filter) {
+			// Click on 1st Filter
+			if(fl.getText().equals(prop.getProperty("filter1"))) //Filter 1 :Women's Contemporary
+			{
+				String filterName1 = fl.getText();
+				System.out.println("Click on 1nd Filter : " + filterName1);
+				fl.click();
+				var=true;
+				break;
+			}
+		}
+		Assert.assertTrue(var);
+		boolean var2=false;
+		for (WebElement fl : filter) {
+			// Click on 2nd Filter
+			if (fl.getText().equals(prop.getProperty("filter2"))) // filter2 : Women's Resort
+			{
+				String filterName2 = fl.getText();
+				System.out.println("Click on 2nd Filter : " + filterName2);
+				fl.click();
+				var2=true;
+				break;
+			}
+		}
+		Assert.assertTrue(var2);
+		
+		// Store 1st exhibitor name
+		String exhName = atlleftpane.getATLexhibitor().getText();
+		System.out.println("Exhibitor Name : " + exhName);
+		atlleftpane.getATLexhibitor().click();
+
+		// List of All Product category
+		List<WebElement> categoris = driver.findElements(By.xpath(
+				"//div[@class='imc-gallery__item imc-gallery__item--no-padding-left imc-gallery__item--no-padding-right imc-type--title-8 imc-padding--bottom--xsmall']"));
+		boolean var3=false;
+		for (WebElement flC : categoris) {
+			// Verify selected filter and its respected categories
+			
+			if (flC.getText().equals(prop.getProperty("filter1"))
+					&& flC.getText().equals(prop.getProperty("filter2")));
+			{
+				System.out.println("CatName : " + flC.getText());
+				var3=true;
+				break;
+			}
+			
+		}
+		Assert.assertTrue(var3);
+	}
+
 	/*@AfterClass
 	public void tearDown()
 	{

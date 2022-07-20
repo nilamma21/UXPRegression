@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="atlantamarket.FloorPlans">
+      <class name="lasvegasmarket_UAT.GlobalSearch_LineActions">
         <methods>
-          <include name="TS003_VerifyNoExhibitorsOnThisFloorMessageTest"/>
-          <include name="TS004_VerifyZoomInOutLevelOnFloorPlansPageTest"/>
-          <include name="TS005_VerifyFloorPlansIconsTest"/>
-          <include name="TS001_VerifyNavigationToDifferentFloorBuildingsTest"/>
+          <include name="tearDown"/>
           <include name="initialize"/>
+          <include name="TS002_VerifyAddToFavoriteForLineTest"/>
         </methods>
-      </class> <!-- atlantamarket.FloorPlans -->
+      </class> <!-- lasvegasmarket_UAT.GlobalSearch_LineActions -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

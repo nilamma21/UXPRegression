@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="LVM_RegressionTestSuite">
+<suite name="ATLMrkt_RegressionTestSuite">
 	<listners>
 		<listner class-name="lasvegasmarket_UAT.TestListeners" />
 	</listners>
@@ -10,10 +10,13 @@
 		<classes>
 
 			<class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions" />
-
-			<class name="lasvegasmarket_UAT.FloorPlans" />
 			
-
+			<methods>
+			<include name="TS001_VerifyAddToFavoriteForExhibitorTest" />
+			</methods>
+		
 		</classes>
+
+
 	</test>
 </suite>
