@@ -1,44 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="ATLMrkt_RegressionTestSuite">
+<suite name="LVM_RegressionTestSuite">
 	<listners>
 		<listner class-name="lasvegasmarket_UAT.TestListeners" />
 	</listners>
 
 	<test thread-count="5" name="RegressionTest">
 		<classes>
-
 			<class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions" />
-			<methods>
-
-				<include
-					name="TS009_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest" />
-			</methods>
-
-			<include name="TS003_VerifySelectionOfProductCategoriesFilterCombinationWithStyleFromLeftPaneFiltersTest"/>
-			</methods>>
-
-
-
-			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
-			<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
-			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
-			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
-
-			<class name="atlantamarket_PROD.FloorPlans" /> -->
-			
-		<class name="lasvegasmarket_UAT.GlobalSearch_ProductActions" />
-		<!--  <<methods>
-			<include name="TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest" />
-			</methods>-->
-		
-
-			
-
-
+			<class name="lasvegasmarket_UAT.GlobalSearch_ProductActions" />
 		</classes>
-
-
 	</test>
 </suite>
