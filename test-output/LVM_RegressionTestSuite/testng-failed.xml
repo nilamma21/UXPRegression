@@ -3,57 +3,16 @@
 <suite name="Failed suite [LVM_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-
-
-
-
-      <class name="lasvegasmarket_UAT.GlobalSearch_ProductActions">
+      <class name="lasvegasmarket_PROD.GlobalSearch_ExhibitorActions">
         <methods>
-          <include name="TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- lasvegasmarket_UAT.GlobalSearch_ProductActions -->
-
-      <class name="lasvegasmarket_UAT.MarketPlanner">
-
-      <class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions">
-
-        <methods>
-          <include name="TS009_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest"/>
           <include name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest"/>
-          <include name="TS006_VerifyClickOnLinesShownLinkForExhibitorTest"/>
+          <include name="TS003_VerifyAddToExistingListForExhibitorTest"/>
           <include name="initialize"/>
-          <include name="TS002_VerifyAddToNewListForExhibitorTest"/>
           <include name="tearDown"/>
+          <include name="TS002_VerifyAddToNewListForExhibitorTest"/>
+          <include name="TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest"/>
         </methods>
-
-      </class> <!-- lasvegasmarket_UAT.MarketPlanner -->
-
-      </class> <!-- lasvegasmarket_UAT.GlobalSearch_ExhibitorActions -->
-
-
-      <class name="lasvegasmarket_UAT.FloorPlans">
-        <methods>
-          <include name="TS008_VerifyClickOnReturnToBuildingListBtnTest"/>
-          <include name="TS002_VerifyNoExhibitorsOnThisFloorMessageTest"/>
-          <include name="TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest"/>
-          <include name="TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest"/>
-          <include name="TS006_VerifyPaginationOnFloorPlansPageTest"/>
-          <include name="TS003_VerifyZoomInOutLevelOnFloorPlansPageTest"/>
-          <include name="TS009_VerifySearchFunctionalityForExhListOnFloorPlansPageTest"/>
-          <include name="TS011_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest"/>
-          <include name="TS004_VerifyIconsOnFloorPlansPageTest"/>
-          <include name="TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest"/>
-          <include name="TS001_VerifyNavigationToDifferentFloorBuildingsTest"/>
-          <include name="TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- lasvegasmarket_UAT.FloorPlans -->
-
-
-
-
-
+      </class> <!-- lasvegasmarket_PROD.GlobalSearch_ExhibitorActions -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
