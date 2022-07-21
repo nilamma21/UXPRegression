@@ -53,6 +53,7 @@ public class ATLExhLineProdActionsPage extends base{
 	By exhproductnameonsearchgrid = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/p[1]"); //Locator for productName
 	By productaddtofavbtn = By.xpath("(//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div[2]/div/div/div/div/div/div/div/div/span/div/button)[1]"); //Locator for Add to Favorite button for Product on Search Results grid
 	By seeDetailsBtn = By.xpath("(//div[@class='imc-gallery imc-gallery--80-20 imc-exhibitorcard--gallery-nowrap'])[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/a[1]"); //Locator for See Details button
+	By productmorebtn = By.xpath("(//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div[2]/div/div/div/div/div/div/div/div/span[2]/div)[1]"); //Locator for Add to List button for Product on Search Results grid
 
 	
 	public ATLExhLineProdActionsPage(WebDriver driver) {
@@ -229,6 +230,11 @@ public class ATLExhLineProdActionsPage extends base{
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(seeDetailsBtn));
 		return driver.findElement(seeDetailsBtn);
+	}
+	public WebElement getProductMoreBtnOnSearchGrid() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(productmorebtn));
+		return driver.findElement(productmorebtn);
 	}
 }
 
