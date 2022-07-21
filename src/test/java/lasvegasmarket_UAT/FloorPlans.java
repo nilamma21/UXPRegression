@@ -213,22 +213,22 @@ public class FloorPlans extends base {
 
 		//Click on Vending Machine icon on Map image
 		Thread.sleep(5000);
-		atlflpp.getlvmflooricononmap_uat().click();
+		atlflpp.getlvmflooricononmap_lvmUAT().click();
 
 		//Verify that Vending Machine Overlay should appeared on Map
-		Assert.assertTrue(atlflpp.getVendingMachineOverlayOnMap().isDisplayed());
+		Assert.assertTrue(atlflpp.getlvmflooriconoverlay_lvmUAT().isDisplayed());
 
-		//Click on Elevator icon on Map image
+		/*//Click on Elevator icon on Map image
 		atlflpp.getElevatorIconOnMap().click();
 
 		//Verify that Elevator Overlay should appeared on Map
 		Assert.assertTrue(atlflpp.getElevatorOverlayOnMap().isDisplayed());
 
-		/*//Click on Water Fountain icon on Map image
+		//Click on Water Fountain icon on Map image
 		atlflpp.getWaterFountainIconOnMap().click();
 
 		//Verify that Water Fountain Overlay should appeared on Map
-		Assert.assertTrue(atlflpp.getWaterFountainOverlayOnMap().isDisplayed());*/
+		Assert.assertTrue(atlflpp.getWaterFountainOverlayOnMap().isDisplayed());
 
 		//Click on Phone icon on Map image
 		atlflpp.getPhoneIconOnMap().click();
@@ -238,7 +238,7 @@ public class FloorPlans extends base {
 
 		//Click on Overlay Close btn
 		atlflpp.getOverlayCloseBtn().click();
-
+*/
 		//Click on Location pin of any Exhibitor on Map
 		atlflpp.getLocationPinIconOnMap().click();
 
@@ -256,7 +256,8 @@ public class FloorPlans extends base {
 
 		//Verify the Exhibitor name on Exh Digital Showroom
 		Thread.sleep(10000);
-		Assert.assertTrue(driver.getTitle().contains(""+exhnameondetailsmodal+" at Atlanta Market"));
+		
+		Assert.assertTrue(driver.getTitle().contains(""+exhnameondetailsmodal+" at Las Vegas Market"));
 		Assert.assertTrue(atlexhdgshw.getExhibitorNameOnExhDirectImg().getText().contains(exhnameondetailsmodal));
 	}
 
@@ -629,16 +630,16 @@ public class FloorPlans extends base {
 		atlflpp.getATLFloorPlansLink().click();
 
 		// click on Exhibitor floor
-		atlflpp.getATLBuildingFloor().click();
+		atlflpp.getbuildingFloor_lvmUAT().click();
 
 		// Scroll Down to Exhibitor list
 		utl.scrollToElement(atlflpp.getATLSelectBox());
-
+		Thread.sleep(6000);
 		// 1st Exhibitor Name
 		String exhibitorName = atlflpp.getATLExhibitorName().getText();
 		System.out.println("Exhibitor Name : " + exhibitorName);
 		// Click on More option 3dots
-		atlflpp.getATLMoreOptions().click();
+		//atlflpp.getATLMoreOptions().click();
 
 		// Click on Favorite icon of 1st exhibitor
 		atlflpp.getATLAddFev().click();
@@ -656,7 +657,9 @@ public class FloorPlans extends base {
 		Assert.assertTrue(atlmppge.getlvmsavedexhnameinlist_uat().getText().contains(exhibitorName));
 
 		// Delete that favorites exhibitor from list
-		atlmppge.getATLEditListItemMoreBtn().click();
+		Actions action=new Actions(driver);
+		//action.moveToElement(atlmppge.getMoreBtnDeleteOptn_lvmUAT()).perform();
+		atlmppge.getMoreBtnDeleteOptn_lvmUAT().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(6000);
 
@@ -671,7 +674,7 @@ public class FloorPlans extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 
 }
