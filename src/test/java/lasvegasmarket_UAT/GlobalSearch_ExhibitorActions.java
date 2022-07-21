@@ -1,13 +1,11 @@
 package lasvegasmarket_UAT;
 
 import java.io.IOException;
-import java.security.Key;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -45,8 +43,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 	ATLExhLineProdActionsPage atlexhact;
 	ATLMarketPlannerPage atlmppge;
 
-	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns,
-			allnoteslist, favlist, searchlinetypelist;
+	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns, allnoteslist,favlist, searchlinetypelist;
 
 	@BeforeClass
 	public void initialize() throws IOException, InterruptedException {
@@ -59,15 +56,15 @@ public class GlobalSearch_ExhibitorActions extends base {
 		driver.get(prop.getProperty("lvmurl_uat"));
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(7000);
-		// lap.getCloseMarktAdBtn().click();
-
-		// Login to Market Planner
+		//lap.getCloseMarktAdBtn().click();
+		
+		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
-
-		// Thread.sleep(6000);
-		// lap.getCloseMarktAdBtn().click();
+		driver.navigate().refresh();
+		Thread.sleep(8000);
+//		lap.getCloseMarktAdBtn().click();
 	}
-
+	
 	@Test(priority = 1)
 	public void TS001_VerifyAddToFavoriteForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -80,27 +77,15 @@ public class GlobalSearch_ExhibitorActions extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		/*
-		 * atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty(
-		 * "globalsearchinput"))); Thread.sleep(5000);
-		 * atlgs.getATLSearchButton().click();
-		 */
-
-		Actions action = new Actions(driver);
-		action.sendKeys(atlgs.getATLGlobalSearchTextBox(), (prop.getProperty("globalsearchinput")));
-		action.sendKeys(Keys.ENTER).build().perform();
-
-		// Thread.sleep(6000);
-		// atlgs.getLVMSearchBtnUAT().click();
-
-		Thread.sleep(5000);
-		// Store the Exhibitor name in String variable
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLSearchButton().click();
+		Thread.sleep(15000);
+		// Store the 1st Exhibitor name in String variable
 		String exhname = atlexhact.getExhibitorName().getText();
 		System.out.println("Exhibitor name: " + exhname);
 
 		// Click on Favorite icon of 1st exhibitor
 		atlexhact.getAddFavIcon().click();
-		Thread.sleep(5000);
 
 		// Click on Market Planner link
 		lap.getMPLinkText().click();
@@ -109,10 +94,9 @@ public class GlobalSearch_ExhibitorActions extends base {
 		atlmppge.getMPHomeListsTab().click();
 		atlmppge.getATLMPListsPageFavoritesMenu().click();
 
-		// Verify that the added favorites exhibitor should be displayed in to Favorites
-		// list
+		// Verify that the added favorites exhibitor should be displayed in to Favorites list
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
-		System.out.println(atlmppge.getATLSavedExhNameInList().getText());
+
 		// Delete that favorites exhibitor from list
 		atlmppge.getATLEditListItemMoreBtn().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
@@ -120,11 +104,11 @@ public class GlobalSearch_ExhibitorActions extends base {
 
 		favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
 
-		// Verify that the added favorites exhibitor should be removed from Favorites
-		// list
-		for (int i = 1; i < favlist.size(); i++) {
-			// System.out.println(favlist.get(i).getText());
-			Assert.assertFalse(favlist.get(i).getText().contains(exhname));
+		//Verify that the added favorites exhibitor should be removed from Favorites list
+		for(int i=1; i< favlist.size(); i++)
+		{			
+			//System.out.println(favlist.get(i).getText());
+			Assert.assertFalse(favlist.get(i).getText().contains(exhname)); 
 		}
 	}
 
@@ -139,15 +123,14 @@ public class GlobalSearch_ExhibitorActions extends base {
 		genData = new GenerateData();
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		
 		driver.get(prop.getProperty("lvmurl_uat"));
 		Thread.sleep(6000);
-		// lap.getCloseMarktAdBtn().click();
+		//lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(15000);
-
 		// Store the 1st Exhibitor name in String variable
 		String exhname = atlexhact.getExhibitorName().getText();
 		System.out.println("Exhibitor name: " + exhname);
@@ -166,7 +149,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 				atlmppge.getNewListModalCreateBtn());
 
 		// Click on Create button
-		atlmppge.getNewlistmodalcreatebtn_LvmUAT().click();
+		atlmppge.getNewListModalCreateBtn().click();
 		// Click on Go to Market Planner button
 		atlmppge.getGoToMarketPlannerBtn().click();
 
@@ -197,15 +180,16 @@ public class GlobalSearch_ExhibitorActions extends base {
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
 		lap = new ATLLandingPage(driver);
-
+		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		driver.get(prop.getProperty("lvmurl_uat"));
 		Thread.sleep(6000);
-		// lap.getCloseMarktAdBtn().click();
-
+		//lap.getCloseMarktAdBtn().click();
+		
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
+
 		Thread.sleep(15000);
 		// Store the 1st Exhibitor name in String variable
 		String exhname = atlexhact.getExhibitorName().getText();
@@ -255,10 +239,11 @@ public class GlobalSearch_ExhibitorActions extends base {
 
 		favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
 
-		// Verify that the added exhibitor should be removed from Existing list
-		for (int i = 1; i < favlist.size(); i++) {
-			// System.out.println(favlist.get(i).getText());
-			Assert.assertFalse(favlist.get(i).getText().contains(exhname));
+		//Verify that the added exhibitor should be removed from Existing list
+		for(int i=1; i< favlist.size(); i++)
+		{			
+			//System.out.println(favlist.get(i).getText());
+			Assert.assertFalse(favlist.get(i).getText().contains(exhname)); 
 		}
 	}
 
@@ -272,13 +257,14 @@ public class GlobalSearch_ExhibitorActions extends base {
 		lap = new ATLLandingPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		
 		driver.get(prop.getProperty("lvmurl_uat"));
 		Thread.sleep(6000);
-		// lap.getCloseMarktAdBtn().click();
+		//lap.getCloseMarktAdBtn().click();
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys("IMC Test");
+		atlgs.getATLGlobalSearchTextBox().sendKeys("Tripp Tents");
 		atlgs.getATLSearchButton().click();
+
 		Thread.sleep(15000);
 		// Click on Contact Exhibitor icon
 		atlexhact.getContactExhibitorIcon().click();
@@ -290,10 +276,9 @@ public class GlobalSearch_ExhibitorActions extends base {
 		// Enter Message
 		atlexhact.getMessageTxtBx().sendKeys("This is a Test Exhibitor");
 
-		/*
-		 * // Select 1st two Product Category atlexhact.getProductCateg1().click();
-		 * atlexhact.getProductCateg2().click();
-		 */
+		// Select 1st two Product Category
+		atlexhact.getProductCateg1().click();
+		atlexhact.getProductCateg2().click();
 
 		utl.scrollToElement(atlexhact.getSendMessageBtn());
 
@@ -315,13 +300,14 @@ public class GlobalSearch_ExhibitorActions extends base {
 		lap = new ATLLandingPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		
 		driver.get(prop.getProperty("lvmurl_uat"));
 		Thread.sleep(6000);
-		// lap.getCloseMarktAdBtn().click();
+		//lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
+
 		Thread.sleep(15000);
 		// Click on any of the Location link present in Exhibitor card
 		String locationlink = atlexhact.getLocationLinkInExhCard().getAttribute("href");
@@ -342,13 +328,14 @@ public class GlobalSearch_ExhibitorActions extends base {
 		lap = new ATLLandingPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		
 		driver.get(prop.getProperty("lvmurl_uat"));
 		Thread.sleep(6000);
-		// lap.getCloseMarktAdBtn().click();
+		//lap.getCloseMarktAdBtn().click();
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("searchexhwithlinesinput_lvmUAT")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
+
 		Thread.sleep(15000);
 		// Store the 1st Exhibitor name in String variable
 		exhname = atlexhact.getExhibitorName().getText();
@@ -357,12 +344,10 @@ public class GlobalSearch_ExhibitorActions extends base {
 		// Click on Lines shown- See All link for an Exhibitor
 		atlexhact.getLinesShownSeeAlLink().click();
 
+		Thread.sleep(15000);
 		// Verify that user should redirect to the Lines page
 		Assert.assertTrue(atlexhact.getValidateLinesPage().isDisplayed());
-
-		Thread.sleep(10000);
-		// Assert.assertTrue(driver.getTitle().contains("{"+exhname + "} Lines"));
-		Assert.assertTrue(driver.getTitle().contains(exhname + " " + "Lines"));
+		Assert.assertTrue(driver.getTitle().contains("{"+exhname+"} Lines"));
 	}
 
 	@Test(priority = 7)
@@ -378,12 +363,12 @@ public class GlobalSearch_ExhibitorActions extends base {
 
 		driver.get(prop.getProperty("lvmurl_uat"));
 		Thread.sleep(6000);
-		// lap.getCloseMarktAdBtn().click();
-
+		//lap.getCloseMarktAdBtn().click();
+		
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
-		Thread.sleep(15000);
 
+		Thread.sleep(15000);
 		// Store the 1st Exhibitor name in String variable
 		exhname = atlexhact.getExhibitorName().getText();
 		System.out.println("Exhibitor name: " + exhname);
@@ -401,7 +386,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		Assert.assertTrue(atlexhact.getValidateProductsPage().isDisplayed());
 		Thread.sleep(6000);
 
-		Assert.assertTrue(driver.getTitle().contains("" + exhname + " Products"));
+		Assert.assertTrue(driver.getTitle().contains(""+exhname+" Products"));
 
 		// Get the Total Products count on Products page
 		String producttabtitle = atlexhact.getValidateProductsPage().getText();
@@ -413,8 +398,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 	}
 
 	@Test(priority = 8)
-	public void TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest()
-			throws InterruptedException, IOException {
+	public void TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T327: The click on 'Matching products-See All' functionality for an Exhibitor
 
@@ -423,13 +407,14 @@ public class GlobalSearch_ExhibitorActions extends base {
 		lap = new ATLLandingPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		
 		driver.get(prop.getProperty("lvmurl_uat"));
 		Thread.sleep(6000);
-		// lap.getCloseMarktAdBtn().click();
+		//lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
+
 		Thread.sleep(15000);
 		// Store the 1st Exhibitor name in String variable
 		exhname = atlexhact.getExhibitorName().getText();
@@ -443,9 +428,9 @@ public class GlobalSearch_ExhibitorActions extends base {
 		// Click on Matching Products-See All link for 1st Exhibitor
 		atlexhact.getMatchingProdSeeAllLink().click();
 
+		Thread.sleep(10000);
 		// Verify that user should redirect to the Matching Products page
 		Assert.assertTrue(atlexhact.getValidateProductsPage().isDisplayed());
-		Thread.sleep(10000);
 		Assert.assertTrue(driver.getTitle().contains("" + exhname + " Products"));
 
 		// Get the Matching Products count on Products page
@@ -461,8 +446,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 	public void TS009_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// T322: The click on 'Matching products-Add Note' functionality for an
-		// Exhibitor
+		// T322: The click on 'Matching products-Add Note' functionality for an Exhibitor
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
@@ -470,13 +454,14 @@ public class GlobalSearch_ExhibitorActions extends base {
 		genData = new GenerateData();
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		
 		driver.get(prop.getProperty("lvmurl_uat"));
 		Thread.sleep(6000);
-		// lap.getCloseMarktAdBtn().click();
+		//lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
+
 		Thread.sleep(15000);
 		// Store the 1st Exhibitor name in String variable
 		exhname = atlexhact.getExhibitorName().getText();
@@ -493,14 +478,12 @@ public class GlobalSearch_ExhibitorActions extends base {
 				.findElement(By.xpath("//h4[contains(text(),'Add a Note For " + exhname + "')]"));
 		Assert.assertTrue(addnotemodaltitle.isDisplayed());
 
-		
 		// Store the new note name
 		String newnotetitle = "CybNote" + genData.generateRandomString(3);
 		System.out.println("Newly added Note is: " + newnotetitle);
 
 		// Enter Note title
 		atlexhact.getNoteTitleTxtBx().sendKeys(newnotetitle);
-		
 		// Enter Note Content
 		atlexhact.getNoteContentTxtBx().sendKeys("TestNote" + genData.generateRandomString(6));
 		// Click on 'Save' button
@@ -523,8 +506,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 
 		allnoteslist = atlexhact.getSavedNoteNameInAllNotesList();
 
-		// Verify that recently added note should be appear on 'All Notes For Exhibitor'
-		// modal
+		// Verify that recently added note should be appear on 'All Notes For Exhibitor' modal
 		for (int i = 0; i < allnoteslist.size(); i++) {
 			// System.out.println(allnoteslist.get(i).getText());
 			if (allnoteslist.get(i).getText().equals(newnotetitle)) {
@@ -548,34 +530,36 @@ public class GlobalSearch_ExhibitorActions extends base {
 		lap = new ATLLandingPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		
 		driver.get(prop.getProperty("lvmurl_uat"));
 		Thread.sleep(6000);
-		// lap.getCloseMarktAdBtn().click();
+		//lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
+
 		Thread.sleep(15000);
 		// Store the 1st Exhibitor name in String variable
 		exhname = atlexhact.getExhibitorName().getText();
 
 		System.out.println("Exhibitor name: " + exhname);
 
-		// Click on Exhibitor name
+		//Click on Exhibitor name
 		atlexhact.getExhibitorName().click();
 
-		// Verify that Selected Exhibitor Digital Showroom page should be opened
-		Assert.assertTrue(atlexhdgshw.getAtlvalidateexhdigishowpage_lvmUAT().isDisplayed());
 		Thread.sleep(10000);
-		Assert.assertTrue(driver.getTitle().contains("" + exhname + " at Las Vegas Market"));
-		Assert.assertTrue(atlexhdgshw.getExhibitornameonexhdirectimg_lvmUAT().getText().contains(exhname));
+		// Verify that Selected Exhibitor Digital Showroom page should be opened
+		Assert.assertTrue(atlexhdgshw.getATLExhDigiShowPage().isDisplayed());
+		Assert.assertTrue(driver.getTitle().contains(""+exhname+" at Las Vegas Market"));
+		Assert.assertTrue(atlexhdgshw.getExhNameOnExhDirectImg().getText().contains(exhname));
 
 		driver.get(prop.getProperty("lvmurl_uat"));
-		// lap.getCloseMarktAdBtn().click();
+		//lap.getCloseMarktAdBtn().click();
 	}
-
+	
 	@AfterClass
-	public void tearDown() {
-		 driver.quit();
+	public void tearDown()
+	{
+		driver.quit();
 	}
 }

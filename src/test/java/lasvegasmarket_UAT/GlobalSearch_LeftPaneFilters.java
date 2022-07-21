@@ -56,7 +56,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
-		driver.get(prop.getProperty("atlmrkturl_prod"));
+		driver.get(prop.getProperty("lvm_prod"));
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(7000);
 		// lap.getCloseMarktAdBtn().click();
@@ -68,7 +68,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		// lap.getCloseMarktAdBtn().click();
 	}
 
-	@Test(priority = 1)
+//	@Test(priority = 1)
 	public void TS001_VerifySelectionOfOneFilterOfProdCatgFromLeftPaneFiltersTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -110,104 +110,34 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		// Click on Product Categories expand btn
 		atlleftpane.getATLProdCatgExpandBtn().click();
-
-		// String accentFurn=atlleftpane.getAccentFurnExpandBtn().getText();
-		// atlleftpane.getAccentFurnExpandBtn().click();
-		// System.out.println("Click on 1st filter : "+accentFurn );
-
 		// Store All the filter list
 		List<WebElement> filter = driver.findElements(By.xpath("//div[@class='imc-filteritem__option']"));
+		boolean var=false;
 		for (WebElement fl : filter) {
-			System.out.println(fl.getText());
 			// Click on 1st Filter
-			if (fl.getText().contains(prop.getProperty("filter1"))) // filter1 : Women's Contemporary
-
+			if(fl.getText().equals(prop.getProperty("filter1_UAT")))   //Filter 1:Rug / Floor Coverings
 			{
 				String filterName1 = fl.getText();
 				System.out.println("Click on 1nd Filter : " + filterName1);
 				fl.click();
-			}
-			// Click on 2nd Filter
-			if (fl.getText().contains(prop.getProperty("filter2"))) // filter2 : Women's Resort
-			{
-				String filterName2 = fl.getText();
-				System.out.println("Click on 2nd Filter : " + filterName2);
-				Thread.sleep(5000);
-				fl.click();
-
+				var=true;
+				break;
 			}
 		}
-		// Store 1st exhibitor name
-		String exhName = atlleftpane.getATLexhibitor().getText();
-		System.out.println("Exhibitor Name : " + exhName);
-		atlleftpane.getATLexhibitor().click();
-
-		// List of All Product category
-		List<WebElement> categoris = driver.findElements(By.xpath(
-				"//div[@class='imc-gallery__item imc-gallery__item--no-padding-left imc-gallery__item--no-padding-right imc-type--title-8 imc-padding--bottom--xsmall']"));
-		for (WebElement flC : categoris) {
-			// Verify selected filter and its respected categories
-			if (flC.getText().contains(prop.getProperty("filter1"))
-					&& flC.getText().contains(prop.getProperty("filter2")))
-				;
-			{
-				System.out.println("CatName : " + flC.getText());
-				String anctiqueProdAcc = flC.getText();
-				Assert.assertTrue(anctiqueProdAcc.contains(anctiqueProdAcc));
-			}
-		}
-
-	}
-
-	@Test(priority = 3)
-	public void TS003_VerifySelectionOfProductCategoriesFilterCombinationWithStyleFromLeftPaneFiltersTest()
-			throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// T406: Left pane Filters : Product Categories Filter - Combination with Style
-
-		atlgs = new ATLGlobalSearchPage(driver);
-		atlexhact = new ATLExhLineProdActionsPage(driver);
-		lap = new ATLLandingPage(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		atlleftpane = new ATLLeftPaneFilters(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
-		atlgs.getATLSearchButton().click();
-
-		// Click on Product Categories expand btn
-		atlleftpane.getATLProdCatgExpandBtn().click();
-		//Click on Styles filter expand btn
-		atlleftpane.getATLStylesFilterbtn().click();
-
-		// String accentFurn=atlleftpane.getAccentFurnExpandBtn().getText();
-		// atlleftpane.getAccentFurnExpandBtn().click();
-		// System.out.println("Click on 1st filter : "+accentFurn );
-
-		// Store All the filter list
-		List<WebElement> filter = driver.findElements(By.xpath("//div[@class='imc-filteritem__option']"));
+		Assert.assertTrue(var);
+		boolean var2=false;
 		for (WebElement fl : filter) {
-			//System.out.println(fl.getText());
-			// Click on 1st Filter
-			if (fl.getText().contains(prop.getProperty("filter1"))) // filter1 : Women's Contemporary
-
-			{
-				String filterName1 = fl.getText();
-				System.out.println("Click on 1nd Filter : " + filterName1);
-				fl.click();
-			}
 			// Click on 2nd Filter
-			if (fl.getText().contains("European")) // filter2 : Women's Resort
+			if (fl.getText().equals(prop.getProperty("filter2_UAT"))) // filter2 : Souvenir / Novelties
 			{
 				String filterName2 = fl.getText();
 				System.out.println("Click on 2nd Filter : " + filterName2);
-				Thread.sleep(5000);
 				fl.click();
-
+				var2=true;
+				break;
 			}
 		}
-		utl.scrollToElement(atlleftpane.getATLStylesFilterbtn());
+		Assert.assertTrue(var2);
 		
 		// Store 1st exhibitor name
 		String exhName = atlleftpane.getATLexhibitor().getText();
@@ -217,20 +147,25 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		// List of All Product category
 		List<WebElement> categoris = driver.findElements(By.xpath(
 				"//div[@class='imc-gallery__item imc-gallery__item--no-padding-left imc-gallery__item--no-padding-right imc-type--title-8 imc-padding--bottom--xsmall']"));
+		boolean var3=false;
 		for (WebElement flC : categoris) {
 			// Verify selected filter and its respected categories
-			if (flC.getText().contains(prop.getProperty("filter1"))
-					&& flC.getText().contains(prop.getProperty("filter2")))
-				;
+			
+			if (flC.getText().equals(prop.getProperty("filter1_UAT"))
+					&& flC.getText().equals(prop.getProperty("filter2_UAT")));
 			{
 				System.out.println("CatName : " + flC.getText());
-				String anctiqueProdAcc = flC.getText();
-				Assert.assertTrue(anctiqueProdAcc.contains(anctiqueProdAcc));
+				var3=true;
+				break;
 			}
+			
 		}
-
+		Assert.assertTrue(var3);
 	}
-	/*
-	 * @AfterClass public void tearDown() { driver.quit(); }
-	 */
+
+	  @AfterClass 
+	  public void tearDown() { 
+		  driver.quit();
+		  }
+	 
 }
