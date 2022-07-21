@@ -3,6 +3,14 @@
 <suite name="Failed suite [LVM_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
+
+      <class name="lasvegasmarket_UAT.GlobalSearch_ProductActions">
+        <methods>
+          <include name="TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- lasvegasmarket_UAT.GlobalSearch_ProductActions -->
+
       <class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions">
         <methods>
 

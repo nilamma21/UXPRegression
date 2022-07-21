@@ -4,7 +4,18 @@
   <test name="RegressionTest(failed)">
     <classes>
 
+
+      <class name="lasvegasmarket_UAT.GlobalSearch_ProductActions">
+        <methods>
+          <include name="TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- lasvegasmarket_UAT.GlobalSearch_ProductActions -->
+
+      <class name="lasvegasmarket_UAT.MarketPlanner">
+
       <class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions">
+
         <methods>
           <include name="TS009_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest"/>
           <include name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest"/>
@@ -13,6 +24,9 @@
           <include name="TS002_VerifyAddToNewListForExhibitorTest"/>
           <include name="tearDown"/>
         </methods>
+
+      </class> <!-- lasvegasmarket_UAT.MarketPlanner -->
+
       </class> <!-- lasvegasmarket_UAT.GlobalSearch_ExhibitorActions -->
 
       <class name="lasvegasmarket_UAT.FloorPlans">
@@ -26,6 +40,7 @@
           <include name="initialize"/>
         </methods>
       </class> <!-- lasvegasmarket_UAT.FloorPlans -->
+
 
     </classes>
   </test> <!-- RegressionTest(failed) -->
