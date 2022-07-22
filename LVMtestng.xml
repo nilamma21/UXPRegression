@@ -3,7 +3,7 @@
 
 <suite name="LVM_RegressionTestSuite">
 	<listners>
-		<listner class-name="lasvegasmarket_UAT.TestListeners" />
+		<listner class-name="lasvegasmarket_PROD.TestListeners" />
 	</listners>
 
 	<test thread-count="5" name="RegressionTest">
@@ -13,16 +13,13 @@
 		<!-- 	<class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions" />
  -->
 
-			<class name="lasvegasmarket_UAT.GlobalSearch_ProductActions" />
+			<class name="lasvegasmarket_PROD.GlobalSearch_ExhibitorActions" />
 			<methods>
-			<include name="TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest"/>
-			</methods>
+			
+			<!-- <include name="TS001_VerifyAddToFavoriteForExhibitorTest"/> -->
+			<!-- <include name="TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest"/>-->
+			</methods> 
 
-
-			<class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions" />
-
-
-			<class name="lasvegasmarket_UAT.FloorPlans" />
 			
 
 		</classes>
