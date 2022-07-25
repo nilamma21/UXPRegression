@@ -54,7 +54,7 @@ public class GlobalSearch_LineActions extends base {
 
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
-		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(7000);
 		//lap.getCloseMarktAdBtn().click();
@@ -117,7 +117,7 @@ public class GlobalSearch_LineActions extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
-		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
@@ -143,7 +143,7 @@ public class GlobalSearch_LineActions extends base {
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 
 		// Delete that favorites exhibitor from list
-		atlmppge.getATLEditListItemMoreBtn().click();
+		atlmppge.getMoreBtnDeleteOptn_lvmUAT().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(6000);
 		favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
@@ -171,11 +171,11 @@ public class GlobalSearch_LineActions extends base {
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
-		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("searchorderonjuniperline_lvmUAT")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("searchorderonjuniperline_lvmprod")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -215,7 +215,7 @@ public class GlobalSearch_LineActions extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 		
@@ -277,7 +277,7 @@ public class GlobalSearch_LineActions extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
-		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
@@ -317,7 +317,7 @@ public class GlobalSearch_LineActions extends base {
 		mpeditlistoptns = atlmppge.getATLMPEditListOptns();
 
 		for (int i = 0; i < mplists.size(); i++) {
-			System.out.println(mplists.get(i).getText());
+			//System.out.println(mplists.get(i).getText());
 			// System.out.println(mpeditlistoptns.get(i).getText());
 			if (mplists.get(i).getText().equals(existinglistname)) {
 				mpeditlistoptns.get(i).click();
@@ -328,7 +328,7 @@ public class GlobalSearch_LineActions extends base {
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 
 		// Delete that added line from list
-		atlmppge.getATLEditListItemMoreBtn().click();
+		atlmppge.getMoreBtnDeleteOptn_lvmUAT().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(8000);
 	}
@@ -346,7 +346,7 @@ public class GlobalSearch_LineActions extends base {
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 		
@@ -378,7 +378,7 @@ public class GlobalSearch_LineActions extends base {
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
-		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
@@ -411,7 +411,7 @@ public class GlobalSearch_LineActions extends base {
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
-		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
@@ -461,7 +461,7 @@ public class GlobalSearch_LineActions extends base {
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
-		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
@@ -497,13 +497,13 @@ public class GlobalSearch_LineActions extends base {
 		// Verify Total Products count on Search grid should match with Products page
 		Assert.assertEquals(matchingprodcountonsearchgrid, matchingprodcountonprodpage);
 		
-		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 		//lap.getCloseMarktAdBtn().click();
 	}
 	
 	@AfterClass
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 }
