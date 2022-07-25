@@ -57,16 +57,16 @@ public class GlobalSearch_ExhibitorActions extends base {
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(7000);
 		//lap.getCloseMarktAdBtn().click();
-		
+
 		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
 		driver.navigate().refresh();
 		Thread.sleep(8000);
-//		lap.getCloseMarktAdBtn().click();
+		//		lap.getCloseMarktAdBtn().click();
 	}
-	
-	@Test(priority = 1)
-	public void TS001_VerifyAddToFavoriteForExhibitorTest() throws InterruptedException, IOException {
+
+	@Test(priority = 3)
+	public void TS003_VerifyAddToFavoriteForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T320: The Add to Favorite functionality for an Exhibitor
 
@@ -123,7 +123,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		genData = new GenerateData();
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
+
 		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
@@ -146,10 +146,10 @@ public class GlobalSearch_ExhibitorActions extends base {
 
 		// Scroll till Create button
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",
-				atlmppge.getNewListModalCreateBtn());
+				atlmppge.getAddListCreateBtn());
 
 		// Click on Create button
-		atlmppge.getNewListModalCreateBtn().click();
+		atlmppge.getAddListCreateBtn().click();
 		// Click on Go to Market Planner button
 		atlmppge.getGoToMarketPlannerBtn().click();
 
@@ -171,8 +171,8 @@ public class GlobalSearch_ExhibitorActions extends base {
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 	}
 
-	@Test(priority = 3)
-	public void TS003_VerifyAddToExistingListForExhibitorTest() throws InterruptedException, IOException {
+	@Test(priority = 1)
+	public void TS001_VerifyAddToExistingListForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T321: The Add to Newly created list functionality for an Exhibitor
 
@@ -180,13 +180,13 @@ public class GlobalSearch_ExhibitorActions extends base {
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
 		lap = new ATLLandingPage(driver);
-		
+
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
-		
+
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
 
@@ -233,7 +233,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 
 		// Delete that added exhibitor from list
-		atlmppge.getATLEditListItemMoreBtn().click();
+		atlmppge.getMoreBtnDeleteOptn_lvmUAT().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(8000);
 
@@ -257,7 +257,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		lap = new ATLLandingPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
+
 		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
@@ -300,7 +300,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		lap = new ATLLandingPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
+
 		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
@@ -328,7 +328,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		lap = new ATLLandingPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
+
 		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
@@ -347,11 +347,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		Thread.sleep(15000);
 		// Verify that user should redirect to the Lines page
 		Assert.assertTrue(atlexhact.getValidateLinesPage().isDisplayed());
-		String t=driver.getTitle();
-		System.out.println(t);
-		//Assert.assertTrue(driver.getTitle().contains("{"+exhname + " } Lines"));
-		
-		Assert.assertTrue(driver.getTitle().contains(exhname +" Lines"));
+		Assert.assertTrue(driver.getTitle().contains("{"+exhname+"} Lines"));
 	}
 
 	@Test(priority = 7)
@@ -368,7 +364,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
-		
+
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
 
@@ -411,7 +407,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		lap = new ATLLandingPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
+
 		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
@@ -432,7 +428,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		// Click on Matching Products-See All link for 1st Exhibitor
 		atlexhact.getMatchingProdSeeAllLink().click();
 
-		Thread.sleep(10000);
+		Thread.sleep(15000);
 		// Verify that user should redirect to the Matching Products page
 		Assert.assertTrue(atlexhact.getValidateProductsPage().isDisplayed());
 		Assert.assertTrue(driver.getTitle().contains("" + exhname + " Products"));
@@ -447,8 +443,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 	}
 
 	@Test(priority = 9)
-	public void TS009_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest()
-			throws InterruptedException, IOException {
+	public void TS009_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T322: The click on 'Matching products-Add Note' functionality for an Exhibitor
 
@@ -458,7 +453,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		genData = new GenerateData();
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
+
 		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
@@ -534,7 +529,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		lap = new ATLLandingPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
+
 		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
@@ -558,12 +553,11 @@ public class GlobalSearch_ExhibitorActions extends base {
 		Assert.assertTrue(atlexhdgshw.getExhNameOnExhDirectImg().getText().contains(exhname));
 
 		driver.get(prop.getProperty("lvmurl_prod"));
-		//lap.getCloseMarktAdBtn().click();
 	}
-	
+
 	@AfterClass
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 }

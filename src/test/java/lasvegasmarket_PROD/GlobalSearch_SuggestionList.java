@@ -51,7 +51,7 @@ public class GlobalSearch_SuggestionList extends base {
 
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
-		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 		lap.getIUnderstandBtn().click();
 //		Thread.sleep(10000);
 //		lap.getCloseMarktAdBtn().click();
@@ -98,7 +98,7 @@ public class GlobalSearch_SuggestionList extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 		//lap.getCloseMarktAdBtn().click();
 		
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestline")));
@@ -131,7 +131,7 @@ public class GlobalSearch_SuggestionList extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 		//lap.getCloseMarktAdBtn().click();
 		
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestproduct_lvm")));
@@ -152,13 +152,13 @@ public class GlobalSearch_SuggestionList extends base {
 		}
 		Thread.sleep(8000);
 		Assert.assertTrue(atlproddet.getATLValidateProdDetailsPage().isDisplayed());
-		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 		//lap.getCloseMarktAdBtn().click();
 	}
 	
-	/*@AfterClass
+	@AfterClass
 	public void tearDown()
 	{
 		driver.quit();
-	}*/
+	}
 }

@@ -54,7 +54,7 @@ public class GlobalSearch_ProductActions extends base {
 
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
-		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(7000);
 		//lap.getCloseMarktAdBtn().click();
@@ -118,7 +118,7 @@ public class GlobalSearch_ProductActions extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
@@ -154,7 +154,7 @@ public class GlobalSearch_ProductActions extends base {
 
 		// Scroll till Create button
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",
-				atlmppge.getNewListModalCreateBtn());
+				atlmppge.getAddListCreateBtn());
 
 		// Click on Create button
 		atlmppge.getAddListCreateBtn().click();
@@ -196,7 +196,7 @@ public class GlobalSearch_ProductActions extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
@@ -258,7 +258,7 @@ public class GlobalSearch_ProductActions extends base {
 		Assert.assertTrue(atlmppge.getSavedProductNameInList().getText().contains(productNameOnSearchGrid));
 
 		// Delete that added Product from list
-		atlmppge.getATLEditListItemMoreBtn().click();
+		atlmppge.getMoreBtnDeleteOptn_lvmUAT().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(8000);
 
@@ -286,7 +286,7 @@ public class GlobalSearch_ProductActions extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
@@ -324,7 +324,7 @@ public class GlobalSearch_ProductActions extends base {
 		Assert.assertTrue(atlmppge.getSavedProductNameInList().getText().contains(productNameOnSearchGrid));
 
 		// Delete that favorited product from list
-		atlmppge.getATLEditListItemMoreBtn().click();
+		atlmppge.getMoreBtnDeleteOptn_lvmUAT().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(6000);
 
@@ -351,7 +351,7 @@ public class GlobalSearch_ProductActions extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
@@ -361,9 +361,6 @@ public class GlobalSearch_ProductActions extends base {
 		// Store the 1st Exhibitor name in String variable
 		exhname = atlexhact.getExhibitorName().getText();
 		System.out.println("Exhibitor name: " + exhname);
-
-		// Click on Matching Products-See All link for 1st Exhibitor
-		// atlexhact.getMatchingProdSeeAllLink().click();
 
 		utl.scrollToElement(atlexhact.getExhibitorProduct());
 
@@ -384,7 +381,7 @@ public class GlobalSearch_ProductActions extends base {
 		// Enter Note title
 		atlexhact.getNoteTitleTxtBx().sendKeys(newnotetitle);
 		// Enter Note Content
-		atlexhact.getNoteContentTxtBx().sendKeys("TestProdNote" + genData.generateRandomString(6));
+		atlexhact.getNoteContentTxtBx().sendKeys("TestNote" + genData.generateRandomString(6));
 		// Click on 'Save' button
 		atlexhact.getNoteSaveBtn().click();
 		Thread.sleep(5000);
@@ -428,7 +425,7 @@ public class GlobalSearch_ProductActions extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
@@ -466,7 +463,6 @@ public class GlobalSearch_ProductActions extends base {
 
 		// Click on Lists tab on MP home page
 		atlmppge.getMPHomeListsTab().click();
-		//atlmppge.getListsPageListsMenu().click();
 		atlmppge.getListsPageListsMenu().click();
 
 		mplists = atlmppge.getATLMPListsNames();
@@ -483,7 +479,7 @@ public class GlobalSearch_ProductActions extends base {
 		Thread.sleep(10000);
 
 		// Delete that added Product from list
-		atlmppge.getATLEditListItemMoreBtn().click();
+		atlmppge.getMoreBtnDeleteOptn_lvmUAT().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(8000);
 
@@ -511,7 +507,7 @@ public class GlobalSearch_ProductActions extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
@@ -560,7 +556,7 @@ public class GlobalSearch_ProductActions extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
@@ -595,7 +591,7 @@ public class GlobalSearch_ProductActions extends base {
 		Assert.assertTrue(atlmppge.getSavedProductNameInList().getText().contains(productNameOnSearchGrid));
 
 		// Delete that favorited product from list
-		atlmppge.getATLEditListItemMoreBtn().click();
+		atlmppge.getMoreBtnDeleteOptn_lvmUAT().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(6000);
 
@@ -623,7 +619,7 @@ public class GlobalSearch_ProductActions extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
@@ -658,7 +654,7 @@ public class GlobalSearch_ProductActions extends base {
 				atlmppge.getNewListModalCreateBtn());
 
 		// Click on Create button
-		atlmppge.getNewListModalCreateBtn().click();
+		atlmppge.getAddListCreateBtn().click();
 
 		// Click on Go to Market Planner button
 		atlmppge.getGoToMarketPlannerBtn().click();
@@ -683,8 +679,8 @@ public class GlobalSearch_ProductActions extends base {
 		Assert.assertTrue(atlmppge.getNewCreatedListName().getText().contains(newlistname));
 	}
 
-	/*@AfterClass
+	@AfterClass
 	public void tearDown() {
 		driver.quit();
-	}*/
+	}
 }
