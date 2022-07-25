@@ -1,8 +1,10 @@
 package resources;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -14,6 +16,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.config.WebDriverManagerException;
 
 public class base {	
 
@@ -22,6 +26,31 @@ public class base {
 	public static WebDriver driver;
 	//public WebDriver driver; //For parallel execution
 	public static Properties prop;
+	public static String s;
+
+	public static void chromeVersion() throws IOException {
+
+		Runtime rt = Runtime.getRuntime();
+		Process proc = rt.exec("reg query " + "HKEY_CURRENT_USER\\Software\\Google\\Chrome\\BLBeacon " +  "/v version");
+		BufferedReader stdInput = new BufferedReader(new 
+				InputStreamReader(proc.getInputStream()));
+
+		BufferedReader stdError = new BufferedReader(new 
+				InputStreamReader(proc.getErrorStream()));
+
+		// Read the output from the command
+		System.out.println("Here is the standard output of the command:\n");
+		String s = null;
+		while ((s = stdInput.readLine()) != null) {
+			System.out.println(s);
+		}
+
+		// Read any errors from the attempted command
+		System.out.println("Here is the standard error of the command (if any):\n");
+		while ((s = stdError.readLine()) != null) {
+			System.out.println(s);
+		}
+	}
 
 	public WebDriver initializeDriver() throws IOException
 	{
@@ -35,34 +64,39 @@ public class base {
 
 		if(browserName.equals("chrome"))
 		{
-			// you can mention chromedriver.exe path here to execute all the scripts.
+			//Check for Specific browser version
+			//WebDriverManager.chromedriver().browserVersion(prop.getProperty("browserversion")).setup();
+			//WebDriverManager.chromedriver().driverVersion(prop.getProperty("driverversion")).setup();
 
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/Drivers/chromedriver_103.exe");
+			//Checks for the latest browser version
+			//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/Drivers/chromedriver_102.exe");
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 		}
 		else if (browserName.equals("firefox"))
 		{
-			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/Drivers/geckodriver.exe");
+			//System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/Drivers/geckodriver.exe");
+			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 			driver.manage().window().maximize();
 		}
 		else if (browserName.equals("edge")) 
 		{
-			System.setProperty("webdriver.edge.driver",System.getProperty("user.dir") + "/Drivers/msedgedriver.exe");
+			//System.setProperty("webdriver.edge.driver",System.getProperty("user.dir") + "/Drivers/msedgedriver.exe");
+			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 			driver.manage().window().maximize();
 		}
 		else if (browserName.equals("IE")) 
 		{
-			System.setProperty("webdriver.ie.driver",System.getProperty("user.dir") + "/Drivers/IEDriverServer.exe");
+			//System.setProperty("webdriver.ie.driver",System.getProperty("user.dir") + "/Drivers/IEDriverServer.exe");
+			WebDriverManager.iedriver().setup();
 			driver = new InternetExplorerDriver();
 			driver.manage().window().maximize();
 		}
-
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		return driver;
-
 	}	
 
 	public static String capture(WebDriver driver, String testMethodName) throws IOException 

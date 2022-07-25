@@ -17,16 +17,21 @@ public class ATLMarketPlannerPage {
 	By atlfaveditlistbtn = By.xpath("//li[contains(text(),'Favorites')]/span"); //Locator for Edit list btn of Favorites list
 	By editlistpage = By.xpath("//div[@class='imc-gallery imc-market-planner-list-display imc-vr--large']"); //Locator for Edit List page
 	By savedexhnameinlist = By.xpath("//li[@class='imc-list-edit--draggable'][1]/div/div[1]/div[1]/a"); //Locator for Saved Exhibitor name in list
-	By editlistitemmorebtn = By.xpath("//li[@class='imc-list-edit--draggable'][1]/div/div/div[4]/div/button"); //Locator for More button of 1st list item
+	By lvmsavedexhnameinlist_uat = By.xpath("//li[@class='imc-list-edit--draggable'][1]/div/div[1]/div[1]/a"); //Locator for Saved Exhibitor name in list
+	By editlistitemmorebtn = By.xpath("//div[@class='imc-loading-relative']"); //Locator for More button of  list item
+	
+	By moreBtnDeleteOptn_lvmUAT = By.xpath("(//li[@class=\"imc-list-edit--draggable\"])[1]/div/div[1]/div[4]/div/button"); //Locator for Delete Option of 1st list item
 	By editlistitemdeleteoptn = By.xpath("//li[@class='imc-list-edit--draggable'][1]/div/div/div[4]/div/div/span[3]/a"); //Locator for Delete Option of 1st list item
 	By createnewlistnametxtbx = By.xpath("//input[@name='listName']"); //Locator for List name text field on Create new list modal
 	By newlistmodalcreatebtn = By.xpath("(//input[@type='submit'])[position()=2]"); //Locator for Create btn on Create new list modal
+	By newlistmodalcreatebtn_LvmUAT = By.xpath("(//input[@type='submit'])[position()=3]"); //Locator for Create btn on Create new list modal LVM UAT
+	
 	By gotomarketplannerbtn = By.xpath("//a[contains(text(),'Go to Market Planner')]"); //Locator for Go to Market Planner button
 	By mphomeliststab = By.xpath("//div[@class='imc-mp-toolbar imc-breakpoint-display--hide-mobile']/a[2]"); //Locator for Lists tab on MP Home
 	By listspagelistsmenu = By.xpath("//div[@class='imc-vertical-tabs-nav']/a[1]"); //Locator for Lists left menu
 	By atlmplistsnames = By.xpath("//ul[@class='imc-market-planner-list']/li/div[1]"); //Locator for the List names of MP lists
 	By atlmpeditlistoptns = By.xpath("//ul[@class='imc-market-planner-list']/li/div[2]/span[2]/a"); //Locator for Edit List options on Lists page
-	By atlmpexistinglistname = By.xpath("//form/div[4]/div[1]/label"); //Locator for existing list name
+	By atlmpexistinglistname = By.xpath("//form/div[4]/div[3]/label"); //Locator for existing list name
 	By atladdtoseselectedbtn = By.xpath("//input[@data-xpath='quickAdd.saveList']"); //Locator for Add to Selected button
 	By listspagefavoritesmenu = By.xpath("//div[@class='imc-vertical-tabs-nav']/div[contains(text(),'Favorites')]"); //Locator for Favorites left menu
 	By addlistcreatebtn = By.xpath("(//input[@type='submit'])[position()=3]"); //Locator for Create button on Add List modal
@@ -125,6 +130,23 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(newCreatedListName));
 		return driver.findElement(newCreatedListName);
 	}
+	public WebElement getNewlistmodalcreatebtn_LvmUAT() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(newlistmodalcreatebtn_LvmUAT));
+		return driver.findElement(newlistmodalcreatebtn_LvmUAT);
+	}
+	
+	public WebElement getlvmsavedexhnameinlist_uat() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmsavedexhnameinlist_uat));
+		return driver.findElement(lvmsavedexhnameinlist_uat);
+	}
+	public WebElement getMoreBtnDeleteOptn_lvmUAT() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(moreBtnDeleteOptn_lvmUAT));
+		return driver.findElement(moreBtnDeleteOptn_lvmUAT);
+	}
+	
 	
 }
 

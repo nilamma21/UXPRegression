@@ -45,6 +45,7 @@ public class GlobalSearch_SuggestionList extends base {
 	@BeforeClass
 	public void initialize() throws IOException, InterruptedException {
 		driver = initializeDriver(); // requires for Parallel text execution
+		//chromeVersion();
 		utl = new Utility(driver);
 		lap = new ATLLandingPage(driver);
 
@@ -155,9 +156,9 @@ public class GlobalSearch_SuggestionList extends base {
 		//lap.getCloseMarktAdBtn().click();
 	}
 	
-	@AfterClass
+	/*@AfterClass
 	public void tearDown()
 	{
 		driver.quit();
-	}
+	}*/
 }
