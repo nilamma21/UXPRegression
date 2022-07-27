@@ -26,7 +26,12 @@ public class ATLGlobalSearchPage {
 	By atlclearsearchbtn = By.xpath("(//button[@aria-label='Clear Search'])[position()=1]"); //Locator for Clear Search button
 	By atlsearchresultproducttypelist = By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li/span/span/span[5]"); //Locator for list of search result product type
 	//By atlsearchbtn = By.xpath("//button[@data-xpath='typesearchahead.submitBtn']");
-
+	By atlsearchresultInfoLink = By.xpath("//a[@id='Information']"); //Locator for list of search result Info Link
+	By atlCatalog = By.xpath("(//div[@class='imc-products-overview--gallery'])[2]/div[1]/div[1]/a[1]/div[1]/div[1]/span[1]/span[1]"); //Locator for list of search result Catalog 
+	By CatalogHeaderName = By.xpath("//div[@class='imc-pdfview--display']/div[1]/h1[1]"); //Locator for Catalog header
+	By atlsearchresultArticlesLink = By.xpath("//a[@id='Articles']"); //Locator for Article Link
+	By atlsearchresultBlog = By.xpath("(//div[@class='imc-gallery__item'])[1]/section[1]/span[1]/div[1]"); //Locator for Article Link
+	
 	public ATLGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
@@ -84,6 +89,35 @@ public class ATLGlobalSearchPage {
 		wait.until(ExpectedConditions.elementToBeClickable(lvmSearchBtnUAT));
 		return driver.findElement(lvmSearchBtnUAT);
 	}
+	public WebElement getATLsearchresultInfoLink() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlsearchresultInfoLink));
+		return driver.findElement(atlsearchresultInfoLink);
+	}
+	public WebElement getAtlCatalog() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlCatalog));
+		return driver.findElement(atlCatalog);
+	}
+	public WebElement getCatalogHeaderName() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(CatalogHeaderName));
+		return driver.findElement(CatalogHeaderName);
+	}
+	public WebElement getATLsearchresultArticlesLink() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlsearchresultArticlesLink));
+		return driver.findElement(atlsearchresultArticlesLink);
+	}
+	public WebElement getATLSearchResultBlog() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlsearchresultBlog));
+		return driver.findElement(atlsearchresultBlog);
+	}
+			
+	
+	
+	
 }
 
 
