@@ -14,6 +14,10 @@
 			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
 			<class name="atlantamarket_PROD.FloorPlans" /> -->
 			<class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters"/>
+			<methods>
+			<include name="TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest"/>
+			</methods>
+			
 			
 		</classes>
 

@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,12 +101,7 @@
                     <div class="method-list-content passed suite-ATLMrkt_RegressionTestSuite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket_PROD.GlobalSearch_LeftPaneFilters" hash-for-method="TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest">TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket_PROD.GlobalSearch_LeftPaneFilters" hash-for-method="TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest">TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket_PROD.GlobalSearch_LeftPaneFilters" hash-for-method="TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest">TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-ATLMrkt_RegressionTestSuite -->
@@ -129,16 +124,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest">
-                  </a> <!-- TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest -->
-                  <span class="method-name">TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest">
-                  </a> <!-- TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest -->
-                  <span class="method-name">TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest</span>
+                  <a name="TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest">
+                  </a> <!-- TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest -->
+                  <span class="method-name">TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -155,7 +143,11 @@
 &lt;suite name=&quot;ATLMrkt_RegressionTestSuite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;RegressionTest&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;atlantamarket_PROD.GlobalSearch_LeftPaneFilters&quot;/&gt;
+      &lt;class name=&quot;atlantamarket_PROD.GlobalSearch_LeftPaneFilters&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- atlantamarket_PROD.GlobalSearch_LeftPaneFilters --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- RegressionTest --&gt;
 &lt;/suite&gt; &lt;!-- ATLMrkt_RegressionTestSuite --&gt;
@@ -195,20 +187,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest')
+data.setCell(0, 1, 'TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest')
 data.setCell(0, 2, 'atlantamarket_PROD.GlobalSearch_LeftPaneFilters')
-data.setCell(0, 3, 64412);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest')
-data.setCell(1, 2, 'atlantamarket_PROD.GlobalSearch_LeftPaneFilters')
-data.setCell(1, 3, 33798);
+data.setCell(0, 3, 125634);
 window.suiteTableData['ATLMrkt_RegressionTestSuite']= { tableData: data, tableDiv: 'times-div-ATLMrkt_RegressionTestSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-ATLMrkt_RegressionTestSuite">
               </div> <!-- times-div-ATLMrkt_RegressionTestSuite -->
             </div> <!-- times-div -->
@@ -223,9 +211,18 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-ATLMrkt_RegressionTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">2 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">atlantamarket_PROD.GlobalSearch_LeftPaneFilters</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest</span>
+                <br/>
+                <span class="ignored-method-name">TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-ATLMrkt_RegressionTestSuite" class="panel">
@@ -240,12 +237,8 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest</span>
-                <span class="method-start">32879 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest</span>
-                <span class="method-start">66701 ms</span>
+                <span class="method-name">TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest</span>
+                <span class="method-start">40639 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
