@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="131140" started-at="2022-07-28T07:10:49Z" finished-at="2022-07-28T07:13:00Z">
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="166314" started-at="2022-07-28T12:18:49Z" finished-at="2022-07-28T12:21:35Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="131140" started-at="2022-07-28T07:10:49Z" finished-at="2022-07-28T07:13:00Z">
+    <test name="RegressionTest" duration-ms="166314" started-at="2022-07-28T12:18:49Z" finished-at="2022-07-28T12:21:35Z">
       <class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@548e7350]" name="initialize" is-config="true" duration-ms="32873" started-at="2022-07-28T12:40:49Z" finished-at="2022-07-28T12:41:22Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@204f30ec]" name="initialize" is-config="true" duration-ms="40634" started-at="2022-07-28T17:48:49Z" finished-at="2022-07-28T17:49:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@548e7350]" name="TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest" duration-ms="33798" started-at="2022-07-28T12:41:22Z" finished-at="2022-07-28T12:41:56Z">
+        <test-method status="PASS" signature="TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@204f30ec]" name="TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest" duration-ms="125634" started-at="2022-07-28T17:49:29Z" finished-at="2022-07-28T17:51:35Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest -->
-        <test-method status="PASS" signature="TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@548e7350]" name="TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest" duration-ms="64412" started-at="2022-07-28T12:41:56Z" finished-at="2022-07-28T12:43:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest -->
+        </test-method> <!-- TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest -->
       </class> <!-- atlantamarket_PROD.GlobalSearch_LeftPaneFilters -->
     </test> <!-- RegressionTest -->
   </suite> <!-- ATLMrkt_RegressionTestSuite -->
