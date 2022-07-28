@@ -16,7 +16,9 @@ public class ATLLeftPaneFilters {
 	By atlAntiqueReprodAccbtn = By.xpath("(//div[contains(@class,'imc-filter imc-content imc-expand-collapse')]//div[1]//div[1]//div[2]//div[1]//div[20])[1]"); //Locator for Antique Reprod Accbtn
 	By atlexhibitor = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[1]/div[1]/div[1]//a[1]/h2[1]");//Locator for 1st Exhibitor
 	By stylesFilterbtn = By.xpath("//a[@aria-label='Styles']"); //Locator for Styles filter
-	
+	By apparelvintprodcatg = By.xpath("//label[contains(text(),'Apparel, Vintage')]"); //Locator for name of 'Apparel, Vintage' Categ.
+	By antiquevintprodcatg = By.xpath("//label[contains(text(),'Antique/Vintage')]"); //Locator for name of 'Antique/Vintage' Categ.
+
 	public ATLLeftPaneFilters(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
@@ -46,6 +48,12 @@ public class ATLLeftPaneFilters {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(stylesFilterbtn));
 		return driver.findElement(stylesFilterbtn);
+	}
+	public WebElement getATLApparelVintProdCatg(){
+		return driver.findElement(apparelvintprodcatg);
+	}
+	public WebElement getATLAntiqueVintProdCatg(){
+		return driver.findElement(antiquevintprodcatg);
 	}
 }
 
