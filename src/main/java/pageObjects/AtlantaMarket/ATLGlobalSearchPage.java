@@ -5,9 +5,12 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import bsh.This;
 
 public class ATLGlobalSearchPage {
 
@@ -15,6 +18,8 @@ public class ATLGlobalSearchPage {
 	public WebDriverWait wait;
 
 	By atlglobalsearchtxtbx = By.xpath("//input[@id='input-1']"); // Locator for Global Search field 
+	By atlInfosearchtxtbx = By.xpath("(//input[@id='input-1'])[2]"); // Locator for Information Search field
+	By atlInfosearchbtn = By.xpath("(//button[@class = 'imc-searchform--button--search'])[2]"); //Locator for Seach button for global search
 	By atlsearchbtn = By.xpath("//button[@class = 'imc-searchform--button--search']"); //Locator for Seach button for global search
 	By lvmSearchBtnUAT = By.xpath("(//div[@class='imc-searchform--row'])[1]/form[1]/button[2]"); //Locator for Seach button for global search
 	
@@ -31,10 +36,18 @@ public class ATLGlobalSearchPage {
 	By CatalogHeaderName = By.xpath("//div[@class='imc-pdfview--display']/div[1]/h1[1]"); //Locator for Catalog header
 	By atlsearchresultArticlesLink = By.xpath("//a[@id='Articles']"); //Locator for Article Link
 	By atlsearchresultBlog = By.xpath("(//div[@class='imc-gallery__item'])[1]/section[1]/span[1]/div[1]"); //Locator for Article Link
+	By atlsearchresult = By.xpath("//div[@class='alert-box  ']"); //Locator for Article Link
+	By atlInfoSearchJuniperMarketBtn = By.xpath("//a[@href='/JuniperMarket']"); //Locator for Juniper Market Btn
+	By atlInfoSearchTopicsFilter = By.xpath("//a[@aria-label='Topics']"); //Locator for Topics filter
+	By atlInfoSearchTopicsMarketSnapshot = By.xpath("//h2[@class='imc-informationcard__title']"); //Locator for Topics filter Market snapshot
+	By atlInfoSearchSeeMoreDetailsBtn = By.xpath("//a[@href='/exhibitor']"); //Locator for See More Details Btn
+	By atlExhibitorFilter = By.xpath("(//label[@class='imc-checkbox--label imc-filteritem--label-width imc-type--title-2-ui'])[1]"); //Locator for Exhibitor filter
+	By atlExhibitorHeader = By.xpath("//div[@class='imc-gallery imc-gallery--65-35 breadcrumbs__round']//ul//li[2]/a[1]"); //Locator for Exhibitor Header
 	
 	public ATLGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
+		PageFactory.initElements(driver, this);
 	} 
 
 	public WebElement getATLGlobalSearchTextBox() throws InterruptedException {
@@ -114,9 +127,53 @@ public class ATLGlobalSearchPage {
 		wait.until(ExpectedConditions.elementToBeClickable(atlsearchresultBlog));
 		return driver.findElement(atlsearchresultBlog);
 	}
-			
-	
-	
+	public WebElement getATLSearchResult() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlsearchresult));
+		return driver.findElement(atlsearchresult);
+	}		
+	public WebElement getATLInfoSearchJuniperMarketBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlInfoSearchJuniperMarketBtn));
+		return driver.findElement(atlInfoSearchJuniperMarketBtn);
+	}		
+	public WebElement getATLInfoSearchTopicsFilter() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlInfoSearchTopicsFilter));
+		return driver.findElement(atlInfoSearchTopicsFilter);
+	}		
+	public WebElement getATLInfoSearchTopicsMarketSnapshot() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlInfoSearchTopicsMarketSnapshot));
+		return driver.findElement(atlInfoSearchTopicsMarketSnapshot);
+	}		
+	public WebElement getATLInfoSearchSeeMoreDetailsBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlInfoSearchSeeMoreDetailsBtn));
+		return driver.findElement(atlInfoSearchSeeMoreDetailsBtn);
+	}		
+									
+	public WebElement getATLExhibitorFilter() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlExhibitorFilter));
+		return driver.findElement(atlExhibitorFilter);
+	}		
+	public WebElement getATLExhibitorHeader() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlExhibitorHeader));
+		return driver.findElement(atlExhibitorHeader);
+	}								
+	public WebElement getATLInfosearchtxtbx() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlInfosearchtxtbx));
+		return driver.findElement(atlInfosearchtxtbx);
+	}								
+	public WebElement getATLInfosearchbtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlInfosearchbtn));
+		return driver.findElement(atlInfosearchbtn);
+	}								
+		
 	
 }
 

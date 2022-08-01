@@ -5,8 +5,8 @@
     <classes>
       <class name="atlantamarket_PROD.GlobalSearch_SearchFor">
         <methods>
-          <include name="TS003_VerifyGlobalSearchSearchForArticlesTest"/>
           <include name="initialize"/>
+          <include name="TS003_VerifyGlobalSearchSearchInformationAndFiltersTest"/>
         </methods>
       </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
     </classes>
