@@ -4,7 +4,9 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.omg.CORBA.PUBLIC_MEMBER;
 import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -140,97 +142,55 @@ public class GlobalSearch_SearchFor extends base {
 		
 		for(int i=0;i<infoFilterList.size();i++)
 		{
-			infoFilterList.get(i).getText();
+			//String f=infoFilterList.get(i).getText();
+			try {
+			 
+				String f=infoFilterList.get(i).getText();
+			 
+			
+			
 			System.out.println(infoFilterList.get(i));
 			
-			switch(infoFilterList.get(i).getText())
+			switch(f)
 			{
 			case "Exhibitors":
 
 				infoFilterList.get(i).click();
+				Thread.sleep(5000);
 				System.out.println(atlgs.getATLInfoSearchTopicsMarketSnapshot().getText());
 				Assert.assertTrue(atlgs.getATLInfoSearchTopicsMarketSnapshot().getText().contains("exhibitor"));
 				atlgs.getATLInfoSearchSeeMoreDetailsBtn().click();
 				Assert.assertTrue(atlgs.getATLExhibitorHeader().getText().contains("Exhibitors & Products"));
 				driver.navigate().back();
-				infoFilterList.get(i).click();
-				driver.navigate().refresh();
 				Thread.sleep(5000);
-				// Click on Info link
-				atlgs.getATLsearchresultInfoLink().click();
-				// click on Topics filter
-				atlgs.getATLInfoSearchTopicsFilter().click();
+				try {
+					infoFilterList.get(i).click();
+				}catch (StaleElementReferenceException e) {
+					infoFilterList = driver.findElements(By.xpath("//div[@class='imc-filteritem__option']"));
+					infoFilterList.get(i).click();
+					atlgs.getATLInfoSearchTopicsFilter().click();
+				}
 				break;
-				
 			case "Atlanta Market":
 				infoFilterList.get(i).click();
+				System.out.println("Click on ATLM");
 				infoFilterList.get(i).click();
 				break;
-
 			case "Market Snapshot":
 				infoFilterList.get(i).click();
 				//infoFilterList.get(i).click();
 				// atlgs.getATLInfoSearchTopicsMarketSnapshot().getTagName();
 				Assert.assertTrue(atlgs.getATLInfoSearchTopicsMarketSnapshot().getText().contains("Market Snapshot"));
-
 				infoFilterList.get(i).click();
 				break;
-
 			default:
 				break;
 			}
-		}
-		
-		
-		
-		
-		
-		/*
-		for (WebElement filters : infoFilterList) {
-			
-			// System.out.println(filters.getSize());
-			// String s = filters.getText();
-			
-			
-			for(WebElement f:infoFilterList)
-			{
-			switch (f.getText()) {
-			case "Exhibitors":
-
-				filters.click();
-				System.out.println(atlgs.getATLInfoSearchTopicsMarketSnapshot().getText());
-				Assert.assertTrue(atlgs.getATLInfoSearchTopicsMarketSnapshot().getText().contains("exhibitor"));
-				atlgs.getATLInfoSearchSeeMoreDetailsBtn().click();
-				Assert.assertTrue(atlgs.getATLExhibitorHeader().getText().contains("Exhibitors & Products"));
-				driver.navigate().back();
-				Thread.sleep(5000);
-				//44driver.navigate().refresh();
-				// click on Topics filter
-			
-				break;
-
-			case "Atlanta Market":
-				filters.click();
-				filters.click();
-				break;
-
-			case "Market Snapshot":
-				filters.click();
-				// atlgs.getATLInfoSearchTopicsMarketSnapshot().getTagName();
-				Assert.assertTrue(atlgs.getATLInfoSearchTopicsMarketSnapshot().getText().contains("Market Snapshot"));
-
-				filters.click();
-				break;
-
-			default:
-				break;
+			}catch (StaleElementReferenceException e) {
+				infoFilterList = driver.findElements(By.xpath("//div[@class='imc-filteritem__option']"));
+				String f=infoFilterList.get(i).getText();
 			}
-
-		}
-}
-*/		
-		
-
+		}	
 	}
 
 	public void TS004_VerifyGlobalSearchSearchForCatalogsTest() throws InterruptedException, IOException {
