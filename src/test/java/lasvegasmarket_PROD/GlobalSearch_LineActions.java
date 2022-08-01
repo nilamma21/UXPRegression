@@ -156,7 +156,7 @@ public class GlobalSearch_LineActions extends base {
 		}
 
 		// Verify that the added favorites exhibitor should be removed from Favorites list
-		//Assert.assertFalse(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
+		Assert.assertFalse(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 	}
 
 	@Test(priority = 3)
@@ -175,7 +175,7 @@ public class GlobalSearch_LineActions extends base {
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("searchorderonjuniperline_lvmprod")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("searchorderonjuniperline")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -317,7 +317,7 @@ public class GlobalSearch_LineActions extends base {
 		mpeditlistoptns = atlmppge.getATLMPEditListOptns();
 
 		for (int i = 0; i < mplists.size(); i++) {
-			//System.out.println(mplists.get(i).getText());
+			System.out.println(mplists.get(i).getText());
 			// System.out.println(mpeditlistoptns.get(i).getText());
 			if (mplists.get(i).getText().equals(existinglistname)) {
 				mpeditlistoptns.get(i).click();
@@ -328,7 +328,7 @@ public class GlobalSearch_LineActions extends base {
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 
 		// Delete that added line from list
-		atlmppge.getMoreBtnDeleteOptn_lvmUAT().click();
+		atlmppge.getATLEditListItemMoreBtn().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(8000);
 	}
@@ -504,6 +504,6 @@ public class GlobalSearch_LineActions extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 }
