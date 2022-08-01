@@ -2,6 +2,7 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
+
   <suite name="ATLMrkt_RegressionTestSuite" duration-ms="50912" started-at="2022-08-01T12:09:25Z" finished-at="2022-08-01T12:10:16Z">
     <groups>
     </groups>
@@ -76,6 +77,22 @@ Session ID: a2d17c6e178ad6cf63afe9cede6872e8
           </reporter-output>
         </test-method> <!-- TS003_VerifyGlobalSearchSearchInformationAndFiltersTest -->
       </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
+
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="166314" started-at="2022-07-28T12:18:49Z" finished-at="2022-07-28T12:21:35Z">
+    <groups>
+    </groups>
+    <test name="RegressionTest" duration-ms="166314" started-at="2022-07-28T12:18:49Z" finished-at="2022-07-28T12:21:35Z">
+      <class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@204f30ec]" name="initialize" is-config="true" duration-ms="40634" started-at="2022-07-28T17:48:49Z" finished-at="2022-07-28T17:49:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@204f30ec]" name="TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest" duration-ms="125634" started-at="2022-07-28T17:49:29Z" finished-at="2022-07-28T17:51:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_LeftPaneFilters -->
+
     </test> <!-- RegressionTest -->
   </suite> <!-- ATLMrkt_RegressionTestSuite -->
 </testng-results>

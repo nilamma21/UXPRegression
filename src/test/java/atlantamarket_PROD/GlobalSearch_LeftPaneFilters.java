@@ -5,15 +5,11 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -44,8 +40,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 	ATLExhLineProdActionsPage atlexhact;
 	ATLMarketPlannerPage atlmppge;
 	ATLLeftPaneFilters atlleftpane;
-	
-	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns, allnoteslist,favlist, searchlinetypelist;
+
+	List<WebElement> exhproductlist,prodcatgitemlist,exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns, allnoteslist,favlist, searchlinetypelist;
 
 	@BeforeClass
 	public void initialize() throws IOException, InterruptedException {
@@ -59,25 +55,26 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(7000);
 		//lap.getCloseMarktAdBtn().click();
-		
+
 		//Login to Market Planner
 		//utl.verifyMPLoginFunctionality();
-		
+
 		//Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 	}
-	
+
 	@Test(priority = 1)
-	public void TS001_VerifySelectionOfOneFilterOfProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
+	public void TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// T404: Selection Of One Filter Of Prod Catg From Left Pane Filters
+		// T404: Selection Of Apparel, Vintage Prod Catg From Left Pane Filters
 
 		atlgs = new ATLGlobalSearchPage(driver);
-		atlexhact = new ATLExhLineProdActionsPage(driver);
-		lap = new ATLLandingPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
 		atlleftpane = new ATLLeftPaneFilters(driver);
-		
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		utl = new Utility(driver);
+
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
@@ -85,13 +82,158 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		//Click on Product Categories expand btn
 		atlleftpane.getATLProdCatgExpandBtn().click();
-		
-		atlleftpane.getAccentFurnExpandBtn().click();
+
+		utl.scrollToElement(atlleftpane.getATLApparelVintProdCatg());
+
+		//Select 'Apparel, Vintage' prod category
+		String expectedprodcatg = atlleftpane.getATLApparelVintProdCatg().getText();
+		atlleftpane.getATLApparelVintProdCatg().click();
+		Thread.sleep(8000);
+
+		//Verify the selected Product Category on Exhibitor Digital Showroom page
+		//Select 1st Exhibitor from Search results grid
+		atlleftpane.getATLexhibitor().click();
+
+		//Scroll till Product Categories section
+		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
+		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
+
+		for (int i = 0; i < prodcatgitemlist.size(); i++) {
+			if(atlexhdgshw.getATLProductCategTable().isDisplayed()) {
+				//System.out.println(prodcatgitemlist.get(i).getText());
+				Assert.assertTrue(prodcatgitemlist.get(i).getText().contains(expectedprodcatg));
+				break;
+			}
+		}
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
 
 	@Test(priority = 2)
-	public void TS002_VerifySelectionOfMoreThanOneFilterOfProdCatgFromLeftPaneFiltersTest()
-			throws InterruptedException, IOException {
+	public void TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T404: Selection Of Antique/Vintage Prod Catg From Left Pane Filters
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		atlleftpane = new ATLLeftPaneFilters(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		utl = new Utility(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
+		atlgs.getATLSearchButton().click();
+
+		//Click on Product Categories expand btn
+		atlleftpane.getATLProdCatgExpandBtn().click();
+
+		utl.scrollToElement(atlleftpane.getATLAntiqueVintProdCatg());
+
+		//Select 'Antique/Vintage' prod category
+		String expectedprodcatg = atlleftpane.getATLAntiqueVintProdCatg().getText();
+		atlleftpane.getATLAntiqueVintProdCatg().click();
+		Thread.sleep(8000);
+
+		//Verify the selected Product Category on Product details page
+		utl.scrollToElement(atlexhact.getExhibitorProduct());
+		// Hovering on 1st Product
+		Actions actions = new Actions(driver);
+		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
+		// To mouseover on See Details btn
+		actions.moveToElement(atlexhact.getProdSeeDetailsBtn()).perform();
+		// Click on See Details button
+		actions.click().perform();
+
+		//Scroll till Product Categories section
+		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
+		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
+
+		for (int j = 0; j < prodcatgitemlist.size(); j++) {
+			if(atlexhdgshw.getATLProductCategTable().isDisplayed()) {
+				//System.out.println(prodcatgitemlist.get(i).getText());
+				Assert.assertTrue(prodcatgitemlist.get(j).getText().contains(expectedprodcatg));
+				break;
+			}
+		}
+		driver.get(prop.getProperty("atlmrkturl_prod"));
+	}
+
+	@Test(priority = 3)
+	public void TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T405: Combination within Prod Catgs From Left Pane Filters
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		atlleftpane = new ATLLeftPaneFilters(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		utl = new Utility(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
+		atlgs.getATLSearchButton().click();
+
+		//Click on Product Categories expand btn
+		atlleftpane.getATLProdCatgExpandBtn().click();
+
+		utl.scrollToElement(atlleftpane.getATLAntiqueVintProdCatg());
+
+		//Select 'Antique/Vintage' prod category
+		String expectedprodcatg1 = atlleftpane.getATLAntiqueVintProdCatg().getText();
+		atlleftpane.getATLAntiqueVintProdCatg().click();
+
+		//Select 'Apparel, Vintage' prod category
+		String expectedprodcatg2 = atlleftpane.getATLApparelVintProdCatg().getText();
+		atlleftpane.getATLApparelVintProdCatg().click();
+		Thread.sleep(8000);
+
+		//Verify the selected Product Categories on Exhibitor Digital Showroom page
+		//Select 1st Exhibitor from Search results grid
+		atlleftpane.getATLexhibitor().click();
+
+		//Scroll till Product Categories section
+		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
+		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
+
+		for (int i = 0; i < prodcatgitemlist.size(); i++) {
+			if(atlexhdgshw.getATLProductCategTable().isDisplayed()) {
+				//System.out.println(prodcatgitemlist.get(i).getText());
+				Assert.assertTrue(prodcatgitemlist.get(i).getText().contains(expectedprodcatg1) || prodcatgitemlist.get(i).getText().contains(expectedprodcatg2));
+				break;
+			}
+		}
+		driver.navigate().back();
+		Thread.sleep(5000);
+		
+		//Verify the selected Product Category on Product details page
+		utl.scrollToElement(atlexhact.getProductForMultipleCatg());
+		// Hovering on 1st Product
+		Actions actions = new Actions(driver);
+		actions.moveToElement(atlexhact.getProductForMultipleCatg()).perform();
+		// To mouseover on See Details btn
+		actions.moveToElement(atlexhact.getThirdExhProdSeeDetailsBtn()).perform();
+		// Click on See Details button
+		actions.click().perform();
+
+		//Scroll till Product Categories section
+		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
+		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
+
+		for (int j = 0; j < prodcatgitemlist.size(); j++) {
+			if(atlexhdgshw.getATLProductCategTable().isDisplayed()) {
+				//System.out.println(prodcatgitemlist.get(i).getText());
+				Assert.assertTrue(prodcatgitemlist.get(j).getText().contains(expectedprodcatg1) || prodcatgitemlist.get(j).getText().contains(expectedprodcatg2));
+				break;
+			}
+		}
+		driver.get(prop.getProperty("atlmrkturl_prod"));
+
+	}
+	/*	@Test(priority = 2)
+	public void TS002_VerifySelectionOfMoreThanOneFilterOfProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T405: Left pane Filters : Product Categories Filter : Combined within
 
@@ -102,6 +244,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		atlleftpane = new ATLLeftPaneFilters(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
@@ -136,7 +279,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 			}
 		}
 		Assert.assertTrue(var2);
-		
+
 		// Store 1st exhibitor name
 		String exhName = atlleftpane.getATLexhibitor().getText();
 		System.out.println("Exhibitor Name : " + exhName);
@@ -148,7 +291,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		boolean var3=false;
 		for (WebElement flC : categoris) {
 			// Verify selected filter and its respected categories
-			
+
 			if (flC.getText().equals(prop.getProperty("filter1"))
 					&& flC.getText().equals(prop.getProperty("filter2")));
 			{
@@ -156,10 +299,10 @@ public class GlobalSearch_LeftPaneFilters extends base {
 				var3=true;
 				break;
 			}
-			
+
 		}
 		Assert.assertTrue(var3);
-	}
+	}*/
 
 	/*@AfterClass
 	public void tearDown()

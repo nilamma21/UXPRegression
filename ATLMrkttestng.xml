@@ -8,11 +8,16 @@
 
 	<test thread-count="5" name="RegressionTest">
 		<classes>
+
 <!-- 			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
+
+			<!-- <class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
+
 			<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
 			<class name="atlantamarket_PROD.FloorPlans" /> -->
+
 			
 			<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
 			<methods>
@@ -20,6 +25,14 @@
 			<!--<include name="TS004_VerifyGlobalSearchSearchForBlogTest" /> -->
 			</methods>
 			
+
+			<class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters"/>
+			<methods>
+			<include name="TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest"/>
+			</methods>
+			
+			
+
 		</classes>
 
 			<!-- <listners>
