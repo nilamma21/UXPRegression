@@ -11,7 +11,7 @@
 
 <!-- 			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
 
-			<!-- <class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
+			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
 
 			<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
@@ -26,11 +26,7 @@
 			</methods>
 			
 
-			<class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters"/>
-			<methods>
-			<include name="TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest"/>
-			</methods>
-			
+		
 			
 
 		</classes>
