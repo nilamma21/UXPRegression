@@ -26,6 +26,7 @@ import pageObjects.AtlantaMarket.ATLLandingPage;
 import pageObjects.AtlantaMarket.ATLLoginPage;
 import pageObjects.AtlantaMarket.ATLMarketPlannerPage;
 import pageObjects.AtlantaMarket.ATLProductDetailsPage;
+import pageObjects.LasVegasMarket.LVMGlobalSearchPage;
 import resources.GenerateData;
 import resources.Utility;
 import resources.base;
@@ -266,6 +267,54 @@ public class GlobalSearch_SearchFor extends base {
 
 		Assert.assertTrue(atlgs.getATLSearchResultBlog().getText().contains("blog"));
 
+	}
+	
+	public void TS005_VerifyShowSpecialsTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T425: Verify Show Specials option in global search
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearch")));
+
+		atlgs.getATLSearchButton().click();
+		Thread.sleep(10000);
+		
+		atlgs.getatlseealllineslink().click();
+		
+		atlgs.getatlShowSpecialsTab().click();
+		
+		//Verify Show Specials section
+		Assert.assertTrue(atlgs.getatlVerifyShowSpecials().isDisplayed());
+		System.out.println("Show Sepcials section is displayed properly");
+		
+	}
+	
+	public void TS006_VerifyEventsTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T425: Verify Events option in global search
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys("   ");
+
+		atlgs.getATLSearchButton().click();
+		Thread.sleep(10000);
+		
+		atlgs.getatlseealllineslink().click();
+		
+		atlgs.getatlShowSpecialsTab().click();
+		
+		//Verify Show Specials section
+		Assert.assertTrue(atlgs.getatlVerifyShowSpecials().isDisplayed());
+		System.out.println("Show Sepcials section is displayed properly");
+		
 	}
 
 	/*
