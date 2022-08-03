@@ -43,9 +43,18 @@ public class ATLGlobalSearchPage {
 	By atlInfoSearchSeeMoreDetailsBtn = By.xpath("//a[@href='/exhibitor']"); //Locator for See More Details Btn
 	By atlExhibitorFilter = By.xpath("(//label[@class='imc-checkbox--label imc-filteritem--label-width imc-type--title-2-ui'])[1]"); //Locator for Exhibitor filter
 	By atlExhibitorHeader = By.xpath("//div[@class='imc-gallery imc-gallery--65-35 breadcrumbs__round']//ul//li[2]/a[1]"); //Locator for Exhibitor Header
+
+	By atlExhibitorCatalogName = By.xpath("//div[@class='imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div[2]//div[1]/div[1]/div[1]//a[1]/div[1]/div[1]/span[1]/span[1]"); //Locator for Exhibitor Catalog name
+	By atlArticleHeader = By.xpath("//div[@id='root']/section[1]/section[1]/section[1]/h1[1]"); //Locator for Article Header	
+	By atlArticleTag = By.xpath("//div[@class='imc-blog-tag-module imc-vr--titan imc-breakpoint-display--hide-mobile']/span[1]"); //Locator for Article Tag
+	By atlArticleName = By.xpath("//div[@class='imc-vr--xxlarge imc-margin--top--large--mobile']/div[1]/div[1]/a[1]"); //Locator for Article Name
+	By atlArticleSeeMoreBtn = By.xpath("//div[@class='imc-vr--xxlarge imc-margin--top--large--mobile']/div[1]/div[2]/div[3]/a[1]"); //Locator for Article See More Btn
+	By atlBlogSeeAllBtn = By.xpath("//div[@class='imc-vr--xxlarge imc-margin--top--large--mobile']/div[1]/div[2]/div[3]/a[1]"); //Locator for Blog See All Btn
+
 	By atlseealllineslink = By.xpath("//a[@class = 'imc-exhibitorcard--link']"); //Locator for Sell All lines link
 	By atlShowSpecialsTab = By.xpath("//a[@id = 'Specials']"); //Locator for Show Specials tab
 	By atlVerifyShowSpecials = By.xpath("//div[@class = 'imc-tabs__body imc-section']"); //Locator for Show Specials section
+
 	
 	public ATLGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -147,9 +156,11 @@ Thread.sleep(5000);
 		wait.until(ExpectedConditions.elementToBeClickable(atlInfoSearchTopicsFilter));*/
 		return driver.findElement(atlInfoSearchTopicsFilter);
 	}		
-	public WebElement getATLInfoSearchTopicsMarketSnapshot() {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.elementToBeClickable(atlInfoSearchTopicsMarketSnapshot));
+	public WebElement getATLInfoSearchTopicsMarketSnapshot() throws InterruptedException {
+		/*wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlInfoSearchTopicsMarketSnapshot));*/
+		Thread.sleep(5000);
+
 		return driver.findElement(atlInfoSearchTopicsMarketSnapshot);
 	}		
 	public WebElement getATLInfoSearchSeeMoreDetailsBtn() {
@@ -173,11 +184,38 @@ Thread.sleep(5000);
 		wait.until(ExpectedConditions.elementToBeClickable(atlInfosearchtxtbx));
 		return driver.findElement(atlInfosearchtxtbx);
 	}								
-	public WebElement getATLInfosearchbtn() {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.elementToBeClickable(atlInfosearchbtn));
+	public WebElement getATLInfosearchbtn() throws InterruptedException {
+		Thread.sleep(5000);
 		return driver.findElement(atlInfosearchbtn);
 	}								
+
+	public WebElement getATLExhibitorCatalogName() throws InterruptedException {
+		Thread.sleep(5000);
+		return driver.findElement(atlExhibitorCatalogName);
+	}								
+	public WebElement getATLArticleHeader() throws InterruptedException {
+		Thread.sleep(5000);
+		return driver.findElement(atlArticleHeader);
+	}								
+	public WebElement getATLArticleTag() throws InterruptedException {
+		Thread.sleep(5000);
+		return driver.findElement(atlArticleTag);
+	}								
+	public WebElement getATLArticleName() throws InterruptedException {
+		Thread.sleep(5000);
+		return driver.findElement(atlArticleName);
+	}								
+	public WebElement getATLArticleSeeMoreBtn() throws InterruptedException {
+		Thread.sleep(5000);
+		return driver.findElement(atlArticleSeeMoreBtn);
+	}								
+	public WebElement getATLBlogSeeAllBtn() throws InterruptedException {
+		Thread.sleep(5000);
+		return driver.findElement(atlBlogSeeAllBtn);
+	}								
+									
+	
+
 	public WebElement getatlseealllineslink() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.elementToBeClickable(atlseealllineslink));
@@ -193,6 +231,7 @@ Thread.sleep(5000);
 		wait.until(ExpectedConditions.elementToBeClickable(atlVerifyShowSpecials));
 		return driver.findElement(atlVerifyShowSpecials);
 	}
+
 }
 
 
