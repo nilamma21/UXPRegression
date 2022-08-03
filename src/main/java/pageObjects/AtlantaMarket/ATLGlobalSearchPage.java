@@ -43,6 +43,9 @@ public class ATLGlobalSearchPage {
 	By atlInfoSearchSeeMoreDetailsBtn = By.xpath("//a[@href='/exhibitor']"); //Locator for See More Details Btn
 	By atlExhibitorFilter = By.xpath("(//label[@class='imc-checkbox--label imc-filteritem--label-width imc-type--title-2-ui'])[1]"); //Locator for Exhibitor filter
 	By atlExhibitorHeader = By.xpath("//div[@class='imc-gallery imc-gallery--65-35 breadcrumbs__round']//ul//li[2]/a[1]"); //Locator for Exhibitor Header
+	By atlseealllineslink = By.xpath("//a[@class = 'imc-exhibitorcard--link']"); //Locator for Sell All lines link
+	By atlShowSpecialsTab = By.xpath("//a[@id = 'Specials']"); //Locator for Show Specials tab
+	By atlVerifyShowSpecials = By.xpath("//div[@class = 'imc-tabs__body imc-section']"); //Locator for Show Specials section
 	
 	public ATLGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -175,8 +178,21 @@ Thread.sleep(5000);
 		wait.until(ExpectedConditions.elementToBeClickable(atlInfosearchbtn));
 		return driver.findElement(atlInfosearchbtn);
 	}								
-		
-	
+	public WebElement getatlseealllineslink() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlseealllineslink));
+		return driver.findElement(atlseealllineslink);
+	}	
+	public WebElement getatlShowSpecialsTab() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlShowSpecialsTab));
+		return driver.findElement(atlShowSpecialsTab);
+	}
+	public WebElement getatlVerifyShowSpecials() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlVerifyShowSpecials));
+		return driver.findElement(atlVerifyShowSpecials);
+	}
 }
 
 

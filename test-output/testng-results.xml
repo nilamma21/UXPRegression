@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="65448" started-at="2022-08-01T18:25:36Z" finished-at="2022-08-01T18:26:42Z">
+  <suite name="LVM_RegressionTestSuite" duration-ms="44790" started-at="2022-08-03T06:23:16Z" finished-at="2022-08-03T06:24:01Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="65448" started-at="2022-08-01T18:25:36Z" finished-at="2022-08-01T18:26:42Z">
+    <test name="RegressionTest" duration-ms="44790" started-at="2022-08-03T06:23:16Z" finished-at="2022-08-03T06:24:01Z">
       <class name="atlantamarket_PROD.GlobalSearch_SearchFor">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@6eebc39e]" name="initialize" is-config="true" duration-ms="27085" started-at="2022-08-01T23:55:36Z" finished-at="2022-08-01T23:56:03Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@146ba0ac]" name="initialize" is-config="true" duration-ms="31177" started-at="2022-08-03T11:53:16Z" finished-at="2022-08-03T11:53:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS003_VerifyGlobalSearchSearchInformationAndFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@6eebc39e]" name="TS003_VerifyGlobalSearchSearchInformationAndFiltersTest" duration-ms="38324" started-at="2022-08-01T23:56:03Z" finished-at="2022-08-01T23:56:42Z">
+        <test-method status="PASS" signature="TS005_VerifyShowSpecialsTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@146ba0ac]" name="TS005_VerifyShowSpecialsTest" duration-ms="13533" started-at="2022-08-03T11:53:47Z" finished-at="2022-08-03T11:54:01Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS003_VerifyGlobalSearchSearchInformationAndFiltersTest -->
+        </test-method> <!-- TS005_VerifyShowSpecialsTest -->
       </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
     </test> <!-- RegressionTest -->
-  </suite> <!-- ATLMrkt_RegressionTestSuite -->
+  </suite> <!-- LVM_RegressionTestSuite -->
 </testng-results>
