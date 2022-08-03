@@ -21,7 +21,7 @@
 			
 			<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
 			<methods>
-			 <include name="TS003_VerifyGlobalSearchSearchInformationAndFiltersTest" />
+			  <!-- <include name="TS004_VerifyGlobalSearchSearchForCatalogsTest" /> -->
 			<!--<include name="TS004_VerifyGlobalSearchSearchForBlogTest" /> -->
 			</methods>
 			
