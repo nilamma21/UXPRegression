@@ -9,9 +9,11 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -41,7 +43,7 @@ public class MarketPlanner extends base {
 	ATLLoginPage lp;
 	ATLLandingPage lap;
 	ATLMarketPlannerPage atlmppge;
-	
+
 	@BeforeClass
 	public void initialize() throws IOException, InterruptedException {
 		driver = initializeDriver(); // requires for Parallel text execution
@@ -52,8 +54,8 @@ public class MarketPlanner extends base {
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 		lap.getIUnderstandBtn().click();
-		Thread.sleep(10000);
-		lap.getCloseMarktAdBtn().click();
+		Thread.sleep(8000);
+		// lap.getCloseMarktAdBtn().click();
 	}
 
 	@Test(priority = 1)
@@ -71,16 +73,125 @@ public class MarketPlanner extends base {
 		utl.verifyMPLoginFunctionality();
 
 		Thread.sleep(6000);
-		lap.getCloseMarktAdBtn().click();
+		// lap.getCloseMarktAdBtn().click();
 
 		// Verify that Market Planner Home page should be displayed
-		Assert.assertTrue(lap.getMPLinkText().isDisplayed());	
+		Assert.assertTrue(lap.getMPLinkText().isDisplayed());
 	}
-	
+
+	@Test(priority = 2)
+
+	public void TS002_VerifyMarketPlannerChannelSelectorTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP-T48: Market Planner: Channel Selector
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		// Login to Market Planner
+		utl.verifyMPLoginFunctionality();
+		Thread.sleep(6000);
+		// Click on Market Planner
+		lap.getMPLinkText().click();
+		Thread.sleep(6000);
+		// Verify MP page
+		Assert.assertTrue(driver.getTitle().contains("Market Planner"));
+
+		Select selectAMC = new Select(atlmppge.getselectChannel());
+		// Select AMC
+		selectAMC.selectByVisibleText("AmericasMart");
+		// verify AMC MP Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://uat-amc.imcmvdp.com/Market-Planner"));
+		System.out.println("Select AMC");
+		driver.get("https://uat-atlmkt.imcmvdp.com/Market-Planner");
+		Thread.sleep(10000);
+
+		// Select ATL APP
+		Select selectATLApp = new Select(atlmppge.getselectChannel());
+		selectATLApp.selectByVisibleText("Atlanta Apparel");
+		// verify Atlanta App Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://uat-atlapp.imcmvdp.com/Market-Planner"));
+		System.out.println("Select ATLAPP");
+
+		driver.get("https://uat-atlmkt.imcmvdp.com/Market-Planner");
+		Thread.sleep(5000);
+
+		Select selectLVA = new Select(atlmppge.getselectChannel());
+		selectLVA.selectByVisibleText("Las Vegas Apparel");
+		// verify Atlanta Market Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://uat-lvapp.imcmvdp.com/Market-Planner"));
+		System.out.println("Select Las Vegas Apparel");
+		driver.get("https://uat-atlmkt.imcmvdp.com/Market-Planner");
+		Thread.sleep(5000);
+
+		Select selectLVM = new Select(atlmppge.getselectChannel());
+		selectLVM.selectByVisibleText("Las Vegas Market");
+		// verify Atlanta Market Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://uat-lvm.imcmvdp.com/Market-Planner"));
+		System.out.println("Select Las Vegas Market");
+		driver.get("https://uat-atlmkt.imcmvdp.com/Market-Planner");
+		Thread.sleep(5000);
+
+		Select selectLVV = new Select(atlmppge.getselectChannel());
+		selectLVV.selectByVisibleText("Las Vegas VOW");
+		// verify Atlanta Market Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.change.me/Market-Planner"));
+		System.out.println("Select Las Vegas VOW");
+		driver.get("https://uat-atlmkt.imcmvdp.com/Market-Planner");
+		Thread.sleep(5000);
+
+		Select selectATLM = new Select(atlmppge.getselectChannel());
+		selectATLM.selectByVisibleText("Atlanta Market");
+		// verify Atlanta Market Page
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://uat-atlmkt.imcmvdp.com/Market-Planner"));
+		System.out.println("Select ATL Market");
+		driver.get("https://uat-atlmkt.imcmvdp.com/Market-Planner");
+		Thread.sleep(5000);
+	}
+
+	@Test(priority = 3)
+
+	public void TS003_VerifyMarketPlannerInvalidLoginCredentialsTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP-T221: Market Planner: Login: Login with invalid login credentials
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		// Invalid Password
+		utl.verifyMPInvalidLoginFunctionality((prop.getProperty("username")), (prop.getProperty("invalidPassword")));
+		// Verify incorrect password error msg
+		Assert.assertTrue(
+				atlmppge.getInvalidPasswordError().getText().contains(prop.getProperty("incorrectPasswordErrorMsg")));
+
+		driver.get(prop.getProperty("atlmrkturl_uat"));
+
+		// non-registered (Invalid) email address and Invalid password
+		utl.verifyMPInvalidLoginFunctionality((prop.getProperty("invalidUsername")),
+				(prop.getProperty("invalidPassword")));
+		// Verify error msg
+		Assert.assertTrue(
+				atlmppge.getInvalidPasswordError().getText().contains(prop.getProperty("invalidUserIdErrorMsg")));
+
+		driver.get(prop.getProperty("atlmrkturl_uat"));
+		// without Email and Password
+		lap.getLogin().click();
+		lp.getSignInBtn().click();
+		// Verify Enter email error msg
+		Assert.assertTrue(atlmppge.getEnterEmailErrorMsg().getText().contains(prop.getProperty("EnterEmailErrorMsg")));
+		// Verify Enter password error msg
+		Assert.assertTrue(
+				atlmppge.getEnterPasswordErrorMsg().getText().contains(prop.getProperty("EnterPasswordErrorMsg")));
+	}
+
 	@AfterClass
-	public void tearDown()
-	{
-		driver.quit();
+	public void tearDown() {
+		// driver.quit();
 	}
 
 }
