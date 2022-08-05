@@ -5,7 +5,7 @@
     <classes>
       <class name="atlantamarket_UAT.MarketPlanner">
         <methods>
-          <include name="TS003_VerifyMarketPlannerInvalidLoginCredentialsTest"/>
+          <include name="TS004_VerifyMarketPlannerSignOutTest"/>
           <include name="initialize"/>
           <include name="tearDown"/>
         </methods>
