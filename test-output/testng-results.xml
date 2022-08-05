@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="92336" started-at="2022-08-04T11:13:17Z" finished-at="2022-08-04T11:14:49Z">
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="76424" started-at="2022-08-05T11:22:04Z" finished-at="2022-08-05T11:23:21Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="92336" started-at="2022-08-04T11:13:17Z" finished-at="2022-08-04T11:14:49Z">
+    <test name="RegressionTest" duration-ms="76424" started-at="2022-08-05T11:22:04Z" finished-at="2022-08-05T11:23:21Z">
       <class name="atlantamarket_UAT.MarketPlanner">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.MarketPlanner@146ba0ac]" name="initialize" is-config="true" duration-ms="37323" started-at="2022-08-04T16:43:17Z" finished-at="2022-08-04T16:43:54Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.MarketPlanner@e25b2fe]" name="initialize" is-config="true" duration-ms="34022" started-at="2022-08-05T16:52:04Z" finished-at="2022-08-05T16:52:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS003_VerifyMarketPlannerInvalidLoginCredentialsTest()[pri:0, instance:atlantamarket_UAT.MarketPlanner@146ba0ac]" name="TS003_VerifyMarketPlannerInvalidLoginCredentialsTest" duration-ms="54977" started-at="2022-08-04T16:43:54Z" finished-at="2022-08-04T16:44:49Z">
+        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:atlantamarket_UAT.MarketPlanner@e25b2fe]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="29101" started-at="2022-08-05T16:52:38Z" finished-at="2022-08-05T16:53:08Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS003_VerifyMarketPlannerInvalidLoginCredentialsTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.MarketPlanner@146ba0ac]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-08-04T16:44:49Z" finished-at="2022-08-04T16:44:49Z">
+        </test-method> <!-- TS001_VerifyMarketPlannerLoginTest -->
+        <test-method status="PASS" signature="TS004_VerifyMarketPlannerSignOutTest()[pri:0, instance:atlantamarket_UAT.MarketPlanner@e25b2fe]" name="TS004_VerifyMarketPlannerSignOutTest" duration-ms="13271" started-at="2022-08-05T16:53:08Z" finished-at="2022-08-05T16:53:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyMarketPlannerSignOutTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.MarketPlanner@e25b2fe]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-08-05T16:53:21Z" finished-at="2022-08-05T16:53:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

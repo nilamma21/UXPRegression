@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-ATLMrkt_RegressionTestSuite">
-                    <span>C:\Users\swapnili\UXPRegression_jul\ATLMrkttestng.xml</span>
+                    <span>C:\Users\shradhama\UXPRegression\ATLMrkttestng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,7 +101,12 @@
                     <div class="method-list-content passed suite-ATLMrkt_RegressionTestSuite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket_UAT.MarketPlanner" hash-for-method="TS003_VerifyMarketPlannerInvalidLoginCredentialsTest">TS003_VerifyMarketPlannerInvalidLoginCredentialsTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket_UAT.MarketPlanner" hash-for-method="TS001_VerifyMarketPlannerLoginTest">TS001_VerifyMarketPlannerLoginTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket_UAT.MarketPlanner" hash-for-method="TS004_VerifyMarketPlannerSignOutTest">TS004_VerifyMarketPlannerSignOutTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-ATLMrkt_RegressionTestSuite -->
@@ -124,9 +129,16 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TS003_VerifyMarketPlannerInvalidLoginCredentialsTest">
-                  </a> <!-- TS003_VerifyMarketPlannerInvalidLoginCredentialsTest -->
-                  <span class="method-name">TS003_VerifyMarketPlannerInvalidLoginCredentialsTest</span>
+                  <a name="TS001_VerifyMarketPlannerLoginTest">
+                  </a> <!-- TS001_VerifyMarketPlannerLoginTest -->
+                  <span class="method-name">TS001_VerifyMarketPlannerLoginTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TS004_VerifyMarketPlannerSignOutTest">
+                  </a> <!-- TS004_VerifyMarketPlannerSignOutTest -->
+                  <span class="method-name">TS004_VerifyMarketPlannerSignOutTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -134,7 +146,7 @@
         </div> <!-- panel ATLMrkt_RegressionTestSuite -->
         <div panel-name="test-xml-ATLMrkt_RegressionTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\swapnili\UXPRegression_jul\ATLMrkttestng.xml</span>
+            <span class="header-content">C:\Users\shradhama\UXPRegression\ATLMrkttestng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -145,7 +157,8 @@
     &lt;classes&gt;
       &lt;class name=&quot;atlantamarket_UAT.MarketPlanner&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;TS003_VerifyMarketPlannerInvalidLoginCredentialsTest&quot;/&gt;
+          &lt;include name=&quot;TS001_VerifyMarketPlannerLoginTest&quot;/&gt;
+          &lt;include name=&quot;TS004_VerifyMarketPlannerSignOutTest&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- atlantamarket_UAT.MarketPlanner --&gt;
     &lt;/classes&gt;
@@ -187,16 +200,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TS003_VerifyMarketPlannerInvalidLoginCredentialsTest')
+data.setCell(0, 1, 'TS001_VerifyMarketPlannerLoginTest')
 data.setCell(0, 2, 'atlantamarket_UAT.MarketPlanner')
-data.setCell(0, 3, 54977);
+data.setCell(0, 3, 29101);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'TS004_VerifyMarketPlannerSignOutTest')
+data.setCell(1, 2, 'atlantamarket_UAT.MarketPlanner')
+data.setCell(1, 3, 13271);
 window.suiteTableData['ATLMrkt_RegressionTestSuite']= { tableData: data, tableDiv: 'times-div-ATLMrkt_RegressionTestSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 54 seconds</span>
+              <span class="suite-total-time">Total running time: 42 seconds</span>
               <div id="times-div-ATLMrkt_RegressionTestSuite">
               </div> <!-- times-div-ATLMrkt_RegressionTestSuite -->
             </div> <!-- times-div -->
@@ -217,9 +234,9 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">atlantamarket_UAT.MarketPlanner</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">TS002_VerifyMarketPlannerChannelSelectorTest</span>
+                <span class="ignored-method-name">TS003_VerifyMarketPlannerInvalidLoginCredentialsTest</span>
                 <br/>
-                <span class="ignored-method-name">TS001_VerifyMarketPlannerLoginTest</span>
+                <span class="ignored-method-name">TS002_VerifyMarketPlannerChannelSelectorTest</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -237,12 +254,16 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">TS003_VerifyMarketPlannerInvalidLoginCredentialsTest</span>
-                <span class="method-start">37331 ms</span>
+                <span class="method-name">TS001_VerifyMarketPlannerLoginTest</span>
+                <span class="method-start">34030 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS004_VerifyMarketPlannerSignOutTest</span>
+                <span class="method-start">63141 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">92321 ms</span>
+                <span class="method-start">76413 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
