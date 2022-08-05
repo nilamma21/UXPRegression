@@ -224,6 +224,29 @@ public class MarketPlanner extends base {
 		
 		
 
+	@Test(priority = 4)
+	public void TS004_VerifyMarketPlannerSignOutTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP-001: To verify the Market Planner sign out functionality
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//Click Welcome Text
+		atlmppge.getwelcometext().click();
+		
+		//Click Sign out link 
+		atlmppge.getsignout().click();
+		
+		//Verify user signed out successfully
+		Assert.assertTrue(driver.getCurrentUrl().equalsIgnoreCase("https://uat-atlmkt.imcmvdp.com/"));
+		System.out.println("Market Planner signed out successfully.");
+	}
+	
 	@AfterClass
 	public void tearDown() {
 		// driver.quit();

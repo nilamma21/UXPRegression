@@ -40,6 +40,7 @@ public class ATLMarketPlannerPage {
 	By invalidPasswordError = By.xpath("//div[@class='error pageLevel']/p[1]"); //Locator for invalid Password
 	By enterEmailErrorMsg = By.xpath("(//div[@class='error itemLevel']/p[1])[1]"); //Locator for Enter Email Error msg
 	By enterPasswordErrorMsg = By.xpath("(//div[@class='error itemLevel']/p[1])[2]"); //Locator for Enter password error msg
+
 	By mpListLeftPannel = By.xpath("//div[@class='imc-vertical-tabs-nav']/a[1]"); //Locator for List Left Pannel
 	By mpEditListoption = By.xpath("(//ul[@class='imc-market-planner-list']/li/div[2]/span[2]/a[1])[1]"); //Locator for Edit List option 
 	By mpQuickAdd = By.xpath("//div[@class='imc-gallery__item market-planner--list-sidebar imc-breakpoint-display--hide-mobile']//input[1]"); //Locator for QuickAdd
@@ -47,6 +48,11 @@ public class ATLMarketPlannerPage {
 	By mpQuickAddedExpName = By.xpath("//div[@class='imc-loading-relative']/div[3]/li[1]/div[1]/div[1]/div[1]/a[1]"); //Locator for 1st EXP
 	By mpArrangeBtn = By.xpath("//div[@class='imc-gallery imc-gallery--1-2']/div[2]/button[1]"); //Locator for Arrange btn
 	
+
+	By welcometext = By.xpath("//div[@class = 'imc-header-user-icon--wrapper']/button[1]"); //Locator for Market Planner welcome text
+	By signout = By.xpath("//div[@class = 'imc-header-user-icon--links-settings']/a[3]"); //Locator for Signout link
+	By verifysignout = By.xpath("//div[@class = 'imc-header__logo']"); //Locator for Verify Sign out
+
 	
 	public ATLMarketPlannerPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -175,6 +181,7 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(enterPasswordErrorMsg));
 		return driver.findElement(enterPasswordErrorMsg);
 	}					
+
 	public WebElement getMpListLeftPannel() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpListLeftPannel));
@@ -208,6 +215,23 @@ public class ATLMarketPlannerPage {
 
 	
 		
+
+	public WebElement getwelcometext() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(welcometext));
+		return driver.findElement(welcometext);
+	}
+	public WebElement getsignout() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(signout));
+		return driver.findElement(signout);
+	}
+	public WebElement getverifysignout() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(verifysignout));
+		return driver.findElement(verifysignout);
+	}
+
 }
 
 
