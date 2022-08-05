@@ -1,65 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="8" passed="8">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="501030" started-at="2022-08-03T09:53:15Z" finished-at="2022-08-03T10:01:36Z">
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="92336" started-at="2022-08-04T11:13:17Z" finished-at="2022-08-04T11:14:49Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="501030" started-at="2022-08-03T09:53:15Z" finished-at="2022-08-03T10:01:36Z">
-      <class name="atlantamarket_PROD.GlobalSearch_SearchFor">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@754ba872]" name="initialize" is-config="true" duration-ms="29650" started-at="2022-08-03T15:23:15Z" finished-at="2022-08-03T15:23:45Z">
+    <test name="RegressionTest" duration-ms="92336" started-at="2022-08-04T11:13:17Z" finished-at="2022-08-04T11:14:49Z">
+      <class name="atlantamarket_UAT.MarketPlanner">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.MarketPlanner@146ba0ac]" name="initialize" is-config="true" duration-ms="37323" started-at="2022-08-04T16:43:17Z" finished-at="2022-08-04T16:43:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyGlobalSearchSearchForInformationTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@754ba872]" name="TS001_VerifyGlobalSearchSearchForInformationTest" duration-ms="14547" started-at="2022-08-03T15:23:45Z" finished-at="2022-08-03T15:23:59Z">
+        <test-method status="PASS" signature="TS003_VerifyMarketPlannerInvalidLoginCredentialsTest()[pri:0, instance:atlantamarket_UAT.MarketPlanner@146ba0ac]" name="TS003_VerifyMarketPlannerInvalidLoginCredentialsTest" duration-ms="54977" started-at="2022-08-04T16:43:54Z" finished-at="2022-08-04T16:44:49Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS001_VerifyGlobalSearchSearchForInformationTest -->
-        <test-method status="PASS" signature="TS002_VerifyGlobalSearchSearchForInformationSearchBoxTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@754ba872]" name="TS002_VerifyGlobalSearchSearchForInformationSearchBoxTest" duration-ms="16750" started-at="2022-08-03T15:23:59Z" finished-at="2022-08-03T15:24:16Z">
+        </test-method> <!-- TS003_VerifyMarketPlannerInvalidLoginCredentialsTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.MarketPlanner@146ba0ac]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-08-04T16:44:49Z" finished-at="2022-08-04T16:44:49Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS002_VerifyGlobalSearchSearchForInformationSearchBoxTest -->
-        <test-method status="PASS" signature="TS003_VerifyGlobalSearchSearchInformationAndFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@754ba872]" name="TS003_VerifyGlobalSearchSearchInformationAndFiltersTest" duration-ms="47864" started-at="2022-08-03T15:24:16Z" finished-at="2022-08-03T15:25:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS003_VerifyGlobalSearchSearchInformationAndFiltersTest -->
-        <test-method status="PASS" signature="TS004_VerifyGlobalSearchSearchForCatalogsTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@754ba872]" name="TS004_VerifyGlobalSearchSearchForCatalogsTest" duration-ms="31843" started-at="2022-08-03T15:25:04Z" finished-at="2022-08-03T15:25:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS004_VerifyGlobalSearchSearchForCatalogsTest -->
-        <test-method status="PASS" signature="TS005_VerifyGlobalSearchSearchForArticlesTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@754ba872]" name="TS005_VerifyGlobalSearchSearchForArticlesTest" duration-ms="44370" started-at="2022-08-03T15:25:36Z" finished-at="2022-08-03T15:26:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS005_VerifyGlobalSearchSearchForArticlesTest -->
-        <test-method status="PASS" signature="TS006_VerifyGlobalSearchSearchArticlesFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@754ba872]" name="TS006_VerifyGlobalSearchSearchArticlesFiltersTest" duration-ms="238812" started-at="2022-08-03T15:26:20Z" finished-at="2022-08-03T15:30:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS006_VerifyGlobalSearchSearchArticlesFiltersTest -->
-        <test-method status="PASS" signature="TS007_VerifyGlobalSearchSearchForArticlesSearchBoxTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@754ba872]" name="TS007_VerifyGlobalSearchSearchForArticlesSearchBoxTest" duration-ms="42452" started-at="2022-08-03T15:30:19Z" finished-at="2022-08-03T15:31:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS007_VerifyGlobalSearchSearchForArticlesSearchBoxTest -->
-        <test-method status="PASS" signature="TS008_VerifyGlobalSearchSearchForBlogTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@754ba872]" name="TS008_VerifyGlobalSearchSearchForBlogTest" duration-ms="34667" started-at="2022-08-03T15:31:01Z" finished-at="2022-08-03T15:31:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS008_VerifyGlobalSearchSearchForBlogTest -->
-
-  <suite name="LVM_RegressionTestSuite" duration-ms="44790" started-at="2022-08-03T06:23:16Z" finished-at="2022-08-03T06:24:01Z">
-    <groups>
-    </groups>
-    <test name="RegressionTest" duration-ms="44790" started-at="2022-08-03T06:23:16Z" finished-at="2022-08-03T06:24:01Z">
-      <class name="atlantamarket_PROD.GlobalSearch_SearchFor">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@146ba0ac]" name="initialize" is-config="true" duration-ms="31177" started-at="2022-08-03T11:53:16Z" finished-at="2022-08-03T11:53:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS005_VerifyShowSpecialsTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@146ba0ac]" name="TS005_VerifyShowSpecialsTest" duration-ms="13533" started-at="2022-08-03T11:53:47Z" finished-at="2022-08-03T11:54:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS005_VerifyShowSpecialsTest -->
-
-      </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
+        </test-method> <!-- tearDown -->
+      </class> <!-- atlantamarket_UAT.MarketPlanner -->
     </test> <!-- RegressionTest -->
-  </suite> <!-- LVM_RegressionTestSuite -->
+  </suite> <!-- ATLMrkt_RegressionTestSuite -->
 </testng-results>

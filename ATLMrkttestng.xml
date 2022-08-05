@@ -19,9 +19,9 @@
 			<class name="atlantamarket_PROD.FloorPlans" /> -->
 
 			
-			<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
+			<class name="atlantamarket_UAT.MarketPlanner" />
 			<methods>
-			  <!-- <include name="TS004_VerifyGlobalSearchSearchForCatalogsTest" /> -->
+			  <include name="TS003_VerifyMarketPlannerInvalidLoginCredentialsTest" />
 			<!--<include name="TS004_VerifyGlobalSearchSearchForBlogTest" /> -->
 			</methods>
 			
