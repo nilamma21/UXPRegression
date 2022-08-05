@@ -5,8 +5,8 @@
     <classes>
       <class name="atlantamarket_UAT.MarketPlanner">
         <methods>
-          <include name="TS003_VerifyMarketPlannerInvalidLoginCredentialsTest"/>
           <include name="initialize"/>
+          <include name="TS003_VerifyMarketPlannerChannelSelectorTest"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- atlantamarket_UAT.MarketPlanner -->

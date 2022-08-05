@@ -21,7 +21,7 @@
 			
 			<class name="atlantamarket_UAT.MarketPlanner" />
 			<methods>
-			  <include name="TS003_VerifyMarketPlannerInvalidLoginCredentialsTest" />
+			  <include name="TS003_VerifyMarketPlannerChannelSelectorTest" />
 			<!--<include name="TS004_VerifyGlobalSearchSearchForBlogTest" /> -->
 			</methods>
 			

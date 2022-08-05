@@ -40,6 +40,13 @@ public class ATLMarketPlannerPage {
 	By invalidPasswordError = By.xpath("//div[@class='error pageLevel']/p[1]"); //Locator for invalid Password
 	By enterEmailErrorMsg = By.xpath("(//div[@class='error itemLevel']/p[1])[1]"); //Locator for Enter Email Error msg
 	By enterPasswordErrorMsg = By.xpath("(//div[@class='error itemLevel']/p[1])[2]"); //Locator for Enter password error msg
+	By mpListLeftPannel = By.xpath("//div[@class='imc-vertical-tabs-nav']/a[1]"); //Locator for List Left Pannel
+	By mpEditListoption = By.xpath("(//ul[@class='imc-market-planner-list']/li/div[2]/span[2]/a[1])[1]"); //Locator for Edit List option 
+	By mpQuickAdd = By.xpath("//div[@class='imc-gallery__item market-planner--list-sidebar imc-breakpoint-display--hide-mobile']//input[1]"); //Locator for QuickAdd
+	By mpQuickAddAutosuggetion = By.xpath("//ul[@role='listbox']/li[1]/span[1]/span[1]"); //Locator for 1st Autsuggetion
+	By mpQuickAddedExpName = By.xpath("//div[@class='imc-loading-relative']/div[3]/li[1]/div[1]/div[1]/div[1]/a[1]"); //Locator for 1st EXP
+	By mpArrangeBtn = By.xpath("//div[@class='imc-gallery imc-gallery--1-2']/div[2]/button[1]"); //Locator for Arrange btn
+	
 	
 	public ATLMarketPlannerPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -168,7 +175,39 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(enterPasswordErrorMsg));
 		return driver.findElement(enterPasswordErrorMsg);
 	}					
+	public WebElement getMpListLeftPannel() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpListLeftPannel));
+		return driver.findElement(mpListLeftPannel);
+	}					
+	public WebElement getMpEditListoption() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpEditListoption));
+		return driver.findElement(mpEditListoption);
+	}					
+	public WebElement getMpQuickAdd() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpQuickAdd));
+		return driver.findElement(mpQuickAdd);
+	}					
+	public WebElement getMpQuickAddAutosuggetion() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpQuickAddAutosuggetion));
+		return driver.findElement(mpQuickAddAutosuggetion);
+	}					
+	public WebElement getMpQuickAddedExpName() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpQuickAddedExpName));
+		return driver.findElement(mpQuickAddedExpName);
+	}					
+	public WebElement getMpArrangeBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpArrangeBtn));
+		return driver.findElement(mpArrangeBtn);
+	}					
+
 	
+		
 }
 
 

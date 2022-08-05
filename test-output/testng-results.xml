@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="92336" started-at="2022-08-04T11:13:17Z" finished-at="2022-08-04T11:14:49Z">
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="95919" started-at="2022-08-05T11:35:35Z" finished-at="2022-08-05T11:37:11Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="92336" started-at="2022-08-04T11:13:17Z" finished-at="2022-08-04T11:14:49Z">
+    <test name="RegressionTest" duration-ms="95919" started-at="2022-08-05T11:35:35Z" finished-at="2022-08-05T11:37:11Z">
       <class name="atlantamarket_UAT.MarketPlanner">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.MarketPlanner@146ba0ac]" name="initialize" is-config="true" duration-ms="37323" started-at="2022-08-04T16:43:17Z" finished-at="2022-08-04T16:43:54Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.MarketPlanner@146ba0ac]" name="initialize" is-config="true" duration-ms="36749" started-at="2022-08-05T17:05:35Z" finished-at="2022-08-05T17:06:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS003_VerifyMarketPlannerInvalidLoginCredentialsTest()[pri:0, instance:atlantamarket_UAT.MarketPlanner@146ba0ac]" name="TS003_VerifyMarketPlannerInvalidLoginCredentialsTest" duration-ms="54977" started-at="2022-08-04T16:43:54Z" finished-at="2022-08-04T16:44:49Z">
+        <test-method status="PASS" signature="TS003_VerifyMarketPlannerChannelSelectorTest()[pri:0, instance:atlantamarket_UAT.MarketPlanner@146ba0ac]" name="TS003_VerifyMarketPlannerChannelSelectorTest" duration-ms="59082" started-at="2022-08-05T17:06:12Z" finished-at="2022-08-05T17:07:11Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS003_VerifyMarketPlannerInvalidLoginCredentialsTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.MarketPlanner@146ba0ac]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-08-04T16:44:49Z" finished-at="2022-08-04T16:44:49Z">
+        </test-method> <!-- TS003_VerifyMarketPlannerChannelSelectorTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.MarketPlanner@146ba0ac]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-08-05T17:07:11Z" finished-at="2022-08-05T17:07:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
