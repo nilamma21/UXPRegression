@@ -188,6 +188,41 @@ public class MarketPlanner extends base {
 		Assert.assertTrue(
 				atlmppge.getEnterPasswordErrorMsg().getText().contains(prop.getProperty("EnterPasswordErrorMsg")));
 	}
+	@Test(priority = 3)
+
+	public void TS003_VerifyMarketPlannerChannelSelectorTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP-T232: Market Planner: Lists- Favorites- Add an Exhibitor to Favorites using 'Quick Add'
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		// Login to Market Planner
+		utl.verifyMPLoginFunctionality();
+		Thread.sleep(6000);
+		// Click on Market Planner
+		lap.getMPLinkText().click();
+		Thread.sleep(6000);
+		//Click on List tab
+		atlmppge.getMPHomeListsTab().click();
+		Thread.sleep(10000);
+		//Click on List from left Pannel
+		atlmppge.getMpListLeftPannel().click();
+		//Click on Edit list option in front of fev
+		atlmppge.getMpEditListoption().click();
+		//Enter search term
+		atlmppge.getMpQuickAdd().sendKeys("Test");
+		//Click on 1st suggetion
+		String s=atlmppge.getMpQuickAddAutosuggetion().getText();
+		atlmppge.getMpQuickAddAutosuggetion().click();
+		//Verify Selected exhibitor added or not
+		Assert.assertTrue(s.contains(atlmppge.getMpQuickAddedExpName().getText()));
+		
+	}
+		
+		
 
 	@Test(priority = 4)
 	public void TS004_VerifyMarketPlannerSignOutTest() throws InterruptedException, IOException {

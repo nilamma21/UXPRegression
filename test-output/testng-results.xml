@@ -2,6 +2,22 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
+
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="95919" started-at="2022-08-05T11:35:35Z" finished-at="2022-08-05T11:37:11Z">
+    <groups>
+    </groups>
+    <test name="RegressionTest" duration-ms="95919" started-at="2022-08-05T11:35:35Z" finished-at="2022-08-05T11:37:11Z">
+      <class name="atlantamarket_UAT.MarketPlanner">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.MarketPlanner@146ba0ac]" name="initialize" is-config="true" duration-ms="36749" started-at="2022-08-05T17:05:35Z" finished-at="2022-08-05T17:06:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS003_VerifyMarketPlannerChannelSelectorTest()[pri:0, instance:atlantamarket_UAT.MarketPlanner@146ba0ac]" name="TS003_VerifyMarketPlannerChannelSelectorTest" duration-ms="59082" started-at="2022-08-05T17:06:12Z" finished-at="2022-08-05T17:07:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifyMarketPlannerChannelSelectorTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.MarketPlanner@146ba0ac]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-08-05T17:07:11Z" finished-at="2022-08-05T17:07:11Z">
+
   <suite name="ATLMrkt_RegressionTestSuite" duration-ms="76424" started-at="2022-08-05T11:22:04Z" finished-at="2022-08-05T11:23:21Z">
     <groups>
     </groups>
@@ -20,6 +36,7 @@
           </reporter-output>
         </test-method> <!-- TS004_VerifyMarketPlannerSignOutTest -->
         <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.MarketPlanner@e25b2fe]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-08-05T16:53:21Z" finished-at="2022-08-05T16:53:21Z">
+
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
