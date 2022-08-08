@@ -255,6 +255,7 @@ public class MarketPlanner extends base {
 		lp = new ATLLoginPage(driver);
 		utl = new Utility(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		// Login to Market Planner
@@ -288,6 +289,7 @@ public class MarketPlanner extends base {
 		lp = new ATLLoginPage(driver);
 		utl = new Utility(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		// Login to Market Planner
@@ -306,7 +308,8 @@ public class MarketPlanner extends base {
 		// verify New Group Popup header
 		Assert.assertTrue(atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateGroupPopupHeader")));
 		// Enter Group name
-		atlmppge.getMpListNewGroupNameTxt().sendKeys(prop.getProperty("NewGroupName"));
+		String newGroupname = "Cyb"+ genData.generateRandomString(5);
+		atlmppge.getMpListNewGroupNameTxt().sendKeys(newGroupname);
 		// Clickk on Create Btn
 		atlmppge.getMpListNewGroupCreateBtn().click();
 
@@ -338,8 +341,9 @@ public class MarketPlanner extends base {
 		atlmppge.getMpListNewListBtn().click();
 		// verify New List Popup header
 		Assert.assertTrue(atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateListPopupHeader")));
-		// Enter Group name
-		atlmppge.getMpListNewGroupNameTxt().sendKeys(prop.getProperty("NewListName"));
+		// Enter List name
+		String newlistname = "Cyb"+ genData.generateRandomString(5);
+		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
 		// Select Group from dropdown
 		Select selectGroup = new Select(atlmppge.getmpListNewSelectGroupDropdown());
 		selectGroup.selectByIndex(1);
@@ -349,7 +353,7 @@ public class MarketPlanner extends base {
 		boolean flag = false;
 		for (WebElement list : allList) {
 
-			if (list.getText().contains(prop.getProperty("NewListName"))) {
+			if (list.getText().contains(newlistname)) {
 
 				flag = true;
 				break;

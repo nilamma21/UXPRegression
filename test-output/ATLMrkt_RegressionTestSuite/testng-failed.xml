@@ -5,8 +5,8 @@
     <classes>
       <class name="atlantamarket_UAT.MarketPlanner">
         <methods>
+          <include name="TS007_VerifyMarketPlannerListNewGroupBtnTest"/>
           <include name="initialize"/>
-          <include name="TS008_VerifyMarketPlannerListNewListBtnTest"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- atlantamarket_UAT.MarketPlanner -->
