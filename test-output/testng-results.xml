@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="93027" started-at="2022-08-08T13:05:24Z" finished-at="2022-08-08T13:06:57Z">
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="130408" started-at="2022-08-09T10:45:04Z" finished-at="2022-08-09T10:47:15Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="93027" started-at="2022-08-08T13:05:24Z" finished-at="2022-08-08T13:06:57Z">
+    <test name="RegressionTest" duration-ms="130408" started-at="2022-08-09T10:45:04Z" finished-at="2022-08-09T10:47:15Z">
       <class name="atlantamarket_UAT.MarketPlanner">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.MarketPlanner@4dfa3a9d]" name="initialize" is-config="true" duration-ms="36706" started-at="2022-08-08T18:35:24Z" finished-at="2022-08-08T18:36:01Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.MarketPlanner@4dfa3a9d]" name="initialize" is-config="true" duration-ms="38661" started-at="2022-08-09T16:15:04Z" finished-at="2022-08-09T16:15:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS007_VerifyMarketPlannerListNewGroupBtnTest()[pri:0, instance:atlantamarket_UAT.MarketPlanner@4dfa3a9d]" name="TS007_VerifyMarketPlannerListNewGroupBtnTest" duration-ms="51804" started-at="2022-08-08T18:36:01Z" finished-at="2022-08-08T18:36:52Z">
+        <test-method status="PASS" signature="TS0012_VerifyMarketPlannerAddExhibitorToFevoritesTest()[pri:0, instance:atlantamarket_UAT.MarketPlanner@4dfa3a9d]" name="TS0012_VerifyMarketPlannerAddExhibitorToFevoritesTest" duration-ms="91712" started-at="2022-08-09T16:15:43Z" finished-at="2022-08-09T16:17:15Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS007_VerifyMarketPlannerListNewGroupBtnTest -->
-        <test-method status="PASS" signature="TS008_VerifyMarketPlannerListNewListBtnTest()[pri:0, instance:atlantamarket_UAT.MarketPlanner@4dfa3a9d]" name="TS008_VerifyMarketPlannerListNewListBtnTest" duration-ms="4451" started-at="2022-08-08T18:36:52Z" finished-at="2022-08-08T18:36:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS008_VerifyMarketPlannerListNewListBtnTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.MarketPlanner@4dfa3a9d]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-08-08T18:36:57Z" finished-at="2022-08-08T18:36:57Z">
+        </test-method> <!-- TS0012_VerifyMarketPlannerAddExhibitorToFevoritesTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.MarketPlanner@4dfa3a9d]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-08-09T16:17:15Z" finished-at="2022-08-09T16:17:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
