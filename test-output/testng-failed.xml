@@ -5,7 +5,7 @@
     <classes>
       <class name="atlantamarket_UAT.MarketPlanner">
         <methods>
-          <include name="TS007_VerifyMarketPlannerListNewGroupBtnTest"/>
+          <include name="TS010_RegistrationCardTest"/>
           <include name="initialize"/>
           <include name="tearDown"/>
         </methods>
