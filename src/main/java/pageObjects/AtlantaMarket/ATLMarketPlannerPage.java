@@ -56,10 +56,16 @@ public class ATLMarketPlannerPage {
 	By mpListNewGroupBtn = By.xpath("//div[@class='imc-gallery__item imc-vertical-tabs-content']/div[1]/div[1]/div[2]/button[3]"); //Locator for new Group Btn
 	By mpListNewGroupPopupHeader = By.xpath("//div[@class='imc-modal--content imc-section imc-customlists-form']/h3[1]"); //Locator for new Group popup Header
 	By mpListNewGroupNameTxt = By.xpath("//div[@class='imc-modal--content imc-section imc-customlists-form']/form[1]/div[2]/div[1]/div[1]/input[1]"); //Locator for new Group Text
+	By mpListNameTxt = By.xpath("//div[@class='imc-modal--content imc-section imc-customlists-form']/form[1]/div[3]/div[1]/div[1]/input[1]"); //Locator for new List Text
 	
+	By mpListNewListCreateBtn = By.xpath("//div[@class='imc-modal--content imc-section imc-customlists-form']/form[1]/div[3]/div[3]/input[1]"); //Locator for new List Create Btn
 	By mpListNewGroupCreateBtn = By.xpath("//div[@class='imc-modal--content imc-section imc-customlists-form']/form[1]/div[2]/div[2]/input[1]"); //Locator for new Group Create Btn
 	By mpListNewSelectGroupDropdown = By.xpath("//select[@name='groupName']"); //Locator for Grou Dorpdown
 	By mpListNewCreateBtn = By.xpath("//div[@class='imc-modal--content imc-section imc-customlists-form']/form[1]/div[2]/div[3]/input[1]"); //Locator for Create Btn
+
+	By mpInvalidGrNameMsg = By.xpath("//div[@class='imc-modal--content imc-section imc-customlists-form']/form[1]/div[2]/ul[1]/li[1]"); //Locator for Invalid Gr name msg
+	
+
 	By mpdasboardtab = By.xpath("//div[@class='imc-section imc-market-planner-toolbar ']/div[1]/div[1]/div[2]/div[1]/a[1]"); //Locator for Dashboard tab
 	By mpmyinfotab = By.xpath("//div[@class='imc-mp-toolbar imc-breakpoint-display--hide-mobile']/a[3]"); //Locator for My Info tab
 	By mpregistrationtab = By.xpath("//div[@class='imc-mp-toolbar imc-breakpoint-display--hide-mobile']/a[4]"); //Locator for Registration tab
@@ -76,6 +82,7 @@ public class ATLMarketPlannerPage {
 	By mpmarketdateregcard = By.xpath("//div[@class = 'imc-card  imc-register-card']/div[1]/div[3]"); //Locator for market date in registration card
 	By mpregistrationlink = By.xpath("//div[@class = 'imc-card-section imc-card-footer imc-card-centered']/a[1]"); //Locator for Registration Information link
 	By mpverifyregistrationinformationlink = By.xpath("//div[@class = 'section-wrapper imc-section--basic-white']"); //Locator for verify registration page link
+
 	
 	public ATLMarketPlannerPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -295,6 +302,25 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpListNewCreateBtn));
 		return driver.findElement(mpListNewCreateBtn);
 	}
+
+	public WebElement getMpInvalidGrNameMsg() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpInvalidGrNameMsg));
+		return driver.findElement(mpInvalidGrNameMsg);
+	}
+	public WebElement getMpListNameTxt() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpListNameTxt));
+		return driver.findElement(mpListNameTxt);
+	}
+	public WebElement getMpListNewListCreateBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpListNewListCreateBtn));
+		return driver.findElement(mpListNewListCreateBtn);
+	}
+
+		
+
 	public WebElement getmpdasboardtab() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpdasboardtab));
@@ -375,6 +401,7 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpverifyregistrationinformationlink));
 		return driver.findElement(mpverifyregistrationinformationlink);
 	}
+
 
 
 }

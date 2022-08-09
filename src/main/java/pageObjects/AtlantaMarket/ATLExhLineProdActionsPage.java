@@ -56,6 +56,7 @@ public class ATLExhLineProdActionsPage extends base{
 	By productmorebtn = By.xpath("(//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div[2]/div/div/div/div/div/div/div/div/span[2]/div)[1]"); //Locator for Add to List button for Product on Search Results grid
 	By productformultiplecatg = By.xpath("//div[@class='imc-vr--xxlarge']/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]"); //Locator for product to verify multiple Prod categ selection
 	By seedetailsbtn3rdexhproduct = By.xpath("(//div[@class='imc-gallery imc-gallery--80-20 imc-exhibitorcard--gallery-nowrap'])[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/a[1]"); //Locator for See Details button of 3rd exh product
+	By productFevBtn = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/span[1]/div[1]/button[1]"); //Locator for Fev Btn
 	
 	public ATLExhLineProdActionsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -247,6 +248,13 @@ public class ATLExhLineProdActionsPage extends base{
 		wait.until(ExpectedConditions.visibilityOfElementLocated(seedetailsbtn3rdexhproduct));
 		return driver.findElement(seedetailsbtn3rdexhproduct);
 	}
+	public WebElement getProductFevBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(productFevBtn));
+		return driver.findElement(productFevBtn);
+	}
+		
+	
 }
 
 
