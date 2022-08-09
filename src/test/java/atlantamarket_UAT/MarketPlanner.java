@@ -361,6 +361,82 @@ public class MarketPlanner extends base {
 		}
 		Assert.assertTrue(flag = true);
 	}
+	
+	@Test(priority = 9)
+	public void TS009_DashboardOverviewTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP-001: To verify the Market Planner overview and it's functionality
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		lap.getMPLinkText().click();
+		Thread.sleep(6000);
+
+		// Verify dash board for tabs options after login
+		Assert.assertTrue(atlmppge.getselectChannel().isDisplayed());
+		Assert.assertEquals(atlmppge.getmpdasboardtab().getText(),"Dashboard");
+		Assert.assertEquals(atlmppge.getMPHomeListsTab().getText(),"Lists");
+		Assert.assertEquals(atlmppge.getmpmyinfotab().getText(),"My Info");
+		Assert.assertEquals(atlmppge.getmpregistrationtab().getText(),"Registrations");
+		Assert.assertEquals(atlmppge.getmpsavedsearchestab().getText(),"Saved Searches");
+		
+		System.out.println("Market Planner tabs are displayed properly.");
+		
+		// Verify Dashboard Cards
+		Assert.assertTrue(atlmppge.getmpregistrationcard().isDisplayed());
+		Assert.assertTrue(atlmppge.getmplistscard().getText().contains("Lists"));
+		Assert.assertTrue(atlmppge.getmpbookmyhotelcard().getText().contains("Hotel"));
+		
+		System.out.println("Market Planner Cards are displayed properly.");
+		
+		// Verify Book a Hotel card options
+		Assert.assertEquals(atlmppge.getmpbookmyhotelsection().getText(), "Book a Hotel");
+		Assert.assertEquals(atlmppge.getmpfloorplanssection().getText(), "Floor Plans");
+		Assert.assertEquals(atlmppge.getmpexhibitorsectionsection().getText(), "Exhibitor Directory");
+		Assert.assertEquals(atlmppge.getmpsavedsearchessection().getText(), "Saved Searches");
+		Assert.assertEquals(atlmppge.getmpmyinfosection().getText(), "My Info");
+		
+		System.out.println("Book a Hotel sub options are displayed properly.");
+
+	}
+	
+	@Test(priority = 10)
+	public void TS010_RegistrationCardTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP-001: To verify the Market Planner overview and it's functionality
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		lap.getMPLinkText().click();
+		Thread.sleep(6000);
+
+		// Verify Registration Card details
+		Assert.assertTrue(atlmppge.getmpmarketnameregcard().isDisplayed());
+		Assert.assertTrue(atlmppge.getmpmarketdateregcard().isDisplayed());
+				
+		System.out.println("Market Name and Market Date are displayed at Registration Card properly.");
+		
+		Assert.assertTrue(atlmppge.getmpregistrationlink().isDisplayed());
+		
+		System.out.println("Registration Information link is displayed at Registration Card properly.");
+		
+		// Verify Online Registrations page
+		atlmppge.getmpregistrationlink().click();
+		Assert.assertTrue(atlmppge.getmpverifyregistrationinformationlink().isDisplayed());
+		
+		System.out.println("Registration section is displayed properly.");
+
+	}
 
 	@AfterClass
 	public void tearDown() {
