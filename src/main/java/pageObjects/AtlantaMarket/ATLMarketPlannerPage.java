@@ -62,8 +62,27 @@ public class ATLMarketPlannerPage {
 	By mpListNewGroupCreateBtn = By.xpath("//div[@class='imc-modal--content imc-section imc-customlists-form']/form[1]/div[2]/div[2]/input[1]"); //Locator for new Group Create Btn
 	By mpListNewSelectGroupDropdown = By.xpath("//select[@name='groupName']"); //Locator for Grou Dorpdown
 	By mpListNewCreateBtn = By.xpath("//div[@class='imc-modal--content imc-section imc-customlists-form']/form[1]/div[2]/div[3]/input[1]"); //Locator for Create Btn
+
 	By mpInvalidGrNameMsg = By.xpath("//div[@class='imc-modal--content imc-section imc-customlists-form']/form[1]/div[2]/ul[1]/li[1]"); //Locator for Invalid Gr name msg
 	
+
+	By mpdasboardtab = By.xpath("//div[@class='imc-section imc-market-planner-toolbar ']/div[1]/div[1]/div[2]/div[1]/a[1]"); //Locator for Dashboard tab
+	By mpmyinfotab = By.xpath("//div[@class='imc-mp-toolbar imc-breakpoint-display--hide-mobile']/a[3]"); //Locator for My Info tab
+	By mpregistrationtab = By.xpath("//div[@class='imc-mp-toolbar imc-breakpoint-display--hide-mobile']/a[4]"); //Locator for Registration tab
+	By mpsavedsearchestab = By.xpath("//div[@class='imc-mp-toolbar imc-breakpoint-display--hide-mobile']/a[5]"); //Locator for Saved Searches tab
+	By mpregistrationcard = By.xpath("//div[@class = 'imc-card  imc-register-card']"); //Locator for registration card
+	By mplistscard = By.xpath("//div[@class='imc-section--content-with-image']/div[1]/div[1]/div[2]/div[1]"); //Locator for lists card
+	By mpbookmyhotelcard = By.xpath("//div[@class='imc-section--content-with-image']/div[1]/div[1]/div[3]/div[1]"); //Locator for book my hotel card
+	By mpbookmyhotelsection = By.xpath("//div[@class='imc-section--content-with-image']/div[1]/div[1]/div[3]/div[1]/div[1]"); //Locator for Book my Hotel section
+	By mpfloorplanssection = By.xpath("//div[@class='imc-section--content-with-image']/div[1]/div[1]/div[3]/div[1]/div[2]"); //Locator for Book my Hotel section
+	By mpexhibitorsectionsection = By.xpath("//div[@class='imc-section--content-with-image']/div[1]/div[1]/div[3]/div[1]/div[3]"); //Locator for Book my Hotel section
+	By mpsavedsearchessection = By.xpath("//div[@class='imc-section--content-with-image']/div[1]/div[1]/div[3]/div[1]/div[4]"); //Locator for Book my Hotel section
+	By mpmyinfosection = By.xpath("//div[@class='imc-section--content-with-image']/div[1]/div[1]/div[3]/div[1]/div[5]"); //Locator for Book my Hotel section
+	By mpmarketnameregcard = By.xpath("//div[@class = 'imc-card  imc-register-card']/div[1]/div[2]"); //Locator for market name in registration card
+	By mpmarketdateregcard = By.xpath("//div[@class = 'imc-card  imc-register-card']/div[1]/div[3]"); //Locator for market date in registration card
+	By mpregistrationlink = By.xpath("//div[@class = 'imc-card-section imc-card-footer imc-card-centered']/a[1]"); //Locator for Registration Information link
+	By mpverifyregistrationinformationlink = By.xpath("//div[@class = 'section-wrapper imc-section--basic-white']"); //Locator for verify registration page link
+
 	
 	public ATLMarketPlannerPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -283,6 +302,7 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpListNewCreateBtn));
 		return driver.findElement(mpListNewCreateBtn);
 	}
+
 	public WebElement getMpInvalidGrNameMsg() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpInvalidGrNameMsg));
@@ -300,6 +320,90 @@ public class ATLMarketPlannerPage {
 	}
 
 		
+
+	public WebElement getmpdasboardtab() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpdasboardtab));
+		return driver.findElement(mpdasboardtab);
+	}
+	public WebElement getmpmyinfotab() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpmyinfotab));
+		return driver.findElement(mpmyinfotab);
+	}
+	public WebElement getmpregistrationtab() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpregistrationtab));
+		return driver.findElement(mpregistrationtab);
+	}
+	public WebElement getmpsavedsearchestab() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpsavedsearchestab));
+		return driver.findElement(mpsavedsearchestab);
+	}
+	public WebElement getmpregistrationcard() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpregistrationcard));
+		return driver.findElement(mpregistrationcard);
+	}
+	public WebElement getmplistscard() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mplistscard));
+		return driver.findElement(mplistscard);
+	}
+	public WebElement getmpbookmyhotelcard() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpbookmyhotelcard));
+		return driver.findElement(mpbookmyhotelcard);
+	}
+	public WebElement getmpbookmyhotelsection() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpbookmyhotelsection));
+		return driver.findElement(mpbookmyhotelsection);
+	}
+	public WebElement getmpfloorplanssection() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpfloorplanssection));
+		return driver.findElement(mpfloorplanssection);
+	}
+	public WebElement getmpexhibitorsectionsection() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpexhibitorsectionsection));
+		return driver.findElement(mpexhibitorsectionsection);
+	}
+	public WebElement getmpsavedsearchessection() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpsavedsearchessection));
+		return driver.findElement(mpsavedsearchessection);
+	}
+	public WebElement getmpmyinfosection() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpmyinfosection));
+		return driver.findElement(mpmyinfosection);
+	}
+	public WebElement getmpmarketnameregcard() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpmarketnameregcard));
+		return driver.findElement(mpmarketnameregcard);
+	}
+	public WebElement getmpmarketdateregcard() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpmarketdateregcard));
+		return driver.findElement(mpmarketdateregcard);
+	}
+	public WebElement getmpregistrationlink() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpregistrationlink));
+		return driver.findElement(mpregistrationlink);
+	}
+	public WebElement getmpverifyregistrationinformationlink() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpverifyregistrationinformationlink));
+		return driver.findElement(mpverifyregistrationinformationlink);
+	}
+
+
+
 }
 
 

@@ -13,8 +13,13 @@
 			<class name="atlantamarket_UAT.MarketPlanner" />
 			<methods>
 				
+
 				<include name="TS0012_VerifyMarketPlannerAddExhibitorToFevoritesTest" />
 			<!-- 	<include name="TS008_VerifyMarketPlannerListNewListBtnTest" /> -->
+
+				<include name="TS001_VerifyMarketPlannerLoginTest" />
+				<include name="TS010_RegistrationCardTest" />
+
 				 
 				<!--<include name="TS001_VerifyMarketPlannerLoginTest" /> 
 				<include name="TS004_VerifyMarketPlannerSignOutTest" 
