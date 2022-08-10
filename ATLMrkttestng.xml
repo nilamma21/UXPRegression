@@ -9,6 +9,12 @@
 	<test thread-count="5" name="RegressionTest">
 
 		<classes>
+			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
+			<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
+			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
+			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
+			<class name="atlantamarket_PROD.FloorPlans" />
+			<class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters"/>			
 
 			<class name="atlantamarket_UAT.MarketPlanner" />
 			<methods>
@@ -31,6 +37,7 @@
 
 
 
+>>>>>>> 2a478fc61ebd0d8d61a6b51a90ab59c170d62f8e
 		</classes>
 
 		<!-- <listners> <listner class-name="atlantamarket_UAT.TestListeners" /> 

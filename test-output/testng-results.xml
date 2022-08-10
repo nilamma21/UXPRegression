@@ -3,6 +3,22 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
+
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="135080" started-at="2022-08-10T06:14:46Z" finished-at="2022-08-10T06:17:01Z">
+    <groups>
+    </groups>
+    <test name="RegressionTest" duration-ms="135080" started-at="2022-08-10T06:14:46Z" finished-at="2022-08-10T06:17:01Z">
+      <class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@204f30ec]" name="initialize" is-config="true" duration-ms="37360" started-at="2022-08-10T11:44:46Z" finished-at="2022-08-10T11:45:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@204f30ec]" name="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest" duration-ms="97652" started-at="2022-08-10T11:45:24Z" finished-at="2022-08-10T11:47:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_LeftPaneFilters -->
+
   <suite name="ATLMrkt_RegressionTestSuite" duration-ms="130408" started-at="2022-08-09T10:45:04Z" finished-at="2022-08-09T10:47:15Z">
     <groups>
     </groups>
@@ -94,6 +110,7 @@ Driver info: driver.version: unknown
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- atlantamarket_UAT.MarketPlanner -->
+
     </test> <!-- RegressionTest -->
   </suite> <!-- ATLMrkt_RegressionTestSuite -->
 </testng-results>
