@@ -3,47 +3,28 @@
 
 <suite name="ATLMrkt_RegressionTestSuite">
 	<listners>
-		<listner class-name="atlantamarket_UAT.TestListeners" />
+		<listner class-name="atlantamarket_PROD.TestListeners" />
 	</listners>
 
 	<test thread-count="5" name="RegressionTest">
 
 		<classes>
-			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
-			<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
-			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
-			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
-			<class name="atlantamarket_PROD.FloorPlans" />
-			<class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters"/>			
-
-			<class name="atlantamarket_UAT.MarketPlanner" />
+			<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
+		
 			<methods>
 				
 
-				<include name="TS0012_VerifyMarketPlannerAddExhibitorToFevoritesTest" />
-			<!-- 	<include name="TS008_VerifyMarketPlannerListNewListBtnTest" /> -->
-
-				<include name="TS001_VerifyMarketPlannerLoginTest" />
-				<include name="TS010_RegistrationCardTest" />
-
-				 
-				<!--<include name="TS001_VerifyMarketPlannerLoginTest" /> 
-				<include name="TS004_VerifyMarketPlannerSignOutTest" 
-					/> -->
-
+				<include name="TS005_VerifyShowSpecialsTest" />
+						 
+				
 			</methods>
 
 
 
 
 
->>>>>>> 2a478fc61ebd0d8d61a6b51a90ab59c170d62f8e
+
 		</classes>
 
-		<!-- <listners> <listner class-name="atlantamarket_UAT.TestListeners" /> 
-			</listners> <classes> <class name="atlantamarket_UAT.GlobalSearch_SuggestionList" 
-			/> <class name="atlantamarket_UAT.GlobalSearch_ExhibitorActions" /> <class 
-			name="atlantamarket_UAT.GlobalSearch_LineActions" /> <class name="atlantamarket_UAT.GlobalSearch_ProductActions" 
-			/> <class name="atlantamarket_UAT.FloorPlans" /> </classes> -->
 	</test>
 </suite>

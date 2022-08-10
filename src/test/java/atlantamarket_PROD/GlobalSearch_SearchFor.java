@@ -624,9 +624,10 @@ public class GlobalSearch_SearchFor extends base {
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearch")));
 
 		atlgs.getATLSearchButton().click();
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		
 		atlgs.getatlseealllineslink().click();
+		Thread.sleep(5000);
 		
 		atlgs.getatlShowSpecialsTab().click();
 		
