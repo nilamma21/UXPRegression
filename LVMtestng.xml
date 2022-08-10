@@ -8,11 +8,10 @@
 
 	<test thread-count="5" name="RegressionTest">
 		<classes>
-			<class name="lasvegasmarket_PROD.GlobalSearch_SuggestionList" />
-			<class name="lasvegasmarket_PROD.GlobalSearch_ExhibitorActions" />
-			<class name="lasvegasmarket_PROD.GlobalSearch_LineActions" />
-			<class name="lasvegasmarket_PROD.GlobalSearch_ProductActions" />
-			<class name="lasvegasmarket_PROD.FloorPlans" />
+			<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
+			<methods>
+				<include name="TS005_VerifyShowSpecialsTest" />
+			</methods>
 		</classes>
 	</test>
 </suite>
