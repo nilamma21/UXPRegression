@@ -1,10 +1,13 @@
 package atlantamarket_PROD;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -12,6 +15,8 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
+import com.sun.jna.platform.win32.OaIdl.SYSKIND;
 
 import pageObjects.AtlantaMarket.ATLExhDigiShowroomPage;
 import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
@@ -151,7 +156,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		for (int j = 0; j < prodcatgitemlist.size(); j++) {
 			if(atlexhdgshw.getATLProductCategTable().isDisplayed()) {
-				//System.out.println(prodcatgitemlist.get(i).getText());
+				System.out.println(prodcatgitemlist.get(j).getText());
 				Assert.assertTrue(prodcatgitemlist.get(j).getText().contains(expectedprodcatg));
 				break;
 			}
@@ -200,14 +205,14 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		for (int i = 0; i < prodcatgitemlist.size(); i++) {
 			if(atlexhdgshw.getATLProductCategTable().isDisplayed()) {
-				//System.out.println(prodcatgitemlist.get(i).getText());
+				System.out.println(prodcatgitemlist.get(i).getText());
 				Assert.assertTrue(prodcatgitemlist.get(i).getText().contains(expectedprodcatg1) || prodcatgitemlist.get(i).getText().contains(expectedprodcatg2));
 				break;
 			}
 		}
 		driver.navigate().back();
 		Thread.sleep(5000);
-		
+
 		//Verify the selected Product Category on Product details page
 		utl.scrollToElement(atlexhact.getProductForMultipleCatg());
 		// Hovering on 1st Product
@@ -224,7 +229,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		for (int j = 0; j < prodcatgitemlist.size(); j++) {
 			if(atlexhdgshw.getATLProductCategTable().isDisplayed()) {
-				//System.out.println(prodcatgitemlist.get(i).getText());
+				System.out.println(prodcatgitemlist.get(j).getText());
 				Assert.assertTrue(prodcatgitemlist.get(j).getText().contains(expectedprodcatg1) || prodcatgitemlist.get(j).getText().contains(expectedprodcatg2));
 				break;
 			}
@@ -232,81 +237,109 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 
 	}
-	/*	@Test(priority = 2)
-	public void TS002_VerifySelectionOfMoreThanOneFilterOfProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
+
+	@Test(priority = 4)
+	public void TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// T405: Left pane Filters : Product Categories Filter : Combined within
+		// T406: Combination of Prod Catgs with Styles From Left Pane Filters
 
 		atlgs = new ATLGlobalSearchPage(driver);
-		atlexhact = new ATLExhLineProdActionsPage(driver);
-		lap = new ATLLandingPage(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 		atlleftpane = new ATLLeftPaneFilters(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		utl = new Utility(driver);
+		lp = new ATLLoginPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
 
-		// Click on Product Categories expand btn
+		//Click on Product Categories expand btn
+		atlleftpane.getATLProdCatgExpandBtn().click();		
+
+		/*//Expand btn code
+		WebElement pseudoEle = driver.findElement(By.xpath("//label[contains(text(),'Accent Furniture')]"));
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		String display = js.executeScript("return window.getComputedStyle(arguments[0], ':after').getPropertyValue('display');",pseudoEle).toString();
+		System.out.println(display);*/
+
+		utl.scrollToElement(atlleftpane.getATLAntiqueVintProdCatg());
+
+		//Select 'Antique/Vintage' prod category
+		String expectedprodcatg = atlleftpane.getATLAntiqueVintProdCatg().getText();
+		atlleftpane.getATLAntiqueVintProdCatg().click();
+		Thread.sleep(8000);
+
+		//Click on Product Categories expand btn
 		atlleftpane.getATLProdCatgExpandBtn().click();
-		// Store All the filter list
-		List<WebElement> filter = driver.findElements(By.xpath("//div[@class='imc-filteritem__option']"));
-		boolean var=false;
-		for (WebElement fl : filter) {
-			// Click on 1st Filter
-			if(fl.getText().equals(prop.getProperty("filter1"))) //Filter 1 :Women's Contemporary
-			{
-				String filterName1 = fl.getText();
-				System.out.println("Click on 1nd Filter : " + filterName1);
-				fl.click();
-				var=true;
+
+		//Click on Styles expand btn
+		atlleftpane.getATLStylesExpandBtn().click();
+
+		//Select Style name 'Industrial'
+		utl.scrollToElement(atlleftpane.getATLIndustrialStyle());
+		String expectedstyle = atlleftpane.getATLIndustrialStyle().getText();
+		System.out.println("Expected Style name:"+expectedstyle);
+		atlleftpane.getATLIndustrialStyle().click();
+		Thread.sleep(8000);
+
+		//Click on IMC Test Exhibitor name in list
+		atlexhact.getIMCExhibitorName().click();
+
+		//Scroll till Product Categories section
+		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
+		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
+
+		for (int i = 0; i < prodcatgitemlist.size(); i++) {
+			if(atlexhdgshw.getATLProductCategTable().isDisplayed()) {
+				//System.out.println(prodcatgitemlist.get(i).getText());
+				Assert.assertTrue(prodcatgitemlist.get(i).getText().contains(expectedprodcatg));
 				break;
 			}
 		}
-		Assert.assertTrue(var);
-		boolean var2=false;
-		for (WebElement fl : filter) {
-			// Click on 2nd Filter
-			if (fl.getText().equals(prop.getProperty("filter2"))) // filter2 : Women's Resort
-			{
-				String filterName2 = fl.getText();
-				System.out.println("Click on 2nd Filter : " + filterName2);
-				fl.click();
-				var2=true;
-				break;
-			}
-		}
-		Assert.assertTrue(var2);
 
-		// Store 1st exhibitor name
-		String exhName = atlleftpane.getATLexhibitor().getText();
-		System.out.println("Exhibitor Name : " + exhName);
-		atlleftpane.getATLexhibitor().click();
+		driver.navigate().back();
 
-		// List of All Product category
-		List<WebElement> categoris = driver.findElements(By.xpath(
-				"//div[@class='imc-gallery__item imc-gallery__item--no-padding-left imc-gallery__item--no-padding-right imc-type--title-8 imc-padding--bottom--xsmall']"));
-		boolean var3=false;
-		for (WebElement flC : categoris) {
-			// Verify selected filter and its respected categories
+		//Open Exhibitor Portal in new tab
+		((JavascriptExecutor)driver).executeScript("window.open()");
+		ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tabs.get(1));
+		driver.get("https://exhibitors.imcenters.com/");
 
-			if (flC.getText().equals(prop.getProperty("filter1"))
-					&& flC.getText().equals(prop.getProperty("filter2")));
-			{
-				System.out.println("CatName : " + flC.getText());
-				var3=true;
-				break;
-			}
+		//Login to EXP
+		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
+		lp.getPassword().sendKeys((prop.getProperty("password")));
 
-		}
-		Assert.assertTrue(var3);
-	}*/
+		lp.getSignInBtn().click();
+		Thread.sleep(15000);
 
-	/*@AfterClass
+		//In EXP click on Exhibitor association drop down
+		atlleftpane.getEXPExhDropDown().click();
+
+		//Select IMC Test Company exhibitor
+		atlleftpane.getIMCExhNameInEXP().click();
+
+		//Click on Digital Showroom tab
+		atlleftpane.getEXPDigiShowroomTab().click();
+		
+		//Click on Profile Info menu
+		atlleftpane.getEXPProfileInfoMenu().click();
+		Thread.sleep(6000);
+
+		//Scroll till Product Categories section
+		utl.scrollToElement(atlleftpane.getEXPProductCategSection());
+
+		//Verify that expected Style should be displayed on profile
+		Assert.assertTrue(atlleftpane.getEXPIndustrialStyleOnProfile().isDisplayed());
+		driver.close();
+		driver.switchTo().window(tabs.get(0));
+	}
+				
+
+		/*@AfterClass
 	public void tearDown()
 	{
 		driver.quit();
 	}*/
-}
+	}

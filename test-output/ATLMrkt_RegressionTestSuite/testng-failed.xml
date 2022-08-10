@@ -6,7 +6,7 @@
       <class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters">
         <methods>
           <include name="initialize"/>
-          <include name="TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest"/>
+          <include name="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest"/>
         </methods>
       </class> <!-- atlantamarket_PROD.GlobalSearch_LeftPaneFilters -->
     </classes>
