@@ -54,7 +54,7 @@ public class ATLGlobalSearchPage {
 	By atlseealllineslink = By.xpath("//div[@class = 'imc-exhibitorcard--text-container-row']/a[1]"); //Locator for Sell All lines link
 	By atlShowSpecialsTab = By.xpath("//a[@id = 'Specials']"); //Locator for Show Specials tab
 	By atlVerifyShowSpecials = By.xpath("//div[@class = 'imc-tabs__body imc-section']"); //Locator for Show Specials section
-
+	By fourthbreadcrumbtxt = By.xpath("//li[@data-xpath='breadcrumb.active.link'][3]/a"); //Locator for 4th Breadcrumb text in app
 	
 	public ATLGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -230,6 +230,9 @@ Thread.sleep(5000);
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.elementToBeClickable(atlVerifyShowSpecials));
 		return driver.findElement(atlVerifyShowSpecials);
+	}
+	public WebElement getFourthBreadcrumbTxtInApp() {
+		return driver.findElement(fourthbreadcrumbtxt);
 	}
 
 }
