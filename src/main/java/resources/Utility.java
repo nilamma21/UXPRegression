@@ -53,6 +53,26 @@ public class Utility extends base {
 		Thread.sleep(15000);
 	}
 
+	public void verifyMPInvalidLoginFunctionality(String un,String pwd) throws IOException, InterruptedException {
+
+		// The purpose of this test case to verify:-
+		// TS1- Login to Market Planner
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);		
+
+		// Click on Login button from Landing Page
+		lap.getLogin().click();
+
+		// Enter the credentials on Login Page and click
+		lp.getEmailAddress().sendKeys(un);
+		lp.getPassword().sendKeys(pwd);
+
+		lp.getSignInBtn().click();
+		Thread.sleep(15000);
+	}
+	
+	
 	public void mouseHover(WebElement mainMenu,WebElement subMenu) throws IOException, InterruptedException {
 
 		lap = new ATLLandingPage(driver);
@@ -68,4 +88,6 @@ public class Utility extends base {
 		actions.click().build().perform();
 
 	}
+
+	
 }

@@ -1,16 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [LVM_RegressionTestSuite]">
+<suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-      <class name="lasvegasmarket_PROD.FloorPlans">
+      <class name="atlantamarket_PROD.GlobalSearch_SearchFor">
         <methods>
-          <include name="tearDown"/>
-          <include name="TS011_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest"/>
+
+          <include name="TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest"/>
+          <include name="TS004_VerifyCatalogsOverviewInGlobalSearchTest"/>
+          <include name="TS010_VerifyEventsFiltersFunctionalityInGlobalSearchTest"/>
+          <include name="TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest"/>
           <include name="initialize"/>
-          <include name="TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest"/>
+          <include name="TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest"/>
+
+
+          <include name="initialize"/>
+          <include name="TS0016_VerifyMarketPlannerListManageListEditOptTest"/>
+          <include name="tearDown"/>
+
+          <include name="TS005_VerifyShowSpecialsTest"/>
+          <include name="initialize"/>
+
+
         </methods>
-      </class> <!-- lasvegasmarket_PROD.FloorPlans -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
-</suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
+</suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->

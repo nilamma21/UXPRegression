@@ -31,14 +31,137 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">RegressionTest</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">140.5 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+
+<tr><td style="text-align:left;padding-right:2em">RegressionTest</td><td class="numi">6</td><td class="numi">6</td><td class="numi">0</td><td class="numi_attn">5</td><td class="numi">604.6 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+
+
+<tr><td style="text-align:left;padding-right:2em">RegressionTest</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">121.4 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+
+<tr><td style="text-align:left;padding-right:2em">RegressionTest</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">38.3 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+
+
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr><th colspan="4">RegressionTest &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="5">atlantamarket_PROD.GlobalSearch_SearchFor</td><td><a href="#m1"><b>TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest</b>  </a></td><td class="numi">1</td><td>1660220147685</td><td class="numi">62756</td></tr><tr class="failedodd"><td><a href="#m2"><b>TS004_VerifyCatalogsOverviewInGlobalSearchTest</b>  </a></td><td class="numi">1</td><td>1660220211136</td><td class="numi">49062</td></tr><tr class="failedodd"><td><a href="#m3"><b>TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest</b>  </a></td><td class="numi">1</td><td>1660220304147</td><td class="numi">250493</td></tr><tr class="failedodd"><td><a href="#m4"><b>TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest</b>  </a></td><td class="numi">1</td><td>1660220555287</td><td class="numi">17464</td></tr><tr class="failedodd"><td><a href="#m5"><b>TS010_VerifyEventsFiltersFunctionalityInGlobalSearchTest</b>  </a></td><td class="numi">1</td><td>1660220620002</td><td class="numi">43498</td></tr>
 <tr><th colspan="4">RegressionTest &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="1">lasvegasmarket_PROD.GlobalSearch_ProductActions</td><td><a href="#m1"><b>TS005_VerifyAddNoteOnProductDetailsPageTest</b>  </a></td><td class="numi">1</td><td>1658732451344</td><td class="numi">53002</td></tr>
+
+<tr class="passedodd"><td rowspan="6">atlantamarket_PROD.GlobalSearch_SearchFor</td><td><a href="#m6"><b>TS001_VerifyInformationTabInGlobalSearchTest</b>  </a></td><td class="numi">1</td><td>1660220109256</td><td class="numi">14815</td></tr><tr class="passedodd"><td><a href="#m7"><b>TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest</b>  </a></td><td class="numi">1</td><td>1660220124090</td><td class="numi">23592</td></tr><tr class="passedodd"><td><a href="#m8"><b>TS005_VerifyArticlesOverviewInGlobalSearchTest</b>  </a></td><td class="numi">1</td><td>1660220260831</td><td class="numi">43312</td></tr><tr class="passedodd"><td><a href="#m9"><b>TS008_VerifyEventsOverviewInGlobalSearchTest</b>  </a></td><td class="numi">1</td><td>1660220573542</td><td class="numi">21126</td></tr><tr class="passedodd"><td><a href="#m10"><b>TS009_VerifyEventsSearchFunctionalityInGlobalSearchTest</b>  </a></td><td class="numi">1</td><td>1660220594672</td><td class="numi">25319</td></tr><tr class="passedodd"><td><a href="#m11"><b>TS011_VerifyShowSpecialsOverviewInGlobalSearchTest</b>  </a></td><td class="numi">1</td><td>1660220666063</td><td class="numi">19808</td></tr>
 </table>
 <h1>RegressionTest</h1>
-<h2 id="m1">lasvegasmarket_PROD.GlobalSearch_ProductActions:TS005_VerifyAddNoteOnProductDetailsPageTest</h2>
+<h2 id="m1">atlantamarket_PROD.GlobalSearch_SearchFor:TS010_VerifyEventsFiltersFunctionalityInGlobalSearchTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for visibility of element located by By.xpath: //label[contains(text(),&apos;Atlanta Market&apos;)] (tried for 20 second(s) with 500 MILLISECONDS interval)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir18692_1117029916}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:64326}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=104.0.5112.81, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 18d10ea8e17cf4738299a3357e7d99ac</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.AtlantaMarket.ATLGlobalSearchPage.getEventsATLMktTopics(ATLGlobalSearchPage.java:244)
+<br/>at atlantamarket_PROD.GlobalSearch_SearchFor.TS010_VerifyEventsFiltersFunctionalityInGlobalSearchTest(GlobalSearch_SearchFor.java:638)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">atlantamarket_PROD.GlobalSearch_SearchFor:TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for element to be clickable: By.xpath: //a[@href=&apos;/exhibitor&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.AtlantaMarket.ATLGlobalSearchPage.getATLInfoSearchSeeMoreDetailsBtn(ATLGlobalSearchPage.java:169)
+<br/>at atlantamarket_PROD.GlobalSearch_SearchFor.TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest(GlobalSearch_SearchFor.java:167)
+<br/>25 lines not shown
+<p>Caused by Cannot locate an element using By.xpath: //a[@href=&apos;/exhibitor&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: driver.version: unknown</p>
+org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+<br/>at java.util.Optional.orElseThrow(Unknown Source)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+<br/>at pageObjects.AtlantaMarket.ATLGlobalSearchPage.getATLInfoSearchSeeMoreDetailsBtn(ATLGlobalSearchPage.java:169)
+<br/>at atlantamarket_PROD.GlobalSearch_SearchFor.TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest(GlobalSearch_SearchFor.java:167)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">atlantamarket_PROD.GlobalSearch_SearchFor:TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest</h2>
+<div style="padding-left:3em">
+<p>expected [true] but found [false]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertTrue(Assert.java:42)
+<br/>at org.testng.Assert.assertTrue(Assert.java:52)
+<br/>at atlantamarket_PROD.GlobalSearch_SearchFor.TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest(GlobalSearch_SearchFor.java:462)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">atlantamarket_PROD.GlobalSearch_SearchFor:TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest</h2>
+<div style="padding-left:3em">
+<p>expected [true] but found [false]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertTrue(Assert.java:42)
+<br/>at org.testng.Assert.assertTrue(Assert.java:52)
+<br/>at atlantamarket_PROD.GlobalSearch_SearchFor.TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest(GlobalSearch_SearchFor.java:566)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">atlantamarket_PROD.GlobalSearch_SearchFor:TS004_VerifyCatalogsOverviewInGlobalSearchTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for visibility of element located by By.xpath: //a[@id=&apos;Catalogs&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.AtlantaMarket.ATLExhLineProdActionsPage.getCatalogsTab(ATLExhLineProdActionsPage.java:272)
+<br/>at atlantamarket_PROD.GlobalSearch_SearchFor.TS004_VerifyCatalogsOverviewInGlobalSearchTest(GlobalSearch_SearchFor.java:219)
+<br/>25 lines not shown
+<p>Caused by Cannot locate an element using By.xpath: //a[@id=&apos;Catalogs&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: driver.version: unknown</p>
+org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+<br/>at java.util.Optional.orElseThrow(Unknown Source)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+<br/>at pageObjects.AtlantaMarket.ATLExhLineProdActionsPage.getCatalogsTab(ATLExhLineProdActionsPage.java:272)
+<br/>at atlantamarket_PROD.GlobalSearch_SearchFor.TS004_VerifyCatalogsOverviewInGlobalSearchTest(GlobalSearch_SearchFor.java:219)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">atlantamarket_PROD.GlobalSearch_SearchFor:TS001_VerifyInformationTabInGlobalSearchTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">atlantamarket_PROD.GlobalSearch_SearchFor:TS011_VerifyShowSpecialsOverviewInGlobalSearchTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">atlantamarket_PROD.GlobalSearch_SearchFor:TS008_VerifyEventsOverviewInGlobalSearchTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m9">atlantamarket_PROD.GlobalSearch_SearchFor:TS005_VerifyArticlesOverviewInGlobalSearchTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">atlantamarket_PROD.GlobalSearch_SearchFor:TS009_VerifyEventsSearchFunctionalityInGlobalSearchTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m11">atlantamarket_PROD.GlobalSearch_SearchFor:TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest</h2>
+
+
+<tr class="passedodd"><td rowspan="1">atlantamarket_UAT.MarketPlanner</td><td><a href="#m1"><b>TS0016_VerifyMarketPlannerListManageListEditOptTest</b>  </a></td><td class="numi">1</td><td>1660137620564</td><td class="numi">78606</td></tr>
+</table>
+<h1>RegressionTest</h1>
+<h2 id="m1">atlantamarket_UAT.MarketPlanner:TS0016_VerifyMarketPlannerListManageListEditOptTest</h2>
+
+<tr class="passedodd"><td rowspan="1">atlantamarket_PROD.GlobalSearch_SearchFor</td><td><a href="#m1"><b>TS005_VerifyShowSpecialsTest</b>  </a></td><td class="numi">1</td><td>1660124185205</td><td class="numi">11864</td></tr>
+</table>
+<h1>RegressionTest</h1>
+<h2 id="m1">atlantamarket_PROD.GlobalSearch_SearchFor:TS005_VerifyShowSpecialsTest</h2>
+
+
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

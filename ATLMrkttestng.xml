@@ -12,18 +12,10 @@
 			<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
+			<class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters" />
+			<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
+			<class name="atlantamarket_PROD.MarketPlanner" />
 			<class name="atlantamarket_PROD.FloorPlans" />
 		</classes>
-
-			<!-- <listners>
-				<listner class-name="atlantamarket_UAT.TestListeners" />
-			</listners>
-			<classes>
-				<class name="atlantamarket_UAT.GlobalSearch_SuggestionList" />
-				<class name="atlantamarket_UAT.GlobalSearch_ExhibitorActions" />
-				<class name="atlantamarket_UAT.GlobalSearch_LineActions" />
-				<class name="atlantamarket_UAT.GlobalSearch_ProductActions" />
-				<class name="atlantamarket_UAT.FloorPlans" />
-			</classes> -->
 	</test>
 </suite>
