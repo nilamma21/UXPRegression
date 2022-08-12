@@ -7,7 +7,6 @@
 	</listners>
 
 	<test thread-count="5" name="RegressionTest">
-
 		<classes>
 
 
@@ -30,6 +29,7 @@
 
 
 			<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
+
 		
 			<methods>
 				
@@ -46,6 +46,5 @@
 
 
 		</classes>
-
 	</test>
 </suite>
