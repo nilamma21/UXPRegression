@@ -8,7 +8,43 @@
 
 	<test thread-count="5" name="RegressionTest">
 		<classes>
+
+
+			<class name="atlantamarket_UAT.MarketPlanner" />
+			<!-- <class name="atlantamarket_PROD.GlobalSearch_SearchFor" /> -->
+			
+			<methods>
+				
+
+			<include name="TS0016_VerifyMarketPlannerListManageListEditOptTest" />
+				<!-- 	<include name="TS008_VerifyMarketPlannerListNewListBtnTest" /> 
+
+				<include name="TS001_VerifyMarketPlannerLoginTest" />
+				<include name="TS010_RegistrationCardTest" />-->
+
+				 
+				<!--<include name="TS001_VerifyMarketPlannerLoginTest" /> 
+				<include name="TS004_VerifyMarketPlannerSignOutTest" 
+					/> -->
+
+
 			<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
+
+		
+			<methods>
+				
+
+				<include name="TS005_VerifyShowSpecialsTest" />
+						 
+				
+
+			</methods>
+
+
+
+
+
+
 		</classes>
 	</test>
 </suite>

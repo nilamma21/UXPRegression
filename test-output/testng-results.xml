@@ -2,7 +2,30 @@
 <testng-results skipped="0" failed="5" total="11" passed="6">
   <reporter-output>
   </reporter-output>
+
   <suite name="ATLMrkt_RegressionTestSuite" duration-ms="604576" started-at="2022-08-11T12:14:41Z" finished-at="2022-08-11T12:24:45Z">
+
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="121433" started-at="2022-08-10T13:19:37Z" finished-at="2022-08-10T13:21:39Z">
+    <groups>
+    </groups>
+    <test name="RegressionTest" duration-ms="121433" started-at="2022-08-10T13:19:37Z" finished-at="2022-08-10T13:21:39Z">
+      <class name="atlantamarket_UAT.MarketPlanner">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.MarketPlanner@4dfa3a9d]" name="initialize" is-config="true" duration-ms="42772" started-at="2022-08-10T18:49:37Z" finished-at="2022-08-10T18:50:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS0016_VerifyMarketPlannerListManageListEditOptTest()[pri:0, instance:atlantamarket_UAT.MarketPlanner@4dfa3a9d]" name="TS0016_VerifyMarketPlannerListManageListEditOptTest" duration-ms="78606" started-at="2022-08-10T18:50:20Z" finished-at="2022-08-10T18:51:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS0016_VerifyMarketPlannerListManageListEditOptTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.MarketPlanner@4dfa3a9d]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-08-10T18:51:39Z" finished-at="2022-08-10T18:51:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- atlantamarket_UAT.MarketPlanner -->
+
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="38287" started-at="2022-08-10T09:35:58Z" finished-at="2022-08-10T09:36:37Z">
+
     <groups>
     </groups>
     <test name="RegressionTest" duration-ms="604576" started-at="2022-08-11T12:14:41Z" finished-at="2022-08-11T12:24:45Z">
@@ -281,6 +304,7 @@ Session ID: 18d10ea8e17cf4738299a3357e7d99ac
           </reporter-output>
         </test-method> <!-- TS011_VerifyShowSpecialsOverviewInGlobalSearchTest -->
       </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
+
     </test> <!-- RegressionTest -->
   </suite> <!-- ATLMrkt_RegressionTestSuite -->
 </testng-results>

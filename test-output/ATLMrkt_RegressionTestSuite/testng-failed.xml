@@ -5,12 +5,23 @@
     <classes>
       <class name="atlantamarket_PROD.GlobalSearch_SearchFor">
         <methods>
+
           <include name="TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest"/>
           <include name="TS004_VerifyCatalogsOverviewInGlobalSearchTest"/>
           <include name="TS010_VerifyEventsFiltersFunctionalityInGlobalSearchTest"/>
           <include name="TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest"/>
           <include name="initialize"/>
           <include name="TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest"/>
+
+
+          <include name="initialize"/>
+          <include name="TS0016_VerifyMarketPlannerListManageListEditOptTest"/>
+          <include name="tearDown"/>
+
+          <include name="TS005_VerifyShowSpecialsTest"/>
+          <include name="initialize"/>
+
+
         </methods>
       </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
     </classes>
