@@ -445,10 +445,6 @@ public class MarketPlanner extends base {
 		Assert.assertTrue(flag = true);
 	}
 
-
-	@Test(priority = 11)
-	public void TS009_DashboardOverviewTest() throws InterruptedException, IOException {
-
 	@Test(priority = 4)
 	public void TS004_VerifyMPDashboardOverviewTest() throws InterruptedException, IOException {
 
@@ -501,10 +497,6 @@ public class MarketPlanner extends base {
 
 	}
 
-
-	@Test(priority = 12)
-	public void TS010_RegistrationCardTest() throws InterruptedException, IOException {
-
 	@Test(priority = 5)
 	public void TS005_VerifyMPRegistrationCardOverviewTest() throws InterruptedException, IOException {
 
@@ -538,10 +530,6 @@ public class MarketPlanner extends base {
 		System.out.println("Registration section is displayed properly.");
 
 	}
-
-
-	@Test(priority = 13)
-	public void TS0013_VerifyMarketPlannerAddProducToFevoritesTest() throws InterruptedException, IOException {
 
 	@Test(priority = 11)
 	public void TS011_VerifyAddProductToFavFunctionalityInFavListsTest() throws InterruptedException, IOException {
@@ -604,13 +592,6 @@ public class MarketPlanner extends base {
 
 	}
 
-
-	@Test(priority = 14)
-	public void TS0014_VerifyMarketPlannerAddExhibitorToFevoritesTest() throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// UXP-T243: Market Planner: Lists- Favorites- Add an Exhibitor to Favorites
-		// using 'Favorite' icon in Exhibitor actions.
-
 	@Test(priority = 12)
 	public void TS012_VerifyAddExhibitorToFavInFavListsTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -667,7 +648,7 @@ public class MarketPlanner extends base {
 	}
 
 	@Test(priority = 15)
-	public void TS0015_VerifyMarketPlannerListManageListTest() throws InterruptedException, IOException {
+	public void TS015_VerifyMarketPlannerListManageListTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T244: Market Planner: Lists- List Management- 'Manage List' Options.
 
@@ -735,7 +716,7 @@ public class MarketPlanner extends base {
 	}
 
 	@Test(priority = 16)
-	public void TS0016_VerifyMarketPlannerListManageListEditOptTest() throws InterruptedException, IOException {
+	public void TS016_VerifyMarketPlannerListManageListEditOptTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T245: Market Planner: Lists- List Management- Manage List- 'Edit' list functionality
 		lap = new ATLLandingPage(driver);
