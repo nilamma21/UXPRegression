@@ -56,14 +56,17 @@ public class ATLExhLineProdActionsPage extends base{
 	By productmorebtn = By.xpath("(//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div[2]/div/div/div/div/div/div/div/div/span[2]/div)[1]"); //Locator for Add to List button for Product on Search Results grid
 	By productformultiplecatg = By.xpath("//div[@class='imc-vr--xxlarge']/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]"); //Locator for product to verify multiple Prod categ selection
 	By seedetailsbtn3rdexhproduct = By.xpath("(//div[@class='imc-gallery imc-gallery--80-20 imc-exhibitorcard--gallery-nowrap'])[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/a[1]"); //Locator for See Details button of 3rd exh product
-
 	By imcexhibitorname = By.xpath("//h2[contains(text(),'IMC test company')]"); //Locator for IMC Exhibitor name from Search results grid
-
-	
-	
-
 	By productFevBtn = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/span[1]/div[1]/button[1]"); //Locator for Fev Btn
-
+	By catalogstab = By.xpath("//a[@id='Catalogs']"); //Locator for Catalogs tab on Exhibitor products page
+	By catalogitem = By.xpath("//div[@class='imc-catalog__item_title multiSelectItem']/div/span/span"); //Locator for Catalog item
+	By eventcardinsearch = By.xpath("//div[@class='imc-vr--xlarge imc-eventcard']");//Locator for Event card in search results
+	By eventcardtitle = By.xpath("//span[contains(@class,'imc-eventcard__title')]"); //Locator for Event Card title
+	By eventdetailsheader = By.xpath("//h1[contains(@class,'imc-heading')]"); //Locator for header of Events details btn
+	By eventdetailstag = By.xpath("//a[contains(@class,'imc-eventdetail--tag')]"); //Locator for tag on Event Details
+	By eventcardtag = By.xpath("//ul[@class='imc-cardtags imc-content--light imc-eventcard__tag']/li/button"); //Locator for Event Card tag
+	
+	
 	
 	public ATLExhLineProdActionsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -204,7 +207,6 @@ public class ATLExhLineProdActionsPage extends base{
 		return driver.findElement(lineLocationLink);
 	}
 	
-
 	public WebElement getseealllink() throws InterruptedException {
 		Thread.sleep(5000);
 		return driver.findElement(seealllink);
@@ -255,21 +257,49 @@ public class ATLExhLineProdActionsPage extends base{
 		wait.until(ExpectedConditions.visibilityOfElementLocated(seedetailsbtn3rdexhproduct));
 		return driver.findElement(seedetailsbtn3rdexhproduct);
 	}
-
 	public WebElement getIMCExhibitorName() {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(imcexhibitorname));
 		return driver.findElement(imcexhibitorname);
 	}
-
 	public WebElement getProductFevBtn() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productFevBtn));
 		return driver.findElement(productFevBtn);
+	}	
+	public WebElement getCatalogsTab() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(catalogstab));
+		return driver.findElement(catalogstab);
 	}
-		
-	
-
+	public WebElement getCatalogsItem() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(catalogitem));
+		return driver.findElement(catalogitem);
+	}
+	public WebElement getEventCardInSearch() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(eventcardinsearch));
+		return driver.findElement(eventcardinsearch);
+	}
+	public WebElement getEventCardTitle() {
+		return driver.findElement(eventcardtitle);
+	}
+	public WebElement getEventDetailsHeader() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(eventdetailsheader));
+		return driver.findElement(eventdetailsheader);
+	}
+	public WebElement getEventDetailsTag() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(eventdetailstag));
+		return driver.findElement(eventdetailstag);
+	}
+	public WebElement getEventCardTag() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(eventcardtag));
+		return driver.findElement(eventcardtag);
+	}
 }
 
 
