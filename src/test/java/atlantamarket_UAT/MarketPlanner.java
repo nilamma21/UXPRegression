@@ -778,7 +778,58 @@ public class MarketPlanner extends base {
 
 	}
 
-	
+	@Test(priority = 17)
+	public void TS017_VerifyMPListsCardOverviewTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP-001: To verify the Market Planner overview and it's functionality
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		lap.getMPLinkText().click();
+		Thread.sleep(6000);
+
+		// Verify dashboard page
+		Assert.assertTrue(atlmppge.getmpregistrationcard().isDisplayed());
+		Assert.assertTrue(atlmppge.getmplistscard().getText().contains("Lists"));
+		Assert.assertTrue(atlmppge.getmpbookmyhotelcard().getText().contains("Hotel"));
+
+		System.out.println("Dashboard Cards are displayed properly.");
+
+		// Verify All Lists link is available at Lists card
+		utl.scrollToElement(atlmppge.getmpalllists());
+		Assert.assertTrue(atlmppge.getmpalllists().isDisplayed());
+		System.out.println("All Lists link is displayed properly.");
+		
+		//Save existing lists in List Card
+		String SavedLists = atlmppge.getmpexistinglists().getText();
+		
+		//Click All Lists link and verify the result
+		atlmppge.getmpalllists().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://uat-atlmkt.imcmvdp.com/Market-Planner/Lists"));
+		System.out.println("Lists page is displayed properly.");
+				
+		//Add a new list
+		//Click Lists tab
+		atlmppge.getmplisttab().click();
+		//Click New Lists button
+		atlmppge.getmpnewlistbutton().click();
+		//Add list name and click create button
+		atlmppge.getCreateNewListNameTxtbx().sendKeys(genData.generateRandomString(10));
+		atlmppge.getCreateNewListNameTxtbx().sendKeys();
+		atlmppge.getAddListCreateBtn().click();
+		//Click Dashboard tab
+		atlmppge.getmpdasboardtab().click();
+		//Verify if new list is displayed at List Card and old list is removed
+		Assert.assertFalse(atlmppge.getmpexistinglists().getText().equalsIgnoreCase(SavedLists));
+		System.out.println("Recent lists are displayed at List Card.");
+		
+	}
 	
 	
 	
