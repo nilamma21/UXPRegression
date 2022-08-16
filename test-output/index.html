@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-ATLMrkt_RegressionTestSuite">
-                    <span>C:\Users\swapnili\UXPRegression_jul\ATLMrkttestng.xml</span>
+                    <span>C:\Users\shradhama\UXPRegression\ATLMrkttestng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,11 +101,12 @@
                     <div class="method-list-content passed suite-ATLMrkt_RegressionTestSuite">
                       <span>
                         <img width="3%" src="passed.png"/>
-
-                        <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket_UAT.MarketPlanner" hash-for-method="TS0016_VerifyMarketPlannerListManageListEditOptTest">TS0016_VerifyMarketPlannerListManageListEditOptTest</a> <!-- method navigator-link -->
-
-                        <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket_PROD.GlobalSearch_SearchFor" hash-for-method="TS005_VerifyShowSpecialsTest">TS005_VerifyShowSpecialsTest</a> <!-- method navigator-link -->
-
+                        <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket_UAT.MarketPlanner" hash-for-method="TS001_VerifyMarketPlannerLoginTest">TS001_VerifyMarketPlannerLoginTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket_UAT.MarketPlanner" hash-for-method="TS015_VerifyMPListsCardOverviewTest">TS015_VerifyMPListsCardOverviewTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-ATLMrkt_RegressionTestSuite -->
@@ -123,20 +124,21 @@
           <div class="suite-ATLMrkt_RegressionTestSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">atlantamarket_PROD.GlobalSearch_SearchFor</span>
+              <span class="class-name">atlantamarket_UAT.MarketPlanner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-
-                  <a name="TS0016_VerifyMarketPlannerListManageListEditOptTest">
-                  </a> <!-- TS0016_VerifyMarketPlannerListManageListEditOptTest -->
-                  <span class="method-name">TS0016_VerifyMarketPlannerListManageListEditOptTest</span>
-
-                  <a name="TS005_VerifyShowSpecialsTest">
-                  </a> <!-- TS005_VerifyShowSpecialsTest -->
-                  <span class="method-name">TS005_VerifyShowSpecialsTest</span>
-
+                  <a name="TS001_VerifyMarketPlannerLoginTest">
+                  </a> <!-- TS001_VerifyMarketPlannerLoginTest -->
+                  <span class="method-name">TS001_VerifyMarketPlannerLoginTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TS015_VerifyMPListsCardOverviewTest">
+                  </a> <!-- TS015_VerifyMPListsCardOverviewTest -->
+                  <span class="method-name">TS015_VerifyMPListsCardOverviewTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -144,7 +146,7 @@
         </div> <!-- panel ATLMrkt_RegressionTestSuite -->
         <div panel-name="test-xml-ATLMrkt_RegressionTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\swapnili\UXPRegression_jul\ATLMrkttestng.xml</span>
+            <span class="header-content">C:\Users\shradhama\UXPRegression\ATLMrkttestng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -153,15 +155,12 @@
 &lt;suite name=&quot;ATLMrkt_RegressionTestSuite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;RegressionTest&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;atlantamarket_PROD.GlobalSearch_SearchFor&quot;&gt;
+      &lt;class name=&quot;atlantamarket_UAT.MarketPlanner&quot;&gt;
         &lt;methods&gt;
-
-          &lt;include name=&quot;TS0016_VerifyMarketPlannerListManageListEditOptTest&quot;/&gt;
-
-          &lt;include name=&quot;TS005_VerifyShowSpecialsTest&quot;/&gt;
-
+          &lt;include name=&quot;TS001_VerifyMarketPlannerLoginTest&quot;/&gt;
+          &lt;include name=&quot;TS015_VerifyMPListsCardOverviewTest&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- atlantamarket_PROD.GlobalSearch_SearchFor --&gt;
+      &lt;/class&gt; &lt;!-- atlantamarket_UAT.MarketPlanner --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- RegressionTest --&gt;
 &lt;/suite&gt; &lt;!-- ATLMrkt_RegressionTestSuite --&gt;
@@ -201,22 +200,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-
-data.setCell(0, 1, 'TS0016_VerifyMarketPlannerListManageListEditOptTest')
+data.setCell(0, 1, 'TS015_VerifyMPListsCardOverviewTest')
 data.setCell(0, 2, 'atlantamarket_UAT.MarketPlanner')
-data.setCell(0, 3, 78606);
-
-data.setCell(0, 1, 'TS005_VerifyShowSpecialsTest')
-data.setCell(0, 2, 'atlantamarket_PROD.GlobalSearch_SearchFor')
-data.setCell(0, 3, 11864);
-
+data.setCell(0, 3, 30025);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'TS001_VerifyMarketPlannerLoginTest')
+data.setCell(1, 2, 'atlantamarket_UAT.MarketPlanner')
+data.setCell(1, 3, 27234);
 window.suiteTableData['ATLMrkt_RegressionTestSuite']= { tableData: data, tableDiv: 'times-div-ATLMrkt_RegressionTestSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 11 seconds</span>
+              <span class="suite-total-time">Total running time: 57 seconds</span>
               <div id="times-div-ATLMrkt_RegressionTestSuite">
               </div> <!-- times-div-ATLMrkt_RegressionTestSuite -->
             </div> <!-- times-div -->
@@ -231,65 +228,39 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-ATLMrkt_RegressionTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-
-            <span class="header-content">15 ignored methods</span>
-
-            <span class="header-content">9 ignored methods</span>
-
+            <span class="header-content">14 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">atlantamarket_PROD.GlobalSearch_SearchFor</span>
+              <span class="ignored-class-name">atlantamarket_UAT.MarketPlanner</span>
               <div class="ignored-methods-div">
-
-                <span class="ignored-method-name">TS0013_VerifyMarketPlannerAddProducToFevoritesTest</span>
+                <span class="ignored-method-name">TS002_VerifyMarketPlannerInvalidLoginCredentialsTest</span>
                 <br/>
-                <span class="ignored-method-name">TS006_VerifyMarketPlannerListArrangeBtnTest</span>
-
-                <span class="ignored-method-name">TS006_VerifyEventsTest</span>
-
+                <span class="ignored-method-name">TS008_VerifyNewGroupBtnFunctionalityForListsTest</span>
                 <br/>
-                <span class="ignored-method-name">TS002_VerifyGlobalSearchSearchForInformationSearchBoxTest</span>
+                <span class="ignored-method-name">TS013_VerifyAddExhibitorToFavUsingQuickAddInListsTest</span>
                 <br/>
-
-                <span class="ignored-method-name">TS009_VerifyMarketPlannerListNewGroupValidationTest</span>
-
-                <span class="ignored-method-name">TS006_VerifyGlobalSearchSearchArticlesFiltersTest</span>
+                <span class="ignored-method-name">TS005_VerifyMPRegistrationCardOverviewTest</span>
                 <br/>
-                <span class="ignored-method-name">TS004_VerifyGlobalSearchSearchForCatalogsTest</span>
-
+                <span class="ignored-method-name">TS007_VerifyArrangeBtnFunctionalityForListsTest</span>
                 <br/>
-                <span class="ignored-method-name">TS005_VerifyGlobalSearchSearchForArticlesTest</span>
+                <span class="ignored-method-name">TS012_VerifyAddExhibitorToFavInFavListsTest</span>
                 <br/>
-
-                <span class="ignored-method-name">TS0014_VerifyMarketPlannerAddExhibitorToFevoritesTest</span>
+                <span class="ignored-method-name">TS006_VerifyCreateNewListFormValidationTest</span>
                 <br/>
-                <span class="ignored-method-name">TS0010_VerifyMarketPlannerNewListValidationTest</span>
+                <span class="ignored-method-name">TS013_VerifyMPListsCardOverviewTest</span>
                 <br/>
-                <span class="ignored-method-name">TS001_VerifyMarketPlannerLoginTest</span>
+                <span class="ignored-method-name">TS014_VerifyMarketPlannerSignOutTest</span>
                 <br/>
-                <span class="ignored-method-name">TS009_DashboardOverviewTest</span>
+                <span class="ignored-method-name">TS003_VerifyMarketPlannerChannelSelectorTest</span>
                 <br/>
-                <span class="ignored-method-name">TS010_RegistrationCardTest</span>
+                <span class="ignored-method-name">TS009_VerifyCreateNewGroupFormValidationForListsTest</span>
                 <br/>
-                <span class="ignored-method-name">TS0015_VerifyMarketPlannerListManageListTest</span>
+                <span class="ignored-method-name">TS010_VerifyNewListBtnFunctionalityForListsTest</span>
                 <br/>
-                <span class="ignored-method-name">TS007_VerifyMarketPlannerListNewGroupBtnTest</span>
+                <span class="ignored-method-name">TS011_VerifyAddProductToFavFunctionalityInFavListsTest</span>
                 <br/>
-                <span class="ignored-method-name">TS003_VerifyMarketPlannerInvalidLoginCredentialsTest</span>
-                <br/>
-                <span class="ignored-method-name">TS008_VerifyMarketPlannerListNewListBtnTest</span>
-                <br/>
-                <span class="ignored-method-name">TS002_VerifyMarketPlannerChannelSelectorTest</span>
-
-                <span class="ignored-method-name">TS001_VerifyGlobalSearchSearchForInformationTest</span>
-                <br/>
-                <span class="ignored-method-name">TS008_VerifyGlobalSearchSearchForBlogTest</span>
-                <br/>
-                <span class="ignored-method-name">TS003_VerifyGlobalSearchSearchInformationAndFiltersTest</span>
-                <br/>
-                <span class="ignored-method-name">TS007_VerifyGlobalSearchSearchForArticlesSearchBoxTest</span>
-
+                <span class="ignored-method-name">TS004_VerifyMPDashboardOverviewTest</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -301,25 +272,23 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">atlantamarket_PROD.GlobalSearch_SearchFor</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">atlantamarket_UAT.MarketPlanner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">initialize</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-
-                <span class="method-name">TS0016_VerifyMarketPlannerListManageListEditOptTest</span>
-                <span class="method-start">42786 ms</span>
+                <span class="method-name">TS001_VerifyMarketPlannerLoginTest</span>
+                <span class="method-start">33344 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS015_VerifyMPListsCardOverviewTest</span>
+                <span class="method-start">60587 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">121410 ms</span>
+                <span class="method-start">90614 ms</span>
               </div> <!-- configuration-class after -->
-
-                <span class="method-name">TS005_VerifyShowSpecialsTest</span>
-                <span class="method-start">26399 ms</span>
-              </div> <!-- test-method -->
-
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
