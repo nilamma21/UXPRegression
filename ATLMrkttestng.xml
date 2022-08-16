@@ -3,12 +3,12 @@
 
 <suite name="ATLMrkt_RegressionTestSuite">
 	<listners>
-		<listner class-name="atlantamarket_PROD.TestListeners" />
+		<listner class-name="atlantamarket_UAT.TestListeners" />
 	</listners>
 
 	<test thread-count="5" name="RegressionTest">
-
 		<classes>
+
 			<class name="atlantamarket_UAT.MarketPlanner" />
 			
 			<!-- <class name="atlantamarket_PROD.GlobalSearch_SearchFor" /> -->
@@ -21,14 +21,14 @@
 
 			
 
+
+		
+			<class name="atlantamarket_UAT.MarketPlanner" />
+			<methods>
+				<include name="TS001_VerifyMarketPlannerLoginTest" />
+				<include name="TS017_VerifyMPListsCardOverviewTest" />
+
 			</methods>
-
-
-
-
-
-
 		</classes>
-
 	</test>
 </suite>
