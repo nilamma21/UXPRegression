@@ -93,7 +93,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		// Click on Lists tab on MP home page
 		atlmppge.getMPHomeListsTab().click();
 		atlmppge.getATLMPListsPageFavoritesMenu().click();
-
+		Thread.sleep(4000);
 		// Verify that the added favorites exhibitor should be displayed in to Favorites list
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 
@@ -168,6 +168,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 				break;
 			}
 		}
+		Thread.sleep(5000);
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 	}
 
