@@ -98,7 +98,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 
 		// Delete that favorites exhibitor from list
-		atlmppge.getATLEditListItemMoreBtn().click();
+		atlmppge.getMoreBtnDeleteOptnExistingList_ATLPROD().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(6000);
 
@@ -234,7 +234,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 
 		// Delete that added exhibitor from list
-		atlmppge.getATLEditListItemMoreBtn().click();
+		atlmppge.getMoreBtnDeleteOptnExistingList_ATLPROD().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(8000);
 

@@ -19,6 +19,9 @@ public class ATLMarketPlannerPage {
 	By savedexhnameinlist = By.xpath("//li[@class='imc-list-edit--draggable'][1]/div/div[1]/div[1]/a"); //Locator for Saved Exhibitor name in list
 	By lvmsavedexhnameinlist_uat = By.xpath("//li[@class='imc-list-edit--draggable'][1]/div/div[1]/div[1]/a"); //Locator for Saved Exhibitor name in list
 	By editlistitemmorebtn = By.xpath("//div[@class='imc-loading-relative']"); //Locator for More button of  list item
+	By moreBtnDeleteOptnExistingList_ATLPROD = By.xpath("//div[@class='imc-loading-relative']/div[3]/li[1]/div[1]/div[1]/div[4]/div[1]/button[1]"); //Locator for Delete Option of 1st list item
+	
+	By moreBtnDeleteOptn_ATLPROD = By.xpath("//div[@class='imc-gallery__item imc-vertical-tabs-content']/div[1]/div[3]/li[1]/div[1]/div[1]/div[4]/div[1]/button[1]"); //Locator for Delete Option of 1st list item
 	By moreBtnDeleteOptn_lvmUAT = By.xpath("(//li[@class=\"imc-list-edit--draggable\"])[1]/div/div[1]/div[4]/div/button"); //Locator for Delete Option of 1st list item
 	By editlistitemdeleteoptn = By.xpath("//li[@class='imc-list-edit--draggable'][1]/div/div/div[4]/div/div/span[3]/a"); //Locator for Delete Option of 1st list item
 	By createnewlistnametxtbx = By.xpath("//input[@name='listName']"); //Locator for List name text field on Create new list modal
@@ -34,6 +37,8 @@ public class ATLMarketPlannerPage {
 	By atladdtoseselectedbtn = By.xpath("//input[@data-xpath='quickAdd.saveList']"); //Locator for Add to Selected button
 	By listspagefavoritesmenu = By.xpath("//div[@class='imc-vertical-tabs-nav']/div[contains(text(),'Favorites')]"); //Locator for Favorites left menu
 	By addlistcreatebtn = By.xpath("//div[@class = 'imc-vr--medium']/input[1]"); //Locator for Create button on Add List modal
+	By addlistcreatebtn_ATLPROD = By.xpath("//div[@class = 'imc-vr--medium-alt']/input[1]"); //Locator for Create button on Add List modal
+	
 	By savedproductnameinlist = By.xpath("//li[@class='imc-list-edit--draggable'][1]/div/div[3]/div/div/div/div/a"); //Locator for Saved Product Name in List
 	By createAddListBtn = By.xpath("(//input[@type='submit'])[position()=3]"); //Locator for Create button on Add List modal		
 	By newCreatedListName = By.xpath("//div[@class='imc-gallery imc-gallery--20-80 imc-gallery--1-2--mobile-full-width']/div[1]/div[1]/div[1]/div[1]/h3[1]"); //Locator for newly Created List name
@@ -551,6 +556,21 @@ public class ATLMarketPlannerPage {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpnewlistbutton));
 		return driver.findElement(mpnewlistbutton);
+	}
+	public WebElement getMoreBtnDeleteOptn_ATLPROD() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(moreBtnDeleteOptn_ATLPROD));
+		return driver.findElement(moreBtnDeleteOptn_ATLPROD);
+	}
+	public WebElement getMoreBtnDeleteOptnExistingList_ATLPROD() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(moreBtnDeleteOptnExistingList_ATLPROD));
+		return driver.findElement(moreBtnDeleteOptnExistingList_ATLPROD);
+	}
+	public WebElement getaddlistcreatebtn_ATLPROD() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(addlistcreatebtn_ATLPROD));
+		return driver.findElement(addlistcreatebtn_ATLPROD);
 	}
 
 	
