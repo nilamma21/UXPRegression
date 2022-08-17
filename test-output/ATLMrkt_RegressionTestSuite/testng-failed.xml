@@ -5,9 +5,15 @@
     <classes>
       <class name="atlantamarket_UAT.MarketPlanner">
         <methods>
+<<<<<<< HEAD
+          <include name="TS020_VerifyAddToFavoriteForExhibitorTest1"/>
+          <include name="initialize"/>
+          <include name="tearDown"/>
+=======
           <include name="initialize"/>
           <include name="tearDown"/>
           <include name="TS017_VerifyMPListsCardOverviewTest"/>
+>>>>>>> 5d0323c48aecee6ab2c8c7cd8a1e661124955a51
         </methods>
       </class> <!-- atlantamarket_UAT.MarketPlanner -->
     </classes>

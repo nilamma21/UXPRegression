@@ -90,11 +90,27 @@ public class ATLMarketPlannerPage {
 	By mpSelectListPopup = By.xpath("//div[@class='ReactModal__Content ReactModal__Content--after-open imc-modal--box imc-contactexhibitormodal']"); //Locator for Select List Popup
 	By mpFevList = By.xpath("//div[@class='ReactModal__Content ReactModal__Content--after-open imc-modal--box imc-contactexhibitormodal']/div[1]/div[1]/ul[1]/li[2]/div[1]"); //Locator for Fev List
 	By mpSelectFevList = By.xpath("//div[@class='ReactModal__Content ReactModal__Content--after-open imc-modal--box imc-contactexhibitormodal']/div[1]/div[1]/ul[1]/li[2]/div[2]/span[1]/a[1]"); //Locator for Select Fev List
+
+	By mpDuplicateList = By.xpath("(//ul[@class='imc-market-planner-list']/li/div[2]/span[1]/a[1])[1]"); //Locator for Duplicate List
+	By mpDuplicateListName = By.xpath("(//ul[@class='imc-market-planner-list']/li[1]/div[1])[1]"); //Locator for Duplicate List Name
+	By mpDuplicateListInputBox = By.xpath("//div[@class='imc-modal--content imc-section imc-customlists-form']//form[1]/div[2]/div[1]/div[1]/input[1]"); //Locator for Duplicate List Input field
+	By mpDuplicateBtn = By.xpath("//div[@class='imc-modal--content imc-section imc-customlists-form']//form[1]/div[2]//div[2]/input[1]"); //Locator for Duplicate btn
+	By mpCurrentListName = By.xpath("//div[@class='imc-gallery imc-gallery--20-80 imc-gallery--1-2--mobile-full-width']/div[1]/div[1]/div[1]/div[1]/h3[1]"); //Locator for Current list name
+	By mpRenameLink = By.xpath("//div[@class='imc-gallery imc-gallery--20-80 imc-gallery--1-2--mobile-full-width']/div[1]/div[1]/div[1]/div[1]/a[1]"); //Locator for rename link
+	By mpRenameInputField = By.xpath("//div[@class='imc-gallery imc-gallery--20-80 imc-gallery--1-2--mobile-full-width']/div[1]/div[1]/div[1]/div[1]/form[1]/div[2]/input[1]"); //Locator for rename Input field
+	By mpRenameInputSaveBtn = By.xpath("//div[@class='imc-gallery imc-gallery--20-80 imc-gallery--1-2--mobile-full-width']/div[1]/div[1]/div[1]/div[1]/form[1]/input[1]"); //Locator for rename Input Save Btn
+	By mpRenameListName = By.xpath("//div[@class='imc-gallery imc-gallery--20-80 imc-gallery--1-2--mobile-full-width']/div[1]/div[1]/div[1]/div[1]/h3[1]"); //Locator for rename List Name
+	By mpBackToList = By.xpath("//div[@class='imc-section--inner-content imc-section--align-fullwidth  imc-section-- imc-content--center-mobile']/div[1]/div[1]/div[1]/a[1]"); //Locator for back to List 
+	By mpSourceLocationList = By.xpath("(//ul[@class='imc-market-planner-list']/li[1])[1]"); //Locator for Sourch List
+	By mpDestinationLocationList = By.xpath("(//ul[@class='imc-market-planner-list']/li[3])[1]"); //Locator for Destination List
+	By mpListName = By.xpath("(//ul[@class='imc-market-planner-list']/li[1]/div[1])[1]"); //Locator for 1list 
+
 	By mpexistinglists = By.xpath("//div[@class = 'imc-section--content-with-image']/div[1]/div[1]/div[2]/div[1]/div[2]/ul[1]"); //Locator for Saved Searches under Lists card
 	By mpalllists = By.xpath("//div[@class = 'imc-section--content-with-image']/div[1]/div[1]/div[2]/div[1]/div[3]/h6[1]/a[1]"); //Locator for All Lists under Lists card
 	By mplisttab = By.xpath("//div[@class = 'imc-vertical-tabs-nav']/a[1]"); //Locator for Lists tab
 	By mpnewlistbutton = By.xpath("//div[@class = 'imc-gallery__item imc-customlists-button-pad']/button[2]"); //Locator for new list button
 	By createlistbutton = By.xpath("//div[@class = 'imc-vr--medium']/inout[1]"); //Locator Create List button
+
 	
 	public ATLMarketPlannerPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -446,6 +462,76 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpFevList));
 		return driver.findElement(mpFevList);
 	}
+
+
+	public WebElement getMpDuplicateList() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpDuplicateList));
+		return driver.findElement(mpDuplicateList);
+	}
+	public WebElement getMpDuplicateListName() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpDuplicateListName));
+		return driver.findElement(mpDuplicateListName);
+	}
+	public WebElement getMpDuplicateListInputBox() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpDuplicateListInputBox));
+		return driver.findElement(mpDuplicateListInputBox);
+	}
+	public WebElement getMpDuplicateBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpDuplicateBtn));
+		return driver.findElement(mpDuplicateBtn);
+	}				
+	public WebElement getmpCurrentListName() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpCurrentListName));
+		return driver.findElement(mpCurrentListName);
+	}				
+	public WebElement getmpRenameLink() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpRenameLink));
+		return driver.findElement(mpRenameLink);
+	}	
+	public WebElement getmpRenameInputField() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpRenameInputField));
+		return driver.findElement(mpRenameInputField);
+	}	
+	public WebElement getmpRenameInputSaveBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpRenameInputSaveBtn));
+		return driver.findElement(mpRenameInputSaveBtn);
+	}	
+	public WebElement getmpRenameListName() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpRenameListName));
+		return driver.findElement(mpRenameListName);
+	}	
+	public WebElement getmpBackToList() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpBackToList));
+		return driver.findElement(mpBackToList);
+	}	
+	public WebElement getmpSourceLocationList() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSourceLocationList));
+		return driver.findElement(mpSourceLocationList);
+	}	
+	public WebElement getmpDestinationLocationList() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpDestinationLocationList));
+		return driver.findElement(mpDestinationLocationList);
+	}	
+	public WebElement getmpListName() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpListName));
+		return driver.findElement(mpListName);
+	}	
+
+	
+
 	public WebElement getmpalllists() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpalllists));
@@ -466,9 +552,9 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpnewlistbutton));
 		return driver.findElement(mpnewlistbutton);
 	}
-	
-	
 
+	
+	
 }
 
 
