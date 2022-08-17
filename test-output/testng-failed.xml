@@ -3,6 +3,7 @@
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
+
       <class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions">
         <methods>
           <include name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest"/>
@@ -12,6 +13,14 @@
           <include name="TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest"/>
         </methods>
       </class> <!-- atlantamarket_PROD.GlobalSearch_ExhibitorActions -->
+
+      <class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters">
+        <methods>
+          <include name="initialize"/>
+          <include name="TS005_VerifySelectionOfAccentFurnitureProdCatgFromLeftPaneFiltersTest"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.GlobalSearch_LeftPaneFilters -->
+
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->

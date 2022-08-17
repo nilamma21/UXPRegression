@@ -511,10 +511,15 @@ public class MarketPlanner extends base {
 	}
 
 
+
 	@Test(priority = 11)
 	public void TS011_VerifyMPDashboardOverviewTest() throws InterruptedException, IOException {
 
 	
+
+	@Test(priority = 4)
+	public void TS004_VerifyMPDashboardOverviewTest() throws InterruptedException, IOException {
+
 
 
 		// The purpose of this test case to verify:-
@@ -566,8 +571,13 @@ public class MarketPlanner extends base {
 	}
 
 
+
 	@Test(priority = 12)
 	public void TS012_VerifyMPRegistrationCardOverviewTest() throws InterruptedException, IOException {
+
+	@Test(priority = 5)
+	public void TS005_VerifyMPRegistrationCardOverviewTest() throws InterruptedException, IOException {
+
 
 
 		// The purpose of this test case to verify:-
@@ -602,10 +612,16 @@ public class MarketPlanner extends base {
 	}
 
 
+
 	@Test(priority = 13)
 	public void TS013_VerifyAddProductToFavFunctionalityInFavListsTest() throws InterruptedException, IOException {
 
 	
+
+	@Test(priority = 11)
+	public void TS011_VerifyAddProductToFavFunctionalityInFavListsTest() throws InterruptedException, IOException {
+
+
 
 		// The purpose of this test case to verify:-
 		// UXP-T237: Market Planner: Lists- Favorites- Add a Product to Favorites using
@@ -678,6 +694,9 @@ public class MarketPlanner extends base {
 		// The purpose of this test case to verify:-
 		// UXP-T243: Market Planner: Lists- Favorites- Add an Exhibitor to Favorites
 		// using 'Favorite' icon in Exhibitor actions.
+
+
+
 
 
 		lap = new ATLLandingPage(driver);
