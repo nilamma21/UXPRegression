@@ -334,6 +334,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		Assert.assertTrue(atlleftpane.getEXPIndustrialStyleOnProfile().isDisplayed());
 		driver.close();
 		driver.switchTo().window(tabs.get(0));
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
 
 	@Test(priority = 5)
