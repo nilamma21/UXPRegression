@@ -26,7 +26,8 @@ public class ATLLeftPaneFilters {
 	By expprofileinfomenu = By.xpath("//a[contains(text(),'Profile Info')]"); //Locator for EXP Profile Info menu
 	By expproductcategsectn = By.xpath("//h3[contains(text(),'Product Categories')]"); //Locator for Products Categories section title in EXP
 	By expindustrialstyleonprofile = By.xpath("//span[contains(@class,'EPUpdateExhibitorProfile_categoriesList') and text()='Industrial']"); //Locator for Industrial Style on Profile
-	
+	By accentfurnitureprodcatg = By.xpath("//label[contains(text(),'Accent Furniture')]"); //Locator for name of Accent Furniture Categ.
+
 	public ATLLeftPaneFilters(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
@@ -99,6 +100,9 @@ public class ATLLeftPaneFilters {
 	}
 	public WebElement getEXPIndustrialStyleOnProfile() {
 		return driver.findElement(expindustrialstyleonprofile);
+	}
+	public WebElement getATLAccentFurnitureProdCatg(){
+		return driver.findElement(accentfurnitureprodcatg);
 	}
 }
 
