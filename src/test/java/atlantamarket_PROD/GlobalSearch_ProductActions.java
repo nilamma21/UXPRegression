@@ -157,7 +157,7 @@ public class GlobalSearch_ProductActions extends base {
 				atlmppge.getNewListModalCreateBtn());
 
 		// Click on Create button
-		atlmppge.getAddListCreateBtn().click();
+		atlmppge.getaddlistcreatebtn_ATLPROD().click();
 
 		// Click on Go to Market Planner button
 		atlmppge.getGoToMarketPlannerBtn().click();
@@ -258,7 +258,7 @@ public class GlobalSearch_ProductActions extends base {
 		Assert.assertTrue(atlmppge.getSavedProductNameInList().getText().contains(productNameOnSearchGrid));
 
 		// Delete that added Product from list
-		atlmppge.getATLEditListItemMoreBtn().click();
+		atlmppge.getMoreBtnDeleteOptnExistingList_ATLPROD().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(8000);
 
@@ -324,7 +324,7 @@ public class GlobalSearch_ProductActions extends base {
 		Assert.assertTrue(atlmppge.getSavedProductNameInList().getText().contains(productNameOnSearchGrid));
 
 		// Delete that favorited product from list
-		atlmppge.getATLEditListItemMoreBtn().click();
+		atlmppge.getMoreBtnDeleteOptnExistingList_ATLPROD().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(6000);
 
@@ -483,7 +483,7 @@ public class GlobalSearch_ProductActions extends base {
 		Thread.sleep(10000);
 
 		// Delete that added Product from list
-		atlmppge.getATLEditListItemMoreBtn().click();
+		atlmppge.getMoreBtnDeleteOptnExistingList_ATLPROD().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(8000);
 
@@ -595,7 +595,7 @@ public class GlobalSearch_ProductActions extends base {
 		Assert.assertTrue(atlmppge.getSavedProductNameInList().getText().contains(productNameOnSearchGrid));
 
 		// Delete that favorited product from list
-		atlmppge.getATLEditListItemMoreBtn().click();
+		atlmppge.getMoreBtnDeleteOptnExistingList_ATLPROD().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(6000);
 
@@ -685,6 +685,6 @@ public class GlobalSearch_ProductActions extends base {
 
 	@AfterClass
 	public void tearDown() {
-		driver.quit();
+		//driver.quit();
 	}
 }

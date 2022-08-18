@@ -650,7 +650,7 @@ public class FloorPlans extends base {
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().equals(exhibitorName));
 
 		// Delete that favorites exhibitor from list
-		atlmppge.getATLEditListItemMoreBtn().click();
+		atlmppge.getMoreBtnDeleteOptn_ATLPROD().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(6000);
 

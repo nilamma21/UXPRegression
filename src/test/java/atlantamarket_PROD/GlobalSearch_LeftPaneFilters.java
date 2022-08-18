@@ -322,7 +322,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		//Click on Digital Showroom tab
 		atlleftpane.getEXPDigiShowroomTab().click();
-		
+
 		//Click on Profile Info menu
 		atlleftpane.getEXPProfileInfoMenu().click();
 		Thread.sleep(6000);
@@ -334,12 +334,64 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		Assert.assertTrue(atlleftpane.getEXPIndustrialStyleOnProfile().isDisplayed());
 		driver.close();
 		driver.switchTo().window(tabs.get(0));
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
-				
 
-		/*@AfterClass
+	@Test(priority = 5)
+	public void TS005_VerifySelectionOfAccentFurnitureProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T404: Selection Of Accent Furniture Prod Catg From Left Pane Filters
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		atlleftpane = new ATLLeftPaneFilters(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		utl = new Utility(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
+		atlgs.getATLSearchButton().click();
+
+		//Click on Product Categories expand btn
+		atlleftpane.getATLProdCatgExpandBtn().click();
+
+		utl.scrollToElement(atlleftpane.getATLAccentFurnitureProdCatg());
+
+		//Select Accent Furniture prod category
+		String expectedprodcatg = atlleftpane.getATLAccentFurnitureProdCatg().getText();
+		atlleftpane.getATLAccentFurnitureProdCatg().click();
+		Thread.sleep(8000);
+
+		//Verify the selected Product Category on Product details page
+		utl.scrollToElement(atlexhact.getExhibitorProduct());
+		// Hovering on 1st Product
+		Actions actions = new Actions(driver);
+		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
+		// To mouseover on See Details btn
+		actions.moveToElement(atlexhact.getProdSeeDetailsBtn()).perform();
+		// Click on See Details button
+		actions.click().perform();
+
+		//Scroll till Product Categories section
+		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
+		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
+
+		for (int j = 0; j < prodcatgitemlist.size(); j++) {
+			if(atlexhdgshw.getATLProductCategTable().isDisplayed()) {
+				System.out.println(prodcatgitemlist.get(j).getText());
+				Assert.assertTrue(prodcatgitemlist.get(j).getText().contains(expectedprodcatg));
+				break;
+			}
+		}
+		driver.get(prop.getProperty("atlmrkturl_prod"));
+	}
+
+
+/*@AfterClass
 	public void tearDown()
 	{
 		driver.quit();
 	}*/
-	}
+}

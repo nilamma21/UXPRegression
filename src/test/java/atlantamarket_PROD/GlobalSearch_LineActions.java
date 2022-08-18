@@ -137,17 +137,27 @@ public class GlobalSearch_LineActions extends base {
 		// Click on Lists tab on MP home page
 		atlmppge.getMPHomeListsTab().click();
 		atlmppge.getATLMPListsPageFavoritesMenu().click();
+		Thread.sleep(10000);
 
 		// Verify that the added favorites exhibitor should be displayed in to Favorites list
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 
 		// Delete that favorites exhibitor from list
-		atlmppge.getATLEditListItemMoreBtn().click();
+		atlmppge.getMoreBtnDeleteOptn_ATLPROD().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(6000);
 
 		// Verify that the added favorites exhibitor should be removed from Favorites list
-		Assert.assertFalse(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
+	/*	Assert.assertFalse(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
+		Thread.sleep(6000);*/
+
+		favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
+
+		// Verify that the added favorites exhibitor should be removed from Favorites list
+		for (int i = 1; i < favlist.size(); i++) {
+			// System.out.println(favlist.get(i).getText());
+			Assert.assertFalse(favlist.get(i).getText().contains(exhname));
+		}
 	}
 
 	@Test(priority = 3)
@@ -319,7 +329,8 @@ public class GlobalSearch_LineActions extends base {
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 
 		// Delete that added line from list
-		atlmppge.getATLEditListItemMoreBtn().click();
+		atlmppge.getMoreBtnDeleteOptnExistingList_ATLPROD().click();
+		Thread.sleep(5000);
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(8000);
 	}
@@ -491,6 +502,6 @@ public class GlobalSearch_LineActions extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 }
