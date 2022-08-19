@@ -60,8 +60,8 @@ public class MarketPlanner extends base {
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		lap.getIUnderstandBtn().click();
-		Thread.sleep(8000);
+		//lap.getIUnderstandBtn().click();
+		//Thread.sleep(8000);
 		// lap.getCloseMarktAdBtn().click();
 	}
 
@@ -1227,7 +1227,65 @@ public class MarketPlanner extends base {
 
 	}
 
+	@Test(priority = 20)
+	public void TS020_VerifyMPActivitiesCardOverviewTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP-001: To verify the Market Planner overview and it's functionality
 
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		lap.getMPLinkText().click();
+		Thread.sleep(6000);
+
+		// Verify dashboard page
+		Assert.assertTrue(atlmppge.getmpregistrationcard().isDisplayed());
+		Assert.assertTrue(atlmppge.getmplistscard().getText().contains("Lists"));
+		Assert.assertTrue(atlmppge.getmpbookmyhotelcard().getText().contains("Hotel"));
+
+		System.out.println("Dashboard Cards are displayed properly.");
+
+		// Verify all the tabs for Activities Card are properly displayed
+		Assert.assertTrue(atlmppge.getmpbookhotel().getText().contains("Book a Hotel"));
+		Assert.assertTrue(atlmppge.getmpfloorplans().getText().contains("Floor Plans"));
+		Assert.assertTrue(atlmppge.getmpexpdirectory().getText().contains("Exhibitor Directory"));
+		Assert.assertTrue(atlmppge.getmpsavedsearches().getText().contains("Saved Searches"));
+		Assert.assertTrue(atlmppge.getmpmyinfo().getText().contains("My Info"));
+		
+		System.out.println("Dashboard Activity Card details are displayed properly.");
+		
+		//Verify if all the tabs open up with proper pages
+		atlmppge.getmpbookhotel().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://uat-atlmkt.imcmvdp.com/Attend/Hotels"));
+		System.out.println("Book a Hotel page is displayed properly.");
+		driver.navigate().back();
+		
+		atlmppge.getmpfloorplans().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://uat-atlmkt.imcmvdp.com/Market-Map"));
+		System.out.println("Floor Plans page is displayed properly.");
+		driver.navigate().back();
+		
+		atlmppge.getmpexpdirectory().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://uat-atlmkt.imcmvdp.com/exhibitor/exhibitor-directory"));
+		System.out.println("Exhibitor Directory page is displayed properly.");
+		driver.navigate().back();
+		
+		atlmppge.getmpsavedsearches().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://uat-atlmkt.imcmvdp.com/Market-Planner/Saved-Searches"));
+		System.out.println("Saved Searches page is displayed properly.");
+		driver.navigate().back();
+		
+		atlmppge.getmpmyinfo().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://uat-atlmkt.imcmvdp.com/Market-Planner/My-Info"));
+		System.out.println("My Info page is displayed properly.");
+		driver.navigate().back();
+
+	}
 
 
 	@AfterClass

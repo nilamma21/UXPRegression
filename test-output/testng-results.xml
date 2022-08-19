@@ -1,61 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="11" passed="11">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="626267" started-at="2022-08-18T12:21:08Z" finished-at="2022-08-18T12:31:34Z">
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="92703" started-at="2022-08-19T05:57:45Z" finished-at="2022-08-19T05:59:17Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="626267" started-at="2022-08-18T12:21:08Z" finished-at="2022-08-18T12:31:34Z">
-      <class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="initialize" is-config="true" duration-ms="36605" started-at="2022-08-18T17:51:08Z" finished-at="2022-08-18T17:51:45Z">
+    <test name="RegressionTest" duration-ms="92703" started-at="2022-08-19T05:57:45Z" finished-at="2022-08-19T05:59:17Z">
+      <class name="atlantamarket_UAT.MarketPlanner">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.MarketPlanner@754ba872]" name="initialize" is-config="true" duration-ms="20734" started-at="2022-08-19T11:27:45Z" finished-at="2022-08-19T11:28:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest" duration-ms="29750" started-at="2022-08-18T17:51:45Z" finished-at="2022-08-18T17:52:15Z">
+        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:atlantamarket_UAT.MarketPlanner@754ba872]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="32849" started-at="2022-08-19T11:28:05Z" finished-at="2022-08-19T11:28:38Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest -->
-        <test-method status="PASS" signature="TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest" duration-ms="31194" started-at="2022-08-18T17:52:15Z" finished-at="2022-08-18T17:52:46Z">
+        </test-method> <!-- TS001_VerifyMarketPlannerLoginTest -->
+        <test-method status="PASS" signature="TS020_VerifyMPActivitiesCardOverviewTest()[pri:0, instance:atlantamarket_UAT.MarketPlanner@754ba872]" name="TS020_VerifyMPActivitiesCardOverviewTest" duration-ms="39088" started-at="2022-08-19T11:28:38Z" finished-at="2022-08-19T11:29:17Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest -->
-        <test-method status="PASS" signature="TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest" duration-ms="45806" started-at="2022-08-18T17:52:46Z" finished-at="2022-08-18T17:53:32Z">
+        </test-method> <!-- TS020_VerifyMPActivitiesCardOverviewTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.MarketPlanner@754ba872]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-08-19T11:29:17Z" finished-at="2022-08-19T11:29:17Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest -->
-        <test-method status="PASS" signature="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest" duration-ms="91968" started-at="2022-08-18T17:53:32Z" finished-at="2022-08-18T17:55:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest -->
-        <test-method status="PASS" signature="TS005_VerifySelectionOfAccentFurnitureProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="TS005_VerifySelectionOfAccentFurnitureProdCatgFromLeftPaneFiltersTest" duration-ms="66238" started-at="2022-08-18T17:55:04Z" finished-at="2022-08-18T17:56:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS005_VerifySelectionOfAccentFurnitureProdCatgFromLeftPaneFiltersTest -->
-        <test-method status="PASS" signature="TS006_VerifySelectionOfHolidayProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="TS006_VerifySelectionOfHolidayProdCatgFromLeftPaneFiltersTest" duration-ms="34661" started-at="2022-08-18T17:56:10Z" finished-at="2022-08-18T17:56:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS006_VerifySelectionOfHolidayProdCatgFromLeftPaneFiltersTest -->
-        <test-method status="PASS" signature="TS007_VerifySelectionOfDecorativeAccessProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="TS007_VerifySelectionOfDecorativeAccessProdCatgFromLeftPaneFiltersTest" duration-ms="48666" started-at="2022-08-18T17:56:44Z" finished-at="2022-08-18T17:57:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS007_VerifySelectionOfDecorativeAccessProdCatgFromLeftPaneFiltersTest -->
-        <test-method status="PASS" signature="TS008_VerifySelectionOfGeneralGiftProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="TS008_VerifySelectionOfGeneralGiftProdCatgFromLeftPaneFiltersTest" duration-ms="82036" started-at="2022-08-18T17:57:33Z" finished-at="2022-08-18T17:58:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS008_VerifySelectionOfGeneralGiftProdCatgFromLeftPaneFiltersTest -->
-        <test-method status="PASS" signature="TS009_VerifySelectionOfFashionAccProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="TS009_VerifySelectionOfFashionAccProdCatgFromLeftPaneFiltersTest" duration-ms="67662" started-at="2022-08-18T17:58:55Z" finished-at="2022-08-18T18:00:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS009_VerifySelectionOfFashionAccProdCatgFromLeftPaneFiltersTest -->
-        <test-method status="PASS" signature="TS010_VerifySelectionOfFloralBotanicalsProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="TS010_VerifySelectionOfFloralBotanicalsProdCatgFromLeftPaneFiltersTest" duration-ms="52109" started-at="2022-08-18T18:00:03Z" finished-at="2022-08-18T18:00:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS010_VerifySelectionOfFloralBotanicalsProdCatgFromLeftPaneFiltersTest -->
-        <test-method status="PASS" signature="TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest" duration-ms="39452" started-at="2022-08-18T18:00:55Z" finished-at="2022-08-18T18:01:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest -->
-      </class> <!-- atlantamarket_PROD.GlobalSearch_LeftPaneFilters -->
+        </test-method> <!-- tearDown -->
+      </class> <!-- atlantamarket_UAT.MarketPlanner -->
     </test> <!-- RegressionTest -->
   </suite> <!-- ATLMrkt_RegressionTestSuite -->
 </testng-results>
