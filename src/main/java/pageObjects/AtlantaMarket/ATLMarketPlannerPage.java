@@ -116,6 +116,11 @@ public class ATLMarketPlannerPage {
 	By mpnewlistbutton = By.xpath("//div[@class = 'imc-gallery__item imc-customlists-button-pad']/button[2]"); //Locator for new list button
 	By createlistbutton = By.xpath("//div[@class = 'imc-vr--medium']/inout[1]"); //Locator Create List button
 
+	By mpbookhotel = By.xpath("//div[@class = 'imc-card imc-loading-relative']/div[1]/a[1]"); //Locator for Book a Hotel option
+	By mpfloorplans = By.xpath("//div[@class = 'imc-card imc-loading-relative']/div[2]/a[1]"); //Locator for Floor Plans option
+	By mpexpdirectory = By.xpath("//div[@class = 'imc-card imc-loading-relative']/div[3]/a[1]"); //Locator for Exhibitor Directory option
+	By mpsavedsearches = By.xpath("//div[@class = 'imc-card imc-loading-relative']/div[4]/a[1]"); //Locator for saved Searches option
+	By mpmyinfo = By.xpath("//div[@class = 'imc-card imc-loading-relative']/div[5]/a[1]"); //Locator for My Info option
 	
 	public ATLMarketPlannerPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -572,8 +577,31 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(addlistcreatebtn_ATLPROD));
 		return driver.findElement(addlistcreatebtn_ATLPROD);
 	}
-
-	
+	public WebElement getmpbookhotel() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpbookhotel));
+		return driver.findElement(mpbookhotel);
+	}
+	public WebElement getmpfloorplans() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpfloorplans));
+		return driver.findElement(mpfloorplans);
+	}
+	public WebElement getmpexpdirectory() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpexpdirectory));
+		return driver.findElement(mpexpdirectory);
+	}
+	public WebElement getmpsavedsearches() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpsavedsearches));
+		return driver.findElement(mpsavedsearches);
+	}
+	public WebElement getmpmyinfo() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpmyinfo));
+		return driver.findElement(mpmyinfo);
+	}
 	
 }
 
