@@ -6,7 +6,7 @@
 	/> <methods> <include name="TS020_VerifyAddToFavoriteForExhibitorTest1" /> -->
 
 
-<suite name="ATLMrkt_RegressionTestSuite">
+<!-- <suite name="ATLMrkt_RegressionTestSuite">
 	<listners>
 		<listner class-name="atlantamarket_PROD.TestListeners" />
 	</listners>
@@ -14,10 +14,10 @@
 		<classes>
 
 			<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
-			<!-- <class name="atlantamarket_PROD.GlobalSearch_LineActions" /> -->
+			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
 			<methods> 
-		<!--	 <include name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest" /> 
-			 <include name="TS003_VerifyAddToExistingListForExhibitorTest" /> -->
+			 <include name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest" /> 
+			 <include name="TS003_VerifyAddToExistingListForExhibitorTest" />
 			</methods>
 
  			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
@@ -29,7 +29,7 @@
 			<class name="atlantamarket_PROD.FloorPlans" />
 			<class name="atlantamarket_PROD.MarketPlanner" />
 		</classes>
-	</test>
+	</test> -->
 
 <!-- 
  	<listners>
@@ -43,11 +43,22 @@
 			<class name="atlantamarket_UAT.MarketPlanner" />
 
 		</classes>
-	</test> -->
+	</test> 
+</suite>-->
+
+
+<suite name="ATLMrkt_RegressionTestSuite">
+	<listners>
+		<listner class-name="atlantamarket_PROD.TestListeners" />
+	</listners>
+	<test thread-count="5" name="RegressionTest">
+		<classes>
+			<class name="atlantamarket_UAT.MarketPlanner" />
+			<methods>
+				<include name="TS016_VerifyMarketPlannerListManageListEditOptTest" />
+				<!-- <include name="TS003_VerifyMarketPlannerInvalidLoginCredentialsTest" /> -->
+				
+			</methods>
+		</classes>
+	</test>
 </suite>
-
-
-
-<!-- <class name="atlantamarket_UAT.MarketPlanner" /> <methods> <include 
-	name="TS001_VerifyMarketPlannerLoginTest" /> <include name="TS017_VerifyMPListsCardOverviewTest" 
-	/> </methods> </classes> </test> </suite> -->

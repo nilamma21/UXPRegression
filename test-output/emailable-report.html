@@ -31,96 +31,37 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-
-<tr><td style="text-align:left;padding-right:2em">RegressionTest</td><td class="numi">7</td><td class="numi">7</td><td class="numi">0</td><td class="numi_attn">3</td><td class="numi">517.9 seconds</td><td class="numi"></td><td class="numi"></td></tr>
-
-<tr><td style="text-align:left;padding-right:2em">RegressionTest</td><td class="numi">5</td><td class="numi">5</td><td class="numi">0</td><td class="numi">0</td><td class="numi">383.9 seconds</td><td class="numi"></td><td class="numi"></td></tr>
-
+<tr><td style="text-align:left;padding-right:2em">RegressionTest</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">145.5 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
 <tr><th colspan="4">RegressionTest &#8212; failed</th></tr>
-<tr class="failedodd"><td rowspan="3">atlantamarket_PROD.GlobalSearch_ExhibitorActions</td><td><a href="#m1"><b>TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1660736847952</td><td class="numi">38569</td></tr><tr class="failedodd"><td><a href="#m2"><b>TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1660736886790</td><td class="numi">38665</td></tr><tr class="failedodd"><td><a href="#m3"><b>TS009_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1660736925693</td><td class="numi">36678</td></tr>
-<tr><th colspan="4">RegressionTest &#8212; passed</th></tr>
-
-<tr class="passedodd"><td rowspan="7">atlantamarket_PROD.GlobalSearch_ExhibitorActions</td><td><a href="#m4"><b>TS001_VerifyAddToFavoriteForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1660736555533</td><td class="numi">63681</td></tr><tr class="passedodd"><td><a href="#m5"><b>TS002_VerifyAddToNewListForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1660736619240</td><td class="numi">44639</td></tr><tr class="passedodd"><td><a href="#m6"><b>TS003_VerifyAddToExistingListForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1660736663882</td><td class="numi">81784</td></tr><tr class="passedodd"><td><a href="#m7"><b>TS004_VerifyClickOnContactExhIconForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1660736745670</td><td class="numi">32836</td></tr><tr class="passedodd"><td><a href="#m8"><b>TS005_VerifyClickOnLocationLinksForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1660736778517</td><td class="numi">30919</td></tr><tr class="passedodd"><td><a href="#m9"><b>TS006_VerifyClickOnLinesShownLinkForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1660736809439</td><td class="numi">38510</td></tr><tr class="passedodd"><td><a href="#m10"><b>TS010_VerifySelectionOfExhibitorFromSearchResultsTest</b>  </a></td><td class="numi">1</td><td>1660736962721</td><td class="numi">45049</td></tr>
+<tr class="failedodd"><td rowspan="1">atlantamarket_UAT.MarketPlanner</td><td><a href="#m1"><b>TS016_VerifyMarketPlannerListManageListEditOptTest</b>  </a></td><td class="numi">1</td><td>1661169154735</td><td class="numi">88051</td></tr>
 </table>
 <h1>RegressionTest</h1>
-<h2 id="m1">atlantamarket_PROD.GlobalSearch_ExhibitorActions:TS009_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest</h2>
+<h2 id="m1">atlantamarket_UAT.MarketPlanner:TS016_VerifyMarketPlannerListManageListEditOptTest</h2>
 <div style="padding-left:3em">
-<p>element click intercepted: Element &lt;button id=&quot;&quot; class=&quot;imc-addnote__openModal imc-addnote__openModal--hideafter imc-link--alt-darkred imc-content imc-content--delta imc-expand-collapse__heading&quot;&gt;...&lt;/button&gt; is not clickable at point (1316, 246). Other element would receive the click: &lt;div class=&quot;ReactModal__Overlay ReactModal__Overlay--after-open imc-modal--overlay&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=104.0.5112.81)
+<p>Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;imc-gallery__item market-planner--list-sidebar imc-breakpoint-display--hide-mobile&apos;]//input[1] (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getMpQuickAdd(ATLMarketPlannerPage.java:266)
+<br/>at atlantamarket_UAT.MarketPlanner.TS016_VerifyMarketPlannerListManageListEditOptTest(MarketPlanner.java:902)
+<br/>25 lines not shown
+<p>Caused by Cannot locate an element using By.xpath: //div[@class=&apos;imc-gallery__item market-planner--list-sidebar imc-breakpoint-display--hide-mobile&apos;]//input[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
 System info: host: &apos;SWAPNILI&apos;, ip: &apos;172.27.182.57&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}), userDataDir=C:\Users\swapnili\AppData\Local\Temp\scoped_dir10944_1089842183}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:51217}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=104.0.5112.81, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: 7001ee456064daa2097f9b53b5670f93</p>
-sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
-<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
-<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
-<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-<br/>at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-<br/>at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
-<br/>at atlantamarket_PROD.GlobalSearch_ExhibitorActions.TS009_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest(GlobalSearch_ExhibitorActions.java:495)
+Driver info: driver.version: unknown</p>
+org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+<br/>at java.util.Optional.orElseThrow(Optional.java:290)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getMpQuickAdd(ATLMarketPlannerPage.java:266)
+<br/>at atlantamarket_UAT.MarketPlanner.TS016_VerifyMarketPlannerListManageListEditOptTest(MarketPlanner.java:902)
 <br/>25 lines not shown
 </div>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">atlantamarket_PROD.GlobalSearch_ExhibitorActions:TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest</h2>
-<div style="padding-left:3em">
-<p>expected [2551] but found [309053]</p>
-org.testng.Assert.fail(Assert.java:94)
-<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
-<br/>at org.testng.Assert.assertEquals(Assert.java:123)
-<br/>at org.testng.Assert.assertEquals(Assert.java:176)
-<br/>at org.testng.Assert.assertEquals(Assert.java:186)
-<br/>at atlantamarket_PROD.GlobalSearch_ExhibitorActions.TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest(GlobalSearch_ExhibitorActions.java:443)
-<br/>25 lines not shown
-</div>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">atlantamarket_PROD.GlobalSearch_ExhibitorActions:TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest</h2>
-<div style="padding-left:3em">
-<p>expected [309053] but found [699159]</p>
-org.testng.Assert.fail(Assert.java:94)
-<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
-<br/>at org.testng.Assert.assertEquals(Assert.java:123)
-<br/>at org.testng.Assert.assertEquals(Assert.java:176)
-<br/>at org.testng.Assert.assertEquals(Assert.java:186)
-<br/>at atlantamarket_PROD.GlobalSearch_ExhibitorActions.TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest(GlobalSearch_ExhibitorActions.java:398)
-<br/>25 lines not shown
-</div>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">atlantamarket_PROD.GlobalSearch_ExhibitorActions:TS003_VerifyAddToExistingListForExhibitorTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m5">atlantamarket_PROD.GlobalSearch_ExhibitorActions:TS006_VerifyClickOnLinesShownLinkForExhibitorTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m6">atlantamarket_PROD.GlobalSearch_ExhibitorActions:TS001_VerifyAddToFavoriteForExhibitorTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m7">atlantamarket_PROD.GlobalSearch_ExhibitorActions:TS002_VerifyAddToNewListForExhibitorTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m8">atlantamarket_PROD.GlobalSearch_ExhibitorActions:TS005_VerifyClickOnLocationLinksForExhibitorTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m9">atlantamarket_PROD.GlobalSearch_ExhibitorActions:TS010_VerifySelectionOfExhibitorFromSearchResultsTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m10">atlantamarket_PROD.GlobalSearch_ExhibitorActions:TS004_VerifyClickOnContactExhIconForExhibitorTest</h2>
-
-<tr class="passedodd"><td rowspan="5">atlantamarket_PROD.GlobalSearch_LeftPaneFilters</td><td><a href="#m1"><b>TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest</b>  </a></td><td class="numi">1</td><td>1660723173652</td><td class="numi">44930</td></tr><tr class="passedodd"><td><a href="#m2"><b>TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest</b>  </a></td><td class="numi">1</td><td>1660723218603</td><td class="numi">64776</td></tr><tr class="passedodd"><td><a href="#m3"><b>TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest</b>  </a></td><td class="numi">1</td><td>1660723283381</td><td class="numi">85345</td></tr><tr class="passedodd"><td><a href="#m4"><b>TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest</b>  </a></td><td class="numi">1</td><td>1660723368732</td><td class="numi">88127</td></tr><tr class="passedodd"><td><a href="#m5"><b>TS005_VerifySelectionOfAccentFurnitureProdCatgFromLeftPaneFiltersTest</b>  </a></td><td class="numi">1</td><td>1660723456870</td><td class="numi">61997</td></tr>
-</table>
-<h1>RegressionTest</h1>
-<h2 id="m1">atlantamarket_PROD.GlobalSearch_LeftPaneFilters:TS005_VerifySelectionOfAccentFurnitureProdCatgFromLeftPaneFiltersTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">atlantamarket_PROD.GlobalSearch_LeftPaneFilters:TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">atlantamarket_PROD.GlobalSearch_LeftPaneFilters:TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">atlantamarket_PROD.GlobalSearch_LeftPaneFilters:TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m5">atlantamarket_PROD.GlobalSearch_LeftPaneFilters:TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest</h2>
-
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>
