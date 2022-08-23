@@ -3,9 +3,12 @@
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-      <class name="atlantamarket_UAT.MarketPlanner">
+      <class name="atlantamarket_PROD.GlobalSearch_SearchFor">
         <methods>
+          <include name="TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest"/>
           <include name="initialize"/>
+
+
 
           <include name="tearDown"/>
           <include name="TS016_VerifyMarketPlannerListManageListEditOptTest"/>
@@ -13,8 +16,9 @@
           <include name="TS001_VerifyMarketPlannerLoginTest"/>
           <include name="TS020_VerifyMPActivitiesCardOverviewTest"/>
 
+
         </methods>
-      </class> <!-- atlantamarket_UAT.MarketPlanner -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->

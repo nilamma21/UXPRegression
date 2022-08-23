@@ -308,18 +308,11 @@ public class MarketPlanner extends base {
 		for (WebElement list : allList) {
 			Thread.sleep(5000);
 
-
-			if (list.getText().equals(lName)) {
-				Point DestLocation = list.getLocation();
-				System.out.println("In If :: " + sLocation + "And" + DestLocation);
-				if (DestLocation != sLocation) {
-
 			if(list.getText().equals(lName)) {
 				Point DestLocation=list.getLocation();
 				System.out.println("In If :: "+sLocation +"And" +DestLocation);
 				if(DestLocation!=sLocation)
 				{
-
 					flag = true;
 					Assert.assertTrue(flag = true);
 					break;
@@ -564,13 +557,8 @@ public class MarketPlanner extends base {
 		}
 	}
 
-
-	@Test(priority = 11)
-	public void TS011_VerifyMPDashboardOverviewTest() throws InterruptedException, IOException {
-
 	@Test(priority = 4)
 	public void TS004_VerifyMPDashboardOverviewTest() throws InterruptedException, IOException {
-
 
 		// The purpose of this test case to verify:-
 		// UXP-001: To verify the Market Planner overview and it's functionality
@@ -620,10 +608,6 @@ public class MarketPlanner extends base {
 
 	}
 
-
-	@Test(priority = 12)
-	public void TS012_VerifyMPRegistrationCardOverviewTest() throws InterruptedException, IOException {
-
 	@Test(priority = 5)
 	public void TS005_VerifyMPRegistrationCardOverviewTest() throws InterruptedException, IOException {
 
@@ -659,15 +643,8 @@ public class MarketPlanner extends base {
 
 	}
 
-
-	@Test(priority = 13)
-	public void TS013_VerifyAddProductToFavFunctionalityInFavListsTest() throws InterruptedException, IOException {
-
 	@Test(priority = 11)
 	public void TS011_VerifyAddProductToFavFunctionalityInFavListsTest() throws InterruptedException, IOException {
-
-
-
 
 		// The purpose of this test case to verify:-
 		// UXP-T237: Market Planner: Lists- Favorites- Add a Product to Favorites using
@@ -733,11 +710,6 @@ public class MarketPlanner extends base {
 		}
 
 	}
-
-
-	@Test(priority = 14)
-	public void TS014_VerifyAddExhibitorToFavInFavListsTest() throws InterruptedException, IOException {
-
 
 	@Test(priority = 13)
 	public void TS013_VerifyAddExhibitorToFavInFavListsTest() throws InterruptedException, IOException {
@@ -907,13 +879,7 @@ public class MarketPlanner extends base {
 			System.out.println("Download not Present");
 			Assert.assertTrue(flag2 = false);
 		}
-
 	}
-
-
-	@Test(priority = 16)
-	public void TS016_VerifyMarketPlannerListManageListEditOptTest() throws InterruptedException, IOException {
-
 
 	@Test(priority = 15)
 	public void TS015_VerifyMarketPlannerListManageListEditOptTest() throws InterruptedException, IOException {
@@ -1518,12 +1484,6 @@ public class MarketPlanner extends base {
 		} else {
 
 			Assert.assertTrue(flag = false, "Not Present");
-
-			Assert.assertTrue(flag=true, "Present");
-		}else {
-
-			Assert.assertTrue(flag=false, "Not Present");
-
 		}
 
 		// Verify Old List is Not Present
@@ -1553,10 +1513,6 @@ public class MarketPlanner extends base {
 			Assert.assertFalse(flag1 = false);
 		}
 	}
-
-
-	@Test(priority = 19)
-	public void TS019_VerifyAddToFavoriteForLineTest() throws InterruptedException, IOException {
 
 	@Test(priority =18)
 	public void TS018_VerifyAddToFavoriteForLineTest() throws InterruptedException, IOException {
@@ -1627,11 +1583,6 @@ public class MarketPlanner extends base {
 		 * exhname));
 		 */
 	}
-
-
-	@Test(priority = 20)
-
-	public void TS020_VerifyAddToFavoriteForExhibitorTest() throws InterruptedException, IOException {
 
 	@Test(priority =20)
 	public void TS020_VerifyAddToFavoriteForExhibitorTest1() throws InterruptedException, IOException {
