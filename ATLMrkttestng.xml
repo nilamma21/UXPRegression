@@ -6,7 +6,15 @@
 	<listners>
 
 <suite name="ATLMrkt_RegressionTestSuite">
+
  <listners>
+
+
+	<listners>
+
+	<!--  <listners>
+
+
 
 		<listner class-name="atlantamarket_PROD.TestListeners" />
 	</listners>
@@ -32,16 +40,27 @@
 			<class name="atlantamarket_PROD.FloorPlans" />
 
 			<class name="atlantamarket_PROD.MarketPlanner" />
+
+
+			<class name="atlantamarket_PROD.MarketPlanner" />
 		</classes>
 	</test> 
 
 			<class name="atlantamarket_PROD.MarketPlanner" /> 
+
 		 </classes>
 	</test>
 
 
 
+
+
+
+<!--  	<listners>
+
+
  	<listners>
+
 		<listner class-name="atlantamarket_UAT.TestListeners" />
 	</listners>
 
@@ -73,7 +92,11 @@
 				<include name="TS001_VerifyMarketPlannerLoginTest" />
 				<include name="TS020_VerifyMPActivitiesCardOverviewTest" />
 			</methods>
+
+	</test>  -->
+
 	</test> 
+
 
 </suite>
  -->

@@ -332,6 +332,7 @@ public class MarketPlanner extends base {
 		List<WebElement> allList = driver.findElements(By.xpath("//div[@class='imc-market-planner-list_row_title']"));
 		boolean flag = false;
 		for (WebElement list : allList) {
+
 			
 			if (list.getText().equals(lName)) {
 			
@@ -357,6 +358,21 @@ public class MarketPlanner extends base {
 						}
 
 					}
+
+			Thread.sleep(5000);
+
+			if(list.getText().equals(lName)) {
+				Point DestLocation=list.getLocation();
+				System.out.println("In If :: "+sLocation +"And" +DestLocation);
+				if(DestLocation!=sLocation)
+				{
+					flag = true;
+					Assert.assertTrue(flag = true);
+					break;
+				} else {
+					Assert.assertTrue(flag = false);
+					break;
+
 				}
 
 			}
@@ -585,10 +601,16 @@ public class MarketPlanner extends base {
 	}
 
 
+
 	@Test(priority = 11)
 	public void TS011_VerifyMPDashboardOverviewTest() throws InterruptedException, IOException {
 
 	
+
+	@Test(priority = 4)
+	public void TS004_VerifyMPDashboardOverviewTest() throws InterruptedException, IOException {
+
+
 		// The purpose of this test case to verify:-
 		// UXP-001: To verify the Market Planner overview and it's functionality
 
@@ -638,8 +660,15 @@ public class MarketPlanner extends base {
 	}
 
 
+
 	@Test(priority = 12)
 	public void TS012_VerifyMPRegistrationCardOverviewTest() throws InterruptedException, IOException {
+
+	@Test(priority = 5)
+	public void TS005_VerifyMPRegistrationCardOverviewTest() throws InterruptedException, IOException {
+
+
+
 		// The purpose of this test case to verify:-
 		// UXP-001: To verify the Market Planner overview and it's functionality
 
@@ -676,8 +705,14 @@ public class MarketPlanner extends base {
 	}
 
 
+
 	@Test(priority = 13)
 	public void TS013_VerifyAddProductToFavFunctionalityInFavListsTest() throws InterruptedException, IOException {
+
+	@Test(priority = 11)
+	public void TS011_VerifyAddProductToFavFunctionalityInFavListsTest() throws InterruptedException, IOException {
+
+
 		// The purpose of this test case to verify:-
 		// UXP-T237: Market Planner: Lists- Favorites- Add a Product to Favorites using
 		// 'Favorite' icon in Product actions
@@ -744,10 +779,17 @@ public class MarketPlanner extends base {
 	}
 
 
+
 	@Test(priority = 14)
 	public void TS014_VerifyAddExhibitorToFavInFavListsTest() throws InterruptedException, IOException {
 
 	// The purpose of this test case to verify:-
+
+	@Test(priority = 13)
+	public void TS013_VerifyAddExhibitorToFavInFavListsTest() throws InterruptedException, IOException {
+
+		// The purpose of this test case to verify:-
+
 		// UXP-T243: Market Planner: Lists- Favorites- Add an Exhibitor to Favorites
 		// using 'Favorite' icon in Exhibitor actions.
 
@@ -896,13 +938,18 @@ public class MarketPlanner extends base {
 			System.out.println("Download not Present");
 			Assert.assertTrue(flag2 = false);
 		}
-
 	}
+
 
 
 	@Test(priority = 16)
 	public void TS016_VerifyMarketPlannerListManageListEditOptTest() throws InterruptedException, IOException {
 		
+
+	@Test(priority = 15)
+	public void TS015_VerifyMarketPlannerListManageListEditOptTest() throws InterruptedException, IOException {
+
+
 		// The purpose of this test case to verify:-
 		// UXP-T245: Market Planner: Lists- List Management- Manage List- 'Edit' list
 		// functionality
@@ -1503,9 +1550,13 @@ public class MarketPlanner extends base {
 			Assert.assertTrue(flag = true, "Present");
 		} else {
 
+
 			//Assert.assertTrue(flag = false, "Not Present");
 
 			Assert.assertTrue(flag=true, "Present");
+
+			Assert.assertTrue(flag = false, "Not Present");
+
 		}
 
 		// Verify Old List is Not Present
@@ -1532,8 +1583,13 @@ public class MarketPlanner extends base {
 	}
 
 
+
 	@Test(priority = 19)
 	public void TS019_VerifyAddToFavoriteForLineTest() throws InterruptedException, IOException {
+
+	@Test(priority =18)
+	public void TS018_VerifyAddToFavoriteForLineTest() throws InterruptedException, IOException {
+
 
 		// The purpose of this test case to verify:-
 		// T242 : Market Planner: Lists- Favorites- Add an Line to Favorites using
@@ -1603,11 +1659,18 @@ public class MarketPlanner extends base {
 	}
 
 
+
 	@Test(priority = 20)
 
 	public void TS020_VerifyAddToFavoriteForExhibitorTest() throws InterruptedException, IOException {
 
 			// The purpose of this test case to verify:-
+
+	@Test(priority =20)
+	public void TS020_VerifyAddToFavoriteForExhibitorTest1() throws InterruptedException, IOException {
+
+		// The purpose of this test case to verify:-
+
 		// T243: The Add to Favorite functionality for an Exhibitor
 
 		atlgs = new ATLGlobalSearchPage(driver);
