@@ -2,12 +2,14 @@
 package resources;
 
 import java.io.IOException;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
+import atlantamarket_UAT.MarketPlanner;
 import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
 import pageObjects.AtlantaMarket.ATLLandingPage;
 import pageObjects.AtlantaMarket.ATLLoginPage;
@@ -19,6 +21,7 @@ public class Utility extends base {
 	ATLLandingPage lap;
 	ATLLoginPage lp;
 	ATLExhLineProdActionsPage atlexhact;
+	MarketPlanner mp;
 
 	@SuppressWarnings("static-access")
 	public Utility(WebDriver driver) {
@@ -59,11 +62,24 @@ public class Utility extends base {
 		// TS1- Login to Market Planner
 
 		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);		
-
-		// Click on Login button from Landing Page
-		lap.getLogin().click();
-
+		lp = new ATLLoginPage(driver);	
+		mp=new MarketPlanner();
+		try {
+			/*lap.getWelcomeMsg().isDisplayed();
+			lap.getSignOut().click();
+			Thread.sleep(8000);
+			lap.getLogin().click();*/
+			
+			mp.TS005_VerifyMarketPlannerSignOutTest();
+			lap.getLogin().click();
+			
+		}catch (Exception e) 
+		{
+		System.out.println(e);
+			lap.getLogin().click();
+		}
+		
+		
 		// Enter the credentials on Login Page and click
 		lp.getEmailAddress().sendKeys(un);
 		lp.getPassword().sendKeys(pwd);

@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="ATLMrkt_RegressionTestSuite">
+
+<!-- <suite name="ATLMrkt_RegressionTestSuite">
 	<listners>
+
+<suite name="ATLMrkt_RegressionTestSuite">
+
+	<listners>
+
+	<!--  <listners>
+
+
 		<listner class-name="atlantamarket_PROD.TestListeners" />
 	</listners>
 	<test thread-count="5" name="RegressionTest">
 		<classes>
+
+
+			<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
+			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
+			<methods> 
+			 <include name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest" /> 
+			 <include name="TS003_VerifyAddToExistingListForExhibitorTest" />
+			</methods>
+
+
+
  			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
 			 <class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
@@ -14,12 +34,26 @@
 			<class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters" />
  			<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
 			<class name="atlantamarket_PROD.FloorPlans" />
+
 			<class name="atlantamarket_PROD.MarketPlanner" />
+
+
+			<class name="atlantamarket_PROD.MarketPlanner" />
+		</classes>
+	</test> -->
+
+			<class name="atlantamarket_PROD.MarketPlanner" /> 
+
 		 </classes>
 	</test>
 
 
+
 <!--  	<listners>
+
+
+ 	<listners>
+
 		<listner class-name="atlantamarket_UAT.TestListeners" />
 	</listners>
 
@@ -27,9 +61,34 @@
 		<classes>
 			<class name="atlantamarket_UAT.MarketPlanner" />
 		</classes>
+
+	</test> 
+</suite>-->
+
+
+<suite name="ATLMrkt_RegressionTestSuite">
+	<listners>
+		<listner class-name="atlantamarket_PROD.TestListeners" />
+	</listners>
+	<test thread-count="5" name="RegressionTest">
+		<classes>
+			<class name="atlantamarket_UAT.MarketPlanner" />
+			<methods>
+				<include name="TS016_VerifyMarketPlannerListManageListEditOptTest" />
+				<!-- <include name="TS003_VerifyMarketPlannerInvalidLoginCredentialsTest" /> -->
+				
+			</methods>
+		</classes>
+	</test>
+
 			<methods>
 				<include name="TS001_VerifyMarketPlannerLoginTest" />
 				<include name="TS020_VerifyMPActivitiesCardOverviewTest" />
 			</methods>
+
 	</test>  -->
+
+	</test> 
+
+
 </suite>
