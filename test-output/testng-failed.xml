@@ -6,8 +6,13 @@
       <class name="atlantamarket_UAT.MarketPlanner">
         <methods>
           <include name="initialize"/>
+
+          <include name="tearDown"/>
+          <include name="TS016_VerifyMarketPlannerListManageListEditOptTest"/>
+
           <include name="TS001_VerifyMarketPlannerLoginTest"/>
           <include name="TS020_VerifyMPActivitiesCardOverviewTest"/>
+
         </methods>
       </class> <!-- atlantamarket_UAT.MarketPlanner -->
     </classes>

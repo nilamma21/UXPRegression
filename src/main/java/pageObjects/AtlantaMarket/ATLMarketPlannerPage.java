@@ -92,6 +92,9 @@ public class ATLMarketPlannerPage {
 	By mpManageEditList = By.xpath("(//a[@class='imc-link--alt-darkred'])[1]"); //Locator for Mnage Edit list'
 	By mpManageEditListSelectAllBtn = By.xpath("//div[@class='imc-loading-relative']/div[2]/div[2]/button[1]"); //Locator for Mnage Edit list Select All Btn
 	By mpManageEditListCopyToBtn = By.xpath("//div[@class='imc-loading-relative']/div[2]/div[3]/button[1]"); //Locator for Mnage Edit list Copy to Btn
+	By mpManageEditListMoveBtn = By.xpath("//div[@class='imc-loading-relative']/div[2]/div[4]/button[1]"); //Locator for Mnage Edit list Move Btn
+	By mpManageEditListRemoveBtn = By.xpath("//div[@class='imc-loading-relative']/div[2]/div[5]/button[1]"); //Locator for Mnage Edit list Remove Btn
+	
 	By mpSelectListPopup = By.xpath("//div[@class='ReactModal__Content ReactModal__Content--after-open imc-modal--box imc-contactexhibitormodal']"); //Locator for Select List Popup
 	By mpFevList = By.xpath("//div[@class='ReactModal__Content ReactModal__Content--after-open imc-modal--box imc-contactexhibitormodal']/div[1]/div[1]/ul[1]/li[2]/div[1]"); //Locator for Fev List
 	By mpSelectFevList = By.xpath("//div[@class='ReactModal__Content ReactModal__Content--after-open imc-modal--box imc-contactexhibitormodal']/div[1]/div[1]/ul[1]/li[2]/div[2]/span[1]/a[1]"); //Locator for Select Fev List
@@ -577,6 +580,20 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(addlistcreatebtn_ATLPROD));
 		return driver.findElement(addlistcreatebtn_ATLPROD);
 	}
+
+	public WebElement getmpManageEditListMoveBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpManageEditListMoveBtn));
+		return driver.findElement(mpManageEditListMoveBtn);
+	}
+	public WebElement getmpManageEditListRemoveBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpManageEditListRemoveBtn));
+		return driver.findElement(mpManageEditListRemoveBtn);
+	}
+
+	
+
 	public WebElement getmpbookhotel() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpbookhotel));
@@ -602,6 +619,9 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpmyinfo));
 		return driver.findElement(mpmyinfo);
 	}
+
+	
+	
 	
 }
 
