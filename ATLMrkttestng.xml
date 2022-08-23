@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="ATLMrkt_RegressionTestSuite">
-	<!--  <listners>
+	<listners>
 		<listner class-name="atlantamarket_PROD.TestListeners" />
 	</listners>
 	<test thread-count="5" name="RegressionTest">
@@ -14,12 +14,12 @@
 			<class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters" />
  			<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
 			<class name="atlantamarket_PROD.FloorPlans" />
-			<class name="atlantamarket_PROD.MarketPlanner" /> 
+			<class name="atlantamarket_PROD.MarketPlanner" />
 		 </classes>
-	</test>-->
+	</test>
 
 
- 	<listners>
+<!--  	<listners>
 		<listner class-name="atlantamarket_UAT.TestListeners" />
 	</listners>
 
@@ -31,5 +31,5 @@
 				<include name="TS001_VerifyMarketPlannerLoginTest" />
 				<include name="TS020_VerifyMPActivitiesCardOverviewTest" />
 			</methods>
-	</test> 
+	</test>  -->
 </suite>
