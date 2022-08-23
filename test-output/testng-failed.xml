@@ -5,14 +5,12 @@
     <classes>
       <class name="atlantamarket_UAT.MarketPlanner">
         <methods>
+          <include name="TS013_VerifyAddProductToFavFunctionalityInFavListsTest"/>
+          <include name="TS014_VerifyAddExhibitorToFavInFavListsTest"/>
+          <include name="TS020_VerifyAddToFavoriteForExhibitorTest"/>
           <include name="initialize"/>
-
           <include name="tearDown"/>
-          <include name="TS016_VerifyMarketPlannerListManageListEditOptTest"/>
-
-          <include name="TS001_VerifyMarketPlannerLoginTest"/>
-          <include name="TS020_VerifyMPActivitiesCardOverviewTest"/>
-
+          <include name="TS016_VerifyMarketPlannerListDuplicateListTest"/>
         </methods>
       </class> <!-- atlantamarket_UAT.MarketPlanner -->
     </classes>

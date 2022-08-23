@@ -6,7 +6,7 @@
 	<listners>
 
 <suite name="ATLMrkt_RegressionTestSuite">
-	<!--  <listners>
+ <listners>
 
 		<listner class-name="atlantamarket_PROD.TestListeners" />
 	</listners>
@@ -33,11 +33,11 @@
 
 			<class name="atlantamarket_PROD.MarketPlanner" />
 		</classes>
-	</test> -->
+	</test> 
 
 			<class name="atlantamarket_PROD.MarketPlanner" /> 
 		 </classes>
-	</test>-->
+	</test>
 
 
 
@@ -53,7 +53,7 @@
 	</test> 
 </suite>-->
 
-
+<!-- 
 <suite name="ATLMrkt_RegressionTestSuite">
 	<listners>
 		<listner class-name="atlantamarket_PROD.TestListeners" />
@@ -62,8 +62,8 @@
 		<classes>
 			<class name="atlantamarket_UAT.MarketPlanner" />
 			<methods>
-				<include name="TS016_VerifyMarketPlannerListManageListEditOptTest" />
-				<!-- <include name="TS003_VerifyMarketPlannerInvalidLoginCredentialsTest" /> -->
+				<include name="TS021_VerifyMarketPlannerListManagementFilterByTest" />
+				<include name="TS003_VerifyMarketPlannerInvalidLoginCredentialsTest" />
 				
 			</methods>
 		</classes>
@@ -76,3 +76,38 @@
 	</test> 
 
 </suite>
+ -->
+
+<suite name="ATLMrkt_RegressionTestSuite">
+	<listners>
+		<listner class-name="atlantamarket_UAT.TestListeners"/>
+	</listners>
+	<test thread-count="5" name="RegressionTest">
+		<classes>
+			<class name="atlantamarket_UAT.MarketPlanner"/>
+			<methods>
+				<include name="TS025_VerifyMarketPlannerListsManagementFilterOptionsFunctionalityTest"/>
+				<!-- <include name="TS003_VerifyMarketPlannerInvalidLoginCredentialsTest" /> -->
+			</methods>
+		</classes>
+		</test>
+</suite>
+<!-- 
+<suite name="LVM_RegressionTestSuite">
+	<listners>
+		<listner class-name="lasvegasmarket_PROD.TestListeners" />
+	</listners>
+
+	<test thread-count="5" name="RegressionTest">
+		<classes>
+			<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
+			<methods>
+				<include name="TS005_VerifyShowSpecialsTest" />
+			</methods>
+		</classes>
+	</test>
+</suite>
+
+ -->
+
+
