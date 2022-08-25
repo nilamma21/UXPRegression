@@ -12,7 +12,7 @@
 
 	<listners>
 
-	<!--  <listners>
+ <listners>
 
 
 
@@ -56,7 +56,7 @@
 
 
 
-<!--  	<listners>
+ 	<listners>
 
 
  	<listners>
@@ -93,7 +93,7 @@
 				<include name="TS020_VerifyMPActivitiesCardOverviewTest" />
 			</methods>
 
-	</test>  -->
+	</test>
 
 	</test> 
 

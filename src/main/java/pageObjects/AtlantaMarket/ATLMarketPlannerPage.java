@@ -126,6 +126,17 @@ public class ATLMarketPlannerPage {
 	By mpexpdirectory = By.xpath("//div[@class = 'imc-card imc-loading-relative']/div[3]/a[1]"); //Locator for Exhibitor Directory option
 	By mpsavedsearches = By.xpath("//div[@class = 'imc-card imc-loading-relative']/div[4]/a[1]"); //Locator for saved Searches option
 	By mpmyinfo = By.xpath("//div[@class = 'imc-card imc-loading-relative']/div[5]/a[1]"); //Locator for My Info option
+	By filterByList = By.xpath("//div[@class='react-select__menu-list css-11unzgr']/div"); //Locator for My Info option
+	By listOfAllExh = By.xpath("//a[@class='imc-link--alt-darkred']"); //Locator for My Info option
+	By filterBytxt = By.xpath("//div[contains(text(),'Filter By')]"); //Locator for Filter By
+	By nameofElement = By.xpath("//div[@class='imc-market-planner-list--item-body-data-left']/div[1]"); //Locator for Filter By
+	By listOfmngDropdownElements = By.xpath("//div[@class='react-select__menu-list css-11unzgr']/div"); //Locator for Filter By
+	By allList = By.xpath("//div[@class='imc-market-planner-list_row_title']"); //List for all list
+	By addCustomItem = By.xpath("//div[@class='imc-gallery__item market-planner--list-sidebar imc-breakpoint-display--hide-mobile']/div[3]/button[1]"); //Add custom item
+	By customTitle = By.xpath("//div[@class='imc-addnote-modal__padded']/form[1]/div[2]/div[1]/input[1]"); //Add custom item Title
+	By customDesc = By.xpath("//div[@class='imc-addnote-modal__padded']/form[1]/div[5]/div[1]/textarea[1]"); //Add custom item Desc
+	By customItemsubmitBtn = By.xpath("//div[@class='imc-addnote-modal__padded']/form[1]/div[7]/input[1]"); //Add custom item Submit Btn
+	
 	
 	public ATLMarketPlannerPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -627,9 +638,59 @@ public class ATLMarketPlannerPage {
 		return driver.findElement(mpFilterByDropdown);
 	}
 
+	public List <WebElement> getfilterByList() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(filterByList));
+		return driver.findElements(filterByList);
+	}
+	public List <WebElement> getlistOfAllExh() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllExh));
+		return driver.findElements(listOfAllExh);
+	}
 	
+	public WebElement getfilterBytxt() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(filterBytxt));
+		return driver.findElement(filterBytxt);
+	}
+	public List <WebElement> getnameofElement() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(nameofElement));
+		return driver.findElements(nameofElement);
+	}
+	public List <WebElement> getlistOfmngDropdownElements() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfmngDropdownElements));
+		return driver.findElements(listOfmngDropdownElements);
+	}
+	public List <WebElement> getallList() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(allList));
+		return driver.findElements(allList);
+	}
+	public WebElement getAddCustomItem() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(addCustomItem));
+		return driver.findElement(addCustomItem);
+	}		
+	public WebElement getCustomTitle() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(customTitle));
+		return driver.findElement(customTitle);
+	}		
+	public WebElement getCustomDesc() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(customDesc));
+		return driver.findElement(customDesc);
+	}		
+	public WebElement getCustomItemsubmitBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(customItemsubmitBtn));
+		return driver.findElement(customItemsubmitBtn);
+	}		
 	
-	
+		
 }
 
 
