@@ -1,52 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<testng-results skipped="0" failed="0" total="1" passed="1">
-
-
-<testng-results skipped="0" failed="1" total="3" passed="2">
-
-
-<testng-results skipped="0" failed="1" total="1" passed="0">
-
+<testng-results skipped="0" failed="2" total="23" passed="21">
   <reporter-output>
   </reporter-output>
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="191867" started-at="2022-08-23T11:06:59Z" finished-at="2022-08-23T11:10:11Z">
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="1339683" started-at="2022-08-25T08:43:47Z" finished-at="2022-08-25T09:06:07Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="191867" started-at="2022-08-23T11:06:59Z" finished-at="2022-08-23T11:10:11Z">
-      <class name="atlantamarket_UAT.MarketPlanner">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.MarketPlanner@464bee09]" name="initialize" is-config="true" duration-ms="54602" started-at="2022-08-23T16:36:59Z" finished-at="2022-08-23T16:37:54Z">
+    <test name="RegressionTest" duration-ms="1339683" started-at="2022-08-25T08:43:47Z" finished-at="2022-08-25T09:06:07Z">
+      <class name="atlantamarket_PROD.MarketPlanner">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.MarketPlanner@1a968a59]" name="initialize" is-config="true" duration-ms="120779" started-at="2022-08-25T14:13:47Z" finished-at="2022-08-25T14:15:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS025_VerifyMarketPlannerListsManagementFilterOptionsFunctionalityTest()[pri:0, instance:atlantamarket_UAT.MarketPlanner@464bee09]" name="TS025_VerifyMarketPlannerListsManagementFilterOptionsFunctionalityTest" duration-ms="135737" started-at="2022-08-23T16:37:54Z" finished-at="2022-08-23T16:40:10Z">
+        <test-method status="PASS" signature="TS001_VerifyMarketPlannerLoginTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@1a968a59]" name="TS001_VerifyMarketPlannerLoginTest" duration-ms="6847" started-at="2022-08-25T14:15:48Z" finished-at="2022-08-25T14:15:55Z">
           <reporter-output>
           </reporter-output>
-
-        </test-method> <!-- TS025_VerifyMarketPlannerListsManagementFilterOptionsFunctionalityTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.MarketPlanner@464bee09]" name="tearDown" is-config="true" duration-ms="1459" started-at="2022-08-23T16:40:10Z" finished-at="2022-08-23T16:40:11Z">
-
-        </test-method> <!-- TS016_VerifyMarketPlannerListManageListEditOptTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.MarketPlanner@464bee09]" name="tearDown" is-config="true" duration-ms="19" started-at="2022-08-22T17:24:03Z" finished-at="2022-08-22T17:24:03Z">
-
-<testng-results skipped="0" failed="0" total="2" passed="2">
-
-  <reporter-output>
-  </reporter-output>
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="443407" started-at="2022-08-23T08:19:18Z" finished-at="2022-08-23T08:26:42Z">
-    <groups>
-    </groups>
-    <test name="RegressionTest" duration-ms="443407" started-at="2022-08-23T08:19:18Z" finished-at="2022-08-23T08:26:42Z">
-      <class name="atlantamarket_PROD.GlobalSearch_SearchFor">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@6eebc39e]" name="initialize" is-config="true" duration-ms="37913" started-at="2022-08-23T13:49:18Z" finished-at="2022-08-23T13:49:56Z">
+        </test-method> <!-- TS001_VerifyMarketPlannerLoginTest -->
+        <test-method status="PASS" signature="TS002_VerifyMarketPlannerInvalidLoginCredentialsTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@1a968a59]" name="TS002_VerifyMarketPlannerInvalidLoginCredentialsTest" duration-ms="68593" started-at="2022-08-25T14:15:55Z" finished-at="2022-08-25T14:17:03Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS005_VerifyArticlesOverviewInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@6eebc39e]" name="TS005_VerifyArticlesOverviewInGlobalSearchTest" duration-ms="72183" started-at="2022-08-23T13:49:56Z" finished-at="2022-08-23T13:51:09Z">
+        </test-method> <!-- TS002_VerifyMarketPlannerInvalidLoginCredentialsTest -->
+        <test-method status="PASS" signature="TS003_VerifyMarketPlannerChannelSelectorTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@1a968a59]" name="TS003_VerifyMarketPlannerChannelSelectorTest" duration-ms="157478" started-at="2022-08-25T14:17:03Z" finished-at="2022-08-25T14:19:41Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS005_VerifyArticlesOverviewInGlobalSearchTest -->
-        <test-method status="FAIL" signature="TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@6eebc39e]" name="TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest" duration-ms="278631" started-at="2022-08-23T13:51:09Z" finished-at="2022-08-23T13:55:47Z">
+        </test-method> <!-- TS003_VerifyMarketPlannerChannelSelectorTest -->
+        <test-method status="PASS" signature="TS004_VerifyMPDashboardOverviewTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@1a968a59]" name="TS004_VerifyMPDashboardOverviewTest" duration-ms="13053" started-at="2022-08-25T14:19:41Z" finished-at="2022-08-25T14:19:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyMPDashboardOverviewTest -->
+        <test-method status="PASS" signature="TS005_VerifyMPRegistrationCardOverviewTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@1a968a59]" name="TS005_VerifyMPRegistrationCardOverviewTest" duration-ms="12717" started-at="2022-08-25T14:19:54Z" finished-at="2022-08-25T14:20:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifyMPRegistrationCardOverviewTest -->
+        <test-method status="PASS" signature="TS006_VerifyArrangeBtnFunctionalityForListsTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@1a968a59]" name="TS006_VerifyArrangeBtnFunctionalityForListsTest" duration-ms="35146" started-at="2022-08-25T14:20:07Z" finished-at="2022-08-25T14:20:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS006_VerifyArrangeBtnFunctionalityForListsTest -->
+        <test-method status="FAIL" signature="TS007_VerifyNewGroupBtnFunctionalityForListsTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@1a968a59]" name="TS007_VerifyNewGroupBtnFunctionalityForListsTest" duration-ms="28333" started-at="2022-08-25T14:20:42Z" finished-at="2022-08-25T14:21:10Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -57,7 +46,7 @@
 	at org.testng.Assert.failNotEquals(Assert.java:494)
 	at org.testng.Assert.assertTrue(Assert.java:42)
 	at org.testng.Assert.assertTrue(Assert.java:52)
-	at atlantamarket_PROD.GlobalSearch_SearchFor.TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest(GlobalSearch_SearchFor.java:447)
+	at atlantamarket_PROD.MarketPlanner.TS007_VerifyNewGroupBtnFunctionalityForListsTest(MarketPlanner.java:368)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -87,19 +76,110 @@
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-
-        </test-method> <!-- TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest -->
-        <test-method status="PASS" signature="TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@6eebc39e]" name="TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest" duration-ms="54363" started-at="2022-08-23T13:55:47Z" finished-at="2022-08-23T13:56:42Z">
-
-        </test-method> <!-- TS020_VerifyMPActivitiesCardOverviewTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.MarketPlanner@754ba872]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-08-19T11:29:17Z" finished-at="2022-08-19T11:29:17Z">
-
-
-
+        </test-method> <!-- TS007_VerifyNewGroupBtnFunctionalityForListsTest -->
+        <test-method status="PASS" signature="TS008_VerifyNewListBtnFunctionalityForListsTest1()[pri:0, instance:atlantamarket_PROD.MarketPlanner@1a968a59]" name="TS008_VerifyNewListBtnFunctionalityForListsTest1" duration-ms="30984" started-at="2022-08-25T14:21:11Z" finished-at="2022-08-25T14:21:42Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest -->
-      </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
+        </test-method> <!-- TS008_VerifyNewListBtnFunctionalityForListsTest1 -->
+        <test-method status="PASS" signature="TS009_VerifyCreateNewGroupFormValidationForListsTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@1a968a59]" name="TS009_VerifyCreateNewGroupFormValidationForListsTest" duration-ms="11432" started-at="2022-08-25T14:21:42Z" finished-at="2022-08-25T14:21:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_VerifyCreateNewGroupFormValidationForListsTest -->
+        <test-method status="PASS" signature="TS010_VerifyCreateNewListFormValidationTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@1a968a59]" name="TS010_VerifyCreateNewListFormValidationTest" duration-ms="20820" started-at="2022-08-25T14:21:53Z" finished-at="2022-08-25T14:22:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS010_VerifyCreateNewListFormValidationTest -->
+        <test-method status="PASS" signature="TS011_VerifyAddToFavoriteFunctionalityForProductTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@1a968a59]" name="TS011_VerifyAddToFavoriteFunctionalityForProductTest" duration-ms="36321" started-at="2022-08-25T14:22:14Z" finished-at="2022-08-25T14:22:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS011_VerifyAddToFavoriteFunctionalityForProductTest -->
+        <test-method status="PASS" signature="TS012_VerifyAddToFavoriteFunctionalityUsingQuickAddForExhibitorTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@1a968a59]" name="TS012_VerifyAddToFavoriteFunctionalityUsingQuickAddForExhibitorTest" duration-ms="41863" started-at="2022-08-25T14:22:50Z" finished-at="2022-08-25T14:23:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS012_VerifyAddToFavoriteFunctionalityUsingQuickAddForExhibitorTest -->
+        <test-method status="PASS" signature="TS013_VerifyManageListOptionsOverviewTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@1a968a59]" name="TS013_VerifyManageListOptionsOverviewTest" duration-ms="21812" started-at="2022-08-25T14:23:32Z" finished-at="2022-08-25T14:23:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS013_VerifyManageListOptionsOverviewTest -->
+        <test-method status="PASS" signature="TS014_VerifyEditListFunctionalityForManageListTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@1a968a59]" name="TS014_VerifyEditListFunctionalityForManageListTest" duration-ms="314552" started-at="2022-08-25T14:23:54Z" finished-at="2022-08-25T14:29:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS014_VerifyEditListFunctionalityForManageListTest -->
+        <test-method status="PASS" signature="TS015_VerifyDuplicateLinkFunctionalityForListTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@1a968a59]" name="TS015_VerifyDuplicateLinkFunctionalityForListTest" duration-ms="18300" started-at="2022-08-25T14:29:08Z" finished-at="2022-08-25T14:29:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS015_VerifyDuplicateLinkFunctionalityForListTest -->
+        <test-method status="PASS" signature="TS016_VerifyRenameFunctionalityForListTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@1a968a59]" name="TS016_VerifyRenameFunctionalityForListTest" duration-ms="44227" started-at="2022-08-25T14:29:27Z" finished-at="2022-08-25T14:30:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS016_VerifyRenameFunctionalityForListTest -->
+        <test-method status="PASS" signature="TS017_VerifyAddToFavoriteFunctionalityForLineTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@1a968a59]" name="TS017_VerifyAddToFavoriteFunctionalityForLineTest" duration-ms="38260" started-at="2022-08-25T14:30:11Z" finished-at="2022-08-25T14:30:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS017_VerifyAddToFavoriteFunctionalityForLineTest -->
+        <test-method status="PASS" signature="TS018_VerifyMPListsCardOverviewTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@1a968a59]" name="TS018_VerifyMPListsCardOverviewTest" duration-ms="24219" started-at="2022-08-25T14:30:49Z" finished-at="2022-08-25T14:31:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS018_VerifyMPListsCardOverviewTest -->
+        <test-method status="FAIL" signature="TS019_VerifyAddToFavoriteFunctionalityForExhibitorTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@1a968a59]" name="TS019_VerifyAddToFavoriteFunctionalityForExhibitorTest" duration-ms="30334" started-at="2022-08-25T14:31:13Z" finished-at="2022-08-25T14:31:44Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at atlantamarket_PROD.MarketPlanner.TS019_VerifyAddToFavoriteFunctionalityForExhibitorTest(MarketPlanner.java:1420)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS019_VerifyAddToFavoriteFunctionalityForExhibitorTest -->
+        <test-method status="PASS" signature="TS020_VerifyFilterByOptionsOverviewForListTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@1a968a59]" name="TS020_VerifyFilterByOptionsOverviewForListTest" duration-ms="43675" started-at="2022-08-25T14:31:44Z" finished-at="2022-08-25T14:32:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS020_VerifyFilterByOptionsOverviewForListTest -->
+        <test-method status="PASS" signature="TS021_VerifyMPActivitiesCardOverviewTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@1a968a59]" name="TS021_VerifyMPActivitiesCardOverviewTest" duration-ms="74609" started-at="2022-08-25T14:32:28Z" finished-at="2022-08-25T14:33:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS021_VerifyMPActivitiesCardOverviewTest -->
+        <test-method status="PASS" signature="TS022_VerifyVerifyFilterByOptionsFunctionalityForListTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@1a968a59]" name="TS022_VerifyVerifyFilterByOptionsFunctionalityForListTest" duration-ms="130743" started-at="2022-08-25T14:33:42Z" finished-at="2022-08-25T14:35:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS022_VerifyVerifyFilterByOptionsFunctionalityForListTest -->
+        <test-method status="PASS" signature="TS023_VerifyMarketPlannerSignOutTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@1a968a59]" name="TS023_VerifyMarketPlannerSignOutTest" duration-ms="13609" started-at="2022-08-25T14:35:53Z" finished-at="2022-08-25T14:36:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS023_VerifyMarketPlannerSignOutTest -->
+      </class> <!-- atlantamarket_PROD.MarketPlanner -->
     </test> <!-- RegressionTest -->
   </suite> <!-- ATLMrkt_RegressionTestSuite -->
 </testng-results>
