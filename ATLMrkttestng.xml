@@ -109,8 +109,8 @@
 		<classes>
 			<class name="atlantamarket_UAT.MarketPlanner"/>
 			<methods>
-				<include name="TS025_VerifyMarketPlannerListsManagementFilterOptionsFunctionalityTest"/>
-				<!-- <include name="TS003_VerifyMarketPlannerInvalidLoginCredentialsTest" /> -->
+				<include name="TS021_VerifyMarketPlannerListManagementSortByTest"/>
+				<include name="TS021_VerifyMarketPlannerListManagementFilterByTest" />
 			</methods>
 		</classes>
 		</test>

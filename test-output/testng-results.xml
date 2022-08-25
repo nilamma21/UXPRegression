@@ -1,21 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="252171" started-at="2022-08-25T08:56:12Z" finished-at="2022-08-25T09:00:24Z">
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="372182" started-at="2022-08-25T09:57:03Z" finished-at="2022-08-25T10:03:15Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="252171" started-at="2022-08-25T08:56:12Z" finished-at="2022-08-25T09:00:24Z">
+    <test name="RegressionTest" duration-ms="372182" started-at="2022-08-25T09:57:03Z" finished-at="2022-08-25T10:03:15Z">
       <class name="atlantamarket_UAT.MarketPlanner">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.MarketPlanner@464bee09]" name="initialize" is-config="true" duration-ms="52735" started-at="2022-08-25T14:26:12Z" finished-at="2022-08-25T14:27:05Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.MarketPlanner@464bee09]" name="initialize" is-config="true" duration-ms="58520" started-at="2022-08-25T15:27:03Z" finished-at="2022-08-25T15:28:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS025_VerifyMarketPlannerListsManagementFilterOptionsFunctionalityTest()[pri:0, instance:atlantamarket_UAT.MarketPlanner@464bee09]" name="TS025_VerifyMarketPlannerListsManagementFilterOptionsFunctionalityTest" duration-ms="199393" started-at="2022-08-25T14:27:05Z" finished-at="2022-08-25T14:30:24Z">
+        <test-method status="FAIL" signature="TS021_VerifyMarketPlannerListManagementSortByTest()[pri:0, instance:atlantamarket_UAT.MarketPlanner@464bee09]" name="TS021_VerifyMarketPlannerListManagementSortByTest" duration-ms="50865" started-at="2022-08-25T15:28:01Z" finished-at="2022-08-25T15:28:52Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at resources.Utility.filterSortByTest(Utility.java:230)
+	at atlantamarket_UAT.MarketPlanner.TS021_VerifyMarketPlannerListManagementSortByTest(MarketPlanner.java:1928)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS025_VerifyMarketPlannerListsManagementFilterOptionsFunctionalityTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.MarketPlanner@464bee09]" name="tearDown" is-config="true" duration-ms="1" started-at="2022-08-25T14:30:24Z" finished-at="2022-08-25T14:30:24Z">
+        </test-method> <!-- TS021_VerifyMarketPlannerListManagementSortByTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.MarketPlanner@464bee09]" name="tearDown" is-config="true" duration-ms="1" started-at="2022-08-25T15:28:53Z" finished-at="2022-08-25T15:28:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.MarketPlanner@464bee09]" name="initialize" is-config="true" duration-ms="215900" started-at="2022-08-25T15:28:53Z" finished-at="2022-08-25T15:32:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS021_VerifyMarketPlannerListManagementFilterByTest()[pri:0, instance:atlantamarket_UAT.MarketPlanner@464bee09]" name="TS021_VerifyMarketPlannerListManagementFilterByTest" duration-ms="46473" started-at="2022-08-25T15:32:28Z" finished-at="2022-08-25T15:33:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS021_VerifyMarketPlannerListManagementFilterByTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.MarketPlanner@464bee09]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-08-25T15:33:15Z" finished-at="2022-08-25T15:33:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

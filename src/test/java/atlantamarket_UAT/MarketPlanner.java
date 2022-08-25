@@ -1695,19 +1695,19 @@ public class MarketPlanner extends base {
 			}
 		
 		//Verify All Filter By Options should available.
-		utl.filterByTest(atlmppge.getfilterByList(), "All");
-		utl.filterByTest(atlmppge.getfilterByList(), "Exhibitor");
-		utl.filterByTest(atlmppge.getfilterByList(), "Line");
-		utl.filterByTest(atlmppge.getfilterByList(), "Product");
-		utl.filterByTest(atlmppge.getfilterByList(), "Events and Seminars");
-		utl.filterByTest(atlmppge.getfilterByList(), "Custom");
+		utl.filterSortByTest(atlmppge.getfilterByList(), "All");
+		utl.filterSortByTest(atlmppge.getfilterByList(), "Exhibitor");
+		utl.filterSortByTest(atlmppge.getfilterByList(), "Line");
+		utl.filterSortByTest(atlmppge.getfilterByList(), "Product");
+		utl.filterSortByTest(atlmppge.getfilterByList(), "Events and Seminars");
+		utl.filterSortByTest(atlmppge.getfilterByList(), "Custom");
 		
 
 		
 	}	
 
-	@Test(priority = 25)
-	public void TS025_VerifyMarketPlannerListsManagementFilterOptionsFunctionalityTest()
+	@Test(priority = 26)
+	public void TS026_VerifyMarketPlannerListsManagementFilterOptionsFunctionalityTest()
 			throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
@@ -1867,7 +1867,73 @@ public class MarketPlanner extends base {
 		utl.filterByTest(atlmppge.getnameofElement(),"Events and Seminars");
 
 	}
+	@Test(priority = 21)
+	public void TS021_VerifyMarketPlannerListManagementSortByTest() throws InterruptedException, IOException {
+		
+		// The purpose of this test case to verify:-
+		// UXP-T251: Market Planner: Lists- List Management- 'Sort By' options
+		
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
 
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		// Login to Market Planner
+		/*
+		 * utl.verifyMPLoginFunctionality(); Thread.sleep(6000);
+		 */
+		// Click on Market Planner
+		lap.getMPLinkText().click();
+		Thread.sleep(6000);
+		atlmppge.getMPHomeListsTab().click();
+		// Thread.sleep(10000);
+		Thread.sleep(2000);
+		// Click on List from left Pannel
+		atlmppge.getMpListLeftPannel().click();
+		// Thread.sleep(10000);
+		// click on New list btn
+		atlmppge.getMpListNewListBtn().click();
+		// verify New List Popup header
+		Assert.assertTrue(
+				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateListPopupHeader")));
+		// Enter List name
+		String newlistname = "Cyb" + genData.generateRandomString(5);
+		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
+		System.out.println("list name :: " + newlistname);
+		// Click on Create Btn
+		atlmppge.getMpListNewCreateBtn().click();
+		Thread.sleep(5000);
+		boolean flagFList=false;
+		for (WebElement list : atlmppge.getallList()) {
+			if (list.getText().equals(newlistname)) {
+				
+				WebElement dListEditBtn1 = driver.findElement(By.xpath("//div[text()='" + newlistname + "']/../div[2]/span[2]"));
+				utl.scrollToElement(dListEditBtn1);
+				Thread.sleep(5000);
+				dListEditBtn1.click();
+				//Click on Filter By Dropdown
+				atlmppge.getmpSortByDropdown().click();
+				flagFList = true;
+				break;
+			}
+		}if (flagFList == true) {
+				Assert.assertTrue(flagFList = true);
+			} else {
+				Assert.assertTrue(flagFList = false);
+			}
+		
+		//Verify All Filter By Options should available.
+		utl.filterSortByTest(atlmppge.getfilterByList(), "Most Recent Added");
+		utl.filterSortByTest(atlmppge.getfilterByList(), "Location");
+		utl.filterSortByTest(atlmppge.getfilterByList(), "Time");
+		utl.filterSortByTest(atlmppge.getfilterByList(), "A-Z");
+		utl.filterSortByTest(atlmppge.getfilterByList(), "Custom");
+		
+	}	
+
+	
 	@AfterMethod
 	public void tearDown() {
 		 //driver.quit();

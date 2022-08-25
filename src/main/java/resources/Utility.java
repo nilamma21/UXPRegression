@@ -210,4 +210,27 @@ public class Utility extends base {
 		atlmppge.getCustomItemsubmitBtn().click();
 	}
 	
+	public void filterSortByTest(List<WebElement> listOfProd, String filterName) throws IOException, InterruptedException {
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+
+		boolean flagLines = false;
+		for (WebElement selectL : listOfProd) {
+			if (selectL.getText().equals(filterName)) {
+				flagLines = true;
+				break;
+			}
+		}
+		if (flagLines == true) {
+			System.out.println(filterName + "s Present");
+			Assert.assertTrue(flagLines = true);
+		} else {
+			System.out.println(filterName + "s Not Present");
+			Assert.assertTrue(flagLines = false);
+		}
+	}
+
+	
 }
