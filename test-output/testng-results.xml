@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<testng-results skipped="0" failed="1" total="2" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="372182" started-at="2022-08-25T09:57:03Z" finished-at="2022-08-25T10:03:15Z">
+    <groups>
+    </groups>
+    <test name="RegressionTest" duration-ms="372182" started-at="2022-08-25T09:57:03Z" finished-at="2022-08-25T10:03:15Z">
+      <class name="atlantamarket_UAT.MarketPlanner">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.MarketPlanner@464bee09]" name="initialize" is-config="true" duration-ms="58520" started-at="2022-08-25T15:27:03Z" finished-at="2022-08-25T15:28:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="FAIL" signature="TS021_VerifyMarketPlannerListManagementSortByTest()[pri:0, instance:atlantamarket_UAT.MarketPlanner@464bee09]" name="TS021_VerifyMarketPlannerListManagementSortByTest" duration-ms="50865" started-at="2022-08-25T15:28:01Z" finished-at="2022-08-25T15:28:52Z">
+
 <testng-results skipped="0" failed="2" total="23" passed="21">
   <reporter-output>
   </reporter-output>
@@ -122,6 +137,7 @@
           </reporter-output>
         </test-method> <!-- TS018_VerifyMPListsCardOverviewTest -->
         <test-method status="FAIL" signature="TS019_VerifyAddToFavoriteFunctionalityForExhibitorTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@1a968a59]" name="TS019_VerifyAddToFavoriteFunctionalityForExhibitorTest" duration-ms="30334" started-at="2022-08-25T14:31:13Z" finished-at="2022-08-25T14:31:44Z">
+
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -132,11 +148,16 @@
 	at org.testng.Assert.failNotEquals(Assert.java:494)
 	at org.testng.Assert.assertTrue(Assert.java:42)
 	at org.testng.Assert.assertTrue(Assert.java:52)
+
+	at resources.Utility.filterSortByTest(Utility.java:230)
+	at atlantamarket_UAT.MarketPlanner.TS021_VerifyMarketPlannerListManagementSortByTest(MarketPlanner.java:1928)
+
 	at atlantamarket_PROD.MarketPlanner.TS019_VerifyAddToFavoriteFunctionalityForExhibitorTest(MarketPlanner.java:1420)
+
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
@@ -154,14 +175,34 @@
 	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
 	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
+
+        </test-method> <!-- TS021_VerifyMarketPlannerListManagementSortByTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.MarketPlanner@464bee09]" name="tearDown" is-config="true" duration-ms="1" started-at="2022-08-25T15:28:53Z" finished-at="2022-08-25T15:28:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.MarketPlanner@464bee09]" name="initialize" is-config="true" duration-ms="215900" started-at="2022-08-25T15:28:53Z" finished-at="2022-08-25T15:32:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS021_VerifyMarketPlannerListManagementFilterByTest()[pri:0, instance:atlantamarket_UAT.MarketPlanner@464bee09]" name="TS021_VerifyMarketPlannerListManagementFilterByTest" duration-ms="46473" started-at="2022-08-25T15:32:28Z" finished-at="2022-08-25T15:33:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS021_VerifyMarketPlannerListManagementFilterByTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.MarketPlanner@464bee09]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-08-25T15:33:15Z" finished-at="2022-08-25T15:33:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- atlantamarket_UAT.MarketPlanner -->
+
         </test-method> <!-- TS019_VerifyAddToFavoriteFunctionalityForExhibitorTest -->
         <test-method status="PASS" signature="TS020_VerifyFilterByOptionsOverviewForListTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@1a968a59]" name="TS020_VerifyFilterByOptionsOverviewForListTest" duration-ms="43675" started-at="2022-08-25T14:31:44Z" finished-at="2022-08-25T14:32:28Z">
           <reporter-output>
@@ -180,6 +221,7 @@
           </reporter-output>
         </test-method> <!-- TS023_VerifyMarketPlannerSignOutTest -->
       </class> <!-- atlantamarket_PROD.MarketPlanner -->
+
     </test> <!-- RegressionTest -->
   </suite> <!-- ATLMrkt_RegressionTestSuite -->
 </testng-results>

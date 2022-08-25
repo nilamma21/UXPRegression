@@ -2,11 +2,22 @@
 package resources;
 
 import java.io.IOException;
+
+import java.util.List;
+import java.util.NoSuchElementException;
+
+import org.omg.CORBA.PUBLIC_MEMBER;
+import org.openqa.selenium.By;
+
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
+
+import com.gargoylesoftware.htmlunit.javascript.host.media.webkitMediaStream;
 
 import atlantamarket_UAT.MarketPlanner;
 import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
@@ -22,6 +33,8 @@ public class Utility extends base {
 	ATLExhLineProdActionsPage atlexhact;
 	MarketPlanner mp;
 	ATLMarketPlannerPage atlmppge;
+
+	GenerateData genData;
 
 	@SuppressWarnings("static-access")
 	public Utility(WebDriver driver) {
@@ -107,9 +120,7 @@ public class Utility extends base {
 		lp = new ATLLoginPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
 
-		
-		
-		//Clear All
+		// Clear All
 		atlmppge.getMpQuickAdd().sendKeys(Keys.CONTROL + "a");
 		atlmppge.getMpQuickAdd().sendKeys(Keys.DELETE);
 
@@ -123,4 +134,106 @@ public class Utility extends base {
 		Thread.sleep(5000);
 
 	}
+
+	public void filterByTest(List<WebElement> listOfProd, String filterName) throws IOException, InterruptedException {
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+
+		boolean flagLines = false;
+		for (WebElement selectL : listOfProd) {
+			if (selectL.getText().equals(filterName)) {
+				flagLines = true;
+				break;
+			}
+		}
+		if (flagLines == true) {
+			System.out.println(filterName + "s Present");
+			Assert.assertTrue(flagLines = true);
+		} else {
+			System.out.println(filterName + "s Not Present");
+			Assert.assertFalse(flagLines = false);
+		}
+	}
+
+	// Click on FilterBy Options(All , Exhibitor, Line , Product , etc)
+	public void selectFilters(List<WebElement> list, String filterName) {
+
+		boolean flag = false;
+		for (WebElement listExhibitor : list) {
+			if (listExhibitor.getText().equals(filterName)) {
+				listExhibitor.click();
+				flag = true;
+				break;
+			}
+		}
+		if (flag == true) {
+			System.out.println(filterName + " Selected");
+			Assert.assertTrue(flag = true);
+		} else {
+			System.out.println(filterName + " Not Selected");
+			Assert.assertTrue(flag = false);
+		}
+	}
+
+	public void createNewList(String newlistname) throws InterruptedException {
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+		
+		// click on New list btn
+		atlmppge.getMpListNewListBtn().click();
+		// verify New List Popup header
+		Assert.assertTrue(
+				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateListPopupHeader")));
+		// Enter List name
+		newlistname = "Cyb" + genData.generateRandomString(5);
+		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
+		System.out.println("list name :: " + newlistname);
+		// Click on Create Btn
+		atlmppge.getMpListNewCreateBtn().click();
+		Thread.sleep(5000);
+	}
+	
+	public void addingCutomItem() throws IOException, InterruptedException {
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+
+		// Click on Add Custom item Btn
+		atlmppge.getAddCustomItem().click();
+		String newTitle = "Cyb" + genData.generateRandomString(5);
+		atlmppge.getCustomTitle().sendKeys(newTitle);
+		String newDesc = "Cyb" + genData.generateRandomString(20);
+		atlmppge.getCustomDesc().sendKeys(newDesc);
+		atlmppge.getCustomItemsubmitBtn().click();
+	}
+	
+	public void filterSortByTest(List<WebElement> listOfProd, String filterName) throws IOException, InterruptedException {
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+
+		boolean flagLines = false;
+		for (WebElement selectL : listOfProd) {
+			if (selectL.getText().equals(filterName)) {
+				flagLines = true;
+				break;
+			}
+		}
+		if (flagLines == true) {
+			System.out.println(filterName + "s Present");
+			Assert.assertTrue(flagLines = true);
+		} else {
+			System.out.println(filterName + "s Not Present");
+			Assert.assertTrue(flagLines = false);
+		}
+	}
+
+	
 }
