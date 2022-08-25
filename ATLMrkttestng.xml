@@ -1,41 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-
-<!-- <suite name="ATLMrkt_RegressionTestSuite">
-	<listners>
-
 <suite name="ATLMrkt_RegressionTestSuite">
 
- <listners>
-
-
 	<listners>
 
+
  <listners>
+
+
 
 
 
 		<listner class-name="atlantamarket_PROD.TestListeners" />
 	</listners>
+
 	<test thread-count="5" name="RegressionTest">
 		<classes>
-
-
 			<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
-			<methods> 
-			 <include name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest" /> 
-			 <include name="TS003_VerifyAddToExistingListForExhibitorTest" />
-			</methods>
-
-
-
- 			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
-			 <class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
-			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
-			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" /> 
+			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
+			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters" />
+
  			<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
 			<class name="atlantamarket_PROD.FloorPlans" />
 
@@ -123,14 +110,20 @@
 
 	<test thread-count="5" name="RegressionTest">
 		<classes>
+
+
 			<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
-			<methods>
-				<include name="TS005_VerifyShowSpecialsTest" />
-			</methods>
+			<class name="atlantamarket_PROD.FloorPlans" />
+			<class name="atlantamarket_PROD.MarketPlanner" />		
 		</classes>
 	</test>
-</suite>
 
- -->
-
-
+<!-- 	<listners>
+			<listner class-name="atlantamarket_UAT.TestListeners" />
+		</listners>
+		<test thread-count="5" name="RegressionTest">
+			<classes>
+				<class name="atlantamarket_UAT.MarketPlanner" />
+			</classes>
+		</test>  -->
+	</suite> 

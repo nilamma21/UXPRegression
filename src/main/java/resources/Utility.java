@@ -2,11 +2,14 @@
 package resources;
 
 import java.io.IOException;
+
 import java.util.List;
 import java.util.NoSuchElementException;
 
 import org.omg.CORBA.PUBLIC_MEMBER;
 import org.openqa.selenium.By;
+
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -64,7 +67,7 @@ public class Utility extends base {
 		lp.getSignInBtn().click();
 		Thread.sleep(15000);
 	}
-
+/*
 	public void verifyMPInvalidLoginFunctionality(String un, String pwd) throws IOException, InterruptedException {
 
 		// The purpose of this test case to verify:-
@@ -74,12 +77,12 @@ public class Utility extends base {
 		lp = new ATLLoginPage(driver);
 		mp = new MarketPlanner();
 		try {
-			/*
+			
 			 * lap.getWelcomeMsg().isDisplayed(); lap.getSignOut().click();
 			 * Thread.sleep(8000); lap.getLogin().click();
-			 */
+			 
 
-			mp.TS021_VerifyMarketPlannerSignOutTest();
+			mp.TS024_VerifyMarketPlannerSignOutTest();
 			lap.getLogin().click();
 
 		} catch (Exception e) {
@@ -94,7 +97,7 @@ public class Utility extends base {
 		lp.getSignInBtn().click();
 		Thread.sleep(15000);
 	}
-
+*/
 	public void mouseHover(WebElement mainMenu, WebElement subMenu) throws IOException, InterruptedException {
 
 		lap = new ATLLandingPage(driver);
