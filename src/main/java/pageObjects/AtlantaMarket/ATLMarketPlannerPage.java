@@ -126,7 +126,11 @@ public class ATLMarketPlannerPage {
 	By mpexpdirectory = By.xpath("//div[@class = 'imc-card imc-loading-relative']/div[3]/a[1]"); //Locator for Exhibitor Directory option
 	By mpsavedsearches = By.xpath("//div[@class = 'imc-card imc-loading-relative']/div[4]/a[1]"); //Locator for saved Searches option
 	By mpmyinfo = By.xpath("//div[@class = 'imc-card imc-loading-relative']/div[5]/a[1]"); //Locator for My Info option
-	
+	By newlycreatedgroupname = By.xpath("//div[@class='group-container'][2]/div/div/div[1]/h5"); //Locator for Newly created group name
+	By nogroupname = By.xpath("//div[@class='group-container'][1]/div/div/div[1]/h5"); //Locator for No Group name
+	By createnewgrppopupclosebtn = By.xpath("//button[@class='imc-modal--close imc-button--modal-close imc-button--round']"); //Locator for Create new group popup close btn
+	By atlmpduplicatelistoptns = By.xpath("//ul[@class='imc-market-planner-list']/li/div[2]/span[1]/a"); //Locator for Duplicate List options on Lists page
+
 	public ATLMarketPlannerPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
@@ -626,7 +630,22 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpFilterByDropdown));
 		return driver.findElement(mpFilterByDropdown);
 	}
-
+	public WebElement getNoGroupName() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(nogroupname));
+		return driver.findElement(nogroupname);
+	}
+	public WebElement getNewlyCreatedGrpName() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(newlycreatedgroupname));
+		return driver.findElement(newlycreatedgroupname);
+	}
+	public WebElement getCreateNewGrpPopupCloseBtn() {
+		return driver.findElement(createnewgrppopupclosebtn);
+	}
+	public List<WebElement> getATLMPDuplicateListOptns() {
+		return driver.findElements(atlmpduplicatelistoptns);
+	}
 	
 	
 	
