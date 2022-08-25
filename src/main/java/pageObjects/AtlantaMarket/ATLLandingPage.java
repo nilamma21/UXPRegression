@@ -15,6 +15,10 @@ public class ATLLandingPage {
 	By iunderstandbtn = By.xpath("//button[@id='gdpr-btn']"); //Locator for I Understand button
 	By mpsignoutbtn = By.xpath("(//a[@href='/imc-api/account/v1/logout'])[position()=1]"); //Locator for Sign out button
 	By closemrktadbtn = By.xpath("//div[@class=' contact-exit']"); //Locator for Close button of Market ad
+	By welcomeMsg = By.xpath("//button[@class='imc-header-user-icon--greeting ']"); //Locator for Welcome Msg
+	By signOut = By.xpath("//a[contains(text(),'Sign Out')]"); //Locator for Sign Out
+	
+	
 	
 	public ATLLandingPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -47,4 +51,14 @@ public class ATLLandingPage {
 		Thread.sleep(7000);
 		return driver.findElement(closemrktadbtn);		
 	}
+	public WebElement getWelcomeMsg() throws InterruptedException{
+		Thread.sleep(7000);
+		return driver.findElement(welcomeMsg);		
+	}
+	public WebElement getSignOut() throws InterruptedException{
+		Thread.sleep(7000);
+		return driver.findElement(signOut);		
+	}
+	
+	
 }

@@ -89,9 +89,14 @@ public class ATLMarketPlannerPage {
 	By mpregistrationlink = By.xpath("//div[@class = 'imc-card-section imc-card-footer imc-card-centered']/a[1]"); //Locator for Registration Information link
 	By mpverifyregistrationinformationlink = By.xpath("//div[@class = 'section-wrapper imc-section--basic-white']"); //Locator for verify registration page link
 	By mpManageDropdown = By.xpath("(//div[@class='react-select__indicators css-1wy0on6'])[1]"); //Locator for Mnage DropDown
+	By mpFilterByDropdown = By.xpath("(//div[@class='react-select__indicators css-1wy0on6'])[2]"); //Locator for FilterBy DropDown
+	
 	By mpManageEditList = By.xpath("(//a[@class='imc-link--alt-darkred'])[1]"); //Locator for Mnage Edit list'
 	By mpManageEditListSelectAllBtn = By.xpath("//div[@class='imc-loading-relative']/div[2]/div[2]/button[1]"); //Locator for Mnage Edit list Select All Btn
 	By mpManageEditListCopyToBtn = By.xpath("//div[@class='imc-loading-relative']/div[2]/div[3]/button[1]"); //Locator for Mnage Edit list Copy to Btn
+	By mpManageEditListMoveBtn = By.xpath("//div[@class='imc-loading-relative']/div[2]/div[4]/button[1]"); //Locator for Mnage Edit list Move Btn
+	By mpManageEditListRemoveBtn = By.xpath("//div[@class='imc-loading-relative']/div[2]/div[5]/button[1]"); //Locator for Mnage Edit list Remove Btn
+	
 	By mpSelectListPopup = By.xpath("//div[@class='ReactModal__Content ReactModal__Content--after-open imc-modal--box imc-contactexhibitormodal']"); //Locator for Select List Popup
 	By mpFevList = By.xpath("//div[@class='ReactModal__Content ReactModal__Content--after-open imc-modal--box imc-contactexhibitormodal']/div[1]/div[1]/ul[1]/li[2]/div[1]"); //Locator for Fev List
 	By mpSelectFevList = By.xpath("//div[@class='ReactModal__Content ReactModal__Content--after-open imc-modal--box imc-contactexhibitormodal']/div[1]/div[1]/ul[1]/li[2]/div[2]/span[1]/a[1]"); //Locator for Select Fev List
@@ -116,7 +121,16 @@ public class ATLMarketPlannerPage {
 	By mpnewlistbutton = By.xpath("//div[@class = 'imc-gallery__item imc-customlists-button-pad']/button[2]"); //Locator for new list button
 	By createlistbutton = By.xpath("//div[@class = 'imc-vr--medium']/inout[1]"); //Locator Create List button
 
-	
+	By mpbookhotel = By.xpath("//div[@class = 'imc-card imc-loading-relative']/div[1]/a[1]"); //Locator for Book a Hotel option
+	By mpfloorplans = By.xpath("//div[@class = 'imc-card imc-loading-relative']/div[2]/a[1]"); //Locator for Floor Plans option
+	By mpexpdirectory = By.xpath("//div[@class = 'imc-card imc-loading-relative']/div[3]/a[1]"); //Locator for Exhibitor Directory option
+	By mpsavedsearches = By.xpath("//div[@class = 'imc-card imc-loading-relative']/div[4]/a[1]"); //Locator for saved Searches option
+	By mpmyinfo = By.xpath("//div[@class = 'imc-card imc-loading-relative']/div[5]/a[1]"); //Locator for My Info option
+	By newlycreatedgroupname = By.xpath("//div[@class='group-container'][2]/div/div/div[1]/h5"); //Locator for Newly created group name
+	By nogroupname = By.xpath("//div[@class='group-container'][1]/div/div/div[1]/h5"); //Locator for No Group name
+	By createnewgrppopupclosebtn = By.xpath("//button[@class='imc-modal--close imc-button--modal-close imc-button--round']"); //Locator for Create new group popup close btn
+	By atlmpduplicatelistoptns = By.xpath("//ul[@class='imc-market-planner-list']/li/div[2]/span[1]/a"); //Locator for Duplicate List options on Lists page
+
 	public ATLMarketPlannerPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
@@ -573,6 +587,66 @@ public class ATLMarketPlannerPage {
 		return driver.findElement(addlistcreatebtn_ATLPROD);
 	}
 
+	public WebElement getmpManageEditListMoveBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpManageEditListMoveBtn));
+		return driver.findElement(mpManageEditListMoveBtn);
+	}
+	public WebElement getmpManageEditListRemoveBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpManageEditListRemoveBtn));
+		return driver.findElement(mpManageEditListRemoveBtn);
+	}
+
+	
+
+	public WebElement getmpbookhotel() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpbookhotel));
+		return driver.findElement(mpbookhotel);
+	}
+	public WebElement getmpfloorplans() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpfloorplans));
+		return driver.findElement(mpfloorplans);
+	}
+	public WebElement getmpexpdirectory() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpexpdirectory));
+		return driver.findElement(mpexpdirectory);
+	}
+	public WebElement getmpsavedsearches() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpsavedsearches));
+		return driver.findElement(mpsavedsearches);
+	}
+	public WebElement getmpmyinfo() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpmyinfo));
+		return driver.findElement(mpmyinfo);
+	}
+	public WebElement getmpFilterByDropdown() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpFilterByDropdown));
+		return driver.findElement(mpFilterByDropdown);
+	}
+	public WebElement getNoGroupName() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(nogroupname));
+		return driver.findElement(nogroupname);
+	}
+	public WebElement getNewlyCreatedGrpName() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(newlycreatedgroupname));
+		return driver.findElement(newlycreatedgroupname);
+	}
+	public WebElement getCreateNewGrpPopupCloseBtn() {
+		return driver.findElement(createnewgrppopupclosebtn);
+	}
+	public List<WebElement> getATLMPDuplicateListOptns() {
+		return driver.findElements(atlmpduplicatelistoptns);
+	}
+	
 	
 	
 }

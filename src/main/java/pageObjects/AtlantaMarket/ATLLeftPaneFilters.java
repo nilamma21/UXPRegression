@@ -27,6 +27,12 @@ public class ATLLeftPaneFilters {
 	By expproductcategsectn = By.xpath("//h3[contains(text(),'Product Categories')]"); //Locator for Products Categories section title in EXP
 	By expindustrialstyleonprofile = By.xpath("//span[contains(@class,'EPUpdateExhibitorProfile_categoriesList') and text()='Industrial']"); //Locator for Industrial Style on Profile
 	By accentfurnitureprodcatg = By.xpath("//label[contains(text(),'Accent Furniture')]"); //Locator for name of Accent Furniture Categ.
+	By holidayprodcatg = By.xpath("//label[contains(text(),'Holiday/Seasonal')]"); //Locator for name of Holiday/Seasonal Categ.
+	By decorativeaccprodcatg = By.xpath("//label[contains(text(),'Decorative Accessories')]"); //Locator for name of Decorative Accessories Categ.
+	By generalgiftprodcatg = By.xpath("//label[contains(text(),'General Gift')]"); //Locator for name of General Gift Categ.
+	By fashionaccprodcatg = By.xpath("//label[contains(text(),'Fashion Accessories/Jewelry')]"); //Locator for name of Fashion Accessories/Jewelry Categ.
+	By floralbotanicalsprodcatg = By.xpath("//label[contains(text(),'Floral / Botanicals')]"); //Locator for name of Floral / Botanicals Categ.
+	By hometextilesprodcatg = By.xpath("//label[contains(text(),'Home Textiles')]"); //Locator for name of Home Textiles Categ.
 
 	public ATLLeftPaneFilters(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -103,6 +109,24 @@ public class ATLLeftPaneFilters {
 	}
 	public WebElement getATLAccentFurnitureProdCatg(){
 		return driver.findElement(accentfurnitureprodcatg);
+	}
+	public WebElement getATLHolidayProdCatg(){
+		return driver.findElement(holidayprodcatg);
+	}
+	public WebElement getATLDecorativeAccProdCatg(){
+		return driver.findElement(decorativeaccprodcatg);
+	}
+	public WebElement getATLGeneralGiftProdCatg(){
+		return driver.findElement(generalgiftprodcatg);
+	}
+	public WebElement getATLFashionAccProdCatg(){
+		return driver.findElement(fashionaccprodcatg);
+	}
+	public WebElement getATLFloralBotanicalsProdCatg(){
+		return driver.findElement(floralbotanicalsprodcatg);
+	}
+	public WebElement getATLHomeTextilesProdCatg(){
+		return driver.findElement(hometextilesprodcatg);
 	}
 }
 
