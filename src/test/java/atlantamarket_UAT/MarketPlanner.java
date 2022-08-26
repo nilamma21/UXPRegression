@@ -312,20 +312,11 @@ public class MarketPlanner extends base {
 			if (list.getText().equals(lName)) {
 				Point DestLocation = list.getLocation();
 
-				System.out.println("In If :: " + sLocation + "And" + DestLocation);
 				if (DestLocation != sLocation) {
 					if (list.getText().equals(lName)) {
 						Point DestLocation1 = list.getLocation();
 						System.out.println("In If :: " + sLocation + "And" + DestLocation1);
 						if (DestLocation1 != sLocation) {
-
-				if (DestLocation != sLocation) 
-				{
-					if(list.getText().equals(lName)) {
-						Point DestLocation1=list.getLocation();
-						if(DestLocation1!=sLocation)
-						{
-
 							flag = true;
 							Assert.assertTrue(flag = true);
 							break;
@@ -340,13 +331,6 @@ public class MarketPlanner extends base {
 		}
 
 	}
-
-					Thread.sleep(5000);
-				}
-			}
-		}
-	}
-
 
 
 	@Test(priority = 7)
@@ -517,9 +501,6 @@ public class MarketPlanner extends base {
 		atlmppge.getMpListNewListCreateBtn().click();
 		Thread.sleep(5000);
 
-
-			System.out.println(list.getText());
-
 		List<WebElement> mplists = atlmppge.getATLMPListsNames();
 		boolean flag = false;
 		for (WebElement list : mplists) {
@@ -535,12 +516,6 @@ public class MarketPlanner extends base {
 			Assert.assertTrue(flag = false);
 		}
 	}
-
-
-
-
-	@Test(priority = 11)
-	public void TS011_VerifyMPDashboardOverviewTest() throws InterruptedException, IOException {
 
 	@Test(priority = 4)
 	public void TS004_VerifyMPDashboardOverviewTest() throws InterruptedException, IOException {
@@ -586,12 +561,6 @@ public class MarketPlanner extends base {
 		Assert.assertEquals(atlmppge.getmpmyinfosection().getText(), "My Info");
 	}
 
-
-
-
-	@Test(priority = 12)
-	public void TS012_VerifyMPRegistrationCardOverviewTest() throws InterruptedException, IOException {
-
 	@Test(priority = 5)
 	public void TS005_VerifyMPRegistrationCardOverviewTest() throws InterruptedException, IOException {
 
@@ -619,12 +588,6 @@ public class MarketPlanner extends base {
 		String rURL=driver.getCurrentUrl();
 		Assert.assertTrue(rURL.contains(prop.getProperty("atlmrkturl_uat")+"Attend/Registration"));
 	}
-
-
-
-
-	@Test(priority = 13)
-	public void TS013_VerifyAddProductToFavFunctionalityInFavListsTest() throws InterruptedException, IOException {
 
 	@Test(priority = 11)
 	public void TS011_VerifyAddToFavoriteFunctionalityForProductTest() throws InterruptedException, IOException {
@@ -747,9 +710,6 @@ public class MarketPlanner extends base {
 
 	}
 
-	@Test(priority = 15)
-	public void TS014_VerifyMarketPlannerListManageListTest() throws InterruptedException, IOException {
-
 	@Test(priority = 13)
 	public void TS013_VerifyManageListOptionsOverviewTest() throws InterruptedException, IOException {
 
@@ -836,7 +796,6 @@ public class MarketPlanner extends base {
 	@Test(priority = 14)
 	public void TS014_VerifyEditListFunctionalityForManageListTest() throws InterruptedException, IOException {
 
-
 		// The purpose of this test case to verify:-
 		// UXP-T245: Market Planner: Lists- List Management- Manage List- 'Edit' list functionality
 
@@ -898,17 +857,6 @@ public class MarketPlanner extends base {
 				WebElement dListEditBtn1 = driver.findElement(By.xpath("//div[text()='" + newlistname + "']/../div[2]/span[2]"));
 				utl.scrollToElement(dListEditBtn1);
 				Thread.sleep(5000);
-				dListEditBtn1.click();
-
-
-				// System.out.println(list.getText());
-				//System.out.println("Equal");
-				WebElement dListEditBtn1 = driver.findElement(By.xpath("//div[text()='" + newlistname + "']/../div[2]/span[2]"));
-				//WebElement dListName = driver.findElement(By.xpath("//div[text()= '" + newlistname + "']"));
-				//System.out.println("List Name :: " + dListName.getText());
-				utl.scrollToElement(dListEditBtn1);
-				Thread.sleep(5000);
-
 				dListEditBtn1.click();
 
 				// Adding Exh into list
@@ -1039,10 +987,6 @@ public class MarketPlanner extends base {
 														.findElement(By.xpath("//div[text()= '" + newlistname + "']"));
 												// System.out.println("List Name :: " + dListNameM.getText());
 
-												WebElement dListEditBtnM = driver.findElement(By.xpath("//div[text()='" + newlistname + "']/../div[2]/span[2]"));
-												WebElement dListNameM = driver.findElement(By.xpath("//div[text()= '" + newlistname + "']"));
-												//System.out.println("List Name :: " + dListNameM.getText());
-
 												utl.scrollToElement(dListEditBtnM);
 												Thread.sleep(5000);
 
@@ -1054,8 +998,6 @@ public class MarketPlanner extends base {
 
 												List<WebElement> manageList1 = driver.findElements(By.xpath(
 														"//div[@class='react-select__menu-list css-11unzgr']/div"));
-
-												List<WebElement>manageList1 = driver.findElements(By.xpath("//div[@class='react-select__menu-list css-11unzgr']/div"));
 
 												boolean flag7 = false;
 												for (WebElement mListM : manageList1) {
@@ -1103,9 +1045,6 @@ public class MarketPlanner extends base {
 
 																List<WebElement> allList2 = driver.findElements(By
 																		.xpath("//div[@class='imc-market-planner-list_row_title']"));
-
-																List<WebElement>	allList2 = driver.findElements(By.xpath(
-																		"//div[@class='imc-market-planner-list_row_title']"));
 
 																boolean flag9 = false;
 																for (WebElement listMove : allList2) {
@@ -1180,14 +1119,10 @@ public class MarketPlanner extends base {
 																				for (WebElement selectExhRR : listOfAllExhRR) {
 																					// Thread.sleep(2000);
 																					// System.out.println(selectExhM.getText());
-																					if (selectExhRR.getText()
-
-																							.equals(prop.getProperty(
+																					if (selectExhRR.getText().equals(prop.getProperty(
 																									"exhibitor1"))) {
 																						System.out.println(
 																								"Exh is present in list");
-
-																							.equals(prop.getProperty("exhibitor1"))) {
 
 																						flag12 = true;
 																						break;
@@ -1203,14 +1138,6 @@ public class MarketPlanner extends base {
 																							"Passed.. Not Present");
 																					Assert.assertFalse(flag12 = false);
 																				}
-
-
-																					Assert.assertTrue(flag12 = true);
-																				} else {
-																					Assert.assertFalse(flag12 = false);
-																				}
-
-
 
 																				flag11 = true;
 																				break;
@@ -1300,13 +1227,8 @@ public class MarketPlanner extends base {
 		} else {
 			Assert.assertTrue(flag1 = false);
 		}
+		}
 	}
-
-	
-
-
-
-
 
 	@Test(priority = 15)
 	public void TS015_VerifyDuplicateLinkFunctionalityForListTest() throws InterruptedException, IOException {
@@ -1448,6 +1370,7 @@ public class MarketPlanner extends base {
 	}
 
 
+
 /*
 	@Test(priority = 19)
 	public void TS019_VerifyAddToFavoriteForLineTest() throws InterruptedException, IOException {
@@ -1487,6 +1410,10 @@ public class MarketPlanner extends base {
 		}
 	}
 */
+
+
+	
+
 	@Test(priority =17)
 	public void TS017_VerifyAddToFavoriteFunctionalityForLineTest() throws InterruptedException, IOException {
 
@@ -1722,8 +1649,14 @@ public class MarketPlanner extends base {
 		Assert.assertFalse(atlmppge.getmpexistinglists().getText().equalsIgnoreCase(SavedLists));
 	}
 
+
 @Test(priority = 20)
 	public void TS020_VerifyMPActivitiesCardOverviewTest() throws InterruptedException, IOException {
+
+
+
+	@Test(priority = 21)
+	public void TS021_VerifyMPActivitiesCardOverviewTest() throws InterruptedException, IOException {
 
 
 		// The purpose of this test case to verify:-
@@ -1839,8 +1772,7 @@ public class MarketPlanner extends base {
 	}	
 
 	@Test(priority = 26)
-	public void TS026_VerifyMarketPlannerListsManagementFilterOptionsFunctionalityTest()
-			throws InterruptedException, IOException {
+	public void TS026_VerifyVerifyFilterByOptionsFunctionalityForListTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
 		// UXP-T250: Market Planner: Lists- List Management- Filter By options
@@ -2149,6 +2081,7 @@ public class MarketPlanner extends base {
 		utl.filterSortByTest(atlmppge.getfilterByList(), "A-Z");
 		utl.filterSortByTest(atlmppge.getfilterByList(), "Custom");
 		
+
 	}	
 
 	
@@ -2229,5 +2162,13 @@ public void tearDown() {
 	// driver.quit();
 	
 }
+
+	}
+
+	@AfterClass
+	public void tearDown() {
+		 //driver.quit();
+	}
+
 
 }
