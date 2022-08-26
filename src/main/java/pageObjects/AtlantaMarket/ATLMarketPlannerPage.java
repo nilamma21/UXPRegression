@@ -656,6 +656,7 @@ public class ATLMarketPlannerPage {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllExh));
 		return driver.findElements(listOfAllExh);
+	}
 
 	public WebElement getNoGroupName() {
 		wait = new WebDriverWait (driver,20);

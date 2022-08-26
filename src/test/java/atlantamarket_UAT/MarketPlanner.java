@@ -1448,7 +1448,7 @@ public class MarketPlanner extends base {
 	}
 
 
-
+/*
 	@Test(priority = 19)
 	public void TS019_VerifyAddToFavoriteForLineTest() throws InterruptedException, IOException {
 
@@ -1486,7 +1486,7 @@ public class MarketPlanner extends base {
 			Assert.assertFalse(flag1 = false);
 		}
 	}
-
+*/
 	@Test(priority =17)
 	public void TS017_VerifyAddToFavoriteFunctionalityForLineTest() throws InterruptedException, IOException {
 
@@ -1647,7 +1647,7 @@ public class MarketPlanner extends base {
 		 * Assert.assertFalse(favlist.get(i).getText().contains(exhname)); }
 		 */
 	}
-@Test(priority = 19)
+/*@Test(priority = 19)
 	public void TS019_VerifyMPListsCardOverviewTest() throws InterruptedException, IOException {
 
 
@@ -1669,7 +1669,7 @@ public class MarketPlanner extends base {
 			Assert.assertFalse(favlist.get(i).getText().contains(exhname)); 
 		}
 	}
-
+*/
 	@Test(priority = 18)
 	public void TS018_VerifyMPListsCardOverviewTest() throws InterruptedException, IOException {
 
@@ -1725,11 +1725,6 @@ public class MarketPlanner extends base {
 @Test(priority = 20)
 	public void TS020_VerifyMPActivitiesCardOverviewTest() throws InterruptedException, IOException {
 
-
-
-
-	@Test(priority = 21)
-	public void TS021_VerifyMPActivitiesCardOverviewTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
 		// UXP-001: To verify the Market Planner overview and it's functionality
@@ -2157,13 +2152,6 @@ public class MarketPlanner extends base {
 	}	
 
 	
-	@AfterMethod
-
-			Assert.assertTrue(flagFList = true);
-		} else {
-			Assert.assertTrue(flagFList = false);
-		}
-	}	
 	
 	@Test(priority = 22)
 	public void TS022_VerifyVerifyFilterByOptionsFunctionalityForListTest() throws InterruptedException, IOException {
@@ -2227,10 +2215,19 @@ public class MarketPlanner extends base {
 
 	}
 
-	@AfterClass
+	
+	/*@AfterMethod
 
-	public void tearDown() {
-		 //driver.quit();
-	}
+			Assert.assertTrue(flagFList = true);
+		} else {
+			Assert.assertTrue(flagFList = false);
+		}
+	}*/
+@AfterClass
+
+public void tearDown() {
+	// driver.quit();
+	
+}
 
 }
