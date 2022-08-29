@@ -19,7 +19,6 @@ public class Utility extends base {
 	ATLLandingPage lap;
 	ATLLoginPage lp;
 	ATLExhLineProdActionsPage atlexhact;
-	MarketPlanner mp;
 	ATLMarketPlannerPage atlmppge;
 
 	@SuppressWarnings("static-access")
