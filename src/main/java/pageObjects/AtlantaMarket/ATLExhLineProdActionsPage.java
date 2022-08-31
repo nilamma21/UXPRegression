@@ -68,7 +68,7 @@ public class ATLExhLineProdActionsPage extends base{
 	By eventdetailstag = By.xpath("//a[contains(@class,'imc-eventdetail--tag')]"); //Locator for tag on Event Details
 	By eventcardtag = By.xpath("//ul[@class='imc-cardtags imc-content--light imc-eventcard__tag']/li/button"); //Locator for Event Card tag
 	
-	
+	//img[@class='imc-saved-exhibitors__img-grid']
 	
 	public ATLExhLineProdActionsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -164,12 +164,18 @@ public class ATLExhLineProdActionsPage extends base{
 		return driver.findElement(popupclosebtn);
 	}
 	public WebElement getNoteTitleTxtBx() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(notetitletxtbx));
 		return driver.findElement(notetitletxtbx);
 	}
 	public WebElement getNoteContentTxtBx() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(notecontenttxtbx));
 		return driver.findElement(notecontenttxtbx);
 	}
 	public WebElement getNoteSaveBtn() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(notesavebtn));
 		return driver.findElement(notesavebtn);
 	}
 	public WebElement getViewAllNotesLink() {
@@ -189,7 +195,7 @@ public class ATLExhLineProdActionsPage extends base{
 	}
 	public WebElement getDeleteNoteBtn() {
 		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(noteforanexhibitormodal));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(deletenotebtn));
 		return driver.findElement(deletenotebtn);
 	}
 	public WebElement getOrderOnJuniperMarketBtn() {

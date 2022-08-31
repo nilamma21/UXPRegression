@@ -96,8 +96,8 @@
 		<classes>
 			<class name="atlantamarket_UAT.MarketPlanner"/>
 			<methods>
-				<include name="TS002_VerifyMarketPlannerChannelSelectorTest"/>
-				<!-- <include name="TS014_VerifyEditListFunctionalityForManageListTest" /> -->
+				<!-- <include name="TS007_VerifyNewGroupBtnFunctionalityForListsTest"/> -->
+				<!-- <include name="TS034_VerifyMarketPlannerListsElementMoreOoptionsDeleteTest" /> -->
 			</methods>
 		</classes>
 		</test>

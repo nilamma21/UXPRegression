@@ -14,6 +14,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 import com.gargoylesoftware.htmlunit.javascript.host.media.webkitMediaStream;
@@ -40,7 +41,7 @@ public class Utility extends base {
 		this.driver = driver;
 	}
 
-public WebElement scrollToElement(WebElement element) throws InterruptedException {
+	public WebElement scrollToElement(WebElement element) throws InterruptedException {
 		WebElement scrollText = element;
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true);", scrollText);
@@ -48,7 +49,7 @@ public WebElement scrollToElement(WebElement element) throws InterruptedExceptio
 		return element;
 	}
 
-public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
+	public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
 
 		// The purpose of this test case to verify:-
 		// TS1- Login to Market Planner
@@ -67,29 +68,22 @@ public void verifyMPLoginFunctionality() throws IOException, InterruptedExceptio
 		Thread.sleep(15000);
 	}
 
-	/*
-	 * public void verifyMPInvalidLoginFunctionality(String un, String pwd) throws
-	 * IOException, InterruptedException {
-	 * 
-	 * // The purpose of this test case to verify:- // TS1- Login to Market Planner
-	 * 
-	 * lap = new ATLLandingPage(driver); lp = new ATLLoginPage(driver); mp = new
-	 * MarketPlanner(); try {
-	 * 
-	 * lap.getWelcomeMsg().isDisplayed(); lap.getSignOut().click();
-	 * Thread.sleep(8000); lap.getLogin().click();
-	 * 
-	 * 
-	 * mp.TS024_VerifyMarketPlannerSignOutTest(); lap.getLogin().click();
-	 * 
-	 * } catch (Exception e) { System.out.println(e); lap.getLogin().click(); }
-	 * 
-	 * // Enter the credentials on Login Page and click
-	 * lp.getEmailAddress().sendKeys(un); lp.getPassword().sendKeys(pwd);
-	 * 
-	 * lp.getSignInBtn().click(); Thread.sleep(15000); }
-	 */
-public void mouseHover(WebElement mainMenu, WebElement subMenu) throws IOException, InterruptedException {
+	public void selectDropdown(String itemName,String channelURL) throws InterruptedException {
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		
+		Select selectAMC = new Select(atlmppge.getselectChannel());
+		selectAMC.selectByVisibleText(itemName);
+		Thread.sleep(5000);
+		Assert.assertTrue(driver.getCurrentUrl().contains(channelURL +"Market-Planner"));
+		System.out.println("Verified "+itemName+"channel page");
+
+	}
+	
+	
+	
+	public void mouseHover(WebElement mainMenu, WebElement subMenu) throws IOException, InterruptedException {
 
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
@@ -105,7 +99,7 @@ public void mouseHover(WebElement mainMenu, WebElement subMenu) throws IOExcepti
 
 	}
 
-public void addingExhProdLine(String name) throws IOException, InterruptedException {
+	public void addingExhProdLine(String name) throws IOException, InterruptedException {
 
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
@@ -126,7 +120,8 @@ public void addingExhProdLine(String name) throws IOException, InterruptedExcept
 
 	}
 
-public void checkItemPresentInListorNot(List<WebElement> listOfProd, String filterName) throws IOException, InterruptedException {
+	public void checkItemPresentInListorNot(List<WebElement> listOfProd, String filterName)
+			throws IOException, InterruptedException {
 
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
@@ -147,30 +142,32 @@ public void checkItemPresentInListorNot(List<WebElement> listOfProd, String filt
 			Assert.assertTrue(flagLines = false);
 		}
 	}
-public void checkItemNotPresentInList(List<WebElement> listOfProd, String filterName)
-		throws IOException, InterruptedException {
 
-	lap = new ATLLandingPage(driver);
-	lp = new ATLLoginPage(driver);
-	atlmppge = new ATLMarketPlannerPage(driver);
+	public void checkItemNotPresentInList(List<WebElement> listOfProd, String filterName)
+			throws IOException, InterruptedException {
 
-	boolean flagLines = false;
-	for (WebElement selectL : listOfProd) {
-		if (selectL.getText().equals(filterName)) {
-			flagLines = true;
-			break;
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+
+		boolean flagLines = false;
+		for (WebElement selectL : listOfProd) {
+			if (selectL.getText().equals(filterName)) {
+				flagLines = true;
+				break;
+			}
+		}
+		if (flagLines == true) {
+			System.out.println(filterName + "s Present");
+			Assert.assertFalse(flagLines = true);
+		} else {
+			System.out.println(filterName + "s Not Present");
+			Assert.assertTrue(flagLines = true);
 		}
 	}
-	if (flagLines == true) {
-		System.out.println(filterName + "s Present");
-		Assert.assertFalse(flagLines = true);
-	} else {
-		System.out.println(filterName + "s Not Present");
-		Assert.assertTrue(flagLines = true);
-	}
-}
-// Click on FilterBy Options(All , Exhibitor, Line , Product , etc)
-public void selectFilters(List<WebElement> list, String filterName) {
+
+	// Click on FilterBy Options(All , Exhibitor, Line , Product , etc)
+	public void selectFilters(List<WebElement> list, String filterName) {
 
 		boolean flag = false;
 		for (WebElement listExhibitor : list) {
@@ -189,7 +186,7 @@ public void selectFilters(List<WebElement> list, String filterName) {
 		}
 	}
 
-public void createNewList(String newlistname) throws InterruptedException {
+	public void createNewList() throws InterruptedException {
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
@@ -201,7 +198,7 @@ public void createNewList(String newlistname) throws InterruptedException {
 		Assert.assertTrue(
 				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateListPopupHeader")));
 		// Enter List name
-		newlistname = "Cyb" + genData.generateRandomString(5);
+		String newlistname = "Cyb" + genData.generateRandomString(5);
 		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
 		System.out.println("list name :: " + newlistname);
 		// Click on Create Btn
@@ -209,7 +206,7 @@ public void createNewList(String newlistname) throws InterruptedException {
 		Thread.sleep(5000);
 	}
 
-public void addingCutomItem() throws IOException, InterruptedException {
+	public void addingCutomItem() throws IOException, InterruptedException {
 
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
@@ -225,7 +222,8 @@ public void addingCutomItem() throws IOException, InterruptedException {
 		atlmppge.getCustomItemsubmitBtn().click();
 	}
 
-public void ClickOnEditBtnOfAnyList(List<WebElement> list, String listName)throws IOException, InterruptedException {
+	public void ClickOnEditBtnOfAnyList(List<WebElement> list, String listName)
+			throws IOException, InterruptedException {
 
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
@@ -235,8 +233,7 @@ public void ClickOnEditBtnOfAnyList(List<WebElement> list, String listName)throw
 		for (WebElement selectListName : list) {
 			if (selectListName.getText().equals(listName)) {
 				scrollToElement(selectListName);
-				WebElement editBtn = driver
-						.findElement(By.xpath("//div[text()='" + listName + "']/../div[2]/span[2]"));
+				WebElement editBtn = driver.findElement(By.xpath("//div[text()='" + listName + "']/../div[2]/span[2]"));
 				// click on Edit btn
 				editBtn.click();
 				Thread.sleep(5000);
@@ -252,31 +249,97 @@ public void ClickOnEditBtnOfAnyList(List<WebElement> list, String listName)throw
 		}
 
 	}
-public void ClickOnListSelectBtn(List<WebElement> list, String listName)throws IOException, InterruptedException {
 
-	lap = new ATLLandingPage(driver);
-	lp = new ATLLoginPage(driver);
-	atlmppge = new ATLMarketPlannerPage(driver);
+	public void ClickOnListSelectBtn(List<WebElement> list, String listName) throws IOException, InterruptedException {
 
-	boolean flag = false;
-	for (WebElement selectListName : list) {
-		if (selectListName.getText().equals(listName)) {
-			scrollToElement(selectListName);
-			WebElement editBtn = driver
-					.findElement(By.xpath("//div[text()='" + listName + "']/../div[2]/span[1]"));
-			// click on Edit btn
-			editBtn.click();
-			Thread.sleep(5000);
-			flag = true;
-			break;
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+
+		boolean flag = false;
+		for (WebElement selectListName : list) {
+			if (selectListName.getText().equals(listName)) {
+				scrollToElement(selectListName);
+				WebElement editBtn = driver.findElement(By.xpath("//div[text()='" + listName + "']/../div[2]/span[1]"));
+				// click on Edit btn
+				editBtn.click();
+				Thread.sleep(5000);
+				flag = true;
+				break;
+			}
 		}
-	}
-	if (flag == true) {
-		System.out.println("List " + listName + "selected");
-		Assert.assertTrue(flag = true);
-	} else {
-		Assert.assertTrue(flag = false);
-	}
+		if (flag == true) {
+			System.out.println("List " + listName + "selected");
+			Assert.assertTrue(flag = true);
+		} else {
+			Assert.assertTrue(flag = false);
+		}
 
-}
+	}
+	//Check Exhibito Location
+	public void checkLocationLink(List<WebElement> list, String exhName) throws IOException, InterruptedException {
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+
+		boolean flag = false;
+		for (WebElement selectListName : list) {
+			if (selectListName.getText().equals(exhName)) {
+				//scrollToElement(selectListName);
+				WebElement locationLink = driver.findElement(By.xpath("//a[text()='"+exhName+"']/../../../div[2]/div[1]/div[2]/a[1]/div/span[2]"));
+				// click on Edit btn
+				String	locationText=locationLink.getText();
+				System.out.println("Location ::"+locationText);
+			
+				
+				Thread.sleep(5000);
+				flag = true;
+				break;
+			}
+		}
+		if (flag == true) {
+			System.out.println("Exhibitor " + exhName + "Location Link Present");
+			Assert.assertTrue(flag = true);
+		} else {
+			Assert.assertTrue(flag = false);
+		}
+
+	}
+	
+	//Click on Exhibitor Location
+	public void clickOnLocationLink(List<WebElement> list, String exhName) throws IOException, InterruptedException {
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+
+		boolean flag = false;
+		for (WebElement selectListName : list) {
+			if (selectListName.getText().equals(exhName)) {
+				//scrollToElement(selectListName);
+				WebElement locationLink = driver.findElement(By.xpath("//a[text()='"+exhName+"']/../../../div[2]/div[1]/div[2]/a[1]/div[1]"));
+				// click on Edit btn
+				String	locationText=locationLink.getText();
+				System.out.println("Location ::"+locationText);
+				locationLink.click();
+				Thread.sleep(5000);
+				System.out.println(driver.getTitle());
+				//Assert.assertTrue(locationText.contains(driver.getTitle()));
+				flag = true;
+				break;
+			}
+		}
+		if (flag == true) {
+			System.out.println("Click on " + exhName + "location Link");
+			Assert.assertTrue(flag = true);
+		} else {
+			Assert.assertTrue(flag = false);
+		}
+
+	}
+	
+	
+	
+	
 }
