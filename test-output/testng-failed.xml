@@ -5,8 +5,15 @@
     <classes>
       <class name="atlantamarket_UAT.MarketPlanner">
         <methods>
+          <include name="TS029_VerifyListDisplayControlsFunctionalityTest"/>
+          <include name="TS007_VerifyNewGroupBtnFunctionalityForListsTest"/>
+          <include name="TS014_VerifyAddExhibitorToFavInFavListsTest"/>
+          <include name="TS025_VerifyVerifyFilterByOptionsFunctionalityForListTest"/>
+          <include name="TS033_VerifyMarketPlannerListsElementMoreOoptionsMoveTest"/>
+          <include name="TS013_VerifyAddToFavoriteFunctionalityForProductTest"/>
+          <include name="TS016_VerifyEditListFunctionalityForManageListTest"/>
           <include name="initialize"/>
-          <include name="TS002_VerifyMarketPlannerChannelSelectorTest"/>
+          <include name="TS022_VerifyMPListsCardOverviewTest"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- atlantamarket_UAT.MarketPlanner -->

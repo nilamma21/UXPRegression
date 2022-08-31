@@ -144,12 +144,44 @@ public class ATLMarketPlannerPage {
 	By nogroupname = By.xpath("//div[@class='group-container'][1]/div/div/div[1]/h5"); //Locator for No Group name
 	By createnewgrppopupclosebtn = By.xpath("//button[@class='imc-modal--close imc-button--modal-close imc-button--round']"); //Locator for Create new group popup close btn
 	By atlmpduplicatelistoptns = By.xpath("//ul[@class='imc-market-planner-list']/li/div[2]/span[1]/a"); //Locator for Duplicate List options on Lists page
-
-
+	By atlmpGrByExhCheckbox = By.xpath("//div[@class='imc-gallery imc-market-planner-list-display imc-vr--large']/div[2]/div[1]/div[1]/div[1]"); //Locator for Gr By CheckBox
+	By atlmpListView = By.xpath("//div[@class='imc-gallery imc-market-planner-list-display imc-vr--large']/div[2]/div[1]/div[2]/button[1]"); //Locator for List View
+	By atlmpGridView = By.xpath("//div[@class='imc-gallery imc-market-planner-list-display imc-vr--large']/div[2]/div[1]/div[2]/button[2]"); //Locator for Grid view
+	By atlmpVerifyGridView = By.xpath("//img[@class='imc-saved-exhibitors__img-grid']"); //Locator for Grid view
+	By atlmpVerifyListView = By.xpath("//div[@class='imc-gallery imc-saved-exhibitors__outer-row imc-market-planner-list--mobile-overlays-left']"); //Locator for Grid view
+	By atlmpVerifyLocationLink = By.xpath("//a[@class='imc-link imc-link--alt-darkred']"); //Locator for Location Link
+	By listOfAllGroups = By.xpath("//h5[@class='accordion__item__title']"); //Locator for list of gr
+	
+	
+	
+	
 	public ATLMarketPlannerPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
-	} 
+	}
+	
+	public List <WebElement> atlmpVerifyLocationLink() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmpVerifyLocationLink));
+		return driver.findElements(atlmpVerifyLocationLink);
+	}
+	public List <WebElement> getAtlListOfAllGroups() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllGroups));
+		return driver.findElements(listOfAllGroups);
+	}
+	
+	
+	public WebElement getATLmpVerifyListView() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmpVerifyListView));
+		return driver.findElement(atlmpVerifyListView);
+	}
+	public WebElement getATLmpVerifyGridView() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmpVerifyGridView));
+		return driver.findElement(atlmpVerifyGridView);
+	}
 	public WebElement getATLMarketPlannerHome() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmarketplannerhome));
@@ -721,7 +753,22 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSortByDropdown));
 		return driver.findElement(mpSortByDropdown);
 	}		
-		
+	public WebElement getAtlmpGrByExhCheckbox() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmpGrByExhCheckbox));
+		return driver.findElement(atlmpGrByExhCheckbox);
+	}		
+	public WebElement getatlmpListView() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmpListView));
+		return driver.findElement(atlmpListView);
+	}		
+	public WebElement getatlmpGridView() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmpGridView));
+		return driver.findElement(atlmpGridView);
+	}		
+				
 	
 }
 
