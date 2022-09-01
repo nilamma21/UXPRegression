@@ -2222,7 +2222,55 @@ public class MarketPlanner extends base {
 		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), exhname);
 		
 	}
+	@Test(priority = 39)
+	public void TS039_VerifyMarketPlannerListsAllSavedProductsTest() throws InterruptedException, IOException {
 
+
+		// The purpose of this test case to verify:-
+		// UXP-T266: Market Planner: Lists- All Saved Products
+		
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+
+		atlgs = new ATLGlobalSearchPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys("   ");
+		atlgs.getATLSearchButton().click();
+		Thread.sleep(15000);
+		// Store the 1st Product name of Exhibitor
+		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
+		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
+
+		// utl.scrollToElement(atlexhact.getExhibitorProduct());
+
+		// Hovering on Product
+		Actions actions = new Actions(driver);
+		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
+		// To mouseover on Add to Fav btn
+		actions.moveToElement(atlexhact.getProductFevBtn()).perform();
+
+		// Click on Add To Favorite button
+		actions.click().perform();
+		Thread.sleep(5000);
+
+		// Click on Market Planner link
+		lap.getMPLinkText().click();
+
+		// Click on Lists tab on MP home page
+		atlmppge.getMPHomeListsTab().click();
+		atlmppge.getallSavedProductMenu().click();
+		Thread.sleep(8000);
+		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), productNameOnSearchGrid);
+	}
+	
+	
 	@AfterClass
 	public void tearDown() {
 		// driver.quit();
