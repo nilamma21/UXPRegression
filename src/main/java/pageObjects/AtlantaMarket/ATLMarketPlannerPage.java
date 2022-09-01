@@ -151,15 +151,73 @@ public class ATLMarketPlannerPage {
 	By atlmpVerifyListView = By.xpath("//div[@class='imc-gallery imc-saved-exhibitors__outer-row imc-market-planner-list--mobile-overlays-left']"); //Locator for Grid view
 	By atlmpVerifyLocationLink = By.xpath("//a[@class='imc-link imc-link--alt-darkred']"); //Locator for Location Link
 	By listOfAllGroups = By.xpath("//h5[@class='accordion__item__title']"); //Locator for list of gr
-	
-	
-	
+	By duplicateListErrorMsg = By.xpath("//div[@class='imc-vr--large']/ul/li[1]"); //Locator for Invalid Group msg
+	By customItemHeader = By.xpath("//div[@class='modal-wrapper']/div[1]/div[1]/h2[1]"); //Locator for Title of custom Item header
+	By listOfCustomItems = By.xpath("//div[@class='imc-type--body-6-ui imc-content--padded-medium-desktop imc-content--padded-medium-left']"); //Locator for List of custom Item 
+	By cancelBtnCustomItem = By.xpath("//div[@class='imc-addnote-modal__padded']/form[1]/div[7]/button[1]"); //Locator for Cancel Btn custom Item
+	By addNoteBtn = By.xpath("//div[@class='imc-gallery__item market-planner--list-sidebar imc-breakpoint-display--hide-mobile']/div[4]/div[1]/button[1]"); //Locator for Note Btn 
+	By newAddedNote = By.xpath("//div[@class='imc-gallery__item market-planner--list-sidebar imc-breakpoint-display--hide-mobile']/div[5]/ul[1]/li[1]/a[1]"); //Locator for Note Btn
+	By listOfAllNewAddedNotes = By.xpath("//a[@class='imc-link imc-type--body-4-ui']");//List of All notes
+	By closeNotePopup = By.xpath("//button[@class='imc-modal--close imc-addnote-modal__close']");////Locator for close Note popup
+	By allSavedExhibiorMenu = By.xpath("//div[@class='imc-vertical-tabs-nav']/a[contains(text(),'All Saved Exhibitors')]");////Locator for All Saved Exhibitors
+	By allSavedProductMenu = By.xpath("//div[@class='imc-vertical-tabs-nav']/a[contains(text(),'All Saved Products')]");////Locator for All Saved Product
+	By allEventsAndSeminarMenu = By.xpath("//div[@class='imc-vertical-tabs-nav']/a[contains(text(),'All Events And Seminars')]");////Locator for All Saved Events And Seminar
 	
 	public ATLMarketPlannerPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	}
+	public WebElement getallEventsAndSeminarMenu() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(allEventsAndSeminarMenu));
+		return driver.findElement(allEventsAndSeminarMenu);
+	}
+	public WebElement getallSavedProductMenu() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(allSavedProductMenu));
+		return driver.findElement(allSavedProductMenu);
+	}
+	public WebElement getallSavedExhibiorMenu() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(allSavedExhibiorMenu));
+		return driver.findElement(allSavedExhibiorMenu);
+	}
+	public WebElement getcloseNotePopup() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(closeNotePopup));
+		return driver.findElement(closeNotePopup);
+	}
+	public List <WebElement> getlistOfAllNewAddedNotes() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllNewAddedNotes));
+		return driver.findElements(listOfAllNewAddedNotes);
+	}
+	public WebElement getaddNoteBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(addNoteBtn));
+		return driver.findElement(addNoteBtn);
+	}
+	public WebElement getcancelBtnCustomItem() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(cancelBtnCustomItem));
+		return driver.findElement(cancelBtnCustomItem);
+	}
+	public List <WebElement> getATLlistOfCustomItems() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfCustomItems));
+		return driver.findElements(listOfCustomItems);
+	}
+	public WebElement getcustomItemHeader() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(customItemHeader));
+		return driver.findElement(customItemHeader);
+	}
 	
+	public WebElement getDuplicateListErrorMsg() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(duplicateListErrorMsg));
+		return driver.findElement(duplicateListErrorMsg);
+	}
 	public List <WebElement> atlmpVerifyLocationLink() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmpVerifyLocationLink));
