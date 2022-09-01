@@ -96,7 +96,7 @@
 		<classes>
 			<class name="atlantamarket_UAT.MarketPlanner"/>
 			<methods>
-				<!-- <include name="TS007_VerifyNewGroupBtnFunctionalityForListsTest"/> -->
+				<include name="CheckBoxTest"/>
 				<!-- <include name="TS034_VerifyMarketPlannerListsElementMoreOoptionsDeleteTest" /> -->
 			</methods>
 		</classes>
