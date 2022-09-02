@@ -33,6 +33,7 @@ public class ATLLeftPaneFilters {
 	By fashionaccprodcatg = By.xpath("//label[contains(text(),'Fashion Accessories/Jewelry')]"); //Locator for name of Fashion Accessories/Jewelry Categ.
 	By floralbotanicalsprodcatg = By.xpath("//label[contains(text(),'Floral / Botanicals')]"); //Locator for name of Floral / Botanicals Categ.
 	By hometextilesprodcatg = By.xpath("//label[contains(text(),'Home Textiles')]"); //Locator for name of Home Textiles Categ.
+	By secondexhibitor = By.xpath("//div[@class='imc-vr--xxlarge']/div[2]/div[1]/div[1]/div[1]//a[1]/h2[1]");//Locator for 2nd Exhibitor
 
 	public ATLLeftPaneFilters(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -127,6 +128,9 @@ public class ATLLeftPaneFilters {
 	}
 	public WebElement getATLHomeTextilesProdCatg(){
 		return driver.findElement(hometextilesprodcatg);
+	}
+	public WebElement getATLSecondExhibitor(){
+		return driver.findElement(secondexhibitor);
 	}
 }
 
