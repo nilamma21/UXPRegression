@@ -30,3 +30,48 @@
 		</classes>
 	</test> -->
 </suite>
+<<<<<<< HEAD
+ -->
+
+<suite name="ATLMrkt_RegressionTestSuite">
+	<listners>
+		<listner class-name="atlantamarket_UAT.TestListeners"/>
+	</listners>
+	<test thread-count="5" name="RegressionTest">
+		<classes>
+			<class name="atlantamarket_UAT.MarketPlanner"/>
+			<methods>
+				<include name="TS042_VerifyMarketSavedSearchesDeletefunctionalityTest"/>
+				<!-- <include name="TS001_VerifyMarketPlannerLoginTest"/> -->
+				
+			</methods>
+		</classes>
+		</test>
+</suite>
+<!-- 
+<suite name="LVM_RegressionTestSuite">
+	<listners>
+		<listner class-name="lasvegasmarket_PROD.TestListeners" />
+	</listners>
+
+	<test thread-count="5" name="RegressionTest">
+		<classes>
+
+
+			<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
+			<class name="atlantamarket_PROD.FloorPlans" />
+			<class name="atlantamarket_PROD.MarketPlanner" />		
+		</classes>
+	</test>
+
+	<listners>
+			<listner class-name="atlantamarket_UAT.TestListeners" />
+		</listners>
+		<test thread-count="5" name="RegressionTest">
+			<classes>
+				<class name="atlantamarket_UAT.MarketPlanner" />
+			</classes>
+		</test>  
+	</suite> -->
+=======
+>>>>>>> 1ff82d05b4a27023d3d11286aeaf5a456ccc2095

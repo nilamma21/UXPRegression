@@ -2,6 +2,22 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="88505" started-at="2022-09-05T11:31:15Z" finished-at="2022-09-05T11:32:43Z">
+    <groups>
+    </groups>
+    <test name="RegressionTest" duration-ms="88505" started-at="2022-09-05T11:31:15Z" finished-at="2022-09-05T11:32:43Z">
+      <class name="atlantamarket_UAT.MarketPlanner">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.MarketPlanner@4dfa3a9d]" name="initialize" is-config="true" duration-ms="64346" started-at="2022-09-05T17:01:15Z" finished-at="2022-09-05T17:02:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS042_VerifyMarketSavedSearchesDeletefunctionalityTest()[pri:0, instance:atlantamarket_UAT.MarketPlanner@4dfa3a9d]" name="TS042_VerifyMarketSavedSearchesDeletefunctionalityTest" duration-ms="24107" started-at="2022-09-05T17:02:19Z" finished-at="2022-09-05T17:02:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS042_VerifyMarketSavedSearchesDeletefunctionalityTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.MarketPlanner@4dfa3a9d]" name="tearDown" is-config="true" duration-ms="1" started-at="2022-09-05T17:02:43Z" finished-at="2022-09-05T17:02:43Z">
+=======
   <suite name="ATLMrkt_RegressionTestSuite" duration-ms="504458" started-at="2022-09-01T12:33:17Z" finished-at="2022-09-01T12:41:41Z">
     <groups>
     </groups>
@@ -54,6 +70,7 @@
           </reporter-output>
         </test-method> <!-- TS014_VerifyEditListFunctionalityForManageListTest -->
         <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.MarketPlanner@146ba0ac]" name="tearDown" is-config="true" duration-ms="31137" started-at="2022-09-01T18:11:10Z" finished-at="2022-09-01T18:11:41Z">
+>>>>>>> 1ff82d05b4a27023d3d11286aeaf5a456ccc2095
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

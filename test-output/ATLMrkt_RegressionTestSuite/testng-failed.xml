@@ -5,6 +5,10 @@
     <classes>
       <class name="atlantamarket_PROD.MarketPlanner">
         <methods>
+<<<<<<< HEAD
+          <include name="TS043_VerifyMarketPlannerListSortByFunctionalityTest"/>
+=======
+>>>>>>> 1ff82d05b4a27023d3d11286aeaf5a456ccc2095
           <include name="initialize"/>
           <include name="tearDown"/>
           <include name="TS014_VerifyEditListFunctionalityForManageListTest"/>

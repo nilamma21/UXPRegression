@@ -162,10 +162,78 @@ public class ATLMarketPlannerPage {
 	By allSavedExhibiorMenu = By.xpath("//div[@class='imc-vertical-tabs-nav']/a[contains(text(),'All Saved Exhibitors')]");////Locator for All Saved Exhibitors
 	By allSavedProductMenu = By.xpath("//div[@class='imc-vertical-tabs-nav']/a[contains(text(),'All Saved Products')]");////Locator for All Saved Product
 	By allEventsAndSeminarMenu = By.xpath("//div[@class='imc-vertical-tabs-nav']/a[contains(text(),'All Events And Seminars')]");////Locator for All Saved Events And Seminar
+	By mpRegistrationTab = By.xpath("//div[@class='imc-section imc-market-planner-toolbar ']/div[1]/div[1]/div[2]/div[1]/a[4]");////Locator for Reg tab
+	By mpRegisterNowBtn = By.xpath("//div[@class='imc-gallery__item']/div[1]/a[1]");////Locator for Reg Btn
+	By mpSavedSearchesTab = By.xpath("//div[@class='imc-section imc-market-planner-toolbar ']/div[1]/div[1]/div[2]/div[1]/a[5]");////Locator for Saved Searches tab
+	By mpSavedSearchesIcon = By.xpath("//div[@class='imc-vr--large']/section[1]/div[1]/div[1]/div[1]");////Locator for Saved Searches icon
+	By mpSaveSearcheBtn = By.xpath("//div[@class='imc-vr--large']/section[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]");////Locator for Saved Searches Btn
+	By mpSaveSearcheNameInput = By.xpath("//div[@class='imc-modal--box imc-savesearchmodal']/form[1]/div[1]/input[1]");////Locator for Saved Searche input
+	By mpSaveSearcheInputBtn = By.xpath("//div[@class='imc-modal--box imc-savesearchmodal']/form[1]/div[2]/input[1]");////Locator for Saved Searche input Btn
+	By mplistOfAllSaveSearches = By.xpath("//a[@class='imc-link imc-link--alt-darkred imc-content--display-flex  imc-content--display-flex-center']");////Locator for list of all Saved Searche 
+	By mplistSearcheAlert = By.xpath("//div[@class='imc-vr--large']/section[1]/span[1]/div[1]");////Locator for list Search name
+	By mpConfirmDeleteBtn = By.xpath("//button[@class='imc-market-planner-quick-add-modal__submit-btn imc-button']");////Locator for Confim Delete
+	By mp1stExhiName = By.xpath("//div[@class='imc-gallery__item']//div/li[1]/div[1]/div[1]/div[1]/a");////Locator for 1st exh name
+	
 	
 	public ATLMarketPlannerPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
+	}
+	public WebElement getmpmp1stExhiName() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mp1stExhiName));
+		return driver.findElement(mp1stExhiName);
+	}
+	public WebElement getmpConfirmDeleteBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpConfirmDeleteBtn));
+		return driver.findElement(mpConfirmDeleteBtn);
+	}
+	public WebElement getmplistSearcheAlert() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mplistSearcheAlert));
+		return driver.findElement(mplistSearcheAlert);
+	}
+
+	public List <WebElement> getmplistOfAllSaveSearches() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mplistOfAllSaveSearches));
+		return driver.findElements(mplistOfAllSaveSearches);
+	}
+	public WebElement getmpSaveSearcheInputBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSaveSearcheInputBtn));
+		return driver.findElement(mpSaveSearcheInputBtn);
+	}
+	public WebElement getmpSaveSearcheNameInput() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSaveSearcheNameInput));
+		return driver.findElement(mpSaveSearcheNameInput);
+	}
+	public WebElement getmpSaveSearcheBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSaveSearcheBtn));
+		return driver.findElement(mpSaveSearcheBtn);
+	}
+	public WebElement getmpSavedSearchesIcon() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSavedSearchesIcon));
+		return driver.findElement(mpSavedSearchesIcon);
+	}
+	public WebElement mpSavedSearchesTab() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSavedSearchesTab));
+		return driver.findElement(mpSavedSearchesTab);
+	}
+	public WebElement getmpRegisterNowBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpRegisterNowBtn));
+		return driver.findElement(mpRegisterNowBtn);
+	}
+	public WebElement getmpRegistrationTab() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpRegistrationTab));
+		return driver.findElement(mpRegistrationTab);
 	}
 	public WebElement getallEventsAndSeminarMenu() {
 		wait = new WebDriverWait (driver,20);
