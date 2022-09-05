@@ -17,7 +17,7 @@ public class ATLLandingPage {
 	By closemrktadbtn = By.xpath("//div[@class=' contact-exit']"); //Locator for Close button of Market ad
 	By welcomeMsg = By.xpath("//button[@class='imc-header-user-icon--greeting ']"); //Locator for Welcome Msg
 	By signOut = By.xpath("//a[contains(text(),'Sign Out')]"); //Locator for Sign Out
-	
+	By marketplannerlinktext1 = By.xpath("(//span[contains(text(),'s Market Planner')])[1]"); //Locator for Market Planner link text
 	
 	
 	public ATLLandingPage(WebDriver driver) {
@@ -58,6 +58,11 @@ public class ATLLandingPage {
 	public WebElement getSignOut() throws InterruptedException{
 		Thread.sleep(7000);
 		return driver.findElement(signOut);		
+	}
+	public WebElement getmarketplannerlinktext1() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(marketplannerlinktext1));
+		return driver.findElement(marketplannerlinktext1);		
 	}
 	
 	

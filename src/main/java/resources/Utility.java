@@ -21,6 +21,7 @@ import com.gargoylesoftware.htmlunit.javascript.host.media.webkitMediaStream;
 
 import atlantamarket_UAT.MarketPlanner;
 import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
+import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
 import pageObjects.AtlantaMarket.ATLLandingPage;
 import pageObjects.AtlantaMarket.ATLLoginPage;
 import pageObjects.AtlantaMarket.ATLMarketPlannerPage;
@@ -33,7 +34,7 @@ public class Utility extends base {
 	ATLExhLineProdActionsPage atlexhact;
 	MarketPlanner mp;
 	ATLMarketPlannerPage atlmppge;
-
+	ATLGlobalSearchPage atlgs;
 	GenerateData genData;
 
 	@SuppressWarnings("static-access")
@@ -66,6 +67,8 @@ public class Utility extends base {
 
 		lp.getSignInBtn().click();
 		Thread.sleep(15000);
+		
+	
 	}
 
 	public void selectDropdown(String itemName,String channelURL) throws InterruptedException {
@@ -120,6 +123,32 @@ public class Utility extends base {
 
 	}
 
+	public void addingExhForSorting(String name) throws IOException, InterruptedException {
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		atlgs = new ATLGlobalSearchPage(driver);
+
+		// Clear All
+		atlgs.getATLGlobalSearchTextBox().sendKeys(Keys.CONTROL + "a");
+		atlgs.getATLGlobalSearchTextBox().sendKeys(Keys.DELETE);
+
+		// Enter New Exh
+		Thread.sleep(2000);
+		atlgs.getATLGlobalSearchTextBox().sendKeys(name);
+		
+		Thread.sleep(2000);
+		atlgs.getATLGlobalSearchTextBox().sendKeys(Keys.ENTER);
+		Thread.sleep(5000);
+
+	}
+
+	
+	
+	
+	
+	
 	public void checkItemPresentInListorNot(List<WebElement> listOfProd, String filterName)
 			throws IOException, InterruptedException {
 

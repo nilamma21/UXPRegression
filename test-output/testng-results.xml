@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="31670" started-at="2022-08-31T20:29:11Z" finished-at="2022-08-31T20:29:42Z">
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="88505" started-at="2022-09-05T11:31:15Z" finished-at="2022-09-05T11:32:43Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="31670" started-at="2022-08-31T20:29:11Z" finished-at="2022-08-31T20:29:42Z">
+    <test name="RegressionTest" duration-ms="88505" started-at="2022-09-05T11:31:15Z" finished-at="2022-09-05T11:32:43Z">
       <class name="atlantamarket_UAT.MarketPlanner">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.MarketPlanner@4dfa3a9d]" name="initialize" is-config="true" duration-ms="20219" started-at="2022-09-01T01:59:11Z" finished-at="2022-09-01T01:59:31Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.MarketPlanner@4dfa3a9d]" name="initialize" is-config="true" duration-ms="64346" started-at="2022-09-05T17:01:15Z" finished-at="2022-09-05T17:02:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="CheckBoxTest()[pri:0, instance:atlantamarket_UAT.MarketPlanner@4dfa3a9d]" name="CheckBoxTest" duration-ms="11379" started-at="2022-09-01T01:59:31Z" finished-at="2022-09-01T01:59:42Z">
+        <test-method status="PASS" signature="TS042_VerifyMarketSavedSearchesDeletefunctionalityTest()[pri:0, instance:atlantamarket_UAT.MarketPlanner@4dfa3a9d]" name="TS042_VerifyMarketSavedSearchesDeletefunctionalityTest" duration-ms="24107" started-at="2022-09-05T17:02:19Z" finished-at="2022-09-05T17:02:43Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CheckBoxTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.MarketPlanner@4dfa3a9d]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-09-01T01:59:42Z" finished-at="2022-09-01T01:59:42Z">
+        </test-method> <!-- TS042_VerifyMarketSavedSearchesDeletefunctionalityTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.MarketPlanner@4dfa3a9d]" name="tearDown" is-config="true" duration-ms="1" started-at="2022-09-05T17:02:43Z" finished-at="2022-09-05T17:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

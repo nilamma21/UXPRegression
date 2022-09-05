@@ -96,8 +96,9 @@
 		<classes>
 			<class name="atlantamarket_UAT.MarketPlanner"/>
 			<methods>
-				<include name="CheckBoxTest"/>
-				<!-- <include name="TS034_VerifyMarketPlannerListsElementMoreOoptionsDeleteTest" /> -->
+				<include name="TS042_VerifyMarketSavedSearchesDeletefunctionalityTest"/>
+				<!-- <include name="TS001_VerifyMarketPlannerLoginTest"/> -->
+				
 			</methods>
 		</classes>
 		</test>

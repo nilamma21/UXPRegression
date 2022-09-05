@@ -5,7 +5,7 @@
     <classes>
       <class name="atlantamarket_UAT.MarketPlanner">
         <methods>
-          <include name="CheckBoxTest"/>
+          <include name="TS043_VerifyMarketPlannerListSortByFunctionalityTest"/>
           <include name="initialize"/>
           <include name="tearDown"/>
         </methods>
