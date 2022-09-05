@@ -1335,8 +1335,13 @@ public class MarketPlanner extends base {
 		
 	}	
 
+<<<<<<< HEAD
 	@Test(priority = 24)
 	public void TS024_VerifyVerifyFilterByOptionsFunctionalityForListTest() throws InterruptedException, IOException {
+=======
+	@Test(priority = 25)
+	public void TS025_VerifyFilterByOptionsFunctionalityForListTest() throws InterruptedException, IOException {
+>>>>>>> 1ff82d05b4a27023d3d11286aeaf5a456ccc2095
 
 		// The purpose of this test case to verify:-
 		// UXP-T250: Market Planner: Lists- List Management- Filter By options

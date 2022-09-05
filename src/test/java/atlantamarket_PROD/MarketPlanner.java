@@ -559,10 +559,10 @@ public class MarketPlanner extends base {
 	}
 
 	@Test(priority = 5)
-	public void TS005_VerifyMPRegistrationCardOverviewTest() throws InterruptedException, IOException {
+	public void TS005_VerifyMPDashboardRegistrationCardOverviewTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
-		// UXP-001: To verify the Market Planner overview and it's functionality
+		// UXP-225: To get the overview of 'Registration' card on the Market Planner Dashboard
 
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
@@ -1206,31 +1206,27 @@ public class MarketPlanner extends base {
 		// Click on List from left Panel
 		atlmppge.getMpListLeftPannel().click();
 
-		atlmppge.getMpListNewListBtn().click();
-		// verify New List Popup header
-		Assert.assertTrue(atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateListPopupHeader")));
-		// Click on Create Btn
-		atlmppge.getMpListNewCreateBtn().click();
-		// Validate Invalid list name msg
-		Assert.assertTrue(atlmppge.getMpInvalidGrNameMsg().getText().contains(prop.getProperty("InvalidListMsg")));
-
+		/*atlmppge.getMpListNewListBtn().click();
+		
 		String newlistname = "Cyb" + genData.generateRandomString(5);
 		atlmppge.getMpListNameTxt().sendKeys(newlistname);
 		// Click on Create Btn
 		atlmppge.getMpListNewListCreateBtn().click();
-		Thread.sleep(5000);
+		Thread.sleep(5000);*/
 		// click on Edit list btn
 		atlmppge.getATLMPEditListOptn().click();
 		Thread.sleep(5000);
 
 		String currentListName = atlmppge.getmpCurrentListName().getText();
-
+		System.out.println("Before Rename:"+currentListName);
 		atlmppge.getmpRenameLink().click();
 		String renameListName = "RenameList" + currentListName;
 		atlmppge.getmpRenameInputField().clear();
 		atlmppge.getmpRenameInputField().sendKeys(renameListName);
 		atlmppge.getmpRenameInputSaveBtn().click();
 		Thread.sleep(5000);
+		
+		System.out.println("After Rename:"+atlmppge.getmpRenameListName().getText());
 		// Verify Rename List Name
 		Assert.assertTrue(atlmppge.getmpRenameListName().getText().equals(renameListName));
 		// Back To List
@@ -1372,10 +1368,10 @@ public class MarketPlanner extends base {
 	}
 
 	@Test(priority = 18)
-	public void TS018_VerifyMPListsCardOverviewTest() throws InterruptedException, IOException {
+	public void TS018_VerifyMPDashboardYourListsCardOverviewTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
-		// UXP-001: To verify the Market Planner overview and it's functionality
+		// UXP-226: To get the overview of 'Your Lists' card on the Market Planner Dashboard
 
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
@@ -1386,12 +1382,7 @@ public class MarketPlanner extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		lap.getMPLinkText().click();
-
-		// Verify dashboard page
-		Assert.assertTrue(atlmppge.getmpregistrationcard().isDisplayed());
-		Assert.assertTrue(atlmppge.getmplistscard().getText().contains("Lists"));
-		Assert.assertTrue(atlmppge.getmpbookmyhotelcard().getText().contains("Hotel"));
-
+		
 		// Verify All Lists link is available at Lists card
 		utl.scrollToElement(atlmppge.getmpalllists());
 		Assert.assertTrue(atlmppge.getmpalllists().isDisplayed());
@@ -1420,9 +1411,9 @@ public class MarketPlanner extends base {
 
 
 	@Test(priority = 21)
-	public void TS021_VerifyMPActivitiesCardOverviewTest() throws InterruptedException, IOException {
+	public void TS021_VerifyMPDashboardActivitiesCardOverviewTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// UXP-001: To verify the Market Planner overview and it's functionality
+		// UXP-227: To get the overview of 'Activities' card on the Market Planner Dashboard
 
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
