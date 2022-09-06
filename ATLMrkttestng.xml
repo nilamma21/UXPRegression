@@ -40,7 +40,7 @@
 		<classes>
 			<class name="atlantamarket_UAT.MarketPlanner"/>
 			<methods>
-				<include name="TS044_VerifyMarketPlanneMyInfoEditProfile"/>
+				<include name="TS045_VerifyMarketPlanneMyInfoOverview"/>
 				<!-- <include name="TS001_VerifyMarketPlannerLoginTest"/> -->
 				
 			</methods>
