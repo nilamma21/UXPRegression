@@ -195,6 +195,8 @@ public class ATLMarketPlannerPage {
 	By myinfonewemail = By.xpath("//div[@class = 'imc-vr--large imc-vr--smallmedium-desktop']/div[1]"); //Locator for newly added email address
 	By myinfoverifycompanyname = By.xpath("//div[@class = 'imc-formfield imc-content ']/p[1]"); //Locator for newly added Company Name
 	By myinfoverifyeditprofile = By.xpath("//div[@class = 'imc-profile']"); //Locator for edit profile verification
+	By myinfomyinquiriestab = By.xpath("//div[@class = 'imc-vertical-tabs-nav']/a[1]"); //Locator for My Inquiries tab
+	By myinfoverifymyinquiries = By.xpath("//div[@class = 'imc-gallery__item imc-vertical-tabs-content']"); //Locator for My Inquiries tab
 	
 	public ATLMarketPlannerPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -1021,6 +1023,16 @@ public class ATLMarketPlannerPage {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfoverifyeditprofile));
 		return driver.findElement(myinfoverifyeditprofile);
+	}
+	public WebElement getmyinfomyinquiriestab() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfomyinquiriestab));
+		return driver.findElement(myinfomyinquiriestab);
+	}
+	public WebElement getmyinfoverifymyinquiries() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfoverifymyinquiries));
+		return driver.findElement(myinfoverifymyinquiries);
 	}
 }
 

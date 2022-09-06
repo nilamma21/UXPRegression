@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="87790" started-at="2022-09-06T04:44:14Z" finished-at="2022-09-06T04:45:42Z">
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="81080" started-at="2022-09-06T11:05:20Z" finished-at="2022-09-06T11:06:41Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="87790" started-at="2022-09-06T04:44:14Z" finished-at="2022-09-06T04:45:42Z">
+    <test name="RegressionTest" duration-ms="81080" started-at="2022-09-06T11:05:20Z" finished-at="2022-09-06T11:06:41Z">
       <class name="atlantamarket_UAT.MarketPlanner">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.MarketPlanner@754ba872]" name="initialize" is-config="true" duration-ms="61066" started-at="2022-09-06T10:14:14Z" finished-at="2022-09-06T10:15:15Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.MarketPlanner@754ba872]" name="initialize" is-config="true" duration-ms="65726" started-at="2022-09-06T16:35:20Z" finished-at="2022-09-06T16:36:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS044_VerifyMarketPlanneMyInfoEditProfile()[pri:0, instance:atlantamarket_UAT.MarketPlanner@754ba872]" name="TS044_VerifyMarketPlanneMyInfoEditProfile" duration-ms="26695" started-at="2022-09-06T10:15:15Z" finished-at="2022-09-06T10:15:42Z">
+        <test-method status="PASS" signature="TS045_VerifyMarketPlanneMyInfoOverview()[pri:0, instance:atlantamarket_UAT.MarketPlanner@754ba872]" name="TS045_VerifyMarketPlanneMyInfoOverview" duration-ms="15293" started-at="2022-09-06T16:36:26Z" finished-at="2022-09-06T16:36:41Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS044_VerifyMarketPlanneMyInfoEditProfile -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.MarketPlanner@754ba872]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-09-06T10:15:42Z" finished-at="2022-09-06T10:15:42Z">
+        </test-method> <!-- TS045_VerifyMarketPlanneMyInfoOverview -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.MarketPlanner@754ba872]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-09-06T16:36:41Z" finished-at="2022-09-06T16:36:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

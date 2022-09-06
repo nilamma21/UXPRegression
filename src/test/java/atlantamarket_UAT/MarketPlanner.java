@@ -2578,9 +2578,7 @@ public class MarketPlanner extends base {
 		
 		lap.getMPLinkText().click();
 		atlmppge.getmyinfotab().click();
-		Assert.assertTrue(atlmppge.getverifymyinfopage().isDisplayed());
-		System.out.println("My Info page is displayed successfully.");
-		
+			
 		// Change and Verify First Name and Last Name
 		
 		atlmppge.getmyinfoeditprofile().click();
@@ -2643,7 +2641,57 @@ public class MarketPlanner extends base {
 		System.out.println("Company Name is not updated with Discard button.");	
 	}
 	
+	@Test(priority = 45)
+	public void TS045_VerifyMarketPlanneMyInfoOverview() throws InterruptedException, IOException {
+
+		// The purpose of this test case to verify:-
+		// UXP-T266: Market Planner: Lists- All Saved Products
+		
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+
+		atlgs = new ATLGlobalSearchPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		lap.getMPLinkText().click();
+		atlmppge.getmyinfotab().click();
+		Assert.assertTrue(atlmppge.getverifymyinfopage().isDisplayed());
+		System.out.println("My Info page is displayed successfully.");
+		
+	}
 	
+	@Test(priority = 46)
+	public void TS046_VerifyMarketPlanneMyInfoMyInquiriesTab() throws InterruptedException, IOException {
+
+		// The purpose of this test case to verify:-
+		// UXP-T266: Market Planner: Lists- All Saved Products
+		
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+
+		atlgs = new ATLGlobalSearchPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		lap.getMPLinkText().click();
+		atlmppge.getmyinfotab().click();
+		
+		//Click My inquiries tab and verify results
+		atlmppge.getmyinfomyinquiriestab().click();
+		Assert.assertTrue(atlmppge.getmyinfoverifymyinquiries().isDisplayed());
+		System.out.println("My Inquiries page is displayed properly.");
+	}
 	@AfterClass
 	public void tearDown() {
 		// driver.quit();
