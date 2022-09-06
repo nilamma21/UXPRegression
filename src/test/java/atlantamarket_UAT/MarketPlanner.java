@@ -1335,13 +1335,14 @@ public class MarketPlanner extends base {
 		
 	}	
 
-<<<<<<< HEAD
+
 	@Test(priority = 24)
 	public void TS024_VerifyVerifyFilterByOptionsFunctionalityForListTest() throws InterruptedException, IOException {
-=======
+
+	}
 	@Test(priority = 25)
 	public void TS025_VerifyFilterByOptionsFunctionalityForListTest() throws InterruptedException, IOException {
->>>>>>> 1ff82d05b4a27023d3d11286aeaf5a456ccc2095
+
 
 		// The purpose of this test case to verify:-
 		// UXP-T250: Market Planner: Lists- List Management- Filter By options
@@ -2555,6 +2556,93 @@ public class MarketPlanner extends base {
 		
 	
 	}
+	
+	@Test(priority = 44)
+	public void TS044_VerifyMarketPlanneMyInfoEditProfile() throws InterruptedException, IOException {
+
+
+		// The purpose of this test case to verify:-
+		// UXP-T266: Market Planner: Lists- All Saved Products
+		
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+
+		atlgs = new ATLGlobalSearchPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		lap.getMPLinkText().click();
+		atlmppge.getmyinfotab().click();
+		Assert.assertTrue(atlmppge.getverifymyinfopage().isDisplayed());
+		System.out.println("My Info page is displayed successfully.");
+		
+		// Change and Verify First Name and Last Name
+		
+		atlmppge.getmyinfoeditprofile().click();
+		Assert.assertTrue(atlmppge.getmyinfoverifyeditprofile().isDisplayed());
+		System.out.println("Edit Profile page is displayed successfully.");
+		Thread.sleep(3000);
+		/*atlmppge.getmyinfonamepencil().click();
+		atlmppge.getmyinfofirstname().sendKeys(genData.generateRandomString(8));
+		String FirstName = atlmppge.getmyinfofirstname().getText();
+		atlmppge.getmyinfolastname().sendKeys(genData.generateRandomString(8));
+		String LastName = atlmppge.getmyinfolastname().getText();
+		atlmppge.getmyinfodiscardbtn().click();
+		Assert.assertFalse(atlmppge.getverifymyinfoname().getText().contains(FirstName+LastName));
+		System.out.println("Name is not updated.");
+		
+		atlmppge.getmyinfonamepencil().click();
+		atlmppge.getmyinfofirstname().sendKeys(genData.generateRandomString(8));
+		String FirstName1 = atlmppge.getmyinfofirstname().getText();
+		atlmppge.getmyinfolastname().sendKeys(genData.generateRandomString(8));
+		String LastName1 = atlmppge.getmyinfolastname().getText();
+		atlmppge.getmyinfosavebutton().click();
+		Assert.assertFalse(atlmppge.getverifymyinfoname().getText().contains(FirstName1+LastName1));
+		System.out.println("Name is updated successfully.");*/
+		
+		// Change and Verify Email Address
+		
+		atlmppge.getmyinfoemail().click();
+		atlmppge.getmyinfoemailcancelbtn().click();
+		Assert.assertTrue(atlmppge.getmyinfoemail().isDisplayed());
+		System.out.println("Email Form is closed successfully with Cancel button.");
+		
+		atlmppge.getmyinfoemail().click();
+		atlmppge.getmyinfemailclosebtn().click();
+		Assert.assertTrue(atlmppge.getmyinfoemail().isDisplayed());
+		System.out.println("Email Form is closed successfully with X button.");
+		
+		atlmppge.getmyinfoemail().click();
+		atlmppge.getmyinfoemailtxtbox().sendKeys(genData.generateEmail(15));
+		Thread.sleep(3000);
+		String Email = atlmppge.getmyinfoemailtxtbox().getText();
+		atlmppge.getmyinfoverifybtn().click();
+		
+		Assert.assertTrue(atlmppge.getmyinfonewemail().getText().contains(Email));
+		System.out.println("New email is properly added.");
+		
+		// Change and Verify Email Address
+		
+		atlmppge.getmyinfocompanynamepencil().click();Thread.sleep(5000);
+		atlmppge.getmyinfocompnametxt().sendKeys(genData.generateRandomString(10));
+		String CompanyName = atlmppge.getmyinfocompnametxt().getText();
+		atlmppge.getmyinfosave2btn().click();
+		Assert.assertTrue(atlmppge.getmyinfoverifycompanyname().getText().contains(CompanyName));
+		System.out.println("Company Name is updated successfully.");	
+		
+		atlmppge.getmyinfocompanynamepencil().click();
+		atlmppge.getmyinfocompnametxt().sendKeys(genData.generateRandomString(10));
+		String CompanyName1 = atlmppge.getmyinfocompnametxt().getText();
+		atlmppge.getmyinfodiscard2btn().click();
+		Assert.assertTrue(atlmppge.getmyinfoverifycompanyname().getText().contains(CompanyName));
+		System.out.println("Company Name is not updated with Discard button.");	
+	}
+	
 	
 	@AfterClass
 	public void tearDown() {
