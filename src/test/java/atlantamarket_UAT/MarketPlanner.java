@@ -2692,6 +2692,82 @@ public class MarketPlanner extends base {
 		Assert.assertTrue(atlmppge.getmyinfoverifymyinquiries().isDisplayed());
 		System.out.println("My Inquiries page is displayed properly.");
 	}
+
+	@Test(priority = 47)
+	public void TS047_VerifyTabsUnderListsSectionTest() throws InterruptedException, IOException {
+
+		// The purpose of this test case to verify:-
+		// UXP-T266: Market Planner: Lists- All Saved Products
+		
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+
+		atlgs = new ATLGlobalSearchPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		lap.getMPLinkText().click();
+		
+		
+		//Click Lists tab and verify tabs under it
+		atlmppge.getMPHomeListsTab().click();
+		Assert.assertTrue(atlmppge.getmplistsfavorites().isDisplayed());
+		Assert.assertTrue(atlmppge.getListsPageListsMenu().isDisplayed());
+		Assert.assertTrue(atlmppge.getmplistsallsavedproduts().isDisplayed());
+		Assert.assertTrue(atlmppge.getmplistsallsavedexhibitors().isDisplayed());
+		Assert.assertTrue(atlmppge.getmplistsenentsandseminars().isDisplayed());
+		Assert.assertTrue(atlmppge.getmplistsmanagelist().isDisplayed());
+		System.out.println("List tab details are displayed properly.");
+	}
+
+	@Test(priority = 48)
+	public void TS048_VerifyListTabDetailsTest() throws InterruptedException, IOException {
+
+		// The purpose of this test case to verify:-
+		// UXP-T266: Market Planner: Lists- All Saved Products
+		
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+
+		atlgs = new ATLGlobalSearchPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		lap.getMPLinkText().click();
+		
+		
+		//Click Lists tab and verify tabs under it
+		atlmppge.getMPHomeListsTab().click();
+		Assert.assertTrue(atlmppge.getmplistsfavorites().isDisplayed());
+		Assert.assertTrue(atlmppge.getListsPageListsMenu().isDisplayed());
+		Assert.assertTrue(atlmppge.getmplistsallsavedproduts().isDisplayed());
+		Assert.assertTrue(atlmppge.getmplistsallsavedexhibitors().isDisplayed());
+		Assert.assertTrue(atlmppge.getmplistsenentsandseminars().isDisplayed());
+		Assert.assertTrue(atlmppge.getmplistsmanagelist().isDisplayed());
+		System.out.println("List tab options are displayed properly.");
+		
+		//Verify List Details on the page
+		atlmppge.getListsPageListsMenu().click();
+		Assert.assertTrue(atlmppge.getmplistsmanagelist().isDisplayed());
+		Assert.assertTrue(atlmppge.getmpduplicatelistbtn().isDisplayed());
+		Assert.assertTrue(atlmppge.getmpeditlistbtn().isDisplayed());
+		Assert.assertTrue(atlmppge.getmparrangelistbtn().isDisplayed());
+		Assert.assertTrue(atlmppge.getmpnewlistbtn().isDisplayed());
+		Assert.assertTrue(atlmppge.getmpnewgrpbtn().isDisplayed());
+		System.out.println("List details are displayed properly.");
+		
+	}
+	
 	@AfterClass
 	public void tearDown() {
 		// driver.quit();
