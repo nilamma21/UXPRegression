@@ -173,11 +173,72 @@ public class ATLMarketPlannerPage {
 	By mplistSearcheAlert = By.xpath("//div[@class='imc-vr--large']/section[1]/span[1]/div[1]");////Locator for list Search name
 	By mpConfirmDeleteBtn = By.xpath("//button[@class='imc-market-planner-quick-add-modal__submit-btn imc-button']");////Locator for Confim Delete
 	By mp1stExhiName = By.xpath("//div[@class='imc-gallery__item']//div/li[1]/div[1]/div[1]/div[1]/a");////Locator for 1st exh name
+	By mpAddToScheduledHeader = By.xpath("//div[@class='imc-modal--content imc-section imc-customlists-form']/h2[1]");////Locator for Add to Scheduled
+	By mpSelectStartDateCalendar = By.xpath("//div[@class='imc-modal--content imc-section imc-customlists-form']/form[1]/div[2]/div[1]/div[2]/div[1]");////Locator for Calendr
+	By mpCalendarNextMonthArrow = By.xpath("//div[@class='DayPicker-NavBar']/span[2]");////Locator for Calendr Next Month Arrow
+	By mpListOfAllCalendarDays = By.xpath("//div[@class='DayPicker-Day']");////Locator for List Of Calendr days
+	By mpSelectEndDateCalendar = By.xpath("//div[@class='imc-modal--content imc-section imc-customlists-form']/form[1]/div[2]/div[2]/div[2]/div[1]");////Locator for Calendr
+	By mpSelectStartTime = By.xpath("//div[@class='imc-modal--content imc-section imc-customlists-form']/form[1]/div[2]/div[1]/div[2]/div[2]/select[1]");////Locator for Start Time
+	By mpSelectEndTime = By.xpath("//div[@class='imc-modal--content imc-section imc-customlists-form']/form[1]/div[2]/div[2]/div[2]/div[2]/select[1]");////Locator for End Time
+	By mpAddToScheduledSaveBtn = By.xpath("//div[@class='imc-gallery imc-vr--medium']/div[1]/input[1]");////Locator for Save Btn
+	By mpmonthName = By.xpath("//div[@class='DayPicker-Months']/div[1]/div[1]/div[1]");////Locator for Month
+	By mpListOfAllProds = By.xpath("//div[@class='imc-saved-exhibitors__contentItems__col2-1 imc-heading--h7 imc-heading--primary-medium imc-saved-exhibitors__name-title']/a");////Locator for List of all products
 	
 	
 	public ATLMarketPlannerPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
+	}
+	public List <WebElement> getmpListOfAllProds() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpListOfAllProds));
+		return driver.findElements(mpListOfAllProds);
+	}
+	public WebElement getmpmonthName() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpmonthName));
+		return driver.findElement(mpmonthName);
+	}
+	public WebElement getmpAddToScheduledSaveBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpAddToScheduledSaveBtn));
+		return driver.findElement(mpAddToScheduledSaveBtn);
+	}
+	
+	public WebElement getmpSelectEndTime() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSelectEndTime));
+		return driver.findElement(mpSelectEndTime);
+	}
+	public WebElement getmpSelectStartTime() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSelectStartTime));
+		return driver.findElement(mpSelectStartTime);
+	}
+	public WebElement getmpSelectEndDateCalendar() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSelectEndDateCalendar));
+		return driver.findElement(mpSelectEndDateCalendar);
+	}
+	public List <WebElement> getmpListOfAllCalendarDays() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpListOfAllCalendarDays));
+		return driver.findElements(mpListOfAllCalendarDays);
+	}
+	public WebElement getmpCalendarNextMonthArrow() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpCalendarNextMonthArrow));
+		return driver.findElement(mpCalendarNextMonthArrow);
+	}
+	public WebElement getmpSelectStartDateCalendar() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSelectStartDateCalendar));
+		return driver.findElement(mpSelectStartDateCalendar);
+	}
+	public WebElement getmpAddToScheduledHeader() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpAddToScheduledHeader));
+		return driver.findElement(mpAddToScheduledHeader);
 	}
 	public WebElement getmpmp1stExhiName() {
 		wait = new WebDriverWait (driver,20);

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-
+<!-- 	
 <suite name="ATLMrkt_RegressionTestSuite">
 
 	<listners>
@@ -20,7 +20,7 @@
 		</classes>
 	</test>
 
-<!-- 	<listners>
+<listners>
 		<listner class-name="atlantamarket_UAT.TestListeners" />
 	</listners>
 
@@ -28,10 +28,10 @@
 		<classes>
 			<class name="atlantamarket_UAT.MarketPlanner" />
 		</classes>
-	</test> -->
-</suite>
-<<<<<<< HEAD
- -->
+	</test> 
+</suite>-->
+
+ 
 
 <suite name="ATLMrkt_RegressionTestSuite">
 	<listners>
@@ -41,7 +41,7 @@
 		<classes>
 			<class name="atlantamarket_UAT.MarketPlanner"/>
 			<methods>
-				<include name="TS042_VerifyMarketSavedSearchesDeletefunctionalityTest"/>
+				<include name="TS028_VerifyListDisplayControlsFunctionalityTest"/>
 				<!-- <include name="TS001_VerifyMarketPlannerLoginTest"/> -->
 				
 			</methods>
@@ -73,5 +73,5 @@
 			</classes>
 		</test>  
 	</suite> -->
-=======
->>>>>>> 1ff82d05b4a27023d3d11286aeaf5a456ccc2095
+
+
