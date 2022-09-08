@@ -38,6 +38,17 @@ public class ATLMarketPlannerPage {
 	By listspagefavoritesmenu = By.xpath("//div[@class='imc-vertical-tabs-nav']/div[contains(text(),'Favorites')]"); //Locator for Favorites left menu
 	By addlistcreatebtn = By.xpath("//div[@class = 'imc-vr--medium']/input[1]"); //Locator for Create button on Add List modal
 	By addlistcreatebtn_ATLPROD = By.xpath("//div[@class = 'imc-vr--medium-alt']/input[1]"); //Locator for Create button on Add List modal
+	By mplistsfavorites = By.xpath("//div[@class = 'imc-vertical-tabs-nav']/div[1]"); //Locator for Favorites tab
+	By mplistsallsavedproduts = By.xpath("//div[@class = 'imc-vertical-tabs-nav']/a[2]"); //Locator for All Saved Products tab
+	By mplistsallsavedexhibitors = By.xpath("//div[@class = 'imc-vertical-tabs-nav']/a[3]"); //Locator for All Saved Exhibitors tab
+	By mplistsenentsandseminars = By.xpath("//div[@class = 'imc-vertical-tabs-nav']/a[4]"); //Locator for Events and Seminars tab
+	By mplistsmanagelist = By.xpath("//div[@class = 'imc-gallery__item imc-vertical-tabs-content']"); //Locator for List details
+	By mpduplicatelistbtn = By.xpath("//div[@class = 'imc-market-planner-list_row_right_column imc-content--epsilon']/span[1]"); //Locator for Duplicate List button
+	By mpeditlistbtn = By.xpath("//div[@class = 'imc-market-planner-list_row_right_column imc-content--epsilon']/span[2]"); //Locator for Edit List button
+	By mparrangelistbtn = By.xpath("//div[@class = 'imc-gallery__item imc-customlists-button-pad']/button[1]"); //Locator for Arrange List button
+	By mpnewlistbtn = By.xpath("//div[@class = 'imc-gallery__item imc-customlists-button-pad']/button[2]"); //Locator for New List button
+	By mpnewgrpbtn = By.xpath("//div[@class = 'imc-gallery__item imc-customlists-button-pad']/button[3]"); //Locator for New Group button
+	
 	
 	By savedproductnameinlist = By.xpath("//li[@class='imc-list-edit--draggable'][1]/div/div[3]/div/div/div/div/a"); //Locator for Saved Product Name in List
 	By createAddListBtn = By.xpath("(//input[@type='submit'])[position()=3]"); //Locator for Create button on Add List modal		
@@ -1028,6 +1039,56 @@ public class ATLMarketPlannerPage {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfomyinquiriestab));
 		return driver.findElement(myinfomyinquiriestab);
+	}
+	public WebElement getmplistsfavorites() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mplistsfavorites));
+		return driver.findElement(mplistsfavorites);
+	}
+	public WebElement getmplistsallsavedproduts() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mplistsallsavedproduts));
+		return driver.findElement(mplistsallsavedproduts);
+	}
+	public WebElement getmplistsallsavedexhibitors() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mplistsallsavedexhibitors));
+		return driver.findElement(mplistsallsavedexhibitors);
+	}
+	public WebElement getmplistsenentsandseminars() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mplistsenentsandseminars));
+		return driver.findElement(mplistsenentsandseminars);
+	}
+	public WebElement getmplistsmanagelist() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mplistsmanagelist));
+		return driver.findElement(mplistsmanagelist);
+	}
+	public WebElement getmpduplicatelistbtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpduplicatelistbtn));
+		return driver.findElement(mpduplicatelistbtn);
+	}
+	public WebElement getmpeditlistbtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpeditlistbtn));
+		return driver.findElement(mpeditlistbtn);
+	}
+	public WebElement getmparrangelistbtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mparrangelistbtn));
+		return driver.findElement(mparrangelistbtn);
+	}
+	public WebElement getmpnewlistbtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpnewlistbtn));
+		return driver.findElement(mpnewlistbtn);
+	}
+	public WebElement getmpnewgrpbtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpnewgrpbtn));
+		return driver.findElement(mpnewgrpbtn);
 	}
 	public WebElement getmyinfoverifymyinquiries() {
 		wait = new WebDriverWait (driver,20);
