@@ -3,17 +3,13 @@
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-      <class name="atlantamarket_PROD.MarketPlanner">
+      <class name="atlantamarket_UAT.MarketPlanner">
         <methods>
-<<<<<<< HEAD
-          <include name="TS043_VerifyMarketPlannerListSortByFunctionalityTest"/>
-=======
->>>>>>> 1ff82d05b4a27023d3d11286aeaf5a456ccc2095
           <include name="initialize"/>
           <include name="tearDown"/>
-          <include name="TS014_VerifyEditListFunctionalityForManageListTest"/>
+          <include name="TS028_VerifyListDisplayControlsFunctionalityTest"/>
         </methods>
-      </class> <!-- atlantamarket_PROD.MarketPlanner -->
+      </class> <!-- atlantamarket_UAT.MarketPlanner -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->
