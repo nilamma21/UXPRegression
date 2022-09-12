@@ -2,37 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-<<<<<<< HEAD
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="105332" started-at="2022-09-08T11:11:47Z" finished-at="2022-09-08T11:13:33Z">
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="220276" started-at="2022-09-12T08:53:53Z" finished-at="2022-09-12T08:57:34Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="105332" started-at="2022-09-08T11:11:47Z" finished-at="2022-09-08T11:13:33Z">
+    <test name="RegressionTest" duration-ms="220276" started-at="2022-09-12T08:53:53Z" finished-at="2022-09-12T08:57:34Z">
       <class name="atlantamarket_UAT.MarketPlanner">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.MarketPlanner@4dfa3a9d]" name="initialize" is-config="true" duration-ms="66761" started-at="2022-09-08T16:41:47Z" finished-at="2022-09-08T16:42:54Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.MarketPlanner@4dfa3a9d]" name="initialize" is-config="true" duration-ms="64988" started-at="2022-09-12T14:23:53Z" finished-at="2022-09-12T14:24:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS028_VerifyListDisplayControlsFunctionalityTest()[pri:0, instance:atlantamarket_UAT.MarketPlanner@4dfa3a9d]" name="TS028_VerifyListDisplayControlsFunctionalityTest" duration-ms="38531" started-at="2022-09-08T16:42:54Z" finished-at="2022-09-08T16:43:33Z">
+        <test-method status="PASS" signature="TS028_VerifyListDisplayControlsFunctionalityTest()[pri:0, instance:atlantamarket_UAT.MarketPlanner@4dfa3a9d]" name="TS028_VerifyListDisplayControlsFunctionalityTest" duration-ms="155240" started-at="2022-09-12T14:24:58Z" finished-at="2022-09-12T14:27:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS028_VerifyListDisplayControlsFunctionalityTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.MarketPlanner@4dfa3a9d]" name="tearDown" is-config="true" duration-ms="1" started-at="2022-09-08T16:43:33Z" finished-at="2022-09-08T16:43:33Z">
-=======
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="75003" started-at="2022-09-07T12:32:40Z" finished-at="2022-09-07T12:33:55Z">
-    <groups>
-    </groups>
-    <test name="RegressionTest" duration-ms="75003" started-at="2022-09-07T12:32:40Z" finished-at="2022-09-07T12:33:55Z">
-      <class name="atlantamarket_UAT.MarketPlanner">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.MarketPlanner@754ba872]" name="initialize" is-config="true" duration-ms="64926" started-at="2022-09-07T18:02:40Z" finished-at="2022-09-07T18:03:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS047_VerifyTabsUnderListsSectionTest()[pri:0, instance:atlantamarket_UAT.MarketPlanner@754ba872]" name="TS047_VerifyTabsUnderListsSectionTest" duration-ms="10049" started-at="2022-09-07T18:03:45Z" finished-at="2022-09-07T18:03:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS047_VerifyTabsUnderListsSectionTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.MarketPlanner@754ba872]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-09-07T18:03:55Z" finished-at="2022-09-07T18:03:55Z">
->>>>>>> bd1e01c5f40f83ddc574746d9ea3fd15e03357b8
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.MarketPlanner@4dfa3a9d]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-09-12T14:27:34Z" finished-at="2022-09-12T14:27:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

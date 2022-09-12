@@ -5,7 +5,7 @@
 <suite name="ATLMrkt_RegressionTestSuite">
 
 
-<!--  <suite name="ATLMrkt_RegressionTestSuite">
+ <suite name="ATLMrkt_RegressionTestSuite">
 
 
 	<listners>
@@ -53,12 +53,15 @@
 		<classes>
 			<class name="atlantamarket_UAT.MarketPlanner"/>
 			<methods>
-
+				
+				<!-- <include name="TS030_VerifyMarketPlannerListsElementMoreOoptionsOverviewTest"/>
+				<include name="TS031_VerifyMarketPlannerListsElementMoreOoptionsCopyeTest"/>
+				<include name="TS032_VerifyMarketPlannerListsElementMoreOoptionsMoveTest"/> -->
 				<include name="TS028_VerifyListDisplayControlsFunctionalityTest"/>
-
-				<include name="TS047_VerifyTabsUnderListsSectionTest"/>
-
-				<!-- <include name="TS001_VerifyMarketPlannerLoginTest"/> -->
+				
+				<!-- <include name="TS034_VerifyMarketPlannerListManagementAddNoteTest"/> -->
+				<!-- <include name="TS035_VerifyMarketPlannerEditListCustomItemTest"/> -->
+				
 				
 			</methods>
 		</classes>
