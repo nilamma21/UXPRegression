@@ -1307,19 +1307,9 @@ public class MarketPlanner extends base {
 
 	}
 
-<<<<<<< HEAD
-	@Test(priority = 25)
-	public void TS025_VerifyFilterByOptionsFunctionalityForListTest() throws InterruptedException, IOException {
-=======
 
 	@Test(priority = 24)
-	public void TS024_VerifyVerifyFilterByOptionsFunctionalityForListTest() throws InterruptedException, IOException {
-
-	}
-	@Test(priority = 25)
-	public void TS025_VerifyFilterByOptionsFunctionalityForListTest() throws InterruptedException, IOException {
-
->>>>>>> bd1e01c5f40f83ddc574746d9ea3fd15e03357b8
+	public void TS024_VerifyFilterByOptionsFunctionalityForListTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
 		// UXP-T250: Market Planner: Lists- List Management- Filter By options
@@ -1629,8 +1619,7 @@ public class MarketPlanner extends base {
 		// Click on List from left Panel
 		atlmppge.getMpListLeftPannel().click();
 
-		Thread.sleep(3000);
-		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), "CybYSXwE");
+		
 		// Create new list for copy
 		atlmppge.getMpListNewListBtn().click();
 		// verify New ListPopup header
@@ -1641,7 +1630,7 @@ public class MarketPlanner extends base {
 		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
 		System.out.println("list name :: " + newlistname);
 		atlmppge.getMpListNewCreateBtn().click();
-		Thread.sleep(3000);
+		Thread.sleep(10000);
 		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistname);
 
 		utl.addingExhProdLine(prop.getProperty("exhibitor1"));
@@ -1714,8 +1703,8 @@ public class MarketPlanner extends base {
 		System.out.println("Verify respected location details page opend");
 	}
 
-	@Test(priority = 31)
-	public void TS031_VerifyMarketPlannerListsElementMoreOoptionsOverviewTest()
+	@Test(priority = 30)
+	public void TS030_VerifyMarketPlannerListsElementMoreOoptionsOverviewTest()
 			throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
@@ -1753,8 +1742,8 @@ public class MarketPlanner extends base {
 
 	}
 
-	@Test(priority = 32)
-	public void TS032_VerifyMarketPlannerListsElementMoreOoptionsCopyeTest() throws InterruptedException, IOException {
+	@Test(priority = 31)
+	public void TS031_VerifyMarketPlannerListsElementMoreOoptionsCopyeTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
 		// UXP:259-Market Planner: Lists- List Element Management- More- 'Copy' option
@@ -1826,8 +1815,8 @@ public class MarketPlanner extends base {
 
 	}
 
-	@Test(priority = 33)
-	public void TS033_VerifyMarketPlannerListsElementMoreOoptionsMoveTest() throws InterruptedException, IOException {
+	@Test(priority = 32)
+	public void TS032_VerifyMarketPlannerListsElementMoreOoptionsMoveTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
 		// UXP:260-Market Planner: Lists- List Element Management- More- 'Move' option
@@ -1903,8 +1892,8 @@ public class MarketPlanner extends base {
 
 	}
 
-	@Test(priority = 34)
-	public void TS034_VerifyMarketPlannerListsElementMoreOoptionsDeleteTest() throws InterruptedException, IOException {
+	@Test(priority = 33)
+	public void TS033_VerifyMarketPlannerListsElementMoreOoptionsDeleteTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
 		// UXP:261-Market Planner: Lists- List Element Management- More- 'Delete' option
@@ -1936,7 +1925,7 @@ public class MarketPlanner extends base {
 		System.out.println("list name :: " + newlistname);
 		// Click on Create Btn
 		atlmppge.getMpListNewCreateBtn().click();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistname);
 
 		utl.addingExhProdLine(prop.getProperty("exhibitor1"));
@@ -1953,8 +1942,8 @@ public class MarketPlanner extends base {
 		utl.checkItemNotPresentInList(atlmppge.getlistOfAllExh(), exName);
 	}
 
-	@Test(priority = 35)
-	public void TS035_VerifyMarketPlannerListManagementAddNoteTest() throws InterruptedException, IOException {
+	@Test(priority = 34)
+	public void TS034_VerifyMarketPlannerListManagementAddNoteTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
 		// UXP:256-Market Planner: Lists- List Management- 'Add Note' functionality
@@ -1989,7 +1978,7 @@ public class MarketPlanner extends base {
 		System.out.println("list name :: " + newlistname);
 		// Click on Create Btn
 		atlmppge.getMpListNewCreateBtn().click();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistname);
 
 		utl.addingExhProdLine(prop.getProperty("exhibitor1"));
@@ -2039,11 +2028,12 @@ public class MarketPlanner extends base {
 			Thread.sleep(2000);
 			atlmppge.getcloseNotePopup().click();
 		}
-
+		atlmppge.getcloseNotePopup().click();
+		driver.get(prop.getProperty("atlmrkturl_uat"));
 	}
 
-	@Test(priority = 36)
-	public void TS036_VerifyMarketPlannerEditListCustomItemTest() throws InterruptedException, IOException {
+	@Test(priority = 35)
+	public void TS035_VerifyMarketPlannerEditListCustomItemTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
 		// UXP:264-Market Planner: Lists: Lists: Edit List: Add Custom Item
@@ -2109,8 +2099,8 @@ public class MarketPlanner extends base {
 
 	}
 
-	@Test(priority = 37)
-	public void TS037_VerifyMarketPlannerEditListAddNoteTest() throws InterruptedException, IOException {
+	@Test(priority = 36)
+	public void TS036_VerifyMarketPlannerEditListAddNoteTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
 		// UXP:265-Market Planner: Lists: Lists: Edit List: Add Note
@@ -2215,8 +2205,8 @@ public class MarketPlanner extends base {
 		}
 	}
 
-	@Test(priority = 38)
-	public void TS038_VerifyMarketPlannerListsAllSavedExhibitorsTest() throws InterruptedException, IOException {
+	@Test(priority = 37)
+	public void TS037_VerifyMarketPlannerListsAllSavedExhibitorsTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T267: Market Planner: Lists- All Saved Exhibitors
 
@@ -2254,8 +2244,8 @@ public class MarketPlanner extends base {
 
 	}
 
-	@Test(priority = 39)
-	public void TS039_VerifyMarketPlannerListsAllSavedProductsTest() throws InterruptedException, IOException {
+	@Test(priority = 38)
+	public void TS038_VerifyMarketPlannerListsAllSavedProductsTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T266: Market Planner: Lists- All Saved Products
 
@@ -2299,8 +2289,8 @@ public class MarketPlanner extends base {
 		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), productNameOnSearchGrid);
 	}
 
-	@Test(priority = 40)
-	public void TS040_VerifyMarketPlannerRegistrationsTabTest() throws InterruptedException, IOException {
+	@Test(priority = 39)
+	public void TS039_VerifyMarketPlannerRegistrationsTabTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
 		// UXP:280-Market Planner: Registrations
@@ -2324,8 +2314,8 @@ public class MarketPlanner extends base {
 
 	}
 
-	@Test(priority = 41)
-	public void TS041_VerifyMarketSavedSearchesfunctionalityTest() throws InterruptedException, IOException {
+	@Test(priority = 40)
+	public void TS040_VerifyMarketSavedSearchesfunctionalityTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
 		// UXP:T59-Market Planner: Saved Searches
@@ -2369,8 +2359,8 @@ public class MarketPlanner extends base {
 
 	}
 
-	@Test(priority = 42)
-	public void TS042_VerifyMarketSavedSearchesDeletefunctionalityTest() throws InterruptedException, IOException {
+	@Test(priority = 41)
+	public void TS041_VerifyMarketSavedSearchesDeletefunctionalityTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
 		// UXP:281-Market Planner: Saved Searches- 'Delete' functionality
@@ -2386,9 +2376,8 @@ public class MarketPlanner extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("saveSearchTerm"));
+		/*atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("saveSearchTerm"));
 		atlgs.getATLSearchButton().click();
-
 		// Click on Saved searches Icon
 		atlmppge.getmpSavedSearchesIcon().click();
 		// Click on Save Search Btn to Save the Term
@@ -2398,27 +2387,59 @@ public class MarketPlanner extends base {
 		// Click on Save Btn
 		atlmppge.getmpSaveSearcheInputBtn().click();
 		Thread.sleep(3000);
+*/
+		lap.getMPLinkText().click();
+		// Click on Mp Reg tab
+		atlmppge.getmpsavedsearchestab().click();
+		
+		if(atlmppge.getnoSavedSearchesMsg().isDisplayed())
+		{
+			TS040_VerifyMarketSavedSearchesfunctionalityTest();	
+			// Click on Market Planner
+			lap.getMPLinkText().click();
+			// Click on Mp Reg tab
+			atlmppge.getmpsavedsearchestab().click();
 
+			List<WebElement> deleteBtn = driver
+					.findElements(By.xpath("//a[text()='"+ prop.getProperty("saveSearchTerm")+"']/../../div[2]/span[2]"));
+
+			//System.out.println(deleteBtn);
+			for (WebElement webElement : deleteBtn) {
+				webElement.click();
+				atlmppge.getmpConfirmDeleteBtn().click();
+				Thread.sleep(5000);	
+			}
+			try {
+				utl.checkItemNotPresentInList(atlmppge.getmplistOfAllSaveSearches(), prop.getProperty("saveSearchTerm"));
+			} catch (Exception e) {
+				System.out.println("Saved Search Term deleted succsfully ");
+			}
+		}else {
+		
 		// Click on Market Planner
 		lap.getMPLinkText().click();
 		// Click on Mp Reg tab
 		atlmppge.getmpsavedsearchestab().click();
 
-		WebElement deleteBtn = driver
-				.findElement(By.xpath("//a[text()='" + prop.getProperty("saveSearchTerm") + "']/../../div[2]/span[2]"));
+		List<WebElement> deleteBtn = driver
+				.findElements(By.xpath("//a[text()='"+ prop.getProperty("saveSearchTerm")+"']/../../div[2]/span[2]"));
 
-		deleteBtn.click();
-		atlmppge.getmpConfirmDeleteBtn().click();
-		Thread.sleep(5000);
+		//System.out.println(deleteBtn);
+		for (WebElement webElement : deleteBtn) {
+			webElement.click();
+			atlmppge.getmpConfirmDeleteBtn().click();
+			Thread.sleep(5000);	
+		}
 		try {
 			utl.checkItemNotPresentInList(atlmppge.getmplistOfAllSaveSearches(), prop.getProperty("saveSearchTerm"));
 		} catch (Exception e) {
 			System.out.println("Saved Search Term deleted succsfully ");
 		}
+		}
 	}
 
-	@Test(priority = 43)
-	public void TS043_VerifyMarketPlannerListSortByFunctionalityTest() throws IOException, InterruptedException {
+	@Test(priority = 42)
+	public void TS042_VerifyMarketPlannerListSortByFunctionalityTest() throws IOException, InterruptedException {
 
 		// The purpose of this test case to verify:-
 		// UXP-T252: Market Planner: Lists- List Management- Sort By options
@@ -2756,7 +2777,7 @@ public class MarketPlanner extends base {
 	public void TS045_VerifyAddToFavoriteFunctionalityUsingQuickAddForLinesTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// UXP-T230: Maket Planner: Lists- Favorites- Add an line to Favorites using 'Quick Add'
+		// UXP-T231: Maket Planner: Lists- Favorites- Add an line to Favorites using 'Quick Add'
 		// using 'Quick Add'
 
 		lap = new ATLLandingPage(driver);
@@ -2831,15 +2852,15 @@ public class MarketPlanner extends base {
 		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), autoSuggetion);
 		
 	
-<<<<<<< HEAD
+
 	}
-=======
-	@Test(priority = 44)
-	public void TS044_VerifyMarketPlanneMyInfoEditProfile() throws InterruptedException, IOException {
+
+	@Test(priority = 47)
+	public void TS047_VerifyMarketPlanneMyInfoEditProfile() throws InterruptedException, IOException {
 
 
 		// The purpose of this test case to verify:-
-		// UXP-T266: Market Planner: Lists- All Saved Products
+		// UXP-T270: Market Planner: My Info: Edit Profile
 		
 
 		lap = new ATLLandingPage(driver);
@@ -2918,11 +2939,11 @@ public class MarketPlanner extends base {
 		System.out.println("Company Name is not updated with Discard button.");	
 	}
 	
-	@Test(priority = 45)
-	public void TS045_VerifyMarketPlanneMyInfoOverview() throws InterruptedException, IOException {
+	@Test(priority = 48)
+	public void TS048_VerifyMarketPlanneMyInfoOverview() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
-		// UXP-T266: Market Planner: Lists- All Saved Products
+		// UXP-T278:Market Planner: My Info overview
 		
 
 		lap = new ATLLandingPage(driver);
@@ -2943,11 +2964,11 @@ public class MarketPlanner extends base {
 		
 	}
 	
-	@Test(priority = 46)
-	public void TS046_VerifyMarketPlanneMyInfoMyInquiriesTab() throws InterruptedException, IOException {
+	@Test(priority = 49)
+	public void TS049_VerifyMarketPlanneMyInfoMyInquiriesTab() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
-		// UXP-T266: Market Planner: Lists- All Saved Products
+		// UXP-T279: Market Planner: My Info- My Inquiries
 		
 
 		lap = new ATLLandingPage(driver);
@@ -2970,11 +2991,11 @@ public class MarketPlanner extends base {
 		System.out.println("My Inquiries page is displayed properly.");
 	}
 
-	@Test(priority = 47)
-	public void TS047_VerifyTabsUnderListsSectionTest() throws InterruptedException, IOException {
+	@Test(priority = 50)
+	public void TS050_VerifyTabsUnderListsSectionTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
-		// UXP-T266: Market Planner: Lists- All Saved Products
+		// UXP-T299: Maket Planner: Lists: Tabs under Lists section
 		
 
 		lap = new ATLLandingPage(driver);
@@ -3002,11 +3023,11 @@ public class MarketPlanner extends base {
 		System.out.println("List tab details are displayed properly.");
 	}
 
-	@Test(priority = 48)
-	public void TS048_VerifyListTabDetailsTest() throws InterruptedException, IOException {
+	@Test(priority = 51)
+	public void TS051_VerifyListTabDetailsTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
-		// UXP-T266: Market Planner: Lists- All Saved Products
+		// UXP-T228: Maket Planner: Lists: Lists tab details
 		
 
 		lap = new ATLLandingPage(driver);
@@ -3045,7 +3066,7 @@ public class MarketPlanner extends base {
 		
 	}
 	
->>>>>>> bd1e01c5f40f83ddc574746d9ea3fd15e03357b8
+
 	@AfterClass
 	public void tearDown() {
 		// driver.quit();
