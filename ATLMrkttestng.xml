@@ -57,7 +57,7 @@
 				<!-- <include name="TS030_VerifyMarketPlannerListsElementMoreOoptionsOverviewTest"/>
 				<include name="TS031_VerifyMarketPlannerListsElementMoreOoptionsCopyeTest"/>
 				<include name="TS032_VerifyMarketPlannerListsElementMoreOoptionsMoveTest"/> -->
-				<include name="TS028_VerifyListDisplayControlsFunctionalityTest"/>
+				<include name="TS052_VerifyRegistrationTabDetailsTest"/>
 				
 				<!-- <include name="TS034_VerifyMarketPlannerListManagementAddNoteTest"/> -->
 				<!-- <include name="TS035_VerifyMarketPlannerEditListCustomItemTest"/> -->
