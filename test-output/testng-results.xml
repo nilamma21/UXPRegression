@@ -2,6 +2,22 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
+
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="175241" started-at="2022-09-13T10:35:15Z" finished-at="2022-09-13T10:38:10Z">
+    <groups>
+    </groups>
+    <test name="RegressionTest" duration-ms="175241" started-at="2022-09-13T10:35:15Z" finished-at="2022-09-13T10:38:10Z">
+      <class name="atlantamarket_PROD.FloorPlans">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.FloorPlans@146ba0ac]" name="initialize" is-config="true" duration-ms="128719" started-at="2022-09-13T16:05:15Z" finished-at="2022-09-13T16:07:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest()[pri:0, instance:atlantamarket_PROD.FloorPlans@146ba0ac]" name="TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest" duration-ms="40012" started-at="2022-09-13T16:07:23Z" finished-at="2022-09-13T16:08:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.FloorPlans@146ba0ac]" name="tearDown" is-config="true" duration-ms="6416" started-at="2022-09-13T16:08:04Z" finished-at="2022-09-13T16:08:10Z">
+
   <suite name="ATLMrkt_RegressionTestSuite" duration-ms="129356" started-at="2022-09-13T05:41:27Z" finished-at="2022-09-13T05:43:37Z">
     <groups>
     </groups>
@@ -54,10 +70,11 @@
           </reporter-output>
         </test-method> <!-- TS052_VerifyRegistrationTabDetailsTest -->
         <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.MarketPlanner@754ba872]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-09-13T11:13:37Z" finished-at="2022-09-13T11:13:37Z">
+
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- atlantamarket_UAT.MarketPlanner -->
+      </class> <!-- atlantamarket_PROD.FloorPlans -->
     </test> <!-- RegressionTest -->
   </suite> <!-- ATLMrkt_RegressionTestSuite -->
 </testng-results>

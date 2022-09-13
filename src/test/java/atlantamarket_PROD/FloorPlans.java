@@ -650,7 +650,7 @@ public class FloorPlans extends base {
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().equals(exhibitorName));
 
 		// Delete that favorites exhibitor from list
-		atlmppge.getMoreBtnDeleteOptn_ATLPROD().click();
+		atlmppge.getMoreBtnDeleteOptnExistingList_ATLPROD().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(6000);
 
@@ -658,7 +658,7 @@ public class FloorPlans extends base {
 
 		// Verify that the added favorites exhibitor should be removed from Favorites list
 		for (int i = 1; i < favlist.size(); i++) {
-			// System.out.println(favlist.get(i).getText());
+			//System.out.println(favlist.get(i).getText());
 			Assert.assertFalse(favlist.get(i).getText().contains(exhibitorName));
 		}
 	}
