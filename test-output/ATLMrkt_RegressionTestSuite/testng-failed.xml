@@ -5,9 +5,14 @@
     <classes>
       <class name="atlantamarket_PROD.FloorPlans">
         <methods>
+
           <include name="TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest"/>
           <include name="TS011_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest"/>
           <include name="initialize"/>
+
+          <include name="TS052_VerifyRegistrationTabDetailsTest"/>
+          <include name="initialize"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- atlantamarket_PROD.FloorPlans -->
     </classes>

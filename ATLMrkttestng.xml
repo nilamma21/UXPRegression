@@ -9,7 +9,7 @@
 
 	<test thread-count="5" name="RegressionTest">
 		<classes>
-		  	<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
+		 	<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
 			 <class name="atlantamarket_PROD.GlobalSearch_LineActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
 			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
@@ -29,6 +29,20 @@
 	<test thread-count="5" name="RegressionTest">
 		<classes>
 			<class name="atlantamarket_UAT.MarketPlanner"/>
+
+			<methods>
+				
+				<!-- <include name="TS030_VerifyMarketPlannerListsElementMoreOoptionsOverviewTest"/>
+				<include name="TS031_VerifyMarketPlannerListsElementMoreOoptionsCopyeTest"/>
+				<include name="TS032_VerifyMarketPlannerListsElementMoreOoptionsMoveTest"/> -->
+				<include name="TS052_VerifyRegistrationTabDetailsTest"/>
+				
+				<!-- <include name="TS034_VerifyMarketPlannerListManagementAddNoteTest"/> -->
+				<!-- <include name="TS035_VerifyMarketPlannerEditListCustomItemTest"/> -->
+				
+				
+			</methods>
+
 		</classes>
 		</test>
 </suite>
