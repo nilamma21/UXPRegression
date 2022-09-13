@@ -220,6 +220,7 @@ public class ATLMarketPlannerPage {
 	By myinfoverifymyinquiries = By.xpath("//div[@class = 'imc-gallery__item imc-vertical-tabs-content']"); //Locator for My Inquiries tab
 	By noSavedSearchesMsg = By.xpath("	//div[@class='imc-gallery__item imc-vertical-tabs-content']/div[1]/ul[1]/span[1]"); //Locator for No saved Searches msg
 
+		
 	public ATLMarketPlannerPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
@@ -1162,6 +1163,7 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfoverifymyinquiries));
 		return driver.findElement(myinfoverifymyinquiries);
 	}
+
 }
 
 

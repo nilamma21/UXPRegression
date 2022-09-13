@@ -5,9 +5,9 @@
     <classes>
       <class name="atlantamarket_UAT.MarketPlanner">
         <methods>
+          <include name="TS052_VerifyRegistrationTabDetailsTest"/>
           <include name="initialize"/>
           <include name="tearDown"/>
-          <include name="TS028_VerifyListDisplayControlsFunctionalityTest"/>
         </methods>
       </class> <!-- atlantamarket_UAT.MarketPlanner -->
     </classes>
