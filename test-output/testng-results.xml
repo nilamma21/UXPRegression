@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="220276" started-at="2022-09-12T08:53:53Z" finished-at="2022-09-12T08:57:34Z">
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="175241" started-at="2022-09-13T10:35:15Z" finished-at="2022-09-13T10:38:10Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="220276" started-at="2022-09-12T08:53:53Z" finished-at="2022-09-12T08:57:34Z">
-      <class name="atlantamarket_UAT.MarketPlanner">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.MarketPlanner@4dfa3a9d]" name="initialize" is-config="true" duration-ms="64988" started-at="2022-09-12T14:23:53Z" finished-at="2022-09-12T14:24:58Z">
+    <test name="RegressionTest" duration-ms="175241" started-at="2022-09-13T10:35:15Z" finished-at="2022-09-13T10:38:10Z">
+      <class name="atlantamarket_PROD.FloorPlans">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.FloorPlans@146ba0ac]" name="initialize" is-config="true" duration-ms="128719" started-at="2022-09-13T16:05:15Z" finished-at="2022-09-13T16:07:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS028_VerifyListDisplayControlsFunctionalityTest()[pri:0, instance:atlantamarket_UAT.MarketPlanner@4dfa3a9d]" name="TS028_VerifyListDisplayControlsFunctionalityTest" duration-ms="155240" started-at="2022-09-12T14:24:58Z" finished-at="2022-09-12T14:27:34Z">
+        <test-method status="PASS" signature="TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest()[pri:0, instance:atlantamarket_PROD.FloorPlans@146ba0ac]" name="TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest" duration-ms="40012" started-at="2022-09-13T16:07:23Z" finished-at="2022-09-13T16:08:03Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS028_VerifyListDisplayControlsFunctionalityTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.MarketPlanner@4dfa3a9d]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-09-12T14:27:34Z" finished-at="2022-09-12T14:27:34Z">
+        </test-method> <!-- TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.FloorPlans@146ba0ac]" name="tearDown" is-config="true" duration-ms="6416" started-at="2022-09-13T16:08:04Z" finished-at="2022-09-13T16:08:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- atlantamarket_UAT.MarketPlanner -->
+      </class> <!-- atlantamarket_PROD.FloorPlans -->
     </test> <!-- RegressionTest -->
   </suite> <!-- ATLMrkt_RegressionTestSuite -->
 </testng-results>
