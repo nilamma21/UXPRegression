@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
-  <test name="RegressionTest(failed)">
+  <test name="RegressionParallelest(failed)">
     <classes>
-      <class name="atlantamarket_PROD.FloorPlans">
+      <class name="atlantamarket_PROD.GlobalSearch_SuggestionList">
         <methods>
-
-          <include name="TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest"/>
-          <include name="TS011_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest"/>
           <include name="initialize"/>
-
-          <include name="TS052_VerifyRegistrationTabDetailsTest"/>
-          <include name="initialize"/>
-          <include name="tearDown"/>
-
+          <include name="TS002_VerifySelectionOfLineFromAutoSuggestionListTest"/>
+          <include name="TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest"/>
         </methods>
-      </class> <!-- atlantamarket_PROD.FloorPlans -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_SuggestionList -->
     </classes>
-  </test> <!-- RegressionTest(failed) -->
+  </test> <!-- RegressionParallelest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->
