@@ -30,7 +30,7 @@
 		<classes>
 			<class name="atlantamarket_UAT.MarketPlanner" />
 		</classes>
-<<<<<<< HEAD
+
 	</test> 
 </suite>-->
 
@@ -79,9 +79,9 @@
 			</methods>
 		</classes>
 		</test>
-=======
+
 	</test>
->>>>>>> 11333d54891cba41ce24f3007bb76933ed3be70e
+
 </suite>
 
 <suite name="LVM_RegressionTestSuite">
