@@ -219,10 +219,24 @@ public class ATLMarketPlannerPage {
 	By myinfomyinquiriestab = By.xpath("//div[@class = 'imc-vertical-tabs-nav']/a[1]"); //Locator for My Inquiries tab
 	By myinfoverifymyinquiries = By.xpath("//div[@class = 'imc-gallery__item imc-vertical-tabs-content']"); //Locator for My Inquiries tab
 	By noSavedSearchesMsg = By.xpath("	//div[@class='imc-gallery__item imc-vertical-tabs-content']/div[1]/ul[1]/span[1]"); //Locator for No saved Searches msg
-
+	By checkBox = By.xpath("(//div[@class='imc-formfield imc-content imc-saved-exhibitors__chk-container']/label[1])[1]"); //Locator for Checkbox
+	By fExhpName = By.xpath("//div[@class='imc-loading-relative']/div[4]/li[1]/div[1]/div[1]/div[1]/a[1]"); //Locator for Checkbox
+	
+	
 	public ATLMarketPlannerPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
+	}
+	
+	public WebElement getfirstExhName() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(fExhpName));
+		return driver.findElement(fExhpName);
+	}
+	public WebElement getcheckBox() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(checkBox));
+		return driver.findElement(checkBox);
 	}
 	public WebElement getnoSavedSearchesMsg() {
 		wait = new WebDriverWait (driver,20);
@@ -912,7 +926,7 @@ public class ATLMarketPlannerPage {
 		return driver.findElements(filterByList);
 	}
 	public List <WebElement> getlistOfAllExh() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,35);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllExh));
 		return driver.findElements(listOfAllExh);
 	}

@@ -54,13 +54,32 @@
 			<class name="atlantamarket_UAT.MarketPlanner"/>
 			<methods>
 				
-				<!-- <include name="TS030_VerifyMarketPlannerListsElementMoreOoptionsOverviewTest"/>
-				<include name="TS031_VerifyMarketPlannerListsElementMoreOoptionsCopyeTest"/>
-				<include name="TS032_VerifyMarketPlannerListsElementMoreOoptionsMoveTest"/> -->
-				<include name="TS028_VerifyListDisplayControlsFunctionalityTest"/>
+				<!--<include name="TS024_VerifyFilterByOptionsFunctionalityForListTest"/>
+				 <include name="TS026_VerifyDuplicateLinkFunctionalityForListTest"/>  
+				 <include name="TS028_VerifyListDisplayControlsFunctionalityTest"/> -->
+			<!-- 	<include name="TS031_VerifyMarketPlannerListsElementMoreOoptionsCopyeTest"/>
+				<include name="TS032_VerifyMarketPlannerListsElementMoreOoptionsMoveTest"/>
+				<include name="TS033_VerifyMarketPlannerListsElementMoreOoptionsDeleteTest"/>
+				<include name="TS034_VerifyMarketPlannerListManagementAddNoteTest"/>
+				<include name="TS035_VerifyMarketPlannerEditListCustomItemTest"/> -->
 				
-				<!-- <include name="TS034_VerifyMarketPlannerListManagementAddNoteTest"/> -->
-				<!-- <include name="TS035_VerifyMarketPlannerEditListCustomItemTest"/> -->
+				
+				
+				<!-- <include name="TS040_VerifyMarketSavedSearchesfunctionalityTest"/> 
+				<include name="TS041_VerifyMarketSavedSearchesDeletefunctionalityTest"/>
+				
+				<include name="TS043_VerifyMarketPlannerListsElementMoreOoptionsAddToScheduleTest"/>
+				<include name="TS046_VerifyAddToListFunctionalityUsingQuickAddTest"/>
+				<include name="TS047_VerifyMarketPlanneMyInfoEditProfile"/>
+				<include name="TS038_VerifyMarketPlannerListsAllSavedProductsTest"/>-->
+				<!-- <include name="TS030_VerifyMarketPlannerListsElementMoreOoptionsOverviewTest"/> -->
+				
+				<!-- <include name="TS016_VerifyEditListFunctionalityForManageListTest"/> -->
+
+<!-- <include name="TS016_VerifyEditListFunctionalityForManageListTest"/> -->
+				
+				
+
 				
 				
 			</methods>

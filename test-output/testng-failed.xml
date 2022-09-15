@@ -5,9 +5,18 @@
     <classes>
       <class name="atlantamarket_UAT.MarketPlanner">
         <methods>
+          <include name="TS024_VerifyFilterByOptionsFunctionalityForListTest"/>
+          <include name="TS031_VerifyMarketPlannerListsElementMoreOoptionsCopyeTest"/>
+          <include name="TS007_VerifyNewGroupBtnFunctionalityForListsTest"/>
+          <include name="TS040_VerifyMarketSavedSearchesfunctionalityTest"/>
+          <include name="CheckBoxTest"/>
+          <include name="TS013_VerifyAddToFavoriteFunctionalityForProductTest"/>
+          <include name="TS018_VerifyRenameFunctionalityForListTest"/>
           <include name="initialize"/>
+          <include name="TS021_VerifyMPListsCardOverviewTest"/>
+          <include name="TS026_VerifyDuplicateLinkFunctionalityForListTest"/>
           <include name="tearDown"/>
-          <include name="TS028_VerifyListDisplayControlsFunctionalityTest"/>
+          <include name="TS038_VerifyMarketPlannerListsAllSavedProductsTest"/>
         </methods>
       </class> <!-- atlantamarket_UAT.MarketPlanner -->
     </classes>
