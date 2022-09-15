@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
-  <test name="RegressionTest(failed)">
+  <test name="RegressionParallelest(failed)">
     <classes>
-      <class name="atlantamarket_UAT.MarketPlanner">
+      <class name="atlantamarket_PROD.GlobalSearch_SuggestionList">
         <methods>
           <include name="TS024_VerifyFilterByOptionsFunctionalityForListTest"/>
           <include name="TS031_VerifyMarketPlannerListsElementMoreOoptionsCopyeTest"/>
@@ -13,12 +13,17 @@
           <include name="TS013_VerifyAddToFavoriteFunctionalityForProductTest"/>
           <include name="TS018_VerifyRenameFunctionalityForListTest"/>
           <include name="initialize"/>
+
           <include name="TS021_VerifyMPListsCardOverviewTest"/>
           <include name="TS026_VerifyDuplicateLinkFunctionalityForListTest"/>
           <include name="tearDown"/>
           <include name="TS038_VerifyMarketPlannerListsAllSavedProductsTest"/>
+
+          <include name="TS002_VerifySelectionOfLineFromAutoSuggestionListTest"/>
+          <include name="TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest"/>
+
         </methods>
-      </class> <!-- atlantamarket_UAT.MarketPlanner -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_SuggestionList -->
     </classes>
-  </test> <!-- RegressionTest(failed) -->
+  </test> <!-- RegressionParallelest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->

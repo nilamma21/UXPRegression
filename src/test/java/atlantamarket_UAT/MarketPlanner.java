@@ -2373,7 +2373,8 @@ Thread.sleep(5000);
 		// Click on Mp Reg tab
 		atlmppge.getmpRegistrationTab().click();
 		atlmppge.getmpRegisterNowBtn().click();
-
+		Assert.assertTrue(driver.getTitle().contains("Market Registration"));
+		System.out.println("User is redirected to Market Registration page.");
 	}
 
 	@Test(priority = 40)

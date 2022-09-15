@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results skipped="0" failed="10" total="52" passed="42">
   <reporter-output>
   </reporter-output>
@@ -708,10 +709,33 @@ Session ID: ed646255407576ea284c6f5caa224dcf
           </reporter-output>
         </test-method> <!-- CheckBoxTest -->
         <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.MarketPlanner@4dfa3a9d]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-09-15T17:40:11Z" finished-at="2022-09-15T17:40:11Z">
+=======
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="102351" started-at="2022-09-14T10:22:41Z" finished-at="2022-09-14T10:24:23Z">
+    <groups>
+    </groups>
+    <test name="RegressionParallelest" duration-ms="102351" started-at="2022-09-14T10:22:41Z" finished-at="2022-09-14T10:24:23Z">
+      <class name="atlantamarket_PROD.GlobalSearch_SuggestionList">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SuggestionList@548e7350]" name="initialize" is-config="true" duration-ms="42064" started-at="2022-09-14T15:52:41Z" finished-at="2022-09-14T15:53:23Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- atlantamarket_UAT.MarketPlanner -->
-    </test> <!-- RegressionTest -->
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SuggestionList@548e7350]" name="TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest" duration-ms="19886" started-at="2022-09-14T15:53:23Z" finished-at="2022-09-14T15:53:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest -->
+        <test-method status="PASS" signature="TS002_VerifySelectionOfLineFromAutoSuggestionListTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SuggestionList@548e7350]" name="TS002_VerifySelectionOfLineFromAutoSuggestionListTest" duration-ms="18283" started-at="2022-09-14T15:53:43Z" finished-at="2022-09-14T15:54:01Z">
+>>>>>>> 11333d54891cba41ce24f3007bb76933ed3be70e
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifySelectionOfLineFromAutoSuggestionListTest -->
+        <test-method status="PASS" signature="TS003_VerifySelectionOfProductFromAutoSuggestionListTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SuggestionList@548e7350]" name="TS003_VerifySelectionOfProductFromAutoSuggestionListTest" duration-ms="22048" started-at="2022-09-14T15:54:01Z" finished-at="2022-09-14T15:54:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifySelectionOfProductFromAutoSuggestionListTest -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_SuggestionList -->
+    </test> <!-- RegressionParallelest -->
   </suite> <!-- ATLMrkt_RegressionTestSuite -->
 </testng-results>
