@@ -9,14 +9,17 @@
 
 	<test thread-count="5" name="RegressionParallelest">
 		<classes>
-			<class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters" />
-			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
-	 		<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
+			<!--  <class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />-->
 			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
-			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
+			<!-- <class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters" />
+			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
+	 		<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
 			<class name="atlantamarket_PROD.MarketPlanner" />
-			<class name="atlantamarket_PROD.FloorPlans" />
+			<class name="atlantamarket_PROD.FloorPlans" />-->
+				<!--  <methods>
+					<include name="TS002_VerifyAddToFavoriteForLineTest" />
+				</methods>-->
 		</classes>
 	</test>
 </suite>
@@ -39,7 +42,7 @@
 
 
 
-<suite name="ATLMrkt_RegressionTestSuite">
+<!--  <suite name="ATLMrkt_RegressionTestSuite">
 	<listners>
 		<listner class-name="atlantamarket_UAT.TestListeners"/>
 	</listners>
@@ -48,7 +51,7 @@
 			<class name="atlantamarket_UAT.MarketPlanner"/>
 			<methods>
 				
-				<!--<include name="TS024_VerifyFilterByOptionsFunctionalityForListTest"/>
+				<include name="TS024_VerifyFilterByOptionsFunctionalityForListTest"/>
 				 <include name="TS026_VerifyDuplicateLinkFunctionalityForListTest"/>  
 				 <include name="TS028_VerifyListDisplayControlsFunctionalityTest"/> -->
 			<!-- 	<include name="TS031_VerifyMarketPlannerListsElementMoreOoptionsCopyeTest"/>
@@ -76,15 +79,15 @@
 
 				
 				
-			</methods>
+			<!--  </methods>
 		</classes>
 		</test>
 
 	</test>
 
-</suite>
+</suite>-->
 
-<suite name="LVM_RegressionTestSuite">
+<!--  <suite name="LVM_RegressionTestSuite">
 	<listners>
 		<listner class-name="lasvegasmarket_PROD.TestListeners" />
 	</listners>

@@ -489,7 +489,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		atlexhact.getNoteContentTxtBx().sendKeys("TestNote" + genData.generateRandomString(6));
 		// Click on 'Save' button
 		atlexhact.getNoteSaveBtn().click();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 
 		// Click on 'Add Note' icon for the same exhibitor
 		atlexhact.getMatchingProdAddNoteIcon().click();
