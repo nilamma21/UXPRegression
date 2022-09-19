@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
-  <test name="RegressionTest(failed)">
+  <test name="RegressionParallelest(failed)">
     <classes>
-      <class name="atlantamarket_PROD.MarketPlanner">
+
+      <class name="atlantamarket_PROD.GlobalSearch_ProductActions">
         <methods>
+          <include name="tearDown"/>
+          <include name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest"/>
+          <include name="TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest"/>
+          <include name="TS004_VerifyAddToFavoriteOnProductDetailsPageTest"/>
           <include name="initialize"/>
-          <include name="TS007_VerifyNewGroupBtnFunctionalityForListsTest"/>
-          <include name="TS019_VerifyAddToFavoriteFunctionalityForExhibitorTest"/>
+          <include name="TS005_VerifyAddNoteOnProductDetailsPageTest"/>
         </methods>
-      </class> <!-- atlantamarket_PROD.MarketPlanner -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_ProductActions -->
+
+      <class name="atlantamarket_PROD.GlobalSearch_LineActions">
+        <methods>
+          <include name="TS002_VerifyAddToFavoriteForLineTest"/>
+          <include name="TS004_VerifyAddToNewListForLineTest"/>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.GlobalSearch_LineActions -->
+
     </classes>
-  </test> <!-- RegressionTest(failed) -->
+  </test> <!-- RegressionParallelest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->

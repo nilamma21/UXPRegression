@@ -563,8 +563,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		Thread.sleep(8000);
 
 		//Verify the selected Product Categories on Exhibitor Digital Showroom page
-		//Select 1st Exhibitor from Search results grid
-		atlleftpane.getATLexhibitor().click();
+		//Select 2nd Exhibitor from Search results grid
+		atlleftpane.getATLSecondExhibitor().click();
 
 		//Scroll till Product Categories section
 		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());

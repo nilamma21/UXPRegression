@@ -38,6 +38,17 @@ public class ATLMarketPlannerPage {
 	By listspagefavoritesmenu = By.xpath("//div[@class='imc-vertical-tabs-nav']/div[contains(text(),'Favorites')]"); //Locator for Favorites left menu
 	By addlistcreatebtn = By.xpath("//div[@class = 'imc-vr--medium']/input[1]"); //Locator for Create button on Add List modal
 	By addlistcreatebtn_ATLPROD = By.xpath("//div[@class = 'imc-vr--medium-alt']/input[1]"); //Locator for Create button on Add List modal
+	By mplistsfavorites = By.xpath("//div[@class = 'imc-vertical-tabs-nav']/div[1]"); //Locator for Favorites tab
+	By mplistsallsavedproduts = By.xpath("//div[@class = 'imc-vertical-tabs-nav']/a[2]"); //Locator for All Saved Products tab
+	By mplistsallsavedexhibitors = By.xpath("//div[@class = 'imc-vertical-tabs-nav']/a[3]"); //Locator for All Saved Exhibitors tab
+	By mplistsenentsandseminars = By.xpath("//div[@class = 'imc-vertical-tabs-nav']/a[4]"); //Locator for Events and Seminars tab
+	By mplistsmanagelist = By.xpath("//div[@class = 'imc-gallery__item imc-vertical-tabs-content']"); //Locator for List details
+	By mpduplicatelistbtn = By.xpath("//div[@class = 'imc-market-planner-list_row_right_column imc-content--epsilon']/span[1]"); //Locator for Duplicate List button
+	By mpeditlistbtn = By.xpath("//div[@class = 'imc-market-planner-list_row_right_column imc-content--epsilon']/span[2]"); //Locator for Edit List button
+	By mparrangelistbtn = By.xpath("//div[@class = 'imc-gallery__item imc-customlists-button-pad']/button[1]"); //Locator for Arrange List button
+	By mpnewlistbtn = By.xpath("//div[@class = 'imc-gallery__item imc-customlists-button-pad']/button[2]"); //Locator for New List button
+	By mpnewgrpbtn = By.xpath("//div[@class = 'imc-gallery__item imc-customlists-button-pad']/button[3]"); //Locator for New Group button
+	
 	
 	By savedproductnameinlist = By.xpath("//li[@class='imc-list-edit--draggable'][1]/div/div[3]/div/div/div/div/a"); //Locator for Saved Product Name in List
 	By createAddListBtn = By.xpath("(//input[@type='submit'])[position()=3]"); //Locator for Create button on Add List modal		
@@ -90,7 +101,7 @@ public class ATLMarketPlannerPage {
 	By mpverifyregistrationinformationlink = By.xpath("//div[@class = 'section-wrapper imc-section--basic-white']"); //Locator for verify registration page link
 	By mpManageDropdown = By.xpath("(//div[@class='react-select__indicators css-1wy0on6'])[1]"); //Locator for Mnage DropDown
 	By mpFilterByDropdown = By.xpath("(//div[@class='react-select__indicators css-1wy0on6'])[2]"); //Locator for FilterBy DropDown
-	
+	By mpSortByDropdown = By.xpath("(//div[@class='react-select__indicators css-1wy0on6'])[3]"); //Locator for SortBy DropDown
 	By mpManageEditList = By.xpath("(//a[@class='imc-link--alt-darkred'])[1]"); //Locator for Mnage Edit list'
 	By mpManageEditListSelectAllBtn = By.xpath("//div[@class='imc-loading-relative']/div[2]/div[2]/button[1]"); //Locator for Mnage Edit list Select All Btn
 	By mpManageEditListCopyToBtn = By.xpath("//div[@class='imc-loading-relative']/div[2]/div[3]/button[1]"); //Locator for Mnage Edit list Copy to Btn
@@ -126,15 +137,297 @@ public class ATLMarketPlannerPage {
 	By mpexpdirectory = By.xpath("//div[@class = 'imc-card imc-loading-relative']/div[3]/a[1]"); //Locator for Exhibitor Directory option
 	By mpsavedsearches = By.xpath("//div[@class = 'imc-card imc-loading-relative']/div[4]/a[1]"); //Locator for saved Searches option
 	By mpmyinfo = By.xpath("//div[@class = 'imc-card imc-loading-relative']/div[5]/a[1]"); //Locator for My Info option
+
+	By filterByList = By.xpath("//div[@class='react-select__menu-list css-11unzgr']/div"); //Locator for My Info option
+	By listOfAllExh = By.xpath("//a[@class='imc-link--alt-darkred']"); //Locator for My Info option
+	By filterBytxt = By.xpath("//div[contains(text(),'Filter By')]"); //Locator for Filter By
+	By nameofElement = By.xpath("//div[@class='imc-market-planner-list--item-body-data-left']/div[1]"); //Locator for Filter By
+	By listOfmngDropdownElements = By.xpath("//div[@class='react-select__menu-list css-11unzgr']/div"); //Locator for Filter By
+	By allList = By.xpath("//div[@class='imc-market-planner-list_row_title']"); //List for all list
+	By addCustomItem = By.xpath("//div[@class='imc-gallery__item market-planner--list-sidebar imc-breakpoint-display--hide-mobile']/div[3]/button[1]"); //Add custom item
+	By customTitle = By.xpath("//div[@class='imc-addnote-modal__padded']/form[1]/div[2]/div[1]/input[1]"); //Add custom item Title
+	By customDesc = By.xpath("//div[@class='imc-addnote-modal__padded']/form[1]/div[5]/div[1]/textarea[1]"); //Add custom item Desc
+	By customItemsubmitBtn = By.xpath("//div[@class='imc-addnote-modal__padded']/form[1]/div[7]/input[1]"); //Add custom item Submit Btn
+	
+	
+
 	By newlycreatedgroupname = By.xpath("//div[@class='group-container'][2]/div/div/div[1]/h5"); //Locator for Newly created group name
 	By nogroupname = By.xpath("//div[@class='group-container'][1]/div/div/div[1]/h5"); //Locator for No Group name
 	By createnewgrppopupclosebtn = By.xpath("//button[@class='imc-modal--close imc-button--modal-close imc-button--round']"); //Locator for Create new group popup close btn
 	By atlmpduplicatelistoptns = By.xpath("//ul[@class='imc-market-planner-list']/li/div[2]/span[1]/a"); //Locator for Duplicate List options on Lists page
+	By atlmpGrByExhCheckbox = By.xpath("//div[@class='imc-gallery imc-market-planner-list-display imc-vr--large']/div[2]/div[1]/div[1]/div[1]"); //Locator for Gr By CheckBox
+	By atlmpListView = By.xpath("//div[@class='imc-gallery imc-market-planner-list-display imc-vr--large']/div[2]/div[1]/div[2]/button[1]"); //Locator for List View
+	By atlmpGridView = By.xpath("//div[@class='imc-gallery imc-market-planner-list-display imc-vr--large']/div[2]/div[1]/div[2]/button[2]"); //Locator for Grid view
+	By atlmpVerifyGridView = By.xpath("//img[@class='imc-saved-exhibitors__img-grid']"); //Locator for Grid view
+	By atlmpVerifyListView = By.xpath("//div[@class='imc-gallery imc-saved-exhibitors__outer-row imc-market-planner-list--mobile-overlays-left']"); //Locator for Grid view
+	By atlmpVerifyLocationLink = By.xpath("//a[@class='imc-link imc-link--alt-darkred']"); //Locator for Location Link
+	By listOfAllGroups = By.xpath("//h5[@class='accordion__item__title']"); //Locator for list of gr
+	By duplicateListErrorMsg = By.xpath("//div[@class='imc-vr--large']/ul/li[1]"); //Locator for Invalid Group msg
+	By customItemHeader = By.xpath("//div[@class='modal-wrapper']/div[1]/div[1]/h2[1]"); //Locator for Title of custom Item header
+	By listOfCustomItems = By.xpath("//div[@class='imc-type--body-6-ui imc-content--padded-medium-desktop imc-content--padded-medium-left']"); //Locator for List of custom Item 
+	By cancelBtnCustomItem = By.xpath("//div[@class='imc-addnote-modal__padded']/form[1]/div[7]/button[1]"); //Locator for Cancel Btn custom Item
+	By addNoteBtn = By.xpath("//div[@class='imc-gallery__item market-planner--list-sidebar imc-breakpoint-display--hide-mobile']/div[4]/div[1]/button[1]"); //Locator for Note Btn 
+	By newAddedNote = By.xpath("//div[@class='imc-gallery__item market-planner--list-sidebar imc-breakpoint-display--hide-mobile']/div[5]/ul[1]/li[1]/a[1]"); //Locator for Note Btn
+	By listOfAllNewAddedNotes = By.xpath("//a[@class='imc-link imc-type--body-4-ui']");//List of All notes
+	By closeNotePopup = By.xpath("//button[@class='imc-modal--close imc-addnote-modal__close']");////Locator for close Note popup
+	By allSavedExhibiorMenu = By.xpath("//div[@class='imc-vertical-tabs-nav']/a[contains(text(),'All Saved Exhibitors')]");////Locator for All Saved Exhibitors
+	By allSavedProductMenu = By.xpath("//div[@class='imc-vertical-tabs-nav']/a[contains(text(),'All Saved Products')]");////Locator for All Saved Product
+	By allEventsAndSeminarMenu = By.xpath("//div[@class='imc-vertical-tabs-nav']/a[contains(text(),'All Events And Seminars')]");////Locator for All Saved Events And Seminar
+	By mpRegistrationTab = By.xpath("//div[@class='imc-section imc-market-planner-toolbar ']/div[1]/div[1]/div[2]/div[1]/a[4]");////Locator for Reg tab
+	By mpRegisterNowBtn = By.xpath("//div[@class='imc-gallery__item']/div[1]/a[1]");////Locator for Reg Btn
+	By mpSavedSearchesTab = By.xpath("//div[@class='imc-section imc-market-planner-toolbar ']/div[1]/div[1]/div[2]/div[1]/a[5]");////Locator for Saved Searches tab
+	By mpSavedSearchesIcon = By.xpath("//div[@class='imc-vr--large']/section[1]/div[1]/div[1]/div[1]");////Locator for Saved Searches icon
+	By mpSaveSearcheBtn = By.xpath("//div[@class='imc-vr--large']/section[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]");////Locator for Saved Searches Btn
+	By mpSaveSearcheNameInput = By.xpath("//div[@class='imc-modal--box imc-savesearchmodal']/form[1]/div[1]/input[1]");////Locator for Saved Searche input
+	By mpSaveSearcheInputBtn = By.xpath("//div[@class='imc-modal--box imc-savesearchmodal']/form[1]/div[2]/input[1]");////Locator for Saved Searche input Btn
+	By mplistOfAllSaveSearches = By.xpath("//a[@class='imc-link imc-link--alt-darkred imc-content--display-flex  imc-content--display-flex-center']");////Locator for list of all Saved Searche 
+	By mplistSearcheAlert = By.xpath("//div[@class='imc-vr--large']/section[1]/span[1]/div[1]");////Locator for list Search name
+	By mpConfirmDeleteBtn = By.xpath("//button[@class='imc-market-planner-quick-add-modal__submit-btn imc-button']");////Locator for Confim Delete
+	By mp1stExhiName = By.xpath("//div[@class='imc-gallery__item']//div/li[1]/div[1]/div[1]/div[1]/a");////Locator for 1st exh name
+	By mpAddToScheduledHeader = By.xpath("//div[@class='imc-modal--content imc-section imc-customlists-form']/h2[1]");////Locator for Add to Scheduled
+	By mpSelectStartDateCalendar = By.xpath("//div[@class='imc-modal--content imc-section imc-customlists-form']/form[1]/div[2]/div[1]/div[2]/div[1]");////Locator for Calendr
+	By mpCalendarNextMonthArrow = By.xpath("//div[@class='DayPicker-NavBar']/span[2]");////Locator for Calendr Next Month Arrow
+	By mpListOfAllCalendarDays = By.xpath("//div[@class='DayPicker-Day']");////Locator for List Of Calendr days
+	By mpSelectEndDateCalendar = By.xpath("//div[@class='imc-modal--content imc-section imc-customlists-form']/form[1]/div[2]/div[2]/div[2]/div[1]");////Locator for Calendr
+	By mpSelectStartTime = By.xpath("//div[@class='imc-modal--content imc-section imc-customlists-form']/form[1]/div[2]/div[1]/div[2]/div[2]/select[1]");////Locator for Start Time
+	By mpSelectEndTime = By.xpath("//div[@class='imc-modal--content imc-section imc-customlists-form']/form[1]/div[2]/div[2]/div[2]/div[2]/select[1]");////Locator for End Time
+	By mpAddToScheduledSaveBtn = By.xpath("//div[@class='imc-gallery imc-vr--medium']/div[1]/input[1]");////Locator for Save Btn
+	By mpmonthName = By.xpath("//div[@class='DayPicker-Months']/div[1]/div[1]/div[1]");////Locator for Month
+	By mpListOfAllProds = By.xpath("//div[@class='imc-saved-exhibitors__contentItems__col2-1 imc-heading--h7 imc-heading--primary-medium imc-saved-exhibitors__name-title']/a");////Locator for List of all products
+	
+	By myinfotab = By.xpath("//div[@class = 'imc-mp-toolbar imc-breakpoint-display--hide-mobile']/a[3]"); //Locator for My Info tab
+	By myinfoeditprofile = By.xpath("//div[@class = 'imc-gallery__item']/a[1]"); //Locator Edit Profile button under My Info
+	By myinfonamepencil = By.xpath("//div[class = 'imc-formfield imc-content']/div[1]/p[2]/span[1]"); //Locator for Pencil for Name field 
+	By myinfofirstname = By.xpath("//input[@name = 'firstName']"); //Locator for First Name text box
+	By myinfolastname = By.xpath("//input[@name = 'lastName']"); //Locator for Last Name text box
+	By myinfodiscardbtn = By.xpath("//div[@class = 'imc-profile']/form[1]/div[2]/button[1]"); //Locator for Discard button
+	By myinfosavebutton = By.xpath("//div[@class = 'imc-profile']/form[1]/div[2]/input[1]"); //Locator for Submit button
+	By myinfoemail = By.xpath("//p[@class = 'imc-section--margin-medium']/a[1]"); //Locator for Add Email button
+	By myinfoemailcancelbtn = By.xpath("//div[@class = 'imc-section--margin-small']/button[1]"); //Locator for Cancel button for Add Email
+	By myinfemailclosebtn = By.xpath("//button[@class = 'imc-modal--close']"); //Locator for X button on email form
+	By myinfoemailtxtbox = By.xpath("//input[@name = 'newEmailAddress']"); //Locator for Email text box
+	By myinfoverifybtn = By.xpath("//div[@class = 'inline-form']/input[1]"); //Locator for Verify button
+	By myinfocompanynamepencil = By.xpath("//div[@class = 'imc-formfield imc-content ']/p[1]/span[1]"); //Locator for Company Name pencil
+	By myinfocompnametxt = By.xpath("//input[@name = 'companyName']"); //Locator for Company Name text box
+	By myinfodiscard2btn = By.xpath("//div[@class = 'imc-profile']/form[1]/div[2]/button[1]"); //Locator for Discard button for Company Name
+	By myinfosave2btn = By.xpath("//div[@class = 'imc-profile']/form[1]/div[2]/input[1]"); //Locator for Discard button for Company Name
+	By verifymyinfopage = By.xpath("//div[@class = 'imc-gallery__item imc-vertical-tabs-content']"); //Locator for my info verification
+	By verifymyinfoname = By.xpath("//div[@class = 'imc-formfield imc-content']/div[[1]/p[2]"); //Locator for Name 
+	By myinfonewemail = By.xpath("//div[@class = 'imc-vr--large imc-vr--smallmedium-desktop']/div[1]"); //Locator for newly added email address
+	By myinfoverifycompanyname = By.xpath("//div[@class = 'imc-formfield imc-content ']/p[1]"); //Locator for newly added Company Name
+	By myinfoverifyeditprofile = By.xpath("//div[@class = 'imc-profile']"); //Locator for edit profile verification
+	By myinfomyinquiriestab = By.xpath("//div[@class = 'imc-vertical-tabs-nav']/a[1]"); //Locator for My Inquiries tab
+	By myinfoverifymyinquiries = By.xpath("//div[@class = 'imc-gallery__item imc-vertical-tabs-content']"); //Locator for My Inquiries tab
+	By noSavedSearchesMsg = By.xpath("	//div[@class='imc-gallery__item imc-vertical-tabs-content']/div[1]/ul[1]/span[1]"); //Locator for No saved Searches msg
+
+	By checkBox = By.xpath("(//div[@class='imc-formfield imc-content imc-saved-exhibitors__chk-container']/label[1])[1]"); //Locator for Checkbox
+	By fExhpName = By.xpath("//div[@class='imc-loading-relative']/div[4]/li[1]/div[1]/div[1]/div[1]/a[1]"); //Locator for Checkbox
+	
+	
+
+
+		
 
 	public ATLMarketPlannerPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
-	} 
+	}
+	
+	public WebElement getfirstExhName() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(fExhpName));
+		return driver.findElement(fExhpName);
+	}
+	public WebElement getcheckBox() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(checkBox));
+		return driver.findElement(checkBox);
+	}
+	public WebElement getnoSavedSearchesMsg() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(noSavedSearchesMsg));
+		return driver.findElement(noSavedSearchesMsg);
+	}
+	public List <WebElement> getmpListOfAllProds() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpListOfAllProds));
+		return driver.findElements(mpListOfAllProds);
+	}
+	public WebElement getmpmonthName() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpmonthName));
+		return driver.findElement(mpmonthName);
+	}
+	public WebElement getmpAddToScheduledSaveBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpAddToScheduledSaveBtn));
+		return driver.findElement(mpAddToScheduledSaveBtn);
+	}
+	
+	public WebElement getmpSelectEndTime() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSelectEndTime));
+		return driver.findElement(mpSelectEndTime);
+	}
+	public WebElement getmpSelectStartTime() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSelectStartTime));
+		return driver.findElement(mpSelectStartTime);
+	}
+	public WebElement getmpSelectEndDateCalendar() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSelectEndDateCalendar));
+		return driver.findElement(mpSelectEndDateCalendar);
+	}
+	public List <WebElement> getmpListOfAllCalendarDays() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpListOfAllCalendarDays));
+		return driver.findElements(mpListOfAllCalendarDays);
+	}
+	public WebElement getmpCalendarNextMonthArrow() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpCalendarNextMonthArrow));
+		return driver.findElement(mpCalendarNextMonthArrow);
+	}
+	public WebElement getmpSelectStartDateCalendar() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSelectStartDateCalendar));
+		return driver.findElement(mpSelectStartDateCalendar);
+	}
+	public WebElement getmpAddToScheduledHeader() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpAddToScheduledHeader));
+		return driver.findElement(mpAddToScheduledHeader);
+	}
+	public WebElement getmpmp1stExhiName() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mp1stExhiName));
+		return driver.findElement(mp1stExhiName);
+	}
+	public WebElement getmpConfirmDeleteBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpConfirmDeleteBtn));
+		return driver.findElement(mpConfirmDeleteBtn);
+	}
+	public WebElement getmplistSearcheAlert() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mplistSearcheAlert));
+		return driver.findElement(mplistSearcheAlert);
+	}
+
+	public List <WebElement> getmplistOfAllSaveSearches() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mplistOfAllSaveSearches));
+		return driver.findElements(mplistOfAllSaveSearches);
+	}
+	public WebElement getmpSaveSearcheInputBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSaveSearcheInputBtn));
+		return driver.findElement(mpSaveSearcheInputBtn);
+	}
+	public WebElement getmpSaveSearcheNameInput() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSaveSearcheNameInput));
+		return driver.findElement(mpSaveSearcheNameInput);
+	}
+	public WebElement getmpSaveSearcheBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSaveSearcheBtn));
+		return driver.findElement(mpSaveSearcheBtn);
+	}
+	public WebElement getmpSavedSearchesIcon() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSavedSearchesIcon));
+		return driver.findElement(mpSavedSearchesIcon);
+	}
+	public WebElement mpSavedSearchesTab() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSavedSearchesTab));
+		return driver.findElement(mpSavedSearchesTab);
+	}
+	public WebElement getmpRegisterNowBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpRegisterNowBtn));
+		return driver.findElement(mpRegisterNowBtn);
+	}
+	public WebElement getmpRegistrationTab() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpRegistrationTab));
+		return driver.findElement(mpRegistrationTab);
+	}
+	public WebElement getallEventsAndSeminarMenu() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(allEventsAndSeminarMenu));
+		return driver.findElement(allEventsAndSeminarMenu);
+	}
+	public WebElement getallSavedProductMenu() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(allSavedProductMenu));
+		return driver.findElement(allSavedProductMenu);
+	}
+	public WebElement getallSavedExhibiorMenu() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(allSavedExhibiorMenu));
+		return driver.findElement(allSavedExhibiorMenu);
+	}
+	public WebElement getcloseNotePopup() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(closeNotePopup));
+		return driver.findElement(closeNotePopup);
+	}
+	public List <WebElement> getlistOfAllNewAddedNotes() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllNewAddedNotes));
+		return driver.findElements(listOfAllNewAddedNotes);
+	}
+	public WebElement getaddNoteBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(addNoteBtn));
+		return driver.findElement(addNoteBtn);
+	}
+	public WebElement getcancelBtnCustomItem() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(cancelBtnCustomItem));
+		return driver.findElement(cancelBtnCustomItem);
+	}
+	public List <WebElement> getATLlistOfCustomItems() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfCustomItems));
+		return driver.findElements(listOfCustomItems);
+	}
+	public WebElement getcustomItemHeader() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(customItemHeader));
+		return driver.findElement(customItemHeader);
+	}
+	
+	public WebElement getDuplicateListErrorMsg() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(duplicateListErrorMsg));
+		return driver.findElement(duplicateListErrorMsg);
+	}
+	public List <WebElement> atlmpVerifyLocationLink() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmpVerifyLocationLink));
+		return driver.findElements(atlmpVerifyLocationLink);
+	}
+	public List <WebElement> getAtlListOfAllGroups() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllGroups));
+		return driver.findElements(listOfAllGroups);
+	}
+	
+	
+	public WebElement getATLmpVerifyListView() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmpVerifyListView));
+		return driver.findElement(atlmpVerifyListView);
+	}
+	public WebElement getATLmpVerifyGridView() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmpVerifyGridView));
+		return driver.findElement(atlmpVerifyGridView);
+	}
 	public WebElement getATLMarketPlannerHome() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmarketplannerhome));
@@ -630,6 +923,19 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpFilterByDropdown));
 		return driver.findElement(mpFilterByDropdown);
 	}
+
+
+	public List <WebElement> getfilterByList() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(filterByList));
+		return driver.findElements(filterByList);
+	}
+	public List <WebElement> getlistOfAllExh() {
+		wait = new WebDriverWait (driver,35);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllExh));
+		return driver.findElements(listOfAllExh);
+	}
+
 	public WebElement getNoGroupName() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(nogroupname));
@@ -645,10 +951,237 @@ public class ATLMarketPlannerPage {
 	}
 	public List<WebElement> getATLMPDuplicateListOptns() {
 		return driver.findElements(atlmpduplicatelistoptns);
+
 	}
 	
+	public WebElement getfilterBytxt() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(filterBytxt));
+		return driver.findElement(filterBytxt);
+	}
+	public List <WebElement> getnameofElement() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(nameofElement));
+		return driver.findElements(nameofElement);
+	}
+	public List <WebElement> getlistOfmngDropdownElements() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfmngDropdownElements));
+		return driver.findElements(listOfmngDropdownElements);
+	}
+	public List <WebElement> getallList() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(allList));
+		return driver.findElements(allList);
+	}
+	public WebElement getAddCustomItem() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(addCustomItem));
+		return driver.findElement(addCustomItem);
+	}		
+	public WebElement getCustomTitle() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(customTitle));
+		return driver.findElement(customTitle);
+	}		
+	public WebElement getCustomDesc() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(customDesc));
+		return driver.findElement(customDesc);
+	}		
+	public WebElement getCustomItemsubmitBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(customItemsubmitBtn));
+		return driver.findElement(customItemsubmitBtn);
+	}		
+	public WebElement getmpSortByDropdown() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSortByDropdown));
+		return driver.findElement(mpSortByDropdown);
+	}		
+	public WebElement getAtlmpGrByExhCheckbox() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmpGrByExhCheckbox));
+		return driver.findElement(atlmpGrByExhCheckbox);
+	}		
+	public WebElement getatlmpListView() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmpListView));
+		return driver.findElement(atlmpListView);
+	}		
+	public WebElement getatlmpGridView() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmpGridView));
+		return driver.findElement(atlmpGridView);
+	}		
+	public WebElement getmyinfotab() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfotab));
+		return driver.findElement(myinfotab);
+	}		
+	public WebElement getmyinfoeditprofile() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfoeditprofile));
+		return driver.findElement(myinfoeditprofile);
+	}	
+	public WebElement getmyinfonamepencil() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfonamepencil));
+		return driver.findElement(myinfonamepencil);
+	}	
+	public WebElement getmyinfofirstname() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfofirstname));
+		return driver.findElement(myinfofirstname);
+	}	
+	public WebElement getmyinfolastname() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfolastname));
+		return driver.findElement(myinfolastname);
+	}	
+	public WebElement getmyinfodiscardbtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfodiscardbtn));
+		return driver.findElement(myinfodiscardbtn);
+	}	
+	public WebElement getmyinfosavebutton() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfosavebutton));
+		return driver.findElement(myinfosavebutton);
+	}	
+	public WebElement getmyinfoemail() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfoemail));
+		return driver.findElement(myinfoemail);
+	}	
+	public WebElement getmyinfoemailcancelbtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfoemailcancelbtn));
+		return driver.findElement(myinfoemailcancelbtn);
+	}	
+	public WebElement getmyinfemailclosebtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfemailclosebtn));
+		return driver.findElement(myinfemailclosebtn);
+	}	
+	public WebElement getmyinfoemailtxtbox() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfoemailtxtbox));
+		return driver.findElement(myinfoemailtxtbox);
+	}	
 	
-	
+	public WebElement getmyinfoverifybtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfoverifybtn));
+		return driver.findElement(myinfoverifybtn);
+	}	
+	public WebElement getmyinfocompanynamepencil() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfocompanynamepencil));
+		return driver.findElement(myinfocompanynamepencil);
+	}	
+	public WebElement getmyinfocompnametxt() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfocompnametxt));
+		return driver.findElement(myinfocompnametxt);
+	}	
+	public WebElement getmyinfodiscard2btn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfodiscard2btn));
+		return driver.findElement(myinfodiscard2btn);
+	}	
+	public WebElement getmyinfosave2btn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfosave2btn));
+		return driver.findElement(myinfosave2btn);
+	}	
+
+	public WebElement getverifymyinfoname() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(verifymyinfoname));
+		return driver.findElement(verifymyinfoname);
+	}
+	public WebElement getmyinfonewemail() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfonewemail));
+		return driver.findElement(myinfonewemail);
+	}
+	public WebElement getmyinfoverifycompanyname() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfoverifycompanyname));
+		return driver.findElement(myinfoverifycompanyname);
+	}			
+	public WebElement getverifymyinfopage() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(verifymyinfopage));
+		return driver.findElement(verifymyinfopage);
+	}
+	public WebElement getmyinfoverifyeditprofile() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfoverifyeditprofile));
+		return driver.findElement(myinfoverifyeditprofile);
+	}
+	public WebElement getmyinfomyinquiriestab() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfomyinquiriestab));
+		return driver.findElement(myinfomyinquiriestab);
+	}
+	public WebElement getmplistsfavorites() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mplistsfavorites));
+		return driver.findElement(mplistsfavorites);
+	}
+	public WebElement getmplistsallsavedproduts() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mplistsallsavedproduts));
+		return driver.findElement(mplistsallsavedproduts);
+	}
+	public WebElement getmplistsallsavedexhibitors() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mplistsallsavedexhibitors));
+		return driver.findElement(mplistsallsavedexhibitors);
+	}
+	public WebElement getmplistsenentsandseminars() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mplistsenentsandseminars));
+		return driver.findElement(mplistsenentsandseminars);
+	}
+	public WebElement getmplistsmanagelist() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mplistsmanagelist));
+		return driver.findElement(mplistsmanagelist);
+	}
+	public WebElement getmpduplicatelistbtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpduplicatelistbtn));
+		return driver.findElement(mpduplicatelistbtn);
+	}
+	public WebElement getmpeditlistbtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpeditlistbtn));
+		return driver.findElement(mpeditlistbtn);
+	}
+	public WebElement getmparrangelistbtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mparrangelistbtn));
+		return driver.findElement(mparrangelistbtn);
+	}
+	public WebElement getmpnewlistbtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpnewlistbtn));
+		return driver.findElement(mpnewlistbtn);
+	}
+	public WebElement getmpnewgrpbtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpnewgrpbtn));
+		return driver.findElement(mpnewgrpbtn);
+	}
+	public WebElement getmyinfoverifymyinquiries() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfoverifymyinquiries));
+		return driver.findElement(myinfoverifymyinquiries);
+	}
+
 }
 
 
