@@ -19,7 +19,6 @@ import org.testng.Assert;
 
 import com.gargoylesoftware.htmlunit.javascript.host.media.webkitMediaStream;
 
-import atlantamarket_UAT.MarketPlanner;
 import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
 import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
 import pageObjects.AtlantaMarket.ATLLandingPage;
@@ -32,7 +31,6 @@ public class Utility extends base {
 	ATLLandingPage lap;
 	ATLLoginPage lp;
 	ATLExhLineProdActionsPage atlexhact;
-	MarketPlanner mp;
 	ATLMarketPlannerPage atlmppge;
 	ATLGlobalSearchPage atlgs;
 	GenerateData genData;
