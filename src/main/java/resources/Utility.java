@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-import org.omg.CORBA.PUBLIC_MEMBER;
+//import org.omg.CORBA.PUBLIC_MEMBER;
 import org.openqa.selenium.By;
 
 import org.openqa.selenium.JavascriptExecutor;
