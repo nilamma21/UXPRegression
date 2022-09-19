@@ -1,5 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<testng-results skipped="0" failed="5" total="11" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="617643" started-at="2022-09-19T07:24:00Z" finished-at="2022-09-19T07:34:17Z">
+    <groups>
+    </groups>
+    <test name="RegressionParallelest" duration-ms="617643" started-at="2022-09-19T07:24:00Z" finished-at="2022-09-19T07:34:17Z">
+      <class name="atlantamarket_PROD.GlobalSearch_SearchFor">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@754ba872]" name="initialize" is-config="true" duration-ms="36020" started-at="2022-09-19T12:54:00Z" finished-at="2022-09-19T12:54:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS001_VerifyInformationTabInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@754ba872]" name="TS001_VerifyInformationTabInGlobalSearchTest" duration-ms="21988" started-at="2022-09-19T12:54:36Z" finished-at="2022-09-19T12:54:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifyInformationTabInGlobalSearchTest -->
+        <test-method status="PASS" signature="TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@754ba872]" name="TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest" duration-ms="34510" started-at="2022-09-19T12:54:58Z" finished-at="2022-09-19T12:55:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest -->
+        <test-method status="PASS" signature="TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@754ba872]" name="TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest" duration-ms="92107" started-at="2022-09-19T12:55:32Z" finished-at="2022-09-19T12:57:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest -->
+        <test-method status="FAIL" signature="TS004_VerifyCatalogsOverviewInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@754ba872]" name="TS004_VerifyCatalogsOverviewInGlobalSearchTest" duration-ms="41206" started-at="2022-09-19T12:57:04Z" finished-at="2022-09-19T12:57:45Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //a[@id='Catalogs'] (tried for 20 second(s) with 500 MILLISECONDS interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[@id='Catalogs'] (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.AtlantaMarket.ATLExhLineProdActionsPage.getCatalogsTab(ATLExhLineProdActionsPage.java:280)
+	at atlantamarket_PROD.GlobalSearch_SearchFor.TS004_VerifyCatalogsOverviewInGlobalSearchTest(GlobalSearch_SearchFor.java:240)
+
+
 <testng-results skipped="0" failed="4" total="9" passed="5">
   <reporter-output>
   </reporter-output>
@@ -77,6 +114,7 @@ Driver info: driver.version: unknown
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
 	at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getSavedProductNameInList(ATLMarketPlannerPage.java:490)
 	at atlantamarket_PROD.GlobalSearch_ProductActions.TS002_VerifyProductAddToNewListOnProductDetailsPageTest(GlobalSearch_ProductActions.java:181)
+
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -98,10 +136,17 @@ Driver info: driver.version: unknown
 	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
 	at org.testng.TestNG.run(TestNG.java:1031)
+
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //a[@id='Catalogs']
+
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
 Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //li[@class='imc-list-edit--draggable'][1]/div/div[3]/div/div/div/div/a
+
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
 System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
@@ -119,6 +164,27 @@ Driver info: driver.version: unknown
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
+
+        </test-method> <!-- TS004_VerifyCatalogsOverviewInGlobalSearchTest -->
+        <test-method status="PASS" signature="TS005_VerifyArticlesOverviewInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@754ba872]" name="TS005_VerifyArticlesOverviewInGlobalSearchTest" duration-ms="56904" started-at="2022-09-19T12:57:46Z" finished-at="2022-09-19T12:58:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifyArticlesOverviewInGlobalSearchTest -->
+        <test-method status="PASS" signature="TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@754ba872]" name="TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest" duration-ms="122057" started-at="2022-09-19T12:58:43Z" finished-at="2022-09-19T13:00:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest -->
+        <test-method status="PASS" signature="TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@754ba872]" name="TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest" duration-ms="54791" started-at="2022-09-19T13:00:45Z" finished-at="2022-09-19T13:01:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest -->
+        <test-method status="FAIL" signature="TS008_VerifyEventsOverviewInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@754ba872]" name="TS008_VerifyEventsOverviewInGlobalSearchTest" duration-ms="40819" started-at="2022-09-19T13:01:40Z" finished-at="2022-09-19T13:02:20Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//span[contains(@class,'imc-eventcard__title')]"}
+  (Session info: chrome=105.0.5195.127)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+
         </test-method> <!-- TS002_VerifyProductAddToNewListOnProductDetailsPageTest -->
         <test-method status="PASS" signature="TS003_VerifyProductAddToExistingListOnProductDetailsPageTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@77cd7a0]" name="TS003_VerifyProductAddToExistingListOnProductDetailsPageTest" duration-ms="117616" started-at="2022-09-15T17:09:02Z" finished-at="2022-09-15T17:11:00Z">
           <reporter-output>
@@ -171,20 +237,38 @@ Driver info: driver.version: unknown
             <message>
               <![CDATA[element click intercepted: Element <label class="imc-selectableicon__label" for="">...</label> is not clickable at point (283, 365). Other element would receive the click: <div class="imc-addnote-modal__padded ">...</div>
   (Session info: chrome=105.0.5195.102)
+
 Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
 System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
+
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=105.0.5195.52 (412c95e518836d8a7d97250d62b29c2ae6a26a85-refs/branch-heads/5195@{#853}), userDataDir=C:\Users\swapnili\AppData\Local\Temp\scoped_dir9812_2140359437}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:50312}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=105.0.5195.127, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: fe42fec9ada5abba28f6afa1a27f866c
+*** Element info: {Using=xpath, value=//span[contains(@class,'imc-eventcard__title')]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[contains(@class,'imc-eventcard__title')]"}
+  (Session info: chrome=105.0.5195.127)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+
 Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=105.0.5195.52 (412c95e518836d8a7d97250d62b29c2ae6a26a85-refs/branch-heads/5195@{#853}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir27332_719831387}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:55005}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=105.0.5195.102, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
 Session ID: e77441a492aa6bbdb38e0b2886a92d5c]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.WebDriverException: element click intercepted: Element <label class="imc-selectableicon__label" for="">...</label> is not clickable at point (283, 365). Other element would receive the click: <div class="imc-addnote-modal__padded ">...</div>
   (Session info: chrome=105.0.5195.102)
+
 Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
 System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
+
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=105.0.5195.52 (412c95e518836d8a7d97250d62b29c2ae6a26a85-refs/branch-heads/5195@{#853}), userDataDir=C:\Users\swapnili\AppData\Local\Temp\scoped_dir9812_2140359437}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:50312}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=105.0.5195.127, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: fe42fec9ada5abba28f6afa1a27f866c
+*** Element info: {Using=xpath, value=//span[contains(@class,'imc-eventcard__title')]}
+
 Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=105.0.5195.52 (412c95e518836d8a7d97250d62b29c2ae6a26a85-refs/branch-heads/5195@{#853}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir27332_719831387}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:55005}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=105.0.5195.102, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
 Session ID: e77441a492aa6bbdb38e0b2886a92d5c
+
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -195,9 +279,18 @@ Session ID: e77441a492aa6bbdb38e0b2886a92d5c
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at pageObjects.AtlantaMarket.ATLExhLineProdActionsPage.getEventCardTitle(ATLExhLineProdActionsPage.java:294)
+	at atlantamarket_PROD.GlobalSearch_SearchFor.TS008_VerifyEventsOverviewInGlobalSearchTest(GlobalSearch_SearchFor.java:732)
+
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
 	at atlantamarket_PROD.GlobalSearch_ProductActions.TS005_VerifyAddNoteOnProductDetailsPageTest(GlobalSearch_ProductActions.java:393)
+
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -224,9 +317,180 @@ Session ID: e77441a492aa6bbdb38e0b2886a92d5c
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
+
+        </test-method> <!-- TS008_VerifyEventsOverviewInGlobalSearchTest -->
+        <test-method status="FAIL" signature="TS009_VerifyEventsSearchFunctionalityInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@754ba872]" name="TS009_VerifyEventsSearchFunctionalityInGlobalSearchTest" duration-ms="22052" started-at="2022-09-19T13:02:21Z" finished-at="2022-09-19T13:02:43Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at atlantamarket_PROD.GlobalSearch_SearchFor.TS009_VerifyEventsSearchFunctionalityInGlobalSearchTest(GlobalSearch_SearchFor.java:618)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_VerifyEventsSearchFunctionalityInGlobalSearchTest -->
+        <test-method status="FAIL" signature="TS010_VerifyEventsFiltersFunctionalityInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@754ba872]" name="TS010_VerifyEventsFiltersFunctionalityInGlobalSearchTest" duration-ms="51765" started-at="2022-09-19T13:02:43Z" finished-at="2022-09-19T13:03:35Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[@aria-label='Topics']"}
+  (Session info: chrome=105.0.5195.127)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'SWAPNILI', ip: '172.27.182.57', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=105.0.5195.52 (412c95e518836d8a7d97250d62b29c2ae6a26a85-refs/branch-heads/5195@{#853}), userDataDir=C:\Users\swapnili\AppData\Local\Temp\scoped_dir9812_2140359437}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:50312}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=105.0.5195.127, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: fe42fec9ada5abba28f6afa1a27f866c
+*** Element info: {Using=xpath, value=//a[@aria-label='Topics']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@aria-label='Topics']"}
+  (Session info: chrome=105.0.5195.127)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'SWAPNILI', ip: '172.27.182.57', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=105.0.5195.52 (412c95e518836d8a7d97250d62b29c2ae6a26a85-refs/branch-heads/5195@{#853}), userDataDir=C:\Users\swapnili\AppData\Local\Temp\scoped_dir9812_2140359437}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:50312}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=105.0.5195.127, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: fe42fec9ada5abba28f6afa1a27f866c
+*** Element info: {Using=xpath, value=//a[@aria-label='Topics']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at pageObjects.AtlantaMarket.ATLGlobalSearchPage.getATLInfoSearchTopicsFilter(ATLGlobalSearchPage.java:161)
+	at atlantamarket_PROD.GlobalSearch_SearchFor.TS010_VerifyEventsFiltersFunctionalityInGlobalSearchTest(GlobalSearch_SearchFor.java:643)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS010_VerifyEventsFiltersFunctionalityInGlobalSearchTest -->
+        <test-method status="FAIL" signature="TS011_VerifyShowSpecialsOverviewInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@754ba872]" name="TS011_VerifyShowSpecialsOverviewInGlobalSearchTest" duration-ms="42125" started-at="2022-09-19T13:03:35Z" finished-at="2022-09-19T13:04:17Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //a[@id = 'Specials'] (tried for 20 second(s) with 500 MILLISECONDS interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@id = 'Specials'] (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.AtlantaMarket.ATLGlobalSearchPage.getatlShowSpecialsTab(ATLGlobalSearchPage.java:225)
+	at atlantamarket_PROD.GlobalSearch_SearchFor.TS011_VerifyShowSpecialsOverviewInGlobalSearchTest(GlobalSearch_SearchFor.java:704)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //a[@id = 'Specials']
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'SWAPNILI', ip: '172.27.182.57', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_161'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Optional.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 26 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS011_VerifyShowSpecialsOverviewInGlobalSearchTest -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
+
         </test-method> <!-- TS005_VerifyAddNoteOnProductDetailsPageTest -->
         <test-method status="PASS" signature="TS006_VerifyProductAddToExistingListOnSearchResultsGridTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@77cd7a0]" name="TS006_VerifyProductAddToExistingListOnSearchResultsGridTest" duration-ms="105418" started-at="2022-09-15T17:12:51Z" finished-at="2022-09-15T17:14:36Z">
           <reporter-output>
@@ -303,6 +567,7 @@ Session ID: e77441a492aa6bbdb38e0b2886a92d5c
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- atlantamarket_PROD.GlobalSearch_LineActions -->
+
 
     </test> <!-- RegressionParallelest -->
   </suite> <!-- ATLMrkt_RegressionTestSuite -->

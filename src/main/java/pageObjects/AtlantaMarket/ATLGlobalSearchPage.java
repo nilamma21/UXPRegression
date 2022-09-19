@@ -34,7 +34,7 @@ public class ATLGlobalSearchPage {
 	By CatalogHeaderName = By.xpath("//div[@class='imc-pdfview--display']/div[1]/h1[1]"); //Locator for Catalog header
 	By atlsearchresultArticlesLink = By.xpath("//a[@id='Articles']"); //Locator for Article Link
 	By atlsearchresultBlog = By.xpath("(//div[@class='imc-gallery__item'])[1]/section[1]/span[1]/div[1]"); //Locator for Article Link
-	By atlsearchresult = By.xpath("//div[@class='alert-box  ']"); //Locator for Article Link
+	By atlsearchresult = By.xpath("//div[@class='alert-box  ']"); //Locator for Search result 
 	By atlInfoSearchJuniperMarketBtn = By.xpath("//a[contains(text(),'See More Details')]"); //Locator for Juniper Market Btn
 	By atlInfoSearchTopicsFilter = By.xpath("//a[@aria-label='Topics']"); //Locator for Topics filter
 	By atlInfoSearchTopicsMarketSnapshot = By.xpath("//div[@class='imc-content--border imc-vr--xlarge imc-informationcard'][1]/div/div/div[2]/ul/li[2]/button"); //Locator for Topics filter Market snapshot
@@ -53,7 +53,7 @@ public class ATLGlobalSearchPage {
 	By atlShowSpecialsTab = By.xpath("//a[@id = 'Specials']"); //Locator for Show Specials tab
 	By atlVerifyShowSpecials = By.xpath("//div[@class = 'imc-tabs__body imc-section']"); //Locator for Show Specials section
 	By fourthbreadcrumbtxt = By.xpath("//li[@data-xpath='breadcrumb.active.link'][3]/a"); //Locator for 4th Breadcrumb text in app
-	By atleventstabinsearch =  By.xpath("//a[@id='Events']"); //Locator for Events tab in Search
+	By atleventstabinsearch =  By.xpath("//div[@id='Events']"); //Locator for Events tab in Search
 	By atlseemoredetailsbtn = By.xpath("//a[contains(text(),'See More Details')]"); //Locator for See More Details button
 	By eventsatlmkttopicsfilter = By.xpath("//label[contains(text(),'Atlanta Market')]"); //Locator for Atlanta Market topics filter
 	By clearfiltersbtn = By.xpath("//a[@class='clear-filter active']"); //Locator for Clear Filters btn
