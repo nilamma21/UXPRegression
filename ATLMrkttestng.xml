@@ -9,13 +9,27 @@
 
 	<test thread-count="5" name="RegressionParallelest">
 		<classes>
+
 			<!-- <class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters" />
+
+
+		<!-- 	<class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters" />
+
 			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
 	 		<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
-			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
+			<class name="atlantamarket_PROD.GlobalSearch_LineActions" /> -->
 			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
+		<!-- 	<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
+			<class name="atlantamarket_PROD.MarketPlanner" />
+			<class name="atlantamarket_PROD.FloorPlans" /> -->
+			<!--  <class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />-->
+			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
+			<!-- <class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters" />
+			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
+	 		<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
 			<class name="atlantamarket_PROD.MarketPlanner" />
+
 			<class name="atlantamarket_PROD.FloorPlans" />
 			 -->
 			<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
@@ -25,6 +39,13 @@
 						
 			</methods>
 			
+
+			<class name="atlantamarket_PROD.FloorPlans" />-->
+				<!--  <methods>
+					<include name="TS002_VerifyAddToFavoriteForLineTest" />
+				</methods>-->
+
+
 		</classes>
 	</test>
 </suite>
@@ -46,8 +67,13 @@
  
 
 
+
 <!-- 
 <suite name="ATLMrkt_RegressionTestSuite">
+
+
+<!--  <suite name="ATLMrkt_RegressionTestSuite">
+
 	<listners>
 		<listner class-name="atlantamarket_UAT.TestListeners"/>
 	</listners>
@@ -84,15 +110,21 @@
 
 				
 				
-			</methods>
+			<!--  </methods>
 		</classes>
 		</test>
 
 	</test>
 
+
 </suite> -->
 <!-- 
 <suite name="LVM_RegressionTestSuite">
+
+</suite>-->
+
+<!--  <suite name="LVM_RegressionTestSuite">
+
 	<listners>
 		<listner class-name="lasvegasmarket_PROD.TestListeners" />
 	</listners>

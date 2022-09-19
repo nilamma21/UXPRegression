@@ -3,6 +3,7 @@
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionParallelest(failed)">
     <classes>
+
       <class name="atlantamarket_PROD.GlobalSearch_SearchFor">
         <methods>
           <include name="TS009_VerifyEventsSearchFunctionalityInGlobalSearchTest"/>
@@ -13,6 +14,29 @@
           <include name="TS008_VerifyEventsOverviewInGlobalSearchTest"/>
         </methods>
       </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
+
+
+      <class name="atlantamarket_PROD.GlobalSearch_ProductActions">
+        <methods>
+          <include name="tearDown"/>
+          <include name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest"/>
+          <include name="TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest"/>
+          <include name="TS004_VerifyAddToFavoriteOnProductDetailsPageTest"/>
+          <include name="initialize"/>
+          <include name="TS005_VerifyAddNoteOnProductDetailsPageTest"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.GlobalSearch_ProductActions -->
+
+      <class name="atlantamarket_PROD.GlobalSearch_LineActions">
+        <methods>
+          <include name="TS002_VerifyAddToFavoriteForLineTest"/>
+          <include name="TS004_VerifyAddToNewListForLineTest"/>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.GlobalSearch_LineActions -->
+
+
     </classes>
   </test> <!-- RegressionParallelest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->
