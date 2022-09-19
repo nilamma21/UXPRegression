@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <testng-results skipped="0" failed="4" total="9" passed="5">
   <reporter-output>
   </reporter-output>
@@ -248,6 +249,61 @@ Session ID: e77441a492aa6bbdb38e0b2886a92d5c
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- atlantamarket_PROD.GlobalSearch_ProductActions -->
+
+<testng-results skipped="0" failed="0" total="9" passed="9">
+  <reporter-output>
+  </reporter-output>
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="546071" started-at="2022-09-16T04:12:45Z" finished-at="2022-09-16T04:21:52Z">
+    <groups>
+    </groups>
+    <test name="RegressionParallelest" duration-ms="546071" started-at="2022-09-16T04:12:45Z" finished-at="2022-09-16T04:21:52Z">
+      <class name="atlantamarket_PROD.GlobalSearch_LineActions">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@4667ae56]" name="initialize" is-config="true" duration-ms="79915" started-at="2022-09-16T09:42:45Z" finished-at="2022-09-16T09:44:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS001_VerifyClickOnContactExhIconForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@4667ae56]" name="TS001_VerifyClickOnContactExhIconForLineTest" duration-ms="28489" started-at="2022-09-16T09:44:05Z" finished-at="2022-09-16T09:44:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifyClickOnContactExhIconForLineTest -->
+        <test-method status="PASS" signature="TS002_VerifyAddToFavoriteForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@4667ae56]" name="TS002_VerifyAddToFavoriteForLineTest" duration-ms="51808" started-at="2022-09-16T09:44:34Z" finished-at="2022-09-16T09:45:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifyAddToFavoriteForLineTest -->
+        <test-method status="PASS" signature="TS003_VerifyClickOnOrderOnJuniperMarketBtnForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@4667ae56]" name="TS003_VerifyClickOnOrderOnJuniperMarketBtnForLineTest" duration-ms="64737" started-at="2022-09-16T09:45:26Z" finished-at="2022-09-16T09:46:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifyClickOnOrderOnJuniperMarketBtnForLineTest -->
+        <test-method status="PASS" signature="TS004_VerifyAddToNewListForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@4667ae56]" name="TS004_VerifyAddToNewListForLineTest" duration-ms="65925" started-at="2022-09-16T09:46:30Z" finished-at="2022-09-16T09:47:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyAddToNewListForLineTest -->
+        <test-method status="PASS" signature="TS005_VerifyAddToExistingListForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@4667ae56]" name="TS005_VerifyAddToExistingListForLineTest" duration-ms="71999" started-at="2022-09-16T09:47:36Z" finished-at="2022-09-16T09:48:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifyAddToExistingListForLineTest -->
+        <test-method status="PASS" signature="TS006_VerifyClickOnShownByExhibitorNameLinkForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@4667ae56]" name="TS006_VerifyClickOnShownByExhibitorNameLinkForLineTest" duration-ms="36943" started-at="2022-09-16T09:48:48Z" finished-at="2022-09-16T09:49:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS006_VerifyClickOnShownByExhibitorNameLinkForLineTest -->
+        <test-method status="PASS" signature="TS007_VerifyClickOnLocationLinkForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@4667ae56]" name="TS007_VerifyClickOnLocationLinkForLineTest" duration-ms="37697" started-at="2022-09-16T09:49:25Z" finished-at="2022-09-16T09:50:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifyClickOnLocationLinkForLineTest -->
+        <test-method status="PASS" signature="TS008_VerifyClickOnMatchingProductsSeeAllLinkForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@4667ae56]" name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForLineTest" duration-ms="52373" started-at="2022-09-16T09:50:03Z" finished-at="2022-09-16T09:50:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS008_VerifyClickOnMatchingProductsSeeAllLinkForLineTest -->
+        <test-method status="PASS" signature="TS009_VerifyClickOnTotalProductsSeeAllLinkForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@4667ae56]" name="TS009_VerifyClickOnTotalProductsSeeAllLinkForLineTest" duration-ms="56079" started-at="2022-09-16T09:50:55Z" finished-at="2022-09-16T09:51:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_VerifyClickOnTotalProductsSeeAllLinkForLineTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@4667ae56]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-09-16T09:51:52Z" finished-at="2022-09-16T09:51:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_LineActions -->
+
     </test> <!-- RegressionParallelest -->
   </suite> <!-- ATLMrkt_RegressionTestSuite -->
 </testng-results>
