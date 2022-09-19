@@ -3,27 +3,16 @@
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionParallelest(failed)">
     <classes>
-      <class name="atlantamarket_PROD.GlobalSearch_SuggestionList">
+      <class name="atlantamarket_PROD.GlobalSearch_SearchFor">
         <methods>
-          <include name="TS024_VerifyFilterByOptionsFunctionalityForListTest"/>
-          <include name="TS031_VerifyMarketPlannerListsElementMoreOoptionsCopyeTest"/>
-          <include name="TS007_VerifyNewGroupBtnFunctionalityForListsTest"/>
-          <include name="TS040_VerifyMarketSavedSearchesfunctionalityTest"/>
-          <include name="CheckBoxTest"/>
-          <include name="TS013_VerifyAddToFavoriteFunctionalityForProductTest"/>
-          <include name="TS018_VerifyRenameFunctionalityForListTest"/>
+          <include name="TS009_VerifyEventsSearchFunctionalityInGlobalSearchTest"/>
+          <include name="TS011_VerifyShowSpecialsOverviewInGlobalSearchTest"/>
+          <include name="TS004_VerifyCatalogsOverviewInGlobalSearchTest"/>
+          <include name="TS010_VerifyEventsFiltersFunctionalityInGlobalSearchTest"/>
           <include name="initialize"/>
-
-          <include name="TS021_VerifyMPListsCardOverviewTest"/>
-          <include name="TS026_VerifyDuplicateLinkFunctionalityForListTest"/>
-          <include name="tearDown"/>
-          <include name="TS038_VerifyMarketPlannerListsAllSavedProductsTest"/>
-
-          <include name="TS002_VerifySelectionOfLineFromAutoSuggestionListTest"/>
-          <include name="TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest"/>
-
+          <include name="TS008_VerifyEventsOverviewInGlobalSearchTest"/>
         </methods>
-      </class> <!-- atlantamarket_PROD.GlobalSearch_SuggestionList -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
     </classes>
   </test> <!-- RegressionParallelest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->
