@@ -36,7 +36,7 @@ public class TestListeners extends base implements ITestListener {
 		// TODO Auto-generated method stub
 		try {
 			String testMethodName = arg0.getName().toString().trim();
-			test.addScreenCaptureFromPath(capture(driver, testMethodName));
+			//test.addScreenCaptureFromPath(capture(driver, testMethodName));
 			test.fail(arg0.getThrowable());
 			System.out.println("FAILED- "+testMethodName);
 		} catch (IOException e) {
