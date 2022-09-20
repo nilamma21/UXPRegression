@@ -1,4 +1,3 @@
-
 package resources;
 
 import java.io.IOException;
@@ -12,7 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
-//import org.testng.Assert;
+import org.testng.Assert;
 //import com.gargoylesoftware.htmlunit.javascript.host.media.webkitMediaStream;
 import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
 import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
@@ -59,9 +58,7 @@ public class Utility extends base {
 		lp.getPassword().sendKeys((prop.getProperty("password")));
 
 		lp.getSignInBtn().click();
-		Thread.sleep(15000);
-		
-	
+		Thread.sleep(15000);	
 	}
 
 	public void selectDropdown(String itemName,String channelURL) throws InterruptedException {
@@ -359,9 +356,5 @@ public class Utility extends base {
 			Assert.assertTrue(flag = false);
 		}
 
-	}
-	
-	
-	
-	
+	}	
 }
