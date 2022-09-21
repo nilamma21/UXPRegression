@@ -156,9 +156,9 @@ public class GlobalSearch_SuggestionList extends base {
 		//lap.getCloseMarktAdBtn().click();
 	}
 	
-	/*@AfterClass
+	@AfterClass
 	public void tearDown()
 	{
 		driver.quit();
-	}*/
+	}
 }
