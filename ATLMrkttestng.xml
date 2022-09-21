@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="ATLMrkt_RegressionTestSuite" parallel="classes">
+<suite name="ATLMrkt_RegressionTestSuite">
 
-	<test thread-count="8" name="RegressionParallelTest" >
+	<test thread-count="8" name="RegressionSequentialTest" >
 		<classes>
 		 	<class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters" />
 			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
