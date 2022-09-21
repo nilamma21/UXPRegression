@@ -3119,7 +3119,7 @@ Thread.sleep(5000);
 	
 	@AfterClass
 	public void tearDown() {
-		// driver.quit();
+		driver.quit();
 
 	}
 
