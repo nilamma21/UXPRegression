@@ -713,4 +713,10 @@ public class GlobalSearch_SearchFor extends base {
 		driver.navigate().back();
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
+
+	@AfterClass
+	public void tearDown()
+	{
+		driver.quit();
+	}
 }
