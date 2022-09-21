@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="ATLMrkt_RegressionTestSuite" parallel="classes" >
+<suite name="ATLMrkt_RegressionTestSuite">
 
-	<test thread-count="7" name="RegressionParallelTest" >
+	<listners>
+		<listner class-name="atlantamarket_PROD.TestListeners" />
+	</listners>
+
+	<test thread-count="8" name="RegressionSequentialTest" >
 		<classes>
 		 	<class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters" />
 			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
@@ -12,7 +16,7 @@
 			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
 			<class name="atlantamarket_PROD.FloorPlans" />
-			<!-- <class name="atlantamarket_UAT.MarketPlanner" /> -->
+			<class name="atlantamarket_UAT.MarketPlanner" />
 		</classes>
 	</test>
 </suite>
