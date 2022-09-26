@@ -2,7 +2,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="ATLMrkt_RegressionTestSuite">
-
 	<listners>
 		<listner class-name="atlantamarket_PROD.TestListeners" />
 	</listners>
@@ -29,6 +28,5 @@
 		<classes>
 			<class name="atlantamarket_UAT.MarketPlanner" />
 		</classes>
-
-	</test> 
-</suite>-->
+	</test>
+</suite> -->

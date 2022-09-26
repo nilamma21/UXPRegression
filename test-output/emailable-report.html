@@ -31,137 +31,14 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-
-<tr><td style="text-align:left;padding-right:2em">RegressionParallelest</td><td class="numi">5</td><td class="numi">5</td><td class="numi">0</td><td class="numi_attn">4</td><td class="numi">767.9 seconds</td><td class="numi"></td><td class="numi"></td></tr>
-
-<tr><td style="text-align:left;padding-right:2em">RegressionParallelest</td><td class="numi">9</td><td class="numi">9</td><td class="numi">0</td><td class="numi">0</td><td class="numi">546.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
-
+<tr><td style="text-align:left;padding-right:2em">RegressionTest</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">68.4 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">RegressionParallelest &#8212; failed</th></tr>
-<tr class="failedodd"><td rowspan="4">atlantamarket_PROD.GlobalSearch_ProductActions</td><td><a href="#m1"><b>TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest</b>  </a></td><td class="numi">1</td><td>1663241784422</td><td class="numi">49027</td></tr><tr class="failedodd"><td><a href="#m2"><b>TS002_VerifyProductAddToNewListOnProductDetailsPageTest</b>  </a></td><td class="numi">1</td><td>1663241833810</td><td class="numi">108581</td></tr><tr class="failedodd"><td><a href="#m3"><b>TS004_VerifyAddToFavoriteOnProductDetailsPageTest</b>  </a></td><td class="numi">1</td><td>1663242060249</td><td class="numi">57634</td></tr><tr class="failedodd"><td><a href="#m4"><b>TS005_VerifyAddNoteOnProductDetailsPageTest</b>  </a></td><td class="numi">1</td><td>1663242118125</td><td class="numi">52719</td></tr>
-<tr><th colspan="4">RegressionParallelest &#8212; passed</th></tr>
-
-<tr class="passedodd"><td rowspan="5">atlantamarket_PROD.GlobalSearch_ProductActions</td><td><a href="#m5"><b>TS003_VerifyProductAddToExistingListOnProductDetailsPageTest</b>  </a></td><td class="numi">1</td><td>1663241942628</td><td class="numi">117616</td></tr><tr class="passedodd"><td><a href="#m6"><b>TS006_VerifyProductAddToExistingListOnSearchResultsGridTest</b>  </a></td><td class="numi">1</td><td>1663242171091</td><td class="numi">105418</td></tr><tr class="passedodd"><td><a href="#m7"><b>TS007_VerifyFullScreenViewerOnProductDetailsPageTest</b>  </a></td><td class="numi">1</td><td>1663242276513</td><td class="numi">41920</td></tr><tr class="passedodd"><td><a href="#m8"><b>TS008_VerifyAddToFavoriteOnSearchResultsGridTest</b>  </a></td><td class="numi">1</td><td>1663242318437</td><td class="numi">61769</td></tr><tr class="passedodd"><td><a href="#m9"><b>TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest</b>  </a></td><td class="numi">1</td><td>1663242380212</td><td class="numi">72017</td></tr>
+<tr><th colspan="4">RegressionTest &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="1">atlantamarket_UAT.MarketPlanner</td><td><a href="#m1"><b>TS052_VerifyMarketPlannerAddEventsToFav</b>  </a></td><td class="numi">1</td><td>1663756086092</td><td class="numi">5532</td></tr>
 </table>
-<h1>RegressionParallelest</h1>
-<h2 id="m1">atlantamarket_PROD.GlobalSearch_ProductActions:TS005_VerifyAddNoteOnProductDetailsPageTest</h2>
-<div style="padding-left:3em">
-<p>element click intercepted: Element &lt;label class=&quot;imc-selectableicon__label&quot; for=&quot;&quot;&gt;...&lt;/label&gt; is not clickable at point (283, 365). Other element would receive the click: &lt;div class=&quot;imc-addnote-modal__padded &quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=105.0.5195.102)
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=105.0.5195.52 (412c95e518836d8a7d97250d62b29c2ae6a26a85-refs/branch-heads/5195@{#853}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir27332_719831387}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:55005}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=105.0.5195.102, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: e77441a492aa6bbdb38e0b2886a92d5c</p>
-sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
-<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
-<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
-<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
-<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-<br/>at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-<br/>at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
-<br/>at atlantamarket_PROD.GlobalSearch_ProductActions.TS005_VerifyAddNoteOnProductDetailsPageTest(GlobalSearch_ProductActions.java:393)
-<br/>25 lines not shown
-</div>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">atlantamarket_PROD.GlobalSearch_ProductActions:TS004_VerifyAddToFavoriteOnProductDetailsPageTest</h2>
-<div style="padding-left:3em">
-<p>expected [true] but found [false]</p>
-org.testng.Assert.fail(Assert.java:94)
-<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
-<br/>at org.testng.Assert.assertTrue(Assert.java:42)
-<br/>at org.testng.Assert.assertTrue(Assert.java:52)
-<br/>at atlantamarket_PROD.GlobalSearch_ProductActions.TS004_VerifyAddToFavoriteOnProductDetailsPageTest(GlobalSearch_ProductActions.java:324)
-<br/>25 lines not shown
-</div>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">atlantamarket_PROD.GlobalSearch_ProductActions:TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest</h2>
-<div style="padding-left:3em">
-<p>Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;imc-vr--xxlarge&apos;]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/p[1] (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
-org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-<br/>at pageObjects.AtlantaMarket.ATLExhLineProdActionsPage.getExhProductNameOnSearchGrid(ATLExhLineProdActionsPage.java:239)
-<br/>at atlantamarket_PROD.GlobalSearch_ProductActions.TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest(GlobalSearch_ProductActions.java:85)
-<br/>25 lines not shown
-<p>Caused by Cannot locate an element using By.xpath: //div[@class=&apos;imc-vr--xxlarge&apos;]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/p[1]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: driver.version: unknown</p>
-org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
-<br/>at java.util.Optional.orElseThrow(Unknown Source)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-<br/>at pageObjects.AtlantaMarket.ATLExhLineProdActionsPage.getExhProductNameOnSearchGrid(ATLExhLineProdActionsPage.java:239)
-<br/>at atlantamarket_PROD.GlobalSearch_ProductActions.TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest(GlobalSearch_ProductActions.java:85)
-<br/>25 lines not shown
-</div>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">atlantamarket_PROD.GlobalSearch_ProductActions:TS002_VerifyProductAddToNewListOnProductDetailsPageTest</h2>
-<div style="padding-left:3em">
-<p>Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
-org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getSavedProductNameInList(ATLMarketPlannerPage.java:490)
-<br/>at atlantamarket_PROD.GlobalSearch_ProductActions.TS002_VerifyProductAddToNewListOnProductDetailsPageTest(GlobalSearch_ProductActions.java:181)
-<br/>25 lines not shown
-<p>Caused by Cannot locate an element using By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: driver.version: unknown</p>
-org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
-<br/>at java.util.Optional.orElseThrow(Unknown Source)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getSavedProductNameInList(ATLMarketPlannerPage.java:490)
-<br/>at atlantamarket_PROD.GlobalSearch_ProductActions.TS002_VerifyProductAddToNewListOnProductDetailsPageTest(GlobalSearch_ProductActions.java:181)
-<br/>25 lines not shown
-</div>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m5">atlantamarket_PROD.GlobalSearch_ProductActions:TS008_VerifyAddToFavoriteOnSearchResultsGridTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m6">atlantamarket_PROD.GlobalSearch_ProductActions:TS006_VerifyProductAddToExistingListOnSearchResultsGridTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m7">atlantamarket_PROD.GlobalSearch_ProductActions:TS003_VerifyProductAddToExistingListOnProductDetailsPageTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m8">atlantamarket_PROD.GlobalSearch_ProductActions:TS007_VerifyFullScreenViewerOnProductDetailsPageTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m9">atlantamarket_PROD.GlobalSearch_ProductActions:TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest</h2>
-
-<tr class="passedodd"><td rowspan="9">atlantamarket_PROD.GlobalSearch_LineActions</td><td><a href="#m1"><b>TS001_VerifyClickOnContactExhIconForLineTest</b>  </a></td><td class="numi">1</td><td>1663301645932</td><td class="numi">28489</td></tr><tr class="passedodd"><td><a href="#m2"><b>TS002_VerifyAddToFavoriteForLineTest</b>  </a></td><td class="numi">1</td><td>1663301674448</td><td class="numi">51808</td></tr><tr class="passedodd"><td><a href="#m3"><b>TS003_VerifyClickOnOrderOnJuniperMarketBtnForLineTest</b>  </a></td><td class="numi">1</td><td>1663301726258</td><td class="numi">64737</td></tr><tr class="passedodd"><td><a href="#m4"><b>TS004_VerifyAddToNewListForLineTest</b>  </a></td><td class="numi">1</td><td>1663301790997</td><td class="numi">65925</td></tr><tr class="passedodd"><td><a href="#m5"><b>TS005_VerifyAddToExistingListForLineTest</b>  </a></td><td class="numi">1</td><td>1663301856923</td><td class="numi">71999</td></tr><tr class="passedodd"><td><a href="#m6"><b>TS006_VerifyClickOnShownByExhibitorNameLinkForLineTest</b>  </a></td><td class="numi">1</td><td>1663301928926</td><td class="numi">36943</td></tr><tr class="passedodd"><td><a href="#m7"><b>TS007_VerifyClickOnLocationLinkForLineTest</b>  </a></td><td class="numi">1</td><td>1663301965870</td><td class="numi">37697</td></tr><tr class="passedodd"><td><a href="#m8"><b>TS008_VerifyClickOnMatchingProductsSeeAllLinkForLineTest</b>  </a></td><td class="numi">1</td><td>1663302003569</td><td class="numi">52373</td></tr><tr class="passedodd"><td><a href="#m9"><b>TS009_VerifyClickOnTotalProductsSeeAllLinkForLineTest</b>  </a></td><td class="numi">1</td><td>1663302055943</td><td class="numi">56079</td></tr>
-</table>
-<h1>RegressionParallelest</h1>
-<h2 id="m1">atlantamarket_PROD.GlobalSearch_LineActions:TS003_VerifyClickOnOrderOnJuniperMarketBtnForLineTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">atlantamarket_PROD.GlobalSearch_LineActions:TS004_VerifyAddToNewListForLineTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">atlantamarket_PROD.GlobalSearch_LineActions:TS002_VerifyAddToFavoriteForLineTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">atlantamarket_PROD.GlobalSearch_LineActions:TS006_VerifyClickOnShownByExhibitorNameLinkForLineTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m5">atlantamarket_PROD.GlobalSearch_LineActions:TS007_VerifyClickOnLocationLinkForLineTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m6">atlantamarket_PROD.GlobalSearch_LineActions:TS001_VerifyClickOnContactExhIconForLineTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m7">atlantamarket_PROD.GlobalSearch_LineActions:TS005_VerifyAddToExistingListForLineTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m8">atlantamarket_PROD.GlobalSearch_LineActions:TS009_VerifyClickOnTotalProductsSeeAllLinkForLineTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m9">atlantamarket_PROD.GlobalSearch_LineActions:TS008_VerifyClickOnMatchingProductsSeeAllLinkForLineTest</h2>
-
+<h1>RegressionTest</h1>
+<h2 id="m1">atlantamarket_UAT.MarketPlanner:TS052_VerifyMarketPlannerAddEventsToFav</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

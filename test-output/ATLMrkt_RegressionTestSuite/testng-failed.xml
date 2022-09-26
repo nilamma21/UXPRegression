@@ -4,6 +4,18 @@
   <test name="RegressionParallelest(failed)">
     <classes>
 
+      <class name="atlantamarket_PROD.GlobalSearch_SearchFor">
+        <methods>
+          <include name="TS009_VerifyEventsSearchFunctionalityInGlobalSearchTest"/>
+          <include name="TS011_VerifyShowSpecialsOverviewInGlobalSearchTest"/>
+          <include name="TS004_VerifyCatalogsOverviewInGlobalSearchTest"/>
+          <include name="TS010_VerifyEventsFiltersFunctionalityInGlobalSearchTest"/>
+          <include name="initialize"/>
+          <include name="TS008_VerifyEventsOverviewInGlobalSearchTest"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
+
+
       <class name="atlantamarket_PROD.GlobalSearch_ProductActions">
         <methods>
           <include name="tearDown"/>
@@ -23,6 +35,7 @@
           <include name="initialize"/>
         </methods>
       </class> <!-- atlantamarket_PROD.GlobalSearch_LineActions -->
+
 
     </classes>
   </test> <!-- RegressionParallelest(failed) -->

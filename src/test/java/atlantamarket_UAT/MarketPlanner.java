@@ -70,8 +70,8 @@ public class MarketPlanner extends base {
 
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
-		driver.get(prop.getProperty("atlmrkturl_uat"));
-
+		//driver.get(prop.getProperty("atlmrkturl_uat"));
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 		// lap.getIUnderstandBtn().click();
 		utl.verifyMPLoginFunctionality();
 		Thread.sleep(8000);
@@ -3115,6 +3115,55 @@ Thread.sleep(5000);
 		Assert.assertTrue(atlmppge.getmpnewgrpbtn().isDisplayed());
 		System.out.println("List details are displayed properly.");
 		
+	}
+
+	@Test(priority = 52)
+	public void TS052_VerifyMarketPlannerAddEventsToFav() throws InterruptedException, IOException {
+
+		// The purpose of this test case to verify:-
+		// UXP-T233: Market Planner: Lists- Favorites- Add an Event to Favorites using 'Favorite' icon in Event actions
+		
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+
+		atlgs = new ATLGlobalSearchPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		atlmppge.getATLAttendTab().click();
+		atlmppge.getATLAttendTabEventMenu().click();
+		atlmppge.getATLAttendTabEventBtn().click();
+		atlmppge.getATLExhibitorEvent().click();
+		atlmppge.getATLIMCEvent().click();
+	}
+	@Test(priority = 53)
+	public void TS053_VerifyMarketPlannerAllSavedEventsAndSemninar() throws InterruptedException, IOException {
+
+		// The purpose of this test case to verify:-
+		// UXP-T268: Market Planner: Lists- All Saved Events and Seminars
+		
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+
+		atlgs = new ATLGlobalSearchPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		atlmppge.getATLAttendTab().click();
+		atlmppge.getATLAttendTabEventMenu().click();
+		atlmppge.getATLAttendTabEventBtn().click();
+		atlmppge.getATLExhibitorEvent().click();
+		atlmppge.getATLIMCEvent().click();
 	}
 	
 	@AfterClass
