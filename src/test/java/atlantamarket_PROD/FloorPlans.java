@@ -308,7 +308,7 @@ public class FloorPlans extends base {
 			expectedSortedList.add(we.getText().toLowerCase());
 		}
 		//Thread.sleep(25000);
-		//System.out.println("Expected sorted Exhibitor List : "+expectedSortedList);
+		System.out.println("Expected sorted Exhibitor List : "+expectedSortedList);
 		//Verify Exhibitor List is Sorted or not
 		Assert.assertEquals(sortedList, expectedSortedList, "Exhibitor List Should be sorted");
 
@@ -464,7 +464,7 @@ public class FloorPlans extends base {
 		atlflpp.getatlexhibitorsearch().sendKeys(prop.getProperty("floorplanexhibitorseacrch"));
 
 		atlflpp.getatlserachexhibitorbtn().click();
-		Thread.sleep(8000);
+		Thread.sleep(12000);
 		Assert.assertTrue(atlflpp.getverifyexhibitor().getText().contains(prop.getProperty("floorplanexhibitorseacrch")));
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
