@@ -307,7 +307,7 @@ public class FloorPlans extends base {
 		for(WebElement we:elementList){
 			expectedSortedList.add(we.getText().toLowerCase());
 		}
-		//Thread.sleep(25000);
+		Thread.sleep(25000);
 		System.out.println("Expected sorted Exhibitor List : "+expectedSortedList);
 		//Verify Exhibitor List is Sorted or not
 		Assert.assertEquals(sortedList, expectedSortedList, "Exhibitor List Should be sorted");
