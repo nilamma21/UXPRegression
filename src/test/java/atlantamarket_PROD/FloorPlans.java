@@ -456,7 +456,7 @@ public class FloorPlans extends base {
 		atlflpp.getATLBuildingFloor().click();
 
 		utl.scrollToElement(atlflpp.getscrollexhibitorsection());
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		Assert.assertTrue(atlflpp.getatlexhibitorsection().isDisplayed());
 
 		atlflpp.getatlexhibitorsearch().click();
