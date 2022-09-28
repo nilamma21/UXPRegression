@@ -65,7 +65,8 @@ public class ATLFloorPlansPage {
 	By atlExhSearchField = By.xpath("(//div[@class='imc-searchform--row'])[2]/form[1]/div[1]/input[1]"); //Locator for Exh Search filed
 	By atlExhSearchFieldBtn = By.xpath("(//div[@class='imc-searchform--row'])[2]/form[1]/button[2]"); //Locator for Exh Search filed Btn
 	By noresultsforjuniperlinesmsg = By.xpath("//p[contains(text(),'Sorry, no results found.')]"); //Locator for No results found msg for Lines on Junipermarket filter
-	
+	By exhibitedonfloormsg = By.xpath("//span[contains(text(),'Exhibited on this floor:')]");
+
 	public ATLFloorPlansPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
@@ -125,7 +126,7 @@ public class ATLFloorPlansPage {
 
 	public WebElement getATLSelectBox() {
 		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlSelectBox));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitedonfloormsg));
 		return driver.findElement(atlSelectBox);
 	}
 
@@ -230,7 +231,7 @@ public class ATLFloorPlansPage {
 	}
 	public WebElement getatlexhibitorsearch() {
 		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlexhibitorsearch));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitedonfloormsg));
 		return driver.findElement(atlexhibitorsearch);
 	}
 	public WebElement getatlserachexhibitorbtn() {
@@ -315,7 +316,11 @@ public class ATLFloorPlansPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmflooriconoverlay_lvmUAT));
 		return driver.findElement(lvmflooriconoverlay_lvmUAT);
 	}
-	
+	public WebElement getExhibitedOnFloorMsg() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitedonfloormsg));
+		return driver.findElement(exhibitedonfloormsg);
+	}
 	
 }
 
