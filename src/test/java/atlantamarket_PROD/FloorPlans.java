@@ -627,14 +627,12 @@ public class FloorPlans extends base {
 		atlflpp.getATLBuildingFloor().click();
 
 		// Scroll Down to Exhibitor list
-		utl.scrollToElement(atlflpp.getATLSelectBox());
+		utl.scrollToElement(atlflpp.getatlserachexhibitorbtn());
 
 		// 1st Exhibitor Name
 		String exhibitorName = atlflpp.getATLExhibitorName().getText();
 		System.out.println("Exhibitor Name : " + exhibitorName);
-		// Click on More option 3dots
-		atlflpp.getATLMoreOptions().click();
-
+		
 		// Click on Favorite icon of 1st exhibitor
 		atlflpp.getATLAddFev().click();
 
