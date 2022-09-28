@@ -111,7 +111,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 				break;
 			}
 		}
-		driver.get(prop.getProperty("atlmrkturl_prod"));
+		//driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
 
 	@Test(priority = 2)
@@ -127,6 +127,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
@@ -162,7 +164,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 				break;
 			}
 		}
-		driver.get(prop.getProperty("atlmrkturl_prod"));
+		//driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
 
 	@Test(priority = 3)
@@ -178,6 +180,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
@@ -235,8 +239,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 				break;
 			}
 		}
-		driver.get(prop.getProperty("atlmrkturl_prod"));
-
+		//driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
 
 	@Test(priority = 4)
@@ -252,6 +255,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		lp = new ATLLoginPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
@@ -335,7 +340,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		Assert.assertTrue(atlleftpane.getEXPIndustrialStyleOnProfile().isDisplayed());
 		driver.close();
 		driver.switchTo().window(tabs.get(0));
-		driver.get(prop.getProperty("atlmrkturl_prod"));
+		//driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
 
 	@Test(priority = 5)
@@ -351,6 +356,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
@@ -386,7 +393,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 				break;
 			}
 		}
-		driver.get(prop.getProperty("atlmrkturl_prod"));
+		//driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
 
 	@Test(priority = 6)
@@ -402,6 +409,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
@@ -431,7 +440,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 				break;
 			}
 		}
-		driver.get(prop.getProperty("atlmrkturl_prod"));
+		//driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
 
 	@Test(priority =7)
@@ -447,6 +456,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
@@ -482,7 +493,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 				break;
 			}
 		}
-		driver.get(prop.getProperty("atlmrkturl_prod"));
+		//driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
 
 	@Test(priority =8)
@@ -498,6 +509,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
@@ -533,7 +546,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 				break;
 			}
 		}
-		driver.get(prop.getProperty("atlmrkturl_prod"));
+		//driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
 
 	@Test(priority = 9)
@@ -549,6 +562,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
@@ -602,7 +617,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 				break;
 			}
 		}
-		driver.get(prop.getProperty("atlmrkturl_prod"));
+		//driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
 
 	@Test(priority =10)
@@ -618,6 +633,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
@@ -653,7 +670,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 				break;
 			}
 		}
-		driver.get(prop.getProperty("atlmrkturl_prod"));
+		//driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
 
 	@Test(priority =11)
@@ -669,6 +686,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
