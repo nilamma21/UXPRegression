@@ -412,8 +412,9 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys("Anne");
 		atlgs.getATLSearchButton().click();
+		Thread.sleep(6000);
 
 		//Click on Product Categories expand btn
 		atlleftpane.getATLProdCatgExpandBtn().click();
@@ -440,7 +441,30 @@ public class GlobalSearch_LeftPaneFilters extends base {
 				break;
 			}
 		}
-		//driver.get(prop.getProperty("atlmrkturl_prod"));
+		driver.navigate().back();
+		Thread.sleep(5000);
+
+		//Verify the selected Product Category on Product details page
+		utl.scrollToElement(atlexhact.getProductForMultipleCatg());
+		// Hovering on 1st Product
+		Actions actions = new Actions(driver);
+		actions.moveToElement(atlexhact.getProductForMultipleCatg()).perform();
+		// To mouseover on See Details btn
+		actions.moveToElement(atlexhact.getThirdExhProdSeeDetailsBtn()).perform();
+		// Click on See Details button
+		actions.click().perform();
+
+		//Scroll till Product Categories section
+		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
+		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
+
+		for (int j = 0; j < prodcatgitemlist.size(); j++) {
+			if(atlexhdgshw.getATLProductCategTable().isDisplayed()) {
+				//System.out.println(prodcatgitemlist.get(j).getText());
+				Assert.assertTrue(prodcatgitemlist.get(j).getText().contains(expectedprodcatg));
+				break;
+			}
+		}
 	}
 
 	@Test(priority =7)
