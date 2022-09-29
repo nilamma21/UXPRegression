@@ -8,13 +8,12 @@
 
 	<test thread-count="5" name="RegressionParallelest">
 		<classes>
-			<class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters" />
-			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
+			 <class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters" />
+			 <class name="atlantamarket_PROD.GlobalSearch_SuggestionList" /> 
 			<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
-			<class name="atlantamarket_PROD.MarketPlanner" />
 			<class name="atlantamarket_PROD.FloorPlans" />
 		</classes>
 	</test>
