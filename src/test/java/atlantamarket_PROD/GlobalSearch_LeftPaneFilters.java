@@ -562,12 +562,13 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys("Anne");
 		atlgs.getATLSearchButton().click();
-
+		Thread.sleep(6000);
+		
 		//Click on Product Categories expand btn
 		atlleftpane.getATLProdCatgExpandBtn().click();
 
@@ -579,8 +580,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		Thread.sleep(8000);
 
 		//Verify the selected Product Categories on Exhibitor Digital Showroom page
-		//Select 2nd Exhibitor from Search results grid
-		atlleftpane.getATLSecondExhibitor().click();
+		//Select 1st Exhibitor from Search results grid
+		atlleftpane.getATLexhibitor().click();
 
 		//Scroll till Product Categories section
 		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
