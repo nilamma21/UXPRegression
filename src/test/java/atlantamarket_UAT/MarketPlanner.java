@@ -341,7 +341,7 @@ public class MarketPlanner extends base {
 
 	}
 
-	@Test(priority = 07)
+	//@Test(priority = 07)
 	public void TS007_VerifyNewGroupBtnFunctionalityForListsTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T238: Market Planner: Lists: Lists: New Group button functionality
