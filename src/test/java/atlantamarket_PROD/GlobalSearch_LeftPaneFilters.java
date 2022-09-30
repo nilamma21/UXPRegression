@@ -536,7 +536,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys("Anne");
 		atlgs.getATLSearchButton().click();
 
 		//Click on Product Categories expand btn
