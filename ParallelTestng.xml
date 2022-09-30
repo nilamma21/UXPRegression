@@ -12,7 +12,6 @@
 			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
 			<!-- <class name="atlantamarket_PROD.GlobalSearch_SearchFor" /> -->
 			<class name="atlantamarket_PROD.FloorPlans" />
-			<class name="atlantamarket_UAT.MarketPlanner" />
 		</classes>
 	</test>
 </suite>
