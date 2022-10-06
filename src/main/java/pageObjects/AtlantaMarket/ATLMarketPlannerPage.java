@@ -197,7 +197,7 @@ public class ATLMarketPlannerPage {
 	
 	By myinfotab = By.xpath("//div[@class = 'imc-mp-toolbar imc-breakpoint-display--hide-mobile']/a[3]"); //Locator for My Info tab
 	By myinfoeditprofile = By.xpath("//div[@class = 'imc-gallery__item']/a[1]"); //Locator Edit Profile button under My Info
-	By myinfonamepencil = By.xpath("//div[class = 'imc-formfield imc-content']/div[1]/p[2]/span[1]"); //Locator for Pencil for Name field 
+	By myinfonamepencil = By.xpath("//div[@class = 'imc-formfield imc-content']/div[1]/p[2]/span[1]"); //Locator for Pencil for Name field 
 	By myinfofirstname = By.xpath("//input[@name = 'firstName']"); //Locator for First Name text box
 	By myinfolastname = By.xpath("//input[@name = 'lastName']"); //Locator for Last Name text box
 	By myinfodiscardbtn = By.xpath("//div[@class = 'imc-profile']/form[1]/div[2]/button[1]"); //Locator for Discard button
@@ -212,7 +212,7 @@ public class ATLMarketPlannerPage {
 	By myinfodiscard2btn = By.xpath("//div[@class = 'imc-profile']/form[1]/div[2]/button[1]"); //Locator for Discard button for Company Name
 	By myinfosave2btn = By.xpath("//div[@class = 'imc-profile']/form[1]/div[2]/input[1]"); //Locator for Discard button for Company Name
 	By verifymyinfopage = By.xpath("//div[@class = 'imc-gallery__item imc-vertical-tabs-content']"); //Locator for my info verification
-	By verifymyinfoname = By.xpath("//div[@class = 'imc-formfield imc-content']/div[[1]/p[2]"); //Locator for Name 
+	By verifymyinfoname = By.xpath("//div[@class = 'imc-formfield imc-content']/div[1]/p[2]"); //Locator for Name 
 	By myinfonewemail = By.xpath("//div[@class = 'imc-vr--large imc-vr--smallmedium-desktop']/div[1]"); //Locator for newly added email address
 	By myinfoverifycompanyname = By.xpath("//div[@class = 'imc-formfield imc-content ']/p[1]"); //Locator for newly added Company Name
 	By myinfoverifyeditprofile = By.xpath("//div[@class = 'imc-profile']"); //Locator for edit profile verification
@@ -515,6 +515,8 @@ public class ATLMarketPlannerPage {
 		return driver.findElement(atlmpexistinglistname);
 	}
 	public WebElement getATLMPAddToSelectedBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atladdtoseselectedbtn));
 		return driver.findElement(atladdtoseselectedbtn);
 	}
 	

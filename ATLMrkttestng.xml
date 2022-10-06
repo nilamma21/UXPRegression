@@ -59,7 +59,7 @@
 		<classes>
 			<class name="atlantamarket_UAT.MarketPlanner"/>
 			<methods>
-			<!-- <include name="TS052_VerifyMarketPlannerAddEventsToFav"/> -->
+			<include name="TS047_VerifyMarketPlanneMyInfoEditProfile"/>
 			</methods>
 		</classes>
 
