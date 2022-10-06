@@ -1,53 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<!-- 
-<suite name="ATLMrkt_RegressionTestSuite">
 
+<suite name="ATLMrkt_RegressionTestSuite">
 	<listners>
 		<listner class-name="atlantamarket_PROD.TestListeners" />
 	</listners>
 
 	<test thread-count="5" name="RegressionParallelest">
 		<classes>
-
-			<class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters" />
-
-
-			<class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters" />
-
-			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
-	 		<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
+			 <class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters" />
+			 <class name="atlantamarket_PROD.GlobalSearch_SuggestionList" /> 
+			<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
-			<class name="atlantamarket_PROD.MarketPlanner" />
 			<class name="atlantamarket_PROD.FloorPlans" />
-			 <class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
-			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
-			<class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters" />
-			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
-	 		<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
-			<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
-			<class name="atlantamarket_PROD.MarketPlanner" />
-
-			<class name="atlantamarket_PROD.FloorPlans" />
-			
-			<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
-			<methods>
-				
-				<include name="TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest"/>
-						
-			</methods>
-			
-
-			<class name="atlantamarket_PROD.FloorPlans" />
-				 <methods>
-					<include name="TS002_VerifyAddToFavoriteForLineTest" />
-				</methods>
-
-
 		</classes>
 	</test>
+
 </suite> -->
 
 
@@ -64,69 +34,11 @@
 		</classes>
 
 	</test> 
+
+
 </suite>
 
-
- 
-
-
-
-<!-- 
-<suite name="ATLMrkt_RegressionTestSuite">
-
-  <suite name="ATLMrkt_RegressionTestSuite">
-
-	<listners>
-		<listner class-name="atlantamarket_UAT.TestListeners"/>
-	</listners>
-	<test thread-count="5" name="RegressionTest">
-		<classes>
-			<class name="atlantamarket_UAT.MarketPlanner"/>
-			<methods>
-				
-				<include name="TS024_VerifyFilterByOptionsFunctionalityForListTest"/>
-				 <include name="TS026_VerifyDuplicateLinkFunctionalityForListTest"/>  
-				 <include name="TS028_VerifyListDisplayControlsFunctionalityTest"/>
-				<include name="TS031_VerifyMarketPlannerListsElementMoreOoptionsCopyeTest"/>
-				<include name="TS032_VerifyMarketPlannerListsElementMoreOoptionsMoveTest"/>
-				<include name="TS033_VerifyMarketPlannerListsElementMoreOoptionsDeleteTest"/>
-				<include name="TS034_VerifyMarketPlannerListManagementAddNoteTest"/>
-				<include name="TS035_VerifyMarketPlannerEditListCustomItemTest"/>
-				
-				
-				
-				<include name="TS040_VerifyMarketSavedSearchesfunctionalityTest"/> 
-				<include name="TS041_VerifyMarketSavedSearchesDeletefunctionalityTest"/>
-				
-				<include name="TS043_VerifyMarketPlannerListsElementMoreOoptionsAddToScheduleTest"/>
-				<include name="TS046_VerifyAddToListFunctionalityUsingQuickAddTest"/>
-				<include name="TS047_VerifyMarketPlanneMyInfoEditProfile"/>
-				<include name="TS038_VerifyMarketPlannerListsAllSavedProductsTest"/>
-				<include name="TS030_VerifyMarketPlannerListsElementMoreOoptionsOverviewTest"/>
-				
-				<include name="TS016_VerifyEditListFunctionalityForManageListTest"/>
-
-<include name="TS016_VerifyEditListFunctionalityForManageListTest"/>
-				
-				
-
-				
-				
-		
-<suite name="LVM_RegressionTestSuite">
-
-	<listners>
-		<listner class-name="lasvegasmarket_PROD.TestListeners" />
-	</listners>
-
-	<test thread-count="5" name="RegressionTest">
-		<classes>
-			<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
-			<class name="atlantamarket_PROD.FloorPlans" />
-			<class name="atlantamarket_PROD.MarketPlanner" />
-		</classes>
-	</test>
-
+<!-- <suite name="ATLMrkt_RegressionTestSuite">
 	<listners>
 		<listner class-name="atlantamarket_UAT.TestListeners" />
 	</listners>

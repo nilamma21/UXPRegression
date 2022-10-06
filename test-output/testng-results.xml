@@ -2,6 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
+
   <suite name="ATLMrkt_RegressionTestSuite" duration-ms="109869" started-at="2022-10-06T10:37:04Z" finished-at="2022-10-06T10:38:54Z">
     <groups>
     </groups>
@@ -21,5 +22,22 @@
         </test-method> <!-- tearDown -->
       </class> <!-- atlantamarket_UAT.MarketPlanner -->
     </test> <!-- RegressionTest -->
+
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="196602" started-at="2022-09-29T10:53:44Z" finished-at="2022-09-29T10:57:01Z">
+    <groups>
+    </groups>
+    <test name="RegressionParallelest" duration-ms="196602" started-at="2022-09-29T10:53:44Z" finished-at="2022-09-29T10:57:01Z">
+      <class name="atlantamarket_PROD.FloorPlans">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.FloorPlans@e25b2fe]" name="initialize" is-config="true" duration-ms="138832" started-at="2022-09-29T16:23:44Z" finished-at="2022-09-29T16:26:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest()[pri:0, instance:atlantamarket_PROD.FloorPlans@e25b2fe]" name="TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest" duration-ms="57661" started-at="2022-09-29T16:26:03Z" finished-at="2022-09-29T16:27:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest -->
+      </class> <!-- atlantamarket_PROD.FloorPlans -->
+    </test> <!-- RegressionParallelest -->
+
   </suite> <!-- ATLMrkt_RegressionTestSuite -->
 </testng-results>

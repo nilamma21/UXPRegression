@@ -110,7 +110,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 				break;
 			}
 		}
-		driver.get(prop.getProperty("atlmrkturl_prod"));
+		//driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
 
 	@Test(priority = 2)
@@ -126,6 +126,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
@@ -161,7 +163,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 				break;
 			}
 		}
-		driver.get(prop.getProperty("atlmrkturl_prod"));
+		//driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
 
 	@Test(priority = 3)
@@ -177,6 +179,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
@@ -234,7 +238,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 				break;
 			}
 		}
-		driver.get(prop.getProperty("atlmrkturl_prod"));
+		//driver.get(prop.getProperty("atlmrkturl_prod"));
 
 	}
 
@@ -251,6 +255,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		lp = new ATLLoginPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
@@ -334,7 +340,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		Assert.assertTrue(atlleftpane.getEXPIndustrialStyleOnProfile().isDisplayed());
 		driver.close();
 		driver.switchTo().window(tabs.get(0));
-		driver.get(prop.getProperty("atlmrkturl_prod"));
+		//driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
 
 	@Test(priority = 5)
@@ -350,6 +356,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
@@ -385,7 +393,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 				break;
 			}
 		}
-		driver.get(prop.getProperty("atlmrkturl_prod"));
+		//driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
 
 	@Test(priority = 6)
@@ -402,8 +410,11 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
+		driver.get(prop.getProperty("atlmrkturl_prod"));
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys("Anne");
 		atlgs.getATLSearchButton().click();
+		Thread.sleep(6000);
 
 		//Click on Product Categories expand btn
 		atlleftpane.getATLProdCatgExpandBtn().click();
@@ -418,153 +429,6 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//Verify the selected Product Categories on Exhibitor Digital Showroom page
 		//Select 1st Exhibitor from Search results grid
 		atlleftpane.getATLexhibitor().click();
-
-		//Scroll till Product Categories section
-		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
-		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
-
-		for (int i = 0; i < prodcatgitemlist.size(); i++) {
-			if(atlexhdgshw.getATLProductCategTable().isDisplayed()) {
-				//System.out.println(prodcatgitemlist.get(i).getText());
-				Assert.assertTrue(prodcatgitemlist.get(i).getText().contains(expectedprodcatg));
-				break;
-			}
-		}
-		driver.get(prop.getProperty("atlmrkturl_prod"));
-	}
-
-	@Test(priority =7)
-	public void TS007_VerifySelectionOfDecorativeAccessProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// T404: Selection Of Decorative Accessories Prod Catg From Left Pane Filters
-
-		atlgs = new ATLGlobalSearchPage(driver);
-		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		atlleftpane = new ATLLeftPaneFilters(driver);
-		atlexhact = new ATLExhLineProdActionsPage(driver);
-		utl = new Utility(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
-		atlgs.getATLSearchButton().click();
-
-		//Click on Product Categories expand btn
-		atlleftpane.getATLProdCatgExpandBtn().click();
-
-		utl.scrollToElement(atlleftpane.getATLDecorativeAccProdCatg());
-
-		//Select Decorative Accessories prod category
-		String expectedprodcatg = atlleftpane.getATLDecorativeAccProdCatg().getText();
-		atlleftpane.getATLDecorativeAccProdCatg().click();
-		Thread.sleep(8000);
-
-		//Verify the selected Product Categories on product details page
-		utl.scrollToElement(atlexhact.getExhibitorProduct());
-		// Hovering on 1st Product
-		Actions actions = new Actions(driver);
-		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
-		// To mouseover on See Details btn
-		actions.moveToElement(atlexhact.getProdSeeDetailsBtn()).perform();
-		// Click on See Details button
-		actions.click().perform();
-
-		//Scroll till Product Categories section
-		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
-		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
-
-		for (int j = 0; j < prodcatgitemlist.size(); j++) {
-			if(atlexhdgshw.getATLProductCategTable().isDisplayed()) {
-				System.out.println(prodcatgitemlist.get(j).getText());
-				Assert.assertTrue(prodcatgitemlist.get(j).getText().contains(expectedprodcatg));
-				break;
-			}
-		}
-		driver.get(prop.getProperty("atlmrkturl_prod"));
-	}
-
-	@Test(priority =8)
-	public void TS008_VerifySelectionOfGeneralGiftProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// T404: Selection Of General Gift Prod Catg From Left Pane Filters
-
-		atlgs = new ATLGlobalSearchPage(driver);
-		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		atlleftpane = new ATLLeftPaneFilters(driver);
-		atlexhact = new ATLExhLineProdActionsPage(driver);
-		utl = new Utility(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
-		atlgs.getATLSearchButton().click();
-
-		//Click on Product Categories expand btn
-		atlleftpane.getATLProdCatgExpandBtn().click();
-
-		utl.scrollToElement(atlleftpane.getATLGeneralGiftProdCatg());
-
-		//Select General Gift prod category
-		String expectedprodcatg = atlleftpane.getATLGeneralGiftProdCatg().getText();
-		atlleftpane.getATLGeneralGiftProdCatg().click();
-		Thread.sleep(8000);
-
-		//Verify the selected Product Categories on product details page
-		utl.scrollToElement(atlexhact.getExhibitorProduct());
-		// Hovering on 1st Product
-		Actions actions = new Actions(driver);
-		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
-		// To mouseover on See Details btn
-		actions.moveToElement(atlexhact.getProdSeeDetailsBtn()).perform();
-		// Click on See Details button
-		actions.click().perform();
-
-		//Scroll till Product Categories section
-		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
-		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
-
-		for (int j = 0; j < prodcatgitemlist.size(); j++) {
-			if(atlexhdgshw.getATLProductCategTable().isDisplayed()) {
-				System.out.println(prodcatgitemlist.get(j).getText());
-				Assert.assertTrue(prodcatgitemlist.get(j).getText().contains(expectedprodcatg));
-				break;
-			}
-		}
-		driver.get(prop.getProperty("atlmrkturl_prod"));
-	}
-
-	@Test(priority = 9)
-	public void TS009_VerifySelectionOfFashionAccProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// T404: Selection Of Fashion Accessories/Jewelry Prod Catg From Left Pane Filters
-
-		atlgs = new ATLGlobalSearchPage(driver);
-		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		atlleftpane = new ATLLeftPaneFilters(driver);
-		atlexhact = new ATLExhLineProdActionsPage(driver);
-		utl = new Utility(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
-		atlgs.getATLSearchButton().click();
-
-		//Click on Product Categories expand btn
-		atlleftpane.getATLProdCatgExpandBtn().click();
-
-		utl.scrollToElement(atlleftpane.getATLFashionAccProdCatg());
-
-		//Select Fashion Accessories/Jewelry prod category
-		String expectedprodcatg = atlleftpane.getATLFashionAccProdCatg().getText();
-		atlleftpane.getATLFashionAccProdCatg().click();
-		Thread.sleep(8000);
-
-		//Verify the selected Product Categories on Exhibitor Digital Showroom page
-		//Select 2nd Exhibitor from Search results grid
-		atlleftpane.getATLSecondExhibitor().click();
 
 		//Scroll till Product Categories section
 		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
@@ -601,7 +465,184 @@ public class GlobalSearch_LeftPaneFilters extends base {
 				break;
 			}
 		}
+	}
+
+	@Test(priority =7)
+	public void TS007_VerifySelectionOfDecorativeAccessProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T404: Selection Of Decorative Accessories Prod Catg From Left Pane Filters
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		atlleftpane = new ATLLeftPaneFilters(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		utl = new Utility(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
+		atlgs.getATLSearchButton().click();
+
+		//Click on Product Categories expand btn
+		atlleftpane.getATLProdCatgExpandBtn().click();
+
+		utl.scrollToElement(atlleftpane.getATLDecorativeAccProdCatg());
+
+		//Select Decorative Accessories prod category
+		String expectedprodcatg = atlleftpane.getATLDecorativeAccProdCatg().getText();
+		atlleftpane.getATLDecorativeAccProdCatg().click();
+		Thread.sleep(8000);
+
+		//Verify the selected Product Categories on product details page
+		utl.scrollToElement(atlexhact.getExhibitorProduct());
+		// Hovering on 1st Product
+		Actions actions = new Actions(driver);
+		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
+		// To mouseover on See Details btn
+		actions.moveToElement(atlexhact.getProdSeeDetailsBtn()).perform();
+		// Click on See Details button
+		actions.click().perform();
+
+		//Scroll till Product Categories section
+		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
+		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
+
+		for (int j = 0; j < prodcatgitemlist.size(); j++) {
+			if(atlexhdgshw.getATLProductCategTable().isDisplayed()) {
+				System.out.println(prodcatgitemlist.get(j).getText());
+				Assert.assertTrue(prodcatgitemlist.get(j).getText().contains(expectedprodcatg));
+				break;
+			}
+		}
+		//driver.get(prop.getProperty("atlmrkturl_prod"));
+	}
+
+	@Test(priority =8)
+	public void TS008_VerifySelectionOfGeneralGiftProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T404: Selection Of General Gift Prod Catg From Left Pane Filters
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		atlleftpane = new ATLLeftPaneFilters(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		utl = new Utility(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		driver.get(prop.getProperty("atlmrkturl_prod"));
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys("Anne");
+		atlgs.getATLSearchButton().click();
+
+		//Click on Product Categories expand btn
+		atlleftpane.getATLProdCatgExpandBtn().click();
+
+		utl.scrollToElement(atlleftpane.getATLGeneralGiftProdCatg());
+
+		//Select General Gift prod category
+		String expectedprodcatg = atlleftpane.getATLGeneralGiftProdCatg().getText();
+		atlleftpane.getATLGeneralGiftProdCatg().click();
+		Thread.sleep(8000);
+
+		//Verify the selected Product Categories on product details page
+		utl.scrollToElement(atlexhact.getExhibitorProduct());
+		// Hovering on 1st Product
+		Actions actions = new Actions(driver);
+		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
+		// To mouseover on See Details btn
+		actions.moveToElement(atlexhact.getProdSeeDetailsBtn()).perform();
+		// Click on See Details button
+		actions.click().perform();
+
+		//Scroll till Product Categories section
+		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
+		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
+
+		for (int j = 0; j < prodcatgitemlist.size(); j++) {
+			if(atlexhdgshw.getATLProductCategTable().isDisplayed()) {
+				System.out.println(prodcatgitemlist.get(j).getText());
+				Assert.assertTrue(prodcatgitemlist.get(j).getText().contains(expectedprodcatg));
+				break;
+			}
+		}
+		//driver.get(prop.getProperty("atlmrkturl_prod"));
+	}
+
+	@Test(priority = 9)
+	public void TS009_VerifySelectionOfFashionAccProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T404: Selection Of Fashion Accessories/Jewelry Prod Catg From Left Pane Filters
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		atlleftpane = new ATLLeftPaneFilters(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		utl = new Utility(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		driver.get(prop.getProperty("atlmrkturl_prod"));
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys("Anne");
+		atlgs.getATLSearchButton().click();
+		Thread.sleep(6000);
+
+		//Click on Product Categories expand btn
+		atlleftpane.getATLProdCatgExpandBtn().click();
+
+		utl.scrollToElement(atlleftpane.getATLFashionAccProdCatg());
+
+		//Select Fashion Accessories/Jewelry prod category
+		String expectedprodcatg = atlleftpane.getATLFashionAccProdCatg().getText();
+		atlleftpane.getATLFashionAccProdCatg().click();
+		Thread.sleep(8000);
+
+		//Verify the selected Product Categories on Exhibitor Digital Showroom page
+		//Select 1st Exhibitor from Search results grid
+		atlleftpane.getATLexhibitor().click();
+
+		//Scroll till Product Categories section
+		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
+		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
+
+		for (int i = 0; i < prodcatgitemlist.size(); i++) {
+			if(atlexhdgshw.getATLProductCategTable().isDisplayed()) {
+				//System.out.println(prodcatgitemlist.get(i).getText());
+				Assert.assertTrue(prodcatgitemlist.get(i).getText().contains(expectedprodcatg));
+				break;
+			}
+		}
+		driver.navigate().back();
+		Thread.sleep(5000);
+
+		//Verify the selected Product Category on Product details page
+		utl.scrollToElement(atlexhact.getProductForMultipleCatg());
+		// Hovering on 1st Product
+		Actions actions = new Actions(driver);
+		actions.moveToElement(atlexhact.getProductForMultipleCatg()).perform();
+		// To mouseover on See Details btn
+		actions.moveToElement(atlexhact.getThirdExhProdSeeDetailsBtn()).perform();
+		// Click on See Details button
+		actions.click().perform();
+
+		//Scroll till Product Categories section
+		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
+		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
+
+		for (int j = 0; j < prodcatgitemlist.size(); j++) {
+			if(atlexhdgshw.getATLProductCategTable().isDisplayed()) {
+				//System.out.println(prodcatgitemlist.get(j).getText());
+				Assert.assertTrue(prodcatgitemlist.get(j).getText().contains(expectedprodcatg));
+				break;
+			}
+		}
+		//driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
 
 	@Test(priority =10)
@@ -617,6 +658,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
@@ -652,7 +695,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 				break;
 			}
 		}
-		driver.get(prop.getProperty("atlmrkturl_prod"));
+		//driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
 
 	@Test(priority =11)
@@ -668,6 +711,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
