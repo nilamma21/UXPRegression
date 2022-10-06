@@ -2906,7 +2906,6 @@ Thread.sleep(5000);
 		// The purpose of this test case to verify:-
 		// UXP-T270: Market Planner: My Info: Edit Profile
 		
-
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
 		utl = new Utility(driver);
