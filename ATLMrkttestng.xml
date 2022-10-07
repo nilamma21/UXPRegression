@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="ATLMrkt_RegressionTestSuite">
+<!-- <suite name="ATLMrkt_RegressionTestSuite">
 	<listners>
 		<listner class-name="atlantamarket_PROD.TestListeners" />
 	</listners>
@@ -29,13 +29,10 @@
 		<classes>
 			<class name="atlantamarket_UAT.MarketPlanner"/>
 			<methods>
-			<include name="TS047_VerifyMarketPlanneMyInfoEditProfile"/>
+			<include name="TS020_VerifyAddToFavoriteFunctionalityForExhibitorTest"/>
 			</methods>
 		</classes>
-
 	</test> 
-
-
 </suite>
 
 <!-- <suite name="ATLMrkt_RegressionTestSuite">
