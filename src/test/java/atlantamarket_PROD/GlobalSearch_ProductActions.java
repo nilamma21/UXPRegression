@@ -230,9 +230,13 @@ public class GlobalSearch_ProductActions extends base {
 		// Select Existing list name
 		atlmppge.getATLMPExistingListName().click();
 
+	
 		// Scroll till Add to Selected button
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",
-				atlmppge.getATLMPAddToSelectedBtn());
+//		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",
+//				atlmppge.getATLMPAddToSelectedBtn());
+		
+		utl.scrollToElement(atlmppge.getATLMPAddToSelectedBtn());
+		Thread.sleep(5000);
 		atlmppge.getATLMPAddToSelectedBtn().click();
 
 		// Click on Go to Market Planner button

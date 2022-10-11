@@ -78,7 +78,7 @@ public class Utility extends base {
 		
 		Select selectAMC = new Select(atlmppge.getselectChannel());
 		selectAMC.selectByVisibleText(itemName);
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 		Assert.assertTrue(driver.getCurrentUrl().contains(channelURL +"Market-Planner"));
 		System.out.println("Verified "+itemName+"channel page");
 
