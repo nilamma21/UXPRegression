@@ -68,6 +68,7 @@ public class ATLExhLineProdActionsPage extends base{
 	By eventdetailstag = By.xpath("//a[contains(@class,'imc-eventdetail--tag')]"); //Locator for tag on Event Details
 	By eventcardtag = By.xpath("//ul[@class='imc-cardtags imc-content--light imc-eventcard__tag']/li/button"); //Locator for Event Card tag
 	
+	By catalogstabPROD = By.xpath("//div[@id='Catalogs']"); //Locator for Catalogs tab on Exhibitor products page
 	//img[@class='imc-saved-exhibitors__img-grid']
 	
 	public ATLExhLineProdActionsPage(WebDriver driver) {
@@ -75,6 +76,11 @@ public class ATLExhLineProdActionsPage extends base{
 		this.driver = driver; 			
 	} 
 
+	public WebElement getcatalogstabPROD() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(catalogstabPROD));
+		return driver.findElement(catalogstabPROD);
+	}
 	public WebElement getExhibitorName() {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitorname));

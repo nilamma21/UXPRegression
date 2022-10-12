@@ -3,14 +3,22 @@
 <suite name="Failed suite [LVM_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-      <class name="lasvegasmarket_PROD.FloorPlans">
+      <class name="atlantamarket_PROD.GlobalSearch_SearchFor">
         <methods>
-          <include name="tearDown"/>
-          <include name="TS011_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest"/>
+          <include name="TS009_VerifyEventsSearchFunctionalityInGlobalSearchTest"/>
+          <include name="TS005_VerifyArticlesOverviewInGlobalSearchTest"/>
+          <include name="TS011_VerifyShowSpecialsOverviewInGlobalSearchTest"/>
+          <include name="TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest"/>
+          <include name="TS004_VerifyCatalogsOverviewInGlobalSearchTest"/>
+          <include name="TS010_VerifyEventsFiltersFunctionalityInGlobalSearchTest"/>
+          <include name="TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest"/>
           <include name="initialize"/>
-          <include name="TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest"/>
+          <include name="TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest"/>
+          <include name="TS008_VerifyEventsOverviewInGlobalSearchTest"/>
+          <include name="TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest"/>
+          <include name="TS001_VerifyInformationTabInGlobalSearchTest"/>
         </methods>
-      </class> <!-- lasvegasmarket_PROD.FloorPlans -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
