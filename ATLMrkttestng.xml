@@ -27,9 +27,12 @@
 	</listners>
 	<test thread-count="5" name="RegressionTest">
 		<classes>
-			<class name="atlantamarket_UAT.MarketPlanner"/>
+			<class name="atlantamarket_UAT.GlobalSearch_SearchFor"/>
 			<methods>
-			<include name="TS020_VerifyAddToFavoriteFunctionalityForExhibitorTest"/>
+			<!-- <include name="TS001_VerifyInformationTabInGlobalSearchTest"/>
+			<include name="TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest"/>-->
+			 <include name="TS011_VerifyShowSpecialsOverviewInGlobalSearchTest"/> 
+			
 			</methods>
 		</classes>
 	</test> 

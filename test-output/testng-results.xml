@@ -2,24 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="119817" started-at="2022-10-07T11:06:57Z" finished-at="2022-10-07T11:08:57Z">
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="57054" started-at="2022-10-12T08:21:43Z" finished-at="2022-10-12T08:22:40Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="119817" started-at="2022-10-07T11:06:57Z" finished-at="2022-10-07T11:08:57Z">
-      <class name="atlantamarket_UAT.MarketPlanner">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.MarketPlanner@13deb50e]" name="initialize" is-config="true" duration-ms="87761" started-at="2022-10-07T16:36:57Z" finished-at="2022-10-07T16:38:25Z">
+    <test name="RegressionTest" duration-ms="57054" started-at="2022-10-12T08:21:43Z" finished-at="2022-10-12T08:22:40Z">
+      <class name="atlantamarket_UAT.GlobalSearch_SearchFor">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.GlobalSearch_SearchFor@464bee09]" name="initialize" is-config="true" duration-ms="26859" started-at="2022-10-12T13:51:43Z" finished-at="2022-10-12T13:52:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS020_VerifyAddToFavoriteFunctionalityForExhibitorTest()[pri:0, instance:atlantamarket_UAT.MarketPlanner@13deb50e]" name="TS020_VerifyAddToFavoriteFunctionalityForExhibitorTest" duration-ms="31983" started-at="2022-10-07T16:38:25Z" finished-at="2022-10-07T16:38:57Z">
+        <test-method status="PASS" signature="TS011_VerifyShowSpecialsOverviewInGlobalSearchTest()[pri:0, instance:atlantamarket_UAT.GlobalSearch_SearchFor@464bee09]" name="TS011_VerifyShowSpecialsOverviewInGlobalSearchTest" duration-ms="30129" started-at="2022-10-12T13:52:10Z" finished-at="2022-10-12T13:52:40Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS020_VerifyAddToFavoriteFunctionalityForExhibitorTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.MarketPlanner@13deb50e]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-10-07T16:38:57Z" finished-at="2022-10-07T16:38:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- atlantamarket_UAT.MarketPlanner -->
+        </test-method> <!-- TS011_VerifyShowSpecialsOverviewInGlobalSearchTest -->
+      </class> <!-- atlantamarket_UAT.GlobalSearch_SearchFor -->
     </test> <!-- RegressionTest -->
   </suite> <!-- ATLMrkt_RegressionTestSuite -->
 </testng-results>
