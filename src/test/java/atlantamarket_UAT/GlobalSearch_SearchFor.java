@@ -778,4 +778,9 @@ public class GlobalSearch_SearchFor extends base {
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		Thread.sleep(5000);
 	}
+	@AfterClass
+	public void tearDown()
+	{
+		driver.quit();
+	}
 }

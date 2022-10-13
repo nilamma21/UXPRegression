@@ -27,11 +27,11 @@
 	</listners>
 	<test thread-count="5" name="RegressionTest">
 		<classes>
-			<class name="atlantamarket_UAT.GlobalSearch_SearchFor"/>
+			<class name="atlantamarket_UAT.GlobalSearch_MatchingResults"/>
 			<methods>
-			<!-- <include name="TS001_VerifyInformationTabInGlobalSearchTest"/>
-			<include name="TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest"/>-->
-			 <include name="TS011_VerifyShowSpecialsOverviewInGlobalSearchTest"/> 
+			<!-- <include name="TS001_VerifyGlobalSearchContainsAndStartsWithTest"/> -->
+			<!-- <include name="TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest"/>
+			 <include name="TS011_VerifyShowSpecialsOverviewInGlobalSearchTest"/> -->
 			
 			</methods>
 		</classes>

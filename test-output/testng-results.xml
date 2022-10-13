@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="57054" started-at="2022-10-12T08:21:43Z" finished-at="2022-10-12T08:22:40Z">
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="71870" started-at="2022-10-12T17:31:47Z" finished-at="2022-10-12T17:32:59Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="57054" started-at="2022-10-12T08:21:43Z" finished-at="2022-10-12T08:22:40Z">
-      <class name="atlantamarket_UAT.GlobalSearch_SearchFor">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.GlobalSearch_SearchFor@464bee09]" name="initialize" is-config="true" duration-ms="26859" started-at="2022-10-12T13:51:43Z" finished-at="2022-10-12T13:52:10Z">
+    <test name="RegressionTest" duration-ms="71870" started-at="2022-10-12T17:31:47Z" finished-at="2022-10-12T17:32:59Z">
+      <class name="atlantamarket_UAT.GlobalSearch_MatchingResults">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.GlobalSearch_MatchingResults@77cd7a0]" name="initialize" is-config="true" duration-ms="27678" started-at="2022-10-12T23:01:47Z" finished-at="2022-10-12T23:02:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS011_VerifyShowSpecialsOverviewInGlobalSearchTest()[pri:0, instance:atlantamarket_UAT.GlobalSearch_SearchFor@464bee09]" name="TS011_VerifyShowSpecialsOverviewInGlobalSearchTest" duration-ms="30129" started-at="2022-10-12T13:52:10Z" finished-at="2022-10-12T13:52:40Z">
+        <test-method status="PASS" signature="TS001_VerifyGlobalSearchContainsAndStartsWithTest()[pri:0, instance:atlantamarket_UAT.GlobalSearch_MatchingResults@77cd7a0]" name="TS001_VerifyGlobalSearchContainsAndStartsWithTest" duration-ms="9197" started-at="2022-10-12T23:02:14Z" finished-at="2022-10-12T23:02:24Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS011_VerifyShowSpecialsOverviewInGlobalSearchTest -->
-      </class> <!-- atlantamarket_UAT.GlobalSearch_SearchFor -->
+        </test-method> <!-- TS001_VerifyGlobalSearchContainsAndStartsWithTest -->
+        <test-method status="PASS" signature="TS002_VerifyGlobalSearchMatchingResultsSortWithinTest()[pri:0, instance:atlantamarket_UAT.GlobalSearch_MatchingResults@77cd7a0]" name="TS002_VerifyGlobalSearchMatchingResultsSortWithinTest" duration-ms="34952" started-at="2022-10-12T23:02:24Z" finished-at="2022-10-12T23:02:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifyGlobalSearchMatchingResultsSortWithinTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.GlobalSearch_MatchingResults@77cd7a0]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-10-12T23:02:59Z" finished-at="2022-10-12T23:02:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- atlantamarket_UAT.GlobalSearch_MatchingResults -->
     </test> <!-- RegressionTest -->
   </suite> <!-- ATLMrkt_RegressionTestSuite -->
 </testng-results>
