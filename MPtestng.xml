@@ -10,7 +10,6 @@
 		<classes>
 		 	<class name="atlantamarket_PROD.MarketPlanner" />
 			 <methods>
-				<include name="TS020_VerifyAddToFavoriteFunctionalityForExhibitorTest"/>
 				<include name="TS011_VerifyMPDashboardOverviewTest"/>
 				<include name="TS047_VerifyMarketPlanneMyInfoEditProfile"/>
 			</methods>
