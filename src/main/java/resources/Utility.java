@@ -2,7 +2,8 @@
 package resources;
 
 import java.io.IOException;
-
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -19,6 +20,7 @@ import org.testng.Assert;
 
 import com.gargoylesoftware.htmlunit.javascript.host.media.webkitMediaStream;
 
+import atlantamarket_UAT.MarketPlanner;
 import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
 import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
 import pageObjects.AtlantaMarket.ATLLandingPage;
@@ -31,6 +33,7 @@ public class Utility extends base {
 	ATLLandingPage lap;
 	ATLLoginPage lp;
 	ATLExhLineProdActionsPage atlexhact;
+	MarketPlanner mp;
 	ATLMarketPlannerPage atlmppge;
 	ATLGlobalSearchPage atlgs;
 	GenerateData genData;
@@ -65,25 +68,22 @@ public class Utility extends base {
 
 		lp.getSignInBtn().click();
 		Thread.sleep(15000);
-		
-	
+
 	}
 
-	public void selectDropdown(String itemName,String channelURL) throws InterruptedException {
+	public void selectDropdown(String itemName, String channelURL) throws InterruptedException {
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
-		
+
 		Select selectAMC = new Select(atlmppge.getselectChannel());
 		selectAMC.selectByVisibleText(itemName);
-		Thread.sleep(5000);
-		Assert.assertTrue(driver.getCurrentUrl().contains(channelURL +"Market-Planner"));
-		System.out.println("Verified "+itemName+"channel page");
+		Thread.sleep(8000);
+		Assert.assertTrue(driver.getCurrentUrl().contains(channelURL + "Market-Planner"));
+		System.out.println("Verified " + itemName + "channel page");
 
 	}
-	
-	
-	
+
 	public void mouseHover(WebElement mainMenu, WebElement subMenu) throws IOException, InterruptedException {
 
 		lap = new ATLLandingPage(driver);
@@ -135,18 +135,13 @@ public class Utility extends base {
 		// Enter New Exh
 		Thread.sleep(2000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys(name);
-		
+
 		Thread.sleep(2000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys(Keys.ENTER);
 		Thread.sleep(5000);
 
 	}
 
-	
-	
-	
-	
-	
 	public void checkItemPresentInListorNot(List<WebElement> listOfProd, String filterName)
 			throws IOException, InterruptedException {
 
@@ -303,7 +298,8 @@ public class Utility extends base {
 		}
 
 	}
-	//Check Exhibito Location
+
+	// Check Exhibito Location
 	public void checkLocationLink(List<WebElement> list, String exhName) throws IOException, InterruptedException {
 
 		lap = new ATLLandingPage(driver);
@@ -313,13 +309,13 @@ public class Utility extends base {
 		boolean flag = false;
 		for (WebElement selectListName : list) {
 			if (selectListName.getText().equals(exhName)) {
-				//scrollToElement(selectListName);
-				WebElement locationLink = driver.findElement(By.xpath("//a[text()='"+exhName+"']/../../../div[2]/div[1]/div[2]/a[1]/div/span[2]"));
+				// scrollToElement(selectListName);
+				WebElement locationLink = driver.findElement(
+						By.xpath("//a[text()='" + exhName + "']/../../../div[2]/div[1]/div[2]/a[1]/div/span[2]"));
 				// click on Edit btn
-				String	locationText=locationLink.getText();
-				System.out.println("Location ::"+locationText);
-			
-				
+				String locationText = locationLink.getText();
+				System.out.println("Location ::" + locationText);
+
 				Thread.sleep(5000);
 				flag = true;
 				break;
@@ -333,8 +329,8 @@ public class Utility extends base {
 		}
 
 	}
-	
-	//Click on Exhibitor Location
+
+	// Click on Exhibitor Location
 	public void clickOnLocationLink(List<WebElement> list, String exhName) throws IOException, InterruptedException {
 
 		lap = new ATLLandingPage(driver);
@@ -344,15 +340,16 @@ public class Utility extends base {
 		boolean flag = false;
 		for (WebElement selectListName : list) {
 			if (selectListName.getText().equals(exhName)) {
-				//scrollToElement(selectListName);
-				WebElement locationLink = driver.findElement(By.xpath("//a[text()='"+exhName+"']/../../../div[2]/div[1]/div[2]/a[1]/div[1]"));
+				// scrollToElement(selectListName);
+				WebElement locationLink = driver.findElement(
+						By.xpath("//a[text()='" + exhName + "']/../../../div[2]/div[1]/div[2]/a[1]/div[1]"));
 				// click on Edit btn
-				String	locationText=locationLink.getText();
-				System.out.println("Location ::"+locationText);
+				String locationText = locationLink.getText();
+				System.out.println("Location ::" + locationText);
 				locationLink.click();
 				Thread.sleep(5000);
 				System.out.println(driver.getTitle());
-				//Assert.assertTrue(locationText.contains(driver.getTitle()));
+				// Assert.assertTrue(locationText.contains(driver.getTitle()));
 				flag = true;
 				break;
 			}
@@ -365,8 +362,44 @@ public class Utility extends base {
 		}
 
 	}
-	
-	
-	
-	
+public void Sorting(List<WebElement> list, WebElement dropdown, String filterName) throws IOException, InterruptedException {
+
+		// Store Current location list
+		List<String> currentList = new ArrayList<String>();
+
+		for (WebElement currentElement : list) {
+
+			currentList.add(currentElement.getText().toLowerCase());
+		}
+		System.out.println("Current List : " + currentList);
+
+		// Create sorted list
+		List<String> sortedList = new ArrayList<String>();
+		for (String s : currentList) {
+			sortedList.add(s.toLowerCase());
+		}
+		if(filterName.contains("Ascending"))
+		{
+			Collections.sort(sortedList);
+		}else {
+		Collections.sort(sortedList,Collections.reverseOrder());
+		}
+		// Select Sort by Location Ascending Filter
+		Select selectOption = new Select(dropdown);
+		selectOption.selectByVisibleText(filterName);
+		Thread.sleep(8000);
+
+		List<String> expectedSortedList = new ArrayList<String>();
+		for (WebElement ascLocationList : list) {
+			expectedSortedList.add(ascLocationList.getText().toLowerCase());
+		}
+		// Thread.sleep(25000);
+		System.out.println("Expected sorted Exhibitor List : " + expectedSortedList);
+		// Verify Exhibitor List is Sorted or not
+		Assert.assertEquals(sortedList, expectedSortedList, " List Should be sorted");
+
+		System.out.println("Displayed "+filterName);
+
+	}
+
 }

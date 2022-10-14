@@ -34,8 +34,10 @@ public class ATLGlobalSearchPage {
 	By CatalogHeaderName = By.xpath("//div[@class='imc-pdfview--display']/div[1]/h1[1]"); //Locator for Catalog header
 	By atlsearchresultArticlesLink = By.xpath("//a[@id='Articles']"); //Locator for Article Link
 	By atlsearchresultBlog = By.xpath("(//div[@class='imc-gallery__item'])[1]/section[1]/span[1]/div[1]"); //Locator for Article Link
-	By atlsearchresult = By.xpath("//div[@class='alert-box  ']"); //Locator for Article Link
+	By atlsearchresult = By.xpath("//div[@class='alert-box  ']"); //Locator for Search result 
 	By atlInfoSearchJuniperMarketBtn = By.xpath("//a[contains(text(),'See More Details')]"); //Locator for Juniper Market Btn
+	By atlInfoSearchMoreInfoBtn = By.xpath("(//a[contains(text(),'See More Details')])[1]"); //Locator for Juniper Market Btn
+	
 	By atlInfoSearchTopicsFilter = By.xpath("//a[@aria-label='Topics']"); //Locator for Topics filter
 	By atlInfoSearchTopicsMarketSnapshot = By.xpath("//div[@class='imc-content--border imc-vr--xlarge imc-informationcard'][1]/div/div/div[2]/ul/li[2]/button"); //Locator for Topics filter Market snapshot
 	//By atlInfoSearchSeeMoreDetailsBtn = By.xpath("//a[@href='/exhibitor']"); //Locator for See More Details Btn
@@ -52,22 +54,187 @@ public class ATLGlobalSearchPage {
 	By atlseealllineslink = By.xpath("//div[@class = 'imc-exhibitorcard--text-container-row']/a[1]"); //Locator for Sell All lines link
 	By atlShowSpecialsTab = By.xpath("//a[@id = 'Specials']"); //Locator for Show Specials tab
 	By atlVerifyShowSpecials = By.xpath("//div[@class = 'imc-tabs__body imc-section']"); //Locator for Show Specials section
+	By atlVerifyShowSpecialsUAT = By.xpath("//a[@class = 'imc-tabs__body imc-section']"); //Locator for Show Specials section
 	By fourthbreadcrumbtxt = By.xpath("//li[@data-xpath='breadcrumb.active.link'][3]/a"); //Locator for 4th Breadcrumb text in app
-	By atleventstabinsearch =  By.xpath("//a[@id='Events']"); //Locator for Events tab in Search
+	By atleventstabinsearch =  By.xpath("//div[@id='Events']"); //Locator for Events tab in Search
+	By atleventstabinsearchUAT =  By.xpath("//a[@id='Events']"); //Locator for Events tab in Search
 	By atlseemoredetailsbtn = By.xpath("//a[contains(text(),'See More Details')]"); //Locator for See More Details button
 	By eventsatlmkttopicsfilter = By.xpath("//label[contains(text(),'Atlanta Market')]"); //Locator for Atlanta Market topics filter
 	By clearfiltersbtn = By.xpath("//a[@class='clear-filter active']"); //Locator for Clear Filters btn
 	By eventtypesfilter = By.xpath("//h4[contains(text(),'Event Types')]"); //Locator for Event Types filter
 	By atmarketeventtypefilter = By.xpath("//label[contains(text(),'At Market')]"); //Locator for At Market Event Type
 	By buyingeventtypefilter = By.xpath("//label[contains(text(),'Buying Event')]"); //Locator for Buying Event Type
+	By listOfAllArticles = By.xpath("//div[@class='imc-articlecard__header']"); //Locator for List of all articles
+	By TitleOfArticle = By.xpath("//div[@class='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[2]/a[1]"); //Locator for List of all articles
+	By atlseealllineslinkUAT = By.xpath("//div[@class = 'imc-exhibitorcard-button-wrapper']/div[1]/div[1]/p[2]"); //Locator for Sell All lines link
+	By fourthbreadcrumbtxtUAT = By.xpath("//ul[@class='imc-breadcrumb']/li[4]/a[1]"); //Locator for 4th Breadcrumb text in app
+	By atlGlobalSearchSortBtn = By.xpath("//div[@class='imc-vr--large']/section[1]/div[1]/div[3]"); //Locator for Global Search Sort Btn
+	By atlGlobalSearch_SearchWithinDropdwn = By.xpath("//select[@name='Search Type']"); //Locator for Global Search SearchWithhn Dropdown
+	By atlListOfAllExh = By.xpath("//div[@class='imc-exhibitorcard-title-row']"); //Locator for All Exhibitors
+	By atlListOfAllExhLocation = By.xpath("//div[@class='imc-exhibitorcard-title-row']/div[2]"); //Locator for All Exhibitors Location
+	By atlListOfAllExhTotalProductLink = By.xpath("//div[@class='imc-exhibitorcard--prod-item-container']/p"); //Locator for All Exhibitors Total Product Links
+	By atlListOfAllExhMatchingProductLink = By.xpath("//div[@class='imc-exhibitorcard--prod-item-container imc-exhibitorcard--prod-item-container--divider']/p"); //Locator for All Exhibitors Matching Product Links
+	By atlListOfAllProducts = By.xpath("//div[@class='imc-exhibitorcard-products-row imc-content--display-flex-space-between-mobile ']"); //Locator for All Product Links
+	By atlListOfAllProductsName = By.xpath("//div[@class='imc-exhibitorcard-products-row imc-content--display-flex-space-between-mobile ']/div/p"); //Locator for All Product Names
+	By atlGlobalSearch_SearchSortByDropdwn = By.xpath("//select[@name='Sort by']");  //Locator for Global Search Sort By Dropdown
+	By atlGlobalSearchExhLocationList = By.xpath("//div[@class='imc-exhibitorcard-title-row']/div[2]/div[1]/div[1]/a");  //Locator for Location list
+	By atlExhNames = By.xpath("//div[@class='imc-exhibitorcard-title-row']/div[1]/a[1]/h2");  //Locator for Exhibitors Name list
+	By atlMachingProductCount = By.xpath("//div[@class='imc-exhibitorcard--prod-item-container imc-exhibitorcard--prod-item-container--divider']/p[1]");  //Locator for Matching prod count list
+	By atlFilterByNameDropDown = By.xpath("//select[@id='dropdown-filter-by-letter']");  //Locator for Filter By Name Dropdown
+	By atlExhiNameForFilterByName = By.xpath("//div[@class='imc-exhibitorcard-title-row']/div[1]");  //Locator for Exh Name for Filter by name
+	By atlSelectBtn = By.xpath("//div[@class='imc-vr--large']/section[1]/div[1]/div[2]");  //Locator for Select Btn
+	By atlExhCheckbox = By.xpath("(//div[@class='imc-padding--right--large']/input[1])[1]");  //Locator for Exh checkbox
+	By atlAddToFavBtn = By.xpath("//div[@class='imc-searchform--bar--dropdown open']/div[2]/button[1]");  //Locator for Add To Fav Btn
+	By atl1STExhiName = By.xpath("(//div[@class='imc-exhibitorcard-title-row']/div[1]/a[1]/h2[1])[1]");  //Locator for Exh Name 
+	By atlAddToExistingList = By.xpath("//div[@class='imc-searchform--bar--dropdown open']/div[3]/button[1]");  //Locator for Add Existing list Btn
+	By atlExistingList = By.xpath("//div[@class='imc-vr--xlarge']/div[2]/label[1]");  //Locator for  Existing list
+	By atlAddToSelectBtn = By.xpath("//div[@class='imc-button--justify-right']/input[1]");  //Locator for Add To list Btn
+	By atlGoToMPBtn = By.xpath("//div[@class='imc-modal--content']/div[1]/div[1]/a[1]");  //Locator for Go to MP Btn
 	
 	
 	public ATLGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 		PageFactory.initElements(driver, this);
-	} 
-
+	}
+	public WebElement getatlGoToMPBtn() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlGoToMPBtn));
+		return driver.findElement(atlGoToMPBtn);
+	}
+	public WebElement getatlAddToSelectBtn() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlAddToSelectBtn));
+		return driver.findElement(atlAddToSelectBtn);
+	}
+	
+	public WebElement getatlExistingList() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlExistingList));
+		return driver.findElement(atlExistingList);
+	}
+	
+	public WebElement getatlAddToExistingList() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlAddToExistingList));
+		return driver.findElement(atlAddToExistingList);
+	}
+	
+	public WebElement getatl1STExhiName() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atl1STExhiName));
+		return driver.findElement(atl1STExhiName);
+	}
+	public WebElement getatlGlobalSearchAddToFavBtn() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlAddToFavBtn));
+		return driver.findElement(atlAddToFavBtn);
+	}
+	public WebElement getatlGlobalSearchExhCheckbox() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlExhCheckbox));
+		return driver.findElement(atlExhCheckbox);
+	}
+	public WebElement getatlGlobalSearchSelectBtn() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlSelectBtn));
+		return driver.findElement(atlSelectBtn);
+	}
+	public List<WebElement> getatlExhiNameForFilterByName() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlExhiNameForFilterByName));
+		return driver.findElements(atlExhiNameForFilterByName);
+	}
+	public WebElement getatlFilterByNameDropDown() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlFilterByNameDropDown));
+		return driver.findElement(atlFilterByNameDropDown);
+	}
+	public List<WebElement> getatlMachingProductCount() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlMachingProductCount));
+		return driver.findElements(atlMachingProductCount);
+	}
+	public List<WebElement> getatlExhNames() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlExhNames));
+		return driver.findElements(atlExhNames);
+	}
+	public List<WebElement> getatlGlobalSearchExhLocationList() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlGlobalSearchExhLocationList));
+		return driver.findElements(atlGlobalSearchExhLocationList);
+	}
+	public WebElement getatlGlobalSearch_SearchSortByDropdwn() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlGlobalSearch_SearchSortByDropdwn));
+		return driver.findElement(atlGlobalSearch_SearchSortByDropdwn);
+	}
+	public List<WebElement> getatlListOfAllProductsName() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlListOfAllProductsName));
+		return driver.findElements(atlListOfAllProductsName);
+	}
+	public List<WebElement> getatlListOfAllProducts() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlListOfAllProducts));
+		return driver.findElements(atlListOfAllProducts);
+	}
+	public List<WebElement> getatlListOfAllExhMatchingProductLink() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlListOfAllExhMatchingProductLink));
+		return driver.findElements(atlListOfAllExhMatchingProductLink);
+	}
+	public List<WebElement> getatlListOfAllExhTotalProductLink() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlListOfAllExhTotalProductLink));
+		return driver.findElements(atlListOfAllExhTotalProductLink);
+	}
+	public List<WebElement> getatlListOfAllExhLocation() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlListOfAllExhLocation));
+		return driver.findElements(atlListOfAllExhLocation);
+	}
+	public List<WebElement> getatlListOfAllExh() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlListOfAllExh));
+		return driver.findElements(atlListOfAllExh);
+	}
+	public WebElement getatlGlobalSearch_SearchWithinDropdwn() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlGlobalSearch_SearchWithinDropdwn));
+		return driver.findElement(atlGlobalSearch_SearchWithinDropdwn);
+	}
+	public WebElement getatlGlobalSearchSortBtn() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlGlobalSearchSortBtn));
+		return driver.findElement(atlGlobalSearchSortBtn);
+	}
+	public WebElement getfourthbreadcrumbtxtUAT() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(fourthbreadcrumbtxtUAT));
+		return driver.findElement(fourthbreadcrumbtxtUAT);
+	}
+	public WebElement getatlseealllineslinkUAT() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlseealllineslinkUAT));
+		return driver.findElement(atlseealllineslinkUAT);
+	}
+	public WebElement getatleventstabinsearchUAT() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atleventstabinsearchUAT));
+		return driver.findElement(atleventstabinsearchUAT);
+	}
+	public WebElement getTitleOfArticle() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(TitleOfArticle));
+		return driver.findElement(TitleOfArticle);
+	}
+	public List<WebElement> getATLlistOfAllArticles() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllArticles));
+		return driver.findElements(listOfAllArticles);
+	}
 	public WebElement getATLGlobalSearchTextBox() throws InterruptedException {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.elementToBeClickable(atlglobalsearchtxtbx));
@@ -231,6 +398,8 @@ public class ATLGlobalSearchPage {
 		return driver.findElement(atlVerifyShowSpecials);
 	}
 	public WebElement getFourthBreadcrumbTxtInApp() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(fourthbreadcrumbtxt));
 		return driver.findElement(fourthbreadcrumbtxt);
 	}
 	public WebElement getATLEventsTabInSearch() {

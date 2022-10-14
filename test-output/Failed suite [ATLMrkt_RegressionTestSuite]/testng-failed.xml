@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Failed suite [ATLMrkt_RegressionTestSuite]]">
+  <test name="RegressionParallelest(failed)(failed)">
+    <classes>
+      <class name="atlantamarket_PROD.FloorPlans">
+        <methods>
+          <include name="TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest"/>
+          <include name="TS011_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest"/>
+          <include name="initialize"/>
+          <include name="TS009_VerifySearchFunctionalityForExhListOnFloorPlansPageTest"/>
+          <include name="tearDown"/>
+          <include name="TS002_VerifyNoExhibitorsOnThisFloorMessageTest"/>
+          <include name="TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest"/>
+          <include name="TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.FloorPlans -->
+    </classes>
+  </test> <!-- RegressionParallelest(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [ATLMrkt_RegressionTestSuite]] -->

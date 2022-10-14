@@ -222,17 +222,42 @@ public class ATLMarketPlannerPage {
 
 	By checkBox = By.xpath("(//div[@class='imc-formfield imc-content imc-saved-exhibitors__chk-container']/label[1])[1]"); //Locator for Checkbox
 	By fExhpName = By.xpath("//div[@class='imc-loading-relative']/div[4]/li[1]/div[1]/div[1]/div[1]/a[1]"); //Locator for Checkbox
-	
-	
-
-
-		
+	By ATLAttendTab = By.xpath("//div[@class='imc-section']/div[1]/div[3]/div[1]/a[1]"); //Locator for Attend Tab
+	By ATLAttendTabEventBtn = By.xpath("//a[@href='#events']"); //Locator for Attend Tab
+	By ATLAttendTabEventMenu = By.xpath("//a[@href='/Attend/Events']"); //Locator for Attend Tab
+	By ATLIMCEvent = By.xpath("//div[@class='event-list imc-loading__anchor']/div[1]/p[1]"); //Locator for IMC event Tab
+	By ATLExhibitorEvent = By.xpath("//div[@class='event-list imc-loading__anchor']/div[1]/p[2]"); //Locator for Exhibitor Event Tab
 
 	public ATLMarketPlannerPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	}
-	
+	public WebElement getATLExhibitorEvent() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLExhibitorEvent));
+		return driver.findElement(ATLExhibitorEvent);
+	}
+	public WebElement getATLIMCEvent() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLIMCEvent));
+		return driver.findElement(ATLIMCEvent);
+	}
+	public WebElement getATLAttendTabEventMenu() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLAttendTabEventMenu));
+		return driver.findElement(ATLAttendTabEventMenu);
+	}
+
+	public WebElement getATLAttendTabEventBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLAttendTabEventBtn));
+		return driver.findElement(ATLAttendTabEventBtn);
+	}
+	public WebElement getATLAttendTab() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLAttendTab));
+		return driver.findElement(ATLAttendTab);
+	}
 	public WebElement getfirstExhName() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(fExhpName));
@@ -601,7 +626,7 @@ public class ATLMarketPlannerPage {
 		return driver.findElement(welcometext);
 	}
 	public WebElement getsignout() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(signout));
 		return driver.findElement(signout);
 	}
