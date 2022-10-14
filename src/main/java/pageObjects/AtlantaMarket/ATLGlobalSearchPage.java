@@ -76,12 +76,99 @@ public class ATLGlobalSearchPage {
 	By atlListOfAllExhMatchingProductLink = By.xpath("//div[@class='imc-exhibitorcard--prod-item-container imc-exhibitorcard--prod-item-container--divider']/p"); //Locator for All Exhibitors Matching Product Links
 	By atlListOfAllProducts = By.xpath("//div[@class='imc-exhibitorcard-products-row imc-content--display-flex-space-between-mobile ']"); //Locator for All Product Links
 	By atlListOfAllProductsName = By.xpath("//div[@class='imc-exhibitorcard-products-row imc-content--display-flex-space-between-mobile ']/div/p"); //Locator for All Product Names
+	By atlGlobalSearch_SearchSortByDropdwn = By.xpath("//select[@name='Sort by']");  //Locator for Global Search Sort By Dropdown
+	By atlGlobalSearchExhLocationList = By.xpath("//div[@class='imc-exhibitorcard-title-row']/div[2]/div[1]/div[1]/a");  //Locator for Location list
+	By atlExhNames = By.xpath("//div[@class='imc-exhibitorcard-title-row']/div[1]/a[1]/h2");  //Locator for Exhibitors Name list
+	By atlMachingProductCount = By.xpath("//div[@class='imc-exhibitorcard--prod-item-container imc-exhibitorcard--prod-item-container--divider']/p[1]");  //Locator for Matching prod count list
+	By atlFilterByNameDropDown = By.xpath("//select[@id='dropdown-filter-by-letter']");  //Locator for Filter By Name Dropdown
+	By atlExhiNameForFilterByName = By.xpath("//div[@class='imc-exhibitorcard-title-row']/div[1]");  //Locator for Exh Name for Filter by name
+	By atlSelectBtn = By.xpath("//div[@class='imc-vr--large']/section[1]/div[1]/div[2]");  //Locator for Select Btn
+	By atlExhCheckbox = By.xpath("(//div[@class='imc-padding--right--large']/input[1])[1]");  //Locator for Exh checkbox
+	By atlAddToFavBtn = By.xpath("//div[@class='imc-searchform--bar--dropdown open']/div[2]/button[1]");  //Locator for Add To Fav Btn
+	By atl1STExhiName = By.xpath("(//div[@class='imc-exhibitorcard-title-row']/div[1]/a[1]/h2[1])[1]");  //Locator for Exh Name 
+	By atlAddToExistingList = By.xpath("//div[@class='imc-searchform--bar--dropdown open']/div[3]/button[1]");  //Locator for Add Existing list Btn
+	By atlExistingList = By.xpath("//div[@class='imc-vr--xlarge']/div[2]/label[1]");  //Locator for  Existing list
+	By atlAddToSelectBtn = By.xpath("//div[@class='imc-button--justify-right']/input[1]");  //Locator for Add To list Btn
+	By atlGoToMPBtn = By.xpath("//div[@class='imc-modal--content']/div[1]/div[1]/a[1]");  //Locator for Go to MP Btn
 	
 	
 	public ATLGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 		PageFactory.initElements(driver, this);
+	}
+	public WebElement getatlGoToMPBtn() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlGoToMPBtn));
+		return driver.findElement(atlGoToMPBtn);
+	}
+	public WebElement getatlAddToSelectBtn() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlAddToSelectBtn));
+		return driver.findElement(atlAddToSelectBtn);
+	}
+	
+	public WebElement getatlExistingList() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlExistingList));
+		return driver.findElement(atlExistingList);
+	}
+	
+	public WebElement getatlAddToExistingList() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlAddToExistingList));
+		return driver.findElement(atlAddToExistingList);
+	}
+	
+	public WebElement getatl1STExhiName() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atl1STExhiName));
+		return driver.findElement(atl1STExhiName);
+	}
+	public WebElement getatlGlobalSearchAddToFavBtn() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlAddToFavBtn));
+		return driver.findElement(atlAddToFavBtn);
+	}
+	public WebElement getatlGlobalSearchExhCheckbox() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlExhCheckbox));
+		return driver.findElement(atlExhCheckbox);
+	}
+	public WebElement getatlGlobalSearchSelectBtn() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlSelectBtn));
+		return driver.findElement(atlSelectBtn);
+	}
+	public List<WebElement> getatlExhiNameForFilterByName() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlExhiNameForFilterByName));
+		return driver.findElements(atlExhiNameForFilterByName);
+	}
+	public WebElement getatlFilterByNameDropDown() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlFilterByNameDropDown));
+		return driver.findElement(atlFilterByNameDropDown);
+	}
+	public List<WebElement> getatlMachingProductCount() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlMachingProductCount));
+		return driver.findElements(atlMachingProductCount);
+	}
+	public List<WebElement> getatlExhNames() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlExhNames));
+		return driver.findElements(atlExhNames);
+	}
+	public List<WebElement> getatlGlobalSearchExhLocationList() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlGlobalSearchExhLocationList));
+		return driver.findElements(atlGlobalSearchExhLocationList);
+	}
+	public WebElement getatlGlobalSearch_SearchSortByDropdwn() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlGlobalSearch_SearchSortByDropdwn));
+		return driver.findElement(atlGlobalSearch_SearchSortByDropdwn);
 	}
 	public List<WebElement> getatlListOfAllProductsName() {
 		wait = new WebDriverWait (driver,20);
