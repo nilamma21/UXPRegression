@@ -12,6 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -57,7 +58,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl_prod"));
-		lap.getIUnderstandBtn().click();
+		//lap.getIUnderstandBtn().click();
 		Thread.sleep(7000);
 		//lap.getCloseMarktAdBtn().click();
 
@@ -239,6 +240,9 @@ public class GlobalSearch_LeftPaneFilters extends base {
 			}
 		}
 		//driver.get(prop.getProperty("atlmrkturl_prod"));
+
+
+
 
 	}
 
@@ -586,6 +590,9 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		driver.get(prop.getProperty("atlmrkturl_prod"));
+
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 
@@ -593,6 +600,12 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(6000);
 
+=======
+		atlgs.getATLGlobalSearchTextBox().sendKeys("Anne");
+		atlgs.getATLSearchButton().click();
+		Thread.sleep(6000);
+		
+>>>>>>> 40057dcd1e31146c777830dc3333c1efc99ebe03
 		//Click on Product Categories expand btn
 		atlleftpane.getATLProdCatgExpandBtn().click();
 
@@ -752,9 +765,9 @@ public class GlobalSearch_LeftPaneFilters extends base {
 	}
 
 
-	/*@AfterClass
+	@AfterClass
 	public void tearDown()
 	{
 		driver.quit();
-	}*/
+	}
 }

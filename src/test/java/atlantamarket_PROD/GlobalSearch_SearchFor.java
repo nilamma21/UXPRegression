@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import org.omg.CORBA.PUBLIC_MEMBER;
+//import org.omg.CORBA.PUBLIC_MEMBER;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -24,7 +24,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
+//import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
 
 import pageObjects.AtlantaMarket.ATLExhDigiShowroomPage;
 import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
@@ -740,5 +740,11 @@ public class GlobalSearch_SearchFor extends base {
 		driver.navigate().back();
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		Thread.sleep(5000);
+	}
+
+	@AfterClass
+	public void tearDown()
+	{
+		driver.quit();
 	}
 }

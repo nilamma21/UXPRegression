@@ -210,32 +210,32 @@ public class FloorPlans extends base {
 		//click on any floor
 		atlflpp.getATLBuildingFloor().click();
 
-		//Click on Vending Machine icon on Map image
-		atlflpp.getVendingMachineIconOnMap().click();
+		// //Click on Vending Machine icon on Map image
+		// atlflpp.getVendingMachineIconOnMap().click();
 
-		//Verify that Vending Machine Overlay should appeared on Map
-		Assert.assertTrue(atlflpp.getVendingMachineOverlayOnMap().isDisplayed());
+		// //Verify that Vending Machine Overlay should appeared on Map
+		// Assert.assertTrue(atlflpp.getVendingMachineOverlayOnMap().isDisplayed());
 
-		//Click on Elevator icon on Map image
-		atlflpp.getElevatorIconOnMap().click();
+		// //Click on Elevator icon on Map image
+		// atlflpp.getElevatorIconOnMap().click();
 
-		//Verify that Elevator Overlay should appeared on Map
-		Assert.assertTrue(atlflpp.getElevatorOverlayOnMap().isDisplayed());
+		// //Verify that Elevator Overlay should appeared on Map
+		// Assert.assertTrue(atlflpp.getElevatorOverlayOnMap().isDisplayed());
 
-		/*//Click on Water Fountain icon on Map image
-		atlflpp.getWaterFountainIconOnMap().click();
+		// /*//Click on Water Fountain icon on Map image
+		// atlflpp.getWaterFountainIconOnMap().click();
 
-		//Verify that Water Fountain Overlay should appeared on Map
-		Assert.assertTrue(atlflpp.getWaterFountainOverlayOnMap().isDisplayed());*/
+		// //Verify that Water Fountain Overlay should appeared on Map
+		// Assert.assertTrue(atlflpp.getWaterFountainOverlayOnMap().isDisplayed());*/
 
-		//Click on Phone icon on Map image
-		atlflpp.getPhoneIconOnMap().click();
+		// //Click on Phone icon on Map image
+		// atlflpp.getPhoneIconOnMap().click();
 
-		//Verify that Phone Overlay should appeared on Map
-		Assert.assertTrue(atlflpp.getPhoneOverlayOnMap().isDisplayed());
+		// //Verify that Phone Overlay should appeared on Map
+		// Assert.assertTrue(atlflpp.getPhoneOverlayOnMap().isDisplayed());
 
-		//Click on Overlay Close btn
-		atlflpp.getOverlayCloseBtn().click();
+		// //Click on Overlay Close btn
+		// atlflpp.getOverlayCloseBtn().click();
 
 		//Click on Location pin of any Exhibitor on Map
 		atlflpp.getLocationPinIconOnMap().click();
@@ -307,7 +307,11 @@ public class FloorPlans extends base {
 		for(WebElement we:elementList){
 			expectedSortedList.add(we.getText().toLowerCase());
 		}
+
 		//Thread.sleep(25000);
+
+		Thread.sleep(25000);
+
 		System.out.println("Expected sorted Exhibitor List : "+expectedSortedList);
 		//Verify Exhibitor List is Sorted or not
 		Assert.assertEquals(sortedList, expectedSortedList, "Exhibitor List Should be sorted");
@@ -456,7 +460,7 @@ public class FloorPlans extends base {
 		atlflpp.getATLBuildingFloor().click();
 
 		utl.scrollToElement(atlflpp.getscrollexhibitorsection());
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		Assert.assertTrue(atlflpp.getatlexhibitorsection().isDisplayed());
 
 		atlflpp.getatlexhibitorsearch().click();
