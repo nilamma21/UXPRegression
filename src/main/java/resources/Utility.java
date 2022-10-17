@@ -1,13 +1,15 @@
+
 package resources;
 
 import java.io.IOException;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.NoSuchElementException;
-//import org.omg.CORBA.PUBLIC_MEMBER;
+
+import org.omg.CORBA.PUBLIC_MEMBER;
 import org.openqa.selenium.By;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -16,12 +18,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
-
 import com.gargoylesoftware.htmlunit.javascript.host.media.webkitMediaStream;
 
 import atlantamarket_UAT.MarketPlanner;
-
-//import com.gargoylesoftware.htmlunit.javascript.host.media.webkitMediaStream;
 import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
 import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
 import pageObjects.AtlantaMarket.ATLLandingPage;
@@ -68,8 +67,8 @@ public class Utility extends base {
 		lp.getPassword().sendKeys((prop.getProperty("password")));
 
 		lp.getSignInBtn().click();
-
 		Thread.sleep(15000);
+
 	}
 
 	public void selectDropdown(String itemName, String channelURL) throws InterruptedException {
@@ -402,5 +401,5 @@ public void Sorting(List<WebElement> list, WebElement dropdown, String filterNam
 		System.out.println("Displayed "+filterName);
 
 	}
-	}	
+
 }
