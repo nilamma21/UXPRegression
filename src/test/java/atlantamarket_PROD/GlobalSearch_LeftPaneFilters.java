@@ -600,12 +600,12 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(6000);
 
-=======
+
 		atlgs.getATLGlobalSearchTextBox().sendKeys("Anne");
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(6000);
 		
->>>>>>> 40057dcd1e31146c777830dc3333c1efc99ebe03
+
 		//Click on Product Categories expand btn
 		atlleftpane.getATLProdCatgExpandBtn().click();
 
