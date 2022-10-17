@@ -20,7 +20,7 @@ import org.testng.Assert;
 
 //import com.gargoylesoftware.htmlunit.javascript.host.media.webkitMediaStream;
 
-import atlantamarket_UAT.MarketPlanner;
+import atlantamarket_PROD.MarketPlanner;
 import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
 import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
 import pageObjects.AtlantaMarket.ATLLandingPage;
