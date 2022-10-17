@@ -65,14 +65,8 @@ public class ATLFloorPlansPage {
 	By atlExhSearchField = By.xpath("(//div[@class='imc-searchform--row'])[2]/form[1]/div[1]/input[1]"); //Locator for Exh Search filed
 	By atlExhSearchFieldBtn = By.xpath("(//div[@class='imc-searchform--row'])[2]/form[1]/button[2]"); //Locator for Exh Search filed Btn
 	By noresultsforjuniperlinesmsg = By.xpath("//p[contains(text(),'Sorry, no results found.')]"); //Locator for No results found msg for Lines on Junipermarket filter
-
-	
 	By exhibitedonfloormsg = By.xpath("//span[contains(text(),'Exhibited on this floor:')]");
 	
-	
-
-	By exhibitedonfloormsg = By.xpath("//span[contains(text(),'Exhibited on this floor:')]");
-
 	public ATLFloorPlansPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
