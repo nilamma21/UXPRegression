@@ -96,19 +96,55 @@ public class ATLGlobalSearchPage {
 	By atlSavedSearchesInputBox = By.xpath("//input[@name='searchName']");  //Locator for Saved Searches input box
 	By atlSavedSearchesBtnForNewSaved = By.xpath("//input[@type='submit']");  //Locator for Saved Searches input box
 	By atlListOfAllSavedSearches = By.xpath("//div[@class='imc-searchform--bar--dropdown open']/div[1]/div[1]/div[1]/div[1]/select[1]/option");  //Locator for Saved Searches input box
-	
-	
+	By atlExhibitorsAndProductTab = By.xpath("//div[@class='imc-navigation imc-breakpoint-display--hide-mobile']/div[2]");  //Locator for Exhibitors And Product Tab
+	By atlShowSpecialsLink = By.xpath("//div[@class='imc-navigation imc-breakpoint-display--hide-mobile']/div[2]/div[2]/div[1]/div[2]/a[1]");  //Locator for Show Secials
+	By atlShowSpecialsTitle = By.xpath("//div[@class='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[3]/a[1]");  //Locator for Show Secials Title
+	By atlShowSpecialsExhName = By.xpath("//div[@class='imc-gallery imc-gallery--align-flex-start imc-gallery--1-4 imc-vr--collosal imc-fprod-cont imc-specials-list']/div[1]/div[1]/a[1]");  //Locator for Show Secials Name
+	By atlShowroomLink = By.xpath("//div[@class='imc-gallery imc-gallery--align-flex-start imc-gallery--1-4 imc-vr--collosal imc-fprod-cont imc-specials-list']/div[1]/div[2]/a[1]");  //Locator for Showroom Name
+	By atlGlobalSearchClearTxt = By.xpath("//div[@class='imc-header-subnav']/div[1]/div[1]/section[1]/div[1]/form[1]/button[1]");  //Locator for Showroom Name
 	
 	public ATLGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 		PageFactory.initElements(driver, this);
 	}
+	public WebElement getatlGlobalSearchClearTxt() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlGlobalSearchClearTxt));
+		return driver.findElement(atlGlobalSearchClearTxt);
+	}
+	public WebElement getatlShowroomLink() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlShowroomLink));
+		return driver.findElement(atlShowroomLink);
+	}
+	public WebElement getatlShowSpecialsExhName() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlShowSpecialsExhName));
+		return driver.findElement(atlShowSpecialsExhName);
+	}
+	public WebElement getatlShowSpecialsTitle() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlShowSpecialsTitle));
+		return driver.findElement(atlShowSpecialsTitle);
+	}
+	public WebElement getatlShowSpecialsLink() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlShowSpecialsLink));
+		return driver.findElement(atlShowSpecialsLink);
+	}
+	public WebElement getatlExhibitorsAndProductTab() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlExhibitorsAndProductTab));
+		return driver.findElement(atlExhibitorsAndProductTab);
+	}
 	public List<WebElement> getatlListOfAllSavedSearches() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlListOfAllSavedSearches));
 		return driver.findElements(atlListOfAllSavedSearches);
 	}
+	
+	
 
 	public WebElement getatlSavedSearchesBtnForNewSaved() throws InterruptedException {
 		wait = new WebDriverWait (driver,20);
