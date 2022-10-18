@@ -31,7 +31,7 @@
 			<methods>
 			<!-- <include name="TS001_VerifyGlobalSearchContainsAndStartsWithTest"/> -->
 			<!-- <include name="TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest"/>-->
-			 <include name="TS006_VerifyGlobalSearchMatchingResultsSelectAddToExistingListTest"/> 
+			 <include name="TS009_VerifyGlobalSearchMatchingResultsSavedSearchesTest"/> 
 			
 			</methods>
 		</classes>
