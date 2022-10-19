@@ -2407,7 +2407,8 @@ Thread.sleep(5000);
 		// Click on Saved searches Icon
 		atlmppge.getmpSavedSearchesIcon().click();
 		// Click on Save Search Btn to Save the Term
-		atlmppge.getmpSaveSearcheBtn().click();
+		//atlmppge.getmpSaveSearcheBtn().click();
+		atlmppge.getATLUseSavedSearchDropDown().click();
 		// Enter Search text into input field
 		atlmppge.getmpSaveSearcheNameInput().sendKeys(prop.getProperty("saveSearchTerm"));
 		// Click on Save Btn
@@ -2690,7 +2691,13 @@ Thread.sleep(5000);
 		
 		  atlmppge.getMpListLeftPannel().click();
 		  
-		  atlmppge.getMpListNewListBtn().click(); // verify New List Popup header
+		  // Click Edit List link for any list
+		  
+		  atlmppge.getEditListAtListTab().click();
+		  atlmppge.getMoreOption().click();
+		  atlmppge.getAddToSchedule().click();
+		  
+		 /* atlmppge.getMpListNewListBtn().click(); // verify New List Popup header
 		  Assert.assertTrue(atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty( "CreateListPopupHeader"))); 
 		  // Enter List  name
 		  String newlistname = "Cyb" + genData.generateRandomString(5);
@@ -2700,7 +2707,7 @@ Thread.sleep(5000);
 		  atlmppge.getMpListNewCreateBtn().click(); 
 		  Thread.sleep(10000); 
 		  
-		  utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistname);
+		  utl.ClickOnEditBtnOfAnyList(atlmppge.getallList());
 		  
 		  utl.addingExhProdLine(prop.getProperty("exhibitor1")); 
 		  String exName=prop.getProperty("exhibitor1");
@@ -2709,7 +2716,7 @@ Thread.sleep(5000);
 		  Actions moreLinkHover=new Actions(driver);
 		  moreLinkHover.moveToElement(moreLink).build().perform();
 		  List<WebElement>allMoreOptions=driver.findElements(By.xpath("//a[text()='"+exName+"']/../../../div[1]/div[4]/div[1]/div[1]/span/a"));
-		 utl.selectFilters(allMoreOptions, "Add To Schedule");
+		 utl.selectFilters(allMoreOptions, "Add To Schedule");*/
 
 		 // Click on start Clendar
 		atlmppge.getmpSelectStartDateCalendar().click();

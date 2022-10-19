@@ -228,6 +228,11 @@ public class ATLMarketPlannerPage {
 	By ATLIMCEvent = By.xpath("//div[@class='event-list imc-loading__anchor']/div[1]/p[1]"); //Locator for IMC event Tab
 	By ATLExhibitorEvent = By.xpath("//div[@class='event-list imc-loading__anchor']/div[1]/p[2]"); //Locator for Exhibitor Event Tab
 
+	By ATLUseSavedSearchDropDown = By.xpath("//select[@name = 'Saved Searches']"); //Locator for Use Saved Search drop down 
+	By EditListAtListTab = By.xpath("//ul[@class = 'imc-market-planner-list']/li[1]/div[2]/span[2]/a[1]"); //Locator for Edit list link
+	By MoreOption = By.xpath("//div[@class = 'imc-hover-menu']"); //locator for More option
+	By AddToSchedule = By.xpath("//div[@class='imc-hover-menu__content']"); //locator for Add To Schedule option
+	
 	public ATLMarketPlannerPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
@@ -1206,7 +1211,27 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfoverifymyinquiries));
 		return driver.findElement(myinfoverifymyinquiries);
 	}
-
+	public WebElement getATLUseSavedSearchDropDown() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLUseSavedSearchDropDown));
+		return driver.findElement(ATLUseSavedSearchDropDown);
+	}
+	public WebElement getEditListAtListTab() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(EditListAtListTab));
+		return driver.findElement(EditListAtListTab);
+	}
+	public WebElement getMoreOption() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MoreOption));
+		return driver.findElement(MoreOption);
+	}
+	public WebElement getAddToSchedule() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(AddToSchedule));
+		return driver.findElement(AddToSchedule);
+	}
+	
 }
 
 
