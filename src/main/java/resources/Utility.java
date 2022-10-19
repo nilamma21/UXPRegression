@@ -401,5 +401,11 @@ public void Sorting(List<WebElement> list, WebElement dropdown, String filterNam
 		System.out.println("Displayed "+filterName);
 
 	}
+public void ClearGlobalSearch() throws IOException, InterruptedException {
+
+	if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
+		atlgs.getatlGlobalSearchClearTxt().click();
+	}
+}
 
 }
