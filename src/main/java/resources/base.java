@@ -23,8 +23,8 @@ public class base {
 
 	// this is base class page where driver is initialized and data.properties mentioned. 
 	// this class holds all the functions that commonly used by other pages.
-	//public static WebDriver driver;
-	public WebDriver driver; //For parallel execution
+	public static WebDriver driver;
+	//public WebDriver driver; //For parallel execution
 	public static Properties prop;
 	public static String s;
 

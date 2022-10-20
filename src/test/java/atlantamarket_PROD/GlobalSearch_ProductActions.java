@@ -689,6 +689,6 @@ public class GlobalSearch_ProductActions extends base {
 
 	@AfterClass
 	public void tearDown() {
-		driver.quit();
+		//driver.quit();
 	}
 }

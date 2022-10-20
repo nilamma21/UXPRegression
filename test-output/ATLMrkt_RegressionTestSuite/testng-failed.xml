@@ -6,7 +6,7 @@
       <class name="atlantamarket_UAT.GlobalSearch_MatchingResults">
         <methods>
           <include name="initialize"/>
-          <include name="TS006_VerifyGlobalSearchMatchingResultsSelectAddToExistingListTest"/>
+          <include name="TS008_VerifyGlobalSearchMatchingResultsUsePreviousSavedSearchTest"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- atlantamarket_UAT.GlobalSearch_MatchingResults -->

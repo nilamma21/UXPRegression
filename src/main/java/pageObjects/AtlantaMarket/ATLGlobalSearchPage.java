@@ -10,6 +10,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import bsh.This;
+
 public class ATLGlobalSearchPage {
 
 	public WebDriver driver;
@@ -88,12 +90,87 @@ public class ATLGlobalSearchPage {
 	By atlExistingList = By.xpath("//div[@class='imc-vr--xlarge']/div[2]/label[1]");  //Locator for  Existing list
 	By atlAddToSelectBtn = By.xpath("//div[@class='imc-button--justify-right']/input[1]");  //Locator for Add To list Btn
 	By atlGoToMPBtn = By.xpath("//div[@class='imc-modal--content']/div[1]/div[1]/a[1]");  //Locator for Go to MP Btn
-	
+	By atlSavedSearchesIcon = By.xpath("//div[@class='imc-vr--large']/section[1]/div[1]/div[1]");  //Locator for Saved Searches Icon
+	By atlSavedSearchesDropdown = By.xpath("//div[@class='imc-searchform--bar--dropdown open']/div[1]/div[1]/div[1]/div[1]/select[1]");  //Locator for Saved Searches Dropdown
+	By atlSavedSearchesBtn = By.xpath("//button[@class='imc-button--muted-inverted imc-icon--bookmark imc-button--full-width']");  //Locator for Saved Searches Dropdown
+	By atlSavedSearchesInputBox = By.xpath("//input[@name='searchName']");  //Locator for Saved Searches input box
+	By atlSavedSearchesBtnForNewSaved = By.xpath("//input[@type='submit']");  //Locator for Saved Searches input box
+	By atlListOfAllSavedSearches = By.xpath("//div[@class='imc-searchform--bar--dropdown open']/div[1]/div[1]/div[1]/div[1]/select[1]/option");  //Locator for Saved Searches input box
+	By atlExhibitorsAndProductTab = By.xpath("//div[@class='imc-navigation imc-breakpoint-display--hide-mobile']/div[2]");  //Locator for Exhibitors And Product Tab
+	By atlShowSpecialsLink = By.xpath("//div[@class='imc-navigation imc-breakpoint-display--hide-mobile']/div[2]/div[2]/div[1]/div[2]/a[1]");  //Locator for Show Secials
+	By atlShowSpecialsTitle = By.xpath("//div[@class='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[3]/a[1]");  //Locator for Show Secials Title
+	By atlShowSpecialsExhName = By.xpath("//div[@class='imc-gallery imc-gallery--align-flex-start imc-gallery--1-4 imc-vr--collosal imc-fprod-cont imc-specials-list']/div[1]/div[1]/a[1]");  //Locator for Show Secials Name
+	By atlShowroomLink = By.xpath("//div[@class='imc-gallery imc-gallery--align-flex-start imc-gallery--1-4 imc-vr--collosal imc-fprod-cont imc-specials-list']/div[1]/div[2]/a[1]");  //Locator for Showroom Name
+	By atlGlobalSearchClearTxt = By.xpath("//div[@class='imc-header-subnav']/div[1]/div[1]/section[1]/div[1]/form[1]/button[1]");  //Locator for Showroom Name
 	
 	public ATLGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 		PageFactory.initElements(driver, this);
+	}
+	public WebElement getatlGlobalSearchClearTxt() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlGlobalSearchClearTxt));
+		return driver.findElement(atlGlobalSearchClearTxt);
+	}
+	public WebElement getatlShowroomLink() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlShowroomLink));
+		return driver.findElement(atlShowroomLink);
+	}
+	public WebElement getatlShowSpecialsExhName() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlShowSpecialsExhName));
+		return driver.findElement(atlShowSpecialsExhName);
+	}
+	public WebElement getatlShowSpecialsTitle() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlShowSpecialsTitle));
+		return driver.findElement(atlShowSpecialsTitle);
+	}
+	public WebElement getatlShowSpecialsLink() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlShowSpecialsLink));
+		return driver.findElement(atlShowSpecialsLink);
+	}
+	public WebElement getatlExhibitorsAndProductTab() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlExhibitorsAndProductTab));
+		return driver.findElement(atlExhibitorsAndProductTab);
+	}
+	public List<WebElement> getatlListOfAllSavedSearches() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlListOfAllSavedSearches));
+		return driver.findElements(atlListOfAllSavedSearches);
+	}
+	
+	
+
+	public WebElement getatlSavedSearchesBtnForNewSaved() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlSavedSearchesBtnForNewSaved));
+		return driver.findElement(atlSavedSearchesBtnForNewSaved);
+	}
+	public WebElement getatlSavedSearchesInputBox() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlSavedSearchesInputBox));
+		return driver.findElement(atlSavedSearchesInputBox);
+	}
+
+	public WebElement getatlSavedSearchesBtn() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlSavedSearchesBtn));
+		return driver.findElement(atlSavedSearchesBtn);
+	}
+	public WebElement getatlSavedSearchesDropdown() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlSavedSearchesDropdown));
+		return driver.findElement(atlSavedSearchesDropdown);
+	}
+	public WebElement getatlSavedSearchesIcon() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlSavedSearchesIcon));
+		return driver.findElement(atlSavedSearchesIcon);
 	}
 	public WebElement getatlGoToMPBtn() throws InterruptedException {
 		wait = new WebDriverWait (driver,20);

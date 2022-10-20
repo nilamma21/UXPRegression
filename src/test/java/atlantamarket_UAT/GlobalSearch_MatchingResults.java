@@ -16,6 +16,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import org.testng.xml.LaunchSuite.ExistingSuite;
 
 import pageObjects.AtlantaMarket.ATLExhDigiShowroomPage;
 import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
@@ -59,9 +60,10 @@ public class GlobalSearch_MatchingResults extends base {
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		// lap.getIUnderstandBtn().click();
-		Thread.sleep(5000);
-		// lap.getCloseMarktAdBtn().click();
+		utl.verifyMPLoginFunctionality();
+		Thread.sleep(8000);
+//		lap.getIUnderstandBtn().click();
+//		Thread.sleep(8000);
 	}
 
 	@Test(priority = 1)
@@ -89,7 +91,7 @@ public class GlobalSearch_MatchingResults extends base {
 
 		}
 		System.out.println("Displayed All Products Name Start with :: " + prop.getProperty("containsStartWithInput"));
-
+		
 	}
 
 	@Test(priority = 2)
@@ -102,7 +104,11 @@ public class GlobalSearch_MatchingResults extends base {
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		
+		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
+			atlgs.getatlGlobalSearchClearTxt().click();
+		}
+	
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(5000);
@@ -208,7 +214,10 @@ public class GlobalSearch_MatchingResults extends base {
 		utl = new Utility(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		
+		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
+			atlgs.getatlGlobalSearchClearTxt().click();
+		}
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("sortByInput"));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(5000);
@@ -220,10 +229,7 @@ public class GlobalSearch_MatchingResults extends base {
 		selectAMC.selectByVisibleText("Sort By Relevance");
 		Thread.sleep(8000);
 		// Verify All Exhibitor Titles
-		/*
-		 * for (WebElement allExhDisply : atlgs.getatlListOfAllExh()) {
-		 * Assert.assertTrue(allExhDisply.isDisplayed()); }
-		 */
+		
 		System.out.println("Displayed All Relevance ");
 
 		utl.Sorting(atlgs.getatlGlobalSearchExhLocationList(), atlgs.getatlGlobalSearch_SearchSortByDropdwn(),
@@ -250,7 +256,9 @@ public class GlobalSearch_MatchingResults extends base {
 		utl = new Utility(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
+			atlgs.getatlGlobalSearchClearTxt().click();
+		}
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("sortByInput"));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(5000);
@@ -285,7 +293,9 @@ public class GlobalSearch_MatchingResults extends base {
 		atlmppge = new ATLMarketPlannerPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
+			atlgs.getatlGlobalSearchClearTxt().click();
+		}
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(5000);
@@ -333,8 +343,12 @@ public class GlobalSearch_MatchingResults extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		utl.verifyMPLoginFunctionality();
-		Thread.sleep(5000);
+		//utl.verifyMPLoginFunctionality();
+		
+		//atlgs.getatlGlobalSearchClearTxt().click();
+		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
+			atlgs.getatlGlobalSearchClearTxt().click();
+		}
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
 		Thread.sleep(5000);
 		atlgs.getATLSearchButton().click();
@@ -348,6 +362,8 @@ public class GlobalSearch_MatchingResults extends base {
 		// Click on Add to Selected List Btn
 		atlgs.getatlAddToExistingList().click();
 		// Select Exiting List
+		String exList = atlgs.getatlExistingList().getText();
+		System.out.println(exList);
 		atlgs.getatlExistingList().click();
 		// Click Add to List Btn
 		atlgs.getatlAddToSelectBtn().click();
@@ -363,21 +379,221 @@ public class GlobalSearch_MatchingResults extends base {
 		Thread.sleep(10000);
 		// Click on List from left Panel
 		atlmppge.getMpListLeftPannel().click();
-		// Verify Exhibitor present or not into MP Fav
+		// Open selected list
+		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), exList);
+		// Verify exhibitor present into selected list or not
 		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), exhName);
 
-		/*
-		 * // Sign In to MP // Enter the credentials on Login Page and click
-		 * lp.getEmailAddress().sendKeys((prop.getProperty("username")));
-		 * lp.getPassword().sendKeys((prop.getProperty("password")));
-		 * 
-		 * lp.getSignInBtn().click(); Thread.sleep(15000); // Click on Market Planner
-		 * lap.getMPLinkText().click(); Thread.sleep(6000);
-		 * 
-		 * // Click on List tab atlmppge.getMPHomeListsTab().click();
-		 * Thread.sleep(10000); //Verify Exhibitor present or not into MP Fav
-		 * utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(),exhName );
-		 */
+	}
+
+	@Test(priority = 7)
+	public void TS007_VerifyGlobalSearchMatchingResultsSelectAddToNewlyCreatedListTest()
+			throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T424: Global Search: Matching results- Select- Add to newly created list
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		utl = new Utility(driver);
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//utl.verifyMPLoginFunctionality();
+		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
+			atlgs.getatlGlobalSearchClearTxt().click();
+		}
+		Thread.sleep(5000);
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
+		Thread.sleep(5000);
+		atlgs.getATLSearchButton().click();
+		Thread.sleep(5000);
+		String exhName = atlgs.getatl1STExhiName().getText();
+		System.out.println(exhName);
+		// Click on Select Btn
+		atlgs.getatlGlobalSearchSelectBtn().click();
+		// Select 1st checkbox from searched result
+		atlgs.getatlGlobalSearchExhCheckbox().click();
+		
+		// Click on Add to Selected List Btn
+		atlgs.getatlAddToExistingList().click();
+		String lName = genData.generateRandomString(10);
+		atlmppge.getCreateNewListNameTxtbx().sendKeys(lName);
+		// atlmppge.getCreateNewListNameTxtbx().sendKeys();
+		atlmppge.getNewListModalCreateBtn().click();
+		// CLick on Go To MP Btn
+		atlgs.getatlGoToMPBtn().click();
+
+		// Click on Market Planner
+		lap.getMPLinkText().click();
+		Thread.sleep(6000);
+
+		// Click on List tab
+		atlmppge.getMPHomeListsTab().click();
+		Thread.sleep(10000);
+		// Click on List from left Panel
+		atlmppge.getMpListLeftPannel().click();
+		// Open selected list
+		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), lName);
+		// Verify exhibitor present into selected list or not
+		Thread.sleep(6000);
+		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), exhName);
+
+	}
+
+	@Test(priority = 8)
+	public void TS008_VerifyGlobalSearchMatchingResultsUsePreviousSavedSearchTest()
+			throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T329: Global Search: Matching results- Use previous saved Search
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		utl = new Utility(driver);
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
+			atlgs.getatlGlobalSearchClearTxt().click();
+		}
+		//utl.verifyMPLoginFunctionality();
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
+		Thread.sleep(5000);
+		atlgs.getATLSearchButton().click();
+		Thread.sleep(5000);
+		// Click on Save Searches Btn
+		atlgs.getatlSavedSearchesIcon().click();
+		try {
+			Select selectSavedSearched = new Select(atlgs.getatlSavedSearchesDropdown());
+			selectSavedSearched.selectByIndex(1);
+			String optin = selectSavedSearched.getOptions().get(1).getText();
+			System.out.println(optin);
+			Assert.assertTrue(atlgs.getATLInfosearchtxtbx().getAttribute("value").contains(optin));
+		} catch (Exception e) {
+			atlgs.getatlSavedSearchesBtn().click();
+			atlgs.getatlSavedSearchesInputBox().sendKeys(prop.getProperty("savedSearchesInput"));
+			atlgs.getatlSavedSearchesBtnForNewSaved().click();
+			Select selectSavedSearched = new Select(atlgs.getatlSavedSearchesDropdown());
+			selectSavedSearched.selectByIndex(1);
+			String optin = selectSavedSearched.getOptions().get(1).getText();
+			System.out.println(optin);
+			Assert.assertTrue(atlgs.getATLInfosearchtxtbx().getAttribute("value").contains(optin));
+		}
+
+	}
+
+	@Test(priority = 9)
+	public void TS009_VerifyGlobalSearchMatchingResultsSavedSearchesTest()
+			throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T355: Global Search: Matching results -Saved Searches
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		utl = new Utility(driver);
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
+			atlgs.getatlGlobalSearchClearTxt().click();
+		}
+		
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
+		Thread.sleep(5000);
+		atlgs.getATLSearchButton().click();
+		Thread.sleep(5000);
+		//Click on Save Searches Btn
+		atlgs.getatlSavedSearchesIcon().click();
+	
+			atlgs.getatlSavedSearchesBtn().click();
+			atlgs.getatlSavedSearchesInputBox().sendKeys(prop.getProperty("savedSearchesInput"));
+			atlgs.getatlSavedSearchesBtnForNewSaved().click();
+			Select selectSavedSearched=new Select(atlgs.getatlSavedSearchesDropdown());
+			selectSavedSearched.selectByIndex(1);
+			String optin=selectSavedSearched.getOptions().get(1).getText();
+			System.out.println(optin);
+			//Verify Added Option is present in Saved Search List
+			utl.checkItemPresentInListorNot(atlgs.getatlListOfAllSavedSearches(),(prop.getProperty("savedSearchesInput")));
+		
+	}
+	@Test(priority = 10)
+	public void TS010_VerifyShowSpecialsLinksExhibitorNameTest()
+			throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T381: Show Specials: Links - Exhibitor Name
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		utl = new Utility(driver);
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		//click on Exhibitors And Product Tab
+		atlgs.getatlExhibitorsAndProductTab().click();
+		//Click on Show Specials 
+		atlgs.getatlShowSpecialsLink().click();
+		//verify Show special Page
+		Assert.assertTrue(atlgs.getatlShowSpecialsTitle().getText().contains(prop.getProperty("showSpecialTitle")));
+		//Click on Show Special Exhibitor
+		String showSpecialExhName=atlgs.getatlShowSpecialsExhName().getText();
+		System.out.println(showSpecialExhName);
+		atlgs.getatlShowSpecialsExhName().click();
+		Thread.sleep(5000);
+		//Verify Show Special Exh Page 
+		Assert.assertTrue(atlgs.getatlShowSpecialsTitle().getText().contains(showSpecialExhName));
+		
+	}
+	@Test(priority = 11)
+	public void TS011_VerifyShowSpecialsLinksShowroomTest()
+			throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T382: Show Specials: Links - Showroom
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		utl = new Utility(driver);
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		//click on Exhibitors And Product Tab
+		atlgs.getatlExhibitorsAndProductTab().click();
+		//Click on Show Specials 
+		atlgs.getatlShowSpecialsLink().click();
+		Thread.sleep(5000);
+		//verify Show special Page
+		Assert.assertTrue(atlgs.getatlShowSpecialsTitle().getText().contains(prop.getProperty("showSpecialTitle")));
+		//Click on Show Special Exhibitor
+		String showroomName=atlgs.getatlShowroomLink().getText();
+		String url=atlgs.getatlShowroomLink().getAttribute("href");
+		System.out.println(showroomName);
+		atlgs.getatlShowroomLink().click();
+		Thread.sleep(5000);
+		//Verify Show Special Exh Page 
+		Assert.assertTrue(driver.getCurrentUrl().contains(url));
+		
 	}
 
 	@AfterClass
