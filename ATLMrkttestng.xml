@@ -31,7 +31,7 @@
 			<methods>
 			<!-- <include name="TS005_VerifyGlobalSearchMatchingResultsSelectAddToFavoritesTest"/>
 			<include name="TS006_VerifyGlobalSearchMatchingResultsSelectAddToExistingListTest"/> -->
-			 <include name="TS008_VerifyGlobalSearchMatchingResultsUsePreviousSavedSearchTest"/> 
+			 <!-- <include name="TS007_VerifyGlobalSearchMatchingResultsSelectAddToNewlyCreatedListTest"/>  -->
 			
 			</methods>
 		</classes>
