@@ -1,17 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="1" total="11" passed="10">
   <reporter-output>
   </reporter-output>
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="62890" started-at="2022-10-18T12:26:15Z" finished-at="2022-10-18T12:27:18Z">
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="461166" started-at="2022-10-19T08:56:21Z" finished-at="2022-10-19T09:04:02Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="62890" started-at="2022-10-18T12:26:15Z" finished-at="2022-10-18T12:27:18Z">
+    <test name="RegressionTest" duration-ms="461166" started-at="2022-10-19T08:56:21Z" finished-at="2022-10-19T09:04:02Z">
       <class name="atlantamarket_UAT.GlobalSearch_MatchingResults">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.GlobalSearch_MatchingResults@4dfa3a9d]" name="initialize" is-config="true" duration-ms="26072" started-at="2022-10-18T17:56:15Z" finished-at="2022-10-18T17:56:41Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.GlobalSearch_MatchingResults@204f30ec]" name="initialize" is-config="true" duration-ms="31101" started-at="2022-10-19T14:26:21Z" finished-at="2022-10-19T14:26:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="FAIL" signature="TS008_VerifyGlobalSearchMatchingResultsUsePreviousSavedSearchTest()[pri:0, instance:atlantamarket_UAT.GlobalSearch_MatchingResults@4dfa3a9d]" name="TS008_VerifyGlobalSearchMatchingResultsUsePreviousSavedSearchTest" duration-ms="36541" started-at="2022-10-18T17:56:41Z" finished-at="2022-10-18T17:57:18Z">
+        <test-method status="PASS" signature="TS001_VerifyGlobalSearchContainsAndStartsWithTest()[pri:0, instance:atlantamarket_UAT.GlobalSearch_MatchingResults@204f30ec]" name="TS001_VerifyGlobalSearchContainsAndStartsWithTest" duration-ms="9140" started-at="2022-10-19T14:26:52Z" finished-at="2022-10-19T14:27:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifyGlobalSearchContainsAndStartsWithTest -->
+        <test-method status="PASS" signature="TS002_VerifyGlobalSearchMatchingResultsSortWithinTest()[pri:0, instance:atlantamarket_UAT.GlobalSearch_MatchingResults@204f30ec]" name="TS002_VerifyGlobalSearchMatchingResultsSortWithinTest" duration-ms="34562" started-at="2022-10-19T14:27:01Z" finished-at="2022-10-19T14:27:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifyGlobalSearchMatchingResultsSortWithinTest -->
+        <test-method status="PASS" signature="TS003_VerifyGlobalSearchMatchingResultsSortSortByTest()[pri:0, instance:atlantamarket_UAT.GlobalSearch_MatchingResults@204f30ec]" name="TS003_VerifyGlobalSearchMatchingResultsSortSortByTest" duration-ms="40653" started-at="2022-10-19T14:27:36Z" finished-at="2022-10-19T14:28:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifyGlobalSearchMatchingResultsSortSortByTest -->
+        <test-method status="PASS" signature="TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest()[pri:0, instance:atlantamarket_UAT.GlobalSearch_MatchingResults@204f30ec]" name="TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest" duration-ms="15387" started-at="2022-10-19T14:28:16Z" finished-at="2022-10-19T14:28:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest -->
+        <test-method status="PASS" signature="TS005_VerifyGlobalSearchMatchingResultsSelectAddToFavoritesTest()[pri:0, instance:atlantamarket_UAT.GlobalSearch_MatchingResults@204f30ec]" name="TS005_VerifyGlobalSearchMatchingResultsSelectAddToFavoritesTest" duration-ms="60395" started-at="2022-10-19T14:28:32Z" finished-at="2022-10-19T14:29:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifyGlobalSearchMatchingResultsSelectAddToFavoritesTest -->
+        <test-method status="PASS" signature="TS006_VerifyGlobalSearchMatchingResultsSelectAddToExistingListTest()[pri:0, instance:atlantamarket_UAT.GlobalSearch_MatchingResults@204f30ec]" name="TS006_VerifyGlobalSearchMatchingResultsSelectAddToExistingListTest" duration-ms="105123" started-at="2022-10-19T14:29:32Z" finished-at="2022-10-19T14:31:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS006_VerifyGlobalSearchMatchingResultsSelectAddToExistingListTest -->
+        <test-method status="PASS" signature="TS007_VerifyGlobalSearchMatchingResultsSelectAddToNewlyCreatedListTest()[pri:0, instance:atlantamarket_UAT.GlobalSearch_MatchingResults@204f30ec]" name="TS007_VerifyGlobalSearchMatchingResultsSelectAddToNewlyCreatedListTest" duration-ms="114781" started-at="2022-10-19T14:31:17Z" finished-at="2022-10-19T14:33:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifyGlobalSearchMatchingResultsSelectAddToNewlyCreatedListTest -->
+        <test-method status="FAIL" signature="TS008_VerifyGlobalSearchMatchingResultsUsePreviousSavedSearchTest()[pri:0, instance:atlantamarket_UAT.GlobalSearch_MatchingResults@204f30ec]" name="TS008_VerifyGlobalSearchMatchingResultsUsePreviousSavedSearchTest" duration-ms="11517" started-at="2022-10-19T14:33:12Z" finished-at="2022-10-19T14:33:24Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -22,7 +50,7 @@
 	at org.testng.Assert.failNotEquals(Assert.java:494)
 	at org.testng.Assert.assertTrue(Assert.java:42)
 	at org.testng.Assert.assertTrue(Assert.java:52)
-	at atlantamarket_UAT.GlobalSearch_MatchingResults.TS008_VerifyGlobalSearchMatchingResultsUsePreviousSavedSearchTest(GlobalSearch_MatchingResults.java:476)
+	at atlantamarket_UAT.GlobalSearch_MatchingResults.TS008_VerifyGlobalSearchMatchingResultsUsePreviousSavedSearchTest(GlobalSearch_MatchingResults.java:479)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -53,7 +81,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS008_VerifyGlobalSearchMatchingResultsUsePreviousSavedSearchTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.GlobalSearch_MatchingResults@4dfa3a9d]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-10-18T17:57:18Z" finished-at="2022-10-18T17:57:18Z">
+        <test-method status="PASS" signature="TS009_VerifyGlobalSearchMatchingResultsSavedSearchesTest()[pri:0, instance:atlantamarket_UAT.GlobalSearch_MatchingResults@204f30ec]" name="TS009_VerifyGlobalSearchMatchingResultsSavedSearchesTest" duration-ms="13436" started-at="2022-10-19T14:33:24Z" finished-at="2022-10-19T14:33:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_VerifyGlobalSearchMatchingResultsSavedSearchesTest -->
+        <test-method status="PASS" signature="TS010_VerifyShowSpecialsLinksExhibitorNameTest()[pri:0, instance:atlantamarket_UAT.GlobalSearch_MatchingResults@204f30ec]" name="TS010_VerifyShowSpecialsLinksExhibitorNameTest" duration-ms="13431" started-at="2022-10-19T14:33:37Z" finished-at="2022-10-19T14:33:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS010_VerifyShowSpecialsLinksExhibitorNameTest -->
+        <test-method status="PASS" signature="TS011_VerifyShowSpecialsLinksShowroomTest()[pri:0, instance:atlantamarket_UAT.GlobalSearch_MatchingResults@204f30ec]" name="TS011_VerifyShowSpecialsLinksShowroomTest" duration-ms="11322" started-at="2022-10-19T14:33:51Z" finished-at="2022-10-19T14:34:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS011_VerifyShowSpecialsLinksShowroomTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.GlobalSearch_MatchingResults@204f30ec]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-10-19T14:34:02Z" finished-at="2022-10-19T14:34:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

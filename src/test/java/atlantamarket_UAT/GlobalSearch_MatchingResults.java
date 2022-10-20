@@ -406,16 +406,18 @@ public class GlobalSearch_MatchingResults extends base {
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
+		Thread.sleep(5000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
 		Thread.sleep(5000);
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(5000);
+		String exhName = atlgs.getatl1STExhiName().getText();
+		System.out.println(exhName);
 		// Click on Select Btn
 		atlgs.getatlGlobalSearchSelectBtn().click();
 		// Select 1st checkbox from searched result
 		atlgs.getatlGlobalSearchExhCheckbox().click();
-		String exhName = atlgs.getatl1STExhiName().getText();
-		System.out.println(exhName);
+		
 		// Click on Add to Selected List Btn
 		atlgs.getatlAddToExistingList().click();
 		String lName = genData.generateRandomString(10);
@@ -437,6 +439,7 @@ public class GlobalSearch_MatchingResults extends base {
 		// Open selected list
 		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), lName);
 		// Verify exhibitor present into selected list or not
+		Thread.sleep(6000);
 		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), exhName);
 
 	}
@@ -461,7 +464,7 @@ public class GlobalSearch_MatchingResults extends base {
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
-		utl.verifyMPLoginFunctionality();
+		//utl.verifyMPLoginFunctionality();
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
 		Thread.sleep(5000);
 		atlgs.getATLSearchButton().click();
@@ -542,13 +545,7 @@ public class GlobalSearch_MatchingResults extends base {
 		genData = new GenerateData();
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
-			atlgs.getatlGlobalSearchClearTxt().click();
-		}
-		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
-		Thread.sleep(5000);
-		atlgs.getATLSearchButton().click();
-		Thread.sleep(5000);
+		
 		//click on Exhibitors And Product Tab
 		atlgs.getatlExhibitorsAndProductTab().click();
 		//Click on Show Specials 
@@ -584,6 +581,7 @@ public class GlobalSearch_MatchingResults extends base {
 		atlgs.getatlExhibitorsAndProductTab().click();
 		//Click on Show Specials 
 		atlgs.getatlShowSpecialsLink().click();
+		Thread.sleep(5000);
 		//verify Show special Page
 		Assert.assertTrue(atlgs.getatlShowSpecialsTitle().getText().contains(prop.getProperty("showSpecialTitle")));
 		//Click on Show Special Exhibitor
