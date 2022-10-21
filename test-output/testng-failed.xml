@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
+<suite name="Failed suite [LVM_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-      <class name="atlantamarket_UAT.GlobalSearch_MatchingResults">
+      <class name="atlantamarket_PROD.GlobalSearch_MatchingResults">
         <methods>
-          <include name="initialize"/>
-          <include name="TS008_VerifyGlobalSearchMatchingResultsUsePreviousSavedSearchTest"/>
           <include name="tearDown"/>
+          <include name="initialize"/>
+          <include name="TS005_VerifyGlobalSearchMatchingResultsSelectAddToFavoritesTest"/>
         </methods>
-      </class> <!-- atlantamarket_UAT.GlobalSearch_MatchingResults -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_MatchingResults -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
-</suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->
+</suite> <!-- Failed suite [LVM_RegressionTestSuite] -->

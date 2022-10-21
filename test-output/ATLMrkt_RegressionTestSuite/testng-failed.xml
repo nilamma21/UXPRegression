@@ -8,6 +8,7 @@
           <include name="initialize"/>
           <include name="TS008_VerifyGlobalSearchMatchingResultsUsePreviousSavedSearchTest"/>
           <include name="tearDown"/>
+          <include name="TS007_VerifyGlobalSearchMatchingResultsSelectAddToNewlyCreatedListTest"/>
         </methods>
       </class> <!-- atlantamarket_UAT.GlobalSearch_MatchingResults -->
     </classes>
