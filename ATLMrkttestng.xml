@@ -29,9 +29,7 @@
 		<classes>
 			<class name="atlantamarket_UAT.GlobalSearch_MatchingResults"/>
 			<methods>
-			<!-- <include name="TS005_VerifyGlobalSearchMatchingResultsSelectAddToFavoritesTest"/>
-			<include name="TS006_VerifyGlobalSearchMatchingResultsSelectAddToExistingListTest"/> -->
-			 <!-- <include name="TS007_VerifyGlobalSearchMatchingResultsSelectAddToNewlyCreatedListTest"/>  -->
+			<include name="TS008_VerifyGlobalSearchMatchingResultsUsePreviousSavedSearchTest"/>
 			
 			</methods>
 		</classes>

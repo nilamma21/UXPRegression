@@ -60,9 +60,10 @@ public class GlobalSearch_MatchingResults extends base {
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		// lap.getIUnderstandBtn().click();
-		Thread.sleep(5000);
-		// lap.getCloseMarktAdBtn().click();
+		utl.verifyMPLoginFunctionality();
+		Thread.sleep(8000);
+//		lap.getIUnderstandBtn().click();
+//		Thread.sleep(8000);
 	}
 
 	@Test(priority = 1)
