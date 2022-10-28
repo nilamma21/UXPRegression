@@ -11,7 +11,7 @@
 			<class name="atlantamarket_PROD.GlobalSearch_MatchingResults" />
 			<methods>
 				<!-- <include name="TS001_VerifyGlobalSearchContainsAndStartsWithTest" /> -->
-				<include name="TS005_VerifyGlobalSearchMatchingResultsSelectAddToFavoritesTest" />
+				<!-- <include name="TS005_VerifyGlobalSearchMatchingResultsSelectAddToFavoritesTest" /> -->
 			</methods>
 		</classes>
 	</test>

@@ -226,14 +226,12 @@ public class GlobalSearch_MatchingResults extends base {
 		
 		System.out.println("Displayed All Relevance ");
 
+		/*utl.Sorting(atlgs.getatlGlobalSearchExhLocationList(), atlgs.getatlGlobalSearch_SearchSortByDropdwn(),
+				"Sort by Name Ascending");
 		utl.Sorting(atlgs.getatlGlobalSearchExhLocationList(), atlgs.getatlGlobalSearch_SearchSortByDropdwn(),
-				"Sort by Location Ascending");
-		utl.Sorting(atlgs.getatlGlobalSearchExhLocationList(), atlgs.getatlGlobalSearch_SearchSortByDropdwn(),
-				"Sort by Location Descending");
-		// utl.Sorting(atlgs.getatlExhNames(),atlgs.getatlGlobalSearch_SearchSortByDropdwn(),"Sort
-		// by Name Ascending");
-		// utl.Sorting(atlgs.getatlExhNames(),atlgs.getatlGlobalSearch_SearchSortByDropdwn(),"Sort
-		// by Name Descending");
+				"Sort by Name Descending");*/
+		 utl.Sorting(atlgs.getatlExhNames(),atlgs.getatlGlobalSearch_SearchSortByDropdwn(),"Sort by Name Ascending");
+		 utl.Sorting(atlgs.getatlExhNames(),atlgs.getatlGlobalSearch_SearchSortByDropdwn(),"Sort by Name Descending");
 		utl.Sorting(atlgs.getatlMachingProductCount(), atlgs.getatlGlobalSearch_SearchSortByDropdwn(),
 				"Sort By Matching Product Count Descending");
 
@@ -576,9 +574,11 @@ public class GlobalSearch_MatchingResults extends base {
 		
 		//click on Exhibitors And Product Tab
 		atlgs.getatlExhibitorsAndProductTab().click();
+		
 		//Click on Show Specials 
 		atlgs.getatlShowSpecialsLink().click();
 		//verify Show special Page
+		Thread.sleep(5000);
 		Assert.assertTrue(atlgs.getatlShowSpecialsTitle().getText().contains(prop.getProperty("showSpecialTitle")));
 		//Click on Show Special Exhibitor
 		String showSpecialExhName=atlgs.getatlShowSpecialsExhNamePROD().getText();
