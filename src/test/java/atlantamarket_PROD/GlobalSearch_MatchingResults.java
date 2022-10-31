@@ -458,7 +458,7 @@ public class GlobalSearch_MatchingResults extends base {
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
-		utl.verifyMPLoginFunctionality();
+		//utl.verifyMPLoginFunctionality();
 		
 		
 		
