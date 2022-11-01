@@ -362,7 +362,9 @@ public class Utility extends base {
 		}
 
 	}
-public void Sorting(List<WebElement> list, WebElement dropdown, String filterName) throws IOException, InterruptedException {
+
+	public void Sorting(List<WebElement> list, WebElement dropdown, String filterName)
+			throws IOException, InterruptedException {
 
 		// Store Current location list
 		List<String> currentList = new ArrayList<String>();
@@ -378,11 +380,10 @@ public void Sorting(List<WebElement> list, WebElement dropdown, String filterNam
 		for (String s : currentList) {
 			sortedList.add(s.toLowerCase());
 		}
-		if(filterName.contains("Ascending"))
-		{
+		if (filterName.contains("Ascending")) {
 			Collections.sort(sortedList);
-		}else {
-		Collections.sort(sortedList,Collections.reverseOrder());
+		} else {
+			Collections.sort(sortedList, Collections.reverseOrder());
 		}
 		// Select Sort by Location Ascending Filter
 		Select selectOption = new Select(dropdown);
@@ -398,14 +399,28 @@ public void Sorting(List<WebElement> list, WebElement dropdown, String filterNam
 		// Verify Exhibitor List is Sorted or not
 		Assert.assertEquals(sortedList, expectedSortedList, " List Should be sorted");
 
-		System.out.println("Displayed "+filterName);
+		System.out.println("Displayed " + filterName);
 
 	}
-public void ClearGlobalSearch() throws IOException, InterruptedException {
 
-	if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
-		atlgs.getatlGlobalSearchClearTxt().click();
+	public void ClearGlobalSearch() throws IOException, InterruptedException {
+
+		if (!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
+			atlgs.getatlGlobalSearchClearTxt().click();
+		}
 	}
-}
+
+	public void CloseATLPopup() throws IOException, InterruptedException {
+		lap = new ATLLandingPage(driver);
+		
+		try {
+			lap.getCloseMarktAdBtn().click();
+			
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+	}
 
 }

@@ -6,12 +6,8 @@
       <class name="atlantamarket_PROD.GlobalSearch_MatchingResults">
         <methods>
           <include name="tearDown"/>
-          <include name="TS003_VerifyGlobalSearchMatchingResultsSortSortByTest"/>
-          <include name="TS008_VerifyGlobalSearchMatchingResultsUsePreviousSavedSearchTest"/>
-          <include name="TS006_VerifyGlobalSearchMatchingResultsSelectAddToExistingListTest"/>
           <include name="initialize"/>
-          <include name="TS009_VerifyGlobalSearchMatchingResultsSavedSearchesTest"/>
-          <include name="TS005_VerifyGlobalSearchMatchingResultsSelectAddToFavoritesTest"/>
+          <include name="TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest"/>
         </methods>
       </class> <!-- atlantamarket_PROD.GlobalSearch_MatchingResults -->
     </classes>
