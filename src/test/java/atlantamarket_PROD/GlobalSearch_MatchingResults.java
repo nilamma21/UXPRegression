@@ -56,13 +56,18 @@ public class GlobalSearch_MatchingResults extends base {
 		// chromeVersion();
 		utl = new Utility(driver);
 		lap = new ATLLandingPage(driver);
-
+		atlgs=new ATLGlobalSearchPage(driver);
+		
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl_prod"));
-		 lap.getIUnderstandBtn().click();
+		
+		lap.getIUnderstandBtn().click();
 		Thread.sleep(5000);
-		// lap.getCloseMarktAdBtn().click();
+		utl.CloseATLPopup();
+		
+		//lap.getCloseMarktAdBtn().click();
+		
 	}
 
 	@Test(priority = 1)
@@ -258,14 +263,51 @@ public class GlobalSearch_MatchingResults extends base {
 		atlgs.getatlGlobalSearchSortBtn().click();
 
 		// Select Exhibitor Sort By Relevance
+		
+		
+		
+		// utl.Sorting(atlgs.getatlExhNames(),atlgs.getatlFilterByNameDropDown(),"R");
+		 
+		// Store Current location list
+			List<String> currentList = new ArrayList<String>();
 
-		Select selectLetter = new Select(atlgs.getatlFilterByNameDropDown());
+			for (WebElement currentElement : atlgs.getatlExhNames()) {
+
+				currentList.add(currentElement.getText().toLowerCase());
+			}
+			System.out.println("Current List : " + currentList);
+
+			// Create sorted list
+			List<String> sortedList = new ArrayList<String>();
+			for (String s : currentList) {
+				sortedList.add(s.toLowerCase());
+			}
+			
+			Collections.sort(sortedList);
+			Select selectOption = new Select(atlgs.getatlFilterByNameDropDown());
+			selectOption.selectByVisibleText("R");
+			Thread.sleep(8000);
+
+			List<String> expectedSortedList = new ArrayList<String>();
+			for (WebElement ascLocationList : atlgs.getatlExhNames()) {
+				expectedSortedList.add(ascLocationList.getText().toLowerCase());
+			}
+			// Thread.sleep(25000);
+			System.out.println("Expected sorted Exhibitor List : " + expectedSortedList);
+			// Verify Exhibitor List is Sorted or not
+			Assert.assertEquals(sortedList, expectedSortedList, " List Should be sorted");
+
+			System.out.println("Displayed " + "R");
+		 
+		 
+
+		/*Select selectLetter = new Select(atlgs.getatlFilterByNameDropDown());
 		selectLetter.selectByVisibleText("R");
 		Thread.sleep(8000);
 		for (WebElement filterExhNames : atlgs.getatlExhiNameForFilterByName()) {
 			Assert.assertTrue(filterExhNames.isDisplayed());
 		}
-
+*/
 		System.out.println("Displayed All Relevance ");
 
 	}
@@ -336,7 +378,7 @@ public class GlobalSearch_MatchingResults extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//utl.verifyMPLoginFunctionality();
-		
+		utl.CloseATLPopup();
 		//atlgs.getatlGlobalSearchClearTxt().click();
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
@@ -396,6 +438,7 @@ public class GlobalSearch_MatchingResults extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//utl.verifyMPLoginFunctionality();
+		utl.CloseATLPopup();
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
@@ -460,7 +503,7 @@ public class GlobalSearch_MatchingResults extends base {
 		}
 		//utl.verifyMPLoginFunctionality();
 		
-		
+		utl.CloseATLPopup();
 		
 		
 		try {
@@ -474,7 +517,7 @@ public class GlobalSearch_MatchingResults extends base {
 			selectSavedSearched.selectByIndex(1);
 			String optin = selectSavedSearched.getOptions().get(1).getText();
 			System.out.println(optin);
-			Assert.assertTrue(atlgs.getATLInfosearchtxtbx().getAttribute("value").contains(optin));
+		//	Assert.assertTrue(atlgs.getATLInfosearchtxtbx().getAttribute("value").contains(optin));
 			Thread.sleep(5000);
 			Assert.assertTrue(atlgs.getATLVerifyGlobalSeacrh().getText().contains(optin));
 			
@@ -536,6 +579,7 @@ public class GlobalSearch_MatchingResults extends base {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
 		//utl.verifyMPLoginFunctionality();
+		utl.CloseATLPopup();
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("savedSearchesInput"));
 		Thread.sleep(3000);
 		atlgs.getATLSearchButton().click();

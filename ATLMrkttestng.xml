@@ -27,9 +27,9 @@
 	</listners>
 	<test thread-count="5" name="RegressionTest">
 		<classes>
-			<class name="atlantamarket_UAT.GlobalSearch_MatchingResults"/>
+			<class name="atlantamarket_UAT.MarketPlanner"/>
 			<methods>
-			<include name="TS008_VerifyGlobalSearchMatchingResultsUsePreviousSavedSearchTest"/>
+			<!-- <include name="TS008_VerifyGlobalSearchMatchingResultsUsePreviousSavedSearchTest"/> -->
 			
 			</methods>
 		</classes>
