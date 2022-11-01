@@ -3,14 +3,28 @@
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-      <class name="atlantamarket_UAT.GlobalSearch_MatchingResults">
+      <class name="atlantamarket_UAT.MarketPlanner">
         <methods>
+          <include name="TS030_VerifyMarketPlannerListsElementMoreOoptionsCopyeTest"/>
+          <include name="TS038_VerifyMarketPlannerRegistrationsTabTest"/>
+          <include name="TS035_VerifyMarketPlannerEditListAddNoteTest"/>
+          <include name="TS039_VerifyMarketSavedSearchesfunctionalityTest"/>
+          <include name="TS052_VerifyMarketPlannerAllSavedEventsAndSemninarTest"/>
+          <include name="TS041_VerifyMarketPlannerListSortByFunctionalityTest"/>
           <include name="initialize"/>
-          <include name="TS008_VerifyGlobalSearchMatchingResultsUsePreviousSavedSearchTest"/>
+          <include name="TS046_VerifyMarketPlanneMyInfoEditProfile"/>
+          <include name="TS051_VerifyMarketPlannerAddEventsToFavTest"/>
+          <include name="TS007_VerifyNewGroupBtnFunctionalityForListsTest"/>
+          <include name="TS025_VerifyDuplicateLinkFunctionalityForListTest"/>
+          <include name="TS040_VerifyMarketSavedSearchesDeletefunctionalityTest"/>
+          <include name="TS027_VerifyListDisplayControlsFunctionalityTest"/>
+          <include name="TS042_VerifyMarketPlannerListsElementMoreOoptionsAddToScheduleTest"/>
+          <include name="TS023_VerifyFilterByOptionsFunctionalityForListTest"/>
           <include name="tearDown"/>
-          <include name="TS007_VerifyGlobalSearchMatchingResultsSelectAddToNewlyCreatedListTest"/>
+          <include name="TS031_VerifyMarketPlannerListsElementMoreOoptionsMoveTest"/>
+          <include name="TS032_VerifyMarketPlannerListsElementMoreOoptionsDeleteTest"/>
         </methods>
-      </class> <!-- atlantamarket_UAT.GlobalSearch_MatchingResults -->
+      </class> <!-- atlantamarket_UAT.MarketPlanner -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->

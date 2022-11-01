@@ -105,12 +105,19 @@ public class ATLGlobalSearchPage {
 	
 	By atlShowSpecialsExhNamePROD = By.xpath("//div[@class='imc-gallery imc-gallery--align-flex-start imc-gallery--1-4 imc-vr--collosal imc-fprod-cont imc-specials-list']/div[1]/div[1]/a[2]");  //Locator for Show Secials Name
 	By atlSelectList = By.xpath("//select[@name='Saved Searches']");  //Locator for Show Secials Name
+	By atlClosePopup = By.xpath("//div[@class=' contact-exit']");  //Locator for Show Secials Name
+	
 	
 	
 	public ATLGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 		PageFactory.initElements(driver, this);
+	}
+	public WebElement getatlClosePopup() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlClosePopup));
+		return driver.findElement(atlClosePopup);
 	}
 	public WebElement getatlSelectList() throws InterruptedException {
 		wait = new WebDriverWait (driver,20);
