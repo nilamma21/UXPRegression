@@ -326,6 +326,7 @@ public class GlobalSearch_MatchingResults extends base {
 		lp = new ATLLoginPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
 		utl.verifyMPLoginFunctionality();
+		utl.CloseATLPopup();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
