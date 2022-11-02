@@ -325,19 +325,19 @@ public class GlobalSearch_MatchingResults extends base {
 
 		/*// Sign In to MP
 		// Enter the credentials on Login Page and click
-<<<<<<< HEAD
+
 		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
 		lp.getPassword().sendKeys((prop.getProperty("password")));
 
 		lp.getSignInBtn().click();
 		Thread.sleep(15000);*/
-=======
+
 		//lp.getEmailAddress().sendKeys((prop.getProperty("username")));
 		//lp.getPassword().sendKeys((prop.getProperty("password")));
 		//lp.getSignInBtn().click();
 		//Thread.sleep(15000);
 		Thread.sleep(5000);
->>>>>>> 4416732d66161525947da42761bcfffa9ea0a294
+
 		// Click on Market Planner
 		lap.getMPLinkText().click();
 		Thread.sleep(6000);
