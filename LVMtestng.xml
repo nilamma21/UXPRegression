@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="LVM_RegressionTestSuite">
+<!-- <suite name="LVM_RegressionTestSuite">
 	<listners>
 		<listner class-name="lasvegasmarket_PROD.TestListeners" />
 	</listners>
@@ -12,7 +12,7 @@
 			<methods>
 			<include name="TS003_VerifyGlobalSearchMatchingResultsSortSortByTest" /> 
 				<include name="TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest" />
-				<include name="TS005_VerifyGlobalSearchMatchingResultsSelectAddToFavoritesTest" />
+				<include name="TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest" />
 				
 				
 			</methods>
@@ -20,6 +20,25 @@
 	</test>
 </suite>
 
- 
+  -->
+ <suite name="LVM_RegressionTestSuite">
+	<listners>
+		<listner class-name="lasvegasmarket_PROD.TestListeners" />
+	</listners>
+
+	<test thread-count="5" name="RegressionTest">
+		<classes>
+			<class name="atlantamarket_PROD.GlobalSearch_ShowSpecials" />
+			<methods>
+	<!-- 		<include name="TS003_VerifyGlobalSearchMatchingResultsSortSortByTest" /> 
+				<include name="TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest" /> -->
+				<!-- <include name="TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest" /> -->
+				
+				
+			</methods>
+		</classes>
+	</test>
+</suite>
+
  
 
