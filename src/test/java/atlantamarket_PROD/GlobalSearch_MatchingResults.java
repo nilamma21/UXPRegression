@@ -228,15 +228,20 @@ public class GlobalSearch_MatchingResults extends base {
 		selectAMC.selectByVisibleText("Sort By Relevance");
 		Thread.sleep(8000);
 		// Verify All Exhibitor Titles
-		
 		System.out.println("Displayed All Relevance ");
 
+		//Location Filters
 		/*utl.Sorting(atlgs.getatlGlobalSearchExhLocationList(), atlgs.getatlGlobalSearch_SearchSortByDropdwn(),
 				"Sort by Name Ascending");
 		utl.Sorting(atlgs.getatlGlobalSearchExhLocationList(), atlgs.getatlGlobalSearch_SearchSortByDropdwn(),
 				"Sort by Name Descending");*/
-		 utl.Sorting(atlgs.getatlExhNames(),atlgs.getatlGlobalSearch_SearchSortByDropdwn(),"Sort by Name Ascending");
-		 utl.Sorting(atlgs.getatlExhNames(),atlgs.getatlGlobalSearch_SearchSortByDropdwn(),"Sort by Name Descending");
+		
+		 //Select filter Sort by Name Ascending
+		 /*utl.Sorting(atlgs.getatlExhNames(),atlgs.getatlGlobalSearch_SearchSortByDropdwn(),"Sort by Name Ascending");
+		  //Select filter Sort by Name Descending
+		 utl.Sorting(atlgs.getatlExhNames(),atlgs.getatlGlobalSearch_SearchSortByDropdwn(),"Sort by Name Descending");*/
+		
+		//Select filter Sort by Matching Product Count Descending
 		utl.Sorting(atlgs.getatlMachingProductCount(), atlgs.getatlGlobalSearch_SearchSortByDropdwn(),
 				"Sort By Matching Product Count Descending");
 
@@ -256,58 +261,31 @@ public class GlobalSearch_MatchingResults extends base {
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
-		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("sortByInput"));
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("filterByInput"));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(5000);
 		// Click on Sort Btn
 		atlgs.getatlGlobalSearchSortBtn().click();
 
-		// Select Exhibitor Sort By Relevance
+		// Select Character from Sort By Filter Name
 		
-		
-		
-		// utl.Sorting(atlgs.getatlExhNames(),atlgs.getatlFilterByNameDropDown(),"R");
-		 
-		// Store Current location list
-			List<String> currentList = new ArrayList<String>();
-
-			for (WebElement currentElement : atlgs.getatlExhNames()) {
-
-				currentList.add(currentElement.getText().toLowerCase());
-			}
-			System.out.println("Current List : " + currentList);
-
-			// Create sorted list
-			List<String> sortedList = new ArrayList<String>();
-			for (String s : currentList) {
-				sortedList.add(s.toLowerCase());
-			}
-			
-			Collections.sort(sortedList);
-			Select selectOption = new Select(atlgs.getatlFilterByNameDropDown());
-			selectOption.selectByVisibleText("R");
-			Thread.sleep(8000);
-
-			List<String> expectedSortedList = new ArrayList<String>();
-			for (WebElement ascLocationList : atlgs.getatlExhNames()) {
-				expectedSortedList.add(ascLocationList.getText().toLowerCase());
-			}
-			// Thread.sleep(25000);
-			System.out.println("Expected sorted Exhibitor List : " + expectedSortedList);
-			// Verify Exhibitor List is Sorted or not
-			Assert.assertEquals(sortedList, expectedSortedList, " List Should be sorted");
-
-			System.out.println("Displayed " + "R");
-		 
-		 
-
-		/*Select selectLetter = new Select(atlgs.getatlFilterByNameDropDown());
-		selectLetter.selectByVisibleText("R");
+		Select selectLetter = new Select(atlgs.getatlFilterByNameDropDown());
+		selectLetter.selectByVisibleText("P");
 		Thread.sleep(8000);
 		for (WebElement filterExhNames : atlgs.getatlExhiNameForFilterByName()) {
-			Assert.assertTrue(filterExhNames.isDisplayed());
+			//Assert.assertTrue(filterExhNames.isDisplayed());
+			
+			String expName=filterExhNames.getText();
+			boolean flag=false;
+			char fChar=expName.charAt(0);
+			String s=""+fChar;
+			System.out.println(fChar);
+			
+				System.out.println("String "+s);
+				Assert.assertTrue(s.contains("P"));
+			
 		}
-*/
+
 		System.out.println("Displayed All Relevance ");
 
 	}
@@ -330,6 +308,8 @@ public class GlobalSearch_MatchingResults extends base {
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
+		utl.verifyMPLoginFunctionality();
+		utl.CloseATLPopup();
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(5000);
@@ -342,13 +322,13 @@ public class GlobalSearch_MatchingResults extends base {
 		// Click on Add to fav Btn
 		atlgs.getatlGlobalSearchAddToFavBtn().click();
 
-		// Sign In to MP
+		/*// Sign In to MP
 		// Enter the credentials on Login Page and click
 		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
 		lp.getPassword().sendKeys((prop.getProperty("password")));
 
 		lp.getSignInBtn().click();
-		Thread.sleep(15000);
+		Thread.sleep(15000);*/
 		// Click on Market Planner
 		lap.getMPLinkText().click();
 		Thread.sleep(6000);
@@ -599,76 +579,5 @@ public class GlobalSearch_MatchingResults extends base {
 		utl.checkItemPresentInListorNot(atlgs.getatlListOfAllSavedSearches(),savedSearchesInput);
 		
 	}
-	@Test(priority = 10)
-	public void TS010_VerifyShowSpecialsLinksExhibitorNameTest()
-			throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// T381: Show Specials: Links - Exhibitor Name
 
-		atlgs = new ATLGlobalSearchPage(driver);
-		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
-		atlexhact = new ATLExhLineProdActionsPage(driver);
-		utl = new Utility(driver);
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		genData = new GenerateData();
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
-		//click on Exhibitors And Product Tab
-		atlgs.getatlExhibitorsAndProductTab().click();
-		
-		//Click on Show Specials 
-		atlgs.getatlShowSpecialsLink().click();
-		//verify Show special Page
-		Thread.sleep(5000);
-		Assert.assertTrue(atlgs.getatlShowSpecialsTitle().getText().contains(prop.getProperty("showSpecialTitle")));
-		//Click on Show Special Exhibitor
-		String showSpecialExhName=atlgs.getatlShowSpecialsExhNamePROD().getText();
-		System.out.println(showSpecialExhName);
-		atlgs.getatlShowSpecialsExhNamePROD().click();
-		Thread.sleep(5000);
-		//Verify Show Special Exh Page 
-		Assert.assertTrue(atlgs.getatlShowSpecialsTitle().getText().contains(showSpecialExhName));
-		
-	}
-	@Test(priority = 11)
-	public void TS011_VerifyShowSpecialsLinksShowroomTest()
-			throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// T382: Show Specials: Links - Showroom
-
-		atlgs = new ATLGlobalSearchPage(driver);
-		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
-		atlexhact = new ATLExhLineProdActionsPage(driver);
-		utl = new Utility(driver);
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		genData = new GenerateData();
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		//click on Exhibitors And Product Tab
-		atlgs.getatlExhibitorsAndProductTab().click();
-		//Click on Show Specials 
-		atlgs.getatlShowSpecialsLink().click();
-		Thread.sleep(5000);
-		//verify Show special Page
-		Assert.assertTrue(atlgs.getatlShowSpecialsTitle().getText().contains(prop.getProperty("showSpecialTitle")));
-		//Click on Show Special Exhibitor
-		String showroomName=atlgs.getatlShowroomLink().getText();
-		String url=atlgs.getatlShowroomLink().getAttribute("href");
-		System.out.println(showroomName);
-		atlgs.getatlShowroomLink().click();
-		Thread.sleep(5000);
-		//Verify Show Special Exh Page 
-		Assert.assertTrue(driver.getCurrentUrl().contains(url));
-		
-	}
-
-	@AfterClass
-	public void tearDown() {
-		// driver.quit();
-	}
 }
