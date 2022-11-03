@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="LVM_RegressionTestSuite" duration-ms="59076" started-at="2022-11-02T10:45:58Z" finished-at="2022-11-02T10:46:57Z">
+  <suite name="LVM_RegressionTestSuite" duration-ms="111457" started-at="2022-11-03T12:34:39Z" finished-at="2022-11-03T12:36:30Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="59076" started-at="2022-11-02T10:45:58Z" finished-at="2022-11-02T10:46:57Z">
-      <class name="atlantamarket_PROD.GlobalSearch_ShowSpecials">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ShowSpecials@548e7350]" name="initialize" is-config="true" duration-ms="34768" started-at="2022-11-02T16:15:58Z" finished-at="2022-11-02T16:16:33Z">
+    <test name="RegressionTest" duration-ms="111457" started-at="2022-11-03T12:34:39Z" finished-at="2022-11-03T12:36:30Z">
+      <class name="atlantamarket_PROD.LineDigitalShowroom">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@204f30ec]" name="initialize" is-config="true" duration-ms="41340" started-at="2022-11-03T18:04:39Z" finished-at="2022-11-03T18:05:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS010_VerifyShowSpecialsLinksExhibitorNameTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ShowSpecials@548e7350]" name="TS010_VerifyShowSpecialsLinksExhibitorNameTest" duration-ms="12560" started-at="2022-11-02T16:16:33Z" finished-at="2022-11-02T16:16:45Z">
+        <test-method status="PASS" signature="TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@204f30ec]" name="TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest" duration-ms="70061" started-at="2022-11-03T18:05:20Z" finished-at="2022-11-03T18:06:30Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS010_VerifyShowSpecialsLinksExhibitorNameTest -->
-        <test-method status="PASS" signature="TS011_VerifyShowSpecialsLinksShowroomTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ShowSpecials@548e7350]" name="TS011_VerifyShowSpecialsLinksShowroomTest" duration-ms="11714" started-at="2022-11-02T16:16:45Z" finished-at="2022-11-02T16:16:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS011_VerifyShowSpecialsLinksShowroomTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ShowSpecials@548e7350]" name="tearDown" is-config="true" duration-ms="1" started-at="2022-11-02T16:16:57Z" finished-at="2022-11-02T16:16:57Z">
+        </test-method> <!-- TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@204f30ec]" name="tearDown" is-config="true" duration-ms="1" started-at="2022-11-03T18:06:30Z" finished-at="2022-11-03T18:06:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- atlantamarket_PROD.GlobalSearch_ShowSpecials -->
+      </class> <!-- atlantamarket_PROD.LineDigitalShowroom -->
     </test> <!-- RegressionTest -->
   </suite> <!-- LVM_RegressionTestSuite -->
 </testng-results>
