@@ -70,9 +70,7 @@ public class MarketPlanner extends base {
 
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
-		//driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.get(prop.getProperty("atlmrkturl_prod"));
-		// lap.getIUnderstandBtn().click();
 		utl.verifyMPLoginFunctionality();
 		Thread.sleep(8000);
 
