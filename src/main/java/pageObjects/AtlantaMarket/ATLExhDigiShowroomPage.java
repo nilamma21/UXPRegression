@@ -24,7 +24,13 @@ public class ATLExhDigiShowroomPage {
 	By productcategsectn = By.xpath("//h5[contains(text(),'Product Categories')]"); //Locator for Products Categories section title
 	By productcategitemlist = By.xpath("//div[contains(@class,'imc-gallery imc-gallery--justify-left imc-gallery')]"); //Locator for Product Categories list
 	By prodcatgtable = By.xpath("//div[@class='imc-gallery__item']"); //Locator for Product Categories table
-
+	
+	// Prod Elements
+	
+	By SearchedExhibitor = By.xpath("//div[@class = 'imc-vr--xxlarge']/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]"); //Locator for Exhibitor Name searched through global search 
+	By VerifyExhibitorInFavoritesLists = By.xpath("//*[contains(text(),'IMC test company')]"); //Locator for Favorites tab list of exhibitors
+	By favoriteicon = By.xpath("//label[@data-xpath='event.addToFavs']"); //Locator for Favorite icon on Exh Digital Showroom
+	
 	public ATLExhDigiShowroomPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
@@ -76,6 +82,24 @@ public class ATLExhDigiShowroomPage {
 	}
 	public WebElement getATLProductCategTable() {
 		return driver.findElement(prodcatgtable);
+	}
+	
+	//Prod Elements
+	
+	public WebElement getSearchedExhibitor() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(SearchedExhibitor));
+		return driver.findElement(SearchedExhibitor);
+	}
+	public WebElement getVerifyExhibitorInFavoritesLists() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(VerifyExhibitorInFavoritesLists));
+		return driver.findElement(VerifyExhibitorInFavoritesLists);
+	}
+	public WebElement getFavoriteIcon() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(favoriteicon));
+		return driver.findElement(favoriteicon);
 	}
 }
 
