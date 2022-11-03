@@ -303,15 +303,21 @@ public class GlobalSearch_MatchingResults extends base {
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
+
+
+
+		//Close the popup
+		utl.CloseATLPopup();
+		//Login to MP
 		utl.verifyMPLoginFunctionality();
 		utl.CloseATLPopup();
+		//Clear the global search field
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
 		
-		utl.verifyMPLoginFunctionality();
-		utl.CloseATLPopup();
+	//Enter global search input
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(5000);
