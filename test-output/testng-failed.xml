@@ -3,12 +3,22 @@
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionParallelest(failed)">
     <classes>
+<<<<<<< HEAD
+      <class name="atlantamarket_PROD.LineDigitalShowroom">
+        <methods>
+          <include name="TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest"/>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.LineDigitalShowroom -->
+=======
       <class name="atlantamarket_PROD.ExhibitorDigitalShowroom">
         <methods>
           <include name="initialize"/>
           <include name="TS001_VerifyAddToFavoritesTest"/>
         </methods>
       </class> <!-- atlantamarket_PROD.ExhibitorDigitalShowroom -->
+>>>>>>> b815013bb02477bc3d8edc6c9d580755cba07246
     </classes>
   </test> <!-- RegressionParallelest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->
