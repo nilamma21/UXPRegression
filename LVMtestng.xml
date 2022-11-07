@@ -10,9 +10,11 @@
 		<classes>
 			<class name="atlantamarket_PROD.LineDigitalShowroom" />
 			<methods>
-			<!-- <include name="TS003_VerifyGlobalSearchMatchingResultsSortSortByTest" /> 
-				<include name="TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest" /> -->
-				<include name="TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest" />
+		<!-- 	<include name="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest" /> 
+				<include name="TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest" /> -->
+				<!-- <include name="TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest" /> -->
+				<!-- <include name="TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest" /> -->
+				<!-- <include name="TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest" /> -->
 				
 				
 			</methods>
