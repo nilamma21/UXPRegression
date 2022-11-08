@@ -229,7 +229,7 @@ public class LineDigitalShowroom extends base {
 		// Click on Add to List Icon
 		atldigish.getaddToListIcon().click();
 		Thread.sleep(6000);
-		// Sign In to MP
+/*		// Sign In to MP
 		// Enter the credentials on Login Page and click
 		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
 		lp.getPassword().sendKeys((prop.getProperty("password")));
@@ -238,7 +238,7 @@ public class LineDigitalShowroom extends base {
 		Thread.sleep(15000);
 		// Click on Add to List Icon
 		Thread.sleep(5000);
-		atldigish.getaddToListIcon().click();
+		atldigish.getaddToListIcon().click();*/
 		
 		String exList = atlgs.getatlExistingList().getText();
 		System.out.println(exList);
@@ -297,13 +297,13 @@ public class LineDigitalShowroom extends base {
 		// Click on Add to List Icon
 		atldigish.getaddNoteIcon().click();
 		Thread.sleep(6000);
-		// Sign In to MP
+		/*// Sign In to MP
 		// Enter the credentials on Login Page and click
 		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
 		lp.getPassword().sendKeys((prop.getProperty("password")));
 
 		lp.getSignInBtn().click();
-		Thread.sleep(15000);
+		Thread.sleep(15000);*/
 		// Click on Add to List Icon
 		//atldigish.getaddNoteIcon().click();
 		String newnotetitle = "CybNote" + genData.generateRandomString(3);
@@ -366,7 +366,7 @@ public class LineDigitalShowroom extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
+		/*if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
 	
@@ -375,7 +375,7 @@ public class LineDigitalShowroom extends base {
 		Thread.sleep(10000);
 		//Click on 1st Suggetions
 		atldigish.getsuggetionList().click();
-		Thread.sleep(5000);
+		Thread.sleep(5000);*/
 		//Verify Digi showrrom page
 		Assert.assertTrue(atldigish.getAtlLineDigiShowroomPageTitle().getText().equals(prop.getProperty("HeroComponentExhName")));
 		//Store Hero Comp Name
@@ -418,7 +418,7 @@ public class LineDigitalShowroom extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
+		/*if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
 	
@@ -427,7 +427,7 @@ public class LineDigitalShowroom extends base {
 		Thread.sleep(5000);
 		//Click on 1st Suggetions
 		atldigish.getsuggetionList().click();
-		Thread.sleep(5000);
+		Thread.sleep(5000);*/
 		//Verify Digi showrrom page
 		Assert.assertTrue(atldigish.getAtlLineDigiShowroomPageTitle().getText().equals(prop.getProperty("HeroComponentExhName")));
 		//Store Hero Comp Name
@@ -525,11 +525,11 @@ public class LineDigitalShowroom extends base {
 		}
 	
 		//click on Global Search Input filed
-		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("HeroComponentExhName"));
+		/*atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("HeroComponentExhName"));
 		Thread.sleep(10000);
 		//Click on 1st Suggetions
 		atldigish.getsuggetionList().click();
-		Thread.sleep(5000);
+		Thread.sleep(5000);*/
 		//Scroll to Product section
 		utl.scrollToElement(atldigish.getproductTitle());
 		String orderOnJuniperURL=atldigish.getorderOnJuniperBtnLink().getAttribute("href");
