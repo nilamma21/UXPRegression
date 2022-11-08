@@ -238,11 +238,11 @@ public class GlobalSearch_MatchingResults extends base {
 		
 		 //Select filter Sort by Name Ascending
 		 utl.Sorting(atlgs.getatlExhNames(),atlgs.getatlGlobalSearch_SearchSortByDropdwn(),"Sort by Name Ascending");
-<<<<<<< HEAD
+
 		 ///Select filter Sort by Name Descending
-=======
+
 		  //Select filter Sort by Name Descending
->>>>>>> 0b3124df54121ae373b6fea1e30bd4824e62cc44
+
 		 utl.Sorting(atlgs.getatlExhNames(),atlgs.getatlGlobalSearch_SearchSortByDropdwn(),"Sort by Name Descending");
 		
 		//Select filter Sort by Matching Product Count Descending
@@ -305,8 +305,6 @@ public class GlobalSearch_MatchingResults extends base {
 		lp = new ATLLoginPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
 
-<<<<<<< HEAD
-=======
 
 
 		//Close the popup
@@ -315,7 +313,7 @@ public class GlobalSearch_MatchingResults extends base {
 		utl.verifyMPLoginFunctionality();
 		utl.CloseATLPopup();
 		//Clear the global search field
->>>>>>> 0b3124df54121ae373b6fea1e30bd4824e62cc44
+
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
@@ -336,17 +334,15 @@ public class GlobalSearch_MatchingResults extends base {
 
 		/*// Sign In to MP
 		// Enter the credentials on Login Page and click
-<<<<<<< HEAD
-=======
 
->>>>>>> 0b3124df54121ae373b6fea1e30bd4824e62cc44
+
+
 		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
 		lp.getPassword().sendKeys((prop.getProperty("password")));
 
 		lp.getSignInBtn().click();
 		Thread.sleep(15000);*/
-<<<<<<< HEAD
-=======
+
 
 		//lp.getEmailAddress().sendKeys((prop.getProperty("username")));
 		//lp.getPassword().sendKeys((prop.getProperty("password")));
@@ -354,7 +350,7 @@ public class GlobalSearch_MatchingResults extends base {
 		//Thread.sleep(15000);
 		Thread.sleep(5000);
 
->>>>>>> 0b3124df54121ae373b6fea1e30bd4824e62cc44
+
 		// Click on Market Planner
 		lap.getMPLinkText().click();
 		Thread.sleep(6000);
