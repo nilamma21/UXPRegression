@@ -5,7 +5,7 @@
     <classes>
       <class name="atlantamarket_PROD.LineDigitalShowroom">
         <methods>
-          <include name="TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest"/>
+          <include name="TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest"/>
           <include name="tearDown"/>
           <include name="initialize"/>
         </methods>
