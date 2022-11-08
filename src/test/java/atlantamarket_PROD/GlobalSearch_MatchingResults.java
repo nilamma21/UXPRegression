@@ -237,9 +237,9 @@ public class GlobalSearch_MatchingResults extends base {
 				"Sort by Name Descending");*/
 		
 		 //Select filter Sort by Name Ascending
-		 /*utl.Sorting(atlgs.getatlExhNames(),atlgs.getatlGlobalSearch_SearchSortByDropdwn(),"Sort by Name Ascending");
-		  //Select filter Sort by Name Descending
-		 utl.Sorting(atlgs.getatlExhNames(),atlgs.getatlGlobalSearch_SearchSortByDropdwn(),"Sort by Name Descending");*/
+		 utl.Sorting(atlgs.getatlExhNames(),atlgs.getatlGlobalSearch_SearchSortByDropdwn(),"Sort by Name Ascending");
+		 ///Select filter Sort by Name Descending
+		 utl.Sorting(atlgs.getatlExhNames(),atlgs.getatlGlobalSearch_SearchSortByDropdwn(),"Sort by Name Descending");
 		
 		//Select filter Sort by Matching Product Count Descending
 		utl.Sorting(atlgs.getatlMachingProductCount(), atlgs.getatlGlobalSearch_SearchSortByDropdwn(),
@@ -279,10 +279,7 @@ public class GlobalSearch_MatchingResults extends base {
 			boolean flag=false;
 			char fChar=expName.charAt(0);
 			String s=""+fChar;
-			System.out.println(fChar);
-			
-				System.out.println("String "+s);
-				Assert.assertTrue(s.contains("P"));
+			Assert.assertTrue(s.contains("P"));
 			
 		}
 
@@ -303,8 +300,7 @@ public class GlobalSearch_MatchingResults extends base {
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
-		utl.verifyMPLoginFunctionality();
-		utl.CloseATLPopup();
+
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
@@ -325,19 +321,11 @@ public class GlobalSearch_MatchingResults extends base {
 
 		/*// Sign In to MP
 		// Enter the credentials on Login Page and click
-<<<<<<< HEAD
 		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
 		lp.getPassword().sendKeys((prop.getProperty("password")));
 
 		lp.getSignInBtn().click();
 		Thread.sleep(15000);*/
-=======
-		//lp.getEmailAddress().sendKeys((prop.getProperty("username")));
-		//lp.getPassword().sendKeys((prop.getProperty("password")));
-		//lp.getSignInBtn().click();
-		//Thread.sleep(15000);
-		Thread.sleep(5000);
->>>>>>> 4416732d66161525947da42761bcfffa9ea0a294
 		// Click on Market Planner
 		lap.getMPLinkText().click();
 		Thread.sleep(6000);

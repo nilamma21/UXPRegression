@@ -1,30 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
-  <test name="RegressionTest(failed)">
+  <test name="RegressionParallelest(failed)">
     <classes>
-      <class name="atlantamarket_UAT.MarketPlanner">
+      <class name="atlantamarket_PROD.ExhibitorDigitalShowroom">
         <methods>
-          <include name="TS030_VerifyMarketPlannerListsElementMoreOoptionsCopyeTest"/>
-          <include name="TS038_VerifyMarketPlannerRegistrationsTabTest"/>
-          <include name="TS035_VerifyMarketPlannerEditListAddNoteTest"/>
-          <include name="TS039_VerifyMarketSavedSearchesfunctionalityTest"/>
-          <include name="TS052_VerifyMarketPlannerAllSavedEventsAndSemninarTest"/>
-          <include name="TS041_VerifyMarketPlannerListSortByFunctionalityTest"/>
           <include name="initialize"/>
-          <include name="TS046_VerifyMarketPlanneMyInfoEditProfile"/>
-          <include name="TS051_VerifyMarketPlannerAddEventsToFavTest"/>
-          <include name="TS007_VerifyNewGroupBtnFunctionalityForListsTest"/>
-          <include name="TS025_VerifyDuplicateLinkFunctionalityForListTest"/>
-          <include name="TS040_VerifyMarketSavedSearchesDeletefunctionalityTest"/>
-          <include name="TS027_VerifyListDisplayControlsFunctionalityTest"/>
-          <include name="TS042_VerifyMarketPlannerListsElementMoreOoptionsAddToScheduleTest"/>
-          <include name="TS023_VerifyFilterByOptionsFunctionalityForListTest"/>
-          <include name="tearDown"/>
-          <include name="TS031_VerifyMarketPlannerListsElementMoreOoptionsMoveTest"/>
-          <include name="TS032_VerifyMarketPlannerListsElementMoreOoptionsDeleteTest"/>
+          <include name="TS001_VerifyAddToFavoritesTest"/>
         </methods>
-      </class> <!-- atlantamarket_UAT.MarketPlanner -->
+      </class> <!-- atlantamarket_PROD.ExhibitorDigitalShowroom -->
     </classes>
-  </test> <!-- RegressionTest(failed) -->
+  </test> <!-- RegressionParallelest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->
