@@ -24,7 +24,7 @@
           <version>3.0.0-M5</version>
           <configuration>
           <suiteXmlFiles>
-            <suiteXmlFile>ATLLineDigiShowroomTng.xml</suiteXmlFile>
+            <suiteXmlFile>ATLLineDigitalShowroomTng.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
         </plugin>
@@ -76,3 +76,4 @@
 		</dependency>
 </dependencies>
 </project>
+
