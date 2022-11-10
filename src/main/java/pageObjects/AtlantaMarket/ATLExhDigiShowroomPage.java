@@ -30,6 +30,16 @@ public class ATLExhDigiShowroomPage {
 	By SearchedExhibitor = By.xpath("//div[@class = 'imc-vr--xxlarge']/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]"); //Locator for Exhibitor Name searched through global search 
 	By VerifyExhibitorInFavoritesLists = By.xpath("//*[contains(text(),'IMC test company')]"); //Locator for Favorites tab list of exhibitors
 	By favoriteicon = By.xpath("//label[@data-xpath='event.addToFavs']"); //Locator for Favorite icon on Exh Digital Showroom
+	By ExhibitorName = By.xpath("//div[@class = 'imc-gallery__item']/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]"); //Locator for first exhibitor name in the list
+	By ListButtonlusIcon = By.xpath("//button[@class = 'imc-selectableicon imc-exhibitor-card__type--color']"); //Locator for Plus icon for Add list
+	By NoteOptn = By.xpath("//div[@class = 'imc-addnote imc-expand-collapse undefined']/button[1]"); //Locator for Note button
+	By NoteCloseBtn = By.xpath("//button[@class = 'imc-modal--close imc-addnote-modal__close']"); //Locator for X button for Note pop up
+	By NoteTitle = By.xpath("//input[@name = 'title']"); //Locator for Note title text box
+	By NoteDescription = By.xpath("//*[@name = 'notes']"); //Locator for Notes Description
+	By SaveNotBtn = By.xpath("//*[contains(text(),'Save')]"); //Locator for Save note button
+	By ViewAllNotes = By.xpath("//a[contains(text(), 'View all Notes')]"); //Locator for View All Notes link
+	By VerifyAddedNote = By.xpath("//ul[@class = 'imc-market-planner-list imc-addnote-modal__list']"); //Locator for Added Notes section
+	By SaveNoteOKButton = By.xpath("//div[@class = 'imc-content imc-content--right']/button[1]"); //Locator for OK button for save note
 	
 	public ATLExhDigiShowroomPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -100,6 +110,56 @@ public class ATLExhDigiShowroomPage {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(favoriteicon));
 		return driver.findElement(favoriteicon);
+	}
+	public WebElement getExhibitorName() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ExhibitorName));
+		return driver.findElement(ExhibitorName);
+	}
+	public WebElement getListButtonPlusIcon() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ListButtonlusIcon));
+		return driver.findElement(ListButtonlusIcon);
+	}
+	public WebElement getNoteOptn() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(NoteOptn));
+		return driver.findElement(NoteOptn);
+	}
+	public WebElement getNoteCloseBtn() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(NoteCloseBtn));
+		return driver.findElement(NoteCloseBtn);
+	}
+	public WebElement getNoteTitle() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(NoteTitle));
+		return driver.findElement(NoteTitle);
+	}
+	public WebElement getNoteDescription() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(NoteDescription));
+		return driver.findElement(NoteDescription);
+	}
+	public WebElement getSaveNotBtn() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(SaveNotBtn));
+		return driver.findElement(SaveNotBtn);
+	}
+	public WebElement getViewAllNotes() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ViewAllNotes));
+		return driver.findElement(ViewAllNotes);
+	}
+	public WebElement getVerifyAddedNote() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(VerifyAddedNote));
+		return driver.findElement(VerifyAddedNote);
+	}
+	public WebElement getSaveNoteOKButton() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(SaveNoteOKButton));
+		return driver.findElement(SaveNoteOKButton);
 	}
 }
 
