@@ -13,8 +13,8 @@
 		<!-- 	<include name="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest" /> 
 				<include name="TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest" /> -->
 				<!-- <include name="TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest" /> -->
-				<!-- <include name="TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest" /> -->
-				<!-- <include name="TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest" /> -->
+			<!-- 	<include name="TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest" />
+				<include name="TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest" /> -->
 				
 				
 			</methods>
