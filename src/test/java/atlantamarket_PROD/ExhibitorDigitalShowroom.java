@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -54,20 +55,20 @@ public class ExhibitorDigitalShowroom extends base {
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		Thread.sleep(3000);
-		utl.CloseATLPopup();
+		lap.getIUnderstandBtn().click();
 		Thread.sleep(3000);
 
 		utl.verifyMPLoginFunctionality();
-		Thread.sleep(3000);
-		lap.getIUnderstandBtn().click();
-		utl.CloseATLPopup();
+		Thread.sleep(5000);
+		//lap.getIUnderstandBtn().click();
+		//utl.CloseATLPopup();
 	}
 	
 	@Test(priority = 1)
 	public void TS001_VerifyAddToFavoritesTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
-		// T294: Add To Favorites - Need to recheck
+		// T294: Add To Favorites
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
@@ -138,6 +139,140 @@ public class ExhibitorDigitalShowroom extends base {
 			Assert.assertFalse(favlist.get(i).getText().contains(exhname)); 
 		}
 	}
+	
+	@Test(priority = 2)
+	public void TS002_VerifyAddToExistingListWithPlusIconTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T297: The Add to existing list functionality for an Exhibitor using Plus icon
 
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor1")));
+		atlgs.getATLSearchButton().click();
+
+		Thread.sleep(15000);
+		// Store the 1st Exhibitor name in String variable
+		String exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: " + exhname);
+
+		// Click Exhibitor Name and click Plus icon
+		atlexhdgshw.getExhibitorName().click();
+		atlexhdgshw.getListButtonPlusIcon().click();
+		
+		/*//Login to Market Planner
+		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
+		lp.getPassword().sendKeys((prop.getProperty("password")));
+		lp.getSignInBtn().click();*/
+		
+		// Select Existing list name
+		atlmppge.getATLMPExistingListName().click();
+		
+		// Store the existing list name
+		String existinglistname = atlmppge.getATLMPExistingListName().getText();
+		System.out.println("Existing list name: " + existinglistname);
+
+		// Scroll till Add to Selected button
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",
+				atlmppge.getATLMPAddToSelectedBtn());
+		atlmppge.getATLMPAddToSelectedBtn().click();
+
+		// Click on Go to Market Planner button
+		atlmppge.getGoToMarketPlannerBtn().click();
+
+		// Click on Lists tab on MP home page
+		atlmppge.getMPHomeListsTab().click();
+		atlmppge.getListsPageListsMenu().click();
+
+		mplists = atlmppge.getATLMPListsNames();
+		mpeditlistoptns = atlmppge.getATLMPEditListOptns();
+
+		for (int i = 0; i < mplists.size(); i++) {
+			// System.out.println(mplists.get(i).getText());
+			// System.out.println(mpeditlistoptns.get(i).getText());
+			if (mplists.get(i).getText().equals(existinglistname)) {
+				mpeditlistoptns.get(i).click();
+				break;
+			}
+		}
+		Thread.sleep(5000);
+		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
+
+		// Delete that added exhibitor from list
+		atlmppge.getMoreBtnDeleteOptnExistingList_ATLPROD().click();
+		atlmppge.getATLEditListItemDeleteOptn().click();
+		Thread.sleep(8000);
+
+		favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
+
+		//Verify that the added exhibitor should be removed from Existing list
+		for(int i=1; i< favlist.size(); i++)
+		{			
+			//System.out.println(favlist.get(i).getText());
+			Assert.assertFalse(favlist.get(i).getText().contains(exhname)); 
+		}
+	}
+	
+	@Test(priority = 3)
+	public void TS003_VerifyAddNoteListWithPlusIconTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T300: Add Note for an exhibitor
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		lp = new ATLLoginPage(driver);
+		genData = new GenerateData();
+		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(10000);
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor1")));
+		atlgs.getATLSearchButton().click();
+
+		Thread.sleep(15000);
+		
+		// Click Exhibitor Name and click Plus icon
+		atlexhdgshw.getExhibitorName().click();
+		Thread.sleep(10000);
+		atlexhdgshw.getNoteOptn().click();
+		
+		// Add Note and verify Functionality for X (Close button)
+		atlexhdgshw.getNoteCloseBtn().click();
+		Assert.assertTrue(atlexhdgshw.getATLExhDigiShowPage().isDisplayed());
+		System.out.println("Close button at Note form works properly.");
+		
+		
+		// Verify save note option works properly
+		atlexhdgshw.getNoteOptn().click();
+		Thread.sleep(3000);
+		atlexhact.getNoteTitleTxtBx().sendKeys(genData.generateRandomString(6));
+		Thread.sleep(3000);
+		// Enter Note Content
+		atlexhact.getNoteContentTxtBx().sendKeys("TestNote" + genData.generateRandomString(15));
+		Thread.sleep(3000);
+		String NoteTitle = atlexhact.getNoteTitleTxtBx().getText();
+		// Click on 'Save' button
+		atlexhact.getNoteSaveBtn().click();
+		Thread.sleep(10000);
+	/*	atlexhact.getNoteTitleTxtBx().sendKeys(prop.getProperty("notetitle"));
+		// Enter Note Content
+		atlexhact.getNoteContentTxtBx().sendKeys("TestNote" + genData.generateRandomString(6));
+		// Click on 'Save' button
+		atlexhact.getNoteSaveBtn().click();
+		atlexhdgshw.getSaveNoteOKButton().click();*/
+		atlexhdgshw.getNoteOptn().click();
+		Thread.sleep(3000);
+		atlexhdgshw.getViewAllNotes().click();
+		Assert.assertTrue(atlexhdgshw.getVerifyAddedNote().getText().contains(NoteTitle));
+		System.out.println("Note is added successfully.");
+		
+	}
 }
 
