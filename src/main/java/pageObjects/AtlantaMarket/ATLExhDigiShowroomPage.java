@@ -40,6 +40,13 @@ public class ATLExhDigiShowroomPage {
 	By ViewAllNotes = By.xpath("//a[contains(text(), 'View all Notes')]"); //Locator for View All Notes link
 	By VerifyAddedNote = By.xpath("//ul[@class = 'imc-market-planner-list imc-addnote-modal__list']"); //Locator for Added Notes section
 	By SaveNoteOKButton = By.xpath("//div[@class = 'imc-content imc-content--right']/button[1]"); //Locator for OK button for save note
+	By Location = By.xpath("//section[@class='imc-site-wrapper']/div[2]/div[1]/div[1]/div[2]/div[1]/span[2]/a[1]"); //Locator for Location symbol at Digital Showroom page
+	By ContactExhibitor = By.xpath("//div[@class = 'contact-exhibitor-wrapper']/button[1]"); //Locator for Contact Exhibitor button
+	By ProductSection = By.xpath("//div[@class = 'imc-content--display-flex-wrap']"); //Locator for Product section in Exhibitor Digital Showroom
+	By AllProductsButton = By.xpath("//a[@class = 'imc-content--inline-block imc-button imc-button--primary-inverted imc-button--full-bleed-mobile']"); //Locator for See All Products button
+	By ProductsPageBackButton = By.xpath("//button[@class = 'imc-icon-BackArrow imc-button--icon-only imc-button--no-border imc-heading--mega imc-heading--line-height-1 imc-content--display-flex']"); //Locator for Back arrow at Products page
+	By ProductsList = By.xpath("//div[@class = 'imc-products-overview--gallery']/div[1]"); //Locator for first product in Product List at Exhibitor Digital Showroom
+	By ProductsDescription = By.xpath("//h5[@class = 'imc-margin--bottom--medium']"); //Locator for Products section at Products page
 	
 	public ATLExhDigiShowroomPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -160,6 +167,41 @@ public class ATLExhDigiShowroomPage {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(SaveNoteOKButton));
 		return driver.findElement(SaveNoteOKButton);
+	}
+	public WebElement getLocation() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(Location));
+		return driver.findElement(Location);
+	}
+	public WebElement getContactExhibitor() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ContactExhibitor));
+		return driver.findElement(ContactExhibitor);
+	}
+	public WebElement getProductSection() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ProductSection));
+		return driver.findElement(ProductSection);
+	}
+	public WebElement getAllProductsButton() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(AllProductsButton));
+		return driver.findElement(AllProductsButton);
+	}
+	public WebElement getProductsPageBackButton() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ProductsPageBackButton));
+		return driver.findElement(ProductsPageBackButton);
+	}
+	public WebElement getProductsList() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ProductsList));
+		return driver.findElement(ProductsList);
+	}
+	public WebElement getProductsDescription() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ProductsDescription));
+		return driver.findElement(ProductsDescription);
 	}
 }
 
