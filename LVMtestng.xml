@@ -14,7 +14,7 @@
 				<include name="TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest" /> -->
 				<!-- <include name="TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest" /> -->
 			<!-- 	<include name="TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest" />-->
-				<include name="TS003_VerifyIMCEventsCalendarViewTest" /> 
+				<include name="TS012_VerifyExhibitorEventsDetailstTest" /> 
 				
 				
 			</methods>
