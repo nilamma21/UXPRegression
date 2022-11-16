@@ -5,7 +5,7 @@
     <classes>
       <class name="atlantamarket_PROD.EvenntsAndWebinar">
         <methods>
-          <include name="TS003_VerifyIMCEventsCalendarViewTest"/>
+          <include name="TS012_VerifyExhibitorEventsDetailstTest"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- atlantamarket_PROD.EvenntsAndWebinar -->

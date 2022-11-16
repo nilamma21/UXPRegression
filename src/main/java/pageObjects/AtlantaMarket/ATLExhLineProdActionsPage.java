@@ -36,8 +36,8 @@ public class ATLExhLineProdActionsPage extends base{
 	By matchingprodseealllink = By.xpath("//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div[2]/div[2]/div/div[1]/p[2]"); //Locator for Matching Products-See All link for 1st Exhibitor
 	By matchingprodaddnoteicon = By.xpath("//button[@class='imc-addnote__openModal imc-addnote__openModal--hideafter imc-link--alt-darkred imc-content imc-content--delta imc-expand-collapse__heading']"); //Locator for Add Note icon on Matching products page
 	By popupclosebtn = By.xpath("//button[@class='imc-modal--close imc-button--modal-close imc-button--round']"); //Locator for Close pop-up button
-	By notetitletxtbx = By.xpath("//input[@name='title']"); //Locator for Note title text field
-	By notecontenttxtbx = By.xpath("//textarea[@name='notes']"); //Locator for Note Content text field
+	By notetitletxtbx = By.xpath("//div[@class='modal-wrapper']/div[1]/form[1]/div[1]/input[1]"); //Locator for Note title text field
+	By notecontenttxtbx = By.xpath("//div[@class='modal-wrapper']/div[1]/form[1]/div[2]/textarea[1]"); //Locator for Note Content text field
 	By notesavebtn = By.xpath("//input[@value='Save']"); //Locator for Save Note button
 	By viewallnoteslink = By.xpath("//a[@href='#list']"); //Locator for View All Notes link
 	By savednotenameinallnoteslist = By.xpath("//ul[@class='imc-market-planner-list imc-addnote-modal__list']/li/a"); //Locator for Saved Note name in All Notes list
