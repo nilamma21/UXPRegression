@@ -2,6 +2,7 @@ package atlantamarket_PROD;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -261,12 +262,6 @@ public class ExhibitorDigitalShowroom extends base {
 		// Click on 'Save' button
 		atlexhact.getNoteSaveBtn().click();
 		Thread.sleep(10000);
-	/*	atlexhact.getNoteTitleTxtBx().sendKeys(prop.getProperty("notetitle"));
-		// Enter Note Content
-		atlexhact.getNoteContentTxtBx().sendKeys("TestNote" + genData.generateRandomString(6));
-		// Click on 'Save' button
-		atlexhact.getNoteSaveBtn().click();
-		atlexhdgshw.getSaveNoteOKButton().click();*/
 		atlexhdgshw.getNoteOptn().click();
 		Thread.sleep(3000);
 		atlexhdgshw.getViewAllNotes().click();
@@ -274,5 +269,143 @@ public class ExhibitorDigitalShowroom extends base {
 		System.out.println("Note is added successfully.");
 		
 	}
+	
+	@Test(priority = 4)
+	public void TS004_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T301: The click on 'Location Links' functionality for an Exhibitor
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		driver.get(prop.getProperty("atlmrkturl_prod"));
+		Thread.sleep(6000);
+		//lap.getCloseMarktAdBtn().click();
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLSearchButton().click();
+
+		Thread.sleep(15000);
+		// Click on any of the Location link present in Exhibitor card and verify result
+		atlexhdgshw.getExhibitorName().click();
+		Thread.sleep(5000);
+		String locationlink = atlexhdgshw.getLocation().getAttribute("href");
+		atlexhdgshw.getLocation().click();
+		Thread.sleep(10000);
+		String winHandleBefore = driver.getWindowHandle();
+		for (String winHandle : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle);
+		}
+		Assert.assertTrue(locationlink.equals(driver.getCurrentUrl()));
+		System.out.println("Locations page is displayed properly.");
+		driver.close();
+		driver.switchTo().window(winHandleBefore);
+
+		
+	}
+	
+	@Test(priority = 5)
+	public void TS005_VerifyClickOnContactExhIconForExhibitorTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T302: The click on 'Contact Exhibitor' functionality for an Exhibitor
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		genData = new GenerateData();
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor1"));
+		atlgs.getATLSearchButton().click();
+
+		Thread.sleep(15000);
+		// Click on any of the Location link present in Exhibitor card and verify result
+		atlexhdgshw.getExhibitorName().click();
+		Thread.sleep(5000);
+		atlexhdgshw.getContactExhibitor().click();
+
+		// Enter Postal code
+		atlexhact.getPostalCodeTxtBx().sendKeys(genData.generateRandomNumber(5));
+
+		// Enter Message
+		atlexhact.getMessageTxtBx().sendKeys(genData.generateRandomString(15));
+		
+
+		// Select 1st two Product Category
+		atlexhact.getProductCateg1().click();
+		atlexhact.getProductCateg2().click();
+
+		utl.scrollToElement(atlexhact.getSendMessageBtn());
+
+		// Click on Send Message button
+		// Will send msg once test exhibitor will get
+		// atlexhact.getSendMessageBtn().click();
+
+		// Close the pop-up
+		atlexhact.getPopUpCloseBtn().click();
+	}
+	
+	@Test(priority = 6)
+	public void TS006_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T368: The click on 'Total products-See All' functionality for an Exhibitor
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLSearchButton().click();
+
+		Thread.sleep(15000);
+		// Store the 1st Exhibitor name in String variable
+		exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: " + exhname);
+
+		// Get the Total Products count on Search grid
+		atlexhdgshw.getExhibitorName().click();
+		Thread.sleep(5000);
+		utl.scrollToElement(atlexhdgshw.getProductSection());
+		String temp = atlexhdgshw.getProductSection().getText();
+		String totalprodcountonsearchgrid = temp.replaceAll("[^0-9]", "");
+		System.out.println("Total Products Count on Search Results grid is: " + totalprodcountonsearchgrid);
+		Assert.assertTrue(atlexhdgshw.getAllProductsButton().getText().contains(totalprodcountonsearchgrid));
+		System.out.println("Total Products count is same at Products section title and See All button.");
+
+		// Click on Total Products-See All link for 1st Exhibitor
+		atlexhdgshw.getAllProductsButton().click();
+		Thread.sleep(6000);
+
+		// Verify that user should redirect to the Products page
+		Assert.assertTrue(atlexhact.getValidateProductsPage().isDisplayed());
+		System.out.println("All Products page is displayed properly.");
+		Thread.sleep(6000);
+
+		Assert.assertTrue(driver.getTitle().contains(""+exhname+" Products"));
+
+		// Get the Total Products count on Products page
+		String producttabtitle = atlexhact.getValidateProductsPage().getText();
+		String totalprodcountonprodpage = producttabtitle.replaceAll("[^0-9]", "");
+		System.out.println("Total Products Count on Products page is: " + totalprodcountonprodpage);
+
+		//Get back to Exhibitor Showroom page and click any one product and verify if product details are displayed properly
+		atlexhdgshw.getProductsPageBackButton().click();
+		utl.scrollToElement(atlexhdgshw.getProductSection());
+		atlexhdgshw.getProductsList().click();
+		utl.scrollToElement(atlexhdgshw.getProductsDescription());
+		Assert.assertTrue(atlexhdgshw.getProductsDescription().getText().contains("Product Description"));
+		System.out.println("Product Details are displayed properly.");
+		
+	}
+	
 }
 
