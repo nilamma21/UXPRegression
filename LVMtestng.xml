@@ -12,10 +12,10 @@
 			<methods>
 		<!-- 	<include name="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest" /> 
 				<include name="TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest" /> -->
-				<!-- <include name="TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest" /> -->
-			<!-- 	<include name="TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest" />-->
-				<include name="TS012_VerifyExhibitorEventsDetailstTest" /> 
-				
+				<!-- <include name="TS005_VerifyIMCEventsEventDetailstTest" />
+				<include name="TS012_VerifyExhibitorEventsDetailstTest" /> -->
+		<!-- 		<include name="TS0013_VerifyExhibitorEventsAddToFavoriteTest" /> 
+				 -->
 				
 			</methods>
 		</classes>
