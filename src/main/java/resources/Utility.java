@@ -7,7 +7,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-
+import org.omg.CORBA.PUBLIC_MEMBER;
 import org.openqa.selenium.By;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -20,7 +20,8 @@ import org.testng.Assert;
 
 import com.gargoylesoftware.htmlunit.javascript.host.media.webkitMediaStream;
 
-//import atlantamarket_UAT.MarketPlanner;
+import atlantamarket_UAT.MarketPlanner;
+import pageObjects.AtlantaMarket.ATLEventsAndWebinarPage;
 import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
 import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
 import pageObjects.AtlantaMarket.ATLLandingPage;
@@ -33,9 +34,10 @@ public class Utility extends base {
 	ATLLandingPage lap;
 	ATLLoginPage lp;
 	ATLExhLineProdActionsPage atlexhact;
-	//MarketPlanner mp;
+	MarketPlanner mp;
 	ATLMarketPlannerPage atlmppge;
 	ATLGlobalSearchPage atlgs;
+	ATLEventsAndWebinarPage atlevents;
 	GenerateData genData;
 
 	@SuppressWarnings("static-access")
@@ -193,7 +195,7 @@ public class Utility extends base {
 
 		boolean flag = false;
 		for (WebElement listExhibitor : list) {
-			if (listExhibitor.getText().equals(filterName)) {
+			if (listExhibitor.getText().contains(filterName)) {
 				listExhibitor.click();
 				flag = true;
 				break;
@@ -421,6 +423,31 @@ public class Utility extends base {
 			e.printStackTrace();
 		}
 		
+	}
+	public void clickOnEventLinkOfChannel() throws InterruptedException {
+		
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		atlevents=new ATLEventsAndWebinarPage(driver);
+		
+		if(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_prod"))) {
+			// Click on Attend Tab
+			atlevents.getatlAttendTab().click(); 
+			Thread.sleep(2000);
+			//click on Events Link
+			atlevents.getatlEventsLink().click();
+			Thread.sleep(3000);
+		}
+		else {
+			atlevents.getatlExploreMarketTab().click();  //For LVM Events
+			Thread.sleep(2000);
+			//click on Events Link
+			atlevents.getatlEventsLink().click();
+			Thread.sleep(3000);
+		}
+	
 	}
 
 }
