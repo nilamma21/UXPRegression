@@ -31,23 +31,145 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">RegressionTest</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">104.3 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">RegressionTest</td><td class="numi">10</td><td class="numi">10</td><td class="numi">0</td><td class="numi_attn">5</td><td class="numi">797.8 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
 <tr><th colspan="4">RegressionTest &#8212; failed</th></tr>
-<tr class="failedodd"><td rowspan="1">atlantamarket_PROD.EvenntsAndWebinar</td><td><a href="#m1"><b>TS012_VerifyExhibitorEventsDetailstTest</b>  </a></td><td class="numi">1</td><td>1668516376327</td><td class="numi">66073</td></tr>
+<tr class="failedodd"><td rowspan="5">atlantamarket_PROD.EvenntsAndWebinar</td><td><a href="#m1"><b>TS0013_VerifyExhibitorEventsAddToFavoriteTest</b>  </a></td><td class="numi">1</td><td>1668600638907</td><td class="numi">53994</td></tr><tr class="failedodd"><td><a href="#m2"><b>TS0014_VerifyExhibitorEventsAddToListTest</b>  </a></td><td class="numi">1</td><td>1668600692910</td><td class="numi">134558</td></tr><tr class="failedodd"><td><a href="#m3"><b>TS005_VerifyIMCEventsEventDetailstTest</b>  </a></td><td class="numi">1</td><td>1668600215605</td><td class="numi">33578</td></tr><tr class="failedodd"><td><a href="#m4"><b>TS006_VerifyIMCEventsAddToFavoriteTest</b>  </a></td><td class="numi">1</td><td>1668600249207</td><td class="numi">72743</td></tr><tr class="failedodd"><td><a href="#m5"><b>TS007_VerifyIMCEventsAddToListTest</b>  </a></td><td class="numi">1</td><td>1668600321955</td><td class="numi">49742</td></tr>
+<tr><th colspan="4">RegressionTest &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="10">atlantamarket_PROD.EvenntsAndWebinar</td><td><a href="#m6"><b>TS0010_VerifyExhibitorEventsCalendarViewTest</b>  </a></td><td class="numi">1</td><td>1668600439919</td><td class="numi">13784</td></tr><tr class="passedodd"><td><a href="#m7"><b>TS001_VerifyEventsAndWebinarsOverviewTest</b>  </a></td><td class="numi">1</td><td>1668600161030</td><td class="numi">6490</td></tr><tr class="passedodd"><td><a href="#m8"><b>TS002_VerifyIMCEventsSearchbarTest</b>  </a></td><td class="numi">1</td><td>1668600167523</td><td class="numi">12728</td></tr><tr class="passedodd"><td><a href="#m9"><b>TS003_VerifyIMCEventsCalendarViewTest</b>  </a></td><td class="numi">1</td><td>1668600180253</td><td class="numi">13762</td></tr><tr class="passedodd"><td><a href="#m10"><b>TS004_VerifyIMCEventsEventsListTest</b>  </a></td><td class="numi">1</td><td>1668600194017</td><td class="numi">21586</td></tr><tr class="passedodd"><td><a href="#m11"><b>TS008_VerifyIMCEventsAddNoteTest</b>  </a></td><td class="numi">1</td><td>1668600371704</td><td class="numi">50761</td></tr><tr class="passedodd"><td><a href="#m12"><b>TS009_VerifyExhibitorEventsSearchbarTest</b>  </a></td><td class="numi">1</td><td>1668600422468</td><td class="numi">17446</td></tr><tr class="passedodd"><td><a href="#m13"><b>TS011_VerifyExhibitorEventsListTest</b>  </a></td><td class="numi">1</td><td>1668600453705</td><td class="numi">159163</td></tr><tr class="passedodd"><td><a href="#m14"><b>TS012_VerifyExhibitorEventsDetailstTest</b>  </a></td><td class="numi">1</td><td>1668600612876</td><td class="numi">26030</td></tr><tr class="passedodd"><td><a href="#m15"><b>TS015_VerifyExhibitorEventsAddNoteTest</b>  </a></td><td class="numi">1</td><td>1668600827472</td><td class="numi">51403</td></tr>
 </table>
 <h1>RegressionTest</h1>
-<h2 id="m1">atlantamarket_PROD.EvenntsAndWebinar:TS012_VerifyExhibitorEventsDetailstTest</h2>
+<h2 id="m1">atlantamarket_PROD.EvenntsAndWebinar:TS0013_VerifyExhibitorEventsAddToFavoriteTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[1]/div[1]/a (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getATLSavedExhNameInList(ATLMarketPlannerPage.java:480)
+<br/>at atlantamarket_PROD.EvenntsAndWebinar.TS0013_VerifyExhibitorEventsAddToFavoriteTest(EvenntsAndWebinar.java:1090)
+<br/>25 lines not shown
+<p>Caused by Cannot locate an element using By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[1]/div[1]/a
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;SWAPNILI&apos;, ip: &apos;172.27.182.57&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: driver.version: unknown</p>
+org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+<br/>at java.util.Optional.orElseThrow(Optional.java:290)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getATLSavedExhNameInList(ATLMarketPlannerPage.java:480)
+<br/>at atlantamarket_PROD.EvenntsAndWebinar.TS0013_VerifyExhibitorEventsAddToFavoriteTest(EvenntsAndWebinar.java:1090)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">atlantamarket_PROD.EvenntsAndWebinar:TS0014_VerifyExhibitorEventsAddToListTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[1]/div[1]/a (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getATLSavedExhNameInList(ATLMarketPlannerPage.java:480)
+<br/>at atlantamarket_PROD.EvenntsAndWebinar.TS0014_VerifyExhibitorEventsAddToListTest(EvenntsAndWebinar.java:1176)
+<br/>25 lines not shown
+<p>Caused by Cannot locate an element using By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[1]/div[1]/a
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;SWAPNILI&apos;, ip: &apos;172.27.182.57&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: driver.version: unknown</p>
+org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+<br/>at java.util.Optional.orElseThrow(Optional.java:290)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getATLSavedExhNameInList(ATLMarketPlannerPage.java:480)
+<br/>at atlantamarket_PROD.EvenntsAndWebinar.TS0014_VerifyExhibitorEventsAddToListTest(EvenntsAndWebinar.java:1176)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">atlantamarket_PROD.EvenntsAndWebinar:TS006_VerifyIMCEventsAddToFavoriteTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[1]/div[1]/a (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getATLSavedExhNameInList(ATLMarketPlannerPage.java:480)
+<br/>at atlantamarket_PROD.EvenntsAndWebinar.TS006_VerifyIMCEventsAddToFavoriteTest(EvenntsAndWebinar.java:513)
+<br/>25 lines not shown
+<p>Caused by Cannot locate an element using By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[1]/div[1]/a
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;SWAPNILI&apos;, ip: &apos;172.27.182.57&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: driver.version: unknown</p>
+org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+<br/>at java.util.Optional.orElseThrow(Optional.java:290)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getATLSavedExhNameInList(ATLMarketPlannerPage.java:480)
+<br/>at atlantamarket_PROD.EvenntsAndWebinar.TS006_VerifyIMCEventsAddToFavoriteTest(EvenntsAndWebinar.java:513)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">atlantamarket_PROD.EvenntsAndWebinar:TS005_VerifyIMCEventsEventDetailstTest</h2>
 <div style="padding-left:3em">
 <p>expected [true] but found [false]</p>
 org.testng.Assert.fail(Assert.java:94)
 <br/>at org.testng.Assert.failNotEquals(Assert.java:494)
 <br/>at org.testng.Assert.assertTrue(Assert.java:42)
 <br/>at org.testng.Assert.assertTrue(Assert.java:52)
-<br/>at atlantamarket_PROD.EvenntsAndWebinar.TS012_VerifyExhibitorEventsDetailstTest(EvenntsAndWebinar.java:1000)
+<br/>at atlantamarket_PROD.EvenntsAndWebinar.TS005_VerifyIMCEventsEventDetailstTest(EvenntsAndWebinar.java:448)
 <br/>25 lines not shown
 </div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">atlantamarket_PROD.EvenntsAndWebinar:TS007_VerifyIMCEventsAddToListTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for visibility of element located by By.xpath: //form/div[4]/div[3]/label (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getATLMPExistingListName(ATLMarketPlannerPage.java:521)
+<br/>at atlantamarket_PROD.EvenntsAndWebinar.TS007_VerifyIMCEventsAddToListTest(EvenntsAndWebinar.java:565)
+<br/>25 lines not shown
+<p>Caused by Cannot locate an element using By.xpath: //form/div[4]/div[3]/label
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;SWAPNILI&apos;, ip: &apos;172.27.182.57&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: driver.version: unknown</p>
+org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+<br/>at java.util.Optional.orElseThrow(Optional.java:290)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getATLMPExistingListName(ATLMarketPlannerPage.java:521)
+<br/>at atlantamarket_PROD.EvenntsAndWebinar.TS007_VerifyIMCEventsAddToListTest(EvenntsAndWebinar.java:565)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">atlantamarket_PROD.EvenntsAndWebinar:TS003_VerifyIMCEventsCalendarViewTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">atlantamarket_PROD.EvenntsAndWebinar:TS009_VerifyExhibitorEventsSearchbarTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">atlantamarket_PROD.EvenntsAndWebinar:TS011_VerifyExhibitorEventsListTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m9">atlantamarket_PROD.EvenntsAndWebinar:TS001_VerifyEventsAndWebinarsOverviewTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">atlantamarket_PROD.EvenntsAndWebinar:TS015_VerifyExhibitorEventsAddNoteTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m11">atlantamarket_PROD.EvenntsAndWebinar:TS008_VerifyIMCEventsAddNoteTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m12">atlantamarket_PROD.EvenntsAndWebinar:TS0010_VerifyExhibitorEventsCalendarViewTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m13">atlantamarket_PROD.EvenntsAndWebinar:TS002_VerifyIMCEventsSearchbarTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m14">atlantamarket_PROD.EvenntsAndWebinar:TS004_VerifyIMCEventsEventsListTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m15">atlantamarket_PROD.EvenntsAndWebinar:TS012_VerifyExhibitorEventsDetailstTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>
