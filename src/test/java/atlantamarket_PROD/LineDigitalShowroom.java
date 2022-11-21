@@ -553,7 +553,7 @@ public class LineDigitalShowroom extends base {
 			
 			
 	}
-	@Test(priority = 11)
+	@Test(priority = 10)
 	public void TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T373: Line Digital Showroom: Products component: See All Products
@@ -587,7 +587,7 @@ public class LineDigitalShowroom extends base {
 		//Verify See All Product CTA page
 		Assert.assertTrue(driver.getCurrentUrl().contains(seeAllProdURL));
 	}
-	@Test(priority = 10)
+	@Test(priority = 11)
 	public void TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T374: Line Digital Showroom: Products component: Select a Product
