@@ -16,6 +16,9 @@
 			<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
 			<class name="atlantamarket_PROD.FloorPlans" /> -->
 			<class name="atlantamarket_PROD.ExhibitorDigitalShowroom"/>
+			<methods>
+			<include name="TS009_VerifyClickOnLineSearchForExhibitorTest"/>
+			</methods>
 		</classes>
 	</test>
 

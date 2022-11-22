@@ -60,7 +60,7 @@ public class ATLExhDigiShowroomPage {
 	By LinesWithProduct = By.xpath("//div[@class = 'imc-content--display-flex']/a[3]"); //Locator for Line with Product sorting
 	By LinesOnJuniperMarket = By.xpath("//div[@class = 'imc-content--display-flex']/a[4]"); //Locator for Line with Juniper Market sorting
 	By LineSearch = By.xpath("//input[@id = 'product-search']"); //Locator for line search
-	By LineSearchButton = By.xpath("//button[@class = 'imc-searchform--button--search']"); //Locator for line search button 		
+	By LineSearchButton = By.xpath("(//button[@class = 'imc-searchform--button--search'])[2]"); //Locator for line search button 		
 	By VerifyLineSearch = By.xpath("//div[@class = 'imc-manufacturing-line-title-wrapper']/a[1]"); //Locator for verify line search  		
 			
 	public ATLExhDigiShowroomPage(WebDriver driver) {

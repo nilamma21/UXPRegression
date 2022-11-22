@@ -505,26 +505,19 @@ public class ExhibitorDigitalShowroom extends base {
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
-
-		Thread.sleep(15000);
-		// Store the 1st Exhibitor name in String variable
-		exhname = atlexhact.getExhibitorName().getText();
-		System.out.println("Exhibitor name: " + exhname);
-
-		// Get the Total Lines count on Search grid
+		Thread.sleep(8000);
+		
+		//Click on the 1st Exhibitor name
 		atlexhdgshw.getExhibitorName().click();
 		Thread.sleep(5000);
 		utl.scrollToElement(atlexhdgshw.getLinesSection());
 		
 		//Verify Line Search functionality
+		atlexhdgshw.getLineSearch().click();
 		atlexhdgshw.getLineSearch().sendKeys(prop.getProperty("line2"));
 		atlexhdgshw.getLineSearchButton().click();
 		Thread.sleep(5000);
-		utl.scrollToElement(atlexhdgshw.getLinesSection());
-		Assert.assertTrue(atlexhdgshw.getVerifyLineSearch().getText().contains("line2"));
-		System.out.println("Line Search functionality is working properly.");
-		
-		
+		Assert.assertTrue(atlexhdgshw.getVerifyLineSearch().getText().contains(prop.getProperty("line2")));	
 	}
 	
 }
