@@ -47,7 +47,22 @@ public class ATLExhDigiShowroomPage {
 	By ProductsPageBackButton = By.xpath("//button[@class = 'imc-icon-BackArrow imc-button--icon-only imc-button--no-border imc-heading--mega imc-heading--line-height-1 imc-content--display-flex']"); //Locator for Back arrow at Products page
 	By ProductsList = By.xpath("//div[@class = 'imc-products-overview--gallery']/div[1]"); //Locator for first product in Product List at Exhibitor Digital Showroom
 	By ProductsDescription = By.xpath("//h5[@class = 'imc-margin--bottom--medium']"); //Locator for Products section at Products page
-	
+	By LinesSection = By.xpath("//div[@id = 'digitalShowRoomLines']/div[1]/div[1]"); //Locator for Lines section
+	By TotalLinesButton = By.xpath("//div[@class = 'imc-content--display-flex imc-content--display-flex-space-between imc-lines-overview-actions']/div[2]/a[1]"); //Locator for Sell All Lines button
+	By ValidateLinesPage = By.xpath("//ul[@class = 'imc-breadcrumb']/li[4]"); //Locator for Validate Lines page
+	By LinesCountAtLinesPage = By.xpath("//div[@id = 'Lines']"); //Locator for Lines tab at All Lines page
+	By LinesOption = By.xpath("//div[@class = 'imc-content--display-flex-wrap imc-content--display-flex imc-content--display-flex-space-between']/div[1]"); //Locator for First Lines option
+	By LinesPage = By.xpath("//section[@class = 'imc-site-wrapper']/div[2]/div[1]"); //Locator for Lines page
+	By LinesOptionText = By.xpath("//div[@class = 'imc-manufacturing-line']/div[2]/a[1]"); //Locator for Lines option text
+	By ProductText = By.xpath("//div[@class = 'imc-catalog__item_title multiSelectItem']"); //Locator for Product text
+	By AlphabeticSorting = By.xpath("//div[@class = 'imc-content--display-flex']/a[1]"); //Locator for A to Z sorting
+	By ProductSorting = By.xpath("//div[@class = 'imc-content--display-flex']/a[2]"); //Locator for sort by product
+	By LinesWithProduct = By.xpath("//div[@class = 'imc-content--display-flex']/a[3]"); //Locator for Line with Product sorting
+	By LinesOnJuniperMarket = By.xpath("//div[@class = 'imc-content--display-flex']/a[4]"); //Locator for Line with Juniper Market sorting
+	By LineSearch = By.xpath("//input[@id = 'product-search']"); //Locator for line search
+	By LineSearchButton = By.xpath("//button[@class = 'imc-searchform--button--search']"); //Locator for line search button 		
+	By VerifyLineSearch = By.xpath("//div[@class = 'imc-manufacturing-line-title-wrapper']/a[1]"); //Locator for verify line search  		
+			
 	public ATLExhDigiShowroomPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
@@ -202,6 +217,81 @@ public class ATLExhDigiShowroomPage {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ProductsDescription));
 		return driver.findElement(ProductsDescription);
+	}
+	public WebElement getLinesSection() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(LinesSection));
+		return driver.findElement(LinesSection);
+	}
+	public WebElement getTotalLinesButton() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(TotalLinesButton));
+		return driver.findElement(TotalLinesButton);
+	}
+	public WebElement getValidateLinesPage() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ValidateLinesPage));
+		return driver.findElement(ValidateLinesPage);
+	}
+	public WebElement getLinesCountAtLinesPage() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(LinesCountAtLinesPage));
+		return driver.findElement(LinesCountAtLinesPage);
+	}
+	public WebElement getLinesOption() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(LinesOption));
+		return driver.findElement(LinesOption);
+	}
+	public WebElement getLinesPage() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(LinesPage));
+		return driver.findElement(LinesPage);
+	}
+	public WebElement getLinesOptionText() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(LinesOptionText));
+		return driver.findElement(LinesOptionText);
+	}
+	public WebElement getProductText() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ProductText));
+		return driver.findElement(ProductText);
+	} 
+	public WebElement getAlphabeticSorting() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(AlphabeticSorting));
+		return driver.findElement(AlphabeticSorting);
+	}
+	public WebElement getProductSorting() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ProductSorting));
+		return driver.findElement(ProductSorting);
+	}
+	public WebElement getLinesWithProduct() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(LinesWithProduct));
+		return driver.findElement(LinesWithProduct);
+	}
+	public WebElement getLinesOnJuniperMarket() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(LinesOnJuniperMarket));
+		return driver.findElement(LinesOnJuniperMarket);
+	}
+	public WebElement getLineSearch() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(LineSearch));
+		return driver.findElement(LineSearch);
+	}
+	public WebElement getLineSearchButton() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(LineSearchButton));
+		return driver.findElement(LineSearchButton);
+	}
+	public WebElement getVerifyLineSearch() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(VerifyLineSearch));
+		return driver.findElement(VerifyLineSearch);
 	}
 }
 

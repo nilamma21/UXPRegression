@@ -352,9 +352,9 @@ public class ExhibitorDigitalShowroom extends base {
 	}
 	
 	@Test(priority = 6)
-	public void TS006_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest() throws InterruptedException, IOException {
+	public void TS006_VerifyClickOnTotalLinesSeeAllLinkForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// T368: The click on 'Total products-See All' functionality for an Exhibitor
+		// T312: The click on 'Total lines-See All' functionality for an Exhibitor Digital Show room
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
@@ -371,6 +371,60 @@ public class ExhibitorDigitalShowroom extends base {
 		exhname = atlexhact.getExhibitorName().getText();
 		System.out.println("Exhibitor name: " + exhname);
 
+		// Get the Total Lines count on Search grid
+		atlexhdgshw.getExhibitorName().click();
+		Thread.sleep(5000);
+		utl.scrollToElement(atlexhdgshw.getLinesSection());
+		String temp = atlexhdgshw.getLinesSection().getText();
+		String totallinescountonsearchgrid = temp.replaceAll("[^0-9]", "");
+		System.out.println("Total Products Count on Search Results grid is: " + totallinescountonsearchgrid);
+		Assert.assertTrue(atlexhdgshw.getTotalLinesButton().getText().contains(totallinescountonsearchgrid));
+		System.out.println("Total Lines count is same at Lines section title and See All button.");
+
+		// Click on Total Lines-See All link for 1st Exhibitor
+		atlexhdgshw.getTotalLinesButton().click();
+		Thread.sleep(6000);
+
+		// Verify that user should redirect to the Lines page
+		Assert.assertTrue(atlexhdgshw.getValidateLinesPage().getText().contains("Lines"));
+		System.out.println("All Lines page is displayed properly.");
+		Thread.sleep(6000);
+
+		// Get the Total Products count on Products page
+		String linestabtitle = atlexhdgshw.getLinesCountAtLinesPage().getText();
+		String totallinescountonprodpage = linestabtitle.replaceAll("[^0-9]", "");
+		System.out.println("Total Lines Count on Products page is: " + totallinescountonprodpage);
+
+		//Get back to Exhibitor Showroom page and click any one product and verify if product details are displayed properly
+		atlexhdgshw.getProductsPageBackButton().click();
+		utl.scrollToElement(atlexhdgshw.getLinesSection());
+		String linetext = atlexhdgshw.getLinesOptionText().getText();
+		atlexhdgshw.getLinesOption().click();
+		Assert.assertTrue(atlexhdgshw.getValidateLinesPage().getText().contains(linetext));
+		System.out.println("Line Details are displayed properly.");
+		
+	}
+	
+	@Test(priority = 7)
+	public void TS007_VerifyClickOnProductShownLinkForExhibitorTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T311: The click on 'Product Shown-See All' functionality for an Exhibitor Digital Showroom
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput"))); 
+		atlgs.getATLSearchButton().click();
+
+		Thread.sleep(15000);
+		// Store the 1st Exhibitor name in String variable
+		exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: " + exhname);
+		
 		// Get the Total Products count on Search grid
 		atlexhdgshw.getExhibitorName().click();
 		Thread.sleep(5000);
@@ -385,25 +439,91 @@ public class ExhibitorDigitalShowroom extends base {
 		atlexhdgshw.getAllProductsButton().click();
 		Thread.sleep(6000);
 
-		// Verify that user should redirect to the Products page
-		Assert.assertTrue(atlexhact.getValidateProductsPage().isDisplayed());
+		// Verify that user should redirect to the Lines page
+		Assert.assertTrue(atlexhdgshw.getValidateLinesPage().getText().contains("Products"));
 		System.out.println("All Products page is displayed properly.");
 		Thread.sleep(6000);
 
-		Assert.assertTrue(driver.getTitle().contains(""+exhname+" Products"));
-
 		// Get the Total Products count on Products page
-		String producttabtitle = atlexhact.getValidateProductsPage().getText();
-		String totalprodcountonprodpage = producttabtitle.replaceAll("[^0-9]", "");
-		System.out.println("Total Products Count on Products page is: " + totalprodcountonprodpage);
+		String productstabtitle =atlexhact.getValidateProductsPage().getText();
+		String totalproductscountonprodpage = productstabtitle.replaceAll("[^0-9]", "");
+		System.out.println("Total Products Count on Products page is: " + totalproductscountonprodpage);
 
 		//Get back to Exhibitor Showroom page and click any one product and verify if product details are displayed properly
 		atlexhdgshw.getProductsPageBackButton().click();
 		utl.scrollToElement(atlexhdgshw.getProductSection());
+		String producttext = atlexhdgshw.getProductText().getText();
+		System.out.println(producttext);
 		atlexhdgshw.getProductsList().click();
-		utl.scrollToElement(atlexhdgshw.getProductsDescription());
-		Assert.assertTrue(atlexhdgshw.getProductsDescription().getText().contains("Product Description"));
+		Thread.sleep(5000);
+		Assert.assertTrue(producttext.contains(atlexhdgshw.getValidateLinesPage().getText()));
 		System.out.println("Product Details are displayed properly.");
+
+	}
+	
+	@Test(priority = 8)
+	public void TS008_VerifyClickOnLineFiltersForExhibitorTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T315: The click on Line Filters functionality for an Exhibitor Digital Show room
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLSearchButton().click();
+
+		Thread.sleep(15000);
+		// Store the 1st Exhibitor name in String variable
+		exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: " + exhname);
+
+		// Get the Total Lines count on Search grid
+		atlexhdgshw.getExhibitorName().click();
+		Thread.sleep(5000);
+		utl.scrollToElement(atlexhdgshw.getLinesSection());
+		
+		//Verify A-Z sorting
+		atlexhdgshw.getAlphabeticSorting().click();
+		Assert.assertTrue(atlexhdgshw.getLinesOptionText().getText().startsWith("A"));
+	}
+	
+	@Test(priority = 9)
+	public void TS009_VerifyClickOnLineSearchForExhibitorTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T315: The click on Line Filters functionality for an Exhibitor Digital Show room
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLSearchButton().click();
+
+		Thread.sleep(15000);
+		// Store the 1st Exhibitor name in String variable
+		exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: " + exhname);
+
+		// Get the Total Lines count on Search grid
+		atlexhdgshw.getExhibitorName().click();
+		Thread.sleep(5000);
+		utl.scrollToElement(atlexhdgshw.getLinesSection());
+		
+		//Verify Line Search functionality
+		atlexhdgshw.getLineSearch().sendKeys(prop.getProperty("line2"));
+		atlexhdgshw.getLineSearchButton().click();
+		Thread.sleep(5000);
+		utl.scrollToElement(atlexhdgshw.getLinesSection());
+		Assert.assertTrue(atlexhdgshw.getVerifyLineSearch().getText().contains("line2"));
+		System.out.println("Line Search functionality is working properly.");
+		
 		
 	}
 	
