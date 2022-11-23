@@ -6,7 +6,7 @@
       <class name="atlantamarket_PROD.ExhibitorDigitalShowroom">
         <methods>
           <include name="initialize"/>
-          <include name="TS001_VerifyAddToFavoritesTest"/>
+          <include name="TS009_VerifyClickOnLineSearchForExhibitorTest"/>
         </methods>
       </class> <!-- atlantamarket_PROD.ExhibitorDigitalShowroom -->
     </classes>
