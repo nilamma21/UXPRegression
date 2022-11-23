@@ -526,6 +526,106 @@ public class ExhibitorDigitalShowroom extends base {
 		
 		
 	}
+	@Test(priority = 10)
+	public void TS010_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T350: Exhibitor Digital Showroom: Lines Component: See All Lines
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLSearchButton().click();
+
+		Thread.sleep(15000);
+		// Store the 1st Exhibitor name in String variable
+		exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: " + exhname);
+
+		// Get the Total Lines count on Search grid
+		atlexhdgshw.getExhibitorName().click();
+		Thread.sleep(5000);
+		//Scroll to Line Section
+		utl.scrollToElement(atlexhdgshw.getLinesSection());
+		//Click on See All Lines Btn
+		atlexhdgshw.getTotalLinesButton().click();
+		
+		Assert.assertTrue(atlexhdgshw.getATLVerifyLinePageTitle().getText().contains("Lines"));
+		System.out.println("Lines Component: See All Lines Btn functionality is working properly.");
+		
+		
+	}
+	@Test(priority = 11)
+	public void TS011_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T349: Exhibitor Digital showroom: Products Component: Order on JuniperMarket
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLSearchButton().click();
+
+		Thread.sleep(15000);
+		// Store the 1st Exhibitor name in String variable
+		exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: " + exhname);
+
+	
+		atlexhdgshw.getExhibitorName().click();
+		Thread.sleep(5000);
+		//Scroll to Line Section
+		utl.scrollToElement(atlexhdgshw.getProductSection());
+		//Click on Order On Juniper Market Btn
+		
+		
+		Assert.assertTrue(atlexhdgshw.getATLVerifyLinePageTitle().getText().contains("Lines"));
+		System.out.println("Lines Component: See All Lines Btn functionality is working properly.");
+		
+		
+	}
+	@Test(priority = 12)
+	public void TS012_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T349: Exhibitor Digital showroom: Products Component: See All Products
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLSearchButton().click();
+
+		Thread.sleep(15000);
+		// Store the 1st Exhibitor name in String variable
+		exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: " + exhname);
+
+		
+		atlexhdgshw.getExhibitorName().click();
+		Thread.sleep(5000);
+		//Scroll to Product Section
+		utl.scrollToElement(atlexhdgshw.getProductSection());
+		//Click on All Product Btn Btn
+		atlexhdgshw.getAllProductsButton().click();
+		
+		
+		Assert.assertTrue(atlexhdgshw.getATLVerifyLinePageTitle().getText().contains("Products"));
+		System.out.println("Products Component: See All Products Btn functionality is working properly.");
+		
+		
+	}
 	
 }
 

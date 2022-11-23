@@ -8,14 +8,14 @@
 
 	<test thread-count="5" name="RegressionTest">
 		<classes>
-			<class name="atlantamarket_PROD.EvenntsAndWebinar" />
+			<class name="atlantamarket_PROD.ExhibitorDigitalShowroom" />
 			<methods>
 		<!-- 	<include name="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest" /> 
 				<include name="TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest" /> -->
 				<!-- <include name="TS005_VerifyIMCEventsEventDetailstTest" />
 				<include name="TS012_VerifyExhibitorEventsDetailstTest" /> -->
-		<!-- 		<include name="TS0013_VerifyExhibitorEventsAddToFavoriteTest" /> 
-				 -->
+				<include name="TS012_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest" /> 
+				
 				
 			</methods>
 		</classes>
