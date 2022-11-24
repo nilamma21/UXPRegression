@@ -494,7 +494,7 @@ public class ExhibitorDigitalShowroom extends base {
 	@Test(priority = 9)
 	public void TS009_VerifyClickOnLineSearchForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// T315: The click on Line Filters functionality for an Exhibitor Digital Show room
+		// T317: The click on Line Filters functionality for an Exhibitor Digital Show room
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
@@ -619,6 +619,58 @@ public class ExhibitorDigitalShowroom extends base {
 		
 		
 	}
+	
+	@Test(priority = 13)
+	public void TS013_VerifySeeInOtherMarketsForExhibitorTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T333: The See in Other Markets functionality for an Exhibitor Digital Show room
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLSearchButton().click();
+
+		Thread.sleep(15000);
+		// Store the 1st Exhibitor name in String variable
+		exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: " + exhname);
+
+		// Get the Total Lines count on Search grid
+		atlexhdgshw.getExhibitorName().click();
+		Thread.sleep(5000);
+		
+		
+		//Click See in Other Market button and verify if the page opens
+		atlexhdgshw.getSeeInOtherMarket().click();
+		Assert.assertTrue(atlexhdgshw.getVerifyOtherMarketsPage().isDisplayed());
+		System.out.println("See In Other Markets page is displayed properly.");
+		
+		//Verify Go To Showroom functionality
+		atlexhdgshw.getClickShowroom().click();
+		Thread.sleep(5000);
+		String winHandleBefore = driver.getWindowHandle();
+		for (String winHandle : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle);
+		}
+		lap.getIUnderstandBtn().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.americasmart.com/exhibitor/"));
+		System.out.println("Showroom page is displayed properly.");
+		driver.close();
+		driver.switchTo().window(winHandleBefore);
+		
+		//Verify Contact Exhibitor
+		atlexhdgshw.getContactExhibitorInOtherMarket().click();
+		Thread.sleep(5000);
+		Assert.assertTrue(atlexhdgshw.getVerifyContactExhibitorPage().isDisplayed());
+		System.out.println("Contact Exhibitor page is displayed properly.");
+		driver.get(prop.getProperty("atlmrkturl_prod"));
+	}
+	
 	
 }
 
