@@ -2,6 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
+
+  <suite name="LVM_RegressionTestSuite" duration-ms="82022" started-at="2022-11-22T11:17:29Z" finished-at="2022-11-22T11:18:51Z">
+    <groups>
+    </groups>
+    <test name="RegressionTest" duration-ms="82022" started-at="2022-11-22T11:17:29Z" finished-at="2022-11-22T11:18:51Z">
+      <class name="atlantamarket_PROD.ExhibitorDigitalShowroom">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.ExhibitorDigitalShowroom@754ba872]" name="initialize" is-config="true" duration-ms="52439" started-at="2022-11-22T16:47:29Z" finished-at="2022-11-22T16:48:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS012_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest()[pri:0, instance:atlantamarket_PROD.ExhibitorDigitalShowroom@754ba872]" name="TS012_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest" duration-ms="29511" started-at="2022-11-22T16:48:21Z" finished-at="2022-11-22T16:48:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS012_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest -->
+      </class> <!-- atlantamarket_PROD.ExhibitorDigitalShowroom -->
+    </test> <!-- RegressionTest -->
+  </suite> <!-- LVM_RegressionTestSuite -->
+
   <suite name="ATLMrkt_RegressionTestSuite" duration-ms="185225" started-at="2022-11-22T09:18:02Z" finished-at="2022-11-22T09:21:07Z">
     <groups>
     </groups>
@@ -18,4 +36,5 @@
       </class> <!-- atlantamarket_PROD.ExhibitorDigitalShowroom -->
     </test> <!-- RegressionParallelest -->
   </suite> <!-- ATLMrkt_RegressionTestSuite -->
+ 8f070e7986cd027a4be87b7178c2f73fcb4c2d95
 </testng-results>

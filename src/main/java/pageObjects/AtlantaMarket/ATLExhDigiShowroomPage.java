@@ -60,14 +60,25 @@ public class ATLExhDigiShowroomPage {
 	By LinesWithProduct = By.xpath("//div[@class = 'imc-content--display-flex']/a[3]"); //Locator for Line with Product sorting
 	By LinesOnJuniperMarket = By.xpath("//div[@class = 'imc-content--display-flex']/a[4]"); //Locator for Line with Juniper Market sorting
 	By LineSearch = By.xpath("//input[@id = 'product-search']"); //Locator for line search
+<<<<<<< HEAD
+	By LineSearchButton = By.xpath("//button[@class = 'imc-searchform--button--search']"); //Locator for line search button 		
+	By VerifyLineSearch = By.xpath("//div[@class = 'imc-manufacturing-line-title-wrapper']/a[1]"); //Locator for verify line search  
+	By VerifyLinePageTitle = By.xpath("//div[@class = 'imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[4]/a[1]"); //Locator for verify line page title
+	
+=======
 	By LineSearchButton = By.xpath("(//button[@class = 'imc-searchform--button--search'])[2]"); //Locator for line search button 		
 	By VerifyLineSearch = By.xpath("//div[@class = 'imc-manufacturing-line-title-wrapper']/a[1]"); //Locator for verify line search  		
+>>>>>>> 8f070e7986cd027a4be87b7178c2f73fcb4c2d95
 			
 	public ATLExhDigiShowroomPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
-
+	public WebElement getATLVerifyLinePageTitle() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(VerifyLinePageTitle));
+		return driver.findElement(VerifyLinePageTitle);
+	}
 	public WebElement getATLExhDigiShowPage() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(exhdigishowroompage));

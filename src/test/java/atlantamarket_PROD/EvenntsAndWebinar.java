@@ -445,7 +445,7 @@ public class EvenntsAndWebinar extends base{
 					String searchResultPageURL=atlevents.getatlEventsTag().getAttribute("href");
 					  atlevents.getatlEventsTag().click();
 					  Assert.assertTrue(searchResultPageURL.contains(driver.getCurrentUrl()));
-					  Assert.assertTrue(atlevents.getatlSearchResultsTitle().getText().contains("Search Results"));
+					  Assert.assertTrue(atlevents.getatlSearchResultsTitle().getText().contains("Search"));
 					  System.out.println("Search Results page opened");
 					  break;
 				}
