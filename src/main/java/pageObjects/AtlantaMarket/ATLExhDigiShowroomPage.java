@@ -71,7 +71,13 @@ public class ATLExhDigiShowroomPage {
 	By ContactExhibitorInOtherMarket = By.xpath("//div[@class = 'imc-other-markets-contact']/div[1]/button[1]"); //Locator for Contact Exhibitor link at See in Other Markets page
 	By VerifyContactExhibitorPage = By.xpath("//div[@class = 'imc-contactexhibitormodal--body-panel imc-section--neutral-medium imc-content--full-width']"); //Locator for Contact Exhibitor Page
 	By ContactExhibitorCloseButton = By.xpath("//div[@class = 'ReactModalPortal']/div[1]/button[1]"); //Locator for Close button at Contact Exhibitor page  		
-			
+	By CatalogsSection = By.xpath("//section[@class = 'imc-site-wrapper']/div[6]/div[1]/div[1]"); //Locator for Catalogs section
+	By SeeAllCatalogsButton = By.xpath("//section[@class = 'imc-site-wrapper']/div[6]/div[1]/div[3]/div[1]/a[1]"); //Locator for See All Catalogs section
+	By SelectCatalog = By.xpath("//div[@class = 'imc-catalog__item_title multiSelectItem']"); //Locator for Catalog option in Catalogs section
+
+	
+	
+	
 	public ATLExhDigiShowroomPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
@@ -341,6 +347,22 @@ public class ATLExhDigiShowroomPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ContactExhibitorCloseButton));
 		return driver.findElement(ContactExhibitorCloseButton);
 	}
+	public WebElement getCatalogsSection() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(CatalogsSection));
+		return driver.findElement(CatalogsSection);
+	}
+	public WebElement getSeeAllCatalogsButton() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(SeeAllCatalogsButton));
+		return driver.findElement(SeeAllCatalogsButton);
+	}
+	public WebElement getSelectCatalog() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(SelectCatalog));
+		return driver.findElement(SelectCatalog);
+	}
+	
 }
 
 
