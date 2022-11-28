@@ -75,6 +75,8 @@ public class GlobalSearch_MatchingResults extends base {
 		// The purpose of this test case to verify:-
 		// T436: Verify Global Search: Contains and Starts With
 
+		//Blocked- Unclear about the acceptance criteria
+		
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
@@ -206,6 +208,7 @@ public class GlobalSearch_MatchingResults extends base {
 	public void TS003_VerifyGlobalSearchMatchingResultsSortSortByTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T335: Global Search: Matching results-Sort- Sort By
+		//Open bug- UXP-1991
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);

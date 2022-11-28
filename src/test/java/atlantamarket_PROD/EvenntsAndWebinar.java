@@ -723,7 +723,7 @@ public class EvenntsAndWebinar extends base{
 		utl.checkItemPresentInListorNot(atlevents.getatlListOfEventTitles(), eventName);
 }
 	@Test(priority = 10)
-	public void TS0010_VerifyExhibitorEventsCalendarViewTest() throws InterruptedException, IOException {
+	public void TS010_VerifyExhibitorEventsCalendarViewTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T305: Exhibitor Events: Calendar View
 		lap = new ATLLandingPage(driver);
@@ -1045,7 +1045,7 @@ public class EvenntsAndWebinar extends base{
 	}	
 
 	@Test(priority = 13)
-	public void TS0013_VerifyExhibitorEventsAddToFavoriteTest() throws InterruptedException, IOException {
+	public void TS013_VerifyExhibitorEventsAddToFavoriteTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T308: Exhibitor Events: Event Details- Add To Favorite
 		lap = new ATLLandingPage(driver);
@@ -1100,7 +1100,7 @@ public class EvenntsAndWebinar extends base{
 
 	}
 	@Test(priority = 14)
-	public void TS0014_VerifyExhibitorEventsAddToListTest() throws InterruptedException, IOException {
+	public void TS014_VerifyExhibitorEventsAddToListTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T309: Exhibitor Events: Event Details- Add To List
 		lap = new ATLLandingPage(driver);
