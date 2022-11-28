@@ -809,6 +809,7 @@ public class ExhibitorDigitalShowroom extends base {
 		System.out.println("Exhibitor name: " + exhname);
 
 	
+<<<<<<< HEAD
 		atlexhdgshw.getExhibitorName().click();
 		Thread.sleep(5000);
 		
@@ -829,11 +830,18 @@ public class ExhibitorDigitalShowroom extends base {
 	public void TS018_VerifyExhibitorDigitalEventsComponentTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T334: Exhibitor Digital showroom: Events Component
+=======
+	@Test(priority = 14)
+	public void TS014_VerifyCatalogsSectionForExhibitorTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T333: The See in Other Markets functionality for an Exhibitor Digital Show room
+>>>>>>> 0c143bfcebcf2e27d5d62eebc63eeb9d93e60b1c
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		lap = new ATLLandingPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+<<<<<<< HEAD
 		atlevents=new ATLEventsAndWebinarPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -862,6 +870,44 @@ public class ExhibitorDigitalShowroom extends base {
 		System.out.println("Events Component functionality is working properly.");	
 		
 	}
+=======
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("searchforCatalogsInputUAT")));
+		atlgs.getATLSearchButton().click();
+
+		Thread.sleep(15000);
+		//Store the 1st Exhibitor name in String variable
+		exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: " + exhname);
+
+		//Get the Total Lines count on Search grid
+		atlexhdgshw.getExhibitorName().click();
+		Thread.sleep(5000);
+		
+		//Verify Catalogs section for Exhibitor
+		utl.scrollToElement(atlexhdgshw.getCatalogsSection());
+		atlexhdgshw.getSeeAllCatalogsButton().click();
+		Assert.assertTrue(atlexhdgshw.getValidateLinesPage().getText().contains("Catalogs"));
+		System.out.println("See All Catalogs is working properly.");
+		atlexhdgshw.getProductsPageBackButton().click();
+		utl.scrollToElement(atlexhdgshw.getCatalogsSection());
+		String CatalogName = atlexhdgshw.getSelectCatalog().getText();
+		System.out.println("Catalog Name : "+CatalogName);
+		atlexhdgshw.getSelectCatalog().click();
+		String winHandleBefore = driver.getWindowHandle();
+		for (String winHandle : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle);
+		}
+		Assert.assertTrue(atlexhdgshw.getValidateLinesPage().getText().contains("pdfview"));
+		System.out.println("Catalog is displayed properly.");
+		driver.close();
+		driver.switchTo().window(winHandleBefore);
+		driver.get(prop.getProperty("atlmrkturl_prod"));
+	}
+	
+>>>>>>> 0c143bfcebcf2e27d5d62eebc63eeb9d93e60b1c
 	
 }
 

@@ -71,6 +71,7 @@ public class ATLExhDigiShowroomPage {
 	By ContactExhibitorInOtherMarket = By.xpath("//div[@class = 'imc-other-markets-contact']/div[1]/button[1]"); //Locator for Contact Exhibitor link at See in Other Markets page
 	By VerifyContactExhibitorPage = By.xpath("//div[@class = 'imc-contactexhibitormodal--body-panel imc-section--neutral-medium imc-content--full-width']"); //Locator for Contact Exhibitor Page
 	By ContactExhibitorCloseButton = By.xpath("//div[@class = 'ReactModalPortal']/div[1]/button[1]"); //Locator for Close button at Contact Exhibitor page  		
+
 	By CatalogSection = By.xpath("//div[@class = 'imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div[1]"); //Locator for Catalog section  			
 	By CatalogSeeAllBtn = By.xpath("(//span[contains(text(),'Catalogs')])[1]/../../div[3]/div/a/span[contains(text(),'See All') and @class='imc-breakpoint-display--hide-mobile']"); //Locator for Catalog see All Btn
 	By HeroComponentVisit = By.xpath("//span[contains(text(),'Visit')]/.."); //Locator for Hero Component Visit Btn
@@ -83,6 +84,13 @@ public class ATLExhDigiShowroomPage {
 	By OrderOnJuniperMarktBtnCatalog = By.xpath("(//span[contains(text(),'Catalogs')])[1]/../../div[3]/div[1]/a[1]"); //Locator for Events Section
 	
 	//div[@class='imc-section imc-section--width-100-percent']/div[1]/span[contains(text(),'Products')]/../../div[3]/div[1]/a[1]/span[1]
+
+	By CatalogsSection = By.xpath("//section[@class = 'imc-site-wrapper']/div[6]/div[1]/div[1]"); //Locator for Catalogs section
+	By SeeAllCatalogsButton = By.xpath("//section[@class = 'imc-site-wrapper']/div[6]/div[1]/div[3]/div[1]/a[1]"); //Locator for See All Catalogs section
+	By SelectCatalog = By.xpath("//div[@class = 'imc-catalog__item_title multiSelectItem']"); //Locator for Catalog option in Catalogs section
+
+	
+
 	
 	
 	public ATLExhDigiShowroomPage(WebDriver driver) {
@@ -404,6 +412,22 @@ public class ATLExhDigiShowroomPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ContactExhibitorCloseButton));
 		return driver.findElement(ContactExhibitorCloseButton);
 	}
+	public WebElement getCatalogsSection() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(CatalogsSection));
+		return driver.findElement(CatalogsSection);
+	}
+	public WebElement getSeeAllCatalogsButton() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(SeeAllCatalogsButton));
+		return driver.findElement(SeeAllCatalogsButton);
+	}
+	public WebElement getSelectCatalog() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(SelectCatalog));
+		return driver.findElement(SelectCatalog);
+	}
+	
 }
 
 
