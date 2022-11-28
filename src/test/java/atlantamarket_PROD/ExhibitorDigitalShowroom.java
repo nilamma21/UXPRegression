@@ -809,7 +809,7 @@ public class ExhibitorDigitalShowroom extends base {
 		System.out.println("Exhibitor name: " + exhname);
 
 	
-<<<<<<< HEAD
+
 		atlexhdgshw.getExhibitorName().click();
 		Thread.sleep(5000);
 		
@@ -830,18 +830,15 @@ public class ExhibitorDigitalShowroom extends base {
 	public void TS018_VerifyExhibitorDigitalEventsComponentTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T334: Exhibitor Digital showroom: Events Component
-=======
-	@Test(priority = 14)
-	public void TS014_VerifyCatalogsSectionForExhibitorTest() throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// T333: The See in Other Markets functionality for an Exhibitor Digital Show room
->>>>>>> 0c143bfcebcf2e27d5d62eebc63eeb9d93e60b1c
+
+	
+
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		lap = new ATLLandingPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
-<<<<<<< HEAD
+
 		atlevents=new ATLEventsAndWebinarPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -870,8 +867,11 @@ public class ExhibitorDigitalShowroom extends base {
 		System.out.println("Events Component functionality is working properly.");	
 		
 	}
-=======
 
+	@Test(priority = 19)
+	public void TS019_VerifyCatalogsSectionForExhibitorTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T333: The See in Other Markets functionality for an Exhibitor Digital Show room
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("searchforCatalogsInputUAT")));
@@ -907,7 +907,7 @@ public class ExhibitorDigitalShowroom extends base {
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
 	
->>>>>>> 0c143bfcebcf2e27d5d62eebc63eeb9d93e60b1c
+
 	
 }
 
