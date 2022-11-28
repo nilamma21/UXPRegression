@@ -14,6 +14,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import pageObjects.AtlantaMarket.ATLEventsAndWebinarPage;
 import pageObjects.AtlantaMarket.ATLExhDigiShowroomPage;
 import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
 import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
@@ -41,6 +42,7 @@ public class ExhibitorDigitalShowroom extends base {
 	ATLExhLineProdActionsPage atlexhact;
 	ATLMarketPlannerPage atlmppge;
 	ATLLeftPaneFilters atlleftpane;
+	ATLEventsAndWebinarPage atlevents;
 
 	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns,
 	allnoteslist, favlist, searchlinetypelist, tagBlogPost, taglist, infoFilterList,favexhlist;
@@ -55,6 +57,8 @@ public class ExhibitorDigitalShowroom extends base {
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		//driver.get(prop.getProperty("lvmurl_uat"));
+		
 		Thread.sleep(3000);
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(3000);
@@ -578,17 +582,20 @@ public class ExhibitorDigitalShowroom extends base {
 		//Scroll to Line Section
 		utl.scrollToElement(atlexhdgshw.getProductSection());
 		//Click on Order On Juniper Market Btn
+		String OrderOnJuniperMarktURL=atlexhdgshw.getOrderOnJuniperMarktBtnCatalog().getAttribute("href");
+		atlexhdgshw.getOrderOnJuniperMarktBtnCatalog().click();
+		
+		Assert.assertTrue(driver.getCurrentUrl().contains(OrderOnJuniperMarktURL));
+		System.out.println(" Products Component: Order on JuniperMarket Btn functionality is working properly.");
 		
 		
-		Assert.assertTrue(atlexhdgshw.getATLVerifyLinePageTitle().getText().contains("Lines"));
-		System.out.println("Lines Component: See All Lines Btn functionality is working properly.");
 		
 		
 	}
 	@Test(priority = 12)
 	public void TS012_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// T349: Exhibitor Digital showroom: Products Component: See All Products
+		// T348: Exhibitor Digital showroom: Products Component: See All Products
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
@@ -670,17 +677,201 @@ public class ExhibitorDigitalShowroom extends base {
 		System.out.println("Contact Exhibitor page is displayed properly.");
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
-	
 	@Test(priority = 14)
-	public void TS014_VerifyCatalogsSectionForExhibitorTest() throws InterruptedException, IOException {
+	public void TS014_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// T333: The See in Other Markets functionality for an Exhibitor Digital Show room
+		// T351: Exhibitor Digital Showroom: Catalogs Component: See All Catalogs
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		lap = new ATLLandingPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchCataloginput")));
+		atlgs.getATLSearchButton().click();
+
+		Thread.sleep(15000);
+		// Store the 1st Exhibitor name in String variable
+		exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: " + exhname);
+
+		
+		atlexhdgshw.getExhibitorName().click();
+		Thread.sleep(5000);
+		//Scroll to Catalog Section
+		utl.scrollToElement(atlexhdgshw.getATLCatalogSection());
+		//Click on All Catalog Btn Btn
+		atlexhdgshw.getATLCatalogSeeAllBtn().click();
+		
+		
+		Assert.assertTrue(atlexhdgshw.getATLVerifyLinePageTitle().getText().contains("Catalogs"));
+		System.out.println("Catalogs Component: See All Catalogs Btn functionality is working properly.");
+		
+		
+	}
+	
+	@Test(priority = 15)
+	public void TS015_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T352: Exhibitor Digital Sowroom: Catalogs Component: Order on JuniperMarket
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchCataloginput")));
+		atlgs.getATLSearchButton().click();
+
+		Thread.sleep(15000);
+		// Store the 1st Exhibitor name in String variable
+		exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: " + exhname);
+
+	
+		atlexhdgshw.getExhibitorName().click();
+		Thread.sleep(5000);
+		//Scroll to Line Section
+		utl.scrollToElement(atlexhdgshw.getATLCatalogSection());
+		//Click on Order On Juniper Market Btn
+		
+		String OrderOnJuniperMarktURL=atlexhdgshw.getOrderOnJuniperMarktBtnCatalog().getAttribute("href");
+		atlexhdgshw.getOrderOnJuniperMarktBtnCatalog().click();
+		
+		Assert.assertTrue(driver.getCurrentUrl().contains(OrderOnJuniperMarktURL));
+		System.out.println(" Catalogs Component: Order on JuniperMarket Btn functionality is working properly.");
+		
+		
+	}
+	@Test(priority = 16)
+	public void TS016_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T347: Exhibitor Digital showroom: Hero component: Visit <Exhibitor site>
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLSearchButton().click();
+
+		Thread.sleep(15000);
+		// Store the 1st Exhibitor name in String variable
+		exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: " + exhname);
+
+	
+		atlexhdgshw.getExhibitorName().click();
+		Thread.sleep(5000);
+		String visitURL=atlexhdgshw.getHeroComponentVisit().getAttribute("href");
+		System.out.println(visitURL);
+		//Click on Hero Component Visit
+		String currentWindowID=driver.getWindowHandle();
+		atlexhdgshw.getHeroComponentVisit().click();
+		for (String winddowHandle : driver.getWindowHandles()) {
+			driver.switchTo().window(winddowHandle);
+		}
+		Thread.sleep(7000);
+		String URL =driver.getCurrentUrl();
+		System.out.println(URL);
+		Assert.assertTrue(URL.contains(visitURL));
+		driver.close();
+		driver.switchTo().window(currentWindowID);
+		System.out.println("Hero component: Visit <Exhibitor site> Btn functionality is working properly.");
+		
+		
+	}
+	@Test(priority = 17)
+	public void TS017_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T345: Exhibitor Digital showroom: Hero component: View 3D Showroom
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("searchexhwithlinesinput")));
+		atlgs.getATLSearchButton().click();
+
+		Thread.sleep(15000);
+		// Store the 1st Exhibitor name in String variable
+		exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: " + exhname);
+
+	
+
+		atlexhdgshw.getExhibitorName().click();
+		Thread.sleep(5000);
+		
+		
+		//Click on Hero Component Visit
+		
+		atlexhdgshw.getView3DshowroomBtn().click();
+		Thread.sleep(5000);
+		String header3Dshowroom=atlexhdgshw.getshowroomHeader3D().getText();
+		System.out.println(exhname +" 3D Showroom");
+		Assert.assertTrue(header3Dshowroom.contains(exhname +" 3D Showroom"));
+		
+		System.out.println("Hero component: View 3D Showroom Btn functionality is working properly.");
+		
+		
+	}
+	@Test(priority = 18)
+	public void TS018_VerifyExhibitorDigitalEventsComponentTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T334: Exhibitor Digital showroom: Events Component
+
+	
+
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+
+		atlevents=new ATLEventsAndWebinarPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalSearchEventsInput")));
+		atlgs.getATLSearchButton().click();
+
+		Thread.sleep(15000);
+		// Store the 1st Exhibitor name in String variable
+		exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: " + exhname);
+
+		atlexhdgshw.getExhibitorName().click();
+		Thread.sleep(5000);
+		// Scroll to Line Section
+		utl.scrollToElement(atlexhdgshw.getEventsSection());
+		// Click on See All Events Btn
+
+		atlexhdgshw.getSeeAllEventsBtn().click();
+		/*Assert.assertTrue(atlexhdgshw.getATLVerifyLinePageTitle().getText().contains("Events"));
+		driver.navigate().back();
+		utl.scrollToElement(atlexhdgshw.getEventsSection());*/
+		String eventName=atlexhdgshw.getEventName().getText();
+		atlexhdgshw.getEventName().click();
+		Assert.assertTrue(atlevents.getatlEventNameOnDetailsPage().getText().contains(eventName));
+		System.out.println("Events Component functionality is working properly.");	
+		
+	}
+
+	@Test(priority = 19)
+	public void TS019_VerifyCatalogsSectionForExhibitorTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T333: The See in Other Markets functionality for an Exhibitor Digital Show room
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("searchforCatalogsInputUAT")));
@@ -716,6 +907,7 @@ public class ExhibitorDigitalShowroom extends base {
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
 	
+
 	
 }
 

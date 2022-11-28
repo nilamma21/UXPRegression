@@ -71,17 +71,82 @@ public class ATLExhDigiShowroomPage {
 	By ContactExhibitorInOtherMarket = By.xpath("//div[@class = 'imc-other-markets-contact']/div[1]/button[1]"); //Locator for Contact Exhibitor link at See in Other Markets page
 	By VerifyContactExhibitorPage = By.xpath("//div[@class = 'imc-contactexhibitormodal--body-panel imc-section--neutral-medium imc-content--full-width']"); //Locator for Contact Exhibitor Page
 	By ContactExhibitorCloseButton = By.xpath("//div[@class = 'ReactModalPortal']/div[1]/button[1]"); //Locator for Close button at Contact Exhibitor page  		
+
+	By CatalogSection = By.xpath("//div[@class = 'imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div[1]"); //Locator for Catalog section  			
+	By CatalogSeeAllBtn = By.xpath("(//span[contains(text(),'Catalogs')])[1]/../../div[3]/div/a/span[contains(text(),'See All') and @class='imc-breakpoint-display--hide-mobile']"); //Locator for Catalog see All Btn
+	By HeroComponentVisit = By.xpath("//span[contains(text(),'Visit')]/.."); //Locator for Hero Component Visit Btn
+	By showroomHeader3D = By.xpath("//div[@class='imc-content--display-flex imc-content--display-flex--center']/span[1]"); //Locator for 3D showroom Header
+	By View3DshowroomBtn = By.xpath("//span[contains(text(),'View 3D Showroom')]"); //Locator for 3D showroom Header
+	By View3DshowroomClose = By.xpath("//button[@class='imc-modal--close imc-button--modal-close imc-button--round']"); //Locator for 3D showroom Header
+	By EventsSection = By.xpath("(//span[contains(text(),'Events')])[1]"); //Locator for Events Section
+	By SeeAllEventsBtn = By.xpath("(//span[contains(text(),'Events')])[1]/../../div[3]/div[1]/a[1]"); //Locator for Events Section
+	By EventName = By.xpath("(//span[contains(text(),'Events')])[1]/../../div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]/h4[1]"); //Locator for Events Section
+	By OrderOnJuniperMarktBtnCatalog = By.xpath("(//span[contains(text(),'Catalogs')])[1]/../../div[3]/div[1]/a[1]"); //Locator for Events Section
+	
+	//div[@class='imc-section imc-section--width-100-percent']/div[1]/span[contains(text(),'Products')]/../../div[3]/div[1]/a[1]/span[1]
+
 	By CatalogsSection = By.xpath("//section[@class = 'imc-site-wrapper']/div[6]/div[1]/div[1]"); //Locator for Catalogs section
 	By SeeAllCatalogsButton = By.xpath("//section[@class = 'imc-site-wrapper']/div[6]/div[1]/div[3]/div[1]/a[1]"); //Locator for See All Catalogs section
 	By SelectCatalog = By.xpath("//div[@class = 'imc-catalog__item_title multiSelectItem']"); //Locator for Catalog option in Catalogs section
 
 	
+
 	
 	
 	public ATLExhDigiShowroomPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
+	public WebElement getOrderOnJuniperMarktBtnCatalog() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(OrderOnJuniperMarktBtnCatalog));
+		return driver.findElement(OrderOnJuniperMarktBtnCatalog);
+	}
+	public WebElement getEventName() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(EventName));
+		return driver.findElement(EventName);
+	}
+	public WebElement getSeeAllEventsBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(SeeAllEventsBtn));
+		return driver.findElement(SeeAllEventsBtn);
+	}
+	public WebElement getEventsSection() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(EventsSection));
+		return driver.findElement(EventsSection);
+	}
+	public WebElement getView3DshowroomClose() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(View3DshowroomClose));
+		return driver.findElement(View3DshowroomClose);
+	}
+	public WebElement getView3DshowroomBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(View3DshowroomBtn));
+		return driver.findElement(View3DshowroomBtn);
+	}
+	public WebElement getshowroomHeader3D() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(showroomHeader3D));
+		return driver.findElement(showroomHeader3D);
+	}
+	public WebElement getHeroComponentVisit() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(HeroComponentVisit));
+		return driver.findElement(HeroComponentVisit);
+	}
+	public WebElement getATLCatalogSeeAllBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(CatalogSeeAllBtn));
+		return driver.findElement(CatalogSeeAllBtn);
+	}
+	public WebElement getATLCatalogSection() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(CatalogSection));
+		return driver.findElement(CatalogSection);
+	}
 	public WebElement getATLVerifyLinePageTitle() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(VerifyLinePageTitle));
