@@ -12,9 +12,10 @@
 			<methods>
 		<!-- 	<include name="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest" /> 
 				<include name="TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest" /> -->
-				<!-- <include name="TS005_VerifyIMCEventsEventDetailstTest" />
-				<include name="TS012_VerifyExhibitorEventsDetailstTest" /> -->
-				<include name="TS011_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest" /> 
+				<!-- -->
+				<!-- <include name="TS010_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest" /> --> 
+				<include name="TS011_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest" />
+				<!-- <include name="TS012_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest" /> -->
 				
 				
 			</methods>

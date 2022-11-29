@@ -127,29 +127,14 @@
                   <a name="TS011_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest">
                   </a> <!-- TS011_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest -->
                   <span class="method-name">TS011_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest</span>
-                  <div class="stack-trace"><b>"org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//span[contains(text(),&apos;Catalogs&apos;)])[1]/../../div[3]/div[1]/a[1] (tried for 20 second(s) with 500 MILLISECONDS interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.AtlantaMarket.ATLExhDigiShowroomPage.getOrderOnJuniperMarktBtnCatalog(ATLExhDigiShowroomPage.java:94)
-	at atlantamarket_PROD.ExhibitorDigitalShowroom.TS011_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest(ExhibitorDigitalShowroom.java:585)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: (//span[contains(text(),&apos;Catalogs&apos;)])[1]/../../div[3]/div[1]/a[1]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;SWAPNILI&apos;, ip: &apos;172.27.182.57&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
-	at java.util.Optional.orElseThrow(Optional.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 26 more
-... Removed 24 stack frames<br/> org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//span[contains(text(),&apos;Catalogs&apos;)])[1]/../../div[3]/div[1]/a[1] (tried for 20 second(s) with 500 MILLISECONDS interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.AtlantaMarket.ATLExhDigiShowroomPage.getOrderOnJuniperMarktBtnCatalog(ATLExhDigiShowroomPage.java:94)
-	at atlantamarket_PROD.ExhibitorDigitalShowroom.TS011_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest(ExhibitorDigitalShowroom.java:585)
+                  <div class="stack-trace"><b>"java.lang.AssertionError: expected [true] but found [false]
+	at atlantamarket_PROD.ExhibitorDigitalShowroom.TS011_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest(ExhibitorDigitalShowroom.java:589)
+... Removed 28 stack frames<br/> java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at atlantamarket_PROD.ExhibitorDigitalShowroom.TS011_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest(ExhibitorDigitalShowroom.java:589)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -174,20 +159,7 @@ Driver info: driver.version: unknown
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: (//span[contains(text(),&apos;Catalogs&apos;)])[1]/../../div[3]/div[1]/a[1]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;SWAPNILI&apos;, ip: &apos;172.27.182.57&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
-	at java.util.Optional.orElseThrow(Optional.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 26 more
-"</b><br>org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)<br>org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)<br>pageObjects.AtlantaMarket.ATLExhDigiShowroomPage.getOrderOnJuniperMarktBtnCatalog(ATLExhDigiShowroomPage.java:94)<br>atlantamarket_PROD.ExhibitorDigitalShowroom.TS011_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest(ExhibitorDigitalShowroom.java:585)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>java.lang.reflect.Method.invoke(Method.java:498)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br>
+"</b><br>org.testng.Assert.fail(Assert.java:94)<br>org.testng.Assert.failNotEquals(Assert.java:494)<br>org.testng.Assert.assertTrue(Assert.java:42)<br>org.testng.Assert.assertTrue(Assert.java:52)<br>atlantamarket_PROD.ExhibitorDigitalShowroom.TS011_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest(ExhibitorDigitalShowroom.java:589)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>java.lang.reflect.Method.invoke(Method.java:498)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br>
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -253,12 +225,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'TS011_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest')
 data.setCell(0, 2, 'atlantamarket_PROD.ExhibitorDigitalShowroom')
-data.setCell(0, 3, 58809);
+data.setCell(0, 3, 27483);
 window.suiteTableData['LVM_RegressionTestSuite']= { tableData: data, tableDiv: 'times-div-LVM_RegressionTestSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 58 seconds</span>
+              <span class="suite-total-time">Total running time: 27 seconds</span>
               <div id="times-div-LVM_RegressionTestSuite">
               </div> <!-- times-div-LVM_RegressionTestSuite -->
             </div> <!-- times-div -->
@@ -273,7 +245,7 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-LVM_RegressionTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">17 ignored methods</span>
+            <span class="header-content">20 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
@@ -295,6 +267,8 @@ return data;
                 <br/>
                 <span class="ignored-method-name">TS018_VerifyExhibitorDigitalEventsComponentTest</span>
                 <br/>
+                <span class="ignored-method-name">TS019_VerifyCatalogsSectionForExhibitorTest</span>
+                <br/>
                 <span class="ignored-method-name">TS004_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest</span>
                 <br/>
                 <span class="ignored-method-name">TS017_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest</span>
@@ -303,15 +277,19 @@ return data;
                 <br/>
                 <span class="ignored-method-name">TS009_VerifyClickOnLineSearchForExhibitorTest</span>
                 <br/>
+                <span class="ignored-method-name">TS014_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest</span>
+                <br/>
                 <span class="ignored-method-name">TS013_VerifySeeInOtherMarketsForExhibitorTest</span>
                 <br/>
-                <span class="ignored-method-name">TS014_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest</span>
+                <span class="ignored-method-name">TS021_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest</span>
                 <br/>
                 <span class="ignored-method-name">TS002_VerifyAddToExistingListWithPlusIconTest</span>
                 <br/>
                 <span class="ignored-method-name">TS012_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest</span>
                 <br/>
                 <span class="ignored-method-name">TS003_VerifyAddNoteListWithPlusIconTest</span>
+                <br/>
+                <span class="ignored-method-name">TS020_VerifyExhibitorDigitalShowroomShowSpecialsTest</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -332,7 +310,7 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">TS011_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest</span>
-                <span class="method-start">60132 ms</span>
+                <span class="method-start">78450 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

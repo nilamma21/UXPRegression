@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Nov 28 10:26:56 IST 2022</td>
+<td>Started on:</td><td>Tue Nov 29 12:12:11 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>119 seconds (119648 ms)</td>
+<tr><td>Total time:</td><td>107 seconds (107712 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,30 +76,15 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='atlantamarket_PROD.ExhibitorDigitalShowroom.TS011_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest()'><b>TS011_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest</b><br>Test class: atlantamarket_PROD.ExhibitorDigitalShowroom</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//span[contains(text(),&apos;Catalogs&apos;)])[1]/../../div[3]/div[1]/a[1] (tried for 20 second(s) with 500 MILLISECONDS interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.AtlantaMarket.ATLExhDigiShowroomPage.getOrderOnJuniperMarktBtnCatalog(ATLExhDigiShowroomPage.java:94)
-	at atlantamarket_PROD.ExhibitorDigitalShowroom.TS011_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest(ExhibitorDigitalShowroom.java:585)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: (//span[contains(text(),&apos;Catalogs&apos;)])[1]/../../div[3]/div[1]/a[1]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;SWAPNILI&apos;, ip: &apos;172.27.182.57&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
-	at java.util.Optional.orElseThrow(Optional.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 26 more
-... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace428996455", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace428996455'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//span[contains(text(),&apos;Catalogs&apos;)])[1]/../../div[3]/div[1]/a[1] (tried for 20 second(s) with 500 MILLISECONDS interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.AtlantaMarket.ATLExhDigiShowroomPage.getOrderOnJuniperMarktBtnCatalog(ATLExhDigiShowroomPage.java:94)
-	at atlantamarket_PROD.ExhibitorDigitalShowroom.TS011_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest(ExhibitorDigitalShowroom.java:585)
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at atlantamarket_PROD.ExhibitorDigitalShowroom.TS011_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest(ExhibitorDigitalShowroom.java:589)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace275056979", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace275056979'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at atlantamarket_PROD.ExhibitorDigitalShowroom.TS011_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest(ExhibitorDigitalShowroom.java:589)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -124,21 +109,8 @@ Driver info: driver.version: unknown
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: (//span[contains(text(),&apos;Catalogs&apos;)])[1]/../../div[3]/div[1]/a[1]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;SWAPNILI&apos;, ip: &apos;172.27.182.57&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
-	at java.util.Optional.orElseThrow(Optional.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 26 more
 </pre></div></td>
-<td>58</td>
+<td>27</td>
 <td>atlantamarket_PROD.ExhibitorDigitalShowroom@754ba872</td></tr>
 </table><p>
 </body>

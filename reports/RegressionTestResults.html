@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Regression Automation Test Results</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Nov 28, 2022 10:26:56 AM</span></a>
+<a href="#"><span class="badge badge-primary">Nov 29, 2022 12:12:10 PM</span></a>
 </li>
 </ul>
 </div>
@@ -86,7 +86,7 @@
           <div class="test-detail">
             <p class="name">TS011_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest</p>
             <p class="text-sm">
-              <span>10:27:57 AM</span> / <span>00:00:59:460</span>
+              <span>12:13:29 PM</span> / <span>00:00:29:155</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -95,9 +95,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-fail">TS011_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest</h5>
-<span class='badge badge-success'>11.28.2022 10:27:57</span>
-<span class='badge badge-danger'>11.28.2022 10:28:56</span>
-<span class='badge badge-default'>00:00:59:460</span>
+<span class='badge badge-success'>11.29.2022 12:13:29</span>
+<span class='badge badge-danger'>11.29.2022 12:13:58</span>
+<span class='badge badge-default'>00:00:29:155</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 </div>
 </div>
@@ -111,13 +111,14 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>10:28:56 AM</td>
+        <td>12:13:58 PM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//span[contains(text(),'Catalogs')])[1]/../../div[3]/div[1]/a[1] (tried for 20 second(s) with 500 MILLISECONDS interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.AtlantaMarket.ATLExhDigiShowroomPage.getOrderOnJuniperMarktBtnCatalog(ATLExhDigiShowroomPage.java:94)
-	at atlantamarket_PROD.ExhibitorDigitalShowroom.TS011_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest(ExhibitorDigitalShowroom.java:585)
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at atlantamarket_PROD.ExhibitorDigitalShowroom.TS011_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest(ExhibitorDigitalShowroom.java:589)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -142,19 +143,6 @@
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: (//span[contains(text(),'Catalogs')])[1]/../../div[3]/div[1]/a[1]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'SWAPNILI', ip: '172.27.182.57', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_161'
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
-	at java.util.Optional.orElseThrow(Optional.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 26 more
 </textarea>
           
         </td>
@@ -186,12 +174,12 @@ Driver info: driver.version: unknown
 <span class="meta">
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">org.openqa.selenium.TimeoutException</p>
+<p class="name">java.lang.AssertionError</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>org.openqa.selenium.TimeoutException</h4>
+<h4>java.lang.AssertionError</h4>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -205,7 +193,7 @@ Driver info: driver.version: unknown
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>10:27:57 AM</td>
+<td>12:13:29 PM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='1'>TS011_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest</a>
 </td>
@@ -227,13 +215,13 @@ Driver info: driver.version: unknown
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Nov 28, 2022 10:26:56 AM</h3>
+<h3>Nov 29, 2022 12:12:10 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Nov 28, 2022 10:28:56 AM</h3>
+<h3>Nov 29, 2022 12:13:58 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -303,7 +291,7 @@ Driver info: driver.version: unknown
 </div></div>
 <script>
 var timeline = {
-"TS011_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest":59.46
+"TS011_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest":29.155
 };
 </script>
 <div class="row">
