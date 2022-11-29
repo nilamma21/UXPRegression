@@ -403,10 +403,15 @@ public class ExhibitorDigitalShowroom extends base {
 		//Get back to Exhibitor Showroom page and click any one product and verify if product details are displayed properly
 		atlexhdgshw.getProductsPageBackButton().click();
 		Thread.sleep(6000);
+		System.out.println("Back to Product Page");
+		
 		utl.scrollToElement(atlexhdgshw.getLinesSection());
+		System.out.println("Scroll down to Line section");
 		String linetext = atlexhdgshw.getLinesOptionText().getText();
+		System.out.println("Store Line Name");
 		atlexhdgshw.getLinesOption().click();
 		Thread.sleep(6000);
+		System.out.println("Click on Line");
 		Assert.assertTrue(atlexhdgshw.getValidateLinesPage().getText().contains(linetext));
 		System.out.println("Line Details are displayed properly.");
 		
