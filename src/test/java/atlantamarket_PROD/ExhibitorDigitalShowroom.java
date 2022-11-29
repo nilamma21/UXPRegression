@@ -408,7 +408,7 @@ public class ExhibitorDigitalShowroom extends base {
 		utl.scrollToElement(atlexhdgshw.getLinesSection());
 		System.out.println("Scroll down to Line section");
 		String linetext = atlexhdgshw.getLinesOptionText().getText();
-		System.out.println("Store Line Name");
+		System.out.println("Store Line Name:: "+linetext);
 		atlexhdgshw.getLinesOption().click();
 		Thread.sleep(6000);
 		System.out.println("Click on Line");
