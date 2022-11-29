@@ -402,9 +402,11 @@ public class ExhibitorDigitalShowroom extends base {
 
 		//Get back to Exhibitor Showroom page and click any one product and verify if product details are displayed properly
 		atlexhdgshw.getProductsPageBackButton().click();
+		Thread.sleep(6000);
 		utl.scrollToElement(atlexhdgshw.getLinesSection());
 		String linetext = atlexhdgshw.getLinesOptionText().getText();
 		atlexhdgshw.getLinesOption().click();
+		Thread.sleep(6000);
 		Assert.assertTrue(atlexhdgshw.getValidateLinesPage().getText().contains(linetext));
 		System.out.println("Line Details are displayed properly.");
 		
@@ -456,6 +458,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 		//Get back to Exhibitor Showroom page and click any one product and verify if product details are displayed properly
 		atlexhdgshw.getProductsPageBackButton().click();
+		Thread.sleep(6000);
 		utl.scrollToElement(atlexhdgshw.getProductSection());
 		String producttext = atlexhdgshw.getProductText().getText();
 		System.out.println(producttext);
