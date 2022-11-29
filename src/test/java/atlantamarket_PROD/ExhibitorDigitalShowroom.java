@@ -412,7 +412,10 @@ public class ExhibitorDigitalShowroom extends base {
 		atlexhdgshw.getLinesOption().click();
 		Thread.sleep(6000);
 		System.out.println("Click on Line");
-		Assert.assertTrue(atlexhdgshw.getValidateLinesPage().getText().contains(linetext));
+		
+		String linepageTxt=atlexhdgshw.getValidateLinesPage().getText();
+		System.out.println("Line name ::" +linepageTxt);
+		Assert.assertTrue(linepageTxt.contains(linetext));
 		System.out.println("Line Details are displayed properly.");
 		
 	}
