@@ -14,8 +14,9 @@
 				<include name="TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest" /> -->
 				<!-- -->
 				<!-- <include name="TS010_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest" /> --> 
-				<include name="TS011_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest" />
-				<!-- <include name="TS012_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest" /> -->
+				
+			<!-- 	<include name="TS013_VerifySeeInOtherMarketsForExhibitorTest" />
+				<include name="TS014_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest" /> -->
 				
 				
 			</methods>

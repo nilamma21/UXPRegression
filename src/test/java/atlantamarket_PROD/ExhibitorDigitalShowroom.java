@@ -541,9 +541,18 @@ public class ExhibitorDigitalShowroom extends base {
 		utl.scrollToElement(atlexhdgshw.getProductSection());
 		//Click on Order On Juniper Market Btn
 		String OrderOnJuniperMarktURL=atlexhdgshw.getOrderOnJuniperMarktBtnCatalog().getAttribute("href");
+		String winHandleBefore = driver.getWindowHandle();
 		atlexhdgshw.getOrderOnJuniperMarktBtnCatalog().click();
 		
+		for (String winHandle : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle);
+		}
+		
 		Assert.assertTrue(driver.getCurrentUrl().contains(OrderOnJuniperMarktURL));
+	
+		driver.close();
+		driver.switchTo().window(winHandleBefore);
+		
 		System.out.println(" Products Component: Order on JuniperMarket Btn functionality is working properly.");
 		
 		
@@ -616,9 +625,10 @@ public class ExhibitorDigitalShowroom extends base {
 		System.out.println("See In Other Markets page is displayed properly.");
 		
 		//Verify Go To Showroom functionality
+		String winHandleBefore = driver.getWindowHandle();
 		atlexhdgshw.getClickShowroom().click();
 		Thread.sleep(5000);
-		String winHandleBefore = driver.getWindowHandle();
+		
 		for (String winHandle : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle);
 		}
@@ -633,6 +643,9 @@ public class ExhibitorDigitalShowroom extends base {
 		Thread.sleep(5000);
 		Assert.assertTrue(atlexhdgshw.getVerifyContactExhibitorPage().isDisplayed());
 		System.out.println("Contact Exhibitor page is displayed properly.");
+		//atlexhdgshw.getContactExhibitorCloseButton().click();
+		driver.get(prop.getProperty("atlmrkturl_prod"));
+		Thread.sleep(5000);
 		
 	}
 	@Test(priority = 13)
