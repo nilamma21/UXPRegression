@@ -1,5 +1,6 @@
 package atlantamarket_PROD;
 
+import java.awt.Window;
 import java.io.IOException;
 import java.util.List;
 import java.util.Set;
@@ -525,7 +526,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputforShowSpecials")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -632,7 +633,7 @@ public class ExhibitorDigitalShowroom extends base {
 		Thread.sleep(5000);
 		Assert.assertTrue(atlexhdgshw.getVerifyContactExhibitorPage().isDisplayed());
 		System.out.println("Contact Exhibitor page is displayed properly.");
-		driver.get(prop.getProperty("atlmrkturl_prod"));
+		
 	}
 	@Test(priority = 13)
 	public void TS013_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest() throws InterruptedException, IOException {
@@ -780,6 +781,7 @@ public class ExhibitorDigitalShowroom extends base {
 		Assert.assertTrue(header3Dshowroom.contains(exhname +" 3D Showroom"));
 		
 		System.out.println("Hero component: View 3D Showroom Btn functionality is working properly.");
+		atlexhdgshw.getView3DshowroomClose().click();
 		
 		
 	}
@@ -825,7 +827,14 @@ public class ExhibitorDigitalShowroom extends base {
 	@Test(priority = 18)
 	public void TS018_VerifyCatalogsSectionForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// T333: The See in Other Markets functionality for an Exhibitor Digital Show room
+		// T318: Exhibitor Digital showroom: Catalogs Component
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+
+		atlevents=new ATLEventsAndWebinarPage(driver);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("searchforCatalogsInputUAT")));
@@ -858,7 +867,100 @@ public class ExhibitorDigitalShowroom extends base {
 		System.out.println("Catalog is displayed properly.");
 		driver.close();
 		driver.switchTo().window(winHandleBefore);
-		driver.get(prop.getProperty("atlmrkturl_prod"));
+		
+	}
+	@Test(priority = 20)
+	public void TS020_VerifyExhibitorDigitalShowroomShowSpecialsTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T319: Exhibitor Digital showroom: Show Specials
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+
+		atlevents=new ATLEventsAndWebinarPage(driver);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputforShowSpecials")));
+		atlgs.getATLSearchButton().click();
+
+		Thread.sleep(15000);
+		//Store the 1st Exhibitor name in String variable
+		exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: " + exhname);
+
+		//Get the Total Lines count on Search grid
+		atlexhdgshw.getExhibitorName().click();
+		Thread.sleep(5000);
+		
+		//Verify Show Special section for Exhibitor
+		utl.scrollToElement(atlexhdgshw.getshowSpecialSection());
+		//Verify both count
+		String shwoSpecialCount=atlexhdgshw.getShowSpecialCount().getText();
+		
+		String splitShwSpecialCount= shwoSpecialCount.split(" ")[0].trim();
+		
+		String SeeAllBtnCount=atlexhdgshw.getSeeAllshowSpecialBtn().getText();
+		
+		String splitSeeAllBtnCount=SeeAllBtnCount.split(" ")[2].trim();
+		
+		
+		Assert.assertTrue(splitShwSpecialCount.contains(splitSeeAllBtnCount));
+		System.out.println("Both counts are same");
+		//Click on See All Show Special
+		atlexhdgshw.getSeeAllshowSpecialBtn().click();
+		Assert.assertTrue(atlexhdgshw.getValidateLinesPage().getText().contains("Specials"));
+		System.out.println("See All Show Specials Btn is working properly.");
+		atlexhdgshw.getProductsPageBackButton().click();
+		utl.scrollToElement(atlexhdgshw.getshowSpecialSection());
+		String ShowSpecialName = atlexhdgshw.getShowSpecialName().getText();
+		System.out.println("Show Special Name : "+ShowSpecialName);
+		
+		
+	}
+	@Test(priority = 21)
+	public void TS021_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T303: Exhibitor Digital showroom: Hero component: Order on Juniper Market
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+
+		atlevents=new ATLEventsAndWebinarPage(driver);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputforShowSpecials")));
+		atlgs.getATLSearchButton().click();
+
+		Thread.sleep(15000);
+		//Store the 1st Exhibitor name in String variable
+		exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: " + exhname);
+
+		//Get the Total Lines count on Search grid
+		atlexhdgshw.getExhibitorName().click();
+		Thread.sleep(5000);
+		String orderOnJuniperURL=atlexhdgshw.getheroComponentOrderOnJunperBtn().getAttribute("href");
+		//Click on Juniper Market Btn
+		
+		String currnetWindowHanldeID=driver.getWindowHandle();
+		atlexhdgshw.getheroComponentOrderOnJunperBtn().click();
+		for (String  winddowHandle : driver.getWindowHandles()) {
+			driver.switchTo().window(winddowHandle);
+		}
+		Thread.sleep(7000);
+		String URL =driver.getCurrentUrl();
+		System.out.println(URL);
+		Assert.assertTrue(URL.contains(orderOnJuniperURL));
+		driver.close();
+		driver.switchTo().window(currnetWindowHanldeID);
+		System.out.println("Hero component: Order on Juniper Market Btn functionality is working properly.");
+		
+		
+		
 	}
 	
 
