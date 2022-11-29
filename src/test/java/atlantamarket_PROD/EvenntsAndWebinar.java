@@ -701,6 +701,7 @@ public class EvenntsAndWebinar extends base{
 		atlgs = new ATLGlobalSearchPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(5000);
 		utl.clickOnEventLinkOfChannel();
 		/*// Click on Attend Tab
 		atlevents.getatlAttendTab().click();
