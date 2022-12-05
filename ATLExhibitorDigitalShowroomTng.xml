@@ -10,7 +10,7 @@
 		<classes>
 		 	<class name="atlantamarket_PROD.ExhibitorDigitalShowroom" />
 			 <methods>
-			<!--<include name="TS006_VerifyClickOnTotalLinesSeeAllLinkForExhibitorTest" /> -->
+			<include name="TS006_VerifyClickOnTotalLinesSeeAllLinkForExhibitorTest" />
 			
 			
 			</methods>
