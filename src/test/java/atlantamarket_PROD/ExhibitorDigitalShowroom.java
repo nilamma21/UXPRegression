@@ -356,7 +356,7 @@ public class ExhibitorDigitalShowroom extends base {
 		atlexhact.getPopUpCloseBtn().click();
 	}
 	
-	@Test(priority = 8)
+	@Test(priority = 6)
 	public void TS006_VerifyClickOnTotalLinesSeeAllLinkForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T312: The click on 'Total lines-See All' functionality for an Exhibitor Digital Show room
@@ -420,7 +420,7 @@ public class ExhibitorDigitalShowroom extends base {
 		
 	}
 	
-	@Test(priority = 10)
+	@Test(priority = 7)
 	public void TS007_VerifyClickOnProductShownLinkForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T311: The click on 'Product Shown-See All' functionality for an Exhibitor Digital Showroom
@@ -477,7 +477,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 	}
 	
-	@Test(priority = 6)
+	@Test(priority = 8)
 	public void TS008_VerifyClickOnLineFiltersForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T315: The click on Line Filters functionality for an Exhibitor Digital Show room
@@ -535,7 +535,7 @@ public class ExhibitorDigitalShowroom extends base {
 		Thread.sleep(5000);
 		Assert.assertTrue(atlexhdgshw.getVerifyLineSearch().getText().contains(prop.getProperty("line2")));	
 	}
-	@Test(priority = 7)
+	@Test(priority = 10)
 	public void TS010_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T350: Exhibitor Digital Showroom: Lines Component: See All Lines
