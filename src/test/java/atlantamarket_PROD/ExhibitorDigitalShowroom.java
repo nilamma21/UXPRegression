@@ -475,7 +475,7 @@ public class ExhibitorDigitalShowroom extends base {
 		Thread.sleep(5000);
 		String validateProdTxt=atlexhdgshw.getValidateLinesPage().getText();
 		System.out.println("Product Name :  " +validateProdTxt);
-		Assert.assertTrue(producttext.contains(validateProdTxt));
+		Assert.assertTrue(validateProdTxt.contains(producttext));
 		System.out.println("Product Details are displayed properly.");
 
 	}
