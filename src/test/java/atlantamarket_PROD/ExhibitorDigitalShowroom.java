@@ -470,7 +470,7 @@ public class ExhibitorDigitalShowroom extends base {
 		utl.scrollToElement(atlexhdgshw.getProductSection());
 		String producttext = atlexhdgshw.getProductText().getText();
 		System.out.println(producttext);
-		atlexhdgshw.getProductsList().click();
+		atlexhdgshw.getProductText().click();
 		System.out.println("Click on Product ");
 		Thread.sleep(5000);
 		String validateProdTxt=atlexhdgshw.getValidateLinesPage().getText();
