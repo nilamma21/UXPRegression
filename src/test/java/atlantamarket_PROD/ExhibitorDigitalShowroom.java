@@ -471,6 +471,7 @@ public class ExhibitorDigitalShowroom extends base {
 		String producttext = atlexhdgshw.getProductText().getText();
 		System.out.println(producttext);
 		atlexhdgshw.getProductsList().click();
+		System.out.println("Click on Product ");
 		Thread.sleep(5000);
 		Assert.assertTrue(producttext.contains(atlexhdgshw.getValidateLinesPage().getText()));
 		System.out.println("Product Details are displayed properly.");
