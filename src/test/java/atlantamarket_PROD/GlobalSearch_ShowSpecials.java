@@ -83,6 +83,7 @@ public class GlobalSearch_ShowSpecials extends base  {
 		atlgs.getatlShowSpecialsLink().click();
 		//verify Show special Page
 		Thread.sleep(5000);
+		utl.scrollToElement(atlgs.getatlShowSpecialsTitle());
 		Assert.assertTrue(atlgs.getatlShowSpecialsTitle().getText().contains(prop.getProperty("showSpecialTitle")));
 		//Click on Show Special Exhibitor
 		String showSpecialExhName=atlgs.getatlShowSpecialsExhNamePROD().getText();
@@ -114,6 +115,7 @@ public class GlobalSearch_ShowSpecials extends base  {
 		//Click on Show Specials 
 		atlgs.getatlShowSpecialsLink().click();
 		Thread.sleep(5000);
+		utl.scrollToElement(atlgs.getatlShowSpecialsTitle());
 		//verify Show special Page
 		Assert.assertTrue(atlgs.getatlShowSpecialsTitle().getText().contains(prop.getProperty("showSpecialTitle")));
 		//Click on Show Special Exhibitor
