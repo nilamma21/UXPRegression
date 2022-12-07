@@ -475,7 +475,7 @@ public class ExhibitorDigitalShowroom extends base {
 		String splitProd="";
 		for(int i=0;i<splitProdTxt.length-2;i++)
 		{
-			System.out.print(splitProd[i] +"");
+			System.out.print(splitProdTxt[i] +"");
 			splitProd=splitProdTxt[i];
 		}
 		System.out.println("Split text ::"+splitProd);
