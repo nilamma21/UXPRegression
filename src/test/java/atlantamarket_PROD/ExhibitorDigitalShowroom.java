@@ -472,13 +472,13 @@ public class ExhibitorDigitalShowroom extends base {
 		//System.out.println("Product Section Text : "+producttext);
 
 		String splitProdtxt[]= producttext.split(" ");
-		String splitProdTxt="";
+		String splitProd="";
 		for(int i=0;i<splitProdTxt.length-2;i++)
 		{
-			System.out.print(splitProdTxt[i] +"");
-			splitProdTxt=splitProdTxt[i];
+			System.out.print(splitProd[i] +"");
+			splitProd=splitProdTxt[i];
 		}
-		System.out.println("Split text ::"+splitProdTxt);
+		System.out.println("Split text ::"+splitProd);
 
 		atlexhdgshw.getProductText().click();
 		System.out.println("Click on Product ");
