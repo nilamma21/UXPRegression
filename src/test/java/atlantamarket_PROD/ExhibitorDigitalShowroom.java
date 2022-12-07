@@ -481,7 +481,7 @@ public class ExhibitorDigitalShowroom extends base {
 		
 		
 		System.out.println(producttext);
-		atlexhdgshw.getProductsList().click();
+		atlexhdgshw.getProductText().click();
 		Thread.sleep(5000);
 		String prodName=atlexhdgshw.getValidateLinesPage().getText();
 		//String splitProdName= prodName.split(" ")[0].trim();
