@@ -469,20 +469,21 @@ public class ExhibitorDigitalShowroom extends base {
 		Thread.sleep(6000);
 		utl.scrollToElement(atlexhdgshw.getProductSection());
 		String producttext = atlexhdgshw.getProductText().getText();
-		System.out.println(producttext);
+		System.out.println("Product Section Text : "+producttext);
 		atlexhdgshw.getProductText().click();
 		System.out.println("Click on Product ");
 		Thread.sleep(5000);
 		String validateProdTxt=atlexhdgshw.getValidateLinesPage().getText();
-		
+		System.out.println("Product page Text : "+validateProdTxt);
+
 		String splitProdName[]= validateProdTxt.split(" ");
 		String abc="";
 		for(int i=0;i<splitProdName.length-2;i++)
 		{
-			System.out.print(splitProdName[i]);
+			System.out.print(splitProdName[i] +"");
 			abc=splitProdName[i];
 		}
-		System.out.println(abc);
+		System.out.println("Split text ::"abc);
 		Assert.assertTrue(producttext.contains(abc));
 		System.out.println("Product Details are displayed properly.");
 
