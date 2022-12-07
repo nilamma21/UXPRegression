@@ -483,7 +483,7 @@ public class ExhibitorDigitalShowroom extends base {
 			System.out.print(splitProdName[i] +"");
 			abc=splitProdName[i];
 		}
-		System.out.println("Split text ::"abc);
+		System.out.println("Split text ::"+abc);
 		Assert.assertTrue(producttext.contains(abc));
 		System.out.println("Product Details are displayed properly.");
 
