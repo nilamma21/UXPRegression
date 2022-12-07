@@ -469,7 +469,7 @@ public class ExhibitorDigitalShowroom extends base {
 		Thread.sleep(6000);
 		utl.scrollToElement(atlexhdgshw.getProductSection());
 		String producttext = atlexhdgshw.getProductText().getText();
-		//System.out.println("Product Section Text : "+producttext);
+		System.out.println("Product Section Text : "+producttext);
 
 
 
@@ -479,12 +479,12 @@ public class ExhibitorDigitalShowroom extends base {
 			temp=splitProdtxt[i];
 		}
 		System.out.println("Split text ::"+temp);
-
-
-
+	
 		atlexhdgshw.getProductText().click();
 		System.out.println("Click on Product ");
+		
 		Thread.sleep(5000);
+		
 		String validateProdTxt=atlexhdgshw.getValidateLinesPage().getText();
 		System.out.println("Product page Text : "+validateProdTxt);
 
