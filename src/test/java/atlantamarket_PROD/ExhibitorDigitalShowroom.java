@@ -425,7 +425,7 @@ public class ExhibitorDigitalShowroom extends base {
 		// The purpose of this test case to verify:-
 		// T311: The click on 'Product Shown-See All' functionality for an Exhibitor Digital Showroom
 
-		atlgs = new ATLGlobalSearchPage(driver);
+	atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		lap = new ATLLandingPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
@@ -466,39 +466,39 @@ public class ExhibitorDigitalShowroom extends base {
 
 		//Get back to Exhibitor Showroom page and click any one product and verify if product details are displayed properly
 		atlexhdgshw.getProductsPageBackButton().click();
-		Thread.sleep(6000);
 		utl.scrollToElement(atlexhdgshw.getProductSection());
 		String producttext = atlexhdgshw.getProductText().getText();
-		System.out.println("Product Section Text : "+producttext);
-
-
-
-		String splitProdtxt[]= producttext.split(" ");
-		String temp="";
-		for(int i=0;i<splitProdtxt.length-2;i++){
-			temp=splitProdtxt[i];
+		String splitProdTxt[]= producttext.split(" ");
+		String xyz="";
+		
+		for(int i=0;i<splitProdTxt.length-2;i++)
+		{
+			System.out.println(splitProdTxt[i]);
+			xyz=splitProdTxt[i];
+			
 		}
-		System.out.println("Split text ::"+temp);
-	
-		atlexhdgshw.getProductText().click();
-		System.out.println("Click on Product ");
+		System.out.println("Prod Text :::"+xyz);
 		
+		
+		System.out.println(producttext);
+		atlexhdgshw.getProductsList().click();
 		Thread.sleep(5000);
-		
-		String validateProdTxt=atlexhdgshw.getValidateLinesPage().getText();
-		System.out.println("Product page Text : "+validateProdTxt);
-
-		String splitProdName[]= validateProdTxt.split(" ");
+		String prodName=atlexhdgshw.getValidateLinesPage().getText();
+		//String splitProdName= prodName.split(" ")[0].trim();
+		String splitProdName[]= prodName.split(" ");
 		String abc="";
 		for(int i=0;i<splitProdName.length-2;i++)
 		{
-			System.out.print(splitProdName[i] +"");
+			System.out.print(splitProdName[i]);
 			abc=splitProdName[i];
 		}
-		System.out.println("Split text ::"+abc);
-		Assert.assertTrue(temp.contains(abc));
+		System.out.println(abc);
+		//System.out.println(splitProdName);
+		//Assert.assertTrue(producttext.contains(atlexhdgshw.getValidateLinesPage().getText()));
+		Assert.assertTrue(xyz.contains(abc));
 		System.out.println("Product Details are displayed properly.");
 
+	
 	}
 	
 	@Test(priority = 8)
