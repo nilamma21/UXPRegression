@@ -480,7 +480,7 @@ public class ExhibitorDigitalShowroom extends base {
 		System.out.println("Prod Text :::"+xyz);
 		
 		
-		System.out.println(producttext);
+		//System.out.println(producttext);
 		atlexhdgshw.getProductText().click();
 		Thread.sleep(5000);
 		String prodName=atlexhdgshw.getValidateLinesPage().getText();
@@ -492,7 +492,7 @@ public class ExhibitorDigitalShowroom extends base {
 			System.out.print(splitProdName[i]);
 			abc=splitProdName[i];
 		}
-		System.out.println(abc);
+		System.out.println("Last String :: "+abc);
 		//System.out.println(splitProdName);
 		//Assert.assertTrue(producttext.contains(atlexhdgshw.getValidateLinesPage().getText()));
 		Assert.assertTrue(xyz.contains(abc));
