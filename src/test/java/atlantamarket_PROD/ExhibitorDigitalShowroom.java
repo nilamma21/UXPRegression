@@ -471,14 +471,16 @@ public class ExhibitorDigitalShowroom extends base {
 		String producttext = atlexhdgshw.getProductText().getText();
 		//System.out.println("Product Section Text : "+producttext);
 
+
+
 		String splitProdtxt[]= producttext.split(" ");
-		String splitProd="";
-		for(int i=0;i<splitProdTxt.length-2;i++)
-		{
-			System.out.print(splitProdTxt[i] +"");
-			splitProd=splitProdTxt[i];
+		String temp="";
+		for(int i=0;i<splitProdtxt.length-2;i++){
+			temp=splitProdtxt[i];
 		}
-		System.out.println("Split text ::"+splitProd);
+		System.out.println("Split text ::"+temp);
+
+
 
 		atlexhdgshw.getProductText().click();
 		System.out.println("Click on Product ");
@@ -494,7 +496,7 @@ public class ExhibitorDigitalShowroom extends base {
 			abc=splitProdName[i];
 		}
 		System.out.println("Split text ::"+abc);
-		Assert.assertTrue(splitProdTxt.contains(abc));
+		Assert.assertTrue(temp.contains(abc));
 		System.out.println("Product Details are displayed properly.");
 
 	}
