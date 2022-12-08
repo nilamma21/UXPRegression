@@ -406,7 +406,11 @@ public class Utility extends base {
 	}
 
 	public void ClearGlobalSearch() throws IOException, InterruptedException {
-
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		atlgs=new ATLGlobalSearchPage(driver);
+		
 		if (!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
