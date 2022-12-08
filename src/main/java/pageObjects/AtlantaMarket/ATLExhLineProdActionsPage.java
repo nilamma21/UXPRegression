@@ -61,6 +61,7 @@ public class ATLExhLineProdActionsPage extends base{
 	By imcexhibitorname = By.xpath("//h2[contains(text(),'IMC test company')]"); //Locator for IMC Exhibitor name from Search results grid
 	By productFevBtn = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/span[1]/div[1]/button[1]"); //Locator for Fev Btn
 	By catalogstab = By.xpath("//a[@id='Catalogs']"); //Locator for Catalogs tab on Exhibitor products page
+	By catalogstabDiv = By.xpath("//div[@id='Catalogs']"); //Locator for Catalogs tab on Exhibitor products page
 	By catalogitem = By.xpath("//div[@class='imc-catalog__item_title multiSelectItem']/div/span/span"); //Locator for Catalog item
 	By eventcardinsearch = By.xpath("//div[@class='imc-vr--xlarge imc-eventcard']");//Locator for Event card in search results
 	By eventcardtitle = By.xpath("//span[contains(@class,'imc-eventcard__title')]"); //Locator for Event Card title
@@ -75,7 +76,11 @@ public class ATLExhLineProdActionsPage extends base{
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
-
+	public WebElement getcatalogstabDiv() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(catalogstabDiv));
+		return driver.findElement(catalogstabDiv);
+	}
 	public WebElement getcatalogstabPROD() {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(catalogstabPROD));
@@ -159,6 +164,8 @@ public class ATLExhLineProdActionsPage extends base{
 		return driver.findElement(matchingprodcountonsearchgrid);
 	}
 	public WebElement getMatchingProdSeeAllLink() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(matchingprodseealllink));
 		return driver.findElement(matchingprodseealllink);
 	}
 	public WebElement getMatchingProdAddNoteIcon() {
