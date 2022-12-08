@@ -15,6 +15,10 @@
 			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
 			<class name="atlantamarket_PROD.FloorPlans" />
+			<class name="atlantamarket_PROD.ExhibitorDigitalShowroom"/>
+			<methods>
+			<include name="TS009_VerifyClickOnLineSearchForExhibitorTest"/>
+			</methods>
 		</classes>
 	</test>
 
@@ -23,18 +27,17 @@
 
 <suite name="ATLMrkt_RegressionTestSuite">
 	<listners>
-		<listner class-name="atlantamarket_UAT.TestListeners" />
+		<listner class-name="atlantamarket_PROD.TestListeners" />
 	</listners>
 	<test thread-count="5" name="RegressionTest">
 		<classes>
-			<class name="atlantamarket_UAT.GlobalSearch_MatchingResults"/>
-			<methods>
-			<include name="TS008_VerifyGlobalSearchMatchingResultsUsePreviousSavedSearchTest"/>
-			
-			</methods>
+			<class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters"/>
+ 		<!-- 	<methods>
+			<include name="TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest"/>			
+			</methods> -->
 		</classes>
 	</test> 
-</suite>
+</suite> 
 
 <!-- <suite name="ATLMrkt_RegressionTestSuite">
 	<listners>

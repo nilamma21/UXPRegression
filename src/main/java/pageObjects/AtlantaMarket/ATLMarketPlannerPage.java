@@ -233,6 +233,8 @@ public class ATLMarketPlannerPage {
 	By MoreOption = By.xpath("//div[@class = 'imc-hover-menu']"); //locator for More option
 	By AddToSchedule = By.xpath("//div[@class='imc-hover-menu__content']"); //locator for Add To Schedule option
 	
+	By favexhnamelist = By.xpath("//div[@class='imc-loading-relative']/div[3]/li/div/div/div/a"); //Locator for Favorite Exhibitor names list
+	
 	public ATLMarketPlannerPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
@@ -1230,6 +1232,12 @@ public class ATLMarketPlannerPage {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(AddToSchedule));
 		return driver.findElement(AddToSchedule);
+	}
+	
+	public List <WebElement> getFavoriteExhibitorNames() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(favexhnamelist));
+		return driver.findElements(favexhnamelist);
 	}
 	
 }

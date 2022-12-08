@@ -3,13 +3,12 @@
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-      <class name="atlantamarket_UAT.GlobalSearch_MatchingResults">
+      <class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters">
         <methods>
           <include name="initialize"/>
-          <include name="TS008_VerifyGlobalSearchMatchingResultsUsePreviousSavedSearchTest"/>
-          <include name="tearDown"/>
+          <include name="TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest"/>
         </methods>
-      </class> <!-- atlantamarket_UAT.GlobalSearch_MatchingResults -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_LeftPaneFilters -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->

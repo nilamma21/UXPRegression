@@ -7,8 +7,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-//import org.omg.CORBA.PUBLIC_MEMBER;
-
+import org.omg.CORBA.PUBLIC_MEMBER;
 import org.openqa.selenium.By;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -19,9 +18,10 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
-
 import com.gargoylesoftware.htmlunit.javascript.host.media.webkitMediaStream;
 
+import atlantamarket_UAT.MarketPlanner;
+import pageObjects.AtlantaMarket.ATLEventsAndWebinarPage;
 import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
 import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
 import pageObjects.AtlantaMarket.ATLLandingPage;
@@ -34,9 +34,10 @@ public class Utility extends base {
 	ATLLandingPage lap;
 	ATLLoginPage lp;
 	ATLExhLineProdActionsPage atlexhact;
-	//MarketPlanner mp;
+	MarketPlanner mp;
 	ATLMarketPlannerPage atlmppge;
 	ATLGlobalSearchPage atlgs;
+	ATLEventsAndWebinarPage atlevents;
 	GenerateData genData;
 
 	@SuppressWarnings("static-access")
@@ -194,7 +195,7 @@ public class Utility extends base {
 
 		boolean flag = false;
 		for (WebElement listExhibitor : list) {
-			if (listExhibitor.getText().equals(filterName)) {
+			if (listExhibitor.getText().contains(filterName)) {
 				listExhibitor.click();
 				flag = true;
 				break;
@@ -363,7 +364,9 @@ public class Utility extends base {
 		}
 
 	}
-public void Sorting(List<WebElement> list, WebElement dropdown, String filterName) throws IOException, InterruptedException {
+
+	public void Sorting(List<WebElement> list, WebElement dropdown, String filterName)
+			throws IOException, InterruptedException {
 
 		// Store Current location list
 		List<String> currentList = new ArrayList<String>();
@@ -379,11 +382,10 @@ public void Sorting(List<WebElement> list, WebElement dropdown, String filterNam
 		for (String s : currentList) {
 			sortedList.add(s.toLowerCase());
 		}
-		if(filterName.contains("Ascending"))
-		{
+		if (filterName.contains("Ascending")) {
 			Collections.sort(sortedList);
-		}else {
-		Collections.sort(sortedList,Collections.reverseOrder());
+		} else {
+			Collections.sort(sortedList, Collections.reverseOrder());
 		}
 		// Select Sort by Location Ascending Filter
 		Select selectOption = new Select(dropdown);
@@ -399,15 +401,57 @@ public void Sorting(List<WebElement> list, WebElement dropdown, String filterNam
 		// Verify Exhibitor List is Sorted or not
 		Assert.assertEquals(sortedList, expectedSortedList, " List Should be sorted");
 
-		System.out.println("Displayed "+filterName);
+		System.out.println("Displayed " + filterName);
 
 	}
 
-public void ClearGlobalSearch() throws IOException, InterruptedException {
-
-	if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
-		atlgs.getatlGlobalSearchClearTxt().click();
+	public void ClearGlobalSearch() throws IOException, InterruptedException {
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		atlgs=new ATLGlobalSearchPage(driver);
+		
+		if (!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
+			atlgs.getatlGlobalSearchClearTxt().click();
+		}
 	}
-}
+
+	public void CloseATLPopup() throws IOException, InterruptedException {
+		lap = new ATLLandingPage(driver);
+		
+		try {
+			lap.getCloseMarktAdBtn().click();
+			
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+	}
+	public void clickOnEventLinkOfChannel() throws InterruptedException {
+		
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		atlevents=new ATLEventsAndWebinarPage(driver);
+		
+		if(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_prod"))) {
+			// Click on Attend Tab
+			atlevents.getatlAttendTab().click(); 
+			Thread.sleep(2000);
+			//click on Events Link
+			atlevents.getatlEventsLink().click();
+			Thread.sleep(3000);
+		}
+		else {
+			atlevents.getatlExploreMarketTab().click();  //For LVM Events
+			Thread.sleep(2000);
+			//click on Events Link
+			atlevents.getatlEventsLink().click();
+			Thread.sleep(3000);
+		}
+	
+	}
 
 }
