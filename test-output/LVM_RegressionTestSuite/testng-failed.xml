@@ -3,13 +3,19 @@
 <suite name="Failed suite [LVM_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-      <class name="atlantamarket_PROD.GlobalSearch_SearchFor">
+      <class name="atlantamarket_PROD.ExhibitorDigitalShowroom">
         <methods>
+<<<<<<< HEAD
           <include name="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest"/>
           <include name="initialize"/>
           <include name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest"/>
+=======
+          <include name="initialize"/>
+          <include name="TS001_VerifyAddToFavoritesTest"/>
+          <include name="TS002_VerifyAddToExistingListWithPlusIconTest"/>
+>>>>>>> a533992e6639477f05b10efbe5f71138cc0815d0
         </methods>
-      </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
+      </class> <!-- atlantamarket_PROD.ExhibitorDigitalShowroom -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
