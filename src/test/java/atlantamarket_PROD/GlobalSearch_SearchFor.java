@@ -247,14 +247,14 @@ public class GlobalSearch_SearchFor extends base {
 		Assert.assertTrue(atlexhact.getCatalogsItem().isDisplayed());
 		Thread.sleep(5000);
 		//Click on Catalog item
-		String catalogName = atlexhact.getCatalogsItem().getText();
-<<<<<<< HEAD
+		String catalogName = atlexhact.getcatalogitemPROD().getText();
+
 		System.out.println(catalogName);
-=======
+
 		System.out.println("Catalo Name :: "+catalogName);
 		String catalogName1 = atlexhact.getCatalogsItem().getText();
 		System.out.println(catalogName1);
->>>>>>> abbd19f6e04415650774deed1112d5937596f65a
+
 		
 		atlexhact.getCatalogsItem().click();
 		Thread.sleep(2000);
