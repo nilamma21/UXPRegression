@@ -259,6 +259,7 @@ public class GlobalSearch_SearchFor extends base {
 		Thread.sleep(5000);
 		Assert.assertTrue(driver.getTitle().contains("Catalog View"));
 		String Cname =atlgs.getCatalogHeaderName().getText();
+		Thread.sleep(5000);
 		Assert.assertTrue(catalogName.contains(Cname));
 
 		driver.close();

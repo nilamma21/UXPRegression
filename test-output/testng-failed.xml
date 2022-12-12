@@ -3,6 +3,7 @@
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
+<<<<<<< HEAD
 
       <class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters">
 
@@ -20,6 +21,15 @@
         </methods>
       </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
 
+=======
+      <class name="atlantamarket_PROD.GlobalSearch_SearchFor">
+        <methods>
+          <include name="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest"/>
+          <include name="initialize"/>
+          <include name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
+>>>>>>> 417411c80b2ec1ce24cc264eeb96ad866236debd
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->
