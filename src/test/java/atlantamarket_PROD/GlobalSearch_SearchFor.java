@@ -212,7 +212,7 @@ public class GlobalSearch_SearchFor extends base {
 		Thread.sleep(5000);
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 7)
 	public void TS004_VerifyCatalogsOverviewInGlobalSearchTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
@@ -551,7 +551,7 @@ public class GlobalSearch_SearchFor extends base {
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		Thread.sleep(5000);
 	}
-	@Test(priority = 7)
+	@Test(priority = 4)
 	public void TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
