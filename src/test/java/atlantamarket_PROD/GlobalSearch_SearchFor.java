@@ -248,7 +248,7 @@ public class GlobalSearch_SearchFor extends base {
 
 		//Click on Catalog item
 		String catalogName = atlexhact.getCatalogsItem().getText();
-		System.out.println(catalogName);
+		System.out.println("Catalo Name :: "+catalogName);
 		String catalogName1 = atlexhact.getCatalogsItem().getText();
 		System.out.println(catalogName1);
 		
@@ -262,6 +262,7 @@ public class GlobalSearch_SearchFor extends base {
 		Thread.sleep(5000);
 		Assert.assertTrue(driver.getTitle().contains("Catalog View"));
 		String Cname =atlgs.getCatalogHeaderName().getText();
+		System.out.println("Header"+Cname);
 		Thread.sleep(5000);
 		Assert.assertTrue(catalogName.contains(Cname));
 
