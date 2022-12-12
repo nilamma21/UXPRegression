@@ -4,7 +4,7 @@
   <test name="Test">
     <classes>
       <class name="lasvegasmarket_UAT.GlobalSearch_LineActions"/>
-    <!--   <class name="atlantamarket_UAT.GlobalSearch_LineActions"/>
+	  <class name="atlantamarket_UAT.GlobalSearch_LineActions"/>
       <class name="atlantamarket_PROD.ShowSpecials"/>
       <class name="atlantamarket_PROD.EvenntsAndWebinar"/>
       <class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters"/>
@@ -39,7 +39,7 @@
       <class name="atlantamarket_UAT.GlobalSearch_LeftPaneFilters"/>
       <class name="lasvegasmarket_PROD.MarketPlanner"/>
       <class name="atlantamarket_UAT.GlobalSearch_SearchFor"/>
-      <class name="lasvegasmarket_UAT.MarketPlanner"/> -->
+      <class name="lasvegasmarket_UAT.MarketPlanner"/> 
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
