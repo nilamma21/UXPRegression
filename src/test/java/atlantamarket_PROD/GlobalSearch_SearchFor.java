@@ -245,7 +245,7 @@ public class GlobalSearch_SearchFor extends base {
 
 		//Verify that Catalog item should be displayed
 		Assert.assertTrue(atlexhact.getCatalogsItem().isDisplayed());
-
+		Thread.sleep(5000);
 		//Click on Catalog item
 		String catalogName = atlexhact.getCatalogsItem().getText();
 		System.out.println("Catalo Name :: "+catalogName);
