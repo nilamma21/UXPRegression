@@ -63,6 +63,8 @@ public class ATLExhLineProdActionsPage extends base{
 	By catalogstab = By.xpath("//a[@id='Catalogs']"); //Locator for Catalogs tab on Exhibitor products page
 	By catalogstabDiv = By.xpath("//div[@id='Catalogs']"); //Locator for Catalogs tab on Exhibitor products page
 	By catalogitem = By.xpath("//div[@class='imc-catalog__item_title multiSelectItem']/div/span/span"); //Locator for Catalog item
+	By catalogitemPROD = By.xpath("(//div[@class='imc-catalog__item_title multiSelectItem'])[1]/div[1]/span[1]/span[1]"); //Locator for Catalog item
+	
 	By eventcardinsearch = By.xpath("//div[@class='imc-vr--xlarge imc-eventcard']");//Locator for Event card in search results
 	By eventcardtitle = By.xpath("//span[contains(@class,'imc-eventcard__title')]"); //Locator for Event Card title
 	By eventdetailsheader = By.xpath("//h1[contains(@class,'imc-heading')]"); //Locator for header of Events details btn
@@ -76,6 +78,11 @@ public class ATLExhLineProdActionsPage extends base{
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
+	public WebElement getcatalogitemPROD() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(catalogitemPROD));
+		return driver.findElement(catalogitemPROD);
+	}
 	public WebElement getcatalogstabDiv() {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(catalogstabDiv));

@@ -7,7 +7,6 @@
         <methods>
           <include name="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest"/>
           <include name="initialize"/>
-          <include name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest"/>
         </methods>
       </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
     </classes>

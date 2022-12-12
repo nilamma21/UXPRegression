@@ -249,6 +249,7 @@ public class GlobalSearch_SearchFor extends base {
 		//Click on Catalog item
 		String catalogName = atlexhact.getCatalogsItem().getText();
 		System.out.println(catalogName);
+		
 		atlexhact.getCatalogsItem().click();
 		Thread.sleep(2000);
 		// Store the current window handle
