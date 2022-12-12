@@ -108,13 +108,9 @@ public class ATLGlobalSearchPage {
 	By atlShowSpecialsExhNamePROD = By.xpath("//div[@class='imc-gallery imc-gallery--align-flex-start imc-gallery--1-4 imc-vr--collosal imc-fprod-cont imc-specials-list']/div[1]/div[1]/a[2]");  //Locator for Show Secials Name
 	By atlSelectList = By.xpath("//select[@name='Saved Searches']");  //Locator for Show Secials Name
 	By atlClosePopup = By.xpath("//div[@class=' contact-exit']");  //Locator for Show Secials Name
-<<<<<<< HEAD
 	By FirstInfoName = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/h2[1]");  //Locator for Show Secials Name
 	By FirstEventName = By.xpath("//div[@class='imc-vr--xxlarge imc-margin--top--large--mobile']/div[1]/div[1]/span[1]");  //Locator for 1st name of Event
 	By seeAllLinkMatchingProduct = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[2]/div[1]/div[1]/p[2]");  //Locator for 1st name of Event
-=======
-	
->>>>>>> a533992e6639477f05b10efbe5f71138cc0815d0
 	
 	
 	public ATLGlobalSearchPage(WebDriver driver) {
@@ -122,7 +118,6 @@ public class ATLGlobalSearchPage {
 		this.driver = driver; 			
 		PageFactory.initElements(driver, this);
 	}
-<<<<<<< HEAD
 	public WebElement getseeAllLinkMatchingProduct() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(seeAllLinkMatchingProduct));
@@ -143,8 +138,6 @@ public class ATLGlobalSearchPage {
 		wait.until(ExpectedConditions.elementToBeClickable(FirstInfoName));
 		return driver.findElement(FirstInfoName);
 	}
-=======
->>>>>>> a533992e6639477f05b10efbe5f71138cc0815d0
 	public WebElement getatlClosePopup() throws InterruptedException {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.elementToBeClickable(atlClosePopup));

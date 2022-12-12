@@ -57,13 +57,9 @@ public class ATLEventsAndWebinarPage {
 	public WebElement getatladdtoseselectedbtn() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atladdtoseselectedbtn));
-<<<<<<< HEAD
 		
 		return driver.findElement(atladdtoseselectedbtn);
 		
-=======
-		return driver.findElement(atladdtoseselectedbtn);
->>>>>>> a533992e6639477f05b10efbe5f71138cc0815d0
 	}
 	public WebElement getatlClickOnEvent() {
 		wait = new WebDriverWait (driver,20);
