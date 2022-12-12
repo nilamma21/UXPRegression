@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test">
+    <classes>
+      <class name="lasvegasmarket_UAT.GlobalSearch_LineActions"/>
+      <class name="atlantamarket_UAT.GlobalSearch_LineActions"/>
+      <class name="atlantamarket_PROD.ShowSpecials"/>
+      <class name="atlantamarket_PROD.EvenntsAndWebinar"/>
+      <class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters"/>
+      <class name="atlantamarket_PROD.MarketPlanner"/>
+      <class name="atlantamarket_PROD.GlobalSearch_LineActions"/>
+      <class name="atlantamarket_UAT.GlobalSearch_ProductActions"/>
+      <class name="atlantamarket_PROD.FloorPlans"/>
+      <class name="lasvegasmarket_PROD.GlobalSearch_LineActions"/>
+      <class name="atlantamarket_PROD.GlobalSearch_SuggestionList"/>
+      <class name="atlantamarket_UAT.GlobalSearch_ExhibitorActions"/>
+      <class name="atlantamarket_UAT.GlobalSearch_MatchingResults"/>
+      <class name="lasvegasmarket_PROD.GlobalSearch_SuggestionList"/>
+      <class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions"/>
+      <class name="atlantamarket_PROD.GlobalSearch_SearchFor"/>
+      <class name="atlantamarket_PROD.GlobalSearch_ProductActions"/>
+      <class name="atlantamarket_UAT.GlobalSearch_SuggestionList"/>
+      <class name="atlantamarket_PROD.LineDigitalShowroom"/>
+      <class name="lasvegasmarket_PROD.GlobalSearch_ProductActions"/>
+      <class name="atlantamarket_PROD.GlobalSearch_MatchingResults"/>
+      <class name="lasvegasmarket_PROD.GlobalSearch_SearchFor"/>
+      <class name="atlantamarket_UAT.MarketPlanner"/>
+      <class name="atlantamarket_UAT.FloorPlans"/>
+      <class name="lasvegasmarket_PROD.GlobalSearch_ExhibitorActions"/>
+      <class name="lasvegasmarket_UAT.FloorPlans"/>
+      <class name="lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters"/>
+      <class name="atlantamarket_PROD.ExhibitorDigitalShowroom"/>
+      <class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions"/>
+      <class name="lasvegasmarket_PROD.FloorPlans"/>
+      <class name="lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters"/>
+      <class name="lasvegasmarket_UAT.GlobalSearch_SuggestionList"/>
+      <class name="lasvegasmarket_UAT.GlobalSearch_ProductActions"/>
+      <class name="atlantamarket_UAT.GlobalSearch_LeftPaneFilters"/>
+      <class name="lasvegasmarket_PROD.MarketPlanner"/>
+      <class name="atlantamarket_UAT.GlobalSearch_SearchFor"/>
+      <class name="lasvegasmarket_UAT.MarketPlanner"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
