@@ -1,5 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results skipped="0" failed="0" total="1" passed="1">
+=======
+<<<<<<< HEAD
+
+<testng-results skipped="0" failed="0" total="11" passed="11">
+  <reporter-output>
+  </reporter-output>
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="580839" started-at="2022-12-08T12:55:24Z" finished-at="2022-12-08T13:05:05Z">
+    <groups>
+    </groups>
+    <test name="RegressionTest" duration-ms="580839" started-at="2022-12-08T12:55:24Z" finished-at="2022-12-08T13:05:05Z">
+      <class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="initialize" is-config="true" duration-ms="39353" started-at="2022-12-08T18:25:24Z" finished-at="2022-12-08T18:26:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest" duration-ms="25739" started-at="2022-12-08T18:26:03Z" finished-at="2022-12-08T18:26:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest -->
+        <test-method status="PASS" signature="TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest" duration-ms="48363" started-at="2022-12-08T18:26:29Z" finished-at="2022-12-08T18:27:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest -->
+        <test-method status="PASS" signature="TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest" duration-ms="56296" started-at="2022-12-08T18:27:17Z" finished-at="2022-12-08T18:28:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest -->
+        <test-method status="PASS" signature="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest" duration-ms="107704" started-at="2022-12-08T18:28:14Z" finished-at="2022-12-08T18:30:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest -->
+        <test-method status="PASS" signature="TS005_VerifySelectionOfAccentFurnitureProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="TS005_VerifySelectionOfAccentFurnitureProdCatgFromLeftPaneFiltersTest" duration-ms="59512" started-at="2022-12-08T18:30:01Z" finished-at="2022-12-08T18:31:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifySelectionOfAccentFurnitureProdCatgFromLeftPaneFiltersTest -->
+        <test-method status="PASS" signature="TS006_VerifySelectionOfHolidayProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="TS006_VerifySelectionOfHolidayProdCatgFromLeftPaneFiltersTest" duration-ms="48587" started-at="2022-12-08T18:31:01Z" finished-at="2022-12-08T18:31:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS006_VerifySelectionOfHolidayProdCatgFromLeftPaneFiltersTest -->
+        <test-method status="PASS" signature="TS007_VerifySelectionOfDecorativeAccessProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="TS007_VerifySelectionOfDecorativeAccessProdCatgFromLeftPaneFiltersTest" duration-ms="34583" started-at="2022-12-08T18:31:50Z" finished-at="2022-12-08T18:32:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifySelectionOfDecorativeAccessProdCatgFromLeftPaneFiltersTest -->
+        <test-method status="PASS" signature="TS008_VerifySelectionOfGeneralGiftProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="TS008_VerifySelectionOfGeneralGiftProdCatgFromLeftPaneFiltersTest" duration-ms="32230" started-at="2022-12-08T18:32:24Z" finished-at="2022-12-08T18:32:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS008_VerifySelectionOfGeneralGiftProdCatgFromLeftPaneFiltersTest -->
+        <test-method status="PASS" signature="TS009_VerifySelectionOfFashionAccProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="TS009_VerifySelectionOfFashionAccProdCatgFromLeftPaneFiltersTest" duration-ms="50690" started-at="2022-12-08T18:32:57Z" finished-at="2022-12-08T18:33:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_VerifySelectionOfFashionAccProdCatgFromLeftPaneFiltersTest -->
+        <test-method status="PASS" signature="TS010_VerifySelectionOfFloralBotanicalsProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="TS010_VerifySelectionOfFloralBotanicalsProdCatgFromLeftPaneFiltersTest" duration-ms="43160" started-at="2022-12-08T18:33:47Z" finished-at="2022-12-08T18:34:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS010_VerifySelectionOfFloralBotanicalsProdCatgFromLeftPaneFiltersTest -->
+        <test-method status="PASS" signature="TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest" duration-ms="34148" started-at="2022-12-08T18:34:31Z" finished-at="2022-12-08T18:35:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_LeftPaneFilters -->
+
+=======
+>>>>>>> 417411c80b2ec1ce24cc264eeb96ad866236debd
+<testng-results skipped="0" failed="2" total="11" passed="9">
+>>>>>>> abbd19f6e04415650774deed1112d5937596f65a
   <reporter-output>
   </reporter-output>
   <suite name="LVM_RegressionTestSuite" duration-ms="95380" started-at="2022-12-12T12:56:08Z" finished-at="2022-12-12T12:57:43Z">
@@ -16,6 +82,10 @@
           </reporter-output>
         </test-method> <!-- TS004_VerifyCatalogsOverviewInGlobalSearchTest -->
       </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
+<<<<<<< HEAD
+
+=======
+>>>>>>> 417411c80b2ec1ce24cc264eeb96ad866236debd
     </test> <!-- RegressionTest -->
-  </suite> <!-- LVM_RegressionTestSuite -->
+  </suite> <!-- ATLMrkt_RegressionTestSuite -->
 </testng-results>

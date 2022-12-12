@@ -1,14 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [LVM_RegressionTestSuite]">
+<suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
+<<<<<<< HEAD
+
+      <class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters">
+
+      <class name="atlantamarket_PROD.GlobalSearch_SearchFor">
+
+        <methods>
+          <include name="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest"/>
+          <include name="initialize"/>
+
+          <include name="TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.GlobalSearch_LeftPaneFilters -->
+
+          <include name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
+
+=======
       <class name="atlantamarket_PROD.GlobalSearch_SearchFor">
         <methods>
           <include name="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
+>>>>>>> 417411c80b2ec1ce24cc264eeb96ad866236debd
     </classes>
   </test> <!-- RegressionTest(failed) -->
-</suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
+</suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->
