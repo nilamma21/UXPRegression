@@ -6,13 +6,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.NoSuchElementException;
-<<<<<<< HEAD
 
 import org.omg.CORBA.PUBLIC_MEMBER;
-=======
-//import org.omg.CORBA.PUBLIC_MEMBER;
->>>>>>> a533992e6639477f05b10efbe5f71138cc0815d0
 import org.openqa.selenium.By;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -20,15 +17,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-<<<<<<< HEAD
 
 import com.gargoylesoftware.htmlunit.javascript.host.media.webkitMediaStream;
 
 import atlantamarket_UAT.MarketPlanner;
-=======
-import com.gargoylesoftware.htmlunit.javascript.host.media.webkitMediaStream;
-//import atlantamarket_UAT.MarketPlanner;
->>>>>>> a533992e6639477f05b10efbe5f71138cc0815d0
 import pageObjects.AtlantaMarket.ATLEventsAndWebinarPage;
 import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
 import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
@@ -414,7 +406,6 @@ public class Utility extends base {
 	}
 
 	public void ClearGlobalSearch() throws IOException, InterruptedException {
-<<<<<<< HEAD
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
@@ -425,14 +416,6 @@ public class Utility extends base {
 		}
 	}
 
-=======
-
-		if (!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
-			atlgs.getatlGlobalSearchClearTxt().click();
-		}
-	}
-
->>>>>>> a533992e6639477f05b10efbe5f71138cc0815d0
 	public void CloseATLPopup() throws IOException, InterruptedException {
 		lap = new ATLLandingPage(driver);
 		

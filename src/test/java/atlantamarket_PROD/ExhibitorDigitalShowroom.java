@@ -314,54 +314,7 @@ public class ExhibitorDigitalShowroom extends base {
 	}
 	
 	@Test(priority = 5)
-<<<<<<< HEAD
 	public void TS005_VerifyClickOnTotalLinesSeeAllLinkForExhibitorTest() throws InterruptedException, IOException {
-=======
-	public void TS005_VerifyClickOnContactExhIconForExhibitorTest() throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// T302: The click on 'Contact Exhibitor' functionality for an Exhibitor
-
-		atlgs = new ATLGlobalSearchPage(driver);
-		atlexhact = new ATLExhLineProdActionsPage(driver);
-		lap = new ATLLandingPage(driver);
-		genData = new GenerateData();
-		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
-		
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	
-		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor1"));
-		atlgs.getATLSearchButton().click();
-
-		Thread.sleep(15000);
-		// Click on any of the Location link present in Exhibitor card and verify result
-		atlexhdgshw.getExhibitorName().click();
-		Thread.sleep(5000);
-		atlexhdgshw.getContactExhibitor().click();
-
-		// Enter Postal code
-		atlexhact.getPostalCodeTxtBx().sendKeys(genData.generateRandomNumber(5));
-
-		// Enter Message
-		atlexhact.getMessageTxtBx().sendKeys(genData.generateRandomString(15));
-		
-
-		// Select 1st two Product Category
-		atlexhact.getProductCateg1().click();
-		atlexhact.getProductCateg2().click();
-
-		utl.scrollToElement(atlexhact.getSendMessageBtn());
-
-		// Click on Send Message button
-		// Will send msg once test exhibitor will get
-		// atlexhact.getSendMessageBtn().click();
-
-		// Close the pop-up
-		atlexhact.getPopUpCloseBtn().click();
-	}
-	
-	@Test(priority = 6)
-	public void TS006_VerifyClickOnTotalLinesSeeAllLinkForExhibitorTest() throws InterruptedException, IOException {
->>>>>>> a533992e6639477f05b10efbe5f71138cc0815d0
 		// The purpose of this test case to verify:-
 		// T312: The click on 'Total lines-See All' functionality for an Exhibitor Digital Show room
 
@@ -402,7 +355,6 @@ public class ExhibitorDigitalShowroom extends base {
 		// Get the Total Products count on Products page
 		String linestabtitle = atlexhdgshw.getLinesCountAtLinesPage().getText();
 		String totallinescountonprodpage = linestabtitle.replaceAll("[^0-9]", "");
-<<<<<<< HEAD
  		System.out.println("Total Lines Count on Products page is: " + totallinescountonprodpage);
 
 		//Get back to Exhibitor Showroom page and click any one product and verify if product details are displayed properly
@@ -411,45 +363,16 @@ public class ExhibitorDigitalShowroom extends base {
 		String linetext = atlexhdgshw.getLinesOptionText().getText();
 		atlexhdgshw.getLinesOption().click();
 		Assert.assertTrue(atlexhdgshw.getValidateLinesPage().getText().contains(linetext));
-=======
-		System.out.println("Total Lines Count on Products page is: " + totallinescountonprodpage);
-
-		//Get back to Exhibitor Showroom page and click any one product and verify if product details are displayed properly
-		atlexhdgshw.getProductsPageBackButton().click();
-		Thread.sleep(6000);
-		System.out.println("Back to Product Page");
-		
-		utl.scrollToElement(atlexhdgshw.getLinesSection());
-		System.out.println("Scroll down to Line section");
-		String linetext = atlexhdgshw.getLinesOptionText().getText();
-		System.out.println("Store Line Name:: "+linetext);
-		atlexhdgshw.getLinesOption().click();
-		Thread.sleep(6000);
-		System.out.println("Click on Line");
-		
-		String linepageTxt=atlexhdgshw.getValidateLinesPage().getText();
-		System.out.println("Line name ::" +linepageTxt);
-		Assert.assertTrue(linepageTxt.contains(linetext));
->>>>>>> a533992e6639477f05b10efbe5f71138cc0815d0
 		System.out.println("Line Details are displayed properly.");
 		
 	}
 	
-<<<<<<< HEAD
 	@Test(priority = 6)
 	public void TS006_VerifyClickOnProductShownLinkForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T311: The click on 'Product Shown-See All' functionality for an Exhibitor Digital Showroom
 
 		atlgs = new ATLGlobalSearchPage(driver);
-=======
-	@Test(priority = 7)
-	public void TS007_VerifyClickOnProductShownLinkForExhibitorTest() throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// T311: The click on 'Product Shown-See All' functionality for an Exhibitor Digital Showroom
-
-	atlgs = new ATLGlobalSearchPage(driver);
->>>>>>> a533992e6639477f05b10efbe5f71138cc0815d0
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		lap = new ATLLandingPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
@@ -492,7 +415,6 @@ public class ExhibitorDigitalShowroom extends base {
 		atlexhdgshw.getProductsPageBackButton().click();
 		utl.scrollToElement(atlexhdgshw.getProductSection());
 		String producttext = atlexhdgshw.getProductText().getText();
-<<<<<<< HEAD
 		System.out.println(producttext);
 		atlexhdgshw.getProductsList().click();
 		Thread.sleep(5000);
@@ -503,43 +425,6 @@ public class ExhibitorDigitalShowroom extends base {
 	
 	@Test(priority = 7)
 	public void TS007_VerifyClickOnLineFiltersForExhibitorTest() throws InterruptedException, IOException {
-=======
-		String splitProdTxt[]= producttext.split(" ");
-		String xyz="";
-		
-		for(int i=0;i<splitProdTxt.length-2;i++)
-		{
-			System.out.println(splitProdTxt[i]);
-			xyz=splitProdTxt[i];
-			
-		}
-		System.out.println("Prod Text :::"+xyz);
-		
-		
-		//System.out.println(producttext);
-		atlexhdgshw.getProductText().click();
-		Thread.sleep(5000);
-		String prodName=atlexhdgshw.getValidateLinesPage().getText();
-		//String splitProdName= prodName.split(" ")[0].trim();
-		String splitProdName[]= prodName.split(" ");
-		String abc="";
-		for(int i=0;i<splitProdName.length-2;i++)
-		{
-			System.out.print(splitProdName[i]);
-			abc=splitProdName[i];
-		}
-		System.out.println("Last String :: "+abc);
-		//System.out.println(splitProdName);
-		//Assert.assertTrue(producttext.contains(atlexhdgshw.getValidateLinesPage().getText()));
-		Assert.assertTrue(xyz.contains(abc));
-		System.out.println("Product Details are displayed properly.");
-
-	
-	}
-	
-	@Test(priority = 8)
-	public void TS008_VerifyClickOnLineFiltersForExhibitorTest() throws InterruptedException, IOException {
->>>>>>> a533992e6639477f05b10efbe5f71138cc0815d0
 		// The purpose of this test case to verify:-
 		// T315: The click on Line Filters functionality for an Exhibitor Digital Show room
 
@@ -568,13 +453,8 @@ public class ExhibitorDigitalShowroom extends base {
 		Assert.assertTrue(atlexhdgshw.getLinesOptionText().getText().startsWith("A"));
 	}
 	
-<<<<<<< HEAD
 	@Test(priority = 8)
 	public void TS008_VerifyClickOnLineSearchForExhibitorTest() throws InterruptedException, IOException {
-=======
-	@Test(priority = 9)
-	public void TS009_VerifyClickOnLineSearchForExhibitorTest() throws InterruptedException, IOException {
->>>>>>> a533992e6639477f05b10efbe5f71138cc0815d0
 		// The purpose of this test case to verify:-
 		// T317: The click on Line Filters functionality for an Exhibitor Digital Show room
 
@@ -601,13 +481,8 @@ public class ExhibitorDigitalShowroom extends base {
 		Thread.sleep(5000);
 		Assert.assertTrue(atlexhdgshw.getVerifyLineSearch().getText().contains(prop.getProperty("line2")));	
 	}
-<<<<<<< HEAD
 	@Test(priority = 9)
 	public void TS009_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest() throws InterruptedException, IOException {
-=======
-	@Test(priority = 10)
-	public void TS010_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest() throws InterruptedException, IOException {
->>>>>>> a533992e6639477f05b10efbe5f71138cc0815d0
 		// The purpose of this test case to verify:-
 		// T350: Exhibitor Digital Showroom: Lines Component: See All Lines
 
@@ -639,13 +514,8 @@ public class ExhibitorDigitalShowroom extends base {
 		
 		
 	}
-<<<<<<< HEAD
 	@Test(priority = 10)
 	public void TS010_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest() throws InterruptedException, IOException {
-=======
-	@Test(priority = 11)
-	public void TS011_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest() throws InterruptedException, IOException {
->>>>>>> a533992e6639477f05b10efbe5f71138cc0815d0
 		// The purpose of this test case to verify:-
 		// T349: Exhibitor Digital showroom: Products Component: Order on JuniperMarket
 
@@ -689,13 +559,8 @@ public class ExhibitorDigitalShowroom extends base {
 		
 		
 	}
-<<<<<<< HEAD
 	@Test(priority = 11)
 	public void TS011_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest() throws InterruptedException, IOException {
-=======
-	@Test(priority = 12)
-	public void TS012_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest() throws InterruptedException, IOException {
->>>>>>> a533992e6639477f05b10efbe5f71138cc0815d0
 		// The purpose of this test case to verify:-
 		// T348: Exhibitor Digital showroom: Products Component: See All Products
 
@@ -729,13 +594,8 @@ public class ExhibitorDigitalShowroom extends base {
 		
 	}
 	
-<<<<<<< HEAD
 	@Test(priority = 12)
 	public void TS012_VerifySeeInOtherMarketsForExhibitorTest() throws InterruptedException, IOException {
-=======
-	@Test(priority = 13)
-	public void TS013_VerifySeeInOtherMarketsForExhibitorTest() throws InterruptedException, IOException {
->>>>>>> a533992e6639477f05b10efbe5f71138cc0815d0
 		// The purpose of this test case to verify:-
 		// T333: The See in Other Markets functionality for an Exhibitor Digital Show room
 
@@ -788,13 +648,8 @@ public class ExhibitorDigitalShowroom extends base {
 		Thread.sleep(5000);
 		
 	}
-<<<<<<< HEAD
 	@Test(priority = 13)
 	public void TS013_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest() throws InterruptedException, IOException {
-=======
-	@Test(priority = 14)
-	public void TS014_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest() throws InterruptedException, IOException {
->>>>>>> a533992e6639477f05b10efbe5f71138cc0815d0
 		// The purpose of this test case to verify:-
 		// T351: Exhibitor Digital Showroom: Catalogs Component: See All Catalogs
 
@@ -828,13 +683,8 @@ public class ExhibitorDigitalShowroom extends base {
 		
 	}
 	
-<<<<<<< HEAD
 	@Test(priority = 14)
 	public void TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest() throws InterruptedException, IOException {
-=======
-	@Test(priority = 15)
-	public void TS015_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest() throws InterruptedException, IOException {
->>>>>>> a533992e6639477f05b10efbe5f71138cc0815d0
 		// The purpose of this test case to verify:-
 		// T352: Exhibitor Digital Sowroom: Catalogs Component: Order on JuniperMarket
 
@@ -868,13 +718,8 @@ public class ExhibitorDigitalShowroom extends base {
 		
 		
 	}
-<<<<<<< HEAD
 	@Test(priority = 15)
 	public void TS015_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest() throws InterruptedException, IOException {
-=======
-	@Test(priority = 16)
-	public void TS016_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest() throws InterruptedException, IOException {
->>>>>>> a533992e6639477f05b10efbe5f71138cc0815d0
 		// The purpose of this test case to verify:-
 		// T347: Exhibitor Digital showroom: Hero component: Visit <Exhibitor site>
 
@@ -914,13 +759,8 @@ public class ExhibitorDigitalShowroom extends base {
 		
 		
 	}
-<<<<<<< HEAD
 	@Test(priority = 16)
 	public void TS016_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest() throws InterruptedException, IOException {
-=======
-	@Test(priority = 17)
-	public void TS017_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest() throws InterruptedException, IOException {
->>>>>>> a533992e6639477f05b10efbe5f71138cc0815d0
 		// The purpose of this test case to verify:-
 		// T345: Exhibitor Digital showroom: Hero component: View 3D Showroom
 
@@ -958,22 +798,11 @@ public class ExhibitorDigitalShowroom extends base {
 		
 		
 	}
-<<<<<<< HEAD
 	@Test(priority = 17)
 	public void TS017_VerifyExhibitorDigitalEventsComponentTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T334: Exhibitor Digital showroom: Events Component
 
-=======
-	@Test(priority = 18)
-	public void TS018_VerifyExhibitorDigitalEventsComponentTest() throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// T334: Exhibitor Digital showroom: Events Component
-
-	
-
-
->>>>>>> a533992e6639477f05b10efbe5f71138cc0815d0
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		lap = new ATLLandingPage(driver);
@@ -1008,13 +837,8 @@ public class ExhibitorDigitalShowroom extends base {
 		
 	}
 
-<<<<<<< HEAD
 	@Test(priority = 18)
 	public void TS018_VerifyCatalogsSectionForExhibitorTest() throws InterruptedException, IOException {
-=======
-	@Test(priority = 19)
-	public void TS019_VerifyCatalogsSectionForExhibitorTest() throws InterruptedException, IOException {
->>>>>>> a533992e6639477f05b10efbe5f71138cc0815d0
 		// The purpose of this test case to verify:-
 		// T318: Exhibitor Digital showroom: Catalogs Component
 

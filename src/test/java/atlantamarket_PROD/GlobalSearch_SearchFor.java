@@ -4,10 +4,6 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-<<<<<<< HEAD
-=======
-//import org.omg.CORBA.PUBLIC_MEMBER;
->>>>>>> a533992e6639477f05b10efbe5f71138cc0815d0
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
