@@ -32,9 +32,9 @@
 	<test thread-count="5" name="RegressionTest">
 		<classes>
 			<class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters"/>
- 		<!-- 	<methods>
+ 			<methods>
 			<include name="TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest"/>			
-			</methods> -->
+			</methods> 
 		</classes>
 	</test> 
 </suite> 
