@@ -61,7 +61,7 @@ public class ATLGlobalSearchPage {
 	By atleventstabinsearchDiv =  By.xpath("//a[@id='Events']"); //Locator for Events tab in Search
 	By atleventstabinsearchUAT =  By.xpath("//a[@id='Events']"); //Locator for Events tab in Search
 	By atlseemoredetailsbtn = By.xpath("//a[contains(text(),'See More Details')]"); //Locator for See More Details button
-	By eventsatlmkttopicsfilter = By.xpath("//label[contains(text(),'Las Vegas')]"); //Locator for Atlanta Market topics filter
+	By eventsatlmkttopicsfilter = By.xpath("//label[contains(text(),'Atlanta Market')]"); //Locator for Atlanta Market topics filter
 	By clearfiltersbtn = By.xpath("//a[@class='clear-filter active']"); //Locator for Clear Filters btn
 	By eventtypesfilter = By.xpath("//h4[contains(text(),'Event Types')]"); //Locator for Event Types filter
 	By atmarketeventtypefilter = By.xpath("//label[contains(text(),'At Market')]"); //Locator for At Market Event Type

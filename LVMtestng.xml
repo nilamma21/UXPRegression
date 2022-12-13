@@ -15,8 +15,8 @@
 				<!-- -->
 				<!-- <include name="TS010_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest" /> --> 
 				
-			<!-- 	<include name="TS013_VerifySeeInOtherMarketsForExhibitorTest" />-->
-			<!-- 	<include name="TS008_VerifyEventsOverviewInGlobalSearchTest" />  -->
+				<!-- <include name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest" /> -->
+				<!-- <include name="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest" />  -->
 				
 				
 			</methods>

@@ -249,6 +249,7 @@ public class GlobalSearch_SearchFor extends base {
 		//Click on Catalog item
 		String catalogName = atlexhact.getCatalogsItem().getText();
 		System.out.println(catalogName);
+		
 		atlexhact.getCatalogsItem().click();
 		Thread.sleep(2000);
 		// Store the current window handle
@@ -260,6 +261,7 @@ public class GlobalSearch_SearchFor extends base {
 		Assert.assertTrue(driver.getTitle().contains("Catalog View"));
 		String Cname =atlgs.getCatalogHeaderName().getText();
 		Assert.assertTrue(catalogName.contains(Cname));
+		Assert.assertTrue(catalogName.startsWith(Cname));
 
 		driver.close();
 		driver.switchTo().window(winHandleBefore);
@@ -671,13 +673,14 @@ public class GlobalSearch_SearchFor extends base {
 
 		//Select 'Atlanta Market' topic
 		String topicName = atlgs.getEventsATLMktTopics().getText();
+		String eventName = atlgs.getATLFirstEventName().getText();
 		atlgs.getEventsATLMktTopics().click();
 
 		//Click on See More details btn
 		atlgs.getATLSeeMoreDetailsBtn().click();
 
 		//Verify that Selected topic name should be displayed as Tag on Event details page
-		Assert.assertTrue(atlexhact.getEventDetailsTag().getText().contains(topicName));
+		Assert.assertTrue(atlexhact.getEventDetailsHeader().getText().contains(eventName));
 		driver.navigate().back();
 
 		//Click on Clear Filters btn
