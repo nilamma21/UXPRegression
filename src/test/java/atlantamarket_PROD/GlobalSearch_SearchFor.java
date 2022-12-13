@@ -696,7 +696,7 @@ public class GlobalSearch_SearchFor extends base {
 
 		//Click on See More details btn
 		atlgs.getATLSeeMoreDetailsBtn().click();
-
+		Thread.sleep(5000);
 		//Verify that Selected topic name should be displayed as Tag on Event details page
 		Assert.assertTrue(atlexhact.getEventDetailsHeader().getText().contains(eventName));
 		driver.navigate().back();
