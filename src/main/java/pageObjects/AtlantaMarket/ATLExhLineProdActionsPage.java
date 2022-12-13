@@ -63,26 +63,37 @@ public class ATLExhLineProdActionsPage extends base{
 	By catalogstab = By.xpath("//a[@id='Catalogs']"); //Locator for Catalogs tab on Exhibitor products page
 	By catalogstabDiv = By.xpath("//div[@id='Catalogs']"); //Locator for Catalogs tab on Exhibitor products page
 	By catalogitem = By.xpath("//div[@class='imc-catalog__item_title multiSelectItem']/div/span/span"); //Locator for Catalog item
-<<<<<<< HEAD
 	By catalogitemPROD = By.xpath("//div[@class='imc-catalog__item_inner-content']"); //Locator for Catalog item
-	
-=======
->>>>>>> 1d0785529350b874cc45300090eb1923d3cfe663
 	By eventcardinsearch = By.xpath("//div[@class='imc-vr--xlarge imc-eventcard']");//Locator for Event card in search results
 	By eventcardtitle = By.xpath("//span[contains(@class,'imc-eventcard__title')]"); //Locator for Event Card title
 	By eventdetailsheader = By.xpath("//h1[contains(@class,'imc-heading')]"); //Locator for header of Events details btn
 	By eventdetailstag = By.xpath("//a[contains(@class,'imc-eventdetail--tag')]"); //Locator for tag on Event Details
 	By eventcardtag = By.xpath("//ul[@class='imc-cardtags imc-content--light imc-eventcard__tag']/li/button"); //Locator for Event Card tag
-	
-	
 	By catalogstabPROD = By.xpath("//div[@id='Catalogs']"); //Locator for Catalogs tab on Exhibitor products page
 	By thirdexhname = By.xpath("//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][3]/div/div/div/div/a/h2"); //Locator for third Exhibitor name in Search grid
-	By catalogitemPROD = By.xpath("(//div[@class='imc-catalog__item_title multiSelectItem'])[1]/div[1]/span[1]/span[1]"); //Locator for Catalog item
+	By leftPaneFilterDGShowroom = By.xpath("//h4[contains(text(),'Digital Showroom')]"); //Locator for DG showroom Filter
+	By leftPaneFilterDGShowroomCatalog = By.xpath("//h4[contains(text(),'Digital Showroom')]/../../.././../../div[2]/div[1]/div[1]/div[2]"); //Locator for DG showroom Filter Catalog
+	
 	
 	public ATLExhLineProdActionsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
-	} 
+	}
+	public WebElement getleftPaneFilterDGShowroomCatalog() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(leftPaneFilterDGShowroomCatalog));
+		return driver.findElement(leftPaneFilterDGShowroomCatalog);
+	}
+	public WebElement getleftPaneFilterDGShowroom() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(leftPaneFilterDGShowroom));
+		return driver.findElement(leftPaneFilterDGShowroom);
+	}
+	public WebElement getcatalogitemPROD() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(catalogitemPROD));
+		return driver.findElement(catalogitemPROD);
+	}
 	public WebElement getcatalogstabDiv() {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(catalogstabDiv));
@@ -344,10 +355,8 @@ public class ATLExhLineProdActionsPage extends base{
 		return driver.findElement(thirdexhname);
 	}
 	
-	public WebElement getcatalogitemPROD() {
-		wait = new WebDriverWait (driver,30);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(catalogitemPROD));
-		return driver.findElement(catalogitemPROD);
-	}
 	
 }
+
+
+
