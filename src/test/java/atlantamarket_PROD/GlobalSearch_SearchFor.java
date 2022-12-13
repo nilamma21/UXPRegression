@@ -255,6 +255,9 @@ public class GlobalSearch_SearchFor extends base {
 		String catalogName1 = atlexhact.getCatalogsItem().getText();
 		System.out.println(catalogName1);
 
+		String a=driver.findElements(by.xpath("//div[@class='imc-catalog__item_inner-content']")).getText();
+		System.out.println("New Xpath :: "+a);
+
 		
 		atlexhact.getCatalogsItem().click();
 		Thread.sleep(2000);
