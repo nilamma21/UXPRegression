@@ -133,6 +133,3 @@ public class ATLLeftPaneFilters {
 		return driver.findElement(secondexhibitor);
 	}
 }
-
-
-

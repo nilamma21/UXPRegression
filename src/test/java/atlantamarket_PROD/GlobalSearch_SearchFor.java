@@ -247,9 +247,20 @@ public class GlobalSearch_SearchFor extends base {
 		Assert.assertTrue(atlexhact.getCatalogsItem().isDisplayed());
 
 		//Click on Catalog item
+<<<<<<< HEAD
 		String catalogName = atlexhact.getCatalogsItem().getText();
 		System.out.println(catalogName);
 		
+=======
+		String catalogName = atlexhact.getcatalogitemPROD().getText();
+
+		System.out.println(catalogName);
+
+		System.out.println("Catalo Name :: "+catalogName);
+		String catalogName1 = atlexhact.getCatalogsItem().getText();
+		System.out.println(catalogName1);
+
+>>>>>>> 1d0785529350b874cc45300090eb1923d3cfe663
 		atlexhact.getCatalogsItem().click();
 		Thread.sleep(2000);
 		// Store the current window handle
@@ -260,8 +271,14 @@ public class GlobalSearch_SearchFor extends base {
 		Thread.sleep(5000);
 		Assert.assertTrue(driver.getTitle().contains("Catalog View"));
 		String Cname =atlgs.getCatalogHeaderName().getText();
+<<<<<<< HEAD
 		Assert.assertTrue(catalogName.contains(Cname));
 		Assert.assertTrue(catalogName.startsWith(Cname));
+=======
+		System.out.println("Header"+Cname);
+		Thread.sleep(5000);
+		Assert.assertTrue(Cname.startsWith(catalogName));
+>>>>>>> 1d0785529350b874cc45300090eb1923d3cfe663
 
 		driver.close();
 		driver.switchTo().window(winHandleBefore);
