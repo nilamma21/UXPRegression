@@ -268,7 +268,7 @@ public class GlobalSearch_SearchFor extends base {
 		String Cname =atlgs.getCatalogHeaderName().getText();
 		System.out.println("Header"+Cname);
 		Thread.sleep(5000);
-		Assert.assertTrue(catalogName.startsWith(Cname));
+		Assert.assertTrue(Cname.startsWith(catalogName));
 
 		driver.close();
 		driver.switchTo().window(winHandleBefore);
