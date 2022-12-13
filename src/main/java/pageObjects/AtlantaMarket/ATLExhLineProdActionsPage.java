@@ -76,12 +76,18 @@ public class ATLExhLineProdActionsPage extends base{
 	
 	By catalogstabPROD = By.xpath("//div[@id='Catalogs']"); //Locator for Catalogs tab on Exhibitor products page
 	By thirdexhname = By.xpath("//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][3]/div/div/div/div/a/h2"); //Locator for third Exhibitor name in Search grid
-	By catalogitemPROD = By.xpath("(//div[@class='imc-catalog__item_title multiSelectItem'])[1]/div[1]/span[1]/span[1]"); //Locator for Catalog item
+	By AtLcatalogitemPROD = By.xpath("(//div[@class='imc-catalog__item_title multiSelectItem'])[1]/div[1]/span[1]/span[1]"); //Locator for Catalog item
 	
 	public ATLExhLineProdActionsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
+
+	public WebElement getAtLcatalogitemPROD() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(AtLcatalogitemPROD));
+		return driver.findElement(AtLcatalogitemPROD);
+	}
 	public WebElement getcatalogstabDiv() {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(catalogstabDiv));
