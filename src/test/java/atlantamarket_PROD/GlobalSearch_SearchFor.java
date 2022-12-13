@@ -251,7 +251,9 @@ public class GlobalSearch_SearchFor extends base {
 		String catalogName = atlexhact.getCatalogsItem().getText();
 		System.out.println(catalogName);
 
-		String catalogName = atlexhact.getcatalogitemPROD().getText();
+		//String catalogName = atlexhact.getcatalogitemPROD().getText();
+		String catalogName = atlexhact.getAtLcatalogitemPROD().getText();
+		
 
 		System.out.println(catalogName);
 
