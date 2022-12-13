@@ -1,91 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testng-results skipped="0" failed="0" total="1" passed="1">
-=======
-<<<<<<< HEAD
-
-<testng-results skipped="0" failed="0" total="11" passed="11">
+<testng-results skipped="0" failed="1" total="11" passed="10">
   <reporter-output>
   </reporter-output>
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="580839" started-at="2022-12-08T12:55:24Z" finished-at="2022-12-08T13:05:05Z">
+  <suite name="LVM_RegressionTestSuite" duration-ms="666069" started-at="2022-12-13T10:00:45Z" finished-at="2022-12-13T10:11:51Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="580839" started-at="2022-12-08T12:55:24Z" finished-at="2022-12-08T13:05:05Z">
-      <class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="initialize" is-config="true" duration-ms="39353" started-at="2022-12-08T18:25:24Z" finished-at="2022-12-08T18:26:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest" duration-ms="25739" started-at="2022-12-08T18:26:03Z" finished-at="2022-12-08T18:26:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest -->
-        <test-method status="PASS" signature="TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest" duration-ms="48363" started-at="2022-12-08T18:26:29Z" finished-at="2022-12-08T18:27:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest -->
-        <test-method status="PASS" signature="TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest" duration-ms="56296" started-at="2022-12-08T18:27:17Z" finished-at="2022-12-08T18:28:14Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest -->
-        <test-method status="PASS" signature="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest" duration-ms="107704" started-at="2022-12-08T18:28:14Z" finished-at="2022-12-08T18:30:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest -->
-        <test-method status="PASS" signature="TS005_VerifySelectionOfAccentFurnitureProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="TS005_VerifySelectionOfAccentFurnitureProdCatgFromLeftPaneFiltersTest" duration-ms="59512" started-at="2022-12-08T18:30:01Z" finished-at="2022-12-08T18:31:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS005_VerifySelectionOfAccentFurnitureProdCatgFromLeftPaneFiltersTest -->
-        <test-method status="PASS" signature="TS006_VerifySelectionOfHolidayProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="TS006_VerifySelectionOfHolidayProdCatgFromLeftPaneFiltersTest" duration-ms="48587" started-at="2022-12-08T18:31:01Z" finished-at="2022-12-08T18:31:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS006_VerifySelectionOfHolidayProdCatgFromLeftPaneFiltersTest -->
-        <test-method status="PASS" signature="TS007_VerifySelectionOfDecorativeAccessProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="TS007_VerifySelectionOfDecorativeAccessProdCatgFromLeftPaneFiltersTest" duration-ms="34583" started-at="2022-12-08T18:31:50Z" finished-at="2022-12-08T18:32:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS007_VerifySelectionOfDecorativeAccessProdCatgFromLeftPaneFiltersTest -->
-        <test-method status="PASS" signature="TS008_VerifySelectionOfGeneralGiftProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="TS008_VerifySelectionOfGeneralGiftProdCatgFromLeftPaneFiltersTest" duration-ms="32230" started-at="2022-12-08T18:32:24Z" finished-at="2022-12-08T18:32:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS008_VerifySelectionOfGeneralGiftProdCatgFromLeftPaneFiltersTest -->
-        <test-method status="PASS" signature="TS009_VerifySelectionOfFashionAccProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="TS009_VerifySelectionOfFashionAccProdCatgFromLeftPaneFiltersTest" duration-ms="50690" started-at="2022-12-08T18:32:57Z" finished-at="2022-12-08T18:33:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS009_VerifySelectionOfFashionAccProdCatgFromLeftPaneFiltersTest -->
-        <test-method status="PASS" signature="TS010_VerifySelectionOfFloralBotanicalsProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="TS010_VerifySelectionOfFloralBotanicalsProdCatgFromLeftPaneFiltersTest" duration-ms="43160" started-at="2022-12-08T18:33:47Z" finished-at="2022-12-08T18:34:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS010_VerifySelectionOfFloralBotanicalsProdCatgFromLeftPaneFiltersTest -->
-        <test-method status="PASS" signature="TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LeftPaneFilters@1a968a59]" name="TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest" duration-ms="34148" started-at="2022-12-08T18:34:31Z" finished-at="2022-12-08T18:35:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest -->
-      </class> <!-- atlantamarket_PROD.GlobalSearch_LeftPaneFilters -->
-
-=======
->>>>>>> 417411c80b2ec1ce24cc264eeb96ad866236debd
-<testng-results skipped="0" failed="2" total="11" passed="9">
->>>>>>> abbd19f6e04415650774deed1112d5937596f65a
-  <reporter-output>
-  </reporter-output>
-  <suite name="LVM_RegressionTestSuite" duration-ms="95380" started-at="2022-12-12T12:56:08Z" finished-at="2022-12-12T12:57:43Z">
-    <groups>
-    </groups>
-    <test name="RegressionTest" duration-ms="95380" started-at="2022-12-12T12:56:08Z" finished-at="2022-12-12T12:57:43Z">
+    <test name="RegressionTest" duration-ms="666069" started-at="2022-12-13T10:00:45Z" finished-at="2022-12-13T10:11:51Z">
       <class name="atlantamarket_PROD.GlobalSearch_SearchFor">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@14bf9759]" name="initialize" is-config="true" duration-ms="68071" started-at="2022-12-12T18:26:08Z" finished-at="2022-12-12T18:27:16Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="initialize" is-config="true" duration-ms="22123" started-at="2022-12-13T15:30:45Z" finished-at="2022-12-13T15:31:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS004_VerifyCatalogsOverviewInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@14bf9759]" name="TS004_VerifyCatalogsOverviewInGlobalSearchTest" duration-ms="27301" started-at="2022-12-12T18:27:16Z" finished-at="2022-12-12T18:27:43Z">
+        <test-method status="PASS" signature="TS001_VerifyInformationTabInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="TS001_VerifyInformationTabInGlobalSearchTest" duration-ms="19378" started-at="2022-12-13T15:31:07Z" finished-at="2022-12-13T15:31:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifyInformationTabInGlobalSearchTest -->
+        <test-method status="PASS" signature="TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest" duration-ms="41431" started-at="2022-12-13T15:31:26Z" finished-at="2022-12-13T15:32:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest -->
+        <test-method status="PASS" signature="TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest" duration-ms="87867" started-at="2022-12-13T15:32:08Z" finished-at="2022-12-13T15:33:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest -->
+        <test-method status="PASS" signature="TS004_VerifyCatalogsOverviewInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="TS004_VerifyCatalogsOverviewInGlobalSearchTest" duration-ms="27534" started-at="2022-12-13T15:33:36Z" finished-at="2022-12-13T15:34:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS004_VerifyCatalogsOverviewInGlobalSearchTest -->
+        <test-method status="PASS" signature="TS005_VerifyArticlesOverviewInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="TS005_VerifyArticlesOverviewInGlobalSearchTest" duration-ms="47504" started-at="2022-12-13T15:34:03Z" finished-at="2022-12-13T15:34:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifyArticlesOverviewInGlobalSearchTest -->
+        <test-method status="PASS" signature="TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest" duration-ms="147561" started-at="2022-12-13T15:34:51Z" finished-at="2022-12-13T15:37:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest -->
+        <test-method status="PASS" signature="TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest" duration-ms="48577" started-at="2022-12-13T15:37:18Z" finished-at="2022-12-13T15:38:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest -->
+        <test-method status="PASS" signature="TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest" duration-ms="72650" started-at="2022-12-13T15:38:07Z" finished-at="2022-12-13T15:39:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest -->
+        <test-method status="PASS" signature="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest" duration-ms="62216" started-at="2022-12-13T15:39:20Z" finished-at="2022-12-13T15:40:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest -->
+        <test-method status="FAIL" signature="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest" duration-ms="37319" started-at="2022-12-13T15:40:22Z" finished-at="2022-12-13T15:40:59Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[2]/div[1]/div[1]/p[2] (tried for 20 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[2]/div[1]/div[1]/p[2] (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.AtlantaMarket.ATLGlobalSearchPage.getseeAllLinkMatchingProduct(ATLGlobalSearchPage.java:123)
+	at atlantamarket_PROD.GlobalSearch_SearchFor.TS010_VerifyShowSpecialsOverviewInGlobalSearchTest(GlobalSearch_SearchFor.java:732)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[2]/div[1]/div[1]/p[2]"}
+  (Session info: chrome=108.0.5359.96)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'EON-SWAPNILI', ip: '172.22.22.78', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_311'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.96, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63454}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c692df3ec0e64ad8a21ef884e036fb70
+*** Element info: {Using=xpath, value=//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[2]/div[1]/div[1]/p[2]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 26 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS010_VerifyShowSpecialsOverviewInGlobalSearchTest -->
+        <test-method status="PASS" signature="TS011_VerifyEventsOverviewInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="TS011_VerifyEventsOverviewInGlobalSearchTest" duration-ms="51774" started-at="2022-12-13T15:40:59Z" finished-at="2022-12-13T15:41:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS011_VerifyEventsOverviewInGlobalSearchTest -->
       </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
-<<<<<<< HEAD
-
-=======
->>>>>>> 417411c80b2ec1ce24cc264eeb96ad866236debd
     </test> <!-- RegressionTest -->
-  </suite> <!-- ATLMrkt_RegressionTestSuite -->
+  </suite> <!-- LVM_RegressionTestSuite -->
 </testng-results>

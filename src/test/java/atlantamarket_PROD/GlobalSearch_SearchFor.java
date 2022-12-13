@@ -212,7 +212,7 @@ public class GlobalSearch_SearchFor extends base {
 		Thread.sleep(5000);
 	}
 
-	@Test(priority = 7)
+	@Test(priority = 4)
 	public void TS004_VerifyCatalogsOverviewInGlobalSearchTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
@@ -245,16 +245,10 @@ public class GlobalSearch_SearchFor extends base {
 
 		//Verify that Catalog item should be displayed
 		Assert.assertTrue(atlexhact.getCatalogsItem().isDisplayed());
-		Thread.sleep(5000);
+
 		//Click on Catalog item
 		String catalogName = atlexhact.getCatalogsItem().getText();
-<<<<<<< HEAD
 		System.out.println(catalogName);
-=======
-		System.out.println("Catalo Name :: "+catalogName);
-		String catalogName1 = atlexhact.getCatalogsItem().getText();
-		System.out.println(catalogName1);
->>>>>>> abbd19f6e04415650774deed1112d5937596f65a
 		
 		atlexhact.getCatalogsItem().click();
 		Thread.sleep(2000);
@@ -266,9 +260,8 @@ public class GlobalSearch_SearchFor extends base {
 		Thread.sleep(5000);
 		Assert.assertTrue(driver.getTitle().contains("Catalog View"));
 		String Cname =atlgs.getCatalogHeaderName().getText();
-		System.out.println("Header"+Cname);
-		Thread.sleep(5000);
 		Assert.assertTrue(catalogName.contains(Cname));
+		Assert.assertTrue(catalogName.startsWith(Cname));
 
 		driver.close();
 		driver.switchTo().window(winHandleBefore);
@@ -559,7 +552,7 @@ public class GlobalSearch_SearchFor extends base {
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		Thread.sleep(5000);
 	}
-	@Test(priority = 4)
+	@Test(priority = 7)
 	public void TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
@@ -680,13 +673,14 @@ public class GlobalSearch_SearchFor extends base {
 
 		//Select 'Atlanta Market' topic
 		String topicName = atlgs.getEventsATLMktTopics().getText();
+		String eventName = atlgs.getATLFirstEventName().getText();
 		atlgs.getEventsATLMktTopics().click();
 
 		//Click on See More details btn
 		atlgs.getATLSeeMoreDetailsBtn().click();
 
 		//Verify that Selected topic name should be displayed as Tag on Event details page
-		Assert.assertTrue(atlexhact.getEventDetailsTag().getText().contains(topicName));
+		Assert.assertTrue(atlexhact.getEventDetailsHeader().getText().contains(eventName));
 		driver.navigate().back();
 
 		//Click on Clear Filters btn

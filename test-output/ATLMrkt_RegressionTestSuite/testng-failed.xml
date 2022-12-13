@@ -1,23 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
-  <test name="RegressionTest(failed)">
+  <test name="RegressionParallelest(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters">
-        <methods>
-          <include name="initialize"/>
-          <include name="TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest"/>
-        </methods>
-      </class> <!-- atlantamarket_PROD.GlobalSearch_LeftPaneFilters -->
-=======
       <class name="atlantamarket_PROD.ExhibitorDigitalShowroom">
         <methods>
           <include name="initialize"/>
           <include name="TS009_VerifyClickOnLineSearchForExhibitorTest"/>
         </methods>
       </class> <!-- atlantamarket_PROD.ExhibitorDigitalShowroom -->
->>>>>>> 417411c80b2ec1ce24cc264eeb96ad866236debd
     </classes>
-  </test> <!-- RegressionTest(failed) -->
+  </test> <!-- RegressionParallelest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->
