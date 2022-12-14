@@ -224,10 +224,10 @@ public class GlobalSearch_SearchFor extends base {
 		utl = new Utility(driver);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		utl.ClearGlobalSearch();
-		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("searchforCatalogsInput"));
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(5000);
-		Assert.assertTrue(atlgs.getATLSearchResult().getText().contains(prop.getProperty("searchforCatalogsInput")));
+		/*Assert.assertTrue(atlgs.getATLSearchResult().getText().contains(prop.getProperty("searchforCatalogsInput")));
 		// Click on Matching Products-See All link for 1st Exhibitor
 		atlexhact.getMatchingProdSeeAllLink().click();
 		Thread.sleep(5000);
@@ -266,7 +266,42 @@ public class GlobalSearch_SearchFor extends base {
 		driver.close();
 		driver.switchTo().window(winHandleBefore);
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		Thread.sleep(5000);*/
+		
+		//Click on DG showroom filter
+		atlexhact.getleftPaneFilterDGShowroom().click();
+		Thread.sleep(3000);
+		//Click on Catalog sub filter
+		atlexhact.getleftPaneFilterDGShowroomCatalog().click();
+		Thread.sleep(3000);
+		//Store Catalog name
+		String catalogName = atlgs.getFirstCatalogName().getText();
+		System.out.println(catalogName);
+		//click on 1st Exhibitor
+		atlgs.getatl1STExhiName().click();
+		Thread.sleep(3000);
+		//Scroll to Catalog Section
+		utl.scrollToElement(atlexhdgshw.getATLCatalogSection());
+		//Click on All Catalog Btn Btn
+		atlexhdgshw.getATLCatalogSeeAllBtn().click();
+		Assert.assertTrue(atlexhdgshw.getATLVerifyLinePageTitle().getText().contains("Catalogs"));
+		Thread.sleep(2000);
+		// Store the current window handle
+		String winHandleBefore = driver.getWindowHandle();
+		//Click on Catalog
+		atlexhact.getCatalogsItem().click();
+		for (String winHandle : driver.getWindowHandles()) {
+			driver.switchTo().window(winHandle);
+		}
 		Thread.sleep(5000);
+		String Cname =atlgs.getCatalogHeaderName().getText();
+		System.out.println(Cname);
+		Assert.assertTrue(catalogName.contains(Cname));
+		driver.close();
+		driver.switchTo().window(winHandleBefore);
+		driver.get(prop.getProperty("atlmrkturl_prod"));
+		Thread.sleep(5000);
+		
 	}
 
 	@Test(priority = 5)
@@ -723,19 +758,20 @@ public class GlobalSearch_SearchFor extends base {
 		utl = new Utility(driver);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		utl.ClearGlobalSearch();
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearch")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputforShowSpecials")));
 
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(5000);
 
 		atlgs.getseeAllLinkMatchingProduct().click();
-		atlgs.getseeAllLinkMatchingProduct().click();
+		//atlgs.getseeAllLinkMatchingProduct().click();
 		Thread.sleep(5000);
 
 		atlgs.getatlShowSpecialsTab().click();
 
 		//Verify Show Specials section
 		Assert.assertTrue(atlgs.getatlVerifyShowSpecials().isDisplayed());
+		Thread.sleep(5000);
 		Assert.assertTrue(atlgs.getFourthBreadcrumbTxtInApp().getText().contains("Specials"));
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		Thread.sleep(5000);
