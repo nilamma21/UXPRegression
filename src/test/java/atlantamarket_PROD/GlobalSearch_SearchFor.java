@@ -291,6 +291,7 @@ public class GlobalSearch_SearchFor extends base {
 		
 		//Click on DG showroom filter
 		atlexhact.getleftPaneFilterDGShowroom().click();
+		Thread.sleep(3000);
 		//Click on Catalog sub filter
 		atlexhact.getleftPaneFilterDGShowroomCatalog().click();
 		Thread.sleep(3000);
