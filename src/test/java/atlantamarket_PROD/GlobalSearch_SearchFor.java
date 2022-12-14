@@ -742,10 +742,11 @@ public class GlobalSearch_SearchFor extends base {
 
 		//Click on Event Types filter
 		atlgs.getEventTypesFilter().click();
-
+		Thread.sleep(5000);
 		//Click on 'At Market' Event Type
 		String atmrkteventtype = atlgs.getAtMarketEventType().getText();
 		atlgs.getAtMarketEventType().click();
+		Thread.sleep(5000);
 
 		//Verify that Selected event type should be displayed as Tag on Event Card
 		Assert.assertTrue(atlexhact.getEventCardTag().getText().contains(atmrkteventtype));
