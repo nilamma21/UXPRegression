@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="lasvegasmarket_UAT.GlobalSearch_LineActions">
+      <class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions">
         <methods>
+          <include name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest"/>
           <include name="tearDown"/>
           <include name="initialize"/>
-          <include name="TS002_VerifyAddToFavoriteForLineTest"/>
         </methods>
-      </class> <!-- lasvegasmarket_UAT.GlobalSearch_LineActions -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_ExhibitorActions -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

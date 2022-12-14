@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="42315" started-at="2022-12-12T11:30:41Z" finished-at="2022-12-12T11:31:23Z">
+  <suite name="Default suite" duration-ms="132048" started-at="2022-12-14T08:06:39Z" finished-at="2022-12-14T08:08:51Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="42315" started-at="2022-12-12T11:30:41Z" finished-at="2022-12-12T11:31:23Z">
-      <class name="atlantamarket_UAT.ATL_LoginPage">
-        <test-method status="PASS" signature="driverInitialize()[pri:0, instance:atlantamarket_UAT.ATL_LoginPage@53b32d7]" name="driverInitialize" is-config="true" duration-ms="3523" started-at="2022-12-12T17:00:41Z" finished-at="2022-12-12T17:00:45Z">
+    <test name="Default test" duration-ms="132048" started-at="2022-12-14T08:06:39Z" finished-at="2022-12-14T08:08:51Z">
+      <class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@6fadae5d]" name="initialize" is-config="true" duration-ms="56390" started-at="2022-12-14T13:36:39Z" finished-at="2022-12-14T13:37:35Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- driverInitialize -->
-        <test-method status="PASS" signature="loginTest()[pri:0, instance:atlantamarket_UAT.ATL_LoginPage@53b32d7]" name="loginTest" duration-ms="37112" started-at="2022-12-12T17:00:45Z" finished-at="2022-12-12T17:01:22Z">
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS003_VerifyAddToExistingListForExhibitorTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@6fadae5d]" name="TS003_VerifyAddToExistingListForExhibitorTest" duration-ms="74069" started-at="2022-12-14T13:37:35Z" finished-at="2022-12-14T13:38:49Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="quitTest()[pri:0, instance:atlantamarket_UAT.ATL_LoginPage@53b32d7]" name="quitTest" is-config="true" duration-ms="1652" started-at="2022-12-12T17:01:22Z" finished-at="2022-12-12T17:01:23Z">
+        </test-method> <!-- TS003_VerifyAddToExistingListForExhibitorTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@6fadae5d]" name="tearDown" is-config="true" duration-ms="1563" started-at="2022-12-14T13:38:49Z" finished-at="2022-12-14T13:38:51Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- quitTest -->
-      </class> <!-- atlantamarket_UAT.ATL_LoginPage -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- tearDown -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_ExhibitorActions -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
