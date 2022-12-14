@@ -82,8 +82,10 @@ public class GlobalSearch_ProductActions extends base {
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(15000);
 		// Store the 1st Product name of Exhibitor
-		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
-		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
+		//String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
+		//System.out.println("Selected Product Name: " + productNameOnSearchGrid);
+		String catalogName = atlgs.getFirstCatalogName().getText();
+		System.out.println("Selected Product Name:"+catalogName);
 
 		utl.scrollToElement(atlexhact.getExhibitorProduct());
 
@@ -101,7 +103,7 @@ public class GlobalSearch_ProductActions extends base {
 		String productNameOnProductDetails = atlproddet.getProductNameOnProductDetails().getText();
 		System.out.println("Product Name On Product Details page: " + productNameOnProductDetails);
 		// Verify that selected Product details page should be opened
-		Assert.assertTrue(productNameOnSearchGrid.equals(productNameOnProductDetails));
+		Assert.assertTrue(catalogName.equals(productNameOnProductDetails));
 	}
 
 	@Test(priority = 2)
