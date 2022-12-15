@@ -247,27 +247,9 @@ public class GlobalSearch_SearchFor extends base {
 		Assert.assertTrue(atlexhact.getCatalogsItem().isDisplayed());
 
 		//Click on Catalog item
-<<<<<<< HEAD
-=======
-
->>>>>>> bce98c753d2ab5247d3f5469c1921910c7b312d6
 		String catalogName = atlexhact.getCatalogsItem().getText();
 		System.out.println(catalogName);
-
-		//String catalogName = atlexhact.getcatalogitemPROD().getText();
-		String catalogName1 = atlexhact.getAtLcatalogitemPROD().getText();
 		
-<<<<<<< HEAD
-=======
-
-		System.out.println(catalogName1);
-
-	//	System.out.println("Catalo Name :: "+catalogName);
-	//	String catalogName1 = atlexhact.getCatalogsItem().getText();
-	//	System.out.println(catalogName1);
-
-
->>>>>>> bce98c753d2ab5247d3f5469c1921910c7b312d6
 		atlexhact.getCatalogsItem().click();
 		Thread.sleep(2000);
 		// Store the current window handle
@@ -278,19 +260,8 @@ public class GlobalSearch_SearchFor extends base {
 		Thread.sleep(5000);
 		Assert.assertTrue(driver.getTitle().contains("Catalog View"));
 		String Cname =atlgs.getCatalogHeaderName().getText();
-<<<<<<< HEAD
 		Assert.assertTrue(catalogName.contains(Cname));
 		Assert.assertTrue(catalogName.startsWith(Cname));
-=======
-
-		Assert.assertTrue(catalogName.contains(Cname));
-		Assert.assertTrue(catalogName.startsWith(Cname));
-
-		System.out.println("Header"+Cname);
-		Thread.sleep(5000);
-		Assert.assertTrue(Cname.startsWith(catalogName));
-
->>>>>>> bce98c753d2ab5247d3f5469c1921910c7b312d6
 
 		driver.close();
 		driver.switchTo().window(winHandleBefore);
@@ -299,6 +270,7 @@ public class GlobalSearch_SearchFor extends base {
 		
 		//Click on DG showroom filter
 		atlexhact.getleftPaneFilterDGShowroom().click();
+		Thread.sleep(3000);
 		//Click on Catalog sub filter
 		atlexhact.getleftPaneFilterDGShowroomCatalog().click();
 		Thread.sleep(3000);
@@ -323,6 +295,7 @@ public class GlobalSearch_SearchFor extends base {
 		}
 		Thread.sleep(5000);
 		String Cname =atlgs.getCatalogHeaderName().getText();
+		System.out.println(Cname);
 		Assert.assertTrue(catalogName.contains(Cname));
 		driver.close();
 		driver.switchTo().window(winHandleBefore);
@@ -740,7 +713,7 @@ public class GlobalSearch_SearchFor extends base {
 
 		//Click on See More details btn
 		atlgs.getATLSeeMoreDetailsBtn().click();
-		Thread.sleep(5000);
+
 		//Verify that Selected topic name should be displayed as Tag on Event details page
 		Assert.assertTrue(atlexhact.getEventDetailsHeader().getText().contains(eventName));
 		driver.navigate().back();
