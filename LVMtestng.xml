@@ -16,7 +16,7 @@
 				<!-- <include name="TS010_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest" /> --> 
 				
 				<!-- <include name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest" /> -->
-				<include name="TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest" /> 
+				<!-- <include name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest" />  -->
 				
 				
 			</methods>
