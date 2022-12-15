@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
@@ -22,4 +23,65 @@
       </class> <!-- atlantamarket_PROD.GlobalSearch_ExhibitorActions -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
+=======
+<testng-results skipped="0" failed="0" total="11" passed="11">
+  <reporter-output>
+  </reporter-output>
+  <suite name="LVM_RegressionTestSuite" duration-ms="726368" started-at="2022-12-14T05:08:18Z" finished-at="2022-12-14T05:20:24Z">
+    <groups>
+    </groups>
+    <test name="RegressionTest" duration-ms="726368" started-at="2022-12-14T05:08:18Z" finished-at="2022-12-14T05:20:24Z">
+      <class name="atlantamarket_PROD.GlobalSearch_SearchFor">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="initialize" is-config="true" duration-ms="20607" started-at="2022-12-14T10:38:18Z" finished-at="2022-12-14T10:38:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS001_VerifyInformationTabInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="TS001_VerifyInformationTabInGlobalSearchTest" duration-ms="43762" started-at="2022-12-14T10:38:39Z" finished-at="2022-12-14T10:39:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifyInformationTabInGlobalSearchTest -->
+        <test-method status="PASS" signature="TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest" duration-ms="33925" started-at="2022-12-14T10:39:22Z" finished-at="2022-12-14T10:39:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest -->
+        <test-method status="PASS" signature="TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest" duration-ms="86275" started-at="2022-12-14T10:39:56Z" finished-at="2022-12-14T10:41:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest -->
+        <test-method status="PASS" signature="TS004_VerifyCatalogsOverviewInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="TS004_VerifyCatalogsOverviewInGlobalSearchTest" duration-ms="35675" started-at="2022-12-14T10:41:23Z" finished-at="2022-12-14T10:41:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyCatalogsOverviewInGlobalSearchTest -->
+        <test-method status="PASS" signature="TS005_VerifyArticlesOverviewInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="TS005_VerifyArticlesOverviewInGlobalSearchTest" duration-ms="52574" started-at="2022-12-14T10:41:58Z" finished-at="2022-12-14T10:42:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifyArticlesOverviewInGlobalSearchTest -->
+        <test-method status="PASS" signature="TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest" duration-ms="167517" started-at="2022-12-14T10:42:51Z" finished-at="2022-12-14T10:45:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest -->
+        <test-method status="PASS" signature="TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest" duration-ms="49948" started-at="2022-12-14T10:45:38Z" finished-at="2022-12-14T10:46:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest -->
+        <test-method status="PASS" signature="TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest" duration-ms="74187" started-at="2022-12-14T10:46:28Z" finished-at="2022-12-14T10:47:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest -->
+        <test-method status="PASS" signature="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest" duration-ms="70774" started-at="2022-12-14T10:47:42Z" finished-at="2022-12-14T10:48:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest -->
+        <test-method status="PASS" signature="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest" duration-ms="29983" started-at="2022-12-14T10:48:53Z" finished-at="2022-12-14T10:49:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS010_VerifyShowSpecialsOverviewInGlobalSearchTest -->
+        <test-method status="PASS" signature="TS011_VerifyEventsOverviewInGlobalSearchTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7]" name="TS011_VerifyEventsOverviewInGlobalSearchTest" duration-ms="61092" started-at="2022-12-14T10:49:23Z" finished-at="2022-12-14T10:50:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS011_VerifyEventsOverviewInGlobalSearchTest -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
+    </test> <!-- RegressionTest -->
+  </suite> <!-- LVM_RegressionTestSuite -->
+>>>>>>> 5344a1973f8b63119b54f0c8ab4279aa23ad7a93
 </testng-results>

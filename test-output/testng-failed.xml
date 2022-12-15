@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<<<<<<< HEAD
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
@@ -13,3 +14,17 @@
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
+=======
+<suite name="Failed suite [LVM_RegressionTestSuite]">
+  <test name="RegressionTest(failed)">
+    <classes>
+      <class name="atlantamarket_PROD.GlobalSearch_SearchFor">
+        <methods>
+          <include name="TS004_VerifyCatalogsOverviewInGlobalSearchTest"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
+    </classes>
+  </test> <!-- RegressionTest(failed) -->
+</suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
+>>>>>>> 5344a1973f8b63119b54f0c8ab4279aa23ad7a93
