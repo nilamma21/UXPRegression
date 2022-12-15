@@ -74,7 +74,7 @@ public class ATLExhLineProdActionsPage extends base{
 	By thirdexhname = By.xpath("//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][3]/div/div/div/div/a/h2"); //Locator for third Exhibitor name in Search grid
 	By leftPaneFilterDGShowroom = By.xpath("//h4[contains(text(),'Digital Showroom')]"); //Locator for DG showroom Filter
 	By leftPaneFilterDGShowroomCatalog = By.xpath("//h4[contains(text(),'Digital Showroom')]/../../.././../../div[2]/div[1]/div[1]/div[2]"); //Locator for DG showroom Filter Catalog
-
+	By AtLcatalogitemPROD = By.xpath("(//div[@class='imc-catalog__item_title multiSelectItem'])[1]/div[1]/span[1]/span[1]"); //Locator for Catalog item
 	By prodName = By.xpath("//a[@class='imc-type--title-5-ui']"); //Locator for DG showroom Filter Catalog
 	By prodNameFromDGshhowroomPage = By.xpath("//div[@class = 'imc-content--display-flex-wrap']/span[text()='Products']/../../div[2]/div[1]/div[1]/div[1]/a"); //Locator for DG showroom Prod Name
 	
@@ -92,7 +92,7 @@ public class ATLExhLineProdActionsPage extends base{
 		wait.until(ExpectedConditions.visibilityOfElementLocated(prodName));
 		return driver.findElement(prodName);
 
-	By AtLcatalogitemPROD = By.xpath("(//div[@class='imc-catalog__item_title multiSelectItem'])[1]/div[1]/span[1]/span[1]"); //Locator for Catalog item
+	
 
 
 	public ATLExhLineProdActionsPage(WebDriver driver) {
