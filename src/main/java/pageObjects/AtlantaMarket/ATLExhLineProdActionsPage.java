@@ -93,13 +93,6 @@ public class ATLExhLineProdActionsPage extends base{
 		return driver.findElement(prodName);
 
 	}
-
-
-	public ATLExhLineProdActionsPage(WebDriver driver) {
-		// TODO Auto-generated constructor stub
-		this.driver = driver; 			
-
-	}
 	public WebElement getleftPaneFilterDGShowroomCatalog() {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(leftPaneFilterDGShowroomCatalog));
