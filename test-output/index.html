@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-LVM_RegressionTestSuite">
-              <span class="suite-name border-passed">LVM_RegressionTestSuite</span>
+              <span class="suite-name border-failed">LVM_RegressionTestSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,7 +90,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">11 methods,   11 passed</span>
+                    <span class="method-stats">9 methods, 3 failed,   6 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-LVM_RegressionTestSuite" class="hide-methods failed suite-LVM_RegressionTestSuite"> (hide)</a> <!-- hide-methods failed suite-LVM_RegressionTestSuite -->
+                      <a href="#" panel-name="suite-LVM_RegressionTestSuite" class="show-methods failed suite-LVM_RegressionTestSuite"> (show)</a> <!-- show-methods failed suite-LVM_RegressionTestSuite -->
+                    </span>
+                    <div class="method-list-content failed suite-LVM_RegressionTestSuite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="atlantamarket_PROD.GlobalSearch_ProductActions" hash-for-method="TS002_VerifyProductAddToNewListOnProductDetailsPageTest">TS002_VerifyProductAddToNewListOnProductDetailsPageTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="atlantamarket_PROD.GlobalSearch_ProductActions" hash-for-method="TS004_VerifyAddToFavoriteOnProductDetailsPageTest">TS004_VerifyAddToFavoriteOnProductDetailsPageTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="atlantamarket_PROD.GlobalSearch_ProductActions" hash-for-method="TS008_VerifyAddToFavoriteOnSearchResultsGridTest">TS008_VerifyAddToFavoriteOnSearchResultsGridTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-LVM_RegressionTestSuite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,57 +125,32 @@
                     <div class="method-list-content passed suite-LVM_RegressionTestSuite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="atlantamarket_PROD.GlobalSearch_SearchFor" hash-for-method="TS001_VerifyInformationTabInGlobalSearchTest">TS001_VerifyInformationTabInGlobalSearchTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="atlantamarket_PROD.GlobalSearch_ProductActions" hash-for-method="TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest">TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="atlantamarket_PROD.GlobalSearch_SearchFor" hash-for-method="TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest">TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="atlantamarket_PROD.GlobalSearch_ProductActions" hash-for-method="TS003_VerifyProductAddToExistingListOnProductDetailsPageTest">TS003_VerifyProductAddToExistingListOnProductDetailsPageTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="atlantamarket_PROD.GlobalSearch_SearchFor" hash-for-method="TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest">TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="atlantamarket_PROD.GlobalSearch_ProductActions" hash-for-method="TS005_VerifyAddNoteOnProductDetailsPageTest">TS005_VerifyAddNoteOnProductDetailsPageTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="atlantamarket_PROD.GlobalSearch_SearchFor" hash-for-method="TS004_VerifyCatalogsOverviewInGlobalSearchTest">TS004_VerifyCatalogsOverviewInGlobalSearchTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="atlantamarket_PROD.GlobalSearch_ProductActions" hash-for-method="TS006_VerifyProductAddToExistingListOnSearchResultsGridTest">TS006_VerifyProductAddToExistingListOnSearchResultsGridTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="atlantamarket_PROD.GlobalSearch_SearchFor" hash-for-method="TS005_VerifyArticlesOverviewInGlobalSearchTest">TS005_VerifyArticlesOverviewInGlobalSearchTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="atlantamarket_PROD.GlobalSearch_ProductActions" hash-for-method="TS007_VerifyFullScreenViewerOnProductDetailsPageTest">TS007_VerifyFullScreenViewerOnProductDetailsPageTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="atlantamarket_PROD.GlobalSearch_SearchFor" hash-for-method="TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest">TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="atlantamarket_PROD.GlobalSearch_SearchFor" hash-for-method="TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest">TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="atlantamarket_PROD.GlobalSearch_SearchFor" hash-for-method="TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest">TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="atlantamarket_PROD.GlobalSearch_SearchFor" hash-for-method="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest">TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="atlantamarket_PROD.GlobalSearch_SearchFor" hash-for-method="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest">TS010_VerifyShowSpecialsOverviewInGlobalSearchTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="atlantamarket_PROD.GlobalSearch_SearchFor" hash-for-method="TS011_VerifyEventsOverviewInGlobalSearchTest">TS011_VerifyEventsOverviewInGlobalSearchTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="atlantamarket_PROD.GlobalSearch_ProductActions" hash-for-method="TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest">TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-LVM_RegressionTestSuite -->
@@ -166,87 +165,339 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-LVM_RegressionTestSuite" class="panel LVM_RegressionTestSuite">
-          <div class="suite-LVM_RegressionTestSuite-class-passed">
+          <div class="suite-LVM_RegressionTestSuite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">atlantamarket_PROD.GlobalSearch_SearchFor</span>
+              <img src="failed.png"/>
+              <span class="class-name">atlantamarket_PROD.GlobalSearch_ProductActions</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TS001_VerifyInformationTabInGlobalSearchTest">
-                  </a> <!-- TS001_VerifyInformationTabInGlobalSearchTest -->
-                  <span class="method-name">TS001_VerifyInformationTabInGlobalSearchTest</span>
+                  <a name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest">
+                  </a> <!-- TS002_VerifyProductAddToNewListOnProductDetailsPageTest -->
+                  <span class="method-name">TS002_VerifyProductAddToNewListOnProductDetailsPageTest</span>
+                  <div class="stack-trace"><b>"org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getSavedProductNameInList(ATLMarketPlannerPage.java:540)
+	at atlantamarket_PROD.GlobalSearch_ProductActions.TS002_VerifyProductAddToNewListOnProductDetailsPageTest(GlobalSearch_ProductActions.java:185)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a&quot;}
+  (Session info: chrome=108.0.5359.96)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
+System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.96, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55548}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 12deea613a993c98c720ae4d64eb38a0
+*** Element info: {Using=xpath, value=//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 26 more
+... Removed 28 stack frames<br/> org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getSavedProductNameInList(ATLMarketPlannerPage.java:540)
+	at atlantamarket_PROD.GlobalSearch_ProductActions.TS002_VerifyProductAddToNewListOnProductDetailsPageTest(GlobalSearch_ProductActions.java:185)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a&quot;}
+  (Session info: chrome=108.0.5359.96)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
+System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.96, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55548}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 12deea613a993c98c720ae4d64eb38a0
+*** Element info: {Using=xpath, value=//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 26 more
+"</b><br>org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)<br>org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)<br>pageObjects.AtlantaMarket.ATLMarketPlannerPage.getSavedProductNameInList(ATLMarketPlannerPage.java:540)<br>atlantamarket_PROD.GlobalSearch_ProductActions.TS002_VerifyProductAddToNewListOnProductDetailsPageTest(GlobalSearch_ProductActions.java:185)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br>java.lang.reflect.Method.invoke(Unknown Source)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br>
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest">
-                  </a> <!-- TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest -->
-                  <span class="method-name">TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest</span>
+                  <a name="TS004_VerifyAddToFavoriteOnProductDetailsPageTest">
+                  </a> <!-- TS004_VerifyAddToFavoriteOnProductDetailsPageTest -->
+                  <span class="method-name">TS004_VerifyAddToFavoriteOnProductDetailsPageTest</span>
+                  <div class="stack-trace"><b>"org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getSavedProductNameInList(ATLMarketPlannerPage.java:540)
+	at atlantamarket_PROD.GlobalSearch_ProductActions.TS004_VerifyAddToFavoriteOnProductDetailsPageTest(GlobalSearch_ProductActions.java:338)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a&quot;}
+  (Session info: chrome=108.0.5359.96)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
+System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.96, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55548}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 12deea613a993c98c720ae4d64eb38a0
+*** Element info: {Using=xpath, value=//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 26 more
+... Removed 28 stack frames<br/> org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getSavedProductNameInList(ATLMarketPlannerPage.java:540)
+	at atlantamarket_PROD.GlobalSearch_ProductActions.TS004_VerifyAddToFavoriteOnProductDetailsPageTest(GlobalSearch_ProductActions.java:338)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a&quot;}
+  (Session info: chrome=108.0.5359.96)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
+System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.96, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55548}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 12deea613a993c98c720ae4d64eb38a0
+*** Element info: {Using=xpath, value=//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 26 more
+"</b><br>org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)<br>org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)<br>pageObjects.AtlantaMarket.ATLMarketPlannerPage.getSavedProductNameInList(ATLMarketPlannerPage.java:540)<br>atlantamarket_PROD.GlobalSearch_ProductActions.TS004_VerifyAddToFavoriteOnProductDetailsPageTest(GlobalSearch_ProductActions.java:338)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br>java.lang.reflect.Method.invoke(Unknown Source)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br>
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest">
-                  </a> <!-- TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest -->
-                  <span class="method-name">TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest</span>
+                  <a name="TS008_VerifyAddToFavoriteOnSearchResultsGridTest">
+                  </a> <!-- TS008_VerifyAddToFavoriteOnSearchResultsGridTest -->
+                  <span class="method-name">TS008_VerifyAddToFavoriteOnSearchResultsGridTest</span>
+                  <div class="stack-trace"><b>"org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getSavedProductNameInList(ATLMarketPlannerPage.java:540)
+	at atlantamarket_PROD.GlobalSearch_ProductActions.TS008_VerifyAddToFavoriteOnSearchResultsGridTest(GlobalSearch_ProductActions.java:638)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a&quot;}
+  (Session info: chrome=108.0.5359.96)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
+System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.96, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55548}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 12deea613a993c98c720ae4d64eb38a0
+*** Element info: {Using=xpath, value=//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 26 more
+... Removed 28 stack frames<br/> org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getSavedProductNameInList(ATLMarketPlannerPage.java:540)
+	at atlantamarket_PROD.GlobalSearch_ProductActions.TS008_VerifyAddToFavoriteOnSearchResultsGridTest(GlobalSearch_ProductActions.java:638)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a&quot;}
+  (Session info: chrome=108.0.5359.96)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
+System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.96, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55548}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 12deea613a993c98c720ae4d64eb38a0
+*** Element info: {Using=xpath, value=//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 26 more
+"</b><br>org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)<br>org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)<br>pageObjects.AtlantaMarket.ATLMarketPlannerPage.getSavedProductNameInList(ATLMarketPlannerPage.java:540)<br>atlantamarket_PROD.GlobalSearch_ProductActions.TS008_VerifyAddToFavoriteOnSearchResultsGridTest(GlobalSearch_ProductActions.java:638)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br>java.lang.reflect.Method.invoke(Unknown Source)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br>
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-LVM_RegressionTestSuite-class-failed -->
+          <div class="suite-LVM_RegressionTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">atlantamarket_PROD.GlobalSearch_ProductActions</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest">
+                  </a> <!-- TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest -->
+                  <span class="method-name">TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TS004_VerifyCatalogsOverviewInGlobalSearchTest">
-                  </a> <!-- TS004_VerifyCatalogsOverviewInGlobalSearchTest -->
-                  <span class="method-name">TS004_VerifyCatalogsOverviewInGlobalSearchTest</span>
+                  <a name="TS003_VerifyProductAddToExistingListOnProductDetailsPageTest">
+                  </a> <!-- TS003_VerifyProductAddToExistingListOnProductDetailsPageTest -->
+                  <span class="method-name">TS003_VerifyProductAddToExistingListOnProductDetailsPageTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TS005_VerifyArticlesOverviewInGlobalSearchTest">
-                  </a> <!-- TS005_VerifyArticlesOverviewInGlobalSearchTest -->
-                  <span class="method-name">TS005_VerifyArticlesOverviewInGlobalSearchTest</span>
+                  <a name="TS005_VerifyAddNoteOnProductDetailsPageTest">
+                  </a> <!-- TS005_VerifyAddNoteOnProductDetailsPageTest -->
+                  <span class="method-name">TS005_VerifyAddNoteOnProductDetailsPageTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest">
-                  </a> <!-- TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest -->
-                  <span class="method-name">TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest</span>
+                  <a name="TS006_VerifyProductAddToExistingListOnSearchResultsGridTest">
+                  </a> <!-- TS006_VerifyProductAddToExistingListOnSearchResultsGridTest -->
+                  <span class="method-name">TS006_VerifyProductAddToExistingListOnSearchResultsGridTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest">
-                  </a> <!-- TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest -->
-                  <span class="method-name">TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest</span>
+                  <a name="TS007_VerifyFullScreenViewerOnProductDetailsPageTest">
+                  </a> <!-- TS007_VerifyFullScreenViewerOnProductDetailsPageTest -->
+                  <span class="method-name">TS007_VerifyFullScreenViewerOnProductDetailsPageTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest">
-                  </a> <!-- TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest -->
-                  <span class="method-name">TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest">
-                  </a> <!-- TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest -->
-                  <span class="method-name">TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest">
-                  </a> <!-- TS010_VerifyShowSpecialsOverviewInGlobalSearchTest -->
-                  <span class="method-name">TS010_VerifyShowSpecialsOverviewInGlobalSearchTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TS011_VerifyEventsOverviewInGlobalSearchTest">
-                  </a> <!-- TS011_VerifyEventsOverviewInGlobalSearchTest -->
-                  <span class="method-name">TS011_VerifyEventsOverviewInGlobalSearchTest</span>
+                  <a name="TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest">
+                  </a> <!-- TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest -->
+                  <span class="method-name">TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -263,7 +514,7 @@
 &lt;suite name=&quot;LVM_RegressionTestSuite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;RegressionTest&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;atlantamarket_PROD.GlobalSearch_SearchFor&quot;/&gt;
+      &lt;class name=&quot;atlantamarket_PROD.GlobalSearch_ProductActions&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- RegressionTest --&gt;
 &lt;/suite&gt; &lt;!-- LVM_RegressionTestSuite --&gt;
@@ -303,51 +554,43 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(11);
+data.addRows(9);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest')
-data.setCell(0, 2, 'atlantamarket_PROD.GlobalSearch_SearchFor')
-data.setCell(0, 3, 167517);
+data.setCell(0, 1, 'TS003_VerifyProductAddToExistingListOnProductDetailsPageTest')
+data.setCell(0, 2, 'atlantamarket_PROD.GlobalSearch_ProductActions')
+data.setCell(0, 3, 115768);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest')
-data.setCell(1, 2, 'atlantamarket_PROD.GlobalSearch_SearchFor')
-data.setCell(1, 3, 86275);
+data.setCell(1, 1, 'TS006_VerifyProductAddToExistingListOnSearchResultsGridTest')
+data.setCell(1, 2, 'atlantamarket_PROD.GlobalSearch_ProductActions')
+data.setCell(1, 3, 107107);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest')
-data.setCell(2, 2, 'atlantamarket_PROD.GlobalSearch_SearchFor')
-data.setCell(2, 3, 74187);
+data.setCell(2, 1, 'TS002_VerifyProductAddToNewListOnProductDetailsPageTest')
+data.setCell(2, 2, 'atlantamarket_PROD.GlobalSearch_ProductActions')
+data.setCell(2, 3, 101489);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest')
-data.setCell(3, 2, 'atlantamarket_PROD.GlobalSearch_SearchFor')
-data.setCell(3, 3, 70774);
+data.setCell(3, 1, 'TS008_VerifyAddToFavoriteOnSearchResultsGridTest')
+data.setCell(3, 2, 'atlantamarket_PROD.GlobalSearch_ProductActions')
+data.setCell(3, 3, 82210);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'TS011_VerifyEventsOverviewInGlobalSearchTest')
-data.setCell(4, 2, 'atlantamarket_PROD.GlobalSearch_SearchFor')
-data.setCell(4, 3, 61092);
+data.setCell(4, 1, 'TS004_VerifyAddToFavoriteOnProductDetailsPageTest')
+data.setCell(4, 2, 'atlantamarket_PROD.GlobalSearch_ProductActions')
+data.setCell(4, 3, 78656);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'TS005_VerifyArticlesOverviewInGlobalSearchTest')
-data.setCell(5, 2, 'atlantamarket_PROD.GlobalSearch_SearchFor')
-data.setCell(5, 3, 52574);
+data.setCell(5, 1, 'TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest')
+data.setCell(5, 2, 'atlantamarket_PROD.GlobalSearch_ProductActions')
+data.setCell(5, 3, 67562);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest')
-data.setCell(6, 2, 'atlantamarket_PROD.GlobalSearch_SearchFor')
-data.setCell(6, 3, 49948);
+data.setCell(6, 1, 'TS005_VerifyAddNoteOnProductDetailsPageTest')
+data.setCell(6, 2, 'atlantamarket_PROD.GlobalSearch_ProductActions')
+data.setCell(6, 3, 49567);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'TS001_VerifyInformationTabInGlobalSearchTest')
-data.setCell(7, 2, 'atlantamarket_PROD.GlobalSearch_SearchFor')
-data.setCell(7, 3, 43762);
+data.setCell(7, 1, 'TS007_VerifyFullScreenViewerOnProductDetailsPageTest')
+data.setCell(7, 2, 'atlantamarket_PROD.GlobalSearch_ProductActions')
+data.setCell(7, 3, 45638);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'TS004_VerifyCatalogsOverviewInGlobalSearchTest')
-data.setCell(8, 2, 'atlantamarket_PROD.GlobalSearch_SearchFor')
-data.setCell(8, 3, 35675);
-data.setCell(9, 0, 9)
-data.setCell(9, 1, 'TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest')
-data.setCell(9, 2, 'atlantamarket_PROD.GlobalSearch_SearchFor')
-data.setCell(9, 3, 33925);
-data.setCell(10, 0, 10)
-data.setCell(10, 1, 'TS010_VerifyShowSpecialsOverviewInGlobalSearchTest')
-data.setCell(10, 2, 'atlantamarket_PROD.GlobalSearch_SearchFor')
-data.setCell(10, 3, 29983);
+data.setCell(8, 1, 'TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest')
+data.setCell(8, 2, 'atlantamarket_PROD.GlobalSearch_ProductActions')
+data.setCell(8, 3, 30221);
 window.suiteTableData['LVM_RegressionTestSuite']= { tableData: data, tableDiv: 'times-div-LVM_RegressionTestSuite'}
 return data;
 }
@@ -378,55 +621,57 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">atlantamarket_PROD.GlobalSearch_SearchFor</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">atlantamarket_PROD.GlobalSearch_ProductActions</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">initialize</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">TS001_VerifyInformationTabInGlobalSearchTest</span>
-                <span class="method-start">20613 ms</span>
+                <span class="method-name">TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest</span>
+                <span class="method-start">54750 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest</span>
-                <span class="method-start">64383 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TS002_VerifyProductAddToNewListOnProductDetailsPageTest</span>
+                <span class="method-start">84977 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest</span>
-                <span class="method-start">98313 ms</span>
+                <span class="method-name">TS003_VerifyProductAddToExistingListOnProductDetailsPageTest</span>
+                <span class="method-start">186622 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">TS004_VerifyCatalogsOverviewInGlobalSearchTest</span>
-                <span class="method-start">184589 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TS004_VerifyAddToFavoriteOnProductDetailsPageTest</span>
+                <span class="method-start">302391 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">TS005_VerifyArticlesOverviewInGlobalSearchTest</span>
-                <span class="method-start">220267 ms</span>
+                <span class="method-name">TS005_VerifyAddNoteOnProductDetailsPageTest</span>
+                <span class="method-start">381176 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest</span>
-                <span class="method-start">272842 ms</span>
+                <span class="method-name">TS006_VerifyProductAddToExistingListOnSearchResultsGridTest</span>
+                <span class="method-start">430744 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest</span>
-                <span class="method-start">440363 ms</span>
+                <span class="method-name">TS007_VerifyFullScreenViewerOnProductDetailsPageTest</span>
+                <span class="method-start">537852 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest</span>
-                <span class="method-start">490312 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TS008_VerifyAddToFavoriteOnSearchResultsGridTest</span>
+                <span class="method-start">583493 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest</span>
-                <span class="method-start">564502 ms</span>
+                <span class="method-name">TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest</span>
+                <span class="method-start">665850 ms</span>
               </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TS010_VerifyShowSpecialsOverviewInGlobalSearchTest</span>
-                <span class="method-start">635279 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TS011_VerifyEventsOverviewInGlobalSearchTest</span>
-                <span class="method-start">665264 ms</span>
-              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">733413 ms</span>
+              </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
