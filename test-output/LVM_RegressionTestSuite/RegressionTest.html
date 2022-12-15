@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>RegressionTest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>11/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>6/3/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Dec 14 10:38:18 IST 2022</td>
+<td>Started on:</td><td>Thu Dec 15 09:44:27 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>726 seconds (726368 ms)</td>
+<tr><td>Total time:</td><td>733 seconds (733430 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,284 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='atlantamarket_PROD.GlobalSearch_ProductActions.TS002_VerifyProductAddToNewListOnProductDetailsPageTest()'><b>TS002_VerifyProductAddToNewListOnProductDetailsPageTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_ProductActions</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getSavedProductNameInList(ATLMarketPlannerPage.java:540)
+	at atlantamarket_PROD.GlobalSearch_ProductActions.TS002_VerifyProductAddToNewListOnProductDetailsPageTest(GlobalSearch_ProductActions.java:185)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a&quot;}
+  (Session info: chrome=108.0.5359.96)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
+System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.96, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55548}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 12deea613a993c98c720ae4d64eb38a0
+*** Element info: {Using=xpath, value=//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 26 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1641027464", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1641027464'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getSavedProductNameInList(ATLMarketPlannerPage.java:540)
+	at atlantamarket_PROD.GlobalSearch_ProductActions.TS002_VerifyProductAddToNewListOnProductDetailsPageTest(GlobalSearch_ProductActions.java:185)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a&quot;}
+  (Session info: chrome=108.0.5359.96)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
+System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.96, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55548}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 12deea613a993c98c720ae4d64eb38a0
+*** Element info: {Using=xpath, value=//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 26 more
+</pre></div></td>
+<td>101</td>
+<td>atlantamarket_PROD.GlobalSearch_ProductActions@239963d8</td></tr>
+<tr>
+<td title='atlantamarket_PROD.GlobalSearch_ProductActions.TS004_VerifyAddToFavoriteOnProductDetailsPageTest()'><b>TS004_VerifyAddToFavoriteOnProductDetailsPageTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_ProductActions</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getSavedProductNameInList(ATLMarketPlannerPage.java:540)
+	at atlantamarket_PROD.GlobalSearch_ProductActions.TS004_VerifyAddToFavoriteOnProductDetailsPageTest(GlobalSearch_ProductActions.java:338)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a&quot;}
+  (Session info: chrome=108.0.5359.96)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
+System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.96, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55548}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 12deea613a993c98c720ae4d64eb38a0
+*** Element info: {Using=xpath, value=//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 26 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace99295602", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace99295602'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getSavedProductNameInList(ATLMarketPlannerPage.java:540)
+	at atlantamarket_PROD.GlobalSearch_ProductActions.TS004_VerifyAddToFavoriteOnProductDetailsPageTest(GlobalSearch_ProductActions.java:338)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a&quot;}
+  (Session info: chrome=108.0.5359.96)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
+System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.96, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55548}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 12deea613a993c98c720ae4d64eb38a0
+*** Element info: {Using=xpath, value=//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 26 more
+</pre></div></td>
+<td>78</td>
+<td>atlantamarket_PROD.GlobalSearch_ProductActions@239963d8</td></tr>
+<tr>
+<td title='atlantamarket_PROD.GlobalSearch_ProductActions.TS008_VerifyAddToFavoriteOnSearchResultsGridTest()'><b>TS008_VerifyAddToFavoriteOnSearchResultsGridTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_ProductActions</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getSavedProductNameInList(ATLMarketPlannerPage.java:540)
+	at atlantamarket_PROD.GlobalSearch_ProductActions.TS008_VerifyAddToFavoriteOnSearchResultsGridTest(GlobalSearch_ProductActions.java:638)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a&quot;}
+  (Session info: chrome=108.0.5359.96)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
+System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.96, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55548}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 12deea613a993c98c720ae4d64eb38a0
+*** Element info: {Using=xpath, value=//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 26 more
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace190967225", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace190967225'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getSavedProductNameInList(ATLMarketPlannerPage.java:540)
+	at atlantamarket_PROD.GlobalSearch_ProductActions.TS008_VerifyAddToFavoriteOnSearchResultsGridTest(GlobalSearch_ProductActions.java:638)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a&quot;}
+  (Session info: chrome=108.0.5359.96)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
+System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.96, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55548}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 12deea613a993c98c720ae4d64eb38a0
+*** Element info: {Using=xpath, value=//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 26 more
+</pre></div></td>
+<td>82</td>
+<td>atlantamarket_PROD.GlobalSearch_ProductActions@239963d8</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,60 +353,35 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='atlantamarket_PROD.GlobalSearch_SearchFor.TS001_VerifyInformationTabInGlobalSearchTest()'><b>TS001_VerifyInformationTabInGlobalSearchTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_SearchFor</td>
+<td title='atlantamarket_PROD.GlobalSearch_ProductActions.TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest()'><b>TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_ProductActions</td>
 <td></td>
-<td>43</td>
-<td>atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7</td></tr>
+<td>30</td>
+<td>atlantamarket_PROD.GlobalSearch_ProductActions@239963d8</td></tr>
 <tr>
-<td title='atlantamarket_PROD.GlobalSearch_SearchFor.TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest()'><b>TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_SearchFor</td>
+<td title='atlantamarket_PROD.GlobalSearch_ProductActions.TS003_VerifyProductAddToExistingListOnProductDetailsPageTest()'><b>TS003_VerifyProductAddToExistingListOnProductDetailsPageTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_ProductActions</td>
 <td></td>
-<td>33</td>
-<td>atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7</td></tr>
+<td>115</td>
+<td>atlantamarket_PROD.GlobalSearch_ProductActions@239963d8</td></tr>
 <tr>
-<td title='atlantamarket_PROD.GlobalSearch_SearchFor.TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest()'><b>TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_SearchFor</td>
-<td></td>
-<td>86</td>
-<td>atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7</td></tr>
-<tr>
-<td title='atlantamarket_PROD.GlobalSearch_SearchFor.TS004_VerifyCatalogsOverviewInGlobalSearchTest()'><b>TS004_VerifyCatalogsOverviewInGlobalSearchTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_SearchFor</td>
-<td></td>
-<td>35</td>
-<td>atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7</td></tr>
-<tr>
-<td title='atlantamarket_PROD.GlobalSearch_SearchFor.TS005_VerifyArticlesOverviewInGlobalSearchTest()'><b>TS005_VerifyArticlesOverviewInGlobalSearchTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_SearchFor</td>
-<td></td>
-<td>52</td>
-<td>atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7</td></tr>
-<tr>
-<td title='atlantamarket_PROD.GlobalSearch_SearchFor.TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest()'><b>TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_SearchFor</td>
-<td></td>
-<td>167</td>
-<td>atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7</td></tr>
-<tr>
-<td title='atlantamarket_PROD.GlobalSearch_SearchFor.TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest()'><b>TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_SearchFor</td>
+<td title='atlantamarket_PROD.GlobalSearch_ProductActions.TS005_VerifyAddNoteOnProductDetailsPageTest()'><b>TS005_VerifyAddNoteOnProductDetailsPageTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_ProductActions</td>
 <td></td>
 <td>49</td>
-<td>atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7</td></tr>
+<td>atlantamarket_PROD.GlobalSearch_ProductActions@239963d8</td></tr>
 <tr>
-<td title='atlantamarket_PROD.GlobalSearch_SearchFor.TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest()'><b>TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_SearchFor</td>
+<td title='atlantamarket_PROD.GlobalSearch_ProductActions.TS006_VerifyProductAddToExistingListOnSearchResultsGridTest()'><b>TS006_VerifyProductAddToExistingListOnSearchResultsGridTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_ProductActions</td>
 <td></td>
-<td>74</td>
-<td>atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7</td></tr>
+<td>107</td>
+<td>atlantamarket_PROD.GlobalSearch_ProductActions@239963d8</td></tr>
 <tr>
-<td title='atlantamarket_PROD.GlobalSearch_SearchFor.TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest()'><b>TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_SearchFor</td>
+<td title='atlantamarket_PROD.GlobalSearch_ProductActions.TS007_VerifyFullScreenViewerOnProductDetailsPageTest()'><b>TS007_VerifyFullScreenViewerOnProductDetailsPageTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_ProductActions</td>
 <td></td>
-<td>70</td>
-<td>atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7</td></tr>
+<td>45</td>
+<td>atlantamarket_PROD.GlobalSearch_ProductActions@239963d8</td></tr>
 <tr>
-<td title='atlantamarket_PROD.GlobalSearch_SearchFor.TS010_VerifyShowSpecialsOverviewInGlobalSearchTest()'><b>TS010_VerifyShowSpecialsOverviewInGlobalSearchTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_SearchFor</td>
+<td title='atlantamarket_PROD.GlobalSearch_ProductActions.TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest()'><b>TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_ProductActions</td>
 <td></td>
-<td>29</td>
-<td>atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7</td></tr>
-<tr>
-<td title='atlantamarket_PROD.GlobalSearch_SearchFor.TS011_VerifyEventsOverviewInGlobalSearchTest()'><b>TS011_VerifyEventsOverviewInGlobalSearchTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_SearchFor</td>
-<td></td>
-<td>61</td>
-<td>atlantamarket_PROD.GlobalSearch_SearchFor@57fffcd7</td></tr>
+<td>67</td>
+<td>atlantamarket_PROD.GlobalSearch_ProductActions@239963d8</td></tr>
 </table><p>
 </body>
 </html>

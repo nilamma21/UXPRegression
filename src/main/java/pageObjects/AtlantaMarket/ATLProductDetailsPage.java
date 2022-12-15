@@ -175,6 +175,8 @@ public class ATLProductDetailsPage {
 		return driver.findElement(productfullscreenviewer);
 	}
 	public WebElement getProductFullScreenViewerTitle() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(prodfullscreenviewertitle));
 		return driver.findElement(prodfullscreenviewertitle);
 	}
 
