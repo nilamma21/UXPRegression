@@ -92,7 +92,7 @@ public class ATLExhLineProdActionsPage extends base{
 		wait.until(ExpectedConditions.visibilityOfElementLocated(prodName));
 		return driver.findElement(prodName);
 
-	
+	}
 
 
 	public ATLExhLineProdActionsPage(WebDriver driver) {
