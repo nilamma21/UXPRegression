@@ -406,7 +406,7 @@ public class GlobalSearch_ProductActions extends base {
 		// Click on 'Save' button
 		atlexhact.getNoteSaveBtn().click();
 		System.out.println("Save Btn");
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 
 		// Click on 'Add Note' icon for the same exhibitor
 		atlproddet.getProductAddNoteIcon().click();
