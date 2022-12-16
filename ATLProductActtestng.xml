@@ -9,6 +9,17 @@
 	<test thread-count="1" name="RegressionSequentialTest" >
 		<classes>
 		 	<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
+			 <methods>
+		<!-- 	<include name="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest" /> 
+				<include name="TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest" /> -->
+				<!-- -->
+				<!-- <include name="TS010_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest" /> --> 
+				
+				<include name="TS006_VerifyProductAddToExistingListOnSearchResultsGridTest" />
+				<include name="TS005_VerifyAddNoteOnProductDetailsPageTest" /> 
+				
+				
+			</methods>
 		</classes>
 	</test>
 </suite>
