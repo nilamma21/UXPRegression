@@ -397,30 +397,43 @@ public class GlobalSearch_ProductActions extends base {
 
 		// Enter Note title
 		atlexhact.getNoteTitleTxtBx().sendKeys(newnotetitle);
+		System.out.println("Title: " + newnotetitle);
+
 		// Enter Note Content
-		atlexhact.getNoteContentTxtBx().sendKeys("TestProdNote" + genData.generateRandomString(6));
+		String conent = genData.generateRandomString(6);
+		atlexhact.getNoteContentTxtBx().sendKeys("TestProdNote" +conent);
+		System.out.println("Content: " +conent);
 		// Click on 'Save' button
 		atlexhact.getNoteSaveBtn().click();
+		System.out.println("Save Btn");
 		Thread.sleep(5000);
 
 		// Click on 'Add Note' icon for the same exhibitor
 		atlproddet.getProductAddNoteIcon().click();
+		System.out.println("Add Note Icon");
 		Thread.sleep(4000);
 
 		// Click on 'View all Notes for an Exhibitor' link on Add Notes pop-up
 		atlexhact.getViewAllNotesLink().click();
+		System.out.println("View All Btn");
 		Thread.sleep(5000);
 
 		allnoteslist = atlexhact.getSavedNoteNameInAllNotesList();
-
+		boolean t=false;
 		// Verify that recently added note should be appear on 'All Notes For Exhibitor' modal
 		for (int i = 0; i < allnoteslist.size(); i++) {
 			//System.out.println(allnoteslist.get(i).getText());
 			if (allnoteslist.get(i).getText().equals(newnotetitle)) {
 				allnoteslist.get(i).click();
-
+				t=true;
 				break;
 			}
+		}
+		if(t==true){
+			System.out.println("Note is present");
+		}
+		else{
+			System.out.println("Note is not present ");
 		}
 
 		// Delete the saved note
