@@ -502,6 +502,6 @@ public class GlobalSearch_LineActions extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 }
