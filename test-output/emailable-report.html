@@ -31,23 +31,248 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">164.6 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Test</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi_attn">9</td><td class="numi">359.7 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">Default test &#8212; failed</th></tr>
-<tr class="failedodd"><td rowspan="1">atlantamarket_PROD.LineDigitalShowroom</td><td><a href="#m1"><b>TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest</b>  </a></td><td class="numi">1</td><td>1671435189114</td><td class="numi">85234</td></tr>
+<tr><th colspan="4">Test &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="9">atlantamarket_PROD.LineDigitalShowroom</td><td><a href="#m1"><b>TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest</b>  </a></td><td class="numi">1</td><td>1671443486302</td><td class="numi">26200</td></tr><tr class="failedodd"><td><a href="#m2"><b>TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest</b>  </a></td><td class="numi">1</td><td>1671443512507</td><td class="numi">115614</td></tr><tr class="failedodd"><td><a href="#m3"><b>TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest</b>  </a></td><td class="numi">1</td><td>1671443628126</td><td class="numi">39633</td></tr><tr class="failedodd"><td><a href="#m4"><b>TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest</b>  </a></td><td class="numi">1</td><td>1671443667759</td><td class="numi">20445</td></tr><tr class="failedodd"><td><a href="#m5"><b>TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest</b>  </a></td><td class="numi">1</td><td>1671443688204</td><td class="numi">20473</td></tr><tr class="failedodd"><td><a href="#m6"><b>TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest</b>  </a></td><td class="numi">1</td><td>1671443708677</td><td class="numi">20474</td></tr><tr class="failedodd"><td><a href="#m7"><b>TS008_VerifyLineDigitalShowroomProductscomponentTest</b>  </a></td><td class="numi">1</td><td>1671443729151</td><td class="numi">20439</td></tr><tr class="failedodd"><td><a href="#m8"><b>TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest</b>  </a></td><td class="numi">1</td><td>1671443749595</td><td class="numi">20463</td></tr><tr class="failedodd"><td><a href="#m9"><b>TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest</b>  </a></td><td class="numi">1</td><td>1671443770058</td><td class="numi">20475</td></tr>
+<tr><th colspan="4">Test &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="1">atlantamarket_PROD.LineDigitalShowroom</td><td><a href="#m10"><b>TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest</b>  </a></td><td class="numi">1</td><td>1671443474910</td><td class="numi">11392</td></tr>
 </table>
-<h1>Default test</h1>
-<h2 id="m1">atlantamarket_PROD.LineDigitalShowroom:TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest</h2>
+<h1>Test</h1>
+<h2 id="m1">atlantamarket_PROD.LineDigitalShowroom:TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest</h2>
 <div style="padding-left:3em">
-<p>Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;imc-products-overview--gallery&apos;]/div[1]/div[1]/a[1]/div[1]/div[1]/span[1]/span[1]/span[1] (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
+<p>Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id=&apos;input-1&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
 org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
 <br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-<br/>at pageObjects.AtlantaMarket.ATLLineDigitalShowroomPage.getproductName(ATLLineDigitalShowroomPage.java:56)
-<br/>at atlantamarket_PROD.LineDigitalShowroom.TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest(LineDigitalShowroom.java:635)
+<br/>at pageObjects.AtlantaMarket.ATLGlobalSearchPage.getATLGlobalSearchTextBox(ATLGlobalSearchPage.java:365)
+<br/>at atlantamarket_PROD.LineDigitalShowroom.TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest(LineDigitalShowroom.java:572)
 <br/>25 lines not shown
-<p>Caused by Cannot locate an element using By.xpath: //div[@class=&apos;imc-products-overview--gallery&apos;]/div[1]/div[1]/a[1]/div[1]/div[1]/span[1]/span[1]/span[1]
+<p>Caused by no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=108.0.5359.125)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir22296_622701147}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:58628}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=108.0.5359.125, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 1cbb5a1aecb7971f7fe7a4859b8ba32a
+*** Element info: {Using=xpath, value=//input[@id=&apos;input-1&apos;]}</p>
+sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:437)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:513)
+<br/>at org.openqa.selenium.By$ByXPath.findElements(By.java:356)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:398)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+<br/>at pageObjects.AtlantaMarket.ATLGlobalSearchPage.getATLGlobalSearchTextBox(ATLGlobalSearchPage.java:365)
+<br/>at atlantamarket_PROD.LineDigitalShowroom.TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest(LineDigitalShowroom.java:572)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">atlantamarket_PROD.LineDigitalShowroom:TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class=&apos;imc-vr--xlarge&apos;]/div[2]/label[1] (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.AtlantaMarket.ATLGlobalSearchPage.getatlExistingList(ATLGlobalSearchPage.java:238)
+<br/>at atlantamarket_PROD.LineDigitalShowroom.TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest(LineDigitalShowroom.java:243)
+<br/>25 lines not shown
+<p>Caused by no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=108.0.5359.125)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir22296_622701147}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:58628}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=108.0.5359.125, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 1cbb5a1aecb7971f7fe7a4859b8ba32a
+*** Element info: {Using=xpath, value=//div[@class=&apos;imc-vr--xlarge&apos;]/div[2]/label[1]}</p>
+sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:437)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:513)
+<br/>at org.openqa.selenium.By$ByXPath.findElements(By.java:356)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:398)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+<br/>at pageObjects.AtlantaMarket.ATLGlobalSearchPage.getatlExistingList(ATLGlobalSearchPage.java:238)
+<br/>at atlantamarket_PROD.LineDigitalShowroom.TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest(LineDigitalShowroom.java:243)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">atlantamarket_PROD.LineDigitalShowroom:TS008_VerifyLineDigitalShowroomProductscomponentTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id=&apos;input-1&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.AtlantaMarket.ATLGlobalSearchPage.getATLGlobalSearchTextBox(ATLGlobalSearchPage.java:365)
+<br/>at atlantamarket_PROD.LineDigitalShowroom.TS008_VerifyLineDigitalShowroomProductscomponentTest(LineDigitalShowroom.java:466)
+<br/>25 lines not shown
+<p>Caused by no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=108.0.5359.125)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir22296_622701147}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:58628}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=108.0.5359.125, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 1cbb5a1aecb7971f7fe7a4859b8ba32a
+*** Element info: {Using=xpath, value=//input[@id=&apos;input-1&apos;]}</p>
+sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:437)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:513)
+<br/>at org.openqa.selenium.By$ByXPath.findElements(By.java:356)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:398)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+<br/>at pageObjects.AtlantaMarket.ATLGlobalSearchPage.getATLGlobalSearchTextBox(ATLGlobalSearchPage.java:365)
+<br/>at atlantamarket_PROD.LineDigitalShowroom.TS008_VerifyLineDigitalShowroomProductscomponentTest(LineDigitalShowroom.java:466)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">atlantamarket_PROD.LineDigitalShowroom:TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for visibility of element located by By.xpath: //div[@ID=&apos;react-autowhatever-input-1&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir22296_622701147}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:58628}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=108.0.5359.125, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 1cbb5a1aecb7971f7fe7a4859b8ba32a</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.AtlantaMarket.ATLLineDigitalShowroomPage.getsuggetionList(ATLLineDigitalShowroomPage.java:132)
+<br/>at atlantamarket_PROD.LineDigitalShowroom.TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest(LineDigitalShowroom.java:121)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">atlantamarket_PROD.LineDigitalShowroom:TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id=&apos;input-1&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.AtlantaMarket.ATLGlobalSearchPage.getATLGlobalSearchTextBox(ATLGlobalSearchPage.java:365)
+<br/>at atlantamarket_PROD.LineDigitalShowroom.TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest(LineDigitalShowroom.java:283)
+<br/>25 lines not shown
+<p>Caused by no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=108.0.5359.125)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir22296_622701147}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:58628}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=108.0.5359.125, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 1cbb5a1aecb7971f7fe7a4859b8ba32a
+*** Element info: {Using=xpath, value=//input[@id=&apos;input-1&apos;]}</p>
+sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:437)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:513)
+<br/>at org.openqa.selenium.By$ByXPath.findElements(By.java:356)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:398)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+<br/>at pageObjects.AtlantaMarket.ATLGlobalSearchPage.getATLGlobalSearchTextBox(ATLGlobalSearchPage.java:365)
+<br/>at atlantamarket_PROD.LineDigitalShowroom.TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest(LineDigitalShowroom.java:283)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">atlantamarket_PROD.LineDigitalShowroom:TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;imc-gallery imc-gallery--65-35 breadcrumbs__round&apos;]/div[1]/ul[1]/li[4]/a[1] (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.AtlantaMarket.ATLLineDigitalShowroomPage.getAtlLineDigiShowroomPageTitle(ATLLineDigitalShowroomPage.java:142)
+<br/>at atlantamarket_PROD.LineDigitalShowroom.TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest(LineDigitalShowroom.java:380)
+<br/>25 lines not shown
+<p>Caused by no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=108.0.5359.125)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir22296_622701147}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:58628}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=108.0.5359.125, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 1cbb5a1aecb7971f7fe7a4859b8ba32a
+*** Element info: {Using=xpath, value=//div[@class=&apos;imc-gallery imc-gallery--65-35 breadcrumbs__round&apos;]/div[1]/ul[1]/li[4]/a[1]}</p>
+sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:437)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:513)
+<br/>at org.openqa.selenium.By$ByXPath.findElements(By.java:356)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:398)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+<br/>at pageObjects.AtlantaMarket.ATLLineDigitalShowroomPage.getAtlLineDigiShowroomPageTitle(ATLLineDigitalShowroomPage.java:142)
+<br/>at atlantamarket_PROD.LineDigitalShowroom.TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest(LineDigitalShowroom.java:380)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">atlantamarket_PROD.LineDigitalShowroom:TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for visibility of element located by By.xpath: //a[@class=&apos;imc-link--alt-darkred&apos;] (tried for 35 second(s) with 500 MILLISECONDS interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getlistOfAllExh(ATLMarketPlannerPage.java:967)
+<br/>at atlantamarket_PROD.LineDigitalShowroom.TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest(LineDigitalShowroom.java:196)
+<br/>25 lines not shown
+<p>Caused by Cannot locate an element using By.xpath: //a[@class=&apos;imc-link--alt-darkred&apos;]
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
 System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
@@ -59,9 +284,93 @@ org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedC
 <br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
 <br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
 <br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-<br/>at pageObjects.AtlantaMarket.ATLLineDigitalShowroomPage.getproductName(ATLLineDigitalShowroomPage.java:56)
-<br/>at atlantamarket_PROD.LineDigitalShowroom.TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest(LineDigitalShowroom.java:635)
+<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getlistOfAllExh(ATLMarketPlannerPage.java:967)
+<br/>at atlantamarket_PROD.LineDigitalShowroom.TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest(LineDigitalShowroom.java:196)
 <br/>25 lines not shown
 </div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">atlantamarket_PROD.LineDigitalShowroom:TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;imc-gallery imc-gallery--65-35 breadcrumbs__round&apos;]/div[1]/ul[1]/li[4]/a[1] (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.AtlantaMarket.ATLLineDigitalShowroomPage.getAtlLineDigiShowroomPageTitle(ATLLineDigitalShowroomPage.java:142)
+<br/>at atlantamarket_PROD.LineDigitalShowroom.TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest(LineDigitalShowroom.java:432)
+<br/>25 lines not shown
+<p>Caused by no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=108.0.5359.125)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir22296_622701147}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:58628}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=108.0.5359.125, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 1cbb5a1aecb7971f7fe7a4859b8ba32a
+*** Element info: {Using=xpath, value=//div[@class=&apos;imc-gallery imc-gallery--65-35 breadcrumbs__round&apos;]/div[1]/ul[1]/li[4]/a[1]}</p>
+sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:437)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:513)
+<br/>at org.openqa.selenium.By$ByXPath.findElements(By.java:356)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:398)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+<br/>at pageObjects.AtlantaMarket.ATLLineDigitalShowroomPage.getAtlLineDigiShowroomPageTitle(ATLLineDigitalShowroomPage.java:142)
+<br/>at atlantamarket_PROD.LineDigitalShowroom.TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest(LineDigitalShowroom.java:432)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m9">atlantamarket_PROD.LineDigitalShowroom:TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id=&apos;input-1&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.AtlantaMarket.ATLGlobalSearchPage.getATLGlobalSearchTextBox(ATLGlobalSearchPage.java:365)
+<br/>at atlantamarket_PROD.LineDigitalShowroom.TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest(LineDigitalShowroom.java:606)
+<br/>25 lines not shown
+<p>Caused by no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=108.0.5359.125)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir22296_622701147}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:58628}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=108.0.5359.125, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 1cbb5a1aecb7971f7fe7a4859b8ba32a
+*** Element info: {Using=xpath, value=//input[@id=&apos;input-1&apos;]}</p>
+sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:437)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:513)
+<br/>at org.openqa.selenium.By$ByXPath.findElements(By.java:356)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:398)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+<br/>at pageObjects.AtlantaMarket.ATLGlobalSearchPage.getATLGlobalSearchTextBox(ATLGlobalSearchPage.java:365)
+<br/>at atlantamarket_PROD.LineDigitalShowroom.TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest(LineDigitalShowroom.java:606)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">atlantamarket_PROD.LineDigitalShowroom:TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>
