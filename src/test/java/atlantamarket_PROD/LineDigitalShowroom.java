@@ -61,7 +61,7 @@ public class LineDigitalShowroom extends base {
 		//lap.getCloseMarktAdBtn().click();
 		
 	}
-	@Test(priority = 01)
+	@Test(enabled=false)//priority = 01
 	public void TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T337: Line Digital Showroom: Hero component: Shown by <ExhibitorName>
@@ -93,7 +93,7 @@ public class LineDigitalShowroom extends base {
 		Assert.assertTrue(atlgs.getatlShowSpecialsTitle().getText().equals(heroompName));
 		
 	}
-	@Test(priority = 02)
+	@Test(enabled=false)//priority = 02
 	public void TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T338: Line Digital Showroom: Hero component: Location Links
@@ -144,7 +144,7 @@ public class LineDigitalShowroom extends base {
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore);
 	}
-	@Test(priority = 03)
+	@Test(enabled=false)//priority = 03
 	public void TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T339: Line Digital Showroom: Hero component: Add to Favorite
@@ -196,7 +196,7 @@ public class LineDigitalShowroom extends base {
 		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), heroCompName);
 
 	}
-	@Test(priority = 04)
+	@Test(enabled=false)//priority = 04
 	public void TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T340: Line Digital Showroom: Hero component: + icon to add to list
@@ -264,7 +264,7 @@ public class LineDigitalShowroom extends base {
 			
 
 	}
-	@Test(priority = 05)
+	@Test(enabled=false)//priority = 05
 	public void TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T341: Line Digital Showroom: Hero component: Add Note
@@ -350,7 +350,7 @@ public class LineDigitalShowroom extends base {
 		}
 		atlmppge.getcloseNotePopup().click();	
 	}
-	@Test(priority = 06)
+	@Test(enabled=false)//priority = 06
 	public void TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T343: Line Digital Showroom: Hero component: Order on Juniper Market
@@ -402,7 +402,7 @@ public class LineDigitalShowroom extends base {
 		driver.switchTo().window(winHandleBefore);
 			
 	}
-	@Test(priority = 07)
+	@Test(enabled=false)//priority = 07
 	public void TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T344: Line Digital Showroom: See all Product CTA
@@ -447,7 +447,7 @@ public class LineDigitalShowroom extends base {
 			
 	}
 	
-	@Test(priority = 8)
+	@Test(enabled=false)//priority = 8
 	public void TS008_VerifyLineDigitalShowroomProductscomponentTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T346: Line Digital Showroom: Products component
@@ -553,7 +553,7 @@ public class LineDigitalShowroom extends base {
 			
 			
 	}
-	@Test(priority = 10)
+	@Test(enabled=false)//priority = 10
 	public void TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T373: Line Digital Showroom: Products component: See All Products
@@ -587,7 +587,7 @@ public class LineDigitalShowroom extends base {
 		//Verify See All Product CTA page
 		Assert.assertTrue(driver.getCurrentUrl().contains(seeAllProdURL));
 	}
-	@Test(priority = 11)
+	@Test(enabled=false)//priority = 11
 	public void TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T374: Line Digital Showroom: Products component: Select a Product
