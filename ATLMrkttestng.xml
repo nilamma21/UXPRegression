@@ -31,9 +31,16 @@
 	</listners>
 	<test thread-count="5" name="RegressionTest">
 		<classes>
+<<<<<<< HEAD
 			<class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters"/>
  			<methods>
 			<include name="TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest"/>			
+=======
+			<class name="atlantamarket_PROD.LineDigitalShowroom"/>
+ 			<methods>
+			<!-- <include name="TS008_VerifyLineDigitalShowroomProductscomponentTest"/>
+				<include name="TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest"/>	 -->	
+>>>>>>> 3b78ec7d2f495cd9888bc87004e285313b956e0e
 			</methods> 
 		</classes>
 	</test> 
