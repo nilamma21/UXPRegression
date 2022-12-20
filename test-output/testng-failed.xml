@@ -3,6 +3,7 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="atlantamarket_PROD.LineDigitalShowroom">
         <methods>
           <include name="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest"/>
@@ -10,6 +11,15 @@
           <include name="initialize"/>
         </methods>
       </class> <!-- atlantamarket_PROD.LineDigitalShowroom -->
+=======
+      <class name="atlantamarket_PROD.GlobalSearch_LineActions">
+        <methods>
+          <include name="TS002_VerifyAddToFavoriteForLineTest"/>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.GlobalSearch_LineActions -->
+>>>>>>> aa76b90493b1f008dcbb59e59252390f34eb42c1
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
