@@ -1,4 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<testng-results skipped="0" failed="1" total="11" passed="10">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="429711" started-at="2022-12-20T05:23:58Z" finished-at="2022-12-20T05:31:08Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="429711" started-at="2022-12-20T05:23:58Z" finished-at="2022-12-20T05:31:08Z">
+      <class name="atlantamarket_PROD.LineDigitalShowroom">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@53b32d7]" name="initialize" is-config="true" duration-ms="39883" started-at="2022-12-20T10:53:58Z" finished-at="2022-12-20T10:54:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@53b32d7]" name="TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest" duration-ms="11522" started-at="2022-12-20T10:54:38Z" finished-at="2022-12-20T10:54:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest -->
+        <test-method status="PASS" signature="TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@53b32d7]" name="TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest" duration-ms="20418" started-at="2022-12-20T10:54:49Z" finished-at="2022-12-20T10:55:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest -->
+        <test-method status="FAIL" signature="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@53b32d7]" name="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest" duration-ms="115876" started-at="2022-12-20T10:55:10Z" finished-at="2022-12-20T10:57:06Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //a[@class='imc-link--alt-darkred'] (tried for 35 second(s) with 500 MILLISECONDS interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[@class='imc-link--alt-darkred'] (tried for 35 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getlistOfAllExh(ATLMarketPlannerPage.java:967)
+	at atlantamarket_PROD.LineDigitalShowroom.TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest(LineDigitalShowroom.java:196)
+=======
 <testng-results skipped="0" failed="1" total="9" passed="8">
   <reporter-output>
   </reporter-output>
@@ -26,6 +59,7 @@
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getATLSavedExhNameInList(ATLMarketPlannerPage.java:480)
 	at atlantamarket_PROD.GlobalSearch_LineActions.TS002_VerifyAddToFavoriteForLineTest(GlobalSearch_LineActions.java:143)
+>>>>>>> aa76b90493b1f008dcbb59e59252390f34eb42c1
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -47,6 +81,23 @@
 	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
 	at org.testng.TestNG.run(TestNG.java:1031)
+<<<<<<< HEAD
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //a[@class='imc-link--alt-darkred']
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'ANUPPA-VD3', ip: '172.27.182.66', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_351'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+=======
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
@@ -76,12 +127,55 @@ Session ID: 420877b7b07799d7b134d10d09247f3b
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+>>>>>>> aa76b90493b1f008dcbb59e59252390f34eb42c1
 	... 26 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
+        </test-method> <!-- TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest -->
+        <test-method status="PASS" signature="TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@53b32d7]" name="TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest" duration-ms="86322" started-at="2022-12-20T10:57:06Z" finished-at="2022-12-20T10:58:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest -->
+        <test-method status="PASS" signature="TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@53b32d7]" name="TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest" duration-ms="48896" started-at="2022-12-20T10:58:32Z" finished-at="2022-12-20T10:59:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest -->
+        <test-method status="PASS" signature="TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@53b32d7]" name="TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest" duration-ms="8014" started-at="2022-12-20T10:59:21Z" finished-at="2022-12-20T10:59:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest -->
+        <test-method status="PASS" signature="TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@53b32d7]" name="TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest" duration-ms="5615" started-at="2022-12-20T10:59:29Z" finished-at="2022-12-20T10:59:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest -->
+        <test-method status="PASS" signature="TS008_VerifyLineDigitalShowroomProductscomponentTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@53b32d7]" name="TS008_VerifyLineDigitalShowroomProductscomponentTest" duration-ms="23590" started-at="2022-12-20T10:59:34Z" finished-at="2022-12-20T10:59:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS008_VerifyLineDigitalShowroomProductscomponentTest -->
+        <test-method status="PASS" signature="TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@53b32d7]" name="TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest" duration-ms="19681" started-at="2022-12-20T10:59:58Z" finished-at="2022-12-20T11:00:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest -->
+        <test-method status="PASS" signature="TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@53b32d7]" name="TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest" duration-ms="15993" started-at="2022-12-20T11:00:18Z" finished-at="2022-12-20T11:00:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest -->
+        <test-method status="PASS" signature="TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@53b32d7]" name="TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest" duration-ms="33862" started-at="2022-12-20T11:00:34Z" finished-at="2022-12-20T11:01:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@53b32d7]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-12-20T11:01:08Z" finished-at="2022-12-20T11:01:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- atlantamarket_PROD.LineDigitalShowroom -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+=======
         </test-method> <!-- TS002_VerifyAddToFavoriteForLineTest -->
         <test-method status="PASS" signature="TS003_VerifyClickOnOrderOnJuniperMarketBtnForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@239963d8]" name="TS003_VerifyClickOnOrderOnJuniperMarketBtnForLineTest" duration-ms="32863" started-at="2022-12-19T11:47:21Z" finished-at="2022-12-19T11:47:54Z">
           <reporter-output>
@@ -118,4 +212,5 @@ Session ID: 420877b7b07799d7b134d10d09247f3b
       </class> <!-- atlantamarket_PROD.GlobalSearch_LineActions -->
     </test> <!-- RegressionTest -->
   </suite> <!-- LVM_RegressionTestSuite -->
+>>>>>>> aa76b90493b1f008dcbb59e59252390f34eb42c1
 </testng-results>
