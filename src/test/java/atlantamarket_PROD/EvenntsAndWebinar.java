@@ -559,8 +559,8 @@ public class EvenntsAndWebinar extends base{
 		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
 		lp.getPassword().sendKeys((prop.getProperty("password")));
 
-		lp.getSignInBtn().click();
-		atlevents.getatlListIcon().click();*/
+		lp.getSignInBtn().click();*/
+		atlevents.getatlListIcon().click();
 		// Store the existing list name
 		String existinglistname = atlmppge.getATLMPExistingListName().getText();
 		System.out.println("Existing list name: " + existinglistname);
@@ -1116,7 +1116,8 @@ public class EvenntsAndWebinar extends base{
 		// Login to MP
 		//utl.verifyMPLoginFunctionality();
 		Thread.sleep(5000);
-
+	
+		
 		utl.clickOnEventLinkOfChannel();
 
 		String eventTitle = atlevents.getatlClickOnEvent().getText();
