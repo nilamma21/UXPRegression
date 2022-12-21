@@ -31,126 +31,335 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<<<<<<< HEAD
-<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">10</td><td class="numi">10</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">429.7 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">3</td><td class="numi">3</td><td class="numi">0</td><td class="numi_attn">12</td><td class="numi">168.3 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
 <tr><th colspan="4">Default test &#8212; failed</th></tr>
-<tr class="failedodd"><td rowspan="1">atlantamarket_PROD.LineDigitalShowroom</td><td><a href="#m1"><b>TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest</b>  </a></td><td class="numi">1</td><td>1671513910144</td><td class="numi">115876</td></tr>
+<tr class="failedodd"><td rowspan="12">atlantamarket_PROD.EvenntsAndWebinar</td><td><a href="#m1"><b>TS004_VerifyIMCEventsEventsListTest</b>  </a></td><td class="numi">1</td><td>1671599803933</td><td class="numi">23192</td></tr><tr class="failedodd"><td><a href="#m2"><b>TS005_VerifyIMCEventsEventDetailstTest</b>  </a></td><td class="numi">1</td><td>1671599827127</td><td class="numi">45195</td></tr><tr class="failedodd"><td><a href="#m3"><b>TS006_VerifyIMCEventsAddToFavoriteTest</b>  </a></td><td class="numi">1</td><td>1671599872323</td><td class="numi">20474</td></tr><tr class="failedodd"><td><a href="#m4"><b>TS007_VerifyIMCEventsAddToListTest</b>  </a></td><td class="numi">1</td><td>1671599892797</td><td class="numi">32</td></tr><tr class="failedodd"><td><a href="#m5"><b>TS008_VerifyIMCEventsAddNoteTest</b>  </a></td><td class="numi">1</td><td>1671599892829</td><td class="numi">41</td></tr><tr class="failedodd"><td><a href="#m6"><b>TS009_VerifyExhibitorEventsSearchbarTest</b>  </a></td><td class="numi">1</td><td>1671599892870</td><td class="numi">30</td></tr><tr class="failedodd"><td><a href="#m7"><b>TS010_VerifyExhibitorEventsCalendarViewTest</b>  </a></td><td class="numi">1</td><td>1671599892900</td><td class="numi">30</td></tr><tr class="failedodd"><td><a href="#m8"><b>TS011_VerifyExhibitorEventsListTest</b>  </a></td><td class="numi">1</td><td>1671599892930</td><td class="numi">31</td></tr><tr class="failedodd"><td><a href="#m9"><b>TS012_VerifyExhibitorEventsDetailstTest</b>  </a></td><td class="numi">1</td><td>1671599892961</td><td class="numi">30</td></tr><tr class="failedodd"><td><a href="#m10"><b>TS013_VerifyExhibitorEventsAddToFavoriteTest</b>  </a></td><td class="numi">1</td><td>1671599892996</td><td class="numi">26</td></tr><tr class="failedodd"><td><a href="#m11"><b>TS014_VerifyExhibitorEventsAddToListTest</b>  </a></td><td class="numi">1</td><td>1671599893022</td><td class="numi">5053</td></tr><tr class="failedodd"><td><a href="#m12"><b>TS015_VerifyExhibitorEventsAddNoteTest</b>  </a></td><td class="numi">1</td><td>1671599898077</td><td class="numi">5044</td></tr>
 <tr><th colspan="4">Default test &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="10">atlantamarket_PROD.LineDigitalShowroom</td><td><a href="#m2"><b>TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest</b>  </a></td><td class="numi">1</td><td>1671513878199</td><td class="numi">11522</td></tr><tr class="passedodd"><td><a href="#m3"><b>TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest</b>  </a></td><td class="numi">1</td><td>1671513889724</td><td class="numi">20418</td></tr><tr class="passedodd"><td><a href="#m4"><b>TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest</b>  </a></td><td class="numi">1</td><td>1671514026023</td><td class="numi">86322</td></tr><tr class="passedodd"><td><a href="#m5"><b>TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest</b>  </a></td><td class="numi">1</td><td>1671514112346</td><td class="numi">48896</td></tr><tr class="passedodd"><td><a href="#m6"><b>TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest</b>  </a></td><td class="numi">1</td><td>1671514161244</td><td class="numi">8014</td></tr><tr class="passedodd"><td><a href="#m7"><b>TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest</b>  </a></td><td class="numi">1</td><td>1671514169259</td><td class="numi">5615</td></tr><tr class="passedodd"><td><a href="#m8"><b>TS008_VerifyLineDigitalShowroomProductscomponentTest</b>  </a></td><td class="numi">1</td><td>1671514174875</td><td class="numi">23590</td></tr><tr class="passedodd"><td><a href="#m9"><b>TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest</b>  </a></td><td class="numi">1</td><td>1671514198466</td><td class="numi">19681</td></tr><tr class="passedodd"><td><a href="#m10"><b>TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest</b>  </a></td><td class="numi">1</td><td>1671514218148</td><td class="numi">15993</td></tr><tr class="passedodd"><td><a href="#m11"><b>TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest</b>  </a></td><td class="numi">1</td><td>1671514234142</td><td class="numi">33862</td></tr>
+<tr class="passedodd"><td rowspan="3">atlantamarket_PROD.EvenntsAndWebinar</td><td><a href="#m13"><b>TS001_VerifyEventsAndWebinarsOverviewTest</b>  </a></td><td class="numi">1</td><td>1671599770358</td><td class="numi">8790</td></tr><tr class="passedodd"><td><a href="#m14"><b>TS002_VerifyIMCEventsSearchbarTest</b>  </a></td><td class="numi">1</td><td>1671599779149</td><td class="numi">12196</td></tr><tr class="passedodd"><td><a href="#m15"><b>TS003_VerifyIMCEventsCalendarViewTest</b>  </a></td><td class="numi">1</td><td>1671599791346</td><td class="numi">12586</td></tr>
 </table>
 <h1>Default test</h1>
-<h2 id="m1">atlantamarket_PROD.LineDigitalShowroom:TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest</h2>
+<h2 id="m1">atlantamarket_PROD.EvenntsAndWebinar:TS013_VerifyExhibitorEventsAddToFavoriteTest</h2>
 <div style="padding-left:3em">
-<p>Expected condition failed: waiting for visibility of element located by By.xpath: //a[@class=&apos;imc-link--alt-darkred&apos;] (tried for 35 second(s) with 500 MILLISECONDS interval)</p>
-org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getlistOfAllExh(ATLMarketPlannerPage.java:967)
-<br/>at atlantamarket_PROD.LineDigitalShowroom.TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest(LineDigitalShowroom.java:196)
-<br/>25 lines not shown
-<p>Caused by Cannot locate an element using By.xpath: //a[@class=&apos;imc-link--alt-darkred&apos;]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+<p>no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=108.0.5359.125)
 Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
 System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
-Driver info: driver.version: unknown</p>
-org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
-<br/>at java.util.Optional.orElseThrow(Unknown Source)
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir14708_722775948}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:61077}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=108.0.5359.125, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: d46540507e75345f9bdb36c2987853b6</p>
+sun.reflect.GeneratedConstructorAccessor16.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:374)
+<br/>at resources.Utility.clickOnEventLinkOfChannel(Utility.java:439)
+<br/>at atlantamarket_PROD.EvenntsAndWebinar.TS013_VerifyExhibitorEventsAddToFavoriteTest(EvenntsAndWebinar.java:1063)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">atlantamarket_PROD.EvenntsAndWebinar:TS014_VerifyExhibitorEventsAddToListTest</h2>
+<div style="padding-left:3em">
+<p>no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=108.0.5359.125)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir14708_722775948}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:61077}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=108.0.5359.125, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: d46540507e75345f9bdb36c2987853b6</p>
+sun.reflect.GeneratedConstructorAccessor16.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:374)
+<br/>at resources.Utility.clickOnEventLinkOfChannel(Utility.java:439)
+<br/>at atlantamarket_PROD.EvenntsAndWebinar.TS014_VerifyExhibitorEventsAddToListTest(EvenntsAndWebinar.java:1120)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">atlantamarket_PROD.EvenntsAndWebinar:TS008_VerifyIMCEventsAddNoteTest</h2>
+<div style="padding-left:3em">
+<p>no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=108.0.5359.125)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir14708_722775948}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:61077}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=108.0.5359.125, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: d46540507e75345f9bdb36c2987853b6</p>
+sun.reflect.GeneratedConstructorAccessor16.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:374)
+<br/>at resources.Utility.clickOnEventLinkOfChannel(Utility.java:439)
+<br/>at atlantamarket_PROD.EvenntsAndWebinar.TS008_VerifyIMCEventsAddNoteTest(EvenntsAndWebinar.java:627)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">atlantamarket_PROD.EvenntsAndWebinar:TS011_VerifyExhibitorEventsListTest</h2>
+<div style="padding-left:3em">
+<p>no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=108.0.5359.125)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir14708_722775948}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:61077}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=108.0.5359.125, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: d46540507e75345f9bdb36c2987853b6</p>
+sun.reflect.GeneratedConstructorAccessor16.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:374)
+<br/>at resources.Utility.clickOnEventLinkOfChannel(Utility.java:439)
+<br/>at atlantamarket_PROD.EvenntsAndWebinar.TS011_VerifyExhibitorEventsListTest(EvenntsAndWebinar.java:828)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">atlantamarket_PROD.EvenntsAndWebinar:TS010_VerifyExhibitorEventsCalendarViewTest</h2>
+<div style="padding-left:3em">
+<p>no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=108.0.5359.125)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir14708_722775948}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:61077}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=108.0.5359.125, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: d46540507e75345f9bdb36c2987853b6</p>
+sun.reflect.GeneratedConstructorAccessor16.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:374)
+<br/>at resources.Utility.clickOnEventLinkOfChannel(Utility.java:439)
+<br/>at atlantamarket_PROD.EvenntsAndWebinar.TS010_VerifyExhibitorEventsCalendarViewTest(EvenntsAndWebinar.java:740)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">atlantamarket_PROD.EvenntsAndWebinar:TS009_VerifyExhibitorEventsSearchbarTest</h2>
+<div style="padding-left:3em">
+<p>no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=108.0.5359.125)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir14708_722775948}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:61077}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=108.0.5359.125, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: d46540507e75345f9bdb36c2987853b6</p>
+sun.reflect.GeneratedConstructorAccessor16.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:374)
+<br/>at resources.Utility.clickOnEventLinkOfChannel(Utility.java:439)
+<br/>at atlantamarket_PROD.EvenntsAndWebinar.TS009_VerifyExhibitorEventsSearchbarTest(EvenntsAndWebinar.java:704)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">atlantamarket_PROD.EvenntsAndWebinar:TS005_VerifyIMCEventsEventDetailstTest</h2>
+<div style="padding-left:3em">
+<p>no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=108.0.5359.125)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir14708_722775948}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:61077}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=108.0.5359.125, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: d46540507e75345f9bdb36c2987853b6</p>
+sun.reflect.GeneratedConstructorAccessor16.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.back(RemoteWebDriver.java:937)
+<br/>at atlantamarket_PROD.EvenntsAndWebinar.TS005_VerifyIMCEventsEventDetailstTest(EvenntsAndWebinar.java:455)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">atlantamarket_PROD.EvenntsAndWebinar:TS012_VerifyExhibitorEventsDetailstTest</h2>
+<div style="padding-left:3em">
+<p>no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=108.0.5359.125)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir14708_722775948}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:61077}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=108.0.5359.125, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: d46540507e75345f9bdb36c2987853b6</p>
+sun.reflect.GeneratedConstructorAccessor16.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:374)
+<br/>at resources.Utility.clickOnEventLinkOfChannel(Utility.java:439)
+<br/>at atlantamarket_PROD.EvenntsAndWebinar.TS012_VerifyExhibitorEventsDetailstTest(EvenntsAndWebinar.java:941)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m9">atlantamarket_PROD.EvenntsAndWebinar:TS006_VerifyIMCEventsAddToFavoriteTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for element to be clickable: By.xpath: //a[contains(text(),&apos;Login&apos;)] (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.AtlantaMarket.ATLLandingPage.getLogin(ATLLandingPage.java:30)
+<br/>at resources.Utility.verifyMPLoginFunctionality(Utility.java:65)
+<br/>at atlantamarket_PROD.EvenntsAndWebinar.TS006_VerifyIMCEventsAddToFavoriteTest(EvenntsAndWebinar.java:486)
+<br/>25 lines not shown
+<p>Caused by no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=108.0.5359.125)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir14708_722775948}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:61077}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=108.0.5359.125, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: d46540507e75345f9bdb36c2987853b6
+*** Element info: {Using=xpath, value=//a[contains(text(),&apos;Login&apos;)]}</p>
+sun.reflect.GeneratedConstructorAccessor16.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:437)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:513)
+<br/>at org.openqa.selenium.By$ByXPath.findElements(By.java:356)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:398)
 <br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
 <br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
 <br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
 <br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
 <br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getlistOfAllExh(ATLMarketPlannerPage.java:967)
-<br/>at atlantamarket_PROD.LineDigitalShowroom.TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest(LineDigitalShowroom.java:196)
+<br/>at pageObjects.AtlantaMarket.ATLLandingPage.getLogin(ATLLandingPage.java:30)
+<br/>at resources.Utility.verifyMPLoginFunctionality(Utility.java:65)
+<br/>at atlantamarket_PROD.EvenntsAndWebinar.TS006_VerifyIMCEventsAddToFavoriteTest(EvenntsAndWebinar.java:486)
 <br/>25 lines not shown
 </div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">atlantamarket_PROD.LineDigitalShowroom:TS008_VerifyLineDigitalShowroomProductscomponentTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">atlantamarket_PROD.LineDigitalShowroom:TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">atlantamarket_PROD.LineDigitalShowroom:TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m5">atlantamarket_PROD.LineDigitalShowroom:TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m6">atlantamarket_PROD.LineDigitalShowroom:TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m7">atlantamarket_PROD.LineDigitalShowroom:TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m8">atlantamarket_PROD.LineDigitalShowroom:TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m9">atlantamarket_PROD.LineDigitalShowroom:TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m10">atlantamarket_PROD.LineDigitalShowroom:TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m11">atlantamarket_PROD.LineDigitalShowroom:TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest</h2>
-=======
-<tr><td style="text-align:left;padding-right:2em">RegressionTest</td><td class="numi">8</td><td class="numi">8</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">501.5 seconds</td><td class="numi"></td><td class="numi"></td></tr>
-</table>
-<table cellspacing="0" cellpadding="0" class="passed" id="summary">
-<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">RegressionTest &#8212; failed</th></tr>
-<tr class="failedodd"><td rowspan="1">atlantamarket_PROD.GlobalSearch_LineActions</td><td><a href="#m1"><b>TS002_VerifyAddToFavoriteForLineTest</b>  </a></td><td class="numi">1</td><td>1671430555568</td><td class="numi">85882</td></tr>
-<tr><th colspan="4">RegressionTest &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="8">atlantamarket_PROD.GlobalSearch_LineActions</td><td><a href="#m2"><b>TS001_VerifyClickOnContactExhIconForLineTest</b>  </a></td><td class="numi">1</td><td>1671430530926</td><td class="numi">24638</td></tr><tr class="passedodd"><td><a href="#m3"><b>TS003_VerifyClickOnOrderOnJuniperMarketBtnForLineTest</b>  </a></td><td class="numi">1</td><td>1671430641598</td><td class="numi">32863</td></tr><tr class="passedodd"><td><a href="#m4"><b>TS004_VerifyAddToNewListForLineTest</b>  </a></td><td class="numi">1</td><td>1671430674461</td><td class="numi">65728</td></tr><tr class="passedodd"><td><a href="#m5"><b>TS005_VerifyAddToExistingListForLineTest</b>  </a></td><td class="numi">1</td><td>1671430740190</td><td class="numi">86645</td></tr><tr class="passedodd"><td><a href="#m6"><b>TS006_VerifyClickOnShownByExhibitorNameLinkForLineTest</b>  </a></td><td class="numi">1</td><td>1671430826836</td><td class="numi">32378</td></tr><tr class="passedodd"><td><a href="#m7"><b>TS007_VerifyClickOnLocationLinkForLineTest</b>  </a></td><td class="numi">1</td><td>1671430859215</td><td class="numi">29037</td></tr><tr class="passedodd"><td><a href="#m8"><b>TS008_VerifyClickOnMatchingProductsSeeAllLinkForLineTest</b>  </a></td><td class="numi">1</td><td>1671430888253</td><td class="numi">43174</td></tr><tr class="passedodd"><td><a href="#m9"><b>TS009_VerifyClickOnTotalProductsSeeAllLinkForLineTest</b>  </a></td><td class="numi">1</td><td>1671430931427</td><td class="numi">50869</td></tr>
-</table>
-<h1>RegressionTest</h1>
-<h2 id="m1">atlantamarket_PROD.GlobalSearch_LineActions:TS002_VerifyAddToFavoriteForLineTest</h2>
+<h2 id="m10">atlantamarket_PROD.EvenntsAndWebinar:TS015_VerifyExhibitorEventsAddNoteTest</h2>
 <div style="padding-left:3em">
-<p>Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[1]/div[1]/a (tried for 20 second(s) with 500 milliseconds interval)</p>
-org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getATLSavedExhNameInList(ATLMarketPlannerPage.java:480)
-<br/>at atlantamarket_PROD.GlobalSearch_LineActions.TS002_VerifyAddToFavoriteForLineTest(GlobalSearch_LineActions.java:143)
-<br/>25 lines not shown
-<p>Caused by no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[1]/div[1]/a&quot;}
+<p>no such window: target window already closed
+from unknown error: web view not found
   (Session info: chrome=108.0.5359.125)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
-System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56746}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 420877b7b07799d7b134d10d09247f3b
-*** Element info: {Using=xpath, value=//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[1]/div[1]/a}</p>
-sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir14708_722775948}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:61077}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=108.0.5359.125, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: d46540507e75345f9bdb36c2987853b6</p>
+sun.reflect.GeneratedConstructorAccessor16.newInstance(Unknown Source)
 <br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
 <br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
-<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-<br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getATLSavedExhNameInList(ATLMarketPlannerPage.java:480)
-<br/>at atlantamarket_PROD.GlobalSearch_LineActions.TS002_VerifyAddToFavoriteForLineTest(GlobalSearch_LineActions.java:143)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:374)
+<br/>at resources.Utility.clickOnEventLinkOfChannel(Utility.java:439)
+<br/>at atlantamarket_PROD.EvenntsAndWebinar.TS015_VerifyExhibitorEventsAddNoteTest(EvenntsAndWebinar.java:1205)
 <br/>25 lines not shown
 </div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">atlantamarket_PROD.GlobalSearch_LineActions:TS001_VerifyClickOnContactExhIconForLineTest</h2>
+<h2 id="m11">atlantamarket_PROD.EvenntsAndWebinar:TS004_VerifyIMCEventsEventsListTest</h2>
+<div style="padding-left:3em">
+<p>expected [41] but found [44]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertEquals(Assert.java:123)
+<br/>at org.testng.Assert.assertEquals(Assert.java:370)
+<br/>at org.testng.Assert.assertEquals(Assert.java:380)
+<br/>at atlantamarket_PROD.EvenntsAndWebinar.TS004_VerifyIMCEventsEventsListTest(EvenntsAndWebinar.java:321)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">atlantamarket_PROD.GlobalSearch_LineActions:TS005_VerifyAddToExistingListForLineTest</h2>
+<h2 id="m12">atlantamarket_PROD.EvenntsAndWebinar:TS007_VerifyIMCEventsAddToListTest</h2>
+<div style="padding-left:3em">
+<p>no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=108.0.5359.125)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir14708_722775948}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:61077}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=108.0.5359.125, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: d46540507e75345f9bdb36c2987853b6</p>
+sun.reflect.GeneratedConstructorAccessor16.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:374)
+<br/>at resources.Utility.clickOnEventLinkOfChannel(Utility.java:439)
+<br/>at atlantamarket_PROD.EvenntsAndWebinar.TS007_VerifyIMCEventsAddToListTest(EvenntsAndWebinar.java:542)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">atlantamarket_PROD.GlobalSearch_LineActions:TS006_VerifyClickOnShownByExhibitorNameLinkForLineTest</h2>
+<h2 id="m13">atlantamarket_PROD.EvenntsAndWebinar:TS001_VerifyEventsAndWebinarsOverviewTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m5">atlantamarket_PROD.GlobalSearch_LineActions:TS009_VerifyClickOnTotalProductsSeeAllLinkForLineTest</h2>
+<h2 id="m14">atlantamarket_PROD.EvenntsAndWebinar:TS003_VerifyIMCEventsCalendarViewTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m6">atlantamarket_PROD.GlobalSearch_LineActions:TS003_VerifyClickOnOrderOnJuniperMarketBtnForLineTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m7">atlantamarket_PROD.GlobalSearch_LineActions:TS008_VerifyClickOnMatchingProductsSeeAllLinkForLineTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m8">atlantamarket_PROD.GlobalSearch_LineActions:TS004_VerifyAddToNewListForLineTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m9">atlantamarket_PROD.GlobalSearch_LineActions:TS007_VerifyClickOnLocationLinkForLineTest</h2>
->>>>>>> aa76b90493b1f008dcbb59e59252390f34eb42c1
+<h2 id="m15">atlantamarket_PROD.EvenntsAndWebinar:TS002_VerifyIMCEventsSearchbarTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

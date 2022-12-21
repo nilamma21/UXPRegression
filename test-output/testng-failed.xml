@@ -3,23 +3,23 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="atlantamarket_PROD.LineDigitalShowroom">
+      <class name="atlantamarket_PROD.EvenntsAndWebinar">
         <methods>
-          <include name="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest"/>
-          <include name="tearDown"/>
+          <include name="TS014_VerifyExhibitorEventsAddToListTest"/>
+          <include name="TS013_VerifyExhibitorEventsAddToFavoriteTest"/>
+          <include name="TS015_VerifyExhibitorEventsAddNoteTest"/>
+          <include name="TS009_VerifyExhibitorEventsSearchbarTest"/>
+          <include name="TS005_VerifyIMCEventsEventDetailstTest"/>
+          <include name="TS010_VerifyExhibitorEventsCalendarViewTest"/>
           <include name="initialize"/>
+          <include name="TS004_VerifyIMCEventsEventsListTest"/>
+          <include name="TS011_VerifyExhibitorEventsListTest"/>
+          <include name="TS006_VerifyIMCEventsAddToFavoriteTest"/>
+          <include name="TS008_VerifyIMCEventsAddNoteTest"/>
+          <include name="TS007_VerifyIMCEventsAddToListTest"/>
+          <include name="TS012_VerifyExhibitorEventsDetailstTest"/>
         </methods>
-      </class> <!-- atlantamarket_PROD.LineDigitalShowroom -->
-=======
-      <class name="atlantamarket_PROD.GlobalSearch_LineActions">
-        <methods>
-          <include name="TS002_VerifyAddToFavoriteForLineTest"/>
-          <include name="tearDown"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- atlantamarket_PROD.GlobalSearch_LineActions -->
->>>>>>> aa76b90493b1f008dcbb59e59252390f34eb42c1
+      </class> <!-- atlantamarket_PROD.EvenntsAndWebinar -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
