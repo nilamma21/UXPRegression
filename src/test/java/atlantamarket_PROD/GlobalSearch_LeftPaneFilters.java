@@ -290,7 +290,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		String expectedstyle = atlleftpane.getATLIndustrialStyle().getText();
 		//System.out.println("Expected Style name:"+expectedstyle);
 		atlleftpane.getATLIndustrialStyle().click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 
 		//Click on IMC Test Exhibitor name in list
 		atlexhact.getIMCExhibitorName().click();
