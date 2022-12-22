@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<<<<<<< HEAD
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
@@ -23,3 +24,20 @@
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
+=======
+<suite name="Failed suite [LVM_RegressionTestSuite]">
+  <test name="RegressionTest(failed)">
+    <classes>
+      <class name="atlantamarket_PROD.GlobalSearch_ProductActions">
+        <methods>
+          <include name="tearDown"/>
+          <include name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest"/>
+          <include name="TS008_VerifyAddToFavoriteOnSearchResultsGridTest"/>
+          <include name="TS004_VerifyAddToFavoriteOnProductDetailsPageTest"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.GlobalSearch_ProductActions -->
+    </classes>
+  </test> <!-- RegressionTest(failed) -->
+</suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
+>>>>>>> bb06a008a6905061d692f2f2d3368e6ddf437590

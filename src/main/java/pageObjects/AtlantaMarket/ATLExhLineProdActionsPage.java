@@ -64,6 +64,7 @@ public class ATLExhLineProdActionsPage extends base{
 	By catalogstabDiv = By.xpath("//div[@id='Catalogs']"); //Locator for Catalogs tab on Exhibitor products page
 	By catalogitem = By.xpath("//div[@class='imc-catalog__item_title multiSelectItem']/div/span/span"); //Locator for Catalog item
 	By catalogitemPROD = By.xpath("//div[@class='imc-catalog__item_inner-content']"); //Locator for Catalog item
+
 	By eventcardinsearch = By.xpath("//div[@class='imc-vr--xlarge imc-eventcard']");//Locator for Event card in search results
 	By eventcardtitle = By.xpath("//span[contains(@class,'imc-eventcard__title')]"); //Locator for Event Card title
 	By eventdetailsheader = By.xpath("//h1[contains(@class,'imc-heading')]"); //Locator for header of Events details btn
@@ -73,7 +74,8 @@ public class ATLExhLineProdActionsPage extends base{
 	By thirdexhname = By.xpath("//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][3]/div/div/div/div/a/h2"); //Locator for third Exhibitor name in Search grid
 	By leftPaneFilterDGShowroom = By.xpath("//h4[contains(text(),'Digital Showroom')]"); //Locator for DG showroom Filter
 	By leftPaneFilterDGShowroomCatalog = By.xpath("//h4[contains(text(),'Digital Showroom')]/../../.././../../div[2]/div[1]/div[1]/div[2]"); //Locator for DG showroom Filter Catalog
-	
+	By AtLcatalogitemPROD = By.xpath("(//div[@class='imc-catalog__item_title multiSelectItem'])[1]/div[1]/span[1]/span[1]"); //Locator for Catalog item
+
 	By prodName = By.xpath("//a[@class='imc-type--title-5-ui']"); //Locator for DG showroom Filter Catalog
 	By prodNameFromDGshhowroomPage = By.xpath("//div[@class = 'imc-content--display-flex-wrap']/span[text()='Products']/../../div[2]/div[1]/div[1]/div[1]/a"); //Locator for DG showroom Prod Name
 	
@@ -105,6 +107,12 @@ public class ATLExhLineProdActionsPage extends base{
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(catalogitemPROD));
 		return driver.findElement(catalogitemPROD);
+	} 
+
+	public WebElement getAtLcatalogitemPROD() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(AtLcatalogitemPROD));
+		return driver.findElement(AtLcatalogitemPROD);
 	}
 	public WebElement getcatalogstabDiv() {
 		wait = new WebDriverWait (driver,30);

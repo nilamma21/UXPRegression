@@ -3,6 +3,7 @@
 <suite name="Failed suite [LVM_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="atlantamarket_PROD.GlobalSearch_LineActions">
         <methods>
           <include name="TS002_VerifyAddToFavoriteForLineTest"/>
@@ -10,6 +11,17 @@
           <include name="initialize"/>
         </methods>
       </class> <!-- atlantamarket_PROD.GlobalSearch_LineActions -->
+=======
+      <class name="atlantamarket_PROD.GlobalSearch_ProductActions">
+        <methods>
+          <include name="tearDown"/>
+          <include name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest"/>
+          <include name="TS008_VerifyAddToFavoriteOnSearchResultsGridTest"/>
+          <include name="TS004_VerifyAddToFavoriteOnProductDetailsPageTest"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.GlobalSearch_ProductActions -->
+>>>>>>> bb06a008a6905061d692f2f2d3368e6ddf437590
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
