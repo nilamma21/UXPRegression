@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import org.omg.CORBA.PUBLIC_MEMBER;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -39,7 +38,7 @@ import resources.GenerateData;
 import resources.Utility;
 import resources.base;
 
-@Test
+
 @Listeners({ TestListeners.class })
 public class GlobalSearch_SearchFor extends base {
 
