@@ -24,10 +24,7 @@ public class TestListeners extends base implements ITestListener {
 	}
 
 	public void onStart(ITestContext arg0) {
-		// TODO Auto-generated method stub
-		String testMethodName = arg0.getName().toString().trim();
-		Log.info(testMethodName +" Started");
-		
+		// TODO Auto-generated method stub	
 	}
 
 	public void onTestFailedButWithinSuccessPercentage(ITestResult arg0) {
@@ -41,16 +38,15 @@ public class TestListeners extends base implements ITestListener {
 			String testMethodName = arg0.getName().toString().trim();
 			//test.addScreenCaptureFromPath(capture(driver, testMethodName));
 			test.fail(arg0.getThrowable());
-			Log.info("FAILED- "+testMethodName);
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
+			System.out.println("FAILED- "+testMethodName);
+		// } catch (IOException e) {
+		// 	e.printStackTrace();
+		// }
 	}
 
 	public void onTestSkipped(ITestResult arg0) {
-		// TODO Auto-generated method stub
 		String testMethodName = arg0.getName().toString().trim();
-		Log.info("SKIPPED- "+testMethodName);
+		System.out.println("SKIPPED- "+testMethodName);
 		test.log(Status.SKIP, "Test Skipped");
 	}
 
