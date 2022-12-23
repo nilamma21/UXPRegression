@@ -8,33 +8,30 @@
 
 	<test thread-count="5" name="RegressionTest">
 		<classes>
-<<<<<<< HEAD
+
 			<class name="atlantamarket_PROD.MarketPlanner" />
-=======
-<<<<<<< HEAD
+
 			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
-=======
+
 			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
->>>>>>> bb06a008a6905061d692f2f2d3368e6ddf437590
->>>>>>> 2b7e700885052ce1012de511f3f3358c90d2f4e3
+
 			<methods>
 		<!-- 	<include name="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest" /> 
 				<include name="TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest" /> -->
 				
-<<<<<<< HEAD
+
 				<!-- <include name="TS011_VerifyEventsOverviewInGlobalSearchTest" /> --> 
 				
 				<!--  <include name="TS004_VerifyAddToNewListForLineTest" />   -->
 				<!--  <include name="TS007_VerifyGlobalSearchMatchingResultsSelectAddToNewlyCreatedListTest" />   -->
 				<!-- <include name="TS045_VerifyAddToListFunctionalityUsingQuickAddTest" /> -->
-=======
+
 				<!-- <include name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest" /> -->
-<<<<<<< HEAD
+
 				<!-- <include name="TS003_VerifyGlobalSearchMatchingResultsSortSortByTest" /> --> 
-=======
+
 				<!-- <include name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest" />  -->
->>>>>>> bb06a008a6905061d692f2f2d3368e6ddf437590
->>>>>>> 2b7e700885052ce1012de511f3f3358c90d2f4e3
+
 				
 				
 			</methods>
