@@ -1,31 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="9" passed="8">
+<testng-results skipped="0" failed="13" total="52" passed="39">
   <reporter-output>
   </reporter-output>
-  <suite name="LVM_RegressionTestSuite" duration-ms="501535" started-at="2022-12-19T06:14:40Z" finished-at="2022-12-19T06:23:02Z">
+  <suite name="LVM_RegressionTestSuite" duration-ms="2837112" started-at="2022-12-23T05:48:41Z" finished-at="2022-12-23T06:35:59Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="501535" started-at="2022-12-19T06:14:40Z" finished-at="2022-12-19T06:23:02Z">
-      <class name="atlantamarket_PROD.GlobalSearch_LineActions">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@239963d8]" name="initialize" is-config="true" duration-ms="50155" started-at="2022-12-19T11:44:40Z" finished-at="2022-12-19T11:45:30Z">
+    <test name="RegressionTest" duration-ms="2837112" started-at="2022-12-23T05:48:41Z" finished-at="2022-12-23T06:35:59Z">
+      <class name="atlantamarket_PROD.MarketPlanner">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="initialize" is-config="true" duration-ms="53613" started-at="2022-12-23T11:18:41Z" finished-at="2022-12-23T11:19:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyClickOnContactExhIconForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@239963d8]" name="TS001_VerifyClickOnContactExhIconForLineTest" duration-ms="24638" started-at="2022-12-19T11:45:30Z" finished-at="2022-12-19T11:45:55Z">
+        <test-method status="PASS" signature="TS001_VerifyMarketPlannerInvalidLoginCredentialsTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS001_VerifyMarketPlannerInvalidLoginCredentialsTest" duration-ms="28895" started-at="2022-12-23T11:19:35Z" finished-at="2022-12-23T11:20:04Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS001_VerifyClickOnContactExhIconForLineTest -->
-        <test-method status="FAIL" signature="TS002_VerifyAddToFavoriteForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@239963d8]" name="TS002_VerifyAddToFavoriteForLineTest" duration-ms="85882" started-at="2022-12-19T11:45:55Z" finished-at="2022-12-19T11:47:21Z">
-          <exception class="org.openqa.selenium.TimeoutException">
+        </test-method> <!-- TS001_VerifyMarketPlannerInvalidLoginCredentialsTest -->
+        <test-method status="PASS" signature="TS002_VerifyMarketPlannerLoginTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS002_VerifyMarketPlannerLoginTest" duration-ms="23920" started-at="2022-12-23T11:20:04Z" finished-at="2022-12-23T11:20:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifyMarketPlannerLoginTest -->
+        <test-method status="PASS" signature="TS003_VerifyMarketPlannerChannelSelectorTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS003_VerifyMarketPlannerChannelSelectorTest" duration-ms="110048" started-at="2022-12-23T11:20:28Z" finished-at="2022-12-23T11:22:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifyMarketPlannerChannelSelectorTest -->
+        <test-method status="PASS" signature="TS004_VerifyAddToFavoriteFunctionalityUsingQuickAddForExhibitorTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS004_VerifyAddToFavoriteFunctionalityUsingQuickAddForExhibitorTest" duration-ms="36587" started-at="2022-12-23T11:22:18Z" finished-at="2022-12-23T11:22:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyAddToFavoriteFunctionalityUsingQuickAddForExhibitorTest -->
+        <test-method status="PASS" signature="TS005_VerifyMarketPlannerSignOutTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS005_VerifyMarketPlannerSignOutTest" duration-ms="34092" started-at="2022-12-23T11:22:54Z" finished-at="2022-12-23T11:23:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifyMarketPlannerSignOutTest -->
+        <test-method status="PASS" signature="TS006_VerifyArrangeBtnFunctionalityForListsTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS006_VerifyArrangeBtnFunctionalityForListsTest" duration-ms="27309" started-at="2022-12-23T11:23:29Z" finished-at="2022-12-23T11:23:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS006_VerifyArrangeBtnFunctionalityForListsTest -->
+        <test-method status="FAIL" signature="TS007_VerifyNewGroupBtnFunctionalityForListsTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS007_VerifyNewGroupBtnFunctionalityForListsTest" duration-ms="9784" started-at="2022-12-23T11:23:56Z" finished-at="2022-12-23T11:24:06Z">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class='imc-list-edit--draggable'][1]/div/div[1]/div[1]/a (tried for 20 second(s) with 500 milliseconds interval)]]>
+              <![CDATA[expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class='imc-list-edit--draggable'][1]/div/div[1]/div[1]/a (tried for 20 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getATLSavedExhNameInList(ATLMarketPlannerPage.java:480)
-	at atlantamarket_PROD.GlobalSearch_LineActions.TS002_VerifyAddToFavoriteForLineTest(GlobalSearch_LineActions.java:143)
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at resources.Utility.checkItemPresentInListorNot(Utility.java:166)
+	at atlantamarket_PROD.MarketPlanner.TS007_VerifyNewGroupBtnFunctionalityForListsTest(MarketPlanner.java:387)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -50,15 +72,76 @@
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//li[@class='imc-list-edit--draggable'][1]/div/div[1]/div[1]/a"}
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifyNewGroupBtnFunctionalityForListsTest -->
+        <test-method status="PASS" signature="TS008_VerifyNewListBtnFunctionalityForListsTest1()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS008_VerifyNewListBtnFunctionalityForListsTest1" duration-ms="38271" started-at="2022-12-23T11:24:06Z" finished-at="2022-12-23T11:24:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS008_VerifyNewListBtnFunctionalityForListsTest1 -->
+        <test-method status="PASS" signature="TS009_VerifyCreateNewGroupFormValidationForListsTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS009_VerifyCreateNewGroupFormValidationForListsTest" duration-ms="15687" started-at="2022-12-23T11:24:44Z" finished-at="2022-12-23T11:25:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_VerifyCreateNewGroupFormValidationForListsTest -->
+        <test-method status="PASS" signature="TS010_VerifyCreateNewListFormValidationTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS010_VerifyCreateNewListFormValidationTest" duration-ms="37998" started-at="2022-12-23T11:25:00Z" finished-at="2022-12-23T11:25:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS010_VerifyCreateNewListFormValidationTest -->
+        <test-method status="PASS" signature="TS011_VerifyMPDashboardOverviewTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS011_VerifyMPDashboardOverviewTest" duration-ms="3443" started-at="2022-12-23T11:25:38Z" finished-at="2022-12-23T11:25:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS011_VerifyMPDashboardOverviewTest -->
+        <test-method status="PASS" signature="TS012_VerifyMPRegistrationCardOverviewTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS012_VerifyMPRegistrationCardOverviewTest" duration-ms="2402" started-at="2022-12-23T11:25:41Z" finished-at="2022-12-23T11:25:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS012_VerifyMPRegistrationCardOverviewTest -->
+        <test-method status="FAIL" signature="TS013_VerifyAddToFavoriteFunctionalityForProductTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS013_VerifyAddToFavoriteFunctionalityForProductTest" duration-ms="45384" started-at="2022-12-23T11:25:44Z" finished-at="2022-12-23T11:26:29Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/p[1] (tried for 20 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/p[1] (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.AtlantaMarket.ATLExhLineProdActionsPage.getExhProductNameOnSearchGrid(ATLExhLineProdActionsPage.java:282)
+	at atlantamarket_PROD.MarketPlanner.TS013_VerifyAddToFavoriteFunctionalityForProductTest(MarketPlanner.java:632)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/p[1]"}
   (Session info: chrome=108.0.5359.125)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
 System info: host: 'EON-SWAPNILI', ip: '172.22.22.78', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_311'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56746}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 420877b7b07799d7b134d10d09247f3b
-*** Element info: {Using=xpath, value=//li[@class='imc-list-edit--draggable'][1]/div/div[1]/div[1]/a}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49876}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 667a6359c8ad49684501e23dfb94d0d0
+*** Element info: {Using=xpath, value=//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/p[1]}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -82,40 +165,761 @@ Session ID: 420877b7b07799d7b134d10d09247f3b
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS002_VerifyAddToFavoriteForLineTest -->
-        <test-method status="PASS" signature="TS003_VerifyClickOnOrderOnJuniperMarketBtnForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@239963d8]" name="TS003_VerifyClickOnOrderOnJuniperMarketBtnForLineTest" duration-ms="32863" started-at="2022-12-19T11:47:21Z" finished-at="2022-12-19T11:47:54Z">
+        </test-method> <!-- TS013_VerifyAddToFavoriteFunctionalityForProductTest -->
+        <test-method status="PASS" signature="TS014_VerifyManageListOptionsOverviewTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS014_VerifyManageListOptionsOverviewTest" duration-ms="6358" started-at="2022-12-23T11:26:29Z" finished-at="2022-12-23T11:26:35Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS003_VerifyClickOnOrderOnJuniperMarketBtnForLineTest -->
-        <test-method status="PASS" signature="TS004_VerifyAddToNewListForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@239963d8]" name="TS004_VerifyAddToNewListForLineTest" duration-ms="65728" started-at="2022-12-19T11:47:54Z" finished-at="2022-12-19T11:49:00Z">
+        </test-method> <!-- TS014_VerifyManageListOptionsOverviewTest -->
+        <test-method status="PASS" signature="TS015_VerifyEditListFunctionalityForManageListTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS015_VerifyEditListFunctionalityForManageListTest" duration-ms="361427" started-at="2022-12-23T11:26:35Z" finished-at="2022-12-23T11:32:37Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS004_VerifyAddToNewListForLineTest -->
-        <test-method status="PASS" signature="TS005_VerifyAddToExistingListForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@239963d8]" name="TS005_VerifyAddToExistingListForLineTest" duration-ms="86645" started-at="2022-12-19T11:49:00Z" finished-at="2022-12-19T11:50:26Z">
+        </test-method> <!-- TS015_VerifyEditListFunctionalityForManageListTest -->
+        <test-method status="PASS" signature="TS016_VerifyDuplicateLinkFunctionalityForListTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS016_VerifyDuplicateLinkFunctionalityForListTest" duration-ms="36521" started-at="2022-12-23T11:32:37Z" finished-at="2022-12-23T11:33:13Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS005_VerifyAddToExistingListForLineTest -->
-        <test-method status="PASS" signature="TS006_VerifyClickOnShownByExhibitorNameLinkForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@239963d8]" name="TS006_VerifyClickOnShownByExhibitorNameLinkForLineTest" duration-ms="32378" started-at="2022-12-19T11:50:26Z" finished-at="2022-12-19T11:50:59Z">
+        </test-method> <!-- TS016_VerifyDuplicateLinkFunctionalityForListTest -->
+        <test-method status="PASS" signature="TS017_VerifyRenameFunctionalityForListTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS017_VerifyRenameFunctionalityForListTest" duration-ms="88179" started-at="2022-12-23T11:33:13Z" finished-at="2022-12-23T11:34:42Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS006_VerifyClickOnShownByExhibitorNameLinkForLineTest -->
-        <test-method status="PASS" signature="TS007_VerifyClickOnLocationLinkForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@239963d8]" name="TS007_VerifyClickOnLocationLinkForLineTest" duration-ms="29037" started-at="2022-12-19T11:50:59Z" finished-at="2022-12-19T11:51:28Z">
+        </test-method> <!-- TS017_VerifyRenameFunctionalityForListTest -->
+        <test-method status="FAIL" signature="TS018_VerifyAddToFavoriteFunctionalityForLineTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS018_VerifyAddToFavoriteFunctionalityForLineTest" duration-ms="56974" started-at="2022-12-23T11:34:42Z" finished-at="2022-12-23T11:35:39Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at atlantamarket_PROD.MarketPlanner.TS018_VerifyAddToFavoriteFunctionalityForLineTest(MarketPlanner.java:1074)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS007_VerifyClickOnLocationLinkForLineTest -->
-        <test-method status="PASS" signature="TS008_VerifyClickOnMatchingProductsSeeAllLinkForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@239963d8]" name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForLineTest" duration-ms="43174" started-at="2022-12-19T11:51:28Z" finished-at="2022-12-19T11:52:11Z">
+        </test-method> <!-- TS018_VerifyAddToFavoriteFunctionalityForLineTest -->
+        <test-method status="FAIL" signature="TS019_VerifyAddToFavoriteFunctionalityForExhibitorTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS019_VerifyAddToFavoriteFunctionalityForExhibitorTest" duration-ms="54000" started-at="2022-12-23T11:35:39Z" finished-at="2022-12-23T11:36:33Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at atlantamarket_PROD.MarketPlanner.TS019_VerifyAddToFavoriteFunctionalityForExhibitorTest(MarketPlanner.java:1139)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS008_VerifyClickOnMatchingProductsSeeAllLinkForLineTest -->
-        <test-method status="PASS" signature="TS009_VerifyClickOnTotalProductsSeeAllLinkForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@239963d8]" name="TS009_VerifyClickOnTotalProductsSeeAllLinkForLineTest" duration-ms="50869" started-at="2022-12-19T11:52:11Z" finished-at="2022-12-19T11:53:02Z">
+        </test-method> <!-- TS019_VerifyAddToFavoriteFunctionalityForExhibitorTest -->
+        <test-method status="PASS" signature="TS020_VerifyMPListsCardOverviewTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS020_VerifyMPListsCardOverviewTest" duration-ms="20021" started-at="2022-12-23T11:36:33Z" finished-at="2022-12-23T11:36:53Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS009_VerifyClickOnTotalProductsSeeAllLinkForLineTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@239963d8]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-12-19T11:53:02Z" finished-at="2022-12-19T11:53:02Z">
+        </test-method> <!-- TS020_VerifyMPListsCardOverviewTest -->
+        <test-method status="PASS" signature="TS021_VerifyMPActivitiesCardOverviewTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS021_VerifyMPActivitiesCardOverviewTest" duration-ms="14011" started-at="2022-12-23T11:36:53Z" finished-at="2022-12-23T11:37:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS021_VerifyMPActivitiesCardOverviewTest -->
+        <test-method status="PASS" signature="TS022_VerifyFilterByOptionsOverviewForListTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS022_VerifyFilterByOptionsOverviewForListTest" duration-ms="40998" started-at="2022-12-23T11:37:07Z" finished-at="2022-12-23T11:37:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS022_VerifyFilterByOptionsOverviewForListTest -->
+        <test-method status="FAIL" signature="TS023_VerifyFilterByOptionsFunctionalityForListTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS023_VerifyFilterByOptionsFunctionalityForListTest" duration-ms="62633" started-at="2022-12-23T11:37:48Z" finished-at="2022-12-23T11:38:50Z">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: element is not attached to the page document
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'EON-SWAPNILI', ip: '172.22.22.78', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_311'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49876}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 667a6359c8ad49684501e23dfb94d0d0]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'EON-SWAPNILI', ip: '172.22.22.78', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_311'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49876}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 667a6359c8ad49684501e23dfb94d0d0
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:166)
+	at atlantamarket_PROD.MarketPlanner.TS023_VerifyFilterByOptionsFunctionalityForListTest(MarketPlanner.java:1354)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS023_VerifyFilterByOptionsFunctionalityForListTest -->
+        <test-method status="PASS" signature="TS024_VerifyMarketPlannerListSortByTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS024_VerifyMarketPlannerListSortByTest" duration-ms="49406" started-at="2022-12-23T11:38:51Z" finished-at="2022-12-23T11:39:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS024_VerifyMarketPlannerListSortByTest -->
+        <test-method status="FAIL" signature="TS025_VerifyDuplicateLinkFunctionalityForListTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS025_VerifyDuplicateLinkFunctionalityForListTest" duration-ms="18226" started-at="2022-12-23T11:39:40Z" finished-at="2022-12-23T11:39:58Z">
+          <exception class="org.openqa.selenium.InvalidSelectorException">
+            <message>
+              <![CDATA[invalid selector: Unable to locate an element with the xpath expression //div[text()='CybQGqaZ']/../div[2]/span[1]) because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//div[text()='CybQGqaZ']/../div[2]/span[1])' is not a valid XPath expression.
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'EON-SWAPNILI', ip: '172.22.22.78', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_311'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49876}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 667a6359c8ad49684501e23dfb94d0d0
+*** Element info: {Using=xpath, value=//div[text()='CybQGqaZ']/../div[2]/span[1])}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression //div[text()='CybQGqaZ']/../div[2]/span[1]) because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//div[text()='CybQGqaZ']/../div[2]/span[1])' is not a valid XPath expression.
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'EON-SWAPNILI', ip: '172.22.22.78', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_311'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49876}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 667a6359c8ad49684501e23dfb94d0d0
+*** Element info: {Using=xpath, value=//div[text()='CybQGqaZ']/../div[2]/span[1])}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at atlantamarket_PROD.MarketPlanner.TS025_VerifyDuplicateLinkFunctionalityForListTest(MarketPlanner.java:1554)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.InvalidSelectorException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS025_VerifyDuplicateLinkFunctionalityForListTest -->
+        <test-method status="PASS" signature="TS026_VerifyListDisplayControlsTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS026_VerifyListDisplayControlsTest" duration-ms="6011" started-at="2022-12-23T11:39:58Z" finished-at="2022-12-23T11:40:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS026_VerifyListDisplayControlsTest -->
+        <test-method status="FAIL" signature="TS027_VerifyListDisplayControlsFunctionalityTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS027_VerifyListDisplayControlsFunctionalityTest" duration-ms="149252" started-at="2022-12-23T11:40:04Z" finished-at="2022-12-23T11:42:34Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at resources.Utility.checkItemPresentInListorNot(Utility.java:166)
+	at atlantamarket_PROD.MarketPlanner.TS027_VerifyListDisplayControlsFunctionalityTest(MarketPlanner.java:1658)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS027_VerifyListDisplayControlsFunctionalityTest -->
+        <test-method status="PASS" signature="TS028_VerifyMarketPlannerListElementLocationLinkTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS028_VerifyMarketPlannerListElementLocationLinkTest" duration-ms="24728" started-at="2022-12-23T11:42:34Z" finished-at="2022-12-23T11:42:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS028_VerifyMarketPlannerListElementLocationLinkTest -->
+        <test-method status="PASS" signature="TS029_VerifyMarketPlannerListsElementMoreOoptionsOverviewTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS029_VerifyMarketPlannerListsElementMoreOoptionsOverviewTest" duration-ms="23800" started-at="2022-12-23T11:42:59Z" finished-at="2022-12-23T11:43:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS029_VerifyMarketPlannerListsElementMoreOoptionsOverviewTest -->
+        <test-method status="PASS" signature="TS030_VerifyMarketPlannerListsElementMoreOoptionsCopyeTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS030_VerifyMarketPlannerListsElementMoreOoptionsCopyeTest" duration-ms="146840" started-at="2022-12-23T11:43:22Z" finished-at="2022-12-23T11:45:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS030_VerifyMarketPlannerListsElementMoreOoptionsCopyeTest -->
+        <test-method status="PASS" signature="TS031_VerifyMarketPlannerListsElementMoreOoptionsMoveTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS031_VerifyMarketPlannerListsElementMoreOoptionsMoveTest" duration-ms="153675" started-at="2022-12-23T11:45:49Z" finished-at="2022-12-23T11:48:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS031_VerifyMarketPlannerListsElementMoreOoptionsMoveTest -->
+        <test-method status="PASS" signature="TS032_VerifyMarketPlannerListsElementMoreOoptionsDeleteTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS032_VerifyMarketPlannerListsElementMoreOoptionsDeleteTest" duration-ms="86345" started-at="2022-12-23T11:48:23Z" finished-at="2022-12-23T11:49:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS032_VerifyMarketPlannerListsElementMoreOoptionsDeleteTest -->
+        <test-method status="PASS" signature="TS033_VerifyMarketPlannerListManagementAddNoteTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS033_VerifyMarketPlannerListManagementAddNoteTest" duration-ms="93736" started-at="2022-12-23T11:49:49Z" finished-at="2022-12-23T11:51:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS033_VerifyMarketPlannerListManagementAddNoteTest -->
+        <test-method status="PASS" signature="TS034_VerifyMarketPlannerEditListCustomItemTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS034_VerifyMarketPlannerEditListCustomItemTest" duration-ms="54108" started-at="2022-12-23T11:51:23Z" finished-at="2022-12-23T11:52:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS034_VerifyMarketPlannerEditListCustomItemTest -->
+        <test-method status="FAIL" signature="TS035_VerifyMarketPlannerEditListAddNoteTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS035_VerifyMarketPlannerEditListAddNoteTest" duration-ms="80846" started-at="2022-12-23T11:52:17Z" finished-at="2022-12-23T11:53:38Z">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element is not clickable at point (166, 634)
+  (Session info: chrome=108.0.5359.125)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'EON-SWAPNILI', ip: '172.22.22.78', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_311'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49876}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 667a6359c8ad49684501e23dfb94d0d0]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (166, 634)
+  (Session info: chrome=108.0.5359.125)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'EON-SWAPNILI', ip: '172.22.22.78', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_311'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49876}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 667a6359c8ad49684501e23dfb94d0d0
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at atlantamarket_PROD.MarketPlanner.TS035_VerifyMarketPlannerEditListAddNoteTest(MarketPlanner.java:2184)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS035_VerifyMarketPlannerEditListAddNoteTest -->
+        <test-method status="PASS" signature="TS036_VerifyMarketPlannerListsAllSavedExhibitorsTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS036_VerifyMarketPlannerListsAllSavedExhibitorsTest" duration-ms="43862" started-at="2022-12-23T11:53:38Z" finished-at="2022-12-23T11:54:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS036_VerifyMarketPlannerListsAllSavedExhibitorsTest -->
+        <test-method status="FAIL" signature="TS037_VerifyMarketPlannerListsAllSavedproductsTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS037_VerifyMarketPlannerListsAllSavedproductsTest" duration-ms="45563" started-at="2022-12-23T11:54:22Z" finished-at="2022-12-23T11:55:07Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/p[1] (tried for 20 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/p[1] (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.AtlantaMarket.ATLExhLineProdActionsPage.getExhProductNameOnSearchGrid(ATLExhLineProdActionsPage.java:282)
+	at atlantamarket_PROD.MarketPlanner.TS037_VerifyMarketPlannerListsAllSavedproductsTest(MarketPlanner.java:2280)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/p[1]"}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'EON-SWAPNILI', ip: '172.22.22.78', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_311'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49876}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 667a6359c8ad49684501e23dfb94d0d0
+*** Element info: {Using=xpath, value=//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/p[1]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 26 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS037_VerifyMarketPlannerListsAllSavedproductsTest -->
+        <test-method status="PASS" signature="TS038_VerifyMarketPlannerRegistrationsTabTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS038_VerifyMarketPlannerRegistrationsTabTest" duration-ms="11875" started-at="2022-12-23T11:55:08Z" finished-at="2022-12-23T11:55:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS038_VerifyMarketPlannerRegistrationsTabTest -->
+        <test-method status="FAIL" signature="TS039_VerifyMarketSavedSearchesfunctionalityTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS039_VerifyMarketSavedSearchesfunctionalityTest" duration-ms="25216" started-at="2022-12-23T11:55:19Z" finished-at="2022-12-23T11:55:45Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at atlantamarket_PROD.MarketPlanner.TS039_VerifyMarketSavedSearchesfunctionalityTest(MarketPlanner.java:2381)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS039_VerifyMarketSavedSearchesfunctionalityTest -->
+        <test-method status="PASS" signature="TS040_VerifyMarketSavedSearchesDeletefunctionalityTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS040_VerifyMarketSavedSearchesDeletefunctionalityTest" duration-ms="90134" started-at="2022-12-23T11:55:45Z" finished-at="2022-12-23T11:57:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS040_VerifyMarketSavedSearchesDeletefunctionalityTest -->
+        <test-method status="PASS" signature="TS041_VerifyMarketPlannerListSortByFunctionalityTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS041_VerifyMarketPlannerListSortByFunctionalityTest" duration-ms="157080" started-at="2022-12-23T11:57:15Z" finished-at="2022-12-23T11:59:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS041_VerifyMarketPlannerListSortByFunctionalityTest -->
+        <test-method status="PASS" signature="TS042_VerifyMarketPlannerListsElementMoreOoptionsAddToScheduleTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS042_VerifyMarketPlannerListsElementMoreOoptionsAddToScheduleTest" duration-ms="15831" started-at="2022-12-23T11:59:52Z" finished-at="2022-12-23T12:00:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS042_VerifyMarketPlannerListsElementMoreOoptionsAddToScheduleTest -->
+        <test-method status="FAIL" signature="TS043_VerifyAddToFavoriteFunctionalityUsingQuickAddForproductTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS043_VerifyAddToFavoriteFunctionalityUsingQuickAddForproductTest" duration-ms="67707" started-at="2022-12-23T12:00:08Z" finished-at="2022-12-23T12:01:15Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='imc-saved-exhibitors__contentItems__col2-1 imc-heading--h7 imc-heading--primary-medium imc-saved-exhibitors__name-title']/a (tried for 20 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='imc-saved-exhibitors__contentItems__col2-1 imc-heading--h7 imc-heading--primary-medium imc-saved-exhibitors__name-title']/a (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getmpListOfAllProds(ATLMarketPlannerPage.java:309)
+	at atlantamarket_PROD.MarketPlanner.TS043_VerifyAddToFavoriteFunctionalityUsingQuickAddForproductTest(MarketPlanner.java:2764)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='imc-saved-exhibitors__contentItems__col2-1 imc-heading--h7 imc-heading--primary-medium imc-saved-exhibitors__name-title']/a"}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'EON-SWAPNILI', ip: '172.22.22.78', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_311'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49876}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 667a6359c8ad49684501e23dfb94d0d0
+*** Element info: {Using=xpath, value=//div[@class='imc-saved-exhibitors__contentItems__col2-1 imc-heading--h7 imc-heading--primary-medium imc-saved-exhibitors__name-title']/a}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 26 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS043_VerifyAddToFavoriteFunctionalityUsingQuickAddForproductTest -->
+        <test-method status="FAIL" signature="TS044_VerifyAddToFavoriteFunctionalityUsingQuickAddForLinesTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS044_VerifyAddToFavoriteFunctionalityUsingQuickAddForLinesTest" duration-ms="98423" started-at="2022-12-23T12:01:16Z" finished-at="2022-12-23T12:02:54Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //a[@class='imc-link--alt-darkred'] (tried for 35 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[@class='imc-link--alt-darkred'] (tried for 35 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getlistOfAllExh(ATLMarketPlannerPage.java:991)
+	at atlantamarket_PROD.MarketPlanner.TS044_VerifyAddToFavoriteFunctionalityUsingQuickAddForLinesTest(MarketPlanner.java:2804)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@class='imc-link--alt-darkred']"}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'EON-SWAPNILI', ip: '172.22.22.78', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_311'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49876}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 667a6359c8ad49684501e23dfb94d0d0
+*** Element info: {Using=xpath, value=//a[@class='imc-link--alt-darkred']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 26 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS044_VerifyAddToFavoriteFunctionalityUsingQuickAddForLinesTest -->
+        <test-method status="FAIL" signature="TS045_VerifyAddToListFunctionalityUsingQuickAddTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS045_VerifyAddToListFunctionalityUsingQuickAddTest" duration-ms="134225" started-at="2022-12-23T12:02:54Z" finished-at="2022-12-23T12:05:08Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //a[@class='imc-link--alt-darkred'] (tried for 35 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[@class='imc-link--alt-darkred'] (tried for 35 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getlistOfAllExh(ATLMarketPlannerPage.java:991)
+	at atlantamarket_PROD.MarketPlanner.TS045_VerifyAddToListFunctionalityUsingQuickAddTest(MarketPlanner.java:2864)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@class='imc-link--alt-darkred']"}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'EON-SWAPNILI', ip: '172.22.22.78', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_311'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49876}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 667a6359c8ad49684501e23dfb94d0d0
+*** Element info: {Using=xpath, value=//a[@class='imc-link--alt-darkred']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 26 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS045_VerifyAddToListFunctionalityUsingQuickAddTest -->
+        <test-method status="PASS" signature="TS046_VerifyMarketPlanneMyInfoEditProfile()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS046_VerifyMarketPlanneMyInfoEditProfile" duration-ms="24286" started-at="2022-12-23T12:05:08Z" finished-at="2022-12-23T12:05:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS046_VerifyMarketPlanneMyInfoEditProfile -->
+        <test-method status="PASS" signature="TS047_VerifyMarketPlanneMyInfoOverview()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS047_VerifyMarketPlanneMyInfoOverview" duration-ms="3468" started-at="2022-12-23T12:05:33Z" finished-at="2022-12-23T12:05:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS047_VerifyMarketPlanneMyInfoOverview -->
+        <test-method status="PASS" signature="TS048_VerifyMarketPlanneMyInfoMyInquiriesTab()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS048_VerifyMarketPlanneMyInfoMyInquiriesTab" duration-ms="3436" started-at="2022-12-23T12:05:36Z" finished-at="2022-12-23T12:05:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS048_VerifyMarketPlanneMyInfoMyInquiriesTab -->
+        <test-method status="PASS" signature="TS049_VerifyTabsUnderListsSectionTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS049_VerifyTabsUnderListsSectionTest" duration-ms="6013" started-at="2022-12-23T12:05:40Z" finished-at="2022-12-23T12:05:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS049_VerifyTabsUnderListsSectionTest -->
+        <test-method status="PASS" signature="TS050_VerifyListTabDetailsTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS050_VerifyListTabDetailsTest" duration-ms="7153" started-at="2022-12-23T12:05:46Z" finished-at="2022-12-23T12:05:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS050_VerifyListTabDetailsTest -->
+        <test-method status="PASS" signature="TS051_VerifyMarketPlannerAddEventsToFav()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS051_VerifyMarketPlannerAddEventsToFav" duration-ms="4528" started-at="2022-12-23T12:05:53Z" finished-at="2022-12-23T12:05:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS051_VerifyMarketPlannerAddEventsToFav -->
+        <test-method status="PASS" signature="TS052_VerifyMarketPlannerAllSavedEventsAndSemninar()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS052_VerifyMarketPlannerAllSavedEventsAndSemninar" duration-ms="1177" started-at="2022-12-23T12:05:57Z" finished-at="2022-12-23T12:05:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS052_VerifyMarketPlannerAllSavedEventsAndSemninar -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-12-23T12:05:59Z" finished-at="2022-12-23T12:05:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- atlantamarket_PROD.GlobalSearch_LineActions -->
+      </class> <!-- atlantamarket_PROD.MarketPlanner -->
     </test> <!-- RegressionTest -->
   </suite> <!-- LVM_RegressionTestSuite -->
 </testng-results>
