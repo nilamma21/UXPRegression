@@ -3,7 +3,20 @@
 <suite name="Failed suite [LVM_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="atlantamarket_PROD.MarketPlanner">
+=======
+<<<<<<< HEAD
+      <class name="atlantamarket_PROD.GlobalSearch_LineActions">
+        <methods>
+          <include name="TS002_VerifyAddToFavoriteForLineTest"/>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.GlobalSearch_LineActions -->
+=======
+      <class name="atlantamarket_PROD.GlobalSearch_ProductActions">
+>>>>>>> 2b7e700885052ce1012de511f3f3358c90d2f4e3
         <methods>
           <include name="initialize"/>
           <include name="TS044_VerifyAddToFavoriteFunctionalityUsingQuickAddForLinesTest"/>
@@ -21,7 +34,12 @@
           <include name="TS018_VerifyAddToFavoriteFunctionalityForLineTest"/>
           <include name="TS025_VerifyDuplicateLinkFunctionalityForListTest"/>
         </methods>
+<<<<<<< HEAD
       </class> <!-- atlantamarket_PROD.MarketPlanner -->
+=======
+      </class> <!-- atlantamarket_PROD.GlobalSearch_ProductActions -->
+>>>>>>> bb06a008a6905061d692f2f2d3368e6ddf437590
+>>>>>>> 2b7e700885052ce1012de511f3f3358c90d2f4e3
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->

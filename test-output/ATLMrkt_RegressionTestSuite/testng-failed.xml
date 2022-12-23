@@ -3,13 +3,29 @@
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="atlantamarket_PROD.LineDigitalShowroom">
+=======
+<<<<<<< HEAD
+      <class name="atlantamarket_PROD.LineDigitalShowroom">
+=======
+      <class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters">
+>>>>>>> bb06a008a6905061d692f2f2d3368e6ddf437590
+>>>>>>> 2b7e700885052ce1012de511f3f3358c90d2f4e3
         <methods>
           <include name="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest"/>
           <include name="tearDown"/>
           <include name="initialize"/>
         </methods>
+<<<<<<< HEAD
       </class> <!-- atlantamarket_PROD.LineDigitalShowroom -->
+=======
+<<<<<<< HEAD
+      </class> <!-- atlantamarket_PROD.LineDigitalShowroom -->
+=======
+      </class> <!-- atlantamarket_PROD.GlobalSearch_LeftPaneFilters -->
+>>>>>>> bb06a008a6905061d692f2f2d3368e6ddf437590
+>>>>>>> 2b7e700885052ce1012de511f3f3358c90d2f4e3
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->

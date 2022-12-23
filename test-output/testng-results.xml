@@ -1,9 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 
 <testng-results skipped="0" failed="13" total="52" passed="39">
 
 
 <testng-results skipped="0" failed="1" total="11" passed="10">
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<testng-results skipped="0" failed="1" total="11" passed="10">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="429711" started-at="2022-12-20T05:23:58Z" finished-at="2022-12-20T05:31:08Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="429711" started-at="2022-12-20T05:23:58Z" finished-at="2022-12-20T05:31:08Z">
+      <class name="atlantamarket_PROD.LineDigitalShowroom">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@53b32d7]" name="initialize" is-config="true" duration-ms="39883" started-at="2022-12-20T10:53:58Z" finished-at="2022-12-20T10:54:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@53b32d7]" name="TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest" duration-ms="11522" started-at="2022-12-20T10:54:38Z" finished-at="2022-12-20T10:54:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest -->
+        <test-method status="PASS" signature="TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@53b32d7]" name="TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest" duration-ms="20418" started-at="2022-12-20T10:54:49Z" finished-at="2022-12-20T10:55:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest -->
+        <test-method status="FAIL" signature="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@53b32d7]" name="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest" duration-ms="115876" started-at="2022-12-20T10:55:10Z" finished-at="2022-12-20T10:57:06Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //a[@class='imc-link--alt-darkred'] (tried for 35 second(s) with 500 MILLISECONDS interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[@class='imc-link--alt-darkred'] (tried for 35 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getlistOfAllExh(ATLMarketPlannerPage.java:967)
+	at atlantamarket_PROD.LineDigitalShowroom.TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest(LineDigitalShowroom.java:196)
+=======
+<testng-results skipped="0" failed="1" total="9" passed="8">
+  <reporter-output>
+  </reporter-output>
+  <suite name="LVM_RegressionTestSuite" duration-ms="501535" started-at="2022-12-19T06:14:40Z" finished-at="2022-12-19T06:23:02Z">
+    <groups>
+    </groups>
+    <test name="RegressionTest" duration-ms="501535" started-at="2022-12-19T06:14:40Z" finished-at="2022-12-19T06:23:02Z">
+      <class name="atlantamarket_PROD.GlobalSearch_LineActions">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@239963d8]" name="initialize" is-config="true" duration-ms="50155" started-at="2022-12-19T11:44:40Z" finished-at="2022-12-19T11:45:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS001_VerifyClickOnContactExhIconForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@239963d8]" name="TS001_VerifyClickOnContactExhIconForLineTest" duration-ms="24638" started-at="2022-12-19T11:45:30Z" finished-at="2022-12-19T11:45:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifyClickOnContactExhIconForLineTest -->
+        <test-method status="FAIL" signature="TS002_VerifyAddToFavoriteForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@239963d8]" name="TS002_VerifyAddToFavoriteForLineTest" duration-ms="85882" started-at="2022-12-19T11:45:55Z" finished-at="2022-12-19T11:47:21Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class='imc-list-edit--draggable'][1]/div/div[1]/div[1]/a (tried for 20 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class='imc-list-edit--draggable'][1]/div/div[1]/div[1]/a (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getATLSavedExhNameInList(ATLMarketPlannerPage.java:480)
+	at atlantamarket_PROD.GlobalSearch_LineActions.TS002_VerifyAddToFavoriteForLineTest(GlobalSearch_LineActions.java:143)
+>>>>>>> aa76b90493b1f008dcbb59e59252390f34eb42c1
+=======
+<testng-results skipped="0" failed="3" total="9" passed="6">
+>>>>>>> 2b7e700885052ce1012de511f3f3358c90d2f4e3
   <reporter-output>
   </reporter-output>
   <suite name="Default suite" duration-ms="429711" started-at="2022-12-20T05:23:58Z" finished-at="2022-12-20T05:31:08Z">
@@ -90,6 +157,7 @@
               <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class='imc-list-edit--draggable'][1]/div/div[1]/div[1]/a (tried for 20 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+<<<<<<< HEAD
 	at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getATLSavedExhNameInList(ATLMarketPlannerPage.java:480)
 	at atlantamarket_PROD.GlobalSearch_LineActions.TS002_VerifyAddToFavoriteForLineTest(GlobalSearch_LineActions.java:143)
 
@@ -172,6 +240,11 @@ Driver info: driver.version: unknown
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at pageObjects.AtlantaMarket.ATLExhLineProdActionsPage.getExhProductNameOnSearchGrid(ATLExhLineProdActionsPage.java:282)
 	at atlantamarket_PROD.MarketPlanner.TS013_VerifyAddToFavoriteFunctionalityForProductTest(MarketPlanner.java:632)
+=======
+	at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getSavedProductNameInList(ATLMarketPlannerPage.java:540)
+	at atlantamarket_PROD.GlobalSearch_ProductActions.TS002_VerifyProductAddToNewListOnProductDetailsPageTest(GlobalSearch_ProductActions.java:185)
+>>>>>>> bb06a008a6905061d692f2f2d3368e6ddf437590
+>>>>>>> 2b7e700885052ce1012de511f3f3358c90d2f4e3
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -193,18 +266,57 @@ Driver info: driver.version: unknown
 	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
 	at org.testng.TestNG.run(TestNG.java:1031)
+<<<<<<< HEAD
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //a[@class='imc-link--alt-darkred']
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'ANUPPA-VD3', ip: '172.27.182.66', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_351'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+=======
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+<<<<<<< HEAD
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/p[1]"}
   (Session info: chrome=108.0.5359.125)
+=======
+<<<<<<< HEAD
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//li[@class='imc-list-edit--draggable'][1]/div/div[1]/div[1]/a"}
+  (Session info: chrome=108.0.5359.125)
+=======
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//li[@class='imc-list-edit--draggable'][1]/div/div[3]/div/div/div/div/a"}
+  (Session info: chrome=108.0.5359.96)
+>>>>>>> bb06a008a6905061d692f2f2d3368e6ddf437590
+>>>>>>> 2b7e700885052ce1012de511f3f3358c90d2f4e3
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
 System info: host: 'EON-SWAPNILI', ip: '172.22.22.78', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_311'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
+<<<<<<< HEAD
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:49876}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
 Session ID: 667a6359c8ad49684501e23dfb94d0d0
 *** Element info: {Using=xpath, value=//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/p[1]}
+=======
+<<<<<<< HEAD
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56746}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 420877b7b07799d7b134d10d09247f3b
+*** Element info: {Using=xpath, value=//li[@class='imc-list-edit--draggable'][1]/div/div[1]/div[1]/a}
+=======
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.96, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55548}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 12deea613a993c98c720ae4d64eb38a0
+*** Element info: {Using=xpath, value=//li[@class='imc-list-edit--draggable'][1]/div/div[3]/div/div/div/div/a}
+>>>>>>> bb06a008a6905061d692f2f2d3368e6ddf437590
+>>>>>>> 2b7e700885052ce1012de511f3f3358c90d2f4e3
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -222,13 +334,18 @@ Session ID: 667a6359c8ad49684501e23dfb94d0d0
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+<<<<<<< HEAD
 
+=======
+>>>>>>> aa76b90493b1f008dcbb59e59252390f34eb42c1
+>>>>>>> 2b7e700885052ce1012de511f3f3358c90d2f4e3
 	... 26 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
 
         </test-method> <!-- TS013_VerifyAddToFavoriteFunctionalityForProductTest -->
         <test-method status="PASS" signature="TS014_VerifyManageListOptionsOverviewTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@598067a5]" name="TS014_VerifyManageListOptionsOverviewTest" duration-ms="6358" started-at="2022-12-23T11:26:29Z" finished-at="2022-12-23T11:26:35Z">
@@ -236,6 +353,91 @@ Session ID: 667a6359c8ad49684501e23dfb94d0d0
 
         </test-method> <!-- TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest -->
         <test-method status="PASS" signature="TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@53b32d7]" name="TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest" duration-ms="86322" started-at="2022-12-20T10:57:06Z" finished-at="2022-12-20T10:58:32Z">
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        </test-method> <!-- TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest -->
+        <test-method status="PASS" signature="TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@53b32d7]" name="TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest" duration-ms="86322" started-at="2022-12-20T10:57:06Z" finished-at="2022-12-20T10:58:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest -->
+        <test-method status="PASS" signature="TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@53b32d7]" name="TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest" duration-ms="48896" started-at="2022-12-20T10:58:32Z" finished-at="2022-12-20T10:59:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest -->
+        <test-method status="PASS" signature="TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@53b32d7]" name="TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest" duration-ms="8014" started-at="2022-12-20T10:59:21Z" finished-at="2022-12-20T10:59:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest -->
+        <test-method status="PASS" signature="TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@53b32d7]" name="TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest" duration-ms="5615" started-at="2022-12-20T10:59:29Z" finished-at="2022-12-20T10:59:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest -->
+        <test-method status="PASS" signature="TS008_VerifyLineDigitalShowroomProductscomponentTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@53b32d7]" name="TS008_VerifyLineDigitalShowroomProductscomponentTest" duration-ms="23590" started-at="2022-12-20T10:59:34Z" finished-at="2022-12-20T10:59:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS008_VerifyLineDigitalShowroomProductscomponentTest -->
+        <test-method status="PASS" signature="TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@53b32d7]" name="TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest" duration-ms="19681" started-at="2022-12-20T10:59:58Z" finished-at="2022-12-20T11:00:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest -->
+        <test-method status="PASS" signature="TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@53b32d7]" name="TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest" duration-ms="15993" started-at="2022-12-20T11:00:18Z" finished-at="2022-12-20T11:00:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest -->
+        <test-method status="PASS" signature="TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@53b32d7]" name="TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest" duration-ms="33862" started-at="2022-12-20T11:00:34Z" finished-at="2022-12-20T11:01:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@53b32d7]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-12-20T11:01:08Z" finished-at="2022-12-20T11:01:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- atlantamarket_PROD.LineDigitalShowroom -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+=======
+        </test-method> <!-- TS002_VerifyAddToFavoriteForLineTest -->
+        <test-method status="PASS" signature="TS003_VerifyClickOnOrderOnJuniperMarketBtnForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@239963d8]" name="TS003_VerifyClickOnOrderOnJuniperMarketBtnForLineTest" duration-ms="32863" started-at="2022-12-19T11:47:21Z" finished-at="2022-12-19T11:47:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifyClickOnOrderOnJuniperMarketBtnForLineTest -->
+        <test-method status="PASS" signature="TS004_VerifyAddToNewListForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@239963d8]" name="TS004_VerifyAddToNewListForLineTest" duration-ms="65728" started-at="2022-12-19T11:47:54Z" finished-at="2022-12-19T11:49:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyAddToNewListForLineTest -->
+        <test-method status="PASS" signature="TS005_VerifyAddToExistingListForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@239963d8]" name="TS005_VerifyAddToExistingListForLineTest" duration-ms="86645" started-at="2022-12-19T11:49:00Z" finished-at="2022-12-19T11:50:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifyAddToExistingListForLineTest -->
+        <test-method status="PASS" signature="TS006_VerifyClickOnShownByExhibitorNameLinkForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@239963d8]" name="TS006_VerifyClickOnShownByExhibitorNameLinkForLineTest" duration-ms="32378" started-at="2022-12-19T11:50:26Z" finished-at="2022-12-19T11:50:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS006_VerifyClickOnShownByExhibitorNameLinkForLineTest -->
+        <test-method status="PASS" signature="TS007_VerifyClickOnLocationLinkForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@239963d8]" name="TS007_VerifyClickOnLocationLinkForLineTest" duration-ms="29037" started-at="2022-12-19T11:50:59Z" finished-at="2022-12-19T11:51:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifyClickOnLocationLinkForLineTest -->
+        <test-method status="PASS" signature="TS008_VerifyClickOnMatchingProductsSeeAllLinkForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@239963d8]" name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForLineTest" duration-ms="43174" started-at="2022-12-19T11:51:28Z" finished-at="2022-12-19T11:52:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS008_VerifyClickOnMatchingProductsSeeAllLinkForLineTest -->
+        <test-method status="PASS" signature="TS009_VerifyClickOnTotalProductsSeeAllLinkForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@239963d8]" name="TS009_VerifyClickOnTotalProductsSeeAllLinkForLineTest" duration-ms="50869" started-at="2022-12-19T11:52:11Z" finished-at="2022-12-19T11:53:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_VerifyClickOnTotalProductsSeeAllLinkForLineTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@239963d8]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-12-19T11:53:02Z" finished-at="2022-12-19T11:53:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_LineActions -->
+    </test> <!-- RegressionTest -->
+  </suite> <!-- LVM_RegressionTestSuite -->
+>>>>>>> aa76b90493b1f008dcbb59e59252390f34eb42c1
+=======
+        </test-method> <!-- TS002_VerifyProductAddToNewListOnProductDetailsPageTest -->
+        <test-method status="PASS" signature="TS003_VerifyProductAddToExistingListOnProductDetailsPageTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@239963d8]" name="TS003_VerifyProductAddToExistingListOnProductDetailsPageTest" duration-ms="115768" started-at="2022-12-15T09:47:34Z" finished-at="2022-12-15T09:49:29Z">
+>>>>>>> 2b7e700885052ce1012de511f3f3358c90d2f4e3
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest -->
@@ -1033,5 +1235,9 @@ Session ID: 667a6359c8ad49684501e23dfb94d0d0
       </class> <!-- atlantamarket_PROD.MarketPlanner -->
     </test> <!-- RegressionTest -->
   </suite> <!-- LVM_RegressionTestSuite -->
+<<<<<<< HEAD
 
+=======
+>>>>>>> bb06a008a6905061d692f2f2d3368e6ddf437590
+>>>>>>> 2b7e700885052ce1012de511f3f3358c90d2f4e3
 </testng-results>
