@@ -230,7 +230,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 				break;
 			}
 		}
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 
 		// Delete that added exhibitor from list
