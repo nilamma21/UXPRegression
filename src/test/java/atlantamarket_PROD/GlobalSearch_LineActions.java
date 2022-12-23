@@ -417,7 +417,7 @@ public class GlobalSearch_LineActions extends base {
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor3")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -436,6 +436,7 @@ public class GlobalSearch_LineActions extends base {
 
 		// Verify that user should redirect to the Matching Products page
 		Assert.assertTrue(atlexhact.getValidateProductsPage().isDisplayed());
+		Thread.sleep(15000);
 		Assert.assertTrue(driver.getTitle().contains("Products by "+linename+""));
 
 		// Get the Matching Products count on Products page
@@ -475,7 +476,7 @@ public class GlobalSearch_LineActions extends base {
 		System.out.println("Line name: " +linename);
 
 		// Get the Matching Products count on Search grid
-		String temp = atlexhact.getMatchingProdCountOnSearchGrid().getText();
+		String temp = atlexhact.getTotalProdCountOnSearchGrid().getText();
 		String matchingprodcountonsearchgrid = temp.replaceAll("[^0-9]", "");
 		System.out.println("Total Products Count on Search Results grid is: " + matchingprodcountonsearchgrid);
 
