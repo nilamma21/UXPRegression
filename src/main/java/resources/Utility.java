@@ -18,12 +18,12 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
-<<<<<<< HEAD
+
 import com.gargoylesoftware.htmlunit.javascript.host.media.webkitMediaStream;
 
 //import atlantamarket_UAT.MarketPlanner;
-=======
->>>>>>> 2b7e700885052ce1012de511f3f3358c90d2f4e3
+
+
 import pageObjects.AtlantaMarket.ATLEventsAndWebinarPage;
 import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
 import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
@@ -37,10 +37,9 @@ public class Utility extends base {
 	ATLLandingPage lap;
 	ATLLoginPage lp;
 	ATLExhLineProdActionsPage atlexhact;
-<<<<<<< HEAD
+
 	//MarketPlanner mp;
-=======
->>>>>>> 2b7e700885052ce1012de511f3f3358c90d2f4e3
+
 	ATLMarketPlannerPage atlmppge;
 	ATLGlobalSearchPage atlgs;
 	ATLEventsAndWebinarPage atlevents;
