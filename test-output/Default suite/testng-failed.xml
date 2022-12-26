@@ -12,8 +12,6 @@
           <include name="TS004_VerifyIMCEventsEventsListTest"/>
           <include name="TS011_VerifyExhibitorEventsListTest"/>
           <include name="TS006_VerifyIMCEventsAddToFavoriteTest"/>
-          <include name="TS008_VerifyIMCEventsAddNoteTest"/>
-          <include name="TS010_VerifyExhibitorEventsCalendarViewTest"/>
           <include name="TS007_VerifyIMCEventsAddToListTest"/>
           <include name="TS012_VerifyExhibitorEventsDetailstTest"/>
           <include name="initialize"/>

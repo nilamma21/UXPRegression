@@ -7,15 +7,6 @@
         <methods>
           <include name="TS014_VerifyExhibitorEventsAddToListTest"/>
           <include name="TS013_VerifyExhibitorEventsAddToFavoriteTest"/>
-          <include name="TS015_VerifyExhibitorEventsAddNoteTest"/>
-          <include name="TS009_VerifyExhibitorEventsSearchbarTest"/>
-          <include name="TS004_VerifyIMCEventsEventsListTest"/>
-          <include name="TS011_VerifyExhibitorEventsListTest"/>
-          <include name="TS006_VerifyIMCEventsAddToFavoriteTest"/>
-          <include name="TS008_VerifyIMCEventsAddNoteTest"/>
-          <include name="TS010_VerifyExhibitorEventsCalendarViewTest"/>
-          <include name="TS007_VerifyIMCEventsAddToListTest"/>
-          <include name="TS012_VerifyExhibitorEventsDetailstTest"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- atlantamarket_PROD.EvenntsAndWebinar -->

@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.concurrent.TimeUnit;
 
 import org.omg.CORBA.PUBLIC_MEMBER;
 import org.openqa.selenium.By;
@@ -437,14 +438,16 @@ public class Utility extends base {
 		atlevents=new ATLEventsAndWebinarPage(driver);
 		
 		if(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_prod"))) {
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			// Click on Attend Tab
-			atlevents.getatlAttendTab().click(); 
+			atlevents.getatlAttendTab().click();
 			Thread.sleep(2000);
 			//click on Events Link
 			atlevents.getatlEventsLink().click();
 			Thread.sleep(3000);
 		}
 		else {
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			atlevents.getatlExploreMarketTab().click();  //For LVM Events
 			Thread.sleep(2000);
 			//click on Events Link
