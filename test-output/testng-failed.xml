@@ -1,53 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [LVM_RegressionTestSuite]">
-  <test name="RegressionTest(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-
       <class name="atlantamarket_PROD.EvenntsAndWebinar">
-
-
-      <class name="atlantamarket_PROD.MarketPlanner">
-
-
-      <class name="atlantamarket_PROD.LineDigitalShowroom">
-
         <methods>
           <include name="TS014_VerifyExhibitorEventsAddToListTest"/>
           <include name="TS013_VerifyExhibitorEventsAddToFavoriteTest"/>
+          <include name="TS004_VerifyIMCEventsEventsListTest"/>
+          <include name="TS006_VerifyIMCEventsAddToFavoriteTest"/>
+          <include name="TS007_VerifyIMCEventsAddToListTest"/>
           <include name="initialize"/>
         </methods>
-
       </class> <!-- atlantamarket_PROD.EvenntsAndWebinar -->
-
-      </class> <!-- atlantamarket_PROD.LineDigitalShowroom -->
-
-      <class name="atlantamarket_PROD.GlobalSearch_LineActions">
-
-        <methods>
-          <include name="initialize"/>
-          <include name="TS044_VerifyAddToFavoriteFunctionalityUsingQuickAddForLinesTest"/>
-          <include name="TS023_VerifyFilterByOptionsFunctionalityForListTest"/>
-          <include name="TS007_VerifyNewGroupBtnFunctionalityForListsTest"/>
-          <include name="TS045_VerifyAddToListFunctionalityUsingQuickAddTest"/>
-          <include name="tearDown"/>
-          <include name="TS027_VerifyListDisplayControlsFunctionalityTest"/>
-          <include name="TS043_VerifyAddToFavoriteFunctionalityUsingQuickAddForproductTest"/>
-          <include name="TS013_VerifyAddToFavoriteFunctionalityForProductTest"/>
-          <include name="TS035_VerifyMarketPlannerEditListAddNoteTest"/>
-          <include name="TS019_VerifyAddToFavoriteFunctionalityForExhibitorTest"/>
-          <include name="TS037_VerifyMarketPlannerListsAllSavedproductsTest"/>
-          <include name="TS039_VerifyMarketSavedSearchesfunctionalityTest"/>
-          <include name="TS018_VerifyAddToFavoriteFunctionalityForLineTest"/>
-          <include name="TS025_VerifyDuplicateLinkFunctionalityForListTest"/>
-        </methods>
-
-      </class> <!-- atlantamarket_PROD.MarketPlanner -->
-
-      </class> <!-- atlantamarket_PROD.GlobalSearch_LineActions -->
-
-
-
     </classes>
-  </test> <!-- RegressionTest(failed) -->
-</suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

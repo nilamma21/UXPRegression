@@ -62,14 +62,14 @@ public class EvenntsAndWebinar extends base{
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		//driver.get(prop.getProperty("lvmurl_uat"));
-		
+		/*utl.verifyMPLoginFunctionality();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);*/
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(7000);
 		//lap.getCloseMarktAdBtn().click();
 
 		//Login to Market Planner
-		utl.verifyMPLoginFunctionality();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
 		//driver.navigate().refresh();
 		Thread.sleep(8000);
 		//		lap.getCloseMarktAdBtn().click();
@@ -485,7 +485,7 @@ public class EvenntsAndWebinar extends base{
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//Login to MP
-		//utl.verifyMPLoginFunctionality();
+		utl.verifyMPLoginFunctionality();
 		
 		utl.clickOnEventLinkOfChannel();
 
@@ -524,7 +524,7 @@ public class EvenntsAndWebinar extends base{
 		Assert.assertFalse(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 
 	}
-	@Test(priority = 16)//previuos priority is 07
+	@Test(priority = 16)//Previous priority = 07
 	public void TS007_VerifyIMCEventsAddToListTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T298: IMC Events: Event Details- Add To List
@@ -806,9 +806,10 @@ public class EvenntsAndWebinar extends base{
 		//Verify Current date and month should selected by default
 		Assert.assertTrue(d.contains(atlevents.getatlTodaysDate().getText()));
 		System.out.println("By Default "+d +" today's date is selected.");
+		Thread.sleep(4000);
 	}
 	
-	@Test(priority = 11)
+	@Test(priority = 0)//Previous priority = 11
 	public void TS011_VerifyExhibitorEventsListTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T306: Exhibitor Events: Events List
@@ -897,12 +898,14 @@ public class EvenntsAndWebinar extends base{
 		}
 		System.out.println(allEventSeeDetailsLinkCount + " See Details Link displayed");
 		Assert.assertEquals(allEventcount, allEventSeeDetailsLinkCount);
+		Thread.sleep(5000);
 
 		// Click on Event Title page
 		int allEventSeeDetailsLinkCount1 = 0;
 		for( int i=0;i < atlevents.getatlListOfEventTitles().size(); i++) {
 			allEventSeeDetailsLinkCount1++;
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			//Thread.sleep(5000);
 			WebElement eventTitleLink = atlevents.getatlListOfEventTitles().get(i);
 			String eventTitle=eventTitleLink.getText();
 			Assert.assertTrue(eventTitleLink.isDisplayed());
@@ -911,14 +914,16 @@ public class EvenntsAndWebinar extends base{
 			//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("eventTitleLink")));
 			eventTitleLink.click();
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			//Thread.sleep(4000);
 			//Verify Event Details Page
 			Assert.assertTrue(eventTitle.contains(atlevents.getatlEventNameOnDetailsPage().getText()));
-			Thread.sleep(1000);
 			driver.navigate().back();
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			//Thread.sleep(5000);
 			//Click on Exh Event Tab
 			atlevents.getatlExhibitorsEventsTab().click();
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			Thread.sleep(3000);
+			Thread.sleep(2000);
+			//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		}
 		
 		System.out.println(allEventSeeDetailsLinkCount + " Events Details Page displayed");
