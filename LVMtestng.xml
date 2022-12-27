@@ -12,14 +12,14 @@
 			<class name="atlantamarket_PROD.EvenntsAndWebinar" />
 			<methods>
 			
-				<!-- <include name="TS011_VerifyExhibitorEventsListTest" /> -->
-				  <include name="TS012_VerifyExhibitorEventsDetailstTest" /> 
+				  <!-- <include name="TS011_VerifyExhibitorEventsListTest" /> -->
+				 <!--<include name="TS012_VerifyExhibitorEventsDetailstTest" /> 
 				 <include name="TS013_VerifyExhibitorEventsAddToFavoriteTest" /> 
 				 <include name="TS014_VerifyExhibitorEventsAddToListTest" />
-				 <include name="TS015_VerifyExhibitorEventsAddNoteTest" /> 
+				 <include name="TS015_VerifyExhibitorEventsAddNoteTest" />  --> 
 
-			<class name="atlantamarket_PROD.MarketPlanner" />
-			<methods>
+			<!-- <class name="atlantamarket_PROD.MarketPlanner" />
+			<methods> -->
 		<!-- 	<include name="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest" /> 
 				<include name="TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest" /> -->
 				
