@@ -1669,7 +1669,7 @@ public class MarketPlanner extends base {
 		Assert.assertTrue(atlmppge.getATLmpVerifyListView().isDisplayed());
 
 	}
-
+ <!--
 	@Test(priority = 28)
 	public void TS028_VerifyMarketPlannerListElementLocationLinkTest() throws InterruptedException, IOException {
 
@@ -3233,7 +3233,7 @@ public class MarketPlanner extends base {
 		// list
 		Assert.assertFalse(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 
-	}
+	} -->
 
 	@AfterClass
 	public void tearDown() {
