@@ -16,7 +16,7 @@ public class ATLExhDigiShowroomPage {
 
 	By atlvalidateexhdigishowpage = By.xpath("//img[@class='imc-image--responsive align-image-content imc-content--full-width imc-exhibitors--directory-image']"); // Locator to validate Exhibitor Digital Showroom page
 
-	By atlvalidateexhdigishowpage = By.xpath("(//img[contains(@class,'imc-exhibitors--')])[2]"); // Locator to validate Exhibitor Digital Showroom page
+	//By atlvalidateexhdigishowpage = By.xpath("(//img[contains(@class,'imc-exhibitors--')])[2]"); // Locator to validate Exhibitor Digital Showroom page
 
 	By lvmvalidateexhdigishowpage_uat = By.xpath("//div[@class='imc-gallery__item']"); // Locator to validate Exhibitor Digital Showroom page
 	By atlvalidateexhdigishowpage_lvmUAT = By.xpath("//img[@class='imc-exhibitors--detail-image']"); // Locator to validate Exhibitor Digital Showroom page LVM UAT
