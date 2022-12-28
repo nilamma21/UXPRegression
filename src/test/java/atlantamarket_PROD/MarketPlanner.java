@@ -401,7 +401,7 @@ public class MarketPlanner extends base {
 
 	}
 
-	@Test(priority = 32)
+	@Test(priority = 35)
 	public void TS032_VerifyMarketPlannerListsElementMoreOoptionsDeleteTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
@@ -617,7 +617,7 @@ public class MarketPlanner extends base {
 
 	}
 
-	@Test(priority = 35)
+	@Test(priority = 32)
 	public void TS035_VerifyMarketPlannerEditListAddNoteTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
