@@ -593,7 +593,7 @@ public class MarketPlanner extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		lap.getMPLinkText().click();
-
+		Thread.sleep(5000);
 		// Verify Registration Card details
 		Assert.assertTrue(atlmppge.getmpmarketnameregcard().isDisplayed());
 		Assert.assertTrue(atlmppge.getmpmarketdateregcard().isDisplayed());
