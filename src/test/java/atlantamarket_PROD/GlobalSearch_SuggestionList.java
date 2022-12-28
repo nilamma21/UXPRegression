@@ -70,7 +70,8 @@ public class GlobalSearch_SuggestionList extends base {
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestexhibitor")));
 
 		WebDriverWait wait = new WebDriverWait(driver, 30);
-		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li")));
+		wait.until(ExpectedConditions
+				.visibilityOfAllElementsLocatedBy(By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li")));
 
 		exhlist = atlgs.getATLSearchResultsList();
 		//searchexhtypelist = atlgs.getATLSearchResultExhTypeList();

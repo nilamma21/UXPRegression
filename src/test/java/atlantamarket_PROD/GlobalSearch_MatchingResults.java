@@ -393,7 +393,6 @@ public class GlobalSearch_MatchingResults extends base {
 		Thread.sleep(10000);
 		// Click on List from left Panel
 		atlmppge.getMpListLeftPannel().click();
-		Thread.sleep(6000);
 		// Open selected list
 		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), exList);
 		// Verify exhibitor present into selected list or not

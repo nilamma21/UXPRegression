@@ -18,12 +18,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
-
 import com.gargoylesoftware.htmlunit.javascript.host.media.webkitMediaStream;
 
-//import atlantamarket_UAT.MarketPlanner;
-
-
+import atlantamarket_UAT.MarketPlanner;
 import pageObjects.AtlantaMarket.ATLEventsAndWebinarPage;
 import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
 import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
@@ -37,14 +34,13 @@ public class Utility extends base {
 	ATLLandingPage lap;
 	ATLLoginPage lp;
 	ATLExhLineProdActionsPage atlexhact;
-
-	//MarketPlanner mp;
-
+	MarketPlanner mp;
 	ATLMarketPlannerPage atlmppge;
 	ATLGlobalSearchPage atlgs;
 	ATLEventsAndWebinarPage atlevents;
 	GenerateData genData;
 
+	@SuppressWarnings("static-access")
 	public Utility(WebDriver driver) {
 		this.driver = driver;
 	}
@@ -410,11 +406,7 @@ public class Utility extends base {
 	}
 
 	public void ClearGlobalSearch() throws IOException, InterruptedException {
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		atlgs=new ATLGlobalSearchPage(driver);
-		
+
 		if (!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}

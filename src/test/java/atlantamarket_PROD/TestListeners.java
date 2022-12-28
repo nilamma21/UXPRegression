@@ -34,14 +34,14 @@ public class TestListeners extends base implements ITestListener {
 
 	public void onTestFailure(ITestResult arg0) {
 		// TODO Auto-generated method stub
-		//try {
+		try {
 			String testMethodName = arg0.getName().toString().trim();
-			//test.addScreenCaptureFromPath(capture(driver, testMethodName));
+			test.addScreenCaptureFromPath(capture(driver, testMethodName));
 			test.fail(arg0.getThrowable());
 			System.out.println("FAILED- "+testMethodName);
-		// } catch (IOException e) {
-		// 	e.printStackTrace();
-		// }
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void onTestSkipped(ITestResult arg0) {

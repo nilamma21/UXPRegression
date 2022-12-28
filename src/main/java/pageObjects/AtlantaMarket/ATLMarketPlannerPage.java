@@ -33,8 +33,7 @@ public class ATLMarketPlannerPage {
 	By atlmplistsnames = By.xpath("//ul[@class='imc-market-planner-list']/li/div[1]"); //Locator for the List names of MP lists
 	By atlmpeditlistoptns = By.xpath("//ul[@class='imc-market-planner-list']/li/div[2]/span[2]/a"); //Locator for Edit List options on Lists page
 	By atlmpeditlistoptn = By.xpath("(//ul[@class='imc-market-planner-list']/li/div[2]/span[2]/a[1])[1]"); //Locator for Edit List options on Lists page
-	By atlmpexistinglistname = By.xpath("//form/div[4]/div[5]/label"); //Locator for existing list name
-
+	By atlmpexistinglistname = By.xpath("//form/div[4]/div[3]/label"); //Locator for existing list name
 	By atladdtoseselectedbtn = By.xpath("//input[@data-xpath='quickAdd.saveList']"); //Locator for Add to Selected button
 	By listspagefavoritesmenu = By.xpath("//div[@class='imc-vertical-tabs-nav']/div[contains(text(),'Favorites')]"); //Locator for Favorites left menu
 	By addlistcreatebtn = By.xpath("//div[@class = 'imc-vr--medium']/input[1]"); //Locator for Create button on Add List modal
@@ -179,8 +178,6 @@ public class ATLMarketPlannerPage {
 	By mpSavedSearchesTab = By.xpath("//div[@class='imc-section imc-market-planner-toolbar ']/div[1]/div[1]/div[2]/div[1]/a[5]");////Locator for Saved Searches tab
 	By mpSavedSearchesIcon = By.xpath("//div[@class='imc-vr--large']/section[1]/div[1]/div[1]/div[1]");////Locator for Saved Searches icon
 	By mpSaveSearcheBtn = By.xpath("//div[@class='imc-vr--large']/section[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]");////Locator for Saved Searches Btn
-	By atlmpSaveSearcheBtn = By.xpath("//button[@class='imc-button--muted-inverted imc-icon--bookmark imc-button--full-width']");////Locator for Saved Searches Btn
-	
 	By mpSaveSearcheNameInput = By.xpath("//div[@class='imc-modal--box imc-savesearchmodal']/form[1]/div[1]/input[1]");////Locator for Saved Searche input
 	By mpSaveSearcheInputBtn = By.xpath("//div[@class='imc-modal--box imc-savesearchmodal']/form[1]/div[2]/input[1]");////Locator for Saved Searche input Btn
 	By mplistOfAllSaveSearches = By.xpath("//a[@class='imc-link imc-link--alt-darkred imc-content--display-flex  imc-content--display-flex-center']");////Locator for list of all Saved Searche 
@@ -233,35 +230,55 @@ public class ATLMarketPlannerPage {
 
 	By ATLUseSavedSearchDropDown = By.xpath("//select[@name = 'Saved Searches']"); //Locator for Use Saved Search drop down 
 	By EditListAtListTab = By.xpath("//ul[@class = 'imc-market-planner-list']/li[1]/div[2]/span[2]/a[1]"); //Locator for Edit list link
-	By MoreOption = By.xpath("(//div[@class = 'imc-hover-menu'])[4]"); //locator for More option
+	By MoreOption = By.xpath("//div[@class = 'imc-hover-menu']"); //locator for More option
 	By AddToSchedule = By.xpath("//div[@class='imc-hover-menu__content']"); //locator for Add To Schedule option
-	By AtlAddToSchedule = By.xpath("//div[@class='imc-hover-menu__content']/span[4]/a[1]"); //locator for Add To Schedule option
-	
 	
 	By favexhnamelist = By.xpath("//div[@class='imc-loading-relative']/div[3]/li/div/div/div/a"); //Locator for Favorite Exhibitor names list
-	
-	By favIconlist = By.xpath("//button[@class='imc-selectableicon ']"); //Locator for Favorite Icon list
-	
-	
+	By savedAllEventsWebinar = By.xpath("//div[@class='imc-vertical-tabs-nav']/a[contains(text(),'All Events And Seminars')]"); //Locator for savedAllEventsWebinar
+	By listOfAllSavedAllEventsWebinar = By.xpath("//div[@class='imc-gallery imc-saved-exhibitors__outer-row imc-market-planner-list--mobile-overlays-left']/div[1]"); //Locator for List of savedAllEventsWebinar
+	By MoreOptionPROD = By.xpath("//div[@class = 'imc-market-planner-list--item-header']/div[4]"); //locator for More option
+	By AddToSchedulePROD = By.xpath("//div[@class = 'imc-market-planner-list--item-header']/div[4]/div[1]/div[1]/span[4]/a[1]"); //locator for Add To Schedule option
+	By FavIcone = By.xpath("(//div[@class='searchItemThumb--container'])[1]/div[1]/div[1]/div[1]/div[1]/span[1]/div[1]/button[1]"); //Locator for Fav
+	By seeAllBtn = By.xpath("(//div[@class='searchItemThumb--container'])[1]/div[1]/img"); //Locator for See All
 	
 	public ATLMarketPlannerPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	}
-	public WebElement getAtlAddToSchedule() {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(AtlAddToSchedule));
-		return driver.findElement(AtlAddToSchedule);
+
+	public WebElement getseeAllBtn() {
+
+		wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(seeAllBtn));
+		return driver.findElement(seeAllBtn);
 	}
-	public List <WebElement> getfavIconlist() {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(favIconlist));
-		return driver.findElements(favIconlist);
+
+	public WebElement getFavIcone() {
+
+		wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(FavIcone));
+		return driver.findElement(FavIcone);
 	}
-	public WebElement getatlmpSaveSearcheBtn() {
+
+	public WebElement getAddToSchedulePROD() {
+		wait = new WebDriverWait(driver, 20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(AddToSchedulePROD));
+		return driver.findElement(AddToSchedulePROD);
+	}
+	public WebElement getMoreOptionPROD() {
 		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmpSaveSearcheBtn));
-		return driver.findElement(atlmpSaveSearcheBtn);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MoreOptionPROD));
+		return driver.findElement(MoreOptionPROD);
+	}
+	public List <WebElement> getlistOfAllSavedAllEventsWebinar() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllSavedAllEventsWebinar));
+		return driver.findElements(listOfAllSavedAllEventsWebinar);
+	}
+	public WebElement getsavedAllEventsWebinar() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(savedAllEventsWebinar));
+		return driver.findElement(savedAllEventsWebinar);
 	}
 	public WebElement getATLExhibitorEvent() {
 		wait = new WebDriverWait (driver,20);

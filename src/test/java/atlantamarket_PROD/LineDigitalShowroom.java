@@ -461,14 +461,13 @@ public class LineDigitalShowroom extends base {
 		genData = new GenerateData();
 		atldigish=new ATLLineDigitalShowroomPage(driver);
 
-		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	
 		//click on Global Search Input filed
-		Thread.sleep(2000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("HeroComponentExhName"));
 		Thread.sleep(5000);
 		//Click on 1st Suggetions
@@ -504,7 +503,6 @@ public class LineDigitalShowroom extends base {
 		
 		//verify both count
 		Assert.assertTrue(trimSeeAllProdCount.equals(trimProdCount));
-		
 	}
 	@Test(priority = 9)
 	public void TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest()throws InterruptedException, IOException {
@@ -520,19 +518,11 @@ public class LineDigitalShowroom extends base {
 		genData = new GenerateData();
 		atldigish=new ATLLineDigitalShowroomPage(driver);
 
-		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
-		Thread.sleep(2000);
-		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("HeroComponentExhName"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(5000);
-		//Click on 1st Suggetions
-		atldigish.getsuggetionList().click();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		//Thread.sleep(5000);
 	
 		//click on Global Search Input filed
 		/*atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("HeroComponentExhName"));
@@ -577,20 +567,18 @@ public class LineDigitalShowroom extends base {
 		genData = new GenerateData();
 		atldigish=new ATLLineDigitalShowroomPage(driver);
 
-		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
 	
 		//click on Global Search Input filed
-		Thread.sleep(2000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("HeroComponentExhName"));
 		Thread.sleep(5000);
 		//Click on 1st Suggetions
 		atldigish.getsuggetionList().click();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		//Thread.sleep(5000);
+		Thread.sleep(5000);
 		//Scroll to Product section
 		utl.scrollToElement(atldigish.getproductTitle());
 		//Click on See All Prod Btn
@@ -613,19 +601,18 @@ public class LineDigitalShowroom extends base {
 		genData = new GenerateData();
 		atldigish=new ATLLineDigitalShowroomPage(driver);
 
-		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	
 		//click on Global Search Input filed
-		Thread.sleep(4000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("HeroComponentExhName"));
 		Thread.sleep(5000);
 		//Click on 1st Suggetions
 		atldigish.getsuggetionList().click();
-		//Thread.sleep(5000);
+		Thread.sleep(5000);
 		//Scroll to Product section
 		utl.scrollToElement(atldigish.getproductTitle());
 		//Click on Any Product Btn
@@ -657,6 +644,6 @@ public class LineDigitalShowroom extends base {
 	
 	@AfterClass
 	public void tearDown() {
-		 //driver.quit();
+		// driver.quit();
 	}
 }

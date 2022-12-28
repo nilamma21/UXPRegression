@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="atlantamarket_PROD.LineDigitalShowroom">
+      <class name="lasvegasmarket_UAT.GlobalSearch_LineActions">
         <methods>
-          <include name="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest"/>
           <include name="tearDown"/>
           <include name="initialize"/>
+          <include name="TS002_VerifyAddToFavoriteForLineTest"/>
         </methods>
-      </class> <!-- atlantamarket_PROD.LineDigitalShowroom -->
+      </class> <!-- lasvegasmarket_UAT.GlobalSearch_LineActions -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
