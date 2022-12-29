@@ -814,7 +814,7 @@ public class MarketPlanner extends base {
 		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), exhname);
 	}
 
-	@Test(priority = 38)
+	@Test(priority = 52)
 	public void TS038_VerifyMarketPlannerRegistrationsTabTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
@@ -1661,7 +1661,7 @@ public class MarketPlanner extends base {
 
 	}
 
-	@Test(priority = 52)
+	@Test(priority = 38)
 	public void TS052_VerifyMarketPlannerAllSavedEventsAndSemninar() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
