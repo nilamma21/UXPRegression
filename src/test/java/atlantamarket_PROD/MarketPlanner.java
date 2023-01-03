@@ -699,7 +699,7 @@ public class MarketPlanner extends base {
 
 	}
 
-	@Test(priority = 15)
+	@Test(priority = 40)
 	public void TS015_VerifyEditListFunctionalityForManageListTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
@@ -1601,7 +1601,7 @@ public class MarketPlanner extends base {
 
 	}
 
-	@Test(priority = 27)
+	@Test(priority = 49)
 	public void TS027_VerifyListDisplayControlsFunctionalityTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
@@ -1669,7 +1669,7 @@ public class MarketPlanner extends base {
 
 	}
 
-	@Test(priority = 28)
+	@Test(priority = 39)
 	public void TS028_VerifyMarketPlannerListElementLocationLinkTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
@@ -2385,7 +2385,7 @@ public class MarketPlanner extends base {
 	}
 
 
-	@Test(priority = 39)
+	@Test(priority = 28)
 	public void TS039_VerifyMarketSavedSearchesfunctionalityTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
@@ -2431,7 +2431,7 @@ public class MarketPlanner extends base {
 
 	}
 
-	@Test(priority = 40)
+	@Test(priority = 15)
 	public void TS040_VerifyMarketSavedSearchesDeletefunctionalityTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
@@ -3064,7 +3064,7 @@ public class MarketPlanner extends base {
 		System.out.println("My Inquiries page is displayed properly.");
 	}
 
-	@Test(priority = 49)
+	@Test(priority = 27)
 	public void TS049_VerifyTabsUnderListsSectionTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
