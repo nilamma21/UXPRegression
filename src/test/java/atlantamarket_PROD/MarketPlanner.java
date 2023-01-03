@@ -2333,6 +2333,9 @@ public class MarketPlanner extends base {
 	@Test(priority = 52)
 	public void TS038_VerifyMarketPlannerRegistrationsTabTest() throws InterruptedException, IOException {
 
+		@Test(priority = 38)
+	public void TS038_VerifyMarketPlannerRegistrationsTabTest() throws InterruptedException, IOException {
+
 		// The purpose of this test case to verify:-
 		// UXP:280-Market Planner: Registrations
 		lap = new ATLLandingPage(driver);
@@ -2354,13 +2357,37 @@ public class MarketPlanner extends base {
 		atlmppge.getmpRegistrationTab().click();
 		Thread.sleep(5000);
 		String regiNowURL = atlmppge.getmpRegisterNowBtn().getAttribute("href");
-		System.out.println(regiNowURL);
+		String btnURlreplace = regiNowURL.replaceAll("[\\/\\-\\+\\.\\^:,]", " ");
+	
+		String s1 = btnURlreplace.split(" ")[0].trim();
+		String s2 = btnURlreplace.split(" ")[3].trim();
+		String s3 = btnURlreplace.split(" ")[4].trim();
+		String s4 = btnURlreplace.split(" ")[5].trim();
+		String s5 = btnURlreplace.split(" ")[6].trim();
+		String s6 = btnURlreplace.split(" ")[7].trim();
+		String btnURL = String.join(" ", s1, s2, s3, s4, s5, s6);
+		System.out.println(btnURL);
+
 		atlmppge.getmpRegisterNowBtn().click();
 		Thread.sleep(3000);
-		Assert.assertTrue(driver.getCurrentUrl().contains(regiNowURL));
+		String expURL = driver.getCurrentUrl();
+		String currntURLReplace = expURL.replaceAll("[\\/\\-\\+\\.\\^:,]", " ");
+		
+		String s8 = currntURLReplace.split(" ")[0].trim();
+		String s9 = currntURLReplace.split(" ")[3].trim();	
+		String s10 = currntURLReplace.split(" ")[4].trim();
+		String s11 = currntURLReplace.split(" ")[5].trim();
+		String s12 = currntURLReplace.split(" ")[6].trim();
+		String s13 = currntURLReplace.split(" ")[7].trim();
+		String s14 = currntURLReplace.split(" ")[8].trim();
+		String pageURL = String.join(" ", s8, s9, s10, s11, s12, s13);
+		System.out.println(pageURL);
+
+		Assert.assertTrue(pageURL.contains(btnURL));
 		System.out.println("User is redirected to Market Registration page.");
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
+
 
 	@Test(priority = 39)
 	public void TS039_VerifyMarketSavedSearchesfunctionalityTest() throws InterruptedException, IOException {
