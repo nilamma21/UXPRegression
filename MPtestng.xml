@@ -10,7 +10,7 @@
 		<classes>
 		 	<class name="atlantamarket_PROD.MarketPlanner" />
 			 <methods>
-		<
+		
 					<include name="TS038_VerifyMarketPlannerRegistrationsTabTest" />
 				
 				
