@@ -882,8 +882,8 @@ public class ExhibitorDigitalShowroom extends base {
 		driver.switchTo().window(winHandleBefore);
 		
 	}
-	@Test(priority = 20)
-	public void TS020_VerifyExhibitorDigitalShowroomShowSpecialsTest() throws InterruptedException, IOException {
+	@Test(priority = 19)
+	public void TS019_VerifyExhibitorDigitalShowroomShowSpecialsTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T319: Exhibitor Digital showroom: Show Specials
 
@@ -932,8 +932,8 @@ public class ExhibitorDigitalShowroom extends base {
 		
 		
 	}
-	@Test(priority = 21)
-	public void TS021_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest() throws InterruptedException, IOException {
+	@Test(priority = 20)
+	public void TS020_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T303: Exhibitor Digital showroom: Hero component: Order on Juniper Market
 
