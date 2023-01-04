@@ -15,6 +15,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -61,13 +62,14 @@ public class EvenntsAndWebinar extends base{
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		//driver.get(prop.getProperty("lvmurl_uat"));
-		
+		/*utl.verifyMPLoginFunctionality();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);*/
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(7000);
 		//lap.getCloseMarktAdBtn().click();
 
 		//Login to Market Planner
-		//utl.verifyMPLoginFunctionality();
+		
 		//driver.navigate().refresh();
 		Thread.sleep(8000);
 		//		lap.getCloseMarktAdBtn().click();
@@ -522,7 +524,7 @@ public class EvenntsAndWebinar extends base{
 		Assert.assertFalse(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 
 	}
-	@Test(priority = 7)
+	@Test(priority = 16)//Previous priority = 07
 	public void TS007_VerifyIMCEventsAddToListTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T298: IMC Events: Event Details- Add To List
@@ -534,13 +536,12 @@ public class EvenntsAndWebinar extends base{
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		// Login to MP
 		/*		utl.verifyMPLoginFunctionality();
 				Thread.sleep(5000);*/
 		utl.clickOnEventLinkOfChannel();
-		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		String eventTitle = atlevents.getatlClickOnEvent().getText();
 
@@ -559,8 +560,8 @@ public class EvenntsAndWebinar extends base{
 		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
 		lp.getPassword().sendKeys((prop.getProperty("password")));
 
-		lp.getSignInBtn().click();
-		atlevents.getatlListIcon().click();*/
+		lp.getSignInBtn().click();*/
+		atlevents.getatlListIcon().click();
 		// Store the existing list name
 		String existinglistname = atlmppge.getATLMPExistingListName().getText();
 		System.out.println("Existing list name: " + existinglistname);
@@ -577,12 +578,10 @@ public class EvenntsAndWebinar extends base{
 		//atlmppge.getATLMPAddToSelectedBtn().click();
 		Thread.sleep(2000);
 		// Click on Go to Market Planner button
-		atlmppge.getGoToMarketPlannerBtn().click();
-
+		utl.clickOnEventLinkOfChannel();
 		// Click on Lists tab on MP home page
 		atlmppge.getMPHomeListsTab().click();
 		atlmppge.getListsPageListsMenu().click();
-
 		mplists = atlmppge.getATLMPListsNames();
 		mpeditlistoptns = atlmppge.getATLMPEditListOptns();
 
@@ -595,13 +594,14 @@ public class EvenntsAndWebinar extends base{
 			}
 		}
 		Thread.sleep(5000);
+		
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 
 		// Delete that added line from list
 		atlmppge.getATLEditListItemMoreBtn().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(8000);
-
+		
 	}
 	
 	@Test(priority = 8)
@@ -618,13 +618,13 @@ public class EvenntsAndWebinar extends base{
 		genData = new GenerateData();
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		atlproddet = new ATLProductDetailsPage(driver);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		// Login to MP
 		/*
 		 * utl.verifyMPLoginFunctionality(); Thread.sleep(5000);
 		 */
 		utl.clickOnEventLinkOfChannel();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(5000);
 		String eventTitle = atlevents.getatlClickOnEvent().getText();
 
@@ -700,8 +700,8 @@ public class EvenntsAndWebinar extends base{
 		atlevents=new ATLEventsAndWebinarPage(driver);
 		atlgs = new ATLGlobalSearchPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		utl.clickOnEventLinkOfChannel();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		/*// Click on Attend Tab
 		atlevents.getatlAttendTab().click();
 		Thread.sleep(2000);
@@ -734,11 +734,9 @@ public class EvenntsAndWebinar extends base{
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		
 		utl.clickOnEventLinkOfChannel();	
-		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		//Click on Exh Event Tab
 				atlevents.getatlExhibitorsEventsTab().click();
@@ -808,9 +806,10 @@ public class EvenntsAndWebinar extends base{
 		//Verify Current date and month should selected by default
 		Assert.assertTrue(d.contains(atlevents.getatlTodaysDate().getText()));
 		System.out.println("By Default "+d +" today's date is selected.");
+		Thread.sleep(4000);
 	}
 	
-	@Test(priority = 11)
+	@Test(priority = 0)//Previous priority = 11
 	public void TS011_VerifyExhibitorEventsListTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T306: Exhibitor Events: Events List
@@ -822,14 +821,13 @@ public class EvenntsAndWebinar extends base{
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		
+		driver.navigate().refresh();
+		Thread.sleep(5000);
 		utl.clickOnEventLinkOfChannel();	
-		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//Click on Exh Event Tab
 		atlevents.getatlExhibitorsEventsTab().click();
-
+		
 		
 		//Verify Event Calendar title
 		Assert.assertTrue(atlevents.getatlEventDateAndMonth().isDisplayed());
@@ -900,24 +898,32 @@ public class EvenntsAndWebinar extends base{
 		}
 		System.out.println(allEventSeeDetailsLinkCount + " See Details Link displayed");
 		Assert.assertEquals(allEventcount, allEventSeeDetailsLinkCount);
+		Thread.sleep(5000);
 
 		// Click on Event Title page
 		int allEventSeeDetailsLinkCount1 = 0;
 		for( int i=0;i < atlevents.getatlListOfEventTitles().size(); i++) {
 			allEventSeeDetailsLinkCount1++;
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			//Thread.sleep(5000);
 			WebElement eventTitleLink = atlevents.getatlListOfEventTitles().get(i);
 			String eventTitle=eventTitleLink.getText();
 			Assert.assertTrue(eventTitleLink.isDisplayed());
 			//eventSeeDetailsLink = atlevents.atlatlListOfAllEventsSeeDetailsLink().get(1);
+			//WebDriverWait wait = new WebDriverWait(driver,30);//new added
+			//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("eventTitleLink")));
 			eventTitleLink.click();
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			//Thread.sleep(4000);
 			//Verify Event Details Page
 			Assert.assertTrue(eventTitle.contains(atlevents.getatlEventNameOnDetailsPage().getText()));
-			Thread.sleep(3000);
 			driver.navigate().back();
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			//Thread.sleep(5000);
 			//Click on Exh Event Tab
 			atlevents.getatlExhibitorsEventsTab().click();
-	
-			Thread.sleep(3000);
+			Thread.sleep(2000);
+			//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		}
 		
 		System.out.println(allEventSeeDetailsLinkCount + " Events Details Page displayed");
@@ -935,11 +941,9 @@ public class EvenntsAndWebinar extends base{
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		
 		utl.clickOnEventLinkOfChannel();	
-		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 
 		//Click on Exh Event Tab
@@ -1056,12 +1060,12 @@ public class EvenntsAndWebinar extends base{
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
 		//Login to MP
 		//utl.verifyMPLoginFunctionality();
 		
 		utl.clickOnEventLinkOfChannel();
-
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		String eventTitle = atlevents.getatlClickOnEvent().getText();
 
 		/*// Click on IMC Event Tab
@@ -1111,14 +1115,14 @@ public class EvenntsAndWebinar extends base{
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		// Login to MP
 		//utl.verifyMPLoginFunctionality();
 		Thread.sleep(5000);
-
+	
+		
 		utl.clickOnEventLinkOfChannel();
-
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		String eventTitle = atlevents.getatlClickOnEvent().getText();
 		//Click on Exh Event Tab
 		atlevents.getatlExhibitorsEventsTab().click();
@@ -1196,14 +1200,13 @@ public class EvenntsAndWebinar extends base{
 		genData = new GenerateData();
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		atlproddet = new ATLProductDetailsPage(driver);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		// Login to MP
 		
 		//utl.verifyMPLoginFunctionality(); Thread.sleep(5000);
 		Thread.sleep(5000); 
 		utl.clickOnEventLinkOfChannel();
-
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		String eventTitle = atlevents.getatlClickOnEvent().getText();
 
 		//Click on Exh Event Tab

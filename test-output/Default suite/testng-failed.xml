@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="atlantamarket_PROD.LineDigitalShowroom">
+      <class name="atlantamarket_PROD.EvenntsAndWebinar">
         <methods>
-          <include name="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest"/>
-          <include name="tearDown"/>
+          <include name="TS014_VerifyExhibitorEventsAddToListTest"/>
+          <include name="TS013_VerifyExhibitorEventsAddToFavoriteTest"/>
+          <include name="TS004_VerifyIMCEventsEventsListTest"/>
+          <include name="TS006_VerifyIMCEventsAddToFavoriteTest"/>
+          <include name="TS007_VerifyIMCEventsAddToListTest"/>
           <include name="initialize"/>
         </methods>
-      </class> <!-- atlantamarket_PROD.LineDigitalShowroom -->
+      </class> <!-- atlantamarket_PROD.EvenntsAndWebinar -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

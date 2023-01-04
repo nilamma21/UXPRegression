@@ -31,9 +31,22 @@
 	</listners>
 	<test thread-count="5" name="RegressionTest">
 		<classes>
+
 			<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions"/>
  			<methods>
 			<include name="TS003_VerifyAddToExistingListForExhibitorTest"/>	
+
+
+			<class name="atlantamarket_PROD.EvenntsAndWebinar"/>
+ 			<methods>
+			<include name="TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest"/>			
+
+			<class name="atlantamarket_PROD.LineDigitalShowroom"/>
+ 			<methods>
+			<!-- <include name="TS008_VerifyLineDigitalShowroomProductscomponentTest"/>
+				<include name="TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest"/>	 -->	
+
+
 			</methods> 
 		</classes>
 	</test> 

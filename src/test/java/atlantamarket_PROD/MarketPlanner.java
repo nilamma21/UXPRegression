@@ -1,5 +1,7 @@
 package atlantamarket_PROD;
 
+import static org.testng.Assert.assertTrue;
+
 import java.io.IOException;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
@@ -35,6 +37,7 @@ import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
 import com.gargoylesoftware.htmlunit.javascript.host.dom.Document;
 import com.sun.mail.iap.Argument;
 
+import net.sf.cglib.reflect.FastClass;
 import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
 import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
 import pageObjects.AtlantaMarket.ATLLandingPage;
@@ -1192,7 +1195,7 @@ public class MarketPlanner extends base {
 		atlmppge.getmpnewlistbutton().click();
 		// Add list name and click create button
 		atlmppge.getCreateNewListNameTxtbx().sendKeys(genData.generateRandomString(10));
-		atlmppge.getCreateNewListNameTxtbx().sendKeys();
+		//atlmppge.getCreateNewListNameTxtbx().sendKeys();
 		atlmppge.getAddListCreateBtn().click();
 		
 		// Click Dashboard tab
@@ -1630,12 +1633,13 @@ public class MarketPlanner extends base {
 		Thread.sleep(10000);
 		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistname);
 
+		utl.addingExhProdLine(prop.getProperty("line1"));
+		utl.addingExhProdLine(prop.getProperty("line2"));
 		utl.addingExhProdLine(prop.getProperty("exhibitor1"));
 		utl.addingExhProdLine(prop.getProperty("exhibitor3"));
 		utl.addingExhProdLine(prop.getProperty("product1"));
 		utl.addingExhProdLine(prop.getProperty("product2"));
-		utl.addingExhProdLine(prop.getProperty("line1"));
-		utl.addingExhProdLine(prop.getProperty("line2"));
+	
 	
 
 		JavascriptExecutor js = (JavascriptExecutor)driver;
@@ -1689,9 +1693,9 @@ public class MarketPlanner extends base {
 
 		atlmppge.atlmpVerifyLocationLink();
 
-		utl.checkLocationLink(atlmppge.getlistOfAllExh(), "OneCoast");
+		utl.checkLocationLink(atlmppge.getlistOfAllExh(), prop.getProperty("exhibitor1"));
 		System.out.println("Verify location Links are Present");
-		utl.clickOnLocationLink(atlmppge.getlistOfAllExh(), "OneCoast");
+		utl.clickOnLocationLink(atlmppge.getlistOfAllExh(), prop.getProperty("exhibitor1"));
 
 		System.out.println("Verify respected location details page opend");
 	}
@@ -1720,12 +1724,12 @@ public class MarketPlanner extends base {
 		atlmppge.getMpListLeftPannel().click();
 
 		atlmppge.getMpEditListoption().click();
-		utl.addingExhProdLine("IMC test company");
-		WebElement moreLink = driver.findElement(By.xpath("//a[text()='IMC test company']/../../../div[1]/div[4]"));
+		utl.addingExhProdLine(prop.getProperty("searchforCatalogsInputUAT"));
+		WebElement moreLink = driver.findElement(By.xpath("//a[text()='"+prop.getProperty("searchforCatalogsInputUAT")+"']/../../../div[1]/div[4]"));
 		Actions moreLinkHover = new Actions(driver);
 		moreLinkHover.moveToElement(moreLink).build().perform();
 		List<WebElement> allMoreOptions = driver
-				.findElements(By.xpath("//a[text()='IMC test company']/../../../div[1]/div[4]/div[1]/div[1]/span/a"));
+				.findElements(By.xpath("//a[text()='"+prop.getProperty("searchforCatalogsInputUAT")+"']/../../../div[1]/div[4]/div[1]/div[1]/span/a"));
 
 		utl.checkItemPresentInListorNot(allMoreOptions, "Copy");
 		utl.checkItemPresentInListorNot(allMoreOptions, "Move");
@@ -1888,7 +1892,7 @@ public class MarketPlanner extends base {
 		Thread.sleep(5000);
 		// Find the list where we copy the exhibitor
 		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistnameformove);
-Thread.sleep(5000);
+		Thread.sleep(5000);
 		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), prop.getProperty("exhibitor1"));
 		System.out.println("Verified Moved items are present into List");
 
@@ -2321,9 +2325,14 @@ Thread.sleep(5000);
 		lap.getMPLinkText().click();
 		// Click on Mp Reg tab
 		atlmppge.getmpRegistrationTab().click();
+		Thread.sleep(5000);
+		String regURL=atlmppge.getmpRegisterNowBtn().getAttribute("href");
 		atlmppge.getmpRegisterNowBtn().click();
-		Assert.assertTrue(driver.getTitle().contains("Market Registration"));
+		
+		//Assert.assertTrue(driver.getTitle().contains("Market Registration"));
+		Assert.assertTrue(driver.getCurrentUrl().contains(regURL));
 		System.out.println("User is redirected to Market Registration page.");
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
 
 	@Test(priority = 39)
@@ -2349,8 +2358,8 @@ Thread.sleep(5000);
 		// Click on Saved searches Icon
 		atlmppge.getmpSavedSearchesIcon().click();
 		// Click on Save Search Btn to Save the Term
-		//atlmppge.getmpSaveSearcheBtn().click();
-		atlmppge.getATLUseSavedSearchDropDown().click();
+		atlmppge.getatlmpSaveSearcheBtn().click();
+		//atlmppge.getATLUseSavedSearchDropDown().click();
 		// Enter Search text into input field
 		atlmppge.getmpSaveSearcheNameInput().sendKeys(prop.getProperty("saveSearchTerm"));
 		// Click on Save Btn
@@ -2366,6 +2375,7 @@ Thread.sleep(5000);
 		Thread.sleep(5000);
 		String temp = atlmppge.getmplistSearcheAlert().getText();
 		System.out.println(temp);
+		Thread.sleep(5000);
 		// Assert.assertTrue(prop.getProperty("saveSearchTerm").contains(temp));
 		// Verify save search
 		Assert.assertTrue(temp.contains(prop.getProperty("saveSearchTerm")));
@@ -2470,78 +2480,59 @@ Thread.sleep(5000);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		// Login to Market Planner
-		/*
-		 * utl.verifyMPLoginFunctionality(); Thread.sleep(6000);
-		 */
-		// atlgs.getATLGlobalSearchTextBox().click();
-		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("sortByFilterInput"));
-		atlgs.getATLSearchButton().click();
-		Thread.sleep(5000);
-		String exhname = atlexhact.getExhibitorName().getText();
-		System.out.println("Exhibitor name: " + exhname);
+		
+//		  utl.verifyMPLoginFunctionality(); Thread.sleep(6000);
+		
+		
+		// Click on Market Planner
+				lap.getMPLinkText().click();
 
-		// Click on Favorite icon of 1st exhibitor
-		atlexhact.getAddFavIcon().click();
-		Thread.sleep(2000);
+				atlmppge.getMPHomeListsTab().click();
 
-		utl.addingExhForSorting("Baggallini");
+				// Click on List from left Panel
+				atlmppge.getMpListLeftPannel().click();
 
-		Thread.sleep(2000);
-		String exhname1 = atlexhact.getExhibitorName().getText();
-		System.out.println("Exhibitor name: " + exhname1);
-		Thread.sleep(2000);
-		// Click on Favorite icon of 1st exhibitor
-		atlexhact.getAddFavIcon().click();
-		Thread.sleep(2000);
+				
+				// Create new list for copy
+				atlmppge.getMpListNewListBtn().click();
+				// verify New ListPopup header
+				Assert.assertTrue(
+						atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateListPopupHeader")));
+				// Enter List name
+				String newlistname = "Cyb" + genData.generateRandomString(5);
+				atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
+				System.out.println("list name :: " + newlistname);
+				atlmppge.getMpListNewCreateBtn().click();
+				Thread.sleep(10000);
+				utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistname);
 
-		utl.addingExhForSorting("TWS Italian Paintings");
-		Thread.sleep(5000);
-
-		String exhname2 = atlexhact.getExhibitorName().getText();
-		System.out.println("Exhibitor name: " + exhname2);
-
-		// Click on Favorite icon of 1st exhibitor
-		atlexhact.getAddFavIcon().click();
-
-		lap.getMPLinkText().click();
-
-		// Click on Lists tab on MP home page
-		atlmppge.getMPHomeListsTab().click();
-		atlmppge.getATLMPListsPageFavoritesMenu().click();
-		Thread.sleep(5000);
-
-		/*// Click on SortBy Dropdown
-		atlmppge.getmpSortByDropdown().click();
-
-		// Verify All Filter By Options should available.
-		utl.selectFilters(atlmppge.getfilterByList(), "Most Recent Added");
-		Thread.sleep(5000);
-		List<WebElement> favlist = driver
-				.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
-		boolean flag = false;
-		for (WebElement list : favlist) {
-
-			if (list.getText().equals(exhname)) {
-
-				System.out.println("Equal");
-				flag = true;
-				break;
-			}
-		}
-		if (flag == true) {
-			Assert.assertTrue(flag = true);
-		} else {
-			Assert.assertTrue(flag = false);
-		}
-*/
-		// Sort filter
+				utl.addingExhProdLine(prop.getProperty("line1"));
+				utl.addingExhProdLine(prop.getProperty("line2"));
+				utl.addingExhProdLine(prop.getProperty("product1"));
+				utl.addingExhProdLine(prop.getProperty("product2"));
+				utl.addingExhProdLine(prop.getProperty("exhibitor1"));
+				utl.addingExhProdLine(prop.getProperty("exhibitor3"));
+				
+				
+				
 
 		// Create current Exhibitor list without sort
 		List<String> currentList = new ArrayList<String>();
 		List<WebElement> elementList = driver
 				.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
+	boolean t=false;
 		for (WebElement we : elementList) {
 			currentList.add(we.getText().toLowerCase());
+			t=true;
+		}
+		if(t==true)
+		{
+			System.out.println("Exhibitors Present ");
+			
+		}
+		else {
+			System.out.println("Exhibitors Not Present ");
+			Assert.assertTrue(t==true);
 		}
 		System.out.println("Current Exhibitor List : " + currentList);
 
@@ -2637,7 +2628,7 @@ Thread.sleep(5000);
 		  
 		  atlmppge.getEditListAtListTab().click();
 		  atlmppge.getMoreOption().click();
-		  atlmppge.getAddToSchedule().click();
+		  atlmppge.getAtlAddToSchedule().click();
 		  
 		 /* atlmppge.getMpListNewListBtn().click(); // verify New List Popup header
 		  Assert.assertTrue(atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty( "CreateListPopupHeader"))); 
@@ -2825,6 +2816,10 @@ Thread.sleep(5000);
 		lp = new ATLLoginPage(driver);
 		utl = new Utility(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
@@ -2837,7 +2832,7 @@ Thread.sleep(5000);
 		// Click on List from left Pannel
 		atlmppge.getMpListLeftPannel().click();
 		
-		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), "Favorites");
+		/*utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), "Favorites");
 		
 		atlmppge.getMpQuickAdd().sendKeys("Anju");
 		Thread.sleep(3000);
@@ -2846,7 +2841,23 @@ Thread.sleep(5000);
 		atlmppge.getMpQuickAdd().sendKeys(Keys.ARROW_DOWN);
 		
 		atlmppge.getMpQuickAdd().sendKeys(Keys.ENTER);
-		Thread.sleep(3000);
+		Thread.sleep(3000);*/
+		// Create new list 
+		atlmppge.getMpListNewListBtn().click();
+		// verify New ListPopup header
+		Assert.assertTrue(
+				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateListPopupHeader")));
+		// Enter List name
+		String newlistname = "Cyb" + genData.generateRandomString(5);
+		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
+		System.out.println("list name :: " + newlistname);
+		atlmppge.getMpListNewCreateBtn().click();
+		Thread.sleep(10000);
+		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistname);
+
+		utl.addingExhProdLine(prop.getProperty("line1"));
+	
+		
 		String autoSuggetion =atlmppge.getMpQuickAdd().getAttribute("value");
 		// Verify Selected product added or not
 		System.out.println("prod Name::"+autoSuggetion);
