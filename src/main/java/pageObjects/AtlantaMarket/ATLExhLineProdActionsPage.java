@@ -58,7 +58,7 @@ public class ATLExhLineProdActionsPage extends base{
 	By productmorebtn = By.xpath("(//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div[2]/div/div/div/div/div/div/div/div/span[2]/div)[1]"); //Locator for Add to List button for Product on Search Results grid
 	By productformultiplecatg = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]"); //Locator for product to verify multiple Prod categ selection
 	By seedetailsbtn3rdexhproduct = By.xpath("(//div[@class='imc-gallery imc-gallery--80-20 imc-exhibitorcard--gallery-nowrap'])[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/a"); //Locator for See Details button of 3rd exh product
-	By imcexhibitorname = By.xpath("//h2[contains(text(),'IMC test company')]"); //Locator for IMC Exhibitor name from Search results grid
+	By imcexhibitorname = By.xpath("//h2[contains(text(),'IMC Test Company')]"); //Locator for IMC Exhibitor name from Search results grid
 	By productFevBtn = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/span[1]/div[1]/button[1]"); //Locator for Fev Btn
 	By catalogstab = By.xpath("//a[@id='Catalogs']"); //Locator for Catalogs tab on Exhibitor products page
 	By catalogstabDiv = By.xpath("//div[@id='Catalogs']"); //Locator for Catalogs tab on Exhibitor products page

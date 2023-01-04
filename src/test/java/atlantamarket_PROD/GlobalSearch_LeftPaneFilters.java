@@ -742,9 +742,9 @@ public class GlobalSearch_LeftPaneFilters extends base {
 	}
 
 
-	@AfterClass
+	/*@AfterClass
 	public void tearDown()
 	{
 		driver.quit();
-	}
+	}*/
 }
