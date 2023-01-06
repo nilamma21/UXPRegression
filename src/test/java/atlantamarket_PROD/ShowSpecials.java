@@ -59,8 +59,8 @@ public class ShowSpecials extends base  {
 		//lap.getCloseMarktAdBtn().click();
 		
 	}
-	@Test(priority = 10)
-	public void TS010_VerifyShowSpecialsLinksExhibitorNameTest()
+	@Test(priority = 1)
+	public void TS001_VerifyShowSpecialsLinksExhibitorNameTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T381: Show Specials: Links - Exhibitor Name
@@ -93,8 +93,8 @@ public class ShowSpecials extends base  {
 		Assert.assertTrue(atlgs.getatlShowSpecialsTitle().getText().contains(showSpecialExhName));
 		
 	}
-	@Test(priority = 11)
-	public void TS011_VerifyShowSpecialsLinksShowroomTest()
+	@Test(priority = 2)
+	public void TS002_VerifyShowSpecialsLinksShowroomTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T382: Show Specials: Links - Showroom
@@ -114,6 +114,7 @@ public class ShowSpecials extends base  {
 		//Click on Show Specials 
 		atlgs.getatlShowSpecialsLink().click();
 		Thread.sleep(5000);
+		utl.scrollToElement(atlgs.getatlShowSpecialsTitle());
 		//verify Show special Page
 		Assert.assertTrue(atlgs.getatlShowSpecialsTitle().getText().contains(prop.getProperty("showSpecialTitle")));
 		//Click on Show Special Exhibitor
