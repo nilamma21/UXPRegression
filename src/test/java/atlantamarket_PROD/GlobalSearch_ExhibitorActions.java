@@ -112,7 +112,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		}
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 5)
 	public void TS002_VerifyAddToNewListForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T422: The Add to Newly created list functionality for an Exhibitor
@@ -172,7 +172,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 8)
 	public void TS003_VerifyAddToExistingListForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T321: The Add to Newly created list functionality for an Exhibitor
@@ -291,7 +291,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		atlexhact.getPopUpCloseBtn().click();
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 2)
 	public void TS005_VerifyClickOnLocationLinksForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T356: The click on 'Location Links' functionality for an Exhibitor
@@ -398,7 +398,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		Assert.assertEquals(totalprodcountonsearchgrid, totalprodcountonprodpage);
 	}
 
-	@Test(priority = 8)
+	@Test(priority = 3)
 	public void TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T327: The click on 'Matching products-See All' functionality for an Exhibitor
