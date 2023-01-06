@@ -3,13 +3,18 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="lasvegasmarket_UAT.GlobalSearch_LineActions">
+      <class name="atlantamarket_PROD.MarketPlanner">
         <methods>
-          <include name="tearDown"/>
+          <include name="TS013_VerifyAddToFavoriteFunctionalityForProductTest"/>
+          <include name="TS052_VerifyMarketPlannerAllSavedEventsAndSemninar"/>
           <include name="initialize"/>
-          <include name="TS002_VerifyAddToFavoriteForLineTest"/>
+          <include name="TS007_VerifyNewGroupBtnFunctionalityForListsTest"/>
+          <include name="TS037_VerifyMarketPlannerListsAllSavedproductsTest"/>
+          <include name="TS045_VerifyAddToListFunctionalityUsingQuickAddTest"/>
+          <include name="TS051_VerifyMarketPlannerAddEventsToFav"/>
+          <include name="TS025_VerifyDuplicateLinkFunctionalityForListTest"/>
         </methods>
-      </class> <!-- lasvegasmarket_UAT.GlobalSearch_LineActions -->
+      </class> <!-- atlantamarket_PROD.MarketPlanner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

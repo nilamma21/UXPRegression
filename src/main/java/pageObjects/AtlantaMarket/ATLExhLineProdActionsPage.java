@@ -71,11 +71,15 @@ public class ATLExhLineProdActionsPage extends base{
 	By catalogstabPROD = By.xpath("//div[@id='Catalogs']"); //Locator for Catalogs tab on Exhibitor products page
 	//img[@class='imc-saved-exhibitors__img-grid']
 	
+	
+			
+			
+	
 	public ATLExhLineProdActionsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
-
+		
 	public WebElement getcatalogstabPROD() {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(catalogstabPROD));
