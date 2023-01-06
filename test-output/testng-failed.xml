@@ -4,6 +4,22 @@
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
+<<<<<<< HEAD
+      <class name="atlantamarket_PROD.MarketPlanner">
+        <methods>
+          <include name="TS013_VerifyAddToFavoriteFunctionalityForProductTest"/>
+          <include name="TS052_VerifyMarketPlannerAllSavedEventsAndSemninar"/>
+          <include name="initialize"/>
+          <include name="TS023_VerifyFilterByOptionsFunctionalityForListTest"/>
+          <include name="TS007_VerifyNewGroupBtnFunctionalityForListsTest"/>
+          <include name="TS038_VerifyMarketPlannerRegistrationsTabTest"/>
+          <include name="TS045_VerifyAddToListFunctionalityUsingQuickAddTest"/>
+          <include name="TS051_VerifyMarketPlannerAddEventsToFav"/>
+          <include name="TS012_VerifyMPRegistrationCardOverviewTest"/>
+          <include name="TS025_VerifyDuplicateLinkFunctionalityForListTest"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.MarketPlanner -->
+=======
       <class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions">
         <methods>
           <include name="TS003_VerifyAddToExistingListForExhibitorTest"/>
@@ -26,6 +42,7 @@
         </methods>
       </class> <!-- atlantamarket_PROD.EvenntsAndWebinar -->
 
+>>>>>>> 165c94fbc4fbd782daad363e3715f4d451ffac1a
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->

@@ -239,6 +239,18 @@ public class ATLMarketPlannerPage {
 	
 	
 	By favexhnamelist = By.xpath("//div[@class='imc-loading-relative']/div[3]/li/div/div/div/a"); //Locator for Favorite Exhibitor names list
+	By savedAllEventsWebinar = By.xpath("//div[@class='imc-vertical-tabs-nav']/a[contains(text(),'All Events And Seminars')]"); //Locator for savedAllEventsWebinar
+	By listOfAllSavedAllEventsWebinar = By.xpath("//div[@class='imc-gallery imc-saved-exhibitors__outer-row imc-market-planner-list--mobile-overlays-left']/div[1]"); //Locator for List of savedAllEventsWebinar
+	By MoreOptionPROD = By.xpath("//div[@class = 'imc-market-planner-list--item-header']/div[4]"); //locator for More option
+	By AddToSchedulePROD = By.xpath("//div[@class = 'imc-market-planner-list--item-header']/div[4]/div[1]/div[1]/span[4]/a[1]"); //locator for Add To Schedule option
+	By FavIcone = By.xpath("(//div[@class='searchItemThumb--container'])[1]/div[1]/div[1]/div[1]/div[1]/span[1]/div[1]/button[1]"); //Locator for Fav
+	By seeAllBtn = By.xpath("(//div[@class='searchItemThumb--container'])[1]/div[1]/img"); //Locator for See All
+	By savedAllThisSearchesBtn = By.xpath("//div[@class='imc-vr--large']/section[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]"); //Locator for Saved All Searches Btn
+	By savedAllSearchesBtn = By.xpath("//div[@class='imc-searchform--bar--dropdown open']/div[1]/div[1]/button[1]"); //Locator for Saved All Searches Btn
+	By listOfAllProductNames = By.xpath("//div[@class='imc-market-planner-list--item-body-data-left']/div[2]/span[1]"); //Locator for Saved All Searches Btn
+	By listOfAllProductTitles = By.xpath("//div[@class='imc-market-planner-list--item-body-data-left']/div[1]"); //Locator for Saved All Searches Btn
+	By mpNotebtn = By.xpath("//div[@class='imc-gallery__item market-planner--list-sidebar imc-breakpoint-display--hide-mobile']/div[4]"); //Locator for Saved All Searches Btn
+	
 	
 	By favIconlist = By.xpath("//button[@class='imc-selectableicon ']"); //Locator for Favorite Icon list
 	
@@ -248,6 +260,69 @@ public class ATLMarketPlannerPage {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	}
+
+	public WebElement getmpNotebtn() {
+
+		wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpNotebtn));
+		return driver.findElement(mpNotebtn);
+	}
+	public List <WebElement> getlistOfAllProductTitles() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllProductTitles));
+		return driver.findElements(listOfAllProductTitles);
+	}
+	public List <WebElement> getlistOfAllProductNames() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllProductNames));
+		return driver.findElements(listOfAllProductNames);
+	}
+	public WebElement getsavedAllSearchesBtn() {
+
+		wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(savedAllSearchesBtn));
+		return driver.findElement(savedAllSearchesBtn);
+	}
+	public WebElement getsavedAllThisSearchesBtn() {
+
+		wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(savedAllThisSearchesBtn));
+		return driver.findElement(savedAllThisSearchesBtn);
+	}
+	public WebElement getseeAllBtn() {
+
+		wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(seeAllBtn));
+		return driver.findElement(seeAllBtn);
+	}
+
+	public WebElement getFavIcone() {
+
+		wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(FavIcone));
+		return driver.findElement(FavIcone);
+	}
+
+	public WebElement getAddToSchedulePROD() {
+		wait = new WebDriverWait(driver, 20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(AddToSchedulePROD));
+		return driver.findElement(AddToSchedulePROD);
+	}
+	public WebElement getMoreOptionPROD() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MoreOptionPROD));
+		return driver.findElement(MoreOptionPROD);
+	}
+	public List <WebElement> getlistOfAllSavedAllEventsWebinar() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllSavedAllEventsWebinar));
+		return driver.findElements(listOfAllSavedAllEventsWebinar);
+	}
+	public WebElement getsavedAllEventsWebinar() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(savedAllEventsWebinar));
+		return driver.findElement(savedAllEventsWebinar);
+
 	public WebElement getAtlAddToSchedule() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(AtlAddToSchedule));
@@ -262,6 +337,7 @@ public class ATLMarketPlannerPage {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmpSaveSearcheBtn));
 		return driver.findElement(atlmpSaveSearcheBtn);
+
 	}
 	public WebElement getATLExhibitorEvent() {
 		wait = new WebDriverWait (driver,20);

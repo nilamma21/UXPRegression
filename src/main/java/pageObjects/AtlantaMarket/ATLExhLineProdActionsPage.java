@@ -77,9 +77,17 @@ public class ATLExhLineProdActionsPage extends base{
 	By prodName = By.xpath("//a[@class='imc-type--title-5-ui']"); //Locator for DG showroom Filter Catalog
 	By prodNameFromDGshhowroomPage = By.xpath("//div[@class = 'imc-content--display-flex-wrap']/span[text()='Products']/../../div[2]/div[1]/div[1]/div[1]/a"); //Locator for DG showroom Prod Name
 	
+	
+			
+			
+	
 	public ATLExhLineProdActionsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
+
+	} 
+		
+
 	}
 	public WebElement getprodNameFromDGshhowroomPage() {
 		wait = new WebDriverWait (driver,30);
@@ -111,6 +119,7 @@ public class ATLExhLineProdActionsPage extends base{
 		wait.until(ExpectedConditions.visibilityOfElementLocated(catalogstabDiv));
 		return driver.findElement(catalogstabDiv);
 	}
+
 	public WebElement getcatalogstabPROD() {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(catalogstabPROD));

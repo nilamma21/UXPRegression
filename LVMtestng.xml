@@ -9,7 +9,11 @@
 	<test thread-count="5" name="RegressionTest">
 		<classes>
 
+			<class name="atlantamarket_PROD.MarketPlanner" />
+
+
 			<class name="atlantamarket_PROD.EvenntsAndWebinar" />
+
 			<methods>
 			
 				  <!-- <include name="TS011_VerifyExhibitorEventsListTest" /> -->
@@ -22,6 +26,15 @@
 			<methods> -->
 		<!-- 	<include name="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest" /> 
 				<include name="TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest" /> -->
+
+			
+				<!-- <include name="TS010_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest" /> --> 
+				
+			
+				<!-- 	<include name="TS037_VerifyMarketPlannerListsAllSavedproductsTest" /> 
+					<include name="TS045_VerifyAddToListFunctionalityUsingQuickAddTest" />
+				 -->
+
 				
 				<!-- <include name="TS011_VerifyEventsOverviewInGlobalSearchTest" /> --> 
 				
@@ -29,6 +42,7 @@
 				<!--  <include name="TS007_VerifyGlobalSearchMatchingResultsSelectAddToNewlyCreatedListTest" />   -->
 				<!-- <include name="TS045_VerifyAddToListFunctionalityUsingQuickAddTest" /> -->
 				
+
 				
 
 			</methods>
