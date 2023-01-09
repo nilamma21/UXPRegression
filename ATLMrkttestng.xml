@@ -1,44 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<!-- <suite name="ATLMrkt_RegressionTestSuite">
-	<listners>
-		<listner class-name="atlantamarket_PROD.TestListeners" />
-	</listners>
-
-	<test thread-count="5" name="RegressionParallelest">
-		<classes>
-			 <class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters" />
-			 <class name="atlantamarket_PROD.GlobalSearch_SuggestionList" /> 
-			<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
-			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
-			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
-			<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
-			<class name="atlantamarket_PROD.FloorPlans" />
-			<class name="atlantamarket_PROD.ExhibitorDigitalShowroom"/>
-			<methods>
-			<include name="TS009_VerifyClickOnLineSearchForExhibitorTest"/>
-			</methods>
-		</classes>
-	</test>
-
-</suite> -->
-
-
 <suite name="ATLMrkt_RegressionTestSuite">
 	<listners>
 		<listner class-name="atlantamarket_PROD.TestListeners" />
 	</listners>
 	<test thread-count="5" name="RegressionTest">
 		<classes>
-			<class name="atlantamarket_PROD.ExhibitorDigitalShowroom"/>
-			<methods>
-			<include name="TS013_VerifySeeInOtherMarketsForExhibitorTest"/>
-			
-			</methods>
+			<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
+			<class name="atlantamarket_PROD.EvenntsAndWebinar" />
+			<class name="atlantamarket_PROD.LineDigitalShowroom" />
 		</classes>
-	</test> 
-</suite> 
+	</test>
+</suite>
 
 <!-- <suite name="ATLMrkt_RegressionTestSuite">
 	<listners>

@@ -5,9 +5,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.NoSuchElementException;
+import java.util.concurrent.TimeUnit;
 
-import org.omg.CORBA.PUBLIC_MEMBER;
 import org.openqa.selenium.By;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -18,9 +17,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
-import com.gargoylesoftware.htmlunit.javascript.host.media.webkitMediaStream;
-
-import atlantamarket_UAT.MarketPlanner;
+//import atlantamarket_UAT.MarketPlanner;
 import pageObjects.AtlantaMarket.ATLEventsAndWebinarPage;
 import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
 import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
@@ -34,7 +31,7 @@ public class Utility extends base {
 	ATLLandingPage lap;
 	ATLLoginPage lp;
 	ATLExhLineProdActionsPage atlexhact;
-	MarketPlanner mp;
+	//MarketPlanner mp;
 	ATLMarketPlannerPage atlmppge;
 	ATLGlobalSearchPage atlgs;
 	ATLEventsAndWebinarPage atlevents;
@@ -65,8 +62,8 @@ public class Utility extends base {
 		lap.getLogin().click();
 
 		// Enter the credentials on Login Page and click
-		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
-		lp.getPassword().sendKeys((prop.getProperty("password")));
+		lp.getEmailAddress().sendKeys((prop.getProperty("usernameSwapnil")));
+		lp.getPassword().sendKeys((prop.getProperty("passwordSwapnil")));
 
 		lp.getSignInBtn().click();
 		Thread.sleep(15000);
@@ -406,7 +403,11 @@ public class Utility extends base {
 	}
 
 	public void ClearGlobalSearch() throws IOException, InterruptedException {
-
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		atlgs=new ATLGlobalSearchPage(driver);
+		
 		if (!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
@@ -433,14 +434,16 @@ public class Utility extends base {
 		atlevents=new ATLEventsAndWebinarPage(driver);
 		
 		if(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_prod"))) {
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			// Click on Attend Tab
-			atlevents.getatlAttendTab().click(); 
+			atlevents.getatlAttendTab().click();
 			Thread.sleep(2000);
 			//click on Events Link
 			atlevents.getatlEventsLink().click();
 			Thread.sleep(3000);
 		}
 		else {
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			atlevents.getatlExploreMarketTab().click();  //For LVM Events
 			Thread.sleep(2000);
 			//click on Events Link
