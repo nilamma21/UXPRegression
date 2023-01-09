@@ -23,7 +23,6 @@ import resources.GenerateData;
 import resources.Utility;
 import resources.base;
 
-@Test
 @Listeners({ TestListeners.class })
 public class GlobalSearch_MatchingResults extends base {
 
