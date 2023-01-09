@@ -87,8 +87,6 @@ public class ATLExhLineProdActionsPage extends base{
 
 	} 
 		
-
-	}
 	public WebElement getprodNameFromDGshhowroomPage() {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(prodNameFromDGshhowroomPage));

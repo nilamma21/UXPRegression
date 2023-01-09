@@ -322,6 +322,7 @@ public class ATLMarketPlannerPage {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(savedAllEventsWebinar));
 		return driver.findElement(savedAllEventsWebinar);
+	}
 
 	public WebElement getAtlAddToSchedule() {
 		wait = new WebDriverWait (driver,20);
