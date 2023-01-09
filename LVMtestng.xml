@@ -8,15 +8,15 @@
 
 	<test thread-count="5" name="RegressionTest">
 		<classes>
-			<class name="atlantamarket_PROD.ExhibitorDigitalShowroom" />
+			<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
 			<methods>
-		<!-- 	<include name="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest" /> 
-				<include name="TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest" /> -->
-				<!-- -->
-				<!-- <include name="TS010_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest" /> --> 
+			<include name="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest" /> 
+				<include name="TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest" />
+				<include name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest" />
+				<include name="TS001_VerifyAddToFavoriteForExhibitorTest" /> 
 				
-			<!-- 	<include name="TS013_VerifySeeInOtherMarketsForExhibitorTest" />
-				<include name="TS014_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest" /> -->
+		 			<include name="TS003_VerifyAddToExistingListForExhibitorTest" />
+					<include name="TS002_VerifyAddToNewListForExhibitorTest" />
 				
 				
 			</methods>
