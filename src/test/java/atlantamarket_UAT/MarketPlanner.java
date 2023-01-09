@@ -1,16 +1,9 @@
 package atlantamarket_UAT;
 
 import java.io.IOException;
-import java.sql.Date;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -20,20 +13,13 @@ import org.openqa.selenium.Point;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
-import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
-import com.gargoylesoftware.htmlunit.javascript.host.dom.Document;
-import com.sun.mail.iap.Argument;
 
 import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
 import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
@@ -41,7 +27,6 @@ import pageObjects.AtlantaMarket.ATLLandingPage;
 import pageObjects.AtlantaMarket.ATLLeftPaneFilters;
 import pageObjects.AtlantaMarket.ATLLoginPage;
 import pageObjects.AtlantaMarket.ATLMarketPlannerPage;
-import pageObjects.AtlantaMarket.ATLProductDetailsPage;
 import resources.GenerateData;
 import resources.Utility;
 import resources.base;

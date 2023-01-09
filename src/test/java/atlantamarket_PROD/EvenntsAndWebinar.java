@@ -1,12 +1,6 @@
 package atlantamarket_PROD;
 
-import static org.junit.Assert.assertNotNull;
-
-import java.awt.Window;
 import java.io.IOException;
-import java.sql.Date;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -15,7 +9,6 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -33,7 +26,6 @@ import pageObjects.AtlantaMarket.ATLProductDetailsPage;
 import resources.GenerateData;
 import resources.Utility;
 import resources.base;
-import java.time.LocalDate;
 
 public class EvenntsAndWebinar extends base{
 	

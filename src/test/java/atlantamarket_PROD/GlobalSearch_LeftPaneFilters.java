@@ -5,19 +5,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
-import com.sun.jna.platform.win32.OaIdl.SYSKIND;
 
 import pageObjects.AtlantaMarket.ATLExhDigiShowroomPage;
 import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;

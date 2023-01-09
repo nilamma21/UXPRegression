@@ -3,7 +3,6 @@ package atlantamarket_UAT;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;

@@ -5,10 +5,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
-import org.omg.CORBA.PUBLIC_MEMBER;
 import org.openqa.selenium.By;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -18,8 +16,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-
-import com.gargoylesoftware.htmlunit.javascript.host.media.webkitMediaStream;
 
 //import atlantamarket_UAT.MarketPlanner;
 import pageObjects.AtlantaMarket.ATLEventsAndWebinarPage;
