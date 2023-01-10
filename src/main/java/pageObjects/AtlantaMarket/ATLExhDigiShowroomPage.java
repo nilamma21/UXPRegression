@@ -13,15 +13,12 @@ public class ATLExhDigiShowroomPage {
 	public WebDriver driver;
 	public WebDriverWait wait;
 
-<<<<<<< HEAD
-	By atlvalidateexhdigishowpage = By.xpath("//img[@class='imc-image--responsive align-image-content imc-content--full-width imc-exhibitors--directory-image']"); // Locator to validate Exhibitor Digital Showroom page
-=======
 
 	By atlvalidateexhdigishowpage = By.xpath("//img[@class='imc-image--responsive align-image-content imc-content--full-width imc-exhibitors--directory-image']"); // Locator to validate Exhibitor Digital Showroom page
 
 	//By atlvalidateexhdigishowpage = By.xpath("(//img[contains(@class,'imc-exhibitors--')])[2]"); // Locator to validate Exhibitor Digital Showroom page
 
->>>>>>> 4c42dc75e1a5c15bc76a373a6dd80ac945b53d04
+
 	By lvmvalidateexhdigishowpage_uat = By.xpath("//div[@class='imc-gallery__item']"); // Locator to validate Exhibitor Digital Showroom page
 	By atlvalidateexhdigishowpage_lvmUAT = By.xpath("//img[@class='imc-exhibitors--detail-image']"); // Locator to validate Exhibitor Digital Showroom page LVM UAT
 	By exhibitornameonexhdirectimg = By.xpath("//span[@class='imc-heading imc-heading--giga-desktop ']"); //Locator for Exhibitor name on Exhibitor Directory image
