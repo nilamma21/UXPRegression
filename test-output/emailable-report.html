@@ -33,11 +33,51 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
 <<<<<<< HEAD
+<tr><td style="text-align:left;padding-right:2em">RegressionTest</td><td class="numi">2</td><td class="numi">2</td><td class="numi">0</td><td class="numi_attn">3</td><td class="numi">403.6 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+=======
+<<<<<<< HEAD
 <tr><td style="text-align:left;padding-right:2em">RegressionTest</td><td class="numi">43</td><td class="numi">43</td><td class="numi">0</td><td class="numi_attn">9</td><td class="numi">2,586.3 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+>>>>>>> b55ac2221bf55977f9520ce056b10f786d0eb40a
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
 <tr><th colspan="4">RegressionTest &#8212; failed</th></tr>
+<<<<<<< HEAD
+<tr class="failedodd"><td rowspan="3">atlantamarket_PROD.GlobalSearch_ExhibitorActions</td><td><a href="#m1"><b>TS001_VerifyAddToFavoriteForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1673242727810</td><td class="numi">60011</td></tr><tr class="failedodd"><td><a href="#m2"><b>TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1673242994056</td><td class="numi">39855</td></tr><tr class="failedodd"><td><a href="#m3"><b>TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1673243034094</td><td class="numi">40703</td></tr>
+<tr><th colspan="4">RegressionTest &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="2">atlantamarket_PROD.GlobalSearch_ExhibitorActions</td><td><a href="#m4"><b>TS002_VerifyAddToNewListForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1673242787963</td><td class="numi">82048</td></tr><tr class="passedodd"><td><a href="#m5"><b>TS003_VerifyAddToExistingListForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1673242870012</td><td class="numi">124043</td></tr>
+</table>
+<h1>RegressionTest</h1>
+<h2 id="m1">atlantamarket_PROD.GlobalSearch_ExhibitorActions:TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest</h2>
+<div style="padding-left:3em">
+<p>expected [346401] but found [708099]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertEquals(Assert.java:123)
+<br/>at org.testng.Assert.assertEquals(Assert.java:176)
+<br/>at org.testng.Assert.assertEquals(Assert.java:186)
+<br/>at atlantamarket_PROD.GlobalSearch_ExhibitorActions.TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest(GlobalSearch_ExhibitorActions.java:398)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">atlantamarket_PROD.GlobalSearch_ExhibitorActions:TS001_VerifyAddToFavoriteForExhibitorTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[1]/div[1]/a (tried for 20 second(s) with 500 milliseconds interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getATLSavedExhNameInList(ATLMarketPlannerPage.java:480)
+<br/>at atlantamarket_PROD.GlobalSearch_ExhibitorActions.TS001_VerifyAddToFavoriteForExhibitorTest(GlobalSearch_ExhibitorActions.java:98)
+<br/>25 lines not shown
+<p>Caused by no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[1]/div[1]/a&quot;}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
+System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61394}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1bde475d3ed0cc940f041e452b278d9f
+*** Element info: {Using=xpath, value=//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[1]/div[1]/a}</p>
+=======
 <tr class="failedodd"><td rowspan="9">atlantamarket_PROD.MarketPlanner</td><td><a href="#m1"><b>TS007_VerifyNewGroupBtnFunctionalityForListsTest</b>  </a></td><td class="numi">1</td><td>1672993190900</td><td class="numi">9770</td></tr><tr class="failedodd"><td><a href="#m2"><b>TS012_VerifyMPRegistrationCardOverviewTest</b>  </a></td><td class="numi">1</td><td>1672993264818</td><td class="numi">36849</td></tr><tr class="failedodd"><td><a href="#m3"><b>TS013_VerifyAddToFavoriteFunctionalityForProductTest</b>  </a></td><td class="numi">1</td><td>1672993301808</td><td class="numi">45390</td></tr><tr class="failedodd"><td><a href="#m4"><b>TS023_VerifyFilterByOptionsFunctionalityForListTest</b>  </a></td><td class="numi">1</td><td>1672993778588</td><td class="numi">203129</td></tr><tr class="failedodd"><td><a href="#m5"><b>TS025_VerifyDuplicateLinkFunctionalityForListTest</b>  </a></td><td class="numi">1</td><td>1672994017371</td><td class="numi">14609</td></tr><tr class="failedodd"><td><a href="#m6"><b>TS038_VerifyMarketPlannerRegistrationsTabTest</b>  </a></td><td class="numi">1</td><td>1672994882692</td><td class="numi">20035</td></tr><tr class="failedodd"><td><a href="#m7"><b>TS045_VerifyAddToListFunctionalityUsingQuickAddTest</b>  </a></td><td class="numi">1</td><td>1672995044216</td><td class="numi">34214</td></tr><tr class="failedodd"><td><a href="#m8"><b>TS051_VerifyMarketPlannerAddEventsToFav</b>  </a></td><td class="numi">1</td><td>1672995411961</td><td class="numi">15933</td></tr><tr class="failedodd"><td><a href="#m9"><b>TS052_VerifyMarketPlannerAllSavedEventsAndSemninar</b>  </a></td><td class="numi">1</td><td>1672995428039</td><td class="numi">15319</td></tr>
 <tr><th colspan="4">RegressionTest &#8212; passed</th></tr>
 <tr class="passedodd"><td rowspan="43">atlantamarket_PROD.MarketPlanner</td><td><a href="#m10"><b>TS001_VerifyMarketPlannerInvalidLoginCredentialsTest</b>  </a></td><td class="numi">1</td><td>1672992933159</td><td class="numi">29941</td></tr><tr class="passedodd"><td><a href="#m11"><b>TS002_VerifyMarketPlannerLoginTest</b>  </a></td><td class="numi">1</td><td>1672992963105</td><td class="numi">23572</td></tr><tr class="passedodd"><td><a href="#m12"><b>TS003_VerifyMarketPlannerChannelSelectorTest</b>  </a></td><td class="numi">1</td><td>1672992986678</td><td class="numi">112023</td></tr><tr class="passedodd"><td><a href="#m13"><b>TS004_VerifyAddToFavoriteFunctionalityUsingQuickAddForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1672993098705</td><td class="numi">35275</td></tr><tr class="passedodd"><td><a href="#m14"><b>TS005_VerifyMarketPlannerSignOutTest</b>  </a></td><td class="numi">1</td><td>1672993133981</td><td class="numi">31326</td></tr><tr class="passedodd"><td><a href="#m15"><b>TS006_VerifyArrangeBtnFunctionalityForListsTest</b>  </a></td><td class="numi">1</td><td>1672993165309</td><td class="numi">25590</td></tr><tr class="passedodd"><td><a href="#m16"><b>TS008_VerifyNewListBtnFunctionalityForListsTest1</b>  </a></td><td class="numi">1</td><td>1672993200806</td><td class="numi">30670</td></tr><tr class="passedodd"><td><a href="#m17"><b>TS009_VerifyCreateNewGroupFormValidationForListsTest</b>  </a></td><td class="numi">1</td><td>1672993231477</td><td class="numi">4136</td></tr><tr class="passedodd"><td><a href="#m18"><b>TS010_VerifyCreateNewListFormValidationTest</b>  </a></td><td class="numi">1</td><td>1672993235614</td><td class="numi">24919</td></tr><tr class="passedodd"><td><a href="#m19"><b>TS011_VerifyMPDashboardOverviewTest</b>  </a></td><td class="numi">1</td><td>1672993260534</td><td class="numi">4283</td></tr><tr class="passedodd"><td><a href="#m20"><b>TS014_VerifyManageListOptionsOverviewTest</b>  </a></td><td class="numi">1</td><td>1672993347350</td><td class="numi">6356</td></tr><tr class="passedodd"><td><a href="#m21"><b>TS015_VerifyEditListFunctionalityForManageListTest</b>  </a></td><td class="numi">1</td><td>1672993353707</td><td class="numi">229496</td></tr><tr class="passedodd"><td><a href="#m22"><b>TS016_VerifyDuplicateLinkFunctionalityForListTest</b>  </a></td><td class="numi">1</td><td>1672993583204</td><td class="numi">25429</td></tr><tr class="passedodd"><td><a href="#m23"><b>TS017_VerifyRenameFunctionalityForListTest</b>  </a></td><td class="numi">1</td><td>1672993608634</td><td class="numi">51898</td></tr><tr class="passedodd"><td><a href="#m24"><b>TS018_VerifyAddToFavoriteFunctionalityForLineTest</b>  </a></td><td class="numi">1</td><td>1672993660532</td><td class="numi">27180</td></tr><tr class="passedodd"><td><a href="#m25"><b>TS019_VerifyAddToFavoriteFunctionalityForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1672993687712</td><td class="numi">24642</td></tr><tr class="passedodd"><td><a href="#m26"><b>TS020_VerifyMPListsCardOverviewTest</b>  </a></td><td class="numi">1</td><td>1672993712354</td><td class="numi">22722</td></tr><tr class="passedodd"><td><a href="#m27"><b>TS021_VerifyMPActivitiesCardOverviewTest</b>  </a></td><td class="numi">1</td><td>1672993735076</td><td class="numi">14813</td></tr><tr class="passedodd"><td><a href="#m28"><b>TS022_VerifyFilterByOptionsOverviewForListTest</b>  </a></td><td class="numi">1</td><td>1672993749889</td><td class="numi">28699</td></tr><tr class="passedodd"><td><a href="#m29"><b>TS024_VerifyMarketPlannerListSortByTest</b>  </a></td><td class="numi">1</td><td>1672993981862</td><td class="numi">35509</td></tr><tr class="passedodd"><td><a href="#m30"><b>TS026_VerifyListDisplayControlsTest</b>  </a></td><td class="numi">1</td><td>1672994032102</td><td class="numi">6051</td></tr><tr class="passedodd"><td><a href="#m31"><b>TS027_VerifyListDisplayControlsFunctionalityTest</b>  </a></td><td class="numi">1</td><td>1672994038153</td><td class="numi">138704</td></tr><tr class="passedodd"><td><a href="#m32"><b>TS028_VerifyMarketPlannerListElementLocationLinkTest</b>  </a></td><td class="numi">1</td><td>1672994176858</td><td class="numi">56697</td></tr><tr class="passedodd"><td><a href="#m33"><b>TS029_VerifyMarketPlannerListsElementMoreOoptionsOverviewTest</b>  </a></td><td class="numi">1</td><td>1672994233555</td><td class="numi">23274</td></tr><tr class="passedodd"><td><a href="#m34"><b>TS030_VerifyMarketPlannerListsElementMoreOoptionsCopyeTest</b>  </a></td><td class="numi">1</td><td>1672994256830</td><td class="numi">96433</td></tr><tr class="passedodd"><td><a href="#m35"><b>TS031_VerifyMarketPlannerListsElementMoreOoptionsMoveTest</b>  </a></td><td class="numi">1</td><td>1672994353263</td><td class="numi">104203</td></tr><tr class="passedodd"><td><a href="#m36"><b>TS032_VerifyMarketPlannerListsElementMoreOoptionsDeleteTest</b>  </a></td><td class="numi">1</td><td>1672994457466</td><td class="numi">74355</td></tr><tr class="passedodd"><td><a href="#m37"><b>TS033_VerifyMarketPlannerListManagementAddNoteTest</b>  </a></td><td class="numi">1</td><td>1672994531821</td><td class="numi">94706</td></tr><tr class="passedodd"><td><a href="#m38"><b>TS034_VerifyMarketPlannerEditListCustomItemTest</b>  </a></td><td class="numi">1</td><td>1672994626527</td><td class="numi">31111</td></tr><tr class="passedodd"><td><a href="#m39"><b>TS035_VerifyMarketPlannerEditListAddNoteTest</b>  </a></td><td class="numi">1</td><td>1672994657638</td><td class="numi">129937</td></tr><tr class="passedodd"><td><a href="#m40"><b>TS036_VerifyMarketPlannerListsAllSavedExhibitorsTest</b>  </a></td><td class="numi">1</td><td>1672994787576</td><td class="numi">34584</td></tr><tr class="passedodd"><td><a href="#m41"><b>TS039_VerifyMarketSavedSearchesfunctionalityTest</b>  </a></td><td class="numi">1</td><td>1672994822160</td><td class="numi">60531</td></tr><tr class="passedodd"><td><a href="#m42"><b>TS037_VerifyMarketPlannerListsAllSavedproductsTest</b>  </a></td><td class="numi">1</td><td>1672994902887</td><td class="numi">50291</td></tr><tr class="passedodd"><td><a href="#m43"><b>TS040_VerifyMarketSavedSearchesDeletefunctionalityTest</b>  </a></td><td class="numi">1</td><td>1672994953178</td><td class="numi">91037</td></tr><tr class="passedodd"><td><a href="#m44"><b>TS042_VerifyMarketPlannerListsElementMoreOoptionsAddToScheduleTest</b>  </a></td><td class="numi">1</td><td>1672995078572</td><td class="numi">14544</td></tr><tr class="passedodd"><td><a href="#m45"><b>TS043_VerifyAddToFavoriteFunctionalityUsingQuickAddForproductTest</b>  </a></td><td class="numi">1</td><td>1672995093117</td><td class="numi">66485</td></tr><tr class="passedodd"><td><a href="#m46"><b>TS044_VerifyAddToFavoriteFunctionalityUsingQuickAddForLinesTest</b>  </a></td><td class="numi">1</td><td>1672995159602</td><td class="numi">48905</td></tr><tr class="passedodd"><td><a href="#m47"><b>TS041_VerifyMarketPlannerListSortByFunctionalityTest</b>  </a></td><td class="numi">1</td><td>1672995208507</td><td class="numi">162522</td></tr><tr class="passedodd"><td><a href="#m48"><b>TS046_VerifyMarketPlanneMyInfoEditProfile</b>  </a></td><td class="numi">1</td><td>1672995371030</td><td class="numi">20750</td></tr><tr class="passedodd"><td><a href="#m49"><b>TS047_VerifyMarketPlanneMyInfoOverview</b>  </a></td><td class="numi">1</td><td>1672995391780</td><td class="numi">3675</td></tr><tr class="passedodd"><td><a href="#m50"><b>TS048_VerifyMarketPlanneMyInfoMyInquiriesTab</b>  </a></td><td class="numi">1</td><td>1672995395455</td><td class="numi">3808</td></tr><tr class="passedodd"><td><a href="#m51"><b>TS049_VerifyTabsUnderListsSectionTest</b>  </a></td><td class="numi">1</td><td>1672995399263</td><td class="numi">7057</td></tr><tr class="passedodd"><td><a href="#m52"><b>TS050_VerifyListTabDetailsTest</b>  </a></td><td class="numi">1</td><td>1672995406320</td><td class="numi">5641</td></tr>
@@ -94,6 +134,7 @@ Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55458}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
 Session ID: 94aa5f1a6a04571ae3865bbea97cd38e
 *** Element info: {Using=xpath, value=//div[text()=&apos;CybqAGbX&apos;]/../div[2]/span[1])}</p>
+>>>>>>> b55ac2221bf55977f9520ce056b10f786d0eb40a
 sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 <br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 <br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -108,6 +149,31 @@ sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 <br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 <br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 <br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<<<<<<< HEAD
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getATLSavedExhNameInList(ATLMarketPlannerPage.java:480)
+<br/>at atlantamarket_PROD.GlobalSearch_ExhibitorActions.TS001_VerifyAddToFavoriteForExhibitorTest(GlobalSearch_ExhibitorActions.java:98)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">atlantamarket_PROD.GlobalSearch_ExhibitorActions:TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest</h2>
+<div style="padding-left:3em">
+<p>expected [2594] but found [346401]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertEquals(Assert.java:123)
+<br/>at org.testng.Assert.assertEquals(Assert.java:176)
+<br/>at org.testng.Assert.assertEquals(Assert.java:186)
+<br/>at atlantamarket_PROD.GlobalSearch_ExhibitorActions.TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest(GlobalSearch_ExhibitorActions.java:443)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">atlantamarket_PROD.GlobalSearch_ExhibitorActions:TS003_VerifyAddToExistingListForExhibitorTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">atlantamarket_PROD.GlobalSearch_ExhibitorActions:TS002_VerifyAddToNewListForExhibitorTest</h2>
+=======
 <br/>at atlantamarket_PROD.MarketPlanner.TS025_VerifyDuplicateLinkFunctionalityForListTest(MarketPlanner.java:1613)
 <br/>25 lines not shown
 </div>
@@ -341,6 +407,7 @@ org.testng.Assert.fail(Assert.java:94)
 <h1>RegressionTest</h1>
 <h2 id="m1">atlantamarket_PROD.GlobalSearch_ExhibitorActions:TS003_VerifyAddToExistingListForExhibitorTest</h2>
 >>>>>>> 165c94fbc4fbd782daad363e3715f4d451ffac1a
+>>>>>>> b55ac2221bf55977f9520ce056b10f786d0eb40a
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>
 

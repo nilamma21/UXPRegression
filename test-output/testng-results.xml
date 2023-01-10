@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <<<<<<< HEAD
+<testng-results skipped="0" failed="3" total="5" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="LVM_RegressionTestSuite" duration-ms="403591" started-at="2023-01-09T05:37:52Z" finished-at="2023-01-09T05:44:35Z">
+    <groups>
+    </groups>
+    <test name="RegressionTest" duration-ms="403591" started-at="2023-01-09T05:37:52Z" finished-at="2023-01-09T05:44:35Z">
+      <class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@3abbfa04]" name="initialize" is-config="true" duration-ms="55497" started-at="2023-01-09T11:07:52Z" finished-at="2023-01-09T11:08:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="FAIL" signature="TS001_VerifyAddToFavoriteForExhibitorTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@3abbfa04]" name="TS001_VerifyAddToFavoriteForExhibitorTest" duration-ms="60011" started-at="2023-01-09T11:08:47Z" finished-at="2023-01-09T11:09:47Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class='imc-list-edit--draggable'][1]/div/div[1]/div[1]/a (tried for 20 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class='imc-list-edit--draggable'][1]/div/div[1]/div[1]/a (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getATLSavedExhNameInList(ATLMarketPlannerPage.java:480)
+	at atlantamarket_PROD.GlobalSearch_ExhibitorActions.TS001_VerifyAddToFavoriteForExhibitorTest(GlobalSearch_ExhibitorActions.java:98)
+=======
+<<<<<<< HEAD
 <testng-results skipped="0" failed="9" total="52" passed="43">
   <reporter-output>
   </reporter-output>
@@ -843,10 +868,59 @@ Session ID: 94aa5f1a6a04571ae3865bbea97cd38e
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
 	at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getATLSavedExhNameInList(ATLMarketPlannerPage.java:504)
 	at atlantamarket_PROD.EvenntsAndWebinar.TS013_VerifyExhibitorEventsAddToFavoriteTest(EvenntsAndWebinar.java:1094)
+>>>>>>> b55ac2221bf55977f9520ce056b10f786d0eb40a
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
+<<<<<<< HEAD
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//li[@class='imc-list-edit--draggable'][1]/div/div[1]/div[1]/a"}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'EON-SWAPNILI', ip: '172.22.22.78', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_311'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61394}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1bde475d3ed0cc940f041e452b278d9f
+*** Element info: {Using=xpath, value=//li[@class='imc-list-edit--draggable'][1]/div/div[1]/div[1]/a}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+=======
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:663)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:849)
@@ -879,12 +953,37 @@ Driver info: driver.version: unknown
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+>>>>>>> b55ac2221bf55977f9520ce056b10f786d0eb40a
 	... 26 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
+        </test-method> <!-- TS001_VerifyAddToFavoriteForExhibitorTest -->
+        <test-method status="PASS" signature="TS002_VerifyAddToNewListForExhibitorTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@3abbfa04]" name="TS002_VerifyAddToNewListForExhibitorTest" duration-ms="82048" started-at="2023-01-09T11:09:47Z" finished-at="2023-01-09T11:11:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifyAddToNewListForExhibitorTest -->
+        <test-method status="PASS" signature="TS003_VerifyAddToExistingListForExhibitorTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@3abbfa04]" name="TS003_VerifyAddToExistingListForExhibitorTest" duration-ms="124043" started-at="2023-01-09T11:11:10Z" finished-at="2023-01-09T11:13:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifyAddToExistingListForExhibitorTest -->
+        <test-method status="FAIL" signature="TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@3abbfa04]" name="TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest" duration-ms="39855" started-at="2023-01-09T11:13:14Z" finished-at="2023-01-09T11:13:53Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [346401] but found [708099]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [346401] but found [708099]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at atlantamarket_PROD.GlobalSearch_ExhibitorActions.TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest(GlobalSearch_ExhibitorActions.java:398)
+=======
         </test-method> <!-- TS013_VerifyExhibitorEventsAddToFavoriteTest -->
         <test-method status="FAIL" signature="TS014_VerifyExhibitorEventsAddToListTest()[pri:0, instance:atlantamarket_PROD.EvenntsAndWebinar@4411d970]" name="TS014_VerifyExhibitorEventsAddToListTest" duration-ms="151439" started-at="2022-12-27T15:32:01Z" finished-at="2022-12-27T15:34:33Z">
           <exception class="org.openqa.selenium.TimeoutException">
@@ -977,10 +1076,89 @@ Session ID: 0e93b5ea148d8b3aa751e43d8ea3de1d
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
 	at resources.Utility.clickOnEventLinkOfChannel(Utility.java:443)
 	at atlantamarket_PROD.EvenntsAndWebinar.TS007_VerifyIMCEventsAddToListTest(EvenntsAndWebinar.java:581)
+>>>>>>> b55ac2221bf55977f9520ce056b10f786d0eb40a
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
+<<<<<<< HEAD
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest -->
+        <test-method status="FAIL" signature="TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@3abbfa04]" name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest" duration-ms="40703" started-at="2023-01-09T11:13:54Z" finished-at="2023-01-09T11:14:34Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [2594] but found [346401]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [2594] but found [346401]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at atlantamarket_PROD.GlobalSearch_ExhibitorActions.TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest(GlobalSearch_ExhibitorActions.java:443)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@3abbfa04]" name="tearDown" is-config="true" duration-ms="885" started-at="2023-01-09T11:14:35Z" finished-at="2023-01-09T11:14:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_ExhibitorActions -->
+    </test> <!-- RegressionTest -->
+  </suite> <!-- LVM_RegressionTestSuite -->
+=======
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:663)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:849)
@@ -1012,4 +1190,5 @@ Session ID: 0e93b5ea148d8b3aa751e43d8ea3de1d
   </suite> <!-- Default suite -->
 
 >>>>>>> 165c94fbc4fbd782daad363e3715f4d451ffac1a
+>>>>>>> b55ac2221bf55977f9520ce056b10f786d0eb40a
 </testng-results>
