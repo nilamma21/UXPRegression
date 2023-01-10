@@ -1,43 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<<<<<<< HEAD
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
-    <classes>
-<<<<<<< HEAD
-      <class name="atlantamarket_PROD.LineDigitalShowroom">
-        <methods>
-          <include name="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest"/>
-          <include name="tearDown"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- atlantamarket_PROD.LineDigitalShowroom -->
-=======
-      <class name="atlantamarket_PROD.GlobalSearch_LineActions">
-        <methods>
-          <include name="TS002_VerifyAddToFavoriteForLineTest"/>
-          <include name="tearDown"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- atlantamarket_PROD.GlobalSearch_LineActions -->
->>>>>>> aa76b90493b1f008dcbb59e59252390f34eb42c1
-    </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
-=======
-<suite name="Failed suite [LVM_RegressionTestSuite]">
+
+<suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-      <class name="atlantamarket_PROD.GlobalSearch_ProductActions">
+<<<<<<< HEAD
+      <class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions">
         <methods>
+          <include name="TS001_VerifyAddToFavoriteForExhibitorTest"/>
+          <include name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest"/>
           <include name="tearDown"/>
-          <include name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest"/>
-          <include name="TS008_VerifyAddToFavoriteOnSearchResultsGridTest"/>
-          <include name="TS004_VerifyAddToFavoriteOnProductDetailsPageTest"/>
+          <include name="initialize"/>
+          <include name="TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.GlobalSearch_ExhibitorActions -->
+=======
+<<<<<<< HEAD
+      <class name="atlantamarket_PROD.MarketPlanner">
+        <methods>
+          <include name="TS013_VerifyAddToFavoriteFunctionalityForProductTest"/>
+          <include name="TS052_VerifyMarketPlannerAllSavedEventsAndSemninar"/>
+          <include name="initialize"/>
+          <include name="TS023_VerifyFilterByOptionsFunctionalityForListTest"/>
+          <include name="TS007_VerifyNewGroupBtnFunctionalityForListsTest"/>
+          <include name="TS038_VerifyMarketPlannerRegistrationsTabTest"/>
+          <include name="TS045_VerifyAddToListFunctionalityUsingQuickAddTest"/>
+          <include name="TS051_VerifyMarketPlannerAddEventsToFav"/>
+          <include name="TS012_VerifyMPRegistrationCardOverviewTest"/>
+          <include name="TS025_VerifyDuplicateLinkFunctionalityForListTest"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.MarketPlanner -->
+=======
+      <class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions">
+        <methods>
+          <include name="TS003_VerifyAddToExistingListForExhibitorTest"/>
+          <include name="tearDown"/>
           <include name="initialize"/>
         </methods>
-      </class> <!-- atlantamarket_PROD.GlobalSearch_ProductActions -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_ExhibitorActions -->
+
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="atlantamarket_PROD.EvenntsAndWebinar">
+        <methods>
+          <include name="TS014_VerifyExhibitorEventsAddToListTest"/>
+          <include name="TS013_VerifyExhibitorEventsAddToFavoriteTest"/>
+          <include name="TS004_VerifyIMCEventsEventsListTest"/>
+          <include name="TS006_VerifyIMCEventsAddToFavoriteTest"/>
+          <include name="TS007_VerifyIMCEventsAddToListTest"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.EvenntsAndWebinar -->
+
+>>>>>>> 165c94fbc4fbd782daad363e3715f4d451ffac1a
+>>>>>>> b55ac2221bf55977f9520ce056b10f786d0eb40a
     </classes>
   </test> <!-- RegressionTest(failed) -->
-</suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
->>>>>>> bb06a008a6905061d692f2f2d3368e6ddf437590
+</suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->

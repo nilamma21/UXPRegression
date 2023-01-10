@@ -1,4 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>TestNG:  Unit Test</title>
@@ -32,217 +33,73 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
 <<<<<<< HEAD
+<tr><td style="text-align:left;padding-right:2em">RegressionTest</td><td class="numi">2</td><td class="numi">2</td><td class="numi">0</td><td class="numi_attn">3</td><td class="numi">403.6 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+=======
 <<<<<<< HEAD
-<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">10</td><td class="numi">10</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">429.7 seconds</td><td class="numi"></td><td class="numi"></td></tr>
-</table>
-<table cellspacing="0" cellpadding="0" class="passed" id="summary">
-<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">Default test &#8212; failed</th></tr>
-<tr class="failedodd"><td rowspan="1">atlantamarket_PROD.LineDigitalShowroom</td><td><a href="#m1"><b>TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest</b>  </a></td><td class="numi">1</td><td>1671513910144</td><td class="numi">115876</td></tr>
-<tr><th colspan="4">Default test &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="10">atlantamarket_PROD.LineDigitalShowroom</td><td><a href="#m2"><b>TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest</b>  </a></td><td class="numi">1</td><td>1671513878199</td><td class="numi">11522</td></tr><tr class="passedodd"><td><a href="#m3"><b>TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest</b>  </a></td><td class="numi">1</td><td>1671513889724</td><td class="numi">20418</td></tr><tr class="passedodd"><td><a href="#m4"><b>TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest</b>  </a></td><td class="numi">1</td><td>1671514026023</td><td class="numi">86322</td></tr><tr class="passedodd"><td><a href="#m5"><b>TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest</b>  </a></td><td class="numi">1</td><td>1671514112346</td><td class="numi">48896</td></tr><tr class="passedodd"><td><a href="#m6"><b>TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest</b>  </a></td><td class="numi">1</td><td>1671514161244</td><td class="numi">8014</td></tr><tr class="passedodd"><td><a href="#m7"><b>TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest</b>  </a></td><td class="numi">1</td><td>1671514169259</td><td class="numi">5615</td></tr><tr class="passedodd"><td><a href="#m8"><b>TS008_VerifyLineDigitalShowroomProductscomponentTest</b>  </a></td><td class="numi">1</td><td>1671514174875</td><td class="numi">23590</td></tr><tr class="passedodd"><td><a href="#m9"><b>TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest</b>  </a></td><td class="numi">1</td><td>1671514198466</td><td class="numi">19681</td></tr><tr class="passedodd"><td><a href="#m10"><b>TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest</b>  </a></td><td class="numi">1</td><td>1671514218148</td><td class="numi">15993</td></tr><tr class="passedodd"><td><a href="#m11"><b>TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest</b>  </a></td><td class="numi">1</td><td>1671514234142</td><td class="numi">33862</td></tr>
-</table>
-<h1>Default test</h1>
-<h2 id="m1">atlantamarket_PROD.LineDigitalShowroom:TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest</h2>
-<div style="padding-left:3em">
-<p>Expected condition failed: waiting for visibility of element located by By.xpath: //a[@class=&apos;imc-link--alt-darkred&apos;] (tried for 35 second(s) with 500 MILLISECONDS interval)</p>
-org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getlistOfAllExh(ATLMarketPlannerPage.java:967)
-<br/>at atlantamarket_PROD.LineDigitalShowroom.TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest(LineDigitalShowroom.java:196)
-<br/>25 lines not shown
-<p>Caused by Cannot locate an element using By.xpath: //a[@class=&apos;imc-link--alt-darkred&apos;]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
-Driver info: driver.version: unknown</p>
-org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
-<br/>at java.util.Optional.orElseThrow(Unknown Source)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getlistOfAllExh(ATLMarketPlannerPage.java:967)
-<br/>at atlantamarket_PROD.LineDigitalShowroom.TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest(LineDigitalShowroom.java:196)
-<br/>25 lines not shown
-</div>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">atlantamarket_PROD.LineDigitalShowroom:TS008_VerifyLineDigitalShowroomProductscomponentTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">atlantamarket_PROD.LineDigitalShowroom:TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">atlantamarket_PROD.LineDigitalShowroom:TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m5">atlantamarket_PROD.LineDigitalShowroom:TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m6">atlantamarket_PROD.LineDigitalShowroom:TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m7">atlantamarket_PROD.LineDigitalShowroom:TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m8">atlantamarket_PROD.LineDigitalShowroom:TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m9">atlantamarket_PROD.LineDigitalShowroom:TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m10">atlantamarket_PROD.LineDigitalShowroom:TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m11">atlantamarket_PROD.LineDigitalShowroom:TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest</h2>
-=======
-<tr><td style="text-align:left;padding-right:2em">RegressionTest</td><td class="numi">8</td><td class="numi">8</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">501.5 seconds</td><td class="numi"></td><td class="numi"></td></tr>
-=======
-<tr><td style="text-align:left;padding-right:2em">RegressionTest</td><td class="numi">6</td><td class="numi">6</td><td class="numi">0</td><td class="numi_attn">3</td><td class="numi">733.4 seconds</td><td class="numi"></td><td class="numi"></td></tr>
->>>>>>> bb06a008a6905061d692f2f2d3368e6ddf437590
+<tr><td style="text-align:left;padding-right:2em">RegressionTest</td><td class="numi">43</td><td class="numi">43</td><td class="numi">0</td><td class="numi_attn">9</td><td class="numi">2,586.3 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+>>>>>>> b55ac2221bf55977f9520ce056b10f786d0eb40a
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
 <tr><th colspan="4">RegressionTest &#8212; failed</th></tr>
 <<<<<<< HEAD
-<tr class="failedodd"><td rowspan="1">atlantamarket_PROD.GlobalSearch_LineActions</td><td><a href="#m1"><b>TS002_VerifyAddToFavoriteForLineTest</b>  </a></td><td class="numi">1</td><td>1671430555568</td><td class="numi">85882</td></tr>
+<tr class="failedodd"><td rowspan="3">atlantamarket_PROD.GlobalSearch_ExhibitorActions</td><td><a href="#m1"><b>TS001_VerifyAddToFavoriteForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1673242727810</td><td class="numi">60011</td></tr><tr class="failedodd"><td><a href="#m2"><b>TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1673242994056</td><td class="numi">39855</td></tr><tr class="failedodd"><td><a href="#m3"><b>TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1673243034094</td><td class="numi">40703</td></tr>
 <tr><th colspan="4">RegressionTest &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="8">atlantamarket_PROD.GlobalSearch_LineActions</td><td><a href="#m2"><b>TS001_VerifyClickOnContactExhIconForLineTest</b>  </a></td><td class="numi">1</td><td>1671430530926</td><td class="numi">24638</td></tr><tr class="passedodd"><td><a href="#m3"><b>TS003_VerifyClickOnOrderOnJuniperMarketBtnForLineTest</b>  </a></td><td class="numi">1</td><td>1671430641598</td><td class="numi">32863</td></tr><tr class="passedodd"><td><a href="#m4"><b>TS004_VerifyAddToNewListForLineTest</b>  </a></td><td class="numi">1</td><td>1671430674461</td><td class="numi">65728</td></tr><tr class="passedodd"><td><a href="#m5"><b>TS005_VerifyAddToExistingListForLineTest</b>  </a></td><td class="numi">1</td><td>1671430740190</td><td class="numi">86645</td></tr><tr class="passedodd"><td><a href="#m6"><b>TS006_VerifyClickOnShownByExhibitorNameLinkForLineTest</b>  </a></td><td class="numi">1</td><td>1671430826836</td><td class="numi">32378</td></tr><tr class="passedodd"><td><a href="#m7"><b>TS007_VerifyClickOnLocationLinkForLineTest</b>  </a></td><td class="numi">1</td><td>1671430859215</td><td class="numi">29037</td></tr><tr class="passedodd"><td><a href="#m8"><b>TS008_VerifyClickOnMatchingProductsSeeAllLinkForLineTest</b>  </a></td><td class="numi">1</td><td>1671430888253</td><td class="numi">43174</td></tr><tr class="passedodd"><td><a href="#m9"><b>TS009_VerifyClickOnTotalProductsSeeAllLinkForLineTest</b>  </a></td><td class="numi">1</td><td>1671430931427</td><td class="numi">50869</td></tr>
+<tr class="passedodd"><td rowspan="2">atlantamarket_PROD.GlobalSearch_ExhibitorActions</td><td><a href="#m4"><b>TS002_VerifyAddToNewListForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1673242787963</td><td class="numi">82048</td></tr><tr class="passedodd"><td><a href="#m5"><b>TS003_VerifyAddToExistingListForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1673242870012</td><td class="numi">124043</td></tr>
 </table>
 <h1>RegressionTest</h1>
-<h2 id="m1">atlantamarket_PROD.GlobalSearch_LineActions:TS002_VerifyAddToFavoriteForLineTest</h2>
+<h2 id="m1">atlantamarket_PROD.GlobalSearch_ExhibitorActions:TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest</h2>
+<div style="padding-left:3em">
+<p>expected [346401] but found [708099]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertEquals(Assert.java:123)
+<br/>at org.testng.Assert.assertEquals(Assert.java:176)
+<br/>at org.testng.Assert.assertEquals(Assert.java:186)
+<br/>at atlantamarket_PROD.GlobalSearch_ExhibitorActions.TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest(GlobalSearch_ExhibitorActions.java:398)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">atlantamarket_PROD.GlobalSearch_ExhibitorActions:TS001_VerifyAddToFavoriteForExhibitorTest</h2>
 <div style="padding-left:3em">
 <p>Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[1]/div[1]/a (tried for 20 second(s) with 500 milliseconds interval)</p>
 org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 <br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 <br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getATLSavedExhNameInList(ATLMarketPlannerPage.java:480)
-<br/>at atlantamarket_PROD.GlobalSearch_LineActions.TS002_VerifyAddToFavoriteForLineTest(GlobalSearch_LineActions.java:143)
+<br/>at atlantamarket_PROD.GlobalSearch_ExhibitorActions.TS001_VerifyAddToFavoriteForExhibitorTest(GlobalSearch_ExhibitorActions.java:98)
 <br/>25 lines not shown
 <p>Caused by no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[1]/div[1]/a&quot;}
   (Session info: chrome=108.0.5359.125)
-=======
-<tr class="failedodd"><td rowspan="3">atlantamarket_PROD.GlobalSearch_ProductActions</td><td><a href="#m1"><b>TS002_VerifyProductAddToNewListOnProductDetailsPageTest</b>  </a></td><td class="numi">1</td><td>1671077752394</td><td class="numi">101489</td></tr><tr class="failedodd"><td><a href="#m2"><b>TS004_VerifyAddToFavoriteOnProductDetailsPageTest</b>  </a></td><td class="numi">1</td><td>1671077969808</td><td class="numi">78656</td></tr><tr class="failedodd"><td><a href="#m3"><b>TS008_VerifyAddToFavoriteOnSearchResultsGridTest</b>  </a></td><td class="numi">1</td><td>1671078250910</td><td class="numi">82210</td></tr>
-<tr><th colspan="4">RegressionTest &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="6">atlantamarket_PROD.GlobalSearch_ProductActions</td><td><a href="#m4"><b>TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest</b>  </a></td><td class="numi">1</td><td>1671077722167</td><td class="numi">30221</td></tr><tr class="passedodd"><td><a href="#m5"><b>TS003_VerifyProductAddToExistingListOnProductDetailsPageTest</b>  </a></td><td class="numi">1</td><td>1671077854039</td><td class="numi">115768</td></tr><tr class="passedodd"><td><a href="#m6"><b>TS005_VerifyAddNoteOnProductDetailsPageTest</b>  </a></td><td class="numi">1</td><td>1671078048593</td><td class="numi">49567</td></tr><tr class="passedodd"><td><a href="#m7"><b>TS006_VerifyProductAddToExistingListOnSearchResultsGridTest</b>  </a></td><td class="numi">1</td><td>1671078098161</td><td class="numi">107107</td></tr><tr class="passedodd"><td><a href="#m8"><b>TS007_VerifyFullScreenViewerOnProductDetailsPageTest</b>  </a></td><td class="numi">1</td><td>1671078205269</td><td class="numi">45638</td></tr><tr class="passedodd"><td><a href="#m9"><b>TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest</b>  </a></td><td class="numi">1</td><td>1671078333267</td><td class="numi">67562</td></tr>
-</table>
-<h1>RegressionTest</h1>
-<h2 id="m1">atlantamarket_PROD.GlobalSearch_ProductActions:TS002_VerifyProductAddToNewListOnProductDetailsPageTest</h2>
-<div style="padding-left:3em">
-<p>Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a (tried for 20 second(s) with 500 milliseconds interval)</p>
-org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getSavedProductNameInList(ATLMarketPlannerPage.java:540)
-<br/>at atlantamarket_PROD.GlobalSearch_ProductActions.TS002_VerifyProductAddToNewListOnProductDetailsPageTest(GlobalSearch_ProductActions.java:185)
-<br/>25 lines not shown
-<p>Caused by no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a&quot;}
-  (Session info: chrome=108.0.5359.96)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
 System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.96, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55548}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 12deea613a993c98c720ae4d64eb38a0
-*** Element info: {Using=xpath, value=//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a}</p>
-sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
-<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-<br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getSavedProductNameInList(ATLMarketPlannerPage.java:540)
-<br/>at atlantamarket_PROD.GlobalSearch_ProductActions.TS002_VerifyProductAddToNewListOnProductDetailsPageTest(GlobalSearch_ProductActions.java:185)
-<br/>25 lines not shown
-</div>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">atlantamarket_PROD.GlobalSearch_ProductActions:TS008_VerifyAddToFavoriteOnSearchResultsGridTest</h2>
-<div style="padding-left:3em">
-<p>Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a (tried for 20 second(s) with 500 milliseconds interval)</p>
-org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getSavedProductNameInList(ATLMarketPlannerPage.java:540)
-<br/>at atlantamarket_PROD.GlobalSearch_ProductActions.TS008_VerifyAddToFavoriteOnSearchResultsGridTest(GlobalSearch_ProductActions.java:638)
-<br/>25 lines not shown
-<p>Caused by no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a&quot;}
-  (Session info: chrome=108.0.5359.96)
->>>>>>> bb06a008a6905061d692f2f2d3368e6ddf437590
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
-System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-<<<<<<< HEAD
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56746}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 420877b7b07799d7b134d10d09247f3b
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61394}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1bde475d3ed0cc940f041e452b278d9f
 *** Element info: {Using=xpath, value=//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[1]/div[1]/a}</p>
 =======
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.96, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55548}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 12deea613a993c98c720ae4d64eb38a0
-*** Element info: {Using=xpath, value=//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a}</p>
->>>>>>> bb06a008a6905061d692f2f2d3368e6ddf437590
-sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
-<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-<br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-<<<<<<< HEAD
-<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getATLSavedExhNameInList(ATLMarketPlannerPage.java:480)
-<br/>at atlantamarket_PROD.GlobalSearch_LineActions.TS002_VerifyAddToFavoriteForLineTest(GlobalSearch_LineActions.java:143)
-<br/>25 lines not shown
-</div>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">atlantamarket_PROD.GlobalSearch_LineActions:TS001_VerifyClickOnContactExhIconForLineTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">atlantamarket_PROD.GlobalSearch_LineActions:TS005_VerifyAddToExistingListForLineTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">atlantamarket_PROD.GlobalSearch_LineActions:TS006_VerifyClickOnShownByExhibitorNameLinkForLineTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m5">atlantamarket_PROD.GlobalSearch_LineActions:TS009_VerifyClickOnTotalProductsSeeAllLinkForLineTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m6">atlantamarket_PROD.GlobalSearch_LineActions:TS003_VerifyClickOnOrderOnJuniperMarketBtnForLineTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m7">atlantamarket_PROD.GlobalSearch_LineActions:TS008_VerifyClickOnMatchingProductsSeeAllLinkForLineTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m8">atlantamarket_PROD.GlobalSearch_LineActions:TS004_VerifyAddToNewListForLineTest</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m9">atlantamarket_PROD.GlobalSearch_LineActions:TS007_VerifyClickOnLocationLinkForLineTest</h2>
->>>>>>> aa76b90493b1f008dcbb59e59252390f34eb42c1
-=======
-<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getSavedProductNameInList(ATLMarketPlannerPage.java:540)
-<br/>at atlantamarket_PROD.GlobalSearch_ProductActions.TS008_VerifyAddToFavoriteOnSearchResultsGridTest(GlobalSearch_ProductActions.java:638)
-<br/>25 lines not shown
-</div>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">atlantamarket_PROD.GlobalSearch_ProductActions:TS004_VerifyAddToFavoriteOnProductDetailsPageTest</h2>
+<tr class="failedodd"><td rowspan="9">atlantamarket_PROD.MarketPlanner</td><td><a href="#m1"><b>TS007_VerifyNewGroupBtnFunctionalityForListsTest</b>  </a></td><td class="numi">1</td><td>1672993190900</td><td class="numi">9770</td></tr><tr class="failedodd"><td><a href="#m2"><b>TS012_VerifyMPRegistrationCardOverviewTest</b>  </a></td><td class="numi">1</td><td>1672993264818</td><td class="numi">36849</td></tr><tr class="failedodd"><td><a href="#m3"><b>TS013_VerifyAddToFavoriteFunctionalityForProductTest</b>  </a></td><td class="numi">1</td><td>1672993301808</td><td class="numi">45390</td></tr><tr class="failedodd"><td><a href="#m4"><b>TS023_VerifyFilterByOptionsFunctionalityForListTest</b>  </a></td><td class="numi">1</td><td>1672993778588</td><td class="numi">203129</td></tr><tr class="failedodd"><td><a href="#m5"><b>TS025_VerifyDuplicateLinkFunctionalityForListTest</b>  </a></td><td class="numi">1</td><td>1672994017371</td><td class="numi">14609</td></tr><tr class="failedodd"><td><a href="#m6"><b>TS038_VerifyMarketPlannerRegistrationsTabTest</b>  </a></td><td class="numi">1</td><td>1672994882692</td><td class="numi">20035</td></tr><tr class="failedodd"><td><a href="#m7"><b>TS045_VerifyAddToListFunctionalityUsingQuickAddTest</b>  </a></td><td class="numi">1</td><td>1672995044216</td><td class="numi">34214</td></tr><tr class="failedodd"><td><a href="#m8"><b>TS051_VerifyMarketPlannerAddEventsToFav</b>  </a></td><td class="numi">1</td><td>1672995411961</td><td class="numi">15933</td></tr><tr class="failedodd"><td><a href="#m9"><b>TS052_VerifyMarketPlannerAllSavedEventsAndSemninar</b>  </a></td><td class="numi">1</td><td>1672995428039</td><td class="numi">15319</td></tr>
+<tr><th colspan="4">RegressionTest &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="43">atlantamarket_PROD.MarketPlanner</td><td><a href="#m10"><b>TS001_VerifyMarketPlannerInvalidLoginCredentialsTest</b>  </a></td><td class="numi">1</td><td>1672992933159</td><td class="numi">29941</td></tr><tr class="passedodd"><td><a href="#m11"><b>TS002_VerifyMarketPlannerLoginTest</b>  </a></td><td class="numi">1</td><td>1672992963105</td><td class="numi">23572</td></tr><tr class="passedodd"><td><a href="#m12"><b>TS003_VerifyMarketPlannerChannelSelectorTest</b>  </a></td><td class="numi">1</td><td>1672992986678</td><td class="numi">112023</td></tr><tr class="passedodd"><td><a href="#m13"><b>TS004_VerifyAddToFavoriteFunctionalityUsingQuickAddForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1672993098705</td><td class="numi">35275</td></tr><tr class="passedodd"><td><a href="#m14"><b>TS005_VerifyMarketPlannerSignOutTest</b>  </a></td><td class="numi">1</td><td>1672993133981</td><td class="numi">31326</td></tr><tr class="passedodd"><td><a href="#m15"><b>TS006_VerifyArrangeBtnFunctionalityForListsTest</b>  </a></td><td class="numi">1</td><td>1672993165309</td><td class="numi">25590</td></tr><tr class="passedodd"><td><a href="#m16"><b>TS008_VerifyNewListBtnFunctionalityForListsTest1</b>  </a></td><td class="numi">1</td><td>1672993200806</td><td class="numi">30670</td></tr><tr class="passedodd"><td><a href="#m17"><b>TS009_VerifyCreateNewGroupFormValidationForListsTest</b>  </a></td><td class="numi">1</td><td>1672993231477</td><td class="numi">4136</td></tr><tr class="passedodd"><td><a href="#m18"><b>TS010_VerifyCreateNewListFormValidationTest</b>  </a></td><td class="numi">1</td><td>1672993235614</td><td class="numi">24919</td></tr><tr class="passedodd"><td><a href="#m19"><b>TS011_VerifyMPDashboardOverviewTest</b>  </a></td><td class="numi">1</td><td>1672993260534</td><td class="numi">4283</td></tr><tr class="passedodd"><td><a href="#m20"><b>TS014_VerifyManageListOptionsOverviewTest</b>  </a></td><td class="numi">1</td><td>1672993347350</td><td class="numi">6356</td></tr><tr class="passedodd"><td><a href="#m21"><b>TS015_VerifyEditListFunctionalityForManageListTest</b>  </a></td><td class="numi">1</td><td>1672993353707</td><td class="numi">229496</td></tr><tr class="passedodd"><td><a href="#m22"><b>TS016_VerifyDuplicateLinkFunctionalityForListTest</b>  </a></td><td class="numi">1</td><td>1672993583204</td><td class="numi">25429</td></tr><tr class="passedodd"><td><a href="#m23"><b>TS017_VerifyRenameFunctionalityForListTest</b>  </a></td><td class="numi">1</td><td>1672993608634</td><td class="numi">51898</td></tr><tr class="passedodd"><td><a href="#m24"><b>TS018_VerifyAddToFavoriteFunctionalityForLineTest</b>  </a></td><td class="numi">1</td><td>1672993660532</td><td class="numi">27180</td></tr><tr class="passedodd"><td><a href="#m25"><b>TS019_VerifyAddToFavoriteFunctionalityForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1672993687712</td><td class="numi">24642</td></tr><tr class="passedodd"><td><a href="#m26"><b>TS020_VerifyMPListsCardOverviewTest</b>  </a></td><td class="numi">1</td><td>1672993712354</td><td class="numi">22722</td></tr><tr class="passedodd"><td><a href="#m27"><b>TS021_VerifyMPActivitiesCardOverviewTest</b>  </a></td><td class="numi">1</td><td>1672993735076</td><td class="numi">14813</td></tr><tr class="passedodd"><td><a href="#m28"><b>TS022_VerifyFilterByOptionsOverviewForListTest</b>  </a></td><td class="numi">1</td><td>1672993749889</td><td class="numi">28699</td></tr><tr class="passedodd"><td><a href="#m29"><b>TS024_VerifyMarketPlannerListSortByTest</b>  </a></td><td class="numi">1</td><td>1672993981862</td><td class="numi">35509</td></tr><tr class="passedodd"><td><a href="#m30"><b>TS026_VerifyListDisplayControlsTest</b>  </a></td><td class="numi">1</td><td>1672994032102</td><td class="numi">6051</td></tr><tr class="passedodd"><td><a href="#m31"><b>TS027_VerifyListDisplayControlsFunctionalityTest</b>  </a></td><td class="numi">1</td><td>1672994038153</td><td class="numi">138704</td></tr><tr class="passedodd"><td><a href="#m32"><b>TS028_VerifyMarketPlannerListElementLocationLinkTest</b>  </a></td><td class="numi">1</td><td>1672994176858</td><td class="numi">56697</td></tr><tr class="passedodd"><td><a href="#m33"><b>TS029_VerifyMarketPlannerListsElementMoreOoptionsOverviewTest</b>  </a></td><td class="numi">1</td><td>1672994233555</td><td class="numi">23274</td></tr><tr class="passedodd"><td><a href="#m34"><b>TS030_VerifyMarketPlannerListsElementMoreOoptionsCopyeTest</b>  </a></td><td class="numi">1</td><td>1672994256830</td><td class="numi">96433</td></tr><tr class="passedodd"><td><a href="#m35"><b>TS031_VerifyMarketPlannerListsElementMoreOoptionsMoveTest</b>  </a></td><td class="numi">1</td><td>1672994353263</td><td class="numi">104203</td></tr><tr class="passedodd"><td><a href="#m36"><b>TS032_VerifyMarketPlannerListsElementMoreOoptionsDeleteTest</b>  </a></td><td class="numi">1</td><td>1672994457466</td><td class="numi">74355</td></tr><tr class="passedodd"><td><a href="#m37"><b>TS033_VerifyMarketPlannerListManagementAddNoteTest</b>  </a></td><td class="numi">1</td><td>1672994531821</td><td class="numi">94706</td></tr><tr class="passedodd"><td><a href="#m38"><b>TS034_VerifyMarketPlannerEditListCustomItemTest</b>  </a></td><td class="numi">1</td><td>1672994626527</td><td class="numi">31111</td></tr><tr class="passedodd"><td><a href="#m39"><b>TS035_VerifyMarketPlannerEditListAddNoteTest</b>  </a></td><td class="numi">1</td><td>1672994657638</td><td class="numi">129937</td></tr><tr class="passedodd"><td><a href="#m40"><b>TS036_VerifyMarketPlannerListsAllSavedExhibitorsTest</b>  </a></td><td class="numi">1</td><td>1672994787576</td><td class="numi">34584</td></tr><tr class="passedodd"><td><a href="#m41"><b>TS039_VerifyMarketSavedSearchesfunctionalityTest</b>  </a></td><td class="numi">1</td><td>1672994822160</td><td class="numi">60531</td></tr><tr class="passedodd"><td><a href="#m42"><b>TS037_VerifyMarketPlannerListsAllSavedproductsTest</b>  </a></td><td class="numi">1</td><td>1672994902887</td><td class="numi">50291</td></tr><tr class="passedodd"><td><a href="#m43"><b>TS040_VerifyMarketSavedSearchesDeletefunctionalityTest</b>  </a></td><td class="numi">1</td><td>1672994953178</td><td class="numi">91037</td></tr><tr class="passedodd"><td><a href="#m44"><b>TS042_VerifyMarketPlannerListsElementMoreOoptionsAddToScheduleTest</b>  </a></td><td class="numi">1</td><td>1672995078572</td><td class="numi">14544</td></tr><tr class="passedodd"><td><a href="#m45"><b>TS043_VerifyAddToFavoriteFunctionalityUsingQuickAddForproductTest</b>  </a></td><td class="numi">1</td><td>1672995093117</td><td class="numi">66485</td></tr><tr class="passedodd"><td><a href="#m46"><b>TS044_VerifyAddToFavoriteFunctionalityUsingQuickAddForLinesTest</b>  </a></td><td class="numi">1</td><td>1672995159602</td><td class="numi">48905</td></tr><tr class="passedodd"><td><a href="#m47"><b>TS041_VerifyMarketPlannerListSortByFunctionalityTest</b>  </a></td><td class="numi">1</td><td>1672995208507</td><td class="numi">162522</td></tr><tr class="passedodd"><td><a href="#m48"><b>TS046_VerifyMarketPlanneMyInfoEditProfile</b>  </a></td><td class="numi">1</td><td>1672995371030</td><td class="numi">20750</td></tr><tr class="passedodd"><td><a href="#m49"><b>TS047_VerifyMarketPlanneMyInfoOverview</b>  </a></td><td class="numi">1</td><td>1672995391780</td><td class="numi">3675</td></tr><tr class="passedodd"><td><a href="#m50"><b>TS048_VerifyMarketPlanneMyInfoMyInquiriesTab</b>  </a></td><td class="numi">1</td><td>1672995395455</td><td class="numi">3808</td></tr><tr class="passedodd"><td><a href="#m51"><b>TS049_VerifyTabsUnderListsSectionTest</b>  </a></td><td class="numi">1</td><td>1672995399263</td><td class="numi">7057</td></tr><tr class="passedodd"><td><a href="#m52"><b>TS050_VerifyListTabDetailsTest</b>  </a></td><td class="numi">1</td><td>1672995406320</td><td class="numi">5641</td></tr>
+</table>
+<h1>RegressionTest</h1>
+<h2 id="m1">atlantamarket_PROD.MarketPlanner:TS013_VerifyAddToFavoriteFunctionalityForProductTest</h2>
 <div style="padding-left:3em">
-<p>Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a (tried for 20 second(s) with 500 milliseconds interval)</p>
+<p>Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;imc-vr--xxlarge&apos;]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/p[1] (tried for 20 second(s) with 500 milliseconds interval)</p>
 org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 <br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getSavedProductNameInList(ATLMarketPlannerPage.java:540)
-<br/>at atlantamarket_PROD.GlobalSearch_ProductActions.TS004_VerifyAddToFavoriteOnProductDetailsPageTest(GlobalSearch_ProductActions.java:338)
+<br/>at pageObjects.AtlantaMarket.ATLExhLineProdActionsPage.getExhProductNameOnSearchGrid(ATLExhLineProdActionsPage.java:249)
+<br/>at atlantamarket_PROD.MarketPlanner.TS013_VerifyAddToFavoriteFunctionalityForProductTest(MarketPlanner.java:636)
 <br/>25 lines not shown
-<p>Caused by no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a&quot;}
-  (Session info: chrome=108.0.5359.96)
+<p>Caused by no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;imc-vr--xxlarge&apos;]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/p[1]&quot;}
+  (Session info: chrome=108.0.5359.125)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
 System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.96, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55548}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 12deea613a993c98c720ae4d64eb38a0
-*** Element info: {Using=xpath, value=//li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div/div/a}</p>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55458}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 94aa5f1a6a04571ae3865bbea97cd38e
+*** Element info: {Using=xpath, value=//div[@class=&apos;imc-vr--xxlarge&apos;]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/p[1]}</p>
 sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 <br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 <br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -260,22 +117,501 @@ sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 <br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
 <br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
 <br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getSavedProductNameInList(ATLMarketPlannerPage.java:540)
-<br/>at atlantamarket_PROD.GlobalSearch_ProductActions.TS004_VerifyAddToFavoriteOnProductDetailsPageTest(GlobalSearch_ProductActions.java:338)
+<br/>at pageObjects.AtlantaMarket.ATLExhLineProdActionsPage.getExhProductNameOnSearchGrid(ATLExhLineProdActionsPage.java:249)
+<br/>at atlantamarket_PROD.MarketPlanner.TS013_VerifyAddToFavoriteFunctionalityForProductTest(MarketPlanner.java:636)
 <br/>25 lines not shown
 </div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">atlantamarket_PROD.GlobalSearch_ProductActions:TS006_VerifyProductAddToExistingListOnSearchResultsGridTest</h2>
+<h2 id="m2">atlantamarket_PROD.MarketPlanner:TS025_VerifyDuplicateLinkFunctionalityForListTest</h2>
+<div style="padding-left:3em">
+<p>invalid selector: Unable to locate an element with the xpath expression //div[text()=&apos;CybqAGbX&apos;]/../div[2]/span[1]) because of the following error:
+SyntaxError: Failed to execute &apos;evaluate&apos; on &apos;Document&apos;: The string &apos;//div[text()=&apos;CybqAGbX&apos;]/../div[2]/span[1])&apos; is not a valid XPath expression.
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
+System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55458}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 94aa5f1a6a04571ae3865bbea97cd38e
+*** Element info: {Using=xpath, value=//div[text()=&apos;CybqAGbX&apos;]/../div[2]/span[1])}</p>
+>>>>>>> b55ac2221bf55977f9520ce056b10f786d0eb40a
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+<br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<<<<<<< HEAD
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getATLSavedExhNameInList(ATLMarketPlannerPage.java:480)
+<br/>at atlantamarket_PROD.GlobalSearch_ExhibitorActions.TS001_VerifyAddToFavoriteForExhibitorTest(GlobalSearch_ExhibitorActions.java:98)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m5">atlantamarket_PROD.GlobalSearch_ProductActions:TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest</h2>
+<h2 id="m3">atlantamarket_PROD.GlobalSearch_ExhibitorActions:TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest</h2>
+<div style="padding-left:3em">
+<p>expected [2594] but found [346401]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertEquals(Assert.java:123)
+<br/>at org.testng.Assert.assertEquals(Assert.java:176)
+<br/>at org.testng.Assert.assertEquals(Assert.java:186)
+<br/>at atlantamarket_PROD.GlobalSearch_ExhibitorActions.TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest(GlobalSearch_ExhibitorActions.java:443)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m6">atlantamarket_PROD.GlobalSearch_ProductActions:TS005_VerifyAddNoteOnProductDetailsPageTest</h2>
+<h2 id="m4">atlantamarket_PROD.GlobalSearch_ExhibitorActions:TS003_VerifyAddToExistingListForExhibitorTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m7">atlantamarket_PROD.GlobalSearch_ProductActions:TS003_VerifyProductAddToExistingListOnProductDetailsPageTest</h2>
+<h2 id="m5">atlantamarket_PROD.GlobalSearch_ExhibitorActions:TS002_VerifyAddToNewListForExhibitorTest</h2>
+=======
+<br/>at atlantamarket_PROD.MarketPlanner.TS025_VerifyDuplicateLinkFunctionalityForListTest(MarketPlanner.java:1613)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m8">atlantamarket_PROD.GlobalSearch_ProductActions:TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest</h2>
+<h2 id="m3">atlantamarket_PROD.MarketPlanner:TS038_VerifyMarketPlannerRegistrationsTabTest</h2>
+<div style="padding-left:3em">
+<p>8</p>
+atlantamarket_PROD.MarketPlanner.TS038_VerifyMarketPlannerRegistrationsTabTest(MarketPlanner.java:2426)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m9">atlantamarket_PROD.GlobalSearch_ProductActions:TS007_VerifyFullScreenViewerOnProductDetailsPageTest</h2>
->>>>>>> bb06a008a6905061d692f2f2d3368e6ddf437590
+<h2 id="m4">atlantamarket_PROD.MarketPlanner:TS023_VerifyFilterByOptionsFunctionalityForListTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;imc-market-planner-list--item-body-data-left&apos;]/div[1] (tried for 20 second(s) with 500 milliseconds interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getnameofElement(ATLMarketPlannerPage.java:1070)
+<br/>at atlantamarket_PROD.MarketPlanner.TS023_VerifyFilterByOptionsFunctionalityForListTest(MarketPlanner.java:1473)
+<br/>25 lines not shown
+<p>Caused by no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;imc-market-planner-list--item-body-data-left&apos;]/div[1]&quot;}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
+System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55458}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 94aa5f1a6a04571ae3865bbea97cd38e
+*** Element info: {Using=xpath, value=//div[@class=&apos;imc-market-planner-list--item-body-data-left&apos;]/div[1]}</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+<br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getnameofElement(ATLMarketPlannerPage.java:1070)
+<br/>at atlantamarket_PROD.MarketPlanner.TS023_VerifyFilterByOptionsFunctionalityForListTest(MarketPlanner.java:1473)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">atlantamarket_PROD.MarketPlanner:TS045_VerifyAddToListFunctionalityUsingQuickAddTest</h2>
+<div style="padding-left:3em">
+<p>expected [true] but found [false]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertTrue(Assert.java:42)
+<br/>at org.testng.Assert.assertTrue(Assert.java:52)
+<br/>at resources.Utility.ClickOnEditBtnOfAnyList(Utility.java:272)
+<br/>at atlantamarket_PROD.MarketPlanner.TS045_VerifyAddToListFunctionalityUsingQuickAddTest(MarketPlanner.java:3015)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">atlantamarket_PROD.MarketPlanner:TS007_VerifyNewGroupBtnFunctionalityForListsTest</h2>
+<div style="padding-left:3em">
+<p>expected [true] but found [false]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertTrue(Assert.java:42)
+<br/>at org.testng.Assert.assertTrue(Assert.java:52)
+<br/>at resources.Utility.checkItemPresentInListorNot(Utility.java:166)
+<br/>at atlantamarket_PROD.MarketPlanner.TS007_VerifyNewGroupBtnFunctionalityForListsTest(MarketPlanner.java:389)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">atlantamarket_PROD.MarketPlanner:TS012_VerifyMPRegistrationCardOverviewTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class = &apos;imc-card-section imc-card-footer imc-card-centered&apos;]/a[1] (tried for 20 second(s) with 500 milliseconds interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getmpregistrationlink(ATLMarketPlannerPage.java:845)
+<br/>at atlantamarket_PROD.MarketPlanner.TS012_VerifyMPRegistrationCardOverviewTest(MarketPlanner.java:605)
+<br/>25 lines not shown
+<p>Caused by no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class = &apos;imc-card-section imc-card-footer imc-card-centered&apos;]/a[1]&quot;}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
+System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55458}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 94aa5f1a6a04571ae3865bbea97cd38e
+*** Element info: {Using=xpath, value=//div[@class = &apos;imc-card-section imc-card-footer imc-card-centered&apos;]/a[1]}</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+<br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+<br/>at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getmpregistrationlink(ATLMarketPlannerPage.java:845)
+<br/>at atlantamarket_PROD.MarketPlanner.TS012_VerifyMPRegistrationCardOverviewTest(MarketPlanner.java:605)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">atlantamarket_PROD.MarketPlanner:TS051_VerifyMarketPlannerAddEventsToFav</h2>
+<div style="padding-left:3em">
+<p>expected [true] but found [false]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertTrue(Assert.java:42)
+<br/>at org.testng.Assert.assertTrue(Assert.java:52)
+<br/>at resources.Utility.checkItemPresentInListorNot(Utility.java:166)
+<br/>at atlantamarket_PROD.MarketPlanner.TS051_VerifyMarketPlannerAddEventsToFav(MarketPlanner.java:3298)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m9">atlantamarket_PROD.MarketPlanner:TS052_VerifyMarketPlannerAllSavedEventsAndSemninar</h2>
+<div style="padding-left:3em">
+<p>expected [true] but found [false]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertTrue(Assert.java:42)
+<br/>at org.testng.Assert.assertTrue(Assert.java:52)
+<br/>at resources.Utility.checkItemPresentInListorNot(Utility.java:166)
+<br/>at atlantamarket_PROD.MarketPlanner.TS052_VerifyMarketPlannerAllSavedEventsAndSemninar(MarketPlanner.java:3355)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">atlantamarket_PROD.MarketPlanner:TS008_VerifyNewListBtnFunctionalityForListsTest1</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m11">atlantamarket_PROD.MarketPlanner:TS026_VerifyListDisplayControlsTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m12">atlantamarket_PROD.MarketPlanner:TS001_VerifyMarketPlannerInvalidLoginCredentialsTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m13">atlantamarket_PROD.MarketPlanner:TS017_VerifyRenameFunctionalityForListTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m14">atlantamarket_PROD.MarketPlanner:TS014_VerifyManageListOptionsOverviewTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m15">atlantamarket_PROD.MarketPlanner:TS003_VerifyMarketPlannerChannelSelectorTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m16">atlantamarket_PROD.MarketPlanner:TS018_VerifyAddToFavoriteFunctionalityForLineTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m17">atlantamarket_PROD.MarketPlanner:TS030_VerifyMarketPlannerListsElementMoreOoptionsCopyeTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m18">atlantamarket_PROD.MarketPlanner:TS037_VerifyMarketPlannerListsAllSavedproductsTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m19">atlantamarket_PROD.MarketPlanner:TS044_VerifyAddToFavoriteFunctionalityUsingQuickAddForLinesTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m20">atlantamarket_PROD.MarketPlanner:TS032_VerifyMarketPlannerListsElementMoreOoptionsDeleteTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m21">atlantamarket_PROD.MarketPlanner:TS049_VerifyTabsUnderListsSectionTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m22">atlantamarket_PROD.MarketPlanner:TS050_VerifyListTabDetailsTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m23">atlantamarket_PROD.MarketPlanner:TS029_VerifyMarketPlannerListsElementMoreOoptionsOverviewTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m24">atlantamarket_PROD.MarketPlanner:TS031_VerifyMarketPlannerListsElementMoreOoptionsMoveTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m25">atlantamarket_PROD.MarketPlanner:TS041_VerifyMarketPlannerListSortByFunctionalityTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m26">atlantamarket_PROD.MarketPlanner:TS015_VerifyEditListFunctionalityForManageListTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m27">atlantamarket_PROD.MarketPlanner:TS024_VerifyMarketPlannerListSortByTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m28">atlantamarket_PROD.MarketPlanner:TS027_VerifyListDisplayControlsFunctionalityTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m29">atlantamarket_PROD.MarketPlanner:TS016_VerifyDuplicateLinkFunctionalityForListTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m30">atlantamarket_PROD.MarketPlanner:TS042_VerifyMarketPlannerListsElementMoreOoptionsAddToScheduleTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m31">atlantamarket_PROD.MarketPlanner:TS009_VerifyCreateNewGroupFormValidationForListsTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m32">atlantamarket_PROD.MarketPlanner:TS034_VerifyMarketPlannerEditListCustomItemTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m33">atlantamarket_PROD.MarketPlanner:TS040_VerifyMarketSavedSearchesDeletefunctionalityTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m34">atlantamarket_PROD.MarketPlanner:TS036_VerifyMarketPlannerListsAllSavedExhibitorsTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m35">atlantamarket_PROD.MarketPlanner:TS048_VerifyMarketPlanneMyInfoMyInquiriesTab</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m36">atlantamarket_PROD.MarketPlanner:TS005_VerifyMarketPlannerSignOutTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m37">atlantamarket_PROD.MarketPlanner:TS010_VerifyCreateNewListFormValidationTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m38">atlantamarket_PROD.MarketPlanner:TS006_VerifyArrangeBtnFunctionalityForListsTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m39">atlantamarket_PROD.MarketPlanner:TS021_VerifyMPActivitiesCardOverviewTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m40">atlantamarket_PROD.MarketPlanner:TS002_VerifyMarketPlannerLoginTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m41">atlantamarket_PROD.MarketPlanner:TS035_VerifyMarketPlannerEditListAddNoteTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m42">atlantamarket_PROD.MarketPlanner:TS019_VerifyAddToFavoriteFunctionalityForExhibitorTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m43">atlantamarket_PROD.MarketPlanner:TS011_VerifyMPDashboardOverviewTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m44">atlantamarket_PROD.MarketPlanner:TS046_VerifyMarketPlanneMyInfoEditProfile</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m45">atlantamarket_PROD.MarketPlanner:TS039_VerifyMarketSavedSearchesfunctionalityTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m46">atlantamarket_PROD.MarketPlanner:TS022_VerifyFilterByOptionsOverviewForListTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m47">atlantamarket_PROD.MarketPlanner:TS033_VerifyMarketPlannerListManagementAddNoteTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m48">atlantamarket_PROD.MarketPlanner:TS043_VerifyAddToFavoriteFunctionalityUsingQuickAddForproductTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m49">atlantamarket_PROD.MarketPlanner:TS020_VerifyMPListsCardOverviewTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m50">atlantamarket_PROD.MarketPlanner:TS047_VerifyMarketPlanneMyInfoOverview</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m51">atlantamarket_PROD.MarketPlanner:TS028_VerifyMarketPlannerListElementLocationLinkTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m52">atlantamarket_PROD.MarketPlanner:TS004_VerifyAddToFavoriteFunctionalityUsingQuickAddForExhibitorTest</h2>
+=======
+<tr><td style="text-align:left;padding-right:2em">RegressionTest</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">304.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+</table>
+<table cellspacing="0" cellpadding="0" class="passed" id="summary">
+<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr><th colspan="4">RegressionTest &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="1">atlantamarket_PROD.GlobalSearch_ExhibitorActions</td><td><a href="#m1"><b>TS003_VerifyAddToExistingListForExhibitorTest</b>  </a></td><td class="numi">1</td><td>1671777763202</td><td class="numi">183647</td></tr>
+</table>
+<h1>RegressionTest</h1>
+<h2 id="m1">atlantamarket_PROD.GlobalSearch_ExhibitorActions:TS003_VerifyAddToExistingListForExhibitorTest</h2>
+>>>>>>> 165c94fbc4fbd782daad363e3715f4d451ffac1a
+>>>>>>> b55ac2221bf55977f9520ce056b10f786d0eb40a
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>TestNG Report</title><style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}</style></head><body><table><tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr><tr><th colspan="7">Default suite</th></tr><tr><td><a href="#t0">Default test</a></td><td class="num">10</td><td class="num">0</td><td class="num attn">5</td><td class="num">721,322</td><td></td><td></td></tr></table><table><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="5">atlantamarket_PROD.EvenntsAndWebinar</td><td><a href="#m0">TS004_VerifyIMCEventsEventsListTest</a></td><td rowspan="1">1672135064895</td><td rowspan="1">24508</td></tr><tr class="failedeven"><td><a href="#m1">TS006_VerifyIMCEventsAddToFavoriteTest</a></td><td rowspan="1">1672135115721</td><td rowspan="1">65879</td></tr><tr class="failedeven"><td><a href="#m2">TS007_VerifyIMCEventsAddToListTest</a></td><td rowspan="1">1672135520672</td><td rowspan="1">26084</td></tr><tr class="failedeven"><td><a href="#m3">TS013_VerifyExhibitorEventsAddToFavoriteTest</a></td><td rowspan="1">1672135274305</td><td rowspan="1">47277</td></tr><tr class="failedeven"><td><a href="#m4">TS014_VerifyExhibitorEventsAddToListTest</a></td><td rowspan="1">1672135321584</td><td rowspan="1">151439</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="10">atlantamarket_PROD.EvenntsAndWebinar</td><td><a href="#m5">TS001_VerifyEventsAndWebinarsOverviewTest</a></td><td rowspan="1">1672135034562</td><td rowspan="1">6202</td></tr><tr class="passedeven"><td><a href="#m6">TS002_VerifyIMCEventsSearchbarTest</a></td><td rowspan="1">1672135040765</td><td rowspan="1">12011</td></tr><tr class="passedeven"><td><a href="#m7">TS003_VerifyIMCEventsCalendarViewTest</a></td><td rowspan="1">1672135052777</td><td rowspan="1">12117</td></tr><tr class="passedeven"><td><a href="#m8">TS005_VerifyIMCEventsEventDetailstTest</a></td><td rowspan="1">1672135089405</td><td rowspan="1">26315</td></tr><tr class="passedeven"><td><a href="#m9">TS008_VerifyIMCEventsAddNoteTest</a></td><td rowspan="1">1672135181604</td><td rowspan="1">46954</td></tr><tr class="passedeven"><td><a href="#m10">TS009_VerifyExhibitorEventsSearchbarTest</a></td><td rowspan="1">1672135228559</td><td rowspan="1">13953</td></tr><tr class="passedeven"><td><a href="#m11">TS010_VerifyExhibitorEventsCalendarViewTest</a></td><td rowspan="1">1672135242513</td><td rowspan="1">16183</td></tr><tr class="passedeven"><td><a href="#m12">TS011_VerifyExhibitorEventsListTest</a></td><td rowspan="1">1672134858126</td><td rowspan="1">176434</td></tr><tr class="passedeven"><td><a href="#m13">TS012_VerifyExhibitorEventsDetailstTest</a></td><td rowspan="1">1672135258697</td><td rowspan="1">15607</td></tr><tr class="passedeven"><td><a href="#m14">TS015_VerifyExhibitorEventsAddNoteTest</a></td><td rowspan="1">1672135473025</td><td rowspan="1">47646</td></tr></tbody></table><h2>Default test</h2><h3 id="m0">atlantamarket_PROD.EvenntsAndWebinar#TS004_VerifyIMCEventsEventsListTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [50] but found [53]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:372)
+	at org.testng.Assert.assertEquals(Assert.java:382)
+	at atlantamarket_PROD.EvenntsAndWebinar.TS004_VerifyIMCEventsEventsListTest(EvenntsAndWebinar.java:323)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:663)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:849)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
+	at org.testng.TestNG.run(TestNG.java:1033)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m1">atlantamarket_PROD.EvenntsAndWebinar#TS006_VerifyIMCEventsAddToFavoriteTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[1]/div[1]/a (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getATLSavedExhNameInList(ATLMarketPlannerPage.java:504)
+	at atlantamarket_PROD.EvenntsAndWebinar.TS006_VerifyIMCEventsAddToFavoriteTest(EvenntsAndWebinar.java:515)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:663)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:849)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
+	at org.testng.TestNG.run(TestNG.java:1033)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[1]/div[1]/a
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 26 more
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m2">atlantamarket_PROD.EvenntsAndWebinar#TS007_VerifyIMCEventsAddToListTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: element click intercepted: Element &lt;a href=&quot;/&quot; class=&quot;imc-navigation__tier1Link&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;navigation-tier2-&quot; data-xpath=&quot;navigation.tier1Link&quot; target=&quot;_self&quot;&gt;...&lt;/a&gt; is not clickable at point (977, 159). Other element would receive the click: &lt;div class=&quot;imc-formfield imc-content &quot; data-xpath=&quot;form.textfieldContainer&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=108.0.5359.125)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir13880_763270834}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:53145}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=108.0.5359.125, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 0e93b5ea148d8b3aa751e43d8ea3de1d
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
+	at resources.Utility.clickOnEventLinkOfChannel(Utility.java:443)
+	at atlantamarket_PROD.EvenntsAndWebinar.TS007_VerifyIMCEventsAddToListTest(EvenntsAndWebinar.java:581)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:663)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:849)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
+	at org.testng.TestNG.run(TestNG.java:1033)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m3">atlantamarket_PROD.EvenntsAndWebinar#TS013_VerifyExhibitorEventsAddToFavoriteTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[1]/div[1]/a (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getATLSavedExhNameInList(ATLMarketPlannerPage.java:504)
+	at atlantamarket_PROD.EvenntsAndWebinar.TS013_VerifyExhibitorEventsAddToFavoriteTest(EvenntsAndWebinar.java:1094)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:663)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:849)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
+	at org.testng.TestNG.run(TestNG.java:1033)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[1]/div[1]/a
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 26 more
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m4">atlantamarket_PROD.EvenntsAndWebinar#TS014_VerifyExhibitorEventsAddToListTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[1]/div[1]/a (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getATLSavedExhNameInList(ATLMarketPlannerPage.java:504)
+	at atlantamarket_PROD.EvenntsAndWebinar.TS014_VerifyExhibitorEventsAddToListTest(EvenntsAndWebinar.java:1180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:663)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:849)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
+	at org.testng.TestNG.run(TestNG.java:1033)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[1]/div[1]/a
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_351&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 26 more
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m5">atlantamarket_PROD.EvenntsAndWebinar#TS001_VerifyEventsAndWebinarsOverviewTest</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m6">atlantamarket_PROD.EvenntsAndWebinar#TS002_VerifyIMCEventsSearchbarTest</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m7">atlantamarket_PROD.EvenntsAndWebinar#TS003_VerifyIMCEventsCalendarViewTest</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m8">atlantamarket_PROD.EvenntsAndWebinar#TS005_VerifyIMCEventsEventDetailstTest</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m9">atlantamarket_PROD.EvenntsAndWebinar#TS008_VerifyIMCEventsAddNoteTest</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m10">atlantamarket_PROD.EvenntsAndWebinar#TS009_VerifyExhibitorEventsSearchbarTest</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m11">atlantamarket_PROD.EvenntsAndWebinar#TS010_VerifyExhibitorEventsCalendarViewTest</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m12">atlantamarket_PROD.EvenntsAndWebinar#TS011_VerifyExhibitorEventsListTest</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m13">atlantamarket_PROD.EvenntsAndWebinar#TS012_VerifyExhibitorEventsDetailstTest</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m14">atlantamarket_PROD.EvenntsAndWebinar#TS015_VerifyExhibitorEventsAddNoteTest</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p></body></html>
+

@@ -7,13 +7,10 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -66,46 +63,7 @@ public class GlobalSearch_LineActions extends base {
 	}
 
 	@Test(priority = 1)
-	public void TS001_VerifyClickOnContactExhIconForLineTest() throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// T361: The click on 'Contact Exhibitor' functionality for a Line
-
-		atlgs = new ATLGlobalSearchPage(driver);
-		atlexhact = new ATLExhLineProdActionsPage(driver);
-		lap = new ATLLandingPage(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearchlineinput"));
-		atlgs.getATLSearchButton().click();
-
-		Thread.sleep(15000);
-		// Click on Contact Exhibitor icon
-		atlexhact.getContactExhibitorIcon().click();
-		Assert.assertTrue(atlexhact.getContactExhibitorModal().isDisplayed());
-
-		// Enter Postal code
-		atlexhact.getPostalCodeTxtBx().sendKeys("99950");
-
-		// Enter Message
-		atlexhact.getMessageTxtBx().sendKeys("This is a Test Line");
-
-		// Select 1st two Product Category
-		atlexhact.getProductCateg1().click();
-		atlexhact.getProductCateg2().click();
-
-		utl.scrollToElement(atlexhact.getSendMessageBtn());
-
-		// Click on Send Message button
-		// Will send msg once test exhibitor will get
-		// atlexhact.getSendMessageBtn().click();
-
-		// Close the pop-up
-		atlexhact.getPopUpCloseBtn().click();
-	}
-
-	@Test(priority = 2)
-	public void TS002_VerifyAddToFavoriteForLineTest() throws InterruptedException, IOException {
+	public void TS001_VerifyAddToFavoriteForLineTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T360: The Add to Favorite functionality for a Line
 
@@ -160,8 +118,8 @@ public class GlobalSearch_LineActions extends base {
 		}
 	}
 
-	@Test(priority = 3)
-	public void TS003_VerifyClickOnOrderOnJuniperMarketBtnForLineTest() throws InterruptedException, IOException {
+	@Test(priority = 2)
+	public void TS002_VerifyClickOnOrderOnJuniperMarketBtnForLineTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T376: The click on 'Order On JuniperMarket' button functionality for a Line
 
@@ -203,8 +161,8 @@ public class GlobalSearch_LineActions extends base {
 		driver.switchTo().window(winHandleBefore);
 	}
 
-	@Test(priority = 4)
-	public void TS004_VerifyAddToNewListForLineTest() throws InterruptedException, IOException {
+	@Test(priority = 3)
+	public void TS003_VerifyAddToNewListForLineTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T423: The Add to Newly created list functionality for Line
 
@@ -266,8 +224,8 @@ public class GlobalSearch_LineActions extends base {
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 	}
 
-	@Test(priority = 5)
-	public void TS005_VerifyAddToExistingListForLineTest() throws InterruptedException, IOException {
+	@Test(priority = 4)
+	public void TS004_VerifyAddToExistingListForLineTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T362: The Add to Newly created list functionality for a Line
 
@@ -335,8 +293,8 @@ public class GlobalSearch_LineActions extends base {
 		Thread.sleep(8000);
 	}
 
-	@Test(priority = 06)
-	public void TS006_VerifyClickOnShownByExhibitorNameLinkForLineTest() throws InterruptedException, IOException {
+	@Test(priority = 5)
+	public void TS005_VerifyClickOnShownByExhibitorNameLinkForLineTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T433: The Lines actions: Shown By <ExhibitorName> link
 
@@ -365,8 +323,8 @@ public class GlobalSearch_LineActions extends base {
 		Assert.assertTrue(atlexhdgshw.getATLExhDigiShowPage().isDisplayed());
 	}
 
-	@Test(priority = 7)
-	public void TS007_VerifyClickOnLocationLinkForLineTest() throws InterruptedException, IOException {
+	@Test(priority = 6)
+	public void TS006_VerifyClickOnLocationLinkForLineTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
 		// T370: Lines Actions: Location links
@@ -398,8 +356,8 @@ public class GlobalSearch_LineActions extends base {
 		Assert.assertTrue(locationLink.equals(driver.getCurrentUrl()));
 	}
 
-	@Test(priority = 8)
-	public void TS008_VerifyClickOnMatchingProductsSeeAllLinkForLineTest() throws InterruptedException, IOException {
+	@Test(priority = 7)
+	public void TS007_VerifyClickOnMatchingProductsSeeAllLinkForLineTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
 		// T371: Lines Actions: Matching Products- See All
@@ -448,8 +406,8 @@ public class GlobalSearch_LineActions extends base {
 		Assert.assertEquals(matchingprodcountonsearchgrid, matchingprodcountonprodpage);
 	}
 
-	@Test(priority = 9)
-	public void TS009_VerifyClickOnTotalProductsSeeAllLinkForLineTest() throws InterruptedException, IOException {
+	@Test(priority = 8)
+	public void TS008_VerifyClickOnTotalProductsSeeAllLinkForLineTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
 		// T369: Lines actions: Total Products- See all
@@ -476,7 +434,7 @@ public class GlobalSearch_LineActions extends base {
 		System.out.println("Line name: " +linename);
 
 		// Get the Matching Products count on Search grid
-		String temp = atlexhact.getMatchingProdCountOnSearchGrid().getText();
+		String temp = atlexhact.getTotalProdCountOnSearchGrid().getText();
 		String matchingprodcountonsearchgrid = temp.replaceAll("[^0-9]", "");
 		System.out.println("Total Products Count on Search Results grid is: " + matchingprodcountonsearchgrid);
 

@@ -6,14 +6,12 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -397,43 +395,30 @@ public class GlobalSearch_ProductActions extends base {
 
 		// Enter Note title
 		atlexhact.getNoteTitleTxtBx().sendKeys(newnotetitle);
-		System.out.println("Title: " + newnotetitle);
-
 		// Enter Note Content
-		String conent = genData.generateRandomString(6);
-		atlexhact.getNoteContentTxtBx().sendKeys("TestProdNote" +conent);
-		System.out.println("Content: " +conent);
+		atlexhact.getNoteContentTxtBx().sendKeys("TestProdNote" + genData.generateRandomString(6));
 		// Click on 'Save' button
 		atlexhact.getNoteSaveBtn().click();
-		System.out.println("Save Btn");
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 
 		// Click on 'Add Note' icon for the same exhibitor
 		atlproddet.getProductAddNoteIcon().click();
-		System.out.println("Add Note Icon");
 		Thread.sleep(4000);
 
 		// Click on 'View all Notes for an Exhibitor' link on Add Notes pop-up
 		atlexhact.getViewAllNotesLink().click();
-		System.out.println("View All Btn");
 		Thread.sleep(5000);
 
 		allnoteslist = atlexhact.getSavedNoteNameInAllNotesList();
-		boolean t=false;
+
 		// Verify that recently added note should be appear on 'All Notes For Exhibitor' modal
 		for (int i = 0; i < allnoteslist.size(); i++) {
 			//System.out.println(allnoteslist.get(i).getText());
 			if (allnoteslist.get(i).getText().equals(newnotetitle)) {
 				allnoteslist.get(i).click();
-				t=true;
+
 				break;
 			}
-		}
-		if(t==true){
-			System.out.println("Note is present");
-		}
-		else{
-			System.out.println("Note is not present ");
 		}
 
 		// Delete the saved note

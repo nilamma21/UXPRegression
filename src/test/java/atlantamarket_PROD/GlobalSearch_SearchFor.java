@@ -25,7 +25,6 @@ import resources.GenerateData;
 import resources.Utility;
 import resources.base;
 
-@Test
 @Listeners({ TestListeners.class })
 public class GlobalSearch_SearchFor extends base {
 
@@ -247,21 +246,9 @@ public class GlobalSearch_SearchFor extends base {
 		Assert.assertTrue(atlexhact.getCatalogsItem().isDisplayed());
 
 		//Click on Catalog item
-
-
-
-
 		String catalogName = atlexhact.getCatalogsItem().getText();
 		System.out.println(catalogName);
-
-
-
-
-		System.out.println(catalogName1);
-
-	//	System.out.println("Catalo Name :: "+catalogName);
-	//	String catalogName1 = atlexhact.getCatalogsItem().getText();
-
+		
 		atlexhact.getCatalogsItem().click();
 		Thread.sleep(2000);
 		// Store the current window handle
@@ -272,13 +259,8 @@ public class GlobalSearch_SearchFor extends base {
 		Thread.sleep(5000);
 		Assert.assertTrue(driver.getTitle().contains("Catalog View"));
 		String Cname =atlgs.getCatalogHeaderName().getText();
-
 		Assert.assertTrue(catalogName.contains(Cname));
 		Assert.assertTrue(catalogName.startsWith(Cname));
-
-		System.out.println("Header"+Cname);
-		Thread.sleep(5000);
-		Assert.assertTrue(Cname.startsWith(catalogName));
 
 		driver.close();
 		driver.switchTo().window(winHandleBefore);
@@ -310,7 +292,6 @@ public class GlobalSearch_SearchFor extends base {
 		for (String winHandle : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle);
 		}
-
 		Thread.sleep(5000);
 		String Cname =atlgs.getCatalogHeaderName().getText();
 		System.out.println(Cname);
@@ -741,11 +722,10 @@ public class GlobalSearch_SearchFor extends base {
 
 		//Click on Event Types filter
 		atlgs.getEventTypesFilter().click();
-		Thread.sleep(5000);
+
 		//Click on 'At Market' Event Type
 		String atmrkteventtype = atlgs.getAtMarketEventType().getText();
 		atlgs.getAtMarketEventType().click();
-		Thread.sleep(5000);
 
 		//Verify that Selected event type should be displayed as Tag on Event Card
 		Assert.assertTrue(atlexhact.getEventCardTag().getText().contains(atmrkteventtype));

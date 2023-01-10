@@ -8,14 +8,10 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -210,32 +206,32 @@ public class FloorPlans extends base {
 		//click on any floor
 		atlflpp.getATLBuildingFloor().click();
 
-		// //Click on Vending Machine icon on Map image
-		// atlflpp.getVendingMachineIconOnMap().click();
+		//Click on Vending Machine icon on Map image
+		atlflpp.getVendingMachineIconOnMap().click();
 
-		// //Verify that Vending Machine Overlay should appeared on Map
-		// Assert.assertTrue(atlflpp.getVendingMachineOverlayOnMap().isDisplayed());
+		//Verify that Vending Machine Overlay should appeared on Map
+		Assert.assertTrue(atlflpp.getVendingMachineOverlayOnMap().isDisplayed());
 
-		// //Click on Elevator icon on Map image
-		// atlflpp.getElevatorIconOnMap().click();
+		//Click on Elevator icon on Map image
+		atlflpp.getElevatorIconOnMap().click();
 
-		// //Verify that Elevator Overlay should appeared on Map
-		// Assert.assertTrue(atlflpp.getElevatorOverlayOnMap().isDisplayed());
+		//Verify that Elevator Overlay should appeared on Map
+		Assert.assertTrue(atlflpp.getElevatorOverlayOnMap().isDisplayed());
 
-		// /*//Click on Water Fountain icon on Map image
-		// atlflpp.getWaterFountainIconOnMap().click();
+		/*//Click on Water Fountain icon on Map image
+		atlflpp.getWaterFountainIconOnMap().click();
 
-		// //Verify that Water Fountain Overlay should appeared on Map
-		// Assert.assertTrue(atlflpp.getWaterFountainOverlayOnMap().isDisplayed());*/
+		//Verify that Water Fountain Overlay should appeared on Map
+		Assert.assertTrue(atlflpp.getWaterFountainOverlayOnMap().isDisplayed());*/
 
-		// //Click on Phone icon on Map image
-		// atlflpp.getPhoneIconOnMap().click();
+		//Click on Phone icon on Map image
+		atlflpp.getPhoneIconOnMap().click();
 
-		// //Verify that Phone Overlay should appeared on Map
-		// Assert.assertTrue(atlflpp.getPhoneOverlayOnMap().isDisplayed());
+		//Verify that Phone Overlay should appeared on Map
+		Assert.assertTrue(atlflpp.getPhoneOverlayOnMap().isDisplayed());
 
-		// //Click on Overlay Close btn
-		// atlflpp.getOverlayCloseBtn().click();
+		//Click on Overlay Close btn
+		atlflpp.getOverlayCloseBtn().click();
 
 		//Click on Location pin of any Exhibitor on Map
 		atlflpp.getLocationPinIconOnMap().click();

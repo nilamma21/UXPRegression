@@ -8,25 +8,55 @@
 
 	<test thread-count="5" name="RegressionTest">
 		<classes>
-<<<<<<< HEAD
-			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
-=======
-			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
->>>>>>> bb06a008a6905061d692f2f2d3368e6ddf437590
+
+			<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
 			<methods>
+			<include name="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest" /> 
+				<include name="TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest" />
+				<include name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest" />
+				<include name="TS001_VerifyAddToFavoriteForExhibitorTest" /> 
+				
+		 			<include name="TS003_VerifyAddToExistingListForExhibitorTest" />
+					<include name="TS002_VerifyAddToNewListForExhibitorTest" />
+
+
+			<class name="atlantamarket_PROD.MarketPlanner" />
+
+
+			<class name="atlantamarket_PROD.EvenntsAndWebinar" />
+
+			<methods>
+			
+				  <!-- <include name="TS011_VerifyExhibitorEventsListTest" /> -->
+				 <!--<include name="TS012_VerifyExhibitorEventsDetailstTest" /> 
+				 <include name="TS013_VerifyExhibitorEventsAddToFavoriteTest" /> 
+				 <include name="TS014_VerifyExhibitorEventsAddToListTest" />
+				 <include name="TS015_VerifyExhibitorEventsAddNoteTest" />  --> 
+
+			<!-- <class name="atlantamarket_PROD.MarketPlanner" />
+			<methods> -->
 		<!-- 	<include name="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest" /> 
 				<include name="TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest" /> -->
-				<!-- -->
+
+			
 				<!-- <include name="TS010_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest" /> --> 
 				
-				<!-- <include name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest" /> -->
-<<<<<<< HEAD
-				<!-- <include name="TS003_VerifyGlobalSearchMatchingResultsSortSortByTest" /> --> 
-=======
-				<!-- <include name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest" />  -->
->>>>>>> bb06a008a6905061d692f2f2d3368e6ddf437590
+			
+				<!-- 	<include name="TS037_VerifyMarketPlannerListsAllSavedproductsTest" /> 
+					<include name="TS045_VerifyAddToListFunctionalityUsingQuickAddTest" />
+				 -->
+
+
 				
+				<!-- <include name="TS011_VerifyEventsOverviewInGlobalSearchTest" /> --> 
 				
+				<!--  <include name="TS004_VerifyAddToNewListForLineTest" />   -->
+				<!--  <include name="TS007_VerifyGlobalSearchMatchingResultsSelectAddToNewlyCreatedListTest" />   -->
+				<!-- <include name="TS045_VerifyAddToListFunctionalityUsingQuickAddTest" /> -->
+				
+
+				
+
 			</methods>
 		</classes>
 	</test>
