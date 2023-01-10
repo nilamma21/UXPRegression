@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
-  <test name="RegressionTest(failed)">
+  <test name="RegressionParallelest(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions">
         <methods>
           <include name="TS003_VerifyAddToExistingListForExhibitorTest"/>
           <include name="tearDown"/>
+=======
+      <class name="atlantamarket_PROD.ExhibitorDigitalShowroom">
+        <methods>
+>>>>>>> 4c42dc75e1a5c15bc76a373a6dd80ac945b53d04
           <include name="initialize"/>
+          <include name="TS009_VerifyClickOnLineSearchForExhibitorTest"/>
         </methods>
+<<<<<<< HEAD
       </class> <!-- atlantamarket_PROD.GlobalSearch_ExhibitorActions -->
+=======
+      </class> <!-- atlantamarket_PROD.ExhibitorDigitalShowroom -->
+>>>>>>> 4c42dc75e1a5c15bc76a373a6dd80ac945b53d04
     </classes>
-  </test> <!-- RegressionTest(failed) -->
+  </test> <!-- RegressionParallelest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->

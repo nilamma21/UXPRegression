@@ -353,7 +353,7 @@ public class ExhibitorDigitalShowroom extends base {
 		// Get the Total Products count on Products page
 		String linestabtitle = atlexhdgshw.getLinesCountAtLinesPage().getText();
 		String totallinescountonprodpage = linestabtitle.replaceAll("[^0-9]", "");
- 		System.out.println("Total Lines Count on Products page is: " + totallinescountonprodpage);
+		System.out.println("Total Lines Count on Products page is: " + totallinescountonprodpage);
 
 		//Get back to Exhibitor Showroom page and click any one product and verify if product details are displayed properly
 		atlexhdgshw.getProductsPageBackButton().click();

@@ -114,7 +114,6 @@ public class ShowSpecials extends base  {
 		//Click on Show Specials 
 		atlgs.getatlShowSpecialsLink().click();
 		Thread.sleep(5000);
-		utl.scrollToElement(atlgs.getatlShowSpecialsTitle());
 		//verify Show special Page
 		Assert.assertTrue(atlgs.getatlShowSpecialsTitle().getText().contains(prop.getProperty("showSpecialTitle")));
 		//Click on Show Special Exhibitor

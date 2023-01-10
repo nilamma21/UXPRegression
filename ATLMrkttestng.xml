@@ -7,9 +7,17 @@
 	</listners>
 	<test thread-count="5" name="RegressionTest">
 		<classes>
+<<<<<<< HEAD
 			<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
 			<class name="atlantamarket_PROD.EvenntsAndWebinar" />
 			<class name="atlantamarket_PROD.LineDigitalShowroom" />
+=======
+			<class name="atlantamarket_PROD.ExhibitorDigitalShowroom"/>
+			<methods>
+			<include name="TS013_VerifySeeInOtherMarketsForExhibitorTest"/>
+			
+			</methods>
+>>>>>>> 4c42dc75e1a5c15bc76a373a6dd80ac945b53d04
 		</classes>
 	</test>
 </suite>

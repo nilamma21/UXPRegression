@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>uxpRegression</name>
+<<<<<<< HEAD
 	<comment>NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
+=======
+	<comment></comment>
+>>>>>>> 4c42dc75e1a5c15bc76a373a6dd80ac945b53d04
 	<projects>
 	</projects>
 	<buildSpec>
@@ -17,7 +21,12 @@
 		</buildCommand>
 	</buildSpec>
 	<natures>
+<<<<<<< HEAD
 		<nature>org.eclipse.m2e.core.maven2Nature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
+=======
+		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>org.eclipse.m2e.core.maven2Nature</nature>
+>>>>>>> 4c42dc75e1a5c15bc76a373a6dd80ac945b53d04
 	</natures>
 </projectDescription>

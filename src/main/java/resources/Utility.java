@@ -17,6 +17,11 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
+<<<<<<< HEAD
+=======
+import com.gargoylesoftware.htmlunit.javascript.host.media.webkitMediaStream;
+
+>>>>>>> 4c42dc75e1a5c15bc76a373a6dd80ac945b53d04
 //import atlantamarket_UAT.MarketPlanner;
 import pageObjects.AtlantaMarket.ATLEventsAndWebinarPage;
 import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
@@ -403,11 +408,7 @@ public class Utility extends base {
 	}
 
 	public void ClearGlobalSearch() throws IOException, InterruptedException {
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		atlgs=new ATLGlobalSearchPage(driver);
-		
+
 		if (!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}

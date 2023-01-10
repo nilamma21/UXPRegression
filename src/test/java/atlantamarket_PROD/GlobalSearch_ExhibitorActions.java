@@ -108,7 +108,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		}
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 5)
 	public void TS002_VerifyAddToNewListForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T422: The Add to Newly created list functionality for an Exhibitor
@@ -168,7 +168,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 8)
 	public void TS003_VerifyAddToExistingListForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T321: The Add to Newly created list functionality for an Exhibitor
@@ -245,7 +245,51 @@ public class GlobalSearch_ExhibitorActions extends base {
 	}
 
 	@Test(priority = 4)
-	public void TS004_VerifyClickOnLocationLinksForExhibitorTest() throws InterruptedException, IOException {
+	public void TS004_VerifyClickOnContactExhIconForExhibitorTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T323: The click on 'Contact Exhibitor' functionality for an Exhibitor
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		driver.get(prop.getProperty("atlmrkturl_prod"));
+		Thread.sleep(6000);
+		//lap.getCloseMarktAdBtn().click();
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys("IMC Test");
+		atlgs.getATLSearchButton().click();
+
+		Thread.sleep(15000);
+		// Click on Contact Exhibitor icon
+		atlexhact.getContactExhibitorIcon().click();
+		Assert.assertTrue(atlexhact.getContactExhibitorModal().isDisplayed());
+
+		// Enter Postal code
+		atlexhact.getPostalCodeTxtBx().sendKeys("99950");
+
+		// Enter Message
+		atlexhact.getMessageTxtBx().sendKeys("This is a Test Exhibitor");
+
+		// Select 1st two Product Category
+		atlexhact.getProductCateg1().click();
+		atlexhact.getProductCateg2().click();
+
+		utl.scrollToElement(atlexhact.getSendMessageBtn());
+
+		// Click on Send Message button
+		// Will send msg once test exhibitor will get
+		// atlexhact.getSendMessageBtn().click();
+
+		// Close the pop-up
+		atlexhact.getPopUpCloseBtn().click();
+	}
+
+	@Test(priority = 2)
+	public void TS002_VerifyClickOnLocationLinksForExhibitorTest() throws InterruptedException, IOException {
+
 		// The purpose of this test case to verify:-
 		// T356: The click on 'Location Links' functionality for an Exhibitor
 
@@ -351,8 +395,10 @@ public class GlobalSearch_ExhibitorActions extends base {
 		Assert.assertEquals(totalprodcountonsearchgrid, totalprodcountonprodpage);
 	}
 
+
 	@Test(priority = 7)
 	public void TS007_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest() throws InterruptedException, IOException {
+
 		// The purpose of this test case to verify:-
 		// T327: The click on 'Matching products-See All' functionality for an Exhibitor
 
@@ -511,9 +557,9 @@ public class GlobalSearch_ExhibitorActions extends base {
 		//lap.getCloseMarktAdBtn().click();
 	}
 	
-	/*@AfterClass
+	@AfterClass
 	public void tearDown()
 	{
 		driver.quit();
-	}*/
+	}
 }
