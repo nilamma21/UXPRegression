@@ -21,13 +21,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-<<<<<<< HEAD
-=======
-import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
-import com.gargoylesoftware.htmlunit.javascript.host.dom.Document;
-import com.sun.mail.iap.Argument;
-
->>>>>>> 4c42dc75e1a5c15bc76a373a6dd80ac945b53d04
 import pageObjects.AtlantaMarket.ATLEventsAndWebinarPage;
 import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
 import pageObjects.AtlantaMarket.ATLFloorPlansPage;
