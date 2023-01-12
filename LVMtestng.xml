@@ -9,53 +9,29 @@
 	<test thread-count="5" name="RegressionTest">
 		<classes>
 
+			<!-- <class name="atlantamarket_PROD.EvenntsAndWebinar" /> -->
+			<!-- <class name="atlantamarket_PROD.ExhibitorDigitalShowroom" />
+			<class name="atlantamarket_PROD.FloorPlans" />
 			<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
+			<class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters" />
+			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
+			<class name="atlantamarket_PROD.GlobalSearch_MatchingResults" />
+			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
+			<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
+			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
+			<class name="atlantamarket_PROD.LineDigitalShowroom" />
+			<class name="atlantamarket_PROD.ShowSpecials" /> -->
+			<class name="atlantamarket_PROD.FloorPlans" />
+			
 			<methods>
-			<include name="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest" /> 
-				<include name="TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest" />
-				<include name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest" />
+			<!--  <include name="TS004_VerifyIMCEventsEventsListTest" /> --> 
+			<!--	<include name="TS010_VerifyExhibitorEventsCalendarViewTest" />
+				<include name="TS014_VerifyExhibitorEventsAddToListTest" />
 				<include name="TS001_VerifyAddToFavoriteForExhibitorTest" /> 
 				
 		 			<include name="TS003_VerifyAddToExistingListForExhibitorTest" />
-					<include name="TS002_VerifyAddToNewListForExhibitorTest" />
-
-
-			<class name="atlantamarket_PROD.MarketPlanner" />
-
-
-			<class name="atlantamarket_PROD.EvenntsAndWebinar" />
-
-			<methods>
-			
-				  <!-- <include name="TS011_VerifyExhibitorEventsListTest" /> -->
-				 <!--<include name="TS012_VerifyExhibitorEventsDetailstTest" /> 
-				 <include name="TS013_VerifyExhibitorEventsAddToFavoriteTest" /> 
-				 <include name="TS014_VerifyExhibitorEventsAddToListTest" />
-				 <include name="TS015_VerifyExhibitorEventsAddNoteTest" />  --> 
-
-			<!-- <class name="atlantamarket_PROD.MarketPlanner" />
-			<methods> -->
-		<!-- 	<include name="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest" /> 
-				<include name="TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest" /> -->
-
-			
-				<!-- <include name="TS010_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest" /> --> 
-				
-			
-				<!-- 	<include name="TS037_VerifyMarketPlannerListsAllSavedproductsTest" /> 
-					<include name="TS045_VerifyAddToListFunctionalityUsingQuickAddTest" />
-				 -->
-
-
-				
-				<!-- <include name="TS011_VerifyEventsOverviewInGlobalSearchTest" /> --> 
-				
-				<!--  <include name="TS004_VerifyAddToNewListForLineTest" />   -->
-				<!--  <include name="TS007_VerifyGlobalSearchMatchingResultsSelectAddToNewlyCreatedListTest" />   -->
-				<!-- <include name="TS045_VerifyAddToListFunctionalityUsingQuickAddTest" /> -->
-				
-
-				
+					<include name="TS002_VerifyAddToNewListForExhibitorTest" /> -->
+		<!-- <include name="EvenntsAndWebinar" /> -->
 
 			</methods>
 		</classes>
