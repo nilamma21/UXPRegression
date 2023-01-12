@@ -24,7 +24,7 @@
           <version>3.0.0-M5</version>
           <configuration>
           <suiteXmlFiles>
-            <suiteXmlFile>/TestNGFiles_UAT/ATLEventsWebinarsTestngUAT.xml</suiteXmlFile>
+            <suiteXmlFile>ATLEventsWebinarsTestngUAT.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
         </plugin>
