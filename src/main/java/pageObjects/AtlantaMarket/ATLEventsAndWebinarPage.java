@@ -27,7 +27,9 @@ public class ATLEventsAndWebinarPage {
 	By atlCalendarNextMonthBtn = By.xpath("//div[@class='calendar-container']/div[2]/div[1]/button[4]"); //Locator for Calendar nxt month btn
 	By atlListOfEventDate = By.xpath("//button[@class='react-calendar__tile react-calendar__month-view__days__day']/abbr[1]"); //List for Event Date
 	By atlSelectMonth = By.xpath("//button[@class='react-calendar__navigation__label']/span[1]"); //List for Month
-	By atlTodaysDate = By.xpath("//button[@class='react-calendar__tile react-calendar__tile--now react-calendar__month-view__days__day react-calendar--no-event']/abbr[1]"); //Locator for Todays Date
+	By atlTodaysDate = By.xpath("//button[@class='react-calendar__tile react-calendar__tile--now react-calendar__month-view__days__day react-calendar--no-event']/abbr[1]");//Locator for Todays Date
+	By atlTodaysDatePROD = By.xpath("//button[@class='react-calendar__tile react-calendar__tile--now react-calendar__month-view__days__day']/abbr");//Locator for Todays Date
+	
 	By atlCalendarPrevMonth = By.xpath("//div[@class='calendar-container']/div[2]/div[1]/button[2]"); //Locator for Calendar Prev month btn 
 	By atlSelectAnyDate = By.xpath("//button[@class='react-calendar__tile react-calendar__month-view__days__day react-calendar--no-event']/abbr[1]"); //Locator for Any Date
 	By atlResetBtn = By.xpath("//div[@class='calendar-container']/div[1]/p[2]"); //Locator for Reset Btn
@@ -53,6 +55,13 @@ public class ATLEventsAndWebinarPage {
 	public ATLEventsAndWebinarPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
+	}
+	public WebElement getatlTodaysDatePROD() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlTodaysDatePROD));
+		
+		return driver.findElement(atlTodaysDatePROD);
+		
 	}
 	public WebElement getatladdtoseselectedbtn() {
 		wait = new WebDriverWait (driver,20);
