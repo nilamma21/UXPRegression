@@ -60,7 +60,7 @@ public class ExhibitorDigitalShowroom extends base {
 		//driver.get(prop.getProperty("lvmurl_uat"));
 		
 		Thread.sleep(3000);
-		lap.getIUnderstandBtn().click();
+		//lap.getIUnderstandBtn().click();
 		Thread.sleep(3000);
 
 		utl.verifyMPLoginFunctionality();
