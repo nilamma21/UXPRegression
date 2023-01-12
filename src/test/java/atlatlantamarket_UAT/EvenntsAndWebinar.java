@@ -57,7 +57,7 @@ public class EvenntsAndWebinar extends base{
 		//driver.get(prop.getProperty("lvmurl_uat"));
 		/*utl.verifyMPLoginFunctionality();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);*/
-		lap.getIUnderstandBtn().click();
+		//lap.getIUnderstandBtn().click();
 		Thread.sleep(7000);
 		//lap.getCloseMarktAdBtn().click();
 
