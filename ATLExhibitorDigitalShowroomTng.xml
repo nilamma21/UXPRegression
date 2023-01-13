@@ -10,8 +10,8 @@
 		<classes>
 		 	<class name="atlantamarket_PROD.ExhibitorDigitalShowroom" />
 			 <methods>
-			<include name="TS004_VerifyIconsOnFloorPlansPageTest" />
-			<!-- 	<include name="TS013_VerifySeeInOtherMarketsForExhibitorTest" />-->
+			<!--<include name="TS004_VerifyIconsOnFloorPlansPageTest" />
+			 	<include name="TS013_VerifySeeInOtherMarketsForExhibitorTest" />-->
 			
 			</methods>
 		</classes>
