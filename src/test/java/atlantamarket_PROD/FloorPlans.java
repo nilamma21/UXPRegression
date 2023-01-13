@@ -185,7 +185,7 @@ public class FloorPlans extends base {
 		Assert.assertNotEquals(x1, out);
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 5)
 	public void TS004_VerifyIconsOnFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to:-
 		// UXP-T289: To verify Floor Plans: Icons
@@ -255,7 +255,7 @@ public class FloorPlans extends base {
 		Assert.assertTrue(atlexhdgshw.getExhibitorNameOnExhDirectImg().getText().contains(exhnameondetailsmodal));
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 4)
 	public void TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T290: To verify Floor Plans: Filter
