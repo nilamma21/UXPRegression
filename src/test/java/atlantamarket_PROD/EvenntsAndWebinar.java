@@ -585,7 +585,7 @@ public class EvenntsAndWebinar extends base{
 		
 	}
 	
-	@Test(priority = 8)
+	@Test(priority = 9)
 	public void TS008_VerifyIMCEventsAddNoteTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T299: IMC Events: Event Details- Add Note
@@ -670,7 +670,7 @@ public class EvenntsAndWebinar extends base{
 		// Delete the saved note
 		atlexhact.getDeleteNoteBtn().click();
 	}
-	@Test(priority = 9)
+	@Test(priority = 8)
 	public void TS009_VerifyExhibitorEventsSearchbarTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T304: Exhibitor Events: Search bar
