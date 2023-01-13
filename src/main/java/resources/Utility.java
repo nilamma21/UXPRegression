@@ -62,8 +62,8 @@ public class Utility extends base {
 		lap.getLogin().click();
 
 		// Enter the credentials on Login Page and click
-		lp.getEmailAddress().sendKeys((prop.getProperty("usernameSwapnil")));
-		lp.getPassword().sendKeys((prop.getProperty("passwordSwapnil")));
+		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
+		lp.getPassword().sendKeys((prop.getProperty("password")));
 
 		lp.getSignInBtn().click();
 		Thread.sleep(15000);
@@ -403,7 +403,11 @@ public class Utility extends base {
 	}
 
 	public void ClearGlobalSearch() throws IOException, InterruptedException {
-
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		atlgs=new ATLGlobalSearchPage(driver);
+		
 		if (!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
@@ -430,6 +434,33 @@ public class Utility extends base {
 		atlevents=new ATLEventsAndWebinarPage(driver);
 		
 		if(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_prod"))) {
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			// Click on Attend Tab
+			atlevents.getatlAttendTab().click();
+			Thread.sleep(2000);
+			//click on Events Link
+			atlevents.getatlEventsLink().click();
+			Thread.sleep(3000);
+		}
+		else {
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			atlevents.getatlExploreMarketTab().click();  //For LVM Events
+			Thread.sleep(2000);
+			//click on Events Link
+			atlevents.getatlEventsLink().click();
+			Thread.sleep(3000);
+		}
+	
+	}
+public void clickOnEventLinkOfChannel_UAT() throws InterruptedException {
+		
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		atlevents=new ATLEventsAndWebinarPage(driver);
+		
+		if(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_uat"))) {
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			// Click on Attend Tab
 			atlevents.getatlAttendTab().click();

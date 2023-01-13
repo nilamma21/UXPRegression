@@ -154,7 +154,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		for (int j = 0; j < prodcatgitemlist.size(); j++) {
 			if(atlexhdgshw.getATLProductCategTable().isDisplayed()) {
-				System.out.println(prodcatgitemlist.get(j).getText());
+				//System.out.println(prodcatgitemlist.get(j).getText());
 				Assert.assertTrue(prodcatgitemlist.get(j).getText().contains(expectedprodcatg));
 				break;
 			}
@@ -178,7 +178,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
 
 		//Click on Product Categories expand btn
@@ -194,24 +194,6 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		String expectedprodcatg2 = atlleftpane.getATLApparelVintProdCatg().getText();
 		atlleftpane.getATLApparelVintProdCatg().click();
 		Thread.sleep(8000);
-
-		//Verify the selected Product Categories on Exhibitor Digital Showroom page
-		//Select 1st Exhibitor from Search results grid
-		atlleftpane.getATLexhibitor().click();
-
-		//Scroll till Product Categories section
-		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
-		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
-
-		for (int i = 0; i < prodcatgitemlist.size(); i++) {
-			if(atlexhdgshw.getATLProductCategTable().isDisplayed()) {
-				System.out.println(prodcatgitemlist.get(i).getText());
-				Assert.assertTrue(prodcatgitemlist.get(i).getText().contains(expectedprodcatg1) || prodcatgitemlist.get(i).getText().contains(expectedprodcatg2));
-				break;
-			}
-		}
-		driver.navigate().back();
-		Thread.sleep(5000);
 
 		//Verify the selected Product Category on Product details page
 		utl.scrollToElement(atlexhact.getProductForMultipleCatg());
@@ -229,8 +211,27 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		for (int j = 0; j < prodcatgitemlist.size(); j++) {
 			if(atlexhdgshw.getATLProductCategTable().isDisplayed()) {
-				System.out.println(prodcatgitemlist.get(j).getText());
+				//System.out.println(prodcatgitemlist.get(j).getText());
 				Assert.assertTrue(prodcatgitemlist.get(j).getText().contains(expectedprodcatg1) || prodcatgitemlist.get(j).getText().contains(expectedprodcatg2));
+				break;
+			}
+		}
+
+		driver.navigate().back();
+		Thread.sleep(5000);
+
+		//Verify the selected Product Categories on Exhibitor Digital Showroom page
+		//Select 3rd Exhibitor from Search results grid
+		atlexhact.getThirdExhName().click();
+
+		//Scroll till Product Categories section
+		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
+		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
+
+		for (int i = 0; i < prodcatgitemlist.size(); i++) {
+			if(atlexhdgshw.getATLProductCategTable().isDisplayed()) {
+				//System.out.println(prodcatgitemlist.get(i).getText());
+				Assert.assertTrue(prodcatgitemlist.get(i).getText().contains(expectedprodcatg1) || prodcatgitemlist.get(i).getText().contains(expectedprodcatg2));
 				break;
 			}
 		}
@@ -282,7 +283,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//Select Style name 'Industrial'
 		utl.scrollToElement(atlleftpane.getATLIndustrialStyle());
 		String expectedstyle = atlleftpane.getATLIndustrialStyle().getText();
-		System.out.println("Expected Style name:"+expectedstyle);
+		//System.out.println("Expected Style name:"+expectedstyle);
 		atlleftpane.getATLIndustrialStyle().click();
 		Thread.sleep(8000);
 
@@ -368,24 +369,18 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		atlleftpane.getATLAccentFurnitureProdCatg().click();
 		Thread.sleep(8000);
 
-		//Verify the selected Product Category on Product details page
-		utl.scrollToElement(atlexhact.getExhibitorProduct());
-		// Hovering on 1st Product
-		Actions actions = new Actions(driver);
-		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
-		// To mouseover on See Details btn
-		actions.moveToElement(atlexhact.getProdSeeDetailsBtn()).perform();
-		// Click on See Details button
-		actions.click().perform();
+		//Verify the selected Product Category on Exh Digital Showroom page
+		//Select 1st Exhibitor from Search results grid
+		atlleftpane.getATLexhibitor().click();
 
 		//Scroll till Product Categories section
 		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
 		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
 
-		for (int j = 0; j < prodcatgitemlist.size(); j++) {
+		for (int i = 0; i < prodcatgitemlist.size(); i++) {
 			if(atlexhdgshw.getATLProductCategTable().isDisplayed()) {
-				System.out.println(prodcatgitemlist.get(j).getText());
-				Assert.assertTrue(prodcatgitemlist.get(j).getText().contains(expectedprodcatg));
+				//System.out.println(prodcatgitemlist.get(i).getText());
+				Assert.assertTrue(prodcatgitemlist.get(i).getText().contains(expectedprodcatg));
 				break;
 			}
 		}
@@ -479,7 +474,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
 
 		//Click on Product Categories expand btn
@@ -508,7 +503,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		for (int j = 0; j < prodcatgitemlist.size(); j++) {
 			if(atlexhdgshw.getATLProductCategTable().isDisplayed()) {
-				System.out.println(prodcatgitemlist.get(j).getText());
+				//System.out.println(prodcatgitemlist.get(j).getText());
 				Assert.assertTrue(prodcatgitemlist.get(j).getText().contains(expectedprodcatg));
 				break;
 			}
@@ -561,7 +556,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		for (int j = 0; j < prodcatgitemlist.size(); j++) {
 			if(atlexhdgshw.getATLProductCategTable().isDisplayed()) {
-				System.out.println(prodcatgitemlist.get(j).getText());
+				//System.out.println(prodcatgitemlist.get(j).getText());
 				Assert.assertTrue(prodcatgitemlist.get(j).getText().contains(expectedprodcatg));
 				break;
 			}
@@ -657,7 +652,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
 
 		//Click on Product Categories expand btn
@@ -686,7 +681,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		for (int j = 0; j < prodcatgitemlist.size(); j++) {
 			if(atlexhdgshw.getATLProductCategTable().isDisplayed()) {
-				System.out.println(prodcatgitemlist.get(j).getText());
+				//System.out.println(prodcatgitemlist.get(j).getText());
 				Assert.assertTrue(prodcatgitemlist.get(j).getText().contains(expectedprodcatg));
 				break;
 			}
@@ -724,23 +719,17 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		Thread.sleep(8000);
 
 		//Verify the selected Product Categories on product details page
-		utl.scrollToElement(atlexhact.getExhibitorProduct());
-		// Hovering on 1st Product
-		Actions actions = new Actions(driver);
-		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
-		// To mouseover on See Details btn
-		actions.moveToElement(atlexhact.getProdSeeDetailsBtn()).perform();
-		// Click on See Details button
-		actions.click().perform();
+		//Select 2nd Exhibitor from Search results grid
+		atlleftpane.getATLSecondExhibitor().click();
 
 		//Scroll till Product Categories section
 		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
 		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
 
-		for (int j = 0; j < prodcatgitemlist.size(); j++) {
+		for (int i = 0; i < prodcatgitemlist.size(); i++) {
 			if(atlexhdgshw.getATLProductCategTable().isDisplayed()) {
-				System.out.println(prodcatgitemlist.get(j).getText());
-				Assert.assertTrue(prodcatgitemlist.get(j).getText().contains(expectedprodcatg));
+				//System.out.println(prodcatgitemlist.get(i).getText());
+				Assert.assertTrue(prodcatgitemlist.get(i).getText().contains(expectedprodcatg));
 				break;
 			}
 		}

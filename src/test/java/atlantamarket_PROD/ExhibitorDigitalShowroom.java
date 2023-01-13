@@ -56,12 +56,15 @@ public class ExhibitorDigitalShowroom extends base {
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		//driver.get(prop.getProperty("lvmurl_uat"));
+		
+		Thread.sleep(3000);
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(3000);
 
 		utl.verifyMPLoginFunctionality();
-		driver.navigate().refresh();
 		Thread.sleep(5000);
+		//lap.getIUnderstandBtn().click();
 		//utl.CloseATLPopup();
 	}
 	
@@ -164,7 +167,6 @@ public class ExhibitorDigitalShowroom extends base {
 
 		// Click Exhibitor Name and click Plus icon
 		atlexhdgshw.getExhibitorName().click();
-		Thread.sleep(4000);
 		atlexhdgshw.getListButtonPlusIcon().click();
 		
 		/*//Login to Market Planner
@@ -351,7 +353,7 @@ public class ExhibitorDigitalShowroom extends base {
 		// Get the Total Products count on Products page
 		String linestabtitle = atlexhdgshw.getLinesCountAtLinesPage().getText();
 		String totallinescountonprodpage = linestabtitle.replaceAll("[^0-9]", "");
-		System.out.println("Total Lines Count on Products page is: " + totallinescountonprodpage);
+ 		System.out.println("Total Lines Count on Products page is: " + totallinescountonprodpage);
 
 		//Get back to Exhibitor Showroom page and click any one product and verify if product details are displayed properly
 		atlexhdgshw.getProductsPageBackButton().click();

@@ -4,7 +4,6 @@
   <test name="Default test(failed)">
     <classes>
 <<<<<<< HEAD
-<<<<<<< HEAD
       <class name="atlantamarket_PROD.MarketPlanner">
         <methods>
           <include name="TS013_VerifyAddToFavoriteFunctionalityForProductTest"/>
@@ -29,15 +28,6 @@
         </methods>
       </class> <!-- atlantamarket_PROD.EvenntsAndWebinar -->
 >>>>>>> 165c94fbc4fbd782daad363e3715f4d451ffac1a
-=======
-      <class name="lasvegasmarket_UAT.GlobalSearch_LineActions">
-        <methods>
-          <include name="tearDown"/>
-          <include name="initialize"/>
-          <include name="TS002_VerifyAddToFavoriteForLineTest"/>
-        </methods>
-      </class> <!-- lasvegasmarket_UAT.GlobalSearch_LineActions -->
->>>>>>> 4c42dc75e1a5c15bc76a373a6dd80ac945b53d04
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
