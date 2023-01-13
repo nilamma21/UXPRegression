@@ -67,12 +67,19 @@ public class ATLFloorPlansPage {
 	By noresultsforjuniperlinesmsg = By.xpath("//p[contains(text(),'Sorry, no results found.')]"); //Locator for No results found msg for Lines on Junipermarket filter
 	
 	By exhibitedonfloormsg = By.xpath("//span[contains(text(),'Exhibited on this floor:')]");
+	By atlLoadingNoExhiMsg = By.xpath("//div[@class='imc-manufacturing-line--alternated-section imc-lines-overview']/p[1]");//Loading Msg
+	
 	
 	
 	public ATLFloorPlansPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
+	public WebElement getatlLoadingNoExhiMsg() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlLoadingNoExhiMsg));
+		return driver.findElement(atlLoadingNoExhiMsg);
+	}
 	public WebElement getATLExhibitorsAndProductTab() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlExhibitorsAndProductTab));
