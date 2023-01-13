@@ -164,6 +164,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 		// Click Exhibitor Name and click Plus icon
 		atlexhdgshw.getExhibitorName().click();
+		Thread.sleep(4000);
 		atlexhdgshw.getListButtonPlusIcon().click();
 		
 		/*//Login to Market Planner
