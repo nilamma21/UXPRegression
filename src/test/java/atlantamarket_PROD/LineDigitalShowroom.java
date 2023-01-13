@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -40,7 +41,7 @@ public class LineDigitalShowroom extends base {
 	ATLLineDigitalShowroomPage atldigish;
 
 	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns,
-			allnoteslist, favlist, searchlinetypelist, tagBlogPost, taglist, infoFilterList;
+	allnoteslist, favlist, searchlinetypelist, tagBlogPost, taglist, infoFilterList;
 
 	@BeforeClass
 	public void initialize() throws IOException, InterruptedException {
@@ -49,17 +50,21 @@ public class LineDigitalShowroom extends base {
 		utl = new Utility(driver);
 		lap = new ATLLandingPage(driver);
 		atlgs=new ATLGlobalSearchPage(driver);
-		
+
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl_prod"));
-		
+
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(5000);
 		utl.CloseATLPopup();
-		
+		//Login to Market Planner
+		utl.verifyMPLoginFunctionality();		
+		driver.navigate().refresh();
+		Thread.sleep(8000);
+
 		//lap.getCloseMarktAdBtn().click();
-		
+
 	}
 	@Test(priority = 01)
 	public void TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest()throws InterruptedException, IOException {
@@ -88,10 +93,10 @@ public class LineDigitalShowroom extends base {
 		//Click on Shown By Exhibitor Name
 		String heroompName=atldigish.getdigiShowroomExhName().getText();
 		atldigish.getdigiShowroomExhName().click();
-		
+
 		//verify Selected exhitor digi showroom ppage
 		Assert.assertTrue(atlgs.getatlShowSpecialsTitle().getText().equals(heroompName));
-		
+
 	}
 	@Test(priority = 02)
 	public void TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest()throws InterruptedException, IOException {
@@ -113,7 +118,7 @@ public class LineDigitalShowroom extends base {
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
-	
+
 		//click on Global Search Input filed
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("HeroComponentExhName"));
 		Thread.sleep(5000);
@@ -124,8 +129,8 @@ public class LineDigitalShowroom extends base {
 		Assert.assertTrue(atldigish.getAtlLineDigiShowroomPageTitle().getText().equals(prop.getProperty("HeroComponentExhName")));
 		//Click on 1st Location Link
 		String locationURL = atldigish.getlocationLink().getAttribute("href");
-		
-		
+
+
 		// Store the current window handle
 		String winHandleBefore = driver.getWindowHandle();
 		atldigish.getlocationLink().click();
@@ -163,7 +168,7 @@ public class LineDigitalShowroom extends base {
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
-	
+
 		//click on Global Search Input filed
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("HeroComponentExhName"));
 		Thread.sleep(5000);
@@ -174,26 +179,45 @@ public class LineDigitalShowroom extends base {
 		Assert.assertTrue(atldigish.getAtlLineDigiShowroomPageTitle().getText().equals(prop.getProperty("HeroComponentExhName")));
 		//Store Hero Comp Name
 		String heroCompName=atldigish.getdigiShowroomExhName().getText();
+
 		// Click on Fav Icon
 		atldigish.getfavIconDigiShowroom().click();
 		Thread.sleep(6000);
-		// Sign In to MP
-		// Enter the credentials on Login Page and click
-		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
-		lp.getPassword().sendKeys((prop.getProperty("password")));
 
-		lp.getSignInBtn().click();
-		Thread.sleep(15000);
-		// Click on Fav Icon
-		atldigish.getfavIconDigiShowroom().click();
 		lap.getMPLinkText().click();
 		Thread.sleep(6000);
 
-		// Click on List tab
+		// Click on Lists tab on MP home page
+		atlmppge.getMPHomeListsTab().click();
+		atlmppge.getATLMPListsPageFavoritesMenu().click();
+		Thread.sleep(10000);
+
+		// Verify that the added favorites exhibitor should be displayed in to Favorites list
+		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(prop.getProperty("HeroComponentExhName")));
+
+		// Delete that favorites exhibitor from list
+		atlmppge.getMoreBtnDeleteOptn_ATLPROD().click();
+		atlmppge.getATLEditListItemDeleteOptn().click();
+		Thread.sleep(6000);
+
+		// Verify that the added favorites exhibitor should be removed from Favorites list
+		/*	Assert.assertFalse(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
+				Thread.sleep(6000);*/
+
+		favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
+
+		// Verify that the added favorites exhibitor should be removed from Favorites list
+		for (int i = 1; i < favlist.size(); i++) {
+			// System.out.println(favlist.get(i).getText());
+			Assert.assertFalse(favlist.get(i).getText().contains(prop.getProperty("HeroComponentExhName")));
+		}
+
+
+		/*// Click on List tab
 		atlmppge.getMPHomeListsTab().click();
 		Thread.sleep(10000);
 		// Verify Exhibitor present or not into MP Fav
-		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), heroCompName);
+		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), heroCompName);*/
 
 	}
 	@Test(priority = 04)
@@ -215,7 +239,7 @@ public class LineDigitalShowroom extends base {
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
-	
+
 		//click on Global Search Input filed
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("HeroComponentExhName"));
 		Thread.sleep(5000);
@@ -229,18 +253,75 @@ public class LineDigitalShowroom extends base {
 		// Click on Add to List Icon
 		atldigish.getaddToListIcon().click();
 		Thread.sleep(6000);
-/*		// Sign In to MP
-		// Enter the credentials on Login Page and click
-		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
-		lp.getPassword().sendKeys((prop.getProperty("password")));
 
-		lp.getSignInBtn().click();
-		Thread.sleep(15000);
-		// Click on Add to List Icon
-		Thread.sleep(5000);
-		atldigish.getaddToListIcon().click();*/
-		
-		String exList = atlgs.getatlExistingList().getText();
+		// Store the existing list name
+		String existinglistname = atlmppge.getATLMPExistingListName().getText();
+		System.out.println("Existing list name: " + existinglistname);
+
+		// Select Existing list name
+		atlmppge.getATLMPExistingListName().click();
+
+		// Scroll till Add to Selected button
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",
+				atlmppge.getATLMPAddToSelectedBtn());
+		atlmppge.getATLMPAddToSelectedBtn().click();
+
+		// Click on Go to Market Planner button
+		atlmppge.getGoToMarketPlannerBtn().click();
+
+		// Click on Lists tab on MP home page
+		atlmppge.getMPHomeListsTab().click();
+		atlmppge.getListsPageListsMenu().click();
+
+		mplists = atlmppge.getATLMPListsNames();
+		mpeditlistoptns = atlmppge.getATLMPEditListOptns();
+
+		for (int i = 0; i < mplists.size(); i++) {
+			// System.out.println(mplists.get(i).getText());
+			// System.out.println(mpeditlistoptns.get(i).getText());
+			if (mplists.get(i).getText().equals(existinglistname)) {
+				mpeditlistoptns.get(i).click();
+				break;
+			}
+		}
+		Thread.sleep(10000);
+		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(prop.getProperty("HeroComponentExhName")));
+
+		// Delete that added exhibitor from list
+		atlmppge.getMoreBtnDeleteOptnExistingList_ATLPROD().click();
+		atlmppge.getATLEditListItemDeleteOptn().click();
+		Thread.sleep(8000);
+
+		favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
+
+		//Verify that the added exhibitor should be removed from Existing list
+		for(int i=1; i< favlist.size(); i++)
+		{			
+			//System.out.println(favlist.get(i).getText());
+			Assert.assertFalse(favlist.get(i).getText().contains(prop.getProperty("HeroComponentExhName"))); 
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		/*String exList = atlgs.getatlExistingList().getText();
 		System.out.println(exList);
 		atlgs.getatlExistingList().click();
 		// Click Add to List Btn
@@ -261,7 +342,7 @@ public class LineDigitalShowroom extends base {
 		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), exList);
 		// Verify exhibitor present into selected list or not
 		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), prop.getProperty("HeroComponentExhName"));
-			
+		 */
 
 	}
 	@Test(priority = 05)
@@ -283,7 +364,7 @@ public class LineDigitalShowroom extends base {
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
-	
+
 		//click on Global Search Input filed
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("HeroComponentExhName"));
 		Thread.sleep(5000);
@@ -369,7 +450,7 @@ public class LineDigitalShowroom extends base {
 		/*if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
-	
+
 		//click on Global Search Input filed
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("HeroComponentExhName"));
 		Thread.sleep(10000);
@@ -382,7 +463,7 @@ public class LineDigitalShowroom extends base {
 		String heroCompName = atldigish.getdigiShowroomExhName().getText();
 		// Click on OrderOnJUniper Btn
 		String orderOnJuniperURL = atldigish.getorderOnJuniperBtn().getAttribute("href");
-		
+
 		// Store the current window handle
 		String winHandleBefore = driver.getWindowHandle();
 		atldigish.getorderOnJuniperBtn().click();
@@ -400,7 +481,7 @@ public class LineDigitalShowroom extends base {
 		driver.close();
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore);
-			
+
 	}
 	@Test(priority = 07)
 	public void TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest()throws InterruptedException, IOException {
@@ -421,7 +502,7 @@ public class LineDigitalShowroom extends base {
 		/*if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
-	
+
 		//click on Global Search Input filed
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("HeroComponentExhName"));
 		Thread.sleep(5000);
@@ -433,7 +514,7 @@ public class LineDigitalShowroom extends base {
 		//Store Hero Comp Name
 		String heroCompName = atldigish.getdigiShowroomExhName().getText();
 		// Click on OrderOnJUniper Btn
-		
+
 		String seeAllProdBtn=atldigish.getseeAllProductBtn().getText();
 		String seeAllProdCount = seeAllProdBtn.split(" ")[2].trim();
 		atldigish.getseeAllProductBtn().click();
@@ -443,10 +524,10 @@ public class LineDigitalShowroom extends base {
 		String trimCount = count.split(" ")[1].trim();
 		//verify both count
 		Assert.assertTrue(seeAllProdCount.equals(trimCount));
-		
-			
+
+
 	}
-	
+
 	@Test(priority = 8)
 	public void TS008_VerifyLineDigitalShowroomProductscomponentTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -461,13 +542,14 @@ public class LineDigitalShowroom extends base {
 		genData = new GenerateData();
 		atldigish=new ATLLineDigitalShowroomPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
-	
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//click on Global Search Input filed
+		Thread.sleep(2000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("HeroComponentExhName"));
 		Thread.sleep(5000);
 		//Click on 1st Suggetions
@@ -483,7 +565,7 @@ public class LineDigitalShowroom extends base {
 		int count=0;
 		for (WebElement prodTile : atldigish.gelistOfproductTile()) {
 			if(prodTile.isDisplayed())
-			count++;
+				count++;
 		}
 		System.out.println(count);
 		//Verify Tiles count 6 or not
@@ -492,17 +574,18 @@ public class LineDigitalShowroom extends base {
 		Assert.assertTrue(atldigish.getorderOnJuniperBtnLink().isDisplayed());
 		//Verify Bottom Product count Link CTA
 		Assert.assertTrue(atldigish.getprodctCountBottomBtn().isDisplayed());
-		
+
 		//Trim count from See All Product btn
 		String seeAllProdBtn=atldigish.getprodctCountBottomBtn().getText();
 		String trimSeeAllProdCount = seeAllProdBtn.split(" ")[2].trim();
-		
+
 		//Trim count from Product Section titled
 		String prodCount=atldigish.getproductCount().getText();
 		String trimProdCount = prodCount.split(" ")[0].trim();
-		
+
 		//verify both count
 		Assert.assertTrue(trimSeeAllProdCount.equals(trimProdCount));
+
 	}
 	@Test(priority = 9)
 	public void TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest()throws InterruptedException, IOException {
@@ -518,12 +601,20 @@ public class LineDigitalShowroom extends base {
 		genData = new GenerateData();
 		atldigish=new ATLLineDigitalShowroomPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
 
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
-	
+		Thread.sleep(2000);
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("HeroComponentExhName"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(5000);
+		//Click on 1st Suggetions
+		atldigish.getsuggetionList().click();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		//Thread.sleep(5000);
+
 		//click on Global Search Input filed
 		/*atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("HeroComponentExhName"));
 		Thread.sleep(10000);
@@ -550,8 +641,8 @@ public class LineDigitalShowroom extends base {
 		driver.close();
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore);
-			
-			
+
+
 	}
 	@Test(priority = 10)
 	public void TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest()throws InterruptedException, IOException {
@@ -567,18 +658,20 @@ public class LineDigitalShowroom extends base {
 		genData = new GenerateData();
 		atldigish=new ATLLineDigitalShowroomPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
-	
+
 		//click on Global Search Input filed
+		Thread.sleep(2000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("HeroComponentExhName"));
 		Thread.sleep(5000);
 		//Click on 1st Suggetions
 		atldigish.getsuggetionList().click();
-		Thread.sleep(5000);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		//Thread.sleep(5000);
 		//Scroll to Product section
 		utl.scrollToElement(atldigish.getproductTitle());
 		//Click on See All Prod Btn
@@ -601,32 +694,33 @@ public class LineDigitalShowroom extends base {
 		genData = new GenerateData();
 		atldigish=new ATLLineDigitalShowroomPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
-	
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//click on Global Search Input filed
+		Thread.sleep(4000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("HeroComponentExhName"));
 		Thread.sleep(5000);
 		//Click on 1st Suggetions
 		atldigish.getsuggetionList().click();
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		//Scroll to Product section
 		utl.scrollToElement(atldigish.getproductTitle());
 		//Click on Any Product Btn
 		Thread.sleep(5000);
 		try {
-		String prodName=atldigish.getproductName().getText();
-		String replaceProdName=prodName.replaceAll(".", "");
-		Thread.sleep(5000);
-		System.out.println(replaceProdName);
-		atldigish.getproductName().click();
-		Thread.sleep(5000);
-		System.out.println(atldigish.getproductHeader().getText());
-		//Verify See All Product details page
-		Assert.assertTrue(atldigish.getproductHeader().getText().contains(replaceProdName));
+			String prodName=atldigish.getproductName().getText();
+			String replaceProdName=prodName.replaceAll(".", "");
+			Thread.sleep(5000);
+			System.out.println(replaceProdName);
+			atldigish.getproductName().click();
+			Thread.sleep(5000);
+			System.out.println(atldigish.getproductHeader().getText());
+			//Verify See All Product details page
+			Assert.assertTrue(atldigish.getproductHeader().getText().contains(replaceProdName));
 		}catch (Exception e){
 			String prodName=atldigish.getproductName1().getText();
 			String replaceProdName=prodName.replaceAll(".", "");
@@ -638,12 +732,12 @@ public class LineDigitalShowroom extends base {
 			//Verify See All Product details page
 			Assert.assertTrue(atldigish.getproductHeader().getText().contains(replaceProdName));
 		}
-		
+
 	}
 
-	
+
 	@AfterClass
 	public void tearDown() {
-		// driver.quit();
+		driver.quit();
 	}
 }
