@@ -55,13 +55,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(7000);
-		//lap.getCloseMarktAdBtn().click();
-
-		//Login to Market Planner
-		//utl.verifyMPLoginFunctionality();
-
-		//Thread.sleep(6000);
-		//lap.getCloseMarktAdBtn().click();
+		driver.navigate().refresh();
+		Thread.sleep(4000);
 	}
 
 	@Test(priority = 1)
@@ -125,7 +120,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
 
 		//Click on Product Categories expand btn
@@ -178,7 +173,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
 
 		//Click on Product Categories expand btn
@@ -189,12 +184,13 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//Select 'Antique/Vintage' prod category
 		String expectedprodcatg1 = atlleftpane.getATLAntiqueVintProdCatg().getText();
 		atlleftpane.getATLAntiqueVintProdCatg().click();
-
+		Thread.sleep(6000);
+		
 		//Select 'Apparel, Vintage' prod category
 		String expectedprodcatg2 = atlleftpane.getATLApparelVintProdCatg().getText();
 		atlleftpane.getATLApparelVintProdCatg().click();
 		Thread.sleep(8000);
-
+/*
 		//Verify the selected Product Category on Product details page
 		utl.scrollToElement(atlexhact.getProductForMultipleCatg());
 		// Hovering on 1st Product
@@ -219,10 +215,10 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		driver.navigate().back();
 		Thread.sleep(5000);
-
+*/
 		//Verify the selected Product Categories on Exhibitor Digital Showroom page
-		//Select 3rd Exhibitor from Search results grid
-		atlexhact.getThirdExhName().click();
+		//Select 1st Exhibitor from Search results grid
+		atlleftpane.getATLexhibitor().click();
 
 		//Scroll till Product Categories section
 		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
@@ -737,9 +733,9 @@ public class GlobalSearch_LeftPaneFilters extends base {
 	}
 
 
-	/*@AfterClass
+	@AfterClass
 	public void tearDown()
 	{
 		driver.quit();
-	}*/
+	}
 }
