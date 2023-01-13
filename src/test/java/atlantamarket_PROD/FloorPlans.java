@@ -212,7 +212,7 @@ public class FloorPlans extends base {
 
 		//Verify that Vending Machine Overlay should appeared on Map
 		Assert.assertTrue(atlflpp.getVendingMachineOverlayOnMap().isDisplayed());
-
+		Thread.sleep(5000);
 		//Click on Elevator icon on Map image
 		atlflpp.getElevatorIconOnMap().click();
 
