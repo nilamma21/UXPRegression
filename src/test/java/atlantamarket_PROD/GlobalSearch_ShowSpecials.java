@@ -24,7 +24,7 @@ import resources.GenerateData;
 import resources.Utility;
 import resources.base;
 
-public class ShowSpecials extends base  {
+public class GlobalSearch_ShowSpecials extends base  {
 	public WebDriverWait wait;
 	public GenerateData genData;
 	public Utility utl;
