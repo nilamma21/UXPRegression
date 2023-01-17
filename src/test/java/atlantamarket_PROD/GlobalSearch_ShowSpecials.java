@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -23,7 +24,7 @@ import resources.GenerateData;
 import resources.Utility;
 import resources.base;
 
-public class GlobalSearch_ShowSpecials extends base  {
+public class ShowSpecials extends base  {
 	public WebDriverWait wait;
 	public GenerateData genData;
 	public Utility utl;
@@ -59,8 +60,8 @@ public class GlobalSearch_ShowSpecials extends base  {
 		//lap.getCloseMarktAdBtn().click();
 		
 	}
-	@Test(priority = 10)
-	public void TS010_VerifyShowSpecialsLinksExhibitorNameTest()
+	@Test(priority = 1)
+	public void TS001_VerifyShowSpecialsLinksExhibitorNameTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T381: Show Specials: Links - Exhibitor Name
@@ -83,19 +84,21 @@ public class GlobalSearch_ShowSpecials extends base  {
 		atlgs.getatlShowSpecialsLink().click();
 		//verify Show special Page
 		Thread.sleep(5000);
-		utl.scrollToElement(atlgs.getatlShowSpecialsTitle());
 		Assert.assertTrue(atlgs.getatlShowSpecialsTitle().getText().contains(prop.getProperty("showSpecialTitle")));
 		//Click on Show Special Exhibitor
-		String showSpecialExhName=atlgs.getatlShowSpecialsExhNamePROD().getText();
-		System.out.println(showSpecialExhName);
-		atlgs.getatlShowSpecialsExhNamePROD().click();
+		//String showSpecialExhName=atlgs.getatlShowSpecialsExhNamePROD().getText();
+		
+		String ename=atlgs.getFirstShowSpecialName().getText();
+		System.out.println(ename);
+		String abc =ename.split(" ")[2].trim();
+		atlgs.getFirstShowSpecialViewBrandDetailsBtn().click();
 		Thread.sleep(5000);
 		//Verify Show Special Exh Page 
-		Assert.assertTrue(atlgs.getatlShowSpecialsTitle().getText().contains(showSpecialExhName));
+		Assert.assertTrue(atlgs.getatlShowSpecialsTitle().getText().contains(abc));
 		
 	}
-	@Test(priority = 11)
-	public void TS011_VerifyShowSpecialsLinksShowroomTest()
+	@Test(priority = 2)
+	public void TS002_VerifyShowSpecialsLinksShowroomTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T382: Show Specials: Links - Showroom
