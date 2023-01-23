@@ -185,7 +185,7 @@ public class FloorPlans extends base {
 		Assert.assertNotEquals(x1, out);
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 5)
 	public void TS004_VerifyIconsOnFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to:-
 		// UXP-T289: To verify Floor Plans: Icons
@@ -213,7 +213,7 @@ public class FloorPlans extends base {
 
 		//Verify that Vending Machine Overlay should appeared on Map
 		Assert.assertTrue(atlflpp.getVendingMachineOverlayOnMap().isDisplayed());
-
+		Thread.sleep(5000);
 		//Click on Elevator icon on Map image
 		atlflpp.getElevatorIconOnMap().click();
 
@@ -256,7 +256,7 @@ public class FloorPlans extends base {
 		Assert.assertTrue(atlgs.getinfoTitleOnSeeDetailsPage().getText().contains(exhnameondetailsmodal));
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 4)
 	public void TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T290: To verify Floor Plans: Filter
@@ -402,10 +402,16 @@ public class FloorPlans extends base {
 		// Verify that Selected Exhibitor Digital Showroom page should be opened
 		//Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
 		//Verify Selected Exhibitor title
+<<<<<<< HEAD
 		//Assert.assertTrue(driver.getTitle().contains(""+exhibitorName+" at Atlanta Market"));
 		//Verify Selected Exhibitor Name
 		//Assert.assertTrue(atlexhdgshw.getExhibitorNameOnExhDirectImg().getText().contains(exhibitorName));
 		Assert.assertTrue(atlgs.getinfoTitleOnSeeDetailsPage().getText().contains(exhibitorName));
+=======
+		Assert.assertTrue(driver.getTitle().contains(""+exhibitorName+" at Atlanta Market"));
+		//Verify Selected Exhibitor Name
+		Assert.assertTrue(atlexhdgshw.getExhibitorNameOnExhDirectImg().getText().contains(exhibitorName));
+>>>>>>> 95f3394d181e284539f9b1b34ad1098609ae77a7
 	}
 
 	@Test(priority = 8)

@@ -69,18 +69,24 @@ public class ATLFloorPlansPage {
 	By exhibitedonfloormsg = By.xpath("//span[contains(text(),'Exhibited on this floor:')]");
 	By atlLoadingNoExhiMsg = By.xpath("//div[@class='imc-manufacturing-line--alternated-section imc-lines-overview']/p[1]");//Loading Msg
 	
+<<<<<<< HEAD
 	By atlExhibitorNamePROD = By.xpath("//div[@class='imc-content--padded-top-bottom']/div[1]//div[2]/div[2]/a[1]"); //Locator for Exhibitor Name
+=======
+>>>>>>> 95f3394d181e284539f9b1b34ad1098609ae77a7
 	
 	
 	public ATLFloorPlansPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
+<<<<<<< HEAD
 	public WebElement getatlExhibitorNamePROD() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlExhibitorNamePROD));
 		return driver.findElement(atlExhibitorNamePROD);
 	}
+=======
+>>>>>>> 95f3394d181e284539f9b1b34ad1098609ae77a7
 	public WebElement getatlLoadingNoExhiMsg() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlLoadingNoExhiMsg));

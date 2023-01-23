@@ -113,10 +113,13 @@ public class ATLGlobalSearchPage {
 	By FirstCatalogName = By.xpath("(//div[@class='imc-exhibitorcard-products-row imc-content--display-flex-space-between-mobile '])[1]/div[2]/p[1]");  //Locator for 1st name of Catalog
 	By FirstShowSpecialName = By.xpath("(//div[@class='imc-showSpecial--tableContainer']/p[1])[1]");  //Locator for 1st name of Catalog
 	By FirstShowSpecialViewBrandDetailsBtn = By.xpath("(//a[@class='imc-showSpecial--link'])[1]");  //Locator for 1st name of Catalog
+<<<<<<< HEAD
 	By infoTitleOnSeeDetailsPage = By.xpath("//div[@class='imc-gallery imc-gallery--65-35 breadcrumbs__round']//ul//li[3]/a[1]");  //Locator for 1st name of Catalog
 	By infoTitle = By.xpath("//div[@class='imc-informationcard__body']/p[2]");  //Locator for 1st name of Catalog
 	
 	
+=======
+>>>>>>> 95f3394d181e284539f9b1b34ad1098609ae77a7
 	
 	
 	public ATLGlobalSearchPage(WebDriver driver) {
@@ -124,6 +127,7 @@ public class ATLGlobalSearchPage {
 		this.driver = driver; 			
 		PageFactory.initElements(driver, this);
 	}
+<<<<<<< HEAD
 	
 	public WebElement infoTitle() {
 		wait = new WebDriverWait (driver,20);
@@ -140,6 +144,8 @@ public class ATLGlobalSearchPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlInfoSearchMoreInfoBtn));
 		return driver.findElement(atlInfoSearchMoreInfoBtn);
 	}
+=======
+>>>>>>> 95f3394d181e284539f9b1b34ad1098609ae77a7
 	public WebElement getFirstShowSpecialViewBrandDetailsBtn() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(FirstShowSpecialViewBrandDetailsBtn));
