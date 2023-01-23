@@ -60,7 +60,7 @@ public class ExhibitorDigitalShowroom extends base {
 		//driver.get(prop.getProperty("lvmurl_uat"));
 		
 		Thread.sleep(3000);
-		lap.getIUnderstandBtn().click();
+		//lap.getIUnderstandBtn().click();
 		Thread.sleep(3000);
 
 		utl.verifyMPLoginFunctionality();
@@ -227,7 +227,7 @@ public class ExhibitorDigitalShowroom extends base {
 	public void TS003_VerifyAddNoteListWithPlusIconTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T300: Add Note for an exhibitor
-
+															//Error when we open exhibitor
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
@@ -278,7 +278,7 @@ public class ExhibitorDigitalShowroom extends base {
 	public void TS004_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T301: The click on 'Location Links' functionality for an Exhibitor
-
+																										//Error when we open exhibitor
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		lap = new ATLLandingPage(driver);
@@ -316,6 +316,7 @@ public class ExhibitorDigitalShowroom extends base {
 	public void TS005_VerifyClickOnTotalLinesSeeAllLinkForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T312: The click on 'Total lines-See All' functionality for an Exhibitor Digital Show room
+																													//Error when we open exhibitor
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);

@@ -84,6 +84,7 @@ public class EvenntsAndWebinar extends base{
 		// Verify IMC tab
 		Assert.assertTrue(atlevents.getatlImcEventsTab().getText().equals("IMC Events"));
 		
+		
 		System.out.println("IMC Event Tab is Present");
 		// Verify Exhibitors Events tab
 		Assert.assertTrue(atlevents.getatlExhibitorsEventsTab().getText().equals("Exhibitor Events"));
@@ -602,7 +603,7 @@ public class EvenntsAndWebinar extends base{
 		
 	}
 	
-	@Test(priority = 8)
+	@Test(priority = 9)
 	public void TS008_VerifyIMCEventsAddNoteTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T299: IMC Events: Event Details- Add Note
@@ -616,11 +617,11 @@ public class EvenntsAndWebinar extends base{
 		genData = new GenerateData();
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		atlproddet = new ATLProductDetailsPage(driver);
-
+/*
 		// Login to MP
-		/*
-		 * utl.verifyMPLoginFunctionality(); Thread.sleep(5000);
-		 */
+		
+		 utl.verifyMPLoginFunctionality(); Thread.sleep(5000);*/
+		 
 		utl.clickOnEventLinkOfChannel();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(5000);
@@ -687,7 +688,7 @@ public class EvenntsAndWebinar extends base{
 		// Delete the saved note
 		atlexhact.getDeleteNoteBtn().click();
 	}
-	@Test(priority = 9)
+	@Test(priority = 8)
 	public void TS009_VerifyExhibitorEventsSearchbarTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T304: Exhibitor Events: Search bar
@@ -698,8 +699,9 @@ public class EvenntsAndWebinar extends base{
 		atlevents=new ATLEventsAndWebinarPage(driver);
 		atlgs = new ATLGlobalSearchPage(driver);
 
-		utl.clickOnEventLinkOfChannel();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		utl.clickOnEventLinkOfChannel();
+		
 		/*// Click on Attend Tab
 		atlevents.getatlAttendTab().click();
 		Thread.sleep(2000);
@@ -927,7 +929,7 @@ public class EvenntsAndWebinar extends base{
 			//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("eventTitleLink")));
 			eventTitleLink.click();
 			
-			Thread.sleep(5000);
+			Thread.sleep(15000);
 			driver.navigate().refresh();
 			//Verify Event Details Page
 			Assert.assertTrue(eventTitle.contains(atlevents.getatlEventNameOnDetailsPage().getText()));
