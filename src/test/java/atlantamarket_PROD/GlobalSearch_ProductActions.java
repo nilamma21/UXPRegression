@@ -350,7 +350,7 @@ public class GlobalSearch_ProductActions extends base {
 		}
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 8)
 	public void TS005_VerifyAddNoteOnProductDetailsPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T386: Add Note functionality on Product Details page
@@ -585,7 +585,7 @@ public class GlobalSearch_ProductActions extends base {
 		atlproddet.getProductFullScreenViewer().click();
 	}
 
-	@Test(priority = 8)
+	@Test(priority = 5)
 	public void TS008_VerifyAddToFavoriteOnSearchResultsGridTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T378: Add To Favorite functionality for Product on Search Results grid
