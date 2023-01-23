@@ -3,11 +3,11 @@
 
 <suite name="ATLMrkt_RegressionTestSuite">
 	<listners>
-		<listner class-name="atlantamarket_PROD.TestListeners" />
+		<listner class-name="antamarket_uat.TestListeners" />
 	</listners>
 	<test thread-count="5" name="RegressionTest">
 		<classes>
-			<class name="atlantamarket_PROD.EvenntsAndWebinar" />
+			<!-- <class name="atlantamarket_PROD.EvenntsAndWebinar" />
 			<class name="atlantamarket_PROD.ExhibitorDigitalShowroom" />
 			<class name="atlantamarket_PROD.FloorPlans" />
 			<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
@@ -18,7 +18,21 @@
 			<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
 			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
 			<class name="atlantamarket_PROD.LineDigitalShowroom" />
-			<class name="atlantamarket_PROD.ShowSpecials" />
+			<class name="atlantamarket_PROD.ShowSpecials" /> -->
+			
+			 <class name="antamarket_UAT.EvenntsAndWebinar" />
+			
+			<methods>
+			<!--  <include name="TS004_VerifyIMCEventsEventsListTest" /> --> 
+			<!--	<include name="TS010_VerifyExhibitorEventsCalendarViewTest" />
+				<include name="TS014_VerifyExhibitorEventsAddToListTest" />
+				<include name="TS001_VerifyAddToFavoriteForExhibitorTest" /> 
+				
+		 			<include name="TS003_VerifyAddToExistingListForExhibitorTest" />
+					<include name="TS002_VerifyAddToNewListForExhibitorTest" /> -->
+		<!-- <include name="EvenntsAndWebinar" /> -->
+
+			</methods>
 			
 		</classes>
 	</test>

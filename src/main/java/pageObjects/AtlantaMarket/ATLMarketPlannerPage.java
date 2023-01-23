@@ -141,6 +141,7 @@ public class ATLMarketPlannerPage {
 
 	By filterByList = By.xpath("//div[@class='react-select__menu-list css-11unzgr']/div"); //Locator for My Info option
 	By listOfAllExh = By.xpath("//a[@class='imc-link--alt-darkred']"); //Locator for My Info option
+	
 	By filterBytxt = By.xpath("//div[contains(text(),'Filter By')]"); //Locator for Filter By
 	By nameofElement = By.xpath("//div[@class='imc-market-planner-list--item-body-data-left']/div[1]"); //Locator for Filter By
 	By listOfmngDropdownElements = By.xpath("//div[@class='react-select__menu-list css-11unzgr']/div"); //Locator for Filter By
@@ -254,6 +255,7 @@ public class ATLMarketPlannerPage {
 	
 	By favIconlist = By.xpath("//button[@class='imc-selectableicon ']"); //Locator for Favorite Icon list
 	
+	By listOfAllExhPROD = By.xpath("//span[@class='imc-link--alt-darkred disabled']"); //Locator for My Info option
 	
 	
 	public ATLMarketPlannerPage(WebDriver driver) {
@@ -261,6 +263,11 @@ public class ATLMarketPlannerPage {
 		this.driver = driver; 			
 	}
 
+	public List <WebElement> getlistOfAllExhPROD() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllExhPROD));
+		return driver.findElements(listOfAllExhPROD);
+	}
 	public WebElement getmpNotebtn() {
 
 		wait = new WebDriverWait(driver, 30);
