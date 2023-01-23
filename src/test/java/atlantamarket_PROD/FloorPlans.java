@@ -402,16 +402,15 @@ public class FloorPlans extends base {
 		// Verify that Selected Exhibitor Digital Showroom page should be opened
 		//Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
 		//Verify Selected Exhibitor title
-<<<<<<< HEAD
+
 		//Assert.assertTrue(driver.getTitle().contains(""+exhibitorName+" at Atlanta Market"));
 		//Verify Selected Exhibitor Name
 		//Assert.assertTrue(atlexhdgshw.getExhibitorNameOnExhDirectImg().getText().contains(exhibitorName));
-		Assert.assertTrue(atlgs.getinfoTitleOnSeeDetailsPage().getText().contains(exhibitorName));
-=======
+
 		Assert.assertTrue(driver.getTitle().contains(""+exhibitorName+" at Atlanta Market"));
 		//Verify Selected Exhibitor Name
 		Assert.assertTrue(atlexhdgshw.getExhibitorNameOnExhDirectImg().getText().contains(exhibitorName));
->>>>>>> 95f3394d181e284539f9b1b34ad1098609ae77a7
+
 	}
 
 	@Test(priority = 8)
