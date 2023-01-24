@@ -325,8 +325,13 @@ public class ExhibitorDigitalShowroom extends base {
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
-
 		Thread.sleep(15000);
+		
+		// Get the Total Lines count on Search grid
+		String temp = atlexhdgshw.getLinesShownTxtOnSearchGrid().getText();
+		String totallinescountonsearchgrid = temp.replaceAll("[^0-9]", "");
+		System.out.println("Total Lines Count on Search Results grid is: " + totallinescountonsearchgrid);
+
 		// Store the 1st Exhibitor name in String variable
 		exhname = atlexhact.getExhibitorName().getText();
 		System.out.println("Exhibitor name: " + exhname);
@@ -334,12 +339,10 @@ public class ExhibitorDigitalShowroom extends base {
 		// Get the Total Lines count on Search grid
 		atlexhdgshw.getExhibitorName().click();
 		Thread.sleep(5000);
-		utl.scrollToElement(atlexhdgshw.getLinesSection());
-		String temp = atlexhdgshw.getLinesSection().getText();
-		String totallinescountonsearchgrid = temp.replaceAll("[^0-9]", "");
-		System.out.println("Total Products Count on Search Results grid is: " + totallinescountonsearchgrid);
-		Assert.assertTrue(atlexhdgshw.getTotalLinesButton().getText().contains(totallinescountonsearchgrid));
-		System.out.println("Total Lines count is same at Lines section title and See All button.");
+		String temp1 = atlexhdgshw.getTotalLinesButton().getText();
+		String totallinescountondgtab = temp1.replaceAll("[^0-9]", "");
+		System.out.println("Lines count on Lines section:"+totallinescountondgtab);
+		Assert.assertTrue(totallinescountondgtab.contains(totallinescountonsearchgrid));
 
 		// Click on Total Lines-See All link for 1st Exhibitor
 		atlexhdgshw.getTotalLinesButton().click();
@@ -347,24 +350,16 @@ public class ExhibitorDigitalShowroom extends base {
 
 		// Verify that user should redirect to the Lines page
 		Assert.assertTrue(atlexhdgshw.getValidateLinesPage().getText().contains("Lines"));
-		System.out.println("All Lines page is displayed properly.");
 		Thread.sleep(6000);
+		Assert.assertTrue(driver.getTitle().contains("{"+exhname+"} Lines"));
 
-		// Get the Total Products count on Products page
+		// Get the Total Lines count on Lines page
 		String linestabtitle = atlexhdgshw.getLinesCountAtLinesPage().getText();
-		String totallinescountonprodpage = linestabtitle.replaceAll("[^0-9]", "");
- 		System.out.println("Total Lines Count on Products page is: " + totallinescountonprodpage);
-
-		//Get back to Exhibitor Showroom page and click any one product and verify if product details are displayed properly
-		atlexhdgshw.getProductsPageBackButton().click();
-		utl.scrollToElement(atlexhdgshw.getLinesSection());
-		String linetext = atlexhdgshw.getLinesOptionText().getText();
-		atlexhdgshw.getLinesOption().click();
-		Assert.assertTrue(atlexhdgshw.getValidateLinesPage().getText().contains(linetext));
-		System.out.println("Line Details are displayed properly.");
-		
+		String totallinescountonlinespage = linestabtitle.replaceAll("[^0-9]", "");
+		System.out.println("Total Lines Count on Lines page is: " + totallinescountonlinespage);
+		Assert.assertTrue(totallinescountonlinespage.contains(totallinescountondgtab));
 	}
-	
+
 	@Test(priority = 6)
 	public void TS006_VerifyClickOnProductShownLinkForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -376,7 +371,7 @@ public class ExhibitorDigitalShowroom extends base {
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
+
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput"))); 
 		atlgs.getATLSearchButton().click();
 
@@ -384,7 +379,7 @@ public class ExhibitorDigitalShowroom extends base {
 		// Store the 1st Exhibitor name in String variable
 		exhname = atlexhact.getExhibitorName().getText();
 		System.out.println("Exhibitor name: " + exhname);
-		
+
 		// Get the Total Products count on Search grid
 		atlexhdgshw.getExhibitorName().click();
 		Thread.sleep(5000);
@@ -418,7 +413,6 @@ public class ExhibitorDigitalShowroom extends base {
 		Thread.sleep(5000);
 		Assert.assertTrue(producttext.contains(atlexhdgshw.getValidateLinesPage().getText()));
 		System.out.println("Product Details are displayed properly.");
-
 	}
 	
 	@Test(priority = 7)
