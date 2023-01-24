@@ -279,8 +279,8 @@ public class GlobalSearch_SearchFor extends base {
 		atlexhact.getleftPaneFilterDGShowroomCatalog().click();
 		Thread.sleep(3000);
 		//Store Catalog name
-		String catalogName = atlgs.getFirstCatalogName().getText();
-		System.out.println(catalogName);
+		/*String catalogName = atlgs.getFirstCatalogName().getText();
+		System.out.println(catalogName);*/
 		//click on 1st Exhibitor
 		atlgs.getatl1STExhiName().click();
 		Thread.sleep(3000);
@@ -293,7 +293,10 @@ public class GlobalSearch_SearchFor extends base {
 		// Store the current window handle
 		String winHandleBefore = driver.getWindowHandle();
 		//Click on Catalog
-		atlexhact.getCatalogsItem().click();
+		String catalogName = atlgs.FirstCatalogNamePROD().getText();
+		System.out.println(catalogName);
+		//atlexhact.getCatalogsItem().click();
+		atlgs.FirstCatalogNamePROD().click();
 		for (String winHandle : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle);
 		}
