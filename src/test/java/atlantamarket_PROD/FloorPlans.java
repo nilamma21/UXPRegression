@@ -390,7 +390,7 @@ public class FloorPlans extends base {
 
 		//Scroll Down to Exhibitor list
 		utl.scrollToElement(atlflpp.getATLNextFloorBtn());
-
+	Thread.sleep(6000);
 		//Stored 1st Exhibitor Name
 		String exhibitorName=atlflpp.getatlExhibitorNamePROD().getText();
 		System.out.println("Exhi Name: "+exhibitorName);
