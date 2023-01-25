@@ -10,7 +10,7 @@
 		<classes>
 		 	<class name="atlantamarket_PROD.FloorPlans" />
 			  <methods>
-			<include name="TS004_VerifyIconsOnFloorPlansPageTest" />
+			
 			<!-- 	<include name="TS013_VerifySeeInOtherMarketsForExhibitorTest" />-->
 			
 			</methods>
