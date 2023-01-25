@@ -280,7 +280,7 @@ public class GlobalSearch_ProductActions extends base {
 		}
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 6)
 	public void TS004_VerifyAddToFavoriteOnProductDetailsPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T385: Add to Favorite functionality on Product Details page
@@ -425,7 +425,7 @@ public class GlobalSearch_ProductActions extends base {
 		atlexhact.getDeleteNoteBtn().click();
 	}
 
-	@Test(priority = 6)
+	@Test(priority = 4)
 	public void TS006_VerifyProductAddToExistingListOnSearchResultsGridTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T377: Products Actions: + icon to add to existing list
