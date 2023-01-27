@@ -12,6 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -133,8 +134,7 @@ public class FloorPlans extends base {
 		//Assert.assertTrue(atlflpp.getATLLoadingExhMsg().isDisplayed());
 
 		//Verify that No Exhibitor msg should be displayed
-		Assert.assertTrue(atlflpp.getatlLoadingNoExhiMsg().isDisplayed());
-		Assert.assertTrue(atlflpp.getatlLoadingNoExhiMsg().isDisplayed());
+		Assert.assertTrue(atlflpp.getATLNoExpMsg().isDisplayed());
 	}
 
 	@Test(priority = 3)
@@ -185,7 +185,7 @@ public class FloorPlans extends base {
 		Assert.assertNotEquals(x1, out);
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 4)
 	public void TS004_VerifyIconsOnFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to:-
 		// UXP-T289: To verify Floor Plans: Icons
@@ -195,7 +195,6 @@ public class FloorPlans extends base {
 		utl = new Utility(driver);
 		atlflpp=new ATLFloorPlansPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
-		atlgs = new ATLGlobalSearchPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
@@ -207,13 +206,13 @@ public class FloorPlans extends base {
 
 		//click on any floor
 		atlflpp.getATLBuildingFloor().click();
-		Thread.sleep(5000);
+
 		//Click on Vending Machine icon on Map image
 		atlflpp.getVendingMachineIconOnMap().click();
-		Thread.sleep(5000);
+
 		//Verify that Vending Machine Overlay should appeared on Map
 		Assert.assertTrue(atlflpp.getVendingMachineOverlayOnMap().isDisplayed());
-		Thread.sleep(5000);
+
 		//Click on Elevator icon on Map image
 		atlflpp.getElevatorIconOnMap().click();
 
@@ -253,10 +252,10 @@ public class FloorPlans extends base {
 		//Verify the Exhibitor name on Exh Digital Showroom
 		Thread.sleep(10000);
 		Assert.assertTrue(driver.getTitle().contains(""+exhnameondetailsmodal+" at Atlanta Market"));
-		Assert.assertTrue(atlgs.getinfoTitleOnSeeDetailsPage().getText().contains(exhnameondetailsmodal));
+		Assert.assertTrue(atlexhdgshw.getExhibitorNameOnExhDirectImg().getText().contains(exhnameondetailsmodal));
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 5)
 	public void TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T290: To verify Floor Plans: Filter
@@ -374,7 +373,6 @@ public class FloorPlans extends base {
 		lp = new ATLLoginPage(driver);
 		utl = new Utility(driver);
 		atlflpp=new ATLFloorPlansPage(driver);
-		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -390,27 +388,19 @@ public class FloorPlans extends base {
 
 		//Scroll Down to Exhibitor list
 		utl.scrollToElement(atlflpp.getATLNextFloorBtn());
-	Thread.sleep(6000);
+
 		//Stored 1st Exhibitor Name
-		String exhibitorName=atlflpp.getatlExhibitorNamePROD().getText();
+		String exhibitorName=atlflpp.getATLExhibitorName().getText();
 		System.out.println("Exhi Name: "+exhibitorName);
 
 		//Click on 1st Exhibitor
-		atlflpp.getatlExhibitorNamePROD().click();
+		atlflpp.getATLExhibitorName().click();
 
 		Thread.sleep(12000);
 		// Verify that Selected Exhibitor Digital Showroom page should be opened
-		//Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
-		//Verify Selected Exhibitor title
-
-		//Assert.assertTrue(driver.getTitle().contains(""+exhibitorName+" at Atlanta Market"));
-		//Verify Selected Exhibitor Name
-		//Assert.assertTrue(atlexhdgshw.getExhibitorNameOnExhDirectImg().getText().contains(exhibitorName));
-
+		Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
 		Assert.assertTrue(driver.getTitle().contains(""+exhibitorName+" at Atlanta Market"));
-		//Verify Selected Exhibitor Name
 		Assert.assertTrue(atlexhdgshw.getExhibitorNameOnExhDirectImg().getText().contains(exhibitorName));
-
 	}
 
 	@Test(priority = 8)
@@ -499,7 +489,8 @@ public class FloorPlans extends base {
 		atlflpp.getATLBuildingFloor().click();
 
 		// Scroll Down to Exhibitor list
-		utl.scrollToElement(atlflpp.getATLSelectBox());
+		//utl.scrollToElement(atlflpp.getATLSelectBox());
+		utl.scrollToElement(atlflpp.getATLNextFloorBtn());
 		Thread.sleep(15000);
 
 		// 1st Exhibitor Name
@@ -507,7 +498,6 @@ public class FloorPlans extends base {
 		System.out.println("Exhibitor Name : " +exhnameonfloorplan );
 		// Click on More option 3dots
 		atlflpp.getATLMoreOptions().click();
-		Thread.sleep(2000);
 	
 		// Click on Add To List
 		atlflpp.getATLAddToList().click();
@@ -567,8 +557,10 @@ public class FloorPlans extends base {
 		// click on Exhibitor floor
 		atlflpp.getATLBuildingFloor().click();
 		// Scroll Down to Exhibitor list
-		utl.scrollToElement(atlflpp.getATLSelectBox());
-
+		//utl.scrollToElement(atlflpp.getATLSelectBox());
+		utl.scrollToElement(atlflpp.getATLNextFloorBtn());
+		Thread.sleep(15000);
+		
 		// 1st Exhibitor Name
 		String exhibitorName = atlflpp.getATLExhibitorName().getText();
 		System.out.println("Exhibitor Name : " + exhibitorName);
@@ -636,6 +628,7 @@ public class FloorPlans extends base {
 
 		// Scroll Down to Exhibitor list
 		utl.scrollToElement(atlflpp.getatlserachexhibitorbtn());
+		Thread.sleep(15000);
 
 		// 1st Exhibitor Name
 		String exhibitorName = atlflpp.getATLExhibitorName().getText();
@@ -668,10 +661,10 @@ public class FloorPlans extends base {
 			Assert.assertFalse(favlist.get(i).getText().contains(exhibitorName));
 		}
 	}
-	/*@AfterClass
+	@AfterClass
 	public void tearDown()
 	{
 		driver.quit();
-	}*/
+	}
 
 }
