@@ -16,7 +16,7 @@ public class ATLExhDigiShowroomPage {
 	By atlvalidateexhdigishowpage = By.xpath("//img[@class='imc-image--responsive align-image-content imc-content--full-width imc-exhibitors--directory-image']"); // Locator to validate Exhibitor Digital Showroom page
 	By lvmvalidateexhdigishowpage_uat = By.xpath("//div[@class='imc-gallery__item']"); // Locator to validate Exhibitor Digital Showroom page
 	By atlvalidateexhdigishowpage_lvmUAT = By.xpath("//img[@class='imc-exhibitors--detail-image']"); // Locator to validate Exhibitor Digital Showroom page LVM UAT
-	By exhibitornameonexhdirectimg = By.xpath("//span[@class='imc-heading imc-heading--giga-desktop imc-vr--medium imc-content--inline-block']"); //Locator for Exhibitor name on Exhibitor Directory image
+	By exhibitornameonexhdirectimg = By.xpath("//span[@class='imc-heading imc-heading--giga-desktop ']"); //Locator for Exhibitor name on Exhibitor Directory image
 	By lvmexhibitornameonexhdirectimg_uat = By.xpath("//span[@class='imc-heading imc-heading--giga-desktop imc-vr--medium imc-content--inline-block']"); //Locator for Exhibitor name on Exhibitor Directory image
 	By exhibitornameonexhdirectimg_lvmUAT = By.xpath("//span[@class='imc-heading imc-heading--giga-desktop imc-vr--medium imc-content--inline-block']"); //Locator for Exhibitor name on Exhibitor Directory image LVM UAT
 	By exhdigishowroompage = By.xpath("//div[@class='imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1 imc-section--divided-bottom']"); //Locator for Exhibitor Digital Showroom page
@@ -42,7 +42,7 @@ public class ATLExhDigiShowroomPage {
 	By SaveNoteOKButton = By.xpath("//div[@class = 'imc-content imc-content--right']/button[1]"); //Locator for OK button for save note
 	By Location = By.xpath("//section[@class='imc-site-wrapper']/div[2]/div[1]/div[1]/div[2]/div[1]/span[2]/a[1]"); //Locator for Location symbol at Digital Showroom page
 	By ContactExhibitor = By.xpath("//div[@class = 'contact-exhibitor-wrapper']/button[1]"); //Locator for Contact Exhibitor button
-	By ProductSection = By.xpath("//div[@class = 'imc-content--display-flex-wrap']/span[text()='Products']"); //Locator for Product section in Exhibitor Digital Showroom
+	By ProductSection = By.xpath("//div[@class = 'imc-content--display-flex-wrap']/span[contains(text(),'Products Shown')]"); //Locator for Product section in Exhibitor Digital Showroom
 	By AllProductsButton = By.xpath("//a[@class = 'imc-content--inline-block imc-button imc-button--primary-inverted imc-button--full-bleed-mobile']"); //Locator for See All Products button
 	By ProductsPageBackButton = By.xpath("//button[@class = 'imc-icon-BackArrow imc-button--icon-only imc-button--no-border imc-heading--mega imc-heading--line-height-1 imc-content--display-flex']"); //Locator for Back arrow at Products page
 	By ProductsList = By.xpath("//div[@class = 'imc-products-overview--gallery']/div[1]"); //Locator for first product in Product List at Exhibitor Digital Showroom
@@ -96,7 +96,6 @@ public class ATLExhDigiShowroomPage {
 	By closeBtnContactExh = By.xpath("//button[@class='imc-modal--close imc-button--modal-close imc-button--round']"); ////Locator for Closse Btn
 	By linesshowntextonsearchgrid = By.xpath("(//div[@class='imc-exhibitorcard-title-row'])[1]/div[1]/div[1]/p"); //Locator for Line shown text on Search grid
 	By linesshownseealllink = By.xpath("(//div[@class='imc-exhibitorcard-title-row'])[1]/div[1]/div[1]/a"); //Locator for Lines shown-see all link
-	
 	
 	public ATLExhDigiShowroomPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -462,7 +461,6 @@ public class ATLExhDigiShowroomPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(SelectCatalog));
 		return driver.findElement(SelectCatalog);
 	}
-
 	public WebElement getLinesShownTxtOnSearchGrid() {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(linesshowntextonsearchgrid));
@@ -473,7 +471,6 @@ public class ATLExhDigiShowroomPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(linesshownseealllink));
 		return driver.findElement(linesshownseealllink);
 	}
-	
 }
 
 
