@@ -72,7 +72,7 @@ public class GlobalSearch_SearchFor extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearchinputforInfoTab"));
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearchinputforInformation"));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(5000);
 
@@ -80,20 +80,17 @@ public class GlobalSearch_SearchFor extends base {
 		atlgs.getATLsearchresultInfoLink().click();
 		Thread.sleep(2000);
 		
-		String infoTitle=atlgs.infoTitle().getText();
-
-		Assert.assertTrue(atlgs.getATLSearchResult().getText().contains(prop.getProperty("globalsearchinputforInfoTab")));
-
-		String seeMoreDetailsURL=atlgs.getatlInfoSearchMoreInfoBtn().getAttribute("href");
 		
-		
+
+		Assert.assertTrue(atlgs.getATLSearchResult().getText().contains(prop.getProperty("globalsearchinputforInformation")));
+
+		String seeMoreDetailsURL=atlgs.getATLInfoSearchJuniperMarketBtn().getAttribute("href");
 		// Click on See More details Btn from result
-		atlgs.getatlInfoSearchMoreInfoBtn().click();
-		Thread.sleep(2000);
+		atlgs.getATLInfoSearchJuniperMarketBtn().click();
+		
 
 		// Verify Juniper Market Page
-		//Assert.assertTrue(driver.getCurrentUrl().contains(seeMoreDetailsURL));
-		Assert.assertTrue(driver.getTitle().contains(infoTitle));
+		Assert.assertTrue(driver.getCurrentUrl().contains(seeMoreDetailsURL));
 		
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		Thread.sleep(5000);
@@ -120,7 +117,6 @@ public class GlobalSearch_SearchFor extends base {
 		atlgs.getATLsearchresultInfoLink().click();
 		Thread.sleep(2000);
 		String FirstInfoName=atlgs.getFirstInfoName().getText();
-		atlgs.getATLInfosearchtxtbx().clear();
 		atlgs.getATLInfosearchtxtbx().sendKeys(FirstInfoName);
 		atlgs.getATLInfosearchbtn().click();
 		Thread.sleep(2000);
@@ -132,14 +128,13 @@ public class GlobalSearch_SearchFor extends base {
 		Assert.assertTrue(FirstInfoName.contains(searchName));
 
 		
-		String seeMoreDetailsURL=atlgs.getatlInfoSearchMoreInfoBtn().getAttribute("href");
+		String seeMoreDetailsURL=atlgs.getATLInfoSearchJuniperMarketBtn().getAttribute("href");
 		// Click on See More details Btn from result
-		atlgs.getatlInfoSearchMoreInfoBtn().click();
-		Thread.sleep(5000);
-		System.out.println(FirstInfoName);
-		// Verify Juniper Market Page
-		Assert.assertTrue(atlgs.getinfoTitleOnSeeDetailsPage().getText().equalsIgnoreCase(FirstInfoName));
+		atlgs.getATLInfoSearchJuniperMarketBtn().click();
 		
+
+		// Verify Juniper Market Page
+		Assert.assertTrue(driver.getCurrentUrl().contains(seeMoreDetailsURL));
 		
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		Thread.sleep(5000);
@@ -280,8 +275,8 @@ public class GlobalSearch_SearchFor extends base {
 		atlexhact.getleftPaneFilterDGShowroomCatalog().click();
 		Thread.sleep(3000);
 		//Store Catalog name
-		/*String catalogName = atlgs.getFirstCatalogName().getText();
-		System.out.println(catalogName);*/
+		String catalogName = atlgs.getFirstCatalogName().getText();
+		System.out.println(catalogName);
 		//click on 1st Exhibitor
 		atlgs.getatl1STExhiName().click();
 		Thread.sleep(3000);
@@ -294,10 +289,7 @@ public class GlobalSearch_SearchFor extends base {
 		// Store the current window handle
 		String winHandleBefore = driver.getWindowHandle();
 		//Click on Catalog
-		String catalogName = atlgs.FirstCatalogNamePROD().getText();
-		System.out.println(catalogName);
-		//atlexhact.getCatalogsItem().click();
-		atlgs.FirstCatalogNamePROD().click();
+		atlexhact.getCatalogsItem().click();
 		for (String winHandle : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle);
 		}
