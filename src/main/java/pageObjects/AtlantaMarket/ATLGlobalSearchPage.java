@@ -104,55 +104,19 @@ public class ATLGlobalSearchPage {
 	By atlShowroomLink = By.xpath("//div[@class='ag-center-cols-container']/div[1]/div[2]/a");  //Locator for Showroom Name
 	By atlGlobalSearchClearTxt = By.xpath("//div[@class='imc-header-subnav']/div[1]/div[1]/section[1]/div[1]/form[1]/button[1]");  //Locator for Showroom Name
 	
-	By atlShowSpecialsExhNamePROD = By.xpath("//div[@class='imc-gallery imc-gallery--align-flex-start imc-gallery--1-4 imc-vr--collosal imc-fprod-cont imc-specials-list']/div[1]/div[1]/a[2]");  //Locator for Show Secials Name
+	By atlShowSpecialsExhNamePROD = By.xpath("(//div[@class='imc-showSpecial--tableContainer'])[1]/p[2]");  //Locator for Show Secials Name
 	By atlSelectList = By.xpath("//select[@name='Saved Searches']");  //Locator for Show Secials Name
 	By atlClosePopup = By.xpath("//div[@class=' contact-exit']");  //Locator for Show Secials Name
 	By FirstInfoName = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/h2[1]");  //Locator for Show Secials Name
 	By FirstEventName = By.xpath("//div[@class='imc-vr--xxlarge imc-margin--top--large--mobile']/div[1]/div[1]/span[1]");  //Locator for 1st name of Event
 	By seeAllLinkMatchingProduct = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[2]/div[1]/div[1]/p[2]");  //Locator for 1st name of Event
 	By FirstCatalogName = By.xpath("(//div[@class='imc-exhibitorcard-products-row imc-content--display-flex-space-between-mobile '])[1]/div[2]/p[1]");  //Locator for 1st name of Catalog
-	By FirstShowSpecialName = By.xpath("(//div[@class='imc-showSpecial--tableContainer']/p[1])[1]");  //Locator for 1st name of Catalog
-	By FirstShowSpecialViewBrandDetailsBtn = By.xpath("(//a[@class='imc-showSpecial--link'])[1]");  //Locator for 1st name of Catalog
-	By infoTitleOnSeeDetailsPage = By.xpath("//div[@class='imc-gallery imc-gallery--65-35 breadcrumbs__round']//ul//li[3]/a[1]");  //Locator for 1st name of Catalog
-	By infoTitle = By.xpath("//div[@class='imc-informationcard__body']/p[2]");  //Locator for 1st name of Catalog
-	By FirstCatalogNamePROD = By.xpath("//div[@class='imc-gallery imc-vr--collosal imc-gallery--justify-left imc-catalog']/div[1]/div/a/div//span/span");  //Locator for 1st name of Catalog
-	
-	
+	By viewbranddetailslink = By.xpath("(//div[@col-id='viewDetails'])[2]"); //Locator for View Brand details link of 1st Show Special
 	
 	public ATLGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 		PageFactory.initElements(driver, this);
-	}
-	public WebElement FirstCatalogNamePROD() {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(FirstCatalogNamePROD));
-		return driver.findElement(FirstCatalogNamePROD);
-	}
-	public WebElement infoTitle() {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(infoTitle));
-		return driver.findElement(infoTitle);
-	}
-	public WebElement getinfoTitleOnSeeDetailsPage() {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(infoTitleOnSeeDetailsPage));
-		return driver.findElement(infoTitleOnSeeDetailsPage);
-	}
-	public WebElement getatlInfoSearchMoreInfoBtn() {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlInfoSearchMoreInfoBtn));
-		return driver.findElement(atlInfoSearchMoreInfoBtn);
-	}
-	public WebElement getFirstShowSpecialViewBrandDetailsBtn() {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(FirstShowSpecialViewBrandDetailsBtn));
-		return driver.findElement(FirstShowSpecialViewBrandDetailsBtn);
-	}
-	public WebElement getFirstShowSpecialName() {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(FirstShowSpecialName));
-		return driver.findElement(FirstShowSpecialName);
 	}
 	public WebElement getFirstCatalogName() {
 		wait = new WebDriverWait (driver,20);
@@ -594,9 +558,10 @@ public class ATLGlobalSearchPage {
 	public WebElement getBuyingEventType() {
 		return driver.findElement(buyingeventtypefilter);
 	}
-	
+	public WebElement getViewBrandDetailsLink() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(viewbranddetailslink));
+		return driver.findElement(viewbranddetailslink);
+	}
 	
 }
-
-
-
