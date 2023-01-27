@@ -60,7 +60,7 @@ public class GlobalSearch_ShowSpecials extends base  {
 		
 	}
 	@Test(priority = 1)
-	public void TS001_VerifyShowSpecialsLinksExhibitorNameTest()
+	public void TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T381: Show Specials: Links - Exhibitor Name
@@ -102,7 +102,7 @@ public class GlobalSearch_ShowSpecials extends base  {
 		
 	}
 	@Test(priority = 2)
-	public void TS002_VerifyShowSpecialsLinksShowroomTest()
+	public void TS002_VerifyShowroomLinkForShowSpecialsTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T382: Show Specials: Links - Showroom
