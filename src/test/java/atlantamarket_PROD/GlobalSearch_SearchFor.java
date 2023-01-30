@@ -105,7 +105,7 @@ public class GlobalSearch_SearchFor extends base {
 		// The purpose of this test case to verify:-
 		// T439: Global Search- Search for: Information - Search box
 
-		atlgs = new ATLGlobalSearchPage(driver);
+		/*atlgs = new ATLGlobalSearchPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
@@ -141,6 +141,50 @@ public class GlobalSearch_SearchFor extends base {
 		
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		Thread.sleep(5000);
+
+
+	*/
+
+
+	atlgs = new ATLGlobalSearchPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		utl = new Utility(driver);
+		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		utl.ClearGlobalSearch();
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
+		atlgs.getATLSearchButton().click();
+		Thread.sleep(5000);
+
+		// Click on Info link
+		atlgs.getATLsearchresultInfoLink().click();
+		Thread.sleep(2000);
+		String FirstInfoName=atlgs.getFirstInfoName().getText();
+		atlgs.getATLInfosearchtxtbx().clear();
+		atlgs.getATLInfosearchtxtbx().sendKeys(FirstInfoName);
+		atlgs.getATLInfosearchbtn().click();
+		Thread.sleep(2000);
+		String searchResults=atlgs.getATLSearchResult().getText();
+		Thread.sleep(2000);
+		String searchName=searchResults.split(" ")[5].trim();
+		Thread.sleep(5000);
+		System.out.println(searchName);
+		Assert.assertTrue(FirstInfoName.contains(searchName));
+
+		
+		String seeMoreDetailsURL=atlgs.getatlInfoSearchMoreInfoBtn().getAttribute("href");
+		// Click on See More details Btn from result
+		atlgs.getatlInfoSearchMoreInfoBtn().click();
+		Thread.sleep(5000);
+		System.out.println(FirstInfoName);
+		// Verify Juniper Market Page
+		Assert.assertTrue(atlgs.getinfoTitleOnSeeDetailsPage().getText().equalsIgnoreCase(FirstInfoName));
+		
+		
+		driver.get(prop.getProperty("atlmrkturl_prod"));
+		Thread.sleep(5000);
+
 	}
 
 	@Test(priority = 3)
