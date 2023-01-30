@@ -6,31 +6,12 @@
 		<listner class-name="lasvegasmarket_PROD.TestListeners" />
 	</listners>
 
-	<test thread-count="5" name="RegressionTest">
+	<test thread-count="5" name="RegressionTest">1
 		<classes>
 
-			<class name="atlantamarket_PROD.EvenntsAndWebinar" />
+			<class name="lasvegasmarket_UAT.ExhibitorDigitalShowroom" />
 			<methods>
-			
-				  <!-- <include name="TS011_VerifyExhibitorEventsListTest" /> -->
-				 <!--<include name="TS012_VerifyExhibitorEventsDetailstTest" /> 
-				 <include name="TS013_VerifyExhibitorEventsAddToFavoriteTest" /> 
-				 <include name="TS014_VerifyExhibitorEventsAddToListTest" />
-				 <include name="TS015_VerifyExhibitorEventsAddNoteTest" />  --> 
-
-			<!-- <class name="atlantamarket_PROD.MarketPlanner" />
-			<methods> -->
-		<!-- 	<include name="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest" /> 
-				<include name="TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest" /> -->
-				
-				<!-- <include name="TS011_VerifyEventsOverviewInGlobalSearchTest" /> --> 
-				
-				<!--  <include name="TS004_VerifyAddToNewListForLineTest" />   -->
-				<!--  <include name="TS007_VerifyGlobalSearchMatchingResultsSelectAddToNewlyCreatedListTest" />   -->
-				<!-- <include name="TS045_VerifyAddToListFunctionalityUsingQuickAddTest" /> -->
-				
-				
-
+				  <!--  <include name="TS008_VerifyLineDigitalShowroomProductscomponentTest"/>  -->
 			</methods>
 		</classes>
 	</test>
@@ -49,7 +30,6 @@
 			<include name="TS003_VerifyGlobalSearchMatchingResultsSortSortByTest" /> 
 				<include name="TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest" />
 				<include name="TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest" />
-				
 				
 			</methods>
 		</classes>

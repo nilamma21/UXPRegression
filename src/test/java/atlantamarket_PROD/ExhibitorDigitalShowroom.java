@@ -238,6 +238,7 @@ public class ExhibitorDigitalShowroom extends base {
 		genData = new GenerateData();
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		lap.getIUnderstandBtn().click();
 		Thread.sleep(10000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor1")));
 		atlgs.getATLSearchButton().click();
@@ -308,9 +309,7 @@ public class ExhibitorDigitalShowroom extends base {
 		Assert.assertTrue(locationlink.equals(driver.getCurrentUrl()));
 		System.out.println("Locations page is displayed properly.");
 		driver.close();
-		driver.switchTo().window(winHandleBefore);
-
-		
+		driver.switchTo().window(winHandleBefore);	
 	}
 	
 	@Test(priority = 5)

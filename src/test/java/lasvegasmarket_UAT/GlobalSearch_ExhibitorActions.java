@@ -146,10 +146,10 @@ public class GlobalSearch_ExhibitorActions extends base {
 
 		// Scroll till Create button
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",
-				atlmppge.getNewListModalCreateBtn());
+				atlmppge.getNewlistmodalcreatebtn_LvmUAT());
 
 		// Click on Create button
-		atlmppge.getNewListModalCreateBtn().click();
+		atlmppge.getNewlistmodalcreatebtn_LvmUAT().click();
 		// Click on Go to Market Planner button
 		atlmppge.getGoToMarketPlannerBtn().click();
 
@@ -233,7 +233,8 @@ public class GlobalSearch_ExhibitorActions extends base {
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 
 		// Delete that added exhibitor from list
-		atlmppge.getATLEditListItemMoreBtn().click();
+		//atlmppge.getATLEditListItemMoreBtn().click(); //Old btn not working
+		atlmppge.getATLEditListItemMoreBtnNew().click(); // new btn
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(8000);
 
@@ -347,7 +348,9 @@ public class GlobalSearch_ExhibitorActions extends base {
 		Thread.sleep(15000);
 		// Verify that user should redirect to the Lines page
 		Assert.assertTrue(atlexhact.getValidateLinesPage().isDisplayed());
-		Assert.assertTrue(driver.getTitle().contains("{"+exhname+"} Lines"));
+		System.out.println(driver.getTitle());
+		//Assert.assertTrue(driver.getTitle().contains("{"+exhname+"} Lines")); //Old assertion
+		Assert.assertTrue(driver.getTitle().contains(exhname +" Lines")); //New assertion statement
 	}
 
 	@Test(priority = 7)
@@ -359,9 +362,8 @@ public class GlobalSearch_ExhibitorActions extends base {
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		lap = new ATLLandingPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 		
@@ -375,11 +377,13 @@ public class GlobalSearch_ExhibitorActions extends base {
 
 		// Get the Total Products count on Search grid
 		String temp = atlexhact.getTotalProdCountOnSearchGrid().getText();
+		
 		String totalprodcountonsearchgrid = temp.replaceAll("[^0-9]", "");
 		System.out.println("Total Products Count on Search Results grid is: " + totalprodcountonsearchgrid);
 
 		// Click on Total Products-See All link for 1st Exhibitor
-		atlexhact.getTotalProdSeeAllLink().click();
+		atlexhact.getTotalProdSeeAllLink().click(); 
+		 
 		Thread.sleep(6000);
 
 		// Verify that user should redirect to the Products page
@@ -405,10 +409,9 @@ public class GlobalSearch_ExhibitorActions extends base {
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		lap = new ATLLandingPage(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
@@ -442,7 +445,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		Assert.assertEquals(matchingprodcountonsearchgrid, matchingprodcountonprodpage);
 	}
 
-	@Test(priority = 9)
+	@Test(priority = 11)//old priority 9
 	public void TS009_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -452,10 +455,9 @@ public class GlobalSearch_ExhibitorActions extends base {
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		lap = new ATLLandingPage(driver);
 		genData = new GenerateData();
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
@@ -488,11 +490,11 @@ public class GlobalSearch_ExhibitorActions extends base {
 		atlexhact.getNoteContentTxtBx().sendKeys("TestNote" + genData.generateRandomString(6));
 		// Click on 'Save' button
 		atlexhact.getNoteSaveBtn().click();
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 
 		// Click on 'Add Note' icon for the same exhibitor
 		atlexhact.getMatchingProdAddNoteIcon().click();
-		Thread.sleep(4000);
+		Thread.sleep(5000);
 
 		// Click on 'View all Notes for an Exhibitor' link on Add Notes pop-up
 		atlexhact.getViewAllNotesLink().click();
@@ -530,7 +532,6 @@ public class GlobalSearch_ExhibitorActions extends base {
 		lap = new ATLLandingPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
 		driver.get(prop.getProperty("lvmurl_uat"));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();

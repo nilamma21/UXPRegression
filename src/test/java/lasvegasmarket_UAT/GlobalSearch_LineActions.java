@@ -328,7 +328,8 @@ public class GlobalSearch_LineActions extends base {
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 
 		// Delete that added line from list
-		atlmppge.getATLEditListItemMoreBtn().click();
+		//atlmppge.getATLEditListItemMoreBtn().click(); //Old 
+		atlmppge.getATLEditListItemMoreBtnNew().click(); //New
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(8000);
 	}
@@ -504,6 +505,6 @@ public class GlobalSearch_LineActions extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 }

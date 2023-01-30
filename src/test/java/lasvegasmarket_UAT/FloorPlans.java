@@ -280,10 +280,10 @@ public class FloorPlans extends base {
 
 		//Click on Building floorr
 		atlflpp.getATLBuildingFloorForFilter().click();
-
+		Thread.sleep(5000);
 		//Scroll Down to Exhibitor list
 		utl.scrollToElement(atlflpp.getATLSelectBox());
-		Thread.sleep(10000);
+		Thread.sleep(7000);
 		
 		//Create current Exhibitor list without sort
 		List<String> currentList=new ArrayList<String>();
@@ -674,7 +674,7 @@ public class FloorPlans extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 
 }
