@@ -417,7 +417,7 @@ public class Utility extends base {
 		lp = new ATLLoginPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
 		atlgs=new ATLGlobalSearchPage(driver);
-		
+
 		if (!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
@@ -425,24 +425,24 @@ public class Utility extends base {
 
 	public void CloseATLPopup() throws IOException, InterruptedException {
 		lap = new ATLLandingPage(driver);
-		
+
 		try {
 			lap.getCloseMarktAdBtn().click();
-			
+
 		}catch(Exception e)
 		{
 			e.printStackTrace();
 		}
-		
+
 	}
 	public void clickOnEventLinkOfChannel() throws InterruptedException {
-		
+
 
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
 		atlevents=new ATLEventsAndWebinarPage(driver);
-		
+
 		if(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_prod"))) {
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			// Click on Attend Tab
@@ -461,12 +461,59 @@ public class Utility extends base {
 			atlevents.getatlEventsLink().click();
 			Thread.sleep(3000);
 		}
-	
+
 	}
 
-	
 	public void clickOnEventLinkOfChannelLVM() throws InterruptedException {
 
+
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+
+		lvmmpp = new LVMMarketPlannerPage(driver);
+		lvmevents=new LVMEventsAndWebinarPage(driver);
+
+		if(driver.getCurrentUrl().contains(prop.getProperty("lvmurl_uat"))) {
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			// Click on Attend Tab
+			Thread.sleep(2000);
+			lvmevents.getlvmExploreMarketTab().click();
+			Thread.sleep(2000);
+			//click on Events Link
+			lvmevents.getlvmEventsLink().click();
+
+			atlmppge = new ATLMarketPlannerPage(driver);
+			atlevents=new ATLEventsAndWebinarPage(driver);
+
+			if(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_uat"))) {
+				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				// Click on Attend Tab
+				atlevents.getatlAttendTab().click();
+				Thread.sleep(2000);
+				//click on Events Link
+				atlevents.getatlEventsLink().click();
+
+				Thread.sleep(3000);
+			}
+			else {
+				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+				lvmevents.getlvmAttendTab().click();  //For LVM Events  
+				Thread.sleep(2000);
+				//click on Events Link
+				lvmevents.getlvmEventsLink().click();
+
+				atlevents.getatlExploreMarketTab().click();  //For LVM Events
+				Thread.sleep(2000);
+				//click on Events Link
+				atlevents.getatlEventsLink().click();
+
+				Thread.sleep(3000);
+			}
+		}
+	}
+	
 public void clickOnEventLinkOfChannel_UAT() throws InterruptedException {
 
 		
@@ -516,8 +563,6 @@ public void clickOnEventLinkOfChannel_UAT() throws InterruptedException {
 		}
 	
 	}
-
-	
 
 }
 

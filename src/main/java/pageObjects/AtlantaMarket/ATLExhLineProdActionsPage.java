@@ -83,10 +83,6 @@ public class ATLExhLineProdActionsPage extends base{
 	By totalprodcountonsearchgridnew = By.xpath("//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div[2]/div[2]/div/div/p[1]");
 	By totalprodseealllinknew = By.xpath("//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div[2]/div[2]/div/div/p[2]");
 	By exhproductnameonsearchgridnew = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]/h2");
-	
->>>>>>> c3bab41ee6649ba7028fd86608c705ebc3932aaa
-	
-			
 			
 	
 	public ATLExhLineProdActionsPage(WebDriver driver) {
@@ -391,7 +387,7 @@ public class ATLExhLineProdActionsPage extends base{
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(secondexhprodseedetailsbtn));
 		return driver.findElement(secondexhprodseedetailsbtn);
-
+	}
 	public WebElement getTotalProdCountOnSearchGridNew() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(totalprodcountonsearchgridnew));
