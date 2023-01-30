@@ -112,7 +112,7 @@ public class GlobalSearch_SearchFor extends base {
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		utl.ClearGlobalSearch();
-		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearchinputforInfoTab"));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(5000);
 
@@ -120,7 +120,6 @@ public class GlobalSearch_SearchFor extends base {
 		atlgs.getATLsearchresultInfoLink().click();
 		Thread.sleep(2000);
 		String FirstInfoName=atlgs.getFirstInfoName().getText();
-		atlgs.getATLInfosearchtxtbx().clear();
 		atlgs.getATLInfosearchtxtbx().sendKeys(FirstInfoName);
 		atlgs.getATLInfosearchbtn().click();
 		Thread.sleep(2000);
@@ -132,14 +131,13 @@ public class GlobalSearch_SearchFor extends base {
 		Assert.assertTrue(FirstInfoName.contains(searchName));
 
 		
-		String seeMoreDetailsURL=atlgs.getatlInfoSearchMoreInfoBtn().getAttribute("href");
+		String seeMoreDetailsURL=atlgs.getATLInfoSearchJuniperMarketBtn().getAttribute("href");
 		// Click on See More details Btn from result
-		atlgs.getatlInfoSearchMoreInfoBtn().click();
-		Thread.sleep(5000);
-		System.out.println(FirstInfoName);
-		// Verify Juniper Market Page
-		Assert.assertTrue(atlgs.getinfoTitleOnSeeDetailsPage().getText().equalsIgnoreCase(FirstInfoName));
+		atlgs.getATLInfoSearchJuniperMarketBtn().click();
 		
+
+		// Verify Juniper Market Page
+		Assert.assertTrue(driver.getCurrentUrl().contains(seeMoreDetailsURL));
 		
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		Thread.sleep(5000);
