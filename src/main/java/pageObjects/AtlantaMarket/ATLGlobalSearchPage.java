@@ -113,11 +113,17 @@ public class ATLGlobalSearchPage {
 	By FirstCatalogName = By.xpath("(//div[@class='imc-exhibitorcard-products-row imc-content--display-flex-space-between-mobile '])[1]/div[2]/p[1]");  //Locator for 1st name of Catalog
 	By viewbranddetailslink = By.xpath("(//div[@col-id='viewDetails'])[2]"); //Locator for View Brand details link of 1st Show Special
 	By infoTitle = By.xpath("//div[@class='imc-informationcard__body']/p[2]");  //Locator for 1st name of Catalog
+	By infoTitleOnSeeDetailsPage = By.xpath("//div[@class='imc-gallery imc-gallery--65-35 breadcrumbs__round']//ul//li[3]/a[1]");  //Locator for 1st name of Catalog
 	
 	public ATLGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 		PageFactory.initElements(driver, this);
+	}
+		public WebElement getinfoTitleOnSeeDetailsPage() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(infoTitleOnSeeDetailsPage));
+		return driver.findElement(infoTitleOnSeeDetailsPage);
 	}	
 		public WebElement infoTitle() {
 		wait = new WebDriverWait (driver,20);
