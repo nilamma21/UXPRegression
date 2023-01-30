@@ -6,8 +6,13 @@
 		<listner class-name="atlantamarket_UAT.TestListeners" />
 	</listners>
 
-	<test thread-count="5" name="RegressionTest">
+	<test thread-count="5" name="RegressionTest">1
 		<classes>
+
+
+			<class name="lasvegasmarket_UAT.ExhibitorDigitalShowroom" />
+			<methods>
+				  <!--  <include name="TS008_VerifyLineDigitalShowroomProductscomponentTest"/>  -->
 
 		<!-- 	<class name="atlantamarket_PROD.EvenntsAndWebinar" />
 			<class name="atlantamarket_PROD.FloorPlans" />
@@ -28,6 +33,7 @@
 					<include name="TS002_VerifyAddToNewListForExhibitorTest" /> -->
 		<!-- <include name="EvenntsAndWebinar" /> -->
 
+
 			</methods>
 		</classes>
 	</test>
@@ -46,7 +52,6 @@
 			<include name="TS003_VerifyGlobalSearchMatchingResultsSortSortByTest" /> 
 				<include name="TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest" />
 				<include name="TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest" />
-				
 				
 			</methods>
 		</classes>
