@@ -76,8 +76,15 @@ public class ATLExhLineProdActionsPage extends base{
 	
 	By prodName = By.xpath("//a[@class='imc-type--title-5-ui']"); //Locator for DG showroom Filter Catalog
 	By prodNameFromDGshhowroomPage = By.xpath("//div[@class = 'imc-content--display-flex-wrap']/span[text()='Products']/../../div[2]/div[1]/div[1]/div[1]/a"); //Locator for DG showroom Prod Name
+
 	By secondexhproduct = By.xpath("//div[@class='imc-vr--xxlarge']/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]"); //Locator for Second exhibitor product
 	By secondexhprodseedetailsbtn = By.xpath("(//div[@class='imc-gallery imc-gallery--80-20 imc-exhibitorcard--gallery-nowrap'])[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/a"); //Locator for Second exhibitor product see details btn
+
+	By totalprodcountonsearchgridnew = By.xpath("//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div[2]/div[2]/div/div/p[1]");
+	By totalprodseealllinknew = By.xpath("//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div[2]/div[2]/div/div/p[2]");
+	By exhproductnameonsearchgridnew = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]/h2");
+	
+>>>>>>> c3bab41ee6649ba7028fd86608c705ebc3932aaa
 	
 			
 			
@@ -374,6 +381,7 @@ public class ATLExhLineProdActionsPage extends base{
 		wait.until(ExpectedConditions.visibilityOfElementLocated(thirdexhname));
 		return driver.findElement(thirdexhname);
 	}
+
 	public WebElement getSecondExhProduct() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(secondexhproduct));
@@ -383,6 +391,21 @@ public class ATLExhLineProdActionsPage extends base{
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(secondexhprodseedetailsbtn));
 		return driver.findElement(secondexhprodseedetailsbtn);
+
+	public WebElement getTotalProdCountOnSearchGridNew() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(totalprodcountonsearchgridnew));
+		return driver.findElement(totalprodcountonsearchgridnew);
+	}
+	public WebElement getTotalProdSeeAllLinkNew() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(totalprodseealllinknew));
+		return driver.findElement(totalprodseealllinknew);
+	}
+	public WebElement getExhProductNameOnSearchGridNew() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(exhproductnameonsearchgridnew));
+		return driver.findElement(exhproductnameonsearchgridnew);
 	}
 }
 

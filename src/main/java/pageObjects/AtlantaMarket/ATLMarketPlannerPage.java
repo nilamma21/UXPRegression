@@ -20,7 +20,7 @@ public class ATLMarketPlannerPage {
 	By lvmsavedexhnameinlist_uat = By.xpath("//li[@class='imc-list-edit--draggable'][1]/div/div[1]/div[1]/a"); //Locator for Saved Exhibitor name in list
 	By editlistitemmorebtn = By.xpath("//div[@class='imc-loading-relative']"); //Locator for More button of  list item
 	By moreBtnDeleteOptnExistingList_ATLPROD = By.xpath("//div[@class='imc-loading-relative']/div[3]/li[1]/div[1]/div[1]/div[4]/div[1]/button[1]"); //Locator for Delete Option of 1st list item
-	
+	By editlistitemmorebtnnew = By.xpath("//button[@class='imc-hover-menu__dropbtn imc-content--delta']");
 	By moreBtnDeleteOptn_ATLPROD = By.xpath("//div[@class='imc-gallery__item imc-vertical-tabs-content']/div[1]/div[3]/li[1]/div[1]/div[1]/div[4]/div[1]/button[1]"); //Locator for Delete Option of 1st list item
 	By moreBtnDeleteOptn_lvmUAT = By.xpath("(//li[@class=\"imc-list-edit--draggable\"])[1]/div/div[1]/div[4]/div/button"); //Locator for Delete Option of 1st list item
 	By editlistitemdeleteoptn = By.xpath("//li[@class='imc-list-edit--draggable'][1]/div/div/div[4]/div/div/span[3]/a"); //Locator for Delete Option of 1st list item
@@ -33,7 +33,7 @@ public class ATLMarketPlannerPage {
 	By atlmplistsnames = By.xpath("//ul[@class='imc-market-planner-list']/li/div[1]"); //Locator for the List names of MP lists
 	By atlmpeditlistoptns = By.xpath("//ul[@class='imc-market-planner-list']/li/div[2]/span[2]/a"); //Locator for Edit List options on Lists page
 	By atlmpeditlistoptn = By.xpath("(//ul[@class='imc-market-planner-list']/li/div[2]/span[2]/a[1])[1]"); //Locator for Edit List options on Lists page
-	By atlmpexistinglistname = By.xpath("//form/div[4]/div[5]/label"); //Locator for existing list name
+	By atlmpexistinglistname = By.xpath("//form/div[4]/div[8]/label"); //Locator for existing list name
 	
 	By atladdtoseselectedbtn = By.xpath("//input[@data-xpath='quickAdd.saveList']"); //Locator for Add to Selected button
 	By listspagefavoritesmenu = By.xpath("//div[@class='imc-vertical-tabs-nav']/div[contains(text(),'Favorites')]"); //Locator for Favorites left menu
@@ -141,6 +141,7 @@ public class ATLMarketPlannerPage {
 
 	By filterByList = By.xpath("//div[@class='react-select__menu-list css-11unzgr']/div"); //Locator for My Info option
 	By listOfAllExh = By.xpath("//a[@class='imc-link--alt-darkred']"); //Locator for My Info option
+	
 	By filterBytxt = By.xpath("//div[contains(text(),'Filter By')]"); //Locator for Filter By
 	By nameofElement = By.xpath("//div[@class='imc-market-planner-list--item-body-data-left']/div[1]"); //Locator for Filter By
 	By listOfmngDropdownElements = By.xpath("//div[@class='react-select__menu-list css-11unzgr']/div"); //Locator for Filter By
@@ -254,6 +255,7 @@ public class ATLMarketPlannerPage {
 	
 	By favIconlist = By.xpath("//button[@class='imc-selectableicon ']"); //Locator for Favorite Icon list
 	
+	By listOfAllExhPROD = By.xpath("//span[@class='imc-link--alt-darkred disabled']"); //Locator for My Info option
 	
 	
 	public ATLMarketPlannerPage(WebDriver driver) {
@@ -261,6 +263,11 @@ public class ATLMarketPlannerPage {
 		this.driver = driver; 			
 	}
 
+	public List <WebElement> getlistOfAllExhPROD() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllExhPROD));
+		return driver.findElements(listOfAllExhPROD);
+	}
 	public WebElement getmpNotebtn() {
 
 		wait = new WebDriverWait(driver, 30);
@@ -583,6 +590,9 @@ public class ATLMarketPlannerPage {
 	}
 	public WebElement getATLEditListItemMoreBtn() {
 		return driver.findElement(editlistitemmorebtn);
+	}
+	public WebElement getATLEditListItemMoreBtnNew() {
+		return driver.findElement(editlistitemmorebtnnew);
 	}
 	public WebElement getATLEditListItemDeleteOptn() {
 		return driver.findElement(editlistitemdeleteoptn);

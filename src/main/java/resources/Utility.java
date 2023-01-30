@@ -24,6 +24,8 @@ import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
 import pageObjects.AtlantaMarket.ATLLandingPage;
 import pageObjects.AtlantaMarket.ATLLoginPage;
 import pageObjects.AtlantaMarket.ATLMarketPlannerPage;
+import pageObjects.LasVegasMarket.LVMEventsAndWebinarPage;
+import pageObjects.LasVegasMarket.LVMMarketPlannerPage;
 
 public class Utility extends base {
 
@@ -36,6 +38,8 @@ public class Utility extends base {
 	ATLGlobalSearchPage atlgs;
 	ATLEventsAndWebinarPage atlevents;
 	GenerateData genData;
+	LVMMarketPlannerPage lvmmpp;
+	LVMEventsAndWebinarPage lvmevents;
 
 	@SuppressWarnings("static-access")
 	public Utility(WebDriver driver) {
@@ -60,10 +64,16 @@ public class Utility extends base {
 
 		// Click on Login button from Landing Page
 		lap.getLogin().click();
-
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		// Enter the credentials on Login Page and click
 		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
+
 		lp.getPassword().sendKeys((prop.getProperty("password")));
+
+
+		Thread.sleep(1000);
+		lp.getPassword().sendKeys((prop.getProperty("password")));
+		Thread.sleep(1000);
 
 		lp.getSignInBtn().click();
 		Thread.sleep(15000);
@@ -436,6 +446,7 @@ public class Utility extends base {
 		if(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_prod"))) {
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			// Click on Attend Tab
+			Thread.sleep(1000);
 			atlevents.getatlAttendTab().click();
 			Thread.sleep(2000);
 			//click on Events Link
@@ -452,5 +463,62 @@ public class Utility extends base {
 		}
 	
 	}
+
+	
+	public void clickOnEventLinkOfChannelLVM() throws InterruptedException {
+
+public void clickOnEventLinkOfChannel_UAT() throws InterruptedException {
+
+		
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+
+		lvmmpp = new LVMMarketPlannerPage(driver);
+		lvmevents=new LVMEventsAndWebinarPage(driver);
+		
+		if(driver.getCurrentUrl().contains(prop.getProperty("lvmurl_uat"))) {
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			// Click on Attend Tab
+			Thread.sleep(2000);
+			lvmevents.getlvmExploreMarketTab().click();
+			Thread.sleep(2000);
+			//click on Events Link
+			lvmevents.getlvmEventsLink().click();
+
+		atlmppge = new ATLMarketPlannerPage(driver);
+		atlevents=new ATLEventsAndWebinarPage(driver);
+		
+		if(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_uat"))) {
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			// Click on Attend Tab
+			atlevents.getatlAttendTab().click();
+			Thread.sleep(2000);
+			//click on Events Link
+			atlevents.getatlEventsLink().click();
+
+			Thread.sleep(3000);
+		}
+		else {
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+			lvmevents.getlvmAttendTab().click();  //For LVM Events  
+			Thread.sleep(2000);
+			//click on Events Link
+			lvmevents.getlvmEventsLink().click();
+
+			atlevents.getatlExploreMarketTab().click();  //For LVM Events
+			Thread.sleep(2000);
+			//click on Events Link
+			atlevents.getatlEventsLink().click();
+
+			Thread.sleep(3000);
+		}
+	
+	}
+
+	
+
+}
 
 }

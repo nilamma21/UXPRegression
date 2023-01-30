@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -85,6 +86,7 @@ public class ShowSpecials extends base  {
 		
 		//verify Show special Page
 		Assert.assertTrue(atlgs.getatlShowSpecialsTitle().getText().contains(prop.getProperty("showSpecialTitle")));
+
 		
 		/*//Store the name of Show Special Exhibitor
 		String showSpecialExhName=atlgs.getatlShowSpecialsExhNamePROD().getText();
@@ -96,9 +98,17 @@ public class ShowSpecials extends base  {
 		System.out.println(showSpecialExhName);
 		
 		atlgs.getViewBrandDetailsLink().click();
+
+		//Click on Show Special Exhibitor
+		//String showSpecialExhName=atlgs.getatlShowSpecialsExhNamePROD().getText();
+		
+		String ename=atlgs.getFirstShowSpecialName().getText();
+		System.out.println(ename);
+		String abc =ename.split(" ")[2].trim();
+		atlgs.getFirstShowSpecialViewBrandDetailsBtn().click();
 		Thread.sleep(5000);
 		//Verify Show Special Exh Page 
-		Assert.assertTrue(atlgs.getatlShowSpecialsTitle().getText().contains(showSpecialExhName));
+		Assert.assertTrue(atlgs.getatlShowSpecialsTitle().getText().contains(abc));
 		
 	}
 	@Test(priority = 2)
