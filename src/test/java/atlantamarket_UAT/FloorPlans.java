@@ -8,10 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -59,7 +56,7 @@ public class FloorPlans extends base {
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		lap.getIUnderstandBtn().click();
+	//	lap.getIUnderstandBtn().click();
 		Thread.sleep(7000);
 		//lap.getCloseMarktAdBtn().click();
 
@@ -308,7 +305,7 @@ public class FloorPlans extends base {
 			expectedSortedList.add(we.getText().toLowerCase());
 		}
 		//Thread.sleep(25000);
-		//System.out.println("Expected sorted Exhibitor List : "+expectedSortedList);
+		System.out.println("Expected sorted Exhibitor List : "+expectedSortedList);
 		//Verify Exhibitor List is Sorted or not
 		Assert.assertEquals(sortedList, expectedSortedList, "Exhibitor List Should be sorted");
 
@@ -464,7 +461,7 @@ public class FloorPlans extends base {
 		atlflpp.getatlexhibitorsearch().sendKeys(prop.getProperty("floorplanexhibitorseacrch"));
 
 		atlflpp.getatlserachexhibitorbtn().click();
-		Thread.sleep(8000);
+		Thread.sleep(12000);
 		Assert.assertTrue(atlflpp.getverifyexhibitor().getText().contains(prop.getProperty("floorplanexhibitorseacrch")));
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
@@ -627,14 +624,12 @@ public class FloorPlans extends base {
 		atlflpp.getATLBuildingFloor().click();
 
 		// Scroll Down to Exhibitor list
-		utl.scrollToElement(atlflpp.getATLSelectBox());
+		utl.scrollToElement(atlflpp.getatlserachexhibitorbtn());
 
 		// 1st Exhibitor Name
 		String exhibitorName = atlflpp.getATLExhibitorName().getText();
 		System.out.println("Exhibitor Name : " + exhibitorName);
-		// Click on More option 3dots
-		atlflpp.getATLMoreOptions().click();
-
+		
 		// Click on Favorite icon of 1st exhibitor
 		atlflpp.getATLAddFev().click();
 
@@ -650,7 +645,7 @@ public class FloorPlans extends base {
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().equals(exhibitorName));
 
 		// Delete that favorites exhibitor from list
-		atlmppge.getATLEditListItemMoreBtn().click();
+		atlmppge.getMoreBtnDeleteOptnExistingList_ATLPROD().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(6000);
 
@@ -658,14 +653,14 @@ public class FloorPlans extends base {
 
 		// Verify that the added favorites exhibitor should be removed from Favorites list
 		for (int i = 1; i < favlist.size(); i++) {
-			// System.out.println(favlist.get(i).getText());
+			//System.out.println(favlist.get(i).getText());
 			Assert.assertFalse(favlist.get(i).getText().contains(exhibitorName));
 		}
 	}
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 
 }

@@ -6,14 +6,12 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -82,8 +80,10 @@ public class GlobalSearch_ProductActions extends base {
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(15000);
 		// Store the 1st Product name of Exhibitor
-		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
-		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
+		//String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
+		//System.out.println("Selected Product Name: " + productNameOnSearchGrid);
+		String catalogName = atlgs.getFirstCatalogName().getText();
+		System.out.println("Selected Product Name:"+catalogName);
 
 		utl.scrollToElement(atlexhact.getExhibitorProduct());
 
@@ -101,13 +101,13 @@ public class GlobalSearch_ProductActions extends base {
 		String productNameOnProductDetails = atlproddet.getProductNameOnProductDetails().getText();
 		System.out.println("Product Name On Product Details page: " + productNameOnProductDetails);
 		// Verify that selected Product details page should be opened
-		Assert.assertTrue(productNameOnSearchGrid.equals(productNameOnProductDetails));
+		Assert.assertTrue(catalogName.equals(productNameOnProductDetails));
 	}
 
 	@Test(priority = 2)
 	public void TS002_VerifyProductAddToNewListOnProductDetailsPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// T435: Add to Newly created list functionality on Product details page
+		// T434: Product Actions: + icon to add to newly created list
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
@@ -122,14 +122,16 @@ public class GlobalSearch_ProductActions extends base {
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("searchexhwithlinesinput"));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
-
 		Thread.sleep(15000);
 		// Store the 1st Product name of Exhibitor
-		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
+	/*	String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
 		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
-
+*/
+		String prodName = atlgs.getFirstCatalogName().getText();
+		System.out.println("Selected Product Name:"+prodName);
+		
 		utl.scrollToElement(atlexhact.getExhibitorProduct());
 
 		// Hover on Product
@@ -157,7 +159,7 @@ public class GlobalSearch_ProductActions extends base {
 				atlmppge.getNewListModalCreateBtn());
 
 		// Click on Create button
-		atlmppge.getAddListCreateBtn().click();
+		atlmppge.getaddlistcreatebtn_ATLPROD().click();
 
 		// Click on Go to Market Planner button
 		atlmppge.getGoToMarketPlannerBtn().click();
@@ -178,7 +180,7 @@ public class GlobalSearch_ProductActions extends base {
 			}
 		}
 		Thread.sleep(10000);
-		Assert.assertTrue(atlmppge.getSavedProductNameInList().getText().contains(productNameOnSearchGrid));
+		Assert.assertTrue(atlmppge.getSavedProductNameInList().getText().contains(prodName));
 	}
 
 	@Test(priority = 3)
@@ -205,9 +207,12 @@ public class GlobalSearch_ProductActions extends base {
 		Thread.sleep(15000);
 
 		// Store the 1st Product name of Exhibitor
-		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
+	/*	String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
 		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
-
+*/
+		String prodName = atlgs.getFirstCatalogName().getText();
+		System.out.println("Selected Product Name:"+prodName);
+		
 		utl.scrollToElement(atlexhact.getExhibitorProduct());
 
 		// Hovering on Product
@@ -230,9 +235,13 @@ public class GlobalSearch_ProductActions extends base {
 		// Select Existing list name
 		atlmppge.getATLMPExistingListName().click();
 
+	
 		// Scroll till Add to Selected button
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",
-				atlmppge.getATLMPAddToSelectedBtn());
+//		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",
+//				atlmppge.getATLMPAddToSelectedBtn());
+		
+		utl.scrollToElement(atlmppge.getATLMPAddToSelectedBtn());
+		Thread.sleep(5000);
 		atlmppge.getATLMPAddToSelectedBtn().click();
 
 		// Click on Go to Market Planner button
@@ -255,10 +264,10 @@ public class GlobalSearch_ProductActions extends base {
 		}
 		Thread.sleep(10000);
 		System.out.println("Saved Product Name in List:" + atlmppge.getSavedProductNameInList().getText());
-		Assert.assertTrue(atlmppge.getSavedProductNameInList().getText().contains(productNameOnSearchGrid));
+		Assert.assertTrue(atlmppge.getSavedProductNameInList().getText().contains(prodName));
 
 		// Delete that added Product from list
-		atlmppge.getATLEditListItemMoreBtn().click();
+		atlmppge.getMoreBtnDeleteOptnExistingList_ATLPROD().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(8000);
 
@@ -267,7 +276,7 @@ public class GlobalSearch_ProductActions extends base {
 		// Verify that the added Product should be removed from Existing list
 		for (int i = 1; i < favlist.size(); i++) {
 			// System.out.println(favlist.get(i).getText());
-			Assert.assertFalse(favlist.get(i).getText().contains(productNameOnSearchGrid));
+			Assert.assertFalse(favlist.get(i).getText().contains(prodName));
 		}
 	}
 
@@ -294,9 +303,12 @@ public class GlobalSearch_ProductActions extends base {
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(15000);
 		// Store the 1st Product name of Exhibitor
-		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
+		/*String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
 		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
-
+*/
+		String prodName = atlgs.getFirstCatalogName().getText();
+		System.out.println("Selected Product Name:"+prodName);
+		
 		utl.scrollToElement(atlexhact.getExhibitorProduct());
 
 		// Hovering on Product
@@ -321,10 +333,10 @@ public class GlobalSearch_ProductActions extends base {
 		Thread.sleep(8000);
 
 		// Verify that the added Product should be displayed in to Favorites list
-		Assert.assertTrue(atlmppge.getSavedProductNameInList().getText().contains(productNameOnSearchGrid));
+		Assert.assertTrue(atlmppge.getSavedProductNameInList().getText().contains(prodName));
 
 		// Delete that favorited product from list
-		atlmppge.getATLEditListItemMoreBtn().click();
+		atlmppge.getMoreBtnDeleteOptnExistingList_ATLPROD().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(6000);
 
@@ -334,7 +346,7 @@ public class GlobalSearch_ProductActions extends base {
 		for(int i=1; i< favlist.size(); i++)
 		{			
 			//System.out.println(favlist.get(i).getText());
-			Assert.assertFalse(favlist.get(i).getText().contains(productNameOnSearchGrid)); 
+			Assert.assertFalse(favlist.get(i).getText().contains(prodName)); 
 		}
 	}
 
@@ -436,12 +448,23 @@ public class GlobalSearch_ProductActions extends base {
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(15000);
 		// Store the 1st Product name of Exhibitor
-		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
-		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
+	/*	String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
+		System.out.println("Selected Product Name: " + productNameOnSearchGrid);*/
+		exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: " + exhname);
+		String prodName = atlgs.getFirstCatalogName().getText();
+		System.out.println("Selected Product Name:"+prodName);
 
-		// Click on Add to List button for 1st Exhibitor
-		atlexhact.getSearchResultMoreicon().click();
+		// Hovering on Product
+		Actions actions = new Actions(driver);
+		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
+		// To mouseover on More btn
+		actions.moveToElement(atlexhact.getProductMoreBtnOnSearchGrid()).perform();
+
+		//Click on Add To List button
+		actions.click().perform();
 		atlexhact.getAddToListOptn().click();
+		Thread.sleep(5000);
 
 		// Store the existing list name
 		String existinglistname = atlmppge.getATLMPExistingListName().getText();
@@ -464,19 +487,27 @@ public class GlobalSearch_ProductActions extends base {
 
 		mplists = atlmppge.getATLMPListsNames();
 		mpeditlistoptns = atlmppge.getATLMPEditListOptns();
-
+		boolean t=false;
 		for (int i = 0; i < mplists.size(); i++) {
 			// System.out.println(mplists.get(i).getText());
 			// System.out.println(mpeditlistoptns.get(i).getText());
 			if (mplists.get(i).getText().equals(existinglistname)) {
 				mpeditlistoptns.get(i).click();
+				t=true;
 				break;
 			}
 		}
+		if(t==true) {
+			System.out.println("Existing List is Present");
+		}else {
+			System.out.println("Not present");
+		}
+		
+		Assert.assertTrue(atlexhact.getprodName().getText().contains(prodName));
 		Thread.sleep(10000);
 
 		// Delete that added Product from list
-		atlmppge.getATLEditListItemMoreBtn().click();
+		atlmppge.getMoreBtnDeleteOptnExistingList_ATLPROD().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(8000);
 
@@ -484,8 +515,8 @@ public class GlobalSearch_ProductActions extends base {
 
 		// Verify that the added Product should be removed from Existing list
 		for (int i = 1; i < favlist.size(); i++) {
-			// System.out.println(favlist.get(i).getText());
-			Assert.assertFalse(favlist.get(i).getText().contains(productNameOnSearchGrid));
+			 System.out.println(favlist.get(i).getText());
+			Assert.assertFalse(favlist.get(i).getText().contains(prodName));
 		}
 	}
 
@@ -508,14 +539,28 @@ public class GlobalSearch_ProductActions extends base {
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearchinput"));
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearchinputforProduct"));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(15000);
 		//Store the 1st Product name of Exhibitor
-		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
-		System.out.println("Selected Product Name: "+productNameOnSearchGrid);
-
-		utl.scrollToElement(atlexhact.getExhibitorProduct());
+	/*	String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
+		System.out.println("Selected Product Name: "+productNameOnSearchGrid);*/
+		exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: " + exhname);
+		
+		//Click on Exhibitor
+		atlexhact.getExhibitorName().click();
+		//Scroll To Products Section
+		utl.scrollToElement(atlexhdgshw.getProductSection());
+		String prodName = atlexhact.getprodNameFromDGshhowroomPage().getText();
+		String prodNameTitle=prodName.replaceAll("\\.","");
+		System.out.println("Selected Product Name:"+prodNameTitle);
+		
+		//Click on product
+		atlexhact.getprodNameFromDGshhowroomPage().click();
+		
+		
+		/*utl.scrollToElement(atlexhact.getExhibitorProduct());
 
 		// Hovering on Product
 		Actions actions = new Actions(driver);
@@ -526,15 +571,15 @@ public class GlobalSearch_ProductActions extends base {
 		//Click on See Details button
 		actions.click().perform();
 		Thread.sleep(5000);
-
+*/
 		//Click on Product Full Screen Viewer button
 		atlproddet.getProductFullScreenViewerBtn().click();
 
 		//Verify that Full Screen viewer should be displayed with Product images
 		Assert.assertTrue(atlproddet.getProductFullScreenViewer().isDisplayed());
-
+		Thread.sleep(5000);
 		//Verify the title of the Full screen viewer
-		Assert.assertTrue(atlproddet.getProductFullScreenViewerTitle().getText().equals(productNameOnSearchGrid));
+		Assert.assertTrue(atlproddet.getProductFullScreenViewerTitle().getText().contains(prodNameTitle));
 
 		//Dismiss the Full Screen Viewer
 		atlproddet.getProductFullScreenViewer().click();
@@ -561,8 +606,11 @@ public class GlobalSearch_ProductActions extends base {
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(15000);
 		//Store the 1st Product name of Exhibitor
-		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
+	/*	String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
 		System.out.println("Selected Product Name: "+productNameOnSearchGrid);
+*/
+		String prodName = atlgs.getFirstCatalogName().getText();
+		System.out.println("Selected Product Name:"+prodName);
 
 		utl.scrollToElement(atlexhact.getExhibitorProduct());
 
@@ -585,10 +633,10 @@ public class GlobalSearch_ProductActions extends base {
 		Thread.sleep(8000);
 
 		// Verify that the added product should be displayed in to Favorites list
-		Assert.assertTrue(atlmppge.getSavedProductNameInList().getText().contains(productNameOnSearchGrid));
+		Assert.assertTrue(atlmppge.getSavedProductNameInList().getText().contains(prodName));
 
 		// Delete that favorited product from list
-		atlmppge.getATLEditListItemMoreBtn().click();
+		atlmppge.getMoreBtnDeleteOptnExistingList_ATLPROD().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(6000);
 
@@ -598,14 +646,14 @@ public class GlobalSearch_ProductActions extends base {
 		for(int i=1; i< favlist.size(); i++)
 		{			
 			//System.out.println(favlist.get(i).getText());
-			Assert.assertFalse(favlist.get(i).getText().contains(productNameOnSearchGrid)); 
+			Assert.assertFalse(favlist.get(i).getText().contains(prodName)); 
 		}
 	}
 
 	@Test(priority = 9)
-	public void TS009_VerifyProductActionsIconToAddToNewlyCreatedListTest() throws InterruptedException, IOException {
+	public void TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// T435: Add to Newly created list functionality on Product details page
+		// T435: Products Actions: Product Details: + icon to add to newly created list
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
@@ -625,12 +673,22 @@ public class GlobalSearch_ProductActions extends base {
 
 		Thread.sleep(15000);
 		// Store the 1st Product name of Exhibitor
-		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
+	/*	String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
 		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
+*/
+		String prodName = atlgs.getFirstCatalogName().getText();
+		System.out.println("Selected Product Name:"+prodName);
+		
+		// Hovering on Product
+		Actions actions = new Actions(driver);
+		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
+		// To mouseover on More btn
+		actions.moveToElement(atlexhact.getProductMoreBtnOnSearchGrid()).perform();
 
-		// Click on Add to List button for 1st Exhibitor
-		atlexhact.getSearchResultMoreicon().click();
+		//Click on Add To List button
+		actions.click().perform();
 		atlexhact.getAddToListOptn().click();
+		Thread.sleep(5000);
 
 		utl.scrollToElement(atlmppge.getCreateNewListNameTxtbx());
 
@@ -666,7 +724,9 @@ public class GlobalSearch_ProductActions extends base {
 		}
 		Thread.sleep(10000);
 		//System.out.println(atlmppge.getNewCreatedListName().getText());
-		Assert.assertTrue(atlmppge.getNewCreatedListName().getText().contains(newlistname));
+	/*	Assert.assertTrue(atlmppge.getNewCreatedListName().getText().contains(newlistname));
+		Thread.sleep(10000);*/
+		Assert.assertTrue(atlmppge.getSavedProductNameInList().getText().contains(prodName));
 	}
 
 	@AfterClass

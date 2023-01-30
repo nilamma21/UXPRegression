@@ -5,10 +5,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
-import org.omg.CORBA.PUBLIC_MEMBER;
 import org.openqa.selenium.By;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -18,8 +16,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-
-import com.gargoylesoftware.htmlunit.javascript.host.media.webkitMediaStream;
 
 //import atlantamarket_UAT.MarketPlanner;
 import pageObjects.AtlantaMarket.ATLEventsAndWebinarPage;
@@ -462,12 +458,17 @@ public class Utility extends base {
 		}
 	
 	}
+<<<<<<< HEAD
 	
 	public void clickOnEventLinkOfChannelLVM() throws InterruptedException {
+=======
+public void clickOnEventLinkOfChannel_UAT() throws InterruptedException {
+>>>>>>> 2d902bb2fbf84a07a349e7ecc16fcdef4962929a
 		
 
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
+<<<<<<< HEAD
 		lvmmpp = new LVMMarketPlannerPage(driver);
 		lvmevents=new LVMEventsAndWebinarPage(driver);
 		
@@ -479,18 +480,40 @@ public class Utility extends base {
 			Thread.sleep(2000);
 			//click on Events Link
 			lvmevents.getlvmEventsLink().click();
+=======
+		atlmppge = new ATLMarketPlannerPage(driver);
+		atlevents=new ATLEventsAndWebinarPage(driver);
+		
+		if(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_uat"))) {
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			// Click on Attend Tab
+			atlevents.getatlAttendTab().click();
+			Thread.sleep(2000);
+			//click on Events Link
+			atlevents.getatlEventsLink().click();
+>>>>>>> 2d902bb2fbf84a07a349e7ecc16fcdef4962929a
 			Thread.sleep(3000);
 		}
 		else {
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+<<<<<<< HEAD
 			lvmevents.getlvmAttendTab().click();  //For LVM Events  
 			Thread.sleep(2000);
 			//click on Events Link
 			lvmevents.getlvmEventsLink().click();
+=======
+			atlevents.getatlExploreMarketTab().click();  //For LVM Events
+			Thread.sleep(2000);
+			//click on Events Link
+			atlevents.getatlEventsLink().click();
+>>>>>>> 2d902bb2fbf84a07a349e7ecc16fcdef4962929a
 			Thread.sleep(3000);
 		}
 	
 	}
+<<<<<<< HEAD
 	
+=======
+>>>>>>> 2d902bb2fbf84a07a349e7ecc16fcdef4962929a
 
 }
