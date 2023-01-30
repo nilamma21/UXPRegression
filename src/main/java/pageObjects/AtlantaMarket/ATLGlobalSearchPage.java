@@ -111,7 +111,7 @@ public class ATLGlobalSearchPage {
 	By FirstEventName = By.xpath("//div[@class='imc-vr--xxlarge imc-margin--top--large--mobile']/div[1]/div[1]/span[1]");  //Locator for 1st name of Event
 	By seeAllLinkMatchingProduct = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[2]/div[1]/div[1]/p[2]");  //Locator for 1st name of Event
 	By FirstCatalogName = By.xpath("(//div[@class='imc-exhibitorcard-products-row imc-content--display-flex-space-between-mobile '])[1]/div[2]/p[1]");  //Locator for 1st name of Catalog
-<<<<<<< HEAD
+
 
 	By viewbranddetailslink = By.xpath("(//div[@col-id='viewDetails'])[2]"); //Locator for View Brand details link of 1st Show Special
 
@@ -123,18 +123,18 @@ public class ATLGlobalSearchPage {
 	
 	
 
-=======
+
 	By viewbranddetailslink = By.xpath("(//div[@col-id='viewDetails'])[2]"); //Locator for View Brand details link of 1st Show Special
 	By infoTitle = By.xpath("//div[@class='imc-informationcard__body']/p[2]");  //Locator for 1st name of Catalog
 	By infoTitleOnSeeDetailsPage = By.xpath("//div[@class='imc-gallery imc-gallery--65-35 breadcrumbs__round']//ul//li[3]/a[1]");  //Locator for 1st name of Catalog
->>>>>>> 4985492824d42a419e8b39f90fc0adc954d87f68
+
 	
 	public ATLGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 		PageFactory.initElements(driver, this);
 	}
-<<<<<<< HEAD
+
 	
 	public WebElement infoTitle() {
 		wait = new WebDriverWait (driver,20);
@@ -142,9 +142,9 @@ public class ATLGlobalSearchPage {
 		return driver.findElement(infoTitle);
 	}
 	public WebElement getinfoTitleOnSeeDetailsPage() {
-=======
+
 		public WebElement getinfoTitleOnSeeDetailsPage() {
->>>>>>> 4985492824d42a419e8b39f90fc0adc954d87f68
+
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(infoTitleOnSeeDetailsPage));
 		return driver.findElement(infoTitleOnSeeDetailsPage);
@@ -159,7 +159,7 @@ public class ATLGlobalSearchPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlInfoSearchMoreInfoBtn));
 		return driver.findElement(atlInfoSearchMoreInfoBtn);
 	}
-<<<<<<< HEAD
+
 	public WebElement getFirstShowSpecialViewBrandDetailsBtn() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(FirstShowSpecialViewBrandDetailsBtn));
@@ -170,8 +170,7 @@ public class ATLGlobalSearchPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(FirstShowSpecialName));
 		return driver.findElement(FirstShowSpecialName);
 	}
-=======
->>>>>>> 4985492824d42a419e8b39f90fc0adc954d87f68
+
 	public WebElement getFirstCatalogName() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(FirstCatalogName));
