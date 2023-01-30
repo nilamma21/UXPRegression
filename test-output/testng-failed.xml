@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<<<<<<< HEAD
+
 <suite guice-stage="DEVELOPMENT" name="Failed suite [LVM_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
@@ -16,7 +16,7 @@
           <include name="TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest"/>
         </methods>
       </class> <!-- lasvegasmarket_UAT.LineDigitalShowroom -->
-=======
+
 <suite name="Failed suite [LVM_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
@@ -28,7 +28,7 @@
           <include name="TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest"/>
         </methods>
       </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
->>>>>>> 2d902bb2fbf84a07a349e7ecc16fcdef4962929a
+
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
