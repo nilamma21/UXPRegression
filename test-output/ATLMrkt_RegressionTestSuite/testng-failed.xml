@@ -3,6 +3,19 @@
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
+
+      <class name="atlantamarket_PROD.GlobalSearch_SearchFor">
+        <methods>
+          <include name="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest"/>
+          <include name="TS011_VerifyEventsOverviewInGlobalSearchTest"/>
+          <include name="initialize"/>
+          <include name="TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest"/>
+          <include name="tearDown"/>
+          <include name="TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest"/>
+          <include name="TS001_VerifyInformationTabInGlobalSearchTest"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
+
       <class name="atlantamarket_PROD.EvenntsAndWebinar">
         <methods>
           <include name="TS014_VerifyExhibitorEventsAddToListTest"/>
@@ -140,6 +153,7 @@
           <include name="initialize"/>
         </methods>
       </class> <!-- atlantamarket_PROD.GlobalSearch_LineActions -->
+
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->

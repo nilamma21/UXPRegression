@@ -49,7 +49,7 @@ public class ATLFloorPlansPage {
 	By atlNextFloorBtn = By.xpath("//div[@class='imc-floor-plan--floorButtons']/a[2]"); //Locator for previous Floor button
 	By atlPreviousFloorBtn = By.xpath("//div[@class='imc-floor-plan--floorButtons']/a[1]"); //Locator for Next Floor button
 	By atlExpectedFloorNumber = By.xpath("//div[@class='imc-content--omni']"); //Locator for expected Floor number
-	By atlExhibitorName = By.xpath("//div[@class='imc-content--padded-top-bottom']/div[1]/div[1]/div[2]/a[1]"); //Locator for Exhibitor Name
+	By atlExhibitorName = By.xpath("//div[@class='imc-content--padded-top-bottom']/div[1]/div[2]/div[2]/a"); //Locator for Exhibitor Name
 	By atlExhibitorNameOnDGShowroomPage = By.xpath("//div[@class='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[3]/a[1]"); //Locator for Exhibitor Name on DG showroom Page 
 	By atlReturnToBuildingList = By.xpath("//div[@class='imc-floor-plan']/div[1]/div[1]/a[1]"); //Locator for Return to Building list link
 	By scrollexhibitorsection = By.xpath("//div[@class = 'imc-manufacturing-line--alternated-section imc-lines-overview']"); //Locator for scroll to exhibitor section
@@ -58,10 +58,10 @@ public class ATLFloorPlansPage {
 	By atlserachexhibitorbtn = By.xpath("//section[@class = 'imc-site-wrapper']/div[1]/section[1]/div[1]/div[1]/div[1]/div[3]/div[3]/div[1]/div[1]/section[1]/div[1]/form[1]/button[2]"); //Locator for Search button for search input field
 	By verifyexhibitor = By.xpath("//div[@class = 'imc-manufacturing-line']/div[2]/a[1]"); //Locator for verification for searched exhibitor
 	By viewdgshowroombtn = By.xpath("//a[contains(text(),'View Digital Showroom')]"); //Locator for View Digital Showroom button
-	By atlMoreOptions = By.xpath("//div[@class='imc-content--padded-top-bottom']/div[1]/div[1]/div[3]/div[1]"); //Locator for More Options 3dots
+	By atlMoreOptions = By.xpath("//div[@class='imc-content--padded-top-bottom']/div[1]/div[2]/div[3]/div[1]"); //Locator for More Options 3dots
 	By atlAddToList = By.xpath("//div[@id='popup-root']/div[2]/div[2]/div[1]/label"); //Locator for Add to List
-	By atlAddNote = By.xpath("//div[@id='popup-root']/div[2]/div[2]/div[2]/div[1]/button[1]/label[1]"); //Locator for Add Note
-	By atlAddFev = By.xpath("//div[@class='imc-content--padded-top-bottom']/div[1]/div[1]/div[3]/div[2]/div[1]/button[1]"); //Locator for Add Fev
+	By atlAddNote = By.xpath("//div[@id='popup-root']/div[2]/div[2]/div[2]/label"); //Locator for Add Note
+	By atlAddFev = By.xpath("//div[@class='imc-content--padded-top-bottom']/div[1]/div[2]/div[3]/div[2]/div[1]/button[1]"); //Locator for Add Fev
 	By atlExhSearchField = By.xpath("(//div[@class='imc-searchform--row'])[2]/form[1]/div[1]/input[1]"); //Locator for Exh Search filed
 	By atlExhSearchFieldBtn = By.xpath("(//div[@class='imc-searchform--row'])[2]/form[1]/button[2]"); //Locator for Exh Search filed Btn
 	By noresultsforjuniperlinesmsg = By.xpath("//p[contains(text(),'Sorry, no results found.')]"); //Locator for No results found msg for Lines on Junipermarket filter
