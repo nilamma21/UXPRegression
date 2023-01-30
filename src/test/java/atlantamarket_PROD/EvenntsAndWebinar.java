@@ -632,7 +632,7 @@ public class EvenntsAndWebinar extends base{
 		// Click on Any Event title
 
 		atlevents.getatlClickOnEvent().click();
-		Thread.sleep(5000);
+
 		Assert.assertTrue(eventTitle.contains(atlevents.getatlEventNameOnDetailsPage().getText()));
 
 		// Click on Add to List Icon

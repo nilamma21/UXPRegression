@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -63,11 +64,12 @@ public class GlobalSearch_SuggestionList extends base {
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
-
+		
+		driver.get(prop.getProperty("lvmurl_uat"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		Thread.sleep(2000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestexhibitor")));
-
+		Thread.sleep(2000);
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions
 				.visibilityOfAllElementsLocatedBy(By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li")));
@@ -95,11 +97,10 @@ public class GlobalSearch_SuggestionList extends base {
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//lap.getCloseMarktAdBtn().click();
-		
+		Thread.sleep(2000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestline")));
 
 		WebDriverWait wait = new WebDriverWait(driver, 30);
@@ -128,13 +129,12 @@ public class GlobalSearch_SuggestionList extends base {
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlproddet = new ATLProductDetailsPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//lap.getCloseMarktAdBtn().click();
-		
+		Thread.sleep(2000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestproduct_lvm")));
-
+		Thread.sleep(2000);
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li")));
 
@@ -155,9 +155,9 @@ public class GlobalSearch_SuggestionList extends base {
 		//lap.getCloseMarktAdBtn().click();
 	}
 	
-	/*@AfterClass
+	@AfterClass
 	public void tearDown()
 	{
 		driver.quit();
-	}*/
+	}
 }

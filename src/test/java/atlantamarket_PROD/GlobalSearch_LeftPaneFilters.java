@@ -133,7 +133,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		String expectedprodcatg = atlleftpane.getATLAntiqueVintProdCatg().getText();
 		atlleftpane.getATLAntiqueVintProdCatg().click();
 		Thread.sleep(8000);
-
+		//Verify the selected Product Category on Product details page
 		utl.scrollToElement(atlexhact.getSecondExhProduct());
 				
 		Actions actions = new Actions(driver);
@@ -141,7 +141,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		// To mouseover on See Details btn
 		actions.moveToElement(atlexhact.getSecondExhProductSeeDetailsBtn()).perform();
 		// Click on See Details button
-		actions.click().perform();	
+		actions.click().perform();		
 
 		//Scroll till Product Categories section
 		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());

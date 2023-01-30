@@ -12,6 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -185,7 +186,7 @@ public class FloorPlans extends base {
 		Assert.assertNotEquals(x1, out);
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 4)
 	public void TS004_VerifyIconsOnFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to:-
 		// UXP-T289: To verify Floor Plans: Icons
@@ -213,7 +214,7 @@ public class FloorPlans extends base {
 
 		//Verify that Vending Machine Overlay should appeared on Map
 		Assert.assertTrue(atlflpp.getVendingMachineOverlayOnMap().isDisplayed());
-		Thread.sleep(5000);
+
 		//Click on Elevator icon on Map image
 		atlflpp.getElevatorIconOnMap().click();
 
@@ -256,7 +257,7 @@ public class FloorPlans extends base {
 		Assert.assertTrue(atlgs.getinfoTitleOnSeeDetailsPage().getText().contains(exhnameondetailsmodal));
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 5)
 	public void TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T290: To verify Floor Plans: Filter
@@ -402,16 +403,10 @@ public class FloorPlans extends base {
 		// Verify that Selected Exhibitor Digital Showroom page should be opened
 		//Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
 		//Verify Selected Exhibitor title
-<<<<<<< HEAD
 		//Assert.assertTrue(driver.getTitle().contains(""+exhibitorName+" at Atlanta Market"));
 		//Verify Selected Exhibitor Name
 		//Assert.assertTrue(atlexhdgshw.getExhibitorNameOnExhDirectImg().getText().contains(exhibitorName));
 		Assert.assertTrue(atlgs.getinfoTitleOnSeeDetailsPage().getText().contains(exhibitorName));
-=======
-		Assert.assertTrue(driver.getTitle().contains(""+exhibitorName+" at Atlanta Market"));
-		//Verify Selected Exhibitor Name
-		Assert.assertTrue(atlexhdgshw.getExhibitorNameOnExhDirectImg().getText().contains(exhibitorName));
->>>>>>> 95f3394d181e284539f9b1b34ad1098609ae77a7
 	}
 
 	@Test(priority = 8)
@@ -500,7 +495,8 @@ public class FloorPlans extends base {
 		atlflpp.getATLBuildingFloor().click();
 
 		// Scroll Down to Exhibitor list
-		utl.scrollToElement(atlflpp.getATLSelectBox());
+		//utl.scrollToElement(atlflpp.getATLSelectBox());
+		utl.scrollToElement(atlflpp.getATLNextFloorBtn());
 		Thread.sleep(15000);
 
 		// 1st Exhibitor Name
@@ -568,8 +564,10 @@ public class FloorPlans extends base {
 		// click on Exhibitor floor
 		atlflpp.getATLBuildingFloor().click();
 		// Scroll Down to Exhibitor list
-		utl.scrollToElement(atlflpp.getATLSelectBox());
-
+		//utl.scrollToElement(atlflpp.getATLSelectBox());
+		utl.scrollToElement(atlflpp.getATLNextFloorBtn());
+		Thread.sleep(15000);
+		
 		// 1st Exhibitor Name
 		String exhibitorName = atlflpp.getATLExhibitorName().getText();
 		System.out.println("Exhibitor Name : " + exhibitorName);
@@ -637,6 +635,7 @@ public class FloorPlans extends base {
 
 		// Scroll Down to Exhibitor list
 		utl.scrollToElement(atlflpp.getatlserachexhibitorbtn());
+		Thread.sleep(15000);
 
 		// 1st Exhibitor Name
 		String exhibitorName = atlflpp.getATLExhibitorName().getText();
@@ -669,10 +668,10 @@ public class FloorPlans extends base {
 			Assert.assertFalse(favlist.get(i).getText().contains(exhibitorName));
 		}
 	}
-	/*@AfterClass
+	@AfterClass
 	public void tearDown()
 	{
 		driver.quit();
-	}*/
+	}
 
 }
