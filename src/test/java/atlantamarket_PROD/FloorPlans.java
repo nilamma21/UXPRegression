@@ -398,18 +398,18 @@ public class FloorPlans extends base {
 
 		Thread.sleep(12000);
 		// Verify that Selected Exhibitor Digital Showroom page should be opened
-<<<<<<< HEAD
+
 		//Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
 		//Verify Selected Exhibitor title
 		//Assert.assertTrue(driver.getTitle().contains(""+exhibitorName+" at Atlanta Market"));
 		//Verify Selected Exhibitor Name
 		//Assert.assertTrue(atlexhdgshw.getExhibitorNameOnExhDirectImg().getText().contains(exhibitorName));
 		Assert.assertTrue(atlgs.getinfoTitleOnSeeDetailsPage().getText().contains(exhibitorName));
-=======
+
 		Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
 		Assert.assertTrue(driver.getTitle().contains(""+exhibitorName+" at Atlanta Market"));
 		Assert.assertTrue(atlexhdgshw.getExhibitorNameOnExhDirectImg().getText().contains(exhibitorName));
->>>>>>> 4985492824d42a419e8b39f90fc0adc954d87f68
+
 	}
 
 	@Test(priority = 8)
