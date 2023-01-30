@@ -67,19 +67,16 @@ public class ATLFloorPlansPage {
 	By noresultsforjuniperlinesmsg = By.xpath("//p[contains(text(),'Sorry, no results found.')]"); //Locator for No results found msg for Lines on Junipermarket filter
 	
 	By exhibitedonfloormsg = By.xpath("//span[contains(text(),'Exhibited on this floor:')]");
-<<<<<<< HEAD
+
 	By atlLoadingNoExhiMsg = By.xpath("//div[@class='imc-manufacturing-line--alternated-section imc-lines-overview']/p[1]");//Loading Msg
 	
 	By atlExhibitorNamePROD = By.xpath("//div[@class='imc-content--padded-top-bottom']/div[1]//div[2]/div[2]/a[1]"); //Locator for Exhibitor Name
-=======
->>>>>>> 4985492824d42a419e8b39f90fc0adc954d87f68
-	
 	
 	public ATLFloorPlansPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
-<<<<<<< HEAD
+
 	public WebElement getatlExhibitorNamePROD() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlExhibitorNamePROD));
@@ -90,8 +87,7 @@ public class ATLFloorPlansPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlLoadingNoExhiMsg));
 		return driver.findElement(atlLoadingNoExhiMsg);
 	}
-=======
->>>>>>> 4985492824d42a419e8b39f90fc0adc954d87f68
+
 	public WebElement getATLExhibitorsAndProductTab() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlExhibitorsAndProductTab));
