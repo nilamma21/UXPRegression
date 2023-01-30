@@ -9,6 +9,7 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -79,8 +80,6 @@ public class GlobalSearch_SearchFor extends base {
 		atlgs.getATLsearchresultInfoLink().click();
 		Thread.sleep(2000);
 		
-		
-
 		Assert.assertTrue(atlgs.getATLSearchResult().getText().contains(prop.getProperty("globalsearchinputforInformation")));
 
 		String seeMoreDetailsURL=atlgs.getATLInfoSearchJuniperMarketBtn().getAttribute("href");
@@ -812,5 +811,9 @@ public class GlobalSearch_SearchFor extends base {
 		driver.navigate().back();
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		Thread.sleep(5000);
+	}
+	@AfterClass
+	public void tearDown() {
+		driver.quit();
 	}
 }

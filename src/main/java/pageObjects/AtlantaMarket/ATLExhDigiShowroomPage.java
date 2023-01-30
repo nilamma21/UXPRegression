@@ -42,7 +42,7 @@ public class ATLExhDigiShowroomPage {
 	By SaveNoteOKButton = By.xpath("//div[@class = 'imc-content imc-content--right']/button[1]"); //Locator for OK button for save note
 	By Location = By.xpath("//section[@class='imc-site-wrapper']/div[2]/div[1]/div[1]/div[2]/div[1]/span[2]/a[1]"); //Locator for Location symbol at Digital Showroom page
 	By ContactExhibitor = By.xpath("//div[@class = 'contact-exhibitor-wrapper']/button[1]"); //Locator for Contact Exhibitor button
-	By ProductSection = By.xpath("//div[@class = 'imc-content--display-flex-wrap']/span[text()='Products']"); //Locator for Product section in Exhibitor Digital Showroom
+	By ProductSection = By.xpath("//div[@class = 'imc-content--display-flex-wrap']/span[contains(text(),'Products Shown')]"); //Locator for Product section in Exhibitor Digital Showroom
 	By AllProductsButton = By.xpath("//a[@class = 'imc-content--inline-block imc-button imc-button--primary-inverted imc-button--full-bleed-mobile']"); //Locator for See All Products button
 	By ProductsPageBackButton = By.xpath("//button[@class = 'imc-icon-BackArrow imc-button--icon-only imc-button--no-border imc-heading--mega imc-heading--line-height-1 imc-content--display-flex']"); //Locator for Back arrow at Products page
 	By ProductsList = By.xpath("//div[@class = 'imc-products-overview--gallery']/div[1]"); //Locator for first product in Product List at Exhibitor Digital Showroom
@@ -94,7 +94,8 @@ public class ATLExhDigiShowroomPage {
 	By ShowSpecialName = By.xpath("//div[@class = 'imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div[1]/span[text()='Show Specials']/../../div[2]/span[1]"); ////Locator for See All Show special Count
 	By heroComponentOrderOnJunperBtn = By.xpath("//div[@class='imc-section imc-padding--left--xlarge imc-padding--right--xlarge imc-section--width-100-percent']/div//span[@class='imc-breakpoint-display--hide-mobile' and text()='Order on JuniperMarket']/.."); ////Locator for Order on Juniper CTA
 	By closeBtnContactExh = By.xpath("//button[@class='imc-modal--close imc-button--modal-close imc-button--round']"); ////Locator for Closse Btn
-	
+	By linesshowntextonsearchgrid = By.xpath("(//div[@class='imc-exhibitorcard-title-row'])[1]/div[1]/div[1]/p"); //Locator for Line shown text on Search grid
+	By linesshownseealllink = By.xpath("(//div[@class='imc-exhibitorcard-title-row'])[1]/div[1]/div[1]/a"); //Locator for Lines shown-see all link
 	
 	public ATLExhDigiShowroomPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -460,7 +461,16 @@ public class ATLExhDigiShowroomPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(SelectCatalog));
 		return driver.findElement(SelectCatalog);
 	}
-	
+	public WebElement getLinesShownTxtOnSearchGrid() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(linesshowntextonsearchgrid));
+		return driver.findElement(linesshowntextonsearchgrid);
+	}
+	public WebElement getLinesShownSeeAllLink() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(linesshownseealllink));
+		return driver.findElement(linesshownseealllink);
+	}
 }
 
 

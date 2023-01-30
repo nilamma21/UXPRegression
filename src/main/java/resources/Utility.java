@@ -62,8 +62,8 @@ public class Utility extends base {
 		lap.getLogin().click();
 
 		// Enter the credentials on Login Page and click
-		lp.getEmailAddress().sendKeys((prop.getProperty("usernameSwapnil")));
-		lp.getPassword().sendKeys((prop.getProperty("passwordSwapnil")));
+		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
+		lp.getPassword().sendKeys((prop.getProperty("password")));
 
 		lp.getSignInBtn().click();
 		Thread.sleep(15000);
@@ -263,7 +263,7 @@ public class Utility extends base {
 			}
 		}
 		if (flag == true) {
-			System.out.println("List " + listName + "selected");
+			System.out.println("List " + listName + " selected");
 			Assert.assertTrue(flag = true);
 		} else {
 			Assert.assertTrue(flag = false);

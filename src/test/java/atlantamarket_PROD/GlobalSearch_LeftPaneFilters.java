@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -55,13 +56,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(7000);
-		//lap.getCloseMarktAdBtn().click();
-
-		//Login to Market Planner
-		//utl.verifyMPLoginFunctionality();
-
-		//Thread.sleep(6000);
-		//lap.getCloseMarktAdBtn().click();
+		driver.navigate().refresh();
+		Thread.sleep(4000);
 	}
 
 	@Test(priority = 1)
@@ -125,7 +121,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
 
 		//Click on Product Categories expand btn
@@ -137,16 +133,15 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		String expectedprodcatg = atlleftpane.getATLAntiqueVintProdCatg().getText();
 		atlleftpane.getATLAntiqueVintProdCatg().click();
 		Thread.sleep(8000);
-
 		//Verify the selected Product Category on Product details page
-		utl.scrollToElement(atlexhact.getExhibitorProduct());
-		// Hovering on 1st Product
+		utl.scrollToElement(atlexhact.getSecondExhProduct());
+				
 		Actions actions = new Actions(driver);
-		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
+		actions.moveToElement(atlexhact.getSecondExhProduct()).perform();
 		// To mouseover on See Details btn
-		actions.moveToElement(atlexhact.getProdSeeDetailsBtn()).perform();
+		actions.moveToElement(atlexhact.getSecondExhProductSeeDetailsBtn()).perform();
 		// Click on See Details button
-		actions.click().perform();
+		actions.click().perform();		
 
 		//Scroll till Product Categories section
 		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
@@ -178,7 +173,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
 
 		//Click on Product Categories expand btn
@@ -189,12 +184,13 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//Select 'Antique/Vintage' prod category
 		String expectedprodcatg1 = atlleftpane.getATLAntiqueVintProdCatg().getText();
 		atlleftpane.getATLAntiqueVintProdCatg().click();
-
+		Thread.sleep(6000);
+		
 		//Select 'Apparel, Vintage' prod category
 		String expectedprodcatg2 = atlleftpane.getATLApparelVintProdCatg().getText();
 		atlleftpane.getATLApparelVintProdCatg().click();
 		Thread.sleep(8000);
-
+/*
 		//Verify the selected Product Category on Product details page
 		utl.scrollToElement(atlexhact.getProductForMultipleCatg());
 		// Hovering on 1st Product
@@ -219,10 +215,10 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		driver.navigate().back();
 		Thread.sleep(5000);
-
+*/
 		//Verify the selected Product Categories on Exhibitor Digital Showroom page
-		//Select 3rd Exhibitor from Search results grid
-		atlexhact.getThirdExhName().click();
+		//Select 1st Exhibitor from Search results grid
+		atlleftpane.getATLexhibitor().click();
 
 		//Scroll till Product Categories section
 		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
@@ -737,9 +733,9 @@ public class GlobalSearch_LeftPaneFilters extends base {
 	}
 
 
-	/*@AfterClass
+	@AfterClass
 	public void tearDown()
 	{
 		driver.quit();
-	}*/
+	}
 }

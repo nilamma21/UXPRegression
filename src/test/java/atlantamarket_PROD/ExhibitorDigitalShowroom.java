@@ -56,18 +56,15 @@ public class ExhibitorDigitalShowroom extends base {
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl_prod"));
-		//driver.get(prop.getProperty("lvmurl_uat"));
-		
-		Thread.sleep(3000);
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(3000);
 
 		utl.verifyMPLoginFunctionality();
+		driver.navigate().refresh();
 		Thread.sleep(5000);
-		//lap.getIUnderstandBtn().click();
 		//utl.CloseATLPopup();
 	}
-	
+
 	@Test(priority = 1)
 	public void TS001_VerifyAddToFavoritesTest() throws InterruptedException, IOException {
 
@@ -114,7 +111,7 @@ public class ExhibitorDigitalShowroom extends base {
 		atlmppge.getMPHomeListsTab().click();
 		atlmppge.getATLMPListsPageFavoritesMenu().click();
 		Thread.sleep(4000);
-		
+
 		// Verify that the added favorites exhibitor should be displayed in to Favorites list
 		//Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 
@@ -127,8 +124,8 @@ public class ExhibitorDigitalShowroom extends base {
 				break;
 			}
 		}
-		
-		
+
+
 		// Delete that favorites exhibitor from list
 		atlmppge.getMoreBtnDeleteOptnExistingList_ATLPROD().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
@@ -143,7 +140,7 @@ public class ExhibitorDigitalShowroom extends base {
 			Assert.assertFalse(favlist.get(i).getText().contains(exhname)); 
 		}
 	}
-	
+
 	@Test(priority = 2)
 	public void TS002_VerifyAddToExistingListWithPlusIconTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -154,7 +151,7 @@ public class ExhibitorDigitalShowroom extends base {
 		atlmppge = new ATLMarketPlannerPage(driver);
 		lap = new ATLLandingPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
-		
+
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor1")));
@@ -167,16 +164,12 @@ public class ExhibitorDigitalShowroom extends base {
 
 		// Click Exhibitor Name and click Plus icon
 		atlexhdgshw.getExhibitorName().click();
+		Thread.sleep(4000);
 		atlexhdgshw.getListButtonPlusIcon().click();
-		
-		/*//Login to Market Planner
-		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
-		lp.getPassword().sendKeys((prop.getProperty("password")));
-		lp.getSignInBtn().click();*/
-		
+
 		// Select Existing list name
 		atlmppge.getATLMPExistingListName().click();
-		
+
 		// Store the existing list name
 		String existinglistname = atlmppge.getATLMPExistingListName().getText();
 		System.out.println("Existing list name: " + existinglistname);
@@ -221,7 +214,7 @@ public class ExhibitorDigitalShowroom extends base {
 			Assert.assertFalse(favlist.get(i).getText().contains(exhname)); 
 		}
 	}
-	
+
 	@Test(priority = 3)
 	public void TS003_VerifyAddNoteListWithPlusIconTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -234,25 +227,25 @@ public class ExhibitorDigitalShowroom extends base {
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 		lp = new ATLLoginPage(driver);
 		genData = new GenerateData();
-		
+
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(10000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor1")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
-		
+
 		// Click Exhibitor Name and click Plus icon
 		atlexhdgshw.getExhibitorName().click();
 		Thread.sleep(10000);
 		atlexhdgshw.getNoteOptn().click();
-		
+
 		// Add Note and verify Functionality for X (Close button)
 		atlexhdgshw.getNoteCloseBtn().click();
 		Assert.assertTrue(atlexhdgshw.getATLExhDigiShowPage().isDisplayed());
 		System.out.println("Close button at Note form works properly.");
-		
-		
+
+
 		// Verify save note option works properly
 		atlexhdgshw.getNoteOptn().click();
 		Thread.sleep(3000);
@@ -270,9 +263,9 @@ public class ExhibitorDigitalShowroom extends base {
 		atlexhdgshw.getViewAllNotes().click();
 		Assert.assertTrue(atlexhdgshw.getVerifyAddedNote().getText().contains(NoteTitle));
 		System.out.println("Note is added successfully.");
-		
+
 	}
-	
+
 	@Test(priority = 4)
 	public void TS004_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -284,7 +277,7 @@ public class ExhibitorDigitalShowroom extends base {
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
+
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
@@ -308,9 +301,9 @@ public class ExhibitorDigitalShowroom extends base {
 		driver.close();
 		driver.switchTo().window(winHandleBefore);
 
-		
+
 	}
-	
+
 	@Test(priority = 5)
 	public void TS005_VerifyClickOnTotalLinesSeeAllLinkForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -325,8 +318,13 @@ public class ExhibitorDigitalShowroom extends base {
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
-
 		Thread.sleep(15000);
+		
+		// Get the Total Lines count on Search grid
+		String temp = atlexhdgshw.getLinesShownTxtOnSearchGrid().getText();
+		String totallinescountonsearchgrid = temp.replaceAll("[^0-9]", "");
+		System.out.println("Total Lines Count on Search Results grid is: " + totallinescountonsearchgrid);
+
 		// Store the 1st Exhibitor name in String variable
 		exhname = atlexhact.getExhibitorName().getText();
 		System.out.println("Exhibitor name: " + exhname);
@@ -334,12 +332,10 @@ public class ExhibitorDigitalShowroom extends base {
 		// Get the Total Lines count on Search grid
 		atlexhdgshw.getExhibitorName().click();
 		Thread.sleep(5000);
-		utl.scrollToElement(atlexhdgshw.getLinesSection());
-		String temp = atlexhdgshw.getLinesSection().getText();
-		String totallinescountonsearchgrid = temp.replaceAll("[^0-9]", "");
-		System.out.println("Total Products Count on Search Results grid is: " + totallinescountonsearchgrid);
-		Assert.assertTrue(atlexhdgshw.getTotalLinesButton().getText().contains(totallinescountonsearchgrid));
-		System.out.println("Total Lines count is same at Lines section title and See All button.");
+		String temp1 = atlexhdgshw.getTotalLinesButton().getText();
+		String totallinescountondgtab = temp1.replaceAll("[^0-9]", "");
+		System.out.println("Lines count on Lines section:"+totallinescountondgtab);
+		Assert.assertTrue(totallinescountondgtab.contains(totallinescountonsearchgrid));
 
 		// Click on Total Lines-See All link for 1st Exhibitor
 		atlexhdgshw.getTotalLinesButton().click();
@@ -347,24 +343,16 @@ public class ExhibitorDigitalShowroom extends base {
 
 		// Verify that user should redirect to the Lines page
 		Assert.assertTrue(atlexhdgshw.getValidateLinesPage().getText().contains("Lines"));
-		System.out.println("All Lines page is displayed properly.");
-		Thread.sleep(6000);
+		Thread.sleep(8000);
+		Assert.assertTrue(driver.getTitle().contains("{"+exhname+"} Lines"));
 
-		// Get the Total Products count on Products page
+		// Get the Total Lines count on Lines page
 		String linestabtitle = atlexhdgshw.getLinesCountAtLinesPage().getText();
-		String totallinescountonprodpage = linestabtitle.replaceAll("[^0-9]", "");
- 		System.out.println("Total Lines Count on Products page is: " + totallinescountonprodpage);
-
-		//Get back to Exhibitor Showroom page and click any one product and verify if product details are displayed properly
-		atlexhdgshw.getProductsPageBackButton().click();
-		utl.scrollToElement(atlexhdgshw.getLinesSection());
-		String linetext = atlexhdgshw.getLinesOptionText().getText();
-		atlexhdgshw.getLinesOption().click();
-		Assert.assertTrue(atlexhdgshw.getValidateLinesPage().getText().contains(linetext));
-		System.out.println("Line Details are displayed properly.");
-		
+		String totallinescountonlinespage = linestabtitle.replaceAll("[^0-9]", "");
+		System.out.println("Total Lines Count on Lines page is: " + totallinescountonlinespage);
+		Assert.assertTrue(totallinescountonlinespage.contains(totallinescountondgtab));
 	}
-	
+
 	@Test(priority = 6)
 	public void TS006_VerifyClickOnProductShownLinkForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -376,39 +364,38 @@ public class ExhibitorDigitalShowroom extends base {
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
+
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput"))); 
 		atlgs.getATLSearchButton().click();
-
 		Thread.sleep(15000);
+		
 		// Store the 1st Exhibitor name in String variable
 		exhname = atlexhact.getExhibitorName().getText();
 		System.out.println("Exhibitor name: " + exhname);
-		
-		// Get the Total Products count on Search grid
+
+		// Get the Total Products count on Exh DG Showroom
 		atlexhdgshw.getExhibitorName().click();
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 		utl.scrollToElement(atlexhdgshw.getProductSection());
 		String temp = atlexhdgshw.getProductSection().getText();
-		String totalprodcountonsearchgrid = temp.replaceAll("[^0-9]", "");
-		System.out.println("Total Products Count on Search Results grid is: " + totalprodcountonsearchgrid);
-		Assert.assertTrue(atlexhdgshw.getAllProductsButton().getText().contains(totalprodcountonsearchgrid));
-		System.out.println("Total Products count is same at Products section title and See All button.");
+		String totalprodcountonexhdgshowroom = temp.replaceAll("[^0-9]", "");
+		System.out.println("Total Products Count on Exh DG Showroom is: " + totalprodcountonexhdgshowroom);
+		Assert.assertTrue(atlexhdgshw.getAllProductsButton().getText().contains(totalprodcountonexhdgshowroom));
 
 		// Click on Total Products-See All link for 1st Exhibitor
 		atlexhdgshw.getAllProductsButton().click();
 		Thread.sleep(6000);
 
-		// Verify that user should redirect to the Lines page
+		// Verify that user should redirect to the Products page
 		Assert.assertTrue(atlexhdgshw.getValidateLinesPage().getText().contains("Products"));
-		System.out.println("All Products page is displayed properly.");
-		Thread.sleep(6000);
+		Thread.sleep(9000);
 
 		// Get the Total Products count on Products page
 		String productstabtitle =atlexhact.getValidateProductsPage().getText();
 		String totalproductscountonprodpage = productstabtitle.replaceAll("[^0-9]", "");
 		System.out.println("Total Products Count on Products page is: " + totalproductscountonprodpage);
-
+		Assert.assertTrue(totalprodcountonexhdgshowroom.equals(totalproductscountonprodpage));
+		
 		//Get back to Exhibitor Showroom page and click any one product and verify if product details are displayed properly
 		atlexhdgshw.getProductsPageBackButton().click();
 		utl.scrollToElement(atlexhdgshw.getProductSection());
@@ -417,10 +404,8 @@ public class ExhibitorDigitalShowroom extends base {
 		atlexhdgshw.getProductsList().click();
 		Thread.sleep(5000);
 		Assert.assertTrue(producttext.contains(atlexhdgshw.getValidateLinesPage().getText()));
-		System.out.println("Product Details are displayed properly.");
-
 	}
-	
+
 	@Test(priority = 7)
 	public void TS007_VerifyClickOnLineFiltersForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -445,12 +430,12 @@ public class ExhibitorDigitalShowroom extends base {
 		atlexhdgshw.getExhibitorName().click();
 		Thread.sleep(5000);
 		utl.scrollToElement(atlexhdgshw.getLinesSection());
-		
+
 		//Verify A-Z sorting
 		atlexhdgshw.getAlphabeticSorting().click();
 		Assert.assertTrue(atlexhdgshw.getLinesOptionText().getText().startsWith("A"));
 	}
-	
+
 	@Test(priority = 8)
 	public void TS008_VerifyClickOnLineSearchForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -466,12 +451,12 @@ public class ExhibitorDigitalShowroom extends base {
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(8000);
-		
+
 		//Click on the 1st Exhibitor name
 		atlexhdgshw.getExhibitorName().click();
 		Thread.sleep(5000);
 		utl.scrollToElement(atlexhdgshw.getLinesSection());
-		
+
 		//Verify Line Search functionality
 		atlexhdgshw.getLineSearch().click();
 		atlexhdgshw.getLineSearch().sendKeys(prop.getProperty("line2"));
@@ -506,11 +491,11 @@ public class ExhibitorDigitalShowroom extends base {
 		utl.scrollToElement(atlexhdgshw.getLinesSection());
 		//Click on See All Lines Btn
 		atlexhdgshw.getTotalLinesButton().click();
-		
+
 		Assert.assertTrue(atlexhdgshw.getATLVerifyLinePageTitle().getText().contains("Lines"));
 		System.out.println("Lines Component: See All Lines Btn functionality is working properly.");
-		
-		
+
+
 	}
 	@Test(priority = 10)
 	public void TS010_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest() throws InterruptedException, IOException {
@@ -532,7 +517,7 @@ public class ExhibitorDigitalShowroom extends base {
 		exhname = atlexhact.getExhibitorName().getText();
 		System.out.println("Exhibitor name: " + exhname);
 
-	
+
 		atlexhdgshw.getExhibitorName().click();
 		Thread.sleep(5000);
 		//Scroll to Line Section
@@ -541,21 +526,21 @@ public class ExhibitorDigitalShowroom extends base {
 		String OrderOnJuniperMarktURL=atlexhdgshw.getOrderOnJuniperMarktBtnCatalog().getAttribute("href");
 		String winHandleBefore = driver.getWindowHandle();
 		atlexhdgshw.getOrderOnJuniperMarktBtnCatalog().click();
-		
+
 		for (String winHandle : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle);
 		}
-		
+
 		Assert.assertTrue(driver.getCurrentUrl().contains(OrderOnJuniperMarktURL));
-	
+
 		driver.close();
 		driver.switchTo().window(winHandleBefore);
-		
+
 		System.out.println(" Products Component: Order on JuniperMarket Btn functionality is working properly.");
-		
-		
-		
-		
+
+
+
+
 	}
 	@Test(priority = 11)
 	public void TS011_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest() throws InterruptedException, IOException {
@@ -577,21 +562,21 @@ public class ExhibitorDigitalShowroom extends base {
 		exhname = atlexhact.getExhibitorName().getText();
 		System.out.println("Exhibitor name: " + exhname);
 
-		
+
 		atlexhdgshw.getExhibitorName().click();
 		Thread.sleep(5000);
 		//Scroll to Product Section
 		utl.scrollToElement(atlexhdgshw.getProductSection());
 		//Click on All Product Btn Btn
 		atlexhdgshw.getAllProductsButton().click();
-		
-		
+
+
 		Assert.assertTrue(atlexhdgshw.getATLVerifyLinePageTitle().getText().contains("Products"));
 		System.out.println("Products Component: See All Products Btn functionality is working properly.");
-		
-		
+
+
 	}
-	
+
 	@Test(priority = 12)
 	public void TS012_VerifySeeInOtherMarketsForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -615,18 +600,18 @@ public class ExhibitorDigitalShowroom extends base {
 		// Get the Total Lines count on Search grid
 		atlexhdgshw.getExhibitorName().click();
 		Thread.sleep(5000);
-		
-		
+
+
 		//Click See in Other Market button and verify if the page opens
 		atlexhdgshw.getSeeInOtherMarket().click();
 		Assert.assertTrue(atlexhdgshw.getVerifyOtherMarketsPage().isDisplayed());
 		System.out.println("See In Other Markets page is displayed properly.");
-		
+
 		//Verify Go To Showroom functionality
 		String winHandleBefore = driver.getWindowHandle();
 		atlexhdgshw.getClickShowroom().click();
 		Thread.sleep(5000);
-		
+
 		for (String winHandle : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle);
 		}
@@ -635,7 +620,7 @@ public class ExhibitorDigitalShowroom extends base {
 		System.out.println("Showroom page is displayed properly.");
 		driver.close();
 		driver.switchTo().window(winHandleBefore);
-		
+
 		//Verify Contact Exhibitor
 		atlexhdgshw.getContactExhibitorInOtherMarket().click();
 		Thread.sleep(5000);
@@ -644,7 +629,7 @@ public class ExhibitorDigitalShowroom extends base {
 		//atlexhdgshw.getContactExhibitorCloseButton().click();
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		Thread.sleep(5000);
-		
+
 	}
 	@Test(priority = 13)
 	public void TS013_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest() throws InterruptedException, IOException {
@@ -658,7 +643,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchCataloginput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputforInformation")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -666,21 +651,21 @@ public class ExhibitorDigitalShowroom extends base {
 		exhname = atlexhact.getExhibitorName().getText();
 		System.out.println("Exhibitor name: " + exhname);
 
-		
+
 		atlexhdgshw.getExhibitorName().click();
 		Thread.sleep(5000);
 		//Scroll to Catalog Section
 		utl.scrollToElement(atlexhdgshw.getATLCatalogSection());
 		//Click on All Catalog Btn Btn
 		atlexhdgshw.getATLCatalogSeeAllBtn().click();
-		
-		
+
+
 		Assert.assertTrue(atlexhdgshw.getATLVerifyLinePageTitle().getText().contains("Catalogs"));
 		System.out.println("Catalogs Component: See All Catalogs Btn functionality is working properly.");
-		
-		
+
+
 	}
-	
+
 	@Test(priority = 14)
 	public void TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -693,7 +678,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchCataloginput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputforInformation")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -701,20 +686,20 @@ public class ExhibitorDigitalShowroom extends base {
 		exhname = atlexhact.getExhibitorName().getText();
 		System.out.println("Exhibitor name: " + exhname);
 
-	
+
 		atlexhdgshw.getExhibitorName().click();
 		Thread.sleep(5000);
 		//Scroll to Line Section
 		utl.scrollToElement(atlexhdgshw.getATLCatalogSection());
 		//Click on Order On Juniper Market Btn
-		
+
 		String OrderOnJuniperMarktURL=atlexhdgshw.getOrderOnJuniperMarktBtnCatalog().getAttribute("href");
 		atlexhdgshw.getOrderOnJuniperMarktBtnCatalog().click();
-		
+
 		Assert.assertTrue(driver.getCurrentUrl().contains(OrderOnJuniperMarktURL));
 		System.out.println(" Catalogs Component: Order on JuniperMarket Btn functionality is working properly.");
-		
-		
+
+
 	}
 	@Test(priority = 15)
 	public void TS015_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest() throws InterruptedException, IOException {
@@ -736,7 +721,7 @@ public class ExhibitorDigitalShowroom extends base {
 		exhname = atlexhact.getExhibitorName().getText();
 		System.out.println("Exhibitor name: " + exhname);
 
-	
+
 		atlexhdgshw.getExhibitorName().click();
 		Thread.sleep(5000);
 		String visitURL=atlexhdgshw.getHeroComponentVisit().getAttribute("href");
@@ -754,8 +739,8 @@ public class ExhibitorDigitalShowroom extends base {
 		driver.close();
 		driver.switchTo().window(currentWindowID);
 		System.out.println("Hero component: Visit <Exhibitor site> Btn functionality is working properly.");
-		
-		
+
+
 	}
 	@Test(priority = 16)
 	public void TS016_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest() throws InterruptedException, IOException {
@@ -777,24 +762,24 @@ public class ExhibitorDigitalShowroom extends base {
 		exhname = atlexhact.getExhibitorName().getText();
 		System.out.println("Exhibitor name: " + exhname);
 
-	
+
 
 		atlexhdgshw.getExhibitorName().click();
 		Thread.sleep(5000);
-		
-		
+
+
 		//Click on Hero Component Visit
-		
+
 		atlexhdgshw.getView3DshowroomBtn().click();
 		Thread.sleep(5000);
 		String header3Dshowroom=atlexhdgshw.getshowroomHeader3D().getText();
 		System.out.println(exhname +" 3D Showroom");
 		Assert.assertTrue(header3Dshowroom.contains(exhname +" 3D Showroom"));
-		
+
 		System.out.println("Hero component: View 3D Showroom Btn functionality is working properly.");
 		atlexhdgshw.getView3DshowroomClose().click();
-		
-		
+
+
 	}
 	@Test(priority = 17)
 	public void TS017_VerifyExhibitorDigitalEventsComponentTest() throws InterruptedException, IOException {
@@ -832,7 +817,7 @@ public class ExhibitorDigitalShowroom extends base {
 		atlexhdgshw.getEventName().click();
 		Assert.assertTrue(atlevents.getatlEventNameOnDetailsPage().getText().contains(eventName));
 		System.out.println("Events Component functionality is working properly.");	
-		
+
 	}
 
 	@Test(priority = 18)
@@ -859,7 +844,7 @@ public class ExhibitorDigitalShowroom extends base {
 		//Get the Total Lines count on Search grid
 		atlexhdgshw.getExhibitorName().click();
 		Thread.sleep(5000);
-		
+
 		//Verify Catalogs section for Exhibitor
 		utl.scrollToElement(atlexhdgshw.getCatalogsSection());
 		atlexhdgshw.getSeeAllCatalogsButton().click();
@@ -878,7 +863,7 @@ public class ExhibitorDigitalShowroom extends base {
 		System.out.println("Catalog is displayed properly.");
 		driver.close();
 		driver.switchTo().window(winHandleBefore);
-		
+
 	}
 	@Test(priority = 19)
 	public void TS019_VerifyExhibitorDigitalShowroomShowSpecialsTest() throws InterruptedException, IOException {
@@ -904,19 +889,19 @@ public class ExhibitorDigitalShowroom extends base {
 		//Get the Total Lines count on Search grid
 		atlexhdgshw.getExhibitorName().click();
 		Thread.sleep(5000);
-		
+
 		//Verify Show Special section for Exhibitor
 		utl.scrollToElement(atlexhdgshw.getshowSpecialSection());
 		//Verify both count
 		String shwoSpecialCount=atlexhdgshw.getShowSpecialCount().getText();
-		
+
 		String splitShwSpecialCount= shwoSpecialCount.split(" ")[0].trim();
-		
+
 		String SeeAllBtnCount=atlexhdgshw.getSeeAllshowSpecialBtn().getText();
-		
+
 		String splitSeeAllBtnCount=SeeAllBtnCount.split(" ")[2].trim();
-		
-		
+
+
 		Assert.assertTrue(splitShwSpecialCount.contains(splitSeeAllBtnCount));
 		System.out.println("Both counts are same");
 		//Click on See All Show Special
@@ -927,8 +912,8 @@ public class ExhibitorDigitalShowroom extends base {
 		utl.scrollToElement(atlexhdgshw.getshowSpecialSection());
 		String ShowSpecialName = atlexhdgshw.getShowSpecialName().getText();
 		System.out.println("Show Special Name : "+ShowSpecialName);
-		
-		
+
+
 	}
 	@Test(priority = 20)
 	public void TS020_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest() throws InterruptedException, IOException {
@@ -956,7 +941,7 @@ public class ExhibitorDigitalShowroom extends base {
 		Thread.sleep(5000);
 		String orderOnJuniperURL=atlexhdgshw.getheroComponentOrderOnJunperBtn().getAttribute("href");
 		//Click on Juniper Market Btn
-		
+
 		String currnetWindowHanldeID=driver.getWindowHandle();
 		atlexhdgshw.getheroComponentOrderOnJunperBtn().click();
 		for (String  winddowHandle : driver.getWindowHandles()) {
@@ -969,12 +954,12 @@ public class ExhibitorDigitalShowroom extends base {
 		driver.close();
 		driver.switchTo().window(currnetWindowHanldeID);
 		System.out.println("Hero component: Order on Juniper Market Btn functionality is working properly.");
-		
-		
-		
-	}
-	
 
-	
+
+
+	}
+
+
+
 }
 

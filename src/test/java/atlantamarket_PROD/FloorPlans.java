@@ -12,6 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -488,7 +489,8 @@ public class FloorPlans extends base {
 		atlflpp.getATLBuildingFloor().click();
 
 		// Scroll Down to Exhibitor list
-		utl.scrollToElement(atlflpp.getATLSelectBox());
+		//utl.scrollToElement(atlflpp.getATLSelectBox());
+		utl.scrollToElement(atlflpp.getATLNextFloorBtn());
 		Thread.sleep(15000);
 
 		// 1st Exhibitor Name
@@ -555,8 +557,10 @@ public class FloorPlans extends base {
 		// click on Exhibitor floor
 		atlflpp.getATLBuildingFloor().click();
 		// Scroll Down to Exhibitor list
-		utl.scrollToElement(atlflpp.getATLSelectBox());
-
+		//utl.scrollToElement(atlflpp.getATLSelectBox());
+		utl.scrollToElement(atlflpp.getATLNextFloorBtn());
+		Thread.sleep(15000);
+		
 		// 1st Exhibitor Name
 		String exhibitorName = atlflpp.getATLExhibitorName().getText();
 		System.out.println("Exhibitor Name : " + exhibitorName);
@@ -624,6 +628,7 @@ public class FloorPlans extends base {
 
 		// Scroll Down to Exhibitor list
 		utl.scrollToElement(atlflpp.getatlserachexhibitorbtn());
+		Thread.sleep(15000);
 
 		// 1st Exhibitor Name
 		String exhibitorName = atlflpp.getATLExhibitorName().getText();
@@ -656,10 +661,10 @@ public class FloorPlans extends base {
 			Assert.assertFalse(favlist.get(i).getText().contains(exhibitorName));
 		}
 	}
-	/*@AfterClass
+	@AfterClass
 	public void tearDown()
 	{
 		driver.quit();
-	}*/
+	}
 
 }
