@@ -9,6 +9,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -301,6 +302,11 @@ public class ExhibitorDigitalShowroom extends base {
 		System.out.println("Locations page is displayed properly.");
 		driver.close();
 		driver.switchTo().window(winHandleBefore);
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4985492824d42a419e8b39f90fc0adc954d87f68
 	}
 
 	@Test(priority = 5)
@@ -953,6 +959,7 @@ public class ExhibitorDigitalShowroom extends base {
 		driver.close();
 		driver.switchTo().window(currnetWindowHanldeID);
 		System.out.println("Hero component: Order on Juniper Market Btn functionality is working properly.");
+<<<<<<< HEAD
 
 
 
@@ -960,5 +967,15 @@ public class ExhibitorDigitalShowroom extends base {
 
 
 
+=======
+	}
+	@AfterClass
+	public void tearDown()
+	{
+		driver.quit();
+	}
+
+
+>>>>>>> 4985492824d42a419e8b39f90fc0adc954d87f68
 }
 

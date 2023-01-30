@@ -134,8 +134,7 @@ public class FloorPlans extends base {
 		//Assert.assertTrue(atlflpp.getATLLoadingExhMsg().isDisplayed());
 
 		//Verify that No Exhibitor msg should be displayed
-		Assert.assertTrue(atlflpp.getatlLoadingNoExhiMsg().isDisplayed());
-		Assert.assertTrue(atlflpp.getatlLoadingNoExhiMsg().isDisplayed());
+		Assert.assertTrue(atlflpp.getATLNoExpMsg().isDisplayed());
 	}
 
 	@Test(priority = 3)
@@ -196,7 +195,6 @@ public class FloorPlans extends base {
 		utl = new Utility(driver);
 		atlflpp=new ATLFloorPlansPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
-		atlgs = new ATLGlobalSearchPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
@@ -254,7 +252,7 @@ public class FloorPlans extends base {
 		//Verify the Exhibitor name on Exh Digital Showroom
 		Thread.sleep(10000);
 		Assert.assertTrue(driver.getTitle().contains(""+exhnameondetailsmodal+" at Atlanta Market"));
-		Assert.assertTrue(atlgs.getinfoTitleOnSeeDetailsPage().getText().contains(exhnameondetailsmodal));
+		Assert.assertTrue(atlexhdgshw.getExhibitorNameOnExhDirectImg().getText().contains(exhnameondetailsmodal));
 	}
 
 	@Test(priority = 5)
@@ -375,7 +373,6 @@ public class FloorPlans extends base {
 		lp = new ATLLoginPage(driver);
 		utl = new Utility(driver);
 		atlflpp=new ATLFloorPlansPage(driver);
-		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -393,20 +390,26 @@ public class FloorPlans extends base {
 		utl.scrollToElement(atlflpp.getATLNextFloorBtn());
 
 		//Stored 1st Exhibitor Name
-		String exhibitorName=atlflpp.getatlExhibitorNamePROD().getText();
+		String exhibitorName=atlflpp.getATLExhibitorName().getText();
 		System.out.println("Exhi Name: "+exhibitorName);
 
 		//Click on 1st Exhibitor
-		atlflpp.getatlExhibitorNamePROD().click();
+		atlflpp.getATLExhibitorName().click();
 
 		Thread.sleep(12000);
 		// Verify that Selected Exhibitor Digital Showroom page should be opened
+<<<<<<< HEAD
 		//Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
 		//Verify Selected Exhibitor title
 		//Assert.assertTrue(driver.getTitle().contains(""+exhibitorName+" at Atlanta Market"));
 		//Verify Selected Exhibitor Name
 		//Assert.assertTrue(atlexhdgshw.getExhibitorNameOnExhDirectImg().getText().contains(exhibitorName));
 		Assert.assertTrue(atlgs.getinfoTitleOnSeeDetailsPage().getText().contains(exhibitorName));
+=======
+		Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
+		Assert.assertTrue(driver.getTitle().contains(""+exhibitorName+" at Atlanta Market"));
+		Assert.assertTrue(atlexhdgshw.getExhibitorNameOnExhDirectImg().getText().contains(exhibitorName));
+>>>>>>> 4985492824d42a419e8b39f90fc0adc954d87f68
 	}
 
 	@Test(priority = 8)
@@ -504,7 +507,6 @@ public class FloorPlans extends base {
 		System.out.println("Exhibitor Name : " +exhnameonfloorplan );
 		// Click on More option 3dots
 		atlflpp.getATLMoreOptions().click();
-		Thread.sleep(2000);
 	
 		// Click on Add To List
 		atlflpp.getATLAddToList().click();
