@@ -63,8 +63,8 @@ public class MarketPlanner extends base {
 		utl.verifyMPLoginFunctionality();
 		Thread.sleep(8000);
 
-		//lap.getIUnderstandBtn().click();
-		//Thread.sleep(8000);
+		lap.getIUnderstandBtn().click();
+		Thread.sleep(8000);
 	}
 
 	@Test(priority = 1)
