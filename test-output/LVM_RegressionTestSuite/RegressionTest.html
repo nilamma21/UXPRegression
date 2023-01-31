@@ -55,19 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>RegressionTest</h2><table border='1' align="center">
 <tr>
-<<<<<<< HEAD
-<td>Tests passed/Failed/Skipped:</td><td>4/7/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>8/12/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jan 30 13:13:37 IST 2023</td>
+<td>Started on:</td><td>Tue Jan 31 11:26:44 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>549 seconds (549640 ms)</td>
-=======
-<td>Tests passed/Failed/Skipped:</td><td>8/3/0</td>
-</tr><tr>
-<td>Started on:</td><td>Mon Jan 23 13:33:29 IST 2023</td>
-</tr>
-<tr><td>Total time:</td><td>668 seconds (668394 ms)</td>
->>>>>>> 2d902bb2fbf84a07a349e7ecc16fcdef4962929a
+<tr><td>Total time:</td><td>913 seconds (913390 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -83,14 +75,13 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<<<<<<< HEAD
-<td title='lasvegasmarket_UAT.LineDigitalShowroom.TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest()'><b>TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest</b><br>Test class: lasvegasmarket_UAT.LineDigitalShowroom</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1&apos;]/div[1]/div[1]/div[2]/a[1] (tried for 20 second(s) with 500 MILLISECONDS interval)
+<td title='lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS001_VerifyAddToFavoritesTest()'><b>TS001_VerifyAddToFavoritesTest</b><br>Test class: lasvegasmarket_UAT.ExhibitorDigitalShowroom</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class = &apos;imc-vr--xxlarge&apos;]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1] (tried for 30 second(s) with 500 MILLISECONDS interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.LasVegasMarket.LVMLineDigitalShowroomPage.getdigiShowroomExhName(LVMLineDigitalShowroomPage.java:137)
-	at lasvegasmarket_UAT.LineDigitalShowroom.TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest(LineDigitalShowroom.java:90)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //div[@class=&apos;imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1&apos;]/div[1]/div[1]/div[2]/a[1]
+	at pageObjects.LasVegasMarket.LVMExhDigiShowroomPage.getSearchedExhibitor(LVMExhDigiShowroomPage.java:239)
+	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS001_VerifyAddToFavoritesTest(ExhibitorDigitalShowroom.java:70)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //div[@class = &apos;imc-vr--xxlarge&apos;]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
 System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
@@ -103,254 +94,12 @@ Driver info: driver.version: unknown
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
 	... 26 more
-... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1416415959", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1416415959'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1&apos;]/div[1]/div[1]/div[2]/a[1] (tried for 20 second(s) with 500 MILLISECONDS interval)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1801021153", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1801021153'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class = &apos;imc-vr--xxlarge&apos;]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1] (tried for 30 second(s) with 500 MILLISECONDS interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.LasVegasMarket.LVMLineDigitalShowroomPage.getdigiShowroomExhName(LVMLineDigitalShowroomPage.java:137)
-	at lasvegasmarket_UAT.LineDigitalShowroom.TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest(LineDigitalShowroom.java:90)
-=======
-<td title='atlantamarket_PROD.GlobalSearch_SearchFor.TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest()'><b>TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_SearchFor</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;imc-vr--xxlarge imc-margin--top--large--mobile&apos;]/div[1]/div[1]/span[1] (tried for 20 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at pageObjects.AtlantaMarket.ATLGlobalSearchPage.getATLFirstEventName(ATLGlobalSearchPage.java:165)
-	at atlantamarket_PROD.GlobalSearch_SearchFor.TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest(GlobalSearch_SearchFor.java:665)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;imc-vr--xxlarge imc-margin--top--large--mobile&apos;]/div[1]/div[1]/span[1]&quot;}
-  (Session info: chrome=109.0.5414.75)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
-System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.75, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60243}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 5245281050c204ded832fa1bb899fb52
-*** Element info: {Using=xpath, value=//div[@class=&apos;imc-vr--xxlarge imc-margin--top--large--mobile&apos;]/div[1]/div[1]/span[1]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 26 more
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace779343339", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace779343339'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;imc-vr--xxlarge imc-margin--top--large--mobile&apos;]/div[1]/div[1]/span[1] (tried for 20 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at pageObjects.AtlantaMarket.ATLGlobalSearchPage.getATLFirstEventName(ATLGlobalSearchPage.java:165)
-	at atlantamarket_PROD.GlobalSearch_SearchFor.TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest(GlobalSearch_SearchFor.java:665)
->>>>>>> 2d902bb2fbf84a07a349e7ecc16fcdef4962929a
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-<<<<<<< HEAD
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
-	at org.testng.TestNG.run(TestNG.java:1033)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //div[@class=&apos;imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1&apos;]/div[1]/div[1]/div[2]/a[1]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
-	at java.util.Optional.orElseThrow(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 26 more
-</pre></div></td>
-<td>40</td>
-<td>lasvegasmarket_UAT.LineDigitalShowroom@4411d970</td></tr>
-<tr>
-<td title='lasvegasmarket_UAT.LineDigitalShowroom.TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest()'><b>TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest</b><br>Test class: lasvegasmarket_UAT.LineDigitalShowroom</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@ID=&apos;react-autowhatever-input-1&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir5280_637581899}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:53499}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=109.0.5414.120, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: cc3fb425b02946b96336bc5497d90c90
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.LasVegasMarket.LVMLineDigitalShowroomPage.getsuggetionList(LVMLineDigitalShowroomPage.java:132)
-	at lasvegasmarket_UAT.LineDigitalShowroom.TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest(LineDigitalShowroom.java:119)
-... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1441328175", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1441328175'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@ID=&apos;react-autowhatever-input-1&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir5280_637581899}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:53499}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=109.0.5414.120, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: cc3fb425b02946b96336bc5497d90c90
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.LasVegasMarket.LVMLineDigitalShowroomPage.getsuggetionList(LVMLineDigitalShowroomPage.java:132)
-	at lasvegasmarket_UAT.LineDigitalShowroom.TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest(LineDigitalShowroom.java:119)
-=======
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;imc-vr--xxlarge imc-margin--top--large--mobile&apos;]/div[1]/div[1]/span[1]&quot;}
-  (Session info: chrome=109.0.5414.75)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
-System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.75, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60243}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 5245281050c204ded832fa1bb899fb52
-*** Element info: {Using=xpath, value=//div[@class=&apos;imc-vr--xxlarge imc-margin--top--large--mobile&apos;]/div[1]/div[1]/span[1]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 26 more
-</pre></div></td>
-<td>45</td>
-<td>atlantamarket_PROD.GlobalSearch_SearchFor@13deb50e</td></tr>
-<tr>
-<td title='atlantamarket_PROD.GlobalSearch_SearchFor.TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest()'><b>TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_SearchFor</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@aria-label=&apos;Topics&apos;]&quot;}
-  (Session info: chrome=109.0.5414.75)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
-System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.75, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60243}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 5245281050c204ded832fa1bb899fb52
-*** Element info: {Using=xpath, value=//a[@aria-label=&apos;Topics&apos;]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at pageObjects.AtlantaMarket.ATLGlobalSearchPage.getATLInfoSearchTopicsFilter(ATLGlobalSearchPage.java:485)
-	at atlantamarket_PROD.GlobalSearch_SearchFor.TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest(GlobalSearch_SearchFor.java:711)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1825983295", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1825983295'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@aria-label=&apos;Topics&apos;]&quot;}
-  (Session info: chrome=109.0.5414.75)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
-System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.75, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60243}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 5245281050c204ded832fa1bb899fb52
-*** Element info: {Using=xpath, value=//a[@aria-label=&apos;Topics&apos;]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at pageObjects.AtlantaMarket.ATLGlobalSearchPage.getATLInfoSearchTopicsFilter(ATLGlobalSearchPage.java:485)
-	at atlantamarket_PROD.GlobalSearch_SearchFor.TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest(GlobalSearch_SearchFor.java:711)
->>>>>>> 2d902bb2fbf84a07a349e7ecc16fcdef4962929a
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
-</pre></div></td>
-<<<<<<< HEAD
-<td>26</td>
-<td>lasvegasmarket_UAT.LineDigitalShowroom@4411d970</td></tr>
-<tr>
-<td title='lasvegasmarket_UAT.LineDigitalShowroom.TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest()'><b>TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest</b><br>Test class: lasvegasmarket_UAT.LineDigitalShowroom</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1&apos;]/div[1]/div[1]/div[2]/a[1] (tried for 20 second(s) with 500 MILLISECONDS interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.LasVegasMarket.LVMLineDigitalShowroomPage.getdigiShowroomExhName(LVMLineDigitalShowroomPage.java:137)
-	at lasvegasmarket_UAT.LineDigitalShowroom.TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest(LineDigitalShowroom.java:172)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //div[@class=&apos;imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1&apos;]/div[1]/div[1]/div[2]/a[1]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
-	at java.util.Optional.orElseThrow(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 26 more
-... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace593768538", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace593768538'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1&apos;]/div[1]/div[1]/div[2]/a[1] (tried for 20 second(s) with 500 MILLISECONDS interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.LasVegasMarket.LVMLineDigitalShowroomPage.getdigiShowroomExhName(LVMLineDigitalShowroomPage.java:137)
-	at lasvegasmarket_UAT.LineDigitalShowroom.TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest(LineDigitalShowroom.java:172)
+	at pageObjects.LasVegasMarket.LVMExhDigiShowroomPage.getSearchedExhibitor(LVMExhDigiShowroomPage.java:239)
+	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS001_VerifyAddToFavoritesTest(ExhibitorDigitalShowroom.java:70)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -375,7 +124,7 @@ Driver info: driver.version: unknown
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //div[@class=&apos;imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1&apos;]/div[1]/div[1]/div[2]/a[1]
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //div[@class = &apos;imc-vr--xxlarge&apos;]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
 System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
@@ -388,187 +137,17 @@ Driver info: driver.version: unknown
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
 	... 26 more
-</pre></div></td>
-<td>41</td>
-<td>lasvegasmarket_UAT.LineDigitalShowroom@4411d970</td></tr>
-<tr>
-<td title='lasvegasmarket_UAT.LineDigitalShowroom.TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest()'><b>TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest</b><br>Test class: lasvegasmarket_UAT.LineDigitalShowroom</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[@class=&apos;imc-link--alt-darkred&apos;] (tried for 35 second(s) with 500 MILLISECONDS interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.LasVegasMarket.LVMMarketPlannerPage.getlistOfAllExh(LVMMarketPlannerPage.java:976)
-	at lasvegasmarket_UAT.LineDigitalShowroom.TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest(LineDigitalShowroom.java:259)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //a[@class=&apos;imc-link--alt-darkred&apos;]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
-	at java.util.Optional.orElseThrow(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 26 more
-... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace749981943", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace749981943'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[@class=&apos;imc-link--alt-darkred&apos;] (tried for 35 second(s) with 500 MILLISECONDS interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.LasVegasMarket.LVMMarketPlannerPage.getlistOfAllExh(LVMMarketPlannerPage.java:976)
-	at lasvegasmarket_UAT.LineDigitalShowroom.TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest(LineDigitalShowroom.java:259)
-=======
-<td>50</td>
-<td>atlantamarket_PROD.GlobalSearch_SearchFor@13deb50e</td></tr>
-<tr>
-<td title='atlantamarket_PROD.GlobalSearch_SearchFor.TS011_VerifyEventsOverviewInGlobalSearchTest()'><b>TS011_VerifyEventsOverviewInGlobalSearchTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_SearchFor</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[contains(@class,&apos;imc-eventcard__title&apos;)]&quot;}
-  (Session info: chrome=109.0.5414.75)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
-System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.75, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60243}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 5245281050c204ded832fa1bb899fb52
-*** Element info: {Using=xpath, value=//span[contains(@class,&apos;imc-eventcard__title&apos;)]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at pageObjects.AtlantaMarket.ATLExhLineProdActionsPage.getEventCardTitle(ATLExhLineProdActionsPage.java:344)
-	at atlantamarket_PROD.GlobalSearch_SearchFor.TS011_VerifyEventsOverviewInGlobalSearchTest(GlobalSearch_SearchFor.java:809)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1457352442", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1457352442'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[contains(@class,&apos;imc-eventcard__title&apos;)]&quot;}
-  (Session info: chrome=109.0.5414.75)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
-System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.75, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60243}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 5245281050c204ded832fa1bb899fb52
-*** Element info: {Using=xpath, value=//span[contains(@class,&apos;imc-eventcard__title&apos;)]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at pageObjects.AtlantaMarket.ATLExhLineProdActionsPage.getEventCardTitle(ATLExhLineProdActionsPage.java:344)
-	at atlantamarket_PROD.GlobalSearch_SearchFor.TS011_VerifyEventsOverviewInGlobalSearchTest(GlobalSearch_SearchFor.java:809)
->>>>>>> 2d902bb2fbf84a07a349e7ecc16fcdef4962929a
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-<<<<<<< HEAD
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
-	at org.testng.TestNG.run(TestNG.java:1033)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //a[@class=&apos;imc-link--alt-darkred&apos;]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
-	at java.util.Optional.orElseThrow(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 26 more
-</pre></div></td>
-<td>114</td>
-<td>lasvegasmarket_UAT.LineDigitalShowroom@4411d970</td></tr>
-<tr>
-<td title='lasvegasmarket_UAT.LineDigitalShowroom.TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest()'><b>TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest</b><br>Test class: lasvegasmarket_UAT.LineDigitalShowroom</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@ID=&apos;react-autowhatever-input-1&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir5280_637581899}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:53499}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=109.0.5414.120, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: cc3fb425b02946b96336bc5497d90c90
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.LasVegasMarket.LVMLineDigitalShowroomPage.getsuggetionList(LVMLineDigitalShowroomPage.java:132)
-	at lasvegasmarket_UAT.LineDigitalShowroom.TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest(LineDigitalShowroom.java:368)
-... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1971152916", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1971152916'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@ID=&apos;react-autowhatever-input-1&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir5280_637581899}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:53499}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=109.0.5414.120, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: cc3fb425b02946b96336bc5497d90c90
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.LasVegasMarket.LVMLineDigitalShowroomPage.getsuggetionList(LVMLineDigitalShowroomPage.java:132)
-	at lasvegasmarket_UAT.LineDigitalShowroom.TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest(LineDigitalShowroom.java:368)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:663)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:849)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
-	at org.testng.TestNG.run(TestNG.java:1033)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 </pre></div></td>
 <td>31</td>
-<td>lasvegasmarket_UAT.LineDigitalShowroom@4411d970</td></tr>
+<td>lasvegasmarket_UAT.ExhibitorDigitalShowroom@edf4efb</td></tr>
 <tr>
-<td title='lasvegasmarket_UAT.LineDigitalShowroom.TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest()'><b>TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest</b><br>Test class: lasvegasmarket_UAT.LineDigitalShowroom</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;imc-products-overview--cta-bar__item&apos;]/a[1] (tried for 20 second(s) with 500 MILLISECONDS interval)
+<td title='lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS002_VerifyAddToExistingListWithPlusIconTest()'><b>TS002_VerifyAddToExistingListWithPlusIconTest</b><br>Test class: lasvegasmarket_UAT.ExhibitorDigitalShowroom</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[1]/div[1]/a (tried for 20 second(s) with 500 MILLISECONDS interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.LasVegasMarket.LVMLineDigitalShowroomPage.getorderOnJuniperBtnLink(LVMLineDigitalShowroomPage.java:71)
-	at lasvegasmarket_UAT.LineDigitalShowroom.TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest(LineDigitalShowroom.java:530)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //div[@class=&apos;imc-products-overview--cta-bar__item&apos;]/a[1]
+	at pageObjects.LasVegasMarket.LVMMarketPlannerPage.getLVMSavedExhNameInList(LVMMarketPlannerPage.java:479)
+	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS002_VerifyAddToExistingListWithPlusIconTest(ExhibitorDigitalShowroom.java:141)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[1]/div[1]/a
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
 System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
@@ -581,12 +160,12 @@ Driver info: driver.version: unknown
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
 	... 26 more
-... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace114414807", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace114414807'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;imc-products-overview--cta-bar__item&apos;]/a[1] (tried for 20 second(s) with 500 MILLISECONDS interval)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1818449913", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1818449913'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[1]/div[1]/a (tried for 20 second(s) with 500 MILLISECONDS interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.LasVegasMarket.LVMLineDigitalShowroomPage.getorderOnJuniperBtnLink(LVMLineDigitalShowroomPage.java:71)
-	at lasvegasmarket_UAT.LineDigitalShowroom.TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest(LineDigitalShowroom.java:530)
+	at pageObjects.LasVegasMarket.LVMMarketPlannerPage.getLVMSavedExhNameInList(LVMMarketPlannerPage.java:479)
+	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS002_VerifyAddToExistingListWithPlusIconTest(ExhibitorDigitalShowroom.java:141)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -611,7 +190,7 @@ Driver info: driver.version: unknown
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //div[@class=&apos;imc-products-overview--cta-bar__item&apos;]/a[1]
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[1]/div[1]/a
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
 System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
@@ -625,31 +204,283 @@ Driver info: driver.version: unknown
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
 	... 26 more
 </pre></div></td>
-<td>45</td>
-<td>lasvegasmarket_UAT.LineDigitalShowroom@4411d970</td></tr>
+<td>60</td>
+<td>lasvegasmarket_UAT.ExhibitorDigitalShowroom@edf4efb</td></tr>
 <tr>
-<td title='lasvegasmarket_UAT.LineDigitalShowroom.TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest()'><b>TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest</b><br>Test class: lasvegasmarket_UAT.LineDigitalShowroom</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@ID=&apos;react-autowhatever-input-1&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir5280_637581899}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:53499}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=109.0.5414.120, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: cc3fb425b02946b96336bc5497d90c90
+<td title='lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS010_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest()'><b>TS010_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest</b><br>Test class: lasvegasmarket_UAT.ExhibitorDigitalShowroom</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//span[contains(text(),&apos;Catalogs&apos;)])[1]/../../div[3]/div[1]/a[1] (tried for 20 second(s) with 500 MILLISECONDS interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.LasVegasMarket.LVMLineDigitalShowroomPage.getsuggetionList(LVMLineDigitalShowroomPage.java:132)
-	at lasvegasmarket_UAT.LineDigitalShowroom.TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest(LineDigitalShowroom.java:608)
-... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1928621590", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1928621590'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@ID=&apos;react-autowhatever-input-1&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at pageObjects.LasVegasMarket.LVMExhDigiShowroomPage.getOrderOnJuniperMarktBtnCatalog(LVMExhDigiShowroomPage.java:131)
+	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS010_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest(ExhibitorDigitalShowroom.java:455)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: (//span[contains(text(),&apos;Catalogs&apos;)])[1]/../../div[3]/div[1]/a[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
 System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir5280_637581899}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:53499}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=109.0.5414.120, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: cc3fb425b02946b96336bc5497d90c90
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 26 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2113243119", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2113243119'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//span[contains(text(),&apos;Catalogs&apos;)])[1]/../../div[3]/div[1]/a[1] (tried for 20 second(s) with 500 MILLISECONDS interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.LasVegasMarket.LVMLineDigitalShowroomPage.getsuggetionList(LVMLineDigitalShowroomPage.java:132)
-	at lasvegasmarket_UAT.LineDigitalShowroom.TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest(LineDigitalShowroom.java:608)
+	at pageObjects.LasVegasMarket.LVMExhDigiShowroomPage.getOrderOnJuniperMarktBtnCatalog(LVMExhDigiShowroomPage.java:131)
+	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS010_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest(ExhibitorDigitalShowroom.java:455)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:663)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:849)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
+	at org.testng.TestNG.run(TestNG.java:1033)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: (//span[contains(text(),&apos;Catalogs&apos;)])[1]/../../div[3]/div[1]/a[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 26 more
+</pre></div></td>
+<td>59</td>
+<td>lasvegasmarket_UAT.ExhibitorDigitalShowroom@edf4efb</td></tr>
+<tr>
+<td title='lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS012_VerifySeeInOtherMarketsForExhibitorTest()'><b>TS012_VerifySeeInOtherMarketsForExhibitorTest</b><br>Test class: lasvegasmarket_UAT.ExhibitorDigitalShowroom</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //button[@class = &apos;imc-button imc-button--full-bleed-mobile imc-button--primary-inverted imc-margin--all--none&apos;] (tried for 30 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.LasVegasMarket.LVMExhDigiShowroomPage.getSeeInOtherMarket(LVMExhDigiShowroomPage.java:414)
+	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS012_VerifySeeInOtherMarketsForExhibitorTest(ExhibitorDigitalShowroom.java:521)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //button[@class = &apos;imc-button imc-button--full-bleed-mobile imc-button--primary-inverted imc-margin--all--none&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 26 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace32393008", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace32393008'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //button[@class = &apos;imc-button imc-button--full-bleed-mobile imc-button--primary-inverted imc-margin--all--none&apos;] (tried for 30 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.LasVegasMarket.LVMExhDigiShowroomPage.getSeeInOtherMarket(LVMExhDigiShowroomPage.java:414)
+	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS012_VerifySeeInOtherMarketsForExhibitorTest(ExhibitorDigitalShowroom.java:521)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:663)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:849)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
+	at org.testng.TestNG.run(TestNG.java:1033)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //button[@class = &apos;imc-button imc-button--full-bleed-mobile imc-button--primary-inverted imc-margin--all--none&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 26 more
+</pre></div></td>
+<td>57</td>
+<td>lasvegasmarket_UAT.ExhibitorDigitalShowroom@edf4efb</td></tr>
+<tr>
+<td title='lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS013_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest()'><b>TS013_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest</b><br>Test class: lasvegasmarket_UAT.ExhibitorDigitalShowroom</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class = &apos;imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1&apos;]/div[1]/div/span[text()=&apos;Catalogs&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.LasVegasMarket.LVMExhDigiShowroomPage.getLVMCatalogSection(LVMExhDigiShowroomPage.java:176)
+	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS013_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest(ExhibitorDigitalShowroom.java:571)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //div[@class = &apos;imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1&apos;]/div[1]/div/span[text()=&apos;Catalogs&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 26 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1934692470", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1934692470'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class = &apos;imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1&apos;]/div[1]/div/span[text()=&apos;Catalogs&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.LasVegasMarket.LVMExhDigiShowroomPage.getLVMCatalogSection(LVMExhDigiShowroomPage.java:176)
+	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS013_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest(ExhibitorDigitalShowroom.java:571)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:663)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:849)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
+	at org.testng.TestNG.run(TestNG.java:1033)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //div[@class = &apos;imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1&apos;]/div[1]/div/span[text()=&apos;Catalogs&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 26 more
+</pre></div></td>
+<td>55</td>
+<td>lasvegasmarket_UAT.ExhibitorDigitalShowroom@edf4efb</td></tr>
+<tr>
+<td title='lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest()'><b>TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest</b><br>Test class: lasvegasmarket_UAT.ExhibitorDigitalShowroom</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class = &apos;imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1&apos;]/div[1]/div/span[text()=&apos;Catalogs&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.LasVegasMarket.LVMExhDigiShowroomPage.getLVMCatalogSection(LVMExhDigiShowroomPage.java:176)
+	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest(ExhibitorDigitalShowroom.java:602)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //div[@class = &apos;imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1&apos;]/div[1]/div/span[text()=&apos;Catalogs&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 26 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1746257394", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1746257394'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class = &apos;imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1&apos;]/div[1]/div/span[text()=&apos;Catalogs&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.LasVegasMarket.LVMExhDigiShowroomPage.getLVMCatalogSection(LVMExhDigiShowroomPage.java:176)
+	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest(ExhibitorDigitalShowroom.java:602)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:663)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:849)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
+	at org.testng.TestNG.run(TestNG.java:1033)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //div[@class = &apos;imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1&apos;]/div[1]/div/span[text()=&apos;Catalogs&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 26 more
+</pre></div></td>
+<td>54</td>
+<td>lasvegasmarket_UAT.ExhibitorDigitalShowroom@edf4efb</td></tr>
+<tr>
+<td title='lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS015_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest()'><b>TS015_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest</b><br>Test class: lasvegasmarket_UAT.ExhibitorDigitalShowroom</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS015_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest(ExhibitorDigitalShowroom.java:643)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1911978617", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1911978617'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS015_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest(ExhibitorDigitalShowroom.java:643)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -675,19 +506,358 @@ Session ID: cc3fb425b02946b96336bc5497d90c90
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 </pre></div></td>
-<td>31</td>
-<td>lasvegasmarket_UAT.LineDigitalShowroom@4411d970</td></tr>
-=======
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+<td>37</td>
+<td>lasvegasmarket_UAT.ExhibitorDigitalShowroom@edf4efb</td></tr>
+<tr>
+<td title='lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS016_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest()'><b>TS016_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest</b><br>Test class: lasvegasmarket_UAT.ExhibitorDigitalShowroom</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id=&apos;input-1&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.LasVegasMarket.LVMGlobalSearchPage.getLVMGlobalSearchTextBox(LVMGlobalSearchPage.java:355)
+	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS016_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest(ExhibitorDigitalShowroom.java:660)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //input[@id=&apos;input-1&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 26 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2114629072", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2114629072'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id=&apos;input-1&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.LasVegasMarket.LVMGlobalSearchPage.getLVMGlobalSearchTextBox(LVMGlobalSearchPage.java:355)
+	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS016_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest(ExhibitorDigitalShowroom.java:660)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:663)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:849)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
+	at org.testng.TestNG.run(TestNG.java:1033)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //input[@id=&apos;input-1&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 26 more
 </pre></div></td>
-<td>40</td>
-<td>atlantamarket_PROD.GlobalSearch_SearchFor@13deb50e</td></tr>
->>>>>>> 2d902bb2fbf84a07a349e7ecc16fcdef4962929a
+<td>30</td>
+<td>lasvegasmarket_UAT.ExhibitorDigitalShowroom@edf4efb</td></tr>
+<tr>
+<td title='lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS017_VerifyExhibitorDigitalEventsComponentTest()'><b>TS017_VerifyExhibitorDigitalEventsComponentTest</b><br>Test class: lasvegasmarket_UAT.ExhibitorDigitalShowroom</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id=&apos;input-1&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.LasVegasMarket.LVMGlobalSearchPage.getLVMGlobalSearchTextBox(LVMGlobalSearchPage.java:355)
+	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS017_VerifyExhibitorDigitalEventsComponentTest(ExhibitorDigitalShowroom.java:694)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //input[@id=&apos;input-1&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 26 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2010070923", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2010070923'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id=&apos;input-1&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.LasVegasMarket.LVMGlobalSearchPage.getLVMGlobalSearchTextBox(LVMGlobalSearchPage.java:355)
+	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS017_VerifyExhibitorDigitalEventsComponentTest(ExhibitorDigitalShowroom.java:694)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:663)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:849)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
+	at org.testng.TestNG.run(TestNG.java:1033)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //input[@id=&apos;input-1&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 26 more
+</pre></div></td>
+<td>30</td>
+<td>lasvegasmarket_UAT.ExhibitorDigitalShowroom@edf4efb</td></tr>
+<tr>
+<td title='lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS018_VerifyCatalogsSectionForExhibitorTest()'><b>TS018_VerifyCatalogsSectionForExhibitorTest</b><br>Test class: lasvegasmarket_UAT.ExhibitorDigitalShowroom</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id=&apos;input-1&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.LasVegasMarket.LVMGlobalSearchPage.getLVMGlobalSearchTextBox(LVMGlobalSearchPage.java:355)
+	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS018_VerifyCatalogsSectionForExhibitorTest(ExhibitorDigitalShowroom.java:731)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //input[@id=&apos;input-1&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 26 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1589466857", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1589466857'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id=&apos;input-1&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.LasVegasMarket.LVMGlobalSearchPage.getLVMGlobalSearchTextBox(LVMGlobalSearchPage.java:355)
+	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS018_VerifyCatalogsSectionForExhibitorTest(ExhibitorDigitalShowroom.java:731)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:663)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:849)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
+	at org.testng.TestNG.run(TestNG.java:1033)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //input[@id=&apos;input-1&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 26 more
+</pre></div></td>
+<td>30</td>
+<td>lasvegasmarket_UAT.ExhibitorDigitalShowroom@edf4efb</td></tr>
+<tr>
+<td title='lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS020_VerifyExhibitorDigitalShowroomShowSpecialsTest()'><b>TS020_VerifyExhibitorDigitalShowroomShowSpecialsTest</b><br>Test class: lasvegasmarket_UAT.ExhibitorDigitalShowroom</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id=&apos;input-1&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.LasVegasMarket.LVMGlobalSearchPage.getLVMGlobalSearchTextBox(LVMGlobalSearchPage.java:355)
+	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS020_VerifyExhibitorDigitalShowroomShowSpecialsTest(ExhibitorDigitalShowroom.java:776)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //input[@id=&apos;input-1&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 26 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1091781053", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1091781053'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id=&apos;input-1&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.LasVegasMarket.LVMGlobalSearchPage.getLVMGlobalSearchTextBox(LVMGlobalSearchPage.java:355)
+	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS020_VerifyExhibitorDigitalShowroomShowSpecialsTest(ExhibitorDigitalShowroom.java:776)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:663)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:849)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
+	at org.testng.TestNG.run(TestNG.java:1033)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //input[@id=&apos;input-1&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 26 more
+</pre></div></td>
+<td>30</td>
+<td>lasvegasmarket_UAT.ExhibitorDigitalShowroom@edf4efb</td></tr>
+<tr>
+<td title='lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS021_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest()'><b>TS021_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest</b><br>Test class: lasvegasmarket_UAT.ExhibitorDigitalShowroom</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id=&apos;input-1&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.LasVegasMarket.LVMGlobalSearchPage.getLVMGlobalSearchTextBox(LVMGlobalSearchPage.java:355)
+	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS021_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest(ExhibitorDigitalShowroom.java:821)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //input[@id=&apos;input-1&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 26 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1215029765", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1215029765'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id=&apos;input-1&apos;] (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.LasVegasMarket.LVMGlobalSearchPage.getLVMGlobalSearchTextBox(LVMGlobalSearchPage.java:355)
+	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS021_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest(ExhibitorDigitalShowroom.java:821)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:663)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:849)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
+	at org.testng.TestNG.run(TestNG.java:1033)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //input[@id=&apos;input-1&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 26 more
+</pre></div></td>
+<td>30</td>
+<td>lasvegasmarket_UAT.ExhibitorDigitalShowroom@edf4efb</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -697,67 +867,45 @@ Session ID: cc3fb425b02946b96336bc5497d90c90
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<<<<<<< HEAD
-<td title='lasvegasmarket_UAT.LineDigitalShowroom.TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest()'><b>TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest</b><br>Test class: lasvegasmarket_UAT.LineDigitalShowroom</td>
+<td title='lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS003_VerifyAddNoteListWithPlusIconTest()'><b>TS003_VerifyAddNoteListWithPlusIconTest</b><br>Test class: lasvegasmarket_UAT.ExhibitorDigitalShowroom</td>
 <td></td>
-<td>80</td>
-<td>lasvegasmarket_UAT.LineDigitalShowroom@4411d970</td></tr>
+<td>60</td>
+<td>lasvegasmarket_UAT.ExhibitorDigitalShowroom@edf4efb</td></tr>
 <tr>
-<td title='lasvegasmarket_UAT.LineDigitalShowroom.TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest()'><b>TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest</b><br>Test class: lasvegasmarket_UAT.LineDigitalShowroom</td>
+<td title='lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS004_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest()'><b>TS004_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest</b><br>Test class: lasvegasmarket_UAT.ExhibitorDigitalShowroom</td>
 <td></td>
-<td>16</td>
-<td>lasvegasmarket_UAT.LineDigitalShowroom@4411d970</td></tr>
+<td>45</td>
+<td>lasvegasmarket_UAT.ExhibitorDigitalShowroom@edf4efb</td></tr>
 <tr>
-<td title='lasvegasmarket_UAT.LineDigitalShowroom.TS008_VerifyLineDigitalShowroomProductscomponentTest()'><b>TS008_VerifyLineDigitalShowroomProductscomponentTest</b><br>Test class: lasvegasmarket_UAT.LineDigitalShowroom</td>
+<td title='lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS005_VerifyClickOnTotalLinesSeeAllLinkForExhibitorTest()'><b>TS005_VerifyClickOnTotalLinesSeeAllLinkForExhibitorTest</b><br>Test class: lasvegasmarket_UAT.ExhibitorDigitalShowroom</td>
 <td></td>
-<td>23</td>
-<td>lasvegasmarket_UAT.LineDigitalShowroom@4411d970</td></tr>
+<td>51</td>
+<td>lasvegasmarket_UAT.ExhibitorDigitalShowroom@edf4efb</td></tr>
 <tr>
-<td title='lasvegasmarket_UAT.LineDigitalShowroom.TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest()'><b>TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest</b><br>Test class: lasvegasmarket_UAT.LineDigitalShowroom</td>
+<td title='lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS006_VerifyClickOnProductShownLinkForExhibitorTest()'><b>TS006_VerifyClickOnProductShownLinkForExhibitorTest</b><br>Test class: lasvegasmarket_UAT.ExhibitorDigitalShowroom</td>
 <td></td>
-<td>13</td>
-<td>lasvegasmarket_UAT.LineDigitalShowroom@4411d970</td></tr>
-=======
-<td title='atlantamarket_PROD.GlobalSearch_SearchFor.TS001_VerifyInformationTabInGlobalSearchTest()'><b>TS001_VerifyInformationTabInGlobalSearchTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_SearchFor</td>
-<td></td>
-<td>20</td>
-<td>atlantamarket_PROD.GlobalSearch_SearchFor@13deb50e</td></tr>
+<td>55</td>
+<td>lasvegasmarket_UAT.ExhibitorDigitalShowroom@edf4efb</td></tr>
 <tr>
-<td title='atlantamarket_PROD.GlobalSearch_SearchFor.TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest()'><b>TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_SearchFor</td>
+<td title='lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS007_VerifyClickOnLineFiltersForExhibitorTest()'><b>TS007_VerifyClickOnLineFiltersForExhibitorTest</b><br>Test class: lasvegasmarket_UAT.ExhibitorDigitalShowroom</td>
 <td></td>
-<td>37</td>
-<td>atlantamarket_PROD.GlobalSearch_SearchFor@13deb50e</td></tr>
+<td>28</td>
+<td>lasvegasmarket_UAT.ExhibitorDigitalShowroom@edf4efb</td></tr>
 <tr>
-<td title='atlantamarket_PROD.GlobalSearch_SearchFor.TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest()'><b>TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_SearchFor</td>
+<td title='lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS008_VerifyClickOnLineSearchForExhibitorTest()'><b>TS008_VerifyClickOnLineSearchForExhibitorTest</b><br>Test class: lasvegasmarket_UAT.ExhibitorDigitalShowroom</td>
 <td></td>
-<td>86</td>
-<td>atlantamarket_PROD.GlobalSearch_SearchFor@13deb50e</td></tr>
+<td>26</td>
+<td>lasvegasmarket_UAT.ExhibitorDigitalShowroom@edf4efb</td></tr>
 <tr>
-<td title='atlantamarket_PROD.GlobalSearch_SearchFor.TS004_VerifyCatalogsOverviewInGlobalSearchTest()'><b>TS004_VerifyCatalogsOverviewInGlobalSearchTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_SearchFor</td>
+<td title='lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS009_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest()'><b>TS009_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest</b><br>Test class: lasvegasmarket_UAT.ExhibitorDigitalShowroom</td>
 <td></td>
-<td>35</td>
-<td>atlantamarket_PROD.GlobalSearch_SearchFor@13deb50e</td></tr>
+<td>27</td>
+<td>lasvegasmarket_UAT.ExhibitorDigitalShowroom@edf4efb</td></tr>
 <tr>
-<td title='atlantamarket_PROD.GlobalSearch_SearchFor.TS005_VerifyArticlesOverviewInGlobalSearchTest()'><b>TS005_VerifyArticlesOverviewInGlobalSearchTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_SearchFor</td>
+<td title='lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS011_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest()'><b>TS011_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest</b><br>Test class: lasvegasmarket_UAT.ExhibitorDigitalShowroom</td>
 <td></td>
-<td>47</td>
-<td>atlantamarket_PROD.GlobalSearch_SearchFor@13deb50e</td></tr>
-<tr>
-<td title='atlantamarket_PROD.GlobalSearch_SearchFor.TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest()'><b>TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_SearchFor</td>
-<td></td>
-<td>208</td>
-<td>atlantamarket_PROD.GlobalSearch_SearchFor@13deb50e</td></tr>
-<tr>
-<td title='atlantamarket_PROD.GlobalSearch_SearchFor.TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest()'><b>TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_SearchFor</td>
-<td></td>
-<td>48</td>
-<td>atlantamarket_PROD.GlobalSearch_SearchFor@13deb50e</td></tr>
-<tr>
-<td title='atlantamarket_PROD.GlobalSearch_SearchFor.TS010_VerifyShowSpecialsOverviewInGlobalSearchTest()'><b>TS010_VerifyShowSpecialsOverviewInGlobalSearchTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_SearchFor</td>
-<td></td>
-<td>23</td>
-<td>atlantamarket_PROD.GlobalSearch_SearchFor@13deb50e</td></tr>
->>>>>>> 2d902bb2fbf84a07a349e7ecc16fcdef4962929a
+<td>33</td>
+<td>lasvegasmarket_UAT.ExhibitorDigitalShowroom@edf4efb</td></tr>
 </table><p>
 </body>
 </html>
