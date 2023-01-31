@@ -212,7 +212,7 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmds = new LVMExhDigiShowroomPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get(prop.getProperty("atlmrkturl_prod"));
+		driver.get(prop.getProperty("lvmurl_uat"));
 		Thread.sleep(6000);
 		
 		//lap.getCloseMarktAdBtn().click();
@@ -542,7 +542,7 @@ public class ExhibitorDigitalShowroom extends base {
 		Assert.assertTrue(lvmds.getVerifyContactExhibitorPage().isDisplayed());
 		System.out.println("Contact Exhibitor page is displayed properly.");
 		//lvmds.getContactExhibitorCloseButton().click();
-		driver.get(prop.getProperty("atlmrkturl_prod"));
+		driver.get(prop.getProperty("lvmurl_uat"));
 		Thread.sleep(5000);
 	}
 	
