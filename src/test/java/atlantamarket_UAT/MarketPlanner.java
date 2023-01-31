@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -20,7 +19,6 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import pageObjects.AtlantaMarket.ATLEventsAndWebinarPage;
 import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
 import pageObjects.AtlantaMarket.ATLFloorPlansPage;
