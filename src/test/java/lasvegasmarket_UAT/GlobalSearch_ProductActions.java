@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -79,7 +80,8 @@ public class GlobalSearch_ProductActions extends base {
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(15000);
 		// Store the 1st Product name of Exhibitor
-		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
+		//String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText(); //Old
+		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGridNew().getText(); //New
 		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
 
 		utl.scrollToElement(atlexhact.getExhibitorProduct());
@@ -124,7 +126,8 @@ public class GlobalSearch_ProductActions extends base {
 
 		Thread.sleep(15000);
 		// Store the 1st Product name of Exhibitor
-		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
+		//String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText(); //Old
+		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGridNew().getText(); //New
 		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
 
 		utl.scrollToElement(atlexhact.getExhibitorProduct());
@@ -154,7 +157,8 @@ public class GlobalSearch_ProductActions extends base {
 				atlmppge.getNewListModalCreateBtn());
 
 		// Click on Create button
-		atlmppge.getAddListCreateBtn().click();
+		//atlmppge.getAddListCreateBtn().click(); //Old
+		atlmppge.getCreateAddListBtn().click(); //New
 
 		// Click on Go to Market Planner button
 		atlmppge.getGoToMarketPlannerBtn().click();
@@ -202,7 +206,8 @@ public class GlobalSearch_ProductActions extends base {
 		Thread.sleep(15000);
 
 		// Store the 1st Product name of Exhibitor
-		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
+		//String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText(); //Old
+		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGridNew().getText(); //New
 		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
 
 		utl.scrollToElement(atlexhact.getExhibitorProduct());
@@ -291,7 +296,8 @@ public class GlobalSearch_ProductActions extends base {
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(15000);
 		// Store the 1st Product name of Exhibitor
-		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
+		//String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText(); //Old
+		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGridNew().getText(); //New
 		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
 
 		utl.scrollToElement(atlexhact.getExhibitorProduct());
@@ -433,7 +439,8 @@ public class GlobalSearch_ProductActions extends base {
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(15000);
 		// Store the 1st Product name of Exhibitor
-		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
+		//String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText(); //Old
+		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGridNew().getText(); //New
 		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
 
 		// Hovering on Product
@@ -480,7 +487,8 @@ public class GlobalSearch_ProductActions extends base {
 		Thread.sleep(10000);
 
 		// Delete that added Product from list
-		atlmppge.getATLEditListItemMoreBtn().click();
+		//atlmppge.getATLEditListItemMoreBtn().click(); //Old
+		atlmppge.getATLEditListItemMoreBtnNew().click(); //New
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(8000);
 
@@ -516,7 +524,8 @@ public class GlobalSearch_ProductActions extends base {
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(15000);
 		//Store the 1st Product name of Exhibitor
-		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
+		//String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText(); //Old
+		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGridNew().getText(); //New
 		System.out.println("Selected Product Name: "+productNameOnSearchGrid);
 
 		utl.scrollToElement(atlexhact.getExhibitorProduct());
@@ -538,6 +547,7 @@ public class GlobalSearch_ProductActions extends base {
 		Assert.assertTrue(atlproddet.getProductFullScreenViewer().isDisplayed());
 
 		//Verify the title of the Full screen viewer
+		System.out.println(atlproddet.getProductFullScreenViewerTitle().getText());
 		Assert.assertTrue(atlproddet.getProductFullScreenViewerTitle().getText().equals(productNameOnSearchGrid));
 
 		//Dismiss the Full Screen Viewer
@@ -565,7 +575,8 @@ public class GlobalSearch_ProductActions extends base {
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(15000);
 		//Store the 1st Product name of Exhibitor
-		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
+		//String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText(); //Old
+		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGridNew().getText(); //New
 		System.out.println("Selected Product Name: "+productNameOnSearchGrid);
 
 		utl.scrollToElement(atlexhact.getExhibitorProduct());
@@ -629,7 +640,8 @@ public class GlobalSearch_ProductActions extends base {
 
 		Thread.sleep(15000);
 		// Store the 1st Product name of Exhibitor
-		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
+		//String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText(); //Old
+		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGridNew().getText(); //New
 		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
 
 		// Hovering on Product
@@ -655,8 +667,9 @@ public class GlobalSearch_ProductActions extends base {
 				atlmppge.getNewListModalCreateBtn());
 
 		// Click on Create button
-		atlmppge.getNewListModalCreateBtn().click();
-
+		//atlmppge.getNewListModalCreateBtn().click(); //Old
+		atlmppge.getCreateAddListBtn().click(); //New
+		
 		// Click on Go to Market Planner button
 		atlmppge.getGoToMarketPlannerBtn().click();
 
@@ -680,8 +693,8 @@ public class GlobalSearch_ProductActions extends base {
 		Assert.assertTrue(atlmppge.getNewCreatedListName().getText().contains(newlistname));
 	}
 
-	/*@AfterClass
+	@AfterClass
 	public void tearDown() {
 		driver.quit();
-	}*/
+	}
 }

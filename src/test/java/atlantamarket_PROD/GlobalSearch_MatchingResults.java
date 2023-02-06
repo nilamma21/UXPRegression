@@ -349,7 +349,7 @@ public class GlobalSearch_MatchingResults extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		//utl.verifyMPLoginFunctionality();
+	//	utl.verifyMPLoginFunctionality();
 		utl.CloseATLPopup();
 		//atlgs.getatlGlobalSearchClearTxt().click();
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
@@ -409,7 +409,7 @@ public class GlobalSearch_MatchingResults extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		//utl.verifyMPLoginFunctionality();
+	//	utl.verifyMPLoginFunctionality();
 		utl.CloseATLPopup();
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
@@ -448,8 +448,13 @@ public class GlobalSearch_MatchingResults extends base {
 		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), lName);
 		// Verify exhibitor present into selected list or not
 		Thread.sleep(6000);
+		try {
 		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), exhName);
-
+		}catch (Exception e) {
+			// TODO: handle exception
+		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExhPROD(), exhName);
+		
+		}
 	}
 
 	@Test(priority = 8)

@@ -3,21 +3,24 @@
 
 <suite name="ATLMrkt_RegressionTestSuite">
 	<listners>
-		<listner class-name="atlantamarket_PROD.TestListeners" />
+		<listner class-name="antamarket_uat.TestListeners" />
 	</listners>
 	<test thread-count="5" name="RegressionTest">
 		<classes>
-<<<<<<< HEAD
+
+			<!--<class name="atlantamarket_PROD.GlobalSearch_SearchFor"/>
+			 <class name="atlantamarket_PROD.EvenntsAndWebinar" />
+			<class name="atlantamarket_PROD.ExhibitorDigitalShowroom" />
+			<class name="atlantamarket_PROD.FloorPlans" />
 			<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
-			<class name="atlantamarket_PROD.EvenntsAndWebinar" />
+			<class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters" />
+			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
+			<class name="atlantamarket_PROD.GlobalSearch_MatchingResults" />
+			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
+			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
 			<class name="atlantamarket_PROD.LineDigitalShowroom" />
-=======
-			<class name="atlantamarket_PROD.ExhibitorDigitalShowroom"/>
-			<methods>
-			<include name="TS013_VerifySeeInOtherMarketsForExhibitorTest"/>
-			
-			</methods>
->>>>>>> 4c42dc75e1a5c15bc76a373a6dd80ac945b53d04
+			<class name="atlantamarket_PROD.ShowSpecials" /> -->
+			<class name="atlantamarket_PROD.MarketPlanner"/>
 		</classes>
 	</test>
 </suite>

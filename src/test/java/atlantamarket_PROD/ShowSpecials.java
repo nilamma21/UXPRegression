@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -60,7 +61,7 @@ public class ShowSpecials extends base  {
 		
 	}
 	@Test(priority = 1)
-	public void TS001_VerifyShowSpecialsLinksExhibitorNameTest()
+	public void TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T381: Show Specials: Links - Exhibitor Name
@@ -81,20 +82,37 @@ public class ShowSpecials extends base  {
 		
 		//Click on Show Specials 
 		atlgs.getatlShowSpecialsLink().click();
-		//verify Show special Page
 		Thread.sleep(5000);
+		
+		//verify Show special Page
 		Assert.assertTrue(atlgs.getatlShowSpecialsTitle().getText().contains(prop.getProperty("showSpecialTitle")));
-		//Click on Show Special Exhibitor
+
+		
+		/*//Store the name of Show Special Exhibitor
 		String showSpecialExhName=atlgs.getatlShowSpecialsExhNamePROD().getText();
+		System.out.println(showSpecialExhName);*/
+		
+		String inbox = atlgs.getatlShowSpecialsExhNamePROD().getText();
+		String[] data = inbox.split("Shown By ");
+		String showSpecialExhName = data[1];
 		System.out.println(showSpecialExhName);
-		atlgs.getatlShowSpecialsExhNamePROD().click();
+		
+		atlgs.getViewBrandDetailsLink().click();
+
+		//Click on Show Special Exhibitor
+		//String showSpecialExhName=atlgs.getatlShowSpecialsExhNamePROD().getText();
+		
+		String ename=atlgs.getFirstShowSpecialName().getText();
+		System.out.println(ename);
+		String abc =ename.split(" ")[2].trim();
+		atlgs.getFirstShowSpecialViewBrandDetailsBtn().click();
 		Thread.sleep(5000);
 		//Verify Show Special Exh Page 
-		Assert.assertTrue(atlgs.getatlShowSpecialsTitle().getText().contains(showSpecialExhName));
+		Assert.assertTrue(atlgs.getatlShowSpecialsTitle().getText().contains(abc));
 		
 	}
 	@Test(priority = 2)
-	public void TS002_VerifyShowSpecialsLinksShowroomTest()
+	public void TS002_VerifyShowroomLinkForShowSpecialsTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T382: Show Specials: Links - Showroom
@@ -114,6 +132,7 @@ public class ShowSpecials extends base  {
 		//Click on Show Specials 
 		atlgs.getatlShowSpecialsLink().click();
 		Thread.sleep(5000);
+		utl.scrollToElement(atlgs.getatlShowSpecialsTitle());
 		//verify Show special Page
 		Assert.assertTrue(atlgs.getatlShowSpecialsTitle().getText().contains(prop.getProperty("showSpecialTitle")));
 		//Click on Show Special Exhibitor

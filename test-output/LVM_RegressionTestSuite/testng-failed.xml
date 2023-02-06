@@ -3,71 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [LVM_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions">
+      <class name="lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters">
         <methods>
-          <include name="TS001_VerifyAddToFavoriteForExhibitorTest"/>
-          <include name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest"/>
           <include name="tearDown"/>
-          <include name="initialize"/>
-          <include name="TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest"/>
-        </methods>
-      </class> <!-- atlantamarket_PROD.GlobalSearch_ExhibitorActions -->
-=======
-<<<<<<< HEAD
-      <class name="atlantamarket_PROD.MarketPlanner">
-        <methods>
-          <include name="TS013_VerifyAddToFavoriteFunctionalityForProductTest"/>
-          <include name="TS052_VerifyMarketPlannerAllSavedEventsAndSemninar"/>
-          <include name="initialize"/>
-          <include name="TS023_VerifyFilterByOptionsFunctionalityForListTest"/>
-          <include name="TS007_VerifyNewGroupBtnFunctionalityForListsTest"/>
-          <include name="TS038_VerifyMarketPlannerRegistrationsTabTest"/>
-          <include name="TS045_VerifyAddToListFunctionalityUsingQuickAddTest"/>
-          <include name="TS051_VerifyMarketPlannerAddEventsToFav"/>
-          <include name="TS012_VerifyMPRegistrationCardOverviewTest"/>
-          <include name="TS025_VerifyDuplicateLinkFunctionalityForListTest"/>
-        </methods>
-      </class> <!-- atlantamarket_PROD.MarketPlanner -->
-=======
-      <class name="atlantamarket_PROD.EvenntsAndWebinar">
-        <methods>
-          <include name="TS014_VerifyExhibitorEventsAddToListTest"/>
-          <include name="TS013_VerifyExhibitorEventsAddToFavoriteTest"/>
-          <include name="TS015_VerifyExhibitorEventsAddNoteTest"/>
-          <include name="TS004_VerifyIMCEventsEventsListTest"/>
-          <include name="TS011_VerifyExhibitorEventsListTest"/>
-          <include name="TS006_VerifyIMCEventsAddToFavoriteTest"/>
-          <include name="TS007_VerifyIMCEventsAddToListTest"/>
-          <include name="TS012_VerifyExhibitorEventsDetailstTest"/>
+          <include name="TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest"/>
           <include name="initialize"/>
         </methods>
-      </class> <!-- atlantamarket_PROD.EvenntsAndWebinar -->
->>>>>>> 165c94fbc4fbd782daad363e3715f4d451ffac1a
->>>>>>> b55ac2221bf55977f9520ce056b10f786d0eb40a
-=======
-      <class name="atlantamarket_PROD.MarketPlanner">
-        <methods>
-          <include name="initialize"/>
-          <include name="TS044_VerifyAddToFavoriteFunctionalityUsingQuickAddForLinesTest"/>
-          <include name="TS023_VerifyFilterByOptionsFunctionalityForListTest"/>
-          <include name="TS007_VerifyNewGroupBtnFunctionalityForListsTest"/>
-          <include name="TS015_VerifyEditListFunctionalityForManageListTest"/>
-          <include name="TS051_VerifyMarketPlannerAddEventsToFav"/>
-          <include name="tearDown"/>
-          <include name="TS043_VerifyAddToFavoriteFunctionalityUsingQuickAddForproductTest"/>
-          <include name="TS013_VerifyAddToFavoriteFunctionalityForProductTest"/>
-          <include name="TS052_VerifyMarketPlannerAllSavedEventsAndSemninar"/>
-          <include name="TS019_VerifyAddToFavoriteFunctionalityForExhibitorTest"/>
-          <include name="TS037_VerifyMarketPlannerListsAllSavedproductsTest"/>
-          <include name="TS039_VerifyMarketSavedSearchesfunctionalityTest"/>
-          <include name="TS018_VerifyAddToFavoriteFunctionalityForLineTest"/>
-          <include name="TS025_VerifyDuplicateLinkFunctionalityForListTest"/>
-          <include name="TS041_VerifyMarketPlannerListSortByFunctionalityTest"/>
-        </methods>
-      </class> <!-- atlantamarket_PROD.MarketPlanner -->
->>>>>>> 4c42dc75e1a5c15bc76a373a6dd80ac945b53d04
+      </class> <!-- lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->

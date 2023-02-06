@@ -3,8 +3,10 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+      <class name="lasvegasmarket_UAT.GlobalSearch_SearchFor">
+
+
       <class name="atlantamarket_PROD.MarketPlanner">
         <methods>
           <include name="TS013_VerifyAddToFavoriteFunctionalityForProductTest"/>
@@ -17,27 +19,20 @@
           <include name="TS025_VerifyDuplicateLinkFunctionalityForListTest"/>
         </methods>
       </class> <!-- atlantamarket_PROD.MarketPlanner -->
-=======
+
       <class name="atlantamarket_PROD.EvenntsAndWebinar">
+
         <methods>
-          <include name="TS014_VerifyExhibitorEventsAddToListTest"/>
-          <include name="TS013_VerifyExhibitorEventsAddToFavoriteTest"/>
-          <include name="TS004_VerifyIMCEventsEventsListTest"/>
-          <include name="TS006_VerifyIMCEventsAddToFavoriteTest"/>
-          <include name="TS007_VerifyIMCEventsAddToListTest"/>
           <include name="initialize"/>
-        </methods>
-      </class> <!-- atlantamarket_PROD.EvenntsAndWebinar -->
->>>>>>> 165c94fbc4fbd782daad363e3715f4d451ffac1a
-=======
-      <class name="lasvegasmarket_UAT.GlobalSearch_LineActions">
-        <methods>
+          <include name="TS001_VerifyInformationTabInGlobalSearchTest"/>
           <include name="tearDown"/>
-          <include name="initialize"/>
-          <include name="TS002_VerifyAddToFavoriteForLineTest"/>
         </methods>
-      </class> <!-- lasvegasmarket_UAT.GlobalSearch_LineActions -->
->>>>>>> 4c42dc75e1a5c15bc76a373a6dd80ac945b53d04
+
+      </class> <!-- lasvegasmarket_UAT.GlobalSearch_SearchFor -->
+
+      </class> <!-- atlantamarket_PROD.EvenntsAndWebinar -->
+
+
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
