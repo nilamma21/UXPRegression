@@ -155,7 +155,7 @@ public class ExhibitorDigitalShowroom extends base {
 			}
 	}
 	
-	@Test(priority = 03)
+	@Test(priority = 20)
 	public void TS003_VerifyAddNoteListWithPlusIconTest() throws InterruptedException {
 		// T300: Add Note for an exhibitor
 		lvmgs = new LVMGlobalSearchPage(driver);
@@ -288,7 +288,7 @@ public class ExhibitorDigitalShowroom extends base {
 		System.out.println("Line Details are displayed properly.");	
 	}
 	
-	@Test(priority = 6)
+	@Test(priority = 14)
 	public void TS006_VerifyClickOnProductShownLinkForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T311: The click on 'Product Shown-See All' functionality for an Exhibitor Digital Showroom
@@ -428,7 +428,7 @@ public class ExhibitorDigitalShowroom extends base {
 		System.out.println("Lines Component: See All Lines Btn functionality is working properly.");	
 	}
 	
-	@Test(priority = 10)
+	@Test(priority = 12)
 	public void TS010_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T349: Exhibitor Digital showroom: Products Component: Order on JuniperMarket
@@ -493,7 +493,7 @@ public class ExhibitorDigitalShowroom extends base {
 		System.out.println("Products Component: See All Products Btn functionality is working properly.");
 	}
 	
-	@Test(priority = 12)
+	@Test(priority = 10)
 	public void TS012_VerifySeeInOtherMarketsForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T333: The See in Other Markets functionality for an Exhibitor Digital Show room
@@ -546,7 +546,7 @@ public class ExhibitorDigitalShowroom extends base {
 		Thread.sleep(5000);
 	}
 	
-	@Test(priority = 13)
+	@Test(priority = 15)
 	public void TS013_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T351: Exhibitor Digital Showroom: Catalogs Component: See All Catalogs
@@ -577,7 +577,7 @@ public class ExhibitorDigitalShowroom extends base {
 		System.out.println("Catalogs Component: See All Catalogs Btn functionality is working properly.");
 	}
 	
-	@Test(priority = 14)
+	@Test(priority = 6)
 	public void TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T352: Exhibitor Digital Sowroom: Catalogs Component: Order on JuniperMarket
@@ -609,7 +609,7 @@ public class ExhibitorDigitalShowroom extends base {
 		
 		
 	}
-	@Test(priority = 15)
+	@Test(priority = 13)
 	public void TS015_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T347: Exhibitor Digital showroom: Hero component: Visit <Exhibitor site>
@@ -760,7 +760,7 @@ public class ExhibitorDigitalShowroom extends base {
 		driver.switchTo().window(winHandleBefore);	
 	}
 	
-	@Test(priority = 20)
+	@Test(priority = 3)
 	public void TS020_VerifyExhibitorDigitalShowroomShowSpecialsTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T319: Exhibitor Digital showroom: Show Specials
