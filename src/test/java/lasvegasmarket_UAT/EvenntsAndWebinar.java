@@ -1224,11 +1224,11 @@ public class EvenntsAndWebinar extends base{
 		atlexhact.getDeleteNoteBtn().click();
 	}
 	
-	/*@AfterClass
+	@AfterClass
 	public void tearDown()
 	{
 		driver.quit();
-	}*/
+	}
 
 }
 

@@ -57,7 +57,11 @@ public class EvenntsAndWebinar extends base{
 		//driver.get(prop.getProperty("lvmurl_uat"));
 		/*utl.verifyMPLoginFunctionality();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);*/
+<<<<<<< HEAD:src/test/java/atlantamarket_UAT/EvenntsAndWebinar.java
 	//	lap.getIUnderstandBtn().click();
+=======
+		//lap.getIUnderstandBtn().click();
+>>>>>>> da59ce610f79149eab2a8c02d7ac5b13117c74d2:src/test/java/atlatlantamarket_UAT/EvenntsAndWebinar.java
 		Thread.sleep(7000);
 		//lap.getCloseMarktAdBtn().click();
 

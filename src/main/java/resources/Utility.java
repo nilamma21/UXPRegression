@@ -72,8 +72,13 @@ public class Utility extends base {
 
 
 		Thread.sleep(1000);
+<<<<<<< HEAD
 		/*lp.getPassword().sendKeys((prop.getProperty("password")));
 		Thread.sleep(1000);*/
+=======
+		lp.getPassword().sendKeys((prop.getProperty("password")));
+		Thread.sleep(1000);
+>>>>>>> da59ce610f79149eab2a8c02d7ac5b13117c74d2
 
 		lp.getSignInBtn().click();
 		Thread.sleep(15000);

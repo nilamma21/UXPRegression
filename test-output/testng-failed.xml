@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
@@ -12,6 +13,11 @@
         </methods>
       </class> <!-- atlantamarket_PROD.MarketPlanner -->
 
+
+<suite guice-stage="DEVELOPMENT" name="Failed suite [LVM_RegressionTestSuite]">
+  <test name="RegressionTest(failed)">
+    <classes>
+
       <class name="lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters">
         <methods>
           <include name="tearDown"/>
@@ -23,3 +29,8 @@
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->
+
+    </classes>
+  </test> <!-- RegressionTest(failed) -->
+</suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
+

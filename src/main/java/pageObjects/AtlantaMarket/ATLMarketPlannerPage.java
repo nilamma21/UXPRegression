@@ -257,8 +257,10 @@ public class ATLMarketPlannerPage {
 	
 	By listOfAllExhPROD = By.xpath("//span[@class='imc-link--alt-darkred disabled']"); //Locator for My Info option
 	
+
 	By mplistduplicatebtn = By.xpath("//input[@value='Duplicate']"); //Locator for Duplicate button
 	By mpduplicatelistnametxtbx = By.xpath("//div[@class='imc-vr--medium'][1]/div[1]/input"); //Locator of List name txt box to create Duplicate list
+
 	
 	public ATLMarketPlannerPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub

@@ -3,6 +3,7 @@
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="atlantamarket_PROD.MarketPlanner">
         <methods>
           <include name="initialize"/>
@@ -10,6 +11,159 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- atlantamarket_PROD.MarketPlanner -->
+=======
+
+      <class name="atlantamarket_PROD.GlobalSearch_SearchFor">
+        <methods>
+          <include name="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest"/>
+          <include name="TS011_VerifyEventsOverviewInGlobalSearchTest"/>
+          <include name="initialize"/>
+          <include name="TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest"/>
+          <include name="tearDown"/>
+          <include name="TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest"/>
+          <include name="TS001_VerifyInformationTabInGlobalSearchTest"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
+
+      <class name="atlantamarket_PROD.EvenntsAndWebinar">
+        <methods>
+          <include name="TS014_VerifyExhibitorEventsAddToListTest"/>
+          <include name="TS013_VerifyExhibitorEventsAddToFavoriteTest"/>
+          <include name="TS004_VerifyIMCEventsEventsListTest"/>
+          <include name="TS011_VerifyExhibitorEventsListTest"/>
+          <include name="TS006_VerifyIMCEventsAddToFavoriteTest"/>
+          <include name="TS003_VerifyIMCEventsCalendarViewTest"/>
+          <include name="TS010_VerifyExhibitorEventsCalendarViewTest"/>
+          <include name="TS007_VerifyIMCEventsAddToListTest"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.EvenntsAndWebinar -->
+      <class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions">
+        <methods>
+          <include name="TS001_VerifyAddToFavoriteForExhibitorTest"/>
+          <include name="TS006_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest"/>
+          <include name="TS009_VerifySelectionOfExhibitorFromSearchResultsTest"/>
+          <include name="TS003_VerifyAddToExistingListForExhibitorTest"/>
+          <include name="TS004_VerifyClickOnLocationLinksForExhibitorTest"/>
+          <include name="TS008_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest"/>
+          <include name="TS007_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest"/>
+          <include name="TS002_VerifyAddToNewListForExhibitorTest"/>
+          <include name="initialize"/>
+          <include name="TS005_VerifyClickOnLinesShownLinkForExhibitorTest"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.GlobalSearch_ExhibitorActions -->
+      <class name="atlantamarket_PROD.GlobalSearch_SuggestionList">
+        <methods>
+          <include name="initialize"/>
+          <include name="TS003_VerifySelectionOfProductFromAutoSuggestionListTest"/>
+          <include name="TS002_VerifySelectionOfLineFromAutoSuggestionListTest"/>
+          <include name="TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.GlobalSearch_SuggestionList -->
+      <class name="atlantamarket_PROD.ShowSpecials">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+          <include name="TS001_VerifyShowSpecialsLinksExhibitorNameTest"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.ShowSpecials -->
+      <class name="atlantamarket_PROD.GlobalSearch_SearchFor">
+        <methods>
+          <include name="TS011_VerifyEventsOverviewInGlobalSearchTest"/>
+          <include name="TS004_VerifyCatalogsOverviewInGlobalSearchTest"/>
+          <include name="initialize"/>
+          <include name="TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest"/>
+          <include name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest"/>
+          <include name="TS001_VerifyInformationTabInGlobalSearchTest"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
+      <class name="atlantamarket_PROD.FloorPlans">
+        <methods>
+          <include name="TS001_VerifyNavigationToDifferentFloorBuildingsTest"/>
+          <include name="initialize"/>
+          <include name="TS004_VerifyIconsOnFloorPlansPageTest"/>
+          <include name="TS003_VerifyZoomInOutLevelOnFloorPlansPageTest"/>
+          <include name="TS006_VerifyPaginationOnFloorPlansPageTest"/>
+          <include name="TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest"/>
+          <include name="TS011_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest"/>
+          <include name="TS009_VerifySearchFunctionalityForExhListOnFloorPlansPageTest"/>
+          <include name="TS008_VerifyClickOnReturnToBuildingListBtnTest"/>
+          <include name="TS002_VerifyNoExhibitorsOnThisFloorMessageTest"/>
+          <include name="TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest"/>
+          <include name="TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest"/>
+          <include name="TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.FloorPlans -->
+      <class name="atlantamarket_PROD.GlobalSearch_ProductActions">
+        <methods>
+          <include name="tearDown"/>
+          <include name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest"/>
+          <include name="TS008_VerifyAddToFavoriteOnSearchResultsGridTest"/>
+          <include name="TS004_VerifyAddToFavoriteOnProductDetailsPageTest"/>
+          <include name="initialize"/>
+          <include name="TS003_VerifyProductAddToExistingListOnProductDetailsPageTest"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.GlobalSearch_ProductActions -->
+      <class name="atlantamarket_PROD.GlobalSearch_MatchingResults">
+        <methods>
+          <include name="TS003_VerifyGlobalSearchMatchingResultsSortSortByTest"/>
+          <include name="initialize"/>
+          <include name="TS005_VerifyGlobalSearchMatchingResultsSelectAddToFavoritesTest"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.GlobalSearch_MatchingResults -->
+      <class name="atlantamarket_PROD.ExhibitorDigitalShowroom">
+        <methods>
+          <include name="TS016_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest"/>
+          <include name="TS011_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest"/>
+          <include name="TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest"/>
+          <include name="TS020_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest"/>
+          <include name="TS010_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest"/>
+          <include name="TS013_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest"/>
+          <include name="TS015_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest"/>
+          <include name="TS018_VerifyCatalogsSectionForExhibitorTest"/>
+          <include name="TS017_VerifyExhibitorDigitalEventsComponentTest"/>
+          <include name="initialize"/>
+          <include name="TS019_VerifyExhibitorDigitalShowroomShowSpecialsTest"/>
+          <include name="TS001_VerifyAddToFavoritesTest"/>
+          <include name="TS012_VerifySeeInOtherMarketsForExhibitorTest"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.ExhibitorDigitalShowroom -->
+      <class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters">
+        <methods>
+          <include name="TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest"/>
+          <include name="TS006_VerifySelectionOfHolidayProdCatgFromLeftPaneFiltersTest"/>
+          <include name="initialize"/>
+          <include name="TS005_VerifySelectionOfAccentFurnitureProdCatgFromLeftPaneFiltersTest"/>
+          <include name="TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest"/>
+          <include name="TS009_VerifySelectionOfFashionAccProdCatgFromLeftPaneFiltersTest"/>
+          <include name="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest"/>
+          <include name="TS007_VerifySelectionOfDecorativeAccessProdCatgFromLeftPaneFiltersTest"/>
+          <include name="TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest"/>
+          <include name="TS008_VerifySelectionOfGeneralGiftProdCatgFromLeftPaneFiltersTest"/>
+          <include name="TS010_VerifySelectionOfFloralBotanicalsProdCatgFromLeftPaneFiltersTest"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.GlobalSearch_LeftPaneFilters -->
+      <class name="atlantamarket_PROD.LineDigitalShowroom">
+        <methods>
+          <include name="TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest"/>
+          <include name="TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest"/>
+          <include name="TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest"/>
+          <include name="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest"/>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+          <include name="TS008_VerifyLineDigitalShowroomProductscomponentTest"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.LineDigitalShowroom -->
+      <class name="atlantamarket_PROD.GlobalSearch_LineActions">
+        <methods>
+          <include name="TS001_VerifyAddToFavoriteForLineTest"/>
+          <include name="tearDown"/>
+          <include name="TS007_VerifyClickOnMatchingProductsSeeAllLinkForLineTest"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.GlobalSearch_LineActions -->
+
+>>>>>>> da59ce610f79149eab2a8c02d7ac5b13117c74d2
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->

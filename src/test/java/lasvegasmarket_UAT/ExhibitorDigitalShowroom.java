@@ -288,6 +288,7 @@ public class ExhibitorDigitalShowroom extends base {
 		System.out.println("Line Details are displayed properly.");	
 	}
 	
+
 	@Test(priority = 6)
 	public void TS006_VerifyClickOnProductShownLinkForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -428,6 +429,7 @@ public class ExhibitorDigitalShowroom extends base {
 		System.out.println("Lines Component: See All Lines Btn functionality is working properly.");	
 	}
 	
+
 	@Test(priority = 10)
 	public void TS010_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -493,6 +495,7 @@ public class ExhibitorDigitalShowroom extends base {
 		System.out.println("Products Component: See All Products Btn functionality is working properly.");
 	}
 	
+
 	@Test(priority = 12)
 	public void TS012_VerifySeeInOtherMarketsForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -545,8 +548,8 @@ public class ExhibitorDigitalShowroom extends base {
 		driver.get(prop.getProperty("lvmurl_uat"));
 		Thread.sleep(5000);
 	}
-	
-	@Test(priority = 13)
+
+	@Test(priority = 15)
 	public void TS013_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T351: Exhibitor Digital Showroom: Catalogs Component: See All Catalogs
@@ -609,6 +612,7 @@ public class ExhibitorDigitalShowroom extends base {
 		
 		
 	}
+
 	@Test(priority = 15)
 	public void TS015_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -760,6 +764,7 @@ public class ExhibitorDigitalShowroom extends base {
 		driver.switchTo().window(winHandleBefore);	
 	}
 	
+
 	@Test(priority = 20)
 	public void TS020_VerifyExhibitorDigitalShowroomShowSpecialsTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
