@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [LVM_RegressionTestSuite]">
+<suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
+
+      <class name="atlantamarket_PROD.MarketPlanner">
+        <methods>
+          <include name="initialize"/>
+          <include name="TS023_VerifyFilterByOptionsFunctionalityForListTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.MarketPlanner -->
+
       <class name="lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters">
         <methods>
           <include name="tearDown"/>
@@ -10,6 +19,7 @@
           <include name="initialize"/>
         </methods>
       </class> <!-- lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters -->
+
     </classes>
   </test> <!-- RegressionTest(failed) -->
-</suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
+</suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->
