@@ -106,6 +106,8 @@ public class LVMGlobalSearchPage {
 	By seeAllLinkMatchingProduct = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[2]/div[1]/div[1]/p[2]");  //Locator for 1st name of Event
 	By FirstCatalogName = By.xpath("(//div[@class='imc-exhibitorcard-products-row imc-content--display-flex-space-between-mobile '])[1]/div[2]/p[1]");  //Locator for 1st name of Catalog
 	By lvmseemoredetailsbtnnew = By.xpath("(//a[contains(text(),'See More Details')])[1]"); //Locator for See More Details button
+	By FirstShowSpecialName = By.xpath("(//div[@class='imc-showSpecial--tableContainer']/p[1])[1]");  //Locator for 1st name of Catalog
+	By FirstShowSpecialViewBrandDetailsBtn = By.xpath("(//a[@class='imc-showSpecial--link'])[1]");  //Locator for 1st name of Catalog
 	
 	public LVMGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -569,6 +571,16 @@ public class LVMGlobalSearchPage {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmseemoredetailsbtnnew));
 		return driver.findElement(lvmseemoredetailsbtnnew);
+	}
+	public WebElement getFirstShowSpecialName() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(FirstShowSpecialName));
+		return driver.findElement(FirstShowSpecialName);
+	}
+	public WebElement getFirstShowSpecialViewBrandDetailsBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(FirstShowSpecialViewBrandDetailsBtn));
+		return driver.findElement(FirstShowSpecialViewBrandDetailsBtn);
 	}
 }
 

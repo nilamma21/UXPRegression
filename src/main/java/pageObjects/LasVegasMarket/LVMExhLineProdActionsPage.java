@@ -75,7 +75,10 @@ public class LVMExhLineProdActionsPage {
 	By prodNameFromDGshhowroomPage = By.xpath("//div[@class = 'imc-content--display-flex-wrap']/span[text()='Products']/../../div[2]/div[1]/div[1]/div[1]/a"); //Locator for DG showroom Prod Name
 	By eventcardtitlenew = By.xpath("(//span[contains(@class,'imc-eventcard__title')])[1]");
 	By eventdetailsheadernew = By.xpath("//div[@class='imc-eventdetail--header']/h1");
-;	
+	By secondexhproduct = By.xpath("//div[@class='imc-vr--xxlarge']/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]"); //Locator for Second exhibitor product
+	By secondexhprodseedetailsbtn = By.xpath("(//div[@class='imc-gallery imc-gallery--80-20 imc-exhibitorcard--gallery-nowrap'])[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/a"); //Locator for Second exhibitor product see details btn
+
+
 	public LVMExhLineProdActionsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
@@ -374,5 +377,15 @@ public class LVMExhLineProdActionsPage {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(eventdetailsheadernew));
 		return driver.findElement(eventdetailsheadernew);
+	}
+	public WebElement getSecondExhProduct() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(secondexhproduct));
+		return driver.findElement(secondexhproduct);
+	}
+	public WebElement getSecondExhProductSeeDetailsBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(secondexhprodseedetailsbtn));
+		return driver.findElement(secondexhprodseedetailsbtn);
 	}
 }
