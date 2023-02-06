@@ -257,6 +257,8 @@ public class ATLMarketPlannerPage {
 	
 	By listOfAllExhPROD = By.xpath("//span[@class='imc-link--alt-darkred disabled']"); //Locator for My Info option
 	
+	By mplistduplicatebtn = By.xpath("//input[@value='Duplicate']"); //Locator for Duplicate button
+	By mpduplicatelistnametxtbx = By.xpath("//div[@class='imc-vr--medium'][1]/div[1]/input"); //Locator of List name txt box to create Duplicate list
 	
 	public ATLMarketPlannerPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -1350,9 +1352,16 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(favexhnamelist));
 		return driver.findElements(favexhnamelist);
 	}
-	
-
-	
+	public WebElement getMPListDuplicateBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mplistduplicatebtn));
+		return driver.findElement(mplistduplicatebtn);
+	}
+	public WebElement getMPDuplicateListNameTxtBx() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpduplicatelistnametxtbx));
+		return driver.findElement(mpduplicatelistnametxtbx);
+	}
 }
 
 
