@@ -10,9 +10,9 @@
 		<classes>
 
 
-			<class name="lasvegasmarket_UAT.ExhibitorDigitalShowroom" />
+			<class name="lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters" />
 			<methods>
-				  <!--  <include name="TS008_VerifyLineDigitalShowroomProductscomponentTest"/>  -->
+				    <include name="TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest"/> 
 
 		<!-- 	<class name="atlantamarket_PROD.EvenntsAndWebinar" />
 			<class name="atlantamarket_PROD.FloorPlans" />
