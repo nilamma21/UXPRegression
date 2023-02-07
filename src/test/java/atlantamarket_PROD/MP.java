@@ -34,7 +34,7 @@ import resources.Utility;
 import resources.base;
 
 @Listeners({ TestListeners.class })
-public class MarketPlanner extends base {
+public class MP extends base {
 
 	public WebDriverWait wait;
 	public GenerateData genData;
