@@ -66,6 +66,7 @@ public class ExhibitorDigitalShowroom extends base {
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor4")); //"Anne McGilvray & Company" Exhibitor
+		Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		String exhname = lvmds.getSearchedExhibitor().getText(); // Store the 1st Exhibitor name in String variable
 		System.out.println("Exhibitor name: " + exhname);
@@ -103,6 +104,7 @@ public class ExhibitorDigitalShowroom extends base {
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor4")); //"Anne McGilvray & Company" Exhibitor
+		Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		String exhname = lvmds.getSearchedExhibitor().getText(); // Store the 1st Exhibitor name in String variable
 		System.out.println("Exhibitor name: " + exhname);
@@ -169,6 +171,7 @@ public class ExhibitorDigitalShowroom extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(10000);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor4")));
+		Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(15000);
 		
@@ -199,6 +202,7 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmds.getViewAllNotes().click();
 		Assert.assertTrue(lvmds.getVerifyAddedNote().getText().contains(NoteTitle));
 		System.out.println("Note is added successfully.");
+		lvmds.getNoteCloseBtn().click();
 	}
 	
 	@Test(priority = 04)
@@ -217,6 +221,7 @@ public class ExhibitorDigitalShowroom extends base {
 		
 		//lap.getCloseMarktAdBtn().click();
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(15000);
 		
@@ -248,6 +253,7 @@ public class ExhibitorDigitalShowroom extends base {
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(15000);
 		
@@ -300,6 +306,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput"))); 
+		Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(15000);
 		
@@ -354,6 +361,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(15000);
 		
@@ -383,6 +391,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(8000);
 		
@@ -411,6 +420,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(10000);
 		// Store the 1st Exhibitor name in String variable
@@ -439,7 +449,8 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmds = new LVMExhDigiShowroomPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputforInformation")));
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("searchorderonjuniperline_lvmuat")));
+		Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(10000);
 		
@@ -477,6 +488,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(15000);
 		// Store the 1st Exhibitor name in String variable
@@ -505,6 +517,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(15000);
 		
@@ -557,7 +570,8 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmds = new LVMExhDigiShowroomPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchCataloginput")));
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));
+		Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(15000);
 		
@@ -568,7 +582,8 @@ public class ExhibitorDigitalShowroom extends base {
 		Thread.sleep(5000);
 		
 		//Scroll to Catalog Section
-		utl.scrollToElement(lvmds.getLVMCatalogSection());
+		//utl.scrollToElement(lvmds.getLVMCatalogSection());
+		utl.scrollToElement(lvmds.getCatalogsSection());
 		//Click on All Catalog Btn Btn
 		lvmds.getLVMCatalogSeeAllBtn().click();
 		
@@ -588,7 +603,8 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmds = new LVMExhDigiShowroomPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchCataloginput")));
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));
+		Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(15000);
 		
@@ -620,7 +636,8 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmds = new LVMExhDigiShowroomPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));
+		Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(15000);
 		// Store the 1st Exhibitor name in String variable
@@ -658,6 +675,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("searchexhwithlinesinput")));
+		Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(15000);
 		
@@ -691,7 +709,8 @@ public class ExhibitorDigitalShowroom extends base {
 
 		lvmevents=new LVMEventsAndWebinarPage(driver);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalSearchEventsInput")));
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));
+		Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(15000);
 		
@@ -711,7 +730,7 @@ public class ExhibitorDigitalShowroom extends base {
 		utl.scrollToElement(lvmds.getEventsSection());*/
 		String eventName=lvmds.getEventName().getText();
 		lvmds.getEventName().click();
-		Assert.assertTrue(lvmevents.getlvmEventNameOnDetailsPage().getText().contains(eventName));
+		Assert.assertTrue(lvmevents.getlvmEventNameOnDetailsPageUAT().getText().contains(eventName));
 		System.out.println("Events Component functionality is working properly.");	
 	}
 
@@ -728,7 +747,8 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmevents=new LVMEventsAndWebinarPage(driver);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("searchforCatalogsInputUAT")));
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));
+		Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(15000);
 		
@@ -742,19 +762,19 @@ public class ExhibitorDigitalShowroom extends base {
 		
 		//Verify Catalogs section for Exhibitor
 		utl.scrollToElement(lvmds.getCatalogsSection());
-		lvmds.getSeeAllCatalogsButton().click();
+		lvmds.getSeeAllCatalogsButtonUAT().click();
 		Assert.assertTrue(lvmds.getValidateLinesPage().getText().contains("Catalogs"));
 		System.out.println("See All Catalogs is working properly.");
 		lvmds.getProductsPageBackButton().click();
 		utl.scrollToElement(lvmds.getCatalogsSection());
-		String CatalogName = lvmds.getSelectCatalog().getText();
+		String CatalogName = lvmds.getSelectCatalogUAT().getText();
 		System.out.println("Catalog Name : "+CatalogName);
-		lvmds.getSelectCatalog().click();
+		lvmds.getSelectCatalogUAT().click();
 		String winHandleBefore = driver.getWindowHandle();
 		for (String winHandle : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle);
 		}
-		Assert.assertTrue(lvmds.getValidateLinesPage().getText().contains("pdfview"));
+		Assert.assertTrue(lvmds.getCatalogHeaderTxtT().getText().contains(CatalogName));
 		System.out.println("Catalog is displayed properly.");
 		driver.close();
 		driver.switchTo().window(winHandleBefore);	
@@ -773,7 +793,8 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmevents=new LVMEventsAndWebinarPage(driver);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputforShowSpecials")));
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));
+		Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(15000);
 		
@@ -819,6 +840,7 @@ public class ExhibitorDigitalShowroom extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputforShowSpecials")));
+		Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(15000);
 		//Store the 1st Exhibitor name in String variable
@@ -848,7 +870,7 @@ public class ExhibitorDigitalShowroom extends base {
 	@AfterClass
 	public void tearDown() throws InterruptedException {
 		Thread.sleep(2000);
-		driver.quit(); //Quit browser
+	//	driver.quit(); //Quit browser
 	}
 	
 }
