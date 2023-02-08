@@ -166,7 +166,7 @@ public class Utility extends base {
 			}
 		}
 		if (flagLines == true) {
-			System.out.println(filterName + "s Present");
+			System.out.println(filterName +" Present");
 			Assert.assertTrue(flagLines = true);
 		} else {
 			System.out.println(filterName + "s Not Present");

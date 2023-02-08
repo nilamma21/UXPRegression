@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<<<<<<< HEAD
 <suite name="Failed suite [LVM_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
       <class name="lasvegasmarket_UAT.GlobalSearch_ProductActions">
+=======
+<suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
+  <test name="RegressionTest(failed)">
+    <classes>
+
+      <class name="atlantamarket_PROD.MarketPlanner">
+        <methods>
+          <include name="initialize"/>
+          <include name="TS023_VerifyFilterByOptionsFunctionalityForListTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.MarketPlanner -->
+
+      <class name="lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters">
+>>>>>>> 05882c0424bc92ec9b84b3ee5a37380cde63a66a
         <methods>
           <include name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest"/>
           <include name="TS008_VerifyAddToFavoriteOnSearchResultsGridTest"/>
@@ -15,7 +31,12 @@
           <include name="TS007_VerifyFullScreenViewerOnProductDetailsPageTest"/>
           <include name="tearDown"/>
         </methods>
+<<<<<<< HEAD
       </class> <!-- lasvegasmarket_UAT.GlobalSearch_ProductActions -->
+=======
+      </class> <!-- lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters -->
+
+>>>>>>> 05882c0424bc92ec9b84b3ee5a37380cde63a66a
     </classes>
   </test> <!-- RegressionTest(failed) -->
-</suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
+</suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->
