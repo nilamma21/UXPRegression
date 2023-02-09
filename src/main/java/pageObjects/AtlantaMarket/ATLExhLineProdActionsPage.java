@@ -83,6 +83,9 @@ public class ATLExhLineProdActionsPage extends base{
 	By totalprodcountonsearchgridnew = By.xpath("//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div[2]/div[2]/div/div/p[1]");
 	By totalprodseealllinknew = By.xpath("//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div[2]/div[2]/div/div/p[2]");
 	By exhproductnameonsearchgridnew = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]/h2");
+	
+	By prodNameUAT = By.xpath("(//div[@class='searchItemThumb--container'])[1]/p[1]"); //Locator for DG showroom Filter Catalog
+	
 			
 	
 	public ATLExhLineProdActionsPage(WebDriver driver) {
@@ -91,6 +94,11 @@ public class ATLExhLineProdActionsPage extends base{
 
 	} 
 		
+	public WebElement getprodNameUAT() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(prodNameUAT));
+		return driver.findElement(prodNameUAT);
+	}
 	public WebElement getprodNameFromDGshhowroomPage() {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(prodNameFromDGshhowroomPage));

@@ -49,9 +49,16 @@ public class LVMEventsAndWebinarPage {
 	By lvmSearchResultsTitle = By.xpath("//div[@class='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[2]/a[1]"); //Locator for Tag Icon
 	By lvmaddtoseselectedbtn = By.xpath("//input[@data-xpath='quickAdd.saveList']"); //Locator for Add to Selected button
 	
+	By lvmEventNameOnDetailsPageUAT = By.xpath("//div[@class='imc-eventdetail--root-container']/div[1]/h1[1]"); //Locator for list of all Events
+	
 	public LVMEventsAndWebinarPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
+	}
+	public WebElement getlvmEventNameOnDetailsPageUAT() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventNameOnDetailsPageUAT));
+		return driver.findElement(lvmEventNameOnDetailsPageUAT);
 	}
 	public WebElement getlvmaddtoseselectedbtn() {
 		wait = new WebDriverWait (driver,20);

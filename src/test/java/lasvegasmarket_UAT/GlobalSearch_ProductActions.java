@@ -75,13 +75,14 @@ public class GlobalSearch_ProductActions extends base {
 		lap = new ATLLandingPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		Thread.sleep(5000);
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor4")));
+		Thread.sleep(5000);
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(15000);
 		// Store the 1st Product name of Exhibitor
 		//String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText(); //Old
-		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGridNew().getText(); //New
+		String productNameOnSearchGrid = atlexhact.getprodNameUAT().getText(); //New
 		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
 
 		utl.scrollToElement(atlexhact.getExhibitorProduct());
@@ -101,6 +102,7 @@ public class GlobalSearch_ProductActions extends base {
 		System.out.println("Product Name On Product Details page: " + productNameOnProductDetails);
 		// Verify that selected Product details page should be opened
 		Assert.assertTrue(productNameOnSearchGrid.equals(productNameOnProductDetails));
+		driver.get(prop.getProperty("lvmurl_uat"));
 	}
 
 	@Test(priority = 2)
@@ -127,7 +129,7 @@ public class GlobalSearch_ProductActions extends base {
 		Thread.sleep(15000);
 		// Store the 1st Product name of Exhibitor
 		//String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText(); //Old
-		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGridNew().getText(); //New
+		String productNameOnSearchGrid = atlexhact.getprodNameUAT().getText(); //New
 		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
 
 		utl.scrollToElement(atlexhact.getExhibitorProduct());
@@ -180,6 +182,7 @@ public class GlobalSearch_ProductActions extends base {
 		}
 		Thread.sleep(10000);
 		Assert.assertTrue(atlmppge.getSavedProductNameInList().getText().contains(productNameOnSearchGrid));
+		driver.get(prop.getProperty("lvmurl_uat"));
 	}
 
 	@Test(priority = 3)
@@ -207,7 +210,7 @@ public class GlobalSearch_ProductActions extends base {
 
 		// Store the 1st Product name of Exhibitor
 		//String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText(); //Old
-		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGridNew().getText(); //New
+		String productNameOnSearchGrid = atlexhact.getprodNameUAT().getText(); //New
 		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
 
 		utl.scrollToElement(atlexhact.getExhibitorProduct());
@@ -271,6 +274,7 @@ public class GlobalSearch_ProductActions extends base {
 			// System.out.println(favlist.get(i).getText());
 			Assert.assertFalse(favlist.get(i).getText().contains(productNameOnSearchGrid));
 		}
+		driver.get(prop.getProperty("lvmurl_uat"));
 	}
 
 	@Test(priority = 4)
@@ -339,6 +343,7 @@ public class GlobalSearch_ProductActions extends base {
 			//System.out.println(favlist.get(i).getText());
 			Assert.assertFalse(favlist.get(i).getText().contains(productNameOnSearchGrid)); 
 		}
+		driver.get(prop.getProperty("lvmurl_uat"));
 	}
 
 	@Test(priority = 5)
@@ -414,6 +419,7 @@ public class GlobalSearch_ProductActions extends base {
 
 		// Delete the saved note
 		atlexhact.getDeleteNoteBtn().click();
+		driver.get(prop.getProperty("lvmurl_uat"));
 	}
 
 	@Test(priority = 6)
@@ -440,7 +446,7 @@ public class GlobalSearch_ProductActions extends base {
 		Thread.sleep(15000);
 		// Store the 1st Product name of Exhibitor
 		//String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText(); //Old
-		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGridNew().getText(); //New
+		String productNameOnSearchGrid = atlexhact.getprodNameUAT().getText(); //New
 		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
 
 		// Hovering on Product
@@ -484,6 +490,8 @@ public class GlobalSearch_ProductActions extends base {
 				break;
 			}
 		}
+		Assert.assertTrue(atlmppge.getSavedProductNameInList().getText().contains(productNameOnSearchGrid));
+		
 		Thread.sleep(10000);
 
 		// Delete that added Product from list
@@ -499,6 +507,7 @@ public class GlobalSearch_ProductActions extends base {
 			// System.out.println(favlist.get(i).getText());
 			Assert.assertFalse(favlist.get(i).getText().contains(productNameOnSearchGrid));
 		}
+		driver.get(prop.getProperty("lvmurl_uat"));
 	}
 
 	@Test(priority = 7)
@@ -525,7 +534,7 @@ public class GlobalSearch_ProductActions extends base {
 		Thread.sleep(15000);
 		//Store the 1st Product name of Exhibitor
 		//String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText(); //Old
-		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGridNew().getText(); //New
+		String productNameOnSearchGrid = atlexhact.getprodNameUAT().getText(); //New
 		System.out.println("Selected Product Name: "+productNameOnSearchGrid);
 
 		utl.scrollToElement(atlexhact.getExhibitorProduct());
@@ -545,6 +554,7 @@ public class GlobalSearch_ProductActions extends base {
 
 		//Verify that Full Screen viewer should be displayed with Product images
 		Assert.assertTrue(atlproddet.getProductFullScreenViewer().isDisplayed());
+		Thread.sleep(5000);
 
 		//Verify the title of the Full screen viewer
 		System.out.println(atlproddet.getProductFullScreenViewerTitle().getText());
@@ -552,6 +562,7 @@ public class GlobalSearch_ProductActions extends base {
 
 		//Dismiss the Full Screen Viewer
 		atlproddet.getProductFullScreenViewer().click();
+		driver.get(prop.getProperty("lvmurl_uat"));
 	}
 
 	@Test(priority = 8)
@@ -615,6 +626,7 @@ public class GlobalSearch_ProductActions extends base {
 			//System.out.println(favlist.get(i).getText());
 			Assert.assertFalse(favlist.get(i).getText().contains(productNameOnSearchGrid)); 
 		}
+		driver.get(prop.getProperty("lvmurl_uat"));
 	}
 
 	@Test(priority = 9)
@@ -691,10 +703,11 @@ public class GlobalSearch_ProductActions extends base {
 		Thread.sleep(10000);
 		//System.out.println(atlmppge.getNewCreatedListName().getText());
 		Assert.assertTrue(atlmppge.getNewCreatedListName().getText().contains(newlistname));
+		driver.get(prop.getProperty("lvmurl_uat"));
 	}
 
 	@AfterClass
 	public void tearDown() {
-		driver.quit();
+		//driver.quit();
 	}
 }
