@@ -340,9 +340,9 @@ public class MP extends base {
 		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
 
 		// Select Group from dropdown
-		Select selectGroup = new Select(atlmppge.getmpListNewSelectGroupDropdown());
+		// Select selectGroup = new Select(atlmppge.getmpListNewSelectGroupDropdown());
 		Thread.sleep(5000);
-		selectGroup.selectByIndex(3);
+		// selectGroup.selectByIndex(3);
 		// Click on Create Btn
 		atlmppge.getMpListNewCreateBtn().click();
 		Thread.sleep(10000);
