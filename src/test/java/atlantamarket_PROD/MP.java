@@ -248,7 +248,7 @@ public class MP extends base {
 		Thread.sleep(8000);
 	}
 
-	@Test(priority = 06)
+	@Test(priority = 40)
 	public void TS006_VerifyArrangeBtnFunctionalityForListsTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T234: Market Planner: Lists: Lists: Arrange button functionality test
@@ -720,8 +720,7 @@ public class MP extends base {
 		utl.selectFilters(atlmppge.getlistOfmngDropdownElements(), "Edit");
 
 		// click on 1st checkbox
-		WebElement ccD = driver.findElement(By
-				.xpath("(//div[@class='imc-formfield imc-content imc-saved-exhibitors__chk-container']/label[1])[1]"));
+		WebElement ccD = driver.findElement(By.xpath("(//div[@class='imc-formfield imc-content imc-saved-exhibitors__chk-container']/label[1])[1]"));
 		JavascriptExecutor jsD = (JavascriptExecutor) driver;
 		jsD.executeScript("arguments[0].click();", ccD);
 		Thread.sleep(2000);
@@ -2279,7 +2278,7 @@ public class MP extends base {
 		System.out.println("My Inquiries page is displayed properly.");
 	}
 
-	@Test(priority = 40)
+	@Test(priority = 06)
 	public void TS040_VerifyTabsUnderListsSectionTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
