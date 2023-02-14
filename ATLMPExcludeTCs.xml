@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="ATLMrkt_RegressionTestSuite">
+	<listners>
+		<listner class-name="antamarket_uat.TestListeners" />
+	</listners>
+	<test thread-count="5" name="RegressionTest">
+		<classes>
+
+			<!--<class name="atlantamarket_PROD.GlobalSearch_SearchFor"/>
+			 <class name="atlantamarket_PROD.EvenntsAndWebinar" />
+			<class name="atlantamarket_PROD.ExhibitorDigitalShowroom" />
+			<class name="atlantamarket_PROD.FloorPlans" />
+			<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
+			<class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters" />
+			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
+			<class name="atlantamarket_PROD.GlobalSearch_MatchingResults" />
+			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
+			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
+			<class name="atlantamarket_PROD.LineDigitalShowroom" />
+			<class name="atlantamarket_PROD.ShowSpecials" /> -->
+			<class name="atlantamarket_PROD.MarketPlanner"/>
+			<methods>
+			<exclude name="TS052_VerifyMarketPlannerAllSavedEventsAndSemninar"/>
+			<exclude name="TS051_VerifyMarketPlannerAddEventsToFav"/>
+			<exclude name="TS050_VerifyFilterByOptionsFunctionalityForListTest"/>
+			<exclude name="TS049_VerifyAddToFavoriteFunctionalityForProductTest"/>
+			<exclude name="TS048_VerifyAddToFavoriteFunctionalityForExhibitorTest"/>
+			<exclude name="TS047_VerifyAddToFavoriteFunctionalityForLineTest"/>
+			<exclude name="TS046_VerifyNewGroupBtnFunctionalityForListsTest"/>
+			<exclude name="TS045_VerifyMarketPlannerListsAllSavedproductsTest"/>
+			<exclude name="TS044_VerifyMarketPlannerListSortByFunctionalityTest"/>
+			<exclude name="TS043_VerifyAddToFavoriteFunctionalityUsingQuickAddForLinesTest"/>
+			<exclude name="TS042_VerifyAddToFavoriteFunctionalityUsingQuickAddForproductTest"/>
+			<exclude name="TS032_VerifyMarketPlannerRegistrationsTabTest"/>
+			</methods>
+		</classes>
+	</test>
+</suite>
