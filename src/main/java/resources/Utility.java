@@ -417,18 +417,19 @@ public class Utility extends base {
 		lp = new ATLLoginPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
 		atlgs=new ATLGlobalSearchPage(driver);
-
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(2000);
 		if (!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
+			Thread.sleep(1000);
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
 	}
-
 	public void CloseATLPopup() throws IOException, InterruptedException {
 		lap = new ATLLandingPage(driver);
 
 		try {
+			Thread.sleep(1000);
 			lap.getCloseMarktAdBtn().click();
-
 		}catch(Exception e)
 		{
 			e.printStackTrace();
