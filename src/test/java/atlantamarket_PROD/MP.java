@@ -2042,7 +2042,7 @@ public class MP extends base {
 		// Click on nxt month arrow
 		atlmppge.getmpCalendarNextMonthArrow().click();
 		// Click on nxt month arrow
-		atlmppge.getmpCalendarNextMonthArrow().click();
+		//atlmppge.getmpCalendarNextMonthArrow().click();
 		// Print End Month
 		String endMonth = atlmppge.getmpmonthName().getText();
 		// Select End Date
