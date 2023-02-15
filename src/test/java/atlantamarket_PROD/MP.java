@@ -340,9 +340,9 @@ public class MP extends base {
 		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
 
 		// Select Group from dropdown
-		// Select selectGroup = new Select(atlmppge.getmpListNewSelectGroupDropdown());
+		Select selectGroup = new Select(atlmppge.getmpListNewSelectGroupDropdown());
 		Thread.sleep(5000);
-		// selectGroup.selectByIndex(3);
+		//selectGroup.selectByIndex(3);
 		// Click on Create Btn
 		atlmppge.getMpListNewCreateBtn().click();
 		Thread.sleep(10000);
@@ -2042,7 +2042,7 @@ public class MP extends base {
 		// Click on nxt month arrow
 		atlmppge.getmpCalendarNextMonthArrow().click();
 		// Click on nxt month arrow
-		//atlmppge.getmpCalendarNextMonthArrow().click();
+		atlmppge.getmpCalendarNextMonthArrow().click();
 		// Print End Month
 		String endMonth = atlmppge.getmpmonthName().getText();
 		// Select End Date
@@ -2581,26 +2581,21 @@ public class MP extends base {
 		atlgs.getATLGlobalSearchTextBox().sendKeys("   ");
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(15000);
+		
 		// Store the 1st product name of Exhibitor
-		/*
-		 * String productNameOnSearchGrid =
-		 * atlexhact.getExhProductNameOnSearchGrid().getText();
-		 * System.out.println("Selected product Name: " + productNameOnSearchGrid);
-		 */
-		String exhname = atlexhact.getExhibitorName().getText();
-		System.out.println("Exhibitor name: " + exhname);
+		String productNameOnSearchGrid =atlexhact.getExhProductNameOnSearchGrid().getText();
+		System.out.println("Selected product Name: " + productNameOnSearchGrid);
 
-		// utl.scrollToElement(atlexhact.getExhibitorproduct());
+		utl.scrollToElement(atlexhact.getExhibitorProduct());
 
 		// Hovering on product
 		Actions actions = new Actions(driver);
 		actions.moveToElement(atlmppge.getseeAllBtn()).perform();
 		// To mouseover on See All btn
-		// actions.moveToElement(atlexhact.getproductFevBtn()).perform();
-		atlmppge.getFavIcone().click();
+		actions.moveToElement(atlexhact.getProductFevBtn()).perform();
 
 		// Click on Add To Favorite button
-		// actions.click().perform();
+		actions.click().perform();
 		Thread.sleep(5000);
 
 		// Click on Market Planner link
@@ -2611,7 +2606,7 @@ public class MP extends base {
 		atlmppge.getallSavedProductMenu().click();
 		Thread.sleep(5000);
 
-		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), exhname);
+		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), productNameOnSearchGrid);
 	}
 
 	@Test(priority = 46)
