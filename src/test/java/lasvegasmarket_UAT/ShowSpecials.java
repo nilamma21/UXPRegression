@@ -61,8 +61,7 @@ public class ShowSpecials extends base{
 		
 	}
 	@Test(priority = 1)
-	public void TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest()
-			throws InterruptedException, IOException {
+	public void TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T381: Show Specials: Links - Exhibitor Name
 
@@ -86,21 +85,21 @@ public class ShowSpecials extends base{
 		
 		//verify Show special Page
 		Assert.assertTrue(lvmgs.getlvmShowSpecialsTitle().getText().contains(prop.getProperty("showSpecialTitle")));
-
+		System.out.println(lvmgs.getlvmShowSpecialsTitle().getText());
 		
 		/*//Store the name of Show Special Exhibitor
-		String showSpecialExhName=lvmgs.getlvmShowSpecialsExhNamePROD().getText();
+		String showSpecialExhName=lvmgs.getlvmShowSpecialsExhName().getText();
 		System.out.println(showSpecialExhName);*/
 		
-		String inbox = lvmgs.getlvmShowSpecialsExhNamePROD().getText();
+		String inbox = lvmgs.getlvmShowSpecialsExhNamePROD().getText(); //For Prod use - lvmgs.getlvmShowSpecialsExhName().getText();
 		String[] data = inbox.split("Shown By ");
 		String showSpecialExhName = data[1];
 		System.out.println(showSpecialExhName);
 		
-		lvmgs.getLVMSeeMoreDetailsBtnNew().click();
+		lvmgs.getLVMSeeMoreDetailsBtn().click();
 
 		//Click on Show Special Exhibitor
-		//String showSpecialExhName=lvmgs.getlvmShowSpecialsExhNamePROD().getText();
+		//String showSpecialExhName=lvmgs.getlvmShowSpecialsExhName().getText();
 		
 		String ename=lvmgs.getFirstShowSpecialName().getText();
 		System.out.println(ename);
@@ -148,7 +147,7 @@ public class ShowSpecials extends base{
 
 	@AfterClass
 	public void tearDown() {
-		// driver.quit();
+		driver.quit();
 	}
 
 }

@@ -1,5 +1,26 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <<<<<<< HEAD
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>TestNG Report</title><style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}</style></head><body><table><tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr><tr><th colspan="7">LVM_RegressionTestSuite</th></tr><tr><td><a href="#t0">RegressionTest</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">93,379</td><td></td><td></td></tr></table><table><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">LVM_RegressionTestSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">RegressionTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">lasvegasmarket_UAT.ShowSpecials</td><td><a href="#m0">TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest</a></td><td rowspan="1">1676457098765</td><td rowspan="1">36166</td></tr></tbody></table><h2>RegressionTest</h2><h3 id="m0">lasvegasmarket_UAT.ShowSpecials#TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//a[contains(text(),&apos;See More Details&apos;)])[1] (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.LasVegasMarket.LVMGlobalSearchPage.getLVMSeeMoreDetailsBtnNew(LVMGlobalSearchPage.java:572)
+	at lasvegasmarket_UAT.ShowSpecials.TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest(ShowSpecials.java:99)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: (//a[contains(text(),&apos;See More Details&apos;)])[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 26 more
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p></body></html>
+=======
+<<<<<<< HEAD
 =======
 
 >>>>>>> 05882c0424bc92ec9b84b3ee5a37380cde63a66a
@@ -319,3 +340,4 @@ org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedC
 ... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p></body></html>
 
 >>>>>>> 05882c0424bc92ec9b84b3ee5a37380cde63a66a
+>>>>>>> fdbf4885ce3414abaf8ac3710bb261f279b3c122

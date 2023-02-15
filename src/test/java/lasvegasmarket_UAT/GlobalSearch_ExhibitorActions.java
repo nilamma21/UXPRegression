@@ -371,7 +371,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		// Store the 1st Exhibitor name in String variable
 		exhname = atlexhact.getExhibitorName().getText();
 		System.out.println("Exhibitor name: " + exhname);
-
+		Thread.sleep(2000);
 		// Get the Total Products count on Search grid
 		String temp = atlexhact.getTotalProdCountOnSearchGrid().getText();
 		
@@ -480,15 +480,15 @@ public class GlobalSearch_ExhibitorActions extends base {
 		// Store the new note name
 		String newnotetitle = "CybNote" + genData.generateRandomString(3);
 		System.out.println("Newly added Note is: " + newnotetitle);
-
+		Thread.sleep(1000);
 		// Enter Note title
 		atlexhact.getNoteTitleTxtBx().sendKeys(newnotetitle);
+		Thread.sleep(1000);
 		// Enter Note Content
 		atlexhact.getNoteContentTxtBx().sendKeys("TestNote" + genData.generateRandomString(6));
 		// Click on 'Save' button
 		atlexhact.getNoteSaveBtn().click();
 		Thread.sleep(7000);
-
 		// Click on 'Add Note' icon for the same exhibitor
 		atlexhact.getMatchingProdAddNoteIcon().click();
 		Thread.sleep(5000);

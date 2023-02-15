@@ -55,7 +55,7 @@ public class LVMGlobalSearchPage {
 	By lvmeventstabinsearchDiv =  By.xpath("//a[@id='Events']"); //Locator for Events tab in Search
 	By lvmeventstabinsearchUAT =  By.xpath("//a[@id='Events']"); //Locator for Events tab in Search
 	By lvmseemoredetailsbtn = By.xpath("//a[contains(text(),'See More Details')]"); //Locator for See More Details button
-	By eventslvmmkttopicsfilter = By.xpath("//label[contains(text(),'Atlanta Market')]"); //Locator for Atlanta Market topics filter
+	By eventslvmmkttopicsfilter = By.xpath("//label[contains(text(),'Las Vegas Market')]"); //Locator for Atlanta Market topics filter
 	By clearfiltersbtn = By.xpath("//a[@class='clear-filter active']"); //Locator for Clear Filters btn
 	By eventtypesfilter = By.xpath("//h4[contains(text(),'Event Types')]"); //Locator for Event Types filter
 	By atmarketeventtypefilter = By.xpath("//label[contains(text(),'At Market')]"); //Locator for At Market Event Type
@@ -98,7 +98,7 @@ public class LVMGlobalSearchPage {
 	By lvmShowSpecialsExhName = By.xpath("//div[@class='imc-gallery imc-gallery--align-flex-start imc-gallery--1-4 imc-vr--collosal imc-fprod-cont imc-specials-list']/div[1]/div[1]/a[1]");  //Locator for Show Secials Name
 	By lvmShowroomLink = By.xpath("//div[@class='ag-center-cols-container']/div[1]/div[2]/a");  //Locator for Showroom Name
 	By lvmGlobalSearchClearTxt = By.xpath("//div[@class='imc-header-subnav']/div[1]/div[1]/section[1]/div[1]/form[1]/button[1]");  //Locator for Showroom Name
-	By lvmShowSpecialsExhNamePROD = By.xpath("//div[@class='imc-gallery imc-gallery--align-flex-start imc-gallery--1-4 imc-vr--collosal imc-fprod-cont imc-specials-list']/div[1]/div[1]/a[2]");  //Locator for Show Secials Name
+	By lvmShowSpecialsExhNamePROD = By.xpath("//p[contains(text(),'Shown By')]");  //Locator for Show Secials Name
 	By lvmSelectList = By.xpath("//select[@name='Saved Searches']");  //Locator for Show Secials Name
 	By lvmClosePopup = By.xpath("//div[@class=' contact-exit']");  //Locator for Show Secials Name
 	By FirstInfoName = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/h2[1]");  //Locator for Show Secials Name
@@ -472,7 +472,7 @@ public class LVMGlobalSearchPage {
 	}								
 	public WebElement getLVMInfosearchbtn() throws InterruptedException {
 		Thread.sleep(5000);
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(lvmInfosearchbtn));
 		return driver.findElement(lvmInfosearchbtn);
 	}								

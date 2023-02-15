@@ -78,18 +78,19 @@ public class LineDigitalShowroom extends base{
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//click on Global Search Input filed
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor5"));
-		Thread.sleep(5000);
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor7"));
+		Thread.sleep(2000);
 		//Click on 1st Suggetions
 		lvmdigish.getsuggetionList().click();
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		//Verify Digi showrrom page
-		//Assert.assertTrue(lvmdigish.getLVMLineDigiShowroomPageTitle().getText().equals(prop.getProperty("exhibitor5"))); //For Prod
-		Assert.assertTrue(lvmdigish.getLVMLineDigiShowroomPageTitleUAT().getText().equals(prop.getProperty("exhibitor5"))); //For UAT
+		Assert.assertTrue(lvmdigish.getLVMLineDigiShowroomPageTitle().getText().equals(prop.getProperty("exhibitor7")));
 		//Click on Shown By Exhibitor Name
-		String heroompName=lvmdigish.getdigiShowroomExhName().getText();
-		lvmdigish.getdigiShowroomExhName().click();
-		
+		Thread.sleep(2000);
+		//String heroompName=lvmdigish.getdigiShowroomExhName().getText();//LVM Prod
+		//lvmdigish.getdigiShowroomExhName().click();//LVM Prod
+		String heroompName=lvmdigish.getdigiShowroomExhNameUat().getText();//LVM UAT
+		lvmdigish.getdigiShowroomExhNameUat().click();//LVM UAT
 		//verify Selected exhitor digi showroom ppage
 		Assert.assertTrue(lvmgs.getlvmShowSpecialsTitle().getText().equals(heroompName));
 	}
@@ -106,24 +107,24 @@ public class LineDigitalShowroom extends base{
 		lvmmpp = new LVMMarketPlannerPage(driver);
 		genData = new GenerateData();
 		lvmdigish = new LVMLineDigitalShowroomPage(driver);
-
+		driver.navigate().refresh();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			lvmgs.getlvmGlobalSearchClearTxt().click();
 		}
-	
+		Thread.sleep(3000);
 		//click on Global Search Input filed
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor5"));
-		Thread.sleep(5000);
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor7"));
+		Thread.sleep(2000);
 		//Click on 1st Suggetions
 		lvmdigish.getsuggetionList().click();
 		Thread.sleep(5000);
 		//Verify Digi showrrom page
-		//Assert.assertTrue(lvmdigish.getLVMLineDigiShowroomPageTitle().getText().equals(prop.getProperty("exhibitor5"))); //For Prod
-		Assert.assertTrue(lvmdigish.getLVMLineDigiShowroomPageTitleUAT().getText().equals(prop.getProperty("exhibitor5"))); //For UAT
+		Assert.assertTrue(lvmdigish.getLVMLineDigiShowroomPageTitle().getText().equals(prop.getProperty("exhibitor7"))); //For Prod
+		
 		//Click on 1st Location Link
-		//String locationURL = lvmdigish.getlocationLink().getAttribute("href"); //For Prod
-		String locationURL = lvmdigish.getlocationLinkUAT().getAttribute("href"); //For UAT
+		
+		String locationURL = lvmdigish.getlocationLinkUAT().getAttribute("href"); 
 		// Store the current window handle
 		String winHandleBefore = driver.getWindowHandle();
 		//lvmdigish.getlocationLink().click(); //For Prod
@@ -153,36 +154,37 @@ public class LineDigitalShowroom extends base{
 		lvmmpp = new LVMMarketPlannerPage(driver);
 		genData = new GenerateData();
 		lvmdigish = new LVMLineDigitalShowroomPage(driver);
-
+		Thread.sleep(4000);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			lvmgs.getlvmGlobalSearchClearTxt().click();
 		}
-	
+		Thread.sleep(2000);
 		//click on Global Search Input filed
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor5"));
-		Thread.sleep(5000);
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor7"));
+		Thread.sleep(2000);
 		//Click on 1st Suggetions
 		lvmdigish.getsuggetionList().click();
 		Thread.sleep(5000);
 		//Verify Digi showrrom page
-		//Assert.assertTrue(lvmdigish.getLVMLineDigiShowroomPageTitle().getText().equals(prop.getProperty("exhibitor5"))); //For Prod
-		Assert.assertTrue(lvmdigish.getLVMLineDigiShowroomPageTitleUAT().getText().equals(prop.getProperty("exhibitor5"))); //For UAT
+		Assert.assertTrue(lvmdigish.getLVMLineDigiShowroomPageTitle().getText().equals(prop.getProperty("exhibitor7"))); //For Prod
+		//Assert.assertTrue(lvmdigish.getLVMLineDigiShowroomPageTitleUAT().getText().equals(prop.getProperty("exhibitor7"))); //For UAT
 		//Store Hero Comp Name
-		String heroCompName=lvmdigish.getdigiShowroomExhName().getText();
+		String heroCompName=lvmdigish.getdigiShowroomExhNameUat().getText();
 		// Click on Fav Icon
-		lvmdigish.getfavIconDigiShowroom().click();
+		//lvmdigish.getfavIconDigiShowroom().click(); // For Prod
+		lvmdigish.getfavIconDigiShowroomUat().click(); //For UAT
 		Thread.sleep(6000);
-		
 		// Sign In to MP
 		// Enter the credentials on Login Page and click
-		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
+		/*lp.getEmailAddress().sendKeys((prop.getProperty("username")));
 		lp.getPassword().sendKeys((prop.getProperty("password")));
 		lp.getSignInBtn().click();
-		Thread.sleep(15000);
+		Thread.sleep(15000);*/
 		
 		// Click on Fav Icon
-		lvmdigish.getfavIconDigiShowroom().click();
+		//lvmdigish.getfavIconDigiShowroom().click(); // For Prod
+		//lvmdigish.getfavIconDigiShowroomUat().click(); //For UAT
 		lap.getMPLinkText().click();
 		Thread.sleep(6000);
 
@@ -205,21 +207,21 @@ public class LineDigitalShowroom extends base{
 		lvmmpp = new LVMMarketPlannerPage(driver);
 		genData = new GenerateData();
 		lvmdigish=new LVMLineDigitalShowroomPage(driver);
-
+		Thread.sleep(4000);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			lvmgs.getlvmGlobalSearchClearTxt().click();
 		}
-	
+		Thread.sleep(2000);
 		//click on Global Search Input filed
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor5"));
-		Thread.sleep(5000);
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor7"));
+		Thread.sleep(2000);
 		//Click on 1st Suggetions
 		lvmdigish.getsuggetionList().click();
 		Thread.sleep(5000);
 		//Verify Digi showrrom page
-		//Assert.assertTrue(lvmdigish.getLVMLineDigiShowroomPageTitle().getText().equals(prop.getProperty("exhibitor5"))); For Prod
-		Assert.assertTrue(lvmdigish.getLVMLineDigiShowroomPageTitleUAT().getText().equals(prop.getProperty("exhibitor5"))); //For UAT
+		Assert.assertTrue(lvmdigish.getLVMLineDigiShowroomPageTitle().getText().equals(prop.getProperty("exhibitor7"))); //For Prod
+		
 		//Store Hero Comp Name
 		//String heroCompName=lvmdigish.getdigiShowroomExhName().getText();
 		// Click on Add to List Icon
@@ -256,7 +258,7 @@ public class LineDigitalShowroom extends base{
 		// Open selected list
 		utl.ClickOnEditBtnOfAnyList(lvmmpp.getallList(), exList);
 		// Verify exhibitor present into selected list or not
-		utl.checkItemPresentInListorNot(lvmmpp.getlistOfAllExh(), prop.getProperty("exhibitor5"));
+		utl.checkItemPresentInListorNot(lvmmpp.getlistOfAllExh(), prop.getProperty("exhibitor7"));
 	}
 	@Test(priority = 05)
 	public void TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest()throws InterruptedException, IOException {
@@ -273,19 +275,20 @@ public class LineDigitalShowroom extends base{
 		lvmdigish=new LVMLineDigitalShowroomPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		Thread.sleep(1000);
 		if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			lvmgs.getlvmGlobalSearchClearTxt().click();
 		}
+		Thread.sleep(4000);
 		//click on Global Search Input filed
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor5"));
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor7"));
 		Thread.sleep(5000);
 		//Click on 1st Suggetions
 		lvmdigish.getsuggetionList().click();
 		Thread.sleep(5000);
 		//Verify Digi showrrom page
-		//Assert.assertTrue(lvmdigish.getLVMLineDigiShowroomPageTitle().getText().equals(prop.getProperty("exhibitor5"))); //For Prod
-		Assert.assertTrue(lvmdigish.getLVMLineDigiShowroomPageTitleUAT().getText().equals(prop.getProperty("exhibitor5"))); //For UAT
+		Assert.assertTrue(lvmdigish.getLVMLineDigiShowroomPageTitle().getText().equals(prop.getProperty("exhibitor7"))); //For Prod
+		
 		//Store Hero Comp Name
 		//String heroCompName=lvmdigish.getdigiShowroomExhName().getText();
 		// Click on Add to List Icon
@@ -295,7 +298,7 @@ public class LineDigitalShowroom extends base{
 		// Enter the credentials on Login Page and click
 		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
 		lp.getPassword().sendKeys((prop.getProperty("password")));
-		
+	
 		lp.getSignInBtn().click();
 		Thread.sleep(15000);*/
 		// Click on Add to List Icon
@@ -325,6 +328,7 @@ public class LineDigitalShowroom extends base{
 		Thread.sleep(2000);
 		// Delete the saved note
 		lvmexhact.getDeleteNoteBtn().click();
+		Thread.sleep(1000);
 		lvmdigish.getaddNoteIcon().click();
 		Thread.sleep(2000);
 		// Click on 'View all Notes for an Exhibitor' link on Add Notes pop-up
@@ -342,7 +346,7 @@ public class LineDigitalShowroom extends base{
 		}
 		lvmmpp.getcloseNotePopup().click();	
 	}
-	@Test(priority = 06)
+	@Test(priority = 12)//Previous priority is 06
 	public void TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T343: Line Digital Showroom: Hero component: Order on Juniper Market
@@ -355,29 +359,29 @@ public class LineDigitalShowroom extends base{
 		lvmmpp = new LVMMarketPlannerPage(driver);
 		genData = new GenerateData();
 		lvmdigish=new LVMLineDigitalShowroomPage(driver);
-
+		driver.navigate().refresh();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		Thread.sleep(4000);
 		if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			lvmgs.getlvmGlobalSearchClearTxt().click();
 		}
 		//click on Global Search Input filed
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor5"));
-		Thread.sleep(10000);
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor7"));
+		Thread.sleep(7000);
 		//Click on 1st Suggetions
 		lvmdigish.getsuggetionList().click();
-		Thread.sleep(5000);
+		Thread.sleep(4000);
 		//Verify Digi showrrom page
-		//Assert.assertTrue(lvmdigish.getLVMLineDigiShowroomPageTitle().getText().equals(prop.getProperty("exhibitor5"))); For Prod
-		Assert.assertTrue(lvmdigish.getLVMLineDigiShowroomPageTitleUAT().getText().equals(prop.getProperty("exhibitor5"))); //For UAT
+		Assert.assertTrue(lvmdigish.getLVMLineDigiShowroomPageTitle().getText().equals(prop.getProperty("exhibitor7"))); //For Prod
+		
 		//Store Hero Comp Name
 		//String heroCompName = lvmdigish.getdigiShowroomExhName().getText();
 		// Click on OrderOnJUniper Btn
-		String orderOnJuniperURL = lvmdigish.getorderOnJuniperBtnNew().getAttribute("href"); //Old is "getorderOnJuniperBtn"
+		String orderOnJuniperURL = lvmdigish.getorderOnJuniperBtn().getAttribute("href");
 		
 		// Store the current window handle
 		String winHandleBefore = driver.getWindowHandle();
-		lvmdigish.getorderOnJuniperBtnNew().click(); //Old is "getorderOnJuniperBtn"
+		lvmdigish.getorderOnJuniperBtn().click(); 
 
 		// Switch to new window opened
 		for (String winHandle : driver.getWindowHandles()) {
@@ -389,7 +393,7 @@ public class LineDigitalShowroom extends base{
 		// Close the new window, if that window no more required
 		driver.close();
 		// Switch back to original browser (first window)
-		driver.switchTo().window(winHandleBefore);
+		//driver.switchTo().window(winHandleBefore);
 			
 	}
 	@Test(priority = 07)
@@ -405,28 +409,32 @@ public class LineDigitalShowroom extends base{
 		lvmmpp = new LVMMarketPlannerPage(driver);
 		genData = new GenerateData();
 		lvmdigish=new LVMLineDigitalShowroomPage(driver);
-
+		
+		driver.navigate().refresh();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(4000);
 		if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			lvmgs.getlvmGlobalSearchClearTxt().click();
 		}
 	
 		//click on Global Search Input filed
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor5"));
-		Thread.sleep(5000);
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor7"));
+		Thread.sleep(4000);
 		//Click on 1st Suggetions
 		lvmdigish.getsuggetionList().click();
-		Thread.sleep(5000);
+		Thread.sleep(4000);
 		//Verify Digi showrrom page
-		//Assert.assertTrue(lvmdigish.getLVMLineDigiShowroomPageTitle().getText().equals(prop.getProperty("exhibitor5"))); //For Prod
-		Assert.assertTrue(lvmdigish.getLVMLineDigiShowroomPageTitleUAT().getText().equals(prop.getProperty("exhibitor5"))); //For UAT
+		Assert.assertTrue(lvmdigish.getLVMLineDigiShowroomPageTitle().getText().equals(prop.getProperty("exhibitor7"))); //For Prod
+		
 		//Store Hero Comp Name
 		//String heroCompName = lvmdigish.getdigiShowroomExhName().getText();
 		// Click on OrderOnJUniper Btn
 		
-		String seeAllProdBtn=lvmdigish.getseeAllProductBtn().getText();
+		//String seeAllProdBtn=lvmdigish.getseeAllProductBtn().getText(); //For Prod
+		String seeAllProdBtn=lvmdigish.getseeAllProductBtnUat().getText(); //For UAT
 		String seeAllProdCount = seeAllProdBtn.split(" ")[2].trim();
-		lvmdigish.getseeAllProductBtn().click();
+		//lvmdigish.getseeAllProductBtn().click();//For Prod
+		lvmdigish.getseeAllProductBtnUat().click();//For UAT
 		Thread.sleep(5000);
 		String p=driver.findElement(By.xpath("//div[@id='Products']")).getText();
 		String count=p.replaceAll("[()]", "");
@@ -448,22 +456,22 @@ public class LineDigitalShowroom extends base{
 		lvmmpp = new LVMMarketPlannerPage(driver);
 		genData = new GenerateData();
 		lvmdigish=new LVMLineDigitalShowroomPage(driver);
-
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(1000);
 		if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			lvmgs.getlvmGlobalSearchClearTxt().click();
 		}
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//click on Global Search Input filed
 		Thread.sleep(2000);
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor5"));
-		Thread.sleep(5000);
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor7"));
+		Thread.sleep(4000);
 		//Click on 1st Suggetions
 		lvmdigish.getsuggetionList().click();
-		Thread.sleep(5000);
+		Thread.sleep(4000);
 		//Verify Digi showrrom page
-		//Assert.assertTrue(lvmdigish.getLVMLineDigiShowroomPageTitle().getText().equals(prop.getProperty("exhibitor5"))); //For Prod
-		Assert.assertTrue(lvmdigish.getLVMLineDigiShowroomPageTitleUAT().getText().equals(prop.getProperty("exhibitor5"))); //For UAT
+		Assert.assertTrue(lvmdigish.getLVMLineDigiShowroomPageTitle().getText().equals(prop.getProperty("exhibitor7"))); //For Prod
+		
 		//Scroll to Product section
 		utl.scrollToElement(lvmdigish.getproductTitle());
 		Thread.sleep(5000);
@@ -506,21 +514,23 @@ public class LineDigitalShowroom extends base{
 		lvmmpp = new LVMMarketPlannerPage(driver);
 		genData = new GenerateData();
 		lvmdigish=new LVMLineDigitalShowroomPage(driver);
-
+		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(2000);
 		if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			lvmgs.getlvmGlobalSearchClearTxt().click();
 		}
 		Thread.sleep(2000);
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor5"));
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor7"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		//Click on 1st Suggetions
 		lvmdigish.getsuggetionList().click();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//Thread.sleep(5000);
 	
 		//click on Global Search Input filed
-		/*lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor5"));
+		/*lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor7"));
 		Thread.sleep(10000);
 		//Click on 1st Suggetions
 		lvmdigish.getsuggetionList().click();
@@ -559,15 +569,15 @@ public class LineDigitalShowroom extends base{
 		genData = new GenerateData();
 		lvmdigish=new LVMLineDigitalShowroomPage(driver);
 
-		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(4000);
 		if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			lvmgs.getlvmGlobalSearchClearTxt().click();
 		}
 		//click on Global Search Input filed
 		Thread.sleep(2000);
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor5"));
-		Thread.sleep(5000);
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor7"));
+		Thread.sleep(3000);
 		//Click on 1st Suggetions
 		lvmdigish.getsuggetionList().click();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -594,16 +604,16 @@ public class LineDigitalShowroom extends base{
 		genData = new GenerateData();
 		lvmdigish=new LVMLineDigitalShowroomPage(driver);
 
-		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(3000);
 		if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			lvmgs.getlvmGlobalSearchClearTxt().click();
 		}
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//click on Global Search Input filed
-		Thread.sleep(4000);
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor5"));
-		Thread.sleep(5000);
+		Thread.sleep(3000);
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor7"));
+		Thread.sleep(3000);
 		//Click on 1st Suggetions
 		lvmdigish.getsuggetionList().click();
 		//Thread.sleep(5000);
@@ -633,8 +643,8 @@ public class LineDigitalShowroom extends base{
 			Assert.assertTrue(lvmdigish.getproductHeader().getText().contains(replaceProdName));
 		}
 	}
-	/*@AfterClass
+	@AfterClass
 	public void tearDown() {
 		 driver.quit();
-	}*/
+	}
 }

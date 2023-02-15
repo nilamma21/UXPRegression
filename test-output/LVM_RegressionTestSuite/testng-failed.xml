@@ -3,6 +3,15 @@
 <suite name="Failed suite [LVM_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
+
+      <class name="lasvegasmarket_UAT.ShowSpecials">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+          <include name="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest"/>
+        </methods>
+      </class> <!-- lasvegasmarket_UAT.ShowSpecials -->
+
       <class name="lasvegasmarket_UAT.GlobalSearch_ProductActions">
         <methods>
           <include name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest"/>
@@ -16,6 +25,7 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- lasvegasmarket_UAT.GlobalSearch_ProductActions -->
+
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
