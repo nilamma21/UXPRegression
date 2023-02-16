@@ -1,55 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-
-<suite guice-stage="DEVELOPMENT" name="Failed suite [LVM_RegressionTestSuite]">
-  <test name="RegressionTest(failed)">
-    <classes>
-      <class name="lasvegasmarket_UAT.ShowSpecials">
-        <methods>
-          <include name="tearDown"/>
-          <include name="initialize"/>
-          <include name="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest"/>
-        </methods>
-      </class> <!-- lasvegasmarket_UAT.ShowSpecials -->
-
-
 <suite name="Failed suite [LVM_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-      <class name="lasvegasmarket_UAT.GlobalSearch_ProductActions">
-
-<suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
-  <test name="RegressionTest(failed)">
-    <classes>
-
-      <class name="atlantamarket_PROD.MarketPlanner">
+      <class name="lasvegasmarket_UAT.EvenntsAndWebinar">
         <methods>
+          <include name="TS005_VerifyIMCEventsEventDetailstTest"/>
           <include name="initialize"/>
-          <include name="TS023_VerifyFilterByOptionsFunctionalityForListTest"/>
-          <include name="tearDown"/>
+          <include name="TS014_VerifyExhibitorEventsAddToListTest"/>
+          <include name="TS013_VerifyExhibitorEventsAddToFavoriteTest"/>
+          <include name="TS012_VerifyExhibitorEventsDetailstTest"/>
+          <include name="TS006_VerifyIMCEventsAddToFavoriteTest"/>
+          <include name="TS007_VerifyIMCEventsAddToListTest"/>
         </methods>
-      </class> <!-- atlantamarket_PROD.MarketPlanner -->
-
-      <class name="lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters">
-
-        <methods>
-          <include name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest"/>
-          <include name="TS008_VerifyAddToFavoriteOnSearchResultsGridTest"/>
-          <include name="TS006_VerifyProductAddToExistingListOnSearchResultsGridTest"/>
-          <include name="TS004_VerifyAddToFavoriteOnProductDetailsPageTest"/>
-          <include name="initialize"/>
-          <include name="TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest"/>
-          <include name="TS003_VerifyProductAddToExistingListOnProductDetailsPageTest"/>
-          <include name="TS007_VerifyFullScreenViewerOnProductDetailsPageTest"/>
-          <include name="tearDown"/>
-        </methods>
-
-      </class> <!-- lasvegasmarket_UAT.GlobalSearch_ProductActions -->
-
-      </class> <!-- lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters -->
-
-
-
+      </class> <!-- lasvegasmarket_UAT.EvenntsAndWebinar -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->

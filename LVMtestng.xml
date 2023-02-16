@@ -6,14 +6,14 @@
 		<listner class-name="lasvegasmarket_UAT.LineDigitalShowroom" />
 	</listners>
 
-	<test thread-count="5" name="RegressionTest">1
+	<test thread-count="5" name="RegressionTest">
 		<classes>
 
 
 
-			<class name="lasvegasmarket_UAT.ShowSpecials" />
+			<class name="lasvegasmarket_UAT.EvenntsAndWebinar" />
 			<methods>
-				    <include name="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest()"/>  
+				     <include name="TS003_VerifyIMCEventsCalendarViewTest"/>  
 
 			<!-- <class name="lasvegasmarket_UAT.GlobalSearch_ProductActions" />
 			<methods> -->

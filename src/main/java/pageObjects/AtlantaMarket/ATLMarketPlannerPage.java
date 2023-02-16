@@ -33,7 +33,7 @@ public class ATLMarketPlannerPage {
 	By atlmplistsnames = By.xpath("//ul[@class='imc-market-planner-list']/li/div[1]"); //Locator for the List names of MP lists
 	By atlmpeditlistoptns = By.xpath("//ul[@class='imc-market-planner-list']/li/div[2]/span[2]/a"); //Locator for Edit List options on Lists page
 	By atlmpeditlistoptn = By.xpath("(//ul[@class='imc-market-planner-list']/li/div[2]/span[2]/a[1])[1]"); //Locator for Edit List options on Lists page
-	By atlmpexistinglistname = By.xpath("//form/div[4]/div[8]/label"); //Locator for existing list name
+	By atlmpexistinglistname = By.xpath("//form/div[4]/div[9]/label"); //Locator for existing list name
 	
 	By atladdtoseselectedbtn = By.xpath("//input[@data-xpath='quickAdd.saveList']"); //Locator for Add to Selected button
 	By listspagefavoritesmenu = By.xpath("//div[@class='imc-vertical-tabs-nav']/div[contains(text(),'Favorites')]"); //Locator for Favorites left menu
@@ -594,18 +594,28 @@ public class ATLMarketPlannerPage {
 		return driver.findElement(editlistitemmorebtn);
 	}
 	public WebElement getATLEditListItemMoreBtnNew() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(editlistitemmorebtnnew));
 		return driver.findElement(editlistitemmorebtnnew);
 	}
 	public WebElement getATLEditListItemDeleteOptn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(editlistitemdeleteoptn));
 		return driver.findElement(editlistitemdeleteoptn);
 	}
 	public WebElement getCreateNewListNameTxtbx() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(createnewlistnametxtbx));
 		return driver.findElement(createnewlistnametxtbx);
 	}
 	public WebElement getNewListModalCreateBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(newlistmodalcreatebtn));
 		return driver.findElement(newlistmodalcreatebtn);
 	}
 	public WebElement getGoToMarketPlannerBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(gotomarketplannerbtn));
 		return driver.findElement(gotomarketplannerbtn);
 	}
 	public WebElement getMPHomeListsTab() {
@@ -627,6 +637,8 @@ public class ATLMarketPlannerPage {
 		return driver.findElements(atlmpeditlistoptns);
 	}
 	public WebElement getATLMPEditListOptn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmpeditlistoptn));
 		return driver.findElement(atlmpeditlistoptn);
 	}
 	public WebElement getATLMPExistingListName() {
@@ -635,6 +647,8 @@ public class ATLMarketPlannerPage {
 		return driver.findElement(atlmpexistinglistname);
 	}
 	public WebElement getATLMPAddToSelectedBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atladdtoseselectedbtn));
 		return driver.findElement(atladdtoseselectedbtn);
 	}
 	
