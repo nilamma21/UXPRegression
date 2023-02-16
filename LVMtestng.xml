@@ -10,20 +10,14 @@
 		<classes>
 
 
-<<<<<<< HEAD
-			<class name="lasvegasmarket_UAT.GlobalSearch_SuggestionList" />
-			<methods>
-			   <!-- <include name="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest"/>  -->
-=======
 
-			<class name="lasvegasmarket_UAT.ShowSpecials" />
+			<class name="lasvegasmarket_UAT.EvenntsAndWebinar" />
 			<methods>
-				    <include name="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest()"/>  
+				     <include name="TS003_VerifyIMCEventsCalendarViewTest"/>  
 
 			<!-- <class name="lasvegasmarket_UAT.GlobalSearch_ProductActions" />
 			<methods> -->
 			  <!--  <include name="TS006_VerifyProductAddToExistingListOnSearchResultsGridTest"/>  -->
->>>>>>> 8d5639cfcd1a948c6d6ca0269c2724dde49b0170
 				   <!--  <include name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest"/>  -->
 
 
