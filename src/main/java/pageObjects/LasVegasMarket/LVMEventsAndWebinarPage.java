@@ -23,7 +23,7 @@ public class LVMEventsAndWebinarPage {
 	
 	By lvmEventSearchIcon = By.xpath("//div[@class='event-card--cal-btn-container']/div[1]/button[2]"); //Locator for Search btn
 	By lvmEventDateAndMonth = By.xpath("//div[@class='event-date--container']/p[1]"); //Locator for Events date and month
-	By lvmEventDateAndMonth_Test = By.xpath("(//div[@class='event-date--container']/p[1])[2]"); //Locator for Events date and month
+	
 	
 	By lvmCalendarNextMonthBtn = By.xpath("//div[@class='calendar-container']/div[2]/div[1]/button[4]"); //Locator for Calendar nxt month btn
 	By lvmListOfEventDate = By.xpath("//button[@class='react-calendar__tile react-calendar__month-view__days__day']/abbr[1]"); //List for Event Date
@@ -64,11 +64,7 @@ public class LVMEventsAndWebinarPage {
 	}
 	
 	
-	public WebElement getlvmEventDateAndMonth_Test() {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventDateAndMonth_Test));
-		return driver.findElement(lvmEventDateAndMonth_Test);
-	}
+
 	public WebElement getlvmCalendarIconUAT() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmCalendarIconUAT));
