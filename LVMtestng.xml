@@ -6,13 +6,13 @@
 		<listner class-name="lasvegasmarket_UAT.TestListeners" />
 	</listners>
 
-	<test thread-count="5" name="RegressionTest">1
+	<test thread-count="5" name="RegressionTest">
 		<classes>
 
 
-			<class name="lasvegasmarket_UAT.GlobalSearch_ProductActions" />
+			<class name="lasvegasmarket_UAT.GlobalSearch_SuggestionList" />
 			<methods>
-			  <!--  <include name="TS006_VerifyProductAddToExistingListOnSearchResultsGridTest"/>  -->
+			   <!-- <include name="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest"/>  -->
 				   <!--  <include name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest"/>  -->
 
 		<!-- 	<class name="atlantamarket_PROD.EvenntsAndWebinar" />

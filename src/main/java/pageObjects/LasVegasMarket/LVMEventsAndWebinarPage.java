@@ -50,10 +50,30 @@ public class LVMEventsAndWebinarPage {
 	By lvmaddtoseselectedbtn = By.xpath("//input[@data-xpath='quickAdd.saveList']"); //Locator for Add to Selected button
 	
 	By lvmEventNameOnDetailsPageUAT = By.xpath("//div[@class='imc-eventdetail--root-container']/div[1]/h1[1]"); //Locator for list of all Events
+	By lvmEventLocationLinkUAT = By.xpath("//div[@class='imc-eventdetail--location']/a[1]"); //Locator for Event location link
+	
+	By lvmEventTypeUAT = By.xpath("//div[@class='imc-eventdetail--text-container']/span[3]"); //Locator for Event Type
+	By lvmCalendarIconUAT = By.xpath("//div[@class='imc-eventdetail--text-container']//span[2]/a[1]"); //Locator for Calendar Icon
+	
 	
 	public LVMEventsAndWebinarPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
+	}
+	public WebElement getlvmCalendarIconUAT() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmCalendarIconUAT));
+		return driver.findElement(lvmCalendarIconUAT);
+	}
+	public WebElement getlvmEventTypeUAT() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventTypeUAT));
+		return driver.findElement(lvmEventTypeUAT);
+	}
+	public WebElement getlvmEventLocationLinkUAT() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventLocationLinkUAT));
+		return driver.findElement(lvmEventLocationLinkUAT);
 	}
 	public WebElement getlvmEventNameOnDetailsPageUAT() {
 		wait = new WebDriverWait (driver,20);
