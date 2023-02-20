@@ -3,7 +3,7 @@
 
 <suite name="ATLMrkt_RegressionTestSuite">
 	<listners>
-		<listner class-name="antamarket_uat.TestListeners" />
+		<listner class-name="atlantamarket_PROD.TestListeners" />
 	</listners>
 	<test thread-count="5" name="RegressionTest">
 		<classes>
@@ -21,6 +21,17 @@
 			<class name="atlantamarket_PROD.LineDigitalShowroom" />
 			<class name="atlantamarket_PROD.ShowSpecials" /> -->
 			<class name="atlantamarket_PROD.MarketPlanner"/>
+			<methods>
+			<!-- <include name="TS041_VerifyListTabDetailsTest"/>
+			<include name="TS006_VerifyArrangeBtnFunctionalityForListsTest"/>
+			<include name="TS013_VerifyEditListFunctionalityForManageListTest"/>
+			<include name="TS035_VerifyMarketPlannerListsElementMoreOptionsAddToScheduleTest"/>
+		 <include name="TS036_VerifyAddToListFunctionalityUsingQuickAddTest"/>
+			<include name="TS039_VerifyMarketPlanneMyInfoMyInquiriesTab"/>
+			<include name="TS038_VerifyMarketPlanneMyInfoOverview"/>
+			<include name="TS037_VerifyMarketPlanneMyInfoEditProfile"/> -->
+			<include name="TS045_VerifyMarketPlannerListsAllSavedproductsTest"/>
+			</methods>
 		</classes>
 	</test>
 </suite>

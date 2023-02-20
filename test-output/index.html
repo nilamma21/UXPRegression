@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite">
-              <span class="suite-name border-failed">ATLMrkt_RegressionTestSuite</span>
+              <span class="suite-name border-passed">ATLMrkt_RegressionTestSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,28 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-ATLMrkt_RegressionTestSuite" class="hide-methods failed suite-ATLMrkt_RegressionTestSuite"> (hide)</a> <!-- hide-methods failed suite-ATLMrkt_RegressionTestSuite -->
-                      <a href="#" panel-name="suite-ATLMrkt_RegressionTestSuite" class="show-methods failed suite-ATLMrkt_RegressionTestSuite"> (show)</a> <!-- show-methods failed suite-ATLMrkt_RegressionTestSuite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-ATLMrkt_RegressionTestSuite" class="hide-methods passed suite-ATLMrkt_RegressionTestSuite"> (hide)</a> <!-- hide-methods passed suite-ATLMrkt_RegressionTestSuite -->
+                      <a href="#" panel-name="suite-ATLMrkt_RegressionTestSuite" class="show-methods passed suite-ATLMrkt_RegressionTestSuite"> (show)</a> <!-- show-methods passed suite-ATLMrkt_RegressionTestSuite -->
                     </span>
-                    <div class="method-list-content failed suite-ATLMrkt_RegressionTestSuite">
+                    <div class="method-list-content passed suite-ATLMrkt_RegressionTestSuite">
                       <span>
-                        <img width="3%" src="failed.png"/>
-
-                        <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket_PROD.MarketPlanner" hash-for-method="TS023_VerifyFilterByOptionsFunctionalityForListTest">TS023_VerifyFilterByOptionsFunctionalityForListTest</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket_PROD.MarketPlanner" hash-for-method="TS045_VerifyMarketPlannerListsAllSavedproductsTest">TS045_VerifyMarketPlannerListsAllSavedproductsTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-ATLMrkt_RegressionTestSuite -->
-=======
-                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters" hash-for-method="TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest">TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-LVM_RegressionTestSuite -->
-
+                    </div> <!-- method-list-content passed suite-ATLMrkt_RegressionTestSuite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -123,104 +116,23 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-ATLMrkt_RegressionTestSuite" class="panel ATLMrkt_RegressionTestSuite">
-          <div class="suite-ATLMrkt_RegressionTestSuite-class-failed">
+          <div class="suite-ATLMrkt_RegressionTestSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-
+              <img src="passed.png"/>
               <span class="class-name">atlantamarket_PROD.MarketPlanner</span>
-=======
-              <span class="class-name">lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters</span>
-
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-
-                  <a name="TS023_VerifyFilterByOptionsFunctionalityForListTest">
-                  </a> <!-- TS023_VerifyFilterByOptionsFunctionalityForListTest -->
-                  <span class="method-name">TS023_VerifyFilterByOptionsFunctionalityForListTest</span>
-                  <div class="stack-trace"><b>"org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;imc-saved-exhibitors__contentItems__col2-1 imc-heading--h7 imc-heading--primary-medium imc-saved-exhibitors__name-title&apos;]/a (tried for 20 second(s) with 500 MILLISECONDS interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getmpListOfAllProds(ATLMarketPlannerPage.java:395)
-	at atlantamarket_PROD.MarketPlanner.TS023_VerifyFilterByOptionsFunctionalityForListTest(MarketPlanner.java:1396)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //div[@class=&apos;imc-saved-exhibitors__contentItems__col2-1 imc-heading--h7 imc-heading--primary-medium imc-saved-exhibitors__name-title&apos;]/a
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
-	at java.util.Optional.orElseThrow(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 26 more
-... Removed 24 stack frames<br/> org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;imc-saved-exhibitors__contentItems__col2-1 imc-heading--h7 imc-heading--primary-medium imc-saved-exhibitors__name-title&apos;]/a (tried for 20 second(s) with 500 MILLISECONDS interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getmpListOfAllProds(ATLMarketPlannerPage.java:395)
-	at atlantamarket_PROD.MarketPlanner.TS023_VerifyFilterByOptionsFunctionalityForListTest(MarketPlanner.java:1396)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //div[@class=&apos;imc-saved-exhibitors__contentItems__col2-1 imc-heading--h7 imc-heading--primary-medium imc-saved-exhibitors__name-title&apos;]/a
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
-	at java.util.Optional.orElseThrow(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 26 more
-"</b><br>org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)<br>org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)<br>pageObjects.AtlantaMarket.ATLMarketPlannerPage.getmpListOfAllProds(ATLMarketPlannerPage.java:395)<br>atlantamarket_PROD.MarketPlanner.TS023_VerifyFilterByOptionsFunctionalityForListTest(MarketPlanner.java:1396)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br>java.lang.reflect.Method.invoke(Unknown Source)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)<br>
-=======
-                  <a name="TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest">
-                  </a> <!-- TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest -->
-                  <span class="method-name">TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters.TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest(GlobalSearch_LeftPaneFilters.java:727)
-... Removed 28 stack frames
-
-</div> <!-- stack-trace -->
+                  <a name="TS045_VerifyMarketPlannerListsAllSavedproductsTest">
+                  </a> <!-- TS045_VerifyMarketPlannerListsAllSavedproductsTest -->
+                  <span class="method-name">TS045_VerifyMarketPlannerListsAllSavedproductsTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-
-          </div> <!-- suite-ATLMrkt_RegressionTestSuite-class-failed -->
+          </div> <!-- suite-ATLMrkt_RegressionTestSuite-class-passed -->
         </div> <!-- panel ATLMrkt_RegressionTestSuite -->
         <div panel-name="test-xml-ATLMrkt_RegressionTestSuite" class="panel">
-=======
-          </div> <!-- suite-LVM_RegressionTestSuite-class-failed -->
-        </div> <!-- panel LVM_RegressionTestSuite -->
-        <div panel-name="test-xml-LVM_RegressionTestSuite" class="panel">
-
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">C:\Users\nilamma\UXPRegressGit\UXPRegression\ATLMrkttestng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
@@ -231,19 +143,11 @@ Driver info: driver.version: unknown
 &lt;suite name=&quot;ATLMrkt_RegressionTestSuite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;RegressionTest&quot;&gt;
     &lt;classes&gt;
-
       &lt;class name=&quot;atlantamarket_PROD.MarketPlanner&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;TS023_VerifyFilterByOptionsFunctionalityForListTest&quot;/&gt;
+          &lt;include name=&quot;TS045_VerifyMarketPlannerListsAllSavedproductsTest&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- atlantamarket_PROD.MarketPlanner --&gt;
-=======
-      &lt;class name=&quot;lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters --&gt;
-
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- RegressionTest --&gt;
 &lt;/suite&gt; &lt;!-- ATLMrkt_RegressionTestSuite --&gt;
@@ -285,29 +189,16 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-
-data.setCell(0, 1, 'TS023_VerifyFilterByOptionsFunctionalityForListTest')
+data.setCell(0, 1, 'TS045_VerifyMarketPlannerListsAllSavedproductsTest')
 data.setCell(0, 2, 'atlantamarket_PROD.MarketPlanner')
-data.setCell(0, 3, 587615);
+data.setCell(0, 3, 44422);
 window.suiteTableData['ATLMrkt_RegressionTestSuite']= { tableData: data, tableDiv: 'times-div-ATLMrkt_RegressionTestSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 minutes</span>
+              <span class="suite-total-time">Total running time: 44 seconds</span>
               <div id="times-div-ATLMrkt_RegressionTestSuite">
               </div> <!-- times-div-ATLMrkt_RegressionTestSuite -->
-=======
-data.setCell(0, 1, 'TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest')
-data.setCell(0, 2, 'lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters')
-data.setCell(0, 3, 27321);
-window.suiteTableData['LVM_RegressionTestSuite']= { tableData: data, tableDiv: 'times-div-LVM_RegressionTestSuite'}
-return data;
-}
-              </script>
-              <span class="suite-total-time">Total running time: 27 seconds</span>
-              <div id="times-div-LVM_RegressionTestSuite">
-              </div> <!-- times-div-LVM_RegressionTestSuite -->
-
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -320,141 +211,113 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-ATLMrkt_RegressionTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-
             <span class="header-content">51 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">atlantamarket_PROD.MarketPlanner</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">TS045_VerifyAddToListFunctionalityUsingQuickAddTest</span>
+                <span class="ignored-method-name">TS019_VerifyMarketPlannerListSortByTest</span>
                 <br/>
-                <span class="ignored-method-name">TS040_VerifyMarketSavedSearchesDeletefunctionalityTest</span>
+                <span class="ignored-method-name">TS023_VerifyMarketPlannerListElementLocationLinkTest</span>
                 <br/>
-                <span class="ignored-method-name">TS014_VerifyManageListOptionsOverviewTest</span>
+                <span class="ignored-method-name">TS018_VerifyFilterByOptionsOverviewForListTest</span>
                 <br/>
-                <span class="ignored-method-name">TS009_VerifyCreateNewGroupFormValidationForListsTest</span>
+                <span class="ignored-method-name">TS014_VerifyDuplicateLinkFunctionalityForListTest</span>
                 <br/>
-                <span class="ignored-method-name">TS024_VerifyMarketPlannerListSortByTest</span>
-                <br/>
-                <span class="ignored-method-name">TS036_VerifyMarketPlannerListsAllSavedExhibitorsTest</span>
-                <br/>
-                <span class="ignored-method-name">TS019_VerifyAddToFavoriteFunctionalityForExhibitorTest</span>
+                <span class="ignored-method-name">TS010_VerifyMPDashboardOverviewTest</span>
                 <br/>
                 <span class="ignored-method-name">TS006_VerifyArrangeBtnFunctionalityForListsTest</span>
                 <br/>
-                <span class="ignored-method-name">TS028_VerifyMarketPlannerListElementLocationLinkTest</span>
+                <span class="ignored-method-name">TS047_VerifyAddToFavoriteFunctionalityForLineTest</span>
                 <br/>
-                <span class="ignored-method-name">TS012_VerifyMPDashboardRegistrationCardOverviewTest</span>
+                <span class="ignored-method-name">TS044_VerifyMarketPlannerListSortByFunctionalityTest</span>
                 <br/>
-                <span class="ignored-method-name">TS025_VerifyDuplicateLinkFunctionalityForListTest</span>
+                <span class="ignored-method-name">TS016_VerifyMPDashboardListsCardOverviewTest</span>
                 <br/>
-                <span class="ignored-method-name">TS047_VerifyMarketPlanneMyInfoOverview</span>
+                <span class="ignored-method-name">TS008_VerifyCreateNewGroupFormValidationForListsTest</span>
                 <br/>
-                <span class="ignored-method-name">TS048_VerifyMarketPlanneMyInfoMyInquiriesTab</span>
-                <br/>
-                <span class="ignored-method-name">TS034_VerifyMarketPlannerEditListCustomItemTest</span>
+                <span class="ignored-method-name">TS034_VerifyMarketSavedSearchesDeletefunctionalityTest</span>
                 <br/>
                 <span class="ignored-method-name">TS051_VerifyMarketPlannerAddEventsToFav</span>
                 <br/>
-                <span class="ignored-method-name">TS021_VerifyMPDashboardActivitiesCardOverviewTest</span>
-                <br/>
-                <span class="ignored-method-name">TS031_VerifyMarketPlannerListsElementMoreOoptionsMoveTest</span>
+                <span class="ignored-method-name">TS028_VerifyMarketPlannerListManagementAddNoteTest</span>
                 <br/>
                 <span class="ignored-method-name">TS052_VerifyMarketPlannerAllSavedEventsAndSemninar</span>
                 <br/>
-                <span class="ignored-method-name">TS022_VerifyFilterByOptionsOverviewForListTest</span>
+                <span class="ignored-method-name">TS026_VerifyMarketPlannerListsElementMoreOoptionsMoveTest</span>
                 <br/>
-                <span class="ignored-method-name">TS035_VerifyMarketPlannerEditListAddNoteTest</span>
+                <span class="ignored-method-name">TS042_VerifyAddToFavoriteFunctionalityUsingQuickAddForproductTest</span>
                 <br/>
-                <span class="ignored-method-name">TS037_VerifyMarketPlannerListsAllSavedproductsTest</span>
+                <span class="ignored-method-name">TS020_VerifyDuplicateLinkFunctionalityForListTest</span>
                 <br/>
-                <span class="ignored-method-name">TS026_VerifyListDisplayControlsTest</span>
+                <span class="ignored-method-name">TS048_VerifyAddToFavoriteFunctionalityForExhibitorTest</span>
                 <br/>
-                <span class="ignored-method-name">TS049_VerifyTabsUnderListsSectionTest</span>
+                <span class="ignored-method-name">TS033_VerifyMarketSavedSearchesfunctionalityTest</span>
                 <br/>
-                <span class="ignored-method-name">TS010_VerifyCreateNewListFormValidationTest</span>
+                <span class="ignored-method-name">TS009_VerifyCreateNewListFormValidationTest</span>
                 <br/>
-                <span class="ignored-method-name">TS007_VerifyNewGroupBtnFunctionalityForListsTest</span>
+                <span class="ignored-method-name">TS007_VerifyNewListBtnFunctionalityForListsTest1</span>
                 <br/>
-                <span class="ignored-method-name">TS020_VerifyMPDashboardListsCardOverviewTest</span>
+                <span class="ignored-method-name">TS032_VerifyMarketPlannerRegistrationsTabTest</span>
                 <br/>
-                <span class="ignored-method-name">TS032_VerifyMarketPlannerListsElementMoreOoptionsDeleteTest</span>
+                <span class="ignored-method-name">TS036_VerifyAddToListFunctionalityUsingQuickAddTest</span>
                 <br/>
-                <span class="ignored-method-name">TS029_VerifyMarketPlannerListsElementMoreOptionsOverviewTest</span>
+                <span class="ignored-method-name">TS035_VerifyMarketPlannerListsElementMoreOptionsAddToScheduleTest</span>
                 <br/>
-                <span class="ignored-method-name">TS017_VerifyRenameFunctionalityForListTest</span>
+                <span class="ignored-method-name">TS037_VerifyMarketPlanneMyInfoEditProfile</span>
                 <br/>
-                <span class="ignored-method-name">TS043_VerifyAddToFavoriteFunctionalityUsingQuickAddForproductTest</span>
+                <span class="ignored-method-name">TS040_VerifyTabsUnderListsSectionTest</span>
                 <br/>
                 <span class="ignored-method-name">TS002_VerifyMarketPlannerLoginTest</span>
                 <br/>
-                <span class="ignored-method-name">TS008_VerifyNewListBtnFunctionalityForListsTest1</span>
+                <span class="ignored-method-name">TS025_VerifyMarketPlannerListsElementMoreOoptionsCopyeTest</span>
                 <br/>
-                <span class="ignored-method-name">TS041_VerifyMarketPlannerListSortByFunctionalityTest</span>
+                <span class="ignored-method-name">TS046_VerifyNewGroupBtnFunctionalityForListsTest</span>
                 <br/>
-                <span class="ignored-method-name">TS046_VerifyMarketPlanneMyInfoEditProfile</span>
+                <span class="ignored-method-name">TS015_VerifyRenameFunctionalityForListTest</span>
+                <br/>
+                <span class="ignored-method-name">TS050_VerifyFilterByOptionsFunctionalityForListTest</span>
+                <br/>
+                <span class="ignored-method-name">TS039_VerifyMarketPlanneMyInfoMyInquiriesTab</span>
+                <br/>
+                <span class="ignored-method-name">TS030_VerifyMarketPlannerEditListAddNoteTest</span>
+                <br/>
+                <span class="ignored-method-name">TS011_VerifyMPDashboardRegistrationCardOverviewTest</span>
+                <br/>
+                <span class="ignored-method-name">TS012_VerifyManageListOptionsOverviewTest</span>
+                <br/>
+                <span class="ignored-method-name">TS031_VerifyMarketPlannerListsAllSavedExhibitorsTest</span>
                 <br/>
                 <span class="ignored-method-name">TS001_VerifyMarketPlannerInvalidLoginCredentialsTest</span>
                 <br/>
-                <span class="ignored-method-name">TS044_VerifyAddToFavoriteFunctionalityUsingQuickAddForLinesTest</span>
+                <span class="ignored-method-name">TS022_VerifyListDisplayControlsFunctionalityTest</span>
                 <br/>
-                <span class="ignored-method-name">TS015_VerifyEditListFunctionalityForManageListTest</span>
+                <span class="ignored-method-name">TS041_VerifyListTabDetailsTest</span>
                 <br/>
-                <span class="ignored-method-name">TS027_VerifyListDisplayControlsFunctionalityTest</span>
+                <span class="ignored-method-name">TS038_VerifyMarketPlanneMyInfoOverview</span>
                 <br/>
-                <span class="ignored-method-name">TS042_VerifyMarketPlannerListsElementMoreOptionsAddToScheduleTest</span>
+                <span class="ignored-method-name">TS043_VerifyAddToFavoriteFunctionalityUsingQuickAddForLinesTest</span>
+                <br/>
+                <span class="ignored-method-name">TS021_VerifyListDisplayControlsTest</span>
                 <br/>
                 <span class="ignored-method-name">TS003_VerifyMarketPlannerChannelSelectorTest</span>
                 <br/>
                 <span class="ignored-method-name">TS004_VerifyAddToFavoriteFunctionalityUsingQuickAddForExhibitorTest</span>
                 <br/>
-                <span class="ignored-method-name">TS013_VerifyAddToFavoriteFunctionalityForProductTest</span>
+                <span class="ignored-method-name">TS024_VerifyMarketPlannerListsElementMoreOptionsOverviewTest</span>
                 <br/>
-                <span class="ignored-method-name">TS030_VerifyMarketPlannerListsElementMoreOoptionsCopyeTest</span>
+                <span class="ignored-method-name">TS029_VerifyMarketPlannerEditListCustomItemTest</span>
                 <br/>
-                <span class="ignored-method-name">TS050_VerifyListTabDetailsTest</span>
+                <span class="ignored-method-name">TS013_VerifyEditListFunctionalityForManageListTest</span>
                 <br/>
-                <span class="ignored-method-name">TS016_VerifyDuplicateLinkFunctionalityForListTest</span>
+                <span class="ignored-method-name">TS027_VerifyMarketPlannerListsElementMoreOoptionsDeleteTest</span>
                 <br/>
-                <span class="ignored-method-name">TS038_VerifyMarketPlannerRegistrationsTabTest</span>
+                <span class="ignored-method-name">TS017_VerifyMPDashboardActivitiesCardOverviewTest</span>
                 <br/>
-                <span class="ignored-method-name">TS039_VerifyMarketSavedSearchesfunctionalityTest</span>
-                <br/>
-                <span class="ignored-method-name">TS033_VerifyMarketPlannerListManagementAddNoteTest</span>
-                <br/>
-                <span class="ignored-method-name">TS018_VerifyAddToFavoriteFunctionalityForLineTest</span>
-                <br/>
-                <span class="ignored-method-name">TS011_VerifyMPDashboardOverviewTest</span>
+                <span class="ignored-method-name">TS049_VerifyAddToFavoriteFunctionalityForProductTest</span>
                 <br/>
                 <span class="ignored-method-name">TS005_VerifyMarketPlannerSignOutTest</span>
-=======
-            <span class="header-content">10 ignored methods</span>
-          </div> <!-- main-panel-header rounded-window-top -->
-          <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest</span>
-                <br/>
-                <span class="ignored-method-name">TS008_VerifySelectionOfGeneralGiftProdCatgFromLeftPaneFiltersTest</span>
-                <br/>
-                <span class="ignored-method-name">TS005_VerifySelectionOfAccentFurnitureProdCatgFromLeftPaneFiltersTest</span>
-                <br/>
-                <span class="ignored-method-name">TS006_VerifySelectionOfHolidayProdCatgFromLeftPaneFiltersTest</span>
-                <br/>
-                <span class="ignored-method-name">TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest</span>
-                <br/>
-                <span class="ignored-method-name">TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest</span>
-                <br/>
-                <span class="ignored-method-name">TS007_VerifySelectionOfDecorativeAccessProdCatgFromLeftPaneFiltersTest</span>
-                <br/>
-                <span class="ignored-method-name">TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest</span>
-                <br/>
-                <span class="ignored-method-name">TS009_VerifySelectionOfFashionAccProdCatgFromLeftPaneFiltersTest</span>
-                <br/>
-                <span class="ignored-method-name">TS010_VerifySelectionOfFloralBotanicalsProdCatgFromLeftPaneFiltersTest</span>
-
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -466,33 +329,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-
               <div class="chronological-class-name">atlantamarket_PROD.MarketPlanner</div> <!-- chronological-class-name -->
-=======
-              <div class="chronological-class-name">lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters</div> <!-- chronological-class-name -->
-
               <div class="configuration-class before">
                 <span class="method-name">initialize</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-
-                <span class="method-name">TS023_VerifyFilterByOptionsFunctionalityForListTest</span>
-                <span class="method-start">87766 ms</span>
+                <span class="method-name">TS045_VerifyMarketPlannerListsAllSavedproductsTest</span>
+                <span class="method-start">94648 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">675896 ms</span>
-
-                <span class="method-name">TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest</span>
-                <span class="method-start">45101 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">72648 ms</span>
-
+                <span class="method-start">139450 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

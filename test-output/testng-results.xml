@@ -1,133 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="675924" started-at="2023-02-06T12:08:13Z" finished-at="2023-02-06T12:19:29Z">
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="139482" started-at="2023-02-15T12:24:12Z" finished-at="2023-02-15T12:26:32Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="675924" started-at="2023-02-06T12:08:13Z" finished-at="2023-02-06T12:19:29Z">
+    <test name="RegressionTest" duration-ms="139482" started-at="2023-02-15T12:24:12Z" finished-at="2023-02-15T12:26:32Z">
       <class name="atlantamarket_PROD.MarketPlanner">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.MarketPlanner@f6c48ac]" name="initialize" is-config="true" duration-ms="87715" started-at="2023-02-06T17:38:13Z" finished-at="2023-02-06T17:39:41Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.MarketPlanner@f6c48ac]" name="initialize" is-config="true" duration-ms="94626" started-at="2023-02-15T17:54:12Z" finished-at="2023-02-15T17:55:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="FAIL" signature="TS023_VerifyFilterByOptionsFunctionalityForListTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@f6c48ac]" name="TS023_VerifyFilterByOptionsFunctionalityForListTest" duration-ms="587615" started-at="2023-02-06T17:39:41Z" finished-at="2023-02-06T17:49:28Z">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='imc-saved-exhibitors__contentItems__col2-1 imc-heading--h7 imc-heading--primary-medium imc-saved-exhibitors__name-title']/a (tried for 20 second(s) with 500 MILLISECONDS interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='imc-saved-exhibitors__contentItems__col2-1 imc-heading--h7 imc-heading--primary-medium imc-saved-exhibitors__name-title']/a (tried for 20 second(s) with 500 MILLISECONDS interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.AtlantaMarket.ATLMarketPlannerPage.getmpListOfAllProds(ATLMarketPlannerPage.java:395)
-	at atlantamarket_PROD.MarketPlanner.TS023_VerifyFilterByOptionsFunctionalityForListTest(MarketPlanner.java:1396)
-
-  <suite name="LVM_RegressionTestSuite" duration-ms="72659" started-at="2023-02-03T09:11:00Z" finished-at="2023-02-03T09:12:13Z">
-    <groups>
-    </groups>
-    <test name="RegressionTest" duration-ms="72659" started-at="2023-02-03T09:11:00Z" finished-at="2023-02-03T09:12:13Z">
-      <class name="lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters@1554909b]" name="initialize" is-config="true" duration-ms="45098" started-at="2023-02-03T14:41:00Z" finished-at="2023-02-03T14:41:45Z">
+        <test-method status="PASS" signature="TS045_VerifyMarketPlannerListsAllSavedproductsTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@f6c48ac]" name="TS045_VerifyMarketPlannerListsAllSavedproductsTest" duration-ms="44422" started-at="2023-02-15T17:55:47Z" finished-at="2023-02-15T17:56:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="FAIL" signature="TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest()[pri:0, instance:lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters@1554909b]" name="TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest" duration-ms="27321" started-at="2023-02-03T14:41:45Z" finished-at="2023-02-03T14:42:12Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:496)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at org.testng.Assert.assertTrue(Assert.java:52)
-	at lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters.TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest(GlobalSearch_LeftPaneFilters.java:727)
-
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //div[@class='imc-saved-exhibitors__contentItems__col2-1 imc-heading--h7 imc-heading--primary-medium imc-saved-exhibitors__name-title']/a
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
-	at java.util.Optional.orElseThrow(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 26 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS023_VerifyFilterByOptionsFunctionalityForListTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.MarketPlanner@f6c48ac]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-02-06T17:49:29Z" finished-at="2023-02-06T17:49:29Z">
+        </test-method> <!-- TS045_VerifyMarketPlannerListsAllSavedproductsTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.MarketPlanner@f6c48ac]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-02-15T17:56:32Z" finished-at="2023-02-15T17:56:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- atlantamarket_PROD.MarketPlanner -->
-
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:663)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:849)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
-	at org.testng.TestNG.run(TestNG.java:1033)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters@1554909b]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-02-03T14:42:13Z" finished-at="2023-02-03T14:42:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters -->
-
     </test> <!-- RegressionTest -->
   </suite> <!-- ATLMrkt_RegressionTestSuite -->
 </testng-results>
