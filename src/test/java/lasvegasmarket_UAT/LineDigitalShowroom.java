@@ -461,6 +461,7 @@ public class LineDigitalShowroom extends base{
 		if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			lvmgs.getlvmGlobalSearchClearTxt().click();
 		}
+		driver.navigate().refresh();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//click on Global Search Input filed
 		Thread.sleep(2000);
@@ -515,18 +516,17 @@ public class LineDigitalShowroom extends base{
 		genData = new GenerateData();
 		lvmdigish=new LVMLineDigitalShowroomPage(driver);
 		
+		driver.navigate().refresh();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(2000);
 		if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			lvmgs.getlvmGlobalSearchClearTxt().click();
 		}
-		Thread.sleep(2000);
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor7"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(3000);
+		//Thread.sleep(2000);
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("HeroComponentExhName2"));
+		Thread.sleep(8000);
 		//Click on 1st Suggetions
 		lvmdigish.getsuggetionList().click();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//Thread.sleep(5000);
 	
 		//click on Global Search Input filed
@@ -645,6 +645,6 @@ public class LineDigitalShowroom extends base{
 	}
 	@AfterClass
 	public void tearDown() {
-		 driver.quit();
+		 //driver.quit();
 	}
 }

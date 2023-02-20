@@ -108,6 +108,9 @@ public class LVMGlobalSearchPage {
 	By lvmseemoredetailsbtnnew = By.xpath("(//a[contains(text(),'See More Details')])[1]"); //Locator for See More Details button
 	By FirstShowSpecialName = By.xpath("(//div[@class='imc-showSpecial--tableContainer']/p[1])[1]");  //Locator for 1st name of Catalog
 	By FirstShowSpecialViewBrandDetailsBtn = By.xpath("(//a[@class='imc-showSpecial--link'])[1]");  //Locator for 1st name of Catalog
+	By eventslvmmkttopicsfilterUat = By.xpath("//label[contains(text(),'Ahead of the Curve')]"); //Locator for Atlanta Market topics filter
+	By atmarketeventtypefilterUat = By.xpath("//label[contains(text(),'Buying Event')]"); //Locator for At Market Event Type
+	By lvmseemoredetailsbtnneww = By.xpath("//a[contains(text(),'View Brand Details')]"); //Locator for See More Details button
 	
 	public LVMGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -581,6 +584,21 @@ public class LVMGlobalSearchPage {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(FirstShowSpecialViewBrandDetailsBtn));
 		return driver.findElement(FirstShowSpecialViewBrandDetailsBtn);
+	}
+	public WebElement getEventsLVMMktTopicsUat() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(eventslvmmkttopicsfilterUat));
+		return driver.findElement(eventslvmmkttopicsfilterUat);
+	}
+	public WebElement getAtMarketEventTypeUat() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atmarketeventtypefilterUat));
+		return driver.findElement(atmarketeventtypefilterUat);
+	}
+	public WebElement getLVMSeeMoreDetailsBtnNeww() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmseemoredetailsbtnneww));
+		return driver.findElement(lvmseemoredetailsbtnneww);
 	}
 }
 

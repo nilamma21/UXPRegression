@@ -11,9 +11,9 @@
 
 
 
-			<class name="lasvegasmarket_UAT.ShowSpecials" />
+			<class name="lasvegasmarket_UAT.FloorPlans" />
 			<methods>
-				    <include name="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest()"/>  
+				 <include name="TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest"/> 
 
 			<!-- <class name="lasvegasmarket_UAT.GlobalSearch_ProductActions" />
 			<methods> -->

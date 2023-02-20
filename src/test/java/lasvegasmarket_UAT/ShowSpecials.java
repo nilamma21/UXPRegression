@@ -91,21 +91,20 @@ public class ShowSpecials extends base{
 		String showSpecialExhName=lvmgs.getlvmShowSpecialsExhName().getText();
 		System.out.println(showSpecialExhName);*/
 		
-		String inbox = lvmgs.getlvmShowSpecialsExhNamePROD().getText(); //For Prod use - lvmgs.getlvmShowSpecialsExhName().getText();
+		/*String inbox = lvmgs.getlvmShowSpecialsExhName().getText();
 		String[] data = inbox.split("Shown By ");
 		String showSpecialExhName = data[1];
-		System.out.println(showSpecialExhName);
+		System.out.println(showSpecialExhName);*/
 		
-		lvmgs.getLVMSeeMoreDetailsBtn().click();
-
-		//Click on Show Special Exhibitor
-		//String showSpecialExhName=lvmgs.getlvmShowSpecialsExhName().getText();
-		
+		//Store the name of Show Special Exhibitor
 		String ename=lvmgs.getFirstShowSpecialName().getText();
 		System.out.println(ename);
 		String abc =ename.split(" ")[2].trim();
+		
+		//Click on Show Special Exhibitor
 		lvmgs.getFirstShowSpecialViewBrandDetailsBtn().click();
 		Thread.sleep(5000);
+		
 		//Verify Show Special Exh Page 
 		Assert.assertTrue(lvmgs.getlvmShowSpecialsTitle().getText().contains(abc));
 		
@@ -147,7 +146,7 @@ public class ShowSpecials extends base{
 
 	@AfterClass
 	public void tearDown() {
-		driver.quit();
+		//driver.quit();
 	}
 
 }
