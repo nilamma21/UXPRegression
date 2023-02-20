@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite guice-stage="DEVELOPMENT" name="Failed suite [LVM_RegressionTestSuite]">
+  <test name="RegressionTest(failed)">
+    <classes>
+      <class name="lasvegasmarket_UAT.FloorPlans">
+        <methods>
+          <include name="tearDown"/>
+          <include name="TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- lasvegasmarket_UAT.FloorPlans -->
+
 <suite name="Failed suite [LVM_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
@@ -14,6 +26,7 @@
           <include name="TS007_VerifyIMCEventsAddToListTest"/>
         </methods>
       </class> <!-- lasvegasmarket_UAT.EvenntsAndWebinar -->
+
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->

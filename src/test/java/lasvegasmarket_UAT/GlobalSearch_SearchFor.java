@@ -109,6 +109,7 @@ public class GlobalSearch_SearchFor extends base{
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 		
+		driver.navigate().refresh();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		utl.ClearGlobalSearch();
 		Thread.sleep(2000);
@@ -122,6 +123,7 @@ public class GlobalSearch_SearchFor extends base{
 		String FirstInfoName=lvmgs.getFirstInfoName().getText();
 		System.out.println(FirstInfoName);
 		lvmgs.getLVMInfosearchtxtbx().sendKeys(FirstInfoName);
+		Thread.sleep(1000);
 		lvmgs.getLVMInfosearchbtn().click();
 		Thread.sleep(2000);
 		String searchResults=lvmgs.getLVMSearchResult().getText();
@@ -323,6 +325,8 @@ public class GlobalSearch_SearchFor extends base{
 		lvmds = new LVMExhDigiShowroomPage(driver);
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
+		
+		driver.navigate().refresh();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(2000);
 		utl.ClearGlobalSearch();
@@ -712,7 +716,7 @@ public class GlobalSearch_SearchFor extends base{
 		Thread.sleep(4000);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
 		lvmgs.getLVMSearchButton().click();
-		Thread.sleep(15000);
+		Thread.sleep(4000);
 
 		//Click on Events & Seminars tab
 		//	lvmgs.getLVMEventsTabInSearch().click();
@@ -723,23 +727,30 @@ public class GlobalSearch_SearchFor extends base{
 			catch(Exception e) {
 				lvmgs.getLVMEventsTabInSearchDiv().click();
 			}
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		//Click on Topics filter
 		lvmgs.getLVMInfoSearchTopicsFilter().click();
 
-		//Select 'Atlanta Market' topic
+		//Select 'Las Vegas Market' topic
 		Thread.sleep(1000);
-		String topicName = lvmgs.getEventsLVMMktTopics().getText();
-		System.out.println(topicName);
+		//String topicName = lvmgs.getEventsLVMMktTopics().getText(); //for LVM Prod
+		String topicName = lvmgs.getEventsLVMMktTopicsUat().getText(); //For UAT
+		System.out.println("Selected topic name is: "+topicName);
+		
+		//lvmgs.getEventsLVMMktTopics().click(); //For Prod
+		lvmgs.getEventsLVMMktTopicsUat().click(); //For UAT
+		
+		Thread.sleep(3000);
 		String eventName = lvmgs.getLVMFirstEventName().getText();
-		lvmgs.getEventsLVMMktTopics().click();
+		System.out.println(eventName);
 
 		//Click on See More details btn
 		Thread.sleep(1000);
 		lvmgs.getLVMSeeMoreDetailsBtn().click();
 
 		//Verify that Selected topic name should be displayed as Tag on Event details page
-		Assert.assertTrue(lvmexhact.getEventDetailsHeader().getText().contains(eventName));
+		//Assert.assertTrue(lvmexhact.getEventDetailsHeader().getText().contains(eventName)); //For Prod
+		Assert.assertTrue(lvmexhact.getEventDetailsHeaderUat().getText().contains(eventName)); //For UAT
 		driver.navigate().back();
 
 		//Click on Clear Filters btn
@@ -749,9 +760,11 @@ public class GlobalSearch_SearchFor extends base{
 		lvmgs.getEventTypesFilter().click();
 
 		//Click on 'At Market' Event Type
-		String atmrkteventtype = lvmgs.getAtMarketEventType().getText();
-		lvmgs.getAtMarketEventType().click();
-
+		//String atmrkteventtype = lvmgs.getAtMarketEventType().getText(); //For Prod
+		//lvmgs.getAtMarketEventType().click(); //For Prod
+		String atmrkteventtype = lvmgs.getAtMarketEventTypeUat().getText(); //For UAT
+		lvmgs.getAtMarketEventTypeUat().click(); //For UAT
+		Thread.sleep(2000);
 		//Verify that Selected event type should be displayed as Tag on Event Card
 		Assert.assertTrue(lvmexhact.getEventCardTag().getText().contains(atmrkteventtype));
 
@@ -782,7 +795,7 @@ public class GlobalSearch_SearchFor extends base{
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(2000);
 		utl.ClearGlobalSearch();
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputforShowSpecials")));
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputforShowSpecials2")));
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(5000);
 

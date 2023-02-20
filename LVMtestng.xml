@@ -11,9 +11,15 @@
 
 
 
+
+			<class name="lasvegasmarket_UAT.FloorPlans" />
+			<methods>
+				 <include name="TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest"/> 
+
 			<class name="lasvegasmarket_UAT.EvenntsAndWebinar" />
 			<methods>
 				     <include name="TS003_VerifyIMCEventsCalendarViewTest"/>  
+
 
 			<!-- <class name="lasvegasmarket_UAT.GlobalSearch_ProductActions" />
 			<methods> -->

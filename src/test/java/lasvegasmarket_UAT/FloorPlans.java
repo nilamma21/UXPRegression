@@ -493,7 +493,8 @@ public class FloorPlans extends base {
 		atlflpp.getATLFloorPlansLink().click();
 		Thread.sleep(5000);
 		// click on Exhibitor floor
-		atlflpp.getLVMBuildingFloor().click();
+		//atlflpp.getLVMBuildingFloor().click(); //8th Floor
+		atlflpp.getLVMBuildingFloorsix().click(); //6th floor
 		Thread.sleep(12000);
 		// Scroll Down to Exhibitor list
 		utl.scrollToElement(atlflpp.getATLSelectBox());

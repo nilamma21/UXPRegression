@@ -1,4 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="LVM_RegressionTestSuite" duration-ms="153027" started-at="2023-02-17T12:32:28Z" finished-at="2023-02-17T12:35:01Z">
+    <groups>
+    </groups>
+    <test name="RegressionTest" duration-ms="153027" started-at="2023-02-17T12:32:28Z" finished-at="2023-02-17T12:35:01Z">
+      <class name="lasvegasmarket_UAT.FloorPlans">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_UAT.FloorPlans@1554909b]" name="initialize" is-config="true" duration-ms="87291" started-at="2023-02-17T18:02:28Z" finished-at="2023-02-17T18:03:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest()[pri:0, instance:lasvegasmarket_UAT.FloorPlans@1554909b]" name="TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest" duration-ms="63503" started-at="2023-02-17T18:03:56Z" finished-at="2023-02-17T18:04:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_UAT.FloorPlans@1554909b]" name="tearDown" is-config="true" duration-ms="2209" started-at="2023-02-17T18:04:59Z" finished-at="2023-02-17T18:05:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- lasvegasmarket_UAT.FloorPlans -->
+
 <testng-results skipped="0" failed="6" total="14" passed="8">
   <reporter-output>
   </reporter-output>
@@ -419,6 +442,7 @@ Session ID: fd6cb8ccf141b7b2c69d5fe01df12e0b
           </reporter-output>
         </test-method> <!-- TS007_VerifyIMCEventsAddToListTest -->
       </class> <!-- lasvegasmarket_UAT.EvenntsAndWebinar -->
+
     </test> <!-- RegressionTest -->
   </suite> <!-- LVM_RegressionTestSuite -->
 </testng-results>

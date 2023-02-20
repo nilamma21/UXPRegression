@@ -178,8 +178,8 @@ public class GlobalSearch_ExhibitorActions extends base {
 		atlmppge = new ATLMarketPlannerPage(driver);
 		lap = new ATLLandingPage(driver);
 		
+		driver.navigate().refresh();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		driver.get(prop.getProperty("lvmurl_uat"));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
@@ -364,7 +364,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 		
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
