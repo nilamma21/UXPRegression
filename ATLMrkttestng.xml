@@ -19,6 +19,7 @@
 			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
 			<class name="atlantamarket_PROD.LineDigitalShowroom" />
+
 			<class name="atlantamarket_PROD.ShowSpecials" /> -->
 			<class name="atlantamarket_PROD.MarketPlanner"/>
 			<methods>
@@ -32,6 +33,10 @@
 			<include name="TS037_VerifyMarketPlanneMyInfoEditProfile"/> -->
 			<include name="TS045_VerifyMarketPlannerListsAllSavedproductsTest"/>
 			</methods>
+
+			<class name="atlantamarket_PROD.ShowSpecials" />
+			<class name="atlantamarket_PROD.MarketPlanner"/> -->
+
 		</classes>
 	</test>
 </suite>

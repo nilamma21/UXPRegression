@@ -33,6 +33,8 @@ public class LVMLeftPaneFilters {
 	By floralbotanicalsprodcatg = By.xpath("//label[contains(text(),'Floral / Botanicals')]"); //Locator for name of Floral / Botanicals Categ.
 	By hometextilesprodcatg = By.xpath("//label[contains(text(),'Home Textiles')]"); //Locator for name of Home Textiles Categ.
 	By secondexhibitor = By.xpath("//div[@class='imc-vr--xxlarge']/div[2]/div[1]/div[1]/div[1]//a[1]/h2[1]");//Locator for 2nd Exhibitor
+	By firstVintageExhUat = By.xpath("(//div[contains(@class,'imc-exhibitorcard-title-row')]/div/a/h2)[1]");
+	By SecondExhUat = By.xpath("(//div[contains(@class,'imc-exhibitorcard-title-row')]/div/a/h2)[2]");
 
 	public LVMLeftPaneFilters(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -69,6 +71,8 @@ public class LVMLeftPaneFilters {
 		return driver.findElement(apparelvintprodcatg);
 	}
 	public WebElement getLVMAntiqueVintProdCatg(){
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(antiquevintprodcatg));
 		return driver.findElement(antiquevintprodcatg);
 	}
 	public WebElement getLVMStylesExpandBtn(){
@@ -130,6 +134,18 @@ public class LVMLeftPaneFilters {
 		return driver.findElement(hometextilesprodcatg);
 	}
 	public WebElement getLVMSecondExhibitor(){
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(secondexhibitor));
 		return driver.findElement(secondexhibitor);
+	}
+	public WebElement getFirstVintageExhUat() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(firstVintageExhUat));
+		return driver.findElement(firstVintageExhUat);
+	}
+	public WebElement getSecondExhUat() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(SecondExhUat));
+		return driver.findElement(SecondExhUat);
 	}
 }

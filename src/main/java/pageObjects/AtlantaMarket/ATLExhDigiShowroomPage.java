@@ -95,6 +95,8 @@ public class ATLExhDigiShowroomPage {
 	By closeBtnContactExh = By.xpath("//button[@class='imc-modal--close imc-button--modal-close imc-button--round']"); ////Locator for Closse Btn
 	By linesshowntextonsearchgrid = By.xpath("(//div[@class='imc-exhibitorcard-title-row'])[1]/div[1]/div[1]/p"); //Locator for Line shown text on Search grid
 	By linesshownseealllink = By.xpath("(//div[@class='imc-exhibitorcard-title-row'])[1]/div[1]/div[1]/a"); //Locator for Lines shown-see all link
+	By exhibitornameonexhdirectimglvm = By.xpath("//span[@class='imc-heading imc-heading--giga-desktop ']"); //Locator for Exhibitor name on Exhibitor Directory image
+
 	
 	public ATLExhDigiShowroomPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -196,6 +198,8 @@ public class ATLExhDigiShowroomPage {
 		return driver.findElement(atlvalidateexhdigishowpage);
 	}
 	public WebElement getExhibitorNameOnExhDirectImg() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitornameonexhdirectimg));
 		return driver.findElement(exhibitornameonexhdirectimg);
 	}
 	public WebElement getExhNameOnExhDirectImg() {
@@ -469,6 +473,11 @@ public class ATLExhDigiShowroomPage {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(linesshownseealllink));
 		return driver.findElement(linesshownseealllink);
+	}
+	public WebElement getExhibitorNameOnExhDirectImgLvm() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitornameonexhdirectimglvm));
+		return driver.findElement(exhibitornameonexhdirectimglvm);
 	}
 }
 

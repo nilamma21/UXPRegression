@@ -33,8 +33,12 @@ public class LVMLineDigitalShowroomPage {
 	By productHeader= By.xpath("//h2[@class='imc-padding--left--smallmedium imc-padding--bottom--small']"); //Locator for Product name
 	By productName1= By.xpath("//div[@class='imc-products-overview--gallery']/div[1]/div[1]/a[1]/div[1]/div[1]/span[1]/span[1]"); //Locator for Product name
 	By lvmLineDigiShowroomPageTitleUAT = By.xpath("//div[@class='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[3]/a[1]"); // Locator Line Digi showroom page title
-	By locationLinkuat = By.xpath("//div[@class='imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div[1]/div[3]/span[2]/a[1]"); //Locator for Location liks
+	By locationLinkuat = By.xpath("//a[@class='imc-link imc-type--title-6 imc-content--inline-block imc-vr--large']"); //Locator for Location liks
 	By orderOnJuniperBtnNew = By.xpath("(//span[contains(text(),'Order on JuniperMarket')])[1]");
+	By digiShowroomExhNameUat = By.xpath("//a[@class='imc-link imc-type--title-6-link imc-type--color-neutral-medium']"); // Locator  Exhibitor name shown by Digital Showroom page
+	By favIconDigiShowroomUat = By.xpath("//button[@class='imc-selectableicon ']/label"); //Locator for Exhibitor name on Exhibitor Directory image
+	By seeAllProductBtnUat = By.xpath("(//span[contains(text(),'See All')])[1]"); //Locator for See All Product Count Btn
+
 	
 	public LVMLineDigitalShowroomPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -103,7 +107,7 @@ public class LVMLineDigitalShowroomPage {
 		return driver.findElement(orderOnJuniperBtn);
 	}
 	public WebElement getaddNoteIcon() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(addNoteIcon));
 		return driver.findElement(addNoteIcon);
 	}
@@ -128,7 +132,7 @@ public class LVMLineDigitalShowroomPage {
 		return driver.findElement(locationLink);
 	}
 	public WebElement getsuggetionList() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(suggetionList));
 		return driver.findElement(suggetionList);
 	}
@@ -156,5 +160,20 @@ public class LVMLineDigitalShowroomPage {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(orderOnJuniperBtnNew));
 		return driver.findElement(orderOnJuniperBtnNew);
+	}
+	public WebElement getdigiShowroomExhNameUat() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(digiShowroomExhNameUat));
+		return driver.findElement(digiShowroomExhNameUat);
+	}
+	public WebElement getfavIconDigiShowroomUat() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(favIconDigiShowroomUat));
+		return driver.findElement(favIconDigiShowroomUat);
+	}
+	public WebElement getseeAllProductBtnUat() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(seeAllProductBtnUat));
+		return driver.findElement(seeAllProductBtnUat);
 	}
 }

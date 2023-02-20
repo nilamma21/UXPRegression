@@ -23,6 +23,8 @@ public class LVMEventsAndWebinarPage {
 	
 	By lvmEventSearchIcon = By.xpath("//div[@class='event-card--cal-btn-container']/div[1]/button[2]"); //Locator for Search btn
 	By lvmEventDateAndMonth = By.xpath("//div[@class='event-date--container']/p[1]"); //Locator for Events date and month
+	
+	
 	By lvmCalendarNextMonthBtn = By.xpath("//div[@class='calendar-container']/div[2]/div[1]/button[4]"); //Locator for Calendar nxt month btn
 	By lvmListOfEventDate = By.xpath("//button[@class='react-calendar__tile react-calendar__month-view__days__day']/abbr[1]"); //List for Event Date
 	By lvmSelectMonth = By.xpath("//button[@class='react-calendar__navigation__label']/span[1]"); //List for Month
@@ -49,9 +51,39 @@ public class LVMEventsAndWebinarPage {
 	By lvmSearchResultsTitle = By.xpath("//div[@class='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[2]/a[1]"); //Locator for Tag Icon
 	By lvmaddtoseselectedbtn = By.xpath("//input[@data-xpath='quickAdd.saveList']"); //Locator for Add to Selected button
 	
+	By lvmEventNameOnDetailsPageUAT = By.xpath("//div[@class='imc-eventdetail--root-container']/div[1]/h1[1]"); //Locator for list of all Events
+	By lvmEventLocationLinkUAT = By.xpath("//div[@class='imc-eventdetail--location']/a[1]"); //Locator for Event location link
+	
+	By lvmEventTypeUAT = By.xpath("//div[@class='imc-eventdetail--text-container']/span[3]"); //Locator for Event Type
+	By lvmCalendarIconUAT = By.xpath("//div[@class='imc-eventdetail--text-container']//span[2]/a[1]"); //Locator for Calendar Icon
+	
+	
 	public LVMEventsAndWebinarPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
+	}
+	
+	
+
+	public WebElement getlvmCalendarIconUAT() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmCalendarIconUAT));
+		return driver.findElement(lvmCalendarIconUAT);
+	}
+	public WebElement getlvmEventTypeUAT() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventTypeUAT));
+		return driver.findElement(lvmEventTypeUAT);
+	}
+	public WebElement getlvmEventLocationLinkUAT() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventLocationLinkUAT));
+		return driver.findElement(lvmEventLocationLinkUAT);
+	}
+	public WebElement getlvmEventNameOnDetailsPageUAT() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventNameOnDetailsPageUAT));
+		return driver.findElement(lvmEventNameOnDetailsPageUAT);
 	}
 	public WebElement getlvmaddtoseselectedbtn() {
 		wait = new WebDriverWait (driver,20);
