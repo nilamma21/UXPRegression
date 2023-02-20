@@ -147,7 +147,7 @@ public class EvenntsAndWebinar extends base{
 		utl.checkItemPresentInListorNot(lvmevents.getlvmListOfEventTitles(), eventName);	
 	}
 	
-	@Test(enabled=false)//priority = 3
+	@Test(priority = 3)//enabled=false
 	public void TS003_VerifyIMCEventsCalendarViewTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T288: IMC Events: Calendar View
@@ -245,7 +245,7 @@ public class EvenntsAndWebinar extends base{
 		lvmmpp = new LVMMarketPlannerPage(driver);
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		utl.clickOnEventLinkOfChannelLVM();	
+		utl.clickOnEventLinkOfChannel();	
 		
 		//Click on IMC Event Tab
 		lvmevents.getlvmImcEventsTab().click();
@@ -330,7 +330,7 @@ public class EvenntsAndWebinar extends base{
 			//eventSeeDetailsLink = lvmevents.lvmlvmListOfAllEventsSeeDetailsLink().get(1);
 			eventTitleLink.click();
 			//Verify Event Details Page
-			Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPage().getText()));
+			Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUAT().getText()));
 			Thread.sleep(3000);
 			driver.navigate().back();
 			Thread.sleep(3000);
@@ -362,13 +362,13 @@ public class EvenntsAndWebinar extends base{
 		
 		//Click on Any Event title
 		lvmevents.getlvmClickOnEvent().click();
-		Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPage().getText()));
+		Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUAT().getText()));
 		
 		//Verify Location Link
-		Assert.assertTrue(lvmevents.getlvmEventLocationLink().isDisplayed());
+		Assert.assertTrue(lvmevents.getlvmEventLocationLinkUAT().isDisplayed());
 		System.out.println("Events Location link displayed");
 		//Verify Event Type
-		Assert.assertTrue(lvmevents.getlvmEventType().isDisplayed());
+		Assert.assertTrue(lvmevents.getlvmEventTypeUAT().isDisplayed());
 		System.out.println("Event Type displayed");
 		//Verify Add Fav Icon
 		Assert.assertTrue(lvmevents.getlvmFavIcon().isDisplayed());
@@ -380,17 +380,17 @@ public class EvenntsAndWebinar extends base{
 		Assert.assertTrue(lvmevents.getlvmNoteIcon().isDisplayed());
 		System.out.println("Add Note Icon displayed");
 		//Verify Add Fav Icon
-		Assert.assertTrue(lvmevents.getlvmCalendarIcon().isDisplayed());
+		Assert.assertTrue(lvmevents.getlvmCalendarIconUAT().isDisplayed());
 		System.out.println("Calendar displayed");
 		//Verify Add Fav Icon
 		Assert.assertTrue(lvmevents.getlvmTagIcon().isDisplayed());
 		System.out.println("Tag displayed");
 		
 		//Click on Location link
-		String locationURL=lvmevents.getlvmEventLocationLink().getAttribute("href");
+		String locationURL=lvmevents.getlvmEventLocationLinkUAT().getAttribute("href");
 		
 		String currentWindowID=driver.getWindowHandle();
-		lvmevents.getlvmEventLocationLink().click();
+		lvmevents.getlvmEventLocationLinkUAT().click();
 		for (String windowHandleID : driver.getWindowHandles()) {
 			driver.switchTo().window(windowHandleID);
 		}
@@ -471,7 +471,7 @@ public class EvenntsAndWebinar extends base{
 		
 		// Click on Any Event title
 		lvmevents.getlvmClickOnEvent().click();
-		Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPage().getText()));
+		Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUAT().getText()));
 
 		// Click on Fav Icon
 		lvmevents.getlvmFavIcon().click();
@@ -522,7 +522,7 @@ public class EvenntsAndWebinar extends base{
 		
 		// Click on Any Event title
 		lvmevents.getlvmClickOnEvent().click();
-		Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPage().getText()));
+		Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUAT().getText()));
 
 		// Click on Add to List Icon
 
@@ -602,7 +602,7 @@ public class EvenntsAndWebinar extends base{
 		
 		// Click on Any Event title
 		lvmevents.getlvmClickOnEvent().click();
-		Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPage().getText()));
+		Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUAT().getText()));
 
 		// Click on Add to List Icon
 		lvmevents.getlvmNoteIcon().click();
@@ -723,7 +723,7 @@ public class EvenntsAndWebinar extends base{
 		String trimYear = eventDateAndMonth.split(" ")[3].trim();
 		// System.out.println(trimYear);
 		String EventmonthAndYear = trimMonth.concat(" ").concat(trimYear);
-		// System.out.println("Concat Month And Year :: "+EventmonthAndYear);
+		 System.out.println("Concat Month And Year :: "+EventmonthAndYear);
 
 		// Verify Current Date is Heighlighetd or not
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-MMM");
@@ -750,7 +750,7 @@ public class EvenntsAndWebinar extends base{
 		System.out.println("Previous Month From Calendar ::"+lvmevents.getlvmSelectMonth().getText());
 		Assert.assertTrue(lvmevents.getlvmSelectMonth().getText().contains(mm));
 		System.out.println("Previous Month "+lvmevents.getlvmSelectMonth().getText()+" is selected");
-		utl.selectFilters(lvmevents.getlvmListOflvmSelectAnyDate(), replaceDate);
+		utl.selectFilters(lvmevents.getlvmListOflvmSelectAnyDate(), "2");
 		
 		for(int i=0;i>=0;i++)
 		{
@@ -879,7 +879,7 @@ public class EvenntsAndWebinar extends base{
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			//Thread.sleep(4000);
 			//Verify Event Details Page
-			Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPage().getText()));
+			Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUAT().getText()));
 			driver.navigate().back();
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			//Thread.sleep(5000);
@@ -905,7 +905,9 @@ public class EvenntsAndWebinar extends base{
 		lvmgs = new LVMGlobalSearchPage(driver);
 		lvmmpp = new LVMMarketPlannerPage(driver);
 
-		utl.clickOnEventLinkOfChannelLVM();	
+		//utl.clickOnEventLinkOfChannelLVM();	
+		
+		utl.clickOnEventLinkOfChannel();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click on Exh Event Tab
@@ -914,13 +916,13 @@ public class EvenntsAndWebinar extends base{
 		//lvmevents.getlvmImcEventsTab().click();
 		String eventTitle=lvmevents.getlvmClickOnEvent().getText();
 		lvmevents.getlvmClickOnEvent().click();
-		Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPage().getText()));
+		Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUAT().getText()));
 		
 		//Verify Location Link
-		Assert.assertTrue(lvmevents.getlvmEventLocationLink().isDisplayed());
+		Assert.assertTrue(lvmevents.getlvmEventLocationLinkUAT().isDisplayed());
 		System.out.println("Events Location link displayed");
 		//Verify Event Type
-		Assert.assertTrue(lvmevents.getlvmEventType().isDisplayed());
+		Assert.assertTrue(lvmevents.getlvmEventTypeUAT().isDisplayed());
 		System.out.println("Event Type displayed");
 		//Verify Add Fav Icon
 		Assert.assertTrue(lvmevents.getlvmFavIcon().isDisplayed());
@@ -932,17 +934,17 @@ public class EvenntsAndWebinar extends base{
 		Assert.assertTrue(lvmevents.getlvmNoteIcon().isDisplayed());
 		System.out.println("Add Note Icon displayed");
 		//Verify Add Fav Icon
-		Assert.assertTrue(lvmevents.getlvmCalendarIcon().isDisplayed());
+		Assert.assertTrue(lvmevents.getlvmCalendarIconUAT().isDisplayed());
 		System.out.println("Calendar displayed");
 		//Verify Add Fav Icon
 		Assert.assertTrue(lvmevents.getlvmTagIcon().isDisplayed());
 		System.out.println("Tag displayed");
 		
 		//Click on Location link
-		String locationURL=lvmevents.getlvmEventLocationLink().getAttribute("href");
+		String locationURL=lvmevents.getlvmEventLocationLinkUAT().getAttribute("href");
 		
 		String currentWindowID = driver.getWindowHandle();
-		lvmevents.getlvmEventLocationLink().click();
+		lvmevents.getlvmEventLocationLinkUAT().click();
 		for (String windowHandleID : driver.getWindowHandles()) {
 			driver.switchTo().window(windowHandleID);
 		}
@@ -977,7 +979,7 @@ public class EvenntsAndWebinar extends base{
 			// eventSeeDetailsLink = lvmevents.lvmlvmListOfAllEventsSeeDetailsLink().get(1);
 			eventTitleLink.click();
 			// Verify Event Details Page
-			//Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPage().getText()));
+			//Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUATUAT().getText()));
 			Thread.sleep(2000);
 			try {
 				if(lvmevents.getlvmEventsTag().isDisplayed())
@@ -1035,7 +1037,7 @@ public class EvenntsAndWebinar extends base{
 		// Click on Any Event title
 		lvmevents.getlvmClickOnEvent().click();
 
-		//Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPage().getText()));
+		//Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUATUAT().getText()));
 		// Click on Fav Icon
 		lvmevents.getlvmFavIcon().click();
 
@@ -1086,7 +1088,7 @@ public class EvenntsAndWebinar extends base{
 		// Click on Any Event title
 		lvmevents.getlvmClickOnEvent().click();
 
-		//Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPage().getText()));
+		//Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUATUAT().getText()));
 		// Click on Add to List Icon
 
 	/*	lvmevents.getlvmListIcon().click();
@@ -1122,7 +1124,7 @@ public class EvenntsAndWebinar extends base{
 		mpeditlistoptns = lvmmpp.getLVMMPEditListOptns();
 
 		for (int i = 0; i < mplists.size(); i++) {
-			System.out.println(mplists.get(i).getText());
+			//System.out.println(mplists.get(i).getText());
 			// System.out.println(mpeditlistoptns.get(i).getText());
 			if (mplists.get(i).getText().equals(existinglistname)) {
 				mpeditlistoptns.get(i).click();
@@ -1169,7 +1171,7 @@ public class EvenntsAndWebinar extends base{
 		// Click on Any Event title
 		lvmevents.getlvmClickOnEvent().click();
 
-		//Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPage().getText()));
+		//Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUATUAT().getText()));
 		// Click on Add to List Icon
 
 		lvmevents.getlvmNoteIcon().click();

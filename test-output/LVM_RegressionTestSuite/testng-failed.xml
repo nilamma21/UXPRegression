@@ -3,6 +3,7 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [LVM_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
+
       <class name="lasvegasmarket_UAT.FloorPlans">
         <methods>
           <include name="tearDown"/>
@@ -10,6 +11,19 @@
           <include name="initialize"/>
         </methods>
       </class> <!-- lasvegasmarket_UAT.FloorPlans -->
+
+      <class name="lasvegasmarket_UAT.EvenntsAndWebinar">
+        <methods>
+          <include name="TS005_VerifyIMCEventsEventDetailstTest"/>
+          <include name="initialize"/>
+          <include name="TS014_VerifyExhibitorEventsAddToListTest"/>
+          <include name="TS013_VerifyExhibitorEventsAddToFavoriteTest"/>
+          <include name="TS012_VerifyExhibitorEventsDetailstTest"/>
+          <include name="TS006_VerifyIMCEventsAddToFavoriteTest"/>
+          <include name="TS007_VerifyIMCEventsAddToListTest"/>
+        </methods>
+      </class> <!-- lasvegasmarket_UAT.EvenntsAndWebinar -->
+
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
