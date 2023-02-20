@@ -73,7 +73,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));//Previous input = filtersglobalsearchinput
 		lvmgs.getLVMSearchButton().click();
 
 		//Click on Product Categories expand btn
@@ -120,7 +120,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		driver.get(prop.getProperty("lvmurl_uat"));
 
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor6")));
 		lvmgs.getLVMSearchButton().click();
 
 		//Click on Product Categories expand btn
@@ -132,16 +132,18 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		String expectedprodcatg = lvmleftpane.getLVMAntiqueVintProdCatg().getText();
 		lvmleftpane.getLVMAntiqueVintProdCatg().click();
 		Thread.sleep(8000);
+		
 		//Verify the selected Product Category on Product details page
-		utl.scrollToElement(lvmexhact.getSecondExhProduct());
-				
-		Actions actions = new Actions(driver);
+		//utl.scrollToElement(lvmexhact.getSecondExhProduct()); //For Prod
+		lvmleftpane.getFirstVintageExhUat().click(); //For UAT
+		
+		/*Actions actions = new Actions(driver);
 		actions.moveToElement(lvmexhact.getSecondExhProduct()).perform();
 		// To mouseover on See Details btn
 		actions.moveToElement(lvmexhact.getSecondExhProductSeeDetailsBtn()).perform();
 		// Click on See Details button
-		actions.click().perform();		
-
+		actions.click().perform();*/ //For Prod
+		
 		//Scroll till Product Categories section
 		utl.scrollToElement(lvmds.getLVMProductCategSection());
 		prodcatgitemlist = lvmds.getLVMProductCategItemList();
@@ -172,9 +174,10 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		driver.get(prop.getProperty("lvmurl_uat"));
 
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));//Previous input = filtersglobalsearchinput
 		lvmgs.getLVMSearchButton().click();
-
+		
+		Thread.sleep(2000);
 		//Click on Product Categories expand btn
 		lvmleftpane.getLVMProdCatgExpandBtn().click();
 
@@ -250,7 +253,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		driver.get(prop.getProperty("lvmurl_uat"));
 
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor6")));//Previous input = filtersglobalsearchinput
 		lvmgs.getLVMSearchButton().click();
 
 		//Click on Product Categories expand btn
@@ -283,7 +286,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		Thread.sleep(8000);
 
 		//Click on IMC Test Exhibitor name in list
-		lvmexhact.getIMCExhibitorName().click(); //Failed on UAT LVM
+		//lvmexhact.getIMCExhibitorName().click(); //For prod
+		lvmleftpane.getFirstVintageExhUat().click(); //For UAT
 
 		//Scroll till Product Categories section
 		utl.scrollToElement(lvmds.getLVMProductCategSection());
@@ -351,7 +355,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		Thread.sleep(2000);
 		driver.get(prop.getProperty("lvmurl_uat"));
 
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));//Previous input = filtersglobalsearchinput
 		lvmgs.getLVMSearchButton().click();
 
 		//Click on Product Categories expand btn
@@ -398,7 +402,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		driver.get(prop.getProperty("lvmurl_uat"));
 
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys("Anne");
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("leftpanefilterinput")));
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(6000);
 
@@ -409,6 +413,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		//Select Holiday/Seasonal prod category
 		String expectedprodcatg = lvmleftpane.getLVMHolidayProdCatg().getText();
+		System.out.println(expectedprodcatg);
 		lvmleftpane.getLVMHolidayProdCatg().click();
 		Thread.sleep(8000);
 
@@ -430,7 +435,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		driver.navigate().back();
 		Thread.sleep(5000);
 
-		//Verify the selected Product Category on Product details page
+		/*//Verify the selected Product Category on Product details page
 		utl.scrollToElement(lvmexhact.getProductForMultipleCatg());
 		// Hovering on 1st Product
 		Actions actions = new Actions(driver);
@@ -438,7 +443,10 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		// To mouseover on See Details btn
 		actions.moveToElement(lvmexhact.getThirdExhProdSeeDetailsBtn()).perform();
 		// Click on See Details button
-		actions.click().perform();
+		actions.click().perform();*/ //For Prod
+		
+		//Click on the first exhibitor
+		lvmleftpane.getFirstVintageExhUat().click(); //For UAT
 
 		//Scroll till Product Categories section
 		utl.scrollToElement(lvmds.getLVMProductCategSection());
@@ -482,7 +490,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		lvmleftpane.getLVMDecorativeAccProdCatg().click();
 		Thread.sleep(8000);
 
-		//Verify the selected Product Categories on product details page
+		/*//Verify the selected Product Categories on product details page
 		utl.scrollToElement(lvmexhact.getExhibitorProduct());
 		// Hovering on 1st Product
 		Actions actions = new Actions(driver);
@@ -490,7 +498,10 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		// To mouseover on See Details btn
 		actions.moveToElement(lvmexhact.getProdSeeDetailsBtn()).perform();
 		// Click on See Details button
-		actions.click().perform();
+		actions.click().perform();*/ //For Prod
+		
+		//Click on the 2nd exhibitor
+		lvmleftpane.getSecondExhUat().click(); //For UAT
 
 		//Scroll till Product Categories section
 		utl.scrollToElement(lvmds.getLVMProductCategSection());
@@ -522,9 +533,10 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		driver.get(prop.getProperty("lvmurl_uat"));
 
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys("Anne");
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("leftpanefilterinput2")));
 		lvmgs.getLVMSearchButton().click();
-
+		Thread.sleep(2000);
+		
 		//Click on Product Categories expand btn
 		lvmleftpane.getLVMProdCatgExpandBtn().click();
 
@@ -535,7 +547,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		lvmleftpane.getLVMGeneralGiftProdCatg().click();
 		Thread.sleep(8000);
 
-		//Verify the selected Product Categories on product details page
+		/*//Verify the selected Product Categories on product details page
 		utl.scrollToElement(lvmexhact.getExhibitorProduct());
 		// Hovering on 1st Product
 		Actions actions = new Actions(driver);
@@ -543,7 +555,10 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		// To mouseover on See Details btn
 		actions.moveToElement(lvmexhact.getProdSeeDetailsBtn()).perform();
 		// Click on See Details button
-		actions.click().perform();
+		actions.click().perform();*/ //For Prod
+		
+		//Click on the first exhibitor
+		lvmleftpane.getSecondExhUat().click(); //For UAT
 
 		//Scroll till Product Categories section
 		utl.scrollToElement(lvmds.getLVMProductCategSection());
@@ -575,7 +590,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		driver.get(prop.getProperty("lvmurl_uat"));
 
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys("Anne");
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(6000);
 
@@ -607,7 +622,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		driver.navigate().back();
 		Thread.sleep(5000);
 
-		//Verify the selected Product Category on Product details page
+		/*//Verify the selected Product Category on Product details page
 		utl.scrollToElement(lvmexhact.getProductForMultipleCatg());
 		// Hovering on 1st Product
 		Actions actions = new Actions(driver);
@@ -615,7 +630,10 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		// To mouseover on See Details btn
 		actions.moveToElement(lvmexhact.getThirdExhProdSeeDetailsBtn()).perform();
 		// Click on See Details button
-		actions.click().perform();
+		actions.click().perform();*/ //For Prod
+		
+		//Click on the first exhibitor
+		lvmleftpane.getSecondExhUat().click(); //For UAT
 
 		//Scroll till Product Categories section
 		utl.scrollToElement(lvmds.getLVMProductCategSection());
@@ -647,9 +665,11 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		driver.get(prop.getProperty("lvmurl_uat"));
 
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("leftpanefilterinput3")));
+		Thread.sleep(2000);
 		lvmgs.getLVMSearchButton().click();
-
+		Thread.sleep(3000);
+		
 		//Click on Product Categories expand btn
 		lvmleftpane.getLVMProdCatgExpandBtn().click();
 
@@ -660,7 +680,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		lvmleftpane.getLVMFloralBotanicalsProdCatg().click();
 		Thread.sleep(8000);
 
-		//Verify the selected Product Categories on product details page
+		/*//Verify the selected Product Categories on product details page
 		utl.scrollToElement(lvmexhact.getExhibitorProduct());
 		// Hovering on 1st Product
 		Actions actions = new Actions(driver);
@@ -668,7 +688,10 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		// To mouseover on See Details btn
 		actions.moveToElement(lvmexhact.getProdSeeDetailsBtn()).perform();
 		// Click on See Details button
-		actions.click().perform();
+		actions.click().perform();*/ //For Prod
+		
+		//Click on the 2nd exhibitor
+		lvmleftpane.getSecondExhUat().click(); //For UAT
 
 		//Scroll till Product Categories section
 		utl.scrollToElement(lvmds.getLVMProductCategSection());
@@ -700,7 +723,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		
 		driver.get(prop.getProperty("lvmurl_uat"));
 
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("leftpanefilterinput4")));
 		lvmgs.getLVMSearchButton().click();
 
 		//Click on Product Categories expand btn
@@ -715,7 +738,11 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		//Verify the selected Product Categories on product details page
 		//Select 2nd Exhibitor from Search results grid
-		lvmleftpane.getLVMSecondExhibitor().click();
+		//lvmleftpane.getLVMSecondExhibitor().click(); //For Prod
+		
+		//Click on the first exhibitor
+		//lvmleftpane.getSecondExhUat().click(); 
+		lvmleftpane.getLVMexhibitor().click();//For UAT
 
 		//Scroll till Product Categories section
 		utl.scrollToElement(lvmds.getLVMProductCategSection());

@@ -15,7 +15,7 @@ public class ATLFloorPlansPage {
 	By atlFloorPlansLink = By.xpath("//a[contains(text(),'Floor Plans')]"); //Locator for floor plans Link
 	By atlBuildingFloor = By.xpath("//div[@class='imc-campus-view']/div[3]/div[11]/div[3]/a[1]"); //Locator for Building floor
 	By buildingFloor_lvmUAT = By.xpath("//div[@class='imc-campus-view']/div[3]/div[10]/div[3]/a[1]"); //Locator for Building floor 9th LVM UAT
-	
+	By lvmBuildingFloor = By.xpath("//div[@class='imc-campus-view']/div[3]/div[11]/div[3]/a[1]"); //Locator for Building floor
 	By atlBuildingFloorForFilter = By.xpath("//div[@class='imc-campus-view']/div[3]/div[4]/div[3]/a"); //Locator for Building floor
 	By atlBuildingFloorNumber = By.xpath("//div[@class='imc-campus-view']/div[3]/div[10]/div[3]/a"); //Locator for Building floor number
 	By atlFloorName = By.xpath("//div[@class='imc-type--title-6']");
@@ -70,7 +70,8 @@ public class ATLFloorPlansPage {
 	By atlLoadingNoExhiMsg = By.xpath("//div[@class='imc-manufacturing-line--alternated-section imc-lines-overview']/p[1]");//Loading Msg
 	
 	By atlExhibitorNamePROD = By.xpath("//div[@class='imc-content--padded-top-bottom']/div[1]//div[2]/div[2]/a[1]"); //Locator for Exhibitor Name
-	
+	By lvmBuildingFloorsix = By.xpath("//div[@class='imc-campus-view']/div[3]/div[13]/div[3]/a[1]"); //Locator for Building floor
+
 	
 	public ATLFloorPlansPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -140,7 +141,7 @@ public class ATLFloorPlansPage {
 	}
 
 	public WebElement getATLSelectBox() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitedonfloormsg));
 		return driver.findElement(atlSelectBox);
 	}
@@ -241,7 +242,8 @@ public class ATLFloorPlansPage {
 		return driver.findElement(atlReturnToBuildingList);
 	}
 	public WebElement getatlexhibitorsection() throws InterruptedException {
-		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlexhibitorsection));
 		return driver.findElement(atlexhibitorsection);
 	}
 	public WebElement getatlexhibitorsearch() {
@@ -335,6 +337,16 @@ public class ATLFloorPlansPage {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitedonfloormsg));
 		return driver.findElement(exhibitedonfloormsg);
+	}
+	public WebElement getLVMBuildingFloor() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(lvmBuildingFloor));
+		return driver.findElement(lvmBuildingFloor);
+	}
+	public WebElement getLVMBuildingFloorsix() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(lvmBuildingFloorsix));
+		return driver.findElement(lvmBuildingFloorsix);
 	}
 	
 }

@@ -76,6 +76,7 @@ public class GlobalSearch_MatchingResults extends base {
 		
 		Assert.assertTrue(lvmgs.getLVMSearchResult().getText().contains(prop.getProperty("exhibitor5")));
 		System.out.println("Displayed All Products Name Start with :: " + prop.getProperty("exhibitor5"));
+		driver.get(prop.getProperty("lvmurl_uat"));
 	}
 	
 	@Test(priority = 2)
@@ -189,6 +190,7 @@ public class GlobalSearch_MatchingResults extends base {
 			Assert.assertTrue(allProductDisplay.isDisplayed());
 		}
 		System.out.println("Displayed All Products");
+		driver.get(prop.getProperty("lvmurl_uat"));
 	}
 	
 	@Test(priority = 3)
@@ -236,6 +238,7 @@ public class GlobalSearch_MatchingResults extends base {
 		//Select filter Sort by Matching Product Count Descending
 		utl.Sorting(lvmgs.getlvmMachingProductCount(), lvmgs.getlvmGlobalSearch_SearchSortByDropdwn(),
 				"Sort By Matching Product Count Descending");
+		driver.get(prop.getProperty("lvmurl_uat"));
 	}
 	
 	@Test(priority = 4)
@@ -272,6 +275,7 @@ public class GlobalSearch_MatchingResults extends base {
 			Assert.assertTrue(s.contains("P"));
 		}
 		System.out.println("Displayed All Relevance ");
+		driver.get(prop.getProperty("lvmurl_uat"));
 	}
 	
 	@Test(priority = 5)
@@ -322,6 +326,7 @@ public class GlobalSearch_MatchingResults extends base {
 		Thread.sleep(10000);
 		// Verify Exhibitor present or not into MP Fav
 		utl.checkItemPresentInListorNot(lvmmpp.getlistOfAllExh(), exhName);
+		driver.get(prop.getProperty("lvmurl_uat"));
 	}
 	
 	@Test(priority = 6)
@@ -346,7 +351,7 @@ public class GlobalSearch_MatchingResults extends base {
 		if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			lvmgs.getlvmGlobalSearchClearTxt().click();
 		}
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor5"));//filtersglobalsearchinput
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));//filtersglobalsearchinput
 		Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(5000);
@@ -380,6 +385,7 @@ public class GlobalSearch_MatchingResults extends base {
 		utl.ClickOnEditBtnOfAnyList(lvmmpp.getallList(), exList);
 		// Verify exhibitor present into selected list or not
 		utl.checkItemPresentInListorNot(lvmmpp.getlistOfAllExh(), exhName);
+		driver.get(prop.getProperty("lvmurl_uat"));
 	}
 	
 	@Test(priority = 7)
@@ -440,6 +446,7 @@ public class GlobalSearch_MatchingResults extends base {
 		// Verify exhibitor present into selected list or not
 		Thread.sleep(6000);
 		utl.checkItemPresentInListorNot(lvmmpp.getlistOfAllExh(), exhName);
+		driver.get(prop.getProperty("lvmurl_uat"));
 	}
 	
 	@Test(priority = 8)
@@ -469,7 +476,7 @@ public class GlobalSearch_MatchingResults extends base {
 		
 		
 		try {
-			lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor5"));//savedSearchesInput
+			lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearch_input"));//savedSearchesInput
 			Thread.sleep(3000);
 			lvmgs.getLVMSearchButton().click();
 			Thread.sleep(5000);
@@ -488,7 +495,7 @@ public class GlobalSearch_MatchingResults extends base {
 			if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 				lvmgs.getlvmGlobalSearchClearTxt().click();
 			}
-			lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor5"));//savedSearchesInput
+			lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));//savedSearchesInput
 			Thread.sleep(3000);
 			lvmgs.getLVMSearchButton().click();
 			Thread.sleep(5000);
@@ -503,9 +510,9 @@ public class GlobalSearch_MatchingResults extends base {
 			//Click on Save Search Btn 
 			lvmgs.getlvmSavedSearchesBtnForNewSaved().click();
 			//Goto Home page
-			driver.get(prop.getProperty("lvmmrkturl_prod"));
+			driver.get(prop.getProperty("lvmurl_uat"));
 			//Click on saved Searches btn
-			lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor5"));//filtersglobalsearchinput
+			lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));//filtersglobalsearchinput
 			Thread.sleep(5000);
 			lvmgs.getLVMSearchButton().click();
 			lvmgs.getlvmSavedSearchesIcon().click();
@@ -516,6 +523,7 @@ public class GlobalSearch_MatchingResults extends base {
 			Assert.assertTrue(lvmgs.getLVMInfosearchtxtbx().getAttribute("value").contains(prop.getProperty("savedSearchesInput")));
 			Thread.sleep(5000);
 			Assert.assertTrue(lvmgs.getLVMVerifyGlobalSeacrh().getText().contains(prop.getProperty("savedSearchesInput")));
+			driver.get(prop.getProperty("lvmurl_uat"));
 		}
 	}
 	
@@ -558,12 +566,13 @@ public class GlobalSearch_MatchingResults extends base {
 		lvmgs.getlvmSelectList().click();
 		
 		utl.checkItemPresentInListorNot(lvmgs.getlvmListOfAllSavedSearches(),savedSearchesInput);
+		driver.get(prop.getProperty("lvmurl_uat"));
 	}
 	
 	@AfterClass
 	public void quit() throws InterruptedException {
 		Thread.sleep(1000);
-		driver.quit();
+		//driver.quit();
 	}
 	
 }

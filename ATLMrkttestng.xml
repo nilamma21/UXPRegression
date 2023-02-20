@@ -8,13 +8,8 @@
 	<test thread-count="5" name="RegressionTest">
 		<classes>
 
-<<<<<<< HEAD
 			<!--<class name="atlantamarket_PROD.GlobalSearch_SearchFor"/>
 			 <class name="atlantamarket_PROD.EvenntsAndWebinar" />
-=======
-			<class name="atlantamarket_PROD.GlobalSearch_SearchFor"/>
-			<!-- <class name="atlantamarket_PROD.EvenntsAndWebinar" />
->>>>>>> da59ce610f79149eab2a8c02d7ac5b13117c74d2
 			<class name="atlantamarket_PROD.ExhibitorDigitalShowroom" />
 			<class name="atlantamarket_PROD.FloorPlans" />
 			<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
@@ -22,17 +17,10 @@
 			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_MatchingResults" />
 			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
-<<<<<<< HEAD
 			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
 			<class name="atlantamarket_PROD.LineDigitalShowroom" />
-			<class name="atlantamarket_PROD.ShowSpecials" /> -->
-			<class name="atlantamarket_PROD.MarketPlanner"/>
-=======
-			<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
-			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
-			<class name="atlantamarket_PROD.LineDigitalShowroom" />
-			<class name="atlantamarket_PROD.ShowSpecials" /> -->
->>>>>>> da59ce610f79149eab2a8c02d7ac5b13117c74d2
+			<class name="atlantamarket_PROD.ShowSpecials" />
+			<class name="atlantamarket_PROD.MarketPlanner"/> -->
 		</classes>
 	</test>
 </suite>

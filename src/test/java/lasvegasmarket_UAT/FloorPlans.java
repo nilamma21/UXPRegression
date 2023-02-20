@@ -134,7 +134,7 @@ public class FloorPlans extends base {
 
 		//Verify that Loading Exhibitors msg should be displayed
 		//Assert.assertTrue(atlflpp.getATLLoadingExhMsg().isDisplayed());
-
+		Thread.sleep(4000);
 		//Verify that No Exhibitor msg should be displayed
 		Assert.assertTrue(atlflpp.getATLNoExpMsg().isDisplayed());
 	}
@@ -245,7 +245,7 @@ public class FloorPlans extends base {
 
 		//Store the Exhibitor name on details modal
 		String exhnameondetailsmodal = atlflpp.getExhNameOnExhibitorDetailsModal().getText();
-
+		System.out.println(exhnameondetailsmodal);
 		//Click on 'View Digital Showroom' button
 		atlflpp.getViewDGShowroombtn().click();
 
@@ -254,9 +254,9 @@ public class FloorPlans extends base {
 
 		//Verify the Exhibitor name on Exh Digital Showroom
 		Thread.sleep(10000);
-		
+		System.out.println(atlexhdgshw.getExhibitorNameOnExhDirectImgLvm().getText());
 		Assert.assertTrue(driver.getTitle().contains(""+exhnameondetailsmodal+" at Las Vegas Market"));
-		Assert.assertTrue(atlexhdgshw.getExhibitorNameOnExhDirectImg().getText().contains(exhnameondetailsmodal));
+		Assert.assertTrue(atlexhdgshw.getExhibitorNameOnExhDirectImgLvm().getText().contains(exhnameondetailsmodal));
 	}
 
 	@Test(priority = 5)
@@ -272,10 +272,10 @@ public class FloorPlans extends base {
 
 		// Click on Exh And Product Tab
 		atlflpp.getATLExhibitorsAndProductTab().click();
-
+		Thread.sleep(2000);
 		//click on Floor plans link
 		atlflpp.getATLFloorPlansLink().click();
-
+		Thread.sleep(2000);
 		//Click on Building floorr
 		atlflpp.getATLBuildingFloorForFilter().click();
 		Thread.sleep(5000);
@@ -309,7 +309,7 @@ public class FloorPlans extends base {
 		for(WebElement we:elementList){
 			expectedSortedList.add(we.getText().toLowerCase());
 		}
-		//Thread.sleep(25000);
+		Thread.sleep(2000);
 		//System.out.println("Expected sorted Exhibitor List : "+expectedSortedList);
 		//Verify Exhibitor List is Sorted or not
 		Assert.assertEquals(sortedList, expectedSortedList, "Exhibitor List Should be sorted");
@@ -393,7 +393,7 @@ public class FloorPlans extends base {
 
 		//Scroll Down to Exhibitor list
 		utl.scrollToElement(atlflpp.getATLNextFloorBtn());
-
+		Thread.sleep(2000);
 		//Stored 1st Exhibitor Name
 		String exhibitorName=atlflpp.getATLExhibitorName().getText();
 		System.out.println("Exhi Name: "+exhibitorName);
@@ -405,6 +405,7 @@ public class FloorPlans extends base {
 		Thread.sleep(12000);
 		// Verify that Selected Exhibitor Digital Showroom page should be opened
 		Assert.assertTrue(atlexhdgshw.getlvmvalidateexhdigishowpage_uat().isDisplayed());
+		Thread.sleep(2000);
 		//Assert.assertTrue(driver.getTitle().contains(""+exhibitorName+" at Atlanta Market"));
 		Assert.assertTrue(atlexhdgshw.getlvmexhibitornameonexhdirectimg_uat().getText().contains(exhibitorName));
 	}
@@ -485,15 +486,16 @@ public class FloorPlans extends base {
 		atlmppge = new ATLMarketPlannerPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		// Click on Exh And Product Tab
 		atlflpp.getATLExhibitorsAndProductTab().click();
+		Thread.sleep(2000);
 		// click on Floor plans link
 		atlflpp.getATLFloorPlansLink().click();
 		Thread.sleep(5000);
 		// click on Exhibitor floor
-		atlflpp.getATLBuildingFloor().click();
-
+		//atlflpp.getLVMBuildingFloor().click(); //8th Floor
+		atlflpp.getLVMBuildingFloorsix().click(); //6th floor
+		Thread.sleep(12000);
 		// Scroll Down to Exhibitor list
 		utl.scrollToElement(atlflpp.getATLSelectBox());
 		Thread.sleep(15000);
@@ -554,26 +556,26 @@ public class FloorPlans extends base {
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		Thread.sleep(1000);
 		// Click on Exh And Product Tab
 		atlflpp.getATLExhibitorsAndProductTab().click();
 		// click on Floor plans link
 		atlflpp.getATLFloorPlansLink().click();
-
+		Thread.sleep(7000);
 		// click on Exhibitor floor
 		atlflpp.getATLBuildingFloor().click();
 		// Scroll Down to Exhibitor list
+		Thread.sleep(4000);
 		utl.scrollToElement(atlflpp.getATLSelectBox());
-
 		// 1st Exhibitor Name
 		String exhibitorName = atlflpp.getATLExhibitorName().getText();
 		System.out.println("Exhibitor Name : " + exhibitorName);
 		
 		// Click on More option 3dots
 		atlflpp.getATLMoreOptions().click();
+		Thread.sleep(2000);
 		// Click on Add Note
 		atlflpp.getATLAddNote().click();
-
 		// Store the new note name
 		String newnotetitle = "CybNote" + genData.generateRandomString(3);
 		System.out.println("Newly added Note is: " + newnotetitle);
@@ -629,7 +631,7 @@ public class FloorPlans extends base {
 
 		// click on Exhibitor floor
 		atlflpp.getbuildingFloor_lvmUAT().click();
-
+		Thread.sleep(5000);
 		// Scroll Down to Exhibitor list
 		utl.scrollToElement(atlflpp.getATLSelectBox());
 		Thread.sleep(6000);
@@ -648,12 +650,12 @@ public class FloorPlans extends base {
 		// Click on Lists tab on MP home page
 		atlmppge.getMPHomeListsTab().click();
 		atlmppge.getATLMPListsPageFavoritesMenu().click();
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 
 		//System.out.println(atlmppge.getATLSavedExhNameInList().getText());
 		// Verify that the added favorites exhibitor should be displayed in to Favorites list
 		Assert.assertTrue(atlmppge.getlvmsavedexhnameinlist_uat().getText().contains(exhibitorName));
-
+		Thread.sleep(2000);
 		// Delete that favorites exhibitor from list
 		Actions action=new Actions(driver);
 		//action.moveToElement(atlmppge.getMoreBtnDeleteOptn_lvmUAT()).perform();

@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -172,7 +173,7 @@ public class GlobalSearch_LineActions extends base {
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("searchorderonjuniperline_lvmUAT")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("searchjuniperline_lvmuat"));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -259,6 +260,7 @@ public class GlobalSearch_LineActions extends base {
 				break;
 			}
 		}
+		System.out.println(atlmppge.getATLSavedExhNameInList().getText());
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 	}
 
@@ -281,7 +283,7 @@ public class GlobalSearch_LineActions extends base {
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(15000);
-		atlexhact.getseealllink().click();
+		//atlexhact.getseealllink().click();
 
 		// Store the 1st Exhibitor name in String variable
 		String exhname = atlexhact.getExhibitorName().getText();
@@ -314,7 +316,7 @@ public class GlobalSearch_LineActions extends base {
 		mpeditlistoptns = atlmppge.getATLMPEditListOptns();
 
 		for (int i = 0; i < mplists.size(); i++) {
-			System.out.println(mplists.get(i).getText());
+			//System.out.println(mplists.get(i).getText());
 			// System.out.println(mpeditlistoptns.get(i).getText());
 			if (mplists.get(i).getText().equals(existinglistname)) {
 				mpeditlistoptns.get(i).click();
@@ -324,11 +326,22 @@ public class GlobalSearch_LineActions extends base {
 		Thread.sleep(5000);
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 
-		// Delete that added line from list
+/*		// Delete that added line from list
 		//atlmppge.getATLEditListItemMoreBtn().click(); //Old 
-		atlmppge.getATLEditListItemMoreBtnNew().click(); //New
+		atlmppge.getATLEditListItemMoreBtnNew().click();
+		// Hover on MoreOptions
+				Actions actions = new Actions(driver);
+				actions.moveToElement(atlmppge.getATLEditListItemMoreBtnNew()).perform();
+				// To mouseover on See Details btn
+				actions.moveToElement(atlmppge.getATLEditListItemDeleteOptn()).perform();
+
+				// Click on See Details button
+				actions.click().perform();
+		
+		Thread.sleep(5000);
+		utl.scrollToElement(atlmppge.getATLEditListItemDeleteOptn());
 		atlmppge.getATLEditListItemDeleteOptn().click();
-		Thread.sleep(8000);
+		Thread.sleep(8000);*/
 	}
 
 	@Test(priority = 06)
@@ -502,6 +515,6 @@ public class GlobalSearch_LineActions extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 }

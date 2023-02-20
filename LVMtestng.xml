@@ -3,16 +3,29 @@
 
 <suite name="LVM_RegressionTestSuite">
 	<listners>
-		<listner class-name="lasvegasmarket_UAT.TestListeners" />
+		<listner class-name="lasvegasmarket_UAT.LineDigitalShowroom" />
 	</listners>
 
-	<test thread-count="5" name="RegressionTest">1
+	<test thread-count="5" name="RegressionTest">
 		<classes>
 
 
-			<class name="lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters" />
+
+
+			<class name="lasvegasmarket_UAT.FloorPlans" />
 			<methods>
-				    <include name="TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest"/> 
+				 <include name="TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest"/> 
+
+			<class name="lasvegasmarket_UAT.EvenntsAndWebinar" />
+			<methods>
+				     <include name="TS003_VerifyIMCEventsCalendarViewTest"/>  
+
+
+			<!-- <class name="lasvegasmarket_UAT.GlobalSearch_ProductActions" />
+			<methods> -->
+			  <!--  <include name="TS006_VerifyProductAddToExistingListOnSearchResultsGridTest"/>  -->
+				   <!--  <include name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest"/>  -->
+
 
 		<!-- 	<class name="atlantamarket_PROD.EvenntsAndWebinar" />
 			<class name="atlantamarket_PROD.FloorPlans" />
@@ -20,7 +33,7 @@
 			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
 			<class name="atlantamarket_PROD.ShowSpecials" /> -->
-		
+			
 			<!-- <class name="atlantamarket_PROD.GlobalSearch_SearchFor" /> -->
 			
 			<!-- <methods> -->
