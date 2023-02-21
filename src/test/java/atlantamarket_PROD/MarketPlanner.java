@@ -79,13 +79,6 @@ public class MarketPlanner extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		/*
-		 * try { // Click Welcome Text atlmppge.getwelcometext().click(); // Click Sign
-		 * out link atlmppge.getsignout().click(); lap.getLogin().click();
-		 * 
-		 * } catch (Exception e) { System.out.println(e); lap.getLogin().click(); }
-		 */
-
 		// Click Welcome Text
 		atlmppge.getwelcometext().click();
 		// Click Sign out link
@@ -99,8 +92,7 @@ public class MarketPlanner extends base {
 		Thread.sleep(15000);
 
 		// Verify incorrect password error msg
-		Assert.assertTrue(
-				atlmppge.getInvalidPasswordError().getText().contains(prop.getProperty("incorrectPasswordErrorMsg")));
+		Assert.assertTrue(atlmppge.getInvalidPasswordError().getText().contains(prop.getProperty("incorrectPasswordErrorMsg")));
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 
@@ -110,8 +102,7 @@ public class MarketPlanner extends base {
 		// Verify Enter email error msg
 		Assert.assertTrue(atlmppge.getEnterEmailErrorMsg().getText().contains(prop.getProperty("EnterEmailErrorMsg")));
 		// Verify Enter password error msg
-		Assert.assertTrue(
-				atlmppge.getEnterPasswordErrorMsg().getText().contains(prop.getProperty("EnterPasswordErrorMsg")));
+		Assert.assertTrue(atlmppge.getEnterPasswordErrorMsg().getText().contains(prop.getProperty("EnterPasswordErrorMsg")));
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
@@ -128,16 +119,13 @@ public class MarketPlanner extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		// Login to Market Planner
-
 		utl.verifyMPLoginFunctionality();
 
 		// lap.getCloseMarktAdBtn().click();
 
 		Thread.sleep(5000);
 
-		System.out.println("Login");
 		// Verify that Market Planner Home page should be displayed
-		// Assert.assertTrue(lap.getmarketplannerlinktext1().isDisplayed());
 		Assert.assertTrue(lap.getMPLinkText().isDisplayed());
 	}
 
@@ -151,9 +139,6 @@ public class MarketPlanner extends base {
 		atlmppge = new ATLMarketPlannerPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		// Login to Market Planner
-		// utl.verifyMPLoginFunctionality();
-		// Thread.sleep(6000);
 
 		// Click on Market Planner
 		lap.getMPLinkText().click();
@@ -181,14 +166,12 @@ public class MarketPlanner extends base {
 		utl.selectDropdown(prop.getProperty("channelNameLVM"), prop.getProperty("lvmurl_prod"));
 		driver.get(prop.getProperty("atlmrkturl_prod") + "Market-Planner");
 		Thread.sleep(5000);
-
 	}
+
 	@Test(priority = 04)
-	public void TS004_VerifyAddToFavoriteFunctionalityUsingQuickAddForExhibitorTest()
-			throws InterruptedException, IOException {
+	public void TS004_VerifyAddToFavoriteFunctionalityUsingQuickAddForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// UXP-T232: Market Planner: Lists- Favorites- Add an Exhibitor to Favorites
-		// using 'Quick Add'
+		// UXP-T232: Market Planner: Lists- Favorites- Add an Exhibitor to Favorites using 'Quick Add'
 
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
@@ -238,7 +221,6 @@ public class MarketPlanner extends base {
 		}
 		// Verify Selected exhibitor added or not
 		// Assert.assertTrue(autoSuggetion.contains(atlmppge.getMpQuickAddedExpName().getText()));
-
 	}
 
 	@Test(priority = 05)
@@ -264,10 +246,9 @@ public class MarketPlanner extends base {
 
 		utl.verifyMPLoginFunctionality();
 		Thread.sleep(8000);
-
 	}
 
-	@Test(priority = 06)
+	@Test(priority = 40)
 	public void TS006_VerifyArrangeBtnFunctionalityForListsTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T234: Market Planner: Lists: Lists: Arrange button functionality test
@@ -329,48 +310,8 @@ public class MarketPlanner extends base {
 
 	}
 
-	@Test(priority = 07)
-	public void TS007_VerifyNewGroupBtnFunctionalityForListsTest() throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// UXP-T238: Market Planner: Lists: Lists: New Group button functionality
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		genData = new GenerateData();
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		// Click on Market Planner
-		lap.getMPLinkText().click();
-
-		// Click on List tab
-		atlmppge.getMPHomeListsTab().click();
-
-		// Click on List from left Panel
-		atlmppge.getMpListLeftPannel().click();
-
-		// click on New group btn
-		atlmppge.getMpListNewGroupBtn().click();
-
-		// verify New Group Popup header
-		Assert.assertTrue(
-				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateGroupPopupHeader")));
-		// Enter Group name
-		String newGroupname = "Cyb" + genData.generateRandomString(5);
-		atlmppge.getMpListNewGroupNameTxt().sendKeys(newGroupname);
-		System.out.println(newGroupname);
-		// Click on Create Btn
-		atlmppge.getMpListNewGroupCreateBtn().click();
-		Thread.sleep(5000);
-
-		utl.checkItemPresentInListorNot(atlmppge.getAtlListOfAllGroups(), newGroupname);
-
-	}
-
-	@Test(priority = 8)
-	public void TS008_VerifyNewListBtnFunctionalityForListsTest1() throws InterruptedException, IOException {
+	@Test(priority = 7)
+	public void TS007_VerifyNewListBtnFunctionalityForListsTest1() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T235: Market Planner: Lists: Lists: New Test button functionality
 
@@ -401,7 +342,7 @@ public class MarketPlanner extends base {
 		// Select Group from dropdown
 		Select selectGroup = new Select(atlmppge.getmpListNewSelectGroupDropdown());
 		Thread.sleep(5000);
-		selectGroup.selectByIndex(3);
+		//selectGroup.selectByIndex(3);
 		// Click on Create Btn
 		atlmppge.getMpListNewCreateBtn().click();
 		Thread.sleep(10000);
@@ -421,8 +362,8 @@ public class MarketPlanner extends base {
 
 	}
 
-	@Test(priority = 9)
-	public void TS009_VerifyCreateNewGroupFormValidationForListsTest() throws InterruptedException, IOException {
+	@Test(priority = 8)
+	public void TS008_VerifyCreateNewGroupFormValidationForListsTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T239:- Market Planner: Lists: Lists: Validations at Create New List Group
 		// form
@@ -459,8 +400,8 @@ public class MarketPlanner extends base {
 		atlmppge.getCreateNewGrpPopupCloseBtn().click();
 	}
 
-	@Test(priority = 10)
-	public void TS010_VerifyCreateNewListFormValidationTest() throws InterruptedException, IOException {
+	@Test(priority = 9)
+	public void TS009_VerifyCreateNewListFormValidationTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T236: Market Planner: Lists: Lists: Validations at Create New List form
 
@@ -518,8 +459,8 @@ public class MarketPlanner extends base {
 		}
 	}
 
-	@Test(priority = 11)
-	public void TS011_VerifyMPDashboardOverviewTest() throws InterruptedException, IOException {
+	@Test(priority = 10)
+	public void TS010_VerifyMPDashboardOverviewTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
 		// UXP-224: To verify the Market Planner Dashboard overview
@@ -543,8 +484,8 @@ public class MarketPlanner extends base {
 		Assert.assertEquals(atlmppge.getmpsavedsearchestab().getText(), "Saved Searches");
 	}
 
-	@Test(priority = 12)
-	public void TS012_VerifyMPDashboardRegistrationCardOverviewTest() throws InterruptedException, IOException {
+	@Test(priority = 11)
+	public void TS011_VerifyMPDashboardRegistrationCardOverviewTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
 		// UXP-225: To verify the Market Planner-Registration Card overview
@@ -558,7 +499,7 @@ public class MarketPlanner extends base {
 
 		lap.getMPLinkText().click();
 		Thread.sleep(5000);
-		
+
 		// Verify Registration Card details
 		Assert.assertTrue(atlmppge.getmpmarketnameregcard().isDisplayed());
 		Assert.assertTrue(atlmppge.getmpmarketdateregcard().isDisplayed());
@@ -571,70 +512,8 @@ public class MarketPlanner extends base {
 		Assert.assertTrue(rURL.contains(prop.getProperty("atlmrkturl_prod") + "Attend/Registration"));
 	}
 
-	@Test(priority = 13)
-	public void TS013_VerifyAddToFavoriteFunctionalityForProductTest() throws InterruptedException, IOException {
-
-		// The purpose of this test case to verify:-
-		// UXP-T237: Market Planner: Lists- Favorites- Add a product to Favorites using
-		// 'Favorite' icon in product actions
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		genData = new GenerateData();
-		atlexhact = new ATLExhLineProdActionsPage(driver);
-
-		atlgs = new ATLGlobalSearchPage(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		atlgs.getATLGlobalSearchTextBox().sendKeys("   ");
-		atlgs.getATLSearchButton().click();
-		Thread.sleep(15000);
-		
-		// Store the 1st product name of Exhibitor
-		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
-		System.out.println("Selected product Name: " + productNameOnSearchGrid);
-
-		utl.scrollToElement(atlexhact.getExhibitorProduct());
-
-		// Hovering on product
-		Actions actions = new Actions(driver);
-		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
-		// To mouseover on Add to Fav btn
-		actions.moveToElement(atlexhact.getProductFevBtn()).perform();
-
-		// Click on Add To Favorite button
-		actions.click().perform();
-		Thread.sleep(5000);
-
-		// Click on Market Planner link
-		lap.getMPLinkText().click();
-
-		// Click on Lists tab on MP home page
-		atlmppge.getMPHomeListsTab().click();
-		atlmppge.getATLMPListsPageFavoritesMenu().click();
-
-		Thread.sleep(5000);
-		List<WebElement> favlist = driver.findElements(By.xpath(
-				"//div[@class='imc-saved-exhibitors__contentItems__col2-1 imc-heading--h7 imc-heading--primary-medium imc-saved-exhibitors__name-title']"));
-		boolean flag = false;
-		for (WebElement list : favlist) {
-			if (list.getText().equals(productNameOnSearchGrid)) {
-				flag = true;
-				break;
-			}
-		}
-		if (flag == true) {
-			Assert.assertTrue(flag = true);
-		} else {
-			Assert.assertTrue(flag = false);
-		}
-	}
-
-	@Test(priority = 14)
-	public void TS014_VerifyManageListOptionsOverviewTest() throws InterruptedException, IOException {
+	@Test(priority = 12)
+	public void TS012_VerifyManageListOptionsOverviewTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
 		// UXP-T244: Market Planner: Lists- List Management- 'Manage List' Options.
@@ -666,8 +545,8 @@ public class MarketPlanner extends base {
 
 	}
 
-	@Test(priority = 40)
-	public void TS015_VerifyEditListFunctionalityForManageListTest() throws InterruptedException, IOException {
+	@Test(priority = 13)
+	public void TS013_VerifyEditListFunctionalityForManageListTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
 		// UXP-T245: Market Planner: Lists- List Management- Manage List- 'Edit' list
@@ -680,9 +559,6 @@ public class MarketPlanner extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		// Login to Market Planner
-		/*
-		 * utl.verifyMPLoginFunctionality(); Thread.sleep(6000);
-		 */
 		// Click on Market Planner
 		lap.getMPLinkText().click();
 		Thread.sleep(6000);
@@ -844,8 +720,7 @@ public class MarketPlanner extends base {
 		utl.selectFilters(atlmppge.getlistOfmngDropdownElements(), "Edit");
 
 		// click on 1st checkbox
-		WebElement ccD = driver.findElement(By
-				.xpath("(//div[@class='imc-formfield imc-content imc-saved-exhibitors__chk-container']/label[1])[1]"));
+		WebElement ccD = driver.findElement(By.xpath("(//div[@class='imc-formfield imc-content imc-saved-exhibitors__chk-container']/label[1])[1]"));
 		JavascriptExecutor jsD = (JavascriptExecutor) driver;
 		jsD.executeScript("arguments[0].click();", ccD);
 		Thread.sleep(2000);
@@ -854,22 +729,10 @@ public class MarketPlanner extends base {
 
 		// Assert.assertFalse(atlmppge.getlistOfAllExh().size()<1);
 		System.out.println("Verified Items are removed from the list.");
-
-		/*
-		 * for (WebElement selectExhRR : atlmppge.getlistOfAllExh()) { //
-		 * Thread.sleep(2000); // System.out.println(selectExhM.getText()); if
-		 * (selectExhRR.getText().equals(prop.getProperty("exhibitor1"))) {
-		 * System.out.println("Exh is present in list"); flag12 = true; break; } } if
-		 * (flag12 == true) { System.out.println("Failed.. Present");
-		 * Assert.assertTrue(flag12 = true); } else {
-		 * System.out.println("Passed.. Not Present"); Assert.assertFalse(flag12 =
-		 * false); }
-		 */
-
 	}
 
-	@Test(priority = 16)
-	public void TS016_VerifyDuplicateLinkFunctionalityForListTest() throws InterruptedException, IOException {
+	@Test(priority = 14)
+	public void TS014_VerifyDuplicateLinkFunctionalityForListTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T240: Market Planner: Lists: Lists: Duplicate Link functionality.
 
@@ -927,8 +790,8 @@ public class MarketPlanner extends base {
 		 */
 	}
 
-	@Test(priority = 17)
-	public void TS017_VerifyRenameFunctionalityForListTest() throws InterruptedException, IOException {
+	@Test(priority = 15)
+	public void TS015_VerifyRenameFunctionalityForListTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T241: Market Planner: Lists: Lists: Rename List functionality.
 
@@ -984,11 +847,1811 @@ public class MarketPlanner extends base {
 		System.out.println("Verified Rename list is present");
 		utl.checkItemNotPresentInList(atlmppge.getallList(), currentListName);
 		System.out.println("Verified Old list is not present");
+	}
 
+
+	@Test(priority = 16)
+	public void TS016_VerifyMPDashboardListsCardOverviewTest() throws InterruptedException, IOException {
+
+		// The purpose of this test case to verify:-
+		// UXP-T226: To verify the Market Planner-Lists Card overview and it's
+		// functionality
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		lap.getMPLinkText().click();
+		Thread.sleep(6000);
+
+		// Verify All Lists link is available at Lists card
+		utl.scrollToElement(atlmppge.getmpalllists());
+		Assert.assertTrue(atlmppge.getmpalllists().isDisplayed());
+
+		// Save existing lists in List Card
+		String SavedLists = atlmppge.getmpexistinglists().getText();
+
+		// Click All Lists link and verify the result
+		atlmppge.getmpalllists().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_prod") + "Market-Planner/Lists"));
+
+		// Click Lists tab
+		atlmppge.getmplisttab().click();
+		// Click New Lists button
+		atlmppge.getmpnewlistbutton().click();
+		// Add list name and click create button
+		atlmppge.getCreateNewListNameTxtbx().sendKeys(genData.generateRandomString(10));
+		// atlmppge.getCreateNewListNameTxtbx().sendKeys();
+		atlmppge.getAddListCreateBtn().click();
+
+		// Click Dashboard tab
+		atlmppge.getmpdasboardtab().click();
+		// Verify if recently created list is displayed at List Card
+		Assert.assertFalse(atlmppge.getmpexistinglists().getText().equalsIgnoreCase(SavedLists));
+	}
+
+	@Test(priority = 17)
+	public void TS017_VerifyMPDashboardActivitiesCardOverviewTest() throws InterruptedException, IOException {
+
+		// The purpose of this test case to verify:-
+		// UXP-T227: To verify the Market Planner-Activities overview
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		lap.getMPLinkText().click();
+
+		// Verify all the tabs for Activities Card are properly displayed
+		Assert.assertTrue(atlmppge.getmpbookhotel().getText().contains("Book a Hotel"));
+		Assert.assertTrue(atlmppge.getmpfloorplans().getText().contains("Floor Plans"));
+		Assert.assertTrue(atlmppge.getmpexpdirectory().getText().contains("Exhibitor Directory"));
+		Assert.assertTrue(atlmppge.getmpsavedsearches().getText().contains("Saved Searches"));
+		Assert.assertTrue(atlmppge.getmpmyinfo().getText().contains("My Info"));
+
+		// Verify if all the tabs open up with proper pages
+		atlmppge.getmpbookhotel().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_prod") + "Attend/Hotels"));
+		driver.navigate().back();
+
+		atlmppge.getmpfloorplans().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_prod") + "Market-Map"));
+		driver.navigate().back();
+
+		atlmppge.getmpexpdirectory().click();
+		driver.navigate().back();
+
+		atlmppge.getmpsavedsearches().click();
+		Assert.assertTrue(
+				driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_prod") + "Market-Planner/Saved-Searches"));
+		driver.navigate().back();
+
+		atlmppge.getmpmyinfo().click();
+		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_prod") + "Market-Planner/My-Info"));
+		driver.navigate().back();
 	}
 
 	@Test(priority = 18)
-	public void TS018_VerifyAddToFavoriteFunctionalityForLineTest() throws InterruptedException, IOException {
+	public void TS018_VerifyFilterByOptionsOverviewForListTest() throws InterruptedException, IOException {
+
+		// The purpose of this test case to verify:-
+		// UXP-T249: Market Planner: Lists- List Management- 'Filter By' options
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		// Click on Market Planner
+		lap.getMPLinkText().click();
+
+		atlmppge.getMPHomeListsTab().click();
+
+		// Click on List from left Panel
+		atlmppge.getMpListLeftPannel().click();
+
+		// click on New list btn
+		atlmppge.getMpListNewListBtn().click();
+		// verify New List Popup header
+		Assert.assertTrue(
+				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateListPopupHeader")));
+
+		// Enter List name
+		String newlistname = "Cyb" + genData.generateRandomString(5);
+		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
+
+		// Click on Create Btn
+		atlmppge.getMpListNewCreateBtn().click();
+		Thread.sleep(10000);
+		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistname);
+
+		// Click on Filter By Dropdown
+		atlmppge.getmpFilterByDropdown().click();
+		// Verify All Filter By Options should available.
+		utl.checkItemPresentInListorNot(atlmppge.getfilterByList(), "All");
+		utl.checkItemPresentInListorNot(atlmppge.getfilterByList(), "Exhibitor");
+		utl.checkItemPresentInListorNot(atlmppge.getfilterByList(), "Line");
+		utl.checkItemPresentInListorNot(atlmppge.getfilterByList(), "Product");
+		utl.checkItemPresentInListorNot(atlmppge.getfilterByList(), "Events and Seminars");
+		utl.checkItemPresentInListorNot(atlmppge.getfilterByList(), "Custom");
+
+	}
+
+	@Test(priority = 19)
+	public void TS019_VerifyMarketPlannerListSortByTest() throws InterruptedException, IOException {
+
+		// The purpose of this test case to verify:-
+		// UXP-T251: Market Planner: Lists- List Management- 'Sort By' options
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		// Login to Market Planner
+		/*
+		 * utl.verifyMPLoginFunctionality(); Thread.sleep(6000);
+		 */
+		// Click on Market Planner
+		lap.getMPLinkText().click();
+		Thread.sleep(6000);
+		atlmppge.getMPHomeListsTab().click();
+		// Thread.sleep(10000);
+		Thread.sleep(2000);
+		// Click on List from left Pannel
+		atlmppge.getMpListLeftPannel().click();
+		// Thread.sleep(10000);
+		// click on New list btn
+		atlmppge.getMpListNewListBtn().click();
+		// verify New List Popup header
+		Assert.assertTrue(
+				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateListPopupHeader")));
+		// Enter List name
+		String newlistname = "Cyb" + genData.generateRandomString(5);
+		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
+		System.out.println("list name :: " + newlistname);
+		// Click on Create Btn
+		atlmppge.getMpListNewCreateBtn().click();
+		Thread.sleep(10000);
+
+		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistname);
+		atlmppge.getmpSortByDropdown().click();
+
+		// Verify All Filter By Options should available.
+		utl.checkItemPresentInListorNot(atlmppge.getfilterByList(), "Most Recent Added");
+		utl.checkItemPresentInListorNot(atlmppge.getfilterByList(), "Location");
+		utl.checkItemPresentInListorNot(atlmppge.getfilterByList(), "Time");
+		utl.checkItemPresentInListorNot(atlmppge.getfilterByList(), "A-Z");
+		utl.checkItemPresentInListorNot(atlmppge.getfilterByList(), "Custom");
+	}
+
+	@Test(priority = 20)
+	public void TS020_VerifyDuplicateLinkFunctionalityForListTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP-T247: Market Planner: Lists: Lists: Validations for Duplicate Link
+		// functionality
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		// Click on Market Planner
+		lap.getMPLinkText().click();
+
+		// Click on List tab
+		atlmppge.getMPHomeListsTab().click();
+
+		// Click on List from left Panel
+		atlmppge.getMpListLeftPannel().click();
+
+		// click on New list btn
+		atlmppge.getMpListNewListBtn().click();
+
+		String newlistname = "Cyb" + genData.generateRandomString(5);
+		System.out.println("New list name:"+newlistname);
+		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
+		atlmppge.getMpListNewCreateBtn().click();
+		Thread.sleep(10000);
+
+		mplists = atlmppge.getATLMPListsNames();
+		mpduplicatelistoptns = atlmppge.getATLMPDuplicateListOptns();
+
+		for (int i = 0; i < mplists.size(); i++) {
+			// System.out.println(mplists.get(i).getText());
+			// System.out.println(mpeditlistoptns.get(i).getText());
+			if (mplists.get(i).getText().equals(newlistname)) {
+				mpduplicatelistoptns.get(i).click();
+				break;
+			}
+		}
+		Thread.sleep(5000);
+
+		//		WebElement duplicateLink = driver.findElement(By.xpath("//div[text()='"+newlistname+"']/../div[2]/span[1])"));
+		//		duplicateLink.click();
+		// Without entering List name
+		//		atlmppge.getMPListDuplicateBtn().click();
+		//		Thread.sleep(10000);
+		//		// Verify Invalid list name error msg
+		//		Assert.assertTrue(atlmppge.getDuplicateListErrorMsg().getText().contains(prop.getProperty("InvalidListMsg")));
+		//		
+		// Enter duplicate list name 
+		atlmppge.getMPDuplicateListNameTxtBx().sendKeys(newlistname+"_Duplicate");
+		atlmppge.getMPListDuplicateBtn().click();
+		Thread.sleep(10000);
+		// Verify list with special character duplicated or not
+		utl.checkItemPresentInListorNot(atlmppge.getallList(), newlistname+"_Duplicate");
+
+	}
+
+	@Test(priority = 21)
+	public void TS021_VerifyListDisplayControlsTest() throws InterruptedException, IOException {
+
+		// The purpose of this test case to verify:-
+		// UXP-T253: Market Planner: Lists- List Display Controls
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		// Click on Market Planner
+		lap.getMPLinkText().click();
+
+		atlmppge.getMPHomeListsTab().click();
+
+		// Click on List from left Panel
+		atlmppge.getMpListLeftPannel().click();
+
+		atlmppge.getMpEditListoption().click();
+
+		Assert.assertTrue(atlmppge.getAtlmpGrByExhCheckbox().isDisplayed());
+		Assert.assertTrue(atlmppge.getatlmpListView().isDisplayed());
+		Assert.assertTrue(atlmppge.getatlmpGridView().isDisplayed());
+
+	}
+
+	@Test(priority = 22)
+	public void TS022_VerifyListDisplayControlsFunctionalityTest() throws InterruptedException, IOException {
+
+		// The purpose of this test case to verify:-
+		// UXP-T254: Market Planner: Lists- List Display Controls functionality
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		// Click on Market Planner
+		lap.getMPLinkText().click();
+
+		atlmppge.getMPHomeListsTab().click();
+
+		// Click on List from left Panel
+		atlmppge.getMpListLeftPannel().click();
+
+		// Create new list for copy
+		atlmppge.getMpListNewListBtn().click();
+		// verify New ListPopup header
+		Assert.assertTrue(
+				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateListPopupHeader")));
+		// Enter List name
+		String newlistname = "Cyb" + genData.generateRandomString(5);
+		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
+		System.out.println("list name :: " + newlistname);
+		atlmppge.getMpListNewCreateBtn().click();
+		Thread.sleep(10000);
+		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistname);
+
+		utl.addingExhProdLine(prop.getProperty("line1"));
+		utl.addingExhProdLine(prop.getProperty("line2"));
+		utl.addingExhProdLine(prop.getProperty("exhibitor1"));
+		utl.addingExhProdLine(prop.getProperty("exhibitor3"));
+		utl.addingExhProdLine(prop.getProperty("product1"));
+		utl.addingExhProdLine(prop.getProperty("product2"));
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		// Click on Group By checkbox
+		js.executeScript("document.getElementsByClassName('imc-checkbox--label')[1].click();");
+		// Verify if checkbox is uncheck all the products,lines,exhibitos are displayed
+		// or not.
+		utl.checkItemPresentInListorNot(atlmppge.getnameofElement(), "Product");
+		utl.checkItemPresentInListorNot(atlmppge.getnameofElement(), "Line");
+		utl.checkItemPresentInListorNot(atlmppge.getnameofElement(), "Exhibitor");
+
+		// Click on Group By checkbox
+		js.executeScript("document.getElementsByClassName('imc-checkbox--label')[1].click();");
+		Thread.sleep(3000);
+		// Verify if checkbox is checked then exhibitors and its sub product displayed
+		// or not
+		// Verify Exhibitor Present or not
+		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), prop.getProperty("exhibitor3"));
+		// Verify Exhibitor and its sub product present or not
+		utl.checkItemPresentInListorNot(atlmppge.getmpListOfAllProds(), prop.getProperty("product2"));
+
+		atlmppge.getatlmpListView().click();
+		Assert.assertTrue(atlmppge.getATLmpVerifyGridView().isDisplayed());
+		atlmppge.getatlmpGridView().click();
+		Assert.assertTrue(atlmppge.getATLmpVerifyListView().isDisplayed());
+
+	}
+
+	@Test(priority = 23)
+	public void TS023_VerifyMarketPlannerListElementLocationLinkTest() throws InterruptedException, IOException {
+
+		// The purpose of this test case to verify:-
+		// UXP:263-Market Planner: Lists- List Element - Location link
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		// Click on Market Planner
+		lap.getMPLinkText().click();
+
+		atlmppge.getMPHomeListsTab().click();
+
+		// Click on List from left Panel
+		atlmppge.getMpListLeftPannel().click();
+
+		// Create new list for copy
+		atlmppge.getMpListNewListBtn().click();
+		// verify New ListPopup header
+		Assert.assertTrue(
+				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateListPopupHeader")));
+		// Enter List name
+		String newlistname = "Cyb" + genData.generateRandomString(5);
+		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
+		System.out.println("list name :: " + newlistname);
+		atlmppge.getMpListNewCreateBtn().click();
+		Thread.sleep(10000);
+		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistname);
+
+		utl.addingExhProdLine(prop.getProperty("exhibitor3"));
+
+		atlmppge.atlmpVerifyLocationLink();
+
+		utl.checkLocationLink(atlmppge.getlistOfAllExh(), prop.getProperty("exhibitor3"));
+		System.out.println("Verify location Links are Present");
+		utl.clickOnLocationLink(atlmppge.getlistOfAllExh(), prop.getProperty("exhibitor3"));
+
+		System.out.println("Verify respected location details page opend");
+	}
+
+
+	@Test(priority = 24)
+	public void TS024_VerifyMarketPlannerListsElementMoreOptionsOverviewTest()
+			throws InterruptedException, IOException {
+
+		// The purpose of this test case to verify:-
+		// UXP:258-Market Planner: Lists- List Element Management- 'More' options
+		// overview
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		// Click on Market Planner
+		lap.getMPLinkText().click();
+
+		atlmppge.getMPHomeListsTab().click();
+
+		// Click on List from left Panel
+		atlmppge.getMpListLeftPannel().click();
+
+		atlmppge.getMpEditListoption().click();
+
+		//Add Exhibitor to List
+		utl.addingExhProdLine(prop.getProperty("exhibitor1"));
+
+		WebElement moreLink = driver.findElement(By.xpath("//a[text()='"+prop.getProperty("exhibitor1")+"']/../../../div[1]/div[4]"));
+		Actions moreLinkHover = new Actions(driver);
+		moreLinkHover.moveToElement(moreLink).build().perform();
+		List<WebElement> allMoreOptions = driver.findElements(By.xpath("//a[text()='"+prop.getProperty("exhibitor1")+"']/../../../div[1]/div[4]/div[1]/div[1]/span/a"));
+
+		utl.checkItemPresentInListorNot(allMoreOptions, "Copy");
+		utl.checkItemPresentInListorNot(allMoreOptions, "Move");
+		utl.checkItemPresentInListorNot(allMoreOptions, "Delete");
+		utl.checkItemPresentInListorNot(allMoreOptions, "Add To Schedule");
+	}
+
+	@Test(priority = 25)
+	public void TS025_VerifyMarketPlannerListsElementMoreOoptionsCopyeTest() throws InterruptedException, IOException {
+
+		// The purpose of this test case to verify:-
+		// UXP:259-Market Planner: Lists- List Element Management- More- 'Copy' option
+		// functionality
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		// Click on Market Planner
+		lap.getMPLinkText().click();
+
+		atlmppge.getMPHomeListsTab().click();
+
+		// Click on List from left Panel
+		atlmppge.getMpListLeftPannel().click();
+
+		atlmppge.getMpListNewListBtn().click();
+		// verify New List Popup header
+		Assert.assertTrue(
+				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateListPopupHeader")));
+		// Enter List name
+		String newlistname = "Cyb" + genData.generateRandomString(5);
+		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
+		System.out.println("list name :: " + newlistname);
+		// Click on Create Btn
+		atlmppge.getMpListNewCreateBtn().click();
+		Thread.sleep(5000);
+		// Create new list for copy
+		atlmppge.getMpListNewListBtn().click();
+		// verify New ListPopup header
+		Assert.assertTrue(
+				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateListPopupHeader")));
+		// Enter List name
+		String newlistnameforcopy = "Cyb" + genData.generateRandomString(5);
+		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistnameforcopy);
+		System.out.println("list name :: " + newlistnameforcopy);
+		atlmppge.getMpListNewCreateBtn().click();
+		Thread.sleep(10000);
+		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistname);
+
+		utl.addingExhProdLine(prop.getProperty("exhibitor2"));
+
+		String exName = prop.getProperty("exhibitor2");
+
+		WebElement moreLink = driver.findElement(By.xpath(
+				"//div[@class='imc-gallery imc-saved-exhibitors__outer-row imc-market-planner-list--mobile-overlays-left']/div[1]/div[1]/a[1]/../../div[4]"));
+		Actions moreLinkHover = new Actions(driver);
+		moreLinkHover.moveToElement(moreLink).build().perform();
+		List<WebElement> allMoreOptions = driver.findElements(By.xpath(
+				"//div[@class='imc-gallery imc-saved-exhibitors__outer-row imc-market-planner-list--mobile-overlays-left']/div[1]/div[1]/a[1]/../../div[4]/div[1]/div[1]/span/a"));
+		utl.selectFilters(allMoreOptions, "Copy");
+
+		Thread.sleep(2000);
+		Assert.assertTrue(atlmppge.getMpSelectListPopup().isDisplayed());
+		Thread.sleep(5000);
+
+		utl.ClickOnListSelectBtn(atlmppge.getallList(), newlistnameforcopy);
+
+		atlmppge.getmpBackToList().click();
+		Thread.sleep(5000);
+		// Find the list where we copy the exhibitor
+		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistnameforcopy);
+
+		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), prop.getProperty("exhibitor2"));
+		System.out.println("Verified copied items are present into List");
+
+	}
+
+	@Test(priority = 26)
+	public void TS026_VerifyMarketPlannerListsElementMoreOoptionsMoveTest() throws InterruptedException, IOException {
+
+		// The purpose of this test case to verify:-
+		// UXP:260-Market Planner: Lists- List Element Management- More- 'Move' option
+		// functionality
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		// Click on Market Planner
+		lap.getMPLinkText().click();
+
+		atlmppge.getMPHomeListsTab().click();
+
+		// Click on List from left Panel
+		atlmppge.getMpListLeftPannel().click();
+
+		atlmppge.getMpListNewListBtn().click();
+		// verify New List Popup header
+		Assert.assertTrue(
+				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateListPopupHeader")));
+		// Enter List name
+		String newlistname = "Cyb" + genData.generateRandomString(5);
+		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
+		System.out.println("list name :: " + newlistname);
+		// Click on Create Btn
+		atlmppge.getMpListNewCreateBtn().click();
+		Thread.sleep(5000);
+		// Create new list for copy
+		atlmppge.getMpListNewListBtn().click();
+		// verify New ListPopup header
+		Assert.assertTrue(
+				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateListPopupHeader")));
+		// Enter List name
+		String newlistnameformove = "Cyb" + genData.generateRandomString(5);
+		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistnameformove);
+		System.out.println("list name :: " + newlistnameformove);
+		atlmppge.getMpListNewCreateBtn().click();
+		Thread.sleep(10000);
+		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistname);
+
+		utl.addingExhProdLine(prop.getProperty("exhibitor1"));
+		String exName = prop.getProperty("exhibitor1");
+
+		/*
+		 * WebElement moreLink = driver.findElement(By.xpath("//a[text()='" + exName +
+		 * "']/../../../div[1]/div[4]")); Actions moreLinkHover = new Actions(driver);
+		 * moreLinkHover.moveToElement(moreLink).build().perform(); List<WebElement>
+		 * allMoreOptions = driver .findElements(By.xpath("//a[text()='" + exName +
+		 * "']/../../../div[1]/div[4]/div[1]/div[1]/span/a"));
+		 */
+		WebElement moreLink = driver.findElement(By.xpath(
+				"//div[@class='imc-gallery imc-saved-exhibitors__outer-row imc-market-planner-list--mobile-overlays-left']/div[1]/div[1]/a[1]/../../div[4]"));
+		Actions moreLinkHover = new Actions(driver);
+		moreLinkHover.moveToElement(moreLink).build().perform();
+		List<WebElement> allMoreOptions = driver.findElements(By.xpath(
+				"//div[@class='imc-gallery imc-saved-exhibitors__outer-row imc-market-planner-list--mobile-overlays-left']/div[1]/div[1]/a[1]/../../div[4]/div[1]/div[1]/span/a"));
+
+		Thread.sleep(2000);
+		utl.selectFilters(allMoreOptions, "Move");
+
+		Thread.sleep(2000);
+		Assert.assertTrue(atlmppge.getMpSelectListPopup().isDisplayed());
+		Thread.sleep(5000);
+
+		utl.ClickOnListSelectBtn(atlmppge.getallList(), newlistnameformove);
+
+		/*****************************
+		 * Move Item Removed from current list. Code Pending here
+		 */
+
+		atlmppge.getmpBackToList().click();
+		Thread.sleep(5000);
+		// Find the list where we copy the exhibitor
+		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistnameformove);
+		Thread.sleep(5000);
+		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), prop.getProperty("exhibitor1"));
+		System.out.println("Verified Moved items are present into List");
+
+	}
+
+	@Test(priority = 27)
+	public void TS027_VerifyMarketPlannerListsElementMoreOoptionsDeleteTest() throws InterruptedException, IOException {
+
+		// The purpose of this test case to verify:-
+		// UXP:261-Market Planner: Lists- List Element Management- More- 'Delete' option
+		// functionality
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		// Click on Market Planner
+		lap.getMPLinkText().click();
+
+		atlmppge.getMPHomeListsTab().click();
+
+		// Click on List from left Panel
+		atlmppge.getMpListLeftPannel().click();
+
+		atlmppge.getMpListNewListBtn().click();
+		// verify New List Popup header
+		Assert.assertTrue(
+				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateListPopupHeader")));
+		// Enter List name
+		String newlistname = "Cyb" + genData.generateRandomString(5);
+		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
+		System.out.println("list name :: " + newlistname);
+		// Click on Create Btn
+		atlmppge.getMpListNewCreateBtn().click();
+		Thread.sleep(10000);
+		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistname);
+
+		utl.addingExhProdLine(prop.getProperty("exhibitor1"));
+		utl.addingExhProdLine(prop.getProperty("exhibitor2"));
+		String exName = prop.getProperty("exhibitor1");
+		Thread.sleep(5000);
+		/*
+		 * WebElement moreLink = driver.findElement(By.xpath("//a[text()='" + exName +
+		 * "']/../../../div[1]/div[4]")); Actions moreLinkHover = new Actions(driver);
+		 * moreLinkHover.moveToElement(moreLink).build().perform(); List<WebElement>
+		 * allMoreOptions = driver .findElements(By.xpath("//a[text()='" + exName +
+		 * "']/../../../div[1]/div[4]/div[1]/div[1]/span/a"));
+		 */
+		WebElement moreLink = driver.findElement(By.xpath(
+				"//div[@class='imc-gallery imc-saved-exhibitors__outer-row imc-market-planner-list--mobile-overlays-left']/div[1]/div[1]/a[1]/../../div[4]"));
+		Actions moreLinkHover = new Actions(driver);
+		moreLinkHover.moveToElement(moreLink).build().perform();
+		List<WebElement> allMoreOptions = driver.findElements(By.xpath(
+				"//div[@class='imc-gallery imc-saved-exhibitors__outer-row imc-market-planner-list--mobile-overlays-left']/div[1]/div[1]/a[1]/../../div[4]/div[1]/div[1]/span/a"));
+
+		utl.selectFilters(allMoreOptions, "Delete");
+		Thread.sleep(5000);
+		utl.checkItemNotPresentInList(atlmppge.getlistOfAllExh(), exName);
+	}
+
+	@Test(priority = 28)
+	public void TS028_VerifyMarketPlannerListManagementAddNoteTest() throws InterruptedException, IOException {
+
+		// The purpose of this test case to verify:-
+		// UXP:256-Market Planner: Lists- List Management- 'Add Note' functionality
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+
+		genData = new GenerateData();
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		// Click on Market Planner
+		lap.getMPLinkText().click();
+
+		atlmppge.getMPHomeListsTab().click();
+
+		// Click on List from left Panel
+		atlmppge.getMpListLeftPannel().click();
+
+		atlmppge.getMpListNewListBtn().click();
+		// verify New List Popup header
+		Assert.assertTrue(
+				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateListPopupHeader")));
+		// Enter List name
+		String newlistname = "Cyb" + genData.generateRandomString(5);
+		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
+		System.out.println("list name :: " + newlistname);
+		// Click on Create Btn
+		atlmppge.getMpListNewCreateBtn().click();
+		Thread.sleep(10000);
+		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistname);
+
+		utl.addingExhProdLine(prop.getProperty("exhibitor1"));
+		String exName = prop.getProperty("exhibitor1");
+		WebElement noteLink = driver.findElement(By.xpath("//a[text()='" + exName + "']/../../../div[1]/div[3]"));
+		noteLink.click();
+		// Store the new note name
+		String newnotetitle = "CybNote" + genData.generateRandomString(3);
+		// Enter Note title
+		atlexhact.getNoteTitleTxtBx().sendKeys(newnotetitle);
+
+		Thread.sleep(5000);
+		// Enter Note Content
+		atlexhact.getNoteContentTxtBx().sendKeys("TestprodNote" + genData.generateRandomString(6));
+		Thread.sleep(5000);
+		atlexhact.getNoteTitleTxtBx().sendKeys(newnotetitle);
+		// Click on 'Save' button
+		atlexhact.getNoteSaveBtn().click();
+		Thread.sleep(5000);
+
+		noteLink.click();
+		Thread.sleep(2000);
+		// Click on 'View all Notes for an Exhibitor' link on Add Notes pop-up
+		atlexhact.getViewAllNotesLink().click();
+		Thread.sleep(5000);
+
+		List<WebElement> allnoteslist = atlexhact.getSavedNoteNameInAllNotesList();
+
+		utl.checkItemPresentInListorNot(allnoteslist, newnotetitle);
+		utl.selectFilters(allnoteslist, newnotetitle);
+
+		Thread.sleep(2000);
+		// Delete the saved note
+		atlexhact.getDeleteNoteBtn().click();
+		noteLink.click();
+		Thread.sleep(2000);
+		// Click on 'View all Notes for an Exhibitor' link on Add Notes pop-up
+		atlexhact.getViewAllNotesLink().click();
+		Thread.sleep(2000);
+		// Verify Deleted Note not present
+		// utl.checkItemNotPresentInList(atlexhact.getSavedNoteNameInAllNotesList(),
+		// newnotetitle);
+		try {
+			utl.checkItemNotPresentInList(atlexhact.getSavedNoteNameInAllNotesList(), newnotetitle);
+		} catch (Exception e) {
+			System.out.println("Note Deleted successully");
+			Thread.sleep(2000);
+			atlmppge.getcloseNotePopup().click();
+		}
+		atlmppge.getcloseNotePopup().click();
+		driver.get(prop.getProperty("atlmrkturl_prod"));
+	}
+
+	@Test(priority = 29)
+	public void TS029_VerifyMarketPlannerEditListCustomItemTest() throws InterruptedException, IOException {
+
+		// The purpose of this test case to verify:-
+		// UXP:264-Market Planner: Lists: Lists: Edit List: Add Custom Item
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+
+		genData = new GenerateData();
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		// Click on Market Planner
+		lap.getMPLinkText().click();
+
+		atlmppge.getMPHomeListsTab().click();
+
+		// Click on List from left Panel
+		atlmppge.getMpListLeftPannel().click();
+
+		atlmppge.getMpListNewListBtn().click();
+		// verify New List Popup header
+		Assert.assertTrue(
+				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateListPopupHeader")));
+		// Enter List name
+		String newlistname = "Cyb" + genData.generateRandomString(5);
+		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
+		System.out.println("list name :: " + newlistname);
+		// Click on Create Btn
+		atlmppge.getMpListNewCreateBtn().click();
+		Thread.sleep(5000);
+		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistname);
+		// Click on Add Custom item Btn
+		atlmppge.getAddCustomItem().click();
+		// Verify Header of custom Item popup
+		Assert.assertTrue(atlmppge.getcustomItemHeader().getText().contains(prop.getProperty("CustomItemHeader")));
+		String newTitle = "Cyb" + genData.generateRandomString(5);
+		// Enter Title
+		atlmppge.getCustomTitle().sendKeys(newTitle);
+		String newDesc = "Cyb" + genData.generateRandomString(20);
+		// Enter Description
+		atlmppge.getCustomDesc().sendKeys(newDesc);
+		// click on Submit Btn
+		atlmppge.getCustomItemsubmitBtn().click();
+		utl.checkItemPresentInListorNot(atlmppge.getATLlistOfCustomItems(), newDesc);
+
+		// Cancel Btn Test
+		atlmppge.getAddCustomItem().click();
+		// Verify Header of custom Item popup
+		Assert.assertTrue(atlmppge.getcustomItemHeader().getText().contains(prop.getProperty("CustomItemHeader")));
+		String newTitle1 = "Cyb" + genData.generateRandomString(5);
+		// Enter Title
+		atlmppge.getCustomTitle().sendKeys(newTitle1);
+		String newDesc1 = "Cyb" + genData.generateRandomString(20);
+		// Enter Description
+		atlmppge.getCustomDesc().sendKeys(newDesc1);
+		// click on Submit Btn
+		atlmppge.getcancelBtnCustomItem().click();
+		utl.checkItemNotPresentInList(atlmppge.getATLlistOfCustomItems(), newDesc1);
+
+	}
+
+	@Test(priority = 30)
+	public void TS030_VerifyMarketPlannerEditListAddNoteTest() throws InterruptedException, IOException {
+
+		// The purpose of this test case to verify:-
+		// UXP:265-Market Planner: Lists: Lists: Edit List: Add Note
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+
+		genData = new GenerateData();
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		// Click on Market Planner
+		lap.getMPLinkText().click();
+
+		atlmppge.getMPHomeListsTab().click();
+
+		// Click on List from left Panel
+		atlmppge.getMpListLeftPannel().click();
+
+		atlmppge.getMpListNewListBtn().click();
+		// verify New List Popup header
+		Assert.assertTrue(
+				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateListPopupHeader")));
+		// Enter List name
+		String newlistname = "Cyb" + genData.generateRandomString(5);
+		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
+		System.out.println("list name :: " + newlistname);
+		// Click on Create Btn
+		atlmppge.getMpListNewCreateBtn().click();
+		Thread.sleep(10000);
+		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistname);
+		// Click on Add Note Btn
+		atlmppge.getaddNoteBtn().click();
+		// Store the new note name
+		String newnotetitle = "CybNote" + genData.generateRandomString(3);
+		// Enter Note title
+		atlexhact.getNoteTitleTxtBx().sendKeys(newnotetitle);
+		Thread.sleep(5000);
+		// Enter Note Content
+		atlexhact.getNoteContentTxtBx().sendKeys("TestprodNote" + genData.generateRandomString(6));
+		Thread.sleep(5000);
+		atlexhact.getNoteTitleTxtBx().sendKeys(newnotetitle);
+		// Click on 'Save' button
+		atlexhact.getNoteSaveBtn().click();
+		Thread.sleep(5000);
+		// Verify Note is appeared below the Add note btn
+		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllNewAddedNotes(), newnotetitle);
+		// Click on Add Note Btn
+		atlmppge.getaddNoteBtn().click();
+		Thread.sleep(2000);
+		// Click on 'View all Notes for an Exhibitor' link on Add Notes pop-up
+		atlexhact.getViewAllNotesLink().click();
+		Thread.sleep(5000);
+
+		List<WebElement> allnoteslist = atlexhact.getSavedNoteNameInAllNotesList();
+
+		utl.checkItemPresentInListorNot(allnoteslist, newnotetitle);
+		utl.selectFilters(allnoteslist, newnotetitle);
+
+		Thread.sleep(2000);
+		// Delete the saved note
+		atlexhact.getDeleteNoteBtn().click();
+		// Click on Add Note Btn
+		atlmppge.getaddNoteBtn().click();
+		Thread.sleep(2000);
+		// Click on 'View all Notes for an Exhibitor' link on Add Notes pop-up
+		atlexhact.getViewAllNotesLink().click();
+		Thread.sleep(2000);
+		// Verify Deleted Note not present
+		try {
+			utl.checkItemNotPresentInList(atlexhact.getSavedNoteNameInAllNotesList(), newnotetitle);
+		} catch (Exception e) {
+			System.out.println("Note Deleted successully");
+			atlmppge.getcloseNotePopup().click();
+		}
+		// Close Note Popup
+		// Click on Add Note Btn
+		atlmppge.getaddNoteBtn().click();
+		// Store the new note name
+		String newnotetitle1 = "CybNote" + genData.generateRandomString(3);
+		// Enter Note title
+		atlexhact.getNoteTitleTxtBx().sendKeys(newnotetitle1);
+
+		Thread.sleep(5000);
+		// Enter Note Content
+		atlexhact.getNoteContentTxtBx().sendKeys("TestprodNote" + genData.generateRandomString(6));
+		Thread.sleep(5000);
+		atlexhact.getNoteTitleTxtBx().sendKeys(newnotetitle1);
+		// Click on 'Save' button
+		atlmppge.getcloseNotePopup().click();
+		// utl.checkItemNotPresentInList(atlexhact.getSavedNoteNameInAllNotesList(),
+		// newnotetitle1);
+		try {
+			utl.checkItemNotPresentInList(atlexhact.getSavedNoteNameInAllNotesList(), newnotetitle1);
+		} catch (Exception e) {
+			System.out.println("Note Popup closed successully");
+
+		}
+	}
+
+	@Test(priority = 31)
+	public void TS031_VerifyMarketPlannerListsAllSavedExhibitorsTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP-T267: Market Planner: Lists- All Saved Exhibitors
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+
+		atlgs = new ATLGlobalSearchPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		// Login to Market Planner
+		/*
+		 * utl.verifyMPLoginFunctionality(); Thread.sleep(6000);
+		 */
+		atlgs.getATLGlobalSearchTextBox().sendKeys("   ");
+		atlgs.getATLSearchButton().click();
+		Thread.sleep(15000);
+
+		String exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: " + exhname);
+
+		// Click on Favorite icon of 1st exhibitor
+		atlexhact.getAddFavIcon().click();
+		// Click on Market Planner link
+		lap.getMPLinkText().click();
+
+		// Click on Lists tab on MP home page
+		atlmppge.getMPHomeListsTab().click();
+		atlmppge.getallSavedExhibiorMenu().click();
+		Thread.sleep(8000);
+		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), exhname);
+
+	}
+
+
+	@Test(priority = 32)
+	public void TS032_VerifyMarketPlannerRegistrationsTabTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP:280-Market Planner: Registrations
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		genData = new GenerateData();
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		// Click on Market Planner
+		lap.getMPLinkText().click();
+		Thread.sleep(8000);
+
+		// Click on Mp Reg tab
+		atlmppge.getmpRegistrationTab().click();
+		Thread.sleep(5000);
+
+		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_prod")+"Market-Planner/Registrations"));
+
+		atlmppge.getmpRegisterNowBtn().click();
+		Thread.sleep(3000);
+
+		Assert.assertFalse(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_prod")+"Market-Planner/Registrations"));
+
+		driver.get(prop.getProperty("atlmrkturl_prod"));
+	}
+
+
+	@Test(priority = 33)
+	public void TS033_VerifyMarketSavedSearchesfunctionalityTest() throws InterruptedException, IOException {
+
+		// The purpose of this test case to verify:-
+		// UXP:T56-Market Planner: Saved Searches
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("saveSearchTerm"));
+		atlgs.getATLSearchButton().click();
+		Thread.sleep(5000);
+
+		// Click on Saved searches Icon
+		atlmppge.getmpSavedSearchesIcon().click();
+		// Click on Save Search Btn to Save the Term
+		atlmppge.getmpSaveSearcheBtn().click();
+		// Enter Search text into input field
+		atlmppge.getmpSaveSearcheNameInput().sendKeys(prop.getProperty("saveSearchTerm"));
+		// Click on Save Btn
+		atlmppge.getmpSaveSearcheInputBtn().click();
+		Thread.sleep(3000);
+
+		// Click on Market Planner
+		lap.getMPLinkText().click();
+
+		// Click on MP Saved searches tab
+		atlmppge.getmpsavedsearchestab().click();
+
+		// click on Search Term
+		utl.selectFilters(atlmppge.getmplistOfAllSaveSearches(), prop.getProperty("saveSearchTerm"));
+		Thread.sleep(5000);
+		String temp = atlmppge.getmplistSearcheAlert().getText();
+
+		// Verify save search
+		Assert.assertTrue(temp.contains(prop.getProperty("saveSearchTerm")));
+	}
+
+	@Test(priority = 34)
+	public void TS034_VerifyMarketSavedSearchesDeletefunctionalityTest() throws InterruptedException, IOException {
+
+		// The purpose of this test case to verify:-
+		// UXP:281-Market Planner: Saved Searches- 'Delete' functionality
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+
+		genData = new GenerateData();
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		lap.getMPLinkText().click();
+		// Click on Mp Reg tab
+		atlmppge.getmpsavedsearchestab().click();
+
+		try {
+			if (atlmppge.getnoSavedSearchesMsg().isDisplayed()) {
+				TS033_VerifyMarketSavedSearchesfunctionalityTest();
+				// Click on Market Planner
+				lap.getMPLinkText().click();
+				// Click on Mp Reg tab
+				atlmppge.getmpsavedsearchestab().click();
+
+				List<WebElement> deleteBtn = driver.findElements(
+						By.xpath("//a[text()='" + prop.getProperty("saveSearchTerm") + "']/../../div[2]/span[2]"));
+
+				// System.out.println(deleteBtn);
+				for (WebElement webElement : deleteBtn) {
+					webElement.click();
+					atlmppge.getmpConfirmDeleteBtn().click();
+					Thread.sleep(5000);
+				}
+				try {
+					utl.checkItemNotPresentInList(atlmppge.getmplistOfAllSaveSearches(),
+							prop.getProperty("saveSearchTerm"));
+				} catch (Exception e) {
+					System.out.println("Saved Search Term deleted succsfully ");
+				}
+			}
+		} catch (TimeoutException ee) {
+
+			// Click on Market Planner
+			lap.getMPLinkText().click();
+			// Click on Mp Reg tab
+			atlmppge.getmpsavedsearchestab().click();
+
+			List<WebElement> deleteBtn = driver.findElements(
+					By.xpath("//a[text()='" + prop.getProperty("saveSearchTerm") + "']/../../div[2]/span[2]"));
+
+			// System.out.println(deleteBtn);
+			for (WebElement webElement : deleteBtn) {
+				webElement.click();
+				atlmppge.getmpConfirmDeleteBtn().click();
+				Thread.sleep(5000);
+			}
+			try {
+				utl.checkItemNotPresentInList(atlmppge.getmplistOfAllSaveSearches(),
+						prop.getProperty("saveSearchTerm"));
+			} catch (Exception e) {
+				System.out.println("Saved Search Term deleted succsfully ");
+			}
+		}
+	}
+
+	@Test(priority = 35)
+	public void TS035_VerifyMarketPlannerListsElementMoreOptionsAddToScheduleTest()
+			throws InterruptedException, IOException {
+
+		// The purpose of this test case to verify:-
+		// UXP:262-Market Planner: Lists- List Element Management- More- 'Add to
+		// Schedule' option functionality
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		// Click on Market Planner
+		lap.getMPLinkText().click();
+
+		atlmppge.getMPHomeListsTab().click();
+
+		// Click on List from left Panel
+		atlmppge.getMpListLeftPannel().click();
+
+		// Click Edit List link for any list
+		atlmppge.getEditListAtListTab().click();
+		atlmppge.getMoreOptionPROD().click();
+		atlmppge.getAddToSchedulePROD().click();
+
+		/*
+		 * atlmppge.getMpListNewListBtn().click(); // verify New List Popup header
+		 * Assert.assertTrue(atlmppge.getMpListNewGroupPopupHeader().getText().contains(
+		 * prop.getProperty( "CreateListPopupHeader"))); // Enter List name String
+		 * newlistname = "Cyb" + genData.generateRandomString(5);
+		 * atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
+		 * System.out.println("list name :: " + newlistname); // Click on Create Btn
+		 * atlmppge.getMpListNewCreateBtn().click(); Thread.sleep(10000);
+		 * 
+		 * utl.ClickOnEditBtnOfAnyList(atlmppge.getallList());
+		 * 
+		 * utl.addingExhProdLine(prop.getProperty("exhibitor1")); String
+		 * exName=prop.getProperty("exhibitor1"); Thread.sleep(5000); WebElement
+		 * moreLink=driver.findElement(By.xpath("//a[text()='"+exName+
+		 * "']/../../../div[1]/div[4]")); Actions moreLinkHover=new Actions(driver);
+		 * moreLinkHover.moveToElement(moreLink).build().perform();
+		 * List<WebElement>allMoreOptions=driver.findElements(By.xpath("//a[text()='"+
+		 * exName+"']/../../../div[1]/div[4]/div[1]/div[1]/span/a"));
+		 * utl.selectFilters(allMoreOptions, "Add To Schedule");
+		 */
+
+		// Click on start Clendar
+		atlmppge.getmpSelectStartDateCalendar().click();
+
+		// Click on nxt month arrow
+		atlmppge.getmpCalendarNextMonthArrow().click();
+		// Print Month
+		String startMonth = atlmppge.getmpmonthName().getText();
+
+		// Select Date
+		String wDay = null;
+		for (WebElement SelectDate : atlmppge.getmpListOfAllCalendarDays()) {
+
+			if (SelectDate.getText().contains("20")) {
+				wDay = SelectDate.getAttribute("aria-label");
+				SelectDate.click();
+				break;
+			}
+		}
+		// Split Day from date
+		String dayName = wDay.split(" ")[0].trim();
+		// select Start Time
+		Select selectStartTime = new Select(atlmppge.getmpSelectStartTime());
+		selectStartTime.selectByIndex(5);
+		Thread.sleep(2000);
+		// Start Time
+		String startTime = atlmppge.getmpSelectStartTime().getAttribute("value");
+
+		String SelectedDateTime = 12 + startMonth + " " + startTime;
+		System.out.println("Start Date and Time :: " + SelectedDateTime);
+
+		// Click on End Date Of calendar
+		atlmppge.getmpSelectEndDateCalendar().click();
+		// Click on nxt month arrow
+		atlmppge.getmpCalendarNextMonthArrow().click();
+		// Click on nxt month arrow
+		atlmppge.getmpCalendarNextMonthArrow().click();
+		// Print End Month
+		String endMonth = atlmppge.getmpmonthName().getText();
+		// Select End Date
+		utl.selectFilters(atlmppge.getmpListOfAllCalendarDays(), "12");
+		// End Time
+
+		Select selectEndTime = new Select(atlmppge.getmpSelectEndTime());
+		selectEndTime.selectByIndex(4);
+		Thread.sleep(2000);
+		// End Date And Time
+		String endTime = atlmppge.getmpSelectStartTime().getAttribute("value");
+
+		String SelectedEndDateTime = 12 + endMonth + " " + endTime;
+		System.out.println("End Date and Time :: " + SelectedEndDateTime);
+		atlmppge.getmpAddToScheduledSaveBtn().click();
+		Thread.sleep(2000);
+
+		boolean flag = false;
+		String displayTime = null;
+		List<WebElement> listOfDateTime = driver.findElements(By.xpath("//div[@class='imc-type--title-5-ui']"));
+		for (WebElement dateTime : listOfDateTime) {
+
+			if (dateTime.getText().contains(dayName)) {
+
+				displayTime = dateTime.getText().split(" ")[2].trim();
+				// verify display time.
+				Assert.assertTrue(displayTime.contains("@" + startTime));
+				flag = true;
+				break;
+			}
+		}
+		if (flag == true) {
+			System.out.println(dayName + " Present");
+			Assert.assertTrue(flag = true);
+		} else {
+			System.out.println(dayName + " Not Present");
+			Assert.assertTrue(flag = false);
+		}
+
+	}
+
+
+	@Test(priority = 36)
+	public void TS036_VerifyAddToListFunctionalityUsingQuickAddTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP-T257: Market Planner: Lists: Lists: Edit List: Quick Add
+		// using 'Quick Add'
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		genData = new GenerateData();
+		atlmppge = new ATLMarketPlannerPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		// Click on Market Planner
+		lap.getMPLinkText().click();
+		Thread.sleep(6000);
+		// Click on List tab
+		atlmppge.getMPHomeListsTab().click();
+		Thread.sleep(10000);
+		// Click on List from left Pannel
+		atlmppge.getMpListLeftPannel().click();
+
+		// Create new list for copy
+		atlmppge.getMpListNewListBtn().click();
+		// verify New ListPopup header
+		Assert.assertTrue(
+				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateListPopupHeader")));
+		// Enter List name
+		String newlistname = "Cyb" + genData.generateRandomString(5);
+		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
+		System.out.println("list name :: " + newlistname);
+		atlmppge.getMpListNewCreateBtn().click();
+		Thread.sleep(10000);
+		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistname);
+
+		utl.addingExhProdLine(prop.getProperty("line1"));
+
+		/*
+		 * utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), "Favorites");
+		 * 
+		 * atlmppge.getMpQuickAdd().sendKeys("Anju"); Thread.sleep(3000);
+		 * atlmppge.getMpQuickAdd().sendKeys(Keys.ARROW_DOWN); Thread.sleep(3000);
+		 * atlmppge.getMpQuickAdd().sendKeys(Keys.ARROW_DOWN);
+		 * 
+		 * atlmppge.getMpQuickAdd().sendKeys(Keys.ENTER);
+		 */
+		Thread.sleep(3000);
+
+		String autoSuggetion = atlmppge.getMpQuickAdd().getAttribute("value");
+		// Verify Selected product added or not
+		System.out.println("prod Name::" + autoSuggetion);
+		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), autoSuggetion);
+
+	}
+
+	@Test(priority = 37)
+	public void TS037_VerifyMarketPlanneMyInfoEditProfile() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP-T270: Market Planner: My Info: Edit Profile
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+
+		atlgs = new ATLGlobalSearchPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		lap.getMPLinkText().click();
+		atlmppge.getmyinfotab().click();
+
+		// Change and Verify First Name and Last Name
+
+		atlmppge.getmyinfoeditprofile().click();
+		Assert.assertTrue(atlmppge.getmyinfoverifyeditprofile().isDisplayed());
+		System.out.println("Edit Profile page is displayed successfully.");
+		Thread.sleep(3000);
+		/*
+		 * atlmppge.getmyinfonamepencil().click();
+		 * atlmppge.getmyinfofirstname().sendKeys(genData.generateRandomString(8));
+		 * String FirstName = atlmppge.getmyinfofirstname().getText();
+		 * atlmppge.getmyinfolastname().sendKeys(genData.generateRandomString(8));
+		 * String LastName = atlmppge.getmyinfolastname().getText();
+		 * atlmppge.getmyinfodiscardbtn().click();
+		 * Assert.assertFalse(atlmppge.getverifymyinfoname().getText().contains(
+		 * FirstName+LastName)); System.out.println("Name is not updated.");
+		 * 
+		 * atlmppge.getmyinfonamepencil().click();
+		 * atlmppge.getmyinfofirstname().sendKeys(genData.generateRandomString(8));
+		 * String FirstName1 = atlmppge.getmyinfofirstname().getText();
+		 * atlmppge.getmyinfolastname().sendKeys(genData.generateRandomString(8));
+		 * String LastName1 = atlmppge.getmyinfolastname().getText();
+		 * atlmppge.getmyinfosavebutton().click();
+		 * Assert.assertFalse(atlmppge.getverifymyinfoname().getText().contains(
+		 * FirstName1+LastName1)); System.out.println("Name is updated successfully.");
+		 */
+
+		// Change and Verify Email Address
+		/*
+		 * atlmppge.getmyinfoemail().click();
+		 * atlmppge.getmyinfoemailcancelbtn().click();
+		 * Assert.assertTrue(atlmppge.getmyinfoemail().isDisplayed());
+		 * System.out.println("Email Form is closed successfully with Cancel button.");
+		 * 
+		 * atlmppge.getmyinfoemail().click(); atlmppge.getmyinfemailclosebtn().click();
+		 * Assert.assertTrue(atlmppge.getmyinfoemail().isDisplayed());
+		 * System.out.println("Email Form is closed successfully with X button.");
+		 * 
+		 * atlmppge.getmyinfoemail().click();
+		 * atlmppge.getmyinfoemailtxtbox().sendKeys(genData.generateEmail(15));
+		 * Thread.sleep(3000); String Email = atlmppge.getmyinfoemailtxtbox().getText();
+		 * atlmppge.getmyinfoverifybtn().click();
+		 * 
+		 * Assert.assertTrue(atlmppge.getmyinfonewemail().getText().contains(Email));
+		 * System.out.println("New email is properly added.");
+		 * 
+		 * // Change and Verify Email Address
+		 */
+		atlmppge.getmyinfocompanynamepencil().click();
+		Thread.sleep(5000);
+		atlmppge.getmyinfocompnametxt().clear();
+		Thread.sleep(5000);
+		atlmppge.getmyinfocompnametxt().sendKeys("TestCompName" + genData.generateRandomString(5));
+		// atlmppge.getmyinfocompnametxt().sendKeys(genData.generateRandomString(10));
+		String CompanyName = atlmppge.getmyinfocompnametxt().getText();
+		atlmppge.getmyinfosave2btn().click();
+		Assert.assertTrue(atlmppge.getmyinfoverifycompanyname().getText().contains(CompanyName));
+		System.out.println("Company Name is updated successfully.");
+
+		atlmppge.getmyinfocompanynamepencil().click();
+		atlmppge.getmyinfocompnametxt().click();
+		atlmppge.getmyinfocompnametxt().clear();
+		atlmppge.getmyinfocompnametxt().sendKeys("TestCompName" + genData.generateRandomString(5));
+		String CompanyName1 = atlmppge.getmyinfocompnametxt().getText();
+		atlmppge.getmyinfodiscard2btn().click();
+		Assert.assertTrue(atlmppge.getmyinfoverifycompanyname().getText().contains(CompanyName));
+		System.out.println("Company Name is not updated with Discard button.");
+	}
+
+	@Test(priority = 38)
+	public void TS038_VerifyMarketPlanneMyInfoOverview() throws InterruptedException, IOException {
+
+		// The purpose of this test case to verify:-
+		// UXP-T278:Market Planner: My Info overview
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+
+		atlgs = new ATLGlobalSearchPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		lap.getMPLinkText().click();
+		atlmppge.getmyinfotab().click();
+		Assert.assertTrue(atlmppge.getverifymyinfopage().isDisplayed());
+		System.out.println("My Info page is displayed successfully.");
+
+	}
+
+	@Test(priority = 39)
+	public void TS039_VerifyMarketPlanneMyInfoMyInquiriesTab() throws InterruptedException, IOException {
+
+		// The purpose of this test case to verify:-
+		// UXP-T279: Market Planner: My Info- My Inquiries
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+
+		atlgs = new ATLGlobalSearchPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		lap.getMPLinkText().click();
+		atlmppge.getmyinfotab().click();
+
+		// Click My inquiries tab and verify results
+		atlmppge.getmyinfomyinquiriestab().click();
+		Assert.assertTrue(atlmppge.getmyinfoverifymyinquiries().isDisplayed());
+		System.out.println("My Inquiries page is displayed properly.");
+	}
+
+	@Test(priority = 06)
+	public void TS040_VerifyTabsUnderListsSectionTest() throws InterruptedException, IOException {
+
+		// The purpose of this test case to verify:-
+		// UXP-T299: Maket Planner: Lists: Tabs under Lists section
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+
+		atlgs = new ATLGlobalSearchPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		lap.getMPLinkText().click();
+
+		// Click Lists tab and verify tabs under it
+		atlmppge.getMPHomeListsTab().click();
+		Assert.assertTrue(atlmppge.getmplistsfavorites().isDisplayed());
+		Assert.assertTrue(atlmppge.getListsPageListsMenu().isDisplayed());
+		Assert.assertTrue(atlmppge.getmplistsallsavedproduts().isDisplayed());
+		Assert.assertTrue(atlmppge.getmplistsallsavedexhibitors().isDisplayed());
+		Assert.assertTrue(atlmppge.getmplistsenentsandseminars().isDisplayed());
+		Assert.assertTrue(atlmppge.getmplistsmanagelist().isDisplayed());
+		System.out.println("List tab details are displayed properly.");
+	}
+
+	@Test(priority = 41)
+	public void TS041_VerifyListTabDetailsTest() throws InterruptedException, IOException {
+
+		// The purpose of this test case to verify:-
+		// UXP-T228: Maket Planner: Lists: Lists tab details
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+
+		atlgs = new ATLGlobalSearchPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		lap.getMPLinkText().click();
+
+		// Click Lists tab and verify tabs under it
+		atlmppge.getMPHomeListsTab().click();
+		Assert.assertTrue(atlmppge.getmplistsfavorites().isDisplayed());
+		Assert.assertTrue(atlmppge.getListsPageListsMenu().isDisplayed());
+		Assert.assertTrue(atlmppge.getmplistsallsavedproduts().isDisplayed());
+		Assert.assertTrue(atlmppge.getmplistsallsavedexhibitors().isDisplayed());
+		Assert.assertTrue(atlmppge.getmplistsenentsandseminars().isDisplayed());
+		Assert.assertTrue(atlmppge.getmplistsmanagelist().isDisplayed());
+		System.out.println("List tab options are displayed properly.");
+
+		// Verify List Details on the page
+		atlmppge.getListsPageListsMenu().click();
+		Assert.assertTrue(atlmppge.getmplistsmanagelist().isDisplayed());
+		Assert.assertTrue(atlmppge.getmpduplicatelistbtn().isDisplayed());
+		Assert.assertTrue(atlmppge.getmpeditlistbtn().isDisplayed());
+		Assert.assertTrue(atlmppge.getmparrangelistbtn().isDisplayed());
+		Assert.assertTrue(atlmppge.getmpnewlistbtn().isDisplayed());
+		Assert.assertTrue(atlmppge.getmpnewgrpbtn().isDisplayed());
+		System.out.println("List details are displayed properly.");
+
+	}
+
+
+	//$%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+	@Test(priority = 42)
+	public void TS042_VerifyAddToFavoriteFunctionalityUsingQuickAddForproductTest()
+			throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP-T230: Maket Planner: Lists- Favorites- Add a product to Favorites using
+		// 'Quick Add'
+		// using 'Quick Add'
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		// Click on Market Planner
+		lap.getMPLinkText().click();
+		Thread.sleep(6000);
+		// Click on List tab
+		atlmppge.getMPHomeListsTab().click();
+		Thread.sleep(10000);
+		// Click on List from left Pannel
+		atlmppge.getMpListLeftPannel().click();
+
+		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), "Favorites");
+
+		utl.addingExhProdLine(prop.getProperty("line1"));
+		utl.addingExhProdLine(prop.getProperty("product2"));
+
+		Thread.sleep(3000);
+		String autoSuggetion = atlmppge.getMpQuickAdd().getAttribute("value");
+		// Verify Selected product added or not
+		System.out.println("prod Name::" + autoSuggetion);
+		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), autoSuggetion);
+
+	}
+
+	@Test(priority = 43)
+	public void TS043_VerifyAddToFavoriteFunctionalityUsingQuickAddForLinesTest()
+			throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP-T231: Maket Planner: Lists- Favorites- Add an line to Favorites using 'Quick Add'
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		// Click on Market Planner
+		lap.getMPLinkText().click();
+		Thread.sleep(6000);
+		// Click on List tab
+		atlmppge.getMPHomeListsTab().click();
+		Thread.sleep(10000);
+		// Click on List from left Pannel
+		atlmppge.getMpListLeftPannel().click();
+
+		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), "Favorites");
+
+		utl.addingExhProdLine(prop.getProperty("line1"));
+		Thread.sleep(3000);
+		String autoSuggetion = atlmppge.getMpQuickAdd().getAttribute("value");
+		// Verify Selected Line added or not
+		System.out.println("Line Name::" + autoSuggetion);
+		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), autoSuggetion);
+
+	}
+
+	@Test(priority = 44)
+	public void TS044_VerifyMarketPlannerListSortByFunctionalityTest() throws IOException, InterruptedException {
+
+		// The purpose of this test case to verify:-
+		// UXP-T252: Market Planner: Lists- List Management- Sort By options
+		// functionality
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("sortByFilterInput"));
+		atlgs.getATLSearchButton().click();
+		Thread.sleep(5000);
+
+		String exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: " + exhname);
+
+		// Click on Favorite icon of 1st exhibitor
+		atlexhact.getAddFavIcon().click();
+		Thread.sleep(2000);
+
+		utl.addingExhForSorting("Baggallini");
+
+		Thread.sleep(2000);
+		String exhname1 = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: " + exhname1);
+		Thread.sleep(2000);
+		// Click on Favorite icon of 1st exhibitor
+		atlexhact.getAddFavIcon().click();
+		Thread.sleep(2000);
+
+		utl.addingExhForSorting("TWS Italian Paintings");
+		Thread.sleep(5000);
+
+		String exhname2 = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: " + exhname2);
+
+		// Click on Favorite icon of 1st exhibitor
+		atlexhact.getAddFavIcon().click();
+
+		lap.getMPLinkText().click();
+
+		// Click on Lists tab on MP home page
+		atlmppge.getMPHomeListsTab().click();
+		atlmppge.getATLMPListsPageFavoritesMenu().click();
+		Thread.sleep(5000);
+
+		/*
+		 * // Click on SortBy Dropdown atlmppge.getmpSortByDropdown().click();
+		 * 
+		 * // Verify All Filter By Options should available.
+		 * utl.selectFilters(atlmppge.getfilterByList(), "Most Recent Added");
+		 * Thread.sleep(5000); List<WebElement> favlist = driver .findElements(By.xpath(
+		 * "//li[@class='imc-list-edit--draggable']/div/div/div/a")); boolean flag =
+		 * false; for (WebElement list : favlist) {
+		 * 
+		 * if (list.getText().equals(exhname)) {
+		 * 
+		 * System.out.println("Equal"); flag = true; break; } } if (flag == true) {
+		 * Assert.assertTrue(flag = true); } else { Assert.assertTrue(flag = false); }
+		 */
+		// Sort filter
+
+		// Create current Exhibitor list without sort
+		List<String> currentList = new ArrayList<String>();
+		List<WebElement> elementList = driver
+				.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
+		for (WebElement we : elementList) {
+			currentList.add(we.getText().toLowerCase());
+		}
+		System.out.println("Current Exhibitor List : " + currentList);
+
+		// Create sorted list
+		List<String> sortedList = new ArrayList<String>();
+		for (String s : currentList) {
+			sortedList.add(s.toLowerCase());
+		}
+		Collections.sort(sortedList);
+		// System.out.println("Sorted list : "+sortedList);
+
+		atlmppge.getmpSortByDropdown().click();
+
+		// Verify All Filter By Options should available.
+		utl.selectFilters(atlmppge.getfilterByList(), "A-Z");
+		Thread.sleep(5000);
+		List<WebElement> favlist2 = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
+
+		// Sorted list from filter Sort A-Z
+		List<String> expectedSortedList = new ArrayList<String>();
+		for (WebElement we : favlist2) {
+			expectedSortedList.add(we.getText().toLowerCase());
+		}
+		// Thread.sleep(25000);
+		System.out.println("Expected sorted Exhibitor List : " + expectedSortedList);
+		// Verify Exhibitor List is Sorted or not
+		Assert.assertEquals(sortedList, expectedSortedList, "Exhibitor List Should be sorted");
+
+		// Location
+		// Create current Exhibitor list without sort
+		List<String> currentLocationList = new ArrayList<String>();
+		List<WebElement> locationElementList = driver.findElements(By.xpath("//span[@class='imc-mp-location-numbers']"));
+		for (WebElement we : locationElementList) {
+			currentLocationList.add(we.getText().toLowerCase());
+		}
+		System.out.println("Current Location List : " + currentLocationList);
+
+		// Create sorted list
+		List<String> sortedLocationList = new ArrayList<String>();
+		for (String s : currentLocationList) {
+			sortedLocationList.add(s.toLowerCase());
+		}
+		Collections.sort(sortedLocationList);
+		// System.out.println("Sorted list : "+sortedList);
+
+		atlmppge.getmpSortByDropdown().click();
+
+		// Verify All Filter By Options should available.
+		utl.selectFilters(atlmppge.getfilterByList(), "Location");
+		Thread.sleep(5000);
+		List<WebElement> LocationList = driver.findElements(By.xpath("//span[@class='imc-mp-location-numbers']"));
+
+		// Sorted list from filter Sort A-Z
+		List<String> expectedLocationSortedList = new ArrayList<String>();
+		for (WebElement we : LocationList) {
+			expectedLocationSortedList.add(we.getText().toLowerCase());
+		}
+		// Thread.sleep(25000);
+		System.out.println("Expected sorted Exhibitor List : " + expectedLocationSortedList);
+		// Verify Exhibitor List is Sorted or not
+		Assert.assertEquals(sortedLocationList, expectedLocationSortedList, "Exhibitor List Should be sorted");
+
+	}
+
+	@Test(priority = 45)
+	public void TS045_VerifyMarketPlannerListsAllSavedproductsTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP-T266: Market Planner: Lists- All Saved products
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+
+		atlgs = new ATLGlobalSearchPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys("   ");
+		atlgs.getATLSearchButton().click();
+		Thread.sleep(15000);
+		// Store the 1st product name of Exhibitor
+
+		String productNameOnSearchGrid =atlexhact.getExhProductNameOnSearchGrid().getText();
+		System.out.println("Selected product Name: " + productNameOnSearchGrid);
+
+		utl.scrollToElement(atlexhact.getExhibitorProduct());
+
+		// Hovering on product
+		Actions actions = new Actions(driver);
+		actions.moveToElement(atlmppge.getseeAllBtn()).perform();
+		// To mouseover on See All btn
+		actions.moveToElement(atlexhact.getProductFevBtn()).perform();
+		//atlmppge.getFavIcone().click();
+
+		// Click on Add To Favorite button
+		actions.click().perform();
+		Thread.sleep(5000);
+
+		// Click on Market Planner link
+		lap.getMPLinkText().click();
+
+		// Click on Lists tab on MP home page
+		atlmppge.getMPHomeListsTab().click();
+		atlmppge.getallSavedProductMenu().click();
+		Thread.sleep(5000);
+
+		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), productNameOnSearchGrid);
+	}
+
+	@Test(priority = 46)
+	public void TS046_VerifyNewGroupBtnFunctionalityForListsTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP-T238: Market Planner: Lists: Lists: New Group button functionality
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		genData = new GenerateData();
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		// Click on Market Planner
+		lap.getMPLinkText().click();
+
+		// Click on List tab
+		atlmppge.getMPHomeListsTab().click();
+
+		// Click on List from left Panel
+		atlmppge.getMpListLeftPannel().click();
+
+		// click on New group btn
+		atlmppge.getMpListNewGroupBtn().click();
+
+		// verify New Group Popup header
+		Assert.assertTrue(
+				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateGroupPopupHeader")));
+		// Enter Group name
+		String newGroupname = "Cyb" + genData.generateRandomString(5);
+		atlmppge.getMpListNewGroupNameTxt().sendKeys(newGroupname);
+		System.out.println(newGroupname);
+		// Click on Create Btn
+		atlmppge.getMpListNewGroupCreateBtn().click();
+		Thread.sleep(5000);
+
+		utl.checkItemPresentInListorNot(atlmppge.getAtlListOfAllGroups(), newGroupname);
+
+	}
+
+	@Test(priority = 47)
+	public void TS047_VerifyAddToFavoriteFunctionalityForLineTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
 		// T242 : Market Planner: Lists- Favorites- Add an Line to Favorites using
@@ -1052,8 +2715,8 @@ public class MarketPlanner extends base {
 		 */
 	}
 
-	@Test(priority = 19)
-	public void TS019_VerifyAddToFavoriteFunctionalityForExhibitorTest() throws InterruptedException, IOException {
+	@Test(priority = 48)
+	public void TS048_VerifyAddToFavoriteFunctionalityForExhibitorTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
 		// UXP-T243: Market Planner: Lists- Favorites- Add an Exhibitor to Favorites
@@ -1121,146 +2784,70 @@ public class MarketPlanner extends base {
 		 */
 	}
 
-	@Test(priority = 20)
-	public void TS020_VerifyMPDashboardListsCardOverviewTest() throws InterruptedException, IOException {
+	@Test(priority = 49)
+	public void TS049_VerifyAddToFavoriteFunctionalityForProductTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
-		// UXP-T226: To verify the Market Planner-Lists Card overview and it's
-		// functionality
+		// UXP-T237: Market Planner: Lists- Favorites- Add a product to Favorites using
+		// 'Favorite' icon in product actions
 
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
 		utl = new Utility(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
 		genData = new GenerateData();
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+
+		atlgs = new ATLGlobalSearchPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		lap.getMPLinkText().click();
-		Thread.sleep(6000);
+		atlgs.getATLGlobalSearchTextBox().sendKeys("   ");
+		atlgs.getATLSearchButton().click();
+		Thread.sleep(15000);
 
-		// Verify All Lists link is available at Lists card
-		utl.scrollToElement(atlmppge.getmpalllists());
-		Assert.assertTrue(atlmppge.getmpalllists().isDisplayed());
+		// Store the 1st product name of Exhibitor
+		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
+		System.out.println("Selected product Name: " + productNameOnSearchGrid);
 
-		// Save existing lists in List Card
-		String SavedLists = atlmppge.getmpexistinglists().getText();
+		utl.scrollToElement(atlexhact.getExhibitorProduct());
 
-		// Click All Lists link and verify the result
-		atlmppge.getmpalllists().click();
-		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_prod") + "Market-Planner/Lists"));
+		// Hovering on product
+		Actions actions = new Actions(driver);
+		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
+		// To mouseover on Add to Fav btn
+		actions.moveToElement(atlexhact.getProductFevBtn()).perform();
 
-		// Click Lists tab
-		atlmppge.getmplisttab().click();
-		// Click New Lists button
-		atlmppge.getmpnewlistbutton().click();
-		// Add list name and click create button
-		atlmppge.getCreateNewListNameTxtbx().sendKeys(genData.generateRandomString(10));
-		// atlmppge.getCreateNewListNameTxtbx().sendKeys();
-		atlmppge.getAddListCreateBtn().click();
+		// Click on Add To Favorite button
+		actions.click().perform();
+		Thread.sleep(5000);
 
-		// Click Dashboard tab
-		atlmppge.getmpdasboardtab().click();
-		// Verify if recently created list is displayed at List Card
-		Assert.assertFalse(atlmppge.getmpexistinglists().getText().equalsIgnoreCase(SavedLists));
-	}
-
-	@Test(priority = 21)
-	public void TS021_VerifyMPDashboardActivitiesCardOverviewTest() throws InterruptedException, IOException {
-
-		// The purpose of this test case to verify:-
-		// UXP-T227: To verify the Market Planner-Activities overview
-		
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		genData = new GenerateData();
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		// Click on Market Planner link
 		lap.getMPLinkText().click();
 
-		// Verify all the tabs for Activities Card are properly displayed
-		Assert.assertTrue(atlmppge.getmpbookhotel().getText().contains("Book a Hotel"));
-		Assert.assertTrue(atlmppge.getmpfloorplans().getText().contains("Floor Plans"));
-		Assert.assertTrue(atlmppge.getmpexpdirectory().getText().contains("Exhibitor Directory"));
-		Assert.assertTrue(atlmppge.getmpsavedsearches().getText().contains("Saved Searches"));
-		Assert.assertTrue(atlmppge.getmpmyinfo().getText().contains("My Info"));
-
-		// Verify if all the tabs open up with proper pages
-		atlmppge.getmpbookhotel().click();
-		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_prod") + "Attend/Hotels"));
-		driver.navigate().back();
-
-		atlmppge.getmpfloorplans().click();
-		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_prod") + "Market-Map"));
-		driver.navigate().back();
-
-		atlmppge.getmpexpdirectory().click();
-		driver.navigate().back();
-
-		atlmppge.getmpsavedsearches().click();
-		Assert.assertTrue(
-				driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_prod") + "Market-Planner/Saved-Searches"));
-		driver.navigate().back();
-
-		atlmppge.getmpmyinfo().click();
-		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_prod") + "Market-Planner/My-Info"));
-		driver.navigate().back();
-	}
-
-	@Test(priority = 22)
-	public void TS022_VerifyFilterByOptionsOverviewForListTest() throws InterruptedException, IOException {
-
-		// The purpose of this test case to verify:-
-		// UXP-T249: Market Planner: Lists- List Management- 'Filter By' options
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		genData = new GenerateData();
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		// Click on Market Planner
-		lap.getMPLinkText().click();
-
+		// Click on Lists tab on MP home page
 		atlmppge.getMPHomeListsTab().click();
+		atlmppge.getATLMPListsPageFavoritesMenu().click();
 
-		// Click on List from left Panel
-		atlmppge.getMpListLeftPannel().click();
-
-		// click on New list btn
-		atlmppge.getMpListNewListBtn().click();
-		// verify New List Popup header
-		Assert.assertTrue(
-				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateListPopupHeader")));
-
-		// Enter List name
-		String newlistname = "Cyb" + genData.generateRandomString(5);
-		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
-
-		// Click on Create Btn
-		atlmppge.getMpListNewCreateBtn().click();
-		Thread.sleep(10000);
-		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistname);
-
-		// Click on Filter By Dropdown
-		atlmppge.getmpFilterByDropdown().click();
-		// Verify All Filter By Options should available.
-		utl.checkItemPresentInListorNot(atlmppge.getfilterByList(), "All");
-		utl.checkItemPresentInListorNot(atlmppge.getfilterByList(), "Exhibitor");
-		utl.checkItemPresentInListorNot(atlmppge.getfilterByList(), "Line");
-		utl.checkItemPresentInListorNot(atlmppge.getfilterByList(), "Product");
-		utl.checkItemPresentInListorNot(atlmppge.getfilterByList(), "Events and Seminars");
-		utl.checkItemPresentInListorNot(atlmppge.getfilterByList(), "Custom");
-
+		Thread.sleep(5000);
+		List<WebElement> favlist = driver.findElements(By.xpath(
+				"//div[@class='imc-saved-exhibitors__contentItems__col2-1 imc-heading--h7 imc-heading--primary-medium imc-saved-exhibitors__name-title']"));
+		boolean flag = false;
+		for (WebElement list : favlist) {
+			if (list.getText().equals(productNameOnSearchGrid)) {
+				flag = true;
+				break;
+			}
+		}
+		if (flag == true) {
+			Assert.assertTrue(flag = true);
+		} else {
+			Assert.assertTrue(flag = false);
+		}
 	}
 
-	@Test(priority = 23)
-	public void TS023_VerifyFilterByOptionsFunctionalityForListTest() throws InterruptedException, IOException {
+	@Test(priority = 50)
+	public void TS050_VerifyFilterByOptionsFunctionalityForListTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
 		// UXP-T250: Market Planner: Lists- List Management- Filter By options
@@ -1424,1628 +3011,6 @@ public class MarketPlanner extends base {
 
 	}
 
-	@Test(priority = 24)
-	public void TS024_VerifyMarketPlannerListSortByTest() throws InterruptedException, IOException {
-
-		// The purpose of this test case to verify:-
-		// UXP-T251: Market Planner: Lists- List Management- 'Sort By' options
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		genData = new GenerateData();
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		// Login to Market Planner
-		/*
-		 * utl.verifyMPLoginFunctionality(); Thread.sleep(6000);
-		 */
-		// Click on Market Planner
-		lap.getMPLinkText().click();
-		Thread.sleep(6000);
-		atlmppge.getMPHomeListsTab().click();
-		// Thread.sleep(10000);
-		Thread.sleep(2000);
-		// Click on List from left Pannel
-		atlmppge.getMpListLeftPannel().click();
-		// Thread.sleep(10000);
-		// click on New list btn
-		atlmppge.getMpListNewListBtn().click();
-		// verify New List Popup header
-		Assert.assertTrue(
-				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateListPopupHeader")));
-		// Enter List name
-		String newlistname = "Cyb" + genData.generateRandomString(5);
-		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
-		System.out.println("list name :: " + newlistname);
-		// Click on Create Btn
-		atlmppge.getMpListNewCreateBtn().click();
-		Thread.sleep(10000);
-
-		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistname);
-		atlmppge.getmpSortByDropdown().click();
-
-		// Verify All Filter By Options should available.
-		utl.checkItemPresentInListorNot(atlmppge.getfilterByList(), "Most Recent Added");
-		utl.checkItemPresentInListorNot(atlmppge.getfilterByList(), "Location");
-		utl.checkItemPresentInListorNot(atlmppge.getfilterByList(), "Time");
-		utl.checkItemPresentInListorNot(atlmppge.getfilterByList(), "A-Z");
-		utl.checkItemPresentInListorNot(atlmppge.getfilterByList(), "Custom");
-
-	}
-
-	@Test(priority = 25)
-	public void TS025_VerifyDuplicateLinkFunctionalityForListTest() throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// UXP-T247: Market Planner: Lists: Lists: Validations for Duplicate Link
-		// functionality
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		genData = new GenerateData();
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		// Click on Market Planner
-		lap.getMPLinkText().click();
-
-		// Click on List tab
-		atlmppge.getMPHomeListsTab().click();
-
-		// Click on List from left Panel
-		atlmppge.getMpListLeftPannel().click();
-
-		// click on New list btn
-		atlmppge.getMpListNewListBtn().click();
-
-		String newlistname = "Cyb" + genData.generateRandomString(5);
-		System.out.println("New list name:"+newlistname);
-		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
-		atlmppge.getMpListNewCreateBtn().click();
-		Thread.sleep(10000);
-		
-		mplists = atlmppge.getATLMPListsNames();
-		mpduplicatelistoptns = atlmppge.getATLMPDuplicateListOptns();
-
-		for (int i = 0; i < mplists.size(); i++) {
-			// System.out.println(mplists.get(i).getText());
-			// System.out.println(mpeditlistoptns.get(i).getText());
-			if (mplists.get(i).getText().equals(newlistname)) {
-				mpduplicatelistoptns.get(i).click();
-				break;
-			}
-		}
-		Thread.sleep(5000);
-		
-//		WebElement duplicateLink = driver.findElement(By.xpath("//div[text()='"+newlistname+"']/../div[2]/span[1])"));
-//		duplicateLink.click();
-		// Without entering List name
-//		atlmppge.getMPListDuplicateBtn().click();
-//		Thread.sleep(10000);
-//		// Verify Invalid list name error msg
-//		Assert.assertTrue(atlmppge.getDuplicateListErrorMsg().getText().contains(prop.getProperty("InvalidListMsg")));
-//		
-		// Enter duplicate list name 
-		atlmppge.getMPDuplicateListNameTxtBx().sendKeys(newlistname+"_Duplicate");
-		atlmppge.getMPListDuplicateBtn().click();
-		Thread.sleep(10000);
-		// Verify list with special character duplicated or not
-		utl.checkItemPresentInListorNot(atlmppge.getallList(), newlistname+"_Duplicate");
-
-	}
-
-	@Test(priority = 26)
-	public void TS026_VerifyListDisplayControlsTest() throws InterruptedException, IOException {
-
-		// The purpose of this test case to verify:-
-		// UXP-T253: Market Planner: Lists- List Display Controls
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		genData = new GenerateData();
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		// Click on Market Planner
-		lap.getMPLinkText().click();
-
-		atlmppge.getMPHomeListsTab().click();
-
-		// Click on List from left Panel
-		atlmppge.getMpListLeftPannel().click();
-
-		atlmppge.getMpEditListoption().click();
-
-		Assert.assertTrue(atlmppge.getAtlmpGrByExhCheckbox().isDisplayed());
-		Assert.assertTrue(atlmppge.getatlmpListView().isDisplayed());
-		Assert.assertTrue(atlmppge.getatlmpGridView().isDisplayed());
-
-	}
-
-	@Test(priority = 49)
-	public void TS027_VerifyListDisplayControlsFunctionalityTest() throws InterruptedException, IOException {
-
-		// The purpose of this test case to verify:-
-		// UXP-T254: Market Planner: Lists- List Display Controls functionality
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		genData = new GenerateData();
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		// Click on Market Planner
-		lap.getMPLinkText().click();
-
-		atlmppge.getMPHomeListsTab().click();
-
-		// Click on List from left Panel
-		atlmppge.getMpListLeftPannel().click();
-
-		// Create new list for copy
-		atlmppge.getMpListNewListBtn().click();
-		// verify New ListPopup header
-		Assert.assertTrue(
-				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateListPopupHeader")));
-		// Enter List name
-		String newlistname = "Cyb" + genData.generateRandomString(5);
-		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
-		System.out.println("list name :: " + newlistname);
-		atlmppge.getMpListNewCreateBtn().click();
-		Thread.sleep(10000);
-		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistname);
-
-		utl.addingExhProdLine(prop.getProperty("line1"));
-		utl.addingExhProdLine(prop.getProperty("line2"));
-		utl.addingExhProdLine(prop.getProperty("exhibitor1"));
-		utl.addingExhProdLine(prop.getProperty("exhibitor3"));
-		utl.addingExhProdLine(prop.getProperty("product1"));
-		utl.addingExhProdLine(prop.getProperty("product2"));
-
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		// Click on Group By checkbox
-		js.executeScript("document.getElementsByClassName('imc-checkbox--label')[1].click();");
-		// Verify if checkbox is uncheck all the products,lines,exhibitos are displayed
-		// or not.
-		utl.checkItemPresentInListorNot(atlmppge.getnameofElement(), "Product");
-		utl.checkItemPresentInListorNot(atlmppge.getnameofElement(), "Line");
-		utl.checkItemPresentInListorNot(atlmppge.getnameofElement(), "Exhibitor");
-
-		// Click on Group By checkbox
-		js.executeScript("document.getElementsByClassName('imc-checkbox--label')[1].click();");
-		Thread.sleep(3000);
-		// Verify if checkbox is checked then exhibitors and its sub product displayed
-		// or not
-		// Verify Exhibitor Present or not
-		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), prop.getProperty("exhibitor3"));
-		// Verify Exhibitor and its sub product present or not
-		utl.checkItemPresentInListorNot(atlmppge.getmpListOfAllProds(), prop.getProperty("product2"));
-
-		atlmppge.getatlmpListView().click();
-		Assert.assertTrue(atlmppge.getATLmpVerifyGridView().isDisplayed());
-		atlmppge.getatlmpGridView().click();
-		Assert.assertTrue(atlmppge.getATLmpVerifyListView().isDisplayed());
-
-	}
-
-	@Test(priority = 39)
-	public void TS028_VerifyMarketPlannerListElementLocationLinkTest() throws InterruptedException, IOException {
-
-		// The purpose of this test case to verify:-
-		// UXP:263-Market Planner: Lists- List Element - Location link
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		genData = new GenerateData();
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		// Click on Market Planner
-		lap.getMPLinkText().click();
-
-		atlmppge.getMPHomeListsTab().click();
-
-		// Click on List from left Panel
-		atlmppge.getMpListLeftPannel().click();
-
-		// Create new list for copy
-		atlmppge.getMpListNewListBtn().click();
-		// verify New ListPopup header
-		Assert.assertTrue(
-				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateListPopupHeader")));
-		// Enter List name
-		String newlistname = "Cyb" + genData.generateRandomString(5);
-		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
-		System.out.println("list name :: " + newlistname);
-		atlmppge.getMpListNewCreateBtn().click();
-		Thread.sleep(10000);
-		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistname);
-
-		utl.addingExhProdLine(prop.getProperty("exhibitor3"));
-
-		atlmppge.atlmpVerifyLocationLink();
-
-		utl.checkLocationLink(atlmppge.getlistOfAllExh(), prop.getProperty("exhibitor3"));
-		System.out.println("Verify location Links are Present");
-		utl.clickOnLocationLink(atlmppge.getlistOfAllExh(), prop.getProperty("exhibitor3"));
-
-		System.out.println("Verify respected location details page opend");
-	}
-
-
-	@Test(priority = 29)
-	public void TS029_VerifyMarketPlannerListsElementMoreOptionsOverviewTest()
-			throws InterruptedException, IOException {
-
-		// The purpose of this test case to verify:-
-		// UXP:258-Market Planner: Lists- List Element Management- 'More' options
-		// overview
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		genData = new GenerateData();
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		// Click on Market Planner
-		lap.getMPLinkText().click();
-
-		atlmppge.getMPHomeListsTab().click();
-
-		// Click on List from left Panel
-		atlmppge.getMpListLeftPannel().click();
-
-		atlmppge.getMpEditListoption().click();
-		
-		//Add Exhibitor to List
-		utl.addingExhProdLine(prop.getProperty("exhibitor1"));
-		
-		WebElement moreLink = driver.findElement(By.xpath("//a[text()='"+prop.getProperty("exhibitor1")+"']/../../../div[1]/div[4]"));
-		Actions moreLinkHover = new Actions(driver);
-		moreLinkHover.moveToElement(moreLink).build().perform();
-		List<WebElement> allMoreOptions = driver.findElements(By.xpath("//a[text()='"+prop.getProperty("exhibitor1")+"']/../../../div[1]/div[4]/div[1]/div[1]/span/a"));
-
-		utl.checkItemPresentInListorNot(allMoreOptions, "Copy");
-		utl.checkItemPresentInListorNot(allMoreOptions, "Move");
-		utl.checkItemPresentInListorNot(allMoreOptions, "Delete");
-		utl.checkItemPresentInListorNot(allMoreOptions, "Add To Schedule");
-	}
-
-	@Test(priority = 30)
-	public void TS030_VerifyMarketPlannerListsElementMoreOoptionsCopyeTest() throws InterruptedException, IOException {
-
-		// The purpose of this test case to verify:-
-		// UXP:259-Market Planner: Lists- List Element Management- More- 'Copy' option
-		// functionality
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		genData = new GenerateData();
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		// Click on Market Planner
-		lap.getMPLinkText().click();
-
-		atlmppge.getMPHomeListsTab().click();
-
-		// Click on List from left Panel
-		atlmppge.getMpListLeftPannel().click();
-
-		atlmppge.getMpListNewListBtn().click();
-		// verify New List Popup header
-		Assert.assertTrue(
-				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateListPopupHeader")));
-		// Enter List name
-		String newlistname = "Cyb" + genData.generateRandomString(5);
-		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
-		System.out.println("list name :: " + newlistname);
-		// Click on Create Btn
-		atlmppge.getMpListNewCreateBtn().click();
-		Thread.sleep(5000);
-		// Create new list for copy
-		atlmppge.getMpListNewListBtn().click();
-		// verify New ListPopup header
-		Assert.assertTrue(
-				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateListPopupHeader")));
-		// Enter List name
-		String newlistnameforcopy = "Cyb" + genData.generateRandomString(5);
-		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistnameforcopy);
-		System.out.println("list name :: " + newlistnameforcopy);
-		atlmppge.getMpListNewCreateBtn().click();
-		Thread.sleep(10000);
-		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistname);
-
-		utl.addingExhProdLine(prop.getProperty("exhibitor2"));
-
-		String exName = prop.getProperty("exhibitor2");
-
-		WebElement moreLink = driver.findElement(By.xpath(
-				"//div[@class='imc-gallery imc-saved-exhibitors__outer-row imc-market-planner-list--mobile-overlays-left']/div[1]/div[1]/a[1]/../../div[4]"));
-		Actions moreLinkHover = new Actions(driver);
-		moreLinkHover.moveToElement(moreLink).build().perform();
-		List<WebElement> allMoreOptions = driver.findElements(By.xpath(
-				"//div[@class='imc-gallery imc-saved-exhibitors__outer-row imc-market-planner-list--mobile-overlays-left']/div[1]/div[1]/a[1]/../../div[4]/div[1]/div[1]/span/a"));
-		utl.selectFilters(allMoreOptions, "Copy");
-
-		Thread.sleep(2000);
-		Assert.assertTrue(atlmppge.getMpSelectListPopup().isDisplayed());
-		Thread.sleep(5000);
-
-		utl.ClickOnListSelectBtn(atlmppge.getallList(), newlistnameforcopy);
-
-		atlmppge.getmpBackToList().click();
-		Thread.sleep(5000);
-		// Find the list where we copy the exhibitor
-		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistnameforcopy);
-
-		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), prop.getProperty("exhibitor2"));
-		System.out.println("Verified copied items are present into List");
-
-	}
-
-	@Test(priority = 31)
-	public void TS031_VerifyMarketPlannerListsElementMoreOoptionsMoveTest() throws InterruptedException, IOException {
-
-		// The purpose of this test case to verify:-
-		// UXP:260-Market Planner: Lists- List Element Management- More- 'Move' option
-		// functionality
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		genData = new GenerateData();
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		// Click on Market Planner
-		lap.getMPLinkText().click();
-
-		atlmppge.getMPHomeListsTab().click();
-
-		// Click on List from left Panel
-		atlmppge.getMpListLeftPannel().click();
-
-		atlmppge.getMpListNewListBtn().click();
-		// verify New List Popup header
-		Assert.assertTrue(
-				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateListPopupHeader")));
-		// Enter List name
-		String newlistname = "Cyb" + genData.generateRandomString(5);
-		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
-		System.out.println("list name :: " + newlistname);
-		// Click on Create Btn
-		atlmppge.getMpListNewCreateBtn().click();
-		Thread.sleep(5000);
-		// Create new list for copy
-		atlmppge.getMpListNewListBtn().click();
-		// verify New ListPopup header
-		Assert.assertTrue(
-				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateListPopupHeader")));
-		// Enter List name
-		String newlistnameformove = "Cyb" + genData.generateRandomString(5);
-		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistnameformove);
-		System.out.println("list name :: " + newlistnameformove);
-		atlmppge.getMpListNewCreateBtn().click();
-		Thread.sleep(10000);
-		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistname);
-
-		utl.addingExhProdLine(prop.getProperty("exhibitor1"));
-		String exName = prop.getProperty("exhibitor1");
-
-		/*
-		 * WebElement moreLink = driver.findElement(By.xpath("//a[text()='" + exName +
-		 * "']/../../../div[1]/div[4]")); Actions moreLinkHover = new Actions(driver);
-		 * moreLinkHover.moveToElement(moreLink).build().perform(); List<WebElement>
-		 * allMoreOptions = driver .findElements(By.xpath("//a[text()='" + exName +
-		 * "']/../../../div[1]/div[4]/div[1]/div[1]/span/a"));
-		 */
-		WebElement moreLink = driver.findElement(By.xpath(
-				"//div[@class='imc-gallery imc-saved-exhibitors__outer-row imc-market-planner-list--mobile-overlays-left']/div[1]/div[1]/a[1]/../../div[4]"));
-		Actions moreLinkHover = new Actions(driver);
-		moreLinkHover.moveToElement(moreLink).build().perform();
-		List<WebElement> allMoreOptions = driver.findElements(By.xpath(
-				"//div[@class='imc-gallery imc-saved-exhibitors__outer-row imc-market-planner-list--mobile-overlays-left']/div[1]/div[1]/a[1]/../../div[4]/div[1]/div[1]/span/a"));
-
-		Thread.sleep(2000);
-		utl.selectFilters(allMoreOptions, "Move");
-
-		Thread.sleep(2000);
-		Assert.assertTrue(atlmppge.getMpSelectListPopup().isDisplayed());
-		Thread.sleep(5000);
-
-		utl.ClickOnListSelectBtn(atlmppge.getallList(), newlistnameformove);
-
-		/*****************************
-		 * Move Item Removed from current list. Code Pending here
-		 */
-
-		atlmppge.getmpBackToList().click();
-		Thread.sleep(5000);
-		// Find the list where we copy the exhibitor
-		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistnameformove);
-		Thread.sleep(5000);
-		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), prop.getProperty("exhibitor1"));
-		System.out.println("Verified Moved items are present into List");
-
-	}
-
-	@Test(priority = 35)
-	public void TS032_VerifyMarketPlannerListsElementMoreOoptionsDeleteTest() throws InterruptedException, IOException {
-
-		// The purpose of this test case to verify:-
-		// UXP:261-Market Planner: Lists- List Element Management- More- 'Delete' option
-		// functionality
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		genData = new GenerateData();
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		// Click on Market Planner
-		lap.getMPLinkText().click();
-
-		atlmppge.getMPHomeListsTab().click();
-
-		// Click on List from left Panel
-		atlmppge.getMpListLeftPannel().click();
-
-		atlmppge.getMpListNewListBtn().click();
-		// verify New List Popup header
-		Assert.assertTrue(
-				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateListPopupHeader")));
-		// Enter List name
-		String newlistname = "Cyb" + genData.generateRandomString(5);
-		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
-		System.out.println("list name :: " + newlistname);
-		// Click on Create Btn
-		atlmppge.getMpListNewCreateBtn().click();
-		Thread.sleep(10000);
-		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistname);
-
-		utl.addingExhProdLine(prop.getProperty("exhibitor1"));
-		utl.addingExhProdLine(prop.getProperty("exhibitor2"));
-		String exName = prop.getProperty("exhibitor1");
-		Thread.sleep(5000);
-		/*
-		 * WebElement moreLink = driver.findElement(By.xpath("//a[text()='" + exName +
-		 * "']/../../../div[1]/div[4]")); Actions moreLinkHover = new Actions(driver);
-		 * moreLinkHover.moveToElement(moreLink).build().perform(); List<WebElement>
-		 * allMoreOptions = driver .findElements(By.xpath("//a[text()='" + exName +
-		 * "']/../../../div[1]/div[4]/div[1]/div[1]/span/a"));
-		 */
-		WebElement moreLink = driver.findElement(By.xpath(
-				"//div[@class='imc-gallery imc-saved-exhibitors__outer-row imc-market-planner-list--mobile-overlays-left']/div[1]/div[1]/a[1]/../../div[4]"));
-		Actions moreLinkHover = new Actions(driver);
-		moreLinkHover.moveToElement(moreLink).build().perform();
-		List<WebElement> allMoreOptions = driver.findElements(By.xpath(
-				"//div[@class='imc-gallery imc-saved-exhibitors__outer-row imc-market-planner-list--mobile-overlays-left']/div[1]/div[1]/a[1]/../../div[4]/div[1]/div[1]/span/a"));
-
-		utl.selectFilters(allMoreOptions, "Delete");
-		Thread.sleep(5000);
-		utl.checkItemNotPresentInList(atlmppge.getlistOfAllExh(), exName);
-	}
-
-	@Test(priority = 33)
-	public void TS033_VerifyMarketPlannerListManagementAddNoteTest() throws InterruptedException, IOException {
-
-		// The purpose of this test case to verify:-
-		// UXP:256-Market Planner: Lists- List Management- 'Add Note' functionality
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		genData = new GenerateData();
-		atlgs = new ATLGlobalSearchPage(driver);
-		atlexhact = new ATLExhLineProdActionsPage(driver);
-
-		genData = new GenerateData();
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		// Click on Market Planner
-		lap.getMPLinkText().click();
-
-		atlmppge.getMPHomeListsTab().click();
-
-		// Click on List from left Panel
-		atlmppge.getMpListLeftPannel().click();
-
-		atlmppge.getMpListNewListBtn().click();
-		// verify New List Popup header
-		Assert.assertTrue(
-				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateListPopupHeader")));
-		// Enter List name
-		String newlistname = "Cyb" + genData.generateRandomString(5);
-		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
-		System.out.println("list name :: " + newlistname);
-		// Click on Create Btn
-		atlmppge.getMpListNewCreateBtn().click();
-		Thread.sleep(10000);
-		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistname);
-
-		utl.addingExhProdLine(prop.getProperty("exhibitor1"));
-		String exName = prop.getProperty("exhibitor1");
-		WebElement noteLink = driver.findElement(By.xpath("//a[text()='" + exName + "']/../../../div[1]/div[3]"));
-		noteLink.click();
-		// Store the new note name
-		String newnotetitle = "CybNote" + genData.generateRandomString(3);
-		// Enter Note title
-		atlexhact.getNoteTitleTxtBx().sendKeys(newnotetitle);
-
-		Thread.sleep(5000);
-		// Enter Note Content
-		atlexhact.getNoteContentTxtBx().sendKeys("TestprodNote" + genData.generateRandomString(6));
-		Thread.sleep(5000);
-		atlexhact.getNoteTitleTxtBx().sendKeys(newnotetitle);
-		// Click on 'Save' button
-		atlexhact.getNoteSaveBtn().click();
-		Thread.sleep(5000);
-
-		noteLink.click();
-		Thread.sleep(2000);
-		// Click on 'View all Notes for an Exhibitor' link on Add Notes pop-up
-		atlexhact.getViewAllNotesLink().click();
-		Thread.sleep(5000);
-
-		List<WebElement> allnoteslist = atlexhact.getSavedNoteNameInAllNotesList();
-
-		utl.checkItemPresentInListorNot(allnoteslist, newnotetitle);
-		utl.selectFilters(allnoteslist, newnotetitle);
-
-		Thread.sleep(2000);
-		// Delete the saved note
-		atlexhact.getDeleteNoteBtn().click();
-		noteLink.click();
-		Thread.sleep(2000);
-		// Click on 'View all Notes for an Exhibitor' link on Add Notes pop-up
-		atlexhact.getViewAllNotesLink().click();
-		Thread.sleep(2000);
-		// Verify Deleted Note not present
-		// utl.checkItemNotPresentInList(atlexhact.getSavedNoteNameInAllNotesList(),
-		// newnotetitle);
-		try {
-			utl.checkItemNotPresentInList(atlexhact.getSavedNoteNameInAllNotesList(), newnotetitle);
-		} catch (Exception e) {
-			System.out.println("Note Deleted successully");
-			Thread.sleep(2000);
-			atlmppge.getcloseNotePopup().click();
-		}
-		atlmppge.getcloseNotePopup().click();
-		driver.get(prop.getProperty("atlmrkturl_prod"));
-	}
-
-	@Test(priority = 34)
-	public void TS034_VerifyMarketPlannerEditListCustomItemTest() throws InterruptedException, IOException {
-
-		// The purpose of this test case to verify:-
-		// UXP:264-Market Planner: Lists: Lists: Edit List: Add Custom Item
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		genData = new GenerateData();
-		atlgs = new ATLGlobalSearchPage(driver);
-		atlexhact = new ATLExhLineProdActionsPage(driver);
-
-		genData = new GenerateData();
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		// Click on Market Planner
-		lap.getMPLinkText().click();
-
-		atlmppge.getMPHomeListsTab().click();
-
-		// Click on List from left Panel
-		atlmppge.getMpListLeftPannel().click();
-
-		atlmppge.getMpListNewListBtn().click();
-		// verify New List Popup header
-		Assert.assertTrue(
-				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateListPopupHeader")));
-		// Enter List name
-		String newlistname = "Cyb" + genData.generateRandomString(5);
-		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
-		System.out.println("list name :: " + newlistname);
-		// Click on Create Btn
-		atlmppge.getMpListNewCreateBtn().click();
-		Thread.sleep(5000);
-		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistname);
-		// Click on Add Custom item Btn
-		atlmppge.getAddCustomItem().click();
-		// Verify Header of custom Item popup
-		Assert.assertTrue(atlmppge.getcustomItemHeader().getText().contains(prop.getProperty("CustomItemHeader")));
-		String newTitle = "Cyb" + genData.generateRandomString(5);
-		// Enter Title
-		atlmppge.getCustomTitle().sendKeys(newTitle);
-		String newDesc = "Cyb" + genData.generateRandomString(20);
-		// Enter Description
-		atlmppge.getCustomDesc().sendKeys(newDesc);
-		// click on Submit Btn
-		atlmppge.getCustomItemsubmitBtn().click();
-		utl.checkItemPresentInListorNot(atlmppge.getATLlistOfCustomItems(), newDesc);
-
-		// Cancel Btn Test
-		atlmppge.getAddCustomItem().click();
-		// Verify Header of custom Item popup
-		Assert.assertTrue(atlmppge.getcustomItemHeader().getText().contains(prop.getProperty("CustomItemHeader")));
-		String newTitle1 = "Cyb" + genData.generateRandomString(5);
-		// Enter Title
-		atlmppge.getCustomTitle().sendKeys(newTitle1);
-		String newDesc1 = "Cyb" + genData.generateRandomString(20);
-		// Enter Description
-		atlmppge.getCustomDesc().sendKeys(newDesc1);
-		// click on Submit Btn
-		atlmppge.getcancelBtnCustomItem().click();
-		utl.checkItemNotPresentInList(atlmppge.getATLlistOfCustomItems(), newDesc1);
-
-	}
-
-	@Test(priority = 32)
-	public void TS035_VerifyMarketPlannerEditListAddNoteTest() throws InterruptedException, IOException {
-
-		// The purpose of this test case to verify:-
-		// UXP:265-Market Planner: Lists: Lists: Edit List: Add Note
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		genData = new GenerateData();
-		atlgs = new ATLGlobalSearchPage(driver);
-		atlexhact = new ATLExhLineProdActionsPage(driver);
-
-		genData = new GenerateData();
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		// Click on Market Planner
-		lap.getMPLinkText().click();
-
-		atlmppge.getMPHomeListsTab().click();
-
-		// Click on List from left Panel
-		atlmppge.getMpListLeftPannel().click();
-
-		atlmppge.getMpListNewListBtn().click();
-		// verify New List Popup header
-		Assert.assertTrue(
-				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateListPopupHeader")));
-		// Enter List name
-		String newlistname = "Cyb" + genData.generateRandomString(5);
-		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
-		System.out.println("list name :: " + newlistname);
-		// Click on Create Btn
-		atlmppge.getMpListNewCreateBtn().click();
-		Thread.sleep(10000);
-		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistname);
-		// Click on Add Note Btn
-		atlmppge.getaddNoteBtn().click();
-		// Store the new note name
-		String newnotetitle = "CybNote" + genData.generateRandomString(3);
-		// Enter Note title
-		atlexhact.getNoteTitleTxtBx().sendKeys(newnotetitle);
-		Thread.sleep(5000);
-		// Enter Note Content
-		atlexhact.getNoteContentTxtBx().sendKeys("TestprodNote" + genData.generateRandomString(6));
-		Thread.sleep(5000);
-		atlexhact.getNoteTitleTxtBx().sendKeys(newnotetitle);
-		// Click on 'Save' button
-		atlexhact.getNoteSaveBtn().click();
-		Thread.sleep(5000);
-		// Verify Note is appeared below the Add note btn
-		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllNewAddedNotes(), newnotetitle);
-		// Click on Add Note Btn
-		atlmppge.getaddNoteBtn().click();
-		Thread.sleep(2000);
-		// Click on 'View all Notes for an Exhibitor' link on Add Notes pop-up
-		atlexhact.getViewAllNotesLink().click();
-		Thread.sleep(5000);
-
-		List<WebElement> allnoteslist = atlexhact.getSavedNoteNameInAllNotesList();
-
-		utl.checkItemPresentInListorNot(allnoteslist, newnotetitle);
-		utl.selectFilters(allnoteslist, newnotetitle);
-
-		Thread.sleep(2000);
-		// Delete the saved note
-		atlexhact.getDeleteNoteBtn().click();
-		// Click on Add Note Btn
-		atlmppge.getaddNoteBtn().click();
-		Thread.sleep(2000);
-		// Click on 'View all Notes for an Exhibitor' link on Add Notes pop-up
-		atlexhact.getViewAllNotesLink().click();
-		Thread.sleep(2000);
-		// Verify Deleted Note not present
-		try {
-			utl.checkItemNotPresentInList(atlexhact.getSavedNoteNameInAllNotesList(), newnotetitle);
-		} catch (Exception e) {
-			System.out.println("Note Deleted successully");
-			atlmppge.getcloseNotePopup().click();
-		}
-		// Close Note Popup
-		// Click on Add Note Btn
-		atlmppge.getaddNoteBtn().click();
-		// Store the new note name
-		String newnotetitle1 = "CybNote" + genData.generateRandomString(3);
-		// Enter Note title
-		atlexhact.getNoteTitleTxtBx().sendKeys(newnotetitle1);
-
-		Thread.sleep(5000);
-		// Enter Note Content
-		atlexhact.getNoteContentTxtBx().sendKeys("TestprodNote" + genData.generateRandomString(6));
-		Thread.sleep(5000);
-		atlexhact.getNoteTitleTxtBx().sendKeys(newnotetitle1);
-		// Click on 'Save' button
-		atlmppge.getcloseNotePopup().click();
-		// utl.checkItemNotPresentInList(atlexhact.getSavedNoteNameInAllNotesList(),
-		// newnotetitle1);
-		try {
-			utl.checkItemNotPresentInList(atlexhact.getSavedNoteNameInAllNotesList(), newnotetitle1);
-		} catch (Exception e) {
-			System.out.println("Note Popup closed successully");
-
-		}
-	}
-
-	@Test(priority = 36)
-	public void TS036_VerifyMarketPlannerListsAllSavedExhibitorsTest() throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// UXP-T267: Market Planner: Lists- All Saved Exhibitors
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		genData = new GenerateData();
-		atlexhact = new ATLExhLineProdActionsPage(driver);
-
-		atlgs = new ATLGlobalSearchPage(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		// Login to Market Planner
-		/*
-		 * utl.verifyMPLoginFunctionality(); Thread.sleep(6000);
-		 */
-		atlgs.getATLGlobalSearchTextBox().sendKeys("   ");
-		atlgs.getATLSearchButton().click();
-		Thread.sleep(15000);
-
-		String exhname = atlexhact.getExhibitorName().getText();
-		System.out.println("Exhibitor name: " + exhname);
-
-		// Click on Favorite icon of 1st exhibitor
-		atlexhact.getAddFavIcon().click();
-		// Click on Market Planner link
-		lap.getMPLinkText().click();
-
-		// Click on Lists tab on MP home page
-		atlmppge.getMPHomeListsTab().click();
-		atlmppge.getallSavedExhibiorMenu().click();
-		Thread.sleep(8000);
-		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), exhname);
-
-	}
-
-	@Test(priority = 37)
-	public void TS037_VerifyMarketPlannerListsAllSavedproductsTest() throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// UXP-T266: Market Planner: Lists- All Saved products
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		genData = new GenerateData();
-		atlexhact = new ATLExhLineProdActionsPage(driver);
-
-		atlgs = new ATLGlobalSearchPage(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		atlgs.getATLGlobalSearchTextBox().sendKeys("   ");
-		atlgs.getATLSearchButton().click();
-		Thread.sleep(15000);
-		// Store the 1st product name of Exhibitor
-		/*
-		 * String productNameOnSearchGrid =
-		 * atlexhact.getExhProductNameOnSearchGrid().getText();
-		 * System.out.println("Selected product Name: " + productNameOnSearchGrid);
-		 */
-		String exhname = atlexhact.getExhibitorName().getText();
-		System.out.println("Exhibitor name: " + exhname);
-
-		// utl.scrollToElement(atlexhact.getExhibitorproduct());
-
-		// Hovering on product
-		Actions actions = new Actions(driver);
-		actions.moveToElement(atlmppge.getseeAllBtn()).perform();
-		// To mouseover on See All btn
-		// actions.moveToElement(atlexhact.getproductFevBtn()).perform();
-		atlmppge.getFavIcone().click();
-
-		// Click on Add To Favorite button
-		// actions.click().perform();
-		Thread.sleep(5000);
-
-		// Click on Market Planner link
-		lap.getMPLinkText().click();
-
-		// Click on Lists tab on MP home page
-		atlmppge.getMPHomeListsTab().click();
-		atlmppge.getallSavedProductMenu().click();
-		Thread.sleep(5000);
-
-		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), exhname);
-	}
-
-	@Test(priority = 52)
-	public void TS038_VerifyMarketPlannerRegistrationsTabTest() throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// UXP:280-Market Planner: Registrations
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		genData = new GenerateData();
-		atlgs = new ATLGlobalSearchPage(driver);
-		atlexhact = new ATLExhLineProdActionsPage(driver);
-		genData = new GenerateData();
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		// Click on Market Planner
-		lap.getMPLinkText().click();
-		Thread.sleep(8000);
-		
-		// Click on Mp Reg tab
-		atlmppge.getmpRegistrationTab().click();
-		Thread.sleep(5000);
-		
-		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_prod")+"Market-Planner/Registrations"));
-		
-		atlmppge.getmpRegisterNowBtn().click();
-		Thread.sleep(3000);
-		
-		Assert.assertFalse(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_prod")+"Market-Planner/Registrations"));
-
-		driver.get(prop.getProperty("atlmrkturl_prod"));
-	}
-
-
-	@Test(priority = 28)
-	public void TS039_VerifyMarketSavedSearchesfunctionalityTest() throws InterruptedException, IOException {
-
-		// The purpose of this test case to verify:-
-		// UXP:T56-Market Planner: Saved Searches
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		genData = new GenerateData();
-		atlgs = new ATLGlobalSearchPage(driver);
-		atlexhact = new ATLExhLineProdActionsPage(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("saveSearchTerm"));
-		atlgs.getATLSearchButton().click();
-		Thread.sleep(5000);
-		
-		// Click on Saved searches Icon
-		atlmppge.getmpSavedSearchesIcon().click();
-		// Click on Save Search Btn to Save the Term
-		atlmppge.getmpSaveSearcheBtn().click();
-		// Enter Search text into input field
-		atlmppge.getmpSaveSearcheNameInput().sendKeys(prop.getProperty("saveSearchTerm"));
-		// Click on Save Btn
-		atlmppge.getmpSaveSearcheInputBtn().click();
-		Thread.sleep(3000);
-
-		// Click on Market Planner
-		lap.getMPLinkText().click();
-		
-		// Click on MP Saved searches tab
-		atlmppge.getmpsavedsearchestab().click();
-		
-		// click on Search Term
-		utl.selectFilters(atlmppge.getmplistOfAllSaveSearches(), prop.getProperty("saveSearchTerm"));
-		Thread.sleep(5000);
-		String temp = atlmppge.getmplistSearcheAlert().getText();
-
-		// Verify save search
-		Assert.assertTrue(temp.contains(prop.getProperty("saveSearchTerm")));
-	}
-
-	@Test(priority = 15)
-	public void TS040_VerifyMarketSavedSearchesDeletefunctionalityTest() throws InterruptedException, IOException {
-
-		// The purpose of this test case to verify:-
-		// UXP:281-Market Planner: Saved Searches- 'Delete' functionality
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		genData = new GenerateData();
-		atlgs = new ATLGlobalSearchPage(driver);
-		atlexhact = new ATLExhLineProdActionsPage(driver);
-
-		genData = new GenerateData();
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		lap.getMPLinkText().click();
-		// Click on Mp Reg tab
-		atlmppge.getmpsavedsearchestab().click();
-
-		try {
-			if (atlmppge.getnoSavedSearchesMsg().isDisplayed()) {
-				TS039_VerifyMarketSavedSearchesfunctionalityTest();
-				// Click on Market Planner
-				lap.getMPLinkText().click();
-				// Click on Mp Reg tab
-				atlmppge.getmpsavedsearchestab().click();
-
-				List<WebElement> deleteBtn = driver.findElements(
-						By.xpath("//a[text()='" + prop.getProperty("saveSearchTerm") + "']/../../div[2]/span[2]"));
-
-				// System.out.println(deleteBtn);
-				for (WebElement webElement : deleteBtn) {
-					webElement.click();
-					atlmppge.getmpConfirmDeleteBtn().click();
-					Thread.sleep(5000);
-				}
-				try {
-					utl.checkItemNotPresentInList(atlmppge.getmplistOfAllSaveSearches(),
-							prop.getProperty("saveSearchTerm"));
-				} catch (Exception e) {
-					System.out.println("Saved Search Term deleted succsfully ");
-				}
-			}
-		} catch (TimeoutException ee) {
-
-			// Click on Market Planner
-			lap.getMPLinkText().click();
-			// Click on Mp Reg tab
-			atlmppge.getmpsavedsearchestab().click();
-
-			List<WebElement> deleteBtn = driver.findElements(
-					By.xpath("//a[text()='" + prop.getProperty("saveSearchTerm") + "']/../../div[2]/span[2]"));
-
-			// System.out.println(deleteBtn);
-			for (WebElement webElement : deleteBtn) {
-				webElement.click();
-				atlmppge.getmpConfirmDeleteBtn().click();
-				Thread.sleep(5000);
-			}
-			try {
-				utl.checkItemNotPresentInList(atlmppge.getmplistOfAllSaveSearches(),
-						prop.getProperty("saveSearchTerm"));
-			} catch (Exception e) {
-				System.out.println("Saved Search Term deleted succsfully ");
-			}
-		}
-	}
-
-	@Test(priority = 41)
-	public void TS041_VerifyMarketPlannerListSortByFunctionalityTest() throws IOException, InterruptedException {
-
-		// The purpose of this test case to verify:-
-		// UXP-T252: Market Planner: Lists- List Management- Sort By options
-		// functionality
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		genData = new GenerateData();
-		atlgs = new ATLGlobalSearchPage(driver);
-		atlexhact = new ATLExhLineProdActionsPage(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("sortByFilterInput"));
-		atlgs.getATLSearchButton().click();
-		Thread.sleep(5000);
-		
-		String exhname = atlexhact.getExhibitorName().getText();
-		System.out.println("Exhibitor name: " + exhname);
-
-		// Click on Favorite icon of 1st exhibitor
-		atlexhact.getAddFavIcon().click();
-		Thread.sleep(2000);
-
-		utl.addingExhForSorting("Baggallini");
-
-		Thread.sleep(2000);
-		String exhname1 = atlexhact.getExhibitorName().getText();
-		System.out.println("Exhibitor name: " + exhname1);
-		Thread.sleep(2000);
-		// Click on Favorite icon of 1st exhibitor
-		atlexhact.getAddFavIcon().click();
-		Thread.sleep(2000);
-
-		utl.addingExhForSorting("TWS Italian Paintings");
-		Thread.sleep(5000);
-
-		String exhname2 = atlexhact.getExhibitorName().getText();
-		System.out.println("Exhibitor name: " + exhname2);
-
-		// Click on Favorite icon of 1st exhibitor
-		atlexhact.getAddFavIcon().click();
-
-		lap.getMPLinkText().click();
-
-		// Click on Lists tab on MP home page
-		atlmppge.getMPHomeListsTab().click();
-		atlmppge.getATLMPListsPageFavoritesMenu().click();
-		Thread.sleep(5000);
-
-		/*
-		 * // Click on SortBy Dropdown atlmppge.getmpSortByDropdown().click();
-		 * 
-		 * // Verify All Filter By Options should available.
-		 * utl.selectFilters(atlmppge.getfilterByList(), "Most Recent Added");
-		 * Thread.sleep(5000); List<WebElement> favlist = driver .findElements(By.xpath(
-		 * "//li[@class='imc-list-edit--draggable']/div/div/div/a")); boolean flag =
-		 * false; for (WebElement list : favlist) {
-		 * 
-		 * if (list.getText().equals(exhname)) {
-		 * 
-		 * System.out.println("Equal"); flag = true; break; } } if (flag == true) {
-		 * Assert.assertTrue(flag = true); } else { Assert.assertTrue(flag = false); }
-		 */
-		// Sort filter
-
-		// Create current Exhibitor list without sort
-		List<String> currentList = new ArrayList<String>();
-		List<WebElement> elementList = driver
-				.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
-		for (WebElement we : elementList) {
-			currentList.add(we.getText().toLowerCase());
-		}
-		System.out.println("Current Exhibitor List : " + currentList);
-
-		// Create sorted list
-		List<String> sortedList = new ArrayList<String>();
-		for (String s : currentList) {
-			sortedList.add(s.toLowerCase());
-		}
-		Collections.sort(sortedList);
-		// System.out.println("Sorted list : "+sortedList);
-
-		atlmppge.getmpSortByDropdown().click();
-
-		// Verify All Filter By Options should available.
-		utl.selectFilters(atlmppge.getfilterByList(), "A-Z");
-		Thread.sleep(5000);
-		List<WebElement> favlist2 = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
-
-		// Sorted list from filter Sort A-Z
-		List<String> expectedSortedList = new ArrayList<String>();
-		for (WebElement we : favlist2) {
-			expectedSortedList.add(we.getText().toLowerCase());
-		}
-		// Thread.sleep(25000);
-		System.out.println("Expected sorted Exhibitor List : " + expectedSortedList);
-		// Verify Exhibitor List is Sorted or not
-		Assert.assertEquals(sortedList, expectedSortedList, "Exhibitor List Should be sorted");
-
-		// Location
-		// Create current Exhibitor list without sort
-		List<String> currentLocationList = new ArrayList<String>();
-		List<WebElement> locationElementList = driver.findElements(By.xpath("//span[@class='imc-mp-location-numbers']"));
-		for (WebElement we : locationElementList) {
-			currentLocationList.add(we.getText().toLowerCase());
-		}
-		System.out.println("Current Location List : " + currentLocationList);
-
-		// Create sorted list
-		List<String> sortedLocationList = new ArrayList<String>();
-		for (String s : currentLocationList) {
-			sortedLocationList.add(s.toLowerCase());
-		}
-		Collections.sort(sortedLocationList);
-		// System.out.println("Sorted list : "+sortedList);
-
-		atlmppge.getmpSortByDropdown().click();
-
-		// Verify All Filter By Options should available.
-		utl.selectFilters(atlmppge.getfilterByList(), "Location");
-		Thread.sleep(5000);
-		List<WebElement> LocationList = driver.findElements(By.xpath("//span[@class='imc-mp-location-numbers']"));
-
-		// Sorted list from filter Sort A-Z
-		List<String> expectedLocationSortedList = new ArrayList<String>();
-		for (WebElement we : LocationList) {
-			expectedLocationSortedList.add(we.getText().toLowerCase());
-		}
-		// Thread.sleep(25000);
-		System.out.println("Expected sorted Exhibitor List : " + expectedLocationSortedList);
-		// Verify Exhibitor List is Sorted or not
-		Assert.assertEquals(sortedLocationList, expectedLocationSortedList, "Exhibitor List Should be sorted");
-
-	}
-
-	@Test(priority = 42)
-	public void TS042_VerifyMarketPlannerListsElementMoreOptionsAddToScheduleTest()
-			throws InterruptedException, IOException {
-
-		// The purpose of this test case to verify:-
-		// UXP:262-Market Planner: Lists- List Element Management- More- 'Add to
-		// Schedule' option functionality
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		genData = new GenerateData();
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		// Click on Market Planner
-		lap.getMPLinkText().click();
-
-		atlmppge.getMPHomeListsTab().click();
-
-		// Click on List from left Panel
-		atlmppge.getMpListLeftPannel().click();
-
-		// Click Edit List link for any list
-		atlmppge.getEditListAtListTab().click();
-		atlmppge.getMoreOptionPROD().click();
-		atlmppge.getAddToSchedulePROD().click();
-
-		/*
-		 * atlmppge.getMpListNewListBtn().click(); // verify New List Popup header
-		 * Assert.assertTrue(atlmppge.getMpListNewGroupPopupHeader().getText().contains(
-		 * prop.getProperty( "CreateListPopupHeader"))); // Enter List name String
-		 * newlistname = "Cyb" + genData.generateRandomString(5);
-		 * atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
-		 * System.out.println("list name :: " + newlistname); // Click on Create Btn
-		 * atlmppge.getMpListNewCreateBtn().click(); Thread.sleep(10000);
-		 * 
-		 * utl.ClickOnEditBtnOfAnyList(atlmppge.getallList());
-		 * 
-		 * utl.addingExhProdLine(prop.getProperty("exhibitor1")); String
-		 * exName=prop.getProperty("exhibitor1"); Thread.sleep(5000); WebElement
-		 * moreLink=driver.findElement(By.xpath("//a[text()='"+exName+
-		 * "']/../../../div[1]/div[4]")); Actions moreLinkHover=new Actions(driver);
-		 * moreLinkHover.moveToElement(moreLink).build().perform();
-		 * List<WebElement>allMoreOptions=driver.findElements(By.xpath("//a[text()='"+
-		 * exName+"']/../../../div[1]/div[4]/div[1]/div[1]/span/a"));
-		 * utl.selectFilters(allMoreOptions, "Add To Schedule");
-		 */
-
-		// Click on start Clendar
-		atlmppge.getmpSelectStartDateCalendar().click();
-
-		// Click on nxt month arrow
-		atlmppge.getmpCalendarNextMonthArrow().click();
-		// Print Month
-		String startMonth = atlmppge.getmpmonthName().getText();
-
-		// Select Date
-		String wDay = null;
-		for (WebElement SelectDate : atlmppge.getmpListOfAllCalendarDays()) {
-
-			if (SelectDate.getText().contains("20")) {
-				wDay = SelectDate.getAttribute("aria-label");
-				SelectDate.click();
-				break;
-			}
-		}
-		// Split Day from date
-		String dayName = wDay.split(" ")[0].trim();
-		// select Start Time
-		Select selectStartTime = new Select(atlmppge.getmpSelectStartTime());
-		selectStartTime.selectByIndex(5);
-		Thread.sleep(2000);
-		// Start Time
-		String startTime = atlmppge.getmpSelectStartTime().getAttribute("value");
-
-		String SelectedDateTime = 12 + startMonth + " " + startTime;
-		System.out.println("Start Date and Time :: " + SelectedDateTime);
-
-		// Click on End Date Of calendar
-		atlmppge.getmpSelectEndDateCalendar().click();
-		// Click on nxt month arrow
-		atlmppge.getmpCalendarNextMonthArrow().click();
-		// Click on nxt month arrow
-		atlmppge.getmpCalendarNextMonthArrow().click();
-		// Print End Month
-		String endMonth = atlmppge.getmpmonthName().getText();
-		// Select End Date
-		utl.selectFilters(atlmppge.getmpListOfAllCalendarDays(), "12");
-		// End Time
-
-		Select selectEndTime = new Select(atlmppge.getmpSelectEndTime());
-		selectEndTime.selectByIndex(4);
-		Thread.sleep(2000);
-		// End Date And Time
-		String endTime = atlmppge.getmpSelectStartTime().getAttribute("value");
-
-		String SelectedEndDateTime = 12 + endMonth + " " + endTime;
-		System.out.println("End Date and Time :: " + SelectedEndDateTime);
-		atlmppge.getmpAddToScheduledSaveBtn().click();
-		Thread.sleep(2000);
-
-		boolean flag = false;
-		String displayTime = null;
-		List<WebElement> listOfDateTime = driver.findElements(By.xpath("//div[@class='imc-type--title-5-ui']"));
-		for (WebElement dateTime : listOfDateTime) {
-
-			if (dateTime.getText().contains(dayName)) {
-
-				displayTime = dateTime.getText().split(" ")[2].trim();
-				// verify display time.
-				Assert.assertTrue(displayTime.contains("@" + startTime));
-				flag = true;
-				break;
-			}
-		}
-		if (flag == true) {
-			System.out.println(dayName + " Present");
-			Assert.assertTrue(flag = true);
-		} else {
-			System.out.println(dayName + " Not Present");
-			Assert.assertTrue(flag = false);
-		}
-
-	}
-
-	@Test(priority = 43)
-	public void TS043_VerifyAddToFavoriteFunctionalityUsingQuickAddForproductTest()
-			throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// UXP-T230: Maket Planner: Lists- Favorites- Add a product to Favorites using
-		// 'Quick Add'
-		// using 'Quick Add'
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		// Click on Market Planner
-		lap.getMPLinkText().click();
-		Thread.sleep(6000);
-		// Click on List tab
-		atlmppge.getMPHomeListsTab().click();
-		Thread.sleep(10000);
-		// Click on List from left Pannel
-		atlmppge.getMpListLeftPannel().click();
-
-		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), "Favorites");
-
-		utl.addingExhProdLine(prop.getProperty("line1"));
-		utl.addingExhProdLine(prop.getProperty("product2"));
-
-		Thread.sleep(3000);
-		String autoSuggetion = atlmppge.getMpQuickAdd().getAttribute("value");
-		// Verify Selected product added or not
-		System.out.println("prod Name::" + autoSuggetion);
-		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), autoSuggetion);
-
-	}
-
-	@Test(priority = 44)
-	public void TS044_VerifyAddToFavoriteFunctionalityUsingQuickAddForLinesTest()
-			throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// UXP-T231: Maket Planner: Lists- Favorites- Add an line to Favorites using 'Quick Add'
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		// Click on Market Planner
-		lap.getMPLinkText().click();
-		Thread.sleep(6000);
-		// Click on List tab
-		atlmppge.getMPHomeListsTab().click();
-		Thread.sleep(10000);
-		// Click on List from left Pannel
-		atlmppge.getMpListLeftPannel().click();
-
-		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), "Favorites");
-
-		utl.addingExhProdLine(prop.getProperty("line1"));
-		Thread.sleep(3000);
-		String autoSuggetion = atlmppge.getMpQuickAdd().getAttribute("value");
-		// Verify Selected Line added or not
-		System.out.println("Line Name::" + autoSuggetion);
-		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), autoSuggetion);
-
-	}
-
-	@Test(priority = 45)
-	public void TS045_VerifyAddToListFunctionalityUsingQuickAddTest() throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// UXP-T257: Market Planner: Lists: Lists: Edit List: Quick Add
-		// using 'Quick Add'
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-		genData = new GenerateData();
-		atlmppge = new ATLMarketPlannerPage(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		// Click on Market Planner
-		lap.getMPLinkText().click();
-		Thread.sleep(6000);
-		// Click on List tab
-		atlmppge.getMPHomeListsTab().click();
-		Thread.sleep(10000);
-		// Click on List from left Pannel
-		atlmppge.getMpListLeftPannel().click();
-
-		// Create new list for copy
-		atlmppge.getMpListNewListBtn().click();
-		// verify New ListPopup header
-		Assert.assertTrue(
-				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateListPopupHeader")));
-		// Enter List name
-		String newlistname = "Cyb" + genData.generateRandomString(5);
-		atlmppge.getMpListNewGroupNameTxt().sendKeys(newlistname);
-		System.out.println("list name :: " + newlistname);
-		atlmppge.getMpListNewCreateBtn().click();
-		Thread.sleep(10000);
-		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), newlistname);
-
-		utl.addingExhProdLine(prop.getProperty("line1"));
-
-		/*
-		 * utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), "Favorites");
-		 * 
-		 * atlmppge.getMpQuickAdd().sendKeys("Anju"); Thread.sleep(3000);
-		 * atlmppge.getMpQuickAdd().sendKeys(Keys.ARROW_DOWN); Thread.sleep(3000);
-		 * atlmppge.getMpQuickAdd().sendKeys(Keys.ARROW_DOWN);
-		 * 
-		 * atlmppge.getMpQuickAdd().sendKeys(Keys.ENTER);
-		 */
-		Thread.sleep(3000);
-
-		String autoSuggetion = atlmppge.getMpQuickAdd().getAttribute("value");
-		// Verify Selected product added or not
-		System.out.println("prod Name::" + autoSuggetion);
-		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), autoSuggetion);
-
-	}
-
-	@Test(priority = 46)
-	public void TS046_VerifyMarketPlanneMyInfoEditProfile() throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// UXP-T270: Market Planner: My Info: Edit Profile
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		genData = new GenerateData();
-		atlexhact = new ATLExhLineProdActionsPage(driver);
-
-		atlgs = new ATLGlobalSearchPage(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		lap.getMPLinkText().click();
-		atlmppge.getmyinfotab().click();
-
-		// Change and Verify First Name and Last Name
-
-		atlmppge.getmyinfoeditprofile().click();
-		Assert.assertTrue(atlmppge.getmyinfoverifyeditprofile().isDisplayed());
-		System.out.println("Edit Profile page is displayed successfully.");
-		Thread.sleep(3000);
-		/*
-		 * atlmppge.getmyinfonamepencil().click();
-		 * atlmppge.getmyinfofirstname().sendKeys(genData.generateRandomString(8));
-		 * String FirstName = atlmppge.getmyinfofirstname().getText();
-		 * atlmppge.getmyinfolastname().sendKeys(genData.generateRandomString(8));
-		 * String LastName = atlmppge.getmyinfolastname().getText();
-		 * atlmppge.getmyinfodiscardbtn().click();
-		 * Assert.assertFalse(atlmppge.getverifymyinfoname().getText().contains(
-		 * FirstName+LastName)); System.out.println("Name is not updated.");
-		 * 
-		 * atlmppge.getmyinfonamepencil().click();
-		 * atlmppge.getmyinfofirstname().sendKeys(genData.generateRandomString(8));
-		 * String FirstName1 = atlmppge.getmyinfofirstname().getText();
-		 * atlmppge.getmyinfolastname().sendKeys(genData.generateRandomString(8));
-		 * String LastName1 = atlmppge.getmyinfolastname().getText();
-		 * atlmppge.getmyinfosavebutton().click();
-		 * Assert.assertFalse(atlmppge.getverifymyinfoname().getText().contains(
-		 * FirstName1+LastName1)); System.out.println("Name is updated successfully.");
-		 */
-
-		// Change and Verify Email Address
-		/*
-		 * atlmppge.getmyinfoemail().click();
-		 * atlmppge.getmyinfoemailcancelbtn().click();
-		 * Assert.assertTrue(atlmppge.getmyinfoemail().isDisplayed());
-		 * System.out.println("Email Form is closed successfully with Cancel button.");
-		 * 
-		 * atlmppge.getmyinfoemail().click(); atlmppge.getmyinfemailclosebtn().click();
-		 * Assert.assertTrue(atlmppge.getmyinfoemail().isDisplayed());
-		 * System.out.println("Email Form is closed successfully with X button.");
-		 * 
-		 * atlmppge.getmyinfoemail().click();
-		 * atlmppge.getmyinfoemailtxtbox().sendKeys(genData.generateEmail(15));
-		 * Thread.sleep(3000); String Email = atlmppge.getmyinfoemailtxtbox().getText();
-		 * atlmppge.getmyinfoverifybtn().click();
-		 * 
-		 * Assert.assertTrue(atlmppge.getmyinfonewemail().getText().contains(Email));
-		 * System.out.println("New email is properly added.");
-		 * 
-		 * // Change and Verify Email Address
-		 */
-		atlmppge.getmyinfocompanynamepencil().click();
-		Thread.sleep(5000);
-		atlmppge.getmyinfocompnametxt().clear();
-		Thread.sleep(5000);
-		atlmppge.getmyinfocompnametxt().sendKeys("TestCompName" + genData.generateRandomString(5));
-		// atlmppge.getmyinfocompnametxt().sendKeys(genData.generateRandomString(10));
-		String CompanyName = atlmppge.getmyinfocompnametxt().getText();
-		atlmppge.getmyinfosave2btn().click();
-		Assert.assertTrue(atlmppge.getmyinfoverifycompanyname().getText().contains(CompanyName));
-		System.out.println("Company Name is updated successfully.");
-
-		atlmppge.getmyinfocompanynamepencil().click();
-		atlmppge.getmyinfocompnametxt().click();
-		atlmppge.getmyinfocompnametxt().clear();
-		atlmppge.getmyinfocompnametxt().sendKeys("TestCompName" + genData.generateRandomString(5));
-		String CompanyName1 = atlmppge.getmyinfocompnametxt().getText();
-		atlmppge.getmyinfodiscard2btn().click();
-		Assert.assertTrue(atlmppge.getmyinfoverifycompanyname().getText().contains(CompanyName));
-		System.out.println("Company Name is not updated with Discard button.");
-	}
-
-	@Test(priority = 47)
-	public void TS047_VerifyMarketPlanneMyInfoOverview() throws InterruptedException, IOException {
-
-		// The purpose of this test case to verify:-
-		// UXP-T278:Market Planner: My Info overview
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		genData = new GenerateData();
-		atlexhact = new ATLExhLineProdActionsPage(driver);
-
-		atlgs = new ATLGlobalSearchPage(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		lap.getMPLinkText().click();
-		atlmppge.getmyinfotab().click();
-		Assert.assertTrue(atlmppge.getverifymyinfopage().isDisplayed());
-		System.out.println("My Info page is displayed successfully.");
-
-	}
-
-	@Test(priority = 48)
-	public void TS048_VerifyMarketPlanneMyInfoMyInquiriesTab() throws InterruptedException, IOException {
-
-		// The purpose of this test case to verify:-
-		// UXP-T279: Market Planner: My Info- My Inquiries
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		genData = new GenerateData();
-		atlexhact = new ATLExhLineProdActionsPage(driver);
-
-		atlgs = new ATLGlobalSearchPage(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		lap.getMPLinkText().click();
-		atlmppge.getmyinfotab().click();
-
-		// Click My inquiries tab and verify results
-		atlmppge.getmyinfomyinquiriestab().click();
-		Assert.assertTrue(atlmppge.getmyinfoverifymyinquiries().isDisplayed());
-		System.out.println("My Inquiries page is displayed properly.");
-	}
-
-	@Test(priority = 27)
-	public void TS049_VerifyTabsUnderListsSectionTest() throws InterruptedException, IOException {
-
-		// The purpose of this test case to verify:-
-		// UXP-T299: Maket Planner: Lists: Tabs under Lists section
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		genData = new GenerateData();
-		atlexhact = new ATLExhLineProdActionsPage(driver);
-
-		atlgs = new ATLGlobalSearchPage(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		lap.getMPLinkText().click();
-
-		// Click Lists tab and verify tabs under it
-		atlmppge.getMPHomeListsTab().click();
-		Assert.assertTrue(atlmppge.getmplistsfavorites().isDisplayed());
-		Assert.assertTrue(atlmppge.getListsPageListsMenu().isDisplayed());
-		Assert.assertTrue(atlmppge.getmplistsallsavedproduts().isDisplayed());
-		Assert.assertTrue(atlmppge.getmplistsallsavedexhibitors().isDisplayed());
-		Assert.assertTrue(atlmppge.getmplistsenentsandseminars().isDisplayed());
-		Assert.assertTrue(atlmppge.getmplistsmanagelist().isDisplayed());
-		System.out.println("List tab details are displayed properly.");
-	}
-
-	@Test(priority = 50)
-	public void TS050_VerifyListTabDetailsTest() throws InterruptedException, IOException {
-
-		// The purpose of this test case to verify:-
-		// UXP-T228: Maket Planner: Lists: Lists tab details
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		genData = new GenerateData();
-		atlexhact = new ATLExhLineProdActionsPage(driver);
-
-		atlgs = new ATLGlobalSearchPage(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		lap.getMPLinkText().click();
-
-		// Click Lists tab and verify tabs under it
-		atlmppge.getMPHomeListsTab().click();
-		Assert.assertTrue(atlmppge.getmplistsfavorites().isDisplayed());
-		Assert.assertTrue(atlmppge.getListsPageListsMenu().isDisplayed());
-		Assert.assertTrue(atlmppge.getmplistsallsavedproduts().isDisplayed());
-		Assert.assertTrue(atlmppge.getmplistsallsavedexhibitors().isDisplayed());
-		Assert.assertTrue(atlmppge.getmplistsenentsandseminars().isDisplayed());
-		Assert.assertTrue(atlmppge.getmplistsmanagelist().isDisplayed());
-		System.out.println("List tab options are displayed properly.");
-
-		// Verify List Details on the page
-		atlmppge.getListsPageListsMenu().click();
-		Assert.assertTrue(atlmppge.getmplistsmanagelist().isDisplayed());
-		Assert.assertTrue(atlmppge.getmpduplicatelistbtn().isDisplayed());
-		Assert.assertTrue(atlmppge.getmpeditlistbtn().isDisplayed());
-		Assert.assertTrue(atlmppge.getmparrangelistbtn().isDisplayed());
-		Assert.assertTrue(atlmppge.getmpnewlistbtn().isDisplayed());
-		Assert.assertTrue(atlmppge.getmpnewgrpbtn().isDisplayed());
-		System.out.println("List details are displayed properly.");
-
-	}
-
 	@Test(priority = 51)
 	public void TS051_VerifyMarketPlannerAddEventsToFav() throws InterruptedException, IOException {
 
@@ -3111,7 +3076,7 @@ public class MarketPlanner extends base {
 
 	}
 
-	@Test(priority = 38)
+	@Test(priority = 52)
 	public void TS052_VerifyMarketPlannerAllSavedEventsAndSemninar() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
@@ -3166,12 +3131,11 @@ public class MarketPlanner extends base {
 		// Verify that the added favorites exhibitor should be removed from Favorites
 		// list
 		Assert.assertFalse(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
-
 	}
 
 	@AfterClass
 	public void tearDown() {
-		 //driver.quit();
+		//driver.quit();
 
 	}
 
