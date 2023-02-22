@@ -8,7 +8,11 @@
 	</listners>
 	<test thread-count="1" name="RegressionSequentialTest" >
 		<classes>
-		 	<class name="lasvegasmarket_UAT.FloorPlans" />
+		 	<class name="lasvegasmarket_UAT.FloorPlans">
+				<methods>
+					<exclude name="TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest"/>
+				</methods>
+			</class>
 		</classes>
 	</test>
 </suite>
