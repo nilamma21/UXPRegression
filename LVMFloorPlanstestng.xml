@@ -10,6 +10,7 @@
 		<classes>
 		 	<class name="lasvegasmarket_UAT.FloorPlans">
 				<methods>
+					<exclude name="TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest"/>
 					<exclude name="TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest"/>
 				</methods>
 			</class>
