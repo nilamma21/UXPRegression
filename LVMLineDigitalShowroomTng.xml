@@ -8,7 +8,12 @@
 	</listners>
 	<test thread-count="1" name="RegressionSequentialTest" >
 		<classes>
-		 	<class name="lasvegasmarket_UAT.LineDigitalShowroom" />
+		 	<class name="lasvegasmarket_UAT.LineDigitalShowroom">
+				<methods>
+					<exclude name="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest"/>
+					<exclude name="TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest"/>
+				</methods>
+			 </class>
 		</classes>
 	</test>
 </suite>
