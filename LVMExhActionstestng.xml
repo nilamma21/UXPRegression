@@ -11,9 +11,9 @@
 		 	<class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions">
 				<methods>
               		<exclude name="TS001_VerifyAddToFavoriteForExhibitorTest" />
-					<exclude name="TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest" />
-					<exclude name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest" />
-          		</methods>
+			  		<exclude name="TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest" />
+			  		<exclude name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest" />
+         	 	</methods>
 			<class/>
 		</classes>
 	</test>
