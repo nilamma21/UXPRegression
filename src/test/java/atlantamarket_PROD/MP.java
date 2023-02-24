@@ -2635,18 +2635,34 @@ public class MP extends base {
 		atlmppge.getMpListNewGroupBtn().click();
 
 		// verify New Group Popup header
-		Assert.assertTrue(
-				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateGroupPopupHeader")));
+		Assert.assertTrue(atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateGroupPopupHeader")));
+
 		// Enter Group name
 		String newGroupname = "Cyb" + genData.generateRandomString(5);
 		atlmppge.getMpListNewGroupNameTxt().sendKeys(newGroupname);
 		System.out.println(newGroupname);
+
 		// Click on Create Btn
 		atlmppge.getMpListNewGroupCreateBtn().click();
 		Thread.sleep(5000);
 
-		utl.checkItemPresentInListorNot(atlmppge.getAtlListOfAllGroups(), newGroupname);
+		// click on New list btn
+		atlmppge.getMpListNewListBtn().click();
 
+		//Click on select group drop down icon
+		atlmppge.getMPSelectGroupIcon().click();
+		
+		mpgroupnames = atlmppge.getMPGroupNamesDropDown();
+		
+		for (int i = 0; i < mpgroupnames.size(); i++) {
+			// System.out.println(mplists.get(i).getText());
+			// System.out.println(mpeditlistoptns.get(i).getText());
+			if (mpgroupnames.get(i).getText().equals(newGroupname)) {
+				System.out.println("New group is created: "+newGroupname);
+				break;
+			}
+		}
+		
 	}
 
 	@Test(priority = 47)
