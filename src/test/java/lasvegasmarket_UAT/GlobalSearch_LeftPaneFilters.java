@@ -473,16 +473,16 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));
 		lvmgs.getLVMSearchButton().click();
-
+		Thread.sleep(1000);
+		
 		//Click on Product Categories expand btn
 		lvmleftpane.getLVMProdCatgExpandBtn().click();
-
+		Thread.sleep(1000);
 		utl.scrollToElement(lvmleftpane.getLVMDecorativeAccProdCatg());
 
 		//Select Decorative Accessories prod category
@@ -539,7 +539,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		
 		//Click on Product Categories expand btn
 		lvmleftpane.getLVMProdCatgExpandBtn().click();
-
+		Thread.sleep(2000);
 		utl.scrollToElement(lvmleftpane.getLVMGeneralGiftProdCatg());
 
 		//Select General Gift prod category
@@ -562,6 +562,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		//Scroll till Product Categories section
 		utl.scrollToElement(lvmds.getLVMProductCategSection());
+		Thread.sleep(2000);
 		prodcatgitemlist = lvmds.getLVMProductCategItemList();
 
 		for (int j = 0; j < prodcatgitemlist.size(); j++) {

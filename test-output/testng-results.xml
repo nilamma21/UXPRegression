@@ -2,24 +2,31 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
+  <suite name="LVM_RegressionTestSuite" duration-ms="76818" started-at="2023-02-24T08:22:53Z" finished-at="2023-02-24T08:24:10Z">
+=======
 
   <suite name="ATLMrkt_RegressionTestSuite" duration-ms="115819" started-at="2023-02-24T06:42:05Z" finished-at="2023-02-24T06:44:00Z">
+>>>>>>> 9cc178f5175b39c9bc880551cd540347b2cf6083
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="139482" started-at="2023-02-15T12:24:12Z" finished-at="2023-02-15T12:26:32Z">
-      <class name="atlantamarket_PROD.MarketPlanner">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.MarketPlanner@f6c48ac]" name="initialize" is-config="true" duration-ms="94626" started-at="2023-02-15T17:54:12Z" finished-at="2023-02-15T17:55:47Z">
+    <test name="RegressionTest" duration-ms="76818" started-at="2023-02-24T08:22:53Z" finished-at="2023-02-24T08:24:10Z">
+      <class name="lasvegasmarket_UAT.GlobalSearch_SearchFor">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_UAT.GlobalSearch_SearchFor@13969fbe]" name="initialize" is-config="true" duration-ms="33530" started-at="2023-02-24T13:52:53Z" finished-at="2023-02-24T13:53:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS045_VerifyMarketPlannerListsAllSavedproductsTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@f6c48ac]" name="TS045_VerifyMarketPlannerListsAllSavedproductsTest" duration-ms="44422" started-at="2023-02-15T17:55:47Z" finished-at="2023-02-15T17:56:31Z">
+        <test-method status="PASS" signature="TS004_VerifyCatalogsOverviewInGlobalSearchTest()[pri:0, instance:lasvegasmarket_UAT.GlobalSearch_SearchFor@13969fbe]" name="TS004_VerifyCatalogsOverviewInGlobalSearchTest" duration-ms="43263" started-at="2023-02-24T13:53:27Z" finished-at="2023-02-24T13:54:10Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS045_VerifyMarketPlannerListsAllSavedproductsTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.MarketPlanner@f6c48ac]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-02-15T17:56:32Z" finished-at="2023-02-15T17:56:32Z">
+        </test-method> <!-- TS004_VerifyCatalogsOverviewInGlobalSearchTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_UAT.GlobalSearch_SearchFor@13969fbe]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-02-24T13:54:10Z" finished-at="2023-02-24T13:54:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
+<<<<<<< HEAD
+      </class> <!-- lasvegasmarket_UAT.GlobalSearch_SearchFor -->
+=======
       </class> <!-- atlantamarket_PROD.MarketPlanner -->
 
 
@@ -45,6 +52,7 @@
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- atlantamarket_PROD.MarketPlanner -->
+>>>>>>> 9cc178f5175b39c9bc880551cd540347b2cf6083
     </test> <!-- RegressionTest -->
   </suite> <!-- ATLMrkt_RegressionTestSuite -->
 </testng-results>
