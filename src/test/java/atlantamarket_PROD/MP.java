@@ -2652,7 +2652,7 @@ public class MP extends base {
 		//Click on select group drop down icon
 		atlmppge.getMPSelectGroupIcon().click();
 		
-		mpgroupnames = atlmppge.getMPGroupNamesDropDown();
+	List<WebElement> mpgroupnames = atlmppge.getMPGroupNamesDropDown();
 		
 		for (int i = 0; i < mpgroupnames.size(); i++) {
 			// System.out.println(mplists.get(i).getText());
