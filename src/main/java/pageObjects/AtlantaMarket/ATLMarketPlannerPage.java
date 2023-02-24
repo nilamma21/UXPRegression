@@ -259,6 +259,8 @@ public class ATLMarketPlannerPage {
 	
 	By mplistduplicatebtn = By.xpath("//input[@value='Duplicate']"); //Locator for Duplicate button
 	By mpduplicatelistnametxtbx = By.xpath("//div[@class='imc-vr--medium'][1]/div[1]/input"); //Locator of List name txt box to create Duplicate list
+	By mpgroupnamesdropdown = By.xpath("//select[@name='groupName']/option"); //List of group names in drop down
+	By selectgroupicon = By.xpath("//select[@name='groupName']"); //Locator for Select a group drop down icon
 	
 	public ATLMarketPlannerPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -1375,6 +1377,16 @@ public class ATLMarketPlannerPage {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpduplicatelistnametxtbx));
 		return driver.findElement(mpduplicatelistnametxtbx);
+	}
+	public List <WebElement> getMPGroupNamesDropDown() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(mpgroupnamesdropdown));
+		return driver.findElements(mpgroupnamesdropdown);
+	}
+	public WebElement getMPSelectGroupIcon() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(selectgroupicon));
+		return driver.findElement(selectgroupicon);
 	}
 }
 
