@@ -2,7 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite name="LVM_RegressionTestSuite" duration-ms="76818" started-at="2023-02-24T08:22:53Z" finished-at="2023-02-24T08:24:10Z">
+=======
+
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="115819" started-at="2023-02-24T06:42:05Z" finished-at="2023-02-24T06:44:00Z">
+>>>>>>> 9cc178f5175b39c9bc880551cd540347b2cf6083
     <groups>
     </groups>
     <test name="RegressionTest" duration-ms="76818" started-at="2023-02-24T08:22:53Z" finished-at="2023-02-24T08:24:10Z">
@@ -19,7 +24,35 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
+<<<<<<< HEAD
       </class> <!-- lasvegasmarket_UAT.GlobalSearch_SearchFor -->
+=======
+      </class> <!-- atlantamarket_PROD.MarketPlanner -->
+
+
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="LVM_RegressionTestSuite" duration-ms="153027" started-at="2023-02-17T12:32:28Z" finished-at="2023-02-17T12:35:01Z">
+
+    <groups>
+    </groups>
+    <test name="RegressionTest" duration-ms="115819" started-at="2023-02-24T06:42:05Z" finished-at="2023-02-24T06:44:00Z">
+      <class name="atlantamarket_PROD.MarketPlanner">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.MarketPlanner@f6c48ac]" name="initialize" is-config="true" duration-ms="92395" started-at="2023-02-24T12:12:05Z" finished-at="2023-02-24T12:13:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS046_VerifyNewGroupBtnFunctionalityForListsTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@f6c48ac]" name="TS046_VerifyNewGroupBtnFunctionalityForListsTest" duration-ms="23105" started-at="2023-02-24T12:13:37Z" finished-at="2023-02-24T12:14:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS046_VerifyNewGroupBtnFunctionalityForListsTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.MarketPlanner@f6c48ac]" name="tearDown" is-config="true" duration-ms="1" started-at="2023-02-24T12:14:00Z" finished-at="2023-02-24T12:14:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- atlantamarket_PROD.MarketPlanner -->
+>>>>>>> 9cc178f5175b39c9bc880551cd540347b2cf6083
     </test> <!-- RegressionTest -->
-  </suite> <!-- LVM_RegressionTestSuite -->
+  </suite> <!-- ATLMrkt_RegressionTestSuite -->
 </testng-results>

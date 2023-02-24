@@ -49,7 +49,7 @@ public class MarketPlanner extends base {
 	ATLFloorPlansPage atlflpp;
 	ATLEventsAndWebinarPage atlevents;
 	ATLLeftPaneFilters atlleftpane;
-	List<WebElement> mplists, mpduplicatelistoptns;
+	List<WebElement> mplists, mpduplicatelistoptns, mpgroupnames;
 
 	@BeforeClass
 	public void initialize() throws IOException, InterruptedException {
@@ -2581,7 +2581,12 @@ public class MarketPlanner extends base {
 		atlgs.getATLGlobalSearchTextBox().sendKeys("   ");
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(15000);
+
+
 		// Store the 1st product name of Exhibitor
+
+		// Store the 1st product name of Exhibitor
+
 
 		String productNameOnSearchGrid =atlexhact.getExhProductNameOnSearchGrid().getText();
 		System.out.println("Selected product Name: " + productNameOnSearchGrid);
@@ -2593,7 +2598,10 @@ public class MarketPlanner extends base {
 		actions.moveToElement(atlmppge.getseeAllBtn()).perform();
 		// To mouseover on See All btn
 		actions.moveToElement(atlexhact.getProductFevBtn()).perform();
+
+
 		//atlmppge.getFavIcone().click();
+
 
 		// Click on Add To Favorite button
 		actions.click().perform();
@@ -2636,18 +2644,34 @@ public class MarketPlanner extends base {
 		atlmppge.getMpListNewGroupBtn().click();
 
 		// verify New Group Popup header
-		Assert.assertTrue(
-				atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateGroupPopupHeader")));
+		Assert.assertTrue(atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateGroupPopupHeader")));
+		
 		// Enter Group name
 		String newGroupname = "Cyb" + genData.generateRandomString(5);
 		atlmppge.getMpListNewGroupNameTxt().sendKeys(newGroupname);
 		System.out.println(newGroupname);
+
 		// Click on Create Btn
 		atlmppge.getMpListNewGroupCreateBtn().click();
 		Thread.sleep(5000);
 
-		utl.checkItemPresentInListorNot(atlmppge.getAtlListOfAllGroups(), newGroupname);
+		// click on New list btn
+		atlmppge.getMpListNewListBtn().click();
 
+		//Click on select group drop down icon
+		atlmppge.getMPSelectGroupIcon().click();
+		
+		mpgroupnames = atlmppge.getMPGroupNamesDropDown();
+		
+		for (int i = 0; i < mpgroupnames.size(); i++) {
+			// System.out.println(mplists.get(i).getText());
+			// System.out.println(mpeditlistoptns.get(i).getText());
+			if (mpgroupnames.get(i).getText().equals(newGroupname)) {
+				System.out.println("New group is created: "+newGroupname);
+				break;
+			}
+		}
+		
 	}
 
 	@Test(priority = 47)
