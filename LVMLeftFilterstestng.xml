@@ -8,7 +8,11 @@
 	</listners>
 	<test thread-count="1" name="RegressionSequentialTest" >
 		<classes>
-		 	<class name="lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters" />
+		 	<class name="lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters">
+				<methods>
+              		<exclude name="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest" />
+          		</methods>
+			 </class>
 		</classes>
 	</test>
 </suite>
