@@ -3,14 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [LVM_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-      <class name="lasvegasmarket_UAT.FloorPlans">
+      <class name="lasvegasmarket_UAT.GlobalSearch_SearchFor">
         <methods>
-          <include name="tearDown"/>
-          <include name="TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest"/>
-          <include name="TS011_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest"/>
+          <include name="TS004_VerifyCatalogsOverviewInGlobalSearchTest"/>
           <include name="initialize"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- lasvegasmarket_UAT.FloorPlans -->
+      </class> <!-- lasvegasmarket_UAT.GlobalSearch_SearchFor -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->

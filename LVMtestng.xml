@@ -9,16 +9,13 @@
 	<test thread-count="5" name="RegressionTest">
 		<classes>
 
-
-
-
-			<class name="lasvegasmarket_UAT.FloorPlans" />
+			<class name="lasvegasmarket_UAT.GlobalSearch_SearchFor" />
 			<methods>
-				 <include name="TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest"/> 
+				  <include name="TS004_VerifyCatalogsOverviewInGlobalSearchTest()"/> 
 
-			<class name="lasvegasmarket_UAT.EvenntsAndWebinar" />
+			<!-- <class name="lasvegasmarket_UAT.EvenntsAndWebinar" />
 			<methods>
-				     <include name="TS003_VerifyIMCEventsCalendarViewTest"/>  
+				     <include name="TS003_VerifyIMCEventsCalendarViewTest"/>   -->
 
 
 			<!-- <class name="lasvegasmarket_UAT.GlobalSearch_ProductActions" />

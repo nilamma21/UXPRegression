@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>RegressionTest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>10/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Feb 20 15:15:07 IST 2023</td>
+<td>Started on:</td><td>Fri Feb 24 13:52:53 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>506 seconds (506973 ms)</td>
+<tr><td>Total time:</td><td>76 seconds (76818 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,146 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='lasvegasmarket_UAT.FloorPlans.TS011_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest()'><b>TS011_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest</b><br>Test class: lasvegasmarket_UAT.FloorPlans</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: element click intercepted: Element is not clickable at point (666, 1093)
-  (Session info: chrome=109.0.5414.120)
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir17596_605086395}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:50384}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=109.0.5414.120, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: 5954940463de4313e30ec6a7390a1b6f
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
-	at lasvegasmarket_UAT.FloorPlans.TS011_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest(FloorPlans.java:591)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2123269713", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2123269713'><pre>org.openqa.selenium.WebDriverException: element click intercepted: Element is not clickable at point (666, 1093)
-  (Session info: chrome=109.0.5414.120)
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir17596_605086395}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:50384}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=109.0.5414.120, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: 5954940463de4313e30ec6a7390a1b6f
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
-	at lasvegasmarket_UAT.FloorPlans.TS011_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest(FloorPlans.java:591)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:663)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:849)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
-	at org.testng.TestNG.run(TestNG.java:1033)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div></td>
-<td>37</td>
-<td>lasvegasmarket_UAT.FloorPlans@edf4efb</td></tr>
-<tr>
-<td title='lasvegasmarket_UAT.FloorPlans.TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest()'><b>TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest</b><br>Test class: lasvegasmarket_UAT.FloorPlans</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: element click intercepted: Element &lt;a href=&quot;/&quot; class=&quot;imc-navigation__tier1Link&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;navigation-tier2-&quot; data-xpath=&quot;navigation.tier1Link&quot; target=&quot;_self&quot;&gt;...&lt;/a&gt; is not clickable at point (613, 160). Other element would receive the click: &lt;h4 class=&quot;imc-type--title-2&quot;&gt;...&lt;/h4&gt;
-  (Session info: chrome=109.0.5414.120)
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir17596_605086395}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:50384}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=109.0.5414.120, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: 5954940463de4313e30ec6a7390a1b6f
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
-	at lasvegasmarket_UAT.FloorPlans.TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest(FloorPlans.java:628)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace505968231", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace505968231'><pre>org.openqa.selenium.WebDriverException: element click intercepted: Element &lt;a href=&quot;/&quot; class=&quot;imc-navigation__tier1Link&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;navigation-tier2-&quot; data-xpath=&quot;navigation.tier1Link&quot; target=&quot;_self&quot;&gt;...&lt;/a&gt; is not clickable at point (613, 160). Other element would receive the click: &lt;h4 class=&quot;imc-type--title-2&quot;&gt;...&lt;/h4&gt;
-  (Session info: chrome=109.0.5414.120)
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir17596_605086395}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:50384}, webauthn:extension:credBlob=true, acceptInsecureCerts=false, browserVersion=109.0.5414.120, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: 5954940463de4313e30ec6a7390a1b6f
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
-	at lasvegasmarket_UAT.FloorPlans.TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest(FloorPlans.java:628)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:663)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:849)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:771)
-	at org.testng.TestRunner.run(TestRunner.java:621)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
-	at org.testng.TestNG.run(TestNG.java:1033)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div></td>
-<td>1</td>
-<td>lasvegasmarket_UAT.FloorPlans@edf4efb</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -215,55 +75,10 @@ Session ID: 5954940463de4313e30ec6a7390a1b6f
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='lasvegasmarket_UAT.FloorPlans.TS001_VerifyNavigationToDifferentFloorBuildingsTest()'><b>TS001_VerifyNavigationToDifferentFloorBuildingsTest</b><br>Test class: lasvegasmarket_UAT.FloorPlans</td>
+<td title='lasvegasmarket_UAT.GlobalSearch_SearchFor.TS004_VerifyCatalogsOverviewInGlobalSearchTest()'><b>TS004_VerifyCatalogsOverviewInGlobalSearchTest</b><br>Test class: lasvegasmarket_UAT.GlobalSearch_SearchFor</td>
 <td></td>
-<td>11</td>
-<td>lasvegasmarket_UAT.FloorPlans@edf4efb</td></tr>
-<tr>
-<td title='lasvegasmarket_UAT.FloorPlans.TS002_VerifyNoExhibitorsOnThisFloorMessageTest()'><b>TS002_VerifyNoExhibitorsOnThisFloorMessageTest</b><br>Test class: lasvegasmarket_UAT.FloorPlans</td>
-<td></td>
-<td>9</td>
-<td>lasvegasmarket_UAT.FloorPlans@edf4efb</td></tr>
-<tr>
-<td title='lasvegasmarket_UAT.FloorPlans.TS003_VerifyZoomInOutLevelOnFloorPlansPageTest()'><b>TS003_VerifyZoomInOutLevelOnFloorPlansPageTest</b><br>Test class: lasvegasmarket_UAT.FloorPlans</td>
-<td></td>
-<td>22</td>
-<td>lasvegasmarket_UAT.FloorPlans@edf4efb</td></tr>
-<tr>
-<td title='lasvegasmarket_UAT.FloorPlans.TS004_VerifyIconsOnFloorPlansPageTest()'><b>TS004_VerifyIconsOnFloorPlansPageTest</b><br>Test class: lasvegasmarket_UAT.FloorPlans</td>
-<td></td>
-<td>34</td>
-<td>lasvegasmarket_UAT.FloorPlans@edf4efb</td></tr>
-<tr>
-<td title='lasvegasmarket_UAT.FloorPlans.TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest()'><b>TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest</b><br>Test class: lasvegasmarket_UAT.FloorPlans</td>
-<td></td>
-<td>76</td>
-<td>lasvegasmarket_UAT.FloorPlans@edf4efb</td></tr>
-<tr>
-<td title='lasvegasmarket_UAT.FloorPlans.TS006_VerifyPaginationOnFloorPlansPageTest()'><b>TS006_VerifyPaginationOnFloorPlansPageTest</b><br>Test class: lasvegasmarket_UAT.FloorPlans</td>
-<td></td>
-<td>27</td>
-<td>lasvegasmarket_UAT.FloorPlans@edf4efb</td></tr>
-<tr>
-<td title='lasvegasmarket_UAT.FloorPlans.TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest()'><b>TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest</b><br>Test class: lasvegasmarket_UAT.FloorPlans</td>
-<td></td>
-<td>50</td>
-<td>lasvegasmarket_UAT.FloorPlans@edf4efb</td></tr>
-<tr>
-<td title='lasvegasmarket_UAT.FloorPlans.TS008_VerifyClickOnReturnToBuildingListBtnTest()'><b>TS008_VerifyClickOnReturnToBuildingListBtnTest</b><br>Test class: lasvegasmarket_UAT.FloorPlans</td>
-<td></td>
-<td>14</td>
-<td>lasvegasmarket_UAT.FloorPlans@edf4efb</td></tr>
-<tr>
-<td title='lasvegasmarket_UAT.FloorPlans.TS009_VerifySearchFunctionalityForExhListOnFloorPlansPageTest()'><b>TS009_VerifySearchFunctionalityForExhListOnFloorPlansPageTest</b><br>Test class: lasvegasmarket_UAT.FloorPlans</td>
-<td></td>
-<td>53</td>
-<td>lasvegasmarket_UAT.FloorPlans@edf4efb</td></tr>
-<tr>
-<td title='lasvegasmarket_UAT.FloorPlans.TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest()'><b>TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest</b><br>Test class: lasvegasmarket_UAT.FloorPlans</td>
-<td></td>
-<td>65</td>
-<td>lasvegasmarket_UAT.FloorPlans@edf4efb</td></tr>
+<td>43</td>
+<td>lasvegasmarket_UAT.GlobalSearch_SearchFor@13969fbe</td></tr>
 </table><p>
 </body>
 </html>

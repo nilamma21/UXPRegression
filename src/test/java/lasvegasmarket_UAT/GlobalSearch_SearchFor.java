@@ -300,7 +300,8 @@ public class GlobalSearch_SearchFor extends base{
 		// Store the current window handle
 		String winHandleBefore = driver.getWindowHandle();
 		//Click on Catalog
-		lvmexhact.getCatalogsItem().click();
+		//lvmexhact.getCatalogsItem().click();//For Prod
+		lvmexhact.getCatalogsItemNew().click();//For UAT
 		for (String winHandle : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle);
 		}
@@ -856,7 +857,7 @@ public class GlobalSearch_SearchFor extends base{
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 
 }
