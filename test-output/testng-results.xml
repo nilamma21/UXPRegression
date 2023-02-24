@@ -2,7 +2,32 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
+
   <suite name="ATLMrkt_RegressionTestSuite" duration-ms="115819" started-at="2023-02-24T06:42:05Z" finished-at="2023-02-24T06:44:00Z">
+    <groups>
+    </groups>
+    <test name="RegressionTest" duration-ms="139482" started-at="2023-02-15T12:24:12Z" finished-at="2023-02-15T12:26:32Z">
+      <class name="atlantamarket_PROD.MarketPlanner">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.MarketPlanner@f6c48ac]" name="initialize" is-config="true" duration-ms="94626" started-at="2023-02-15T17:54:12Z" finished-at="2023-02-15T17:55:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS045_VerifyMarketPlannerListsAllSavedproductsTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@f6c48ac]" name="TS045_VerifyMarketPlannerListsAllSavedproductsTest" duration-ms="44422" started-at="2023-02-15T17:55:47Z" finished-at="2023-02-15T17:56:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS045_VerifyMarketPlannerListsAllSavedproductsTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.MarketPlanner@f6c48ac]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-02-15T17:56:32Z" finished-at="2023-02-15T17:56:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- atlantamarket_PROD.MarketPlanner -->
+
+
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="LVM_RegressionTestSuite" duration-ms="153027" started-at="2023-02-17T12:32:28Z" finished-at="2023-02-17T12:35:01Z">
+
     <groups>
     </groups>
     <test name="RegressionTest" duration-ms="115819" started-at="2023-02-24T06:42:05Z" finished-at="2023-02-24T06:44:00Z">

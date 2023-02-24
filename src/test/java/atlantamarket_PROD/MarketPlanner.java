@@ -2582,7 +2582,12 @@ public class MarketPlanner extends base {
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(15000);
 
+
 		// Store the 1st product name of Exhibitor
+
+		// Store the 1st product name of Exhibitor
+
+
 		String productNameOnSearchGrid =atlexhact.getExhProductNameOnSearchGrid().getText();
 		System.out.println("Selected product Name: " + productNameOnSearchGrid);
 
@@ -2593,6 +2598,10 @@ public class MarketPlanner extends base {
 		actions.moveToElement(atlmppge.getseeAllBtn()).perform();
 		// To mouseover on See All btn
 		actions.moveToElement(atlexhact.getProductFevBtn()).perform();
+
+
+		//atlmppge.getFavIcone().click();
+
 
 		// Click on Add To Favorite button
 		actions.click().perform();
@@ -2636,7 +2645,7 @@ public class MarketPlanner extends base {
 
 		// verify New Group Popup header
 		Assert.assertTrue(atlmppge.getMpListNewGroupPopupHeader().getText().contains(prop.getProperty("CreateGroupPopupHeader")));
-
+		
 		// Enter Group name
 		String newGroupname = "Cyb" + genData.generateRandomString(5);
 		atlmppge.getMpListNewGroupNameTxt().sendKeys(newGroupname);
