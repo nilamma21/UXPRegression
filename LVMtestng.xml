@@ -9,9 +9,9 @@
 	<test thread-count="5" name="RegressionTest">
 		<classes>
 
-			<class name="lasvegasmarket_UAT.GlobalSearch_SearchFor" />
+			<class name="lasvegasmarket_UAT.FloorPlans" />
 			<methods>
-				  <include name="TS004_VerifyCatalogsOverviewInGlobalSearchTest()"/> 
+				  <include name="TS004_VerifyIconsOnFloorPlansPageTest()"/> 
 
 			<!-- <class name="lasvegasmarket_UAT.EvenntsAndWebinar" />
 			<methods>
