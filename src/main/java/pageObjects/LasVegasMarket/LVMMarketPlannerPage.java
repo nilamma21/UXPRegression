@@ -216,7 +216,7 @@ public class LVMMarketPlannerPage {
 	By LvmAddToSchedule = By.xpath("//div[@class='imc-hover-menu__content']/span[4]/a[1]"); //locator for Add To Schedule option
 	By favexhnamelist = By.xpath("//div[@class='imc-loading-relative']/div[3]/li/div/div/div/a"); //Locator for Favorite Exhibitor names list
 	By favIconlist = By.xpath("//button[@class='imc-selectableicon ']"); //Locator for Favorite Icon list
-	By createandaddaistbtn = By.xpath("//input[@value='Create and Add']");
+	By createandaddaistbtn = By.xpath("//input[contains(@value,'Create')]");
 	
 	public LVMMarketPlannerPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
