@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<<<<<<< HEAD
 <suite name="Failed suite [LVM_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
@@ -10,6 +11,18 @@
           <include name="initialize"/>
         </methods>
       </class> <!-- lasvegasmarket_UAT.GlobalSearch_MatchingResults -->
+=======
+<suite guice-stage="DEVELOPMENT" name="Failed suite [LVM_RegressionTestSuite]">
+  <test name="RegressionTest(failed)">
+    <classes>
+      <class name="lasvegasmarket_UAT.GlobalSearch_SearchFor">
+        <methods>
+          <include name="TS004_VerifyCatalogsOverviewInGlobalSearchTest"/>
+          <include name="initialize"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- lasvegasmarket_UAT.GlobalSearch_SearchFor -->
+>>>>>>> ba8a85d0989a07cec888249c48592927d478b4ff
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->

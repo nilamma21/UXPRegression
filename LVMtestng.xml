@@ -9,6 +9,7 @@
 	<test thread-count="5" name="RegressionTest">
 		<classes>
 
+<<<<<<< HEAD
 
 
 
@@ -19,6 +20,15 @@
 			<!--<class name="lasvegasmarket_UAT.EvenntsAndWebinar" />
 			<methods>
 				     <include name="TS003_VerifyIMCEventsCalendarViewTest"/>  --> 
+=======
+			<class name="lasvegasmarket_UAT.GlobalSearch_SearchFor" />
+			<methods>
+				  <include name="TS004_VerifyCatalogsOverviewInGlobalSearchTest()"/> 
+
+			<!-- <class name="lasvegasmarket_UAT.EvenntsAndWebinar" />
+			<methods>
+				     <include name="TS003_VerifyIMCEventsCalendarViewTest"/>   -->
+>>>>>>> ba8a85d0989a07cec888249c48592927d478b4ff
 
 
 			<!-- <class name="lasvegasmarket_UAT.GlobalSearch_ProductActions" />
