@@ -119,7 +119,7 @@ public class GlobalSearch_LineActions extends base {
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchInputForLines")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -128,22 +128,28 @@ public class GlobalSearch_LineActions extends base {
 		System.out.println("Exhibitor name: " + exhname);
 
 		// Click on Favorite icon of 1st exhibitor
-		atlexhact.getAddFavIcon().click();
-
+		atlexhact.getaddfaviconLVM_UAT().click();
+		Thread.sleep(8000);
 		// Click on Market Planner link
 		lap.getMPLinkText().click();
 
 		// Click on Lists tab on MP home page
 		atlmppge.getMPHomeListsTab().click();
 		atlmppge.getATLMPListsPageFavoritesMenu().click();
-
+		Thread.sleep(5000);
 		// Verify that the added favorites exhibitor should be displayed in to Favorites list
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 
 		// Delete that favorites exhibitor from list
-		atlmppge.getATLEditListItemMoreBtn().click();
+	/*	atlmppge.getATLEditListItemMoreBtn().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
-		Thread.sleep(6000);
+		Thread.sleep(6000)*/;
+		//utl.scrollToElement(atlmppge.getSavedProductNameInList());
+		Thread.sleep(3000);
+		atlmppge.getMoreBtnDeleteOptnExistingList_ATLPROD().click();
+		Thread.sleep(3000);
+		atlmppge.getATLEditListItemDeleteOptn().click();
+		Thread.sleep(8000);
 		favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
 
 		//Verify that the added product should be removed from Favorites list
@@ -217,7 +223,7 @@ public class GlobalSearch_LineActions extends base {
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 		
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchInputForLines")));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(15000);
 		atlexhact.getseealllink().click();
@@ -280,7 +286,7 @@ public class GlobalSearch_LineActions extends base {
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchInputForLines")));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(15000);
 		//atlexhact.getseealllink().click();
@@ -336,12 +342,15 @@ public class GlobalSearch_LineActions extends base {
 				actions.moveToElement(atlmppge.getATLEditListItemDeleteOptn()).perform();
 
 				// Click on See Details button
-				actions.click().perform();
-		
-		Thread.sleep(5000);
-		utl.scrollToElement(atlmppge.getATLEditListItemDeleteOptn());
+				actions.click().perform();*/
+		Thread.sleep(3000);
+		utl.scrollToElement(atlmppge.getATLSavedExhNameInList());
+		atlmppge.getMoreBtnDeleteOptnExistingList_ATLPROD().click();
+		Thread.sleep(3000);
 		atlmppge.getATLEditListItemDeleteOptn().click();
-		Thread.sleep(8000);*/
+		Thread.sleep(8000);
+		Assert.assertFalse(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
+		driver.get(prop.getProperty("lvmurl_uat"));
 	}
 
 	@Test(priority = 06)

@@ -12,13 +12,13 @@
 
 
 
-			<class name="lasvegasmarket_UAT.FloorPlans" />
+			<class name="lasvegasmarket_UAT.GlobalSearch_MatchingResults" />
 			<methods>
-				 <include name="TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest"/> 
-
-			<class name="lasvegasmarket_UAT.EvenntsAndWebinar" />
+				  <include name="TS003_VerifyGlobalSearchMatchingResultsSortSortByTest"/> 
+				<!-- 	<include name="TS006_VerifyProductAddToExistingListOnSearchResultsGridTest"/> -->
+			<!--<class name="lasvegasmarket_UAT.EvenntsAndWebinar" />
 			<methods>
-				     <include name="TS003_VerifyIMCEventsCalendarViewTest"/>  
+				     <include name="TS003_VerifyIMCEventsCalendarViewTest"/>  --> 
 
 
 			<!-- <class name="lasvegasmarket_UAT.GlobalSearch_ProductActions" />
