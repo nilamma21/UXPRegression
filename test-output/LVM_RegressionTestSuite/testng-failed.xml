@@ -3,7 +3,7 @@
 <suite name="Failed suite [LVM_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-<<<<<<< HEAD
+
       <class name="lasvegasmarket_UAT.GlobalSearch_MatchingResults">
         <methods>
           <include name="TS003_VerifyGlobalSearchMatchingResultsSortSortByTest"/>
@@ -11,7 +11,7 @@
           <include name="initialize"/>
         </methods>
       </class> <!-- lasvegasmarket_UAT.GlobalSearch_MatchingResults -->
-=======
+
       <class name="lasvegasmarket_UAT.GlobalSearch_SearchFor">
         <methods>
           <include name="TS004_VerifyCatalogsOverviewInGlobalSearchTest"/>
@@ -19,7 +19,7 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- lasvegasmarket_UAT.GlobalSearch_SearchFor -->
->>>>>>> ba8a85d0989a07cec888249c48592927d478b4ff
+
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
