@@ -1378,6 +1378,7 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpduplicatelistnametxtbx));
 		return driver.findElement(mpduplicatelistnametxtbx);
 	}
+	
 	public List <WebElement> getMPGroupNamesDropDown() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpgroupnamesdropdown));

@@ -86,7 +86,7 @@ public class ATLExhLineProdActionsPage extends base{
 	
 	By prodNameUAT = By.xpath("(//div[@class='searchItemThumb--container'])[1]/p[1]"); //Locator for DG showroom Filter Catalog
 	
-			
+	By addfaviconLVM_UAT = By.xpath("(//li[@class='imc-exhibitorcard--action imc-exhibitorcard--contact imc-exhibitorcard--contact--heart'])[position()=1]/div/button"); // Locator of add to Favorite icon		
 	
 	public ATLExhLineProdActionsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -94,6 +94,11 @@ public class ATLExhLineProdActionsPage extends base{
 
 	} 
 		
+	public WebElement getaddfaviconLVM_UAT() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(addfaviconLVM_UAT));
+		return driver.findElement(addfaviconLVM_UAT);
+	}	
 	public WebElement getprodNameUAT() {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(prodNameUAT));

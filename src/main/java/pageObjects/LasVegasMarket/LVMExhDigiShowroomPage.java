@@ -242,7 +242,7 @@ public class LVMExhDigiShowroomPage {
 		return driver.findElement(productcategsectn);
 	}
 	public List<WebElement> getLVMProductCategItemList() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productcategitemlist));
 		return driver.findElements(productcategitemlist);
 	}

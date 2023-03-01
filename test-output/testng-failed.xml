@@ -1,32 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-
-<suite guice-stage="DEVELOPMENT" name="Failed suite [LVM_RegressionTestSuite]">
-  <test name="RegressionTest(failed)">
-    <classes>
-      <class name="lasvegasmarket_UAT.FloorPlans">
-        <methods>
-          <include name="tearDown"/>
-          <include name="TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- lasvegasmarket_UAT.FloorPlans -->
-
+<<<<<<< HEAD
 <suite name="Failed suite [LVM_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-      <class name="lasvegasmarket_UAT.EvenntsAndWebinar">
+      <class name="lasvegasmarket_UAT.GlobalSearch_MatchingResults">
         <methods>
-          <include name="TS005_VerifyIMCEventsEventDetailstTest"/>
+          <include name="TS003_VerifyGlobalSearchMatchingResultsSortSortByTest"/>
+          <include name="quit"/>
           <include name="initialize"/>
-          <include name="TS014_VerifyExhibitorEventsAddToListTest"/>
-          <include name="TS013_VerifyExhibitorEventsAddToFavoriteTest"/>
-          <include name="TS012_VerifyExhibitorEventsDetailstTest"/>
-          <include name="TS006_VerifyIMCEventsAddToFavoriteTest"/>
-          <include name="TS007_VerifyIMCEventsAddToListTest"/>
         </methods>
-      </class> <!-- lasvegasmarket_UAT.EvenntsAndWebinar -->
-
+      </class> <!-- lasvegasmarket_UAT.GlobalSearch_MatchingResults -->
+=======
+<suite guice-stage="DEVELOPMENT" name="Failed suite [LVM_RegressionTestSuite]">
+  <test name="RegressionTest(failed)">
+    <classes>
+      <class name="lasvegasmarket_UAT.GlobalSearch_SearchFor">
+        <methods>
+          <include name="TS004_VerifyCatalogsOverviewInGlobalSearchTest"/>
+          <include name="initialize"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- lasvegasmarket_UAT.GlobalSearch_SearchFor -->
+>>>>>>> ba8a85d0989a07cec888249c48592927d478b4ff
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
