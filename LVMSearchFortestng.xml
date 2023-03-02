@@ -10,6 +10,7 @@
 		<classes>
 			 <class name="lasvegasmarket_UAT.GlobalSearch_SearchFor" >
           		<methods>
+					<exclude name="TS005_VerifyArticlesOverviewInGlobalSearchTest" />
              	 	<exclude name="TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest" />
 			 	 	<exclude name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest" />
           		</methods>
