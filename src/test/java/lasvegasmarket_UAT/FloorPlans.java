@@ -267,9 +267,8 @@ public class FloorPlans extends base {
 		lp = new ATLLoginPage(driver);
 		utl = new Utility(driver);
 		atlflpp=new ATLFloorPlansPage(driver);
-
+		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		// Click on Exh And Product Tab
 		atlflpp.getATLExhibitorsAndProductTab().click();
 		Thread.sleep(2000);
@@ -484,9 +483,10 @@ public class FloorPlans extends base {
 		utl = new Utility(driver);
 		atlflpp = new ATLFloorPlansPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
-
+		driver.navigate().refresh();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		// Click on Exh And Product Tab
+		Thread.sleep(2000);
 		atlflpp.getATLExhibitorsAndProductTab().click();
 		Thread.sleep(2000);
 		// click on Floor plans link
@@ -509,13 +509,13 @@ public class FloorPlans extends base {
 		
 		// Click on Add To List
 		atlflpp.getATLAddToList().click();
-		
+		Thread.sleep(2000);
 		// Store the existing list name
-		String existinglistname = atlmppge.getATLMPExistingListName().getText();
+		String existinglistname = atlmppge.getATLMPExistingListNameNew().getText();
 		System.out.println("Existing list name: " + existinglistname);
 
 		// Select Existing list name
-		atlmppge.getATLMPExistingListName().click();
+		atlmppge.getATLMPExistingListNameNew().click();
 
 		// Scroll till Add to Selected button5
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",
@@ -556,7 +556,7 @@ public class FloorPlans extends base {
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		// Click on Exh And Product Tab
 		atlflpp.getATLExhibitorsAndProductTab().click();
 		// click on Floor plans link

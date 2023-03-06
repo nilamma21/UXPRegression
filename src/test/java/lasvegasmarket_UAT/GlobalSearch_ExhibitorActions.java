@@ -51,10 +51,10 @@ public class GlobalSearch_ExhibitorActions extends base {
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(7000);
 		//lap.getCloseMarktAdBtn().click();
-		
 		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
 		driver.navigate().refresh();
@@ -118,10 +118,10 @@ public class GlobalSearch_ExhibitorActions extends base {
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
 		genData = new GenerateData();
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
@@ -143,7 +143,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 
 		// Scroll till Create button
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",
-				atlmppge.getNewlistmodalcreatebtn_LvmUAT());
+		atlmppge.getNewlistmodalcreatebtn_LvmUAT());
 
 		// Click on Create button
 		atlmppge.getNewlistmodalcreatebtn_LvmUAT().click();
@@ -179,8 +179,8 @@ public class GlobalSearch_ExhibitorActions extends base {
 		lap = new ATLLandingPage(driver);
 		
 		driver.navigate().refresh();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 		
@@ -195,13 +195,13 @@ public class GlobalSearch_ExhibitorActions extends base {
 		// Click on Add to List button for 1st Exhibitor
 		atlexhact.getSearchResultMoreicon().click();
 		atlexhact.getAddToListOptn().click();
-
+		Thread.sleep(2000);
 		// Store the existing list name
-		String existinglistname = atlmppge.getATLMPExistingListName().getText();
+		String existinglistname = atlmppge.getATLMPExistingListNameNew().getText();
 		System.out.println("Existing list name: " + existinglistname);
 
 		// Select Existing list name
-		atlmppge.getATLMPExistingListName().click();
+		atlmppge.getATLMPExistingListNameNew().click();
 
 		// Scroll till Add to Selected button
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",
@@ -254,9 +254,8 @@ public class GlobalSearch_ExhibitorActions extends base {
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		lap = new ATLLandingPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
 		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
@@ -297,9 +296,9 @@ public class GlobalSearch_ExhibitorActions extends base {
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		lap = new ATLLandingPage(driver);
 
+		driver.get(prop.getProperty("lvmurl_uat"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
-		driver.get(prop.getProperty("lvmurl_uat"));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
@@ -325,9 +324,8 @@ public class GlobalSearch_ExhibitorActions extends base {
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		lap = new ATLLandingPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
 		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
@@ -528,8 +526,8 @@ public class GlobalSearch_ExhibitorActions extends base {
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 		lap = new ATLLandingPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
@@ -558,6 +556,6 @@ public class GlobalSearch_ExhibitorActions extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 }

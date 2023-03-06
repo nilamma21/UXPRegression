@@ -88,7 +88,7 @@ public class ATLFloorPlansPage {
 		return driver.findElement(atlLoadingNoExhiMsg);
 	}
 	public WebElement getATLExhibitorsAndProductTab() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlExhibitorsAndProductTab));
 		return driver.findElement(atlExhibitorsAndProductTab);
 	}
@@ -203,9 +203,13 @@ public class ATLFloorPlansPage {
 		return driver.findElement(exhibitordetailsmodal);
 	}
 	public WebElement getExhNameOnExhibitorDetailsModal() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(exhnameonexhdetailsmodal));
 		return driver.findElement(exhnameonexhdetailsmodal);
 	}
 	public WebElement getOverlayCloseBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(overlayclosebtn));
 		return driver.findElement(overlayclosebtn);
 	}
 
@@ -265,6 +269,8 @@ public class ATLFloorPlansPage {
 		return driver.findElement(scrollexhibitorsection);
 	}
 	public WebElement getViewDGShowroombtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(viewdgshowroombtn));
 		return driver.findElement(viewdgshowroombtn);
 	}
 	public WebElement getATLMoreOptions() {

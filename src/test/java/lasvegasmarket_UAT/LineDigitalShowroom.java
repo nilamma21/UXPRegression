@@ -53,8 +53,9 @@ public class LineDigitalShowroom extends base{
 		lvmgs=new LVMGlobalSearchPage(driver);
 		
 		// Navigate to Las Vegas Market site
-		driver.manage().window().maximize();
 		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		utl.verifyMPLoginFunctionality();
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(5000);

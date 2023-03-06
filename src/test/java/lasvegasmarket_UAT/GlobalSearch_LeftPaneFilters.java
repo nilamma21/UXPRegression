@@ -50,13 +50,14 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 		lap = new LVMLandingPage(driver);
 
-		// Navigate to Atlanta Market site
+		// Navigate to Las Vegas Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(4000);
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(7000);
 		driver.navigate().refresh();
-		Thread.sleep(4000);
 	}
 
 	@Test(priority = 1)
@@ -71,14 +72,13 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));//Previous input = filtersglobalsearchinput
 		lvmgs.getLVMSearchButton().click();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click on Product Categories expand btn
 		lvmleftpane.getLVMProdCatgExpandBtn().click();
-
+		Thread.sleep(2000);
 		utl.scrollToElement(lvmleftpane.getLVMApparelVintProdCatg());
 
 		//Select 'Apparel, Vintage' prod category
@@ -116,9 +116,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor6")));
 		lvmgs.getLVMSearchButton().click();
@@ -170,9 +169,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));//Previous input = filtersglobalsearchinput
 		lvmgs.getLVMSearchButton().click();
@@ -249,9 +247,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 		lp = new LVMLoginPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor6")));//Previous input = filtersglobalsearchinput
 		lvmgs.getLVMSearchButton().click();
@@ -351,9 +348,9 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 
+		driver.get(prop.getProperty("lvmurl_uat"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(2000);
-		driver.get(prop.getProperty("lvmurl_uat"));
 
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));//Previous input = filtersglobalsearchinput
 		lvmgs.getLVMSearchButton().click();
@@ -398,9 +395,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("leftpanefilterinput")));
 		lvmgs.getLVMSearchButton().click();
@@ -521,18 +517,17 @@ public class GlobalSearch_LeftPaneFilters extends base {
 	public void TS008_VerifySelectionOfGeneralGiftProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T404: Selection Of General Gift Prod Catg From Left Pane Filters
-
+		
 		lvmgs = new LVMGlobalSearchPage(driver);
 		lvmds = new LVMExhDigiShowroomPage(driver);
 		lvmmpp = new LVMMarketPlannerPage(driver);
 		lvmleftpane = new LVMLeftPaneFilters(driver);
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		
 		driver.get(prop.getProperty("lvmurl_uat"));
-
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(2000);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("leftpanefilterinput2")));
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(2000);
@@ -558,8 +553,9 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		actions.click().perform();*/ //For Prod
 		
 		//Click on the first exhibitor
-		lvmleftpane.getSecondExhUat().click(); //For UAT
-
+		//lvmleftpane.getSecondExhUat().click();
+		lvmleftpane.getFirstVintageExhUat().click(); //For UAT
+		
 		//Scroll till Product Categories section
 		utl.scrollToElement(lvmds.getLVMProductCategSection());
 		Thread.sleep(2000);
@@ -587,9 +583,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));
 		lvmgs.getLVMSearchButton().click();
@@ -662,9 +657,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("leftpanefilterinput3")));
 		Thread.sleep(2000);
@@ -691,8 +685,9 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		// Click on See Details button
 		actions.click().perform();*/ //For Prod
 		
-		//Click on the 2nd exhibitor
-		lvmleftpane.getSecondExhUat().click(); //For UAT
+		//Click on the 1st exhibitor
+		//lvmleftpane.getSecondExhUat().click();
+		lvmleftpane.getFirstVintageExhUat().click(); //For UAT
 
 		//Scroll till Product Categories section
 		utl.scrollToElement(lvmds.getLVMProductCategSection());
@@ -719,10 +714,9 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		lvmleftpane = new LVMLeftPaneFilters(driver);
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("leftpanefilterinput4")));
 		lvmgs.getLVMSearchButton().click();
