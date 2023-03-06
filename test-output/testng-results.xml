@@ -2,6 +2,26 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
+
+  <suite name="LVM_RegressionTestSuite" duration-ms="110054" started-at="2023-03-06T06:23:40Z" finished-at="2023-03-06T06:25:30Z">
+    <groups>
+    </groups>
+    <test name="RegressionTest" duration-ms="110054" started-at="2023-03-06T06:23:40Z" finished-at="2023-03-06T06:25:30Z">
+      <class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_UAT.GlobalSearch_ExhibitorActions@1554909b]" name="initialize" is-config="true" duration-ms="76705" started-at="2023-03-06T11:53:40Z" finished-at="2023-03-06T11:54:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS004_VerifyClickOnContactExhIconForExhibitorTest()[pri:0, instance:lasvegasmarket_UAT.GlobalSearch_ExhibitorActions@1554909b]" name="TS004_VerifyClickOnContactExhIconForExhibitorTest" duration-ms="33322" started-at="2023-03-06T11:54:57Z" finished-at="2023-03-06T11:55:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyClickOnContactExhIconForExhibitorTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_UAT.GlobalSearch_ExhibitorActions@1554909b]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-03-06T11:55:30Z" finished-at="2023-03-06T11:55:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- lasvegasmarket_UAT.GlobalSearch_ExhibitorActions -->
+
   <suite name="LVM_RegressionTestSuite" duration-ms="84967" started-at="2023-03-06T05:32:55Z" finished-at="2023-03-06T05:34:20Z">
     <groups>
     </groups>
@@ -20,6 +40,7 @@
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- lasvegasmarket_UAT.ExhibitorDigitalShowroom -->
+
     </test> <!-- RegressionTest -->
   </suite> <!-- LVM_RegressionTestSuite -->
 </testng-results>

@@ -152,6 +152,8 @@ public class ATLExhLineProdActionsPage extends base{
 		return driver.findElement(addfavicon);
 	}
 	public WebElement getSearchResultMoreicon() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(searchresultmoreicon));
 		return driver.findElement(searchresultmoreicon);
 	}
 	public WebElement getAddToListOptn() {
@@ -170,18 +172,28 @@ public class ATLExhLineProdActionsPage extends base{
 		return driver.findElement(contactexhibitormodal);
 	}
 	public WebElement getPostalCodeTxtBx() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(postalcodetxtbx));
 		return driver.findElement(postalcodetxtbx);
 	}
 	public WebElement getMessageTxtBx() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(messagetxtbx));
 		return driver.findElement(messagetxtbx);
 	}
 	public WebElement getProductCateg1() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(prodcatg1));
 		return driver.findElement(prodcatg1);
 	}
 	public WebElement getProductCateg2() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(prodcatg2));
 		return driver.findElement(prodcatg2);
 	}
 	public WebElement getSendMessageBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(sendmessagebtn));
 		return driver.findElement(sendmessagebtn);
 	}
 	public WebElement getLocationLinkInExhCard() {
@@ -200,6 +212,8 @@ public class ATLExhLineProdActionsPage extends base{
 		return driver.findElement(validatelinespage);
 	}
 	public WebElement getTotalProdSeeAllLink() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(totalprodseealllink));
 		return driver.findElement(totalprodseealllink);
 	}
 	public WebElement getValidateProductsPage() {
@@ -228,6 +242,8 @@ public class ATLExhLineProdActionsPage extends base{
 		return driver.findElement(matchingprodaddnoteicon);
 	}
 	public WebElement getPopUpCloseBtn() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(popupclosebtn));
 		return driver.findElement(popupclosebtn);
 	}
 	public WebElement getNoteTitleTxtBx() {
@@ -283,6 +299,8 @@ public class ATLExhLineProdActionsPage extends base{
 	}
 	
 	public WebElement getseealllink() throws InterruptedException {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(seealllink));
 		Thread.sleep(5000);
 		return driver.findElement(seealllink);
 	}
@@ -358,6 +376,8 @@ public class ATLExhLineProdActionsPage extends base{
 		return driver.findElement(eventcardinsearch);
 	}
 	public WebElement getEventCardTitle() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(eventcardtitle));
 		return driver.findElement(eventcardtitle);
 	}
 	public WebElement getEventDetailsHeader() {
