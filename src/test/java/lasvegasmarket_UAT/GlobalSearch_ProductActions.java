@@ -671,7 +671,7 @@ public class GlobalSearch_ProductActions extends base {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
 		System.out.println("Move1");
-		Thread.sleep(5000);
+		Thread.sleep(15000);
 		// To mouseover on More btn
 		actions.moveToElement(atlexhact.getProductMoreBtnOnSearchGrid()).perform();
 		System.out.println("Move2");
