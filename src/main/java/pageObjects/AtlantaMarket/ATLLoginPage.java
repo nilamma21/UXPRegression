@@ -3,6 +3,7 @@ package pageObjects.AtlantaMarket;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ATLLoginPage {
@@ -20,16 +21,22 @@ public class ATLLoginPage {
 	
 	public WebElement getEmailAddress() {
 		//Wait till Sign In page is displayed
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(emailaddress));
 		return driver.findElement(emailaddress);		
 	}
 	
 	public WebElement getPassword() {
 		//Wait till Sign In page is displayed
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(password));
 		return driver.findElement(password);		
 	}
 	
 	public WebElement getSignInBtn() {
 		//Wait till Sign In page is displayed
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(signinbtn));
 		return driver.findElement(signinbtn);		
 	}
 
