@@ -3,13 +3,24 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [LVM_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
+
       <class name="lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters">
         <methods>
+
+      <class name="lasvegasmarket_UAT.ExhibitorDigitalShowroom">
+        <methods>
+          <include name="TS010_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest"/>
+          <include name="initialize"/>
+
           <include name="tearDown"/>
           <include name="TS010_VerifySelectionOfFloralBotanicalsProdCatgFromLeftPaneFiltersTest"/>
           <include name="initialize"/>
         </methods>
+
       </class> <!-- lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters -->
+
+      </class> <!-- lasvegasmarket_UAT.ExhibitorDigitalShowroom -->
+
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->

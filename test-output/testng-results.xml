@@ -2,6 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
+
   <suite name="LVM_RegressionTestSuite" duration-ms="110054" started-at="2023-03-06T06:23:40Z" finished-at="2023-03-06T06:25:30Z">
     <groups>
     </groups>
@@ -20,6 +21,26 @@
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- lasvegasmarket_UAT.GlobalSearch_ExhibitorActions -->
+
+  <suite name="LVM_RegressionTestSuite" duration-ms="84967" started-at="2023-03-06T05:32:55Z" finished-at="2023-03-06T05:34:20Z">
+    <groups>
+    </groups>
+    <test name="RegressionTest" duration-ms="84967" started-at="2023-03-06T05:32:55Z" finished-at="2023-03-06T05:34:20Z">
+      <class name="lasvegasmarket_UAT.ExhibitorDigitalShowroom">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_UAT.ExhibitorDigitalShowroom@3abbfa04]" name="initialize" is-config="true" duration-ms="51351" started-at="2023-03-06T11:02:55Z" finished-at="2023-03-06T11:03:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS010_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest()[pri:0, instance:lasvegasmarket_UAT.ExhibitorDigitalShowroom@3abbfa04]" name="TS010_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest" duration-ms="31596" started-at="2023-03-06T11:03:46Z" finished-at="2023-03-06T11:04:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS010_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_UAT.ExhibitorDigitalShowroom@3abbfa04]" name="tearDown" is-config="true" duration-ms="2008" started-at="2023-03-06T11:04:18Z" finished-at="2023-03-06T11:04:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- lasvegasmarket_UAT.ExhibitorDigitalShowroom -->
+
     </test> <!-- RegressionTest -->
   </suite> <!-- LVM_RegressionTestSuite -->
 </testng-results>

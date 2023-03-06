@@ -449,7 +449,7 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmds = new LVMExhDigiShowroomPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("searchorderonjuniperline_lvmuat")));
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("searchjuniperline_lvmuat")));
 		Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(10000);
