@@ -10,7 +10,6 @@
 		<classes>
 		 	<class name="lasvegasmarket_UAT.LineDigitalShowroom">
 				<methods>
-              		<exclude name="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest" />
 			  		<exclude name="TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest" />
           		</methods>
 			 </class>
