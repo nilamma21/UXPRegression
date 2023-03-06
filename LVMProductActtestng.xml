@@ -10,13 +10,8 @@
 		<classes>
 		 	<class name="lasvegasmarket_UAT.GlobalSearch_ProductActions" />
 			 <methods>
-		<!-- 	<include name="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest" /> 
-				<include name="TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest" /> -->
-				<!-- -->
-				<!-- <include name="TS010_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest" /> --> 
-				
-			<!--	<include name="TS006_VerifyProductAddToExistingListOnSearchResultsGridTest" />
-				<include name="TS005_VerifyAddNoteOnProductDetailsPageTest" /> --> 
+		<include name="TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest" /> 
+		<!--<include name="TS005_VerifyAddNoteOnProductDetailsPageTest" /> --> 
 				
 				
 			</methods>

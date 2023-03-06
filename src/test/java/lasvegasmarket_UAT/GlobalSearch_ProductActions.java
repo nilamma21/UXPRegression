@@ -666,22 +666,27 @@ public class GlobalSearch_ProductActions extends base {
 		//String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText(); //Old
 		String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGridNew().getText(); //New
 		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
-
+		Thread.sleep(3000);
 		// Hovering on Product
 		Actions actions = new Actions(driver);
 		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
+		System.out.println("Move1");
 		// To mouseover on More btn
 		actions.moveToElement(atlexhact.getProductMoreBtnOnSearchGrid()).perform();
+		System.out.println("Move2");
 
 		//Click on Add To List button
 		actions.click().perform();
+		System.out.println("Move3");
 		atlexhact.getAddToListOptn().click();
 		Thread.sleep(5000);
-
+		System.out.println("Move5");
 		utl.scrollToElement(atlmppge.getCreateNewListNameTxtbx());
-
+		Thread.sleep(3000);
+		System.out.println("Scrolled");
 		// Enter new list name
 		String newlistname = "CybProduct" + genData.generateRandomString(3);
+		System.out.println("List name :: "+newlistname);
 		atlmppge.getCreateNewListNameTxtbx().sendKeys(newlistname);
 		System.out.println("Newly created list is: " + newlistname);
 
