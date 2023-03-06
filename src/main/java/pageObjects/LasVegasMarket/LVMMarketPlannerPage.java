@@ -218,11 +218,18 @@ public class LVMMarketPlannerPage {
 	By favIconlist = By.xpath("//button[@class='imc-selectableicon ']"); //Locator for Favorite Icon list
 	By createandaddaistbtn = By.xpath("//input[contains(@value,'Create')]");
 	
+	By listOfAllEventsInMPList = By.xpath("//li[@class='imc-list-edit--draggable'][1]/div/div[3]/div/div/div[1]/div[2]/a[1]"); //list of all events from MP list
+	
+	
 	public LVMMarketPlannerPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
-	
+	public List <WebElement> getlistOfAllEventsInMPList() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllEventsInMPList));
+		return driver.findElements(listOfAllEventsInMPList);
+	}
 	public WebElement getLvmAddToSchedule() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(LvmAddToSchedule));

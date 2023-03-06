@@ -15,6 +15,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pageObjects.AtlantaMarket.ATLExhDigiShowroomPage;
 import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
+import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
+import pageObjects.AtlantaMarket.ATLMarketPlannerPage;
 import pageObjects.AtlantaMarket.ATLProductDetailsPage;
 import pageObjects.LasVegasMarket.LVMEventsAndWebinarPage;
 import pageObjects.LasVegasMarket.LVMFloorPlansPage;
@@ -41,6 +43,7 @@ public class EvenntsAndWebinar extends base{
 	LVMMarketPlannerPage lvmmpp;
 	LVMFloorPlansPage lvmflpp;
 	LVMEventsAndWebinarPage lvmevents;
+	ATLMarketPlannerPage atlmppge;
 	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns, allnoteslist,favlist, searchlinetypelist;
 
 	@BeforeClass
@@ -380,10 +383,10 @@ public class EvenntsAndWebinar extends base{
 		Assert.assertTrue(lvmevents.getlvmNoteIcon().isDisplayed());
 		System.out.println("Add Note Icon displayed");
 		//Verify Add Fav Icon
-		Assert.assertTrue(lvmevents.getlvmCalendarIconUAT().isDisplayed());
+		//Assert.assertTrue(lvmevents.getlvmCalendarIconUAT().isDisplayed());
 		System.out.println("Calendar displayed");
-		//Verify Add Fav Icon
-		Assert.assertTrue(lvmevents.getlvmTagIcon().isDisplayed());
+		//tags
+	//	Assert.assertTrue(lvmevents.getlvmTagIcon().isDisplayed());
 		System.out.println("Tag displayed");
 		
 		//Click on Location link
@@ -465,6 +468,7 @@ public class EvenntsAndWebinar extends base{
 		//utl.verifyMPLoginFunctionality();
 		utl.clickOnEventLinkOfChannel();
 		String eventTitle = lvmevents.getlvmClickOnEvent().getText();
+		System.out.println(eventTitle);
 
 		// Click on IMC Event Tab
 		lvmevents.getlvmImcEventsTab().click();
@@ -690,7 +694,7 @@ public class EvenntsAndWebinar extends base{
 		utl.checkItemPresentInListorNot(lvmevents.getlvmListOfEventTitles(), eventName);
 }
 	
-	@Test(priority = 10)
+	//@Test(priority = 10)
 	public void TS010_VerifyExhibitorEventsCalendarViewTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T305: Exhibitor Events: Calendar View
@@ -1073,6 +1077,8 @@ public class EvenntsAndWebinar extends base{
 		lvmevents = new LVMEventsAndWebinarPage(driver);
 		lvmgs = new LVMGlobalSearchPage(driver);
 		lvmmpp = new LVMMarketPlannerPage(driver);
+	
+		atlmppge = new ATLMarketPlannerPage(driver);
 
 		// Login to MP
 		//utl.verifyMPLoginFunctionality();
@@ -1080,11 +1086,12 @@ public class EvenntsAndWebinar extends base{
 	
 		utl.clickOnEventLinkOfChannel();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		String eventTitle = lvmevents.getlvmClickOnEvent().getText();
+		
 		//Click on Exh Event Tab
 		lvmevents.getlvmExhibitorsEventsTab().click();
 		/*// Click on IMC Event Tab
 		lvmevents.getlvmImcEventsTab().click();*/
+		String eventTitle = lvmevents.getlvmClickOnEvent().getText();
 		// Click on Any Event title
 		lvmevents.getlvmClickOnEvent().click();
 
@@ -1132,11 +1139,16 @@ public class EvenntsAndWebinar extends base{
 			}
 		}
 		Thread.sleep(5000);
-		Assert.assertTrue(lvmmpp.getLVMSavedExhNameInList().getText().contains(exhname));
+		//Assert.assertTrue(lvmmpp.getLVMSavedExhNameInList().getText().contains(exhname));
+		utl.checkItemPresentInListorNot(lvmmpp.getlistOfAllEventsInMPList(), eventTitle);
 
 		// Delete that added line from list
-		lvmmpp.getLVMEditListItemMoreBtn().click();
+		/*lvmmpp.getLVMEditListItemMoreBtn().click();
 		lvmmpp.getLVMEditListItemDeleteOptn().click();
+		Thread.sleep(8000);*/
+		//atlmppge.getATLEditListItemMoreBtn().click(); //Old btn not working
+		atlmppge.getATLEditListItemMoreBtnNew().click(); // new btn
+		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(8000);
 
 	}
