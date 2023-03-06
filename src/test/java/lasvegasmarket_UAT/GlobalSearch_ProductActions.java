@@ -673,7 +673,7 @@ public class GlobalSearch_ProductActions extends base {
 		System.out.println("Move1");
 		Thread.sleep(15000);
 		// To mouseover on More btn
-		actions.moveToElement(atlexhact.getProductMoreBtnOnSearchGrid()).perform();
+		actions.moveToElement(atlexhact.getproductmorebtn_UAT()).perform();
 		System.out.println("Move2");
 
 		//Click on Add To List button
