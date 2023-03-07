@@ -402,13 +402,14 @@ public class GlobalSearch_ProductActions extends base {
 		// Click on 'Save' button
 		atlexhact.getNoteSaveBtn().click();
 		Thread.sleep(5000);
-
+		System.out.println("Save Btn");
 		// Click on 'Add Note' icon for the same exhibitor
 		atlproddet.getProductAddNoteIcon().click();
 		Thread.sleep(4000);
-
+System.out.println("Add Note ICon");
 		// Click on 'View all Notes for an Exhibitor' link on Add Notes pop-up
 		atlexhact.getViewAllNotesLink().click();
+		System.out.println("All Note Btn");
 		Thread.sleep(5000);
 
 		allnoteslist = atlexhact.getSavedNoteNameInAllNotesList();
