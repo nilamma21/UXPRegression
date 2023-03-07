@@ -400,6 +400,8 @@ public class GlobalSearch_ProductActions extends base {
 		// Enter Note Content
 		Thread.sleep(5000);
 		atlexhact.getNoteContentTxtBx().sendKeys("TestProdNote" + genData.generateRandomString(6));
+		// Enter Note title
+		atlexhact.getNoteTitleTxtBx().sendKeys(newnotetitle);
 		// Click on 'Save' button
 		Thread.sleep(5000);
 				System.out.println(atlexhact.getNoteTitleTxtBx().getAttribute("value"));
