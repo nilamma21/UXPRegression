@@ -11,7 +11,7 @@
 		 	<class name="lasvegasmarket_UAT.GlobalSearch_ProductActions" />
 			 <methods>
 	
-					<include name="TS005_VerifyAddNoteOnProductDetailsPageTest"/>  
+					
 
 				 <!--	<exclude name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest" />
              	 	<exclude name="TS003_VerifyProductAddToExistingListOnProductDetailsPageTest" />
