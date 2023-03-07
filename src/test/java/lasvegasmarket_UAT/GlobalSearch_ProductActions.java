@@ -669,7 +669,7 @@ public class GlobalSearch_ProductActions extends base {
 		Thread.sleep(3000);
 		// Hovering on Product
 		Actions actions = new Actions(driver);
-		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
+		actions.moveToElement(atlexhact.getproductBlock()).perform();
 		System.out.println("Move1");
 		Thread.sleep(20000);
 		// To mouseover on More btn
