@@ -398,26 +398,26 @@ public class GlobalSearch_ProductActions extends base {
 		// Enter Note title
 		atlexhact.getNoteTitleTxtBx().sendKeys(newnotetitle);
 		// Enter Note Content
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		atlexhact.getNoteContentTxtBx().sendKeys("TestProdNote" + genData.generateRandomString(6));
 		// Enter Note title
 		atlexhact.getNoteTitleTxtBx().sendKeys(newnotetitle);
 		// Click on 'Save' button
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 				System.out.println(atlexhact.getNoteTitleTxtBx().getAttribute("value"));
 		System.out.println(atlexhact.getNoteContentTxtBx().getAttribute("value"));
-		
+		Thread.sleep(3000);
 
 		atlexhact.getNoteSaveBtn().click();
 		Thread.sleep(5000);
-		
+		System.out.println("Click on Save Btn");
 		// Click on 'Add Note' icon for the same exhibitor
 		atlproddet.getProductAddNoteIcon().click();
 		Thread.sleep(4000);
-
+System.out.println("Note Icon Btn");
 		// Click on 'View all Notes for an Exhibitor' link on Add Notes pop-up
 		atlexhact.getViewAllNotesLink().click();
-		
+		System.out.println("All Note");
 		Thread.sleep(5000);
 
 		allnoteslist = atlexhact.getSavedNoteNameInAllNotesList();
