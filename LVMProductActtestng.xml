@@ -12,7 +12,14 @@
 			 <methods>
 		<include name="TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest" /> 
 		<!--<include name="TS005_VerifyAddNoteOnProductDetailsPageTest" /> --> 
-				
+			<!--	<methods>
+					<exclude name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest" />
+             	 	<exclude name="TS003_VerifyProductAddToExistingListOnProductDetailsPageTest" />
+			 	 	<exclude name="TS004_VerifyAddToFavoriteOnProductDetailsPageTest" />
+					  <exclude name="TS006_VerifyProductAddToExistingListOnSearchResultsGridTest" />
+             	 	<exclude name="TS008_VerifyAddToFavoriteOnSearchResultsGridTest" /> --> 
+			 	 	
+          		</methods>
 				
 			</methods>
 		</classes>
