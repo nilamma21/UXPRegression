@@ -13,11 +13,11 @@
 	
 					
 
-				 <!--	<exclude name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest" />
+		<exclude name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest" />
              	 	<exclude name="TS003_VerifyProductAddToExistingListOnProductDetailsPageTest" />
 			 	 	<exclude name="TS004_VerifyAddToFavoriteOnProductDetailsPageTest" />
 					<exclude name="TS006_VerifyProductAddToExistingListOnSearchResultsGridTest" />
-             	 	<exclude name="TS008_VerifyAddToFavoriteOnSearchResultsGridTest" /> -->
+             	 	<exclude name="TS008_VerifyAddToFavoriteOnSearchResultsGridTest" />
 			 	 	
           	
 			</methods>
