@@ -11,10 +11,8 @@
 		 	<class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions" />
 			 
 			<methods>
-					<exclude name="TS012_VerifySeeInOtherMarketsForExhibitorTest" />
-             	 	<exclude name="TS016_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest" />
-			 	 	<exclude name="TS021_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest" />
-          		
+					<exclude name="TS001_VerifyAddToFavoriteForExhibitorTest" />
+			  		<exclude name="TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest" />
 			</methods>
 		</classes>
 	</test>
