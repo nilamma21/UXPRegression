@@ -9,10 +9,12 @@
 	<test thread-count="1" name="RegressionSequentialTest" >
 		<classes>
 		 	<class name="lasvegasmarket_UAT.ExhibitorDigitalShowroom" />
-			 <methods>
-			<!--<include name="TS004_VerifyIconsOnFloorPlansPageTest" />
-			 	<include name="TS013_VerifySeeInOtherMarketsForExhibitorTest" />-->
-			
+			 
+			<methods>
+					<exclude name="TS012_VerifySeeInOtherMarketsForExhibitorTest" />
+             	 	<exclude name="TS016_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest" />
+			 	 	<exclude name="TS021_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest" />
+          		
 			</methods>
 		</classes>
 	</test>
