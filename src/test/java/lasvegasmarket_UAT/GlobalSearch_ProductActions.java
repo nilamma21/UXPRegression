@@ -408,14 +408,14 @@ public class GlobalSearch_ProductActions extends base {
 
 		atlexhact.getNoteSaveBtn().click();
 		Thread.sleep(5000);
-		System.out.println("Save Btn");
+		
 		// Click on 'Add Note' icon for the same exhibitor
 		atlproddet.getProductAddNoteIcon().click();
 		Thread.sleep(4000);
-System.out.println("Add Note ICon");
+
 		// Click on 'View all Notes for an Exhibitor' link on Add Notes pop-up
 		atlexhact.getViewAllNotesLink().click();
-		System.out.println("All Note Btn");
+		
 		Thread.sleep(5000);
 
 		allnoteslist = atlexhact.getSavedNoteNameInAllNotesList();
@@ -677,21 +677,21 @@ System.out.println("Add Note ICon");
 		// Hovering on Product
 		Actions actions = new Actions(driver);
 		actions.moveToElement(atlexhact.getproductBlock()).perform();
-		System.out.println("Move1");
+		
 		Thread.sleep(20000);
 		// To mouseover on More btn
 		actions.moveToElement(atlexhact.getProductMoreBtnOnSearchGrid()).perform();
-		System.out.println("Move2");
+		
 
 		//Click on Add To List button
 		actions.click().perform();
-		System.out.println("Move3");
+	
 		atlexhact.getAddToListOptn().click();
 		Thread.sleep(5000);
-		System.out.println("Move5");
+		
 		utl.scrollToElement(atlmppge.getCreateNewListNameTxtbx());
 		Thread.sleep(3000);
-		System.out.println("Scrolled");
+		
 		// Enter new list name
 		String newlistname = "CybProduct" + genData.generateRandomString(3);
 		System.out.println("List name :: "+newlistname);
