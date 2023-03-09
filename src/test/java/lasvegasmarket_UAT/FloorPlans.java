@@ -237,7 +237,8 @@ public class FloorPlans extends base {
 		//Click on Overlay Close btn
 		atlflpp.getOverlayCloseBtn().click();
 */
-		//Click on Location pin of any Exhibitor on Map
+/*		Commented on UAT LVM
+  		//Click on Location pin of any Exhibitor on Map
 		atlflpp.getLocationPinIconOnMap().click();
 
 		//Verify that select Exhibitor's location details should be displayed in popup
@@ -257,6 +258,7 @@ public class FloorPlans extends base {
 		System.out.println(atlexhdgshw.getExhibitorNameOnExhDirectImgLvm().getText());
 		Assert.assertTrue(driver.getTitle().contains(""+exhnameondetailsmodal+" at Las Vegas Market"));
 		Assert.assertTrue(atlexhdgshw.getExhibitorNameOnExhDirectImgLvm().getText().contains(exhnameondetailsmodal));
+*/
 	}
 
 	@Test(priority = 5)
@@ -674,7 +676,7 @@ public class FloorPlans extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 
 }

@@ -756,7 +756,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 	 
 }
