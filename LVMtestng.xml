@@ -10,17 +10,17 @@
 
 			<class name="lasvegasmarket_UAT.EvenntsAndWebinar" /> 
 				<methods>
-<<<<<<< HEAD
+
 				 <include name="TS003_VerifyIMCEventsCalendarViewTest"/>  
 		
 
 			 </methods>
-=======
+
 					<include name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest"/>
 					<!-- <include name="TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest"/>  -->
 					<!-- <include name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest"/>  -->
 				</methods>
->>>>>>> 27cac8e694c96f74612f9096817d217827dc51bc
+
 		</classes>
 	</test>
 </suite>
