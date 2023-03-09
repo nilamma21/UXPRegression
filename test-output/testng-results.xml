@@ -2,28 +2,27 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="LVM_RegressionTestSuite" duration-ms="118006" started-at="2023-03-07T11:00:22Z" finished-at="2023-03-07T11:02:20Z">
+  <suite name="LVM_RegressionTestSuite" duration-ms="113132" started-at="2023-03-09T05:51:57Z" finished-at="2023-03-09T05:53:50Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="118006" started-at="2023-03-07T11:00:22Z" finished-at="2023-03-07T11:02:20Z">
+    <test name="RegressionTest" duration-ms="113132" started-at="2023-03-09T05:51:57Z" finished-at="2023-03-09T05:53:50Z">
       <class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_UAT.GlobalSearch_ExhibitorActions@146ba0ac]" name="initialize" is-config="true" duration-ms="79109" started-at="2023-03-07T16:30:22Z" finished-at="2023-03-07T16:31:41Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_UAT.GlobalSearch_ExhibitorActions@146ba0ac]" name="initialize" is-config="true" duration-ms="87421" started-at="2023-03-09T11:21:57Z" finished-at="2023-03-09T11:23:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="FAIL" signature="TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest()[pri:0, instance:lasvegasmarket_UAT.GlobalSearch_ExhibitorActions@146ba0ac]" name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest" duration-ms="38664" started-at="2023-03-07T16:31:41Z" finished-at="2023-03-07T16:32:20Z">
+        <test-method status="FAIL" signature="TS001_VerifyAddToFavoriteForExhibitorTest()[pri:0, instance:lasvegasmarket_UAT.GlobalSearch_ExhibitorActions@146ba0ac]" name="TS001_VerifyAddToFavoriteForExhibitorTest" duration-ms="25465" started-at="2023-03-09T11:23:25Z" finished-at="2023-03-09T11:23:50Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [3394] but found [544354]]]>
+              <![CDATA[expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [3394] but found [544354]
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertEquals(Assert.java:123)
-	at org.testng.Assert.assertEquals(Assert.java:176)
-	at org.testng.Assert.assertEquals(Assert.java:186)
-	at lasvegasmarket_UAT.GlobalSearch_ExhibitorActions.TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest(GlobalSearch_ExhibitorActions.java:440)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at lasvegasmarket_UAT.GlobalSearch_ExhibitorActions.TS001_VerifyAddToFavoriteForExhibitorTest(GlobalSearch_ExhibitorActions.java:95)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -53,8 +52,8 @@
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_UAT.GlobalSearch_ExhibitorActions@146ba0ac]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-03-07T16:32:20Z" finished-at="2023-03-07T16:32:20Z">
+        </test-method> <!-- TS001_VerifyAddToFavoriteForExhibitorTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_UAT.GlobalSearch_ExhibitorActions@146ba0ac]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-03-09T11:23:50Z" finished-at="2023-03-09T11:23:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
