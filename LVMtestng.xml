@@ -8,46 +8,10 @@
 		<test thread-count="5" name="RegressionTest">
 		<classes>
 
-			<class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions" /> 
+			<class name="lasvegasmarket_UAT.EvenntsAndWebinar" /> 
 				<methods>
-				 <include name="TS004_VerifyClickOnContactExhIconForExhibitorTest"/>  
-				<!-- <include name="TS010_VerifySelectionOfFloralBotanicalsProdCatgFromLeftPaneFiltersTest()"/>  -->
-				<!-- <include name="TS006_VerifyProductAddToExistingListOnSearchResultsGridTest"/> -->
-				<!--<class name="lasvegasmarket_UAT.EvenntsAndWebinar" />
-				<methods>
-				<include name="TS003_VerifyIMCEventsCalendarViewTest"/>  --> 
-				<!--<class name="lasvegasmarket_UAT.GlobalSearch_SearchFor" />
-				<methods>
-				<include name="TS004_VerifyIconsOnFloorPlansPageTest()"/>  -->
-				<!-- <class name="lasvegasmarket_UAT.EvenntsAndWebinar" />
-				<methods>
-				<include name="TS003_VerifyIMCEventsCalendarViewTest"/>   -->
-				<!-- <class name="lasvegasmarket_UAT.GlobalSearch_ProductActions" />
-				<methods> -->
-			 	<!--  <include name="TS006_VerifyProductAddToExistingListOnSearchResultsGridTest"/>  -->
-				<!--  <include name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest"/>  -->
-				<!-- 	<class name="atlantamarket_PROD.EvenntsAndWebinar" />
-				<class name="atlantamarket_PROD.FloorPlans" />
-				<class name="atlantamarket_PROD.GlobalSearch_MatchingResults" />
-				<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
-				<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
-				<class name="atlantamarket_PROD.ShowSpecials" /> -->
-				<!-- <class name="atlantamarket_PROD.GlobalSearch_SearchFor" /> -->
-				<!-- <methods> -->
-			 	<!--  <include name="TS001_VerifyInformationTabInGlobalSearchTest" />  -->
-				<!-- 	<include name="TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest" /> -->
-				<!--	<include name="TS014_VerifyExhibitorEventsAddToListTest" />
-				<include name="TS001_VerifyAddToFavoriteForExhibitorTest" /> 
-		 		<include name="TS003_VerifyAddToExistingListForExhibitorTest" />
-				<include name="TS002_VerifyAddToNewListForExhibitorTest" /> -->
-				<!-- <include name="EvenntsAndWebinar" /> -->
-
-
-			<class name="lasvegasmarket_UAT.ExhibitorDigitalShowroom" />
-			<methods>
-				
-				 <!--  <include name="TS010_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest"/>  -->
-
+				 <include name="TS003_VerifyIMCEventsCalendarViewTest"/>  
+		
 
 			 </methods>
 		</classes>

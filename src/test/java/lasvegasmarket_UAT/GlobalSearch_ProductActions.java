@@ -400,6 +400,10 @@ public class GlobalSearch_ProductActions extends base {
 		// Enter Note Content
 		atlexhact.getNoteContentTxtBx().sendKeys("TestProdNote" + genData.generateRandomString(6));
 		// Click on 'Save' button
+		
+		System.out.println(atlexhact.getNoteTitleTxtBx().getAttribute("value"));
+		System.out.println(atlexhact.getNoteContentTxtBx().getAttribute("value"));
+		
 		atlexhact.getNoteSaveBtn().click();
 		Thread.sleep(5000);
 
@@ -669,7 +673,7 @@ public class GlobalSearch_ProductActions extends base {
 
 		// Hovering on Product
 		Actions actions = new Actions(driver);
-		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
+		actions.moveToElement(atlexhact.getproductBlock()).perform();
 		// To mouseover on More btn
 		actions.moveToElement(atlexhact.getProductMoreBtnOnSearchGrid()).perform();
 
