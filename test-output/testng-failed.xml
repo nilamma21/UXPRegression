@@ -1,28 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [LVM_RegressionTestSuite]">
+<suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="lasvegasmarket_UAT.EvenntsAndWebinar">
+      <class name="atlantamarket_PROD.ExhibitorDigitalShowroom">
         <methods>
-          <include name="TS005_VerifyIMCEventsEventDetailstTest"/>
           <include name="initialize"/>
-          <include name="TS013_VerifyExhibitorEventsAddToFavoriteTest"/>
-          <include name="TS012_VerifyExhibitorEventsDetailstTest"/>
-          <include name="TS006_VerifyIMCEventsAddToFavoriteTest"/>
-          <include name="TS007_VerifyIMCEventsAddToListTest"/>
+          <include name="TS005_VerifyClickOnTotalLinesSeeAllLinkForExhibitorTest"/>
         </methods>
-      </class> <!-- lasvegasmarket_UAT.EvenntsAndWebinar -->
-=======
-      <class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions">
-        <methods>
-          <include name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest"/>
-          <include name="initialize"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- lasvegasmarket_UAT.GlobalSearch_ExhibitorActions -->
->>>>>>> 27cac8e694c96f74612f9096817d217827dc51bc
+      </class> <!-- atlantamarket_PROD.ExhibitorDigitalShowroom -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
-</suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
+</suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->

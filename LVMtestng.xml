@@ -12,13 +12,7 @@
 				<methods>
 
 				 <include name="TS003_VerifyIMCEventsCalendarViewTest"/>  
-		
-
-			 </methods>
-
-					<include name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest"/>
-					<!-- <include name="TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest"/>  -->
-					<!-- <include name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest"/>  -->
+	
 				</methods>
 
 		</classes>
