@@ -120,7 +120,6 @@ public class ATLGlobalSearchPage {
 	By infoTitle = By.xpath("//div[@class='imc-informationcard__body']/p[2]");  //Locator for 1st name of Catalog
 	
 	
-	
 
 	
 	public ATLGlobalSearchPage(WebDriver driver) {
