@@ -262,7 +262,7 @@ public class ATLMarketPlannerPage {
 	By mpgroupnamesdropdown = By.xpath("//select[@name='groupName']/option"); //List of group names in drop down
 	By selectgroupicon = By.xpath("//select[@name='groupName']"); //Locator for Select a group drop down icon
 	By atlmpexistinglistnamenew = By.xpath("//form/div[4]/div[4]/label"); //Locator for existing list name
-
+	By favexhlist = By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a");//Favourite list from market planner
 	
 	public ATLMarketPlannerPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -1395,6 +1395,11 @@ public class ATLMarketPlannerPage {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmpexistinglistnamenew));
 		return driver.findElement(atlmpexistinglistnamenew);
+	}
+	public List<WebElement> getFavExhList() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(favexhlist));
+		return driver.findElements(favexhlist);
 	}
 }
 

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite name="ATLMrkt_RegressionTestSuite" duration-ms="93206" started-at="2023-03-10T07:01:19Z" finished-at="2023-03-10T07:02:53Z">
     <groups>
     </groups>
@@ -54,6 +55,22 @@
           </reporter-output>
         </test-method> <!-- TS005_VerifyClickOnTotalLinesSeeAllLinkForExhibitorTest -->
       </class> <!-- atlantamarket_PROD.ExhibitorDigitalShowroom -->
+=======
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="105768" started-at="2023-03-10T04:31:19Z" finished-at="2023-03-10T04:33:05Z">
+    <groups>
+    </groups>
+    <test name="RegressionTest" duration-ms="105768" started-at="2023-03-10T04:31:19Z" finished-at="2023-03-10T04:33:05Z">
+      <class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@e25b2fe]" name="initialize" is-config="true" duration-ms="70024" started-at="2023-03-10T10:01:19Z" finished-at="2023-03-10T10:02:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS001_VerifyAddToFavoriteForExhibitorTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@e25b2fe]" name="TS001_VerifyAddToFavoriteForExhibitorTest" duration-ms="35710" started-at="2023-03-10T10:02:29Z" finished-at="2023-03-10T10:03:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifyAddToFavoriteForExhibitorTest -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_ExhibitorActions -->
+>>>>>>> 9781a2b2ab523924ca8069d83c3d49ad413ad74e
     </test> <!-- RegressionTest -->
   </suite> <!-- ATLMrkt_RegressionTestSuite -->
 </testng-results>

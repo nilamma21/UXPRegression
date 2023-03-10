@@ -62,7 +62,7 @@ public class LVMMarketPlannerPage {
 	By mpArrangeBtn = By.xpath("//div[@class='imc-gallery imc-gallery--1-2']/div[2]/button[1]"); //Locator for Arrange btn
 	By mpListSortBtn = By.xpath("(//ul[@class='imc-market-planner-list']/li/div[2]/span[3])[1]"); //Locator for Sort btn
 	By welcometext = By.xpath("//div[@class = 'imc-header-user-icon--wrapper']/button[1]"); //Locator for Market Planner welcome text
-	By signout = By.xpath("//div[@class = 'imc-header-user-icon--links-settings']/a[3]"); //Locator for Signout link
+	By signout = By.xpath("//div[@class='imc-header-user-icon--links-settings']/a[2]"); //Locator for Signout link
 	By verifysignout = By.xpath("//div[@class = 'imc-header__logo']"); //Locator for Verify Sign out
 	By mpListNewListBtn = By.xpath("//div[@class='imc-gallery__item imc-vertical-tabs-content']/div[1]/div[1]/div[2]/button[2]"); //Locator for new list Btn
 	By mpListNewGroupBtn = By.xpath("//div[@class='imc-gallery__item imc-vertical-tabs-content']/div[1]/div[1]/div[2]/button[3]"); //Locator for new Group Btn

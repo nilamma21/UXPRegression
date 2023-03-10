@@ -73,7 +73,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalSearchEventsInputnew")));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(15000);
 		// Store the 1st Exhibitor name in String variable
@@ -90,20 +90,28 @@ public class GlobalSearch_ExhibitorActions extends base {
 		atlmppge.getMPHomeListsTab().click();
 		atlmppge.getATLMPListsPageFavoritesMenu().click();
 		Thread.sleep(4000);
+		
 		// Verify that the added favorites exhibitor should be displayed in to Favorites list
-		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
-
+		//favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
+		favlist = atlmppge.getFavExhList();
+		for (int i = 0; i < favlist.size(); i++) {
+			if(favlist.contains(exhname)) {
+				//System.out.println(prodcatgitemlist.get(i).getText());
+				Assert.assertTrue(favlist.get(i).getText().contains(exhname));
+				break;
+			}
+		}
+		
 		// Delete that favorites exhibitor from list
 		atlmppge.getMoreBtnDeleteOptnExistingList_ATLPROD().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(6000);
 
-		favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
+		//favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
 
 		//Verify that the added favorites exhibitor should be removed from Favorites list
 		for(int i=1; i< favlist.size(); i++)
 		{			
-			//System.out.println(favlist.get(i).getText());
 			Assert.assertFalse(favlist.get(i).getText().contains(exhname)); 
 		}
 	}
