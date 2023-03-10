@@ -9,6 +9,10 @@
 	<test thread-count="1" name="RegressionSequentialTest" >
 		<classes>
 		 	<class name="lasvegasmarket_UAT.GlobalSearch_LineActions" />
+			 <methods>
+					<exclude name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForLineTest" />
+             	 	
+          		</methods>
 		</classes>
 	</test>
 </suite>

@@ -1202,27 +1202,30 @@ public class EvenntsAndWebinar extends base{
 		// Enter Note title
 		WebElement noteTitleTxt=atlexhact.getNoteTitleTxtBx();
 		noteTitleTxt.sendKeys(newnotetitle);
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		// Enter Note Content
 		String noteContent="TestProdNote" + genData.generateRandomString(6);
 		WebElement noteContentTxt=atlexhact.getNoteContentTxtBx();
 		noteContentTxt.sendKeys(noteContent);
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		noteTitleTxt.sendKeys(newnotetitle);
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		//atlexhact.getNoteTitleTxtBx().sendKeys(newnotetitle);
+		System.out.println(atlexhact.getNoteTitleTxtBx().getAttribute("value"));
+		System.out.println(atlexhact.getNoteContentTxtBx().getAttribute("value"));
+		
 		// Click on 'Save' button
 		atlexhact.getNoteSaveBtn().click();
-		Thread.sleep(5000);
-
+		Thread.sleep(3000);
+System.out.println("Click on Save Btn");
 		// Click on 'Add Note' icon for the same exhibitor
 		atlproddet.getProductAddNoteIcon().click();
-		Thread.sleep(4000);
-
+		Thread.sleep(3000);
+System.out.println("Note Icon Btn");
 		// Click on 'View all Notes for an Exhibitor' link on Add Notes pop-up
 		atlexhact.getViewAllNotesLink().click();
 		Thread.sleep(5000);
-
+System.out.println("All Note");
 		allnoteslist = atlexhact.getSavedNoteNameInAllNotesList();
 
 		// Verify that recently added note should be appear on 'All Notes For Exhibitor' modal

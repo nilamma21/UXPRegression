@@ -398,21 +398,33 @@ public class GlobalSearch_ProductActions extends base {
 		// Enter Note title
 		atlexhact.getNoteTitleTxtBx().sendKeys(newnotetitle);
 		// Enter Note Content
+		Thread.sleep(3000);
 		atlexhact.getNoteContentTxtBx().sendKeys("TestProdNote" + genData.generateRandomString(6));
+		// Enter Note title
+	//	atlexhact.getNoteTitleTxtBx().sendKeys(newnotetitle);
 		// Click on 'Save' button
+
 		
 		System.out.println(atlexhact.getNoteTitleTxtBx().getAttribute("value"));
 		System.out.println(atlexhact.getNoteContentTxtBx().getAttribute("value"));
 		
+
+		Thread.sleep(3000);
+				System.out.println(atlexhact.getNoteTitleTxtBx().getAttribute("value"));
+		System.out.println(atlexhact.getNoteContentTxtBx().getAttribute("value"));
+		Thread.sleep(3000);
+
+
 		atlexhact.getNoteSaveBtn().click();
 		Thread.sleep(5000);
-
+		System.out.println("Click on Save Btn");
 		// Click on 'Add Note' icon for the same exhibitor
 		atlproddet.getProductAddNoteIcon().click();
 		Thread.sleep(4000);
-
+System.out.println("Note Icon Btn");
 		// Click on 'View all Notes for an Exhibitor' link on Add Notes pop-up
 		atlexhact.getViewAllNotesLink().click();
+		System.out.println("All Note");
 		Thread.sleep(5000);
 
 		allnoteslist = atlexhact.getSavedNoteNameInAllNotesList();
@@ -674,6 +686,7 @@ public class GlobalSearch_ProductActions extends base {
 		// Hovering on Product
 		Actions actions = new Actions(driver);
 		actions.moveToElement(atlexhact.getproductBlock()).perform();
+
 		// To mouseover on More btn
 		actions.moveToElement(atlexhact.getProductMoreBtnOnSearchGrid()).perform();
 
@@ -683,6 +696,22 @@ public class GlobalSearch_ProductActions extends base {
 		Thread.sleep(5000);
 
 		utl.scrollToElement(atlmppge.getCreateNewListNameTxtbx());
+
+
+		
+		Thread.sleep(20000);
+		// To mouseover on More btn
+		actions.moveToElement(atlexhact.getProductMoreBtnOnSearchGrid()).perform();
+		
+
+		//Click on Add To List button
+		actions.click().perform();
+	
+		atlexhact.getAddToListOptn().click();
+		Thread.sleep(5000);
+		
+		utl.scrollToElement(atlmppge.getCreateNewListNameTxtbx());
+		Thread.sleep(3000);
 
 		// Enter new list name
 		String newlistname = "CybProduct" + genData.generateRandomString(3);
