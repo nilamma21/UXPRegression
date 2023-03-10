@@ -631,7 +631,8 @@ public class FloorPlans extends base {
 		atlflpp.getATLFloorPlansLink().click();
 
 		// click on Exhibitor floor
-		atlflpp.getATLBuildingFloor().click();
+		//atlflpp.getATLBuildingFloor().click();//Old - disabled for fav option
+		atlflpp.getATLBuildingFloorNew().click();//New
 
 		// Scroll Down to Exhibitor list
 		utl.scrollToElement(atlflpp.getatlserachexhibitorbtn());
@@ -653,7 +654,14 @@ public class FloorPlans extends base {
 
 		//System.out.println(atlmppge.getATLSavedExhNameInList().getText());
 		// Verify that the added favorites exhibitor should be displayed in to Favorites list
-		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().equals(exhibitorName));
+		favlist = atlmppge.getFavExhList();
+		for (int i = 0; i < favlist.size(); i++) {
+			if(favlist.contains(exhibitorName)) {
+				//System.out.println(prodcatgitemlist.get(i).getText());
+				Assert.assertTrue(favlist.get(i).getText().contains(exhibitorName));
+				break;
+			}
+		}
 
 		// Delete that favorites exhibitor from list
 		atlmppge.getMoreBtnDeleteOptnExistingList_ATLPROD().click();

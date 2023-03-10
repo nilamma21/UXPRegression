@@ -71,7 +71,7 @@ public class ATLFloorPlansPage {
 	
 	By atlExhibitorNamePROD = By.xpath("//div[@class='imc-content--padded-top-bottom']/div[1]//div[2]/div[2]/a[1]"); //Locator for Exhibitor Name
 	By lvmBuildingFloorsix = By.xpath("//div[@class='imc-campus-view']/div[3]/div[13]/div[3]/a[1]"); //Locator for Building floor
-
+	By atlBuildingFloornew = By.xpath("//div[@class='imc-campus-view']/div[3]/div[10]/div[3]/a[1]"); //Locator for Building floor
 	
 	public ATLFloorPlansPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -354,7 +354,11 @@ public class ATLFloorPlansPage {
 		wait.until(ExpectedConditions.elementToBeClickable(lvmBuildingFloorsix));
 		return driver.findElement(lvmBuildingFloorsix);
 	}
-	
+	public WebElement getATLBuildingFloorNew() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlBuildingFloornew));
+		return driver.findElement(atlBuildingFloornew);
+	}
 }
 
 

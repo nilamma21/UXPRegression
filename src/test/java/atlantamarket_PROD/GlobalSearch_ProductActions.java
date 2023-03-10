@@ -42,7 +42,7 @@ public class GlobalSearch_ProductActions extends base {
 	ATLMarketPlannerPage atlmppge;
 
 	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns,
-	allnoteslist, favlist, searchlinetypelist;
+			allnoteslist, favlist, searchlinetypelist;
 
 	@BeforeClass
 	public void initialize() throws IOException, InterruptedException {
@@ -55,17 +55,18 @@ public class GlobalSearch_ProductActions extends base {
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(7000);
-		//lap.getCloseMarktAdBtn().click();
+		// lap.getCloseMarktAdBtn().click();
 
-		//Login to Market Planner
-		utl.verifyMPLoginFunctionality();		
+		// Login to Market Planner
+		utl.verifyMPLoginFunctionality();
 		driver.navigate().refresh();
 		Thread.sleep(8000);
-		//		lap.getCloseMarktAdBtn().click();
+		// lap.getCloseMarktAdBtn().click();
 	}
 
 	@Test(priority = 1)
-	public void TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest() throws InterruptedException, IOException {
+	public void TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest()
+			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T379: See Details functionality on Search Results grid
 
@@ -80,10 +81,11 @@ public class GlobalSearch_ProductActions extends base {
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(15000);
 		// Store the 1st Product name of Exhibitor
-		//String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
-		//System.out.println("Selected Product Name: " + productNameOnSearchGrid);
+		// String productNameOnSearchGrid =
+		// atlexhact.getExhProductNameOnSearchGrid().getText();
+		// System.out.println("Selected Product Name: " + productNameOnSearchGrid);
 		String catalogName = atlgs.getFirstCatalogName().getText();
-		System.out.println("Selected Product Name:"+catalogName);
+		System.out.println("Selected Product Name:" + catalogName);
 
 		utl.scrollToElement(atlexhact.getExhibitorProduct());
 
@@ -120,25 +122,39 @@ public class GlobalSearch_ProductActions extends base {
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		Thread.sleep(6000);
-		//lap.getCloseMarktAdBtn().click();
+		// lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(15000);
 		// Store the 1st Product name of Exhibitor
-	/*	String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
-		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
-*/
+		/*
+		 * String productNameOnSearchGrid =
+		 * atlexhact.getExhProductNameOnSearchGrid().getText();
+		 * System.out.println("Selected Product Name: " + productNameOnSearchGrid);
+		 */
 		String prodName = atlgs.getFirstCatalogName().getText();
-		System.out.println("Selected Product Name:"+prodName);
-		
+		System.out.println("Selected Product Name:" + prodName);
+
 		utl.scrollToElement(atlexhact.getExhibitorProduct());
 
+		/*
+		 * // Hover on Product Actions actions = new Actions(driver);
+		 * actions.moveToElement(atlexhact.getExhibitorProduct()).perform(); // To
+		 * mouseover on See All btn
+		 * actions.moveToElement(atlexhact.getProdSeeDetailsBtn()).perform();
+		 * 
+		 * // Click On See Details button actions.click().perform(); Thread.sleep(5000);
+		 * 
+		 * // Click on Add to List button atlproddet.getAddToList().click();
+		 * 
+		 * utl.scrollToElement(atlmppge.getCreateNewListNameTxtbx());
+		 */
 		// Hover on Product
 		Actions actions = new Actions(driver);
 		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
 		// To mouseover on See All btn
-		actions.moveToElement(atlexhact.getProdSeeDetailsBtn()).perform();
+		actions.moveToElement(atlexhact.getseeDetailsProd()).perform();
 
 		// Click On See Details button
 		actions.click().perform();
@@ -184,7 +200,8 @@ public class GlobalSearch_ProductActions extends base {
 	}
 
 	@Test(priority = 3)
-	public void TS003_VerifyProductAddToExistingListOnProductDetailsPageTest() throws InterruptedException, IOException {
+	public void TS003_VerifyProductAddToExistingListOnProductDetailsPageTest()
+			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T384: Add to existing list functionality on Product details page
 
@@ -200,19 +217,21 @@ public class GlobalSearch_ProductActions extends base {
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		Thread.sleep(6000);
-		//lap.getCloseMarktAdBtn().click();
+		// lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearchinput"));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(15000);
 
 		// Store the 1st Product name of Exhibitor
-	/*	String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
-		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
-*/
+		/*
+		 * String productNameOnSearchGrid =
+		 * atlexhact.getExhProductNameOnSearchGrid().getText();
+		 * System.out.println("Selected Product Name: " + productNameOnSearchGrid);
+		 */
 		String prodName = atlgs.getFirstCatalogName().getText();
-		System.out.println("Selected Product Name:"+prodName);
-		
+		System.out.println("Selected Product Name:" + prodName);
+
 		utl.scrollToElement(atlexhact.getExhibitorProduct());
 
 		// Hovering on Product
@@ -235,11 +254,11 @@ public class GlobalSearch_ProductActions extends base {
 		// Select Existing list name
 		atlmppge.getATLMPExistingListName().click();
 
-	
 		// Scroll till Add to Selected button
-//		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",
-//				atlmppge.getATLMPAddToSelectedBtn());
-		
+		// ((JavascriptExecutor)
+		// driver).executeScript("arguments[0].scrollIntoView(true);",
+		// atlmppge.getATLMPAddToSelectedBtn());
+
 		utl.scrollToElement(atlmppge.getATLMPAddToSelectedBtn());
 		Thread.sleep(5000);
 		atlmppge.getATLMPAddToSelectedBtn().click();
@@ -297,18 +316,20 @@ public class GlobalSearch_ProductActions extends base {
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		Thread.sleep(6000);
-		//lap.getCloseMarktAdBtn().click();
+		// lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearchinput"));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(15000);
 		// Store the 1st Product name of Exhibitor
-		/*String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
-		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
-*/
+		/*
+		 * String productNameOnSearchGrid =
+		 * atlexhact.getExhProductNameOnSearchGrid().getText();
+		 * System.out.println("Selected Product Name: " + productNameOnSearchGrid);
+		 */
 		String prodName = atlgs.getFirstCatalogName().getText();
-		System.out.println("Selected Product Name:"+prodName);
-		
+		System.out.println("Selected Product Name:" + prodName);
+
 		utl.scrollToElement(atlexhact.getExhibitorProduct());
 
 		// Hovering on Product
@@ -342,11 +363,10 @@ public class GlobalSearch_ProductActions extends base {
 
 		favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
 
-		//Verify that the added product should be removed from Favorites list
-		for(int i=1; i< favlist.size(); i++)
-		{			
-			//System.out.println(favlist.get(i).getText());
-			Assert.assertFalse(favlist.get(i).getText().contains(prodName)); 
+		// Verify that the added product should be removed from Favorites list
+		for (int i = 1; i < favlist.size(); i++) {
+			// System.out.println(favlist.get(i).getText());
+			Assert.assertFalse(favlist.get(i).getText().contains(prodName));
 		}
 	}
 
@@ -365,7 +385,7 @@ public class GlobalSearch_ProductActions extends base {
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		Thread.sleep(6000);
-		//lap.getCloseMarktAdBtn().click();
+		// lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
@@ -411,9 +431,10 @@ public class GlobalSearch_ProductActions extends base {
 
 		allnoteslist = atlexhact.getSavedNoteNameInAllNotesList();
 
-		// Verify that recently added note should be appear on 'All Notes For Exhibitor' modal
+		// Verify that recently added note should be appear on 'All Notes For Exhibitor'
+		// modal
 		for (int i = 0; i < allnoteslist.size(); i++) {
-			//System.out.println(allnoteslist.get(i).getText());
+			// System.out.println(allnoteslist.get(i).getText());
 			if (allnoteslist.get(i).getText().equals(newnotetitle)) {
 				allnoteslist.get(i).click();
 
@@ -442,18 +463,21 @@ public class GlobalSearch_ProductActions extends base {
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		Thread.sleep(6000);
-		//lap.getCloseMarktAdBtn().click();
+		// lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearchinput"));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(15000);
 		// Store the 1st Product name of Exhibitor
-	/*	String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
-		System.out.println("Selected Product Name: " + productNameOnSearchGrid);*/
+		/*
+		 * String productNameOnSearchGrid =
+		 * atlexhact.getExhProductNameOnSearchGrid().getText();
+		 * System.out.println("Selected Product Name: " + productNameOnSearchGrid);
+		 */
 		exhname = atlexhact.getExhibitorName().getText();
 		System.out.println("Exhibitor name: " + exhname);
 		String prodName = atlgs.getFirstCatalogName().getText();
-		System.out.println("Selected Product Name:"+prodName);
+		System.out.println("Selected Product Name:" + prodName);
 
 		// Hovering on Product
 		Actions actions = new Actions(driver);
@@ -461,7 +485,7 @@ public class GlobalSearch_ProductActions extends base {
 		// To mouseover on More btn
 		actions.moveToElement(atlexhact.getProductMoreBtnOnSearchGrid()).perform();
 
-		//Click on Add To List button
+		// Click on Add To List button
 		actions.click().perform();
 		atlexhact.getAddToListOptn().click();
 		Thread.sleep(5000);
@@ -474,7 +498,8 @@ public class GlobalSearch_ProductActions extends base {
 		atlmppge.getATLMPExistingListName().click();
 
 		// Scroll till Add to Selected button
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",atlmppge.getATLMPAddToSelectedBtn());
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",
+				atlmppge.getATLMPAddToSelectedBtn());
 		atlmppge.getATLMPAddToSelectedBtn().click();
 
 		// Click on Go to Market Planner button
@@ -482,27 +507,27 @@ public class GlobalSearch_ProductActions extends base {
 
 		// Click on Lists tab on MP home page
 		atlmppge.getMPHomeListsTab().click();
-		//atlmppge.getListsPageListsMenu().click();
+		// atlmppge.getListsPageListsMenu().click();
 		atlmppge.getListsPageListsMenu().click();
 
 		mplists = atlmppge.getATLMPListsNames();
 		mpeditlistoptns = atlmppge.getATLMPEditListOptns();
-		boolean t=false;
+		boolean t = false;
 		for (int i = 0; i < mplists.size(); i++) {
 			// System.out.println(mplists.get(i).getText());
 			// System.out.println(mpeditlistoptns.get(i).getText());
 			if (mplists.get(i).getText().equals(existinglistname)) {
 				mpeditlistoptns.get(i).click();
-				t=true;
+				t = true;
 				break;
 			}
 		}
-		if(t==true) {
+		if (t == true) {
 			System.out.println("Existing List is Present");
-		}else {
+		} else {
 			System.out.println("Not present");
 		}
-		
+
 		Assert.assertTrue(atlexhact.getprodName().getText().contains(prodName));
 		Thread.sleep(10000);
 
@@ -515,7 +540,7 @@ public class GlobalSearch_ProductActions extends base {
 
 		// Verify that the added Product should be removed from Existing list
 		for (int i = 1; i < favlist.size(); i++) {
-			 System.out.println(favlist.get(i).getText());
+			System.out.println(favlist.get(i).getText());
 			Assert.assertFalse(favlist.get(i).getText().contains(prodName));
 		}
 	}
@@ -537,51 +562,51 @@ public class GlobalSearch_ProductActions extends base {
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		Thread.sleep(6000);
-		//lap.getCloseMarktAdBtn().click();
+		// lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearchinputforProduct"));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(15000);
-		//Store the 1st Product name of Exhibitor
-	/*	String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
-		System.out.println("Selected Product Name: "+productNameOnSearchGrid);*/
+		// Store the 1st Product name of Exhibitor
+		/*
+		 * String productNameOnSearchGrid =
+		 * atlexhact.getExhProductNameOnSearchGrid().getText();
+		 * System.out.println("Selected Product Name: "+productNameOnSearchGrid);
+		 */
 		exhname = atlexhact.getExhibitorName().getText();
 		System.out.println("Exhibitor name: " + exhname);
-		
-		//Click on Exhibitor
+
+		// Click on Exhibitor
 		atlexhact.getExhibitorName().click();
-		//Scroll To Products Section
+		// Scroll To Products Section
 		utl.scrollToElement(atlexhdgshw.getProductSection());
 		String prodName = atlexhact.getprodNameFromDGshhowroomPage().getText();
-		String prodNameTitle=prodName.replaceAll("\\.","");
-		System.out.println("Selected Product Name:"+prodNameTitle);
-		
-		//Click on product
+		String prodNameTitle = prodName.replaceAll("\\.", "");
+		System.out.println("Selected Product Name:" + prodNameTitle);
+
+		// Click on product
 		atlexhact.getprodNameFromDGshhowroomPage().click();
-		
-		
-		/*utl.scrollToElement(atlexhact.getExhibitorProduct());
 
-		// Hovering on Product
-		Actions actions = new Actions(driver);
-		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
-		// To mouseover on See Details btn
-		actions.moveToElement(atlexhact.getProdSeeDetailsBtn()).perform();
-
-		//Click on See Details button
-		actions.click().perform();
-		Thread.sleep(5000);
-*/
-		//Click on Product Full Screen Viewer button
+		/*
+		 * utl.scrollToElement(atlexhact.getExhibitorProduct());
+		 * 
+		 * // Hovering on Product Actions actions = new Actions(driver);
+		 * actions.moveToElement(atlexhact.getExhibitorProduct()).perform(); // To
+		 * mouseover on See Details btn
+		 * actions.moveToElement(atlexhact.getProdSeeDetailsBtn()).perform();
+		 * 
+		 * //Click on See Details button actions.click().perform(); Thread.sleep(5000);
+		 */
+		// Click on Product Full Screen Viewer button
 		atlproddet.getProductFullScreenViewerBtn().click();
 
-		//Verify that Full Screen viewer should be displayed with Product images
+		// Verify that Full Screen viewer should be displayed with Product images
 		Assert.assertTrue(atlproddet.getProductFullScreenViewer().isDisplayed());
 		Thread.sleep(5000);
-		//Verify the title of the Full screen viewer
+		// Verify the title of the Full screen viewer
 		Assert.assertTrue(atlproddet.getProductFullScreenViewerTitle().getText().contains(prodNameTitle));
 
-		//Dismiss the Full Screen Viewer
+		// Dismiss the Full Screen Viewer
 		atlproddet.getProductFullScreenViewer().click();
 	}
 
@@ -600,17 +625,19 @@ public class GlobalSearch_ProductActions extends base {
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		Thread.sleep(6000);
-		//lap.getCloseMarktAdBtn().click();
+		// lap.getCloseMarktAdBtn().click();
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearchinput"));
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor4"));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(15000);
-		//Store the 1st Product name of Exhibitor
-	/*	String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
-		System.out.println("Selected Product Name: "+productNameOnSearchGrid);
-*/
+		// Store the 1st Product name of Exhibitor
+		/*
+		 * String productNameOnSearchGrid =
+		 * atlexhact.getExhProductNameOnSearchGrid().getText();
+		 * System.out.println("Selected Product Name: "+productNameOnSearchGrid);
+		 */
 		String prodName = atlgs.getFirstCatalogName().getText();
-		System.out.println("Selected Product Name:"+prodName);
+		System.out.println("Selected Product Name:" + prodName);
 
 		utl.scrollToElement(atlexhact.getExhibitorProduct());
 
@@ -620,7 +647,7 @@ public class GlobalSearch_ProductActions extends base {
 		// To mouseover on Add to Fav btn
 		actions.moveToElement(atlexhact.getProductAddToFavBtnOnSearchGrid()).perform();
 
-		//Click on Add To Favorite button
+		// Click on Add To Favorite button
 		actions.click().perform();
 		Thread.sleep(5000);
 
@@ -642,16 +669,16 @@ public class GlobalSearch_ProductActions extends base {
 
 		favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
 
-		//Verify that the added product should be removed from Favorites list
-		for(int i=1; i< favlist.size(); i++)
-		{			
-			//System.out.println(favlist.get(i).getText());
-			Assert.assertFalse(favlist.get(i).getText().contains(prodName)); 
+		// Verify that the added product should be removed from Favorites list
+		for (int i = 1; i < favlist.size(); i++) {
+			// System.out.println(favlist.get(i).getText());
+			Assert.assertFalse(favlist.get(i).getText().contains(prodName));
 		}
 	}
 
 	@Test(priority = 9)
-	public void TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest() throws InterruptedException, IOException {
+	public void TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest()
+			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T435: Products Actions: Product Details: + icon to add to newly created list
 
@@ -666,26 +693,28 @@ public class GlobalSearch_ProductActions extends base {
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		Thread.sleep(6000);
-		//lap.getCloseMarktAdBtn().click();
+		// lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearchinput"));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
 		// Store the 1st Product name of Exhibitor
-	/*	String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText();
-		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
-*/
+		/*
+		 * String productNameOnSearchGrid =
+		 * atlexhact.getExhProductNameOnSearchGrid().getText();
+		 * System.out.println("Selected Product Name: " + productNameOnSearchGrid);
+		 */
 		String prodName = atlgs.getFirstCatalogName().getText();
-		System.out.println("Selected Product Name:"+prodName);
-		
+		System.out.println("Selected Product Name:" + prodName);
+
 		// Hovering on Product
 		Actions actions = new Actions(driver);
 		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
 		// To mouseover on More btn
 		actions.moveToElement(atlexhact.getProductMoreBtnOnSearchGrid()).perform();
 
-		//Click on Add To List button
+		// Click on Add To List button
 		actions.click().perform();
 		atlexhact.getAddToListOptn().click();
 		Thread.sleep(5000);
@@ -723,14 +752,16 @@ public class GlobalSearch_ProductActions extends base {
 			}
 		}
 		Thread.sleep(10000);
-		//System.out.println(atlmppge.getNewCreatedListName().getText());
-	/*	Assert.assertTrue(atlmppge.getNewCreatedListName().getText().contains(newlistname));
-		Thread.sleep(10000);*/
+		// System.out.println(atlmppge.getNewCreatedListName().getText());
+		/*
+		 * Assert.assertTrue(atlmppge.getNewCreatedListName().getText().contains(
+		 * newlistname)); Thread.sleep(10000);
+		 */
 		Assert.assertTrue(atlmppge.getSavedProductNameInList().getText().contains(prodName));
 	}
 
 	@AfterClass
 	public void tearDown() {
-		driver.quit();
+		//driver.quit();
 	}
 }

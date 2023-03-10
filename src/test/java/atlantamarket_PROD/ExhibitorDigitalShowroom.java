@@ -229,7 +229,7 @@ public class ExhibitorDigitalShowroom extends base {
 		genData = new GenerateData();
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		lap.getIUnderstandBtn().click();
+		//lap.getIUnderstandBtn().click();
 		Thread.sleep(10000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor1")));
 		atlgs.getATLSearchButton().click();
