@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -282,7 +283,7 @@ public class GlobalSearch_MatchingResults extends base {
 
 	}
 
-	@Test(priority = 7)
+	@Test(priority = 5)
 	public void TS005_VerifyGlobalSearchMatchingResultsSelectAddToFavoritesTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -392,7 +393,7 @@ public class GlobalSearch_MatchingResults extends base {
 
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 7)
 	public void TS007_VerifyGlobalSearchMatchingResultsSelectAddToNewlyCreatedListTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -576,5 +577,9 @@ public class GlobalSearch_MatchingResults extends base {
 		utl.checkItemPresentInListorNot(atlgs.getatlListOfAllSavedSearches(),savedSearchesInput);
 		
 	}
+	@AfterClass
+	public void tearDown() {
+		driver.quit();
 
+	}
 }
