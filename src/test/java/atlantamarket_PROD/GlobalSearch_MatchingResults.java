@@ -282,7 +282,7 @@ public class GlobalSearch_MatchingResults extends base {
 
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 7)
 	public void TS005_VerifyGlobalSearchMatchingResultsSelectAddToFavoritesTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -392,7 +392,7 @@ public class GlobalSearch_MatchingResults extends base {
 
 	}
 
-	@Test(priority = 7)
+	@Test(priority = 5)
 	public void TS007_VerifyGlobalSearchMatchingResultsSelectAddToNewlyCreatedListTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
