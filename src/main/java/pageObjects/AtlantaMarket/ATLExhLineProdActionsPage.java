@@ -96,8 +96,7 @@ public class ATLExhLineProdActionsPage extends base{
 
 
 
-	By productBlock = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]"); //Locator for Add to List button for Product on Search Results grid
-
+	
 
 	public ATLExhLineProdActionsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -115,11 +114,7 @@ public class ATLExhLineProdActionsPage extends base{
 		wait.until(ExpectedConditions.visibilityOfElementLocated(seeDetailsProd));
 		return driver.findElement(seeDetailsProd);
 	}
-	public WebElement getproductBlock() {
-		wait = new WebDriverWait (driver,30);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(productBlock));
-		return driver.findElement(productBlock);
-	}	
+		
 	public WebElement getaddfaviconLVM_UAT() {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(addfaviconLVM_UAT));
