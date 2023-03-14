@@ -7,7 +7,18 @@
 	</listners>
 		<test thread-count="5" name="RegressionTest">
 		<classes>
+
+
+			<class name="lasvegasmarket_UAT.EvenntsAndWebinar" /> 
+				<methods>
+
+				 <include name="TS003_VerifyIMCEventsCalendarViewTest"/>  
+	
+				</methods>
+
+
 			<class name="lasvegasmarket_UAT.MarketPlanner" /> 
+
 		</classes>
 	</test>
 </suite>

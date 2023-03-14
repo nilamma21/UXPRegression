@@ -134,7 +134,7 @@ public class GlobalSearch_LineActions extends base {
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("searchorderonjuniperline")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("searchjuniperline_ATLPROD")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -145,6 +145,7 @@ public class GlobalSearch_LineActions extends base {
 		// Store the current window handle
 		String winHandleBefore = driver.getWindowHandle();
 		atlexhact.getOrderOnJuniperMarketBtn().click();
+		
 
 		// Switch to new window opened
 		for (String winHandle : driver.getWindowHandles()) {
