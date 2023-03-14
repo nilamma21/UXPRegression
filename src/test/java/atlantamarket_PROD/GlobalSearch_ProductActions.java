@@ -154,7 +154,7 @@ public class GlobalSearch_ProductActions extends base {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
 		// To mouseover on See All btn
-		actions.moveToElement(atlexhact.getseeDetailsProd()).perform();
+		actions.moveToElement(atlexhact.getProdSeeDetailsBtn()).perform();
 
 		// Click On See Details button
 		actions.click().perform();
