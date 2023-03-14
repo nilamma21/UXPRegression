@@ -204,7 +204,7 @@ public class LineDigitalShowroom extends base {
 		/*	Assert.assertFalse(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 				Thread.sleep(6000);*/
 
-		favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
+		favlist = atlmppge.getFavExhList();
 
 		// Verify that the added favorites exhibitor should be removed from Favorites list
 		for (int i = 1; i < favlist.size(); i++) {
@@ -255,11 +255,11 @@ public class LineDigitalShowroom extends base {
 		Thread.sleep(6000);
 
 		// Store the existing list name
-		String existinglistname = atlmppge.getATLMPExistingListName().getText();
+		String existinglistname = atlmppge.getATLMPExistingListNameNew().getText();
 		System.out.println("Existing list name: " + existinglistname);
 
 		// Select Existing list name
-		atlmppge.getATLMPExistingListName().click();
+		atlmppge.getATLMPExistingListNameNew().click();
 
 		// Scroll till Add to Selected button
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",
@@ -429,7 +429,7 @@ public class LineDigitalShowroom extends base {
 			Thread.sleep(2000);
 			atlmppge.getcloseNotePopup().click();
 		}
-		atlmppge.getcloseNotePopup().click();	
+		//atlmppge.getcloseNotePopup().click();	
 	}
 	@Test(priority = 06)
 	public void TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest()throws InterruptedException, IOException {
@@ -738,6 +738,6 @@ public class LineDigitalShowroom extends base {
 
 	@AfterClass
 	public void tearDown() {
-		//driver.quit();
+		driver.quit();
 	}
 }

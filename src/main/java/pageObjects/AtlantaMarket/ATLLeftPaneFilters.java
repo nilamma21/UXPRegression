@@ -56,7 +56,7 @@ public class ATLLeftPaneFilters {
 	}
 
 	public WebElement getATLexhibitor(){
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlexhibitor));
 		return driver.findElement(atlexhibitor);
 	}
@@ -106,30 +106,48 @@ public class ATLLeftPaneFilters {
 		return driver.findElement(expproductcategsectn);
 	}
 	public WebElement getEXPIndustrialStyleOnProfile() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(expindustrialstyleonprofile));
 		return driver.findElement(expindustrialstyleonprofile);
 	}
 	public WebElement getATLAccentFurnitureProdCatg(){
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(accentfurnitureprodcatg));
 		return driver.findElement(accentfurnitureprodcatg);
 	}
 	public WebElement getATLHolidayProdCatg(){
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(holidayprodcatg));
 		return driver.findElement(holidayprodcatg);
 	}
 	public WebElement getATLDecorativeAccProdCatg(){
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(decorativeaccprodcatg));
 		return driver.findElement(decorativeaccprodcatg);
 	}
 	public WebElement getATLGeneralGiftProdCatg(){
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(generalgiftprodcatg));
 		return driver.findElement(generalgiftprodcatg);
 	}
 	public WebElement getATLFashionAccProdCatg(){
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(fashionaccprodcatg));
 		return driver.findElement(fashionaccprodcatg);
 	}
 	public WebElement getATLFloralBotanicalsProdCatg(){
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(floralbotanicalsprodcatg));
 		return driver.findElement(floralbotanicalsprodcatg);
 	}
 	public WebElement getATLHomeTextilesProdCatg(){
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(hometextilesprodcatg));
 		return driver.findElement(hometextilesprodcatg);
 	}
 	public WebElement getATLSecondExhibitor(){
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(secondexhibitor));
 		return driver.findElement(secondexhibitor);
 	}
 }

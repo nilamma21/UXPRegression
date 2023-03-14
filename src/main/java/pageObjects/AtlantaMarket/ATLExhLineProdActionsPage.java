@@ -237,7 +237,7 @@ public class ATLExhLineProdActionsPage extends base{
 		return driver.findElement(matchingprodseealllink);
 	}
 	public WebElement getMatchingProdAddNoteIcon() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(matchingprodaddnoteicon));
 		return driver.findElement(matchingprodaddnoteicon);
 	}
@@ -262,12 +262,12 @@ public class ATLExhLineProdActionsPage extends base{
 		return driver.findElement(notesavebtn);
 	}
 	public WebElement getViewAllNotesLink() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(viewallnoteslink));
 		return driver.findElement(viewallnoteslink);
 	}
 	public List <WebElement> getSavedNoteNameInAllNotesList() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(savednotenameinallnoteslist));
 		return driver.findElements(savednotenameinallnoteslist);
 	}
@@ -315,7 +315,7 @@ public class ATLExhLineProdActionsPage extends base{
 		return driver.findElement(seedetailsbtn);
 	}
 	public WebElement getExhibitorProduct() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitorProdcut));
 		return driver.findElement(exhibitorProdcut);
 	}

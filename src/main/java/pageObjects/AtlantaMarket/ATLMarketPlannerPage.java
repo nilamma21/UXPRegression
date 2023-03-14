@@ -261,7 +261,7 @@ public class ATLMarketPlannerPage {
 	By mpduplicatelistnametxtbx = By.xpath("//div[@class='imc-vr--medium'][1]/div[1]/input"); //Locator of List name txt box to create Duplicate list
 	By mpgroupnamesdropdown = By.xpath("//select[@name='groupName']/option"); //List of group names in drop down
 	By selectgroupicon = By.xpath("//select[@name='groupName']"); //Locator for Select a group drop down icon
-	By atlmpexistinglistnamenew = By.xpath("//form/div[4]/div[4]/label"); //Locator for existing list name
+	By atlmpexistinglistnamenew = By.xpath("//form/div[4]/div[3]/label"); //Locator for existing list name
 	By favexhlist = By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a");//Favourite list from market planner
 	
 	public ATLMarketPlannerPage(WebDriver driver) {
@@ -590,7 +590,7 @@ public class ATLMarketPlannerPage {
 		return driver.findElement(editlistpage);
 	}
 	public WebElement getATLSavedExhNameInList() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(savedexhnameinlist));
 		return driver.findElement(savedexhnameinlist);
 	}
@@ -651,7 +651,7 @@ public class ATLMarketPlannerPage {
 		return driver.findElement(atlmpexistinglistname);
 	}
 	public WebElement getATLMPAddToSelectedBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atladdtoseselectedbtn));
 		return driver.findElement(atladdtoseselectedbtn);
 	}
@@ -688,7 +688,7 @@ public class ATLMarketPlannerPage {
 	}
 	
 	public WebElement getlvmsavedexhnameinlist_uat() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmsavedexhnameinlist_uat));
 		return driver.findElement(lvmsavedexhnameinlist_uat);
 	}
@@ -1401,6 +1401,7 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(favexhlist));
 		return driver.findElements(favexhlist);
 	}
+	
 }
 
 

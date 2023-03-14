@@ -2,20 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="105768" started-at="2023-03-10T04:31:19Z" finished-at="2023-03-10T04:33:05Z">
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="139070" started-at="2023-03-14T06:40:28Z" finished-at="2023-03-14T06:42:47Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="105768" started-at="2023-03-10T04:31:19Z" finished-at="2023-03-10T04:33:05Z">
-      <class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@e25b2fe]" name="initialize" is-config="true" duration-ms="70024" started-at="2023-03-10T10:01:19Z" finished-at="2023-03-10T10:02:29Z">
+    <test name="RegressionTest" duration-ms="139070" started-at="2023-03-14T06:40:28Z" finished-at="2023-03-14T06:42:47Z">
+      <class name="atlantamarket_PROD.LineDigitalShowroom">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@204f30ec]" name="initialize" is-config="true" duration-ms="86741" started-at="2023-03-14T12:10:28Z" finished-at="2023-03-14T12:11:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyAddToFavoriteForExhibitorTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@e25b2fe]" name="TS001_VerifyAddToFavoriteForExhibitorTest" duration-ms="35710" started-at="2023-03-10T10:02:29Z" finished-at="2023-03-10T10:03:05Z">
+        <test-method status="PASS" signature="TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@204f30ec]" name="TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest" duration-ms="49431" started-at="2023-03-14T12:11:54Z" finished-at="2023-03-14T12:12:44Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS001_VerifyAddToFavoriteForExhibitorTest -->
-      </class> <!-- atlantamarket_PROD.GlobalSearch_ExhibitorActions -->
+        </test-method> <!-- TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@204f30ec]" name="tearDown" is-config="true" duration-ms="2873" started-at="2023-03-14T12:12:44Z" finished-at="2023-03-14T12:12:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- atlantamarket_PROD.LineDigitalShowroom -->
     </test> <!-- RegressionTest -->
   </suite> <!-- ATLMrkt_RegressionTestSuite -->
 </testng-results>
