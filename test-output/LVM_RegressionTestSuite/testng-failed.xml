@@ -3,6 +3,18 @@
 <suite name="Failed suite [LVM_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
+
+      <class name="lasvegasmarket_UAT.EvenntsAndWebinar">
+        <methods>
+          <include name="TS005_VerifyIMCEventsEventDetailstTest"/>
+          <include name="initialize"/>
+          <include name="TS013_VerifyExhibitorEventsAddToFavoriteTest"/>
+          <include name="TS012_VerifyExhibitorEventsDetailstTest"/>
+          <include name="TS006_VerifyIMCEventsAddToFavoriteTest"/>
+          <include name="TS007_VerifyIMCEventsAddToListTest"/>
+        </methods>
+      </class> <!-- lasvegasmarket_UAT.EvenntsAndWebinar -->
+
       <class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions">
         <methods>
           <include name="TS001_VerifyAddToFavoriteForExhibitorTest"/>
@@ -10,6 +22,7 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- lasvegasmarket_UAT.GlobalSearch_ExhibitorActions -->
+
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->

@@ -88,12 +88,29 @@ public class ATLExhLineProdActionsPage extends base{
 	
 	By addfaviconLVM_UAT = By.xpath("(//li[@class='imc-exhibitorcard--action imc-exhibitorcard--contact imc-exhibitorcard--contact--heart'])[position()=1]/div/button"); // Locator of add to Favorite icon		
 
+	By productBlock = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]"); //Locator for Add to List button for Product on Search Results grid
+	By seeDetailsProd = By.xpath("(//div[@class='imc-gallery imc-gallery--80-20 imc-exhibitorcard--gallery-nowrap'])[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/a[1]"); //Locator for See Detals btn
+	
+	
+
+
+
 	public ATLExhLineProdActionsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 
 	} 
 		
+	public WebElement getseeDetailsProd() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(seeDetailsProd));
+		return driver.findElement(seeDetailsProd);
+	}
+	public WebElement getproductBlock() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(productBlock));
+		return driver.findElement(productBlock);
+	}	
 	public WebElement getaddfaviconLVM_UAT() {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(addfaviconLVM_UAT));
