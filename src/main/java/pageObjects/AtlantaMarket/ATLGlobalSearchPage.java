@@ -104,7 +104,7 @@ public class ATLGlobalSearchPage {
 	By atlShowroomLink = By.xpath("//div[@class='ag-center-cols-container']/div[1]/div[2]/a");  //Locator for Showroom Name
 	By atlGlobalSearchClearTxt = By.xpath("//div[@class='imc-header-subnav']/div[1]/div[1]/section[1]/div[1]/form[1]/button[1]");  //Locator for Showroom Name
 	
-	By atlShowSpecialsExhNamePROD = By.xpath("(//div[@class='imc-showSpecial--tableContainer'])[1]/p[2]");  //Locator for Show Secials Name
+	By atlShowSpecialsExhNamePROD = By.xpath("(//div[@class='imc-showSpecial--tableContainer'])[1]/p[1]");  //Locator for Show Secials Name
 	By atlSelectList = By.xpath("//select[@name='Saved Searches']");  //Locator for Show Secials Name
 	By atlClosePopup = By.xpath("//div[@class=' contact-exit']");  //Locator for Show Secials Name
 	By FirstInfoName = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/h2[1]");  //Locator for Show Secials Name
@@ -396,7 +396,7 @@ public class ATLGlobalSearchPage {
 		return driver.findElements(listOfAllArticles);
 	}
 	public WebElement getATLGlobalSearchTextBox() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlglobalsearchtxtbx));
 		return driver.findElement(atlglobalsearchtxtbx);
 	}
