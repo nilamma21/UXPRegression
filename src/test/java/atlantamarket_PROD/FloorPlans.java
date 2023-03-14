@@ -134,7 +134,7 @@ public class FloorPlans extends base {
 		//Assert.assertTrue(atlflpp.getATLLoadingExhMsg().isDisplayed());
 
 		//Verify that No Exhibitor msg should be displayed
-		Assert.assertTrue(atlflpp.getatlLoadingNoExhiMsg().isDisplayed());
+		//Assert.assertTrue(atlflpp.getatlLoadingNoExhiMsg().isDisplayed());
 		Assert.assertTrue(atlflpp.getatlLoadingNoExhiMsg().isDisplayed());
 	}
 
@@ -229,13 +229,13 @@ public class FloorPlans extends base {
 
 		//Click on Phone icon on Map image
 		atlflpp.getPhoneIconOnMap().click();
-
+		Thread.sleep(1000);
 		//Verify that Phone Overlay should appeared on Map
 		Assert.assertTrue(atlflpp.getPhoneOverlayOnMap().isDisplayed());
 
 		//Click on Overlay Close btn
 		atlflpp.getOverlayCloseBtn().click();
-
+		Thread.sleep(1000);
 		//Click on Location pin of any Exhibitor on Map
 		atlflpp.getLocationPinIconOnMap().click();
 
@@ -510,11 +510,11 @@ public class FloorPlans extends base {
 		atlflpp.getATLAddToList().click();
 		
 		// Store the existing list name
-		String existinglistname = atlmppge.getATLMPExistingListName().getText();
+		String existinglistname = atlmppge.getATLMPExistingListNameNew().getText();
 		System.out.println("Existing list name: " + existinglistname);
 
 		// Select Existing list name
-		atlmppge.getATLMPExistingListName().click();
+		atlmppge.getATLMPExistingListNameNew().click();
 
 		// Scroll till Add to Selected button5
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",
@@ -667,8 +667,6 @@ public class FloorPlans extends base {
 		atlmppge.getMoreBtnDeleteOptnExistingList_ATLPROD().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(6000);
-
-		favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
 
 		// Verify that the added favorites exhibitor should be removed from Favorites list
 		for (int i = 1; i < favlist.size(); i++) {

@@ -701,7 +701,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor8")));
 		atlgs.getATLSearchButton().click();
 
 		//Click on Product Categories expand btn
@@ -713,11 +713,11 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		String expectedprodcatg = atlleftpane.getATLHomeTextilesProdCatg().getText();
 		atlleftpane.getATLHomeTextilesProdCatg().click();
 		Thread.sleep(8000);
-
+		System.out.println(expectedprodcatg);
 		//Verify the selected Product Categories on product details page
-		//Select 2nd Exhibitor from Search results grid
-		atlleftpane.getATLSecondExhibitor().click();
-
+		//Select 1st Exhibitor from Search results grid
+		atlleftpane.getATLexhibitor().click();
+		
 		//Scroll till Product Categories section
 		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
 		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
@@ -736,6 +736,6 @@ public class GlobalSearch_LeftPaneFilters extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 }

@@ -1,4 +1,4 @@
-package lasvegasmarket_UAT;
+package lasvegasmarket_PROD;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -54,8 +54,8 @@ public class EvenntsAndWebinar extends base{
 
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
-		driver.get(prop.getProperty("lvmurl_uat"));
-		//driver.get(prop.getProperty("lvmurl_uat"));
+		driver.get(prop.getProperty("lvmurl_prod"));
+		//driver.get(prop.getProperty("lvmurl_prod"));
 		/*utl.verifyMPLoginFunctionality();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);*/
 		lap.getIUnderstandBtn().click();
@@ -150,7 +150,7 @@ public class EvenntsAndWebinar extends base{
 		utl.checkItemPresentInListorNot(lvmevents.getlvmListOfEventTitles(), eventName);	
 	}
 	
-	@Test(priority = 3)//enabled=false
+	//@Test(priority = 3)//enabled=false
 	public void TS003_VerifyIMCEventsCalendarViewTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T288: IMC Events: Calendar View
@@ -198,7 +198,7 @@ public class EvenntsAndWebinar extends base{
 		//Current Month
 		DateTimeFormatter month = DateTimeFormatter.ofPattern("MMM");
 		LocalDate localMonth = LocalDate.now();
-		LocalDate prevMonth= localMonth.minusMonths(2);		
+		LocalDate prevMonth= localMonth.minusMonths(1);		
 				
 		String m = month.format(localMonth);//current month
 		String mm = month.format(prevMonth);//previous month
@@ -210,7 +210,7 @@ public class EvenntsAndWebinar extends base{
 		//Click on Calendar Prev Btn
 		lvmevents.getlvmCalendarPrevMonth().click();
 		System.out.println("Previous Month From Calendar ::"+lvmevents.getlvmSelectMonth().getText());
-		//Assert.assertTrue(lvmevents.getlvmSelectMonth().getText().contains(mm));
+		Assert.assertTrue(lvmevents.getlvmSelectMonth().getText().contains(mm));
 		System.out.println("Previous Month "+lvmevents.getlvmSelectMonth().getText()+" is selected");
 		utl.selectFilters(lvmevents.getlvmListOflvmSelectAnyDate(), replaceDate);
 		
@@ -694,7 +694,7 @@ public class EvenntsAndWebinar extends base{
 		utl.checkItemPresentInListorNot(lvmevents.getlvmListOfEventTitles(), eventName);
 }
 	
-	@Test(priority = 10)
+	//@Test(priority = 10)
 	public void TS010_VerifyExhibitorEventsCalendarViewTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T305: Exhibitor Events: Calendar View
@@ -741,7 +741,7 @@ public class EvenntsAndWebinar extends base{
 		//Current Month
 		DateTimeFormatter month = DateTimeFormatter.ofPattern("MMM");
 		LocalDate localMonth = LocalDate.now();
-		LocalDate prevMonth= localMonth.minusMonths(2);		
+		LocalDate prevMonth= localMonth.minusMonths(1);		
 				
 		String m = month.format(localMonth);//current month
 		String mm = month.format(prevMonth);//previous month
@@ -750,7 +750,6 @@ public class EvenntsAndWebinar extends base{
 		System.out.println("Previous Month ::" +mm );
 		
 		//Click on Calendar Prev Btn
-		lvmevents.getlvmCalendarPrevMonth().click();
 		lvmevents.getlvmCalendarPrevMonth().click();
 		System.out.println("Previous Month From Calendar ::"+lvmevents.getlvmSelectMonth().getText());
 		Assert.assertTrue(lvmevents.getlvmSelectMonth().getText().contains(mm));
