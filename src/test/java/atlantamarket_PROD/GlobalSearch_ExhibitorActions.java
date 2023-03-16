@@ -9,6 +9,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -89,7 +90,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		// Click on Lists tab on MP home page
 		atlmppge.getMPHomeListsTab().click();
 		atlmppge.getATLMPListsPageFavoritesMenu().click();
-		Thread.sleep(4000);
+		Thread.sleep(6000);
 		
 		// Verify that the added favorites exhibitor should be displayed in to Favorites list
 		//favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
@@ -106,8 +107,6 @@ public class GlobalSearch_ExhibitorActions extends base {
 		atlmppge.getMoreBtnDeleteOptnExistingList_ATLPROD().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(6000);
-
-		//favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
 
 		//Verify that the added favorites exhibitor should be removed from Favorites list
 		for(int i=1; i< favlist.size(); i++)
@@ -205,11 +204,11 @@ public class GlobalSearch_ExhibitorActions extends base {
 		atlexhact.getAddToListOptn().click();
 
 		// Store the existing list name
-		String existinglistname = atlmppge.getATLMPExistingListName().getText();
+		String existinglistname = atlmppge.getATLMPExistingListNameNew().getText();
 		System.out.println("Existing list name: " + existinglistname);
 
 		// Select Existing list name
-		atlmppge.getATLMPExistingListName().click();
+		atlmppge.getATLMPExistingListNameNew().click();
 
 		// Scroll till Add to Selected button
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",
@@ -443,7 +442,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		// Store the new note name
 		String newnotetitle = "CybNote" + genData.generateRandomString(3);
 		System.out.println("Newly added Note is: " + newnotetitle);
-
+		Thread.sleep(1000);
 		// Enter Note title
 		atlexhact.getNoteTitleTxtBx().sendKeys(newnotetitle);
 		// Enter Note Content
@@ -458,7 +457,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 
 		// Click on 'View all Notes for an Exhibitor' link on Add Notes pop-up
 		atlexhact.getViewAllNotesLink().click();
-		Thread.sleep(5000);
+		Thread.sleep(6000);
 
 		// Verify that Add note for selected exhibitor modal should be displayed
 		WebElement allnotesmodaltitle = driver
@@ -519,9 +518,9 @@ public class GlobalSearch_ExhibitorActions extends base {
 		//lap.getCloseMarktAdBtn().click();
 	}
 	
-	/*@AfterClass
+	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
-	}*/
+		//driver.quit();
+	}
 }

@@ -7,18 +7,18 @@
       <class name="atlantamarket_PROD.ExhibitorDigitalShowroom">
         <methods>
           <include name="initialize"/>
-          <include name="TS005_VerifyClickOnTotalLinesSeeAllLinkForExhibitorTest"/>
+          <include name="TS019_VerifyExhibitorDigitalShowroomShowSpecialsTest"/>
         </methods>
       </class> <!-- atlantamarket_PROD.ExhibitorDigitalShowroom -->
 =======
-      <class name="atlantamarket_PROD.FloorPlans">
+      <class name="atlantamarket_PROD.GlobalSearch_ProductActions">
         <methods>
-          <include name="initialize"/>
           <include name="tearDown"/>
-          <include name="TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest"/>
+          <include name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest"/>
+          <include name="initialize"/>
         </methods>
-      </class> <!-- atlantamarket_PROD.FloorPlans -->
->>>>>>> 9781a2b2ab523924ca8069d83c3d49ad413ad74e
+      </class> <!-- atlantamarket_PROD.GlobalSearch_ProductActions -->
+>>>>>>> 5759aadf1ba011620f6f54268ceebcc45e009b4c
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->

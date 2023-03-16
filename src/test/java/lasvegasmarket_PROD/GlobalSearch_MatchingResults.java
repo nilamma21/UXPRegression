@@ -1,4 +1,4 @@
-package lasvegasmarket_UAT;
+package lasvegasmarket_PROD;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -64,7 +64,7 @@ public class GlobalSearch_MatchingResults extends base {
 		
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
-		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(5000);
@@ -93,7 +93,7 @@ public class GlobalSearch_MatchingResults extends base {
 		
 		Assert.assertTrue(lvmgs.getLVMSearchResult().getText().contains(prop.getProperty("exhibitor5")));
 		System.out.println("Displayed All Products Name Start with :: " + prop.getProperty("exhibitor5"));
-		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 	
 	@Test(priority = 2)
@@ -207,7 +207,7 @@ public class GlobalSearch_MatchingResults extends base {
 			Assert.assertTrue(allProductDisplay.isDisplayed());
 		}
 		System.out.println("Displayed All Products");
-		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 	
 	@Test(priority = 3)
@@ -255,7 +255,7 @@ public class GlobalSearch_MatchingResults extends base {
 		//Select filter Sort by Matching Product Count Descending
 		utl.Sorting(lvmgs.getlvmMachingProductCount(), lvmgs.getlvmGlobalSearch_SearchSortByDropdwn(),
 				"Sort By Matching Product Count Descending");
-		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 	
 	@Test(priority = 4)
@@ -272,17 +272,16 @@ public class GlobalSearch_MatchingResults extends base {
 		if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			lvmgs.getlvmGlobalSearchClearTxt().click();
 		}
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearch_input"));//filterByInput
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor5"));//filterByInput
 		lvmgs.getLVMSearchButton().click();
-		Thread.sleep(15000);
+		Thread.sleep(5000);
 		// Click on Sort Btn
 		lvmgs.getlvmGlobalSearchSortBtn().click();
 
 		// Select Character from Sort By Filter Name
 		Select selectLetter = new Select(lvmgs.getlvmFilterByNameDropDown());
 		selectLetter.selectByVisibleText("P");
-		//selectLetter.selectByVisibleText("P");
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 		for (WebElement filterExhNames : lvmgs.getlvmExhiNameForFilterByName()) {
 			//Assert.assertTrue(filterExhNames.isDisplayed());
 			
@@ -290,12 +289,10 @@ public class GlobalSearch_MatchingResults extends base {
 			boolean flag=false;
 			char fChar=expName.charAt(0);
 			String s=""+fChar;
-		//	Assert.assertTrue(s.compareToIgnoreCase("P"));
-			
-			Assert.assertTrue(s.equalsIgnoreCase("P"));
+			Assert.assertTrue(s.contains("P"));
 		}
 		System.out.println("Displayed All Relevance ");
-		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 	
 	@Test(priority = 5)
@@ -346,7 +343,7 @@ public class GlobalSearch_MatchingResults extends base {
 		Thread.sleep(10000);
 		// Verify Exhibitor present or not into MP Fav
 		utl.checkItemPresentInListorNot(lvmmpp.getlistOfAllExh(), exhName);
-		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 	
 	@Test(priority = 6)
@@ -405,7 +402,7 @@ public class GlobalSearch_MatchingResults extends base {
 		utl.ClickOnEditBtnOfAnyList(lvmmpp.getallList(), exList);
 		// Verify exhibitor present into selected list or not
 		utl.checkItemPresentInListorNot(lvmmpp.getlistOfAllExh(), exhName);
-		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 	
 	@Test(priority = 7)
@@ -466,7 +463,7 @@ public class GlobalSearch_MatchingResults extends base {
 		// Verify exhibitor present into selected list or not
 		Thread.sleep(6000);
 		utl.checkItemPresentInListorNot(lvmmpp.getlistOfAllExh(), exhName);
-		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 	
 	@Test(priority = 8)
@@ -530,7 +527,7 @@ public class GlobalSearch_MatchingResults extends base {
 			//Click on Save Search Btn 
 			lvmgs.getlvmSavedSearchesBtnForNewSaved().click();
 			//Goto Home page
-			driver.get(prop.getProperty("lvmurl_uat"));
+			driver.get(prop.getProperty("lvmurl_prod"));
 			//Click on saved Searches btn
 			lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));//filtersglobalsearchinput
 			Thread.sleep(5000);
@@ -543,7 +540,7 @@ public class GlobalSearch_MatchingResults extends base {
 			Assert.assertTrue(lvmgs.getLVMInfosearchtxtbx().getAttribute("value").contains(prop.getProperty("savedSearchesInput")));
 			Thread.sleep(5000);
 			Assert.assertTrue(lvmgs.getLVMVerifyGlobalSeacrh().getText().contains(prop.getProperty("savedSearchesInput")));
-			driver.get(prop.getProperty("lvmurl_uat"));
+			driver.get(prop.getProperty("lvmurl_prod"));
 		}
 	}
 	*/
@@ -661,7 +658,7 @@ public class GlobalSearch_MatchingResults extends base {
 		lvmgs.getlvmSelectList().click();
 		
 		utl.checkItemPresentInListorNot(lvmgs.getlvmListOfAllSavedSearches(),savedSearchesInput);
-		driver.get(prop.getProperty("lvmurl_uat"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 	
 	@AfterClass

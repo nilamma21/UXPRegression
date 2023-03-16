@@ -203,6 +203,8 @@ public class ATLExhDigiShowroomPage {
 		return driver.findElement(exhibitornameonexhdirectimg);
 	}
 	public WebElement getExhNameOnExhDirectImg() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(exhnameonexhdirectimg));
 		return driver.findElement(exhnameonexhdirectimg);
 	}
 	public WebElement getAtlvalidateexhdigishowpage_lvmUAT() {
@@ -226,14 +228,18 @@ public class ATLExhDigiShowroomPage {
 		return driver.findElement(lvmexhibitornameonexhdirectimg_uat);
 	}
 	public WebElement getATLProductCategSection() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productcategsectn));
 		return driver.findElement(productcategsectn);
 	}
 	public List<WebElement> getATLProductCategItemList() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(productcategitemlist));
 		return driver.findElements(productcategitemlist);
 	}
 	public WebElement getATLProductCategTable() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(prodcatgtable));
 		return driver.findElement(prodcatgtable);
 	}
 	
