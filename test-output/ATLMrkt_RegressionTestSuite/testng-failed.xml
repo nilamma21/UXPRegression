@@ -3,22 +3,42 @@
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-<<<<<<< HEAD
+
+      <class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters">
+
+
       <class name="atlantamarket_PROD.ExhibitorDigitalShowroom">
         <methods>
           <include name="initialize"/>
           <include name="TS019_VerifyExhibitorDigitalShowroomShowSpecialsTest"/>
         </methods>
       </class> <!-- atlantamarket_PROD.ExhibitorDigitalShowroom -->
+<<<<<<< HEAD
 =======
       <class name="atlantamarket_PROD.GlobalSearch_ProductActions">
+=======
+
+      <class name="atlantamarket_PROD.FloorPlans">
+
+>>>>>>> c737a1c874fb02ac6194e753a0e38886ac90321f
         <methods>
           <include name="tearDown"/>
+<<<<<<< HEAD
           <include name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- atlantamarket_PROD.GlobalSearch_ProductActions -->
 >>>>>>> 5759aadf1ba011620f6f54268ceebcc45e009b4c
+=======
+          <include name="TS008_VerifySelectionOfGeneralGiftProdCatgFromLeftPaneFiltersTest"/>
+        </methods>
+
+      </class> <!-- atlantamarket_PROD.GlobalSearch_LeftPaneFilters -->
+
+      </class> <!-- atlantamarket_PROD.FloorPlans -->
+
+
+>>>>>>> c737a1c874fb02ac6194e753a0e38886ac90321f
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->

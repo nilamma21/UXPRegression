@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="ATLMrkt_RegressionTestSuite">
+<suite name="LVMMrkt_RegressionTestSuite">
 
 	<listners>
 		<listner class-name="lasvegasmarket_UAT.TestListeners" />
@@ -9,9 +9,6 @@
 	<test thread-count="1" name="RegressionSequentialTest" >
 		<classes>
 			<class name="lasvegasmarket_UAT.FloorPlans" >
-          		<methods>
-					
-          		</methods>
       		</class>
 		</classes>
 	</test>

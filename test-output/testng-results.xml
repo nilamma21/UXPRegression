@@ -3,7 +3,14 @@
   <reporter-output>
   </reporter-output>
 
+<<<<<<< HEAD
   <suite name="LVM_RegressionTestSuite" duration-ms="3079332" started-at="2023-03-16T17:17:09Z" finished-at="2023-03-16T18:08:29Z">
+=======
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="139070" started-at="2023-03-14T06:40:28Z" finished-at="2023-03-14T06:42:47Z">
+
+
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="93206" started-at="2023-03-10T07:01:19Z" finished-at="2023-03-10T07:02:53Z">
+>>>>>>> c737a1c874fb02ac6194e753a0e38886ac90321f
     <groups>
     </groups>
     <test name="RegressionTest" duration-ms="3079332" started-at="2023-03-16T17:17:09Z" finished-at="2023-03-16T18:08:29Z">
@@ -53,6 +60,7 @@
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- TS001_VerifyAddToFavoriteForExhibitorTest -->
         <test-method status="FAIL" signature="TS002_VerifyAddToNewListForExhibitorTest()[pri:0, instance:lasvegasmarket_UAT.GlobalSearch_ExhibitorActions@7085bdee]" name="TS002_VerifyAddToNewListForExhibitorTest" duration-ms="64284" started-at="2023-03-16T23:03:15Z" finished-at="2023-03-16T23:04:20Z">
           <exception class="org.openqa.selenium.TimeoutException">
@@ -902,6 +910,35 @@ Session ID: 9338c4ff74031615e9e970b442c73d5e
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- atlantamarket_PROD.GlobalSearch_ProductActions -->
+=======
+        </test-method> <!-- TS005_VerifyClickOnTotalLinesSeeAllLinkForExhibitorTest -->
+      </class> <!-- atlantamarket_PROD.ExhibitorDigitalShowroom -->
+
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="105768" started-at="2023-03-10T04:31:19Z" finished-at="2023-03-10T04:33:05Z">
+
+    <groups>
+    </groups>
+    <test name="RegressionTest" duration-ms="139070" started-at="2023-03-14T06:40:28Z" finished-at="2023-03-14T06:42:47Z">
+      <class name="atlantamarket_PROD.LineDigitalShowroom">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@204f30ec]" name="initialize" is-config="true" duration-ms="86741" started-at="2023-03-14T12:10:28Z" finished-at="2023-03-14T12:11:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@204f30ec]" name="TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest" duration-ms="49431" started-at="2023-03-14T12:11:54Z" finished-at="2023-03-14T12:12:44Z">
+          <reporter-output>
+          </reporter-output>
+
+        </test-method> <!-- TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@204f30ec]" name="tearDown" is-config="true" duration-ms="2873" started-at="2023-03-14T12:12:44Z" finished-at="2023-03-14T12:12:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- atlantamarket_PROD.LineDigitalShowroom -->
+
+        </test-method> <!-- TS001_VerifyAddToFavoriteForExhibitorTest -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_ExhibitorActions -->
+
+>>>>>>> c737a1c874fb02ac6194e753a0e38886ac90321f
 
     </test> <!-- RegressionTest -->
   </suite> <!-- LVM_RegressionTestSuite -->
