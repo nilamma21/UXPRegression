@@ -2,88 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="139070" started-at="2023-03-14T06:40:28Z" finished-at="2023-03-14T06:42:47Z">
-
-
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="93206" started-at="2023-03-10T07:01:19Z" finished-at="2023-03-10T07:02:53Z">
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="173849" started-at="2023-03-14T12:45:17Z" finished-at="2023-03-14T12:48:11Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="93206" started-at="2023-03-10T07:01:19Z" finished-at="2023-03-10T07:02:53Z">
-      <class name="atlantamarket_PROD.ExhibitorDigitalShowroom">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.ExhibitorDigitalShowroom@13deb50e]" name="initialize" is-config="true" duration-ms="57851" started-at="2023-03-10T12:31:19Z" finished-at="2023-03-10T12:32:17Z">
+    <test name="RegressionTest" duration-ms="173849" started-at="2023-03-14T12:45:17Z" finished-at="2023-03-14T12:48:11Z">
+      <class name="atlantamarket_PROD.GlobalSearch_ProductActions">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@146ba0ac]" name="initialize" is-config="true" duration-ms="79818" started-at="2023-03-14T18:15:17Z" finished-at="2023-03-14T18:16:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="FAIL" signature="TS005_VerifyClickOnTotalLinesSeeAllLinkForExhibitorTest()[pri:0, instance:atlantamarket_PROD.ExhibitorDigitalShowroom@13deb50e]" name="TS005_VerifyClickOnTotalLinesSeeAllLinkForExhibitorTest" duration-ms="35209" started-at="2023-03-10T12:32:17Z" finished-at="2023-03-10T12:32:53Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at org.testng.Assert.assertTrue(Assert.java:52)
-	at atlantamarket_PROD.ExhibitorDigitalShowroom.TS005_VerifyClickOnTotalLinesSeeAllLinkForExhibitorTest(ExhibitorDigitalShowroom.java:352)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="TS002_VerifyProductAddToNewListOnProductDetailsPageTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@146ba0ac]" name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest" duration-ms="93966" started-at="2023-03-14T18:16:37Z" finished-at="2023-03-14T18:18:11Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS005_VerifyClickOnTotalLinesSeeAllLinkForExhibitorTest -->
-      </class> <!-- atlantamarket_PROD.ExhibitorDigitalShowroom -->
-
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="105768" started-at="2023-03-10T04:31:19Z" finished-at="2023-03-10T04:33:05Z">
-
-    <groups>
-    </groups>
-    <test name="RegressionTest" duration-ms="139070" started-at="2023-03-14T06:40:28Z" finished-at="2023-03-14T06:42:47Z">
-      <class name="atlantamarket_PROD.LineDigitalShowroom">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@204f30ec]" name="initialize" is-config="true" duration-ms="86741" started-at="2023-03-14T12:10:28Z" finished-at="2023-03-14T12:11:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@204f30ec]" name="TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest" duration-ms="49431" started-at="2023-03-14T12:11:54Z" finished-at="2023-03-14T12:12:44Z">
-          <reporter-output>
-          </reporter-output>
-
-        </test-method> <!-- TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@204f30ec]" name="tearDown" is-config="true" duration-ms="2873" started-at="2023-03-14T12:12:44Z" finished-at="2023-03-14T12:12:47Z">
+        </test-method> <!-- TS002_VerifyProductAddToNewListOnProductDetailsPageTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@146ba0ac]" name="tearDown" is-config="true" duration-ms="1" started-at="2023-03-14T18:18:11Z" finished-at="2023-03-14T18:18:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- atlantamarket_PROD.LineDigitalShowroom -->
-
-        </test-method> <!-- TS001_VerifyAddToFavoriteForExhibitorTest -->
-      </class> <!-- atlantamarket_PROD.GlobalSearch_ExhibitorActions -->
-
-
+      </class> <!-- atlantamarket_PROD.GlobalSearch_ProductActions -->
     </test> <!-- RegressionTest -->
   </suite> <!-- ATLMrkt_RegressionTestSuite -->
 </testng-results>
