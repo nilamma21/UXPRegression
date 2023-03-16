@@ -32,7 +32,7 @@ public class LVMMarketPlannerPage {
 	By lvmmplistsnames = By.xpath("//ul[@class='imc-market-planner-list']/li/div[1]"); //Locator for the List names of MP lists
 	By lvmmpeditlistoptns = By.xpath("//ul[@class='imc-market-planner-list']/li/div[2]/span[2]/a"); //Locator for Edit List options on Lists page
 	By lvmmpeditlistoptn = By.xpath("(//ul[@class='imc-market-planner-list']/li/div[2]/span[2]/a[1])[1]"); //Locator for Edit List options on Lists page
-	By lvmmpexistinglistname = By.xpath("//form/div[4]/div[5]/label"); //Locator for existing list name
+	By lvmmpexistinglistname = By.xpath("//form/div[4]/div[1]/label"); //Locator for existing list name
 	By lvmaddtoseselectedbtn = By.xpath("//input[@data-xpath='quickAdd.saveList']"); //Locator for Add to Selected button
 	By listspagefavoritesmenu = By.xpath("//div[@class='imc-vertical-tabs-nav']/div[contains(text(),'Favorites')]"); //Locator for Favorites left menu
 	By addlistcreatebtn = By.xpath("//div[@class = 'imc-vr--medium']/input[1]"); //Locator for Create button on Add List modal
@@ -219,12 +219,20 @@ public class LVMMarketPlannerPage {
 	By createandaddaistbtn = By.xpath("//input[contains(@value,'Create')]");
 	
 	By listOfAllEventsInMPList = By.xpath("//li[@class='imc-list-edit--draggable'][1]/div/div[3]/div/div/div[1]/div[2]/a[1]"); //list of all events from MP list
+	By EventsInMPList = By.xpath("(//div[@class='imc-saved-exhibitors__contentItems__col1']/div[2]/a)[1]"); //list of all events from MP list
+	
+	
 	
 	
 	public LVMMarketPlannerPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
+	public WebElement getEventsInMPList() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(EventsInMPList));
+		return driver.findElement(EventsInMPList);
+	}
 	public List <WebElement> getlistOfAllEventsInMPList() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllEventsInMPList));

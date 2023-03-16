@@ -272,16 +272,17 @@ public class GlobalSearch_MatchingResults extends base {
 		if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			lvmgs.getlvmGlobalSearchClearTxt().click();
 		}
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor5"));//filterByInput
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearch_input"));//filterByInput
 		lvmgs.getLVMSearchButton().click();
-		Thread.sleep(5000);
+		Thread.sleep(15000);
 		// Click on Sort Btn
 		lvmgs.getlvmGlobalSearchSortBtn().click();
 
 		// Select Character from Sort By Filter Name
 		Select selectLetter = new Select(lvmgs.getlvmFilterByNameDropDown());
 		selectLetter.selectByVisibleText("P");
-		Thread.sleep(8000);
+		//selectLetter.selectByVisibleText("P");
+		Thread.sleep(5000);
 		for (WebElement filterExhNames : lvmgs.getlvmExhiNameForFilterByName()) {
 			//Assert.assertTrue(filterExhNames.isDisplayed());
 			
@@ -289,7 +290,9 @@ public class GlobalSearch_MatchingResults extends base {
 			boolean flag=false;
 			char fChar=expName.charAt(0);
 			String s=""+fChar;
-			Assert.assertTrue(s.contains("P"));
+		//	Assert.assertTrue(s.compareToIgnoreCase("P"));
+			
+			Assert.assertTrue(s.equalsIgnoreCase("P"));
 		}
 		System.out.println("Displayed All Relevance ");
 		driver.get(prop.getProperty("lvmurl_uat"));

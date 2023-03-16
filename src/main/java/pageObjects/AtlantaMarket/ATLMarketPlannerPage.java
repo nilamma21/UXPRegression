@@ -263,12 +263,30 @@ public class ATLMarketPlannerPage {
 	By selectgroupicon = By.xpath("//select[@name='groupName']"); //Locator for Select a group drop down icon
 	By atlmpexistinglistnamenew = By.xpath("//form/div[4]/div[4]/label"); //Locator for existing list name
 	By favexhlist = By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a");//Favourite list from market planner
+	By moreOptionUAT_LVM = By.xpath("//div[@class='imc-loading-relative']/div[3]/li[1]/div[1]/div[1]/div[3]/div[1]");//More Option LVM
+	By moreOptionDeleteBtnUAT_LVM = By.xpath("//div[@class='imc-gallery__item imc-vertical-tabs-content']/div[1]/div[3]/li[1]/div[1]/div[1]/div[3]/div[1]/div[1]/span[3]/a[1]");//More Option Delete LVM
+	By moreEventOptionDeleteBtnUAT_LVM = By.xpath("(//div[@class='imc-market-planner-list--item-header'])[1]/div[3]/div[1]/div[1]/span[3]/a[1]");//More Option Delete LVM
+	
 	
 	public ATLMarketPlannerPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	}
-
+	public WebElement getmoreEventOptionDeleteBtnUAT_LVM() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(moreEventOptionDeleteBtnUAT_LVM));
+		return driver.findElement(moreEventOptionDeleteBtnUAT_LVM);
+	}
+	public WebElement getmoreOptionDeleteBtnUAT_LVM() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(moreOptionDeleteBtnUAT_LVM));
+		return driver.findElement(moreOptionDeleteBtnUAT_LVM);
+	}
+	public WebElement getmoreOptionUAT_LVM() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(moreOptionUAT_LVM));
+		return driver.findElement(moreOptionUAT_LVM);
+	}
 	public List <WebElement> getlistOfAllExhPROD() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllExhPROD));

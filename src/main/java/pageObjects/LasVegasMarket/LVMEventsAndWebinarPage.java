@@ -56,14 +56,18 @@ public class LVMEventsAndWebinarPage {
 	
 	By lvmEventTypeUAT = By.xpath("//div[@class='imc-eventdetail--text-container']/span[3]"); //Locator for Event Type
 	By lvmCalendarIconUAT = By.xpath("//div[@class='imc-eventdetail--text-container']//span[2]/a[1]"); //Locator for Calendar Icon
-	
+	By lvmListOfCalendarDates = By.xpath("//button[@style='flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;']"); //Locator for Calendar Icon
 	
 	public LVMEventsAndWebinarPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	}
 	
-	
+	public List <WebElement> getlvmListOfCalendarDates() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmListOfCalendarDates));
+		return driver.findElements(lvmListOfCalendarDates);
+	}
 
 	public WebElement getlvmCalendarIconUAT() {
 		wait = new WebDriverWait (driver,20);

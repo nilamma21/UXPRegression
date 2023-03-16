@@ -9,16 +9,22 @@
 		<classes>
 
 
+			<class name="lasvegasmarket_UAT.GlobalSearch_SuggestionList" />
 			<class name="lasvegasmarket_UAT.EvenntsAndWebinar" /> 
+			<class name="lasvegasmarket_UAT.ExhibitorDigitalShowroom" />
+			<class name="lasvegasmarket_UAT.GlobalSearch_LineActions" /> 
+			<class name="lasvegasmarket_UAT.GlobalSearch_MatchingResults" />
+			<class name="lasvegasmarket_UAT.GlobalSearch_ProductActions" /> 	
 				<methods>
 
-				 <include name="TS003_VerifyIMCEventsCalendarViewTest"/>  
+				<!--  <include name="TS008_VerifyIMCEventsAddNoteTest"/>  
+				 <include name="TS009_VerifyExhibitorEventsSearchbarTest"/>  -->
+				<!--  <include name="TS007_VerifyGlobalSearchMatchingResultsSelectAddToNewlyCreatedListTest"/>   
+				 
+				 	 <include name="TS008_VerifyGlobalSearchMatchingResultsUsePreviousSavedSearchTest"/>  
+					<include name="TS009_VerifyGlobalSearchMatchingResultsSavedSearchesTest"/> -->
 	
 				</methods>
-
-
-			<class name="lasvegasmarket_UAT.MarketPlanner" /> 
-
 		</classes>
 	</test>
 </suite>
