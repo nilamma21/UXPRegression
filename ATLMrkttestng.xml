@@ -7,15 +7,15 @@
 	</listners>
 	<test thread-count="5" name="RegressionTest">
 		<classes>
-<<<<<<< HEAD
+
 			
 
-=======
+
 			<class name="atlantamarket_PROD.LineDigitalShowroom" />
 				<methods>
 					 <include name="TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest()"/> 
 				</methods>
->>>>>>> c737a1c874fb02ac6194e753a0e38886ac90321f
+
 		<!--<class name="atlantamarket_PROD.GlobalSearch_SearchFor"/>
 
 			

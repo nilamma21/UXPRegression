@@ -4,27 +4,27 @@
   <test name="RegressionTest(failed)">
     <classes>
 
-<<<<<<< HEAD
+
       <class name="lasvegasmarket_UAT.GlobalSearch_SuggestionList">
-=======
+
       <class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters">
 
 
       <class name="atlantamarket_PROD.ExhibitorDigitalShowroom">
->>>>>>> c737a1c874fb02ac6194e753a0e38886ac90321f
+
         <methods>
           <include name="tearDown"/>
           <include name="initialize"/>
         </methods>
-<<<<<<< HEAD
+
       </class> <!-- lasvegasmarket_UAT.GlobalSearch_SuggestionList -->
       <class name="lasvegasmarket_UAT.GlobalSearch_LineActions">
-=======
+
       </class> <!-- atlantamarket_PROD.ExhibitorDigitalShowroom -->
 
       <class name="atlantamarket_PROD.FloorPlans">
 
->>>>>>> c737a1c874fb02ac6194e753a0e38886ac90321f
+
         <methods>
           <include name="tearDown"/>
           <include name="initialize"/>
@@ -63,7 +63,7 @@
           <include name="TS005_VerifyAddNoteOnProductDetailsPageTest"/>
           <include name="initialize"/>
           <include name="tearDown"/>
-<<<<<<< HEAD
+
         </methods>
       </class> <!-- lasvegasmarket_UAT.GlobalSearch_ProductActions -->
 
@@ -74,7 +74,7 @@
           <include name="initialize"/>
         </methods>
       </class> <!-- atlantamarket_PROD.GlobalSearch_ProductActions -->
-=======
+
           <include name="TS008_VerifySelectionOfGeneralGiftProdCatgFromLeftPaneFiltersTest"/>
         </methods>
 
@@ -82,7 +82,7 @@
 
       </class> <!-- atlantamarket_PROD.FloorPlans -->
 
->>>>>>> c737a1c874fb02ac6194e753a0e38886ac90321f
+
 
     </classes>
   </test> <!-- RegressionTest(failed) -->

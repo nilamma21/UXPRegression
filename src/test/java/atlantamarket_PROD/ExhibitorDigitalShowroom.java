@@ -395,7 +395,7 @@ public class ExhibitorDigitalShowroom extends base {
 		System.out.println("Total Products Count on Products page is: " + totalproductscountonprodpage);
 		Assert.assertTrue(totalprodcountonexhdgshowroom.equals(totalproductscountonprodpage));
 		
-<<<<<<< HEAD
+
 		/*//Get back to Exhibitor Showroom page and click any one product and verify if product details are displayed properly
 		atlexhdgshw.getProductsPageBackButton().click();
 		utl.scrollToElement(atlexhdgshw.getProductSection());
@@ -411,7 +411,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 		Assert.assertTrue(producttext.contains(atlexhdgshw.getValidateLinesPage().getText()));*/
 
-=======
+
 		// //Get back to Exhibitor Showroom page and click any one product and verify if product details are displayed properly
 		// atlexhdgshw.getProductsPageBackButton().click();
 		// utl.scrollToElement(atlexhdgshw.getProductSection());
@@ -420,7 +420,7 @@ public class ExhibitorDigitalShowroom extends base {
 		// atlexhdgshw.getProductsList().click();
 		// Thread.sleep(5000);
 		// Assert.assertTrue(producttext.contains(atlexhdgshw.getValidateLinesPage().getText()));
->>>>>>> c737a1c874fb02ac6194e753a0e38886ac90321f
+
 	}
 
 	@Test(priority = 7)
