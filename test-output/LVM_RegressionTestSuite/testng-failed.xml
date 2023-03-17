@@ -3,26 +3,18 @@
 <suite name="Failed suite [LVM_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-
-      <class name="lasvegasmarket_UAT.EvenntsAndWebinar">
+      <class name="lasvegasmarket_PROD.ExhibitorDigitalShowroom">
         <methods>
-          <include name="TS005_VerifyIMCEventsEventDetailstTest"/>
-          <include name="initialize"/>
-          <include name="TS013_VerifyExhibitorEventsAddToFavoriteTest"/>
-          <include name="TS012_VerifyExhibitorEventsDetailstTest"/>
-          <include name="TS006_VerifyIMCEventsAddToFavoriteTest"/>
-          <include name="TS007_VerifyIMCEventsAddToListTest"/>
-        </methods>
-      </class> <!-- lasvegasmarket_UAT.EvenntsAndWebinar -->
-
-      <class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions">
-        <methods>
-          <include name="TS001_VerifyAddToFavoriteForExhibitorTest"/>
-          <include name="initialize"/>
+          <include name="TS016_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest"/>
           <include name="tearDown"/>
+          <include name="initialize"/>
+          <include name="TS001_VerifyAddToFavoritesTest"/>
+          <include name="TS012_VerifySeeInOtherMarketsForExhibitorTest"/>
+          <include name="TS017_VerifyExhibitorDigitalEventsComponentTest"/>
+          <include name="TS021_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest"/>
+          <include name="TS020_VerifyExhibitorDigitalShowroomShowSpecialsTest"/>
         </methods>
-      </class> <!-- lasvegasmarket_UAT.GlobalSearch_ExhibitorActions -->
-
+      </class> <!-- lasvegasmarket_PROD.ExhibitorDigitalShowroom -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->

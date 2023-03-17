@@ -667,7 +667,7 @@ public class ATLMarketPlannerPage {
 		return driver.findElement(addlistcreatebtn);
 	}
 	public WebElement getSavedProductNameInList() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(savedproductnameinlist));
 		return driver.findElement(savedproductnameinlist);
 	}
@@ -698,7 +698,7 @@ public class ATLMarketPlannerPage {
 		return driver.findElement(moreBtnDeleteOptn_lvmUAT);
 	}
 	public WebElement getselectChannel() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(selectChannel));
 		return driver.findElement(selectChannel);
 	}

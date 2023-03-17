@@ -8,16 +8,10 @@
 		<test thread-count="5" name="RegressionTest">
 		<classes>
 
-
-			<class name="lasvegasmarket_UAT.EvenntsAndWebinar" /> 
+			<class name="lasvegasmarket_PROD.ExhibitorDigitalShowroom" /> 
 				<methods>
-
-				 <include name="TS003_VerifyIMCEventsCalendarViewTest"/>  
-	
+				   <!-- <include name="TS003_VerifyProductAddToExistingListOnProductDetailsPageTest"/>  -->
 				</methods>
-
-
-			<class name="lasvegasmarket_UAT.MarketPlanner" /> 
 
 		</classes>
 	</test>

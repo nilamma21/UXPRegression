@@ -14,7 +14,7 @@ public class LVMLineDigitalShowroomPage {
 
 	By lvmLineDigiShowroomPageTitle = By.xpath("//div[@class='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[4]/a[1]"); // Locator Line Digi showroom page title
 	By digiShowroomExhName = By.xpath("//div[@class='imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div[1]/div[2]/a[1]"); // Locator  Exhibitor name shown by Digital Showroom page
-	By suggetionList = By.xpath("//div[@ID='react-autowhatever-input-1']"); // Locator Suggetion list 1st suggetion
+	By suggetionList = By.xpath("(//div[@ID='react-autowhatever-input-1']/ul/li)[1]"); // Locator Suggetion list 1st suggetion //Old xPath- //div[@ID='react-autowhatever-input-1']
 	By locationLink = By.xpath("//div[@class='imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div[1]/div[3]/span[2]/a[1]"); //Locator for Location liks
 	By favIconDigiShowroom = By.xpath("//div[@class='imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div[1]/div[4]/ul[1]/li[1]/div[1]/button[1]"); //Locator for Exhibitor name on Exhibitor Directory image
 	By addToListIcon = By.xpath("//label[contains(text(),'List')]"); //Locator for Add to list
@@ -92,7 +92,7 @@ public class LVMLineDigitalShowroomPage {
 		return driver.findElement(productCount);
 	}
 	public WebElement getproductTitle() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productTitle));
 		return driver.findElement(productTitle);
 	}

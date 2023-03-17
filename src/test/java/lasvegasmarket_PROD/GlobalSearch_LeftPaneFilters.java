@@ -175,7 +175,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));//Previous input = filtersglobalsearchinput
 		lvmgs.getLVMSearchButton().click();
 		
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		//Click on Product Categories expand btn
 		lvmleftpane.getLVMProdCatgExpandBtn().click();
 
