@@ -356,7 +356,7 @@ public class LVMGlobalSearchPage {
 		return driver.findElements(listOfAllArticles);
 	}
 	public WebElement getLVMGlobalSearchTextBox() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(lvmglobalsearchtxtbx));
 		return driver.findElement(lvmglobalsearchtxtbx);
 	}

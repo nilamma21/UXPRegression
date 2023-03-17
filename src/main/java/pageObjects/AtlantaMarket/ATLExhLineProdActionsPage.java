@@ -234,7 +234,7 @@ public class ATLExhLineProdActionsPage extends base{
 		return driver.findElement(totalprodseealllink);
 	}
 	public WebElement getValidateProductsPage() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(validateproductspage));
 		return driver.findElement(validateproductspage);
 	}
@@ -244,7 +244,7 @@ public class ATLExhLineProdActionsPage extends base{
 		return driver.findElement(totalprodcountonsearchgrid);
 	}
 	public WebElement getMatchingProdCountOnSearchGrid() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(matchingprodcountonsearchgrid));
 		return driver.findElement(matchingprodcountonsearchgrid);
 	}

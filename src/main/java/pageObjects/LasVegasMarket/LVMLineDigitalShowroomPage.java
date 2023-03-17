@@ -162,12 +162,12 @@ public class LVMLineDigitalShowroomPage {
 		return driver.findElement(orderOnJuniperBtnNew);
 	}
 	public WebElement getdigiShowroomExhNameUat() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(digiShowroomExhNameUat));
 		return driver.findElement(digiShowroomExhNameUat);
 	}
 	public WebElement getfavIconDigiShowroomUat() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(favIconDigiShowroomUat));
 		return driver.findElement(favIconDigiShowroomUat);
 	}

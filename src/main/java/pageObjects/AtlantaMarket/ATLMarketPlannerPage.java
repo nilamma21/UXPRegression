@@ -595,6 +595,8 @@ public class ATLMarketPlannerPage {
 		return driver.findElement(savedexhnameinlist);
 	}
 	public WebElement getATLEditListItemMoreBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(editlistitemmorebtn));
 		return driver.findElement(editlistitemmorebtn);
 	}
 	public WebElement getATLEditListItemMoreBtnNew() {
