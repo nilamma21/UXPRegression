@@ -2,6 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
+
   <suite name="ATLMrkt_RegressionTestSuite" duration-ms="83177" started-at="2023-03-17T05:07:29Z" finished-at="2023-03-17T05:08:53Z">
     <groups>
     </groups>
@@ -16,6 +17,26 @@
           </reporter-output>
         </test-method> <!-- TS001_VerifyAddToFavoritesTest -->
       </class> <!-- atlantamarket_PROD.ExhibitorDigitalShowroom -->
+
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="173849" started-at="2023-03-14T12:45:17Z" finished-at="2023-03-14T12:48:11Z">
+    <groups>
+    </groups>
+    <test name="RegressionTest" duration-ms="173849" started-at="2023-03-14T12:45:17Z" finished-at="2023-03-14T12:48:11Z">
+      <class name="atlantamarket_PROD.GlobalSearch_ProductActions">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@146ba0ac]" name="initialize" is-config="true" duration-ms="79818" started-at="2023-03-14T18:15:17Z" finished-at="2023-03-14T18:16:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS002_VerifyProductAddToNewListOnProductDetailsPageTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@146ba0ac]" name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest" duration-ms="93966" started-at="2023-03-14T18:16:37Z" finished-at="2023-03-14T18:18:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifyProductAddToNewListOnProductDetailsPageTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@146ba0ac]" name="tearDown" is-config="true" duration-ms="1" started-at="2023-03-14T18:18:11Z" finished-at="2023-03-14T18:18:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_ProductActions -->
+
     </test> <!-- RegressionTest -->
   </suite> <!-- ATLMrkt_RegressionTestSuite -->
 </testng-results>

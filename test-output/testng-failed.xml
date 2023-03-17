@@ -3,12 +3,22 @@
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
+
       <class name="atlantamarket_PROD.EvenntsAndWebinar">
         <methods>
           <include name="TS008_VerifyIMCEventsAddNoteTest"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- atlantamarket_PROD.EvenntsAndWebinar -->
+
+      <class name="atlantamarket_PROD.GlobalSearch_ProductActions">
+        <methods>
+          <include name="tearDown"/>
+          <include name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.GlobalSearch_ProductActions -->
+
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->
