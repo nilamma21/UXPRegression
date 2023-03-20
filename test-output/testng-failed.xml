@@ -4,6 +4,12 @@
   <test name="RegressionTest(failed)">
     <classes>
 
+      <class name="lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters">
+        <methods>
+          <include name="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest"/>
+          <include name="tearDown"/>
+
+
       <class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions">
 
 
@@ -59,13 +65,18 @@
 
         <methods>
           <include name="TS001_VerifyAddToFavoriteForExhibitorTest"/>
+
           <include name="initialize"/>
           <include name="tearDown"/>
         </methods>
 
+      </class> <!-- lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters -->
+
+
       </class> <!-- lasvegasmarket_UAT.GlobalSearch_ExhibitorActions -->
 
       </class> <!-- atlantamarket_PROD.GlobalSearch_ProductActions -->
+
 
 
     </classes>

@@ -3,6 +3,26 @@
   <reporter-output>
   </reporter-output>
 
+  <suite name="LVM_RegressionTestSuite" duration-ms="182502" started-at="2023-03-20T06:40:04Z" finished-at="2023-03-20T06:43:07Z">
+    <groups>
+    </groups>
+    <test name="RegressionTest" duration-ms="182502" started-at="2023-03-20T06:40:04Z" finished-at="2023-03-20T06:43:07Z">
+      <class name="lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters@146ba0ac]" name="initialize" is-config="true" duration-ms="63040" started-at="2023-03-20T12:10:04Z" finished-at="2023-03-20T12:11:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest()[pri:0, instance:lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters@146ba0ac]" name="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest" duration-ms="119395" started-at="2023-03-20T12:11:07Z" finished-at="2023-03-20T12:13:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters@146ba0ac]" name="tearDown" is-config="true" duration-ms="1" started-at="2023-03-20T12:13:07Z" finished-at="2023-03-20T12:13:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters -->
+
+
   <suite name="LVM_RegressionTestSuite" duration-ms="100889" started-at="2023-03-17T13:12:15Z" finished-at="2023-03-17T13:13:56Z">
 
 
@@ -909,7 +929,6 @@ Session ID: 9338c4ff74031615e9e970b442c73d5e
       </class> <!-- lasvegasmarket_UAT.GlobalSearch_ExhibitorActions -->
 
       </class> <!-- atlantamarket_PROD.GlobalSearch_ProductActions -->
-
 
     </test> <!-- RegressionTest -->
   </suite> <!-- LVM_RegressionTestSuite -->

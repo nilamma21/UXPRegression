@@ -250,7 +250,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		driver.get(prop.getProperty("lvmurl_uat"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor6")));//Previous input = filtersglobalsearchinput
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys("Tripp");//Previous input = filtersglobalsearchinput
 		lvmgs.getLVMSearchButton().click();
 
 		//Click on Product Categories expand btn
@@ -262,11 +262,11 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		String display = js.executeScript("return window.getComputedStyle(arguments[0], ':after').getPropertyValue('display');",pseudoEle).toString();
 		System.out.println(display);*/
 
-		utl.scrollToElement(lvmleftpane.getLVMAntiqueVintProdCatg());
+		utl.scrollToElement(lvmleftpane.getLVMAccentFurnitureProdCatg());
 
-		//Select 'Antique/Vintage' prod category
-		String expectedprodcatg = lvmleftpane.getLVMAntiqueVintProdCatg().getText();
-		lvmleftpane.getLVMAntiqueVintProdCatg().click();
+		//Select 'Ascent Furniture' prod category
+		String expectedprodcatg = lvmleftpane.getLVMAccentFurnitureProdCatg().getText();
+		lvmleftpane.getLVMAccentFurnitureProdCatg().click();
 		Thread.sleep(8000);
 
 		//Click on Product Categories expand btn
@@ -275,11 +275,11 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//Click on Styles expand btn
 		lvmleftpane.getLVMStylesExpandBtn().click();
 
-		//Select Style name 'Industrial'
-		utl.scrollToElement(lvmleftpane.getLVMIndustrialStyle());
-		//String expectedstyle = lvmleftpane.getLVMIndustrialStyle().getText();
+		//Select Style name 'Coastal'
+		utl.scrollToElement(lvmleftpane.getLVMCoastalStyle());
+		String expectedstyle = lvmleftpane.getLVMCoastalStyle().getText();
 		//System.out.println("Expected Style name:"+expectedstyle);
-		lvmleftpane.getLVMIndustrialStyle().click();
+		lvmleftpane.getLVMCoastalStyle().click();
 		Thread.sleep(8000);
 
 		//Click on IMC Test Exhibitor name in list
@@ -304,12 +304,12 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		((JavascriptExecutor)driver).executeScript("window.open()");
 		ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(tabs.get(1));
-		driver.get("https://exhibitors.imcenters.com/");
+		driver.get("https://uat-exhibitors.imcmvdp.com/");
 
 		//Login to EXP
-		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
-		lp.getPassword().sendKeys((prop.getProperty("password")));
-
+		lp.getEmailAddress().sendKeys(prop.getProperty("usernameSwapnil"));
+		lp.getPassword().sendKeys(prop.getProperty("passwordSwapnil"));
+		Thread.sleep(2000);
 		lp.getSignInBtn().click();
 		Thread.sleep(15000);
 
@@ -317,7 +317,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		lvmleftpane.getEXPExhDropDown().click();
 
 		//Select IMC Test Company exhibitor
-		lvmleftpane.getIMCExhNameInEXP().click();
+		lvmleftpane.getTrippExhNameInEXP().click();    
 
 		//Click on Digital Showroom tab
 		lvmleftpane.getEXPDigiShowroomTab().click();
@@ -330,7 +330,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl.scrollToElement(lvmleftpane.getEXPProductCategSection());
 
 		//Verify that expected Style should be displayed on profile
-		Assert.assertTrue(lvmleftpane.getEXPIndustrialStyleOnProfile().isDisplayed());
+		Assert.assertTrue(lvmleftpane.getEXPCoastalStyleOnProfile().isDisplayed());
 		driver.close();
 		driver.switchTo().window(tabs.get(0));
 		//driver.get(prop.getProperty("lvmurl_uat"));
@@ -756,7 +756,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 	 
 }

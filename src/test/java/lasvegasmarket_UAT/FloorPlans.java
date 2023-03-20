@@ -37,6 +37,7 @@ public class FloorPlans extends base {
 	public GenerateData genData;
 	public Utility utl;
 	public String exhname;
+	public int i;
 	ATLLoginPage lp;
 	ATLLandingPage lap;
 	ATLGlobalSearchPage atlgs;
@@ -46,7 +47,7 @@ public class FloorPlans extends base {
 	ATLMarketPlannerPage atlmppge;
 	ATLFloorPlansPage atlflpp;
 
-	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns, allnoteslist,favlist, searchlinetypelist;
+	List<WebElement> morebtnlist, deleteoptnlist, exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns, allnoteslist,favlist, searchlinetypelist;
 
 	@BeforeClass
 	public void initialize() throws IOException, InterruptedException {
@@ -654,25 +655,48 @@ public class FloorPlans extends base {
 		atlmppge.getATLMPListsPageFavoritesMenu().click();
 		Thread.sleep(7000);
 
-		//System.out.println(atlmppge.getATLSavedExhNameInList().getText());
+	/*	//System.out.println(atlmppge.getATLSavedExhNameInList().getText());
 		// Verify that the added favorites exhibitor should be displayed in to Favorites list
 		Assert.assertTrue(atlmppge.getlvmsavedexhnameinlist_uat().getText().contains(exhibitorName));
-		Thread.sleep(2000);
-		// Delete that favorites exhibitor from list
-		Actions action=new Actions(driver);
-		//action.moveToElement(atlmppge.getMoreBtnDeleteOptn_lvmUAT()).perform();
-		atlmppge.getMoreBtnDeleteOptn_lvmUAT().click();
-		atlmppge.getATLEditListItemDeleteOptn().click();
-		Thread.sleep(6000);
-
-		favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
-
-		// Verify that the added favorites exhibitor should be removed from Favorites list
-		for (int i = 1; i < favlist.size(); i++) {
-			// System.out.println(favlist.get(i).getText());
-			Assert.assertFalse(favlist.get(i).getText().contains(exhibitorName));
+		Thread.sleep(2000);*/
+		
+		favlist = atlmppge.getFavExhList();
+		for (int i = 0; i < favlist.size(); i++) {
+			if(favlist.contains(exhibitorName)) {
+				//System.out.println(prodcatgitemlist.get(i).getText());
+				Assert.assertTrue(favlist.get(i).getText().contains(exhibitorName));
+				break;
+			}
 		}
-	}
+		
+		// Delete that favorites exhibitor from list
+		
+//		
+//		atlmppge.getMoreBtnDeleteOptn_lvmUAT().click();
+//		atlmppge.getATLEditListItemDeleteOptn().click();
+//		Thread.sleep(6000);
+		
+		favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
+		
+		// Verify that the added favorites exhibitor should be removed from Favorites list
+		//for (i = 1; i < favlist.size(); i++) {
+			//for (int j = 0; j < favlist.size(); j++) {
+			morebtnlist = driver.findElements(By.xpath("(//li[@class='imc-list-edit--draggable'])/div[1]/div[1]/div[4]/div/button/span"));
+			deleteoptnlist = driver.findElements(By.xpath("(//li[@class='imc-list-edit--draggable'])/div/div/div[4]/div/div/span[3]/a"));
+			
+//			if(favlist.get(i).getText().contains(exhibitorName)) {
+//				System.out.println(favlist.get(i).getText());
+				morebtnlist.get(0).click();
+				deleteoptnlist.get(0).click();
+				Thread.sleep(6000);
+				Assert.assertFalse(favlist.get(1).getText().contains(exhibitorName));
+			//}
+		}
+			// System.out.println(favlist.get(i).getText());
+			//Assert.assertFalse(favlist.get(i).getText().contains(exhibitorName));
+		//}
+	//}
+	
 	@AfterClass
 	public void tearDown()
 	{
