@@ -15,6 +15,9 @@
 		<!--<class name="atlantamarket_PROD.GlobalSearch_SearchFor"/>
 
 			
+
+		<!--<class name="atlantamarket_PROD.GlobalSearch_SearchFor"/>
+
 			
 			
 			<!-- <class name="atlantamarket_PROD.LineDigitalShowroom" />
@@ -38,9 +41,31 @@
 			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_LineActions" /> 
 
+
 			<class name="atlantamarket_PROD.EvenntsAndWebinar" />-->
 		
 			<!-- <class name="atlantamarket_PROD.MarketPlanner"/> -->
+
+			 <class name="atlantamarket_PROD.EvenntsAndWebinar" />-->
+			 <class name="atlantamarket_PROD.ExhibitorDigitalShowroom" />
+			
+			<methods>
+
+				 <include name="TS019_VerifyExhibitorDigitalShowroomShowSpecialsTest"/>
+			<!-- 	<include name="TS006_VerifyProductAddToExistingListOnSearchResultsGridTest"/> --> 
+				<!--  <include name="TS003_VerifyProductAddToExistingListOnProductDetailsPageTest"/>
+				 <include name="TS004_VerifyAddToFavoriteOnProductDetailsPageTest"/> 
+				 <include name="TS005_VerifyAddNoteOnProductDetailsPageTest"/>
+				 <include name="TS006_VerifyProductAddToExistingListOnSearchResultsGridTest"/>  
+				 <include name="TS008_VerifyAddToFavoriteOnSearchResultsGridTest"/>
+				 <include name="TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest"/>  -->  
+	
+				</methods>
+			
+			
+
+		
+
 
 
 			 <class name="atlantamarket_PROD.EvenntsAndWebinar" /> -->
