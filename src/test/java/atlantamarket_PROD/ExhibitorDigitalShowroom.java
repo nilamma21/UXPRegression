@@ -410,6 +410,15 @@ public class ExhibitorDigitalShowroom extends base {
 
 		Assert.assertTrue(producttext.contains(atlexhdgshw.getValidateLinesPage().getText()));*/
 
+
+		// //Get back to Exhibitor Showroom page and click any one product and verify if product details are displayed properly
+		// atlexhdgshw.getProductsPageBackButton().click();
+		// utl.scrollToElement(atlexhdgshw.getProductSection());
+		// String producttext = atlexhdgshw.getProductText().getText();
+		// System.out.println(producttext);
+		// atlexhdgshw.getProductsList().click();
+		// Thread.sleep(5000);
+		// Assert.assertTrue(producttext.contains(atlexhdgshw.getValidateLinesPage().getText()));
 	}
 
 	@Test(priority = 7)

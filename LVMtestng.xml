@@ -22,7 +22,10 @@
 				</methods>
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8131dc71a4849debd29424c683afd13225ff7167
 			<class name="lasvegasmarket_UAT.GlobalSearch_SuggestionList" />
 			<class name="lasvegasmarket_UAT.EvenntsAndWebinar" /> 
 			<class name="lasvegasmarket_UAT.ExhibitorDigitalShowroom" />
@@ -39,8 +42,11 @@
 					<include name="TS009_VerifyGlobalSearchMatchingResultsSavedSearchesTest"/> -->
 	
 				</methods>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 8131dc71a4849debd29424c683afd13225ff7167
 		</classes>
 	</test>
 </suite>

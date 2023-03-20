@@ -8,6 +8,12 @@
 	<test thread-count="5" name="RegressionTest">
 		<classes>
 
+<<<<<<< HEAD
+=======
+			
+
+
+>>>>>>> 8131dc71a4849debd29424c683afd13225ff7167
 			<class name="atlantamarket_PROD.LineDigitalShowroom" />
 
 
@@ -15,9 +21,11 @@
 				<methods>
 					 <include name="TS001_VerifyAddToFavoritesTest"/> 
 				</methods>
+
 		<!--<class name="atlantamarket_PROD.GlobalSearch_SearchFor"/>
 
 			
+<<<<<<< HEAD
 
 		<!--<class name="atlantamarket_PROD.GlobalSearch_SearchFor"/>
 
@@ -25,6 +33,10 @@
 			
 			<!-- <class name="atlantamarket_PROD.LineDigitalShowroom" />
 
+=======
+			
+			<!-- <class name="atlantamarket_PROD.LineDigitalShowroom" />
+>>>>>>> 8131dc71a4849debd29424c683afd13225ff7167
 			<class name="atlantamarket_PROD.GlobalSearch_SearchFor"/>
 
 			<class name="atlantamarket_PROD.EvenntsAndWebinar" />
@@ -33,22 +45,34 @@
 			<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters" />
 			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
-			<class name="atlantamarket_PROD.GlobalSearch_MatchingResults" />
+			<class name="atlantamarket_PROD.GlobalSearch_MatchingResults" /> -->
 			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
+<<<<<<< HEAD
 			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
 			<class name="atlantamarket_PROD.ShowSpecials" />
 			<class name="atlantamarket_PROD.MarketPlanner"/>
 
 
+=======
+			<methods>
+					 <include name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest"/>				 
+			</methods>
+			<!-- <class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
+			<class name="atlantamarket_PROD.ShowSpecials" />
+			<class name="atlantamarket_PROD.MarketPlanner"/>
+>>>>>>> 8131dc71a4849debd29424c683afd13225ff7167
 			<class name="atlantamarket_PROD.GlobalSearch_MatchingResults" />
 			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_LineActions" /> 
 
+<<<<<<< HEAD
 
 			<class name="atlantamarket_PROD.EvenntsAndWebinar" />-->
 		
 			<!-- <class name="atlantamarket_PROD.MarketPlanner"/> -->
 
+=======
+>>>>>>> 8131dc71a4849debd29424c683afd13225ff7167
 			 <class name="atlantamarket_PROD.EvenntsAndWebinar" />-->
 			 <class name="atlantamarket_PROD.ExhibitorDigitalShowroom" />
 			
@@ -70,9 +94,13 @@
 		
 
 
+<<<<<<< HEAD
 
 			 <class name="atlantamarket_PROD.EvenntsAndWebinar" /> -->
 
+=======
+			 <class name="atlantamarket_PROD.EvenntsAndWebinar" /> -->
+>>>>>>> 8131dc71a4849debd29424c683afd13225ff7167
 
 		</classes>
 	</test>
