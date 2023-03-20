@@ -25,7 +25,7 @@ public class ATLLeftPaneFilters {
 	By expdidgitalshowroomtab  = By.xpath("//button[contains(text(),'Your Digital Showroom')]"); //Locator for EXP Digi Showroom tab
 	By expprofileinfomenu = By.xpath("//a[contains(text(),'Profile Info')]"); //Locator for EXP Profile Info menu
 	By expproductcategsectn = By.xpath("//h3[contains(text(),'Product Categories')]"); //Locator for Products Categories section title in EXP
-	By expindustrialstyleonprofile = By.xpath("//span[contains(@class,'EPUpdateExhibitorProfile_categoriesList') and text()='Industrial']"); //Locator for Industrial Style on Profile
+	By expcoastalstyleonprofile = By.xpath("//span[contains(@class,'EPUpdateExhibitorProfile_categoriesList') and text()='Coastal']"); //Locator for Industrial Style on Profile
 	By accentfurnitureprodcatg = By.xpath("//label[contains(text(),'Accent Furniture')]"); //Locator for name of Accent Furniture Categ.
 	By holidayprodcatg = By.xpath("//label[contains(text(),'Holiday/Seasonal')]"); //Locator for name of Holiday/Seasonal Categ.
 	By decorativeaccprodcatg = By.xpath("//label[contains(text(),'Decorative Accessories')]"); //Locator for name of Decorative Accessories Categ.
@@ -34,6 +34,7 @@ public class ATLLeftPaneFilters {
 	By floralbotanicalsprodcatg = By.xpath("//label[contains(text(),'Floral / Botanicals')]"); //Locator for name of Floral / Botanicals Categ.
 	By hometextilesprodcatg = By.xpath("//label[contains(text(),'Home Textiles')]"); //Locator for name of Home Textiles Categ.
 	By secondexhibitor = By.xpath("//div[@class='imc-vr--xxlarge']/div[2]/div[1]/div[1]/div[1]//a[1]/h2[1]");//Locator for 2nd Exhibitor
+	By expindustrialstyleonprofile = By.xpath("//span[contains(@class,'EPUpdateExhibitorProfile_categoriesList') and text()='Industrial']"); //Locator for Industrial Style on Profile
 
 	public ATLLeftPaneFilters(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -105,10 +106,10 @@ public class ATLLeftPaneFilters {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(expproductcategsectn));
 		return driver.findElement(expproductcategsectn);
 	}
-	public WebElement getEXPIndustrialStyleOnProfile() {
+	public WebElement getEXPCoastalStyleOnProfile() {
 		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(expindustrialstyleonprofile));
-		return driver.findElement(expindustrialstyleonprofile);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(expcoastalstyleonprofile));
+		return driver.findElement(expcoastalstyleonprofile);
 	}
 	public WebElement getATLAccentFurnitureProdCatg(){
 		wait = new WebDriverWait (driver,20);
@@ -149,6 +150,9 @@ public class ATLLeftPaneFilters {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(secondexhibitor));
 		return driver.findElement(secondexhibitor);
+	}
+	public WebElement getEXPIndustrialStyleOnProfile() {
+		return driver.findElement(expindustrialstyleonprofile);
 	}
 }
 

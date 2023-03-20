@@ -3,13 +3,80 @@
 <suite name="Failed suite [LVM_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
+
       <class name="lasvegasmarket_UAT.GlobalSearch_SearchFor">
         <methods>
+
+
+      <class name="lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters">
+        <methods>
+          <include name="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest"/>
+
+
+
+      <class name="lasvegasmarket_UAT.GlobalSearch_SuggestionList">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- lasvegasmarket_UAT.GlobalSearch_SuggestionList -->
+      <class name="lasvegasmarket_UAT.GlobalSearch_LineActions">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+          <include name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForLineTest"/>
+        </methods>
+      </class> <!-- lasvegasmarket_UAT.GlobalSearch_LineActions -->
+
+      <class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions">
+        <methods>
+          <include name="TS003_VerifyAddToExistingListForExhibitorTest"/>
+          <include name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest"/>
+          <include name="TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest"/>
+          <include name="TS001_VerifyAddToFavoriteForExhibitorTest"/>
+          <include name="initialize"/>
+          <include name="TS002_VerifyAddToNewListForExhibitorTest"/>
+
+          <include name="tearDown"/>
+          <include name="initialize"/>
+        </methods>
+
+      </class> <!-- lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters -->
+
+      </class> <!-- lasvegasmarket_UAT.GlobalSearch_ExhibitorActions -->
+
+
+      <class name="lasvegasmarket_UAT.EvenntsAndWebinar">
+        <methods>
+          <include name="TS011_VerifyExhibitorEventsListTest"/>
+          <include name="TS005_VerifyIMCEventsEventDetailstTest"/>
+          <include name="initialize"/>
+          <include name="TS012_VerifyExhibitorEventsDetailstTest"/>
+        </methods>
+      </class> <!-- lasvegasmarket_UAT.EvenntsAndWebinar -->
+      <class name="lasvegasmarket_UAT.GlobalSearch_MatchingResults">
+        <methods>
+          <include name="TS009_VerifyGlobalSearchMatchingResultsSavedSearchesTest"/>
+          <include name="TS003_VerifyGlobalSearchMatchingResultsSortSortByTest"/>
+          <include name="quit"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- lasvegasmarket_UAT.GlobalSearch_MatchingResults -->
+      <class name="lasvegasmarket_UAT.GlobalSearch_ProductActions">
+        <methods>
+          <include name="TS005_VerifyAddNoteOnProductDetailsPageTest"/>
+
           <include name="initialize"/>
           <include name="tearDown"/>
           <include name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest"/>
         </methods>
+
       </class> <!-- lasvegasmarket_UAT.GlobalSearch_SearchFor -->
+
+      </class> <!-- lasvegasmarket_UAT.GlobalSearch_ProductActions -->
+
+
+
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
