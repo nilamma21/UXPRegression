@@ -66,9 +66,9 @@ public class Utility extends base {
 		lap.getLogin().click();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		// Enter the credentials on Login Page and click
-		lp.getEmailAddress().sendKeys((prop.getProperty("usernameSwapnil")));
+		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
 
-		lp.getPassword().sendKeys((prop.getProperty("passwordSwapnil")));
+		lp.getPassword().sendKeys((prop.getProperty("password")));
 
 
 		Thread.sleep(1000);
