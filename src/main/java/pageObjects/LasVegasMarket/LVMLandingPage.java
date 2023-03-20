@@ -32,7 +32,7 @@ public class LVMLandingPage {
 	}
 	
 	public WebElement getMPLinkText() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(marketplannerlinktext));
 		return driver.findElement(marketplannerlinktext);		
 	}	

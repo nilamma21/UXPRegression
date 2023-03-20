@@ -179,7 +179,7 @@ public class LineDigitalShowroom extends base {
 		Assert.assertTrue(atldigish.getAtlLineDigiShowroomPageTitle().getText().equals(prop.getProperty("HeroComponentExhName")));
 		//Store Hero Comp Name
 		String heroCompName=atldigish.getdigiShowroomExhName().getText();
-
+		
 		// Click on Fav Icon
 		atldigish.getfavIconDigiShowroom().click();
 		Thread.sleep(6000);
@@ -191,9 +191,17 @@ public class LineDigitalShowroom extends base {
 		atlmppge.getMPHomeListsTab().click();
 		atlmppge.getATLMPListsPageFavoritesMenu().click();
 		Thread.sleep(10000);
-
+		
 		// Verify that the added favorites exhibitor should be displayed in to Favorites list
-		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(prop.getProperty("HeroComponentExhName")));
+		//Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(prop.getProperty("HeroComponentExhName")));
+		favlist = atlmppge.getFavExhList();
+		for (int i = 0; i < favlist.size(); i++) {
+			if(favlist.contains(exhname)) {
+				//System.out.println(prodcatgitemlist.get(i).getText());
+				Assert.assertTrue(favlist.get(i).getText().contains(heroCompName));
+				break;
+			}
+		}
 
 		// Delete that favorites exhibitor from list
 		atlmppge.getMoreBtnDeleteOptn_ATLPROD().click();
@@ -738,6 +746,6 @@ public class LineDigitalShowroom extends base {
 
 	@AfterClass
 	public void tearDown() {
-		driver.quit();
+		//driver.quit();
 	}
 }

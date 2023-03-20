@@ -7,11 +7,40 @@
 	</listners>
 		<test thread-count="5" name="RegressionTest">
 		<classes>
+
 			<class name="lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters" /> 
 				<methods>
 				<!--  <include name="TS011_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest"/> -->
 				 <include name="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest"/>  
 				</methods>
+
+
+
+			<class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions" /> 
+				<methods>
+				    <include name="TS001_VerifyAddToFavoriteForExhibitorTest"/> 
+				</methods>
+
+
+
+			<class name="lasvegasmarket_UAT.GlobalSearch_SuggestionList" />
+			<class name="lasvegasmarket_UAT.EvenntsAndWebinar" /> 
+			<class name="lasvegasmarket_UAT.ExhibitorDigitalShowroom" />
+			<class name="lasvegasmarket_UAT.GlobalSearch_LineActions" /> 
+			<class name="lasvegasmarket_UAT.GlobalSearch_MatchingResults" />
+			<class name="lasvegasmarket_UAT.GlobalSearch_ProductActions" /> 	
+				<methods>
+
+				<!--  <include name="TS008_VerifyIMCEventsAddNoteTest"/>  
+				 <include name="TS009_VerifyExhibitorEventsSearchbarTest"/>  -->
+				<!--  <include name="TS007_VerifyGlobalSearchMatchingResultsSelectAddToNewlyCreatedListTest"/>   
+				 
+				 	 <include name="TS008_VerifyGlobalSearchMatchingResultsUsePreviousSavedSearchTest"/>  
+					<include name="TS009_VerifyGlobalSearchMatchingResultsSavedSearchesTest"/> -->
+	
+				</methods>
+
+
 		</classes>
 	</test>
 </suite>
