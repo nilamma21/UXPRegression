@@ -225,7 +225,7 @@ public class LVMEventsAndWebinarPage {
 		return driver.findElement(lvmCalendarNextMonthBtn);
 	}
 	public WebElement getlvmEventDateAndMonth() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventDateAndMonth));
 		return driver.findElement(lvmEventDateAndMonth);
 	}

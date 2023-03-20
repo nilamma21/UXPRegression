@@ -7,6 +7,13 @@
 	</listners>
 	<test thread-count="5" name="RegressionTest">
 		<classes>
+
+			<class name="atlantamarket_PROD.ExhibitorDigitalShowroom" />
+				<methods>
+					 <include name="TS001_VerifyAddToFavoritesTest"/> 
+				</methods>
+		<!--<class name="atlantamarket_PROD.GlobalSearch_SearchFor"/>
+
 			
 
 		<!--<class name="atlantamarket_PROD.GlobalSearch_SearchFor"/>
@@ -34,6 +41,11 @@
 			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_LineActions" /> 
 
+
+			<class name="atlantamarket_PROD.EvenntsAndWebinar" />-->
+		
+			<!-- <class name="atlantamarket_PROD.MarketPlanner"/> -->
+
 			 <class name="atlantamarket_PROD.EvenntsAndWebinar" />-->
 			 <class name="atlantamarket_PROD.ExhibitorDigitalShowroom" />
 			
@@ -53,6 +65,7 @@
 			
 
 		
+
 
 
 			 <class name="atlantamarket_PROD.EvenntsAndWebinar" /> -->

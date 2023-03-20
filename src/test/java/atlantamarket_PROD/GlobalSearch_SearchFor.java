@@ -668,10 +668,10 @@ public class GlobalSearch_SearchFor extends base {
 		atlgs.getATLInfosearchbtn().click();
 		Thread.sleep(8000);
 		String alertTitle=atlgs.getATLSearchResult().getText();
+		System.out.println(alertTitle);
+		String splitAlertTitle=alertTitle.split(" ")[4].trim();
 		
-		String splitAlertTitle=alertTitle.split(" ")[5].trim();
-		
-		String splitAlertTitleNext=alertTitle.split(" ")[6].trim();
+		String splitAlertTitleNext=alertTitle.split(" ")[5].trim();
 		Thread.sleep(5000);
 		
 	
@@ -808,10 +808,10 @@ public class GlobalSearch_SearchFor extends base {
 		//Verify that Events data should be displayed
 		String eventname = atlexhact.getEventCardTitle().getText();
 		Assert.assertTrue(atlexhact.getEventCardInSearch().isDisplayed());
-
+		System.out.println(eventname);
 		//Click on See More details btn
 		atlgs.getATLSeeMoreDetailsBtn().click();
-
+		System.out.println(atlexhact.getEventDetailsHeader().getText());
 		//Verify that selected event's details page should be opened
 		Assert.assertTrue(atlexhact.getEventDetailsHeader().getText().contains(eventname));
 		driver.navigate().back();
@@ -820,6 +820,6 @@ public class GlobalSearch_SearchFor extends base {
 	}
 	@AfterClass
 	public void tearDown() {
-		driver.quit();
+		//driver.quit();
 	}
 }

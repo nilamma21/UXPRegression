@@ -3,6 +3,8 @@
 <suite name="Failed suite [LVM_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
+
+
       <class name="lasvegasmarket_UAT.GlobalSearch_SuggestionList">
         <methods>
           <include name="tearDown"/>
@@ -16,6 +18,7 @@
           <include name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForLineTest"/>
         </methods>
       </class> <!-- lasvegasmarket_UAT.GlobalSearch_LineActions -->
+
       <class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions">
         <methods>
           <include name="TS003_VerifyAddToExistingListForExhibitorTest"/>
@@ -27,6 +30,8 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- lasvegasmarket_UAT.GlobalSearch_ExhibitorActions -->
+
+
       <class name="lasvegasmarket_UAT.EvenntsAndWebinar">
         <methods>
           <include name="TS011_VerifyExhibitorEventsListTest"/>
@@ -50,6 +55,7 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- lasvegasmarket_UAT.GlobalSearch_ProductActions -->
+
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->

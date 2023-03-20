@@ -134,12 +134,12 @@ public class ATLGlobalSearchPage {
 		return driver.findElement(infoTitle);
 	}
 	public WebElement getinfoTitleOnSeeDetailsPage() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(infoTitleOnSeeDetailsPage));
 		return driver.findElement(infoTitleOnSeeDetailsPage);
 	}
 	public WebElement getatlInfoSearchMoreInfoBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlInfoSearchMoreInfoBtn));
 		return driver.findElement(atlInfoSearchMoreInfoBtn);
 	}
@@ -326,7 +326,7 @@ public class ATLGlobalSearchPage {
 		return driver.findElements(atlGlobalSearchExhLocationList);
 	}
 	public WebElement getatlGlobalSearch_SearchSortByDropdwn() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlGlobalSearch_SearchSortByDropdwn));
 		return driver.findElement(atlGlobalSearch_SearchSortByDropdwn);
 	}

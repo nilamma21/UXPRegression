@@ -524,7 +524,7 @@ public class LineDigitalShowroom extends base{
 			lvmgs.getlvmGlobalSearchClearTxt().click();
 		}
 		//Thread.sleep(2000);
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("HeroComponentExhName2"));
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("line1"));
 		Thread.sleep(8000);
 		//Click on 1st Suggetions
 		lvmdigish.getsuggetionList().click();

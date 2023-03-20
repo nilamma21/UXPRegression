@@ -9,6 +9,13 @@
 		<classes>
 
 
+			<class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions" /> 
+				<methods>
+				    <include name="TS001_VerifyAddToFavoriteForExhibitorTest"/> 
+				</methods>
+
+
+
 			<class name="lasvegasmarket_UAT.GlobalSearch_SuggestionList" />
 			<class name="lasvegasmarket_UAT.EvenntsAndWebinar" /> 
 			<class name="lasvegasmarket_UAT.ExhibitorDigitalShowroom" />
@@ -25,6 +32,7 @@
 					<include name="TS009_VerifyGlobalSearchMatchingResultsSavedSearchesTest"/> -->
 	
 				</methods>
+
 		</classes>
 	</test>
 </suite>

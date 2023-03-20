@@ -520,7 +520,7 @@ public class LVMMarketPlannerPage {
 		return driver.findElement(gotomarketplannerbtn);
 	}
 	public WebElement getMPHomeListsTab() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmmarketplannerhome));
 		return driver.findElement(mphomeliststab);
 	}

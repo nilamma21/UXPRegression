@@ -3,6 +3,9 @@
   <reporter-output>
   </reporter-output>
 
+  <suite name="LVM_RegressionTestSuite" duration-ms="100889" started-at="2023-03-17T13:12:15Z" finished-at="2023-03-17T13:13:56Z">
+
+
   <suite name="LVM_RegressionTestSuite" duration-ms="3079332" started-at="2023-03-16T17:17:09Z" finished-at="2023-03-16T18:08:29Z">
     <groups>
     </groups>
@@ -885,23 +888,28 @@ Session ID: 9338c4ff74031615e9e970b442c73d5e
       </class> <!-- lasvegasmarket_UAT.GlobalSearch_LineActions -->
 
   <suite name="ATLMrkt_RegressionTestSuite" duration-ms="173849" started-at="2023-03-14T12:45:17Z" finished-at="2023-03-14T12:48:11Z">
+
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="173849" started-at="2023-03-14T12:45:17Z" finished-at="2023-03-14T12:48:11Z">
-      <class name="atlantamarket_PROD.GlobalSearch_ProductActions">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@146ba0ac]" name="initialize" is-config="true" duration-ms="79818" started-at="2023-03-14T18:15:17Z" finished-at="2023-03-14T18:16:37Z">
+    <test name="RegressionTest" duration-ms="100889" started-at="2023-03-17T13:12:15Z" finished-at="2023-03-17T13:13:56Z">
+      <class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_UAT.GlobalSearch_ExhibitorActions@146ba0ac]" name="initialize" is-config="true" duration-ms="70826" started-at="2023-03-17T18:42:15Z" finished-at="2023-03-17T18:43:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS002_VerifyProductAddToNewListOnProductDetailsPageTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@146ba0ac]" name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest" duration-ms="93966" started-at="2023-03-14T18:16:37Z" finished-at="2023-03-14T18:18:11Z">
+        <test-method status="PASS" signature="TS001_VerifyAddToFavoriteForExhibitorTest()[pri:0, instance:lasvegasmarket_UAT.GlobalSearch_ExhibitorActions@146ba0ac]" name="TS001_VerifyAddToFavoriteForExhibitorTest" duration-ms="30039" started-at="2023-03-17T18:43:26Z" finished-at="2023-03-17T18:43:56Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS002_VerifyProductAddToNewListOnProductDetailsPageTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@146ba0ac]" name="tearDown" is-config="true" duration-ms="1" started-at="2023-03-14T18:18:11Z" finished-at="2023-03-14T18:18:11Z">
+        </test-method> <!-- TS001_VerifyAddToFavoriteForExhibitorTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_UAT.GlobalSearch_ExhibitorActions@146ba0ac]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-03-17T18:43:56Z" finished-at="2023-03-17T18:43:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
+
+      </class> <!-- lasvegasmarket_UAT.GlobalSearch_ExhibitorActions -->
+
       </class> <!-- atlantamarket_PROD.GlobalSearch_ProductActions -->
+
 
     </test> <!-- RegressionTest -->
   </suite> <!-- LVM_RegressionTestSuite -->

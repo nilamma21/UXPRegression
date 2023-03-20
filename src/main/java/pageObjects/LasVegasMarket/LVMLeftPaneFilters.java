@@ -42,7 +42,7 @@ public class LVMLeftPaneFilters {
 	} 
 	
 	public WebElement getLVMProdCatgExpandBtn(){
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(prodcatgexpandbtn));
 		return driver.findElement(prodcatgexpandbtn);
 	}
@@ -84,7 +84,7 @@ public class LVMLeftPaneFilters {
 		return driver.findElement(industrialstyle);
 	}
 	public WebElement getEXPExhDropDown(){
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(expexhdropdown));
 		return driver.findElement(expexhdropdown);
 	}

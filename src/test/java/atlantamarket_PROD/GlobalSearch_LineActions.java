@@ -396,6 +396,7 @@ public class GlobalSearch_LineActions extends base {
 		// Verify that user should redirect to the Matching Products page
 		Assert.assertTrue(atlexhact.getValidateProductsPage().isDisplayed());
 		Thread.sleep(15000);
+		System.out.println(driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Products by "+linename+""));
 
 		// Get the Matching Products count on Products page

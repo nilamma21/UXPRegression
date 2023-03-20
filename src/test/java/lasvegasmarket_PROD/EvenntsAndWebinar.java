@@ -150,7 +150,7 @@ public class EvenntsAndWebinar extends base{
 		utl.checkItemPresentInListorNot(lvmevents.getlvmListOfEventTitles(), eventName);	
 	}
 	
-	//@Test(priority = 3)//enabled=false
+	@Test(priority = 3)//enabled=false
 	public void TS003_VerifyIMCEventsCalendarViewTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T288: IMC Events: Calendar View
@@ -694,7 +694,7 @@ public class EvenntsAndWebinar extends base{
 		utl.checkItemPresentInListorNot(lvmevents.getlvmListOfEventTitles(), eventName);
 }
 	
-	//@Test(priority = 10)
+	@Test(priority = 10)
 	public void TS010_VerifyExhibitorEventsCalendarViewTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T305: Exhibitor Events: Calendar View
@@ -1238,11 +1238,11 @@ public class EvenntsAndWebinar extends base{
 		atlexhact.getDeleteNoteBtn().click();
 	}
 	
-	/*@AfterClass
+	@AfterClass
 	public void tearDown()
 	{
 		driver.quit();
-	}*/
+	}
 
 }
 
