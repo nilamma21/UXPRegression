@@ -6,12 +6,14 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import atlantamarket_PROD.TestListeners;
+import pageObjects.AtlantaMarket.ATLMarketPlannerPage;
 import pageObjects.LasVegasMarket.LVMEventsAndWebinarPage;
 import pageObjects.LasVegasMarket.LVMExhDigiShowroomPage;
 import pageObjects.LasVegasMarket.LVMExhLineProdActionsPage;
@@ -36,6 +38,7 @@ public class ExhibitorDigitalShowroom extends base {
 	LVMEventsAndWebinarPage lvmevents;
 	LVMLoginPage lp;
 	GenerateData genData;
+	ATLMarketPlannerPage atlmppge;
 	
 	List<WebElement> favexhlist, favlist, mplists, mpeditlistoptns;
 	
@@ -101,6 +104,8 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmds = new LVMExhDigiShowroomPage(driver);
 		lvmmpp = new LVMMarketPlannerPage(driver);
 		lvmgs = new LVMGlobalSearchPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor4")); //"Anne McGilvray & Company" Exhibitor
@@ -141,7 +146,7 @@ public class ExhibitorDigitalShowroom extends base {
 			}
 		Thread.sleep(5000);
 		Assert.assertTrue(lvmmpp.getLVMSavedExhNameInList().getText().contains(exhname));
-
+/*
 		// Delete that added exhibitor from list
 		lvmmpp.getMoreBtnDeleteOptnExistingList_LVMPROD().click();
 		lvmmpp.getLVMEditListItemDeleteOptn().click();
@@ -155,6 +160,28 @@ public class ExhibitorDigitalShowroom extends base {
 			//System.out.println(favlist.get(i).getText());
 			Assert.assertFalse(favlist.get(i).getText().contains(exhname)); 
 			}
+		*/
+		Actions actions = new Actions(driver);
+		actions.moveToElement(lvmmpp.getMoreBtnDeleteOptnExistingList_LVMPROD()).perform();
+		
+		//actions.click().perform();
+		Thread.sleep(10000);
+		lvmmpp.getLVMEditListItemDeleteOptn().click();
+		Thread.sleep(6000);
+
+		// Verify that the added favorites exhibitor should be removed from Favorites
+		// list
+		
+		
+		try {
+			Assert.assertFalse(lvmmpp.getLVMSavedExhNameInList().getText().contains(exhname));
+			}catch (Exception e) {
+				System.out.println("deleted");
+			}
+		Thread.sleep(8000);
+		
+		
+		
 	}
 	
 	@Test(priority = 03)

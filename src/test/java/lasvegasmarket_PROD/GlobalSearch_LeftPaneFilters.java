@@ -175,7 +175,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));//Previous input = filtersglobalsearchinput
 		lvmgs.getLVMSearchButton().click();
 		
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		//Click on Product Categories expand btn
 		lvmleftpane.getLVMProdCatgExpandBtn().click();
 
@@ -317,7 +317,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		lvmleftpane.getEXPExhDropDown().click();
 
 		//Select IMC Test Company exhibitor
-		lvmleftpane.getIMCExhNameInEXP().click();
+		lvmleftpane.getTrippExhNameInEXP().click();
 
 		//Click on Digital Showroom tab
 		lvmleftpane.getEXPDigiShowroomTab().click();

@@ -330,7 +330,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl.scrollToElement(atlleftpane.getEXPProductCategSection());
 
 		//Verify that expected Style should be displayed on profile
-		Assert.assertTrue(atlleftpane.getEXPIndustrialStyleOnProfile().isDisplayed());
+		Assert.assertTrue(atlleftpane.getEXPCoastalStyleOnProfile().isDisplayed());
 		driver.close();
 		driver.switchTo().window(tabs.get(0));
 		//driver.get(prop.getProperty("atlmrkturl_prod"));

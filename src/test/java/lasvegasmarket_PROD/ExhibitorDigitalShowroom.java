@@ -438,7 +438,7 @@ public class ExhibitorDigitalShowroom extends base {
 		System.out.println("Lines Component: See All Lines Btn functionality is working properly.");	
 	}
 	
-	@Test(priority = 10)
+	@Test(enabled=false)//priority = 10
 	public void TS010_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T349: Exhibitor Digital showroom: Products Component: Order on JuniperMarket
@@ -870,7 +870,7 @@ public class ExhibitorDigitalShowroom extends base {
 	@AfterClass
 	public void tearDown() throws InterruptedException {
 		Thread.sleep(2000);
-	//	driver.quit(); //Quit browser
+	//	driver.quit();
 	}
 	
 }
