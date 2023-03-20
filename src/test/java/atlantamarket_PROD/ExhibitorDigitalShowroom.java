@@ -402,7 +402,14 @@ public class ExhibitorDigitalShowroom extends base {
 		System.out.println(producttext);
 		atlexhdgshw.getProductsList().click();
 		Thread.sleep(5000);
+
+		String lName=atlexhdgshw.getValidateLinesPage().getText();
+		String lineName=lName.split(" ")[0].trim();
+		Assert.assertTrue(producttext.contains(lineName));
+	
+
 		Assert.assertTrue(producttext.contains(atlexhdgshw.getValidateLinesPage().getText()));*/
+
 	}
 
 	@Test(priority = 7)
