@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="ATLMrkt_RegressionTestSuite" parallel="classes">
+
+	<test thread-count="5" name="RegressionParallelest">
+		<classes>
+			 <class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters" />
+			 <class name="atlantamarket_PROD.GlobalSearch_SuggestionList" /> 
+			 <!--<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
+			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
+			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
+			 <class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
+			<class name="atlantamarket_PROD.FloorPlans" /> -->
+		</classes>
+	</test>
+</suite>
