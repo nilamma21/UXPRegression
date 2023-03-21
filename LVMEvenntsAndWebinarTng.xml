@@ -9,9 +9,9 @@
 	<test thread-count="1" name="RegressionSequentialTest" >
 		<classes>
 		 	<class name="lasvegasmarket_UAT.EvenntsAndWebinar" />
-				<methods>
+		<!--		<methods>
 				 <include name="TS015_VerifyExhibitorEventsAddNoteTest"/>  
-				</methods>
+				</methods> -->
 			 
 		<!--	 <methods>
 					<exclude name="TS003_VerifyIMCEventsCalendarViewTest" />
