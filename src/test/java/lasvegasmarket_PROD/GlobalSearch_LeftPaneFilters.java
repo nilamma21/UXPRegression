@@ -317,7 +317,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		lvmleftpane.getEXPExhDropDown().click();
 
 		//Select IMC Test Company exhibitor
-		lvmleftpane.getIMCExhNameInEXP().click();
+		lvmleftpane.getTrippExhNameInEXP().click();
 
 		//Click on Digital Showroom tab
 		lvmleftpane.getEXPDigiShowroomTab().click();

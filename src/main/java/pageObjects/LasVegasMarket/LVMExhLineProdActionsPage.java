@@ -79,11 +79,18 @@ public class LVMExhLineProdActionsPage {
 	By secondexhprodseedetailsbtn = By.xpath("(//div[@class='imc-gallery imc-gallery--80-20 imc-exhibitorcard--gallery-nowrap'])[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/a"); //Locator for Second exhibitor product see details btn
 	By eventdetailsheaderUat = By.xpath("//div[contains(@class,'imc-eventdetail--header')]/h1"); //Locator for header of Events details btn
 	By catalogitemnew = By.xpath("(//div[@class='imc-catalog__item_title multiSelectItem']/div/span/span)[3]"); //Locator for Catalog item
+	By catalogitemUAT_LVM = By.xpath("(//div[@class='imc-catalog__item_title multiSelectItem']/div/span/span)[1]"); //Locator for Catalog item
+	
 
 
 	public LVMExhLineProdActionsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
+	}
+	public WebElement getcatalogitemUAT_LVM() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(catalogitemUAT_LVM));
+		return driver.findElement(catalogitemUAT_LVM);
 	}
 	public WebElement getprodNameFromDGshhowroomPage() {
 		wait = new WebDriverWait (driver,30);

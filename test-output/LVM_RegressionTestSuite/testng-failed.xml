@@ -4,6 +4,15 @@
   <test name="RegressionTest(failed)">
     <classes>
 
+      <class name="lasvegasmarket_UAT.GlobalSearch_SearchFor">
+        <methods>
+
+
+      <class name="lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters">
+        <methods>
+          <include name="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest"/>
+
+
 
       <class name="lasvegasmarket_UAT.GlobalSearch_SuggestionList">
         <methods>
@@ -27,8 +36,13 @@
           <include name="TS001_VerifyAddToFavoriteForExhibitorTest"/>
           <include name="initialize"/>
           <include name="TS002_VerifyAddToNewListForExhibitorTest"/>
+
           <include name="tearDown"/>
+          <include name="initialize"/>
         </methods>
+
+      </class> <!-- lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters -->
+
       </class> <!-- lasvegasmarket_UAT.GlobalSearch_ExhibitorActions -->
 
 
@@ -51,10 +65,17 @@
       <class name="lasvegasmarket_UAT.GlobalSearch_ProductActions">
         <methods>
           <include name="TS005_VerifyAddNoteOnProductDetailsPageTest"/>
+
           <include name="initialize"/>
           <include name="tearDown"/>
+          <include name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest"/>
         </methods>
+
+      </class> <!-- lasvegasmarket_UAT.GlobalSearch_SearchFor -->
+
       </class> <!-- lasvegasmarket_UAT.GlobalSearch_ProductActions -->
+
+
 
     </classes>
   </test> <!-- RegressionTest(failed) -->
