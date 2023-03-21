@@ -419,8 +419,9 @@ public class GlobalSearch_ProductActions extends base {
 
 		// Verify that recently added note should be appear on 'All Notes For Exhibitor' modal
 		for (int i = 0; i < allnoteslist.size(); i++) {
-			//System.out.println(allnoteslist.get(i).getText());
+			System.out.println(allnoteslist.get(i).getText());
 			if (allnoteslist.get(i).getText().equals(newnotetitle)) {
+				System.out.println(allnoteslist.get(i).getText());
 				allnoteslist.get(i).click();
 
 				break;
@@ -464,11 +465,13 @@ WebElement d=driver.findElement(By.xpath("//div[@class='ReactModal__Content Reac
 		// Hovering on Product
 		Actions actions = new Actions(driver);
 		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
+		Thread.sleep(3000);
 		// To mouseover on More btn
 		actions.moveToElement(atlexhact.getProductMoreBtnOnSearchGrid()).perform();
-
+		Thread.sleep(3000);
 		//Click on Add To List button
 		actions.click().perform();
+		Thread.sleep(3000);
 		atlexhact.getAddToListOptn().click();
 		Thread.sleep(5000);
 
@@ -485,11 +488,12 @@ WebElement d=driver.findElement(By.xpath("//div[@class='ReactModal__Content Reac
 
 		// Click on Go to Market Planner button
 		atlmppge.getGoToMarketPlannerBtn().click();
-
+		Thread.sleep(3000);
 		// Click on Lists tab on MP home page
 		atlmppge.getMPHomeListsTab().click();
 		//atlmppge.getListsPageListsMenu().click();
 		atlmppge.getListsPageListsMenu().click();
+		Thread.sleep(10000);
 
 		mplists = atlmppge.getATLMPListsNames();
 		mpeditlistoptns = atlmppge.getATLMPEditListOptns();
