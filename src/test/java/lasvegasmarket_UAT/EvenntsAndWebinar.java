@@ -1315,7 +1315,7 @@ public class EvenntsAndWebinar extends base{
 				break;
 			}
 		}
-Thread.sleep(5000);
+Thread.sleep(8000);
 WebElement d=driver.findElement(By.xpath("//div[@class='imc-addnote-modal__actions-wrapper']/div/a[1]"));
 		d.click();
 		// Delete the saved note
