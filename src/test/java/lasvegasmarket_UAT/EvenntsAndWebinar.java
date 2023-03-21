@@ -1311,7 +1311,7 @@ public class EvenntsAndWebinar extends base{
 				break;
 			}
 		}
-
+Thread.sleep(5000);
 		// Delete the saved note
 		atlexhact.getDeleteNoteBtn().click();
 	}
