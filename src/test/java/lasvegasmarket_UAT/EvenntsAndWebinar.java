@@ -1308,7 +1308,7 @@ public class EvenntsAndWebinar extends base{
 
 		// Verify that recently added note should be appear on 'All Notes For Exhibitor' modal
 		for (int i = 0; i < allnoteslist.size(); i++) {
-			//System.out.println(allnoteslist.get(i).getText());
+			System.out.println(allnoteslist.get(i).getText());
 			if (allnoteslist.get(i).getText().equals(newnotetitle)) {
 				allnoteslist.get(i).click();
 
