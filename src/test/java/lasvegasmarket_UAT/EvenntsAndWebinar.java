@@ -1316,8 +1316,10 @@ public class EvenntsAndWebinar extends base{
 			}
 		}
 Thread.sleep(5000);
+WebElement d=driver.findElement(By.xpath("//div[@class='imc-addnote-modal__actions-wrapper']/div/a[1]"));
+		d.click();
 		// Delete the saved note
-		atlexhact.getDeleteNoteBtn().click();
+		//atlexhact.getDeleteNoteBtn().click();
 	}
 	
 	/*@AfterClass
