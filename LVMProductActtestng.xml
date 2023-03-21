@@ -9,18 +9,18 @@
 	<test thread-count="1" name="RegressionSequentialTest" >
 		<classes>
 		 	<class name="lasvegasmarket_UAT.GlobalSearch_ProductActions" />
-			 <methods>
+		<!--	 <methods>
 	
 					
 
-		<!--<exclude name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest" />
+		<exclude name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest" />
              	 	<exclude name="TS003_VerifyProductAddToExistingListOnProductDetailsPageTest" />
 			 	 	<exclude name="TS004_VerifyAddToFavoriteOnProductDetailsPageTest" />
 					<exclude name="TS006_VerifyProductAddToExistingListOnSearchResultsGridTest" />
-             	 	<exclude name="TS008_VerifyAddToFavoriteOnSearchResultsGridTest" /> -->
+             	 	<exclude name="TS008_VerifyAddToFavoriteOnSearchResultsGridTest" /> 
 			 	 	
           	
-			</methods>
+			</methods>-->
 		</classes>
 	</test>
 </suite>
