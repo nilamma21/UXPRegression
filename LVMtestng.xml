@@ -14,13 +14,10 @@
 				 <include name="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest"/>  
 				</methods>
 
-
-
 			<class name="lasvegasmarket_UAT.GlobalSearch_SearchFor" /> 
 			 	<!-- <methods>
 				    <include name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest"/> 
 				</methods> -->
-
 
 		</classes>
 	</test>

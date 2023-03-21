@@ -10,12 +10,12 @@
 		<classes>
 		 	<class name="lasvegasmarket_UAT.ExhibitorDigitalShowroom" />
 			 
-			<methods>
+	<!--		<methods>
 					<exclude name="TS012_VerifySeeInOtherMarketsForExhibitorTest" />
              	 	<exclude name="TS016_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest" />
 			 	 	<exclude name="TS021_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest" />
           		
-			</methods>
+			</methods> -->
 		</classes>
 	</test>
 </suite>
