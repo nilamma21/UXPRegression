@@ -14,39 +14,6 @@
 				 <include name="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest"/>  
 				</methods>
 
-
-
-			<class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions" /> 
-				<methods>
-				    <include name="TS001_VerifyAddToFavoriteForExhibitorTest"/> 
-				</methods>
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 8131dc71a4849debd29424c683afd13225ff7167
-			<class name="lasvegasmarket_UAT.GlobalSearch_SuggestionList" />
-			<class name="lasvegasmarket_UAT.EvenntsAndWebinar" /> 
-			<class name="lasvegasmarket_UAT.ExhibitorDigitalShowroom" />
-			<class name="lasvegasmarket_UAT.GlobalSearch_LineActions" /> 
-			<class name="lasvegasmarket_UAT.GlobalSearch_MatchingResults" />
-			<class name="lasvegasmarket_UAT.GlobalSearch_ProductActions" /> 	
-				<methods>
-
-				<!--  <include name="TS008_VerifyIMCEventsAddNoteTest"/>  
-				 <include name="TS009_VerifyExhibitorEventsSearchbarTest"/>  -->
-				<!--  <include name="TS007_VerifyGlobalSearchMatchingResultsSelectAddToNewlyCreatedListTest"/>   
-				 
-				 	 <include name="TS008_VerifyGlobalSearchMatchingResultsUsePreviousSavedSearchTest"/>  
-					<include name="TS009_VerifyGlobalSearchMatchingResultsSavedSearchesTest"/> -->
-	
-				</methods>
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 8131dc71a4849debd29424c683afd13225ff7167
 		</classes>
 	</test>
 </suite>
