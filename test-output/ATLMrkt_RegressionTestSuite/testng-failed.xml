@@ -19,35 +19,14 @@
         </methods>
       </class> <!-- atlantamarket_PROD.ExhibitorDigitalShowroom -->
 
-<<<<<<< HEAD
 
       <class name="atlantamarket_PROD.GlobalSearch_ProductActions">
         <methods>
           <include name="tearDown"/>
           <include name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest"/>
           <include name="initialize"/>
-=======
-
-      <class name="atlantamarket_PROD.GlobalSearch_ProductActions">
-
-
-      <class name="atlantamarket_PROD.FloorPlans">
-
-
-        <methods>
-          <include name="tearDown"/>
-
-          <include name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest"/>
-          <include name="initialize"/>
         </methods>
       </class> <!-- atlantamarket_PROD.GlobalSearch_ProductActions -->
-
-
-          <include name="TS008_VerifySelectionOfGeneralGiftProdCatgFromLeftPaneFiltersTest"/>
->>>>>>> 8131dc71a4849debd29424c683afd13225ff7167
-        </methods>
-      </class> <!-- atlantamarket_PROD.GlobalSearch_ProductActions -->
-
 
     </classes>
   </test> <!-- RegressionTest(failed) -->

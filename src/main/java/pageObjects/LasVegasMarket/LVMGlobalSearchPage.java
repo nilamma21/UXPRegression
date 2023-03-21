@@ -111,11 +111,18 @@ public class LVMGlobalSearchPage {
 	By eventslvmmkttopicsfilterUat = By.xpath("//label[contains(text(),'Ahead of the Curve')]"); //Locator for Atlanta Market topics filter
 	By atmarketeventtypefilterUat = By.xpath("//label[contains(text(),'Buying Event')]"); //Locator for At Market Event Type
 	By lvmseemoredetailsbtnneww = By.xpath("//a[contains(text(),'View Brand Details')]"); //Locator for See More Details button
+	By atmarketeventtypefilterUAT_LVM = By.xpath("(//div[@class='imc-filteritem__tier2'])[2]/div[1]/label[1]"); //Locator for At Market Event Type
+	
 	
 	public LVMGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 		PageFactory.initElements(driver, this);
+	}
+	public WebElement getatmarketeventtypefilterUAT_LVM() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atmarketeventtypefilterUAT_LVM));
+		return driver.findElement(atmarketeventtypefilterUAT_LVM);
 	}
 	public WebElement getFirstCatalogName() {
 		wait = new WebDriverWait (driver,20);
