@@ -1318,10 +1318,10 @@ public class EvenntsAndWebinar extends base{
 			}
 		}
 Thread.sleep(8000);
-//WebElement d=driver.findElement(By.xpath("//div[@class='ReactModal__Content ReactModal__Content--after-open imc-modal--box imc-addnote-modal']/div/div[3]/div[1]/a[1]"));
-//		d.click();
+WebElement d=driver.findElement(By.xpath("//div[@class='ReactModal__Content ReactModal__Content--after-open imc-modal--box imc-addnote-modal']/div/div[3]/div[1]/a[1]"));
+		d.click();
 		// Delete the saved note
-		atlexhact.getDeleteNoteBtn().click();
+//		atlexhact.getDeleteNoteBtn().click();
 	}
 	
 	/*@AfterClass
