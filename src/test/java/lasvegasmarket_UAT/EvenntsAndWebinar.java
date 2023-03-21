@@ -1287,6 +1287,10 @@ public class EvenntsAndWebinar extends base{
 		Thread.sleep(5000);
 		noteTitleTxt.sendKeys(newnotetitle);
 		Thread.sleep(5000);
+
+		System.out.println("Newly added Note is: " + noteTitleTxt.getAttribute("value"));
+		System.out.println("Newly Content: " + noteContentTxt.getAttribute("value"));
+
 		//atlexhact.getNoteTitleTxtBx().sendKeys(newnotetitle);
 		// Click on 'Save' button
 		atlexhact.getNoteSaveBtn().click();
