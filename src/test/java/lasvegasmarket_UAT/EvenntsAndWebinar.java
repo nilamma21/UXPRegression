@@ -1310,6 +1310,8 @@ public class EvenntsAndWebinar extends base{
 		for (int i = 0; i < allnoteslist.size(); i++) {
 			System.out.println(allnoteslist.get(i).getText());
 			if (allnoteslist.get(i).getText().equals(newnotetitle)) {
+				System.out.println(allnoteslist.get(i).getText());
+				
 				allnoteslist.get(i).click();
 
 				break;
