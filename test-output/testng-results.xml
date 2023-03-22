@@ -2,6 +2,26 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
+
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="120223" started-at="2023-03-22T09:46:37Z" finished-at="2023-03-22T09:48:38Z">
+    <groups>
+    </groups>
+    <test name="RegressionTest" duration-ms="120223" started-at="2023-03-22T09:46:37Z" finished-at="2023-03-22T09:48:38Z">
+      <class name="atlantamarket_PROD.GlobalSearch_ProductActions">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@146ba0ac]" name="initialize" is-config="true" duration-ms="65478" started-at="2023-03-22T15:16:37Z" finished-at="2023-03-22T15:17:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@146ba0ac]" name="TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest" duration-ms="54711" started-at="2023-03-22T15:17:43Z" finished-at="2023-03-22T15:18:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@146ba0ac]" name="tearDown" is-config="true" duration-ms="1" started-at="2023-03-22T15:18:38Z" finished-at="2023-03-22T15:18:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_ProductActions -->
+
   <suite name="LVM_RegressionTestSuite" duration-ms="156228" started-at="2023-03-20T12:25:17Z" finished-at="2023-03-20T12:27:53Z">
     <groups>
     </groups>
@@ -20,6 +40,7 @@
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- lasvegasmarket_UAT.GlobalSearch_ProductActions -->
+
     </test> <!-- RegressionTest -->
-  </suite> <!-- LVM_RegressionTestSuite -->
+  </suite> <!-- ATLMrkt_RegressionTestSuite -->
 </testng-results>
