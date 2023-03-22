@@ -41,10 +41,10 @@ public class ATLEventsAndWebinarPage {
 	By atlListOfAllEventsLocations = By.xpath("//div[@class='event-card--info']/div[3]/p[1]/span"); //Locator for list of all Events
 	By atlListOfAllEventsImages = By.xpath("//div[@class='event-card--multi-card-container']/div/img"); //Locator for list of all Events
 	By atlListOfAllEventsSeeDetailsLink = By.xpath("//a[@class='imc-link--caret-after imc-type--body-1-link']"); //Locator for list of all Events
-	By atlEventNameOnDetailsPage = By.xpath("//div[contains(@class,'imc-eventdetail--header')]/h1"); //Locator for list of all Events
-	By atlEventLocationLink = By.xpath("//div[@class='imc-eventdetail--location']/a[1]"); //Locator for Event location link
-	By atlEventType = By.xpath("//div[@class='imc-eventdetail--text-container']/span[3]"); //Locator for Event Type
-	By atlFavIcon = By.xpath("//div[@class='imc-eventdetail--actions-bar']//ul/li/div/button"); //Locator for Fav Icon
+	By atlEventNameOnDetailsPage = By.xpath("//div[@class='imc-static-hero imc-section imc-section--full-width imc-content--center']/../section[1]/h1[1]"); //Locator for list of all Events
+	By atlEventLocationLink = By.xpath("//div[@class='imc-eventdetail--margin-bottom']/a[1]"); //Locator for Event location link
+	By atlEventType = By.xpath("//div[@class='imc-eventdetail--margin-bottom']/span[2]"); //Locator for Event Type
+	By atlFavIcon = By.xpath("//ul[@class='imc-eventcard--add--links']/li[1]/div[1]/button[1]/label[1]"); //Locator for Fav Icon
 	By atlListIcon = By.xpath("//ul[@class='imc-eventcard--add--links']/li[2]/button[1]"); //Locator for List Icon
 	By atlNoteIcon = By.xpath("//ul[@class='imc-eventcard--add--links']/li[3]/div[1]/div[1]/div[1]/button[1]"); //Locator for Note Icon
 	By atlCalendarIcon = By.xpath("//div[@class='imc-section--alt-gray-light imc-eventdetail__box imc-eventdetail__box--eventpadding imc-content--primary-desktop']/a[1]"); //Locator for Calendar Icon
