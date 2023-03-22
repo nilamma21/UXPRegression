@@ -280,7 +280,7 @@ public class ExhibitorDigitalShowroom extends base {
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(15000);
 		
@@ -490,9 +490,9 @@ public class ExhibitorDigitalShowroom extends base {
 		//Scroll to Line Section
 		utl.scrollToElement(lvmds.getProductSection());
 		//Click on Order On Juniper Market Btn
-		String OrderOnJuniperMarktURL=lvmds.getOrderOnJuniperMarktBtnCatalog().getAttribute("href");
+		String OrderOnJuniperMarktURL=lvmds.getOrderOnJuniperMarktBtnProduct().getAttribute("href");
 		String winHandleBefore = driver.getWindowHandle();
-		lvmds.getOrderOnJuniperMarktBtnCatalog().click();
+		lvmds.getOrderOnJuniperMarktBtnProduct().click();
 		
 		for (String winHandle : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle);
@@ -701,7 +701,7 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmds = new LVMExhDigiShowroomPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("searchexhwithlinesinput")));
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));
 		Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(15000);
@@ -714,7 +714,7 @@ public class ExhibitorDigitalShowroom extends base {
 		Thread.sleep(5000);
 		
 		//Click on Hero Component Visit
-		lvmds.getView3DshowroomBtn().click();
+		lvmds.getView3DshowroomBtnLVMUAT().click();
 		Thread.sleep(5000);
 		String header3Dshowroom=lvmds.getshowroomHeader3D().getText();
 		System.out.println(exhname +" 3D Showroom");
