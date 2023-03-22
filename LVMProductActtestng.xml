@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="ATLMrkt_RegressionTestSuite">
+
+	<listners>
+		<listner class-name="lasvegasmarket_UAT.TestListeners" />
+	</listners>
+	<test thread-count="1" name="RegressionSequentialTest" >
+		<classes>
+		 	<class name="lasvegasmarket_UAT.GlobalSearch_ProductActions" />
+			 <methods>
+	
+					
+
+		<exclude name="TS002_VerifyProductAddToNewListOnProductDetailsPageTest" />
+             	 	<exclude name="TS003_VerifyProductAddToExistingListOnProductDetailsPageTest" />
+			 	 	<exclude name="TS004_VerifyAddToFavoriteOnProductDetailsPageTest" />
+					<exclude name="TS006_VerifyProductAddToExistingListOnSearchResultsGridTest" />
+             	 	<exclude name="TS008_VerifyAddToFavoriteOnSearchResultsGridTest" />
+			 	 	
+          	
+			</methods>
+		</classes>
+	</test>
+</suite>
