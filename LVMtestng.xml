@@ -8,11 +8,16 @@
 		<test thread-count="5" name="RegressionTest">
 		<classes>
 
-			<class name="lasvegasmarket_UAT.GlobalSearch_ProductActions" /> 
+			<class name="lasvegasmarket_UAT.ExhibitorDigitalShowroom" /> 
 				<methods>
-				<!--  <include name="TS011_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest"/> -->
-				 <include name="TS005_VerifyAddNoteOnProductDetailsPageTest"/>  
-				</methods>
+				 <!-- <include name="TS018_VerifyCatalogsSectionForExhibitorTest"/>
+				 <include name="TS020_VerifyExhibitorDigitalShowroomShowSpecialsTest"/>  
+				 <include name="TS013_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest" /> 
+				 <include name="TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest" />
+				 <include name="TS016_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest" />
+				 <include name="TS018_VerifyCatalogsSectionForExhibitorTest" />-->
+				  <include name="TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest" />
+			</methods>
 
 
 
@@ -38,7 +43,7 @@
 			<methods>
 			<include name="TS003_VerifyGlobalSearchMatchingResultsSortSortByTest" /> 
 				<include name="TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest" />
-				<include name="TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest" />
+				<include name="TS018_VerifyCatalogsSectionForExhibitorTest" />
 				
 			</methods>
 		</classes>

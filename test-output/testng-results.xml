@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="LVM_RegressionTestSuite" duration-ms="156228" started-at="2023-03-20T12:25:17Z" finished-at="2023-03-20T12:27:53Z">
+  <suite name="LVM_RegressionTestSuite" duration-ms="90685" started-at="2023-03-22T11:18:24Z" finished-at="2023-03-22T11:19:55Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="156228" started-at="2023-03-20T12:25:17Z" finished-at="2023-03-20T12:27:53Z">
-      <class name="lasvegasmarket_UAT.GlobalSearch_ProductActions">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_UAT.GlobalSearch_ProductActions@3abbfa04]" name="initialize" is-config="true" duration-ms="98887" started-at="2023-03-20T17:55:17Z" finished-at="2023-03-20T17:56:56Z">
+    <test name="RegressionTest" duration-ms="90685" started-at="2023-03-22T11:18:24Z" finished-at="2023-03-22T11:19:55Z">
+      <class name="lasvegasmarket_UAT.ExhibitorDigitalShowroom">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_UAT.ExhibitorDigitalShowroom@3abbfa04]" name="initialize" is-config="true" duration-ms="58396" started-at="2023-03-22T16:48:24Z" finished-at="2023-03-22T16:49:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS005_VerifyAddNoteOnProductDetailsPageTest()[pri:0, instance:lasvegasmarket_UAT.GlobalSearch_ProductActions@3abbfa04]" name="TS005_VerifyAddNoteOnProductDetailsPageTest" duration-ms="57322" started-at="2023-03-20T17:56:56Z" finished-at="2023-03-20T17:57:53Z">
+        <test-method status="PASS" signature="TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest()[pri:0, instance:lasvegasmarket_UAT.ExhibitorDigitalShowroom@3abbfa04]" name="TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest" duration-ms="30262" started-at="2023-03-22T16:49:22Z" finished-at="2023-03-22T16:49:53Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS005_VerifyAddNoteOnProductDetailsPageTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_UAT.GlobalSearch_ProductActions@3abbfa04]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-03-20T17:57:53Z" finished-at="2023-03-20T17:57:53Z">
+        </test-method> <!-- TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_UAT.ExhibitorDigitalShowroom@3abbfa04]" name="tearDown" is-config="true" duration-ms="2014" started-at="2023-03-22T16:49:53Z" finished-at="2023-03-22T16:49:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- lasvegasmarket_UAT.GlobalSearch_ProductActions -->
+      </class> <!-- lasvegasmarket_UAT.ExhibitorDigitalShowroom -->
     </test> <!-- RegressionTest -->
   </suite> <!-- LVM_RegressionTestSuite -->
 </testng-results>
