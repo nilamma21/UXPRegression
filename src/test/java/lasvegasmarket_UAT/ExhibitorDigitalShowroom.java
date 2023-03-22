@@ -280,7 +280,7 @@ public class ExhibitorDigitalShowroom extends base {
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(15000);
 		

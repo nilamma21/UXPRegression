@@ -8,6 +8,7 @@
 		<test thread-count="5" name="RegressionTest">
 		<classes>
 
+<<<<<<< HEAD
 
 
 			<class name="lasvegasmarket_UAT.FloorPlans" /> 
@@ -18,15 +19,18 @@
 
 
 			<class name="lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters" /> 
+=======
+			<class name="lasvegasmarket_UAT.GlobalSearch_ProductActions" /> 
+>>>>>>> 42bf3d414ab30b9790830ac29698db34e2d597d2
 				<methods>
 				<!--  <include name="TS011_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest"/> -->
-				 <include name="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest"/>  
+				 <include name="TS005_VerifyAddNoteOnProductDetailsPageTest"/>  
 				</methods>
 
 
 
-			<class name="lasvegasmarket_UAT.GlobalSearch_SearchFor" /> 
-			 	<!-- <methods>
+			<!-- <class name="lasvegasmarket_UAT.GlobalSearch_SearchFor" /> 
+			 	<methods>
 				    <include name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest"/> 
 				</methods> -->
 
