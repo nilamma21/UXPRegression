@@ -3,50 +3,13 @@
 <suite name="Failed suite [LVM_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-
-      <class name="lasvegasmarket_UAT.GlobalSearch_SearchFor">
-
-
-      <class name="lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters">
-        <methods>
-          <include name="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest"/>
-          <include name="tearDown"/>
-
-
-      <class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions">
-
-
-      <class name="lasvegasmarket_UAT.GlobalSearch_SuggestionList">
-
+      <class name="lasvegasmarket_UAT.ExhibitorDigitalShowroom">
         <methods>
           <include name="initialize"/>
-          <include name="tearDown"/>
-          <include name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest"/>
-        </methods>
-
-      </class> <!-- lasvegasmarket_UAT.GlobalSearch_SearchFor -->
-
-      </class> <!-- lasvegasmarket_UAT.GlobalSearch_ProductActions -->
-
-      <class name="atlantamarket_PROD.GlobalSearch_ProductActions">
-
-        <methods>
-          <include name="TS001_VerifyAddToFavoriteForExhibitorTest"/>
-
-          <include name="initialize"/>
+          <include name="TS016_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest"/>
           <include name="tearDown"/>
         </methods>
-
-      </class> <!-- lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters -->
-
-
-      </class> <!-- lasvegasmarket_UAT.GlobalSearch_ExhibitorActions -->
-
-      </class> <!-- atlantamarket_PROD.GlobalSearch_ProductActions -->
-
-
-
-
+      </class> <!-- lasvegasmarket_UAT.ExhibitorDigitalShowroom -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
