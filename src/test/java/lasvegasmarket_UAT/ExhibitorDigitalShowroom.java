@@ -490,9 +490,9 @@ public class ExhibitorDigitalShowroom extends base {
 		//Scroll to Line Section
 		utl.scrollToElement(lvmds.getProductSection());
 		//Click on Order On Juniper Market Btn
-		String OrderOnJuniperMarktURL=lvmds.getOrderOnJuniperMarktBtnCatalog().getAttribute("href");
+		String OrderOnJuniperMarktURL=lvmds.getOrderOnJuniperMarktBtnProduct().getAttribute("href");
 		String winHandleBefore = driver.getWindowHandle();
-		lvmds.getOrderOnJuniperMarktBtnCatalog().click();
+		lvmds.getOrderOnJuniperMarktBtnProduct().click();
 		
 		for (String winHandle : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle);
@@ -647,7 +647,7 @@ public class ExhibitorDigitalShowroom extends base {
 		//Click on Order On Juniper Market Btn
 		String OrderOnJuniperMarktURL=lvmds.getOrderOnJuniperMarktBtnCatalog().getAttribute("href");
 		lvmds.getOrderOnJuniperMarktBtnCatalog().click();
-		Assert.assertFalse(driver.getCurrentUrl().contains(OrderOnJuniperMarktURL));
+		Assert.assertTrue(driver.getCurrentUrl().contains(OrderOnJuniperMarktURL));
 		System.out.println(" Catalogs Component: Order on JuniperMarket Btn functionality is working properly.");
 		
 		
