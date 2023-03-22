@@ -78,7 +78,7 @@ public class LVMExhDigiShowroomPage {
 	By EventsSection = By.xpath("(//span[contains(text(),'Events')])[1]"); //Locator for Events Section
 	By SeeAllEventsBtn = By.xpath("(//span[contains(text(),'Events')])[1]/../../div[3]/div[1]/a[1]"); //Locator for Events Section
 	By EventName = By.xpath("(//span[contains(text(),'Events')])[1]/../../div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]/h4[1]"); //Locator for Events Section
-	By OrderOnJuniperMarktBtnProduct = By.xpath("//div[@class='imc-section imc-section--width-100-percent']/div[1]/span[contains(text(),'Products')]/../../div[3]/div[1]/a[1]"); //Locator for Events Section
+	By OrderOnJuniperMarktBtnProduct = By.xpath("(//div[@class='imc-section imc-section--width-100-percent']/div[1]/span[contains(text(),'Products')]/../../div[3]/div[1]/a[1]/span[contains(text(),'Order on JuniperMarket')])[1]"); //Locator for Events Section
 	
 	By CatalogsSection = By.xpath("//div[@class = 'imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div/span[text()='Catalogs']"); //Locator for Catalogs section
 	By SeeAllCatalogsButton = By.xpath("//section[@class = 'imc-site-wrapper']/div[6]/div[1]/div[3]/div[1]/a[1]"); //Locator for See All Catalogs section
@@ -97,7 +97,7 @@ public class LVMExhDigiShowroomPage {
 	
 	By View3DshowroomBtnLVMUAT = By.xpath("(//span[contains(text(),'View 3D Showroom')])[1]"); //Locator for 3D showroom Btn
 	
-	By OrderOnJuniperMarktBtnCatalog = By.xpath("//div[@class='imc-section imc-section--width-100-percent']/div[1]/span[contains(text(),'Catalogs')]/../../div[3]/div[1]/a[1]");
+	By OrderOnJuniperMarktBtnCatalog = By.xpath("(//div[@class='imc-section imc-section--width-100-percent']/div[1]/span[contains(text(),'Catalogs')]/../../div[3]/div[1]/a[1]/span[contains(text(),'Order on JuniperMarket')])[1]");
 	
 	
 	public LVMExhDigiShowroomPage(WebDriver driver) {

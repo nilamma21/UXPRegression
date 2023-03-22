@@ -14,8 +14,8 @@
 				 <include name="TS020_VerifyExhibitorDigitalShowroomShowSpecialsTest"/>  
 				 <include name="TS013_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest" /> 
 				 <include name="TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest" />
-				 <include name="TS016_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest" />
-				 <include name="TS018_VerifyCatalogsSectionForExhibitorTest" />-->
+				 <include name="TS016_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest" />-->
+				 <include name="TS010_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest" />
 				  <include name="TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest" />
 			</methods>
 
