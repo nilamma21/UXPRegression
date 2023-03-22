@@ -1287,6 +1287,10 @@ public class EvenntsAndWebinar extends base{
 		Thread.sleep(5000);
 		noteTitleTxt.sendKeys(newnotetitle);
 		Thread.sleep(5000);
+
+		System.out.println("Newly added Note is: " + noteTitleTxt.getAttribute("value"));
+		System.out.println("Newly Content: " + noteContentTxt.getAttribute("value"));
+
 		//atlexhact.getNoteTitleTxtBx().sendKeys(newnotetitle);
 		// Click on 'Save' button
 		atlexhact.getNoteSaveBtn().click();
@@ -1304,16 +1308,20 @@ public class EvenntsAndWebinar extends base{
 
 		// Verify that recently added note should be appear on 'All Notes For Exhibitor' modal
 		for (int i = 0; i < allnoteslist.size(); i++) {
-			//System.out.println(allnoteslist.get(i).getText());
+			System.out.println(allnoteslist.get(i).getText());
 			if (allnoteslist.get(i).getText().equals(newnotetitle)) {
+				System.out.println(allnoteslist.get(i).getText());
+				
 				allnoteslist.get(i).click();
 
 				break;
 			}
 		}
-
+Thread.sleep(8000);
+WebElement d=driver.findElement(By.xpath("//div[@class='ReactModal__Content ReactModal__Content--after-open imc-modal--box imc-addnote-modal']/div/div[3]/div[1]/a[1]"));
+		d.click();
 		// Delete the saved note
-		atlexhact.getDeleteNoteBtn().click();
+	//	atlexhact.getnoteDeleteBtn().click();
 	}
 	
 	/*@AfterClass
