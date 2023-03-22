@@ -3,12 +3,13 @@
 <suite name="Failed suite [LVM_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-      <class name="lasvegasmarket_UAT.EvenntsAndWebinar">
+      <class name="lasvegasmarket_UAT.ExhibitorDigitalShowroom">
         <methods>
           <include name="initialize"/>
-          <include name="TS012_VerifyExhibitorEventsDetailstTest"/>
+          <include name="TS016_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- lasvegasmarket_UAT.EvenntsAndWebinar -->
+      </class> <!-- lasvegasmarket_UAT.ExhibitorDigitalShowroom -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->

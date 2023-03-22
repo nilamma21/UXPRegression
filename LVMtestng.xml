@@ -9,6 +9,7 @@
 		<classes>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 			<class name="lasvegasmarket_UAT.FloorPlans" /> 
@@ -26,6 +27,18 @@
 				<!--  <include name="TS011_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest"/> -->
 				 <include name="TS005_VerifyAddNoteOnProductDetailsPageTest"/>  
 				</methods>
+=======
+			<class name="lasvegasmarket_UAT.ExhibitorDigitalShowroom" /> 
+				<methods>
+				 <!-- <include name="TS018_VerifyCatalogsSectionForExhibitorTest"/>
+				 <include name="TS020_VerifyExhibitorDigitalShowroomShowSpecialsTest"/>  
+				 <include name="TS013_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest" /> 
+				 <include name="TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest" />
+				 <include name="TS016_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest" />
+				 <include name="TS018_VerifyCatalogsSectionForExhibitorTest" />-->
+				  <include name="TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest" />
+			</methods>
+>>>>>>> 4ce9e784a51874d4392647cf33a6a69302e114a5
 
 
 
@@ -33,7 +46,6 @@
 			 	<methods>
 				    <include name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest"/> 
 				</methods> -->
-
 
 
 		</classes>
@@ -52,7 +64,7 @@
 			<methods>
 			<include name="TS003_VerifyGlobalSearchMatchingResultsSortSortByTest" /> 
 				<include name="TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest" />
-				<include name="TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest" />
+				<include name="TS018_VerifyCatalogsSectionForExhibitorTest" />
 				
 			</methods>
 		</classes>

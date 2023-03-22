@@ -3,6 +3,7 @@
   <reporter-output>
   </reporter-output>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <suite name="ATLMrkt_RegressionTestSuite" duration-ms="120223" started-at="2023-03-22T09:46:37Z" finished-at="2023-03-22T09:48:38Z">
     <groups>
     </groups>
@@ -41,6 +42,26 @@
         </test-method> <!-- tearDown -->
       </class> <!-- lasvegasmarket_UAT.GlobalSearch_ProductActions -->
 >>>>>>> 42bf3d414ab30b9790830ac29698db34e2d597d2
+=======
+  <suite name="LVM_RegressionTestSuite" duration-ms="90685" started-at="2023-03-22T11:18:24Z" finished-at="2023-03-22T11:19:55Z">
+    <groups>
+    </groups>
+    <test name="RegressionTest" duration-ms="90685" started-at="2023-03-22T11:18:24Z" finished-at="2023-03-22T11:19:55Z">
+      <class name="lasvegasmarket_UAT.ExhibitorDigitalShowroom">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_UAT.ExhibitorDigitalShowroom@3abbfa04]" name="initialize" is-config="true" duration-ms="58396" started-at="2023-03-22T16:48:24Z" finished-at="2023-03-22T16:49:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest()[pri:0, instance:lasvegasmarket_UAT.ExhibitorDigitalShowroom@3abbfa04]" name="TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest" duration-ms="30262" started-at="2023-03-22T16:49:22Z" finished-at="2023-03-22T16:49:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_UAT.ExhibitorDigitalShowroom@3abbfa04]" name="tearDown" is-config="true" duration-ms="2014" started-at="2023-03-22T16:49:53Z" finished-at="2023-03-22T16:49:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- lasvegasmarket_UAT.ExhibitorDigitalShowroom -->
+>>>>>>> 4ce9e784a51874d4392647cf33a6a69302e114a5
     </test> <!-- RegressionTest -->
-  </suite> <!-- ATLMrkt_RegressionTestSuite -->
+  </suite> <!-- LVM_RegressionTestSuite -->
 </testng-results>

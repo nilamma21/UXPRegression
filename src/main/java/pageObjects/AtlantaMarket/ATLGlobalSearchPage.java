@@ -316,7 +316,7 @@ public class ATLGlobalSearchPage {
 		return driver.findElements(atlMachingProductCount);
 	}
 	public List<WebElement> getatlExhNames() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlExhNames));
 		return driver.findElements(atlExhNames);
 	}
@@ -402,7 +402,7 @@ public class ATLGlobalSearchPage {
 	}
 
 	public WebElement getATLSearchButton() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.elementToBeClickable(atlsearchbtn));
 		return driver.findElement(atlsearchbtn);
 	}
