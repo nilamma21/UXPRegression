@@ -8,8 +8,8 @@
 		<test thread-count="5" name="RegressionTest">
 		<classes>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 
 
 			<class name="lasvegasmarket_UAT.FloorPlans" /> 
@@ -20,14 +20,14 @@
 
 
 			<class name="lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters" /> 
-=======
+
 			<class name="lasvegasmarket_UAT.GlobalSearch_ProductActions" /> 
->>>>>>> 42bf3d414ab30b9790830ac29698db34e2d597d2
+
 				<methods>
 				<!--  <include name="TS011_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest"/> -->
 				 <include name="TS005_VerifyAddNoteOnProductDetailsPageTest"/>  
 				</methods>
-=======
+
 			<class name="lasvegasmarket_UAT.ExhibitorDigitalShowroom" /> 
 				<methods>
 				 <!-- <include name="TS018_VerifyCatalogsSectionForExhibitorTest"/>
@@ -38,7 +38,7 @@
 				 <include name="TS010_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest" />
 				  <include name="TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest" />
 			</methods>
->>>>>>> 4ce9e784a51874d4392647cf33a6a69302e114a5
+
 
 
 
