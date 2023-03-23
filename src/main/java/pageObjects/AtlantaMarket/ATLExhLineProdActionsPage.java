@@ -91,7 +91,7 @@ public class ATLExhLineProdActionsPage extends base{
 	By productBlock = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]"); //Locator for Add to List button for Product on Search Results grid
 	By seeDetailsProd = By.xpath("(//div[@class='imc-gallery imc-gallery--80-20 imc-exhibitorcard--gallery-nowrap'])[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/a[1]"); //Locator for See Detals btn
 	
-	By noteDeleteBtn = By.xpath("//div[@class='imc-addnote-modal__actions-wrapper']/div/a[1]"); //Locator for See Detals btn
+	
 
 
 
@@ -100,11 +100,6 @@ public class ATLExhLineProdActionsPage extends base{
 		this.driver = driver; 			
 
 	} 
-	public WebElement getnoteDeleteBtn() {
-		wait = new WebDriverWait (driver,30);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(noteDeleteBtn));
-		return driver.findElement(noteDeleteBtn);
-	}
 		
 	public WebElement getseeDetailsProd() {
 		wait = new WebDriverWait (driver,30);
