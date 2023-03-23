@@ -9,6 +9,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -960,12 +961,12 @@ public class ExhibitorDigitalShowroom extends base {
 		driver.close();
 		driver.switchTo().window(currnetWindowHanldeID);
 		System.out.println("Hero component: Order on Juniper Market Btn functionality is working properly.");
-
-
-
 	}
 
-
+	@AfterClass
+	public void tearDown() {
+		//driver.quit();
+	}
 
 }
 
