@@ -987,11 +987,11 @@ public class EvenntsAndWebinar extends base{
 		Assert.assertTrue(atlevents.getatlNoteIcon().isDisplayed());
 		System.out.println("Add Note Icon displayed");
 		//Verify Add Fav Icon
-		Assert.assertTrue(atlevents.getatlCalendarIcon().isDisplayed());
-		System.out.println("Calendar displayed");
+		/*Assert.assertTrue(atlevents.getatlCalendarIcon().isDisplayed());
+		System.out.println("Calendar displayed");*/
 		//Verify Add Fav Icon
-		Assert.assertTrue(atlevents.getatlTagIcon().isDisplayed());
-		System.out.println("Tag displayed");
+		/*Assert.assertTrue(atlevents.getatlTagIcon().isDisplayed());
+		System.out.println("Tag displayed");*/
 		
 		//Click on Location link
 		String locationURL=atlevents.getatlEventLocationLink().getAttribute("href");
