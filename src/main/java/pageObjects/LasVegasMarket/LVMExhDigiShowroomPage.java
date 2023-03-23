@@ -99,11 +99,25 @@ public class LVMExhDigiShowroomPage {
 	
 	By OrderOnJuniperMarktBtnCatalog = By.xpath("(//div[@class='imc-section imc-section--width-100-percent']/div[1]/span[contains(text(),'Catalogs')]/../../div[3]/div[1]/a[1]/span[contains(text(),'Order on JuniperMarket')])[1]");
 	
+	By OrderOnJuniperMarktBtnProdURL = By.xpath("//div[@class='imc-section imc-section--width-100-percent']/div[1]/span[contains(text(),'Products')]/../../div[3]/div[1]/a[1]"); //URl for juniper markt prod btn
+	
+	By OrderOnJuniperMarktBtnCatalogURL = By.xpath("//div[@class='imc-section imc-section--width-100-percent']/div[1]/span[contains(text(),'Catalogs')]/../../div[3]/div[1]/a[1]"); //URl for juniper markt catalog btn
+	
 	
 	public LVMExhDigiShowroomPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
+	public WebElement getOrderOnJuniperMarktBtnCatalogURL() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(OrderOnJuniperMarktBtnCatalogURL));
+		return driver.findElement(OrderOnJuniperMarktBtnCatalogURL);
+	}
+	public WebElement getOrderOnJuniperMarktBtnProdURL() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(OrderOnJuniperMarktBtnProdURL));
+		return driver.findElement(OrderOnJuniperMarktBtnProdURL);
+	}
 	public WebElement getOrderOnJuniperMarktBtnCatalog() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(OrderOnJuniperMarktBtnCatalog));

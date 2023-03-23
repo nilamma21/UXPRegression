@@ -13,6 +13,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import atlantamarket_PROD.TestListeners;
+import pageObjects.AtlantaMarket.ATLEventsAndWebinarPage;
 import pageObjects.AtlantaMarket.ATLMarketPlannerPage;
 import pageObjects.LasVegasMarket.LVMEventsAndWebinarPage;
 import pageObjects.LasVegasMarket.LVMExhDigiShowroomPage;
@@ -39,6 +40,7 @@ public class ExhibitorDigitalShowroom extends base {
 	LVMLoginPage lp;
 	GenerateData genData;
 	ATLMarketPlannerPage atlmppge;
+	ATLEventsAndWebinarPage atlevents;
 	
 	List<WebElement> favexhlist, favlist, mplists, mpeditlistoptns;
 	
@@ -476,6 +478,7 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmds = new LVMExhDigiShowroomPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(5000);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("searchjuniperline_lvmuat")));
 		Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
@@ -490,13 +493,15 @@ public class ExhibitorDigitalShowroom extends base {
 		//Scroll to Line Section
 		utl.scrollToElement(lvmds.getProductSection());
 		//Click on Order On Juniper Market Btn
-		String OrderOnJuniperMarktURL=lvmds.getOrderOnJuniperMarktBtnProduct().getAttribute("href");
+		String OrderOnJuniperMarktURL=lvmds.getOrderOnJuniperMarktBtnProdURL().getAttribute("href");
+		System.out.println(OrderOnJuniperMarktURL);
 		String winHandleBefore = driver.getWindowHandle();
-		lvmds.getOrderOnJuniperMarktBtnProduct().click();
+		lvmds.getOrderOnJuniperMarktBtnProdURL().click();
 		
 		for (String winHandle : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle);
 		}
+		System.out.println(driver.getCurrentUrl());
 		Assert.assertTrue(driver.getCurrentUrl().contains(OrderOnJuniperMarktURL));
 		driver.close();
 		driver.switchTo().window(winHandleBefore);
@@ -733,8 +738,10 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		lap = new LVMLandingPage(driver);
 		lvmds = new LVMExhDigiShowroomPage(driver);
+		atlevents=new ATLEventsAndWebinarPage(driver);
 
 		lvmevents=new LVMEventsAndWebinarPage(driver);
+		Thread.sleep(5000);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));
 		Thread.sleep(5000);
@@ -755,8 +762,8 @@ public class ExhibitorDigitalShowroom extends base {
 		/*Assert.assertTrue(lvmds.getLVMVerifyLinePageTitle().getText().contains("Events"));
 		driver.navigate().back();
 		utl.scrollToElement(lvmds.getEventsSection());*/
-		String eventName=lvmds.getEventName().getText();
-		lvmds.getEventName().click();
+		String eventName=atlevents.getatlClickOnEvent().getText();
+		atlevents.getatlClickOnEvent().click();
 		Assert.assertTrue(lvmevents.getlvmEventNameOnDetailsPageUAT().getText().contains(eventName));
 		System.out.println("Events Component functionality is working properly.");	
 	}
