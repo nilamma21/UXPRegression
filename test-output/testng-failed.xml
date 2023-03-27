@@ -5,6 +5,7 @@
     <classes>
       <class name="atlantamarket_PROD.EvenntsAndWebinar">
         <methods>
+
           <include name="TS014_VerifyExhibitorEventsAddToListTest"/>
           <include name="TS013_VerifyExhibitorEventsAddToFavoriteTest"/>
           <include name="TS015_VerifyExhibitorEventsAddNoteTest"/>
@@ -18,6 +19,14 @@
           <include name="TS003_VerifyIMCEventsCalendarViewTest"/>
           <include name="TS008_VerifyIMCEventsAddNoteTest"/>
           <include name="TS007_VerifyIMCEventsAddToListTest"/>
+
+          <include name="TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest"/>
+          <include name="TS001_VerifyAddToFavoritesTest"/>
+          <include name="TS012_VerifySeeInOtherMarketsForExhibitorTest"/>
+          <include name="initialize"/>
+          <include name="tearDown"/>
+          <include name="TS021_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest"/>
+
         </methods>
       </class> <!-- atlantamarket_PROD.EvenntsAndWebinar -->
     </classes>
