@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [LVM_RegressionTestSuite]">
+<suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-      <class name="lasvegasmarket_UAT.ExhibitorDigitalShowroom">
+      <class name="atlantamarket_PROD.EvenntsAndWebinar">
         <methods>
-          <include name="TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest"/>
-          <include name="TS010_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest"/>
+          <include name="TS014_VerifyExhibitorEventsAddToListTest"/>
+          <include name="TS013_VerifyExhibitorEventsAddToFavoriteTest"/>
+          <include name="TS015_VerifyExhibitorEventsAddNoteTest"/>
+          <include name="TS005_VerifyIMCEventsEventDetailstTest"/>
+          <include name="TS002_VerifyIMCEventsSearchbarTest"/>
           <include name="initialize"/>
-          <include name="tearDown"/>
+          <include name="TS004_VerifyIMCEventsEventsListTest"/>
+          <include name="TS011_VerifyExhibitorEventsListTest"/>
+          <include name="TS006_VerifyIMCEventsAddToFavoriteTest"/>
+          <include name="TS001_VerifyEventsAndWebinarsOverviewTest"/>
+          <include name="TS003_VerifyIMCEventsCalendarViewTest"/>
+          <include name="TS008_VerifyIMCEventsAddNoteTest"/>
+          <include name="TS007_VerifyIMCEventsAddToListTest"/>
         </methods>
-      </class> <!-- lasvegasmarket_UAT.ExhibitorDigitalShowroom -->
+      </class> <!-- atlantamarket_PROD.EvenntsAndWebinar -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
-</suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
+</suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->
