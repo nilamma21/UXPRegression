@@ -8,7 +8,7 @@
 	</listners>
 	<test thread-count="1" name="RegressionSequentialTest" >
 		<classes>
-		 	<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
+		 	<class name="atlantamarket_PROD.GlobalSearch_LineActions"/>
 		</classes>
 	</test>
 </suite>
