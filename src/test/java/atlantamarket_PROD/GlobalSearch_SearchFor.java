@@ -820,6 +820,6 @@ public class GlobalSearch_SearchFor extends base {
 	}
 	@AfterClass
 	public void tearDown() {
-		//driver.quit();
+		driver.quit();
 	}
 }

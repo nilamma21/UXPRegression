@@ -746,6 +746,6 @@ public class LineDigitalShowroom extends base {
 
 	@AfterClass
 	public void tearDown() {
-		//driver.quit();
+		driver.quit();
 	}
 }
