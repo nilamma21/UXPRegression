@@ -965,7 +965,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 	@AfterClass
 	public void tearDown() {
-		//driver.quit();
+		driver.quit();
 	}
 
 }
