@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <testng-results skipped="0" failed="13" total="42" passed="29">
   <reporter-output>
   </reporter-output>
@@ -44,6 +45,80 @@ Session ID: f3d2e2e5e64e8511072ce677f5c4a436
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
 	at pageObjects.AtlantaMarket.ATLExhLineProdActionsPage.getleftPaneFilterDGShowroomCatalog(ATLExhLineProdActionsPage.java:136)
 	at atlantamarket_PROD.GlobalSearch_SearchFor.TS004_VerifyCatalogsOverviewInGlobalSearchTest(GlobalSearch_SearchFor.java:279)
+
+<testng-results skipped="0" failed="4" total="20" passed="16">
+  <reporter-output>
+  </reporter-output>
+
+  <suite name="LVM_RegressionTestSuite" duration-ms="978314" started-at="2023-03-23T07:33:23Z" finished-at="2023-03-23T07:49:41Z">
+
+
+
+
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="120223" started-at="2023-03-22T09:46:37Z" finished-at="2023-03-22T09:48:38Z">
+    <groups>
+    </groups>
+    <test name="RegressionTest" duration-ms="120223" started-at="2023-03-22T09:46:37Z" finished-at="2023-03-22T09:48:38Z">
+      <class name="atlantamarket_PROD.GlobalSearch_ProductActions">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@146ba0ac]" name="initialize" is-config="true" duration-ms="65478" started-at="2023-03-22T15:16:37Z" finished-at="2023-03-22T15:17:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@146ba0ac]" name="TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest" duration-ms="54711" started-at="2023-03-22T15:17:43Z" finished-at="2023-03-22T15:18:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@146ba0ac]" name="tearDown" is-config="true" duration-ms="1" started-at="2023-03-22T15:18:38Z" finished-at="2023-03-22T15:18:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_ProductActions -->
+
+  <suite name="LVM_RegressionTestSuite" duration-ms="156228" started-at="2023-03-20T12:25:17Z" finished-at="2023-03-20T12:27:53Z">
+    <groups>
+    </groups>
+    <test name="RegressionTest" duration-ms="156228" started-at="2023-03-20T12:25:17Z" finished-at="2023-03-20T12:27:53Z">
+      <class name="lasvegasmarket_UAT.GlobalSearch_ProductActions">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_UAT.GlobalSearch_ProductActions@3abbfa04]" name="initialize" is-config="true" duration-ms="98887" started-at="2023-03-20T17:55:17Z" finished-at="2023-03-20T17:56:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS005_VerifyAddNoteOnProductDetailsPageTest()[pri:0, instance:lasvegasmarket_UAT.GlobalSearch_ProductActions@3abbfa04]" name="TS005_VerifyAddNoteOnProductDetailsPageTest" duration-ms="57322" started-at="2023-03-20T17:56:56Z" finished-at="2023-03-20T17:57:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifyAddNoteOnProductDetailsPageTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_UAT.GlobalSearch_ProductActions@3abbfa04]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-03-20T17:57:53Z" finished-at="2023-03-20T17:57:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- lasvegasmarket_UAT.GlobalSearch_ProductActions -->
+
+
+  <suite name="LVM_RegressionTestSuite" duration-ms="90685" started-at="2023-03-22T11:18:24Z" finished-at="2023-03-22T11:19:55Z">
+
+  <suite name="LVM_RegressionTestSuite" duration-ms="119129" started-at="2023-03-22T11:50:30Z" finished-at="2023-03-22T11:52:29Z">
+
+
+    <groups>
+    </groups>
+    <test name="RegressionTest" duration-ms="978314" started-at="2023-03-23T07:33:23Z" finished-at="2023-03-23T07:49:41Z">
+      <class name="lasvegasmarket_UAT.ExhibitorDigitalShowroom">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_UAT.ExhibitorDigitalShowroom@464bee09]" name="initialize" is-config="true" duration-ms="54809" started-at="2023-03-23T13:03:23Z" finished-at="2023-03-23T13:04:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="FAIL" signature="TS001_VerifyAddToFavoritesTest()[pri:0, instance:lasvegasmarket_UAT.ExhibitorDigitalShowroom@464bee09]" name="TS001_VerifyAddToFavoritesTest" duration-ms="35516" started-at="2023-03-23T13:04:18Z" finished-at="2023-03-23T13:04:53Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class = 'imc-vr--xxlarge']/div[1]/div[1]/div[1]/div[1]/div[1]/a[1] (tried for 30 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class = 'imc-vr--xxlarge']/div[1]/div[1]/div[1]/div[1]/div[1]/a[1] (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.LasVegasMarket.LVMExhDigiShowroomPage.getSearchedExhibitor(LVMExhDigiShowroomPage.java:287)
+	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS001_VerifyAddToFavoritesTest(ExhibitorDigitalShowroom.java:76)
+
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -65,6 +140,7 @@ Session ID: f3d2e2e5e64e8511072ce677f5c4a436
 	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
 	at org.testng.TestNG.run(TestNG.java:1031)
+
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
@@ -209,6 +285,95 @@ Driver info: driver.version: unknown
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
 	at pageObjects.AtlantaMarket.ATLExhLineProdActionsPage.getEventDetailsHeader(ATLExhLineProdActionsPage.java:402)
 	at atlantamarket_PROD.GlobalSearch_SearchFor.TS011_VerifyEventsOverviewInGlobalSearchTest(GlobalSearch_SearchFor.java:814)
+
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class = 'imc-vr--xxlarge']/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]"}
+  (Session info: chrome=111.0.5563.66)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'EON-SWAPNILI', ip: '172.22.22.78', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_311'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.66, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64445}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2319eaa05e1c3ac05d0ba53177358b65
+*** Element info: {Using=xpath, value=//div[@class = 'imc-vr--xxlarge']/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 26 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifyAddToFavoritesTest -->
+        <test-method status="PASS" signature="TS002_VerifyAddToExistingListWithPlusIconTest()[pri:0, instance:lasvegasmarket_UAT.ExhibitorDigitalShowroom@464bee09]" name="TS002_VerifyAddToExistingListWithPlusIconTest" duration-ms="57183" started-at="2023-03-23T13:04:53Z" finished-at="2023-03-23T13:05:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifyAddToExistingListWithPlusIconTest -->
+        <test-method status="PASS" signature="TS003_VerifyAddNoteListWithPlusIconTest()[pri:0, instance:lasvegasmarket_UAT.ExhibitorDigitalShowroom@464bee09]" name="TS003_VerifyAddNoteListWithPlusIconTest" duration-ms="64155" started-at="2023-03-23T13:05:51Z" finished-at="2023-03-23T13:06:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifyAddNoteListWithPlusIconTest -->
+        <test-method status="PASS" signature="TS004_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest()[pri:0, instance:lasvegasmarket_UAT.ExhibitorDigitalShowroom@464bee09]" name="TS004_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest" duration-ms="48657" started-at="2023-03-23T13:06:55Z" finished-at="2023-03-23T13:07:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest -->
+        <test-method status="PASS" signature="TS005_VerifyClickOnTotalLinesSeeAllLinkForExhibitorTest()[pri:0, instance:lasvegasmarket_UAT.ExhibitorDigitalShowroom@464bee09]" name="TS005_VerifyClickOnTotalLinesSeeAllLinkForExhibitorTest" duration-ms="51786" started-at="2023-03-23T13:07:43Z" finished-at="2023-03-23T13:08:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifyClickOnTotalLinesSeeAllLinkForExhibitorTest -->
+        <test-method status="PASS" signature="TS006_VerifyClickOnProductShownLinkForExhibitorTest()[pri:0, instance:lasvegasmarket_UAT.ExhibitorDigitalShowroom@464bee09]" name="TS006_VerifyClickOnProductShownLinkForExhibitorTest" duration-ms="58253" started-at="2023-03-23T13:08:35Z" finished-at="2023-03-23T13:09:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS006_VerifyClickOnProductShownLinkForExhibitorTest -->
+        <test-method status="PASS" signature="TS007_VerifyClickOnLineFiltersForExhibitorTest()[pri:0, instance:lasvegasmarket_UAT.ExhibitorDigitalShowroom@464bee09]" name="TS007_VerifyClickOnLineFiltersForExhibitorTest" duration-ms="31216" started-at="2023-03-23T13:09:33Z" finished-at="2023-03-23T13:10:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifyClickOnLineFiltersForExhibitorTest -->
+        <test-method status="PASS" signature="TS008_VerifyClickOnLineSearchForExhibitorTest()[pri:0, instance:lasvegasmarket_UAT.ExhibitorDigitalShowroom@464bee09]" name="TS008_VerifyClickOnLineSearchForExhibitorTest" duration-ms="30557" started-at="2023-03-23T13:10:05Z" finished-at="2023-03-23T13:10:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS008_VerifyClickOnLineSearchForExhibitorTest -->
+        <test-method status="PASS" signature="TS009_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest()[pri:0, instance:lasvegasmarket_UAT.ExhibitorDigitalShowroom@464bee09]" name="TS009_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest" duration-ms="30975" started-at="2023-03-23T13:10:35Z" finished-at="2023-03-23T13:11:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest -->
+        <test-method status="PASS" signature="TS010_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest()[pri:0, instance:lasvegasmarket_UAT.ExhibitorDigitalShowroom@464bee09]" name="TS010_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest" duration-ms="38406" started-at="2023-03-23T13:11:06Z" finished-at="2023-03-23T13:11:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS010_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest -->
+        <test-method status="PASS" signature="TS011_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest()[pri:0, instance:lasvegasmarket_UAT.ExhibitorDigitalShowroom@464bee09]" name="TS011_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest" duration-ms="37520" started-at="2023-03-23T13:11:45Z" finished-at="2023-03-23T13:12:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS011_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest -->
+        <test-method status="FAIL" signature="TS012_VerifySeeInOtherMarketsForExhibitorTest()[pri:0, instance:lasvegasmarket_UAT.ExhibitorDigitalShowroom@464bee09]" name="TS012_VerifySeeInOtherMarketsForExhibitorTest" duration-ms="60813" started-at="2023-03-23T13:12:22Z" finished-at="2023-03-23T13:13:23Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //button[@class = 'imc-button imc-button--full-bleed-mobile imc-button--primary-inverted imc-margin--all--none'] (tried for 30 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //button[@class = 'imc-button imc-button--full-bleed-mobile imc-button--primary-inverted imc-margin--all--none'] (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.LasVegasMarket.LVMExhDigiShowroomPage.getSeeInOtherMarket(LVMExhDigiShowroomPage.java:462)
+	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS012_VerifySeeInOtherMarketsForExhibitorTest(ExhibitorDigitalShowroom.java:566)
+
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -230,6 +395,7 @@ Driver info: driver.version: unknown
 	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
 	at org.testng.TestNG.run(TestNG.java:1031)
+
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
@@ -376,12 +542,44 @@ Driver info: driver.version: unknown
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@class = 'imc-button imc-button--full-bleed-mobile imc-button--primary-inverted imc-margin--all--none']"}
+  (Session info: chrome=111.0.5563.66)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'EON-SWAPNILI', ip: '172.22.22.78', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_311'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.66, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64445}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2319eaa05e1c3ac05d0ba53177358b65
+*** Element info: {Using=xpath, value=//button[@class = 'imc-button imc-button--full-bleed-mobile imc-button--primary-inverted imc-margin--all--none']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+
 	... 26 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
+
         </test-method> <!-- TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest -->
         <test-method status="FAIL" signature="TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@402a079c]" name="TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest" duration-ms="30477" started-at="2023-03-23T16:27:31Z" finished-at="2023-03-23T16:28:02Z">
           <exception class="org.openqa.selenium.TimeoutException">
@@ -541,6 +739,24 @@ Driver info: driver.version: unknown
 	at org.testng.Assert.assertTrue(Assert.java:42)
 	at org.testng.Assert.assertTrue(Assert.java:52)
 	at atlantamarket_PROD.ExhibitorDigitalShowroom.TS005_VerifyClickOnTotalLinesSeeAllLinkForExhibitorTest(ExhibitorDigitalShowroom.java:347)
+
+        </test-method> <!-- TS012_VerifySeeInOtherMarketsForExhibitorTest -->
+        <test-method status="PASS" signature="TS013_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest()[pri:0, instance:lasvegasmarket_UAT.ExhibitorDigitalShowroom@464bee09]" name="TS013_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest" duration-ms="39246" started-at="2023-03-23T13:13:23Z" finished-at="2023-03-23T13:14:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS013_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest -->
+        <test-method status="FAIL" signature="TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest()[pri:0, instance:lasvegasmarket_UAT.ExhibitorDigitalShowroom@464bee09]" name="TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest" duration-ms="64657" started-at="2023-03-23T13:14:02Z" finished-at="2023-03-23T13:15:07Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: (//div[@class='imc-section imc-section--width-100-percent']/div[1]/span[contains(text(),'Catalogs')]/../../div[3]/div[1]/a[1]/span[contains(text(),'Order on JuniperMarket')])[1] (tried for 20 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//div[@class='imc-section imc-section--width-100-percent']/div[1]/span[contains(text(),'Catalogs')]/../../div[3]/div[1]/a[1]/span[contains(text(),'Order on JuniperMarket')])[1] (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.LasVegasMarket.LVMExhDigiShowroomPage.getOrderOnJuniperMarktBtnCatalog(LVMExhDigiShowroomPage.java:123)
+	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest(ExhibitorDigitalShowroom.java:653)
+
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -562,6 +778,7 @@ Driver info: driver.version: unknown
 	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
 	at org.testng.TestNG.run(TestNG.java:1031)
+
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
@@ -606,10 +823,25 @@ System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir4524_655997489}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:53856}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=111.0.5563.65, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
 Session ID: a5aa2ee5363b7a7f1e8ed77b281ade80
+
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//div[@class='imc-section imc-section--width-100-percent']/div[1]/span[contains(text(),'Catalogs')]/../../div[3]/div[1]/a[1]/span[contains(text(),'Order on JuniperMarket')])[1]"}
+  (Session info: chrome=111.0.5563.66)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'EON-SWAPNILI', ip: '172.22.22.78', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_311'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.66, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64445}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2319eaa05e1c3ac05d0ba53177358b65
+*** Element info: {Using=xpath, value=(//div[@class='imc-section imc-section--width-100-percent']/div[1]/span[contains(text(),'Catalogs')]/../../div[3]/div[1]/a[1]/span[contains(text(),'Order on JuniperMarket')])[1]}
+
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
 	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
@@ -641,6 +873,22 @@ Session ID: a5aa2ee5363b7a7f1e8ed77b281ade80
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 26 more
+
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.TimeoutException -->
@@ -663,6 +911,7 @@ Session ID: a5aa2ee5363b7a7f1e8ed77b281ade80
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest -->
+
         <test-method status="PASS" signature="TS015_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest()[pri:0, instance:atlantamarket_PROD.ExhibitorDigitalShowroom@6eebc39e]" name="TS015_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest" duration-ms="42663" started-at="2023-03-23T17:11:51Z" finished-at="2023-03-23T17:12:33Z">
           <reporter-output>
           </reporter-output>
@@ -794,6 +1043,39 @@ Driver info: driver.version: unknown
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
 	at pageObjects.AtlantaMarket.ATLExhDigiShowroomPage.getheroComponentOrderOnJunperBtn(ATLExhDigiShowroomPage.java:112)
 	at atlantamarket_PROD.ExhibitorDigitalShowroom.TS020_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest(ExhibitorDigitalShowroom.java:949)
+
+        <test-method status="PASS" signature="TS015_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest()[pri:0, instance:lasvegasmarket_UAT.ExhibitorDigitalShowroom@464bee09]" name="TS015_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest" duration-ms="39200" started-at="2023-03-23T13:15:07Z" finished-at="2023-03-23T13:15:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS015_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest -->
+        <test-method status="PASS" signature="TS016_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest()[pri:0, instance:lasvegasmarket_UAT.ExhibitorDigitalShowroom@464bee09]" name="TS016_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest" duration-ms="39822" started-at="2023-03-23T13:15:47Z" finished-at="2023-03-23T13:16:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS016_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest -->
+        <test-method status="PASS" signature="TS017_VerifyExhibitorDigitalEventsComponentTest()[pri:0, instance:lasvegasmarket_UAT.ExhibitorDigitalShowroom@464bee09]" name="TS017_VerifyExhibitorDigitalEventsComponentTest" duration-ms="54732" started-at="2023-03-23T13:16:26Z" finished-at="2023-03-23T13:17:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS017_VerifyExhibitorDigitalEventsComponentTest -->
+        <test-method status="PASS" signature="TS018_VerifyCatalogsSectionForExhibitorTest()[pri:0, instance:lasvegasmarket_UAT.ExhibitorDigitalShowroom@464bee09]" name="TS018_VerifyCatalogsSectionForExhibitorTest" duration-ms="46436" started-at="2023-03-23T13:17:21Z" finished-at="2023-03-23T13:18:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS018_VerifyCatalogsSectionForExhibitorTest -->
+        <test-method status="PASS" signature="TS020_VerifyExhibitorDigitalShowroomShowSpecialsTest()[pri:0, instance:lasvegasmarket_UAT.ExhibitorDigitalShowroom@464bee09]" name="TS020_VerifyExhibitorDigitalShowroomShowSpecialsTest" duration-ms="40970" started-at="2023-03-23T13:18:08Z" finished-at="2023-03-23T13:18:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS020_VerifyExhibitorDigitalShowroomShowSpecialsTest -->
+        <test-method status="FAIL" signature="TS021_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest()[pri:0, instance:lasvegasmarket_UAT.ExhibitorDigitalShowroom@464bee09]" name="TS021_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest" duration-ms="50481" started-at="2023-03-23T13:18:49Z" finished-at="2023-03-23T13:19:39Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div/div/div/div/a/h2 (tried for 30 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div/div/div/div/a/h2 (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.LasVegasMarket.LVMExhLineProdActionsPage.getExhibitorName(LVMExhLineProdActionsPage.java:132)
+	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS021_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest(ExhibitorDigitalShowroom.java:881)
+
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -815,6 +1097,7 @@ Driver info: driver.version: unknown
 	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
 	at org.testng.TestNG.run(TestNG.java:1031)
+
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
@@ -830,18 +1113,59 @@ Driver info: driver.version: unknown
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div/div/div/div/a/h2"}
+  (Session info: chrome=111.0.5563.66)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'EON-SWAPNILI', ip: '172.22.22.78', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_311'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.66, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64445}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2319eaa05e1c3ac05d0ba53177358b65
+*** Element info: {Using=xpath, value=//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div/div/div/div/a/h2}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+
 	... 26 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
+
         </test-method> <!-- TS020_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest -->
         <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.ExhibitorDigitalShowroom@6eebc39e]" name="tearDown" is-config="true" duration-ms="25925" started-at="2023-03-23T17:17:46Z" finished-at="2023-03-23T17:18:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- atlantamarket_PROD.ExhibitorDigitalShowroom -->
+
+        </test-method> <!-- TS021_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_UAT.ExhibitorDigitalShowroom@464bee09]" name="tearDown" is-config="true" duration-ms="2012" started-at="2023-03-23T13:19:39Z" finished-at="2023-03-23T13:19:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- lasvegasmarket_UAT.ExhibitorDigitalShowroom -->
+
+
     </test> <!-- RegressionTest -->
   </suite> <!-- ATLMrkt_RegressionTestSuite -->
 </testng-results>

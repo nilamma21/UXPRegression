@@ -5,6 +5,7 @@
     <classes>
       <class name="atlantamarket_PROD.ExhibitorDigitalShowroom">
         <methods>
+
           <include name="initialize"/>
           <include name="TS020_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest"/>
           <include name="TS010_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest"/>
@@ -20,9 +21,15 @@
           <include name="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest"/>
           <include name="TS011_VerifyEventsOverviewInGlobalSearchTest"/>
           <include name="TS004_VerifyCatalogsOverviewInGlobalSearchTest"/>
+
+          <include name="TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest"/>
+          <include name="TS001_VerifyAddToFavoritesTest"/>
+          <include name="TS012_VerifySeeInOtherMarketsForExhibitorTest"/>
+
           <include name="initialize"/>
           <include name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest"/>
           <include name="tearDown"/>
+          <include name="TS021_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest"/>
         </methods>
       </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
       <class name="atlantamarket_PROD.LineDigitalShowroom">

@@ -528,7 +528,7 @@ public class GlobalSearch_ProductActions extends base {
 			System.out.println("Not present");
 		}
 
-		Assert.assertTrue(atlexhact.getprodName().getText().contains(prodName));
+		Assert.assertTrue(atlmppge.getSavedProductNameInList().getText().contains(prodName));
 		Thread.sleep(10000);
 
 		// Delete that added Product from list
@@ -536,7 +536,7 @@ public class GlobalSearch_ProductActions extends base {
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(8000);
 
-		favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
+		favlist = atlmppge.getFavExhList();
 
 		// Verify that the added Product should be removed from Existing list
 		for (int i = 1; i < favlist.size(); i++) {
