@@ -1,18 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [LVM_RegressionTestSuite]">
+<suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-      <class name="lasvegasmarket_UAT.ExhibitorDigitalShowroom">
+      <class name="atlantamarket_PROD.ExhibitorDigitalShowroom">
         <methods>
+
+          <include name="initialize"/>
+          <include name="TS020_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest"/>
+          <include name="TS010_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest"/>
+          <include name="TS019_VerifyExhibitorDigitalShowroomShowSpecialsTest"/>
+          <include name="TS001_VerifyAddToFavoritesTest"/>
+          <include name="TS005_VerifyClickOnTotalLinesSeeAllLinkForExhibitorTest"/>
+          <include name="TS017_VerifyExhibitorDigitalEventsComponentTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.ExhibitorDigitalShowroom -->
+      <class name="atlantamarket_PROD.GlobalSearch_SearchFor">
+        <methods>
+          <include name="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest"/>
+          <include name="TS011_VerifyEventsOverviewInGlobalSearchTest"/>
+          <include name="TS004_VerifyCatalogsOverviewInGlobalSearchTest"/>
+
           <include name="TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest"/>
           <include name="TS001_VerifyAddToFavoritesTest"/>
           <include name="TS012_VerifySeeInOtherMarketsForExhibitorTest"/>
+
           <include name="initialize"/>
+          <include name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest"/>
           <include name="tearDown"/>
           <include name="TS021_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest"/>
         </methods>
-      </class> <!-- lasvegasmarket_UAT.ExhibitorDigitalShowroom -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
+      <class name="atlantamarket_PROD.LineDigitalShowroom">
+        <methods>
+          <include name="TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest"/>
+          <include name="TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest"/>
+          <include name="TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest"/>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.LineDigitalShowroom -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
-</suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
+</suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->
