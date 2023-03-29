@@ -3,6 +3,10 @@
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
+
+      <class name="lasvegasmarket_PROD.EvenntsAndWebinar">
+        <methods>
+
       <class name="atlantamarket_PROD.ExhibitorDigitalShowroom">
         <methods>
 
@@ -28,9 +32,14 @@
 
           <include name="initialize"/>
           <include name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest"/>
+
           <include name="tearDown"/>
-          <include name="TS021_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest"/>
+          <include name="TS005_VerifyIMCEventsEventDetailstTest"/>
+          <include name="initialize"/>
         </methods>
+
+      </class> <!-- lasvegasmarket_PROD.EvenntsAndWebinar -->
+
       </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
       <class name="atlantamarket_PROD.LineDigitalShowroom">
         <methods>
@@ -41,6 +50,7 @@
           <include name="initialize"/>
         </methods>
       </class> <!-- atlantamarket_PROD.LineDigitalShowroom -->
+
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->

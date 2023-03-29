@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<testng-results skipped="0" failed="1" total="1" passed="0">
+
+
 <testng-results skipped="0" failed="13" total="42" passed="29">
   <reporter-output>
   </reporter-output>
@@ -47,31 +50,67 @@ Session ID: f3d2e2e5e64e8511072ce677f5c4a436
 	at atlantamarket_PROD.GlobalSearch_SearchFor.TS004_VerifyCatalogsOverviewInGlobalSearchTest(GlobalSearch_SearchFor.java:279)
 
 <testng-results skipped="0" failed="4" total="20" passed="16">
+
   <reporter-output>
   </reporter-output>
-
-  <suite name="LVM_RegressionTestSuite" duration-ms="978314" started-at="2023-03-23T07:33:23Z" finished-at="2023-03-23T07:49:41Z">
-
-
-
-
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="120223" started-at="2023-03-22T09:46:37Z" finished-at="2023-03-22T09:48:38Z">
+  <suite name="LVM_RegressionTestSuite" duration-ms="122120" started-at="2023-03-28T12:16:57Z" finished-at="2023-03-28T12:18:59Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="120223" started-at="2023-03-22T09:46:37Z" finished-at="2023-03-22T09:48:38Z">
-      <class name="atlantamarket_PROD.GlobalSearch_ProductActions">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@146ba0ac]" name="initialize" is-config="true" duration-ms="65478" started-at="2023-03-22T15:16:37Z" finished-at="2023-03-22T15:17:43Z">
+    <test name="RegressionTest" duration-ms="122120" started-at="2023-03-28T12:16:57Z" finished-at="2023-03-28T12:18:59Z">
+      <class name="lasvegasmarket_PROD.EvenntsAndWebinar">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@204f30ec]" name="initialize" is-config="true" duration-ms="58851" started-at="2023-03-28T17:46:57Z" finished-at="2023-03-28T17:47:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@146ba0ac]" name="TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest" duration-ms="54711" started-at="2023-03-22T15:17:43Z" finished-at="2023-03-22T15:18:38Z">
+        <test-method status="FAIL" signature="TS005_VerifyIMCEventsEventDetailstTest()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@204f30ec]" name="TS005_VerifyIMCEventsEventDetailstTest" duration-ms="63241" started-at="2023-03-28T17:47:55Z" finished-at="2023-03-28T17:48:59Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at lasvegasmarket_PROD.EvenntsAndWebinar.TS005_VerifyIMCEventsEventDetailstTest(EvenntsAndWebinar.java:449)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@146ba0ac]" name="tearDown" is-config="true" duration-ms="1" started-at="2023-03-22T15:18:38Z" finished-at="2023-03-22T15:18:38Z">
+        </test-method> <!-- TS005_VerifyIMCEventsEventDetailstTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@204f30ec]" name="tearDown" is-config="true" duration-ms="1" started-at="2023-03-28T17:48:59Z" finished-at="2023-03-28T17:48:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
+
+      </class> <!-- lasvegasmarket_PROD.EvenntsAndWebinar -->
+
       </class> <!-- atlantamarket_PROD.GlobalSearch_ProductActions -->
 
   <suite name="LVM_RegressionTestSuite" duration-ms="156228" started-at="2023-03-20T12:25:17Z" finished-at="2023-03-20T12:27:53Z">
@@ -1164,6 +1203,7 @@ Session ID: 2319eaa05e1c3ac05d0ba53177358b65
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- lasvegasmarket_UAT.ExhibitorDigitalShowroom -->
+
 
 
     </test> <!-- RegressionTest -->

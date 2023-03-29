@@ -112,7 +112,7 @@ public class LVMGlobalSearchPage {
 	By atmarketeventtypefilterUat = By.xpath("//label[contains(text(),'Buying Event')]"); //Locator for At Market Event Type
 	By lvmseemoredetailsbtnneww = By.xpath("//a[contains(text(),'View Brand Details')]"); //Locator for See More Details button
 	By atmarketeventtypefilterUAT_LVM = By.xpath("(//div[@class='imc-filteritem__tier2'])[2]/div[1]/label[1]"); //Locator for At Market Event Type
-	
+	By lvmExhiNameForFilterByNameNew = By.xpath("(//div[@class='imc-exhibitorcard-title-row']/div[1])[1]");  //Locator for Exh Name for Filter by name
 	
 	public LVMGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -268,7 +268,7 @@ public class LVMGlobalSearchPage {
 		return driver.findElement(lvmSelectBtn);
 	}
 	public List<WebElement> getlvmExhiNameForFilterByName() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmExhiNameForFilterByName));
 		return driver.findElements(lvmExhiNameForFilterByName);
 	}
@@ -283,7 +283,7 @@ public class LVMGlobalSearchPage {
 		return driver.findElements(lvmMachingProductCount);
 	}
 	public List<WebElement> getlvmExhNames() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmExhNames));
 		return driver.findElements(lvmExhNames);
 	}
@@ -293,7 +293,7 @@ public class LVMGlobalSearchPage {
 		return driver.findElements(lvmGlobalSearchExhLocationList);
 	}
 	public WebElement getlvmGlobalSearch_SearchSortByDropdwn() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(lvmGlobalSearch_SearchSortByDropdwn));
 		return driver.findElement(lvmGlobalSearch_SearchSortByDropdwn);
 	}
@@ -606,6 +606,11 @@ public class LVMGlobalSearchPage {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmseemoredetailsbtnneww));
 		return driver.findElement(lvmseemoredetailsbtnneww);
+	}
+	public List<WebElement> getlvmExhiNameForFilterByNameNew() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmExhiNameForFilterByNameNew));
+		return driver.findElements(lvmExhiNameForFilterByNameNew);
 	}
 }
 

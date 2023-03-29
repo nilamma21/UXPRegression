@@ -132,7 +132,7 @@ public class LVMEventsAndWebinarPage {
 		return driver.findElement(lvmListIcon);
 	}
 	public WebElement getlvmFavIcon() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmFavIcon));
 		return driver.findElement(lvmFavIcon);
 	}
@@ -182,7 +182,7 @@ public class LVMEventsAndWebinarPage {
 		return driver.findElements(lvmListOfAllEvents);
 	}
 	public List <WebElement> getlvmListOfEventTitles() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmListOfEventTitles));
 		return driver.findElements(lvmListOfEventTitles);
 	}

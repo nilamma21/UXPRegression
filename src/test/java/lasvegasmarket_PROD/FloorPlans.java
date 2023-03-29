@@ -279,7 +279,7 @@ public class FloorPlans extends base {
 		Thread.sleep(2000);
 		//Click on Building floorr
 		atlflpp.getATLBuildingFloorForFilter().click();
-		Thread.sleep(5000);
+		Thread.sleep(6000);
 		//Scroll Down to Exhibitor list
 		utl.scrollToElement(atlflpp.getATLSelectBox());
 		Thread.sleep(7000);
@@ -656,7 +656,12 @@ public class FloorPlans extends base {
 
 		//System.out.println(atlmppge.getATLSavedExhNameInList().getText());
 		// Verify that the added favorites exhibitor should be displayed in to Favorites list
-		Assert.assertTrue(atlmppge.getlvmsavedexhnameinlist_uat().getText().contains(exhibitorName));
+		favlist = atlmppge.getFavExhList();
+		for(WebElement nameOfExh : favlist) {
+			Assert.assertTrue(nameOfExh.getText().contains(exhibitorName));
+			break;
+		}
+		//Assert.assertTrue(atlmppge.getlvmsavedexhnameinlist_uat().getText().contains(exhibitorName));//old
 		Thread.sleep(2000);
 		// Delete that favorites exhibitor from list
 		Actions action=new Actions(driver);
