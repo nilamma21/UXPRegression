@@ -4,6 +4,14 @@
   <test name="RegressionTest(failed)">
     <classes>
 
+      <class name="atlantamarket_PROD.EvenntsAndWebinar">
+        <methods>
+          <include name="TS003_VerifyIMCEventsCalendarViewTest"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.EvenntsAndWebinar -->
+
+
       <class name="lasvegasmarket_PROD.EvenntsAndWebinar">
         <methods>
 
@@ -50,6 +58,7 @@
           <include name="initialize"/>
         </methods>
       </class> <!-- atlantamarket_PROD.LineDigitalShowroom -->
+
 
     </classes>
   </test> <!-- RegressionTest(failed) -->
