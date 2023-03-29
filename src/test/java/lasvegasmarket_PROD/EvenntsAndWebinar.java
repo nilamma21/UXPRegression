@@ -248,8 +248,9 @@ public class EvenntsAndWebinar extends base{
 		lvmmpp = new LVMMarketPlannerPage(driver);
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		utl.clickOnEventLinkOfChannel();	
+utl.clickOnEventLinkOfChannel();	
 		
+		Thread.sleep(5000);
 		//Click on IMC Event Tab
 		lvmevents.getlvmImcEventsTab().click();
 		
@@ -299,10 +300,12 @@ public class EvenntsAndWebinar extends base{
 		// Verify Events Location
 		int allEventLocationCount = 0;
 		for (WebElement eventLocation : lvmevents.getlvmListOfAllEventsLocations()) {
+			
 			allEventLocationCount++;
 			Assert.assertTrue(eventLocation.isDisplayed());
 		}
 		System.out.println(allEventLocationCount + " Location displayed");
+		
 		Assert.assertEquals(allEventcount, allEventLocationCount);
 	
 		// Verify Events Image
@@ -330,10 +333,10 @@ public class EvenntsAndWebinar extends base{
 			WebElement eventTitleLink = lvmevents.getlvmListOfEventTitles().get(i);
 			String eventTitle=eventTitleLink.getText();
 			Assert.assertTrue(eventTitleLink.isDisplayed());
-			//eventSeeDetailsLink = lvmevents.lvmlvmListOfAllEventsSeeDetailsLink().get(1);
+			//eventSeeDetailsLink = atlevents.atlatlListOfAllEventsSeeDetailsLink().get(1);
 			eventTitleLink.click();
 			//Verify Event Details Page
-			Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUAT().getText()));
+			Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPage().getText()));
 			Thread.sleep(3000);
 			driver.navigate().back();
 			Thread.sleep(3000);
@@ -341,6 +344,7 @@ public class EvenntsAndWebinar extends base{
 		
 		System.out.println(allEventSeeDetailsLinkCount + " Events Details Page displayed");
 		Assert.assertEquals(allEventcount, allEventSeeDetailsLinkCount1);
+		
 	}
 	
 	@Test(priority = 5)
@@ -415,7 +419,7 @@ public class EvenntsAndWebinar extends base{
 		for (int i = 0; i < lvmevents.getlvmListOfEventTitles().size(); i++) {
 			allEventSeeDetailsLinkCount1++;
 			WebElement eventTitleLink = lvmevents.getlvmListOfEventTitles().get(i);
-		
+		System.out.println(eventTitleLink);
 			eventTitleLink.click();
 			// Verify Event Details Page
 			
@@ -492,7 +496,7 @@ public class EvenntsAndWebinar extends base{
 		Assert.assertTrue(lvmmpp.getLVMSavedExhNameInList().getText().contains(eventTitle));
 
 		// Delete that favorites exhibitor from list
-		lvmmpp.getLVMEditListItemMoreBtn().click();
+		lvmmpp.getATLEditListItemMoreBtnNew().click();
 		lvmmpp.getLVMEditListItemDeleteOptn().click();
 		Thread.sleep(6000);
 
@@ -1241,7 +1245,7 @@ public class EvenntsAndWebinar extends base{
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 
 }

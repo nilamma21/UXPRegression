@@ -8,6 +8,7 @@
 		<test thread-count="5" name="RegressionTest">
 		<classes>
 
+<<<<<<< HEAD
 
 
 
@@ -28,6 +29,13 @@
 				</methods> -->
 
 
+=======
+			<class name="lasvegasmarket_PROD.EvenntsAndWebinar" /> 
+				<methods>
+				        <include name="TS005_VerifyIMCEventsEventDetailstTest()"/>   
+				</methods>
+
+>>>>>>> 9f79caf2d6a385b52fa3b81e7b85be4d7e678903
 		</classes>
 	</test>
 </suite>
