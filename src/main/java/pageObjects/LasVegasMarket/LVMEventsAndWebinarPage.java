@@ -58,13 +58,40 @@ public class LVMEventsAndWebinarPage {
 	By lvmCalendarIconUAT = By.xpath("//div[@class='imc-eventdetail--text-container']//span[2]/a[1]"); //Locator for Calendar Icon
 	By lvmListOfCalendarDates = By.xpath("//button[@style='flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;']"); //Locator for Calendar Icon
 	
+	By lvmListOfAllWeekDay = By.xpath("//button[@class='react-calendar__tile react-calendar__month-view__days__day react-calendar--no-event']/abbr"); //Locator for All Weekdays
+	
+	By lvmListOfAllEventsDay = By.xpath("//button[@class='react-calendar__tile react-calendar__tile--now react-calendar__month-view__days__day']/abbr"); //Locator for All Events days
+	
+	By lvmCurrentDate = By.xpath("//button[@class='react-calendar__tile react-calendar__tile--now react-calendar__tile--active react-calendar__tile--range react-calendar__tile--rangeStart react-calendar__tile--rangeEnd react-calendar__tile--rangeBothEnds react-calendar__month-view__days__day']/abbr"); //Locator for All Events days
+	
+	
 	//div[@class='event-card--info']/div[1]/div[1]/a[1]/p[1]
+	//button[@class='react-calendar__tile react-calendar__tile--now react-calendar__month-view__days__day react-calendar--no-event']/abbr
 	
 	public LVMEventsAndWebinarPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	}
-	
+	public WebElement getlvmCurrentDate() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmCurrentDate));
+		return driver.findElement(lvmCurrentDate);
+	}
+	public WebElement getlvmListOfAllEventsDay() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmListOfAllEventsDay));
+		return driver.findElement(lvmListOfAllEventsDay);
+	}
+	public List <WebElement> getlvmListOfAllEventsDays() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmListOfAllEventsDay));
+		return driver.findElements(lvmListOfAllEventsDay);
+	}
+	public List <WebElement> getlvmListOfAllWeekDay() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmListOfAllWeekDay));
+		return driver.findElements(lvmListOfAllWeekDay);
+	}
 	public List <WebElement> getlvmListOfCalendarDates() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmListOfCalendarDates));

@@ -739,13 +739,25 @@ utl.clickOnEventLinkOfChannel();
 		String d = dtf.format(localDate);
 		System.out.println("Current Date ::" + dtf.format(localDate));
 		
-		Assert.assertTrue(d.contains(lvmevents.getlvmTodaysDate().getText()));
+		String Cdate = d.split("")[0].trim();
+		String Cdate2 = d.split("")[1].trim();
+		
+		String exactDate=Cdate.concat(Cdate2);
+		try {
+		Assert.assertTrue(exactDate.contains(lvmevents.getlvmTodaysDate().getText()));
 		System.out.println("Current Date "+lvmevents.getlvmTodaysDate().getText()+" is Heighlighted");
+		}catch (Exception e) {
+			// TODO: handle exception
+			Assert.assertTrue(exactDate.contains(lvmevents.getlvmListOfAllEventsDay().getText()));
+			System.out.println("Current Date "+lvmevents.getlvmListOfAllEventsDay().getText()+" is Heighlighted");
+		}
+		
+	
 		
 		//Current Month
 		DateTimeFormatter month = DateTimeFormatter.ofPattern("MMM");
 		LocalDate localMonth = LocalDate.now();
-		LocalDate prevMonth= localMonth.minusMonths(1);		
+		LocalDate prevMonth= localMonth.minusMonths(2);		
 				
 		String m = month.format(localMonth);//current month
 		String mm = month.format(prevMonth);//previous month
@@ -754,6 +766,7 @@ utl.clickOnEventLinkOfChannel();
 		System.out.println("Previous Month ::" +mm );
 		
 		//Click on Calendar Prev Btn
+		lvmevents.getlvmCalendarPrevMonth().click();
 		lvmevents.getlvmCalendarPrevMonth().click();
 		System.out.println("Previous Month From Calendar ::"+lvmevents.getlvmSelectMonth().getText());
 		Assert.assertTrue(lvmevents.getlvmSelectMonth().getText().contains(mm));
@@ -766,8 +779,14 @@ utl.clickOnEventLinkOfChannel();
 			
 			if(lvmevents.getlvmSelectMonth().getText().contains(EventmonthAndYear))
 			{
+				try {
 				utl.selectFilters(lvmevents.getlvmListOfEventDate(), replaceDate);
 				break;
+				}catch (Exception e) {
+					// TODO: handle exception
+				utl.selectFilters(lvmevents.getlvmListOfAllEventsDays(), replaceDate);
+					break;
+				}
 			}
 		}
 		// Verify Event is selected by datepicker
@@ -777,7 +796,15 @@ utl.clickOnEventLinkOfChannel();
 		//Click on Reset Btn
 		lvmevents.getlvmResetBtn().click();
 		//Verify Current date and month should selected by default
-		Assert.assertTrue(d.contains(lvmevents.getlvmTodaysDate().getText()));
+		//Assert.assertTrue(d.contains(lvmevents.getlvmTodaysDate().getText()));
+		try {
+			Assert.assertTrue(exactDate.contains(lvmevents.getlvmTodaysDate().getText()));
+			System.out.println("Current Date "+lvmevents.getlvmTodaysDate().getText()+" is Heighlighted");
+			}catch (Exception e) {
+				// TODO: handle exception
+				Assert.assertTrue(exactDate.contains(lvmevents.getlvmListOfAllEventsDay().getText()));
+				System.out.println("Current Date "+lvmevents.getlvmListOfAllEventsDay().getText()+" is Heighlighted");
+			}
 		System.out.println("By Default "+d +" today's date is selected.");
 		Thread.sleep(4000);
 	}

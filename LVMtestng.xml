@@ -3,39 +3,19 @@
 
 <suite name="LVM_RegressionTestSuite">
 	<listners>
-		<listner class-name="atlantamarket_PROD.TestListeners" />
+		<listner class-name="lasvegasmarket_PROD.TestListeners" />
 	</listners>
 		<test thread-count="5" name="RegressionTest">
 		<classes>
 
-<<<<<<< HEAD
-
-
-
-
-			<class name="atlantamarket_PROD.EvenntsAndWebinar" /> 
+		<class name="lasvegasmarket_PROD.EvenntsAndWebinar" /> 
 				<methods>
-				     <include name="TS012_VerifyExhibitorEventsDetailstTest"/> 
+				     <include name="TS010_VerifyExhibitorEventsCalendarViewTest"/> 
 				</methods>
 
 
+			
 
-		
-
-
-			<!-- <class name="lasvegasmarket_UAT.GlobalSearch_SearchFor" /> 
-			 	<methods>
-				    <include name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest"/> 
-				</methods> -->
-
-
-=======
-			<class name="lasvegasmarket_PROD.EvenntsAndWebinar" /> 
-				<methods>
-				        <include name="TS005_VerifyIMCEventsEventDetailstTest()"/>   
-				</methods>
-
->>>>>>> 9f79caf2d6a385b52fa3b81e7b85be4d7e678903
 		</classes>
 	</test>
 </suite>
