@@ -22,7 +22,7 @@ public class LVMMarketPlannerPage {
 	By moreBtnDeleteOptnExistingList_LVMPROD = By.xpath("//div[@class='imc-loading-relative']/div[3]/li[1]/div[1]/div[1]/div[4]/div[1]/button[1]"); //Locator for Delete Option of 1st list item
 	By moreBtnDeleteOptn_LVMPROD = By.xpath("//div[@class='imc-gallery__item imc-vertical-tabs-content']/div[1]/div[3]/li[1]/div[1]/div[1]/div[4]/div[1]/button[1]"); //Locator for Delete Option of 1st list item
 	By moreBtnDeleteOptn_lvmUAT = By.xpath("(//li[@class=\"imc-list-edit--draggable\"])[1]/div/div[1]/div[4]/div/button"); //Locator for Delete Option of 1st list item
-	By editlistitemdeleteoptn = By.xpath("//li[@class='imc-list-edit--draggable'][1]/div/div/div[4]/div/div/span[3]/a"); //Locator for Delete Option of 1st list item
+	By editlistitemdeleteoptn = By.xpath("//a[contains(text(),'Delete')]"); //Locator for Delete Option of 1st list item
 	By createnewlistnametxtbx = By.xpath("//input[@name='listName']"); //Locator for List name text field on Create new list modal
 	By newlistmodalcreatebtn = By.xpath("(//input[@type='submit'])[position()=2]"); //Locator for Create btn on Create new list modal
 	By newlistmodalcreatebtn_LvmUAT = By.xpath("(//input[@type='submit'])[position()=3]"); //Locator for Create btn on Create new list modal LVM UAT
@@ -220,8 +220,9 @@ public class LVMMarketPlannerPage {
 	
 	By listOfAllEventsInMPList = By.xpath("//li[@class='imc-list-edit--draggable'][1]/div/div[3]/div/div/div[1]/div[2]/a[1]"); //list of all events from MP list
 	By EventsInMPList = By.xpath("(//div[@class='imc-saved-exhibitors__contentItems__col1']/div[2]/a)[1]"); //list of all events from MP list
-	
-	
+	By editlistitemmorebtnnew = By.xpath("//button[@class='imc-hover-menu__dropbtn imc-content--delta']");//Edit list button
+	By editlistitemdeleteoptnnew = By.xpath("//li[@class='imc-list-edit--draggable'][1]/div/div/div[4]/div/div/span[3]/a"); //Locator for Delete Option of 1st list item
+
 	
 	
 	public LVMMarketPlannerPage(WebDriver driver) {
@@ -490,7 +491,7 @@ public class LVMMarketPlannerPage {
 		return driver.findElement(editlistpage);
 	}
 	public WebElement getLVMSavedExhNameInList() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(savedexhnameinlist));
 		return driver.findElement(savedexhnameinlist);
 	}
@@ -525,7 +526,7 @@ public class LVMMarketPlannerPage {
 		return driver.findElement(mphomeliststab);
 	}
 	public WebElement getListsPageListsMenu() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(listspagelistsmenu));
 		return driver.findElement(listspagelistsmenu);
 	}
@@ -1270,8 +1271,16 @@ public class LVMMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(createandaddaistbtn));
 		return driver.findElement(createandaddaistbtn);
 	}
-	
-	
+	public WebElement getATLEditListItemMoreBtnNew() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(editlistitemmorebtnnew));
+		return driver.findElement(editlistitemmorebtnnew);
+	}
+	public WebElement getATLEditListItemDeleteOptnNew() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(editlistitemdeleteoptnnew));
+		return driver.findElement(editlistitemdeleteoptnnew);
+	}
 }
 
 

@@ -597,6 +597,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		//Select Fashion Accessories/Jewelry prod category
 		String expectedprodcatg = lvmleftpane.getLVMFashionAccProdCatg().getText();
+		System.out.println(expectedprodcatg);
 		lvmleftpane.getLVMFashionAccProdCatg().click();
 		Thread.sleep(8000);
 
@@ -672,6 +673,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		//Select Floral / Botanicals prod category
 		String expectedprodcatg = lvmleftpane.getLVMFloralBotanicalsProdCatg().getText();
+		System.out.println(expectedprodcatg);
 		lvmleftpane.getLVMFloralBotanicalsProdCatg().click();
 		Thread.sleep(8000);
 
@@ -756,7 +758,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 	 
 }

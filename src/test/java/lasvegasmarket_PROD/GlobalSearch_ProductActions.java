@@ -332,8 +332,13 @@ public class GlobalSearch_ProductActions extends base {
 
 		// Verify that the added Product should be displayed in to Favorites list
 		Assert.assertTrue(atlmppge.getSavedProductNameInList().getText().contains(productNameOnSearchGrid));
-		utl.checkItemPresentInListorNot(atlmppge.getmpListOfAllProds(), productNameOnSearchGrid);
-
+		utl.checkItemPresentInListorNot(atlmppge.getFavListProducts(), productNameOnSearchGrid);
+		/*favlist = atlmppge.getFavExhList();
+		for(WebElement nameOfExh : favlist) {
+			Assert.assertTrue(nameOfExh.getText().contains(productNameOnSearchGrid));
+			break;
+		}*/
+		
 		// Delete that favorited product from list
 		Thread.sleep(3000);
 		atlmppge.getMoreBtnDeleteOptnExistingList_ATLPROD().click();

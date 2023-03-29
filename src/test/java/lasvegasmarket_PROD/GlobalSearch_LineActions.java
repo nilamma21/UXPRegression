@@ -179,7 +179,7 @@ public class GlobalSearch_LineActions extends base {
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("searchjuniperline_lvmuat"));
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor6"));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);

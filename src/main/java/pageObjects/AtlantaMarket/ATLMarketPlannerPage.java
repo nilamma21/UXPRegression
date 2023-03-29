@@ -20,7 +20,7 @@ public class ATLMarketPlannerPage {
 	By lvmsavedexhnameinlist_uat = By.xpath("//li[@class='imc-list-edit--draggable'][1]/div/div[1]/div[1]/a"); //Locator for Saved Exhibitor name in list
 	By editlistitemmorebtn = By.xpath("//div[@class='imc-loading-relative']"); //Locator for More button of  list item
 	By moreBtnDeleteOptnExistingList_ATLPROD = By.xpath("//div[@class='imc-loading-relative']/div[3]/li[1]/div[1]/div[1]/div[4]/div[1]/button[1]"); //Locator for Delete Option of 1st list item
-	By editlistitemmorebtnnew = By.xpath("//button[@class='imc-hover-menu__dropbtn imc-content--delta']");
+	By editlistitemmorebtnnew = By.xpath("//button[@class='imc-hover-menu__dropbtn imc-content--delta']");//Edit list button
 	By moreBtnDeleteOptn_ATLPROD = By.xpath("//div[@class='imc-gallery__item imc-vertical-tabs-content']/div[1]/div[3]/li[1]/div[1]/div[1]/div[4]/div[1]/button[1]"); //Locator for Delete Option of 1st list item
 	By moreBtnDeleteOptn_lvmUAT = By.xpath("(//li[@class=\"imc-list-edit--draggable\"])[1]/div/div[1]/div[4]/div/button"); //Locator for Delete Option of 1st list item
 	By editlistitemdeleteoptn = By.xpath("//li[@class='imc-list-edit--draggable'][1]/div/div/div[4]/div/div/span[3]/a"); //Locator for Delete Option of 1st list item
@@ -266,7 +266,7 @@ public class ATLMarketPlannerPage {
 	By moreOptionUAT_LVM = By.xpath("//div[@class='imc-loading-relative']/div[3]/li[1]/div[1]/div[1]/div[3]/div[1]");//More Option LVM
 	By moreOptionDeleteBtnUAT_LVM = By.xpath("//div[@class='imc-gallery__item imc-vertical-tabs-content']/div[1]/div[3]/li[1]/div[1]/div[1]/div[3]/div[1]/div[1]/span[3]/a[1]");//More Option Delete LVM
 	By moreEventOptionDeleteBtnUAT_LVM = By.xpath("(//div[@class='imc-market-planner-list--item-header'])[1]/div[3]/div[1]/div[1]/span[3]/a[1]");//More Option Delete LVM
-	
+	By favlistproducts = By.xpath("//div[@class='imc-saved-exhibitors__contentItems']/div/div/div/div/span");
 	
 	public ATLMarketPlannerPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -623,7 +623,7 @@ public class ATLMarketPlannerPage {
 		return driver.findElement(editlistitemmorebtnnew);
 	}
 	public WebElement getATLEditListItemDeleteOptn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(editlistitemdeleteoptn));
 		return driver.findElement(editlistitemdeleteoptn);
 	}
@@ -1053,7 +1053,7 @@ public class ATLMarketPlannerPage {
 		return driver.findElement(moreBtnDeleteOptn_ATLPROD);
 	}
 	public WebElement getMoreBtnDeleteOptnExistingList_ATLPROD() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(moreBtnDeleteOptnExistingList_ATLPROD));
 		return driver.findElement(moreBtnDeleteOptnExistingList_ATLPROD);
 	}
@@ -1421,7 +1421,11 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(favexhlist));
 		return driver.findElements(favexhlist);
 	}
-	
+	public List<WebElement> getFavListProducts() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(favlistproducts));
+		return driver.findElements(favlistproducts);
+	}
 }
 
 
