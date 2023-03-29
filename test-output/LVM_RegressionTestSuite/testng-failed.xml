@@ -5,8 +5,9 @@
     <classes>
       <class name="lasvegasmarket_PROD.EvenntsAndWebinar">
         <methods>
-          <include name="TS010_VerifyExhibitorEventsCalendarViewTest"/>
+          <include name="TS012_VerifyExhibitorEventsDetailstTest"/>
           <include name="tearDown"/>
+          <include name="TS005_VerifyIMCEventsEventDetailstTest"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- lasvegasmarket_PROD.EvenntsAndWebinar -->
