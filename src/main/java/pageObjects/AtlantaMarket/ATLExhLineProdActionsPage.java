@@ -294,7 +294,7 @@ public class ATLExhLineProdActionsPage extends base{
 		return driver.findElement(noteforanexhibitormodal);
 	}
 	public WebElement getDeleteNoteBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(deletenotebtn));
 		return driver.findElement(deletenotebtn);
 	}
