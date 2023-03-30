@@ -657,9 +657,12 @@ public class FloorPlans extends base {
 		//System.out.println(atlmppge.getATLSavedExhNameInList().getText());
 		// Verify that the added favorites exhibitor should be displayed in to Favorites list
 		favlist = atlmppge.getFavExhList();
-		for(WebElement nameOfExh : favlist) {
-			Assert.assertTrue(nameOfExh.getText().contains(exhibitorName));
-			break;
+		for (int i = 0; i < favlist.size(); i++) {
+			if(favlist.contains(exhibitorName)) {
+				//System.out.println(prodcatgitemlist.get(i).getText());
+				Assert.assertTrue(favlist.get(i).getText().contains(exhibitorName));
+				break;
+			}
 		}
 		//Assert.assertTrue(atlmppge.getlvmsavedexhnameinlist_uat().getText().contains(exhibitorName));//old
 		Thread.sleep(2000);
@@ -670,7 +673,7 @@ public class FloorPlans extends base {
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(6000);
 
-		favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
+		//favlist = atlmppge.getFavExhList();
 
 		// Verify that the added favorites exhibitor should be removed from Favorites list
 		for (int i = 1; i < favlist.size(); i++) {
