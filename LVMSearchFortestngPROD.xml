@@ -4,7 +4,7 @@
 <suite name="ATLMrkt_RegressionTestSuite">
 
 	<listners>
-		<listner class-name="lasvegasmarket_UAT.TestListeners" />
+		<listner class-name="lasvegasmarket_PROD.TestListeners" />
 	</listners>
 	<test thread-count="1" name="RegressionSequentialTest" >
 		<classes>
