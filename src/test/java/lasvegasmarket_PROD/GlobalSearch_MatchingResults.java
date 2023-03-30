@@ -282,13 +282,15 @@ public class GlobalSearch_MatchingResults extends base {
 		Select selectLetter = new Select(lvmgs.getlvmFilterByNameDropDown());
 		selectLetter.selectByVisibleText("P");
 		Thread.sleep(8000);
-		for (WebElement filterExhNames : lvmgs.getlvmExhiNameForFilterByName()) {
+		for (WebElement filterExhNames : lvmgs.getlvmExhiNameForFilterByNameNew()) {
 			//Assert.assertTrue(filterExhNames.isDisplayed());
 			
 			String expName=filterExhNames.getText();
+			System.out.println(expName);
 			boolean flag=false;
 			char fChar=expName.charAt(0);
 			String s=""+fChar;
+			System.out.println(s);
 			Assert.assertTrue(s.contains("P"));
 		}
 		System.out.println("Displayed All Relevance ");

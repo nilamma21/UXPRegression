@@ -143,8 +143,10 @@ public class ExhibitorDigitalShowroom extends base {
 		Assert.assertTrue(lvmmpp.getLVMSavedExhNameInList().getText().contains(exhname));
 
 		// Delete that added exhibitor from list
-		lvmmpp.getMoreBtnDeleteOptnExistingList_LVMPROD().click();
-		lvmmpp.getLVMEditListItemDeleteOptn().click();
+		//lvmmpp.getMoreBtnDeleteOptnExistingList_LVMPROD().click();//old
+		//lvmmpp.getLVMEditListItemDeleteOptn().click();//old
+		lvmmpp.getMoreBtnDeleteOptn_lvmUAT().click();//new
+		lvmmpp.getATLEditListItemDeleteOptnNew().click();//new
 		Thread.sleep(8000);
 
 		favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
@@ -839,7 +841,7 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmevents=new LVMEventsAndWebinarPage(driver);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputforShowSpecials")));
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor6")));//globalsearchinputforShowSpecials
 		Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(15000);

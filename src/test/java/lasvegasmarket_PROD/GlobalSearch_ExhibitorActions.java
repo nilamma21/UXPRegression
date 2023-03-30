@@ -95,8 +95,10 @@ public class GlobalSearch_ExhibitorActions extends base {
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 
 		// Delete that favorites exhibitor from list
-		atlmppge.getATLEditListItemMoreBtn().click();
-		atlmppge.getATLEditListItemDeleteOptn().click();
+		//atlmppge.getATLEditListItemMoreBtn().click();//Old
+		//atlmppge.getATLEditListItemDeleteOptn().click();//old
+		atlmppge.getMoreBtnDeleteOptnExistingList_ATLPROD().click();//new
+		atlmppge.getATLEditListItemDeleteOptn().click();//new
 		Thread.sleep(6000);
 
 		favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));

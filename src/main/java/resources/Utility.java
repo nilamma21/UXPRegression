@@ -456,6 +456,7 @@ public class Utility extends base {
 		}
 		else {
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			Thread.sleep(2000);
 			atlevents.getatlExploreMarketTab().click();  //For LVM Events
 			Thread.sleep(2000);
 			//click on Events Link

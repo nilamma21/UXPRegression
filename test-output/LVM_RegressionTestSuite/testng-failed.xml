@@ -3,16 +3,14 @@
 <suite name="Failed suite [LVM_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-      <class name="lasvegasmarket_UAT.ExhibitorDigitalShowroom">
+      <class name="lasvegasmarket_PROD.EvenntsAndWebinar">
         <methods>
-          <include name="TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest"/>
-          <include name="TS001_VerifyAddToFavoritesTest"/>
-          <include name="TS012_VerifySeeInOtherMarketsForExhibitorTest"/>
-          <include name="initialize"/>
+          <include name="TS012_VerifyExhibitorEventsDetailstTest"/>
           <include name="tearDown"/>
-          <include name="TS021_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest"/>
+          <include name="TS005_VerifyIMCEventsEventDetailstTest"/>
+          <include name="initialize"/>
         </methods>
-      </class> <!-- lasvegasmarket_UAT.ExhibitorDigitalShowroom -->
+      </class> <!-- lasvegasmarket_PROD.EvenntsAndWebinar -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
