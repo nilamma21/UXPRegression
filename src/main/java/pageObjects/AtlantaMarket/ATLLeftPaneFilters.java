@@ -21,8 +21,8 @@ public class ATLLeftPaneFilters {
 	By stylesexpandbtn = By.xpath("//a[@aria-label='Styles']"); ////Locator for Styles expand btn
 	By industrialstyle = By.xpath("//label[contains(text(),'Industrial')]"); //Locator for Industrial Styles
 	By expexhdropdown = By.xpath("//div[contains(@class,'DropDown_dropdown')]"); //Locator for Exhibitor association drop down in EXP
-	By imcexhnameinexp = By.xpath("//a[contains(text(),'IMC test company')]"); //Locator for IMC Test Company exhibitor in EXP
-	By expdidgitalshowroomtab  = By.xpath("//button[contains(text(),'Your Digital Showroom')]"); //Locator for EXP Digi Showroom tab
+	By imcexhnameinexp = By.xpath("//span[contains(text(),'IMC test company')]"); //Locator for IMC Test Company exhibitor in EXP
+	By expdidgitalshowroomtab  = By.xpath("//span[contains(text(),'Your Digital Showroom')]"); //Locator for EXP Digi Showroom tab
 	By expprofileinfomenu = By.xpath("//a[contains(text(),'Profile Info')]"); //Locator for EXP Profile Info menu
 	By expproductcategsectn = By.xpath("//h3[contains(text(),'Product Categories')]"); //Locator for Products Categories section title in EXP
 	By expcoastalstyleonprofile = By.xpath("//span[contains(@class,'EPUpdateExhibitorProfile_categoriesList') and text()='Coastal']"); //Locator for Industrial Style on Profile

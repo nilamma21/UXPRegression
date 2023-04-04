@@ -1,25 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="LVM_RegressionTestSuite" duration-ms="95009" started-at="2023-03-30T11:50:08Z" finished-at="2023-03-30T11:51:43Z">
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="227212" started-at="2023-04-03T12:53:09Z" finished-at="2023-04-03T12:56:56Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="95009" started-at="2023-03-30T11:50:08Z" finished-at="2023-03-30T11:51:43Z">
-      <class name="lasvegasmarket_PROD.FloorPlans">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_PROD.FloorPlans@146ba0ac]" name="initialize" is-config="true" duration-ms="55999" started-at="2023-03-30T17:20:08Z" finished-at="2023-03-30T17:21:04Z">
+    <test name="RegressionTest" duration-ms="227212" started-at="2023-04-03T12:53:09Z" finished-at="2023-04-03T12:56:56Z">
+      <class name="atlantamarket_PROD.MarketPlanner">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.MarketPlanner@f6c48ac]" name="initialize" is-config="true" duration-ms="72588" started-at="2023-04-03T18:23:09Z" finished-at="2023-04-03T18:24:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest()[pri:0, instance:lasvegasmarket_PROD.FloorPlans@146ba0ac]" name="TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest" duration-ms="38987" started-at="2023-03-30T17:21:04Z" finished-at="2023-03-30T17:21:43Z">
+        <test-method status="FAIL" signature="TS022_VerifyListDisplayControlsFunctionalityTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@f6c48ac]" name="TS022_VerifyListDisplayControlsFunctionalityTest" duration-ms="153513" started-at="2023-04-03T18:24:22Z" finished-at="2023-04-03T18:26:55Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at resources.Utility.checkItemPresentInListorNot(Utility.java:173)
+	at atlantamarket_PROD.MarketPlanner.TS022_VerifyListDisplayControlsFunctionalityTest(MarketPlanner.java:1180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_PROD.FloorPlans@146ba0ac]" name="tearDown" is-config="true" duration-ms="1" started-at="2023-03-30T17:21:43Z" finished-at="2023-03-30T17:21:43Z">
+        </test-method> <!-- TS022_VerifyListDisplayControlsFunctionalityTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.MarketPlanner@f6c48ac]" name="tearDown" is-config="true" duration-ms="2" started-at="2023-04-03T18:26:56Z" finished-at="2023-04-03T18:26:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- lasvegasmarket_PROD.FloorPlans -->
+      </class> <!-- atlantamarket_PROD.MarketPlanner -->
     </test> <!-- RegressionTest -->
-  </suite> <!-- LVM_RegressionTestSuite -->
+  </suite> <!-- ATLMrkt_RegressionTestSuite -->
 </testng-results>
