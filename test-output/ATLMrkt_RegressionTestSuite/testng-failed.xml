@@ -3,57 +3,13 @@
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-
-      <class name="atlantamarket_PROD.EvenntsAndWebinar">
-        <methods>
-          <include name="TS014_VerifyExhibitorEventsAddToListTest"/>
-          <include name="TS013_VerifyExhibitorEventsAddToFavoriteTest"/>
-          <include name="TS015_VerifyExhibitorEventsAddNoteTest"/>
-          <include name="TS005_VerifyIMCEventsEventDetailstTest"/>
-          <include name="TS002_VerifyIMCEventsSearchbarTest"/>
-          <include name="initialize"/>
-          <include name="TS004_VerifyIMCEventsEventsListTest"/>
-          <include name="TS011_VerifyExhibitorEventsListTest"/>
-          <include name="TS006_VerifyIMCEventsAddToFavoriteTest"/>
-          <include name="TS001_VerifyEventsAndWebinarsOverviewTest"/>
-          <include name="TS003_VerifyIMCEventsCalendarViewTest"/>
-          <include name="TS008_VerifyIMCEventsAddNoteTest"/>
-          <include name="TS007_VerifyIMCEventsAddToListTest"/>
-        </methods>
-      </class> <!-- atlantamarket_PROD.EvenntsAndWebinar -->
-
-      <class name="atlantamarket_PROD.ExhibitorDigitalShowroom">
+      <class name="atlantamarket_PROD.MarketPlanner">
         <methods>
           <include name="initialize"/>
-          <include name="TS020_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest"/>
-          <include name="TS010_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest"/>
-          <include name="TS019_VerifyExhibitorDigitalShowroomShowSpecialsTest"/>
-          <include name="TS001_VerifyAddToFavoritesTest"/>
-          <include name="TS005_VerifyClickOnTotalLinesSeeAllLinkForExhibitorTest"/>
-          <include name="TS017_VerifyExhibitorDigitalEventsComponentTest"/>
+          <include name="TS022_VerifyListDisplayControlsFunctionalityTest"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- atlantamarket_PROD.ExhibitorDigitalShowroom -->
-      <class name="atlantamarket_PROD.GlobalSearch_SearchFor">
-        <methods>
-          <include name="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest"/>
-          <include name="TS011_VerifyEventsOverviewInGlobalSearchTest"/>
-          <include name="TS004_VerifyCatalogsOverviewInGlobalSearchTest"/>
-          <include name="initialize"/>
-          <include name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
-      <class name="atlantamarket_PROD.LineDigitalShowroom">
-        <methods>
-          <include name="TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest"/>
-          <include name="TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest"/>
-          <include name="TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest"/>
-          <include name="tearDown"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- atlantamarket_PROD.LineDigitalShowroom -->
-
+      </class> <!-- atlantamarket_PROD.MarketPlanner -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->

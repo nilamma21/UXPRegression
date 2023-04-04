@@ -108,6 +108,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(6000);
 
+		favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
 		//Verify that the added favorites exhibitor should be removed from Favorites list
 		for(int i=1; i< favlist.size(); i++)
 		{			
