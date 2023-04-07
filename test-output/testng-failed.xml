@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [LVM_RegressionTestSuite]">
+<suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
+
       <class name="lasvegasmarket_PROD.ExhibitorDigitalShowroom">
         <methods>
           <include name="tearDown"/>
@@ -10,6 +11,15 @@
           <include name="TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest"/>
         </methods>
       </class> <!-- lasvegasmarket_PROD.ExhibitorDigitalShowroom -->
+
+      <class name="atlantamarket_PROD.ShowSpecials">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+          <include name="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.ShowSpecials -->
+
     </classes>
   </test> <!-- RegressionTest(failed) -->
-</suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
+</suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->

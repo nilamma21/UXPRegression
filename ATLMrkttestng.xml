@@ -6,6 +6,7 @@
 		<listner class-name="atlantamarket_PROD.TestListeners" />
 	</listners>
 	<test thread-count="5" name="RegressionTest">
+
 		<classes>
 
 
@@ -25,6 +26,9 @@
 			<class name="atlantamarket_PROD.GlobalSearch_SearchFor"/>
 			<class name="atlantamarket_PROD.EvenntsAndWebinar" />
 			<class name="atlantamarket_PROD.ExhibitorDigitalShowroom" />
+
+		<classes>		
+
 			<class name="atlantamarket_PROD.FloorPlans" />
 			<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters" />
@@ -33,27 +37,15 @@
 			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
 			<class name="atlantamarket_PROD.ShowSpecials" />
-			<class name="atlantamarket_PROD.MarketPlanner"/>
-			<class name="atlantamarket_PROD.GlobalSearch_MatchingResults" />
-			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
-			<class name="atlantamarket_PROD.GlobalSearch_LineActions" /> 
+			<class name="atlantamarket_PROD.MarketPlanner" />
 			<class name="atlantamarket_PROD.EvenntsAndWebinar" />
-			<class name="atlantamarket_PROD.MarketPlanner"/>
-			 <class name="atlantamarket_PROD.EvenntsAndWebinar" />
-			 <class name="atlantamarket_PROD.ExhibitorDigitalShowroom" />
-			 <class name="atlantamarket_PROD.EvenntsAndWebinar" /> -->
-
+			<class name="atlantamarket_PROD.ExhibitorDigitalShowroom" />
+			<class name="atlantamarket_PROD.LineDigitalShowroom" />
+			<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
 		</classes>
 	</test>
 </suite>
 
-<!-- <suite name="ATLMrkt_RegressionTestSuite">
-	<listners>
-		<listner class-name="atlantamarket_UAT.TestListeners" />
-	</listners>
-	<test thread-count="5" name="RegressionTest">
-		<classes>
-			<class name="atlantamarket_UAT.MarketPlanner" />
-		</classes>
-	</test>
-</suite> -->
+<!-- <suite name="ATLMrkt_RegressionTestSuite"> <listners> <listner class-name="atlantamarket_UAT.TestListeners" 
+	/> </listners> <test thread-count="5" name="RegressionTest"> <classes> <class 
+	name="atlantamarket_UAT.MarketPlanner" /> </classes> </test> </suite> -->
