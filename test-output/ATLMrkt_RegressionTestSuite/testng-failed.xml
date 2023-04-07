@@ -3,57 +3,63 @@
 <suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-
-      <class name="atlantamarket_PROD.EvenntsAndWebinar">
+      <class name="atlantamarket_PROD.LineDigitalShowroom">
         <methods>
-          <include name="TS014_VerifyExhibitorEventsAddToListTest"/>
-          <include name="TS013_VerifyExhibitorEventsAddToFavoriteTest"/>
-          <include name="TS015_VerifyExhibitorEventsAddNoteTest"/>
-          <include name="TS005_VerifyIMCEventsEventDetailstTest"/>
-          <include name="TS002_VerifyIMCEventsSearchbarTest"/>
+          <include name="TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest"/>
+          <include name="TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest"/>
+          <include name="TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest"/>
+          <include name="TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest"/>
+          <include name="TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest"/>
+          <include name="TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest"/>
+          <include name="TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest"/>
+          <include name="TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest"/>
+          <include name="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest"/>
+          <include name="TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest"/>
           <include name="initialize"/>
-          <include name="TS004_VerifyIMCEventsEventsListTest"/>
-          <include name="TS011_VerifyExhibitorEventsListTest"/>
-          <include name="TS006_VerifyIMCEventsAddToFavoriteTest"/>
-          <include name="TS001_VerifyEventsAndWebinarsOverviewTest"/>
-          <include name="TS003_VerifyIMCEventsCalendarViewTest"/>
-          <include name="TS008_VerifyIMCEventsAddNoteTest"/>
-          <include name="TS007_VerifyIMCEventsAddToListTest"/>
+          <include name="TS008_VerifyLineDigitalShowroomProductscomponentTest"/>
         </methods>
-      </class> <!-- atlantamarket_PROD.EvenntsAndWebinar -->
-
+      </class> <!-- atlantamarket_PROD.LineDigitalShowroom -->
       <class name="atlantamarket_PROD.ExhibitorDigitalShowroom">
         <methods>
-          <include name="initialize"/>
+          <include name="TS016_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest"/>
+          <include name="TS011_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest"/>
+          <include name="TS006_VerifyClickOnProductShownLinkForExhibitorTest"/>
+          <include name="TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest"/>
           <include name="TS020_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest"/>
           <include name="TS010_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest"/>
+          <include name="TS013_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest"/>
+          <include name="TS015_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest"/>
+          <include name="TS018_VerifyCatalogsSectionForExhibitorTest"/>
+          <include name="TS017_VerifyExhibitorDigitalEventsComponentTest"/>
+          <include name="TS004_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest"/>
+          <include name="initialize"/>
           <include name="TS019_VerifyExhibitorDigitalShowroomShowSpecialsTest"/>
           <include name="TS001_VerifyAddToFavoritesTest"/>
+          <include name="TS008_VerifyClickOnLineSearchForExhibitorTest"/>
           <include name="TS005_VerifyClickOnTotalLinesSeeAllLinkForExhibitorTest"/>
-          <include name="TS017_VerifyExhibitorDigitalEventsComponentTest"/>
-          <include name="tearDown"/>
+          <include name="TS007_VerifyClickOnLineFiltersForExhibitorTest"/>
+          <include name="TS009_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest"/>
+          <include name="TS012_VerifySeeInOtherMarketsForExhibitorTest"/>
+          <include name="TS002_VerifyAddToExistingListWithPlusIconTest"/>
+          <include name="TS003_VerifyAddNoteListWithPlusIconTest"/>
         </methods>
       </class> <!-- atlantamarket_PROD.ExhibitorDigitalShowroom -->
       <class name="atlantamarket_PROD.GlobalSearch_SearchFor">
         <methods>
           <include name="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest"/>
-          <include name="TS011_VerifyEventsOverviewInGlobalSearchTest"/>
-          <include name="TS004_VerifyCatalogsOverviewInGlobalSearchTest"/>
           <include name="initialize"/>
           <include name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
-      <class name="atlantamarket_PROD.LineDigitalShowroom">
+      <class name="atlantamarket_PROD.GlobalSearch_SuggestionList">
         <methods>
-          <include name="TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest"/>
-          <include name="TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest"/>
-          <include name="TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest"/>
-          <include name="tearDown"/>
           <include name="initialize"/>
+          <include name="TS003_VerifySelectionOfProductFromAutoSuggestionListTest"/>
+          <include name="TS002_VerifySelectionOfLineFromAutoSuggestionListTest"/>
+          <include name="TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest"/>
         </methods>
-      </class> <!-- atlantamarket_PROD.LineDigitalShowroom -->
-
+      </class> <!-- atlantamarket_PROD.GlobalSearch_SuggestionList -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->

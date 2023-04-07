@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -197,7 +198,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		// Click on Add to List button for 1st Exhibitor
 		atlexhact.getSearchResultMoreicon().click();
 		atlexhact.getAddToListOptn().click();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		// Store the existing list name
 		String existinglistname = atlmppge.getATLMPExistingListNameNew().getText();
 		System.out.println("Existing list name: " + existinglistname);
@@ -473,6 +474,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		atlexhact.getMatchingProdAddNoteIcon().click();
 
 		// Verify that Add note for selected exhibitor modal should be displayed
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		WebElement addnotemodaltitle = driver
 				.findElement(By.xpath("//h4[contains(text(),'Add a Note For " + exhname + "')]"));
 		Assert.assertTrue(addnotemodaltitle.isDisplayed());

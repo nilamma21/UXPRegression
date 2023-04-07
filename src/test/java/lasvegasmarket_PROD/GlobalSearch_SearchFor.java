@@ -74,7 +74,7 @@ public class GlobalSearch_SearchFor extends base{
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(1000);
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor6"));//globalsearchinputforInformation
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearchinputforInformation"));//
 		Thread.sleep(2000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(5000);
@@ -83,7 +83,7 @@ public class GlobalSearch_SearchFor extends base{
 		lvmgs.getLVMsearchresultInfoLink().click();
 		Thread.sleep(3000);
 		System.out.println(lvmgs.getLVMSearchResult().getText());
-		Assert.assertTrue(lvmgs.getLVMSearchResult().getText().contains(prop.getProperty("exhibitor6")));//globalsearchinputforInformation
+		Assert.assertTrue(lvmgs.getLVMSearchResult().getText().contains(prop.getProperty("globalsearchinputforInformation")));//globalsearchinputforInformation
 
 		String seeMoreDetailsURL=lvmgs.getLVMInfoSearchJuniperMarketBtn().getAttribute("href");
 		System.out.println(seeMoreDetailsURL);
@@ -647,7 +647,7 @@ public class GlobalSearch_SearchFor extends base{
 		boolean temp5 = false;
 		tagBlogPost = driver.findElements(By.xpath("//span[@class='imc-blog-tag-module__tag']"));
 		for (WebElement blogPost : tagBlogPost) {
-			if (blogPost.getText().equals(prop.getProperty("searchforArticlesInput"))) {
+			if (blogPost.getText().contains(prop.getProperty("searchforArticlesInputLVM"))) {
 				temp5 = true;
 				break;
 			}

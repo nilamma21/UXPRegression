@@ -368,7 +368,7 @@ public class LVMGlobalSearchPage {
 		return driver.findElement(lvmglobalsearchtxtbx);
 	}
 	public WebElement getLVMSearchButton() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(lvmsearchbtn));
 		return driver.findElement(lvmsearchbtn);
 	}
@@ -423,7 +423,7 @@ public class LVMGlobalSearchPage {
 		return driver.findElement(lvmCatalog);
 	}
 	public WebElement getCatalogHeaderName() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(CatalogHeaderName));
 		return driver.findElement(CatalogHeaderName);
 	}

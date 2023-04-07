@@ -9,7 +9,7 @@
 		<classes>
 
 
-			<class name="atlantamarket_PROD.EvenntsAndWebinar" />
+			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
 				<methods>
 					 <!-- <include name="TS020_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest()"/>   -->
 				</methods>
