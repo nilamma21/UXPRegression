@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>RegressionTest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Apr 03 18:23:09 IST 2023</td>
+<td>Started on:</td><td>Fri Apr 07 16:39:47 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>227 seconds (227212 ms)</td>
+<tr><td>Total time:</td><td>181 seconds (181993 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,18 +75,44 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='atlantamarket_PROD.MarketPlanner.TS022_VerifyListDisplayControlsFunctionalityTest()'><b>TS022_VerifyListDisplayControlsFunctionalityTest</b><br>Test class: atlantamarket_PROD.MarketPlanner</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at resources.Utility.checkItemPresentInListorNot(Utility.java:173)
-	at atlantamarket_PROD.MarketPlanner.TS022_VerifyListDisplayControlsFunctionalityTest(MarketPlanner.java:1180)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1496220730", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1496220730'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at org.testng.Assert.assertTrue(Assert.java:52)
-	at resources.Utility.checkItemPresentInListorNot(Utility.java:173)
-	at atlantamarket_PROD.MarketPlanner.TS022_VerifyListDisplayControlsFunctionalityTest(MarketPlanner.java:1180)
+<td title='atlantamarket_PROD.ShowSpecials.TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest()'><b>TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest</b><br>Test class: atlantamarket_PROD.ShowSpecials</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: element click intercepted: Element &lt;div class=&quot;ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value&quot; aria-colindex=&quot;4&quot; style=&quot;left: 1052px; width: 175px;&quot; tabindex=&quot;-1&quot; role=&quot;gridcell&quot; col-id=&quot;viewDetails&quot;&gt;...&lt;/div&gt; is not clickable at point (1200, 542). Other element would receive the click: &lt;button id=&quot;gdpr-btn&quot; onclick=&quot;gdprAccept()&quot;&gt;...&lt;/button&gt;
+  (Session info: chrome=111.0.5563.148)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir15904_1069356119}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:64305}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=111.0.5563.148, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: e0cb9786b3c7dfa2875c8d4a2de9bf78
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
+	at atlantamarket_PROD.ShowSpecials.TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest(ShowSpecials.java:102)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1556867940", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1556867940'><pre>org.openqa.selenium.WebDriverException: element click intercepted: Element &lt;div class=&quot;ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value&quot; aria-colindex=&quot;4&quot; style=&quot;left: 1052px; width: 175px;&quot; tabindex=&quot;-1&quot; role=&quot;gridcell&quot; col-id=&quot;viewDetails&quot;&gt;...&lt;/div&gt; is not clickable at point (1200, 542). Other element would receive the click: &lt;button id=&quot;gdpr-btn&quot; onclick=&quot;gdprAccept()&quot;&gt;...&lt;/button&gt;
+  (Session info: chrome=111.0.5563.148)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;NILAMMA-W10&apos;, ip: &apos;192.168.68.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir15904_1069356119}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:64305}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=111.0.5563.148, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: e0cb9786b3c7dfa2875c8d4a2de9bf78
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
+	at atlantamarket_PROD.ShowSpecials.TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest(ShowSpecials.java:102)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -112,8 +138,21 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
 </pre></div></td>
-<td>153</td>
-<td>atlantamarket_PROD.MarketPlanner@f6c48ac</td></tr>
+<td>19</td>
+<td>atlantamarket_PROD.ShowSpecials@5442a311</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='atlantamarket_PROD.ShowSpecials.TS002_VerifyLocationLinksForShowSpecialsTest()'><b>TS002_VerifyLocationLinksForShowSpecialsTest</b><br>Test class: atlantamarket_PROD.ShowSpecials</td>
+<td></td>
+<td>17</td>
+<td>atlantamarket_PROD.ShowSpecials@5442a311</td></tr>
 </table><p>
 </body>
 </html>

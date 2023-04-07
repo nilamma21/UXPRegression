@@ -6,7 +6,7 @@
 		<listner class-name="atlantamarket_PROD.TestListeners" />
 	</listners>
 	<test thread-count="5" name="RegressionTest">
-		<classes>
+		<classes>		
 			<class name="atlantamarket_PROD.FloorPlans" />
 			<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters" />

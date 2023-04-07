@@ -1,29 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="227212" started-at="2023-04-03T12:53:09Z" finished-at="2023-04-03T12:56:56Z">
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="181993" started-at="2023-04-07T11:09:47Z" finished-at="2023-04-07T11:12:49Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="227212" started-at="2023-04-03T12:53:09Z" finished-at="2023-04-03T12:56:56Z">
-      <class name="atlantamarket_PROD.MarketPlanner">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.MarketPlanner@f6c48ac]" name="initialize" is-config="true" duration-ms="72588" started-at="2023-04-03T18:23:09Z" finished-at="2023-04-03T18:24:22Z">
+    <test name="RegressionTest" duration-ms="181993" started-at="2023-04-07T11:09:47Z" finished-at="2023-04-07T11:12:49Z">
+      <class name="atlantamarket_PROD.ShowSpecials">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.ShowSpecials@5442a311]" name="initialize" is-config="true" duration-ms="134948" started-at="2023-04-07T16:39:47Z" finished-at="2023-04-07T16:42:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="FAIL" signature="TS022_VerifyListDisplayControlsFunctionalityTest()[pri:0, instance:atlantamarket_PROD.MarketPlanner@f6c48ac]" name="TS022_VerifyListDisplayControlsFunctionalityTest" duration-ms="153513" started-at="2023-04-03T18:24:22Z" finished-at="2023-04-03T18:26:55Z">
-          <exception class="java.lang.AssertionError">
+        <test-method status="FAIL" signature="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest()[pri:0, instance:atlantamarket_PROD.ShowSpecials@5442a311]" name="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest" duration-ms="19664" started-at="2023-04-07T16:42:02Z" finished-at="2023-04-07T16:42:22Z">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[expected [true] but found [false]]]>
+              <![CDATA[element click intercepted: Element <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value" aria-colindex="4" style="left: 1052px; width: 175px;" tabindex="-1" role="gridcell" col-id="viewDetails">...</div> is not clickable at point (1200, 542). Other element would receive the click: <button id="gdpr-btn" onclick="gdprAccept()">...</button>
+  (Session info: chrome=111.0.5563.148)
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir15904_1069356119}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:64305}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=111.0.5563.148, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: e0cb9786b3c7dfa2875c8d4a2de9bf78]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at org.testng.Assert.assertTrue(Assert.java:52)
-	at resources.Utility.checkItemPresentInListorNot(Utility.java:173)
-	at atlantamarket_PROD.MarketPlanner.TS022_VerifyListDisplayControlsFunctionalityTest(MarketPlanner.java:1180)
+              <![CDATA[org.openqa.selenium.WebDriverException: element click intercepted: Element <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value" aria-colindex="4" style="left: 1052px; width: 175px;" tabindex="-1" role="gridcell" col-id="viewDetails">...</div> is not clickable at point (1200, 542). Other element would receive the click: <button id="gdpr-btn" onclick="gdprAccept()">...</button>
+  (Session info: chrome=111.0.5563.148)
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir15904_1069356119}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:64305}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=111.0.5563.148, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: e0cb9786b3c7dfa2875c8d4a2de9bf78
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
+	at atlantamarket_PROD.ShowSpecials.TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest(ShowSpecials.java:102)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -50,15 +69,19 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS022_VerifyListDisplayControlsFunctionalityTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.MarketPlanner@f6c48ac]" name="tearDown" is-config="true" duration-ms="2" started-at="2023-04-03T18:26:56Z" finished-at="2023-04-03T18:26:56Z">
+        </test-method> <!-- TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest -->
+        <test-method status="PASS" signature="TS002_VerifyLocationLinksForShowSpecialsTest()[pri:0, instance:atlantamarket_PROD.ShowSpecials@5442a311]" name="TS002_VerifyLocationLinksForShowSpecialsTest" duration-ms="17413" started-at="2023-04-07T16:42:22Z" finished-at="2023-04-07T16:42:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifyLocationLinksForShowSpecialsTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.ShowSpecials@5442a311]" name="tearDown" is-config="true" duration-ms="9809" started-at="2023-04-07T16:42:39Z" finished-at="2023-04-07T16:42:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- atlantamarket_PROD.MarketPlanner -->
+      </class> <!-- atlantamarket_PROD.ShowSpecials -->
     </test> <!-- RegressionTest -->
   </suite> <!-- ATLMrkt_RegressionTestSuite -->
 </testng-results>
