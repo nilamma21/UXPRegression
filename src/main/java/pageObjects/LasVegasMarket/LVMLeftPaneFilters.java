@@ -147,7 +147,7 @@ public class LVMLeftPaneFilters {
 		return driver.findElement(firstVintageExhUat);
 	}
 	public WebElement getSecondExhUat() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(SecondExhUat));
 		return driver.findElement(SecondExhUat);
 	}

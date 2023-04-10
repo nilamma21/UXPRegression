@@ -223,7 +223,7 @@ public class ATLExhDigiShowroomPage {
 		return driver.findElement(lvmvalidateexhdigishowpage_uat);
 	}
 	public WebElement getlvmexhibitornameonexhdirectimg_uat() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmexhibitornameonexhdirectimg_uat));
 		return driver.findElement(lvmexhibitornameonexhdirectimg_uat);
 	}

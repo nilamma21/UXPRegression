@@ -6,7 +6,29 @@
 		<listner class-name="atlantamarket_PROD.TestListeners" />
 	</listners>
 	<test thread-count="5" name="RegressionTest">
+
+		<classes>
+
+
+			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
+				<methods>
+					 <!-- <include name="TS020_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest()"/>   -->
+				</methods>
+	
+
+
+
+			<class name="atlantamarket_PROD.LineDigitalShowroom" />
+			<class name="atlantamarket_PROD.ExhibitorDigitalShowroom" />
+		<class name="atlantamarket_PROD.GlobalSearch_SearchFor"/>
+						
+			<!-- <class name="atlantamarket_PROD.LineDigitalShowroom" />
+			<class name="atlantamarket_PROD.GlobalSearch_SearchFor"/>
+			<class name="atlantamarket_PROD.EvenntsAndWebinar" />
+			<class name="atlantamarket_PROD.ExhibitorDigitalShowroom" />
+
 		<classes>		
+
 			<class name="atlantamarket_PROD.FloorPlans" />
 			<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters" />

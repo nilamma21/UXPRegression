@@ -628,7 +628,7 @@ public class ATLMarketPlannerPage {
 		return driver.findElement(editlistitemdeleteoptn);
 	}
 	public WebElement getCreateNewListNameTxtbx() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(createnewlistnametxtbx));
 		return driver.findElement(createnewlistnametxtbx);
 	}
@@ -638,26 +638,28 @@ public class ATLMarketPlannerPage {
 		return driver.findElement(newlistmodalcreatebtn);
 	}
 	public WebElement getGoToMarketPlannerBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(gotomarketplannerbtn));
 		return driver.findElement(gotomarketplannerbtn);
 	}
 	public WebElement getMPHomeListsTab() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmarketplannerhome));
 		return driver.findElement(mphomeliststab);
 	}
 	public WebElement getListsPageListsMenu() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(listspagelistsmenu));
 		return driver.findElement(listspagelistsmenu);
 	}
 	public List <WebElement> getATLMPListsNames() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmplistsnames));
 		return driver.findElements(atlmplistsnames);
 	}
 	public List <WebElement> getATLMPEditListOptns() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmpeditlistoptns));
 		return driver.findElements(atlmpeditlistoptns);
 	}
 	public WebElement getATLMPEditListOptn() {
