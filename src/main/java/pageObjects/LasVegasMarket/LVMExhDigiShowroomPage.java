@@ -92,12 +92,12 @@ public class LVMExhDigiShowroomPage {
 	By OrderOnJuniperMarktBtnCatalognew = By.xpath("(//span[contains(text(),'Order on JuniperMarket')])[1]");
 	By SeeAllCatalogsButtonUAT = By.xpath("(//span[contains(text(),'Catalog')])[1]/../../div[3]/div[1]/a[1]"); //Locator for See All Catalogs section
 	By SelectCatalogUAT = By.xpath("(//span[contains(text(),'Catalog')])[1]/../..//div[@class=' imc-type--body-6-ui imc-catalog__item-full-width']/span/span[1]"); //Locator for Catalog option in Catalogs section
-	
+
 	By CatalogHeaderTxt = By.xpath("//div[@class='exhibitor-info-wrapper']/h1[1]"); //Locator for Catalog Header
 	
 	By View3DshowroomBtnLVMUAT = By.xpath("(//span[contains(text(),'View 3D Showroom')])[1]"); //Locator for 3D showroom Btn
 	
-	By OrderOnJuniperMarktBtnCatalog = By.xpath("(//div[@class='imc-section imc-section--width-100-percent']/div[1]/span[contains(text(),'Catalogs')]/../../div[3]/div[1]/a[1]/span[contains(text(),'Order on JuniperMarket')])[1]");
+	By OrderOnJuniperMarktBtnCatalog = By.xpath("(//div[@class='imc-products-overview--cta-bar__item']/a/span)[1]");
 	
 	By OrderOnJuniperMarktBtnProdURL = By.xpath("//div[@class='imc-section imc-section--width-100-percent']/div[1]/span[contains(text(),'Products')]/../../div[3]/div[1]/a[1]"); //URl for juniper markt prod btn
 	
@@ -119,7 +119,7 @@ public class LVMExhDigiShowroomPage {
 		return driver.findElement(OrderOnJuniperMarktBtnProdURL);
 	}
 	public WebElement getOrderOnJuniperMarktBtnCatalog() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(OrderOnJuniperMarktBtnCatalog));
 		return driver.findElement(OrderOnJuniperMarktBtnCatalog);
 	}
@@ -266,7 +266,7 @@ public class LVMExhDigiShowroomPage {
 		return driver.findElement(lvmexhibitornameonexhdirectimg_uat);
 	}
 	public WebElement getLVMProductCategSection() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productcategsectn));
 		return driver.findElement(productcategsectn);
 	}
@@ -512,5 +512,5 @@ public class LVMExhDigiShowroomPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(OrderOnJuniperMarktBtnCatalognew));
 		return driver.findElement(OrderOnJuniperMarktBtnCatalognew);
 	}
-
+	
 }
