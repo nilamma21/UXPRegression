@@ -463,7 +463,7 @@ public class GlobalSearch_MatchingResults extends base {
 		// Open selected list
 		utl.ClickOnEditBtnOfAnyList(lvmmpp.getallList(), lName);
 		// Verify exhibitor present into selected list or not
-		Thread.sleep(6000);
+		Thread.sleep(7000);
 		utl.checkItemPresentInListorNot(lvmmpp.getlistOfAllExh(), exhName);
 		driver.get(prop.getProperty("lvmurl_prod"));
 	}

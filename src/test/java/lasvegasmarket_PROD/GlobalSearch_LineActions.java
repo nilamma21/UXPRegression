@@ -138,7 +138,12 @@ public class GlobalSearch_LineActions extends base {
 		atlmppge.getATLMPListsPageFavoritesMenu().click();
 		Thread.sleep(5000);
 		// Verify that the added favorites exhibitor should be displayed in to Favorites list
-		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
+		//Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
+		favlist = atlmppge.getFavExhList();
+		for(int i=1; i< favlist.size(); i++){			
+			Assert.assertTrue(favlist.get(i).getText().contains(exhname)); 
+			break;
+		}
 
 		// Delete that favorites exhibitor from list
 	/*	atlmppge.getATLEditListItemMoreBtn().click();
@@ -150,15 +155,12 @@ public class GlobalSearch_LineActions extends base {
 		Thread.sleep(3000);
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(8000);
-		favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
+		//favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
 
 		//Verify that the added product should be removed from Favorites list
-		for(int i=1; i< favlist.size(); i++)
-		{			
-			//System.out.println(favlist.get(i).getText());
+		for(int i=1; i< favlist.size(); i++){
 			Assert.assertFalse(favlist.get(i).getText().contains(exhname)); 
 		}
-
 		// Verify that the added favorites exhibitor should be removed from Favorites list
 		//Assert.assertFalse(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 	}

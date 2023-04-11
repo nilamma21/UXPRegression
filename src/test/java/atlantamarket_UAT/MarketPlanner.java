@@ -51,7 +51,7 @@ public class MarketPlanner extends base {
 	ATLLeftPaneFilters atlleftpane;
 	List<WebElement> mplists, mpduplicatelistoptns;
 
-	@BeforeClass
+	@BeforeClass(alwaysRun=true)
 	public void initialize() throws IOException, InterruptedException {
 		driver = initializeDriver(); // requires for Parallel text execution
 		utl = new Utility(driver);
@@ -60,12 +60,40 @@ public class MarketPlanner extends base {
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		utl.verifyMPLoginFunctionality();
+	//	utl.verifyMPLoginFunctionality();
 		Thread.sleep(8000);
 
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(8000);
 	}
+	@Test
+	public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
+
+		// The purpose of this test case to verify:-
+		// TS1- Login to Market Planner
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+
+		// Click on Login button from Landing Page
+		lap.getLogin().click();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		// Enter the credentials on Login Page and click
+		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
+
+		lp.getPassword().sendKeys((prop.getProperty("passwordW")));
+
+
+		Thread.sleep(1000);
+	//	lp.getPassword().sendKeys((prop.getProperty("password")));
+		Thread.sleep(1000);
+
+		lp.getSignInBtn().click();
+		Thread.sleep(15000);
+		Assert.assertTrue(driver.getTitle().contains("Atlanta Market at AmericasMart"));
+	}
+	
+
 
 	@Test(priority = 1)
 	public void TS001_VerifyMarketPlannerInvalidLoginCredentialsTest() throws InterruptedException, IOException {

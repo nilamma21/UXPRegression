@@ -349,7 +349,7 @@ public class GlobalSearch_MatchingResults extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-	//	utl.verifyMPLoginFunctionality();
+		utl.verifyMPLoginFunctionality();
 		utl.CloseATLPopup();
 		//atlgs.getatlGlobalSearchClearTxt().click();
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {

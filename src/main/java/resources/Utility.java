@@ -19,13 +19,20 @@ import org.testng.Assert;
 
 //import atlantamarket_UAT.MarketPlanner;
 import pageObjects.AtlantaMarket.ATLEventsAndWebinarPage;
+import pageObjects.AtlantaMarket.ATLExhDigiShowroomPage;
 import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
 import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
 import pageObjects.AtlantaMarket.ATLLandingPage;
+import pageObjects.AtlantaMarket.ATLLeftPaneFilters;
 import pageObjects.AtlantaMarket.ATLLoginPage;
 import pageObjects.AtlantaMarket.ATLMarketPlannerPage;
+import pageObjects.AtlantaMarket.ATLProductDetailsPage;
+import pageObjects.ExhibitorPortal.EXPMarketsPage;
 import pageObjects.LasVegasMarket.LVMEventsAndWebinarPage;
 import pageObjects.LasVegasMarket.LVMMarketPlannerPage;
+import pageObjects.Sitecore.SCDashboard;
+import pageObjects.Sitecore.SCLoginPage;
+import pageObjects.Sitecore.SCShowSpecials;
 
 public class Utility extends base {
 
@@ -33,13 +40,22 @@ public class Utility extends base {
 	ATLLandingPage lap;
 	ATLLoginPage lp;
 	ATLExhLineProdActionsPage atlexhact;
-	//MarketPlanner mp;
 	ATLMarketPlannerPage atlmppge;
 	ATLGlobalSearchPage atlgs;
 	ATLEventsAndWebinarPage atlevents;
 	GenerateData genData;
 	LVMMarketPlannerPage lvmmpp;
 	LVMEventsAndWebinarPage lvmevents;
+	ATLExhDigiShowroomPage atlexhdgshw;
+	ATLProductDetailsPage atlproddet;
+	ATLLeftPaneFilters atlleftpane;
+	EXPMarketsPage expmrkttab;
+	SCLoginPage sclogin;
+	SCDashboard scdash;
+	SCShowSpecials scshow;
+
+	ArrayList<String> tabs;
+	List<WebElement> showspecialslist;
 
 	@SuppressWarnings("static-access")
 	public Utility(WebDriver driver) {
@@ -65,6 +81,30 @@ public class Utility extends base {
 		// Click on Login button from Landing Page
 		lap.getLogin().click();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+		// Enter the credentials on Login Page and click
+		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
+		lp.getPassword().sendKeys((prop.getProperty("password")));
+		Thread.sleep(1000);
+
+		lp.getSignInBtn().click();
+		Thread.sleep(15000);
+	}
+	public String[] verifyMPLoginFunctionality_Test() throws IOException, InterruptedException {
+
+		// The purpose of this test case to verify:-
+		// TS1- Login to Market Planner
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+
+		// Click on Login button from Landing Page
+		try {
+		lap.getLogin().click();
+		}catch (Exception e) {
+			// TODO: handle exception
+		
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		// Enter the credentials on Login Page and click
 		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
 
@@ -77,6 +117,8 @@ public class Utility extends base {
 
 		lp.getSignInBtn().click();
 		Thread.sleep(15000);
+		}
+		return null;
 
 	}
 
@@ -308,7 +350,7 @@ public class Utility extends base {
 
 	}
 
-	// Check Exhibito Location
+	// Check Exhibitor Location
 	public void checkLocationLink(List<WebElement> list, String exhName) throws IOException, InterruptedException {
 
 		lap = new ATLLandingPage(driver);
@@ -468,8 +510,6 @@ public class Utility extends base {
 
 	public void clickOnEventLinkOfChannelLVM() throws InterruptedException {
 
-
-
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
 
@@ -515,17 +555,15 @@ public class Utility extends base {
 			}
 		}
 	}
-	
-public void clickOnEventLinkOfChannel_UAT() throws InterruptedException {
 
-		
+	public void clickOnEventLinkOfChannel_UAT() throws InterruptedException {
 
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
 
 		lvmmpp = new LVMMarketPlannerPage(driver);
 		lvmevents=new LVMEventsAndWebinarPage(driver);
-		
+
 		if(driver.getCurrentUrl().contains(prop.getProperty("lvmurl_uat"))) {
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			// Click on Attend Tab
@@ -535,37 +573,246 @@ public void clickOnEventLinkOfChannel_UAT() throws InterruptedException {
 			//click on Events Link
 			lvmevents.getlvmEventsLink().click();
 
-		atlmppge = new ATLMarketPlannerPage(driver);
-		atlevents=new ATLEventsAndWebinarPage(driver);
-		
-		if(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_uat"))) {
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			// Click on Attend Tab
-			atlevents.getatlAttendTab().click();
-			Thread.sleep(2000);
-			//click on Events Link
-			atlevents.getatlEventsLink().click();
+			atlmppge = new ATLMarketPlannerPage(driver);
+			atlevents=new ATLEventsAndWebinarPage(driver);
 
-			Thread.sleep(3000);
+			if(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_uat"))) {
+				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				// Click on Attend Tab
+				atlevents.getatlAttendTab().click();
+				Thread.sleep(2000);
+				//click on Events Link
+				atlevents.getatlEventsLink().click();
+
+				Thread.sleep(3000);
+			}
+			else {
+				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+				lvmevents.getlvmAttendTab().click();  //For LVM Events  
+				Thread.sleep(2000);
+				//click on Events Link
+				lvmevents.getlvmEventsLink().click();
+
+				atlevents.getatlExploreMarketTab().click();  //For LVM Events
+				Thread.sleep(2000);
+				//click on Events Link
+				atlevents.getatlEventsLink().click();
+
+				Thread.sleep(3000);
+			}
+
 		}
-		else {
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-			lvmevents.getlvmAttendTab().click();  //For LVM Events  
-			Thread.sleep(2000);
-			//click on Events Link
-			lvmevents.getlvmEventsLink().click();
-
-			atlevents.getatlExploreMarketTab().click();  //For LVM Events
-			Thread.sleep(2000);
-			//click on Events Link
-			atlevents.getatlEventsLink().click();
-
-			Thread.sleep(3000);
-		}
-	
 	}
 
-}
+	public void addNewShowSpecialFrmExp_UAT() throws InterruptedException {
 
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		atlleftpane = new ATLLeftPaneFilters(driver);
+		expmrkttab = new EXPMarketsPage(driver);
+		sclogin = new SCLoginPage(driver);
+		scdash = new SCDashboard(driver);
+		scshow = new SCShowSpecials(driver);
+		genData = new GenerateData();
+
+		//Open Exhibitor Portal in new tab
+		driver.get(prop.getProperty("expurl_uat"));
+		Thread.sleep(5000);
+
+		//Login to EXP
+		lp.getEmailAddress().sendKeys((prop.getProperty("usernameSwapnil")));
+		lp.getPassword().sendKeys((prop.getProperty("passwordSwapnil")));
+
+		lp.getSignInBtn().click();
+		Thread.sleep(15000);
+
+		lap.getIUnderstandBtn().click();
+		Thread.sleep(5000);
+
+		//In EXP click on Exhibitor association drop down
+		atlleftpane.getEXPExhDropDown().click();
+
+		//Select IMC Test Company exhibitor
+		atlleftpane.getIMCExhNameInEXP().click();
+
+		//Click on Markets tab
+		expmrkttab.getEXPMarketTab().click();
+
+		if(expmrkttab.getATLMarket().getText().contains("Atlanta Market")) {
+			expmrkttab.getATLWinterMarket().click();
+		}
+
+		//Click on Add show specials menu
+		expmrkttab.getAddShowSpecialMenu().click();
+
+		//Click on Add show special btn
+		expmrkttab.getAddShowSpecialBtn().click();
+
+		String showspecialname = "CybShowSpecial_"+genData.generateRandomString(3);
+		//Enter show special name
+		expmrkttab.getShowSpecialTxtBx().sendKeys(showspecialname);
+
+		//Click on Submit btn
+		expmrkttab.getShowSpecialSubmitBtn().click();
+
+		Thread.sleep(4000);
+		System.out.println(expmrkttab.getShowSpecialSuccessMsg().getText());
+		Assert.assertTrue(expmrkttab.getShowSpecialSuccessMsg().getText().contains(showspecialname));
+
+		//Dismiss the pop-up by click on Okay btn
+		expmrkttab.getDismissSuccessModal().click();
+		Thread.sleep(6000);
+		showspecialslist = driver.findElements(By.xpath("//div[@col-id='showSpecial']"));
+
+		for (int i = 1; i < showspecialslist.size(); i++) {
+			Assert.assertTrue(showspecialslist.get(i).getText().contains(showspecialname));
+			break;
+		}
+
+		//Open Sitecore in new tab
+		((JavascriptExecutor)driver).executeScript("window.open()");
+		tabs = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tabs.get(1));
+		driver.get(prop.getProperty("sitecoreurl_uat"));
+		Thread.sleep(5000);
+
+		//Login to Sitecore
+		sclogin.getSCUsername().sendKeys(prop.getProperty("scusername_uat"));
+		sclogin.getSCPassword().sendKeys(prop.getProperty("scpassword_uat"));
+		sclogin.getSCLoginbtn().click();
+
+		//Click on Show special Approvals menu
+		scdash.getShowSpecialApprovals().click();
+
+		//Select Sort By dropdown
+		scshow.getSSSortByOptn().click();
+
+		//Click on Date added Desc optn
+		scshow.getDateAddedDesc().click();
+
+		Thread.sleep(6000);
+		WebElement approvebtn = driver.findElement(By.xpath("//a[@data-special='"+showspecialname+"' and text()='Approve']"));
+
+		//Click on Approve btn
+		approvebtn.click();
+		Thread.sleep(6000);
+	}
+
+	public void addNewShowSpecialFrmExp_PROD() throws InterruptedException {
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		atlleftpane = new ATLLeftPaneFilters(driver);
+		expmrkttab = new EXPMarketsPage(driver);
+		sclogin = new SCLoginPage(driver);
+		scdash = new SCDashboard(driver);
+		scshow = new SCShowSpecials(driver);
+		genData = new GenerateData();
+
+		//Open Exhibitor Portal in new tab
+		driver.get(prop.getProperty("expurl_prod"));
+		Thread.sleep(5000);
+
+		//Login to EXP
+		lp.getEmailAddress().sendKeys((prop.getProperty("usernameSwapnil")));
+		lp.getPassword().sendKeys((prop.getProperty("passwordSwapnil")));
+
+		lp.getSignInBtn().click();
+		Thread.sleep(15000);
+
+		lap.getIUnderstandBtn().click();
+		Thread.sleep(5000);
+
+		//In EXP click on Exhibitor association drop down
+		atlleftpane.getEXPExhDropDown().click();
+
+		//Select IMC Test Company exhibitor
+		atlleftpane.getIMCExhNameInEXP().click();
+
+		//Click on Markets tab
+		expmrkttab.getEXPMarketTab().click();
+
+		if(expmrkttab.getATLMarket().getText().contains("Atlanta Market")) {
+			expmrkttab.getATLWinterMarket().click();
+		}
+
+		//Click on Manage show specials menu
+		expmrkttab.getManageShowSpecialMenu().click();
+
+		//Click on Add show special btn
+		expmrkttab.getAddShowSpecialBtn().click();
+
+		String showspecialname = "CybShowSpecial_"+genData.generateRandomString(3);
+		//Enter show special name
+		expmrkttab.getShowSpecialTxtBx().sendKeys(showspecialname);
+
+		//Click on Submit btn
+		expmrkttab.getShowSpecialSubmitBtn().click();
+
+		Thread.sleep(4000);
+		System.out.println(expmrkttab.getShowSpecialSuccessMsg().getText());
+		Assert.assertTrue(expmrkttab.getShowSpecialSuccessMsg().getText().contains(showspecialname));
+
+		//Dismiss the pop-up by click on Okay btn
+		expmrkttab.getDismissSuccessModal().click();
+		Thread.sleep(6000);
+		showspecialslist = driver.findElements(By.xpath("//div[@col-id='showSpecial']"));
+
+		for (int i = 1; i < showspecialslist.size(); i++) {
+			Assert.assertTrue(showspecialslist.get(i).getText().contains(showspecialname));
+			break;
+		}
+
+		//Open Sitecore in new tab
+		((JavascriptExecutor)driver).executeScript("window.open()");
+		tabs = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tabs.get(1));
+		driver.get(prop.getProperty("sitecoreurl_prod"));
+		Thread.sleep(5000);
+
+		//Login to Sitecore
+		sclogin.getSCUsername().sendKeys(prop.getProperty("scusername_prod"));
+		sclogin.getSCPassword().sendKeys(prop.getProperty("scpassword_prod"));
+		sclogin.getSCLoginbtn().click();
+		Thread.sleep(5000);
+		driver.get(prop.getProperty("sitecoreurl_prod"));
+
+		//Click on Show special Approvals menu
+		scdash.getShowSpecialApprovals().click();
+
+		//Select Sort By dropdown
+		Thread.sleep(4000);
+		scshow.getSSSortByOptn().click();
+
+		//Click on Date added Desc optn
+		scshow.getDateAddedDesc().click();
+
+		Thread.sleep(6000);
+		WebElement approvebtn = driver.findElement(By.xpath("//a[@data-special='"+showspecialname+"' and text()='Approve']"));
+
+		//Click on Approve btn
+		approvebtn.click();
+		Thread.sleep(6000);
+	}
+
+	public void deleteShowSpecialFrmExp() throws InterruptedException {
+
+		expmrkttab = new EXPMarketsPage(driver);
+
+		((JavascriptExecutor)driver).executeScript("window.open()");
+		tabs = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tabs.get(0));
+
+		//Delete newly created Show special
+		expmrkttab.getDeleteShowSpecialBtn().click();
+		Thread.sleep(5000);
+	}
 }

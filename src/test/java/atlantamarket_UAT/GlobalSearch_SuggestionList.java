@@ -42,7 +42,7 @@ public class GlobalSearch_SuggestionList extends base {
 
 	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns, allnoteslist,favlist, searchlinetypelist;
 
-	@BeforeClass
+	@BeforeClass(alwaysRun=true)
 	public void initialize() throws IOException, InterruptedException {
 		driver = initializeDriver(); // requires for Parallel text execution
 		//chromeVersion();
@@ -56,8 +56,36 @@ public class GlobalSearch_SuggestionList extends base {
 //		Thread.sleep(10000);
 //		lap.getCloseMarktAdBtn().click();
 	}
+	@Test
+	public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
 
-	@Test(priority = 1)
+		// The purpose of this test case to verify:-
+		// TS1- Login to Market Planner
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+
+		// Click on Login button from Landing Page
+		lap.getLogin().click();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		// Enter the credentials on Login Page and click
+		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
+
+		lp.getPassword().sendKeys((prop.getProperty("passwordW")));
+
+
+		Thread.sleep(1000);
+	//	lp.getPassword().sendKeys((prop.getProperty("password")));
+		Thread.sleep(1000);
+
+		lp.getSignInBtn().click();
+		Thread.sleep(15000);
+		Assert.assertTrue(driver.getTitle().contains("Atlanta Market at AmericasMart"));
+	}
+	
+
+
+	@Test(priority = 1,groups="Non_MP")
 	public void TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T419: The selection of an Exhibitor from Auto Suggestion List
@@ -87,7 +115,7 @@ public class GlobalSearch_SuggestionList extends base {
 		Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2,groups="Non_MP")
 	public void TS002_VerifySelectionOfLineFromAutoSuggestionListTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T420: The selection of a Line from Auto Suggestion List
@@ -120,7 +148,7 @@ public class GlobalSearch_SuggestionList extends base {
 		Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 3,groups="Non_MP")
 	public void TS003_VerifySelectionOfProductFromAutoSuggestionListTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T420: The selection of a Product from Auto Suggestion List

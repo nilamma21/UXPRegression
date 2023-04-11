@@ -913,7 +913,7 @@ public class EvenntsAndWebinar extends base{
 		System.out.println(allEventSeeDetailsLinkCount + " See Details Link displayed");
 		Assert.assertEquals(allEventcount, allEventSeeDetailsLinkCount);
 		Thread.sleep(5000);
-		driver.navigate().refresh();
+		//driver.navigate().refresh();
 
 		// Click on Event Title page
 		int allEventSeeDetailsLinkCount1 = 0;
@@ -1219,14 +1219,15 @@ public class EvenntsAndWebinar extends base{
 
 		// Login to MP
 		
-		//utl.verifyMPLoginFunctionality(); Thread.sleep(5000);
+	//	utl.verifyMPLoginFunctionality(); Thread.sleep(5000);
 		Thread.sleep(5000); 
 		utl.clickOnEventLinkOfChannel();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		String eventTitle = atlevents.getatlClickOnEvent().getText();
+		//String eventTitle = atlevents.getatlClickOnEvent().getText();
 
 		//Click on Exh Event Tab
 				atlevents.getatlExhibitorsEventsTab().click();
+				String eventTitle = atlevents.getatlClickOnEvent().getText();
 		/*// Click on IMC Event Tab
 		atlevents.getatlImcEventsTab().click();*/
 		// Click on Any Event title
