@@ -1,6 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
 <suite name="Failed suite [LVM_RegressionTestSuite]">
+
+
+<suite name="Failed suite [MPGroupTestSuite]">
+  <test name="MPGroupTest(failed)">
+    <groups>
+      <run>
+        <include name="MP_Group"/>
+        <include name="Non_MP"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="atlantamarket_UAT.ExhibitorDigitalShowroom">
+        <methods>
+          <include name="TS001_VerifyAddToFavoritesTest"/>
+          <include name="initialize"/>
+          <include name="TS005_VerifyClickOnTotalLinesSeeAllLinkForExhibitorTest"/>
+          <include name="TS013_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest"/>
+          <include name="TS019_VerifyExhibitorDigitalShowroomShowSpecialsTest"/>
+          <include name="TS010_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest"/>
+          <include name="TS012_VerifySeeInOtherMarketsForExhibitorTest"/>
+          <include name="TS003_VerifyAddNoteListWithPlusIconTest"/>
+          <include name="TS002_VerifyAddToExistingListWithPlusIconTest"/>
+          <include name="tearDown"/>
+          <include name="verifyMPLoginFunctionality"/>
+          <include name="TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest"/>
+          <include name="TS020_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest"/>
+          <include name="TS017_VerifyExhibitorDigitalEventsComponentTest"/>
+          <include name="TS004_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest"/>
+          <include name="TS018_VerifyCatalogsSectionForExhibitorTest"/>
+        </methods>
+      </class> <!-- atlantamarket_UAT.ExhibitorDigitalShowroom -->
+    </classes>
+  </test> <!-- MPGroupTest(failed) -->
+</suite> <!-- Failed suite [MPGroupTestSuite] -->
+
+<suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
+
   <test name="RegressionTest(failed)">
     <classes>
       <class name="lasvegasmarket_PROD.FloorPlans">
@@ -12,4 +50,9 @@
       </class> <!-- lasvegasmarket_PROD.FloorPlans -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
+
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
+
+</suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->
+
+
