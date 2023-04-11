@@ -9,13 +9,9 @@
 		<test thread-count="5" name="RegressionTest">
 		<classes>
 
-		<class name="lasvegasmarket_PROD.ExhibitorDigitalShowroom" /> 
+		<class name="lasvegasmarket_PROD.FloorPlans" /> 
 				<methods>
-
 				      <include name="TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest()"/>   
-
-				      <include name="TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest()"/>   
-
 				</methods>
 		</classes>
 	</test>

@@ -301,6 +301,8 @@ public class GlobalSearch_MatchingResults extends base {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
 		utl.verifyMPLoginFunctionality();
+		Thread.sleep(2000);
+		driver.get(prop.getProperty("atlmrkturl_prod"));;
 		utl.CloseATLPopup();
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
 		atlgs.getATLSearchButton().click();
@@ -350,6 +352,8 @@ public class GlobalSearch_MatchingResults extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		utl.verifyMPLoginFunctionality();
+		Thread.sleep(2000);
+		driver.get(prop.getProperty("atlmrkturl_prod"));;
 		utl.CloseATLPopup();
 		//atlgs.getatlGlobalSearchClearTxt().click();
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {

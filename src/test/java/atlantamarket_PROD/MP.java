@@ -61,6 +61,8 @@ public class MP extends base {
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		utl.verifyMPLoginFunctionality();
+		Thread.sleep(2000);
+		driver.get(prop.getProperty("atlmrkturl_prod"));;
 		Thread.sleep(8000);
 
 		lap.getIUnderstandBtn().click();
@@ -120,7 +122,8 @@ public class MP extends base {
 
 		// Login to Market Planner
 		utl.verifyMPLoginFunctionality();
-
+		Thread.sleep(2000);
+		driver.get(prop.getProperty("atlmrkturl_prod"));;
 		// lap.getCloseMarktAdBtn().click();
 
 		Thread.sleep(5000);
@@ -245,6 +248,8 @@ public class MP extends base {
 		Assert.assertTrue(driver.getCurrentUrl().equalsIgnoreCase(prop.getProperty("atlmrkturl_prod")));
 
 		utl.verifyMPLoginFunctionality();
+		Thread.sleep(2000);
+		driver.get(prop.getProperty("atlmrkturl_prod"));;
 		Thread.sleep(8000);
 	}
 

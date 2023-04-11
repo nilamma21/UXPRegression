@@ -485,7 +485,8 @@ public class EvenntsAndWebinar extends base{
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//Login to MP
 		utl.verifyMPLoginFunctionality();
-		
+		Thread.sleep(2000);
+		driver.get(prop.getProperty("atlmrkturl_prod"));;
 		utl.clickOnEventLinkOfChannel();
 
 		String eventTitle = atlevents.getatlClickOnEvent().getText();
