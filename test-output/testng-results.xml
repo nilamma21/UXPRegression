@@ -1,69 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="LVM_RegressionTestSuite" duration-ms="85715" started-at="2023-04-07T10:32:24Z" finished-at="2023-04-07T10:33:49Z">
+  <suite name="LVM_RegressionTestSuite" duration-ms="95015" started-at="2023-04-11T04:27:10Z" finished-at="2023-04-11T04:28:45Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="85715" started-at="2023-04-07T10:32:24Z" finished-at="2023-04-07T10:33:49Z">
-      <class name="lasvegasmarket_PROD.ExhibitorDigitalShowroom">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@146ba0ac]" name="initialize" is-config="true" duration-ms="52432" started-at="2023-04-07T16:02:24Z" finished-at="2023-04-07T16:03:16Z">
+    <test name="RegressionTest" duration-ms="95015" started-at="2023-04-11T04:27:10Z" finished-at="2023-04-11T04:28:45Z">
+      <class name="lasvegasmarket_PROD.FloorPlans">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_PROD.FloorPlans@146ba0ac]" name="initialize" is-config="true" duration-ms="64628" started-at="2023-04-11T09:57:10Z" finished-at="2023-04-11T09:58:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="FAIL" signature="TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest()[pri:0, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@146ba0ac]" name="TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest" duration-ms="30974" started-at="2023-04-07T16:03:16Z" finished-at="2023-04-07T16:03:47Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at java.lang.String.contains(Unknown Source)
-	at lasvegasmarket_PROD.ExhibitorDigitalShowroom.TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest(ExhibitorDigitalShowroom.java:626)
-
-<testng-results skipped="0" failed="1" total="2" passed="1">
-  <reporter-output>
-  </reporter-output>
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="181993" started-at="2023-04-07T11:09:47Z" finished-at="2023-04-07T11:12:49Z">
-    <groups>
-    </groups>
-    <test name="RegressionTest" duration-ms="181993" started-at="2023-04-07T11:09:47Z" finished-at="2023-04-07T11:12:49Z">
-      <class name="atlantamarket_PROD.ShowSpecials">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.ShowSpecials@5442a311]" name="initialize" is-config="true" duration-ms="134948" started-at="2023-04-07T16:39:47Z" finished-at="2023-04-07T16:42:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="FAIL" signature="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest()[pri:0, instance:atlantamarket_PROD.ShowSpecials@5442a311]" name="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest" duration-ms="19664" started-at="2023-04-07T16:42:02Z" finished-at="2023-04-07T16:42:22Z">
-          <exception class="org.openqa.selenium.WebDriverException">
+        <test-method status="FAIL" signature="TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest()[pri:0, instance:lasvegasmarket_PROD.FloorPlans@146ba0ac]" name="TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest" duration-ms="30122" started-at="2023-04-11T09:58:14Z" finished-at="2023-04-11T09:58:44Z">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[element click intercepted: Element <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value" aria-colindex="4" style="left: 1052px; width: 175px;" tabindex="-1" role="gridcell" col-id="viewDetails">...</div> is not clickable at point (1200, 542). Other element would receive the click: <button id="gdpr-btn" onclick="gdprAccept()">...</button>
-  (Session info: chrome=111.0.5563.148)
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir15904_1069356119}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:64305}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=111.0.5563.148, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: e0cb9786b3c7dfa2875c8d4a2de9bf78]]>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //a[contains(text(),'Exhibitors & Products')] (tried for 30 second(s) with 500 MILLISECONDS interval)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: element click intercepted: Element <div class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-cell-value" aria-colindex="4" style="left: 1052px; width: 175px;" tabindex="-1" role="gridcell" col-id="viewDetails">...</div> is not clickable at point (1200, 542). Other element would receive the click: <button id="gdpr-btn" onclick="gdprAccept()">...</button>
-  (Session info: chrome=111.0.5563.148)
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'NILAMMA-W10', ip: '192.168.68.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}), userDataDir=C:\Users\nilamma\AppData\Local\Temp\scoped_dir15904_1069356119}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:64305}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=111.0.5563.148, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
-Session ID: e0cb9786b3c7dfa2875c8d4a2de9bf78
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
-	at atlantamarket_PROD.ShowSpecials.TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest(ShowSpecials.java:102)
-
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[contains(text(),'Exhibitors & Products')] (tried for 30 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.AtlantaMarket.ATLFloorPlansPage.getATLExhibitorsAndProductTab(ATLFloorPlansPage.java:92)
+	at lasvegasmarket_PROD.FloorPlans.TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest(FloorPlans.java:387)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -86,39 +44,32 @@ Session ID: e0cb9786b3c7dfa2875c8d4a2de9bf78
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
 	at org.testng.TestNG.run(TestNG.java:1031)
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //a[contains(text(),'Exhibitors & Products')]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'ANUPPA-VD3', ip: '172.27.182.66', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_361'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 26 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@146ba0ac]" name="tearDown" is-config="true" duration-ms="2007" started-at="2023-04-07T16:03:47Z" finished-at="2023-04-07T16:03:49Z">
+        </test-method> <!-- TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_PROD.FloorPlans@146ba0ac]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-04-11T09:58:45Z" finished-at="2023-04-11T09:58:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- lasvegasmarket_PROD.ExhibitorDigitalShowroom -->
-
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest -->
-        <test-method status="PASS" signature="TS002_VerifyLocationLinksForShowSpecialsTest()[pri:0, instance:atlantamarket_PROD.ShowSpecials@5442a311]" name="TS002_VerifyLocationLinksForShowSpecialsTest" duration-ms="17413" started-at="2023-04-07T16:42:22Z" finished-at="2023-04-07T16:42:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS002_VerifyLocationLinksForShowSpecialsTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.ShowSpecials@5442a311]" name="tearDown" is-config="true" duration-ms="9809" started-at="2023-04-07T16:42:39Z" finished-at="2023-04-07T16:42:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- atlantamarket_PROD.ShowSpecials -->
-
+      </class> <!-- lasvegasmarket_PROD.FloorPlans -->
     </test> <!-- RegressionTest -->
-  </suite> <!-- ATLMrkt_RegressionTestSuite -->
+  </suite> <!-- LVM_RegressionTestSuite -->
 </testng-results>

@@ -8,9 +8,9 @@
 		<test thread-count="5" name="RegressionTest">
 		<classes>
 
-		<class name="lasvegasmarket_PROD.ExhibitorDigitalShowroom" /> 
+		<class name="lasvegasmarket_PROD.FloorPlans" /> 
 				<methods>
-				      <include name="TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest()"/>   
+				      <include name="TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest()"/>   
 				</methods>
 		</classes>
 	</test>
