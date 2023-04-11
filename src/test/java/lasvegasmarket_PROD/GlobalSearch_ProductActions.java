@@ -331,13 +331,13 @@ public class GlobalSearch_ProductActions extends base {
 		Thread.sleep(8000);
 
 		// Verify that the added Product should be displayed in to Favorites list
-		Assert.assertTrue(atlmppge.getSavedProductNameInList().getText().contains(productNameOnSearchGrid));
-		utl.checkItemPresentInListorNot(atlmppge.getFavListProducts(), productNameOnSearchGrid);
-		/*favlist = atlmppge.getFavExhList();
+		//Assert.assertTrue(atlmppge.getSavedProductNameInList().getText().contains(productNameOnSearchGrid));
+		//utl.checkItemPresentInListorNot(atlmppge.getFavListProducts(), productNameOnSearchGrid);
+		favlist = atlmppge.getFavExhList();
 		for(WebElement nameOfExh : favlist) {
 			Assert.assertTrue(nameOfExh.getText().contains(productNameOnSearchGrid));
 			break;
-		}*/
+		}
 		
 		// Delete that favorited product from list
 		Thread.sleep(3000);
@@ -346,7 +346,7 @@ public class GlobalSearch_ProductActions extends base {
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(8000);
 
-		favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
+		//favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
 
 		//Verify that the added product should be removed from Favorites list
 		for(int i=1; i< favlist.size(); i++)

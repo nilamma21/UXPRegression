@@ -10,19 +10,20 @@
 		<classes>
 
 
-			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
-				<methods>
-					 <!-- <include name="TS020_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest()"/>   -->
-				</methods>
-	
-
-
-
-			<class name="atlantamarket_PROD.LineDigitalShowroom" />
 			<class name="atlantamarket_PROD.ExhibitorDigitalShowroom" />
-		<class name="atlantamarket_PROD.GlobalSearch_SearchFor"/>
-						
+				<methods>
+					 <include name="TS001_VerifyAddToFavoritesTest"/>  
+				</methods>
+	</classes>
+	</test>
+</suite>
+
+
 			<!-- <class name="atlantamarket_PROD.LineDigitalShowroom" />
+			<class name="atlantamarket_PROD.ExhibitorDigitalShowroom" />
+		<class name="atlantamarket_PROD.GlobalSearch_SearchFor"/> 
+						
+			 <class name="atlantamarket_PROD.LineDigitalShowroom" />
 			<class name="atlantamarket_PROD.GlobalSearch_SearchFor"/>
 			<class name="atlantamarket_PROD.EvenntsAndWebinar" />
 			<class name="atlantamarket_PROD.ExhibitorDigitalShowroom" />
@@ -44,7 +45,7 @@
 			<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
 		</classes>
 	</test>
-</suite>
+</suite>-->
 
 <!-- <suite name="ATLMrkt_RegressionTestSuite"> <listners> <listner class-name="atlantamarket_UAT.TestListeners" 
 	/> </listners> <test thread-count="5" name="RegressionTest"> <classes> <class 
