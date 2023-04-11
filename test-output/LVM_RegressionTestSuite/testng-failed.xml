@@ -2,15 +2,17 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [LVM_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
+    <groups>
+      <run>
+        <include name="MP_Group"/>
+      </run>
+    </groups>
     <classes>
-      <class name="lasvegasmarket_PROD.EvenntsAndWebinar">
+      <class name="MPTest.MPTest">
         <methods>
-          <include name="TS012_VerifyExhibitorEventsDetailstTest"/>
-          <include name="tearDown"/>
-          <include name="TS005_VerifyIMCEventsEventDetailstTest"/>
-          <include name="initialize"/>
+          <include name="TS009_VerifySelectionOfExhibitorFromSearchResultsTest"/>
         </methods>
-      </class> <!-- lasvegasmarket_PROD.EvenntsAndWebinar -->
+      </class> <!-- MPTest.MPTest -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->

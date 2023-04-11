@@ -40,7 +40,7 @@ public class ShowSpecials extends base  {
 	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns,
 			allnoteslist, favlist, searchlinetypelist, tagBlogPost, taglist, infoFilterList;
 
-	@BeforeClass
+	@BeforeClass(alwaysRun=true)
 	public void initialize() throws IOException, InterruptedException {
 		driver = initializeDriver(); // requires for Parallel text execution
 		// chromeVersion();
@@ -59,7 +59,35 @@ public class ShowSpecials extends base  {
 		//lap.getCloseMarktAdBtn().click();
 		
 	}
-	@Test(priority = 1)
+	@Test
+	public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
+
+		// The purpose of this test case to verify:-
+		// TS1- Login to Market Planner
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+
+		// Click on Login button from Landing Page
+		lap.getLogin().click();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		// Enter the credentials on Login Page and click
+		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
+
+		lp.getPassword().sendKeys((prop.getProperty("passwordW")));
+
+
+		Thread.sleep(1000);
+	//	lp.getPassword().sendKeys((prop.getProperty("password")));
+		Thread.sleep(1000);
+
+		lp.getSignInBtn().click();
+		Thread.sleep(15000);
+		Assert.assertTrue(driver.getTitle().contains("Atlanta Market at AmericasMart"));
+	}
+	
+
+	@Test(priority = 1,groups="Non_MP")
 	public void TS001_VerifyShowSpecialsLinksExhibitorNameTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -93,7 +121,7 @@ public class ShowSpecials extends base  {
 		Assert.assertTrue(atlgs.getatlShowSpecialsTitle().getText().contains(showSpecialExhName));
 		
 	}
-	@Test(priority = 2)
+	@Test(priority = 2,groups="Non_MP")
 	public void TS002_VerifyShowSpecialsLinksShowroomTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -128,7 +156,7 @@ public class ShowSpecials extends base  {
 		
 	}
 
-	@AfterClass
+	@AfterClass(alwaysRun=true)
 	public void tearDown() {
 		 driver.quit();
 	}

@@ -1,41 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="LVM_RegressionTestSuite">
-	<listners>
-		<listner class-name="lasvegasmarket_PROD.TestListeners" />
-	</listners>
-		<test thread-count="5" name="RegressionTest">
-		<classes>
-
-		<class name="lasvegasmarket_PROD.EvenntsAndWebinar" /> 
-<!-- 				<methods>
-				     <include name="TS007_VerifyIMCEventsAddToListTest"/> 
-				</methods>
-
+<!-- 4
  -->
-			
-
-		</classes>
-	</test>
-</suite>
-
  
- <!-- <suite name="LVM_RegressionTestSuite">
-	<listners>
-		<listner class-name="lasvegasmarket_PROD.TestListeners" />
-	</listners>
-
+ <suite name="LVM_RegressionTestSuite">
+	<!-- <listners>
+		<listner class-name="MPTest.TestListeners" />
+	</listners> -->
 	<test thread-count="5" name="RegressionTest">
+		
+		<groups>
+	<run>
+		<include name="MP_Group"/>
+	</run>
+</groups>
 		<classes>
-			<class name="atlantamarket_PROD.GlobalSearch_ShowSpecials" />
-			<methods>
-			<include name="TS003_VerifyGlobalSearchMatchingResultsSortSortByTest" /> 
-				<include name="TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest" />
+
+			<class name="MPTest.MPTest" />
+			
+			<!-- <methods>
+			<include name="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest" /> 
+				 <include name="TS006_VerifyProductAddToExistingListOnSearchResultsGridTest" />
 				<include name="TS018_VerifyCatalogsSectionForExhibitorTest" />
 				
-			</methods>
+			</methods> -->
 		</classes>
-	</test>
+		</test>
 </suite>
- -->

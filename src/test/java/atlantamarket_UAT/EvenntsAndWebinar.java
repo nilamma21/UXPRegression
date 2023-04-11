@@ -45,7 +45,7 @@ public class EvenntsAndWebinar extends base{
 	ATLEventsAndWebinarPage atlevents;
 	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns, allnoteslist,favlist, searchlinetypelist;
 
-	@BeforeClass
+	@BeforeClass(alwaysRun=true)
 	public void initialize() throws IOException, InterruptedException {
 		driver = initializeDriver(); // requires for Parallel text execution
 		utl = new Utility(driver);
@@ -67,8 +67,36 @@ public class EvenntsAndWebinar extends base{
 		Thread.sleep(8000);
 		//		lap.getCloseMarktAdBtn().click();
 	}
+	@Test
+	public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
 
-	@Test(priority = 1)
+		// The purpose of this test case to verify:-
+		// TS1- Login to Market Planner
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+
+		// Click on Login button from Landing Page
+		lap.getLogin().click();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		// Enter the credentials on Login Page and click
+		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
+
+		lp.getPassword().sendKeys((prop.getProperty("passwordW")));
+
+
+		Thread.sleep(1000);
+	//	lp.getPassword().sendKeys((prop.getProperty("password")));
+		Thread.sleep(1000);
+
+		lp.getSignInBtn().click();
+		Thread.sleep(15000);
+		Assert.assertTrue(driver.getTitle().contains("Atlanta Market at AmericasMart"));
+	}
+	//@Test(priority = 8,groups="Non_MP")
+	//@Test(priority=1,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
+	
+	@Test(priority = 1,groups="Non_MP")
 	public void TS001_VerifyEventsAndWebinarsOverviewTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T283: Events and Webinars Overview
@@ -118,7 +146,7 @@ public class EvenntsAndWebinar extends base{
 
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2,groups="Non_MP")
 	public void TS002_VerifyIMCEventsSearchbarTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T284: IMC Events: Search bar
@@ -155,7 +183,7 @@ public class EvenntsAndWebinar extends base{
 
 
 	}
-	@Test(priority = 3)
+	@Test(priority = 3,groups="Non_MP")
 	public void TS003_VerifyIMCEventsCalendarViewTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 				// UXP-T288: IMC Events: Calendar View
@@ -258,7 +286,7 @@ public class EvenntsAndWebinar extends base{
 				}
 
 	}
-	@Test(priority = 4)
+	@Test(priority = 4,groups="Non_MP")
 	public void TS004_VerifyIMCEventsEventsListTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T292: IMC Events: Events List
@@ -370,7 +398,7 @@ public class EvenntsAndWebinar extends base{
 
 
 	}
-	@Test(priority = 5)
+	@Test(priority = 5,groups="Non_MP")
 	public void TS005_VerifyIMCEventsEventDetailstTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T295: IMC Events: Event Details    
@@ -482,7 +510,7 @@ public class EvenntsAndWebinar extends base{
 
 	}
 
-	@Test(priority = 6)
+	@Test(priority = 6,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS006_VerifyIMCEventsAddToFavoriteTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T296: IMC Events: Event Details- Add To Favorite    
@@ -497,7 +525,7 @@ public class EvenntsAndWebinar extends base{
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//Login to MP
-		utl.verifyMPLoginFunctionality();
+		//utl.verifyMPLoginFunctionality();
 
 		utl.clickOnEventLinkOfChannel_UAT();
 
@@ -536,7 +564,7 @@ public class EvenntsAndWebinar extends base{
 		Assert.assertFalse(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 
 	}
-	@Test(priority = 16)//Previous priority = 07
+	@Test(priority = 16,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")//Previous priority = 07
 	public void TS007_VerifyIMCEventsAddToListTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T298: IMC Events: Event Details- Add To List
@@ -617,7 +645,7 @@ public class EvenntsAndWebinar extends base{
 
 	}
 
-	@Test(priority = 8)
+	@Test(priority = 8,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS008_VerifyIMCEventsAddNoteTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T299: IMC Events: Event Details- Add Note
@@ -703,7 +731,7 @@ public class EvenntsAndWebinar extends base{
 		// Delete the saved note
 		atlexhact.getDeleteNoteBtn().click();
 	}
-	@Test(priority = 9)
+	@Test(priority = 9,groups="Non_MP")
 	public void TS009_VerifyExhibitorEventsSearchbarTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T304: Exhibitor Events: Search bar
@@ -737,7 +765,7 @@ public class EvenntsAndWebinar extends base{
 		//Assert.assertEquals(atlevents.getatlEventName().getText(), eventName);
 		utl.checkItemPresentInListorNot(atlevents.getatlListOfEventTitles(), eventName);
 	}
-	@Test(priority = 10)
+	@Test(priority = 10,groups="Non_MP")
 	public void TS010_VerifyExhibitorEventsCalendarViewTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T305: Exhibitor Events: Calendar View
@@ -825,7 +853,7 @@ public class EvenntsAndWebinar extends base{
 		Thread.sleep(4000);
 	}
 
-	@Test(priority = 16)//Previous priority = 11
+	@Test(priority = 16,groups="Non_MP")//Previous priority = 11
 	public void TS011_VerifyExhibitorEventsListTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T306: Exhibitor Events: Events List
@@ -946,7 +974,7 @@ public class EvenntsAndWebinar extends base{
 		System.out.println(allEventSeeDetailsLinkCount + " Events Details Page displayed");
 		Assert.assertEquals(allEventcount, allEventSeeDetailsLinkCount1);
 	}
-	@Test(priority = 12)
+	@Test(priority = 12,groups="Non_MP")
 	public void TS012_VerifyExhibitorEventsDetailstTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T307: Exhibitor Events: Event Details
@@ -1066,7 +1094,7 @@ public class EvenntsAndWebinar extends base{
 
 	}	
 
-	@Test(priority = 13)
+	@Test(priority = 13,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS013_VerifyExhibitorEventsAddToFavoriteTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T308: Exhibitor Events: Event Details- Add To Favorite
@@ -1122,7 +1150,7 @@ public class EvenntsAndWebinar extends base{
 		Assert.assertFalse(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 
 	}
-	@Test(priority = 14)
+	//@Test(priority = 14,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS014_VerifyExhibitorEventsAddToListTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T309: Exhibitor Events: Event Details- Add To List
@@ -1207,7 +1235,7 @@ public class EvenntsAndWebinar extends base{
 
 	}
 
-	@Test(priority = 15)
+	@Test(priority = 15,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS015_VerifyExhibitorEventsAddNoteTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T310: Exhibitor Events: Event Details- Add Note
@@ -1296,7 +1324,7 @@ public class EvenntsAndWebinar extends base{
 		atlexhact.getDeleteNoteBtn().click();
 	}
 
-	@AfterClass
+	@AfterClass(alwaysRun=true)
 	public void tearDown()
 	{
 		//driver.quit();
