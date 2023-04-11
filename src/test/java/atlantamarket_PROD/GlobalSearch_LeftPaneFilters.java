@@ -307,8 +307,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		driver.get("https://exhibitors.imcenters.com/");
 
 		//Login to EXP
-		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
-		lp.getPassword().sendKeys((prop.getProperty("password")));
+		lp.getEmailAddress().sendKeys((prop.getProperty("usernameSwapnil")));
+		lp.getPassword().sendKeys((prop.getProperty("passwordSwapnil")));
 
 		lp.getSignInBtn().click();
 		Thread.sleep(15000);
@@ -330,7 +330,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl.scrollToElement(atlleftpane.getEXPProductCategSection());
 
 		//Verify that expected Style should be displayed on profile
-		Assert.assertTrue(atlleftpane.getEXPCoastalStyleOnProfile().isDisplayed());
+		Assert.assertTrue(atlleftpane.getEXPIndustrialStyleOnProfile().isDisplayed());
 		driver.close();
 		driver.switchTo().window(tabs.get(0));
 		//driver.get(prop.getProperty("atlmrkturl_prod"));

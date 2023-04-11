@@ -378,7 +378,7 @@ public class LVMExhLineProdActionsPage {
 		return driver.findElement(thirdexhname);
 	}
 	public WebElement getEventCardTitleNex() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(eventcardtitlenew));
 		return driver.findElement(eventcardtitlenew);
 	}

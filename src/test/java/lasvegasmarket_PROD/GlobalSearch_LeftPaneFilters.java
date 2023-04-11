@@ -586,7 +586,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor6")));
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(6000);
 
@@ -617,7 +617,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 			}
 		}
 		driver.navigate().back();
-		Thread.sleep(5000);
+		Thread.sleep(6000);
 
 		/*//Verify the selected Product Category on Product details page
 		utl.scrollToElement(lvmexhact.getProductForMultipleCatg());
@@ -638,7 +638,6 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		for (int j = 0; j < prodcatgitemlist.size(); j++) {
 			if(lvmds.getLVMProductCategTable().isDisplayed()) {
-				//System.out.println(prodcatgitemlist.get(j).getText());
 				Assert.assertTrue(prodcatgitemlist.get(j).getText().contains(expectedprodcatg));
 				break;
 			}

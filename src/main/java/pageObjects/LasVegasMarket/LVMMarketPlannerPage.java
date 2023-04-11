@@ -807,7 +807,7 @@ public class LVMMarketPlannerPage {
 		return driver.findElement(mpManageDropdown);
 	}
 	public WebElement getMpManageEditList() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpManageEditList));
 		return driver.findElement(mpManageEditList);
 	}

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<<<<<<< HEAD
 <suite name="Failed suite [MPGroupTestSuite]">
   <test name="MPGroupTest(failed)">
     <groups>
@@ -32,3 +33,28 @@
     </classes>
   </test> <!-- MPGroupTest(failed) -->
 </suite> <!-- Failed suite [MPGroupTestSuite] -->
+=======
+<suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
+  <test name="RegressionTest(failed)">
+    <classes>
+
+      <class name="lasvegasmarket_PROD.ExhibitorDigitalShowroom">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+          <include name="TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest"/>
+        </methods>
+      </class> <!-- lasvegasmarket_PROD.ExhibitorDigitalShowroom -->
+
+      <class name="atlantamarket_PROD.ShowSpecials">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+          <include name="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.ShowSpecials -->
+
+    </classes>
+  </test> <!-- RegressionTest(failed) -->
+</suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->
+>>>>>>> 1cb1d09bc8de92abb1fa07719c3bf375184cf3e1

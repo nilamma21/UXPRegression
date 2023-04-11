@@ -187,7 +187,7 @@ public class EvenntsAndWebinar extends base{
 		 System.out.println(trimYear);
 		String EventmonthAndYear = trimMonth.concat(" ").concat(trimYear);
 		 System.out.println("Concat Month And Year :: "+EventmonthAndYear);
-
+		 
 		// Verify Current Date is Heighlighetd or not
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-MMM");
 		LocalDate localDate = LocalDate.now();
@@ -205,7 +205,7 @@ public class EvenntsAndWebinar extends base{
 		String m = month.format(localMonth);//current month
 		String mm = month.format(prevMonth);//previous month
 		
-	
+		
 		System.out.println("Current Month ::" +m );
 		System.out.println("Previous Month ::" +mm );
 		

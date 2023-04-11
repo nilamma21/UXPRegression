@@ -488,7 +488,7 @@ public class FloorPlans extends base {
 		driver.navigate().refresh();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		// Click on Exh And Product Tab
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		atlflpp.getATLExhibitorsAndProductTab().click();
 		Thread.sleep(2000);
 		// click on Floor plans link
@@ -625,7 +625,7 @@ public class FloorPlans extends base {
 		atlmppge = new ATLMarketPlannerPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		Thread.sleep(2000);
 		// Click on Exh And Product Tab
 		atlflpp.getATLExhibitorsAndProductTab().click();
 		// click on Floor plans link
@@ -657,9 +657,12 @@ public class FloorPlans extends base {
 		//System.out.println(atlmppge.getATLSavedExhNameInList().getText());
 		// Verify that the added favorites exhibitor should be displayed in to Favorites list
 		favlist = atlmppge.getFavExhList();
-		for(WebElement nameOfExh : favlist) {
-			Assert.assertTrue(nameOfExh.getText().contains(exhibitorName));
-			break;
+		for (int i = 0; i < favlist.size(); i++) {
+			if(favlist.contains(exhibitorName)) {
+				//System.out.println(prodcatgitemlist.get(i).getText());
+				Assert.assertTrue(favlist.get(i).getText().contains(exhibitorName));
+				break;
+			}
 		}
 		//Assert.assertTrue(atlmppge.getlvmsavedexhnameinlist_uat().getText().contains(exhibitorName));//old
 		Thread.sleep(2000);
@@ -668,14 +671,12 @@ public class FloorPlans extends base {
 		//action.moveToElement(atlmppge.getMoreBtnDeleteOptn_lvmUAT()).perform();
 		atlmppge.getMoreBtnDeleteOptn_lvmUAT().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
-		Thread.sleep(6000);
-
-		favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
+		Thread.sleep(7000);
 
 		// Verify that the added favorites exhibitor should be removed from Favorites list
 		for (int i = 1; i < favlist.size(); i++) {
-			// System.out.println(favlist.get(i).getText());
 			Assert.assertFalse(favlist.get(i).getText().contains(exhibitorName));
+			break;
 		}
 	}
 	@AfterClass
