@@ -51,6 +51,11 @@ public class ShowSpecials extends base  {
 	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns,
 	allnoteslist, favlist, searchlinetypelist, tagBlogPost, taglist, infoFilterList, showspecialslist;
 
+
+
+	ArrayList<String> tabs;
+
+
 	ArrayList<String> tabs;
 
 	@BeforeClass(alwaysRun=true)
@@ -63,6 +68,7 @@ public class ShowSpecials extends base  {
 		//Add new Show Special from EXP
 		utl.addNewShowSpecialFrmExp_UAT();
 	}
+
 
 	@Test
 	public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
@@ -97,6 +103,11 @@ public class ShowSpecials extends base  {
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T381: Show Specials: Links - Exhibitor Name
+
+	
+	@Test(priority = 1)
+	public void TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest() throws InterruptedException, IOException {
+
 
 	*/
 	@Test(priority = 1,groups="Non_MP")
@@ -145,12 +156,18 @@ public class ShowSpecials extends base  {
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 	}
 
+
 /*	@Test(priority = 2,groups="Non_MP")
 	public void TS002_VerifyShowSpecialsLinksShowroomTest()
 			throws InterruptedException, IOException {
 
 	*/
 	@Test(priority = 2,groups="Non_MP")
+	public void TS002_VerifyLocationLinksForShowSpecialsTest() throws InterruptedException, IOException {
+
+
+	
+	@Test(priority = 2)
 	public void TS002_VerifyLocationLinksForShowSpecialsTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
@@ -189,11 +206,18 @@ public class ShowSpecials extends base  {
 	}
 
 
+
 /*	@AfterClass(alwaysRun=true)
 	public void tearDown() {
 		 driver.quit();
 */
 	@AfterClass(alwaysRun=true)
+	public void tearDown() throws InterruptedException {
+		utl.deleteShowSpecialFrmExp();
+		driver.quit();
+
+
+	@AfterClass
 	public void tearDown() throws InterruptedException {
 		utl.deleteShowSpecialFrmExp();
 		driver.quit();

@@ -8,6 +8,7 @@
       </run>
     </groups>
     <classes>
+<<<<<<< HEAD
 
       <class name="lasvegasmarket_PROD.FloorPlans">
 
@@ -31,6 +32,15 @@
       </class> <!-- lasvegasmarket_PROD.ExhibitorDigitalShowroom -->
 
 
+=======
+      <class name="lasvegasmarket_PROD.ExhibitorDigitalShowroom">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+          <include name="TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest"/>
+        </methods>
+      </class> <!-- lasvegasmarket_PROD.ExhibitorDigitalShowroom -->
+>>>>>>> 8a469d676341c8f89f92294f314250e80ca62129
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->

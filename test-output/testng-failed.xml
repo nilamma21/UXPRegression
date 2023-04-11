@@ -41,6 +41,7 @@
 
   <test name="RegressionTest(failed)">
     <classes>
+
       <class name="lasvegasmarket_PROD.FloorPlans">
         <methods>
           <include name="tearDown"/>
@@ -48,6 +49,25 @@
           <include name="TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest"/>
         </methods>
       </class> <!-- lasvegasmarket_PROD.FloorPlans -->
+
+
+      <class name="lasvegasmarket_PROD.ExhibitorDigitalShowroom">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+          <include name="TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest"/>
+        </methods>
+      </class> <!-- lasvegasmarket_PROD.ExhibitorDigitalShowroom -->
+
+      <class name="atlantamarket_PROD.ShowSpecials">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+          <include name="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.ShowSpecials -->
+
+
     </classes>
   </test> <!-- RegressionTest(failed) -->
 
