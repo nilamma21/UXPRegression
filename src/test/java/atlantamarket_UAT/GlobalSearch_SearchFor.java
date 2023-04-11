@@ -45,7 +45,7 @@ public class GlobalSearch_SearchFor extends base {
 	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns,
 	allnoteslist, favlist, searchlinetypelist, tagBlogPost, taglist, infoFilterList;
 
-	@BeforeClass
+	@BeforeClass(alwaysRun=true)
 	public void initialize() throws IOException, InterruptedException {
 		driver = initializeDriver(); // requires for Parallel text execution
 		// chromeVersion();
@@ -60,7 +60,36 @@ public class GlobalSearch_SearchFor extends base {
 		Thread.sleep(5000);
 		// lap.getCloseMarktAdBtn().click();
 	}
-	@Test(priority = 1)
+	@Test
+	public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
+
+		// The purpose of this test case to verify:-
+		// TS1- Login to Market Planner
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+
+		// Click on Login button from Landing Page
+		lap.getLogin().click();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		// Enter the credentials on Login Page and click
+		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
+
+		lp.getPassword().sendKeys((prop.getProperty("passwordW")));
+
+
+		Thread.sleep(1000);
+	//	lp.getPassword().sendKeys((prop.getProperty("password")));
+		Thread.sleep(1000);
+
+		lp.getSignInBtn().click();
+		Thread.sleep(15000);
+		Assert.assertTrue(driver.getTitle().contains("Atlanta Market at AmericasMart"));
+	}
+	
+	
+
+	@Test(priority = 1,groups="Non_MP")
 	public void TS001_VerifyInformationTabInGlobalSearchTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
@@ -96,7 +125,7 @@ public class GlobalSearch_SearchFor extends base {
 		Thread.sleep(5000);
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2,groups="Non_MP")
 	public void TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
@@ -140,7 +169,7 @@ public class GlobalSearch_SearchFor extends base {
 		Thread.sleep(5000);
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 3,groups="Non_MP")
 	public void TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
@@ -212,7 +241,7 @@ public class GlobalSearch_SearchFor extends base {
 		Thread.sleep(5000);
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 4,groups="Non_MP")
 	public void TS004_VerifyCatalogsOverviewInGlobalSearchTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
@@ -304,7 +333,7 @@ public class GlobalSearch_SearchFor extends base {
 		
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 5,groups="Non_MP")
 	public void TS005_VerifyArticlesOverviewInGlobalSearchTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
@@ -342,7 +371,7 @@ public class GlobalSearch_SearchFor extends base {
 		Thread.sleep(5000);
 	}
 
-	@Test(priority = 6)
+	@Test(priority = 6,groups="Non_MP")
 	public void TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
@@ -587,7 +616,7 @@ public class GlobalSearch_SearchFor extends base {
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 		Thread.sleep(5000);
 	}
-	@Test(priority = 7)
+	@Test(priority = 7,groups="Non_MP")
 	public void TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
@@ -634,7 +663,7 @@ public class GlobalSearch_SearchFor extends base {
 	}
 
 
-	@Test(priority = 8)
+	@Test(priority = 8,groups="Non_MP")
 	public void TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
@@ -678,7 +707,7 @@ public class GlobalSearch_SearchFor extends base {
 		Thread.sleep(5000);
 	}
 
-	@Test(priority = 9)
+	@Test(priority = 9,groups="Non_MP")
 	public void TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
@@ -748,7 +777,7 @@ public class GlobalSearch_SearchFor extends base {
 	}
 
 
-	@Test(priority = 10)
+	@Test(priority = 10,groups="Non_MP")
 	public void TS010_VerifyShowSpecialsOverviewInGlobalSearchTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T425: Verify Show Specials option in global search
@@ -777,7 +806,7 @@ public class GlobalSearch_SearchFor extends base {
 		Thread.sleep(5000);
 	}
 
-	@Test(priority = 11)
+	@Test(priority = 11,groups="Non_MP")
 	public void TS011_VerifyEventsOverviewInGlobalSearchTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T425: Verify Events option in global search
@@ -814,7 +843,7 @@ public class GlobalSearch_SearchFor extends base {
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 		Thread.sleep(5000);
 	}
-	@AfterClass
+	@AfterClass(alwaysRun=true)
 	public void tearDown()
 	{
 		driver.quit();

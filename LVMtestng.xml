@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
+<!-- 
 <suite name="LVM_RegressionTestSuite">
 	<listners>
 		<listner class-name="lasvegasmarket_PROD.TestListeners" />
@@ -15,23 +16,57 @@
 		</classes>
 	</test>
 </suite>
+ -->
 
- 
- <!-- <suite name="LVM_RegressionTestSuite">
+ <!-- 
+ <suite name="LVM_RegressionTestSuite">
 	<listners>
-		<listner class-name="lasvegasmarket_PROD.TestListeners" />
+		<listner class-name="MPTest.TestListeners" />
 	</listners>
-
 	<test thread-count="5" name="RegressionTest">
+		
+		<groups>
+	<run>
+		<include name="MP_Group"/>
+	</run>
+</groups>
 		<classes>
-			<class name="atlantamarket_PROD.GlobalSearch_ShowSpecials" />
+
+			<class name="MPTest.MPTest" />
+			
 			<methods>
-			<include name="TS003_VerifyGlobalSearchMatchingResultsSortSortByTest" /> 
-				<include name="TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest" />
+			<include name="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest" /> 
+				 <include name="TS006_VerifyProductAddToExistingListOnSearchResultsGridTest" />
 				<include name="TS018_VerifyCatalogsSectionForExhibitorTest" />
 				
 			</methods>
 		</classes>
-	</test>
+		</test>
 </suite>
  -->
+ 
+ 
+ <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MPGroupTestSuite">
+
+	<test thread-count="5" name="MPGroupTest">
+
+		<groups>
+			<run>
+				<include name="MP_Group" />
+				<include name="Non_MP" />
+				
+			</run>
+		</groups>
+
+		<classes>
+			<class name="atlantamarket_UAT.ExhibitorDigitalShowroom" />
+
+		</classes>
+	</test>
+</suite>
+ 
+ 
+ 
+ 

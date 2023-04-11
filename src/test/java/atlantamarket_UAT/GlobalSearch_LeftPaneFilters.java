@@ -45,7 +45,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 	List<WebElement> exhproductlist,prodcatgitemlist,exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns, allnoteslist,favlist, searchlinetypelist;
 
-	@BeforeClass
+	@BeforeClass(alwaysRun=true)
 	public void initialize() throws IOException, InterruptedException {
 		driver = initializeDriver(); // requires for Parallel text execution
 		utl = new Utility(driver);
@@ -64,8 +64,35 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 	}
+	@Test
+	public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
 
-	@Test(priority = 1)
+		// The purpose of this test case to verify:-
+		// TS1- Login to Market Planner
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+
+		// Click on Login button from Landing Page
+		lap.getLogin().click();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		// Enter the credentials on Login Page and click
+		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
+
+		lp.getPassword().sendKeys((prop.getProperty("passwordW")));
+
+
+		Thread.sleep(1000);
+	//	lp.getPassword().sendKeys((prop.getProperty("password")));
+		Thread.sleep(1000);
+
+		lp.getSignInBtn().click();
+		Thread.sleep(15000);
+		Assert.assertTrue(driver.getTitle().contains("Atlanta Market at AmericasMart"));
+	}
+	
+	
+	@Test(priority = 1,groups="Non_MP")
 	public void TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T404: Selection Of Apparel, Vintage Prod Catg From Left Pane Filters
@@ -110,7 +137,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//driver.get(prop.getProperty("atlmrkturl_uat"));
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2,groups="Non_MP")
 	public void TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T404: Selection Of Antique/Vintage Prod Catg From Left Pane Filters
@@ -163,7 +190,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//driver.get(prop.getProperty("atlmrkturl_uat"));
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 3,groups="Non_MP")
 	public void TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T405: Combination within Prod Catgs From Left Pane Filters
@@ -240,7 +267,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 4,groups="Non_MP")
 	public void TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T406: Combination of Prod Catgs with Styles From Left Pane Filters
@@ -341,7 +368,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//driver.get(prop.getProperty("atlmrkturl_uat"));
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 5,groups="Non_MP")
 	public void TS005_VerifySelectionOfAccentFurnitureProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T404: Selection Of Accent Furniture Prod Catg From Left Pane Filters
@@ -388,7 +415,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//driver.get(prop.getProperty("atlmrkturl_uat"));
 	}
 
-	@Test(priority = 6)
+	@Test(priority = 6,groups="Non_MP")
 	public void TS006_VerifySelectionOfHolidayProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T404: Selection Of Holiday/Seasonal Prod Catg From Left Pane Filters
@@ -459,7 +486,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		}
 	}
 
-	@Test(priority =7)
+	@Test(priority =7,groups="Non_MP")
 	public void TS007_VerifySelectionOfDecorativeAccessProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T404: Selection Of Decorative Accessories Prod Catg From Left Pane Filters
@@ -512,7 +539,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//driver.get(prop.getProperty("atlmrkturl_uat"));
 	}
 
-	@Test(priority =8)
+	@Test(priority =8,groups="Non_MP")
 	public void TS008_VerifySelectionOfGeneralGiftProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T404: Selection Of General Gift Prod Catg From Left Pane Filters
@@ -565,7 +592,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//driver.get(prop.getProperty("atlmrkturl_uat"));
 	}
 
-	@Test(priority = 9)
+	@Test(priority = 9,groups="Non_MP")
 	public void TS009_VerifySelectionOfFashionAccProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T404: Selection Of Fashion Accessories/Jewelry Prod Catg From Left Pane Filters
@@ -637,7 +664,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//driver.get(prop.getProperty("atlmrkturl_uat"));
 	}
 
-	@Test(priority =10)
+	@Test(priority =10,groups="Non_MP")
 	public void TS010_VerifySelectionOfFloralBotanicalsProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T404: Selection Of Floral / Botanicals Prod Catg From Left Pane Filters
@@ -690,7 +717,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//driver.get(prop.getProperty("atlmrkturl_uat"));
 	}
 
-	@Test(priority =11)
+	@Test(priority =11,groups="Non_MP")
 	public void TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T404: Selection Of Home Textiles Prod Catg From Left Pane Filters
@@ -738,7 +765,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 	}
 
 
-	@AfterClass
+	@AfterClass(alwaysRun=true)
 	public void tearDown()
 	{
 		driver.quit();

@@ -6,6 +6,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.filefilter.TrueFileFilter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -47,7 +48,7 @@ public class FloorPlans extends base {
 
 	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns, allnoteslist,favlist, searchlinetypelist;
 
-	@BeforeClass
+	@BeforeClass(alwaysRun=true)
 	public void initialize() throws IOException, InterruptedException {
 		driver = initializeDriver(); // requires for Parallel text execution
 		utl = new Utility(driver);
@@ -61,13 +62,41 @@ public class FloorPlans extends base {
 		//lap.getCloseMarktAdBtn().click();
 
 		//Login to Market Planner
-		utl.verifyMPLoginFunctionality();
+		//utl.verifyMPLoginFunctionality();
 		driver.navigate().refresh();
 		Thread.sleep(8000);
 		//		lap.getCloseMarktAdBtn().click();
 	}
+	@Test
+	public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
 
-	@Test(priority = 1)
+		// The purpose of this test case to verify:-
+		// TS1- Login to Market Planner
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+
+		// Click on Login button from Landing Page
+		lap.getLogin().click();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		// Enter the credentials on Login Page and click
+		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
+
+		lp.getPassword().sendKeys((prop.getProperty("passwordW")));
+
+
+		Thread.sleep(1000);
+	//	lp.getPassword().sendKeys((prop.getProperty("password")));
+		Thread.sleep(1000);
+
+		lp.getSignInBtn().click();
+		Thread.sleep(15000);
+		Assert.assertTrue(driver.getTitle().contains("Atlanta Market at AmericasMart"));
+	}
+	
+	
+
+	@Test(priority = 1,groups="Non_MP")
 	public void TS001_VerifyNavigationToDifferentFloorBuildingsTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T285: To verify Floor Plans: Navigation to different floor/buildings
@@ -105,7 +134,7 @@ public class FloorPlans extends base {
 		Assert.assertTrue(atlflpp.getATLFloorName().getText().contains(floorName));
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2,groups="Non_MP")
 	public void TS002_VerifyNoExhibitorsOnThisFloorMessageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T286: To verify Floor Plans: No Exhibitors or Loading message
@@ -137,7 +166,7 @@ public class FloorPlans extends base {
 		Assert.assertTrue(atlflpp.getATLNoExpMsg().isDisplayed());
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 3,groups="Non_MP")
 	public void TS003_VerifyZoomInOutLevelOnFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case:-
 		// UXP-T287: To verify Floor Plans: Zoom Levels
@@ -185,7 +214,7 @@ public class FloorPlans extends base {
 		Assert.assertNotEquals(x1, out);
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 4,groups="Non_MP")
 	public void TS004_VerifyIconsOnFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to:-
 		// UXP-T289: To verify Floor Plans: Icons
@@ -255,7 +284,7 @@ public class FloorPlans extends base {
 		Assert.assertTrue(atlexhdgshw.getExhibitorNameOnExhDirectImg().getText().contains(exhnameondetailsmodal));
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 5,groups="Non_MP")
 	public void TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T290: To verify Floor Plans: Filter
@@ -326,7 +355,7 @@ public class FloorPlans extends base {
 		Assert.assertTrue(atlflpp.getNoResultsMsgForLinesOnJuniper().isDisplayed());
 	}
 
-	@Test(priority = 6)
+	@Test(priority = 6,groups="Non_MP")
 	public void TS006_VerifyPaginationOnFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T291: Floor Plans: Pagination
@@ -365,7 +394,7 @@ public class FloorPlans extends base {
 		Assert.assertTrue(exptectedPeviousFloorNumber.contains(actualPreviousFloorNumber));	
 	}
 
-	@Test(priority = 7)
+	@Test(priority = 7,groups="Non_MP")
 	public void TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T324: Floor Plans: Select Exhibitors
@@ -403,7 +432,7 @@ public class FloorPlans extends base {
 		Assert.assertTrue(atlexhdgshw.getExhibitorNameOnExhDirectImg().getText().contains(exhibitorName));
 	}
 
-	@Test(priority = 8)
+	@Test(priority = 8,groups="Non_MP")
 	public void TS008_VerifyClickOnReturnToBuildingListBtnTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T328: Floor Plans: Return to Building list
@@ -431,7 +460,7 @@ public class FloorPlans extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_uat")+"Market-Map"));
 	}
 
-	@Test(priority = 9)
+	@Test(priority = 9,groups="Non_MP")
 	public void TS009_VerifySearchFunctionalityForExhListOnFloorPlansPageTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
@@ -468,7 +497,7 @@ public class FloorPlans extends base {
 		Thread.sleep(8000);
 	}
 
-	@Test(priority = 10)
+	@Test(priority = 10,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T313: Floor Plans: Exhibitor Options - Add to List
@@ -535,7 +564,7 @@ public class FloorPlans extends base {
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhnameonfloorplan));
 	}
 
-	@Test(priority = 11)
+	@Test(priority = 11,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS011_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T314: Floor Plans: Exhibitor Options - Add Note
@@ -603,7 +632,7 @@ public class FloorPlans extends base {
 		atlexhact.getDeleteNoteBtn().click();
 	}
 
-	@Test(priority = 12)
+	@Test(priority = 12,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T316: Floor Plans: Exhibitors Option - Add to Favorite
@@ -657,7 +686,7 @@ public class FloorPlans extends base {
 			Assert.assertFalse(favlist.get(i).getText().contains(exhibitorName));
 		}
 	}
-	@AfterClass
+	@AfterClass(alwaysRun=true)
 	public void tearDown()
 	{
 		//driver.quit();
