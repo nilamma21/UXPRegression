@@ -10,9 +10,9 @@
 		<classes>
 
 
-			<class name="atlantamarket_PROD.ExhibitorDigitalShowroom" />
+			<class name="atlantamarket_PROD.LineDigitalShowroom" />
 				<methods>
-					 <include name="TS001_VerifyAddToFavoritesTest"/>  
+					   <!-- <include name="TS001_VerifyAddToFavoriteForLineTest"/>   --> 
 				</methods>
 	</classes>
 	</test>

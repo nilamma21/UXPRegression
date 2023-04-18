@@ -1,29 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="2" total="11" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="58757" started-at="2023-04-11T13:15:43Z" finished-at="2023-04-11T13:16:42Z">
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="410674" started-at="2023-04-18T05:50:52Z" finished-at="2023-04-18T05:57:43Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="58757" started-at="2023-04-11T13:15:43Z" finished-at="2023-04-11T13:16:42Z">
-      <class name="atlantamarket_PROD.ExhibitorDigitalShowroom">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.ExhibitorDigitalShowroom@146ba0ac]" name="initialize" is-config="true" duration-ms="57802" started-at="2023-04-11T18:45:43Z" finished-at="2023-04-11T18:46:41Z">
+    <test name="RegressionTest" duration-ms="410674" started-at="2023-04-18T05:50:52Z" finished-at="2023-04-18T05:57:43Z">
+      <class name="atlantamarket_PROD.LineDigitalShowroom">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@548e7350]" name="initialize" is-config="true" duration-ms="65177" started-at="2023-04-18T11:20:52Z" finished-at="2023-04-18T11:21:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="FAIL" signature="TS001_VerifyAddToFavoritesTest()[pri:0, instance:atlantamarket_PROD.ExhibitorDigitalShowroom@146ba0ac]" name="TS001_VerifyAddToFavoritesTest" duration-ms="523" started-at="2023-04-11T18:46:41Z" finished-at="2023-04-11T18:46:42Z">
-          <exception class="java.lang.Error">
+        <test-method status="PASS" signature="TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@548e7350]" name="TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest" duration-ms="11507" started-at="2023-04-18T11:21:57Z" finished-at="2023-04-18T11:22:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest -->
+        <test-method status="FAIL" signature="TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@548e7350]" name="TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest" duration-ms="45991" started-at="2023-04-18T11:22:09Z" finished-at="2023-04-18T11:22:55Z">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Unresolved compilation problem: 
-	The method until(Function<? super WebDriver,V>) in the type FluentWait<WebDriver> is not applicable for the arguments (ExpectedCondition<WebElement>)
-]]>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@ID='react-autowhatever-input-1'] (tried for 40 second(s) with 500 MILLISECONDS interval)
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'ANUPPA-VD3', ip: '172.27.182.66', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_361'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir288_999256227}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:60231}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=112.0.5615.121, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 011ed158b5376c8d8aefde15a6e506ca]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Error: Unresolved compilation problem: 
-	The method until(Function<? super WebDriver,V>) in the type FluentWait<WebDriver> is not applicable for the arguments (ExpectedCondition<WebElement>)
-
-	at pageObjects.AtlantaMarket.ATLExhLineProdActionsPage.getExhibitorName(ATLExhLineProdActionsPage.java:162)
-	at atlantamarket_PROD.ExhibitorDigitalShowroom.TS001_VerifyAddToFavoritesTest(ExhibitorDigitalShowroom.java:90)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@ID='react-autowhatever-input-1'] (tried for 40 second(s) with 500 MILLISECONDS interval)
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'ANUPPA-VD3', ip: '172.27.182.66', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_361'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}), userDataDir=C:\Users\anuppa\AppData\Local\Temp\scoped_dir288_999256227}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=ANY, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:60231}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=112.0.5615.121, browserName=chrome, javascriptEnabled=true, platformName=windows, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 011ed158b5376c8d8aefde15a6e506ca
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pageObjects.AtlantaMarket.ATLLineDigitalShowroomPage.getsuggetionList(ATLLineDigitalShowroomPage.java:132)
+	at atlantamarket_PROD.LineDigitalShowroom.TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest(LineDigitalShowroom.java:127)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -50,15 +62,89 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.Error -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS001_VerifyAddToFavoritesTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.ExhibitorDigitalShowroom@146ba0ac]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-04-11T18:46:42Z" finished-at="2023-04-11T18:46:42Z">
+        </test-method> <!-- TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest -->
+        <test-method status="FAIL" signature="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@548e7350]" name="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest" duration-ms="46448" started-at="2023-04-18T11:22:55Z" finished-at="2023-04-18T11:23:41Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [false] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertFalse(Assert.java:63)
+	at org.testng.Assert.assertFalse(Assert.java:73)
+	at atlantamarket_PROD.LineDigitalShowroom.TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest(LineDigitalShowroom.java:221)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest -->
+        <test-method status="PASS" signature="TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@548e7350]" name="TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest" duration-ms="50130" started-at="2023-04-18T11:23:41Z" finished-at="2023-04-18T11:24:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest -->
+        <test-method status="PASS" signature="TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@548e7350]" name="TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest" duration-ms="81008" started-at="2023-04-18T11:24:32Z" finished-at="2023-04-18T11:25:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest -->
+        <test-method status="PASS" signature="TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@548e7350]" name="TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest" duration-ms="10515" started-at="2023-04-18T11:25:53Z" finished-at="2023-04-18T11:26:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest -->
+        <test-method status="PASS" signature="TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@548e7350]" name="TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest" duration-ms="5844" started-at="2023-04-18T11:26:03Z" finished-at="2023-04-18T11:26:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest -->
+        <test-method status="PASS" signature="TS008_VerifyLineDigitalShowroomProductscomponentTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@548e7350]" name="TS008_VerifyLineDigitalShowroomProductscomponentTest" duration-ms="24339" started-at="2023-04-18T11:26:09Z" finished-at="2023-04-18T11:26:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS008_VerifyLineDigitalShowroomProductscomponentTest -->
+        <test-method status="PASS" signature="TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@548e7350]" name="TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest" duration-ms="20056" started-at="2023-04-18T11:26:33Z" finished-at="2023-04-18T11:26:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest -->
+        <test-method status="PASS" signature="TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@548e7350]" name="TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest" duration-ms="16051" started-at="2023-04-18T11:26:53Z" finished-at="2023-04-18T11:27:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest -->
+        <test-method status="PASS" signature="TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@548e7350]" name="TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest" duration-ms="33567" started-at="2023-04-18T11:27:09Z" finished-at="2023-04-18T11:27:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.LineDigitalShowroom@548e7350]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-04-18T11:27:43Z" finished-at="2023-04-18T11:27:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- atlantamarket_PROD.ExhibitorDigitalShowroom -->
+      </class> <!-- atlantamarket_PROD.LineDigitalShowroom -->
     </test> <!-- RegressionTest -->
   </suite> <!-- ATLMrkt_RegressionTestSuite -->
 </testng-results>

@@ -815,4 +815,16 @@ public class Utility extends base {
 		expmrkttab.getDeleteShowSpecialBtn().click();
 		Thread.sleep(5000);
 	}
+	
+	public void loginCheckATL() throws IOException, InterruptedException {
+		String currentURL = driver.getCurrentUrl();
+		String expectedURL = "https://www.atlantamarket.com/";
+		if(currentURL.equals(expectedURL)) {
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		}
+		else {
+			driver.get(prop.getProperty("atlmrkturl_prod"));
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		}
+	}
 }
