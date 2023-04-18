@@ -53,7 +53,7 @@ public class EvenntsAndWebinar extends base{
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl_prod"));
-
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(7000);
 
@@ -140,9 +140,6 @@ public class EvenntsAndWebinar extends base{
 		//Assert.assertEquals(atlevents.getatlEventName().getText(), eventName);
 		utl.checkItemPresentInListorNot(atlevents.getatlListOfEventTitles(), eventName);
 		
-		
-
-		
 	}
 	@Test(priority = 3)
 	public void TS003_VerifyIMCEventsCalendarViewTest() throws InterruptedException, IOException {
@@ -157,11 +154,8 @@ public class EvenntsAndWebinar extends base{
 		atlmppge = new ATLMarketPlannerPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		
 		utl.clickOnEventLinkOfChannel();	
-		
-		
+
 		//Click on IMC Event Tab
 		atlevents.getatlImcEventsTab().click();
 		
@@ -204,8 +198,7 @@ public class EvenntsAndWebinar extends base{
 				
 		String m = month.format(localMonth);//current month
 		String mm = month.format(prevMonth);//previous month
-		
-	
+
 		System.out.println("Current Month ::" +m );
 		System.out.println("Previous Month ::" +mm );
 		
@@ -260,7 +253,6 @@ public class EvenntsAndWebinar extends base{
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		
 		utl.clickOnEventLinkOfChannel();	
 		
 		Thread.sleep(5000);
@@ -485,8 +477,8 @@ public class EvenntsAndWebinar extends base{
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//Login to MP
 		utl.verifyMPLoginFunctionality();
-		Thread.sleep(2000);
-		driver.get(prop.getProperty("atlmrkturl_prod"));;
+		utl.loginCheckATL();
+		
 		utl.clickOnEventLinkOfChannel();
 
 		String eventTitle = atlevents.getatlClickOnEvent().getText();

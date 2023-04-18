@@ -56,7 +56,7 @@ public class GlobalSearch_SearchFor extends base {
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 		//driver.get(prop.getProperty("lvmurl_prod"));
-		//lap.getIUnderstandBtn().click();
+		lap.getIUnderstandBtn().click();
 		Thread.sleep(5000);
 		// lap.getCloseMarktAdBtn().click();
 	}

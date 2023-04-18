@@ -131,7 +131,7 @@ public class GlobalSearch_SuggestionList extends base {
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		//lap.getCloseMarktAdBtn().click();
-		
+		Thread.sleep(2000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestproduct")));
 
 		WebDriverWait wait = new WebDriverWait(driver, 30);

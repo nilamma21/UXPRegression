@@ -54,7 +54,7 @@ public class LineDigitalShowroom extends base {
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 		
-	//	lap.getIUnderstandBtn().click();
+		lap.getIUnderstandBtn().click();
 		Thread.sleep(5000);
 		utl.CloseATLPopup();
 		
