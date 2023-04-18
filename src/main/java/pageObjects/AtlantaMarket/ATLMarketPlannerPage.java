@@ -13,7 +13,7 @@ public class ATLMarketPlannerPage {
 	public WebDriver driver;
 	public WebDriverWait wait;
 
-	By atlmarketplannerhome = By.xpath("//div[@class='imc-section imc-market-planner-toolbar ']"); // Locator for market planner home page
+	By atlmarketplannerhome = By.xpath("//div[@class='imc-section imc-market-planner-toolbar ']/div/div/div[2]/div/a[2]"); // Locator for market planner home page
 	By atlfaveditlistbtn = By.xpath("//li[contains(text(),'Favorites')]/span"); //Locator for Edit list btn of Favorites list
 	By editlistpage = By.xpath("//div[@class='imc-gallery imc-market-planner-list-display imc-vr--large']"); //Locator for Edit List page
 	By savedexhnameinlist = By.xpath("//li[@class='imc-list-edit--draggable'][1]/div/div[1]/div[1]/a"); //Locator for Saved Exhibitor name in list
@@ -500,7 +500,7 @@ public class ATLMarketPlannerPage {
 		return driver.findElement(mpSaveSearcheBtn);
 	}
 	public WebElement getmpSavedSearchesIcon() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSavedSearchesIcon));
 		return driver.findElement(mpSavedSearchesIcon);
 	}

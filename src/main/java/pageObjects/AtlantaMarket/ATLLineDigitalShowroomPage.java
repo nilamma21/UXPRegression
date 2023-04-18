@@ -128,7 +128,7 @@ public class ATLLineDigitalShowroomPage {
 		return driver.findElement(locationLink);
 	}
 	public WebElement getsuggetionList() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(suggetionList));
 		return driver.findElement(suggetionList);
 	}
