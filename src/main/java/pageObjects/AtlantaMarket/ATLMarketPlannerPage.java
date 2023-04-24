@@ -268,6 +268,7 @@ public class ATLMarketPlannerPage {
 	By moreEventOptionDeleteBtnUAT_LVM = By.xpath("(//div[@class='imc-market-planner-list--item-header'])[1]/div[3]/div[1]/div[1]/span[3]/a[1]");//More Option Delete LVM
 	By favlistproducts = By.xpath("//div[@class='imc-saved-exhibitors__contentItems']/div/div/div/div/span");
 	
+	
 	public ATLMarketPlannerPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
