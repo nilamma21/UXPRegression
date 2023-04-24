@@ -52,6 +52,7 @@ public class ExhibitorDigitalShowroom extends base {
 		Thread.sleep(2000);
 		utl.verifyMPLoginFunctionality(); //Login
 		Thread.sleep(3000);
+		driver.navigate().to("lvmurl_prod");
 
 	}
 	
@@ -307,7 +308,7 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmds = new LVMExhDigiShowroomPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput"))); 
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor3"))); 
 		Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(15000);
@@ -606,7 +607,7 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmds = new LVMExhDigiShowroomPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor10")));
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor12")));
 		Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(15000);
@@ -622,10 +623,11 @@ public class ExhibitorDigitalShowroom extends base {
 		
 		//Click on Order On Juniper Market Btn
 		String OrderOnJuniperMarktURL=lvmds.getOrderOnJuniperMarktBtnCatalog().getAttribute("href");
+		System.out.println(OrderOnJuniperMarktURL);
 		lvmds.getOrderOnJuniperMarktBtnCatalog().click();
+		Thread.sleep(4000);
 		Assert.assertTrue(driver.getCurrentUrl().contains(OrderOnJuniperMarktURL));
 		System.out.println(" Catalogs Component: Order on JuniperMarket Btn functionality is working properly.");
-		
 		
 	}
 	@Test(priority = 15)
@@ -677,7 +679,7 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmds = new LVMExhDigiShowroomPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("searchexhwithlinesinput")));
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor11")));
 		Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(15000);

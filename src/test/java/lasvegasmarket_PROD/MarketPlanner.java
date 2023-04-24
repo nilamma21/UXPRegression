@@ -64,7 +64,8 @@ public class MarketPlanner extends base {
 		driver.get(prop.getProperty("lvmurl_prod"));
 		utl.verifyMPLoginFunctionality();
 		Thread.sleep(8000);
-
+		driver.navigate().to("lvmurl_prod");
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(8000);
 	}

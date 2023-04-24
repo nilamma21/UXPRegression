@@ -63,6 +63,7 @@ public class EvenntsAndWebinar extends base{
 		Thread.sleep(2000);
 		utl.verifyMPLoginFunctionality();
 		Thread.sleep(8000);
+		driver.navigate().to("lvmurl_prod");
 		//lap.getCloseMarktAdBtn().click();
 		//Login to Market Planner
 		//driver.navigate().refresh();
@@ -505,6 +506,7 @@ public class EvenntsAndWebinar extends base{
 		
 		//actions.click().perform();
 		Thread.sleep(10000);
+		atlmppge.getmoreOptionUAT_LVM().click();
 		atlmppge.getmoreOptionDeleteBtnUAT_LVM().click();
 		Thread.sleep(6000);
 
@@ -1204,6 +1206,7 @@ public class EvenntsAndWebinar extends base{
 				//Click on Exh Event Tab
 				lvmevents.getlvmExhibitorsEventsTab().click();
 				String eventTitle = lvmevents.getlvmClickOnEvent().getText();
+				System.out.println(eventTitle);
 				// Click on Any Event title
 				lvmevents.getlvmClickOnEvent().click();
 
