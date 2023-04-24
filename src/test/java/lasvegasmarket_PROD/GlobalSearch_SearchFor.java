@@ -44,7 +44,7 @@ public class GlobalSearch_SearchFor extends base{
 	LVMLeftPaneFilters lvmleftpane;
 	
 	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns,
-	allnoteslist, favlist, searchlinetypelist, tagBlogPost, taglist, infoFilterList;
+	allnoteslist, favlist, searchlinetypelist, tagBlogPost, taglist, infoFilterList,catlist;
 	
 	@BeforeClass
 	public void initialize() throws IOException, InterruptedException {
@@ -300,7 +300,9 @@ public class GlobalSearch_SearchFor extends base{
 		// Store the current window handle
 		String winHandleBefore = driver.getWindowHandle();
 		//Click on Catalog
-		lvmexhact.getCatalogsItem().click();//For Prod
+		//lvmexhact.getCatalogsItem().click();//For Prod
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//div[@class='imc-catalog__item_title multiSelectItem']/div/span/span[contains(text(),"+catalogName+")]")).click();
 		//lvmexhact.getCatalogsItemNew().click();//For UAT
 		for (String winHandle : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle);

@@ -20,7 +20,7 @@ public class LVMLeftPaneFilters {
 	By stylesexpandbtn = By.xpath("//a[@aria-label='Styles']"); ////Locator for Styles expand btn
 	By coastalstyle = By.xpath("//label[contains(text(),'Coastal')]"); //Locator for Coastal Styles
 	By expexhdropdown = By.xpath("//div[contains(@class,'DropDown_dropdown')]"); //Locator for Exhibitor association drop down in EXP
-	By trippexhnameinexp = By.xpath("//a[contains(text(), \"Tripp's Revised Company ...\")]"); //Locator for IMC Test Company exhibitor in EXP
+	By trippexhnameinexp = By.xpath("(//*[contains(text(),\"Tripp's Tents\")])[1]"); //Locator for IMC Test Company exhibitor in EXP
 	By expdidgitalshowroomtab  = By.xpath("//span[contains(text(),'Your Digital Showroom')]"); //Locator for EXP Digi Showroom tab
 	By expprofileinfomenu = By.xpath("//a[contains(text(),'Profile Info')]"); //Locator for EXP Profile Info menu
 	By expproductcategsectn = By.xpath("//h3[contains(text(),'Categories')]"); //Locator for Products Categories section title in EXP
@@ -152,9 +152,13 @@ public class LVMLeftPaneFilters {
 		return driver.findElement(SecondExhUat);
 	}
 	public WebElement getLVMIndustrialStyle(){
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(industrialstyle));
 		return driver.findElement(industrialstyle);
 	}
 	public WebElement getEXPIndustrialStyleOnProfile() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(expindustrialstyleonprofile));
 		return driver.findElement(expindustrialstyleonprofile);
 	}
 	
