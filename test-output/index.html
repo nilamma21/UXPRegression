@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -36,8 +36,13 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
+
+            <a href="#" class="navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite">
+              <span class="suite-name border-passed">ATLMrkt_RegressionTestSuite</span>
+
             <a href="#" class="navigator-link" panel-name="suite-MPGroupTestSuite">
               <span class="suite-name border-failed">MPGroupTestSuite</span>
+
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,6 +95,23 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
+
+                    <span class="method-stats">1 method,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-ATLMrkt_RegressionTestSuite" class="hide-methods passed suite-ATLMrkt_RegressionTestSuite"> (hide)</a> <!-- hide-methods passed suite-ATLMrkt_RegressionTestSuite -->
+                      <a href="#" panel-name="suite-ATLMrkt_RegressionTestSuite" class="show-methods passed suite-ATLMrkt_RegressionTestSuite"> (show)</a> <!-- show-methods passed suite-ATLMrkt_RegressionTestSuite -->
+                    </span>
+                    <div class="method-list-content passed suite-ATLMrkt_RegressionTestSuite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ATLMrkt_RegressionTestSuite" title="atlantamarket_UAT.EvenntsAndWebinar" hash-for-method="TS001_VerifyEventsAndWebinarsOverviewTest">TS001_VerifyEventsAndWebinarsOverviewTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-ATLMrkt_RegressionTestSuite -->
+
                     <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
@@ -105,6 +127,7 @@
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-MPGroupTestSuite -->
+
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -115,15 +138,34 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
+
+        <div panel-name="suite-ATLMrkt_RegressionTestSuite" class="panel ATLMrkt_RegressionTestSuite">
+          <div class="suite-ATLMrkt_RegressionTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">atlantamarket_UAT.EvenntsAndWebinar</span>
+
         <div panel-name="suite-MPGroupTestSuite" class="panel MPGroupTestSuite">
           <div class="suite-MPGroupTestSuite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
               <span class="class-name">lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</span>
+
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+
+                  <a name="TS001_VerifyEventsAndWebinarsOverviewTest">
+                  </a> <!-- TS001_VerifyEventsAndWebinarsOverviewTest -->
+                  <span class="method-name">TS001_VerifyEventsAndWebinarsOverviewTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ATLMrkt_RegressionTestSuite-class-passed -->
+        </div> <!-- panel ATLMrkt_RegressionTestSuite -->
+        <div panel-name="test-xml-ATLMrkt_RegressionTestSuite" class="panel">
+
                   <a name="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest">
                   </a> <!-- TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest -->
                   <span class="method-name">TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest</span>
@@ -195,6 +237,7 @@ Driver info: driver.version: unknown
           </div> <!-- suite-MPGroupTestSuite-class-failed -->
         </div> <!-- panel MPGroupTestSuite -->
         <div panel-name="test-xml-MPGroupTestSuite" class="panel">
+
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">C:\Users\anuppa\UXPRegression_local\UXPRegression\LVMtestng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
@@ -205,11 +248,19 @@ Driver info: driver.version: unknown
 &lt;suite name=&quot;MPGroupTestSuite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;RegressionTest&quot;&gt;
     &lt;classes&gt;
+
+      &lt;class name=&quot;atlantamarket_UAT.EvenntsAndWebinar&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;TS001_VerifyEventsAndWebinarsOverviewTest&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- atlantamarket_UAT.EvenntsAndWebinar --&gt;
+
       &lt;class name=&quot;lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters&quot;&gt;
         &lt;methods&gt;
           &lt;include name=&quot;TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest()&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters --&gt;
+
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- RegressionTest --&gt;
 &lt;/suite&gt; &lt;!-- MPGroupTestSuite --&gt;
@@ -251,6 +302,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
+
+data.setCell(0, 1, 'TS001_VerifyEventsAndWebinarsOverviewTest')
+data.setCell(0, 2, 'atlantamarket_UAT.EvenntsAndWebinar')
+data.setCell(0, 3, 6673);
+window.suiteTableData['ATLMrkt_RegressionTestSuite']= { tableData: data, tableDiv: 'times-div-ATLMrkt_RegressionTestSuite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <div id="times-div-ATLMrkt_RegressionTestSuite">
+              </div> <!-- times-div-ATLMrkt_RegressionTestSuite -->
+
 data.setCell(0, 1, 'TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest')
 data.setCell(0, 2, 'lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters')
 data.setCell(0, 3, 88004);
@@ -261,6 +324,7 @@ return data;
               <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-MPGroupTestSuite">
               </div> <!-- times-div-MPGroupTestSuite -->
+
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -273,6 +337,41 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-MPGroupTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
+
+            <span class="header-content">14 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">atlantamarket_UAT.EvenntsAndWebinar</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">TS015_VerifyExhibitorEventsAddNoteTest</span>
+                <br/>
+                <span class="ignored-method-name">TS013_VerifyExhibitorEventsAddToFavoriteTest</span>
+                <br/>
+                <span class="ignored-method-name">TS014_VerifyExhibitorEventsAddToListTest</span>
+                <br/>
+                <span class="ignored-method-name">TS005_VerifyIMCEventsEventDetailstTest</span>
+                <br/>
+                <span class="ignored-method-name">TS002_VerifyIMCEventsSearchbarTest</span>
+                <br/>
+                <span class="ignored-method-name">TS009_VerifyExhibitorEventsSearchbarTest</span>
+                <br/>
+                <span class="ignored-method-name">TS010_VerifyExhibitorEventsCalendarViewTest</span>
+                <br/>
+                <span class="ignored-method-name">TS007_VerifyIMCEventsAddToListTest</span>
+                <br/>
+                <span class="ignored-method-name">TS004_VerifyIMCEventsEventsListTest</span>
+                <br/>
+                <span class="ignored-method-name">TS012_VerifyExhibitorEventsDetailstTest</span>
+                <br/>
+                <span class="ignored-method-name">TS011_VerifyExhibitorEventsListTest</span>
+                <br/>
+                <span class="ignored-method-name">TS006_VerifyIMCEventsAddToFavoriteTest</span>
+                <br/>
+                <span class="ignored-method-name">TS008_VerifyIMCEventsAddNoteTest</span>
+                <br/>
+                <span class="ignored-method-name">TS003_VerifyIMCEventsCalendarViewTest</span>
+
             <span class="header-content">10 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
@@ -298,6 +397,7 @@ return data;
                 <span class="ignored-method-name">TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest</span>
                 <br/>
                 <span class="ignored-method-name">TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest</span>
+
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -309,12 +409,24 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
+
+              <div class="chronological-class-name">atlantamarket_UAT.EvenntsAndWebinar</div> <!-- chronological-class-name -->
+
               <div class="chronological-class-name">lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</div> <!-- chronological-class-name -->
+
               <div class="configuration-class before">
                 <span class="method-name">initialize</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+
+                <span class="method-name">TS001_VerifyEventsAndWebinarsOverviewTest</span>
+                <span class="method-start">158517 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">165192 ms</span>
+
                 <img src="failed.png">
                 </img>
                 <span class="method-name">TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest</span>
@@ -323,6 +435,7 @@ return data;
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
                 <span class="method-start">117275 ms</span>
+
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
