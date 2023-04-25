@@ -31,23 +31,25 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">RegressionTest</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">117.3 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">RegressionTest</td><td class="numi">11</td><td class="numi">11</td><td class="numi">0</td><td class="numi_attn">4</td><td class="numi">577.3 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
 <tr><th colspan="4">RegressionTest &#8212; failed</th></tr>
-<tr class="failedodd"><td rowspan="1">lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td><td><a href="#m1"><b>TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest</b>  </a></td><td class="numi">1</td><td>1682311912280</td><td class="numi">88004</td></tr>
+<tr class="failedodd"><td rowspan="4">lasvegasmarket_PROD.EvenntsAndWebinar</td><td><a href="#m1"><b>TS005_VerifyIMCEventsEventDetailstTest</b>  </a></td><td class="numi">1</td><td>1682417775611</td><td class="numi">48525</td></tr><tr class="failedodd"><td><a href="#m2"><b>TS012_VerifyExhibitorEventsDetailstTest</b>  </a></td><td class="numi">1</td><td>1682417939581</td><td class="numi">41797</td></tr><tr class="failedodd"><td><a href="#m3"><b>TS013_VerifyExhibitorEventsAddToFavoriteTest</b>  </a></td><td class="numi">1</td><td>1682417981380</td><td class="numi">47422</td></tr><tr class="failedodd"><td><a href="#m4"><b>TS014_VerifyExhibitorEventsAddToListTest</b>  </a></td><td class="numi">1</td><td>1682418028804</td><td class="numi">66607</td></tr>
+<tr><th colspan="4">RegressionTest &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="11">lasvegasmarket_PROD.EvenntsAndWebinar</td><td><a href="#m5"><b>TS011_VerifyExhibitorEventsListTest</b>  </a></td><td class="numi">1</td><td>1682417679117</td><td class="numi">33779</td></tr><tr class="passedodd"><td><a href="#m6"><b>TS001_VerifyEventsAndWebinarsOverviewTest</b>  </a></td><td class="numi">1</td><td>1682417712898</td><td class="numi">8123</td></tr><tr class="passedodd"><td><a href="#m7"><b>TS002_VerifyIMCEventsSearchbarTest</b>  </a></td><td class="numi">1</td><td>1682417721023</td><td class="numi">14559</td></tr><tr class="passedodd"><td><a href="#m8"><b>TS003_VerifyIMCEventsCalendarViewTest</b>  </a></td><td class="numi">1</td><td>1682417735583</td><td class="numi">18365</td></tr><tr class="passedodd"><td><a href="#m9"><b>TS004_VerifyIMCEventsEventsListTest</b>  </a></td><td class="numi">1</td><td>1682417753949</td><td class="numi">21659</td></tr><tr class="passedodd"><td><a href="#m10"><b>TS006_VerifyIMCEventsAddToFavoriteTest</b>  </a></td><td class="numi">1</td><td>1682417824139</td><td class="numi">35571</td></tr><tr class="passedodd"><td><a href="#m11"><b>TS008_VerifyIMCEventsAddNoteTest</b>  </a></td><td class="numi">1</td><td>1682417859711</td><td class="numi">47735</td></tr><tr class="passedodd"><td><a href="#m12"><b>TS009_VerifyExhibitorEventsSearchbarTest</b>  </a></td><td class="numi">1</td><td>1682417907447</td><td class="numi">13823</td></tr><tr class="passedodd"><td><a href="#m13"><b>TS010_VerifyExhibitorEventsCalendarViewTest</b>  </a></td><td class="numi">1</td><td>1682417921271</td><td class="numi">18308</td></tr><tr class="passedodd"><td><a href="#m14"><b>TS015_VerifyExhibitorEventsAddNoteTest</b>  </a></td><td class="numi">1</td><td>1682418095413</td><td class="numi">47709</td></tr><tr class="passedodd"><td><a href="#m15"><b>TS007_VerifyIMCEventsAddToListTest</b>  </a></td><td class="numi">1</td><td>1682418143123</td><td class="numi">64390</td></tr>
 </table>
 <h1>RegressionTest</h1>
-<h2 id="m1">lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters:TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest</h2>
+<h2 id="m1">lasvegasmarket_PROD.EvenntsAndWebinar:TS012_VerifyExhibitorEventsDetailstTest</h2>
 <div style="padding-left:3em">
-<p>Expected condition failed: waiting for visibility of element located by By.xpath: //div[contains(@class,&apos;DropDown_dropdown&apos;)] (tried for 30 second(s) with 500 MILLISECONDS interval)</p>
+<p>Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;imc-eventdetail--location&apos;]/a[1] (tried for 30 second(s) with 500 MILLISECONDS interval)</p>
 org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
 <br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-<br/>at pageObjects.LasVegasMarket.LVMLeftPaneFilters.getEXPExhDropDown(LVMLeftPaneFilters.java:91)
-<br/>at lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest(GlobalSearch_LeftPaneFilters.java:317)
+<br/>at pageObjects.LasVegasMarket.LVMEventsAndWebinarPage.getlvmEventLocationLinkUAT(LVMEventsAndWebinarPage.java:113)
+<br/>at lasvegasmarket_PROD.EvenntsAndWebinar.TS012_VerifyExhibitorEventsDetailstTest(EvenntsAndWebinar.java:1104)
 <br/>25 lines not shown
-<p>Caused by Cannot locate an element using By.xpath: //div[contains(@class,&apos;DropDown_dropdown&apos;)]
+<p>Caused by Cannot locate an element using By.xpath: //div[@class=&apos;imc-eventdetail--location&apos;]/a[1]
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
 System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
@@ -59,9 +61,106 @@ org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedC
 <br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
 <br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
 <br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-<br/>at pageObjects.LasVegasMarket.LVMLeftPaneFilters.getEXPExhDropDown(LVMLeftPaneFilters.java:91)
-<br/>at lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest(GlobalSearch_LeftPaneFilters.java:317)
+<br/>at pageObjects.LasVegasMarket.LVMEventsAndWebinarPage.getlvmEventLocationLinkUAT(LVMEventsAndWebinarPage.java:113)
+<br/>at lasvegasmarket_PROD.EvenntsAndWebinar.TS012_VerifyExhibitorEventsDetailstTest(EvenntsAndWebinar.java:1104)
 <br/>25 lines not shown
 </div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">lasvegasmarket_PROD.EvenntsAndWebinar:TS005_VerifyIMCEventsEventDetailstTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;imc-eventdetail--location&apos;]/a[1] (tried for 30 second(s) with 500 MILLISECONDS interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.LasVegasMarket.LVMEventsAndWebinarPage.getlvmEventLocationLinkUAT(LVMEventsAndWebinarPage.java:113)
+<br/>at lasvegasmarket_PROD.EvenntsAndWebinar.TS005_VerifyIMCEventsEventDetailstTest(EvenntsAndWebinar.java:388)
+<br/>25 lines not shown
+<p>Caused by Cannot locate an element using By.xpath: //div[@class=&apos;imc-eventdetail--location&apos;]/a[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
+Driver info: driver.version: unknown</p>
+org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+<br/>at java.util.Optional.orElseThrow(Unknown Source)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+<br/>at pageObjects.LasVegasMarket.LVMEventsAndWebinarPage.getlvmEventLocationLinkUAT(LVMEventsAndWebinarPage.java:113)
+<br/>at lasvegasmarket_PROD.EvenntsAndWebinar.TS005_VerifyIMCEventsEventDetailstTest(EvenntsAndWebinar.java:388)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">lasvegasmarket_PROD.EvenntsAndWebinar:TS014_VerifyExhibitorEventsAddToListTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div[1]/div[2]/a[1] (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.LasVegasMarket.LVMMarketPlannerPage.getlistOfAllEventsInMPList(LVMMarketPlannerPage.java:239)
+<br/>at lasvegasmarket_PROD.EvenntsAndWebinar.TS014_VerifyExhibitorEventsAddToListTest(EvenntsAndWebinar.java:1333)
+<br/>25 lines not shown
+<p>Caused by Cannot locate an element using By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div[1]/div[2]/a[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
+Driver info: driver.version: unknown</p>
+org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+<br/>at java.util.Optional.orElseThrow(Unknown Source)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+<br/>at pageObjects.LasVegasMarket.LVMMarketPlannerPage.getlistOfAllEventsInMPList(LVMMarketPlannerPage.java:239)
+<br/>at lasvegasmarket_PROD.EvenntsAndWebinar.TS014_VerifyExhibitorEventsAddToListTest(EvenntsAndWebinar.java:1333)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">lasvegasmarket_PROD.EvenntsAndWebinar:TS013_VerifyExhibitorEventsAddToFavoriteTest</h2>
+<div style="padding-left:3em">
+<p>Expected condition failed: waiting for visibility of element located by By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div[1]/div[2]/a[1] (tried for 20 second(s) with 500 MILLISECONDS interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+<br/>at pageObjects.LasVegasMarket.LVMMarketPlannerPage.getlistOfAllEventsInMPList(LVMMarketPlannerPage.java:239)
+<br/>at lasvegasmarket_PROD.EvenntsAndWebinar.TS013_VerifyExhibitorEventsAddToFavoriteTest(EvenntsAndWebinar.java:1239)
+<br/>25 lines not shown
+<p>Caused by Cannot locate an element using By.xpath: //li[@class=&apos;imc-list-edit--draggable&apos;][1]/div/div[3]/div/div/div[1]/div[2]/a[1]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
+Driver info: driver.version: unknown</p>
+org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
+<br/>at java.util.Optional.orElseThrow(Unknown Source)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+<br/>at pageObjects.LasVegasMarket.LVMMarketPlannerPage.getlistOfAllEventsInMPList(LVMMarketPlannerPage.java:239)
+<br/>at lasvegasmarket_PROD.EvenntsAndWebinar.TS013_VerifyExhibitorEventsAddToFavoriteTest(EvenntsAndWebinar.java:1239)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">lasvegasmarket_PROD.EvenntsAndWebinar:TS003_VerifyIMCEventsCalendarViewTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">lasvegasmarket_PROD.EvenntsAndWebinar:TS004_VerifyIMCEventsEventsListTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">lasvegasmarket_PROD.EvenntsAndWebinar:TS010_VerifyExhibitorEventsCalendarViewTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">lasvegasmarket_PROD.EvenntsAndWebinar:TS011_VerifyExhibitorEventsListTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m9">lasvegasmarket_PROD.EvenntsAndWebinar:TS007_VerifyIMCEventsAddToListTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">lasvegasmarket_PROD.EvenntsAndWebinar:TS006_VerifyIMCEventsAddToFavoriteTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m11">lasvegasmarket_PROD.EvenntsAndWebinar:TS015_VerifyExhibitorEventsAddNoteTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m12">lasvegasmarket_PROD.EvenntsAndWebinar:TS009_VerifyExhibitorEventsSearchbarTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m13">lasvegasmarket_PROD.EvenntsAndWebinar:TS001_VerifyEventsAndWebinarsOverviewTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m14">lasvegasmarket_PROD.EvenntsAndWebinar:TS002_VerifyIMCEventsSearchbarTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m15">lasvegasmarket_PROD.EvenntsAndWebinar:TS008_VerifyIMCEventsAddNoteTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

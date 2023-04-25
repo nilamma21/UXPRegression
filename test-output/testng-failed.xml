@@ -3,13 +3,16 @@
 <suite name="Failed suite [MPGroupTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-      <class name="lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters">
+      <class name="lasvegasmarket_PROD.EvenntsAndWebinar">
         <methods>
-          <include name="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest"/>
+          <include name="TS012_VerifyExhibitorEventsDetailstTest"/>
           <include name="tearDown"/>
+          <include name="TS005_VerifyIMCEventsEventDetailstTest"/>
+          <include name="TS013_VerifyExhibitorEventsAddToFavoriteTest"/>
           <include name="initialize"/>
+          <include name="TS014_VerifyExhibitorEventsAddToListTest"/>
         </methods>
-      </class> <!-- lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters -->
+      </class> <!-- lasvegasmarket_PROD.EvenntsAndWebinar -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [MPGroupTestSuite] -->

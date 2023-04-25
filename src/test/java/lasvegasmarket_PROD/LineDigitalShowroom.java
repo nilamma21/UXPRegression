@@ -58,7 +58,7 @@ public class LineDigitalShowroom extends base{
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		utl.verifyMPLoginFunctionality();
 		Thread.sleep(2000);
-		driver.navigate().to("lvmurl_prod");
+		utl.loginCheckLVM();
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(5000);
 		utl.CloseATLPopup();

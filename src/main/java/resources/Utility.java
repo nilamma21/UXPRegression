@@ -827,4 +827,16 @@ public class Utility extends base {
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		}
 	}
+	
+	public void loginCheckLVM() throws IOException, InterruptedException {
+		String currentURL = driver.getCurrentUrl();
+		String expectedURL = "https://www.lasvegasmarket.com/";
+		if(currentURL.equals(expectedURL)) {
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		}
+		else {
+			driver.get(prop.getProperty("lvmurl_prod"));
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		}
+	}
 }

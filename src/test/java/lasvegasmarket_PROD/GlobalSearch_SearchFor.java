@@ -139,7 +139,7 @@ public class GlobalSearch_SearchFor extends base{
 		// Click on See More details Btn from result
 		lvmgs.getLVMInfoSearchJuniperMarketBtn().click();
 		
-
+		
 		// Verify Juniper Market Page
 		Assert.assertTrue(driver.getCurrentUrl().contains(seeMoreDetailsURL));
 		

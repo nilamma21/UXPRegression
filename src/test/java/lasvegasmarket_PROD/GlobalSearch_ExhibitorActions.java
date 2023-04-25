@@ -58,9 +58,9 @@ public class GlobalSearch_ExhibitorActions extends base {
 		//lap.getCloseMarktAdBtn().click();
 		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
+		utl.loginCheckLVM();
 		//driver.navigate().refresh();
 		Thread.sleep(8000);
-		driver.navigate().to("lvmurl_prod");
 //		lap.getCloseMarktAdBtn().click();
 	}
 	
@@ -279,7 +279,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 
 		// Select 1st two Product Category
 		atlexhact.getProductCateg1().click();
-		atlexhact.getProductCateg2().click();
+		//atlexhact.getProductCateg2().click();
 
 		utl.scrollToElement(atlexhact.getSendMessageBtn());
 
