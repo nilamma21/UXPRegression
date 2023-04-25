@@ -59,7 +59,7 @@ public class GlobalSearch_LineActions extends base {
 		
 		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
-		driver.navigate().refresh();
+		utl.loginCheckLVM();
 		Thread.sleep(8000);
 //		lap.getCloseMarktAdBtn().click();
 	}

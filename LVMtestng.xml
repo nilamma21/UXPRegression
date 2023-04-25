@@ -64,9 +64,9 @@
 		</groups> -->
 
 		<classes>
-			<class name="lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters" />
+			<class name="lasvegasmarket_PROD.EvenntsAndWebinar" />
 				<methods>
-				    <include name="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest()"/>    
+				     <!-- <include name="TS003_VerifyIMCEventsCalendarViewTest()"/>  -->   
 				</methods>
 		</classes>
 	</test>

@@ -4,6 +4,9 @@
   <test name="RegressionTest(failed)">
     <classes>
 
+      <class name="lasvegasmarket_PROD.EvenntsAndWebinar">
+
+
       <class name="atlantamarket_UAT.EvenntsAndWebinar">
         <methods>
           <include name="initialize"/>
@@ -12,12 +15,20 @@
       </class> <!-- atlantamarket_UAT.EvenntsAndWebinar -->
 
       <class name="lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters">
+
         <methods>
-          <include name="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest"/>
+          <include name="TS012_VerifyExhibitorEventsDetailstTest"/>
           <include name="tearDown"/>
+          <include name="TS005_VerifyIMCEventsEventDetailstTest"/>
+          <include name="TS013_VerifyExhibitorEventsAddToFavoriteTest"/>
           <include name="initialize"/>
+          <include name="TS014_VerifyExhibitorEventsAddToListTest"/>
         </methods>
+
+      </class> <!-- lasvegasmarket_PROD.EvenntsAndWebinar -->
+
       </class> <!-- lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters -->
+
 
     </classes>
   </test> <!-- RegressionTest(failed) -->
