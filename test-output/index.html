@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-MPGroupTestSuite">
-              <span class="suite-name border-failed">MPGroupTestSuite</span>
+              <span class="suite-name border-skipped">MPGroupTestSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-MPGroupTestSuite">
-                    <span>C:\Users\anuppa\UXPRegression_local\UXPRegression\LVMtestng.xml</span>
+                    <span>C:\Users\swapnili\UXPRegression\Group.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -58,7 +58,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="group-MPGroupTestSuite">
-                    <span>0 groups</span>
+                    <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,21 +90,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">2 methods,  2 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-MPGroupTestSuite" class="hide-methods failed suite-MPGroupTestSuite"> (hide)</a> <!-- hide-methods failed suite-MPGroupTestSuite -->
-                      <a href="#" panel-name="suite-MPGroupTestSuite" class="show-methods failed suite-MPGroupTestSuite"> (show)</a> <!-- show-methods failed suite-MPGroupTestSuite -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-MPGroupTestSuite" class="hide-methods skipped suite-MPGroupTestSuite"> (hide)</a> <!-- hide-methods skipped suite-MPGroupTestSuite -->
+                      <a href="#" panel-name="suite-MPGroupTestSuite" class="show-methods skipped suite-MPGroupTestSuite"> (show)</a> <!-- show-methods skipped suite-MPGroupTestSuite -->
                     </span>
-                    <div class="method-list-content failed suite-MPGroupTestSuite">
+                    <div class="method-list-content skipped suite-MPGroupTestSuite">
                       <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-MPGroupTestSuite" title="lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters" hash-for-method="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest">TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest</a> <!-- method navigator-link -->
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MPGroupTestSuite" title="atlantamarket_PROD.ShowSpecials" hash-for-method="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest">TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-MPGroupTestSuite -->
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MPGroupTestSuite" title="atlantamarket_PROD.ShowSpecials" hash-for-method="TS002_VerifyLocationLinksForShowSpecialsTest">TS002_VerifyLocationLinksForShowSpecialsTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-MPGroupTestSuite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,102 +121,49 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-MPGroupTestSuite" class="panel MPGroupTestSuite">
-          <div class="suite-MPGroupTestSuite-class-failed">
+          <div class="suite-MPGroupTestSuite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</span>
+              <img src="skipped.png"/>
+              <span class="class-name">atlantamarket_PROD.ShowSpecials</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest">
-                  </a> <!-- TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest -->
-                  <span class="method-name">TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest</span>
-                  <div class="stack-trace"><b>"org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[contains(@class,&apos;DropDown_dropdown&apos;)] (tried for 30 second(s) with 500 MILLISECONDS interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.LasVegasMarket.LVMLeftPaneFilters.getEXPExhDropDown(LVMLeftPaneFilters.java:91)
-	at lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest(GlobalSearch_LeftPaneFilters.java:317)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //div[contains(@class,&apos;DropDown_dropdown&apos;)]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
-	at java.util.Optional.orElseThrow(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 26 more
-... Removed 24 stack frames<br/> org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[contains(@class,&apos;DropDown_dropdown&apos;)] (tried for 30 second(s) with 500 MILLISECONDS interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-	at pageObjects.LasVegasMarket.LVMLeftPaneFilters.getEXPExhDropDown(LVMLeftPaneFilters.java:91)
-	at lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest(GlobalSearch_LeftPaneFilters.java:317)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //div[contains(@class,&apos;DropDown_dropdown&apos;)]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:883)
-	at java.util.Optional.orElseThrow(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:882)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
-	... 26 more
-"</b><br>org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)<br>org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)<br>pageObjects.LasVegasMarket.LVMLeftPaneFilters.getEXPExhDropDown(LVMLeftPaneFilters.java:91)<br>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest(GlobalSearch_LeftPaneFilters.java:317)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br>java.lang.reflect.Method.invoke(Unknown Source)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)<br>
-</div> <!-- stack-trace -->
+                  <a name="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest">
+                  </a> <!-- TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest -->
+                  <span class="method-name">TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TS002_VerifyLocationLinksForShowSpecialsTest">
+                  </a> <!-- TS002_VerifyLocationLinksForShowSpecialsTest -->
+                  <span class="method-name">TS002_VerifyLocationLinksForShowSpecialsTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-MPGroupTestSuite-class-failed -->
+          </div> <!-- suite-MPGroupTestSuite-class-skipped -->
         </div> <!-- panel MPGroupTestSuite -->
         <div panel-name="test-xml-MPGroupTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\anuppa\UXPRegression_local\UXPRegression\LVMtestng.xml</span>
+            <span class="header-content">C:\Users\swapnili\UXPRegression\Group.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;MPGroupTestSuite&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;RegressionTest&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;MPGroupTest&quot;&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;MP_Group&quot;/&gt;
+        &lt;include name=&quot;Non_MP&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest()&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters --&gt;
+      &lt;class name=&quot;atlantamarket_PROD.ShowSpecials&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- RegressionTest --&gt;
+  &lt;/test&gt; &lt;!-- MPGroupTest --&gt;
 &lt;/suite&gt; &lt;!-- MPGroupTestSuite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -223,7 +175,7 @@ Driver info: driver.version: unknown
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">RegressionTest (1 class)</span>
+                <span class="test-name">MPGroupTest (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -233,6 +185,18 @@ Driver info: driver.version: unknown
             <span class="header-content">Groups for MPGroupTestSuite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">Non_MP</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TS002_VerifyLocationLinksForShowSpecialsTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-MPGroupTestSuite" class="panel">
@@ -249,16 +213,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest')
-data.setCell(0, 2, 'lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters')
-data.setCell(0, 3, 88004);
+data.setCell(0, 1, 'TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest')
+data.setCell(0, 2, 'atlantamarket_PROD.ShowSpecials')
+data.setCell(0, 3, 0);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'TS002_VerifyLocationLinksForShowSpecialsTest')
+data.setCell(1, 2, 'atlantamarket_PROD.ShowSpecials')
+data.setCell(1, 3, 0);
 window.suiteTableData['MPGroupTestSuite']= { tableData: data, tableDiv: 'times-div-MPGroupTestSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 0 ms</span>
               <div id="times-div-MPGroupTestSuite">
               </div> <!-- times-div-MPGroupTestSuite -->
             </div> <!-- times-div -->
@@ -273,31 +241,13 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-MPGroupTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">10 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</span>
+              <span class="ignored-class-name">atlantamarket_PROD.ShowSpecials</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">TS008_VerifySelectionOfGeneralGiftProdCatgFromLeftPaneFiltersTest</span>
-                <br/>
-                <span class="ignored-method-name">TS006_VerifySelectionOfHolidayProdCatgFromLeftPaneFiltersTest</span>
-                <br/>
-                <span class="ignored-method-name">TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest</span>
-                <br/>
-                <span class="ignored-method-name">TS005_VerifySelectionOfAccentFurnitureProdCatgFromLeftPaneFiltersTest</span>
-                <br/>
-                <span class="ignored-method-name">TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest</span>
-                <br/>
-                <span class="ignored-method-name">TS009_VerifySelectionOfFashionAccProdCatgFromLeftPaneFiltersTest</span>
-                <br/>
-                <span class="ignored-method-name">TS010_VerifySelectionOfFloralBotanicalsProdCatgFromLeftPaneFiltersTest</span>
-                <br/>
-                <span class="ignored-method-name">TS007_VerifySelectionOfDecorativeAccessProdCatgFromLeftPaneFiltersTest</span>
-                <br/>
-                <span class="ignored-method-name">TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest</span>
-                <br/>
-                <span class="ignored-method-name">TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest</span>
+                <span class="ignored-method-name">verifyMPLoginFunctionality</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -309,20 +259,26 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">atlantamarket_PROD.ShowSpecials</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">initialize</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest</span>
-                <span class="method-start">29084 ms</span>
+                <span class="method-name">TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest</span>
+                <span class="method-start">65468 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS002_VerifyLocationLinksForShowSpecialsTest</span>
+                <span class="method-start">65468 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">tearDown</span>
-                <span class="method-start">117275 ms</span>
+                <span class="method-start">65468 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

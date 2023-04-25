@@ -145,11 +145,7 @@ public class ShowSpecials extends base  {
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 	}
 
-/*	@Test(priority = 2,groups="Non_MP")
-	public void TS002_VerifyShowSpecialsLinksShowroomTest()
-			throws InterruptedException, IOException {
 
-	*/
 	@Test(priority = 2,groups="Non_MP")
 	public void TS002_VerifyLocationLinksForShowSpecialsTest() throws InterruptedException, IOException {
 
@@ -188,11 +184,6 @@ public class ShowSpecials extends base  {
 		Assert.assertTrue(driver.getCurrentUrl().contains(url));
 	}
 
-
-/*	@AfterClass(alwaysRun=true)
-	public void tearDown() {
-		 driver.quit();
-*/
 	@AfterClass(alwaysRun=true)
 	public void tearDown() throws InterruptedException {
 		utl.deleteShowSpecialFrmExp();

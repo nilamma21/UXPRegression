@@ -44,7 +44,7 @@ public class GlobalSearch_ProductActions extends base {
 	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns,
 			allnoteslist, favlist, searchlinetypelist;
 
-	@BeforeClass
+	@BeforeClass(alwaysRun=true)
 	public void initialize() throws IOException, InterruptedException {
 		driver = initializeDriver(); // requires for Parallel text execution
 		utl = new Utility(driver);
@@ -58,14 +58,41 @@ public class GlobalSearch_ProductActions extends base {
 		// lap.getCloseMarktAdBtn().click();
 
 		// Login to Market Planner
-		utl.verifyMPLoginFunctionality();
-		utl.loginCheckATL();
+		//utl.verifyMPLoginFunctionality();
+		//utl.loginCheckATL();
 		driver.navigate().refresh();
 		Thread.sleep(8000);
 		// lap.getCloseMarktAdBtn().click();
 	}
+	@Test
+	public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
 
-	@Test(priority = 1)
+		// The purpose of this test case to verify:-
+		// TS1- Login to Market Planner
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+
+		// Click on Login button from Landing Page
+		lap.getLogin().click();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		// Enter the credentials on Login Page and click
+		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
+
+		lp.getPassword().sendKeys((prop.getProperty("passwordW")));
+
+
+		Thread.sleep(1000);
+	//	lp.getPassword().sendKeys((prop.getProperty("password")));
+		Thread.sleep(1000);
+
+		lp.getSignInBtn().click();
+		Thread.sleep(15000);
+		Assert.assertTrue(driver.getTitle().contains("Atlanta Market at AmericasMart"));
+	}
+	
+
+	@Test(priority = 1,groups="Non_MP")
 	public void TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -77,7 +104,8 @@ public class GlobalSearch_ProductActions extends base {
 		lap = new ATLLandingPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		//driver.get(prop.getProperty("atlmrkturl_prod"));
+		utl.loginCheckATL();
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(15000);
@@ -107,7 +135,7 @@ public class GlobalSearch_ProductActions extends base {
 		Assert.assertTrue(catalogName.equals(productNameOnProductDetails));
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS002_VerifyProductAddToNewListOnProductDetailsPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T434: Product Actions: + icon to add to newly created list
@@ -200,7 +228,7 @@ public class GlobalSearch_ProductActions extends base {
 		Assert.assertTrue(atlmppge.getSavedProductNameInList().getText().contains(prodName));
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 3,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS003_VerifyProductAddToExistingListOnProductDetailsPageTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -300,7 +328,7 @@ public class GlobalSearch_ProductActions extends base {
 		}
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 4,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS004_VerifyAddToFavoriteOnProductDetailsPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T385: Add to Favorite functionality on Product Details page
@@ -371,7 +399,7 @@ public class GlobalSearch_ProductActions extends base {
 		}
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 5,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS005_VerifyAddNoteOnProductDetailsPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T386: Add Note functionality on Product Details page
@@ -447,7 +475,7 @@ public class GlobalSearch_ProductActions extends base {
 		atlexhact.getDeleteNoteBtn().click();
 	}
 
-	@Test(priority = 6)
+	@Test(priority = 6,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS006_VerifyProductAddToExistingListOnSearchResultsGridTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T377: Products Actions: + icon to add to existing list
@@ -546,7 +574,7 @@ public class GlobalSearch_ProductActions extends base {
 		}
 	}
 
-	@Test(priority = 7)
+	@Test(priority = 7,groups="Non_MP")
 	public void TS007_VerifyFullScreenViewerOnProductDetailsPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T387: Full Screen Viewer functionality on Product Details page
@@ -611,7 +639,7 @@ public class GlobalSearch_ProductActions extends base {
 		atlproddet.getProductFullScreenViewer().click();
 	}
 
-	@Test(priority = 8)
+	@Test(priority = 8,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS008_VerifyAddToFavoriteOnSearchResultsGridTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T378: Add To Favorite functionality for Product on Search Results grid
@@ -677,7 +705,7 @@ public class GlobalSearch_ProductActions extends base {
 		}
 	}
 
-	@Test(priority = 9)
+	@Test(priority = 9,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -761,8 +789,8 @@ public class GlobalSearch_ProductActions extends base {
 		Assert.assertTrue(atlmppge.getSavedProductNameInList().getText().contains(prodName));
 	}
 
-	@AfterClass
+	@AfterClass(alwaysRun=true)
 	public void tearDown() {
-		//driver.quit();
+		driver.quit();
 	}
 }
