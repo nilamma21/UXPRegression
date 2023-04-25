@@ -3,6 +3,7 @@ package atlantamarket_UAT;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -44,27 +45,38 @@ public class EvenntsAndWebinar extends base{
 	ATLFloorPlansPage atlflpp;
 	ATLEventsAndWebinarPage atlevents;
 	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns, allnoteslist,favlist, searchlinetypelist;
-
+	ArrayList<String> tabs;
+	
 	@BeforeClass
 	public void initialize() throws IOException, InterruptedException {
 		driver = initializeDriver(); // requires for Parallel text execution
 		utl = new Utility(driver);
 		lap = new ATLLandingPage(driver);
 
-		// Navigate to Atlanta Market site
-		driver.manage().window().maximize();
+		//Add new Exhibitor event from EXP
+		utl.addNewExhibitorEventsFrmExp_UAT();
+
+		//Open ATL market site in new tab
+		((JavascriptExecutor)driver).executeScript("window.open()");
+		tabs = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tabs.get(2));
 		driver.get(prop.getProperty("atlmrkturl_uat"));
+		Thread.sleep(5000);
+
+		// Navigate to Atlanta Market site
+		//		driver.manage().window().maximize();
+		//		driver.get(prop.getProperty("atlmrkturl_uat"));
 		//driver.get(prop.getProperty("lvmurl_uat"));
 		/*utl.verifyMPLoginFunctionality();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);*/
-	//	lap.getIUnderstandBtn().click();
-		Thread.sleep(7000);
+		//	lap.getIUnderstandBtn().click();
+		//Thread.sleep(7000);
 		//lap.getCloseMarktAdBtn().click();
 
 		//Login to Market Planner
 
 		//driver.navigate().refresh();
-		Thread.sleep(8000);
+		//Thread.sleep(8000);
 		//		lap.getCloseMarktAdBtn().click();
 	}
 
@@ -80,30 +92,35 @@ public class EvenntsAndWebinar extends base{
 		atlgs = new ATLGlobalSearchPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		utl.clickOnEventLinkOfChannel_UAT();
-		/*// Click on Attend Tab
+		//utl.clickOnEventLinkOfChannel_UAT();
+		// Click on Attend Tab
 		atlevents.getatlAttendTab().click();
 		Thread.sleep(2000);
+		
 		//click on Events Link
 		atlevents.getatlEventsLink().click();
-		Thread.sleep(3000);*/
+		Thread.sleep(3000);
+		
 		//Verify ATL events page title
 		Assert.assertTrue(atlgs.getatlShowSpecialsTitle().getText().contains("Events"));
-		// Verify IMC tab
+		
+		// Verify IMC Events tab
 		Assert.assertTrue(atlevents.getatlImcEventsTab().getText().equals("IMC Events"));
-
 		System.out.println("IMC Event Tab is Present");
+		
 		// Verify Exhibitors Events tab
 		Assert.assertTrue(atlevents.getatlExhibitorsEventsTab().getText().equals("Exhibitor Events"));
 		System.out.println("Exhibitor Event Tab is Present");
+		
+		String noeventsmsg = "Sorry, no results found.";
 		//Verify Events List
 		try {
-			Assert.assertTrue(!atlevents.getatlListOfAllEvents().isEmpty());
+			Assert.assertFalse(noeventsmsg.isEmpty());
 			System.out.println("Events list displayed");
 		}
-		catch(Exception e) {
+		catch (Exception e) {
 			System.out.println("Events list not displayed");
-			Assert.assertTrue(atlevents.getatlListOfAllEvents().isEmpty());
+			Assert.assertTrue(noeventsmsg.isEmpty());
 
 		}
 		//Verify Calendar is displayed or not
@@ -112,10 +129,6 @@ public class EvenntsAndWebinar extends base{
 		//Verify Events Search Bar
 		Assert.assertTrue(atlevents.getatlEventsSearchBar().isDisplayed());
 		System.out.println("Events Search bar is Present");
-
-
-
-
 	}
 
 	@Test(priority = 2)
@@ -158,104 +171,104 @@ public class EvenntsAndWebinar extends base{
 	@Test(priority = 3)
 	public void TS003_VerifyIMCEventsCalendarViewTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-				// UXP-T288: IMC Events: Calendar View
-				lap = new ATLLandingPage(driver);
-				lp = new ATLLoginPage(driver);
-				utl = new Utility(driver);
-				atlflpp=new ATLFloorPlansPage(driver);
-				atlevents=new ATLEventsAndWebinarPage(driver);
-				atlgs = new ATLGlobalSearchPage(driver);
-				atlmppge = new ATLMarketPlannerPage(driver);
+		// UXP-T288: IMC Events: Calendar View
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlflpp=new ATLFloorPlansPage(driver);
+		atlevents=new ATLEventsAndWebinarPage(driver);
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
 
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-				
-				utl.clickOnEventLinkOfChannel_UAT();
-				
-				
-				//Click on IMC Event Tab
-				atlevents.getatlImcEventsTab().click();
-				
-				Thread.sleep(2000);
-				//Event Month and Year
-				String eventDateAndMonth=atlevents.getatlEventDateAndMonth().getText();
-				String trimDate=eventDateAndMonth.split(" ")[2].trim();
-				//System.out.println(trimDate);
-				Thread.sleep(2000);
-				String date=trimDate.replaceAll("[,]", "");
-				String trimOnlyDate=date.split(" ")[0].trim();
-				String replaceDate=trimOnlyDate.replaceFirst("^0+(?!$)", "");
-				System.out.println(replaceDate);
 
-				String trimMonth = eventDateAndMonth.split(" ")[1].trim();
-				// System.out.println(trimMonth);
-				String trimYear = eventDateAndMonth.split(" ")[3].trim();
-				// System.out.println(trimYear);
-				String EventmonthAndYear = trimMonth.concat(" ").concat(trimYear);
-				// System.out.println("Concat Month And Year :: "+EventmonthAndYear);
+		utl.clickOnEventLinkOfChannel_UAT();
 
-				// Verify Current Date is Heighlighetd or not
-				DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-MMM");
-				LocalDate localDate = LocalDate.now();
-				String d = dtf.format(localDate);
-				System.out.println("Current Date ::" + dtf.format(localDate));
-				
-				try {
-				Assert.assertTrue(d.contains(atlevents.getatlTodaysDate().getText()));
-				System.out.println("Current Date "+atlevents.getatlTodaysDate().getText()+" is Heighlighted");
-				}catch (Exception e) {
-					Assert.assertTrue(d.contains(atlevents.getatlTodaysDatePROD().getText()));
-					System.out.println("Current Date "+atlevents.getatlTodaysDatePROD().getText()+" is Heighlighted");
-				}
-				
-				//Current Month
-				DateTimeFormatter month = DateTimeFormatter.ofPattern("MMM");
-				LocalDate localMonth = LocalDate.now();
-				LocalDate prevMonth= localMonth.minusMonths(1);		
-						
-				String m = month.format(localMonth);//current month
-				String mm = month.format(prevMonth);//previous month
-				
-			
-				System.out.println("Current Month ::" +m );
-				System.out.println("Previous Month ::" +mm );
-				
-				//Click on Calendar Prev Btn
-				atlevents.getatlCalendarPrevMonth().click();
-				System.out.println("Previous Month From Calendar ::"+atlevents.getatlSelectMonth().getText());
-				Assert.assertTrue(atlevents.getatlSelectMonth().getText().contains(mm));
-				System.out.println("Previous Month "+atlevents.getatlSelectMonth().getText()+" is selected");
-				//utl.selectFilters(atlevents.getatlListOfatlSelectAnyDate(), replaceDate);
-				
-					atlevents.getatlCalendarNextMonthBtn().click();
-					Thread.sleep(5000);
-				
-					 if(atlevents.getatlSelectMonth().getText().contains(EventmonthAndYear))
-					{
-						 try {
-							 	Assert.assertTrue(atlevents.getatlTodaysDatePROD().isDisplayed());
-								atlevents.getatlTodaysDatePROD().click();
-								
-								}catch (Exception e) {
-									utl.selectFilters(atlevents.getatlListOfEventDate(), replaceDate);
-								
-								}			 
-					}
-				
-				// Verify Event is selected by datepicker
-				Assert.assertTrue(atlevents.getatlEventDateAndMonth().isDisplayed());
-				System.out.println("Event is selected by Date");
 
-				//Click on Reset Btn
-				atlevents.getatlResetBtn().click();
-				//Verify Current date and month should selected by default
-				try {
-				Assert.assertTrue(d.contains(atlevents.getatlTodaysDate().getText()));
-				System.out.println("By Default "+d +" today's date is selected.");
-				}catch (Exception e) {
-					Assert.assertTrue(d.contains(atlevents.getatlTodaysDatePROD().getText()));
-					System.out.println("By Default "+d +" today's date is selected.");
-				}
+		//Click on IMC Event Tab
+		atlevents.getatlImcEventsTab().click();
+
+		Thread.sleep(2000);
+		//Event Month and Year
+		String eventDateAndMonth=atlevents.getatlEventDateAndMonth().getText();
+		String trimDate=eventDateAndMonth.split(" ")[2].trim();
+		//System.out.println(trimDate);
+		Thread.sleep(2000);
+		String date=trimDate.replaceAll("[,]", "");
+		String trimOnlyDate=date.split(" ")[0].trim();
+		String replaceDate=trimOnlyDate.replaceFirst("^0+(?!$)", "");
+		System.out.println(replaceDate);
+
+		String trimMonth = eventDateAndMonth.split(" ")[1].trim();
+		// System.out.println(trimMonth);
+		String trimYear = eventDateAndMonth.split(" ")[3].trim();
+		// System.out.println(trimYear);
+		String EventmonthAndYear = trimMonth.concat(" ").concat(trimYear);
+		// System.out.println("Concat Month And Year :: "+EventmonthAndYear);
+
+		// Verify Current Date is Heighlighetd or not
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-MMM");
+		LocalDate localDate = LocalDate.now();
+		String d = dtf.format(localDate);
+		System.out.println("Current Date ::" + dtf.format(localDate));
+
+		try {
+			Assert.assertTrue(d.contains(atlevents.getatlTodaysDate().getText()));
+			System.out.println("Current Date "+atlevents.getatlTodaysDate().getText()+" is Heighlighted");
+		}catch (Exception e) {
+			Assert.assertTrue(d.contains(atlevents.getatlTodaysDatePROD().getText()));
+			System.out.println("Current Date "+atlevents.getatlTodaysDatePROD().getText()+" is Heighlighted");
+		}
+
+		//Current Month
+		DateTimeFormatter month = DateTimeFormatter.ofPattern("MMM");
+		LocalDate localMonth = LocalDate.now();
+		LocalDate prevMonth= localMonth.minusMonths(1);		
+
+		String m = month.format(localMonth);//current month
+		String mm = month.format(prevMonth);//previous month
+
+
+		System.out.println("Current Month ::" +m );
+		System.out.println("Previous Month ::" +mm );
+
+		//Click on Calendar Prev Btn
+		atlevents.getatlCalendarPrevMonth().click();
+		System.out.println("Previous Month From Calendar ::"+atlevents.getatlSelectMonth().getText());
+		Assert.assertTrue(atlevents.getatlSelectMonth().getText().contains(mm));
+		System.out.println("Previous Month "+atlevents.getatlSelectMonth().getText()+" is selected");
+		//utl.selectFilters(atlevents.getatlListOfatlSelectAnyDate(), replaceDate);
+
+		atlevents.getatlCalendarNextMonthBtn().click();
+		Thread.sleep(5000);
+
+		if(atlevents.getatlSelectMonth().getText().contains(EventmonthAndYear))
+		{
+			try {
+				Assert.assertTrue(atlevents.getatlTodaysDatePROD().isDisplayed());
+				atlevents.getatlTodaysDatePROD().click();
+
+			}catch (Exception e) {
+				utl.selectFilters(atlevents.getatlListOfEventDate(), replaceDate);
+
+			}			 
+		}
+
+		// Verify Event is selected by datepicker
+		Assert.assertTrue(atlevents.getatlEventDateAndMonth().isDisplayed());
+		System.out.println("Event is selected by Date");
+
+		//Click on Reset Btn
+		atlevents.getatlResetBtn().click();
+		//Verify Current date and month should selected by default
+		try {
+			Assert.assertTrue(d.contains(atlevents.getatlTodaysDate().getText()));
+			System.out.println("By Default "+d +" today's date is selected.");
+		}catch (Exception e) {
+			Assert.assertTrue(d.contains(atlevents.getatlTodaysDatePROD().getText()));
+			System.out.println("By Default "+d +" today's date is selected.");
+		}
 
 	}
 	@Test(priority = 4)
@@ -374,7 +387,7 @@ public class EvenntsAndWebinar extends base{
 	public void TS005_VerifyIMCEventsEventDetailstTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T295: IMC Events: Event Details    
-															//Event details page not there,Test page is there.
+		//Event details page not there,Test page is there.
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
 		utl = new Utility(driver);
@@ -486,7 +499,7 @@ public class EvenntsAndWebinar extends base{
 	public void TS006_VerifyIMCEventsAddToFavoriteTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T296: IMC Events: Event Details- Add To Favorite    
-																	//Event details page not there,Test page is there.
+		//Event details page not there,Test page is there.
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
 		utl = new Utility(driver);
@@ -540,7 +553,7 @@ public class EvenntsAndWebinar extends base{
 	public void TS007_VerifyIMCEventsAddToListTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T298: IMC Events: Event Details- Add To List
-															//Event details page not there,Test page is there.
+		//Event details page not there,Test page is there.
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
 		utl = new Utility(driver);
@@ -621,7 +634,7 @@ public class EvenntsAndWebinar extends base{
 	public void TS008_VerifyIMCEventsAddNoteTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T299: IMC Events: Event Details- Add Note
-																									//Event details page not there,Test page is there.
+		//Event details page not there,Test page is there.
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
 		utl = new Utility(driver);
@@ -707,7 +720,7 @@ public class EvenntsAndWebinar extends base{
 	public void TS009_VerifyExhibitorEventsSearchbarTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T304: Exhibitor Events: Search bar
-																	//Exhibitor Events NOT present DATA ISSUE
+		//Exhibitor Events NOT present DATA ISSUE
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
 		utl = new Utility(driver);
@@ -741,7 +754,7 @@ public class EvenntsAndWebinar extends base{
 	public void TS010_VerifyExhibitorEventsCalendarViewTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T305: Exhibitor Events: Calendar View
-																	//Exhibitor Events NOT present DATA ISSUE
+		//Exhibitor Events NOT present DATA ISSUE
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
 		utl = new Utility(driver);
@@ -829,7 +842,7 @@ public class EvenntsAndWebinar extends base{
 	public void TS011_VerifyExhibitorEventsListTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T306: Exhibitor Events: Events List
-														//Exhibitor Events NOT present DATA ISSUE
+		//Exhibitor Events NOT present DATA ISSUE
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
 		utl = new Utility(driver);
@@ -950,7 +963,7 @@ public class EvenntsAndWebinar extends base{
 	public void TS012_VerifyExhibitorEventsDetailstTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T307: Exhibitor Events: Event Details
-																				//Exhibitor Events NOT present DATA ISSUE
+		//Exhibitor Events NOT present DATA ISSUE
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
 		utl = new Utility(driver);
@@ -1070,7 +1083,7 @@ public class EvenntsAndWebinar extends base{
 	public void TS013_VerifyExhibitorEventsAddToFavoriteTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T308: Exhibitor Events: Event Details- Add To Favorite
-																									//Exhibitor Events NOT present DATA ISSUE
+		//Exhibitor Events NOT present DATA ISSUE
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
 		utl = new Utility(driver);
@@ -1126,7 +1139,7 @@ public class EvenntsAndWebinar extends base{
 	public void TS014_VerifyExhibitorEventsAddToListTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T309: Exhibitor Events: Event Details- Add To List
-																										//Exhibitor Events NOT present DATA ISSUE
+		//Exhibitor Events NOT present DATA ISSUE
 
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
@@ -1211,7 +1224,7 @@ public class EvenntsAndWebinar extends base{
 	public void TS015_VerifyExhibitorEventsAddNoteTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T310: Exhibitor Events: Event Details- Add Note
-																										//Exhibitor Events NOT present DATA ISSUE
+		//Exhibitor Events NOT present DATA ISSUE
 
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
@@ -1297,8 +1310,10 @@ public class EvenntsAndWebinar extends base{
 	}
 
 	@AfterClass
-	public void tearDown()
+	public void tearDown() throws InterruptedException
 	{
+		System.out.println("In after class block");
+		utl.deleteExhEventFrmExp();
 		//driver.quit();
 	}
 
