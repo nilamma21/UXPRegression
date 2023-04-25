@@ -23,13 +23,16 @@ public class SCShowSpecials {
 
 
 	public WebElement getSSSortByOptn() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.elementToBeClickable(sssortbyoptn));
+//		wait = new WebDriverWait (driver,20);
+//		wait.until(ExpectedConditions.elementToBeClickable(sssortbyoptn));
+		Thread.sleep(5000);
 		return driver.findElement(sssortbyoptn);
 	}
-	public WebElement getDateAddedDesc() {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.elementToBeClickable(dateaddeddesc));
+	
+	public WebElement getDateAddedDesc() throws InterruptedException {
+//		wait = new WebDriverWait (driver,20);
+//		wait.until(ExpectedConditions.elementToBeClickable(dateaddeddesc));
+		Thread.sleep(5000);
 		return driver.findElement(dateaddeddesc);
 	}
 	public WebElement getFirstRecordSS() {

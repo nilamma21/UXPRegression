@@ -72,7 +72,7 @@ public class GlobalSearch_MatchingResults extends base {
 		Thread.sleep(2000);
 		utl.verifyMPLoginFunctionality();
 		Thread.sleep(5000);
-		driver.navigate().to("lvmurl_prod");
+		utl.loginCheckLVM();
 		//lap.getCloseMarktAdBtn().click();
 	}
 	

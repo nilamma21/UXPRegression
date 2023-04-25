@@ -52,7 +52,7 @@ public class ExhibitorDigitalShowroom extends base {
 		Thread.sleep(2000);
 		utl.verifyMPLoginFunctionality(); //Login
 		Thread.sleep(3000);
-		driver.navigate().to("lvmurl_prod");
+		utl.loginCheckLVM();
 
 	}
 	
@@ -605,7 +605,7 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		lap = new LVMLandingPage(driver);
 		lvmds = new LVMExhDigiShowroomPage(driver);
-
+		driver.get(prop.getProperty("lvmurl_prod")); 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor12")));
 		Thread.sleep(5000);
@@ -639,7 +639,7 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		lap = new LVMLandingPage(driver);
 		lvmds = new LVMExhDigiShowroomPage(driver);
-
+		driver.get(prop.getProperty("lvmurl_prod")); 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));
 		Thread.sleep(5000);
@@ -677,7 +677,7 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		lap = new LVMLandingPage(driver);
 		lvmds = new LVMExhDigiShowroomPage(driver);
-
+		driver.get(prop.getProperty("lvmurl_prod")); 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor11")));
 		Thread.sleep(5000);
@@ -711,8 +711,8 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		lap = new LVMLandingPage(driver);
 		lvmds = new LVMExhDigiShowroomPage(driver);
-
 		lvmevents=new LVMEventsAndWebinarPage(driver);
+		driver.get(prop.getProperty("lvmurl_prod")); 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));
 		Thread.sleep(5000);
@@ -748,8 +748,8 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		lap = new LVMLandingPage(driver);
 		lvmds = new LVMExhDigiShowroomPage(driver);
-
 		lvmevents=new LVMEventsAndWebinarPage(driver);
+		driver.get(prop.getProperty("lvmurl_prod")); 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));
@@ -794,8 +794,8 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		lap = new LVMLandingPage(driver);
 		lvmds = new LVMExhDigiShowroomPage(driver);
-
 		lvmevents=new LVMEventsAndWebinarPage(driver);
+		driver.get(prop.getProperty("lvmurl_prod")); 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));
@@ -840,8 +840,8 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		lap = new LVMLandingPage(driver);
 		lvmds = new LVMExhDigiShowroomPage(driver);
-
 		lvmevents=new LVMEventsAndWebinarPage(driver);
+		driver.get(prop.getProperty("lvmurl_prod")); 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor6")));//globalsearchinputforShowSpecials

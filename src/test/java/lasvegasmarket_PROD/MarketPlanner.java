@@ -64,7 +64,7 @@ public class MarketPlanner extends base {
 		driver.get(prop.getProperty("lvmurl_prod"));
 		utl.verifyMPLoginFunctionality();
 		Thread.sleep(8000);
-		driver.navigate().to("lvmurl_prod");
+		utl.loginCheckLVM();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(8000);
@@ -124,7 +124,7 @@ public class MarketPlanner extends base {
 
 		// Login to Market Planner
 		utl.verifyMPLoginFunctionality();
-
+		utl.loginCheckLVM();
 		// lap.getCloseMarktAdBtn().click();
 
 		Thread.sleep(5000);
@@ -249,6 +249,7 @@ public class MarketPlanner extends base {
 		Assert.assertTrue(driver.getCurrentUrl().equalsIgnoreCase(prop.getProperty("lvmurl_prod")));
 
 		utl.verifyMPLoginFunctionality();
+		utl.loginCheckLVM();
 		Thread.sleep(8000);
 	}
 

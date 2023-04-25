@@ -62,8 +62,7 @@ public class EvenntsAndWebinar extends base{
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(2000);
 		utl.verifyMPLoginFunctionality();
-		Thread.sleep(8000);
-		driver.navigate().to("lvmurl_prod");
+		utl.loginCheckLVM();
 		//lap.getCloseMarktAdBtn().click();
 		//Login to Market Planner
 		//driver.navigate().refresh();
@@ -166,11 +165,11 @@ public class EvenntsAndWebinar extends base{
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		utl.clickOnEventLinkOfChannel();	
-		
+
 		//Click on IMC Event Tab
 		lvmevents.getlvmImcEventsTab().click();
-		Thread.sleep(2000);
 		
+		Thread.sleep(2000);
 		//Event Month and Year
 		String eventDateAndMonth=lvmevents.getlvmEventDateAndMonth().getText();
 		String trimDate=eventDateAndMonth.split(" ")[2].trim();
@@ -180,23 +179,27 @@ public class EvenntsAndWebinar extends base{
 		String trimOnlyDate=date.split(" ")[0].trim();
 		String replaceDate=trimOnlyDate.replaceFirst("^0+(?!$)", "");
 		System.out.println(replaceDate);
-		String selectDate="15";
 
 		String trimMonth = eventDateAndMonth.split(" ")[1].trim();
-		 System.out.println(trimMonth);
+		// System.out.println(trimMonth);
 		String trimYear = eventDateAndMonth.split(" ")[3].trim();
-		 System.out.println(trimYear);
+		// System.out.println(trimYear);
 		String EventmonthAndYear = trimMonth.concat(" ").concat(trimYear);
-		 System.out.println("Concat Month And Year :: "+EventmonthAndYear);
-		 
+		// System.out.println("Concat Month And Year :: "+EventmonthAndYear);
+
 		// Verify Current Date is Heighlighetd or not
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-MMM");
 		LocalDate localDate = LocalDate.now();
 		String d = dtf.format(localDate);
 		System.out.println("Current Date ::" + dtf.format(localDate));
 		
+		try {
 		Assert.assertTrue(d.contains(lvmevents.getlvmTodaysDate().getText()));
 		System.out.println("Current Date "+lvmevents.getlvmTodaysDate().getText()+" is Heighlighted");
+		}catch (Exception e) {
+			Assert.assertTrue(d.contains(lvmevents.getlvmTodaysDate().getText()));
+			System.out.println("Current Date "+lvmevents.getlvmTodaysDate().getText()+" is Heighlighted");
+		}
 		
 		//Current Month
 		DateTimeFormatter month = DateTimeFormatter.ofPattern("MMM");
@@ -205,8 +208,7 @@ public class EvenntsAndWebinar extends base{
 				
 		String m = month.format(localMonth);//current month
 		String mm = month.format(prevMonth);//previous month
-		
-		
+
 		System.out.println("Current Month ::" +m );
 		System.out.println("Previous Month ::" +mm );
 		
@@ -215,18 +217,23 @@ public class EvenntsAndWebinar extends base{
 		System.out.println("Previous Month From Calendar ::"+lvmevents.getlvmSelectMonth().getText());
 		Assert.assertTrue(lvmevents.getlvmSelectMonth().getText().contains(mm));
 		System.out.println("Previous Month "+lvmevents.getlvmSelectMonth().getText()+" is selected");
-		utl.selectFilters(lvmevents.getlvmListOflvmSelectAnyDate(), selectDate);
+		//utl.selectFilters(lvmevents.getatlListOfatlSelectAnyDate(), replaceDate);
 		
-		for(int i=0;i>=0;i++)
-		{
 			lvmevents.getlvmCalendarNextMonthBtn().click();
-			System.out.println(lvmevents.getlvmSelectMonth().getText());
-			if(lvmevents.getlvmSelectMonth().getText().contains(EventmonthAndYear))
+			Thread.sleep(5000);
+		
+			 if(lvmevents.getlvmSelectMonth().getText().contains(EventmonthAndYear))
 			{
-				utl.selectFilters(lvmevents.getlvmListOfEventDate(), replaceDate);
-				break;
+				 try {
+					 	Assert.assertTrue(lvmevents.getlvmTodaysDate().isDisplayed());
+						lvmevents.getlvmTodaysDate().click();
+						
+						}catch (Exception e) {
+							utl.selectFilters(lvmevents.getlvmListOfEventDate(), replaceDate);
+						
+						}			 
 			}
-		}
+		
 		// Verify Event is selected by datepicker
 		Assert.assertTrue(lvmevents.getlvmEventDateAndMonth().isDisplayed());
 		System.out.println("Event is selected by Date");
@@ -234,8 +241,13 @@ public class EvenntsAndWebinar extends base{
 		//Click on Reset Btn
 		lvmevents.getlvmResetBtn().click();
 		//Verify Current date and month should selected by default
+		try {
 		Assert.assertTrue(d.contains(lvmevents.getlvmTodaysDate().getText()));
 		System.out.println("By Default "+d +" today's date is selected.");
+		}catch (Exception e) {
+			Assert.assertTrue(d.contains(lvmevents.getlvmTodaysDate().getText()));
+			System.out.println("By Default "+d +" today's date is selected.");
+		}
 	}
 	
 	@Test(priority = 4)
