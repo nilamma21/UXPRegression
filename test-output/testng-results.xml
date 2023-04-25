@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <testng-results skipped="0" failed="4" total="15" passed="11">
+
+
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="231294" started-at="2023-04-24T13:04:53Z" finished-at="2023-04-24T13:08:44Z">
+    <groups>
+    </groups>
+    <test name="RegressionTest" duration-ms="231294" started-at="2023-04-24T13:04:53Z" finished-at="2023-04-24T13:08:44Z">
+      <class name="atlantamarket_UAT.EvenntsAndWebinar">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@204f30ec]" name="initialize" is-config="true" duration-ms="158512" started-at="2023-04-24T18:34:53Z" finished-at="2023-04-24T18:37:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="TS001_VerifyEventsAndWebinarsOverviewTest()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@204f30ec]" name="TS001_VerifyEventsAndWebinarsOverviewTest" duration-ms="6673" started-at="2023-04-24T18:37:32Z" finished-at="2023-04-24T18:37:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifyEventsAndWebinarsOverviewTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@204f30ec]" name="tearDown" is-config="true" duration-ms="66082" started-at="2023-04-24T18:37:38Z" finished-at="2023-04-24T18:38:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- atlantamarket_UAT.EvenntsAndWebinar -->
+
+<testng-results skipped="0" failed="1" total="1" passed="0">
+
   <reporter-output>
   </reporter-output>
   <suite name="MPGroupTestSuite" duration-ms="577293" started-at="2023-04-25T10:13:50Z" finished-at="2023-04-25T10:23:27Z">
@@ -275,7 +302,12 @@ Driver info: driver.version: unknown
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
+
       </class> <!-- lasvegasmarket_PROD.EvenntsAndWebinar -->
+
+      </class> <!-- lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters -->
+
+
     </test> <!-- RegressionTest -->
   </suite> <!-- MPGroupTestSuite -->
 </testng-results>
