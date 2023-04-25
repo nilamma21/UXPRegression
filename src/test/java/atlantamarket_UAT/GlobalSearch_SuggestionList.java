@@ -183,7 +183,7 @@ public class GlobalSearch_SuggestionList extends base {
 		//lap.getCloseMarktAdBtn().click();
 	}
 	
-	@AfterClass
+	@AfterClass(alwaysRun=true)
 	public void tearDown()
 	{
 		driver.quit();

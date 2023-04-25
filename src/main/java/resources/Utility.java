@@ -2,8 +2,12 @@
 package resources;
 
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -36,6 +40,7 @@ import pageObjects.Sitecore.SCShowSpecials;
 
 public class Utility extends base {
 
+	public String neweventname = "";
 	// public WebDriver driver;
 	ATLLandingPage lap;
 	ATLLoginPage lp;
@@ -53,9 +58,9 @@ public class Utility extends base {
 	SCLoginPage sclogin;
 	SCDashboard scdash;
 	SCShowSpecials scshow;
-
+	
 	ArrayList<String> tabs;
-	List<WebElement> showspecialslist;
+	List<WebElement> showspecialslist, exheventslist, exheventnameslist, exheventdeletebtnlist;
 
 	@SuppressWarnings("static-access")
 	public Utility(WebDriver driver) {
@@ -601,9 +606,7 @@ public class Utility extends base {
 
 				Thread.sleep(3000);
 			}
-
 		}
-
 	}
 
 	public void addNewShowSpecialFrmExp_UAT() throws InterruptedException {
@@ -815,6 +818,194 @@ public class Utility extends base {
 		expmrkttab.getDeleteShowSpecialBtn().click();
 		Thread.sleep(5000);
 	}
+
+
+	public void addNewExhibitorEventsFrmExp_UAT() throws InterruptedException {
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		atlleftpane = new ATLLeftPaneFilters(driver);
+		expmrkttab = new EXPMarketsPage(driver);
+		sclogin = new SCLoginPage(driver);
+		scdash = new SCDashboard(driver);
+		scshow = new SCShowSpecials(driver);
+		genData = new GenerateData();
+
+		//Open Exhibitor Portal in new tab
+		driver.get(prop.getProperty("expurl_uat"));
+		Thread.sleep(5000);
+
+		//Login to EXP
+		lp.getEmailAddress().sendKeys((prop.getProperty("usernameSwapnil")));
+		lp.getPassword().sendKeys((prop.getProperty("passwordSwapnil")));
+
+		lp.getSignInBtn().click();
+		Thread.sleep(15000);
+
+		lap.getIUnderstandBtn().click();
+		Thread.sleep(5000);
+
+		//In EXP click on Exhibitor association drop down
+		atlleftpane.getEXPExhDropDown().click();
+
+		//Select IMC Test Company exhibitor
+		atlleftpane.getIMCExhNameInEXP().click();
+
+		//Click on Markets tab
+		expmrkttab.getEXPMarketTab().click();
+
+		if(expmrkttab.getATLMarket().getText().contains("Atlanta Market")) {
+			expmrkttab.getATLWinterMarket().click();
+		}
+
+		//Click on Add Event btn
+		expmrkttab.getAddEventsBtn().click();
+
+		//Click on Add Event btn on Events page
+		expmrkttab.getAddEventsBtn().click();
+
+		//On Add Event form, fill all the required details
+		//Click on Event Type drop down
+		expmrkttab.getEventTypeDD().click();
+
+		//Select 'Demo' Event type
+		expmrkttab.getDemoEventType().click();
+
+		neweventname = "CybEvent_"+genData.generateRandomString(3);
+		//Enter the Event name
+		expmrkttab.getEventNameTxtBox().sendKeys(neweventname);
+
+		//Enter the event description
+		expmrkttab.getEventDescptnTxtBox().sendKeys("Events testing");
+
+		//Click on Choose location drop down
+		expmrkttab.getChooseLocationDD().click();
+
+		//Select any location
+		expmrkttab.getLocationValue().click();
+
+		//Click on Event Start Date text field
+		expmrkttab.getEventStartDateTxtBx().click();
+
+		DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+
+		//get current date time with Date()
+		Date date = new Date();
+
+		// Now format the date
+		String date1= dateFormat.format(date);
+
+		// Print the Date
+		System.out.println("Current date is " +date1);
+
+		//Enter Event Start date
+		expmrkttab.getEventStartDateTxtBx().sendKeys(date1);
+
+		//Click on Event End Date text field
+		expmrkttab.getEventEndDateTxtBx().click();
+
+		Calendar calendar = Calendar.getInstance();
+		calendar.add(Calendar.DATE, 10);
+		String futureDate = dateFormat.format(calendar.getTime());
+		System.out.println("Future date: "+futureDate);
+
+		//Enter Event End date
+		expmrkttab.getEventEndDateTxtBx().sendKeys(futureDate);
+
+		//Click on Event Start time Drop down
+		expmrkttab.getEventStartTimeDD().click();
+
+		//Select Event Start time
+		expmrkttab.getEventStartTimeValue().click();
+
+		//Click on Event End time Drop down
+		expmrkttab.getEventEndTimeDD().click();
+
+		//Select Event End time
+		expmrkttab.getEventEndTimeValue().click();
+
+		//Select Open to Everyone Checkbox
+		expmrkttab.getOpenToEveryoneChckBx().click();
+
+		//Click on Save button
+		expmrkttab.getEventSaveBtn().click();
+		Thread.sleep(4000);
+
+		//Verify that Success msg should appeared
+		Assert.assertTrue(expmrkttab.getShowSpecialSuccessMsg().isDisplayed());
+
+		//Dismiss the pop-up by click on Okay btn
+		expmrkttab.getDismissSuccessModal().click();
+		Thread.sleep(6000);
+		int i = 0; 
+		exheventslist = driver.findElements(By.xpath("//ul[contains(@class,'EPManageEventsForMarket_eventsList')]/li["+i+"]/span[1]"));
+
+		for (i = 1; i < exheventslist.size(); i++) {
+			Assert.assertTrue(exheventslist.get(i).getText().contains(neweventname));
+			break;
+		}
+
+		//Open Sitecore in new tab
+		((JavascriptExecutor)driver).executeScript("window.open()");
+		tabs = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tabs.get(1));
+		driver.get(prop.getProperty("sitecoreurl_uat"));
+		Thread.sleep(5000);
+
+		//Login to Sitecore
+		sclogin.getSCUsername().sendKeys(prop.getProperty("scusername_uat"));
+		sclogin.getSCPassword().sendKeys(prop.getProperty("scpassword_uat"));
+		sclogin.getSCLoginbtn().click();
+
+		//Click on Exhibitor Events Approvals menu
+		scdash.getExhEventsApprovals().click();
+
+		//Select Sort By dropdown
+		scshow.getSSSortByOptn().click();
+
+		//Click on Date added Desc optn
+		scshow.getDateAddedDesc().click();
+
+		Thread.sleep(6000);
+		WebElement approvebtn = driver.findElement(By.xpath("//a[@data-eventname='"+neweventname+"' and text()='Approve']"));
+
+		//Click on Approve btn
+		approvebtn.click();
+		Thread.sleep(6000);
+	}
+
+
+	public void deleteExhEventFrmExp() throws InterruptedException {
+
+		expmrkttab = new EXPMarketsPage(driver);
+
+		System.out.println("In delete Exh event function");
+		
+		((JavascriptExecutor)driver).executeScript("window.open()");
+		tabs = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tabs.get(0));
+
+		System.out.println(neweventname);
+		
+		//Delete newly created Exhibitor Event
+		int i = 0;
+		exheventnameslist = driver.findElements(By.xpath("//li[contains(@class,'EPManageEventsForMarket_eventItem')]["+i+"]/span[1]"));
+		exheventdeletebtnlist = driver.findElements(By.xpath("//li[contains(@class,'EPManageEventsForMarket_eventItem')]["+i+"]/div[3]/div[3]/span"));
+		
+		for (i = 1; i < exheventnameslist.size(); i++) {
+			
+			scrollToElement(exheventnameslist.get(i));
+			
+			System.out.println(exheventnameslist.get(i).getText());
+			if(exheventnameslist.get(i).getText().contains(neweventname)) {
+				exheventdeletebtnlist.get(i).click();
+				break;
+			}
+		}
+	}
 	
 	public void loginCheckATL() throws IOException, InterruptedException {
 		String currentURL = driver.getCurrentUrl();
@@ -824,6 +1015,18 @@ public class Utility extends base {
 		}
 		else {
 			driver.get(prop.getProperty("atlmrkturl_prod"));
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		}
+	}
+	
+	public void loginCheckLVM() throws IOException, InterruptedException {
+		String currentURL = driver.getCurrentUrl();
+		String expectedURL = "https://www.lasvegasmarket.com/";
+		if(currentURL.equals(expectedURL)) {
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		}
+		else {
+			driver.get(prop.getProperty("lvmurl_prod"));
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		}
 	}

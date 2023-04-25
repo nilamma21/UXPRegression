@@ -61,7 +61,7 @@ public class GlobalSearch_ProductActions extends base {
 		utl.verifyMPLoginFunctionality();		
 		//driver.navigate().refresh();
 		Thread.sleep(8000);
-		driver.navigate().to("lvmurl_prod");
+		utl.loginCheckLVM();
 		//		lap.getCloseMarktAdBtn().click();
 	}
 

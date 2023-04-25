@@ -43,7 +43,7 @@ public class LineDigitalShowroom extends base {
 	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns,
 	allnoteslist, favlist, searchlinetypelist, tagBlogPost, taglist, infoFilterList;
 
-	@BeforeClass
+	@BeforeClass(alwaysRun=true)
 	public void initialize() throws IOException, InterruptedException {
 		driver = initializeDriver(); // requires for Parallel text execution
 		// chromeVersion();
@@ -57,17 +57,44 @@ public class LineDigitalShowroom extends base {
 
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(5000);
-		utl.CloseATLPopup();
+		//utl.CloseATLPopup();
 		//Login to Market Planner
-		utl.verifyMPLoginFunctionality();
-		utl.loginCheckATL();
-		driver.navigate().refresh();
+		//utl.verifyMPLoginFunctionality();
+		//utl.loginCheckATL();
+		//driver.navigate().refresh();
 		Thread.sleep(8000);
 
 		//lap.getCloseMarktAdBtn().click();
 
 	}
-	@Test(priority = 01)
+	@Test
+	public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
+
+		// The purpose of this test case to verify:-
+		// TS1- Login to Market Planner
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+
+		// Click on Login button from Landing Page
+		lap.getLogin().click();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		// Enter the credentials on Login Page and click
+		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
+
+		lp.getPassword().sendKeys((prop.getProperty("passwordW")));
+
+
+		Thread.sleep(1000);
+	//	lp.getPassword().sendKeys((prop.getProperty("password")));
+		Thread.sleep(1000);
+
+		lp.getSignInBtn().click();
+		Thread.sleep(15000);
+		Assert.assertTrue(driver.getTitle().contains("Atlanta Market at AmericasMart"));
+	}
+
+	@Test(priority = 01,groups="Non_MP")
 	public void TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T337: Line Digital Showroom: Hero component: Shown by <ExhibitorName>
@@ -83,6 +110,8 @@ public class LineDigitalShowroom extends base {
 		atldigish=new ATLLineDigitalShowroomPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		//driver.get(prop.getProperty("atlmrkturl_prod"));
+		utl.loginCheckATL();
 		//click on Global Search Input filed
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("HeroComponentExhName"));
 		Thread.sleep(5000);
@@ -99,7 +128,7 @@ public class LineDigitalShowroom extends base {
 		Assert.assertTrue(atlgs.getatlShowSpecialsTitle().getText().equals(heroompName));
 
 	}
-	@Test(priority = 02)
+	@Test(priority = 02,groups="Non_MP")
 	public void TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T338: Line Digital Showroom: Hero component: Location Links
@@ -150,7 +179,7 @@ public class LineDigitalShowroom extends base {
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore);
 	}
-	@Test(priority = 03)
+	@Test(priority = 03,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T339: Line Digital Showroom: Hero component: Add to Favorite
@@ -229,7 +258,7 @@ public class LineDigitalShowroom extends base {
 		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), heroCompName);*/
 
 	}
-	@Test(priority = 04)
+	@Test(priority = 04,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T340: Line Digital Showroom: Hero component: + icon to add to list
@@ -354,7 +383,7 @@ public class LineDigitalShowroom extends base {
 		 */
 
 	}
-	@Test(priority = 05)
+	@Test(priority = 05,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T341: Line Digital Showroom: Hero component: Add Note
@@ -440,7 +469,7 @@ public class LineDigitalShowroom extends base {
 		}
 		//atlmppge.getcloseNotePopup().click();	
 	}
-	@Test(priority = 06)
+	@Test(priority = 06,groups="Non_MP")
 	public void TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T343: Line Digital Showroom: Hero component: Order on Juniper Market
@@ -492,7 +521,7 @@ public class LineDigitalShowroom extends base {
 		driver.switchTo().window(winHandleBefore);
 
 	}
-	@Test(priority = 07)
+	@Test(priority = 07,groups="Non_MP")
 	public void TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T344: Line Digital Showroom: See all Product CTA
@@ -537,7 +566,7 @@ public class LineDigitalShowroom extends base {
 
 	}
 
-	@Test(priority = 8)
+	@Test(priority = 8,groups="Non_MP")
 	public void TS008_VerifyLineDigitalShowroomProductscomponentTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T346: Line Digital Showroom: Products component
@@ -596,7 +625,7 @@ public class LineDigitalShowroom extends base {
 		Assert.assertTrue(trimSeeAllProdCount.equals(trimProdCount));
 
 	}
-	@Test(priority = 9)
+	@Test(priority = 9,groups="Non_MP")
 	public void TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T372: Line Digital Showroom: Products component: Order on JuniperMarket
@@ -653,7 +682,7 @@ public class LineDigitalShowroom extends base {
 
 
 	}
-	@Test(priority = 10)
+	@Test(priority = 10,groups="Non_MP")
 	public void TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T373: Line Digital Showroom: Products component: See All Products
@@ -689,7 +718,7 @@ public class LineDigitalShowroom extends base {
 		//Verify See All Product CTA page
 		Assert.assertTrue(driver.getCurrentUrl().contains(seeAllProdURL));
 	}
-	@Test(priority = 11)
+	@Test(priority = 11,groups="Non_MP")
 	public void TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T374: Line Digital Showroom: Products component: Select a Product
@@ -745,8 +774,8 @@ public class LineDigitalShowroom extends base {
 	}
 
 
-	@AfterClass
+	@AfterClass(alwaysRun=true)
 	public void tearDown() {
-		//driver.quit();
+		 driver.quit();
 	}
 }
