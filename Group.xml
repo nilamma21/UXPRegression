@@ -13,7 +13,7 @@
 		</groups>
 
 		<classes>
-			<class name="atlantamarket_UAT.ExhibitorDigitalShowroom" />
+			<class name="atlantamarket_PROD.ExhibitorDigitalShowroom" />
 
 		</classes>
 	</test>

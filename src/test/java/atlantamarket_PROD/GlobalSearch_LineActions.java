@@ -43,7 +43,7 @@ public class GlobalSearch_LineActions extends base {
 
 	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns, allnoteslist,favlist, searchlinetypelist;
 
-	@BeforeClass
+	@BeforeClass(alwaysRun=true)
 	public void initialize() throws IOException, InterruptedException {
 		driver = initializeDriver(); // requires for Parallel text execution
 		utl = new Utility(driver);
@@ -57,14 +57,41 @@ public class GlobalSearch_LineActions extends base {
 		//lap.getCloseMarktAdBtn().click();
 		
 		//Login to Market Planner
-		utl.verifyMPLoginFunctionality();		
+		//utl.verifyMPLoginFunctionality();		
 		Thread.sleep(2000);
-		utl.loginCheckATL();
+		//utl.loginCheckATL();
 		//Thread.sleep(8000);
 //		lap.getCloseMarktAdBtn().click();
 	}
+	@Test
+	public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
 
-	@Test(priority = 1)
+		// The purpose of this test case to verify:-
+		// TS1- Login to Market Planner
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+
+		// Click on Login button from Landing Page
+		lap.getLogin().click();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		// Enter the credentials on Login Page and click
+		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
+
+		lp.getPassword().sendKeys((prop.getProperty("passwordW")));
+
+
+		Thread.sleep(1000);
+	//	lp.getPassword().sendKeys((prop.getProperty("password")));
+		Thread.sleep(1000);
+
+		lp.getSignInBtn().click();
+		Thread.sleep(15000);
+		Assert.assertTrue(driver.getTitle().contains("Atlanta Market at AmericasMart"));
+	}
+	
+
+	@Test(priority = 1,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS001_VerifyAddToFavoriteForLineTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T360: The Add to Favorite functionality for a Line
@@ -74,9 +101,10 @@ public class GlobalSearch_LineActions extends base {
 		atlmppge = new ATLMarketPlannerPage(driver);
 		lap = new ATLLandingPage(driver);
 
-		driver.get(prop.getProperty("atlmrkturl_prod"));
+		//driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(6000);
+		utl.loginCheckATL();
+		//Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
@@ -127,7 +155,7 @@ public class GlobalSearch_LineActions extends base {
 		}
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2,groups="Non_MP")
 	public void TS002_VerifyClickOnOrderOnJuniperMarketBtnForLineTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T376: The click on 'Order On JuniperMarket' button functionality for a Line
@@ -170,7 +198,7 @@ public class GlobalSearch_LineActions extends base {
 		driver.switchTo().window(winHandleBefore);
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 3,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS003_VerifyAddToNewListForLineTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T423: The Add to Newly created list functionality for Line
@@ -232,7 +260,7 @@ public class GlobalSearch_LineActions extends base {
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 4,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS004_VerifyAddToExistingListForLineTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T362: The Add to Newly created list functionality for a Line
@@ -300,7 +328,7 @@ public class GlobalSearch_LineActions extends base {
 		Thread.sleep(8000);
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 5,groups="Non_MP")
 	public void TS005_VerifyClickOnShownByExhibitorNameLinkForLineTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T433: The Lines actions: Shown By <ExhibitorName> link
@@ -330,7 +358,7 @@ public class GlobalSearch_LineActions extends base {
 		Assert.assertTrue(atlexhdgshw.getATLExhDigiShowPage().isDisplayed());
 	}
 
-	@Test(priority = 6)
+	@Test(priority = 6,groups="Non_MP")
 	public void TS006_VerifyClickOnLocationLinkForLineTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
@@ -362,7 +390,7 @@ public class GlobalSearch_LineActions extends base {
 		Assert.assertTrue(locationLink.equals(driver.getCurrentUrl()));
 	}
 
-	@Test(priority = 7)
+	@Test(priority = 7,groups="Non_MP")
 	public void TS007_VerifyClickOnMatchingProductsSeeAllLinkForLineTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
@@ -413,7 +441,7 @@ public class GlobalSearch_LineActions extends base {
 		Assert.assertEquals(matchingprodcountonsearchgrid, matchingprodcountonprodpage);
 	}
 
-	@Test(priority = 8)
+	@Test(priority = 8,groups="Non_MP")
 	public void TS008_VerifyClickOnTotalProductsSeeAllLinkForLineTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
@@ -464,7 +492,7 @@ public class GlobalSearch_LineActions extends base {
 		//lap.getCloseMarktAdBtn().click();
 	}
 	
-	@AfterClass
+	@AfterClass(alwaysRun=true)
 	public void tearDown()
 	{
 		//driver.quit();

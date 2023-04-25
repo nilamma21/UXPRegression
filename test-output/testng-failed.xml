@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [MPGroupTestSuite]">
-  <test name="RegressionTest(failed)">
+  <test name="MPGroupTest(failed)">
+    <groups>
+      <run>
+        <include name="MP_Group"/>
+        <include name="Non_MP"/>
+      </run>
+    </groups>
     <classes>
+
+      <class name="atlantamarket_PROD.ShowSpecials">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+          <include name="TS002_VerifyLocationLinksForShowSpecialsTest"/>
+          <include name="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.ShowSpecials -->
+
 
       <class name="lasvegasmarket_PROD.EvenntsAndWebinar">
 
@@ -30,6 +46,7 @@
       </class> <!-- lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters -->
 
 
+
     </classes>
-  </test> <!-- RegressionTest(failed) -->
+  </test> <!-- MPGroupTest(failed) -->
 </suite> <!-- Failed suite [MPGroupTestSuite] -->
