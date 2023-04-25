@@ -2,14 +2,35 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [LVM_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
+    <groups>
+      <run>
+        <include name="MP_Group"/>
+      </run>
+    </groups>
     <classes>
+
+      <class name="lasvegasmarket_PROD.FloorPlans">
+
+
+      <class name="MPTest.MPTest">
+        <methods>
+          <include name="TS009_VerifySelectionOfExhibitorFromSearchResultsTest"/>
+        </methods>
+      </class> <!-- MPTest.MPTest -->
+
       <class name="lasvegasmarket_PROD.ExhibitorDigitalShowroom">
+
         <methods>
           <include name="tearDown"/>
           <include name="initialize"/>
-          <include name="TS014_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest"/>
+          <include name="TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest"/>
         </methods>
+
+      </class> <!-- lasvegasmarket_PROD.FloorPlans -->
+
       </class> <!-- lasvegasmarket_PROD.ExhibitorDigitalShowroom -->
+
+
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->

@@ -58,7 +58,7 @@ public class ATLEventsAndWebinarPage {
 		this.driver = driver; 			
 	}
 	public WebElement getatlEventSearchIconUAT() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlEventSearchIconUAT));
 		
 		return driver.findElement(atlEventSearchIconUAT);

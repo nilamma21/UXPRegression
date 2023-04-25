@@ -43,7 +43,7 @@ public class GlobalSearch_MatchingResults extends base {
 	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns,
 	allnoteslist, favlist, searchlinetypelist, tagBlogPost, taglist, infoFilterList;
 
-	@BeforeClass
+	@BeforeClass(alwaysRun=true)
 	public void initialize() throws IOException, InterruptedException {
 		driver = initializeDriver(); // requires for Parallel text execution
 		// chromeVersion();
@@ -62,8 +62,35 @@ public class GlobalSearch_MatchingResults extends base {
 		//lap.getCloseMarktAdBtn().click();
 
 	}
+	@Test
+	public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
 
-	@Test(priority = 1)
+		// The purpose of this test case to verify:-
+		// TS1- Login to Market Planner
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+
+		// Click on Login button from Landing Page
+		lap.getLogin().click();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		// Enter the credentials on Login Page and click
+		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
+
+		lp.getPassword().sendKeys((prop.getProperty("passwordW")));
+
+
+		Thread.sleep(1000);
+	//	lp.getPassword().sendKeys((prop.getProperty("password")));
+		Thread.sleep(1000);
+
+		lp.getSignInBtn().click();
+		Thread.sleep(15000);
+		Assert.assertTrue(driver.getTitle().contains("Atlanta Market at AmericasMart"));
+	}
+	
+	
+	@Test(priority = 1,groups="Non_MP")
 	public void TS001_VerifyGlobalSearchContainsAndStartsWithTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T436: Verify Global Search: Contains and Starts With
@@ -88,7 +115,7 @@ public class GlobalSearch_MatchingResults extends base {
 
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2,groups="Non_MP")
 	public void TS002_VerifyGlobalSearchMatchingResultsSortWithinTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T332: Global Search: Matching results- Sort- Search Within
@@ -197,7 +224,7 @@ public class GlobalSearch_MatchingResults extends base {
 
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 3,groups="Non_MP")
 	public void TS003_VerifyGlobalSearchMatchingResultsSortSortByTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T335: Global Search: Matching results-Sort- Sort By
@@ -243,7 +270,7 @@ public class GlobalSearch_MatchingResults extends base {
 
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 4,groups="Non_MP")
 	public void TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T336: Global Search: Matching results- Sort- Filter By Name
@@ -283,7 +310,7 @@ public class GlobalSearch_MatchingResults extends base {
 
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 5,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS005_VerifyGlobalSearchMatchingResultsSelectAddToFavoritesTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -301,7 +328,7 @@ public class GlobalSearch_MatchingResults extends base {
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
-		utl.verifyMPLoginFunctionality();
+		//utl.verifyMPLoginFunctionality();
 		utl.CloseATLPopup();
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
 		atlgs.getATLSearchButton().click();
@@ -334,7 +361,7 @@ public class GlobalSearch_MatchingResults extends base {
 
 	}
 
-	@Test(priority = 6)
+	@Test(priority = 6,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS006_VerifyGlobalSearchMatchingResultsSelectAddToExistingListTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -393,7 +420,7 @@ public class GlobalSearch_MatchingResults extends base {
 
 	}
 
-	@Test(priority = 7)
+	@Test(priority = 7,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS007_VerifyGlobalSearchMatchingResultsSelectAddToNewlyCreatedListTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -453,7 +480,7 @@ public class GlobalSearch_MatchingResults extends base {
 
 	}
 
-	@Test(priority = 8)
+	@Test(priority = 8,groups="Non_MP")
 	public void TS008_VerifyGlobalSearchMatchingResultsUsePreviousSavedSearchTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -531,7 +558,7 @@ public class GlobalSearch_MatchingResults extends base {
 
 	}
 
-	@Test(priority = 9)
+	@Test(priority = 9,groups="Non_MP")
 	public void TS009_VerifyGlobalSearchMatchingResultsSavedSearchesTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -571,7 +598,7 @@ public class GlobalSearch_MatchingResults extends base {
 
 		utl.checkItemPresentInListorNot(atlgs.getatlListOfAllSavedSearches(),savedSearchesInput);
 	}
-	@AfterClass
+	@AfterClass(alwaysRun=true)
 	public void tearDown()
 	{
 		driver.quit();

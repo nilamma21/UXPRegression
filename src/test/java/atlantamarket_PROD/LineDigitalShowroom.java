@@ -59,7 +59,8 @@ public class LineDigitalShowroom extends base {
 		Thread.sleep(5000);
 		utl.CloseATLPopup();
 		//Login to Market Planner
-		utl.verifyMPLoginFunctionality();		
+		utl.verifyMPLoginFunctionality();
+		utl.loginCheckATL();
 		driver.navigate().refresh();
 		Thread.sleep(8000);
 
@@ -746,6 +747,6 @@ public class LineDigitalShowroom extends base {
 
 	@AfterClass
 	public void tearDown() {
-		driver.quit();
+		//driver.quit();
 	}
 }

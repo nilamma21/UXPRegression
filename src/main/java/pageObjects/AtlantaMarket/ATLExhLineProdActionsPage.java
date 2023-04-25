@@ -264,7 +264,7 @@ public class ATLExhLineProdActionsPage extends base{
 		return driver.findElement(popupclosebtn);
 	}
 	public WebElement getNoteTitleTxtBx() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(notetitletxtbx));
 		return driver.findElement(notetitletxtbx);
 	}

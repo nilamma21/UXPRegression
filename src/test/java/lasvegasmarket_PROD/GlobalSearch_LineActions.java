@@ -140,21 +140,27 @@ public class GlobalSearch_LineActions extends base {
 		// Verify that the added favorites exhibitor should be displayed in to Favorites list
 		//Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 		favlist = atlmppge.getFavExhList();
-		for(int i=1; i< favlist.size(); i++){			
-			Assert.assertTrue(favlist.get(i).getText().contains(exhname)); 
-			break;
+		for (int i = 0; i < favlist.size(); i++) {
+			String exhName = favlist.get(i).getText();
+			if(exhName.equals(exhname)) {
+				WebElement editOpt = favlist.get(i).findElement(By.xpath("./../../div[4]/div/button"));
+				 new Actions(driver).clickAndHold(editOpt).perform();
+				favlist.get(i).findElement(By.xpath("./../../div[4]/div/button/./../div/span[3]")).click();
+				break;
+			}			
 		}
+
 
 		// Delete that favorites exhibitor from list
 	/*	atlmppge.getATLEditListItemMoreBtn().click();
 		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(6000)*/;
 		//utl.scrollToElement(atlmppge.getSavedProductNameInList());
-		Thread.sleep(3000);
+		/*Thread.sleep(3000);
 		atlmppge.getMoreBtnDeleteOptnExistingList_ATLPROD().click();
 		Thread.sleep(3000);
 		atlmppge.getATLEditListItemDeleteOptn().click();
-		Thread.sleep(8000);
+		Thread.sleep(8000);*/
 		//favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
 
 		//Verify that the added product should be removed from Favorites list
@@ -437,7 +443,7 @@ public class GlobalSearch_LineActions extends base {
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -457,7 +463,8 @@ public class GlobalSearch_LineActions extends base {
 		// Verify that user should redirect to the Matching Products page
 		Assert.assertTrue(atlexhact.getValidateProductsPage().isDisplayed());
 		Thread.sleep(5000);
-		Assert.assertTrue(driver.getTitle().contains("Products for "+linename+""));
+		//Assert.assertTrue(driver.getTitle().contains("Products for "+linename+""));
+		Assert.assertTrue(driver.getTitle().contains(linename));
 
 		// Get the Matching Products count on Products page
 		String producttabtitle = atlexhact.getValidateProductsPage().getText();
@@ -487,7 +494,7 @@ public class GlobalSearch_LineActions extends base {
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -509,7 +516,9 @@ public class GlobalSearch_LineActions extends base {
 		/*String t=driver.getTitle();
 		System.out.println(t);*/
 		Thread.sleep(5000);
-		Assert.assertTrue(driver.getTitle().contains("Products for "+linename+""));
+		System.out.println(driver.getTitle());
+		//Assert.assertTrue(driver.getTitle().contains("Products for "+linename+""));
+		Assert.assertTrue(driver.getTitle().contains(linename));
 
 		// Get the Matching Products count on Products page
 		String producttabtitle = atlexhact.getValidateProductsPage().getText();

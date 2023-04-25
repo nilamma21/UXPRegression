@@ -59,6 +59,7 @@ public class GlobalSearch_ProductActions extends base {
 
 		// Login to Market Planner
 		utl.verifyMPLoginFunctionality();
+		utl.loginCheckATL();
 		driver.navigate().refresh();
 		Thread.sleep(8000);
 		// lap.getCloseMarktAdBtn().click();

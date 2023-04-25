@@ -95,6 +95,37 @@ public class Utility extends base {
 		lp.getSignInBtn().click();
 		Thread.sleep(15000);
 	}
+	public String[] verifyMPLoginFunctionality_Test() throws IOException, InterruptedException {
+
+		// The purpose of this test case to verify:-
+		// TS1- Login to Market Planner
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+
+		// Click on Login button from Landing Page
+		try {
+		lap.getLogin().click();
+		}catch (Exception e) {
+			// TODO: handle exception
+		
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		// Enter the credentials on Login Page and click
+		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
+
+		lp.getPassword().sendKeys((prop.getProperty("password")));
+
+
+		Thread.sleep(1000);
+		/*lp.getPassword().sendKeys((prop.getProperty("password")));
+		Thread.sleep(1000);*/
+
+		lp.getSignInBtn().click();
+		Thread.sleep(15000);
+		}
+		return null;
+
+	}
 
 	public void selectDropdown(String itemName, String channelURL) throws InterruptedException {
 		lap = new ATLLandingPage(driver);
@@ -788,6 +819,7 @@ public class Utility extends base {
 		Thread.sleep(5000);
 	}
 
+
 	public void addNewExhibitorEventsFrmExp_UAT() throws InterruptedException {
 
 		lap = new ATLLandingPage(driver);
@@ -973,6 +1005,17 @@ public class Utility extends base {
 				break;
 			}
 		}
-		Thread.sleep(5000);
+	}
+	
+	public void loginCheckATL() throws IOException, InterruptedException {
+		String currentURL = driver.getCurrentUrl();
+		String expectedURL = "https://www.atlantamarket.com/";
+		if(currentURL.equals(expectedURL)) {
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		}
+		else {
+			driver.get(prop.getProperty("atlmrkturl_prod"));
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		}
 	}
 }

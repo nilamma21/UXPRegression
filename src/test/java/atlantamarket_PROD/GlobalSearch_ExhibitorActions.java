@@ -57,6 +57,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		
 		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
+		utl.loginCheckATL();
 		driver.navigate().refresh();
 		Thread.sleep(8000);
 //		lap.getCloseMarktAdBtn().click();

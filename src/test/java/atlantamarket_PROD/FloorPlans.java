@@ -62,6 +62,8 @@ public class FloorPlans extends base {
 
 		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
+		utl.loginCheckATL();
+		Thread.sleep(2000);
 		driver.navigate().refresh();
 		Thread.sleep(8000);
 		//		lap.getCloseMarktAdBtn().click();

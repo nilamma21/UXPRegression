@@ -586,7 +586,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor6")));
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(6000);
 
@@ -630,7 +630,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		actions.click().perform();*/ //For Prod
 		
 		//Click on the first exhibitor
-		lvmleftpane.getSecondExhUat().click(); //For UAT
+		//lvmleftpane.getSecondExhUat().click(); //For UAT
+		lvmleftpane.getFirstVintageExhUat().click();
 
 		//Scroll till Product Categories section
 		utl.scrollToElement(lvmds.getLVMProductCategSection());

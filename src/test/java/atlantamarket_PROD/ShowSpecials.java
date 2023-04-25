@@ -121,7 +121,8 @@ public class ShowSpecials extends base  {
 		lp = new ATLLoginPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
 		genData = new GenerateData();
-
+		
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		//click on Exhibitors And Product Tab
@@ -148,6 +149,6 @@ public class ShowSpecials extends base  {
 	@AfterClass
 	public void tearDown() throws InterruptedException {
 		utl.deleteShowSpecialFrmExp();
-		driver.quit();
+		//driver.quit();
 	}
 }

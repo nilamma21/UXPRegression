@@ -63,8 +63,9 @@ public class FloorPlans extends base {
 
 		//Login to Market Planner
 		utl.verifyMPLoginFunctionality();
-		driver.navigate().refresh();
+		//driver.navigate().refresh();
 		Thread.sleep(8000);
+		driver.navigate().to("lvmurl_prod");
 		//		lap.getCloseMarktAdBtn().click();
 	}
 
