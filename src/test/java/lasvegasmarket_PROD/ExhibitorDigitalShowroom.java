@@ -1,6 +1,7 @@
 package lasvegasmarket_PROD;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
@@ -66,8 +67,9 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(2000);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor4")); //"Anne McGilvray & Company" Exhibitor
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		String exhname = lvmds.getSearchedExhibitor().getText(); // Store the 1st Exhibitor name in String variable
 		System.out.println("Exhibitor name: " + exhname);
@@ -308,8 +310,9 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmds = new LVMExhDigiShowroomPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(2000);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor3"))); 
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(15000);
 		
@@ -607,8 +610,9 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmds = new LVMExhDigiShowroomPage(driver);
 		driver.get(prop.getProperty("lvmurl_prod")); 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(2000);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor12")));
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(15000);
 		
@@ -626,7 +630,11 @@ public class ExhibitorDigitalShowroom extends base {
 		System.out.println(OrderOnJuniperMarktURL);
 		lvmds.getOrderOnJuniperMarktBtnCatalog().click();
 		Thread.sleep(4000);
-		Assert.assertTrue(driver.getCurrentUrl().contains(OrderOnJuniperMarktURL));
+		ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
+	    driver.switchTo().window(tabs.get(1));
+	    Assert.assertTrue(driver.getCurrentUrl().contains(OrderOnJuniperMarktURL));
+	    driver.close();
+	    driver.switchTo().window(tabs.get(0));
 		System.out.println(" Catalogs Component: Order on JuniperMarket Btn functionality is working properly.");
 		
 	}
@@ -641,8 +649,9 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmds = new LVMExhDigiShowroomPage(driver);
 		driver.get(prop.getProperty("lvmurl_prod")); 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(2000);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(15000);
 		// Store the 1st Exhibitor name in String variable
@@ -714,8 +723,9 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmevents=new LVMEventsAndWebinarPage(driver);
 		driver.get(prop.getProperty("lvmurl_prod")); 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(2000);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(15000);
 		
@@ -734,7 +744,9 @@ public class ExhibitorDigitalShowroom extends base {
 		driver.navigate().back();
 		utl.scrollToElement(lvmds.getEventsSection());*/
 		String eventName=lvmds.getEventName().getText();
-		lvmds.getEventName().click();
+		System.out.println(eventName);
+		//lvmds.getEventName().click(); //Old
+		lvmds.getEventNameNew().click(); //New
 		Assert.assertTrue(lvmevents.getlvmEventNameOnDetailsPageUAT().getText().contains(eventName));
 		System.out.println("Events Component functionality is working properly.");	
 	}
@@ -751,9 +763,9 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmevents=new LVMEventsAndWebinarPage(driver);
 		driver.get(prop.getProperty("lvmurl_prod")); 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		Thread.sleep(2000);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(15000);
 		
@@ -797,9 +809,9 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmevents=new LVMEventsAndWebinarPage(driver);
 		driver.get(prop.getProperty("lvmurl_prod")); 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		Thread.sleep(2000);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(15000);
 		

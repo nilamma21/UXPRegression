@@ -402,9 +402,9 @@ public class LVMExhLineProdActionsPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(eventdetailsheaderUat));
 		return driver.findElement(eventdetailsheaderUat);
 	}
-	public WebElement getCatalogsItemNew() {
+	public List <WebElement>getCatalogsItemNew() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(catalogitemnew));
-		return driver.findElement(catalogitemnew);
+		return driver.findElements(catalogitemnew);
 	}
 }

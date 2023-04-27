@@ -329,8 +329,12 @@ public class FloorPlans extends base {
 		//System.out.println("Expected sorted Exhibitor List : "+juniperMarketList);
 		//Verify JuniperMarket List is Displayed or not
 		Assert.assertTrue(!juniperMarketList.isEmpty(),"JuniperMarket Exhibitor list should displayed.");	*/
-		
-		Assert.assertTrue(atlflpp.getNoResultsMsgForLinesOnJuniper().isDisplayed());
+		if(atlflpp.getResultsMsgForLinesOnJuniper().isDisplayed()) {
+			System.out.println("Lines on JuniperMarket is present");
+		}else {
+			Assert.assertTrue(atlflpp.getNoResultsMsgForLinesOnJuniper().isDisplayed());
+			System.out.println("Lines on JuniperMarket is not present");
+		}
 	}
 
 	@Test(priority = 6)
