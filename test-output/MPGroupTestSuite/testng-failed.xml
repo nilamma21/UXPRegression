@@ -1,36 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [MPGroupTestSuite]">
-  <test name="MPGroupTest(failed)">
-    <groups>
-      <run>
-        <include name="MP_Group"/>
-        <include name="Non_MP"/>
-      </run>
-    </groups>
+  <test name="RegressionTest(failed)">
     <classes>
-
-      <class name="atlantamarket_PROD.ShowSpecials">
+      <class name="lasvegasmarket_PROD.FloorPlans">
         <methods>
-
-      <class name="lasvegasmarket_PROD.EvenntsAndWebinar">
-        <methods>
-          <include name="TS012_VerifyExhibitorEventsDetailstTest"/>
-
           <include name="tearDown"/>
-          <include name="TS005_VerifyIMCEventsEventDetailstTest"/>
-          <include name="TS013_VerifyExhibitorEventsAddToFavoriteTest"/>
           <include name="initialize"/>
-
-          <include name="TS002_VerifyLocationLinksForShowSpecialsTest"/>
-          <include name="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest"/>
+          <include name="TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest"/>
         </methods>
-      </class> <!-- atlantamarket_PROD.ShowSpecials -->
-
-          <include name="TS014_VerifyExhibitorEventsAddToListTest"/>
-        </methods>
-      </class> <!-- lasvegasmarket_PROD.EvenntsAndWebinar -->
-
+      </class> <!-- lasvegasmarket_PROD.FloorPlans -->
     </classes>
-  </test> <!-- MPGroupTest(failed) -->
+  </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [MPGroupTestSuite] -->

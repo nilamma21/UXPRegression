@@ -117,7 +117,7 @@ public class ATLProductDetailsPage {
 	}
 
 	public WebElement getProductAddNoteIcon() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productAddNote));
 		return driver.findElement(productAddNote);
 	}
