@@ -65,7 +65,7 @@ public class ATLFloorPlansPage {
 	By atlExhSearchField = By.xpath("(//div[@class='imc-searchform--row'])[2]/form[1]/div[1]/input[1]"); //Locator for Exh Search filed
 	By atlExhSearchFieldBtn = By.xpath("(//div[@class='imc-searchform--row'])[2]/form[1]/button[2]"); //Locator for Exh Search filed Btn
 	By noresultsforjuniperlinesmsg = By.xpath("//p[contains(text(),'Sorry, no results found.')]"); //Locator for No results found msg for Lines on Junipermarket filter
-	
+	By resultsforjuniperlinesmsg = By.xpath("//div[contains(@class,'imc-manufacturing-line-title-wrapper')]/a"); //Locator for results found  for Lines on Junipermarket filter
 	By exhibitedonfloormsg = By.xpath("//span[contains(text(),'Exhibited on this floor:')]");
 	By atlLoadingNoExhiMsg = By.xpath("//div[@class='imc-manufacturing-line--alternated-section imc-lines-overview']/p[1]");//Loading Msg
 	
@@ -358,6 +358,11 @@ public class ATLFloorPlansPage {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlBuildingFloornew));
 		return driver.findElement(atlBuildingFloornew);
+	}
+	public WebElement getResultsMsgForLinesOnJuniper() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(resultsforjuniperlinesmsg));
+		return driver.findElement(resultsforjuniperlinesmsg);
 	}
 }
 

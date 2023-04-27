@@ -97,12 +97,12 @@ public class LVMExhDigiShowroomPage {
 	
 	By View3DshowroomBtnLVMUAT = By.xpath("(//span[contains(text(),'View 3D Showroom')])[1]"); //Locator for 3D showroom Btn
 	
-	By OrderOnJuniperMarktBtnCatalog = By.xpath("(//div[@class='imc-products-overview--cta-bar__item']/a/span)[1]");
+	By OrderOnJuniperMarktBtnCatalog = By.xpath("//div[@class='imc-products-overview--cta-bar__item']/a");
 	
 	By OrderOnJuniperMarktBtnProdURL = By.xpath("//div[@class='imc-section imc-section--width-100-percent']/div[1]/span[contains(text(),'Products')]/../../div[3]/div[1]/a[1]"); //URl for juniper markt prod btn
 	
 	By OrderOnJuniperMarktBtnCatalogURL = By.xpath("//div[@class='imc-section imc-section--width-100-percent']/div[1]/span[contains(text(),'Catalogs')]/../../div[3]/div[1]/a[1]"); //URl for juniper markt catalog btn
-	
+	By EventNameNew = By.xpath("//div[contains(@class,'event-card--title--container')]/a/p");
 	
 	public LVMExhDigiShowroomPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -180,7 +180,7 @@ public class LVMExhDigiShowroomPage {
 		return driver.findElement(OrderOnJuniperMarktBtnProduct);
 	}
 	public WebElement getEventName() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(EventName));
 		return driver.findElement(EventName);
 	}
@@ -512,5 +512,9 @@ public class LVMExhDigiShowroomPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(OrderOnJuniperMarktBtnCatalognew));
 		return driver.findElement(OrderOnJuniperMarktBtnCatalognew);
 	}
-	
+	public WebElement getEventNameNew() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(EventNameNew));
+		return driver.findElement(EventNameNew);
+	}
 }
