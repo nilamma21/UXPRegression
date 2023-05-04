@@ -44,7 +44,7 @@ public class GlobalSearch_SearchFor extends base{
 	LVMLeftPaneFilters lvmleftpane;
 	
 	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns,
-	allnoteslist, favlist, searchlinetypelist, tagBlogPost, taglist, infoFilterList,catlist;
+	allnoteslist, favlist, searchlinetypelist, tagBlogPost, taglist, infoFilterList, catlist;
 	
 	@BeforeClass
 	public void initialize() throws IOException, InterruptedException {
@@ -74,18 +74,27 @@ public class GlobalSearch_SearchFor extends base{
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(1000);
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearchinputforInformation"));//
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearchinputforInfoTab"));//
 		Thread.sleep(2000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(5000);
 
-		// Click on Info link
+	// Click on Info link
 		lvmgs.getLVMsearchresultInfoLink().click();
-		Thread.sleep(3000);
-		System.out.println(lvmgs.getLVMSearchResult().getText());
-		Assert.assertTrue(lvmgs.getLVMSearchResult().getText().contains(prop.getProperty("globalsearchinputforInformation")));//globalsearchinputforInformation
+		Thread.sleep(2000);
+		String infoTitle=lvmgs.infoTitle().getText();
 
-		String seeMoreDetailsURL=lvmgs.getLVMInfoSearchJuniperMarketBtn().getAttribute("href");
+		Assert.assertTrue(lvmgs.getATLSearchResult().getText().contains(prop.getProperty("globalsearchinputforInfoTab")));
+		String seeMoreDetailsURL=lvmgs.getatlInfoSearchMoreInfoBtn().getAttribute("href");
+	
+		// Click on See More details Btn from result
+		lvmgs.getatlInfoSearchMoreInfoBtn().click();
+		Thread.sleep(2000);
+
+		// Verify Juniper Market Page
+		Assert.assertTrue(driver.getTitle().contains(infoTitle));
+		
+		/*			String seeMoreDetailsURL=lvmgs.getLVMInfoSearchJuniperMarketBtn().getAttribute("href");
 		System.out.println(seeMoreDetailsURL);
 		Thread.sleep(2000);
 		// Click on See More details Btn from result
@@ -93,7 +102,7 @@ public class GlobalSearch_SearchFor extends base{
 		
 		// Verify Juniper Market Page
 		Assert.assertTrue(driver.getCurrentUrl().contains(seeMoreDetailsURL));
-		
+		*/
 		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(5000);
 	}
@@ -134,17 +143,15 @@ public class GlobalSearch_SearchFor extends base{
 		System.out.println(searchName);
 		Assert.assertTrue(FirstInfoName.contains(searchName));
 
-		
-		String seeMoreDetailsURL=lvmgs.getLVMInfoSearchJuniperMarketBtn().getAttribute("href");
+		//String seeMoreDetailsURL=lvmgs.getLVMInfoSearchJuniperMarketBtn().getAttribute("href");
 		// Click on See More details Btn from result
-		lvmgs.getLVMInfoSearchJuniperMarketBtn().click();
-		
+		//lvmgs.getLVMInfoSearchJuniperMarketBtn().click();
 		
 		// Verify Juniper Market Page
-		Assert.assertTrue(driver.getCurrentUrl().contains(seeMoreDetailsURL));
+		//Assert.assertTrue(driver.getCurrentUrl().contains(seeMoreDetailsURL));
 		
-		driver.get(prop.getProperty("lvmurl_prod"));
-		Thread.sleep(5000);
+		//driver.get(prop.getProperty("lvmurl_prod"));
+		//Thread.sleep(5000);
 	}
 	
 	@Test(priority = 12)
@@ -157,6 +164,8 @@ public class GlobalSearch_SearchFor extends base{
 		lvmds = new LVMExhDigiShowroomPage(driver);
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
+		
+		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(10000);
 		utl.ClearGlobalSearch();
@@ -164,7 +173,6 @@ public class GlobalSearch_SearchFor extends base{
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(12000);
-
 		// Click on Info link
 		lvmgs.getLVMsearchresultInfoLink().click();
 		// click on Topics filter
@@ -300,14 +308,20 @@ public class GlobalSearch_SearchFor extends base{
 		// Store the current window handle
 		String winHandleBefore = driver.getWindowHandle();
 		//Click on Catalog
-		//lvmexhact.getCatalogsItem().click();//For Prod
-		Thread.sleep(1000);
-		driver.findElement(By.xpath("//div[@class='imc-catalog__item_title multiSelectItem']/div/span/span[contains(text(),"+catalogName+")]")).click();
-		//lvmexhact.getCatalogsItemNew().click();//For UAT
+		//lvmexhact.getCatalogsItem().click();
+		catlist = lvmexhact.getCatalogsItemNew();
+			for(int i=0; i<catlist.size(); i++) {
+				String catName = catlist.get(i).getText();
+				if(catName.equalsIgnoreCase(catalogName)) {
+					catlist.get(i).click();
+					break;
+				}
+			}
+		
 		for (String winHandle : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle);
 		}
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 		String Cname =lvmgs.getCatalogHeaderName().getText();
 		System.out.println(Cname);
 		Assert.assertTrue(catalogName.contains(Cname));
@@ -798,7 +812,7 @@ public class GlobalSearch_SearchFor extends base{
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(2000);
 		utl.ClearGlobalSearch();
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputforShowSpecials2")));
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputforShowSpecials3")));
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(5000);
 

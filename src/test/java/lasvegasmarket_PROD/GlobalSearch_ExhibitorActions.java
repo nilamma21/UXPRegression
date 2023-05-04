@@ -366,7 +366,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 		
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor3")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);

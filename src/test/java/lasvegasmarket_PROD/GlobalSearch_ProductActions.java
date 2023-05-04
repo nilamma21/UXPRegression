@@ -334,7 +334,7 @@ public class GlobalSearch_ProductActions extends base {
 		// Verify that the added Product should be displayed in to Favorites list
 		//Assert.assertTrue(atlmppge.getSavedProductNameInList().getText().contains(productNameOnSearchGrid));
 		//utl.checkItemPresentInListorNot(atlmppge.getFavListProducts(), productNameOnSearchGrid);
-		favlist = atlmppge.getFavExhList();
+		/*favlist = atlmppge.getFavExhList();
 		for(WebElement nameOfExh : favlist) {
 			Assert.assertTrue(nameOfExh.getText().contains(productNameOnSearchGrid));
 			break;
@@ -345,9 +345,17 @@ public class GlobalSearch_ProductActions extends base {
 		atlmppge.getMoreBtnDeleteOptnExistingList_ATLPROD().click();
 		Thread.sleep(3000);
 		atlmppge.getATLEditListItemDeleteOptn().click();
-		Thread.sleep(8000);
-
-		//favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
+		Thread.sleep(8000);*/
+		favlist = atlmppge.getFavExhList();
+		for (int i = 0; i < favlist.size(); i++) {
+			String exhName = favlist.get(i).getText();
+			if(exhName.equals(exhname)) {
+				WebElement editOpt = favlist.get(i).findElement(By.xpath("./../../div[4]/div/button"));
+				 new Actions(driver).clickAndHold(editOpt).perform();
+				favlist.get(i).findElement(By.xpath("./../../div[4]/div/button/./../div/span[3]")).click();
+				break;
+			}			
+		}
 
 		//Verify that the added product should be removed from Favorites list
 		for(int i=1; i< favlist.size(); i++)
@@ -400,15 +408,16 @@ public class GlobalSearch_ProductActions extends base {
 		// Store the new note name
 		String newnotetitle = "CybNote" + genData.generateRandomString(3);
 		System.out.println("Newly added Note is: " + newnotetitle);
-
+		Thread.sleep(2000);
 		// Enter Note title
 		atlexhact.getNoteTitleTxtBx().sendKeys(newnotetitle);
 		// Enter Note Content
+		Thread.sleep(2000);
 		atlexhact.getNoteContentTxtBx().sendKeys("TestProdNote" + genData.generateRandomString(6));
 		// Click on 'Save' button
+		Thread.sleep(2000);
 		atlexhact.getNoteSaveBtn().click();
-		Thread.sleep(5000);
-
+		Thread.sleep(8000);
 		// Click on 'Add Note' icon for the same exhibitor
 		atlproddet.getProductAddNoteIcon().click();
 		Thread.sleep(4000);

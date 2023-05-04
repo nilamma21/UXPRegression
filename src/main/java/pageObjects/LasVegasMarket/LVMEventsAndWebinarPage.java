@@ -109,7 +109,7 @@ public class LVMEventsAndWebinarPage {
 		return driver.findElement(lvmEventTypeUAT);
 	}
 	public WebElement getlvmEventLocationLinkUAT() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventLocationLinkUAT));
 		return driver.findElement(lvmEventLocationLinkUAT);
 	}

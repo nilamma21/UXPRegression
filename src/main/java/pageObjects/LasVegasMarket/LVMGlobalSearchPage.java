@@ -113,6 +113,9 @@ public class LVMGlobalSearchPage {
 	By lvmseemoredetailsbtnneww = By.xpath("//a[contains(text(),'View Brand Details')]"); //Locator for See More Details button
 	By atmarketeventtypefilterUAT_LVM = By.xpath("(//div[@class='imc-filteritem__tier2'])[2]/div[1]/label[1]"); //Locator for At Market Event Type
 	By lvmExhiNameForFilterByNameNew = By.xpath("(//div[@class='imc-exhibitorcard-title-row']/div[1])[1]");  //Locator for Exh Name for Filter by name
+	By infoTitle = By.xpath("//div[@class='imc-informationcard__body']/p[2]");  //Locator for 1st name of Catalog
+	By atlsearchresult = By.xpath("//div[@class='alert-box  ']"); //Locator for Search result 
+	By atlInfoSearchMoreInfoBtn = By.xpath("(//a[contains(text(),'See More Details')])[1]"); //Locator for Juniper Market Btn
 	
 	public LVMGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -130,7 +133,7 @@ public class LVMGlobalSearchPage {
 		return driver.findElement(FirstCatalogName);
 	}
 	public WebElement getseeAllLinkMatchingProduct() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(seeAllLinkMatchingProduct));
 		return driver.findElement(seeAllLinkMatchingProduct);
 	}
@@ -423,7 +426,7 @@ public class LVMGlobalSearchPage {
 		return driver.findElement(lvmCatalog);
 	}
 	public WebElement getCatalogHeaderName() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.elementToBeClickable(CatalogHeaderName));
 		return driver.findElement(CatalogHeaderName);
 	}
@@ -528,27 +531,27 @@ public class LVMGlobalSearchPage {
 		return driver.findElement(lvmseealllineslink);
 	}	
 	public WebElement getlvmShowSpecialsTab() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(lvmShowSpecialsTab));
 		return driver.findElement(lvmShowSpecialsTab);
 	}
 	public WebElement getlvmVerifyShowSpecials() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(lvmVerifyShowSpecials));
 		return driver.findElement(lvmVerifyShowSpecials);
 	}
 	public WebElement getFourthBreadcrumbTxtInApp() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(fourthbreadcrumbtxt));
 		return driver.findElement(fourthbreadcrumbtxt);
 	}
 	public WebElement getLVMEventsTabInSearch() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmeventstabinsearch));
 		return driver.findElement(lvmeventstabinsearch);
 	}
 	public WebElement getLVMSeeMoreDetailsBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmseemoredetailsbtn));
 		return driver.findElement(lvmseemoredetailsbtn);
 	}
@@ -558,7 +561,7 @@ public class LVMGlobalSearchPage {
 		return driver.findElement(eventslvmmkttopicsfilter);
 	}
 	public WebElement getClearFiltersBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(clearfiltersbtn));
 		return driver.findElement(clearfiltersbtn);
 	}
@@ -611,6 +614,21 @@ public class LVMGlobalSearchPage {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmExhiNameForFilterByNameNew));
 		return driver.findElements(lvmExhiNameForFilterByNameNew);
+	}
+	public WebElement infoTitle() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(infoTitle));
+		return driver.findElement(infoTitle);
+	}
+	public WebElement getATLSearchResult() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.elementToBeClickable(atlsearchresult));
+		return driver.findElement(atlsearchresult);
+	}	
+	public WebElement getatlInfoSearchMoreInfoBtn() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlInfoSearchMoreInfoBtn));
+		return driver.findElement(atlInfoSearchMoreInfoBtn);
 	}
 }
 

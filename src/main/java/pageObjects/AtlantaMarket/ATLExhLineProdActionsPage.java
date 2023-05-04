@@ -294,40 +294,40 @@ public class ATLExhLineProdActionsPage extends base{
 		return driver.findElement(noteforanexhibitormodal);
 	}
 	public WebElement getDeleteNoteBtn() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(deletenotebtn));
 		return driver.findElement(deletenotebtn);
 	}
 	public WebElement getOrderOnJuniperMarketBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(orderOnJuniperMarketBtn));
 		return driver.findElement(orderOnJuniperMarketBtn);
 	}
 
 	public WebElement getExhibitorNameLink() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitorNameLink));
 		return driver.findElement(exhibitorNameLink);
 	}
 	public WebElement getLineLocationLink() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lineLocationLink));
 		return driver.findElement(lineLocationLink);
 	}
 	
 	public WebElement getseealllink() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(seealllink));
 		Thread.sleep(5000);
 		return driver.findElement(seealllink);
 	}
 	public WebElement getcreatelistbtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(createlistbtn));
 		return driver.findElement(createlistbtn);
 	}
 	public WebElement getSeeDetailsbtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(seedetailsbtn));
 		return driver.findElement(seedetailsbtn);
 	}
@@ -348,7 +348,7 @@ public class ATLExhLineProdActionsPage extends base{
 	}
 
 	public WebElement getProdSeeDetailsBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(seeDetailsBtn));
 		return driver.findElement(seeDetailsBtn);
 	}

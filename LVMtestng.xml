@@ -66,7 +66,7 @@
 		<classes>
 			<class name="lasvegasmarket_PROD.EvenntsAndWebinar" />
 				<methods>
-				     <!-- <include name="TS003_VerifyIMCEventsCalendarViewTest()"/>  -->   
+				      <include name="TS007_VerifyIMCEventsAddToListTest()"/>    
 				</methods>
 		</classes>
 	</test>

@@ -83,7 +83,6 @@ public class ATLMarketPlannerPage {
 
 	By mpInvalidGrNameMsg = By.xpath("//div[@class='imc-modal--content imc-section imc-customlists-form']/form[1]/div[2]/ul[1]/li[1]"); //Locator for Invalid Gr name msg
 	
-
 	By mpdasboardtab = By.xpath("//div[@class='imc-section imc-market-planner-toolbar ']/div[1]/div[1]/div[2]/div[1]/a[1]"); //Locator for Dashboard tab
 	By mpmyinfotab = By.xpath("//div[@class='imc-mp-toolbar imc-breakpoint-display--hide-mobile']/a[3]"); //Locator for My Info tab
 	By mpregistrationtab = By.xpath("//div[@class='imc-mp-toolbar imc-breakpoint-display--hide-mobile']/a[4]"); //Locator for Registration tab
@@ -151,8 +150,6 @@ public class ATLMarketPlannerPage {
 	By customDesc = By.xpath("//div[@class='imc-addnote-modal__padded']/form[1]/div[5]/div[1]/textarea[1]"); //Add custom item Desc
 	By customItemsubmitBtn = By.xpath("//div[@class='imc-addnote-modal__padded']/form[1]/div[7]/input[1]"); //Add custom item Submit Btn
 	
-	
-
 	By newlycreatedgroupname = By.xpath("//div[@class='group-container'][2]/div/div/div[1]/h5"); //Locator for Newly created group name
 	By nogroupname = By.xpath("//div[@class='group-container'][1]/div/div/div[1]/h5"); //Locator for No Group name
 	By createnewgrppopupclosebtn = By.xpath("//button[@class='imc-modal--close imc-button--modal-close imc-button--round']"); //Locator for Create new group popup close btn
@@ -238,7 +235,6 @@ public class ATLMarketPlannerPage {
 	By AddToSchedule = By.xpath("//div[@class='imc-hover-menu__content']"); //locator for Add To Schedule option
 	By AtlAddToSchedule = By.xpath("//div[@class='imc-hover-menu__content']/span[4]/a[1]"); //locator for Add To Schedule option
 	
-	
 	By favexhnamelist = By.xpath("//div[@class='imc-loading-relative']/div[3]/li/div/div/div/a"); //Locator for Favorite Exhibitor names list
 	By savedAllEventsWebinar = By.xpath("//div[@class='imc-vertical-tabs-nav']/a[contains(text(),'All Events And Seminars')]"); //Locator for savedAllEventsWebinar
 	By listOfAllSavedAllEventsWebinar = By.xpath("//div[@class='imc-gallery imc-saved-exhibitors__outer-row imc-market-planner-list--mobile-overlays-left']/div[1]"); //Locator for List of savedAllEventsWebinar
@@ -251,7 +247,6 @@ public class ATLMarketPlannerPage {
 	By listOfAllProductNames = By.xpath("//div[@class='imc-market-planner-list--item-body-data-left']/div[2]/span[1]"); //Locator for Saved All Searches Btn
 	By listOfAllProductTitles = By.xpath("//div[@class='imc-market-planner-list--item-body-data-left']/div[1]"); //Locator for Saved All Searches Btn
 	By mpNotebtn = By.xpath("//div[@class='imc-gallery__item market-planner--list-sidebar imc-breakpoint-display--hide-mobile']/div[4]"); //Locator for Saved All Searches Btn
-	
 	
 	By favIconlist = By.xpath("//button[@class='imc-selectableicon ']"); //Locator for Favorite Icon list
 	
@@ -294,7 +289,6 @@ public class ATLMarketPlannerPage {
 		return driver.findElements(listOfAllExhPROD);
 	}
 	public WebElement getmpNotebtn() {
-
 		wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpNotebtn));
 		return driver.findElement(mpNotebtn);
@@ -310,31 +304,26 @@ public class ATLMarketPlannerPage {
 		return driver.findElements(listOfAllProductNames);
 	}
 	public WebElement getsavedAllSearchesBtn() {
-
 		wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(savedAllSearchesBtn));
 		return driver.findElement(savedAllSearchesBtn);
 	}
 	public WebElement getsavedAllThisSearchesBtn() {
-
 		wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(savedAllThisSearchesBtn));
 		return driver.findElement(savedAllThisSearchesBtn);
 	}
 	public WebElement getseeAllBtn() {
-
 		wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(seeAllBtn));
 		return driver.findElement(seeAllBtn);
 	}
-
 	public WebElement getFavIcone() {
 
 		wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(FavIcone));
 		return driver.findElement(FavIcone);
 	}
-
 	public WebElement getAddToSchedulePROD() {
 		wait = new WebDriverWait(driver, 20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(AddToSchedulePROD));
@@ -355,7 +344,6 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(savedAllEventsWebinar));
 		return driver.findElement(savedAllEventsWebinar);
 	}
-
 	public WebElement getAtlAddToSchedule() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(AtlAddToSchedule));
@@ -370,7 +358,6 @@ public class ATLMarketPlannerPage {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmpSaveSearcheBtn));
 		return driver.findElement(atlmpSaveSearcheBtn);
-
 	}
 	public WebElement getATLExhibitorEvent() {
 		wait = new WebDriverWait (driver,20);
@@ -387,7 +374,6 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLAttendTabEventMenu));
 		return driver.findElement(ATLAttendTabEventMenu);
 	}
-
 	public WebElement getATLAttendTabEventBtn() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLAttendTabEventBtn));
@@ -428,7 +414,6 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpAddToScheduledSaveBtn));
 		return driver.findElement(mpAddToScheduledSaveBtn);
 	}
-	
 	public WebElement getmpSelectEndTime() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSelectEndTime));
@@ -479,7 +464,6 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mplistSearcheAlert));
 		return driver.findElement(mplistSearcheAlert);
 	}
-
 	public List <WebElement> getmplistOfAllSaveSearches() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mplistOfAllSaveSearches));
@@ -565,7 +549,6 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(customItemHeader));
 		return driver.findElement(customItemHeader);
 	}
-	
 	public WebElement getDuplicateListErrorMsg() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(duplicateListErrorMsg));
@@ -581,8 +564,6 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllGroups));
 		return driver.findElements(listOfAllGroups);
 	}
-	
-	
 	public WebElement getATLmpVerifyListView() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmpVerifyListView));
@@ -609,7 +590,7 @@ public class ATLMarketPlannerPage {
 		return driver.findElement(editlistpage);
 	}
 	public WebElement getATLSavedExhNameInList() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(savedexhnameinlist));
 		return driver.findElement(savedexhnameinlist);
 	}
@@ -678,7 +659,6 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atladdtoseselectedbtn));
 		return driver.findElement(atladdtoseselectedbtn);
 	}
-	
 	public WebElement getATLMPListsPageFavoritesMenu() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(listspagefavoritesmenu));
@@ -709,9 +689,8 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(newlistmodalcreatebtn_LvmUAT));
 		return driver.findElement(newlistmodalcreatebtn_LvmUAT);
 	}
-	
 	public WebElement getlvmsavedexhnameinlist_uat() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmsavedexhnameinlist_uat));
 		return driver.findElement(lvmsavedexhnameinlist_uat);
 	}
@@ -740,7 +719,6 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(enterPasswordErrorMsg));
 		return driver.findElement(enterPasswordErrorMsg);
 	}					
-
 	public WebElement getMpListLeftPannel() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpListLeftPannel));
@@ -776,11 +754,6 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpListSortBtn));
 		return driver.findElement(mpListSortBtn);
 	}					
-
-	
-	
-	
-
 	public WebElement getwelcometext() {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(welcometext));
@@ -831,7 +804,6 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpListNewCreateBtn));
 		return driver.findElement(mpListNewCreateBtn);
 	}
-
 	public WebElement getMpInvalidGrNameMsg() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpInvalidGrNameMsg));
@@ -847,9 +819,6 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpListNewListCreateBtn));
 		return driver.findElement(mpListNewListCreateBtn);
 	}
-
-		
-
 	public WebElement getmpdasboardtab() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpdasboardtab));
@@ -960,8 +929,6 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpFevList));
 		return driver.findElement(mpFevList);
 	}
-
-
 	public WebElement getMpDuplicateList() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpDuplicateList));
@@ -1027,9 +994,6 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpListName));
 		return driver.findElement(mpListName);
 	}	
-
-	
-
 	public WebElement getmpalllists() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpalllists));
@@ -1065,7 +1029,6 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(addlistcreatebtn_ATLPROD));
 		return driver.findElement(addlistcreatebtn_ATLPROD);
 	}
-
 	public WebElement getmpManageEditListMoveBtn() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpManageEditListMoveBtn));
@@ -1076,9 +1039,6 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpManageEditListRemoveBtn));
 		return driver.findElement(mpManageEditListRemoveBtn);
 	}
-
-	
-
 	public WebElement getmpbookhotel() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpbookhotel));
@@ -1109,8 +1069,6 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpFilterByDropdown));
 		return driver.findElement(mpFilterByDropdown);
 	}
-
-
 	public List <WebElement> getfilterByList() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(filterByList));
@@ -1121,7 +1079,6 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllExh));
 		return driver.findElements(listOfAllExh);
 	}
-
 	public WebElement getNoGroupName() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(nogroupname));
@@ -1133,13 +1090,15 @@ public class ATLMarketPlannerPage {
 		return driver.findElement(newlycreatedgroupname);
 	}
 	public WebElement getCreateNewGrpPopupCloseBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(createnewgrppopupclosebtn));
 		return driver.findElement(createnewgrppopupclosebtn);
 	}
 	public List<WebElement> getATLMPDuplicateListOptns() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmpduplicatelistoptns));
 		return driver.findElements(atlmpduplicatelistoptns);
-
 	}
-	
 	public WebElement getfilterBytxt() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(filterBytxt));
@@ -1255,7 +1214,6 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfoemailtxtbox));
 		return driver.findElement(myinfoemailtxtbox);
 	}	
-	
 	public WebElement getmyinfoverifybtn() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfoverifybtn));
@@ -1281,7 +1239,6 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfosave2btn));
 		return driver.findElement(myinfosave2btn);
 	}	
-
 	public WebElement getverifymyinfoname() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(verifymyinfoname));
@@ -1387,7 +1344,6 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(AddToSchedule));
 		return driver.findElement(AddToSchedule);
 	}
-	
 	public List <WebElement> getFavoriteExhibitorNames() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(favexhnamelist));
@@ -1403,7 +1359,6 @@ public class ATLMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpduplicatelistnametxtbx));
 		return driver.findElement(mpduplicatelistnametxtbx);
 	}
-	
 	public List <WebElement> getMPGroupNamesDropDown() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpgroupnamesdropdown));
