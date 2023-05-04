@@ -9,28 +9,13 @@
       </run>
     </groups>
     <classes>
-
-      <class name="atlantamarket_PROD.ShowSpecials">
+      <class name="atlantamarket_PROD.FloorPlans">
         <methods>
-
-      <class name="lasvegasmarket_PROD.EvenntsAndWebinar">
-        <methods>
-          <include name="TS012_VerifyExhibitorEventsDetailstTest"/>
-
-          <include name="tearDown"/>
-          <include name="TS005_VerifyIMCEventsEventDetailstTest"/>
-          <include name="TS013_VerifyExhibitorEventsAddToFavoriteTest"/>
           <include name="initialize"/>
-
-          <include name="TS002_VerifyLocationLinksForShowSpecialsTest"/>
-          <include name="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest"/>
+          <include name="tearDown"/>
+          <include name="TS004_VerifyIconsOnFloorPlansPageTest"/>
         </methods>
-      </class> <!-- atlantamarket_PROD.ShowSpecials -->
-
-          <include name="TS014_VerifyExhibitorEventsAddToListTest"/>
-        </methods>
-      </class> <!-- lasvegasmarket_PROD.EvenntsAndWebinar -->
-
+      </class> <!-- atlantamarket_PROD.FloorPlans -->
     </classes>
   </test> <!-- MPGroupTest(failed) -->
 </suite> <!-- Failed suite [MPGroupTestSuite] -->

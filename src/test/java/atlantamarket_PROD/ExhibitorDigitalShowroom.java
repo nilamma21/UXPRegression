@@ -68,7 +68,7 @@ public class ExhibitorDigitalShowroom extends base {
 		//utl.CloseATLPopup();
 	}
 	@Test
-	public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
+	public void verifyMPLoginFunctionality() throws InterruptedException  {
 
 		// The purpose of this test case to verify:-
 		// TS1- Login to Market Planner
@@ -547,7 +547,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputforShowSpecials")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor13")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -833,7 +833,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalSearchEventsInput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("searchforCatalogsInputUAT")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -851,8 +851,8 @@ public class ExhibitorDigitalShowroom extends base {
 		/*Assert.assertTrue(atlexhdgshw.getATLVerifyLinePageTitle().getText().contains("Events"));
 		driver.navigate().back();
 		utl.scrollToElement(atlexhdgshw.getEventsSection());*/
-		String eventName=atlexhdgshw.getEventName().getText();
-		atlexhdgshw.getEventName().click();
+		String eventName=atlexhdgshw.getEventNamePROD().getText();
+		atlexhdgshw.getEventNamePROD().click();
 		Assert.assertTrue(atlevents.getatlEventNameOnDetailsPage().getText().contains(eventName));
 		System.out.println("Events Component functionality is working properly.");	
 
@@ -966,7 +966,7 @@ public class ExhibitorDigitalShowroom extends base {
 		atlevents=new ATLEventsAndWebinarPage(driver);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputforShowSpecials")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor13")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
