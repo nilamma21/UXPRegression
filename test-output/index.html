@@ -101,7 +101,7 @@
                     <div class="method-list-content passed suite-MPGroupTestSuite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-MPGroupTestSuite" title="lasvegasmarket_PROD.FloorPlans" hash-for-method="TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest">TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-MPGroupTestSuite" title="lasvegasmarket_PROD.EvenntsAndWebinar" hash-for-method="TS007_VerifyIMCEventsAddToListTest">TS007_VerifyIMCEventsAddToListTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-MPGroupTestSuite -->
@@ -119,14 +119,14 @@
           <div class="suite-MPGroupTestSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">lasvegasmarket_PROD.FloorPlans</span>
+              <span class="class-name">lasvegasmarket_PROD.EvenntsAndWebinar</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest">
-                  </a> <!-- TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest -->
-                  <span class="method-name">TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest</span>
+                  <a name="TS007_VerifyIMCEventsAddToListTest">
+                  </a> <!-- TS007_VerifyIMCEventsAddToListTest -->
+                  <span class="method-name">TS007_VerifyIMCEventsAddToListTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -143,11 +143,11 @@
 &lt;suite name=&quot;MPGroupTestSuite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;RegressionTest&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;lasvegasmarket_PROD.FloorPlans&quot;&gt;
+      &lt;class name=&quot;lasvegasmarket_PROD.EvenntsAndWebinar&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest()&quot;/&gt;
+          &lt;include name=&quot;TS007_VerifyIMCEventsAddToListTest()&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- lasvegasmarket_PROD.FloorPlans --&gt;
+      &lt;/class&gt; &lt;!-- lasvegasmarket_PROD.EvenntsAndWebinar --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- RegressionTest --&gt;
 &lt;/suite&gt; &lt;!-- MPGroupTestSuite --&gt;
@@ -189,9 +189,9 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest')
-data.setCell(0, 2, 'lasvegasmarket_PROD.FloorPlans')
-data.setCell(0, 3, 65406);
+data.setCell(0, 1, 'TS007_VerifyIMCEventsAddToListTest')
+data.setCell(0, 2, 'lasvegasmarket_PROD.EvenntsAndWebinar')
+data.setCell(0, 3, 64055);
 window.suiteTableData['MPGroupTestSuite']= { tableData: data, tableDiv: 'times-div-MPGroupTestSuite'}
 return data;
 }
@@ -211,33 +211,39 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-MPGroupTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">11 ignored methods</span>
+            <span class="header-content">14 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">lasvegasmarket_PROD.FloorPlans</span>
+              <span class="ignored-class-name">lasvegasmarket_PROD.EvenntsAndWebinar</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">TS008_VerifyClickOnReturnToBuildingListBtnTest</span>
+                <span class="ignored-method-name">TS012_VerifyExhibitorEventsDetailstTest</span>
                 <br/>
-                <span class="ignored-method-name">TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest</span>
+                <span class="ignored-method-name">TS006_VerifyIMCEventsAddToFavoriteTest</span>
                 <br/>
-                <span class="ignored-method-name">TS003_VerifyZoomInOutLevelOnFloorPlansPageTest</span>
+                <span class="ignored-method-name">TS011_VerifyExhibitorEventsListTest</span>
                 <br/>
-                <span class="ignored-method-name">TS011_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest</span>
+                <span class="ignored-method-name">TS004_VerifyIMCEventsEventsListTest</span>
                 <br/>
-                <span class="ignored-method-name">TS009_VerifySearchFunctionalityForExhListOnFloorPlansPageTest</span>
+                <span class="ignored-method-name">TS008_VerifyIMCEventsAddNoteTest</span>
                 <br/>
-                <span class="ignored-method-name">TS006_VerifyPaginationOnFloorPlansPageTest</span>
+                <span class="ignored-method-name">TS001_VerifyEventsAndWebinarsOverviewTest</span>
                 <br/>
-                <span class="ignored-method-name">TS002_VerifyNoExhibitorsOnThisFloorMessageTest</span>
+                <span class="ignored-method-name">TS010_VerifyExhibitorEventsCalendarViewTest</span>
                 <br/>
-                <span class="ignored-method-name">TS001_VerifyNavigationToDifferentFloorBuildingsTest</span>
+                <span class="ignored-method-name">TS002_VerifyIMCEventsSearchbarTest</span>
                 <br/>
-                <span class="ignored-method-name">TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest</span>
+                <span class="ignored-method-name">TS009_VerifyExhibitorEventsSearchbarTest</span>
                 <br/>
-                <span class="ignored-method-name">TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest</span>
+                <span class="ignored-method-name">TS015_VerifyExhibitorEventsAddNoteTest</span>
                 <br/>
-                <span class="ignored-method-name">TS004_VerifyIconsOnFloorPlansPageTest</span>
+                <span class="ignored-method-name">TS005_VerifyIMCEventsEventDetailstTest</span>
+                <br/>
+                <span class="ignored-method-name">TS013_VerifyExhibitorEventsAddToFavoriteTest</span>
+                <br/>
+                <span class="ignored-method-name">TS014_VerifyExhibitorEventsAddToListTest</span>
+                <br/>
+                <span class="ignored-method-name">TS003_VerifyIMCEventsCalendarViewTest</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -249,18 +255,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">lasvegasmarket_PROD.FloorPlans</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">lasvegasmarket_PROD.EvenntsAndWebinar</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">initialize</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest</span>
-                <span class="method-start">61587 ms</span>
+                <span class="method-name">TS007_VerifyIMCEventsAddToListTest</span>
+                <span class="method-start">47122 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">127003 ms</span>
+                <span class="method-start">111180 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -496,27 +496,27 @@ public class LVMMarketPlannerPage {
 		return driver.findElement(savedexhnameinlist);
 	}
 	public WebElement getLVMEditListItemMoreBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(editlistitemmorebtn));
 		return driver.findElement(editlistitemmorebtn);
 	}
 	public WebElement getLVMEditListItemDeleteOptn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(editlistitemdeleteoptn));
 		return driver.findElement(editlistitemdeleteoptn);
 	}
 	public WebElement getCreateNewListNameTxtbx() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(createnewlistnametxtbx));
 		return driver.findElement(createnewlistnametxtbx);
 	}
 	public WebElement getNewListModalCreateBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(newlistmodalcreatebtn));
 		return driver.findElement(newlistmodalcreatebtn);
 	}
 	public WebElement getGoToMarketPlannerBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(gotomarketplannerbtn));
 		return driver.findElement(gotomarketplannerbtn);
 	}
@@ -531,14 +531,18 @@ public class LVMMarketPlannerPage {
 		return driver.findElement(listspagelistsmenu);
 	}
 	public List <WebElement> getLVMMPListsNames() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmmplistsnames));
 		return driver.findElements(lvmmplistsnames);
 	}
 	public List <WebElement> getLVMMPEditListOptns() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmmpeditlistoptns));
 		return driver.findElements(lvmmpeditlistoptns);
 	}
 	public WebElement getLVMMPEditListOptn() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmmpeditlistoptn));
 		return driver.findElement(lvmmpeditlistoptn);
 	}
 	public WebElement getLVMMPExistingListName() {
@@ -547,6 +551,8 @@ public class LVMMarketPlannerPage {
 		return driver.findElement(lvmmpexistinglistname);
 	}
 	public WebElement getLVMMPAddToSelectedBtn() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmaddtoseselectedbtn));
 		return driver.findElement(lvmaddtoseselectedbtn);
 	}
 	
@@ -927,7 +933,7 @@ public class LVMMarketPlannerPage {
 		return driver.findElement(moreBtnDeleteOptn_LVMPROD);
 	}
 	public WebElement getMoreBtnDeleteOptnExistingList_LVMPROD() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(moreBtnDeleteOptnExistingList_LVMPROD));
 		return driver.findElement(moreBtnDeleteOptnExistingList_LVMPROD);
 	}

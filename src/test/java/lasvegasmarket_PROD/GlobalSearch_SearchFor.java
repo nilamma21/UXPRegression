@@ -314,13 +314,14 @@ public class GlobalSearch_SearchFor extends base{
 				String catName = catlist.get(i).getText();
 				if(catName.equalsIgnoreCase(catalogName)) {
 					catlist.get(i).click();
+					break;
 				}
 			}
 		
 		for (String winHandle : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle);
 		}
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 		String Cname =lvmgs.getCatalogHeaderName().getText();
 		System.out.println(Cname);
 		Assert.assertTrue(catalogName.contains(Cname));

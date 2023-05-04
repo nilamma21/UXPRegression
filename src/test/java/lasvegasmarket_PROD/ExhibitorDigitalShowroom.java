@@ -747,6 +747,7 @@ public class ExhibitorDigitalShowroom extends base {
 		System.out.println(eventName);
 		//lvmds.getEventName().click(); //Old
 		lvmds.getEventNameNew().click(); //New
+		Thread.sleep(3000);
 		Assert.assertTrue(lvmevents.getlvmEventNameOnDetailsPageUAT().getText().contains(eventName));
 		System.out.println("Events Component functionality is working properly.");	
 	}

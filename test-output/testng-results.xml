@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="MPGroupTestSuite" duration-ms="127016" started-at="2023-04-27T11:00:32Z" finished-at="2023-04-27T11:02:39Z">
+  <suite name="MPGroupTestSuite" duration-ms="111193" started-at="2023-05-03T10:28:13Z" finished-at="2023-05-03T10:30:04Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="127016" started-at="2023-04-27T11:00:32Z" finished-at="2023-04-27T11:02:39Z">
-      <class name="lasvegasmarket_PROD.FloorPlans">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_PROD.FloorPlans@146ba0ac]" name="initialize" is-config="true" duration-ms="61583" started-at="2023-04-27T16:30:32Z" finished-at="2023-04-27T16:31:34Z">
+    <test name="RegressionTest" duration-ms="111193" started-at="2023-05-03T10:28:13Z" finished-at="2023-05-03T10:30:04Z">
+      <class name="lasvegasmarket_PROD.EvenntsAndWebinar">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@204f30ec]" name="initialize" is-config="true" duration-ms="47118" started-at="2023-05-03T15:58:13Z" finished-at="2023-05-03T15:59:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest()[pri:0, instance:lasvegasmarket_PROD.FloorPlans@146ba0ac]" name="TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest" duration-ms="65406" started-at="2023-04-27T16:31:34Z" finished-at="2023-04-27T16:32:39Z">
+        <test-method status="PASS" signature="TS007_VerifyIMCEventsAddToListTest()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@204f30ec]" name="TS007_VerifyIMCEventsAddToListTest" duration-ms="64055" started-at="2023-05-03T15:59:00Z" finished-at="2023-05-03T16:00:04Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_PROD.FloorPlans@146ba0ac]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-04-27T16:32:39Z" finished-at="2023-04-27T16:32:39Z">
+        </test-method> <!-- TS007_VerifyIMCEventsAddToListTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@204f30ec]" name="tearDown" is-config="true" duration-ms="1" started-at="2023-05-03T16:00:04Z" finished-at="2023-05-03T16:00:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- lasvegasmarket_PROD.FloorPlans -->
+      </class> <!-- lasvegasmarket_PROD.EvenntsAndWebinar -->
     </test> <!-- RegressionTest -->
   </suite> <!-- MPGroupTestSuite -->
 </testng-results>

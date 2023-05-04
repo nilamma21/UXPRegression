@@ -3,13 +3,13 @@
 <suite name="Failed suite [MPGroupTestSuite]">
   <test name="RegressionTest(failed)">
     <classes>
-      <class name="lasvegasmarket_PROD.FloorPlans">
+      <class name="lasvegasmarket_PROD.ExhibitorDigitalShowroom">
         <methods>
           <include name="tearDown"/>
           <include name="initialize"/>
-          <include name="TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest"/>
+          <include name="TS017_VerifyExhibitorDigitalEventsComponentTest"/>
         </methods>
-      </class> <!-- lasvegasmarket_PROD.FloorPlans -->
+      </class> <!-- lasvegasmarket_PROD.ExhibitorDigitalShowroom -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [MPGroupTestSuite] -->

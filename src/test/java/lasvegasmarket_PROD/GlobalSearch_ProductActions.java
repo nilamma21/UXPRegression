@@ -408,15 +408,16 @@ public class GlobalSearch_ProductActions extends base {
 		// Store the new note name
 		String newnotetitle = "CybNote" + genData.generateRandomString(3);
 		System.out.println("Newly added Note is: " + newnotetitle);
-
+		Thread.sleep(2000);
 		// Enter Note title
 		atlexhact.getNoteTitleTxtBx().sendKeys(newnotetitle);
 		// Enter Note Content
+		Thread.sleep(2000);
 		atlexhact.getNoteContentTxtBx().sendKeys("TestProdNote" + genData.generateRandomString(6));
 		// Click on 'Save' button
+		Thread.sleep(2000);
 		atlexhact.getNoteSaveBtn().click();
-		Thread.sleep(7000);
-
+		Thread.sleep(8000);
 		// Click on 'Add Note' icon for the same exhibitor
 		atlproddet.getProductAddNoteIcon().click();
 		Thread.sleep(4000);
