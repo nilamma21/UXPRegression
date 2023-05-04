@@ -678,7 +678,7 @@ public class EvenntsAndWebinar extends base{
 						break;
 					}
 				}
-				Thread.sleep(5000);
+				Thread.sleep(6000);
 				Assert.assertTrue(lvmmpp.getLVMSavedExhNameInList().getText().contains(eventTitle));
 
 				/*// Delete that added line from list
@@ -798,9 +798,9 @@ public class EvenntsAndWebinar extends base{
 		lvmflpp=new LVMFloorPlansPage(driver);
 		lvmevents=new LVMEventsAndWebinarPage(driver);
 		lvmgs = new LVMGlobalSearchPage(driver);
-
-		utl.clickOnEventLinkOfChannel();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		utl.clickOnEventLinkOfChannel();
+		
 		/*// Click on Attend Tab
 		lvmevents.getatlAttendTab().click();
 		Thread.sleep(2000);
@@ -1361,9 +1361,9 @@ public class EvenntsAndWebinar extends base{
 		// Login to MP
 		
 		//utl.verifyMPLoginFunctionality(); Thread.sleep(5000);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(5000); 
 		utl.clickOnEventLinkOfChannel();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		String eventTitle = lvmevents.getlvmClickOnEvent().getText();
 
 		//Click on Exh Event Tab

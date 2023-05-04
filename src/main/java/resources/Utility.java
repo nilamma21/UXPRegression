@@ -494,7 +494,7 @@ public class Utility extends base {
 		if(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_prod"))) {
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			// Click on Attend Tab
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 			atlevents.getatlAttendTab().click();
 			Thread.sleep(2000);
 			//click on Events Link

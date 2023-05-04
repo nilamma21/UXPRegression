@@ -64,9 +64,9 @@
 		</groups> -->
 
 		<classes>
-			<class name="lasvegasmarket_PROD.FloorPlans" />
+			<class name="lasvegasmarket_PROD.EvenntsAndWebinar" />
 				<methods>
-				      <include name="TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest()"/>    
+				      <include name="TS007_VerifyIMCEventsAddToListTest()"/>    
 				</methods>
 		</classes>
 	</test>
