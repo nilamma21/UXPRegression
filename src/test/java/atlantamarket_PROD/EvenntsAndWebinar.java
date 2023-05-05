@@ -567,6 +567,7 @@ public class EvenntsAndWebinar extends base{
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		String eventTitle = atlevents.getatlClickOnEvent().getText();
+		System.out.println("Event Name :: "+eventTitle);
 
 		// Click on IMC Event Tab
 		atlevents.getatlImcEventsTab().click();
@@ -578,12 +579,6 @@ public class EvenntsAndWebinar extends base{
 
 		// Click on Add to List Icon
 
-	/*	atlevents.getatlListIcon().click();
-		Thread.sleep(5000);
-		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
-		lp.getPassword().sendKeys((prop.getProperty("password")));
-
-		lp.getSignInBtn().click();*/
 		atlevents.getatlListIcon().click();
 		// Store the existing list name
 		String existinglistname = atlmppge.getATLMPExistingListName().getText();
@@ -601,7 +596,10 @@ public class EvenntsAndWebinar extends base{
 		//atlmppge.getATLMPAddToSelectedBtn().click();
 		Thread.sleep(2000);
 		// Click on Go to Market Planner button
-		utl.clickOnEventLinkOfChannel();
+		//utl.clickOnEventLinkOfChannel();
+
+		// Click on Go to Market Planner button
+		atlmppge.getGoToMarketPlannerBtn().click();
 		// Click on Lists tab on MP home page
 		atlmppge.getMPHomeListsTab().click();
 		atlmppge.getListsPageListsMenu().click();
@@ -616,15 +614,18 @@ public class EvenntsAndWebinar extends base{
 				break;
 			}
 		}
-		Thread.sleep(5000);
-		
-		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
-
-		// Delete that added line from list
-		atlmppge.getATLEditListItemMoreBtn().click();
-		atlmppge.getATLEditListItemDeleteOptn().click();
 		Thread.sleep(8000);
 		
+		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(eventTitle));
+
+/*		// Delete that added line from list
+		atlmppge.getATLEditListItemMoreBtn().click();
+		atlmppge.getATLEditListItemDeleteOptn().click();
+		Thread.sleep(8000);*/
+		// Delete that added exhibitor from list
+				atlmppge.getmoreOptionUAT_LVM().click();
+				atlmppge.getmoreEventOptionDeleteBtnUAT_LVM().click();
+				Thread.sleep(8000);
 	}
 	
 	@Test(priority = 8,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
@@ -1317,7 +1318,7 @@ public class EvenntsAndWebinar extends base{
 @AfterClass(alwaysRun=true)
 public void tearDown()
 {
-	driver.quit();
+	//driver.quit();
 }
 
 }

@@ -96,11 +96,16 @@ public class ATLExhDigiShowroomPage {
 	By linesshowntextonsearchgrid = By.xpath("(//div[@class='imc-exhibitorcard-title-row'])[1]/div[1]/div[1]/p"); //Locator for Line shown text on Search grid
 	By linesshownseealllink = By.xpath("(//div[@class='imc-exhibitorcard-title-row'])[1]/div[1]/div[1]/a"); //Locator for Lines shown-see all link
 	By exhibitornameonexhdirectimglvm = By.xpath("//span[@class='imc-heading imc-heading--giga-desktop ']"); //Locator for Exhibitor name on Exhibitor Directory image
-
+	By EventNamePROD = By.xpath("(//div[@class='event-card--info'])[1]/div[1]/div[1]/a[1]/p"); //Locator for Events Section
 	
 	public ATLExhDigiShowroomPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
+	}
+	public WebElement getEventNamePROD() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(EventNamePROD));
+		return driver.findElement(EventNamePROD);
 	}
 	public WebElement getcloseBtnContactExh() {
 		wait = new WebDriverWait (driver,20);

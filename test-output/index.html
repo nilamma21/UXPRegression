@@ -23,7 +23,11 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
+<<<<<<< HEAD
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+=======
       <span class="top-banner-font-1">1 suite</span>
+>>>>>>> 4aa4ff804bc67655c6674bcbe9e9d76136acfded
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +41,11 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-MPGroupTestSuite">
+<<<<<<< HEAD
+              <span class="suite-name border-failed">MPGroupTestSuite</span>
+=======
               <span class="suite-name border-passed">MPGroupTestSuite</span>
+>>>>>>> 4aa4ff804bc67655c6674bcbe9e9d76136acfded
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,6 +98,23 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
+<<<<<<< HEAD
+                    <span class="method-stats">1 method, 1 failed,   </span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-MPGroupTestSuite" class="hide-methods failed suite-MPGroupTestSuite"> (hide)</a> <!-- hide-methods failed suite-MPGroupTestSuite -->
+                      <a href="#" panel-name="suite-MPGroupTestSuite" class="show-methods failed suite-MPGroupTestSuite"> (show)</a> <!-- show-methods failed suite-MPGroupTestSuite -->
+                    </span>
+                    <div class="method-list-content failed suite-MPGroupTestSuite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MPGroupTestSuite" title="atlantamarket_PROD.FloorPlans" hash-for-method="TS004_VerifyIconsOnFloorPlansPageTest">TS004_VerifyIconsOnFloorPlansPageTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-MPGroupTestSuite -->
+=======
                     <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
@@ -105,6 +130,7 @@
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-MPGroupTestSuite -->
+>>>>>>> 4aa4ff804bc67655c6674bcbe9e9d76136acfded
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,14 +142,116 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-MPGroupTestSuite" class="panel MPGroupTestSuite">
+<<<<<<< HEAD
+          <div class="suite-MPGroupTestSuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">atlantamarket_PROD.FloorPlans</span>
+=======
           <div class="suite-MPGroupTestSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">lasvegasmarket_PROD.EvenntsAndWebinar</span>
+>>>>>>> 4aa4ff804bc67655c6674bcbe9e9d76136acfded
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+<<<<<<< HEAD
+                  <a name="TS004_VerifyIconsOnFloorPlansPageTest">
+                  </a> <!-- TS004_VerifyIconsOnFloorPlansPageTest -->
+                  <span class="method-name">TS004_VerifyIconsOnFloorPlansPageTest</span>
+                  <div class="stack-trace"><b>"org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;imc-content--padded-medium-desktop&apos;] (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.AtlantaMarket.ATLFloorPlansPage.getExhibitorDetailsModal(ATLFloorPlansPage.java:202)
+	at atlantamarket_PROD.FloorPlans.TS004_VerifyIconsOnFloorPlansPageTest(FloorPlans.java:274)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;imc-content--padded-medium-desktop&apos;]&quot;}
+  (Session info: chrome=112.0.5615.138)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
+System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.138, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57807}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4b615218eb634c3de9f497f058e323d5
+*** Element info: {Using=xpath, value=//div[@class=&apos;imc-content--padded-medium-desktop&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 26 more
+... Removed 28 stack frames<br/> org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;imc-content--padded-medium-desktop&apos;] (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.AtlantaMarket.ATLFloorPlansPage.getExhibitorDetailsModal(ATLFloorPlansPage.java:202)
+	at atlantamarket_PROD.FloorPlans.TS004_VerifyIconsOnFloorPlansPageTest(FloorPlans.java:274)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;imc-content--padded-medium-desktop&apos;]&quot;}
+  (Session info: chrome=112.0.5615.138)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
+System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.138, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\swapnili\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57807}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4b615218eb634c3de9f497f058e323d5
+*** Element info: {Using=xpath, value=//div[@class=&apos;imc-content--padded-medium-desktop&apos;]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 26 more
+"</b><br>org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)<br>org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)<br>pageObjects.AtlantaMarket.ATLFloorPlansPage.getExhibitorDetailsModal(ATLFloorPlansPage.java:202)<br>atlantamarket_PROD.FloorPlans.TS004_VerifyIconsOnFloorPlansPageTest(FloorPlans.java:274)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br>java.lang.reflect.Method.invoke(Unknown Source)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)<br>
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MPGroupTestSuite-class-failed -->
+=======
                   <a name="TS007_VerifyIMCEventsAddToListTest">
                   </a> <!-- TS007_VerifyIMCEventsAddToListTest -->
                   <span class="method-name">TS007_VerifyIMCEventsAddToListTest</span>
@@ -131,6 +259,7 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-MPGroupTestSuite-class-passed -->
+>>>>>>> 4aa4ff804bc67655c6674bcbe9e9d76136acfded
         </div> <!-- panel MPGroupTestSuite -->
         <div panel-name="test-xml-MPGroupTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -143,11 +272,19 @@
 &lt;suite name=&quot;MPGroupTestSuite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;RegressionTest&quot;&gt;
     &lt;classes&gt;
+<<<<<<< HEAD
+      &lt;class name=&quot;atlantamarket_PROD.FloorPlans&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;TS004_VerifyIconsOnFloorPlansPageTest&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- atlantamarket_PROD.FloorPlans --&gt;
+=======
       &lt;class name=&quot;lasvegasmarket_PROD.EvenntsAndWebinar&quot;&gt;
         &lt;methods&gt;
           &lt;include name=&quot;TS007_VerifyIMCEventsAddToListTest()&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- lasvegasmarket_PROD.EvenntsAndWebinar --&gt;
+>>>>>>> 4aa4ff804bc67655c6674bcbe9e9d76136acfded
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- RegressionTest --&gt;
 &lt;/suite&gt; &lt;!-- MPGroupTestSuite --&gt;
@@ -171,6 +308,17 @@
             <span class="header-content">Groups for MPGroupTestSuite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+<<<<<<< HEAD
+            <div class="test-group">
+              <span class="test-group-name">Non_MP</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">TS004_VerifyIconsOnFloorPlansPageTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+=======
+>>>>>>> 4aa4ff804bc67655c6674bcbe9e9d76136acfded
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-MPGroupTestSuite" class="panel">
@@ -189,14 +337,24 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
+<<<<<<< HEAD
+data.setCell(0, 1, 'TS004_VerifyIconsOnFloorPlansPageTest')
+data.setCell(0, 2, 'atlantamarket_PROD.FloorPlans')
+data.setCell(0, 3, 41167);
+=======
 data.setCell(0, 1, 'TS007_VerifyIMCEventsAddToListTest')
 data.setCell(0, 2, 'lasvegasmarket_PROD.EvenntsAndWebinar')
 data.setCell(0, 3, 64055);
+>>>>>>> 4aa4ff804bc67655c6674bcbe9e9d76136acfded
 window.suiteTableData['MPGroupTestSuite']= { tableData: data, tableDiv: 'times-div-MPGroupTestSuite'}
 return data;
 }
               </script>
+<<<<<<< HEAD
+              <span class="suite-total-time">Total running time: 41 seconds</span>
+=======
               <span class="suite-total-time">Total running time: 1 minutes</span>
+>>>>>>> 4aa4ff804bc67655c6674bcbe9e9d76136acfded
               <div id="times-div-MPGroupTestSuite">
               </div> <!-- times-div-MPGroupTestSuite -->
             </div> <!-- times-div -->
@@ -211,6 +369,21 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-MPGroupTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
+<<<<<<< HEAD
+            <span class="header-content">12 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">atlantamarket_PROD.FloorPlans</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">TS003_VerifyZoomInOutLevelOnFloorPlansPageTest</span>
+                <br/>
+                <span class="ignored-method-name">TS001_VerifyNavigationToDifferentFloorBuildingsTest</span>
+                <br/>
+                <span class="ignored-method-name">TS006_VerifyPaginationOnFloorPlansPageTest</span>
+                <br/>
+                <span class="ignored-method-name">TS011_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest</span>
+=======
             <span class="header-content">14 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
@@ -230,9 +403,25 @@ return data;
                 <span class="ignored-method-name">TS001_VerifyEventsAndWebinarsOverviewTest</span>
                 <br/>
                 <span class="ignored-method-name">TS010_VerifyExhibitorEventsCalendarViewTest</span>
+>>>>>>> 4aa4ff804bc67655c6674bcbe9e9d76136acfded
                 <br/>
-                <span class="ignored-method-name">TS002_VerifyIMCEventsSearchbarTest</span>
+                <span class="ignored-method-name">TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest</span>
                 <br/>
+<<<<<<< HEAD
+                <span class="ignored-method-name">verifyMPLoginFunctionality</span>
+                <br/>
+                <span class="ignored-method-name">TS009_VerifySearchFunctionalityForExhListOnFloorPlansPageTest</span>
+                <br/>
+                <span class="ignored-method-name">TS008_VerifyClickOnReturnToBuildingListBtnTest</span>
+                <br/>
+                <span class="ignored-method-name">TS002_VerifyNoExhibitorsOnThisFloorMessageTest</span>
+                <br/>
+                <span class="ignored-method-name">TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest</span>
+                <br/>
+                <span class="ignored-method-name">TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest</span>
+                <br/>
+                <span class="ignored-method-name">TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest</span>
+=======
                 <span class="ignored-method-name">TS009_VerifyExhibitorEventsSearchbarTest</span>
                 <br/>
                 <span class="ignored-method-name">TS015_VerifyExhibitorEventsAddNoteTest</span>
@@ -244,6 +433,7 @@ return data;
                 <span class="ignored-method-name">TS014_VerifyExhibitorEventsAddToListTest</span>
                 <br/>
                 <span class="ignored-method-name">TS003_VerifyIMCEventsCalendarViewTest</span>
+>>>>>>> 4aa4ff804bc67655c6674bcbe9e9d76136acfded
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -255,18 +445,33 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
+<<<<<<< HEAD
+              <div class="chronological-class-name">atlantamarket_PROD.FloorPlans</div> <!-- chronological-class-name -->
+=======
               <div class="chronological-class-name">lasvegasmarket_PROD.EvenntsAndWebinar</div> <!-- chronological-class-name -->
+>>>>>>> 4aa4ff804bc67655c6674bcbe9e9d76136acfded
               <div class="configuration-class before">
                 <span class="method-name">initialize</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+<<<<<<< HEAD
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TS004_VerifyIconsOnFloorPlansPageTest</span>
+                <span class="method-start">37566 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">78879 ms</span>
+=======
                 <span class="method-name">TS007_VerifyIMCEventsAddToListTest</span>
                 <span class="method-start">47122 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
                 <span class="method-start">111180 ms</span>
+>>>>>>> 4aa4ff804bc67655c6674bcbe9e9d76136acfded
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
