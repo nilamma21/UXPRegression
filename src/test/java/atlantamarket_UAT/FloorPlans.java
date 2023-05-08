@@ -689,7 +689,7 @@ public class FloorPlans extends base {
 	@AfterClass(alwaysRun=true)
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 
 }
