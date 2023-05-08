@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="ATLMrkt_RegressionTestSuite">
+
+	<listners>
+		<listner class-name="lasvegasmarket_UAT.TestListeners" />
+	</listners>
+	<test thread-count="1" name="RegressionSequentialTest" >
+		<classes>
+		 	<class name="lasvegasmarket_UAT.EvenntsAndWebinar" />
+		<!--		<methods>
+				 <include name="TS015_VerifyExhibitorEventsAddNoteTest"/>  
+				</methods> -->
+			 
+		<!--	 <methods>
+					<exclude name="TS003_VerifyIMCEventsCalendarViewTest" />
+             	 	<exclude name="TS005_VerifyIMCEventsEventDetailstTest" />
+			 	 	<exclude name="TS006_VerifyIMCEventsAddToFavoriteTest" />
+					<exclude name="TS007_VerifyIMCEventsAddToListTest" />
+             	 	<exclude name="TS012_VerifyExhibitorEventsDetailstTest" />
+			 	 	<exclude name="TS013_VerifyExhibitorEventsAddToFavoriteTest" />  
+					  
+          		</methods>-->
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="ATLMrkt_RegressionTestSuite">
+
+	<listners>
+		<listner class-name="lasvegasmarket_PROD.TestListeners" />
+	</listners>
+	<test thread-count="1" name="RegressionSequentialTest" >
+		<classes>
+			 <class name="lasvegasmarket_PROD.GlobalSearch_SearchFor" >
+      		</class>
+		</classes>
+	</test>
+</suite>
