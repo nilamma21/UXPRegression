@@ -51,10 +51,11 @@ public class LVMEventsAndWebinarPage {
 	By lvmSearchResultsTitle = By.xpath("//div[@class='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[2]/a[1]"); //Locator for Tag Icon
 	By lvmaddtoseselectedbtn = By.xpath("//input[@data-xpath='quickAdd.saveList']"); //Locator for Add to Selected button
 	
-	By lvmEventNameOnDetailsPageUAT = By.xpath("//div[@class='imc-eventdetail--root-container']/div[1]/h1[1]"); //Locator for list of all Events
+	By lvmEventNameOnDetailsPageUAT = By.xpath("//div[@class='imc-eventdetail--root-container']/div[1]/div[2]/section[1]/div[1]/h1[1]"); //Locator for list of all Events
 	By lvmEventLocationLinkUAT = By.xpath("//div[@class='imc-eventdetail--location']/a[1]"); //Locator for Event location link
 	
 	By lvmEventTypeUAT = By.xpath("//div[@class='imc-eventdetail--text-container']/span[3]"); //Locator for Event Type
+	
 	By lvmCalendarIconUAT = By.xpath("//div[@class='imc-eventdetail--text-container']//span[2]/a[1]"); //Locator for Calendar Icon
 	By lvmListOfCalendarDates = By.xpath("//button[@style='flex-basis: 14.2857%; max-width: 14.2857%; overflow: hidden;']"); //Locator for Calendar Icon
 	
@@ -64,6 +65,13 @@ public class LVMEventsAndWebinarPage {
 	
 	By lvmCurrentDate = By.xpath("//button[@class='react-calendar__tile react-calendar__tile--now react-calendar__tile--active react-calendar__tile--range react-calendar__tile--rangeStart react-calendar__tile--rangeEnd react-calendar__tile--rangeBothEnds react-calendar__month-view__days__day']/abbr"); //Locator for All Events days
 	
+	By lvmEventLocationLinkPROD = By.xpath("//div[@class='imc-eventdetail--location'][1]"); //Locator for Event location link
+	
+	By lvmEventTypePROD = By.xpath("//p[@class='imc-eventdetail--event-type']"); //Locator for Event Type
+	
+	By lvmCalendarLink = By.xpath("//div[@class='imc-gallery__item imc-eventdetail--text-container']/div[1]/section[1]/div[1]/p[1]/span[3]/a[1]"); //Locator for Calendar Icon
+	By lvmEventsRegisterBtn = By.xpath("//div[@class='imc-section--padded-top-xlarge']/a[1]"); //Locator for Register CTA
+	
 	
 	//div[@class='event-card--info']/div[1]/div[1]/a[1]/p[1]
 	//button[@class='react-calendar__tile react-calendar__tile--now react-calendar__month-view__days__day react-calendar--no-event']/abbr
@@ -71,6 +79,26 @@ public class LVMEventsAndWebinarPage {
 	public LVMEventsAndWebinarPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
+	}
+	public WebElement getlvmEventsRegisterBtn() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventsRegisterBtn));
+		return driver.findElement(lvmEventsRegisterBtn);
+	}
+	public WebElement getlvmCalendarLink() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmCalendarLink));
+		return driver.findElement(lvmCalendarLink);
+	}
+	public WebElement getlvmEventTypePROD() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventTypePROD));
+		return driver.findElement(lvmEventTypePROD);
+	}
+	public WebElement getlvmEventLocationLinkPROD() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventLocationLinkPROD));
+		return driver.findElement(lvmEventLocationLinkPROD);
 	}
 	public WebElement getlvmCurrentDate() {
 		wait = new WebDriverWait (driver,30);

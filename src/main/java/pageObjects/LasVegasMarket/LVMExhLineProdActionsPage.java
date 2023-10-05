@@ -80,12 +80,31 @@ public class LVMExhLineProdActionsPage {
 	By eventdetailsheaderUat = By.xpath("//div[contains(@class,'imc-eventdetail--header')]/h1"); //Locator for header of Events details btn
 	By catalogitemnew = By.xpath("//div[@class='imc-catalog__item_title multiSelectItem']/div/span/span"); //Locator for Catalog item
 	By catalogitemUAT_LVM = By.xpath("(//div[@class='imc-catalog__item_title multiSelectItem']/div/span/span)[1]"); //Locator for Catalog item
+	By catalogitemPROD_LVM = By.xpath("(//div[@class='imc-catalog__item_title multiSelectItem']/div[1])[1]"); //Locator for Catalog item
 	
-
+	By listCatalogitemPROD = By.xpath("//div[@class='imc-catalog__item_title multiSelectItem']/div"); //Locator for Catalog item
+	
+	By eventdetailsheaderLVM = By.xpath("//div[@class='imc-eventdetail--header']/div[2]/section[1]/div[1]/h1[1]");
+	
 
 	public LVMExhLineProdActionsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
+	}
+	public WebElement geteventdetailsheaderLVM() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(eventdetailsheaderLVM));
+		return driver.findElement(eventdetailsheaderLVM);
+	}
+	public List <WebElement>getlistCatalogitemPROD() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listCatalogitemPROD));
+		return driver.findElements(listCatalogitemPROD);
+	}
+	public WebElement getcatalogitemPROD_LVM() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(catalogitemPROD_LVM));
+		return driver.findElement(catalogitemPROD_LVM);
 	}
 	public WebElement getcatalogitemUAT_LVM() {
 		wait = new WebDriverWait (driver,30);

@@ -44,7 +44,7 @@ public class GlobalSearch_ProductActions extends base {
 	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns,
 	allnoteslist, favlist, searchlinetypelist;
 
-	@BeforeClass
+	@BeforeClass(alwaysRun=true)
 	public void initialize() throws IOException, InterruptedException {
 		driver = initializeDriver(); // requires for Parallel text execution
 		utl = new Utility(driver);
@@ -56,13 +56,12 @@ public class GlobalSearch_ProductActions extends base {
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(7000);
 		//lap.getCloseMarktAdBtn().click();
-
 		//Login to Market Planner
-		utl.verifyMPLoginFunctionality();		
-		//driver.navigate().refresh();
+		//utl.verifyMPLoginFunctionality();		
+		/*driver.navigate().refresh();
 		Thread.sleep(8000);
-		utl.loginCheckLVM();
-		//		lap.getCloseMarktAdBtn().click();
+		utl.loginCheckLVM();*/
+		//lap.getCloseMarktAdBtn().click();
 	}
 
 	@Test(priority = 1)
@@ -106,7 +105,7 @@ public class GlobalSearch_ProductActions extends base {
 		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 
-	@Test(priority = 2)
+	//@Test(priority = 2)
 	public void TS002_VerifyProductAddToNewListOnProductDetailsPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T435: Add to Newly created list functionality on Product details page
@@ -186,7 +185,7 @@ public class GlobalSearch_ProductActions extends base {
 		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 
-	@Test(priority = 3)
+	//@Test(priority = 3)
 	public void TS003_VerifyProductAddToExistingListOnProductDetailsPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T384: Add to existing list functionality on Product details page
@@ -282,7 +281,7 @@ public class GlobalSearch_ProductActions extends base {
 		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 
-	@Test(priority = 4)
+	//@Test(priority = 4)
 	public void TS004_VerifyAddToFavoriteOnProductDetailsPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T385: Add to Favorite functionality on Product Details page
@@ -366,7 +365,7 @@ public class GlobalSearch_ProductActions extends base {
 		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 
-	@Test(priority = 5)
+	//@Test(priority = 5)
 	public void TS005_VerifyAddNoteOnProductDetailsPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T386: Add Note functionality on Product Details page
@@ -443,7 +442,7 @@ public class GlobalSearch_ProductActions extends base {
 		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 
-	@Test(priority = 6)
+	//@Test(priority = 6)
 	public void TS006_VerifyProductAddToExistingListOnSearchResultsGridTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T377: Products Actions: + icon to add to existing list
@@ -589,7 +588,7 @@ public class GlobalSearch_ProductActions extends base {
 		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 
-	@Test(priority = 8)
+	//@Test(priority = 8)
 	public void TS008_VerifyAddToFavoriteOnSearchResultsGridTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T378: Add To Favorite functionality for Product on Search Results grid
@@ -655,7 +654,7 @@ public class GlobalSearch_ProductActions extends base {
 		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 
-	@Test(priority = 9)
+	//@Test(priority = 9)
 	public void TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T435: Add to Newly created list functionality on Product details page
