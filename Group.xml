@@ -13,7 +13,31 @@
 		</groups>
 
 		<classes>
+			<!-- <class name="atlantamarket_PROD.EvenntsAndWebinar" />
 			<class name="atlantamarket_PROD.ExhibitorDigitalShowroom" />
+			<class name="atlantamarket_PROD.FloorPlans" />
+			<class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters" />
+			<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
+			<class name="atlantamarket_PROD.GlobalSearch_MatchingResults" />
+			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
+			<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
+			<class name="atlantamarket_PROD.GlobalSearch_SuggestionList" />
+			<class name="atlantamarket_PROD.ShowSpecials" />
+			<class name="atlantamarket_PROD.LineDigitalShowroom" />
+			<class name="atlantamarket_PROD.MarketPlanner" /> -->
+			
+			<class name="atlantamarket_PROD.FloorPlans" />
+			 <methods>
+			
+		<!-- 	<include name="TS004_VerifyIconsOnFloorPlansPageTest"/>
+			 <include name="TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest"/> 
+			<include name="TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest"/>
+			<include name="TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest"/> -->
+			<include name="TS004_VerifyIconsOnFloorPlansPageTest"/>
+			<!--  <include name="TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest"/> -->
+			
+			
+			</methods>
 
 		</classes>
 	</test>

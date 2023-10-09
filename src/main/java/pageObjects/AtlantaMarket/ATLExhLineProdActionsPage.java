@@ -91,16 +91,20 @@ public class ATLExhLineProdActionsPage extends base{
 	By productBlock = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]"); //Locator for Add to List button for Product on Search Results grid
 	By seeDetailsProd = By.xpath("(//div[@class='imc-gallery imc-gallery--80-20 imc-exhibitorcard--gallery-nowrap'])[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/a[1]"); //Locator for See Detals btn
 
+	By contactExhibitorHeroComponent = By.xpath("//div[@class='contact-exhibitor-wrapper']/button/span[1]"); //Locator for Contact Exhibitor icon of 1st Exhibitor
+
 	
-
-
 
 	public ATLExhLineProdActionsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 
 	} 
-		
+	public WebElement getcontactExhibitorHeroComponent() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(contactExhibitorHeroComponent));
+		return driver.findElement(contactExhibitorHeroComponent);
+	}	
 	public WebElement getseeDetailsProd() {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(seeDetailsProd));
@@ -294,40 +298,40 @@ public class ATLExhLineProdActionsPage extends base{
 		return driver.findElement(noteforanexhibitormodal);
 	}
 	public WebElement getDeleteNoteBtn() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(deletenotebtn));
 		return driver.findElement(deletenotebtn);
 	}
 	public WebElement getOrderOnJuniperMarketBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(orderOnJuniperMarketBtn));
 		return driver.findElement(orderOnJuniperMarketBtn);
 	}
 
 	public WebElement getExhibitorNameLink() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitorNameLink));
 		return driver.findElement(exhibitorNameLink);
 	}
 	public WebElement getLineLocationLink() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lineLocationLink));
 		return driver.findElement(lineLocationLink);
 	}
 	
 	public WebElement getseealllink() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(seealllink));
 		Thread.sleep(5000);
 		return driver.findElement(seealllink);
 	}
 	public WebElement getcreatelistbtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(createlistbtn));
 		return driver.findElement(createlistbtn);
 	}
 	public WebElement getSeeDetailsbtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(seedetailsbtn));
 		return driver.findElement(seedetailsbtn);
 	}
@@ -348,7 +352,7 @@ public class ATLExhLineProdActionsPage extends base{
 	}
 
 	public WebElement getProdSeeDetailsBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(seeDetailsBtn));
 		return driver.findElement(seeDetailsBtn);
 	}

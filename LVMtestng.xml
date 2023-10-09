@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<!-- 
+
 <suite name="LVM_RegressionTestSuite">
 	<listners>
 		<listner class-name="lasvegasmarket_PROD.TestListeners" />
@@ -9,14 +9,20 @@
 		<test thread-count="5" name="RegressionTest">
 		<classes>
 
-		<class name="lasvegasmarket_PROD.FloorPlans" /> 
-				<methods>
-				      <include name="TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest()"/>   
-				</methods>
+		<class name="lasvegasmarket_PROD.GlobalSearch_ProductActions" /> 
+		<class name="lasvegasmarket_PROD.GlobalSearch_SearchFor" /> 
+		<class name="lasvegasmarket_PROD.ShowSpecials" /> 
+		<class name="lasvegasmarket_PROD.LineDigitalShowroom" /> 
+		<class name="lasvegasmarket_PROD.GlobalSearch_ExhibitorActions" /> 
+		<class name="lasvegasmarket_PROD.GlobalSearch_SuggestionList" /> 
+		
+				<!-- <methods>
+				      <include name="TS004_VerifyClickOnContactExhIconForExhibitorTest"/>   
+				</methods> -->
 		</classes>
 	</test>
 </suite>
- -->
+
 
  <!-- 
  <suite name="LVM_RegressionTestSuite">
@@ -48,31 +54,31 @@
  
  <!-- <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"> -->
-<suite name="MPGroupTestSuite">
+<!-- <suite name="MPGroupTestSuite">
 	<listners>
 		<listner class-name="MPTest.TestListeners" />
 	</listners>
 	<test thread-count="5" name="RegressionTest">
-	<!-- <test thread-count="5" name="MPGroupTest"> -->
+	<test thread-count="5" name="MPGroupTest">
 
-		<!-- <groups>
+		<groups>
 			<run>
 				<include name="MP_Group" />
 				<include name="Non_MP" />
 				
 			</run>
-		</groups> -->
+		</groups>
 
 		<classes>
-			<class name="lasvegasmarket_PROD.FloorPlans" />
+			<class name="lasvegasmarket_PROD.EvenntsAndWebinar" />
 				<methods>
-				      <include name="TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest()"/>    
+				      <include name="TS007_VerifyIMCEventsAddToListTest()"/>    
 				</methods>
 		</classes>
 	</test>
 	
 </suite>
  
- 
+  -->
  
  

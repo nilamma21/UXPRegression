@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -107,6 +108,7 @@ public class ShowSpecials extends base{
 		
 		//Verify Show Special Exh Page 
 		Assert.assertTrue(lvmgs.getlvmShowSpecialsTitle().getText().contains(abc));
+		driver.get(prop.getProperty("lvmurl_prod"));
 		
 	}
 	@Test(priority = 2)
@@ -141,6 +143,7 @@ public class ShowSpecials extends base{
 		Thread.sleep(5000);
 		//Verify Show Special Exh Page 
 		Assert.assertTrue(driver.getCurrentUrl().contains(url));
+		driver.get(prop.getProperty("lvmurl_prod"));
 		
 	}
 

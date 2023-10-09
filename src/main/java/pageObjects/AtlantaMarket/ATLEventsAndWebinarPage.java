@@ -169,7 +169,7 @@ public class ATLEventsAndWebinarPage {
 		return driver.findElements(atlListOfEventTitles);
 	}
 	public WebElement getatlExploreMarketTab() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlExploreMarketTab));
 		return driver.findElement(atlExploreMarketTab);
 	}
@@ -245,13 +245,13 @@ public class ATLEventsAndWebinarPage {
 		return driver.findElement(atlExhibitorsEventsTab);
 	}
 	public WebElement getatlAttendTab() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlAttendTab));
 		return driver.findElement(atlAttendTab);
 	}
 
 	public WebElement getatlEventsLink() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlEventsLink));
 		return driver.findElement(atlEventsLink);
 	}

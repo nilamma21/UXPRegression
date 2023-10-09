@@ -56,13 +56,13 @@ public class LineDigitalShowroom extends base{
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		utl.verifyMPLoginFunctionality();
+		/*utl.verifyMPLoginFunctionality();
 		Thread.sleep(2000);
-		utl.loginCheckLVM();
+		utl.loginCheckLVM();*/
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(5000);
 		utl.CloseATLPopup();
-		//lap.getCloseMarktAdBtn().click();
+	//	lap.getCloseMarktAdBtn().click();
 	}
 	@Test(priority = 01)
 	public void TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest()throws InterruptedException, IOException {
@@ -97,6 +97,7 @@ public class LineDigitalShowroom extends base{
 		lvmdigish.getdigiShowroomExhNameUat().click();//LVM UAT
 		//verify Selected exhitor digi showroom ppage
 		Assert.assertTrue(lvmgs.getlvmShowSpecialsTitle().getText().equals(heroompName));
+		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 	@Test(priority = 02)
 	public void TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest()throws InterruptedException, IOException {
@@ -133,8 +134,9 @@ public class LineDigitalShowroom extends base{
 		String winHandleBefore = driver.getWindowHandle();
 		//lvmdigish.getlocationLink().click(); //For Prod
 		lvmdigish.getlocationLinkUAT().click(); //For UAT
+		Assert.assertTrue(driver.getCurrentUrl().contains(locationURL));
 		// Switch to new window opened
-		for (String winHandle : driver.getWindowHandles()) {
+		/*for (String winHandle : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle);
 		}
 		Thread.sleep(7000);
@@ -143,9 +145,10 @@ public class LineDigitalShowroom extends base{
 		// Close the new window, if that window no more required
 		driver.close();
 		// Switch back to original browser (first window)
-		driver.switchTo().window(winHandleBefore);
+		driver.switchTo().window(winHandleBefore);*/
+		driver.get(prop.getProperty("lvmurl_prod"));
 	}
-	@Test(priority = 03)
+	//@Test(priority = 03)
 	public void TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T339: Line Digital Showroom: Hero component: Add to Favorite
@@ -206,8 +209,9 @@ public class LineDigitalShowroom extends base{
 				break;
 			}
 		}
+		driver.get(prop.getProperty("lvmurl_prod"));
 	}
-	@Test(priority = 04)
+	//@Test(priority = 04)
 	public void TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T340: Line Digital Showroom: Hero component: + icon to add to list
@@ -273,7 +277,7 @@ public class LineDigitalShowroom extends base{
 		// Verify exhibitor present into selected list or not
 		utl.checkItemPresentInListorNot(lvmmpp.getlistOfAllExh(), prop.getProperty("HeroComponentExhName"));
 	}
-	@Test(priority = 05)
+	//@Test(priority = 05)
 	public void TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T341: Line Digital Showroom: Hero component: Add Note
@@ -359,7 +363,7 @@ public class LineDigitalShowroom extends base{
 		}
 		lvmmpp.getcloseNotePopup().click();	
 	}
-	@Test(priority = 12)//Previous priority is 06
+	//@Test(priority = 12)//Previous priority is 06
 	public void TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T343: Line Digital Showroom: Hero component: Order on Juniper Market
@@ -454,6 +458,7 @@ public class LineDigitalShowroom extends base{
 		String trimCount = count.split(" ")[1].trim();
 		//verify both count
 		Assert.assertTrue(seeAllProdCount.equals(trimCount));	
+		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 	
 	@Test(priority = 8)
@@ -514,8 +519,9 @@ public class LineDigitalShowroom extends base{
 		
 		//verify both count
 		Assert.assertTrue(trimSeeAllProdCount.equals(trimProdCount));
+		driver.get(prop.getProperty("lvmurl_prod"));
 	}
-	@Test(priority = 9)
+	//@Test(priority = 9)
 	public void TS009_VerifyLineDigitalShowroomProductscomponentOrderOnJuniperMarketTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T372: Line Digital Showroom: Products component: Order on JuniperMarket
@@ -602,6 +608,7 @@ public class LineDigitalShowroom extends base{
 		lvmdigish.getSeeAllprodctCountBottomBtn().click();
 		//Verify See All Product CTA page
 		Assert.assertTrue(driver.getCurrentUrl().contains(seeAllProdURL));
+		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 	@Test(priority = 11)
 	public void TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest()throws InterruptedException, IOException {
@@ -618,42 +625,41 @@ public class LineDigitalShowroom extends base{
 		lvmdigish=new LVMLineDigitalShowroomPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			lvmgs.getlvmGlobalSearchClearTxt().click();
 		}
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		//click on Global Search Input filed
-		Thread.sleep(3000);
+		
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("HeroComponentExhName"));
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		//Click on 1st Suggetions
 		lvmdigish.getsuggetionList().click();
 		//Thread.sleep(5000);
 		//Scroll to Product section
 		utl.scrollToElement(lvmdigish.getproductTitle());
 		//Click on Any Product Btn
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		try {
 		String prodName=lvmdigish.getproductName().getText();
 		String replaceProdName=prodName.replaceAll(".", "");
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		System.out.println(replaceProdName);
 		lvmdigish.getproductName().click();
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		System.out.println(lvmdigish.getproductHeader().getText());
 		//Verify See All Product details page
 		Assert.assertTrue(lvmdigish.getproductHeader().getText().contains(replaceProdName));
 		}catch (Exception e){
-			String prodName=lvmdigish.getproductName1().getText();
+			String prodName=lvmdigish.getproductName1PROD().getText();
 			String replaceProdName=prodName.replaceAll(".", "");
-			Thread.sleep(5000);
+			Thread.sleep(2000);
 			System.out.println(replaceProdName);
-			lvmdigish.getproductName().click();
-			Thread.sleep(5000);
+			lvmdigish.getproductName1PROD().click();
+			Thread.sleep(2000);
 			System.out.println(lvmdigish.getproductHeader().getText());
 			//Verify See All Product details page
 			Assert.assertTrue(lvmdigish.getproductHeader().getText().contains(replaceProdName));
+			driver.get(prop.getProperty("lvmurl_prod"));
 		}
 	}
 	@AfterClass

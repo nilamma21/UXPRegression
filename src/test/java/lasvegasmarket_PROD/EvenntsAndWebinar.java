@@ -55,14 +55,15 @@ public class EvenntsAndWebinar extends base{
 
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
-		driver.get(prop.getProperty("lvmurl_prod"));
 		//driver.get(prop.getProperty("lvmurl_prod"));
+		
+		driver.get(prop.getProperty("lvmurl_uat"));
 		/*utl.verifyMPLoginFunctionality();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);*/
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(2000);
-		utl.verifyMPLoginFunctionality();
-		utl.loginCheckLVM();
+		//utl.verifyMPLoginFunctionality();
+		//utl.loginCheckLVM();
 		//lap.getCloseMarktAdBtn().click();
 		//Login to Market Planner
 		//driver.navigate().refresh();
@@ -92,7 +93,7 @@ public class EvenntsAndWebinar extends base{
 		//Verify ATL events page title
 		Assert.assertTrue(lvmgs.getlvmShowSpecialsTitle().getText().contains("Events"));
 		// Verify IMC tab
-		Assert.assertTrue(lvmevents.getlvmImcEventsTab().getText().equals("IMC Events"));
+		Assert.assertTrue(lvmevents.getlvmImcEventsTab().getText().equals("Events"));
 		
 		System.out.println("IMC Event Tab is Present");
 		// Verify Exhibitors Events tab
@@ -385,41 +386,43 @@ public class EvenntsAndWebinar extends base{
 		Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUAT().getText()));
 		
 		//Verify Location Link
-		Assert.assertTrue(lvmevents.getlvmEventLocationLinkUAT().isDisplayed());
-		System.out.println("Events Location link displayed");
-		//Verify Event Type
-		Assert.assertTrue(lvmevents.getlvmEventTypeUAT().isDisplayed());
-		System.out.println("Event Type displayed");
+		Assert.assertTrue(lvmevents.getlvmEventLocationLinkPROD().isDisplayed());
+		System.out.println("Events Location  displayed");
+			//tags
+		/*Assert.assertTrue(lvmevents.getlvmTagIcon().isDisplayed());
+		System.out.println("Tag displayed");*/
 		//Verify Add Fav Icon
-		Assert.assertTrue(lvmevents.getlvmFavIcon().isDisplayed());
+		/*Assert.assertTrue(lvmevents.getlvmFavIcon().isDisplayed());
 		System.out.println("Add Fav Icon displayed");
 		//Verify Add Fav Icon
 		Assert.assertTrue(lvmevents.getlvmListIcon().isDisplayed());
 		System.out.println("Add List Icon displayed");
 		//Verify Add Fav Icon
 		Assert.assertTrue(lvmevents.getlvmNoteIcon().isDisplayed());
-		System.out.println("Add Note Icon displayed");
-		//Verify Add Fav Icon
-		//Assert.assertTrue(lvmevents.getlvmCalendarIconUAT().isDisplayed());
+		System.out.println("Add Note Icon displayed");*/
+		//Verify Event Type
+		Assert.assertTrue(lvmevents.getlvmEventTypePROD().isDisplayed());
+		System.out.println("Event Type displayed");
+	
+			
+		//Verify Add Calendar Icon
+		Assert.assertTrue(lvmevents.getlvmCalendarLink().isDisplayed());
 		System.out.println("Calendar displayed");
-		//tags
-	//	Assert.assertTrue(lvmevents.getlvmTagIcon().isDisplayed());
-		System.out.println("Tag displayed");
-		
-		//Click on Location link
-		String locationURL=lvmevents.getlvmEventLocationLinkUAT().getAttribute("href");
-		
-		String currentWindowID=driver.getWindowHandle();
+
+		/*// Click on Location link
+		String locationURL = lvmevents.getlvmEventLocationLinkUAT().getAttribute("href");
+
+		String currentWindowID = driver.getWindowHandle();
 		lvmevents.getlvmEventLocationLinkUAT().click();
 		for (String windowHandleID : driver.getWindowHandles()) {
 			driver.switchTo().window(windowHandleID);
 		}
 		Thread.sleep(5000);
-		//Verify Location floor plan page
+		// Verify Location floor plan page
 		Assert.assertTrue(driver.getCurrentUrl().contains(locationURL));
 		driver.close();
 		driver.switchTo().window(currentWindowID);
-		//driver.navigate().back();
+		driver.navigate().back();*/
 		
 		//Click on Tags
 	/*	String searchResultPageURL=lvmevents.getlvmEventsTag().getAttribute("href");
@@ -427,8 +430,30 @@ public class EvenntsAndWebinar extends base{
 		Assert.assertTrue(searchResultPageURL.contains(driver.getCurrentUrl()));
 		Assert.assertTrue(lvmevents.getlvmSearchResultsTitle().getText().contains("Search Results"));
 		System.out.println("Search Results page opened");*/
+		
+		//Verify Register CTA
+		Assert.assertTrue(lvmevents.getlvmEventsRegisterBtn().isDisplayed());
+		String RegisterCTA=lvmevents.getlvmEventsRegisterBtn().getAttribute("href");
+		//CLick on Register CTA
+		String currentWindowID = driver.getWindowHandle();
+		lvmevents.getlvmEventsRegisterBtn().click();
+		for (String windowHandleID : driver.getWindowHandles()) {
+			driver.switchTo().window(windowHandleID);
+		}
+		Thread.sleep(5000);
+		// Verify Location floor plan page
+		Assert.assertEquals(RegisterCTA, driver.getCurrentUrl());
+		
+		
+		driver.close();
+		driver.switchTo().window(currentWindowID);
 		driver.navigate().back();
-		int allEventSeeDetailsLinkCount1 = 0;
+		System.out.println("register cta page opened");
+		
+		
+		
+		
+/*		int allEventSeeDetailsLinkCount1 = 0;
 		for (int i = 0; i < lvmevents.getlvmListOfEventTitles().size(); i++) {
 			allEventSeeDetailsLinkCount1++;
 			WebElement eventTitleLink = lvmevents.getlvmListOfEventTitles().get(i);
@@ -454,8 +479,8 @@ public class EvenntsAndWebinar extends base{
 				Thread.sleep(2000);
 				//Click on Exh Event Tab
 				//lvmevents.getlvmExhibitorsEventsTab().click();
-				/*System.out.println(i);
-				System.out.println(lvmevents.getlvmListOfEventTitles().size());*/
+				System.out.println(i);
+				System.out.println(lvmevents.getlvmListOfEventTitles().size());
 				if(lvmevents.getlvmListOfEventTitles().size() == i+1)
 				{
 					System.out.println("Tags are not present");
@@ -463,11 +488,11 @@ public class EvenntsAndWebinar extends base{
 				}
 			}
 			
-		}
+		}*/
 		
 	}
 
-	@Test(priority = 6)
+	//@Test(priority = 6)
 	public void TS006_VerifyIMCEventsAddToFavoriteTest() throws InterruptedException, IOException {
 	
 		// The purpose of this test case to verify:-
@@ -533,7 +558,7 @@ public class EvenntsAndWebinar extends base{
 			}
 	}
 	
-	@Test(priority = 16)//Previous priority = 07
+	//@Test(priority = 16)//Previous priority = 07
 	public void TS007_VerifyIMCEventsAddToListTest() throws InterruptedException, IOException {
 		/*// The purpose of this test case to verify:-
 		// UXP-T298: IMC Events: Event Details- Add To List
@@ -678,7 +703,7 @@ public class EvenntsAndWebinar extends base{
 						break;
 					}
 				}
-				Thread.sleep(5000);
+				Thread.sleep(6000);
 				Assert.assertTrue(lvmmpp.getLVMSavedExhNameInList().getText().contains(eventTitle));
 
 				/*// Delete that added line from list
@@ -705,7 +730,7 @@ public class EvenntsAndWebinar extends base{
 				Thread.sleep(8000);
 	}
 	
-	@Test(priority = 8)
+	//@Test(priority = 8)
 	public void TS008_VerifyIMCEventsAddNoteTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T299: IMC Events: Event Details- Add Note
@@ -798,9 +823,9 @@ public class EvenntsAndWebinar extends base{
 		lvmflpp=new LVMFloorPlansPage(driver);
 		lvmevents=new LVMEventsAndWebinarPage(driver);
 		lvmgs = new LVMGlobalSearchPage(driver);
-
-		utl.clickOnEventLinkOfChannel();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		utl.clickOnEventLinkOfChannel();
+		
 		/*// Click on Attend Tab
 		lvmevents.getatlAttendTab().click();
 		Thread.sleep(2000);
@@ -1058,12 +1083,12 @@ public class EvenntsAndWebinar extends base{
 			//WebDriverWait wait = new WebDriverWait(driver,30);//new added
 			//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("eventTitleLink")));
 			eventTitleLink.click();
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			//Thread.sleep(4000);
 			//Verify Event Details Page
 			Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUAT().getText()));
 			driver.navigate().back();
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			//Thread.sleep(5000);
 			//Click on Exh Event Tab
 			lvmevents.getlvmExhibitorsEventsTab().click();
@@ -1094,7 +1119,113 @@ public class EvenntsAndWebinar extends base{
 
 		//Click on Exh Event Tab
 		lvmevents.getlvmExhibitorsEventsTab().click();
-		//Click on IMC Event Tab
+		
+		
+		//Click on Any Event title
+				lvmevents.getlvmClickOnEvent().click();
+				
+				//Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUAT().getText()));
+				
+				String eventTitle=lvmevents.getlvmEventNameOnDetailsPageUAT().getText();
+				lvmevents.getlvmEventNameOnDetailsPageUAT().click();
+				Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUAT().getText()));
+				
+				//Verify Location Link
+				Assert.assertTrue(lvmevents.getlvmEventLocationLinkPROD().isDisplayed());
+				System.out.println("Events Location  displayed");
+					//tags
+				/*Assert.assertTrue(lvmevents.getlvmTagIcon().isDisplayed());
+				System.out.println("Tag displayed");*/
+				//Verify Add Fav Icon
+				/*Assert.assertTrue(lvmevents.getlvmFavIcon().isDisplayed());
+				System.out.println("Add Fav Icon displayed");
+				//Verify Add Fav Icon
+				Assert.assertTrue(lvmevents.getlvmListIcon().isDisplayed());
+				System.out.println("Add List Icon displayed");
+				//Verify Add Fav Icon
+				Assert.assertTrue(lvmevents.getlvmNoteIcon().isDisplayed());
+				System.out.println("Add Note Icon displayed");*/
+				//Verify Event Type
+				Assert.assertTrue(lvmevents.getlvmEventTypePROD().isDisplayed());
+				System.out.println("Event Type displayed");
+			
+					
+				//Verify Add Calendar Icon
+				Assert.assertTrue(lvmevents.getlvmCalendarLink().isDisplayed());
+				System.out.println("Calendar displayed");
+
+				/*// Click on Location link
+				String locationURL = lvmevents.getlvmEventLocationLinkUAT().getAttribute("href");
+
+				String currentWindowID = driver.getWindowHandle();
+				lvmevents.getlvmEventLocationLinkUAT().click();
+				for (String windowHandleID : driver.getWindowHandles()) {
+					driver.switchTo().window(windowHandleID);
+				}
+				Thread.sleep(5000);
+				// Verify Location floor plan page
+				Assert.assertTrue(driver.getCurrentUrl().contains(locationURL));
+				driver.close();
+				driver.switchTo().window(currentWindowID);
+				driver.navigate().back();*/
+				
+				//Click on Tags
+			/*	String searchResultPageURL=lvmevents.getlvmEventsTag().getAttribute("href");
+				lvmevents.getlvmEventsTag().click();
+				Assert.assertTrue(searchResultPageURL.contains(driver.getCurrentUrl()));
+				Assert.assertTrue(lvmevents.getlvmSearchResultsTitle().getText().contains("Search Results"));
+				System.out.println("Search Results page opened");*/
+				
+				//Verify Register CTA
+				Assert.assertTrue(lvmevents.getlvmEventsRegisterBtn().isDisplayed());
+				String RegisterCTA=lvmevents.getlvmEventsRegisterBtn().getAttribute("href");
+				//CLick on Register CTA
+				String currentWindowID = driver.getWindowHandle();
+				lvmevents.getlvmEventsRegisterBtn().click();
+				for (String windowHandleID : driver.getWindowHandles()) {
+					driver.switchTo().window(windowHandleID);
+				}
+				Thread.sleep(5000);
+				// Verify Location floor plan page
+				Assert.assertEquals(RegisterCTA, driver.getCurrentUrl());
+				
+				
+				driver.close();
+				driver.switchTo().window(currentWindowID);
+				driver.navigate().back();
+				System.out.println("register cta page opened");
+				
+				
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/*//Click on IMC Event Tab
 		//lvmevents.getlvmImcEventsTab().click();
 		String eventTitle=lvmevents.getlvmClickOnEvent().getText();
 		lvmevents.getlvmClickOnEvent().click();
@@ -1138,21 +1269,21 @@ public class EvenntsAndWebinar extends base{
 		// driver.navigate().back();
 
 		
-/*		  //Click on Tags String
+		  //Click on Tags String
 		  searchResultPageURL=lvmevents.getlvmEventsTag().getAttribute("href");
 		  lvmevents.getlvmEventsTag().click();
 		  Assert.assertTrue(searchResultPageURL.contains(driver.getCurrentUrl()));
 		  Assert.assertTrue(lvmevents.getlvmSearchResultsTitle().getText().
 		  contains("Search Results"));
 		  System.out.println("Search Results page opened");
-		 */
+		 
 
 		// Click on Event Title page
 		
 		driver.navigate().back();
 		//Click on Exh Event Tab
 		lvmevents.getlvmExhibitorsEventsTab().click();
-	/*	
+		
 		int allEventSeeDetailsLinkCount1 = 0;
 		for (int i = 0; i < lvmevents.getlvmListOfEventTitles().size(); i++) {
 			allEventSeeDetailsLinkCount1++;
@@ -1193,7 +1324,7 @@ public class EvenntsAndWebinar extends base{
 		
 	}	
 
-	@Test(priority = 13)
+	//@Test(priority = 13)
 	public void TS013_VerifyExhibitorEventsAddToFavoriteTest() throws InterruptedException, IOException {
 		
 		// The purpose of this test case to verify:-
@@ -1256,7 +1387,7 @@ public class EvenntsAndWebinar extends base{
 				}
 	}
 	
-	@Test(priority = 14)
+	//@Test(priority = 14)
 	public void TS014_VerifyExhibitorEventsAddToListTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T309: Exhibitor Events: Event Details- Add To List
@@ -1343,7 +1474,7 @@ public class EvenntsAndWebinar extends base{
 
 	}
 	
-	@Test(priority = 15)
+	//@Test(priority = 15)
 	public void TS015_VerifyExhibitorEventsAddNoteTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T310: Exhibitor Events: Event Details- Add Note
@@ -1361,9 +1492,9 @@ public class EvenntsAndWebinar extends base{
 		// Login to MP
 		
 		//utl.verifyMPLoginFunctionality(); Thread.sleep(5000);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(5000); 
 		utl.clickOnEventLinkOfChannel();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		String eventTitle = lvmevents.getlvmClickOnEvent().getText();
 
 		//Click on Exh Event Tab

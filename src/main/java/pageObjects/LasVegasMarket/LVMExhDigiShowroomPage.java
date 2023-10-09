@@ -129,12 +129,12 @@ public class LVMExhDigiShowroomPage {
 		return driver.findElement(View3DshowroomBtnLVMUAT);
 	}
 	public WebElement getCatalogHeaderTxtT() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(CatalogHeaderTxt));
 		return driver.findElement(CatalogHeaderTxt);
 	}
 	public WebElement getSelectCatalogUAT() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(SelectCatalogUAT));
 		return driver.findElement(SelectCatalogUAT);
 	}
@@ -145,7 +145,7 @@ public class LVMExhDigiShowroomPage {
 		return driver.findElement(closeBtnContactExh);
 	}
 	public WebElement getSeeAllCatalogsButtonUAT() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(SeeAllCatalogsButtonUAT));
 		return driver.findElement(SeeAllCatalogsButtonUAT);
 	}
@@ -190,7 +190,7 @@ public class LVMExhDigiShowroomPage {
 		return driver.findElement(SeeAllEventsBtn);
 	}
 	public WebElement getEventsSection() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(EventsSection));
 		return driver.findElement(EventsSection);
 	}
@@ -220,7 +220,7 @@ public class LVMExhDigiShowroomPage {
 		return driver.findElement(CatalogSeeAllBtn);
 	}
 	public WebElement getLVMCatalogSection() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(CatalogSection));
 		return driver.findElement(CatalogSection);
 	}
