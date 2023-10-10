@@ -3,15 +3,17 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="lasvegasmarket_PROD.GlobalSearch_SearchFor">
+      <class name="lasvegasmarket_PROD.EvenntsAndWebinar">
         <methods>
-          <include name="initialize"/>
-          <include name="TS011_VerifyEventsOverviewInGlobalSearchTest"/>
+          <include name="TS012_VerifyExhibitorEventsDetailstTest"/>
+          <include name="TS010_VerifyExhibitorEventsCalendarViewTest"/>
+          <include name="TS011_VerifyExhibitorEventsListTest"/>
+          <include name="TS001_VerifyEventsAndWebinarsOverviewTest"/>
+          <include name="TS009_VerifyExhibitorEventsSearchbarTest"/>
           <include name="tearDown"/>
-          <include name="TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest"/>
-          <include name="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest"/>
+          <include name="initialize"/>
         </methods>
-      </class> <!-- lasvegasmarket_PROD.GlobalSearch_SearchFor -->
+      </class> <!-- lasvegasmarket_PROD.EvenntsAndWebinar -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
