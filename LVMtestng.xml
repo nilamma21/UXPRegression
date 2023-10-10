@@ -15,6 +15,8 @@
 		<class name="lasvegasmarket_PROD.LineDigitalShowroom" /> 
 		<class name="lasvegasmarket_PROD.GlobalSearch_ExhibitorActions" /> 
 		<class name="lasvegasmarket_PROD.GlobalSearch_SuggestionList" /> 
+		<class name="lasvegasmarket_PROD.EvenntsAndWebinar" />
+		
 		
 				<!-- <methods>
 				      <include name="TS004_VerifyClickOnContactExhIconForExhibitorTest"/>   
