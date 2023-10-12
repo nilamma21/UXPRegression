@@ -9,13 +9,15 @@
 		<test thread-count="5" name="RegressionTest">
 		<classes>
 
-		<class name="lasvegasmarket_PROD.GlobalSearch_ProductActions" /> 
+		<!-- <class name="lasvegasmarket_PROD.GlobalSearch_ProductActions" /> 
 		<class name="lasvegasmarket_PROD.GlobalSearch_SearchFor" /> 
 		<class name="lasvegasmarket_PROD.ShowSpecials" /> 
 		<class name="lasvegasmarket_PROD.LineDigitalShowroom" /> 
 		<class name="lasvegasmarket_PROD.GlobalSearch_ExhibitorActions" /> 
 		<class name="lasvegasmarket_PROD.GlobalSearch_SuggestionList" /> 
-		<class name="lasvegasmarket_PROD.EvenntsAndWebinar" />
+		<class name="lasvegasmarket_PROD.EvenntsAndWebinar" /> -->
+		<class name="lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters" />
+		
 		
 		
 				<!-- <methods>

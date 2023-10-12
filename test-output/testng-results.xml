@@ -1,41 +1,184 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="5" total="39" passed="34">
+<testng-results skipped="0" failed="4" total="11" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="LVM_RegressionTestSuite" duration-ms="1795603" started-at="2023-10-09T09:11:29Z" finished-at="2023-10-09T09:41:24Z">
+  <suite name="LVM_RegressionTestSuite" duration-ms="417349" started-at="2023-10-10T05:54:31Z" finished-at="2023-10-10T06:01:28Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="1795603" started-at="2023-10-09T09:11:29Z" finished-at="2023-10-09T09:41:24Z">
-      <class name="lasvegasmarket_PROD.GlobalSearch_ExhibitorActions">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_ExhibitorActions@42dafa95]" name="initialize" is-config="true" duration-ms="37466" started-at="2023-10-09T15:01:43Z" finished-at="2023-10-09T15:02:20Z">
+    <test name="RegressionTest" duration-ms="417349" started-at="2023-10-10T05:54:31Z" finished-at="2023-10-10T06:01:28Z">
+      <class name="lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@57fffcd7]" name="initialize" is-config="true" duration-ms="33183" started-at="2023-10-10T11:24:31Z" finished-at="2023-10-10T11:25:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS004_VerifyClickOnContactExhIconForExhibitorTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_ExhibitorActions@42dafa95]" name="TS004_VerifyClickOnContactExhIconForExhibitorTest" duration-ms="14719" started-at="2023-10-09T15:02:20Z" finished-at="2023-10-09T15:02:35Z">
+        <test-method status="PASS" signature="TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@57fffcd7]" name="TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest" duration-ms="23176" started-at="2023-10-10T11:25:04Z" finished-at="2023-10-10T11:25:27Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS004_VerifyClickOnContactExhIconForExhibitorTest -->
-        <test-method status="PASS" signature="TS005_VerifyClickOnLocationLinksForExhibitorTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_ExhibitorActions@42dafa95]" name="TS005_VerifyClickOnLocationLinksForExhibitorTest" duration-ms="32845" started-at="2023-10-09T15:02:35Z" finished-at="2023-10-09T15:03:08Z">
+        </test-method> <!-- TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest -->
+        <test-method status="PASS" signature="TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@57fffcd7]" name="TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest" duration-ms="22003" started-at="2023-10-10T11:25:27Z" finished-at="2023-10-10T11:25:49Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS005_VerifyClickOnLocationLinksForExhibitorTest -->
-        <test-method status="PASS" signature="TS006_VerifyClickOnLinesShownLinkForExhibitorTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_ExhibitorActions@42dafa95]" name="TS006_VerifyClickOnLinesShownLinkForExhibitorTest" duration-ms="44566" started-at="2023-10-09T15:03:08Z" finished-at="2023-10-09T15:03:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS006_VerifyClickOnLinesShownLinkForExhibitorTest -->
-        <test-method status="FAIL" signature="TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_ExhibitorActions@42dafa95]" name="TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest" duration-ms="39645" started-at="2023-10-09T15:03:53Z" finished-at="2023-10-09T15:04:32Z">
-          <exception class="java.lang.AssertionError">
+        </test-method> <!-- TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest -->
+        <test-method status="FAIL" signature="TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@57fffcd7]" name="TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest" duration-ms="36978" started-at="2023-10-10T11:25:49Z" finished-at="2023-10-10T11:26:26Z">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[expected [224567] but found [331735]]]>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //a[@aria-label='Product Categories'] (tried for 30 second(s) with 500 milliseconds interval)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [224567] but found [331735]
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[@aria-label='Product Categories'] (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.LasVegasMarket.LVMLeftPaneFilters.getLVMProdCatgExpandBtn(LVMLeftPaneFilters.java:49)
+	at lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest(GlobalSearch_LeftPaneFilters.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@aria-label='Product Categories']"}
+  (Session info: chrome=117.0.5938.132)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'EON-SWAPNILI', ip: '172.22.22.78', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_311'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51772}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3be72abd0095ec5dc6ac14b96f927bf6
+*** Element info: {Using=xpath, value=//a[@aria-label='Product Categories']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 26 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest -->
+        <test-method status="FAIL" signature="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@57fffcd7]" name="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest" duration-ms="101996" started-at="2023-10-10T11:26:26Z" finished-at="2023-10-10T11:28:08Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //span[contains(@class,'EPUpdateExhibitorProfile_categoriesList') and text()='Industrial'] (tried for 30 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //span[contains(@class,'EPUpdateExhibitorProfile_categoriesList') and text()='Industrial'] (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.LasVegasMarket.LVMLeftPaneFilters.getEXPIndustrialStyleOnProfile(LVMLeftPaneFilters.java:161)
+	at lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest(GlobalSearch_LeftPaneFilters.java:333)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[contains(@class,'EPUpdateExhibitorProfile_categoriesList') and text()='Industrial']"}
+  (Session info: chrome=117.0.5938.132)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
+System info: host: 'EON-SWAPNILI', ip: '172.22.22.78', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_311'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51772}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3be72abd0095ec5dc6ac14b96f927bf6
+*** Element info: {Using=xpath, value=//span[contains(@class,'EPUpdateExhibitorProfile_categoriesList') and text()='Industrial']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 26 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest -->
+        <test-method status="PASS" signature="TS005_VerifySelectionOfAccentFurnitureProdCatgFromLeftPaneFiltersTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@57fffcd7]" name="TS005_VerifySelectionOfAccentFurnitureProdCatgFromLeftPaneFiltersTest" duration-ms="24457" started-at="2023-10-10T11:28:08Z" finished-at="2023-10-10T11:28:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifySelectionOfAccentFurnitureProdCatgFromLeftPaneFiltersTest -->
+        <test-method status="PASS" signature="TS006_VerifySelectionOfHolidayProdCatgFromLeftPaneFiltersTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@57fffcd7]" name="TS006_VerifySelectionOfHolidayProdCatgFromLeftPaneFiltersTest" duration-ms="36662" started-at="2023-10-10T11:28:33Z" finished-at="2023-10-10T11:29:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS006_VerifySelectionOfHolidayProdCatgFromLeftPaneFiltersTest -->
+        <test-method status="PASS" signature="TS007_VerifySelectionOfDecorativeAccessProdCatgFromLeftPaneFiltersTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@57fffcd7]" name="TS007_VerifySelectionOfDecorativeAccessProdCatgFromLeftPaneFiltersTest" duration-ms="22544" started-at="2023-10-10T11:29:10Z" finished-at="2023-10-10T11:29:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifySelectionOfDecorativeAccessProdCatgFromLeftPaneFiltersTest -->
+        <test-method status="FAIL" signature="TS008_VerifySelectionOfGeneralGiftProdCatgFromLeftPaneFiltersTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@57fffcd7]" name="TS008_VerifySelectionOfGeneralGiftProdCatgFromLeftPaneFiltersTest" duration-ms="27934" started-at="2023-10-10T11:29:32Z" finished-at="2023-10-10T11:30:00Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertEquals(Assert.java:123)
-	at org.testng.Assert.assertEquals(Assert.java:176)
-	at org.testng.Assert.assertEquals(Assert.java:186)
-	at lasvegasmarket_PROD.GlobalSearch_ExhibitorActions.TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest(GlobalSearch_ExhibitorActions.java:407)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS008_VerifySelectionOfGeneralGiftProdCatgFromLeftPaneFiltersTest(GlobalSearch_LeftPaneFilters.java:567)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -65,177 +208,18 @@
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest -->
-        <test-method status="FAIL" signature="TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_ExhibitorActions@42dafa95]" name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest" duration-ms="34938" started-at="2023-10-09T15:04:32Z" finished-at="2023-10-09T15:05:07Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [371] but found [373]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [371] but found [373]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertEquals(Assert.java:123)
-	at org.testng.Assert.assertEquals(Assert.java:176)
-	at org.testng.Assert.assertEquals(Assert.java:186)
-	at lasvegasmarket_PROD.GlobalSearch_ExhibitorActions.TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest(GlobalSearch_ExhibitorActions.java:452)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest -->
-        <test-method status="PASS" signature="TS010_VerifySelectionOfExhibitorFromSearchResultsTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_ExhibitorActions@42dafa95]" name="TS010_VerifySelectionOfExhibitorFromSearchResultsTest" duration-ms="37524" started-at="2023-10-09T15:05:08Z" finished-at="2023-10-09T15:05:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS010_VerifySelectionOfExhibitorFromSearchResultsTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_ExhibitorActions@42dafa95]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-10-09T15:05:45Z" finished-at="2023-10-09T15:05:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- lasvegasmarket_PROD.GlobalSearch_ExhibitorActions -->
-      <class name="lasvegasmarket_PROD.LineDigitalShowroom">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_PROD.LineDigitalShowroom@490ab905]" name="initialize" is-config="true" duration-ms="64706" started-at="2023-10-09T14:58:16Z" finished-at="2023-10-09T14:59:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest()[pri:0, instance:lasvegasmarket_PROD.LineDigitalShowroom@490ab905]" name="TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest" duration-ms="10850" started-at="2023-10-09T14:59:21Z" finished-at="2023-10-09T14:59:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest -->
-        <test-method status="PASS" signature="TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest()[pri:0, instance:lasvegasmarket_PROD.LineDigitalShowroom@490ab905]" name="TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest" duration-ms="15126" started-at="2023-10-09T14:59:32Z" finished-at="2023-10-09T14:59:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest -->
-        <test-method status="PASS" signature="TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest()[pri:0, instance:lasvegasmarket_PROD.LineDigitalShowroom@490ab905]" name="TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest" duration-ms="21649" started-at="2023-10-09T14:59:47Z" finished-at="2023-10-09T15:00:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest -->
-        <test-method status="PASS" signature="TS008_VerifyLineDigitalShowroomProductscomponentTest()[pri:0, instance:lasvegasmarket_PROD.LineDigitalShowroom@490ab905]" name="TS008_VerifyLineDigitalShowroomProductscomponentTest" duration-ms="28610" started-at="2023-10-09T15:00:09Z" finished-at="2023-10-09T15:00:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS008_VerifyLineDigitalShowroomProductscomponentTest -->
-        <test-method status="PASS" signature="TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest()[pri:0, instance:lasvegasmarket_PROD.LineDigitalShowroom@490ab905]" name="TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest" duration-ms="18986" started-at="2023-10-09T15:00:37Z" finished-at="2023-10-09T15:00:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest -->
-        <test-method status="PASS" signature="TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest()[pri:0, instance:lasvegasmarket_PROD.LineDigitalShowroom@490ab905]" name="TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest" duration-ms="46530" started-at="2023-10-09T15:00:56Z" finished-at="2023-10-09T15:01:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_PROD.LineDigitalShowroom@490ab905]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-10-09T15:01:43Z" finished-at="2023-10-09T15:01:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- lasvegasmarket_PROD.LineDigitalShowroom -->
-      <class name="lasvegasmarket_PROD.EvenntsAndWebinar">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@1e397ed7]" name="initialize" is-config="true" duration-ms="27230" started-at="2023-10-09T15:07:31Z" finished-at="2023-10-09T15:07:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS011_VerifyExhibitorEventsListTest()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@1e397ed7]" name="TS011_VerifyExhibitorEventsListTest" duration-ms="52327" started-at="2023-10-09T15:07:59Z" finished-at="2023-10-09T15:08:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS011_VerifyExhibitorEventsListTest -->
-        <test-method status="PASS" signature="TS001_VerifyEventsAndWebinarsOverviewTest()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@1e397ed7]" name="TS001_VerifyEventsAndWebinarsOverviewTest" duration-ms="9083" started-at="2023-10-09T15:08:51Z" finished-at="2023-10-09T15:09:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS001_VerifyEventsAndWebinarsOverviewTest -->
-        <test-method status="PASS" signature="TS002_VerifyIMCEventsSearchbarTest()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@1e397ed7]" name="TS002_VerifyIMCEventsSearchbarTest" duration-ms="14943" started-at="2023-10-09T15:09:00Z" finished-at="2023-10-09T15:09:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS002_VerifyIMCEventsSearchbarTest -->
-        <test-method status="PASS" signature="TS003_VerifyIMCEventsCalendarViewTest()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@1e397ed7]" name="TS003_VerifyIMCEventsCalendarViewTest" duration-ms="19029" started-at="2023-10-09T15:09:15Z" finished-at="2023-10-09T15:09:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS003_VerifyIMCEventsCalendarViewTest -->
-        <test-method status="PASS" signature="TS004_VerifyIMCEventsEventsListTest()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@1e397ed7]" name="TS004_VerifyIMCEventsEventsListTest" duration-ms="32153" started-at="2023-10-09T15:09:34Z" finished-at="2023-10-09T15:10:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS004_VerifyIMCEventsEventsListTest -->
-        <test-method status="PASS" signature="TS005_VerifyIMCEventsEventDetailstTest()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@1e397ed7]" name="TS005_VerifyIMCEventsEventDetailstTest" duration-ms="24171" started-at="2023-10-09T15:10:06Z" finished-at="2023-10-09T15:10:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS005_VerifyIMCEventsEventDetailstTest -->
-        <test-method status="PASS" signature="TS009_VerifyExhibitorEventsSearchbarTest()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@1e397ed7]" name="TS009_VerifyExhibitorEventsSearchbarTest" duration-ms="14741" started-at="2023-10-09T15:10:30Z" finished-at="2023-10-09T15:10:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS009_VerifyExhibitorEventsSearchbarTest -->
-        <test-method status="PASS" signature="TS010_VerifyExhibitorEventsCalendarViewTest()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@1e397ed7]" name="TS010_VerifyExhibitorEventsCalendarViewTest" duration-ms="19550" started-at="2023-10-09T15:10:45Z" finished-at="2023-10-09T15:11:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS010_VerifyExhibitorEventsCalendarViewTest -->
-        <test-method status="PASS" signature="TS012_VerifyExhibitorEventsDetailstTest()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@1e397ed7]" name="TS012_VerifyExhibitorEventsDetailstTest" duration-ms="19834" started-at="2023-10-09T15:11:05Z" finished-at="2023-10-09T15:11:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS012_VerifyExhibitorEventsDetailstTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@1e397ed7]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-10-09T15:11:24Z" finished-at="2023-10-09T15:11:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- lasvegasmarket_PROD.EvenntsAndWebinar -->
-      <class name="lasvegasmarket_PROD.GlobalSearch_SuggestionList">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_SuggestionList@72d818d1]" name="initialize" is-config="true" duration-ms="34121" started-at="2023-10-09T15:05:45Z" finished-at="2023-10-09T15:06:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_SuggestionList@72d818d1]" name="TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest" duration-ms="25393" started-at="2023-10-09T15:06:19Z" finished-at="2023-10-09T15:06:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest -->
-        <test-method status="PASS" signature="TS002_VerifySelectionOfLineFromAutoSuggestionListTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_SuggestionList@72d818d1]" name="TS002_VerifySelectionOfLineFromAutoSuggestionListTest" duration-ms="19797" started-at="2023-10-09T15:06:45Z" finished-at="2023-10-09T15:07:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS002_VerifySelectionOfLineFromAutoSuggestionListTest -->
-        <test-method status="PASS" signature="TS003_VerifySelectionOfProductFromAutoSuggestionListTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_SuggestionList@72d818d1]" name="TS003_VerifySelectionOfProductFromAutoSuggestionListTest" duration-ms="24937" started-at="2023-10-09T15:07:05Z" finished-at="2023-10-09T15:07:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS003_VerifySelectionOfProductFromAutoSuggestionListTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_SuggestionList@72d818d1]" name="tearDown" is-config="true" duration-ms="1816" started-at="2023-10-09T15:07:29Z" finished-at="2023-10-09T15:07:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- lasvegasmarket_PROD.GlobalSearch_SuggestionList -->
-      <class name="lasvegasmarket_PROD.ShowSpecials">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_PROD.ShowSpecials@56ac3a89]" name="initialize" is-config="true" duration-ms="40150" started-at="2023-10-09T14:56:20Z" finished-at="2023-10-09T14:57:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="FAIL" signature="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest()[pri:0, instance:lasvegasmarket_PROD.ShowSpecials@56ac3a89]" name="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest" duration-ms="35916" started-at="2023-10-09T14:57:00Z" finished-at="2023-10-09T14:57:36Z">
+        </test-method> <!-- TS008_VerifySelectionOfGeneralGiftProdCatgFromLeftPaneFiltersTest -->
+        <test-method status="FAIL" signature="TS009_VerifySelectionOfFashionAccProdCatgFromLeftPaneFiltersTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@57fffcd7]" name="TS009_VerifySelectionOfFashionAccProdCatgFromLeftPaneFiltersTest" duration-ms="39452" started-at="2023-10-10T11:30:00Z" finished-at="2023-10-10T11:30:40Z">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: (//div[@class='imc-showSpecial--tableContainer']/p[1])[1] (tried for 20 second(s) with 500 milliseconds interval)]]>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //a[@aria-label='Product Categories'] (tried for 30 second(s) with 500 milliseconds interval)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//div[@class='imc-showSpecial--tableContainer']/p[1])[1] (tried for 20 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[@aria-label='Product Categories'] (tried for 30 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at pageObjects.LasVegasMarket.LVMGlobalSearchPage.getFirstShowSpecialName(LVMGlobalSearchPage.java:614)
-	at lasvegasmarket_PROD.ShowSpecials.TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest(ShowSpecials.java:101)
+	at pageObjects.LasVegasMarket.LVMLeftPaneFilters.getLVMProdCatgExpandBtn(LVMLeftPaneFilters.java:49)
+	at lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS009_VerifySelectionOfFashionAccProdCatgFromLeftPaneFiltersTest(GlobalSearch_LeftPaneFilters.java:594)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -260,15 +244,15 @@
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//div[@class='imc-showSpecial--tableContainer']/p[1])[1]"}
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@aria-label='Product Categories']"}
   (Session info: chrome=117.0.5938.132)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
 System info: host: 'EON-SWAPNILI', ip: '172.22.22.78', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_311'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59604}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3e27be2d4fc584e71419159125e0c239
-*** Element info: {Using=xpath, value=(//div[@class='imc-showSpecial--tableContainer']/p[1])[1]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51772}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3be72abd0095ec5dc6ac14b96f927bf6
+*** Element info: {Using=xpath, value=//a[@aria-label='Product Categories']}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -292,188 +276,20 @@ Session ID: 3e27be2d4fc584e71419159125e0c239
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest -->
-        <test-method status="FAIL" signature="TS002_VerifyShowroomLinkForShowSpecialsTest()[pri:0, instance:lasvegasmarket_PROD.ShowSpecials@56ac3a89]" name="TS002_VerifyShowroomLinkForShowSpecialsTest" duration-ms="39812" started-at="2023-10-09T14:57:36Z" finished-at="2023-10-09T14:58:16Z">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class='ag-center-cols-container']/div[1]/div[2]/a (tried for 20 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class='ag-center-cols-container']/div[1]/div[2]/a (tried for 20 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at pageObjects.LasVegasMarket.LVMGlobalSearchPage.getlvmShowroomLink(LVMGlobalSearchPage.java:201)
-	at lasvegasmarket_PROD.ShowSpecials.TS002_VerifyShowroomLinkForShowSpecialsTest(ShowSpecials.java:139)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='ag-center-cols-container']/div[1]/div[2]/a"}
-  (Session info: chrome=117.0.5938.132)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
-System info: host: 'EON-SWAPNILI', ip: '172.22.22.78', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_311'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59604}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3e27be2d4fc584e71419159125e0c239
-*** Element info: {Using=xpath, value=//div[@class='ag-center-cols-container']/div[1]/div[2]/a}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 26 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        </test-method> <!-- TS009_VerifySelectionOfFashionAccProdCatgFromLeftPaneFiltersTest -->
+        <test-method status="PASS" signature="TS010_VerifySelectionOfFloralBotanicalsProdCatgFromLeftPaneFiltersTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@57fffcd7]" name="TS010_VerifySelectionOfFloralBotanicalsProdCatgFromLeftPaneFiltersTest" duration-ms="25446" started-at="2023-10-10T11:30:40Z" finished-at="2023-10-10T11:31:05Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS002_VerifyShowroomLinkForShowSpecialsTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_PROD.ShowSpecials@56ac3a89]" name="tearDown" is-config="true" duration-ms="1" started-at="2023-10-09T14:58:16Z" finished-at="2023-10-09T14:58:16Z">
+        </test-method> <!-- TS010_VerifySelectionOfFloralBotanicalsProdCatgFromLeftPaneFiltersTest -->
+        <test-method status="PASS" signature="TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@57fffcd7]" name="TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest" duration-ms="22629" started-at="2023-10-10T11:31:05Z" finished-at="2023-10-10T11:31:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@57fffcd7]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-10-10T11:31:28Z" finished-at="2023-10-10T11:31:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- lasvegasmarket_PROD.ShowSpecials -->
-      <class name="lasvegasmarket_PROD.GlobalSearch_SearchFor">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_SearchFor@27c20538]" name="initialize" is-config="true" duration-ms="26891" started-at="2023-10-09T14:43:23Z" finished-at="2023-10-09T14:43:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyInformationTabInGlobalSearchTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_SearchFor@27c20538]" name="TS001_VerifyInformationTabInGlobalSearchTest" duration-ms="23630" started-at="2023-10-09T14:43:50Z" finished-at="2023-10-09T14:44:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS001_VerifyInformationTabInGlobalSearchTest -->
-        <test-method status="PASS" signature="TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_SearchFor@27c20538]" name="TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest" duration-ms="30831" started-at="2023-10-09T14:44:13Z" finished-at="2023-10-09T14:44:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest -->
-        <test-method status="PASS" signature="TS004_VerifyCatalogsOverviewInGlobalSearchTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_SearchFor@27c20538]" name="TS004_VerifyCatalogsOverviewInGlobalSearchTest" duration-ms="39985" started-at="2023-10-09T14:44:44Z" finished-at="2023-10-09T14:45:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS004_VerifyCatalogsOverviewInGlobalSearchTest -->
-        <test-method status="PASS" signature="TS005_VerifyArticlesOverviewInGlobalSearchTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_SearchFor@27c20538]" name="TS005_VerifyArticlesOverviewInGlobalSearchTest" duration-ms="63391" started-at="2023-10-09T14:45:24Z" finished-at="2023-10-09T14:46:27Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS005_VerifyArticlesOverviewInGlobalSearchTest -->
-        <test-method status="PASS" signature="TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_SearchFor@27c20538]" name="TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest" duration-ms="175110" started-at="2023-10-09T14:46:27Z" finished-at="2023-10-09T14:49:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest -->
-        <test-method status="PASS" signature="TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_SearchFor@27c20538]" name="TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest" duration-ms="71011" started-at="2023-10-09T14:49:23Z" finished-at="2023-10-09T14:50:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest -->
-        <test-method status="PASS" signature="TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_SearchFor@27c20538]" name="TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest" duration-ms="79086" started-at="2023-10-09T14:50:34Z" finished-at="2023-10-09T14:51:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest -->
-        <test-method status="PASS" signature="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_SearchFor@27c20538]" name="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest" duration-ms="66623" started-at="2023-10-09T14:51:53Z" finished-at="2023-10-09T14:52:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest -->
-        <test-method status="FAIL" signature="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_SearchFor@27c20538]" name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest" duration-ms="37809" started-at="2023-10-09T14:52:59Z" finished-at="2023-10-09T14:53:37Z">
-          <exception class="java.lang.ArrayIndexOutOfBoundsException">
-            <message>
-              <![CDATA[2]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.ArrayIndexOutOfBoundsException: 2
-	at lasvegasmarket_PROD.GlobalSearch_SearchFor.TS010_VerifyShowSpecialsOverviewInGlobalSearchTest(GlobalSearch_SearchFor.java:876)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.ArrayIndexOutOfBoundsException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS010_VerifyShowSpecialsOverviewInGlobalSearchTest -->
-        <test-method status="PASS" signature="TS011_VerifyEventsOverviewInGlobalSearchTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_SearchFor@27c20538]" name="TS011_VerifyEventsOverviewInGlobalSearchTest" duration-ms="63548" started-at="2023-10-09T14:53:37Z" finished-at="2023-10-09T14:54:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS011_VerifyEventsOverviewInGlobalSearchTest -->
-        <test-method status="PASS" signature="TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_SearchFor@27c20538]" name="TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest" duration-ms="99171" started-at="2023-10-09T14:54:41Z" finished-at="2023-10-09T14:56:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_SearchFor@27c20538]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-10-09T14:56:20Z" finished-at="2023-10-09T14:56:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- lasvegasmarket_PROD.GlobalSearch_SearchFor -->
-      <class name="lasvegasmarket_PROD.GlobalSearch_ProductActions">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_ProductActions@6e06451e]" name="initialize" is-config="true" duration-ms="30843" started-at="2023-10-09T14:41:29Z" finished-at="2023-10-09T14:42:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_ProductActions@6e06451e]" name="TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest" duration-ms="42538" started-at="2023-10-09T14:42:00Z" finished-at="2023-10-09T14:42:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest -->
-        <test-method status="PASS" signature="TS007_VerifyFullScreenViewerOnProductDetailsPageTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_ProductActions@6e06451e]" name="TS007_VerifyFullScreenViewerOnProductDetailsPageTest" duration-ms="40563" started-at="2023-10-09T14:42:42Z" finished-at="2023-10-09T14:43:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS007_VerifyFullScreenViewerOnProductDetailsPageTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_ProductActions@6e06451e]" name="tearDown" is-config="true" duration-ms="1" started-at="2023-10-09T14:43:23Z" finished-at="2023-10-09T14:43:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- lasvegasmarket_PROD.GlobalSearch_ProductActions -->
+      </class> <!-- lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters -->
     </test> <!-- RegressionTest -->
   </suite> <!-- LVM_RegressionTestSuite -->
 </testng-results>
