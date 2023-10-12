@@ -116,11 +116,35 @@ public class LVMGlobalSearchPage {
 	By infoTitle = By.xpath("//div[@class='imc-informationcard__body']/p[2]");  //Locator for 1st name of Catalog
 	By atlsearchresult = By.xpath("//div[@class='alert-box  ']"); //Locator for Search result 
 	By atlInfoSearchMoreInfoBtn = By.xpath("(//a[contains(text(),'See More Details')])[1]"); //Locator for Juniper Market Btn
+	By lvmShowSpecialsSection = By.xpath("//div[@class = 'imc-content--display-flex-wrap']/span[contains(text(),'Show Specials')]"); //Locator for Show Special Sections
+	By lvmShowSpecialsDetailsOnShowSpecialsPage = By.xpath("//div[@class='ag-center-cols-clipper']/div[1]/div[1]/div[1]/div[3]"); //Locator for Show Special Sections
+	By lvmShowSpecialsDetails = By.xpath("//div[@class = 'imc-content--display-flex-wrap']/span/span[1]"); //Locator for Show Special Sections
+	By thirdThbreadCrumbtxt = By.xpath("//li[@data-xpath='breadcrumb.active.link'][2]"); //Locator for 4th Breadcrumb text in app
 	
 	public LVMGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 		PageFactory.initElements(driver, this);
+	}
+	public WebElement getthirdThbreadCrumbtxt() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(thirdThbreadCrumbtxt));
+		return driver.findElement(thirdThbreadCrumbtxt);
+	}
+	public WebElement getlvmShowSpecialsDetails() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmShowSpecialsDetails));
+		return driver.findElement(lvmShowSpecialsDetails);
+	}
+	public WebElement getlvmShowSpecialsDetailsOnShowSpecialsPage() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmShowSpecialsDetailsOnShowSpecialsPage));
+		return driver.findElement(lvmShowSpecialsDetailsOnShowSpecialsPage);
+	}
+	public WebElement getlvmShowSpecialsSection() {
+		wait = new WebDriverWait (driver,20);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmShowSpecialsSection));
+		return driver.findElement(lvmShowSpecialsSection);
 	}
 	public WebElement getatmarketeventtypefilterUAT_LVM() {
 		wait = new WebDriverWait (driver,30);

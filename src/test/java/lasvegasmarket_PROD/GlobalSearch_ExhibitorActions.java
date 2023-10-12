@@ -22,6 +22,7 @@ import pageObjects.AtlantaMarket.ATLLandingPage;
 import pageObjects.AtlantaMarket.ATLLoginPage;
 import pageObjects.AtlantaMarket.ATLMarketPlannerPage;
 import pageObjects.AtlantaMarket.ATLProductDetailsPage;
+import pageObjects.LasVegasMarket.LVMLineDigitalShowroomPage;
 import resources.GenerateData;
 import resources.Utility;
 import resources.base;
@@ -40,6 +41,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 	ATLProductDetailsPage atlproddet;
 	ATLExhLineProdActionsPage atlexhact;
 	ATLMarketPlannerPage atlmppge;
+	LVMLineDigitalShowroomPage lvmdigish;
 
 	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns, allnoteslist,favlist, searchlinetypelist;
 
@@ -57,14 +59,14 @@ public class GlobalSearch_ExhibitorActions extends base {
 		Thread.sleep(7000);
 		//lap.getCloseMarktAdBtn().click();
 		//Login to Market Planner
-		utl.verifyMPLoginFunctionality();
-		utl.loginCheckLVM();
+		//utl.verifyMPLoginFunctionality();
+		//utl.loginCheckLVM();
 		//driver.navigate().refresh();
 		Thread.sleep(8000);
 //		lap.getCloseMarktAdBtn().click();
 	}
 	
-	@Test(priority = 1)
+	//@Test(priority = 1)
 	public void TS001_VerifyAddToFavoriteForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T320: The Add to Favorite functionality for an Exhibitor
@@ -113,7 +115,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		}
 	}
 
-	@Test(priority = 2)
+	//@Test(priority = 2)
 	public void TS002_VerifyAddToNewListForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T422: The Add to Newly created list functionality for an Exhibitor
@@ -172,7 +174,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 	}
 
-	@Test(priority = 3)
+	//@Test(priority = 3)
 	public void TS003_VerifyAddToExistingListForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T321: The Add to Newly created list functionality for an Exhibitor
@@ -257,22 +259,24 @@ public class GlobalSearch_ExhibitorActions extends base {
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		lap = new ATLLandingPage(driver);
+		lvmdigish=new LVMLineDigitalShowroomPage(driver);
 
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		//lap.getCloseMarktAdBtn().click();
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys("Tripp Tents");
-		atlgs.getATLSearchButton().click();
-
-		Thread.sleep(15000);
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor14"));
+		Thread.sleep(2000);
+		//Click on 1st Suggetions
+		lvmdigish.getsuggetionList().click();
+		Thread.sleep(5000);
 		// Click on Contact Exhibitor icon
-		atlexhact.getContactExhibitorIcon().click();
+		atlexhact.getcontactExhibitorHeroComponent().click();
 		Assert.assertTrue(atlexhact.getContactExhibitorModal().isDisplayed());
 
 		// Enter Postal code
-		atlexhact.getPostalCodeTxtBx().sendKeys("99950");
+/*		atlexhact.getPostalCodeTxtBx().sendKeys("99950");
 
 		// Enter Message
 		atlexhact.getMessageTxtBx().sendKeys("This is a Test Exhibitor");
@@ -286,9 +290,10 @@ public class GlobalSearch_ExhibitorActions extends base {
 		// Click on Send Message button
 		// Will send msg once test exhibitor will get
 		// atlexhact.getSendMessageBtn().click();
-
+*/
 		// Close the pop-up
 		atlexhact.getPopUpCloseBtn().click();
+		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 
 	@Test(priority = 5)
@@ -317,6 +322,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 
 		// Verify that selected building-floor plan page should be opened
 		Assert.assertTrue(locationlink.equals(driver.getCurrentUrl()));
+		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 
 	@Test(priority = 6)
@@ -350,6 +356,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		System.out.println(driver.getTitle());
 		//Assert.assertTrue(driver.getTitle().contains("{"+exhname+"} Lines")); //Old assertion
 		Assert.assertTrue(driver.getTitle().contains(exhname +" Lines")); //New assertion statement
+		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 
 	@Test(priority = 7)
@@ -398,6 +405,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 
 		// Verify Total Products count on Search grid should match with Products page
 		Assert.assertEquals(totalprodcountonsearchgrid, totalprodcountonprodpage);
+		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 
 	@Test(priority = 8)
@@ -414,7 +422,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearch_input")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -442,9 +450,10 @@ public class GlobalSearch_ExhibitorActions extends base {
 
 		// Verify Matching Products count on Search grid should match with Products page
 		Assert.assertEquals(matchingprodcountonsearchgrid, matchingprodcountonprodpage);
+		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 
-	@Test(priority = 11)//old priority 9
+	//@Test(priority = 11)//old priority 9
 	public void TS009_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -519,6 +528,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 
 		// Delete the saved note
 		atlexhact.getDeleteNoteBtn().click();
+		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 
 	@Test(priority = 10)

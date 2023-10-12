@@ -1,10 +1,12 @@
 package atlantamarket_PROD;
 import java.io.IOException;
+import java.security.Key;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -151,7 +153,7 @@ public class LineDigitalShowroom extends base {
 
 		//click on Global Search Input filed
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("HeroComponentExhName"));
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		//Click on 1st Suggetions
 		atldigish.getsuggetionList().click();
 		Thread.sleep(5000);
@@ -201,7 +203,7 @@ public class LineDigitalShowroom extends base {
 
 		//click on Global Search Input filed
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("HeroComponentExhName"));
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 		//Click on 1st Suggetions
 		atldigish.getsuggetionList().click();
 		Thread.sleep(5000);
@@ -258,7 +260,7 @@ public class LineDigitalShowroom extends base {
 		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), heroCompName);*/
 
 	}
-	@Test(priority = 04,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
+	@Test(priority = 07,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T340: Line Digital Showroom: Hero component: + icon to add to list
@@ -340,25 +342,6 @@ public class LineDigitalShowroom extends base {
 		}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		/*String exList = atlgs.getatlExistingList().getText();
 		System.out.println(exList);
 		atlgs.getatlExistingList().click();
@@ -383,7 +366,7 @@ public class LineDigitalShowroom extends base {
 		 */
 
 	}
-	@Test(priority = 05,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
+	@Test(priority = 04,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T341: Line Digital Showroom: Hero component: Add Note
@@ -405,7 +388,9 @@ public class LineDigitalShowroom extends base {
 
 		//click on Global Search Input filed
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("HeroComponentExhName"));
-		Thread.sleep(5000);
+		Thread.sleep(3000);
+		atlgs.getATLGlobalSearchTextBox().click();
+		atlgs.getATLGlobalSearchTextBox().sendKeys(Keys.ARROW_DOWN);
 		//Click on 1st Suggetions
 		atldigish.getsuggetionList().click();
 		Thread.sleep(5000);
@@ -485,7 +470,7 @@ public class LineDigitalShowroom extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		/*if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
+		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
 
@@ -494,7 +479,7 @@ public class LineDigitalShowroom extends base {
 		Thread.sleep(10000);
 		//Click on 1st Suggetions
 		atldigish.getsuggetionList().click();
-		Thread.sleep(5000);*/
+		Thread.sleep(8000);
 		//Verify Digi showrrom page
 		Assert.assertTrue(atldigish.getAtlLineDigiShowroomPageTitle().getText().equals(prop.getProperty("HeroComponentExhName")));
 		//Store Hero Comp Name
@@ -521,7 +506,7 @@ public class LineDigitalShowroom extends base {
 		driver.switchTo().window(winHandleBefore);
 
 	}
-	@Test(priority = 07,groups="Non_MP")
+	@Test(priority = 05,groups="Non_MP")
 	public void TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T344: Line Digital Showroom: See all Product CTA
@@ -537,16 +522,17 @@ public class LineDigitalShowroom extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		/*if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
+		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
-
+		Thread.sleep(2000);
 		//click on Global Search Input filed
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("HeroComponentExhName"));
-		Thread.sleep(5000);
+		Thread.sleep(2000);
+		atlgs.getATLGlobalSearchTextBox().sendKeys(Keys.ARROW_DOWN);
 		//Click on 1st Suggetions
 		atldigish.getsuggetionList().click();
-		Thread.sleep(5000);*/
+		Thread.sleep(8000);
 		//Verify Digi showrrom page
 		Assert.assertTrue(atldigish.getAtlLineDigiShowroomPageTitle().getText().equals(prop.getProperty("HeroComponentExhName")));
 		//Store Hero Comp Name
@@ -640,13 +626,13 @@ public class LineDigitalShowroom extends base {
 		atldigish=new ATLLineDigitalShowroomPage(driver);
 
 
-
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
 		Thread.sleep(2000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("HeroComponentExhName"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
 		Thread.sleep(5000);
 		//Click on 1st Suggetions
 		atldigish.getsuggetionList().click();
@@ -696,7 +682,7 @@ public class LineDigitalShowroom extends base {
 		genData = new GenerateData();
 		atldigish=new ATLLineDigitalShowroomPage(driver);
 
-		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
@@ -708,7 +694,7 @@ public class LineDigitalShowroom extends base {
 		Thread.sleep(5000);
 		//Click on 1st Suggetions
 		atldigish.getsuggetionList().click();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
 		//Thread.sleep(5000);
 		//Scroll to Product section
 		utl.scrollToElement(atldigish.getproductTitle());
@@ -732,12 +718,12 @@ public class LineDigitalShowroom extends base {
 		genData = new GenerateData();
 		atldigish=new ATLLineDigitalShowroomPage(driver);
 
-		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//click on Global Search Input filed
 		Thread.sleep(4000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("HeroComponentExhName"));
@@ -776,6 +762,6 @@ public class LineDigitalShowroom extends base {
 
 	@AfterClass(alwaysRun=true)
 	public void tearDown() {
-		 driver.quit();
+		// driver.quit();
 	}
 }

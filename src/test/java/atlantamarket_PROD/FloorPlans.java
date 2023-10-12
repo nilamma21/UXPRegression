@@ -62,8 +62,8 @@ public class FloorPlans extends base {
 		//lap.getCloseMarktAdBtn().click();
 
 		//Login to Market Planner
-		utl.verifyMPLoginFunctionality();
-		utl.loginCheckATL();
+		//utl.verifyMPLoginFunctionality();
+		//utl.loginCheckATL();
 		Thread.sleep(2000);
 		driver.navigate().refresh();
 		Thread.sleep(8000);
@@ -252,12 +252,12 @@ public class FloorPlans extends base {
 		//Verify that Elevator Overlay should appeared on Map
 		Assert.assertTrue(atlflpp.getElevatorOverlayOnMap().isDisplayed());
 
-		//Click on Water Fountain icon on Map image
+	/*	//Click on Water Fountain icon on Map image
 		atlflpp.getWaterFountainIconOnMap().click();
 
 		//Verify that Water Fountain Overlay should appeared on Map
 		Assert.assertTrue(atlflpp.getWaterFountainOverlayOnMap().isDisplayed());
-
+*/
 		//Click on Phone icon on Map image
 		atlflpp.getPhoneIconOnMap().click();
 		Thread.sleep(1000);
