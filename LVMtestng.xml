@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<!-- 
-<suite name="LVM_RegressionTestSuite">
+
+<suite name="LVM_RegressionTestSuite" parallel="classes">
 	<listners>
 		<listner class-name="lasvegasmarket_PROD.TestListeners" />
 	</listners>
-		<test thread-count="5" name="RegressionTest">
+		<test thread-count="1"  name="RegressionTest">
 		<classes>
 
-		<class name="lasvegasmarket_PROD.FloorPlans" /> 
-				<methods>
-				      <include name="TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest()"/>   
+		<class name="lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters" />
+<!-- 
+			 	<methods>
+				  <include name="TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest()"/> 
 				</methods>
+ -->
 		</classes>
 	</test>
 </suite>
- -->
+
 
  <!-- 
  <suite name="LVM_RegressionTestSuite">
@@ -48,11 +50,11 @@
  
  <!-- <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"> -->
-<suite name="MPGroupTestSuite">
+<!-- <suite name="MPGroupTestSuite">
 	<listners>
 		<listner class-name="MPTest.TestListeners" />
 	</listners>
-	<test thread-count="5" name="RegressionTest">
+	<test thread-count="5" name="RegressionTest"> -->
 	<!-- <test thread-count="5" name="MPGroupTest"> -->
 
 		<!-- <groups>
@@ -63,7 +65,7 @@
 			</run>
 		</groups> -->
 
-		<classes>
+<!-- 		<classes>
 			<class name="lasvegasmarket_PROD.EvenntsAndWebinar" />
 				<methods>
 				      <include name="TS007_VerifyIMCEventsAddToListTest()"/>    
@@ -71,7 +73,7 @@
 		</classes>
 	</test>
 	
-</suite>
+</suite> -->
  
  
  

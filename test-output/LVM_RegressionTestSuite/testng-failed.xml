@@ -1,36 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [LVM_RegressionTestSuite]">
-  <test name="RegressionTest(failed)">
-    <groups>
-      <run>
-        <include name="MP_Group"/>
-      </run>
-    </groups>
+<suite name="Failed suite [LVM_RegressionTestSuite]" parallel="classes">
+  <test name="RegressionTest(failed)" parallel="classes">
     <classes>
-
-      <class name="lasvegasmarket_PROD.FloorPlans">
-
-
-      <class name="MPTest.MPTest">
+      <class name="lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters">
         <methods>
-          <include name="TS009_VerifySelectionOfExhibitorFromSearchResultsTest"/>
-        </methods>
-      </class> <!-- MPTest.MPTest -->
-
-      <class name="lasvegasmarket_PROD.ExhibitorDigitalShowroom">
-
-        <methods>
+          <include name="TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest"/>
+          <include name="TS007_VerifySelectionOfDecorativeAccessProdCatgFromLeftPaneFiltersTest"/>
           <include name="tearDown"/>
           <include name="initialize"/>
-          <include name="TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest"/>
         </methods>
-
-      </class> <!-- lasvegasmarket_PROD.FloorPlans -->
-
-      </class> <!-- lasvegasmarket_PROD.ExhibitorDigitalShowroom -->
-
-
+      </class> <!-- lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
