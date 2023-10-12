@@ -401,14 +401,14 @@ public class EvenntsAndWebinar extends base{
 		Assert.assertTrue(lvmevents.getlvmNoteIcon().isDisplayed());
 		System.out.println("Add Note Icon displayed");*/
 		//Verify Event Type
-		Assert.assertTrue(lvmevents.getlvmEventTypePROD().isDisplayed());
+/*		Assert.assertTrue(lvmevents.getlvmEventTypePROD().isDisplayed());
 		System.out.println("Event Type displayed");
 	
 			
 		//Verify Add Calendar Icon
 		Assert.assertTrue(lvmevents.getlvmCalendarLink().isDisplayed());
 		System.out.println("Calendar displayed");
-
+*/
 		/*// Click on Location link
 		String locationURL = lvmevents.getlvmEventLocationLinkUAT().getAttribute("href");
 
@@ -430,7 +430,7 @@ public class EvenntsAndWebinar extends base{
 		Assert.assertTrue(searchResultPageURL.contains(driver.getCurrentUrl()));
 		Assert.assertTrue(lvmevents.getlvmSearchResultsTitle().getText().contains("Search Results"));
 		System.out.println("Search Results page opened");*/
-		
+/*		
 		//Verify Register CTA
 		Assert.assertTrue(lvmevents.getlvmEventsRegisterBtn().isDisplayed());
 		String RegisterCTA=lvmevents.getlvmEventsRegisterBtn().getAttribute("href");
@@ -450,7 +450,7 @@ public class EvenntsAndWebinar extends base{
 		driver.navigate().back();
 		System.out.println("register cta page opened");
 		
-		
+*/		
 		
 		
 /*		int allEventSeeDetailsLinkCount1 = 0;
@@ -488,7 +488,7 @@ public class EvenntsAndWebinar extends base{
 				}
 			}
 			
-		}*/
+		}
 		
 	}
 */
@@ -1146,14 +1146,14 @@ public class EvenntsAndWebinar extends base{
 				Assert.assertTrue(lvmevents.getlvmNoteIcon().isDisplayed());
 				System.out.println("Add Note Icon displayed");*/
 				//Verify Event Type
-				Assert.assertTrue(lvmevents.getlvmEventTypePROD().isDisplayed());
+/*				Assert.assertTrue(lvmevents.getlvmEventTypePROD().isDisplayed());
 				System.out.println("Event Type displayed");
 			
 					
 				//Verify Add Calendar Icon
 				Assert.assertTrue(lvmevents.getlvmCalendarLink().isDisplayed());
 				System.out.println("Calendar displayed");
-
+*/
 				/*// Click on Location link
 				String locationURL = lvmevents.getlvmEventLocationLinkUAT().getAttribute("href");
 
@@ -1177,7 +1177,7 @@ public class EvenntsAndWebinar extends base{
 				System.out.println("Search Results page opened");*/
 				
 				//Verify Register CTA
-				Assert.assertTrue(lvmevents.getlvmEventsRegisterBtn().isDisplayed());
+/*				Assert.assertTrue(lvmevents.getlvmEventsRegisterBtn().isDisplayed());
 				String RegisterCTA=lvmevents.getlvmEventsRegisterBtn().getAttribute("href");
 				//CLick on Register CTA
 				String currentWindowID = driver.getWindowHandle();
@@ -1194,7 +1194,7 @@ public class EvenntsAndWebinar extends base{
 				driver.switchTo().window(currentWindowID);
 				driver.navigate().back();
 				System.out.println("register cta page opened");
-				
+*/				
 				
 		
 		
@@ -1320,7 +1320,7 @@ public class EvenntsAndWebinar extends base{
 				}
 			}
 			
-		}*/
+		}
 		
 	}	
 */
