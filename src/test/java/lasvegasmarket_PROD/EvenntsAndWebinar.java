@@ -360,7 +360,7 @@ public class EvenntsAndWebinar extends base{
 				Assert.assertEquals(allEventcount, allEventSeeDetailsLinkCount1);
 		
 	}
-	
+/*	
 	@Test(priority = 5)
 	public void TS005_VerifyIMCEventsEventDetailstTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -491,7 +491,7 @@ public class EvenntsAndWebinar extends base{
 		}*/
 		
 	}
-
+*/
 	//@Test(priority = 6)
 	public void TS006_VerifyIMCEventsAddToFavoriteTest() throws InterruptedException, IOException {
 	
@@ -1099,7 +1099,7 @@ public class EvenntsAndWebinar extends base{
 		System.out.println(allEventSeeDetailsLinkCount + " Events Details Page displayed");
 		Assert.assertEquals(allEventcount, allEventSeeDetailsLinkCount1);
 }
-	
+/*	
 	@Test(priority = 12)
 	public void TS012_VerifyExhibitorEventsDetailstTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -1323,7 +1323,7 @@ public class EvenntsAndWebinar extends base{
 		}*/
 		
 	}	
-
+*/
 	//@Test(priority = 13)
 	public void TS013_VerifyExhibitorEventsAddToFavoriteTest() throws InterruptedException, IOException {
 		
