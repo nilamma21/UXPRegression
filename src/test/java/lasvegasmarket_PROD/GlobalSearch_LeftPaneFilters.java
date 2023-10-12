@@ -88,7 +88,6 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		//Verify the selected Product Category on Exhibitor Digital Showroom page
 		//Select 1st Exhibitor from Search results grid
-		utl.scrollToElement(lvmleftpane.getLVMexhibitor());
 		lvmleftpane.getLVMexhibitor().click();
 
 		//Scroll till Product Categories section
@@ -135,7 +134,6 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		
 		//Verify the selected Product Category on Product details page
 		//utl.scrollToElement(lvmexhact.getSecondExhProduct()); //For Prod
-		utl.scrollToElement(lvmleftpane.getFirstVintageExhUat());
 		lvmleftpane.getFirstVintageExhUat().click(); //For UAT
 		
 		/*Actions actions = new Actions(driver);
@@ -177,7 +175,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));//Previous input = filtersglobalsearchinput
 		lvmgs.getLVMSearchButton().click();
 		
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		//Click on Product Categories expand btn
 		lvmleftpane.getLVMProdCatgExpandBtn().click();
 
@@ -220,16 +218,15 @@ public class GlobalSearch_LeftPaneFilters extends base {
 */
 		//Verify the selected Product Categories on Exhibitor Digital Showroom page
 		//Select 1st Exhibitor from Search results grid
-		utl.scrollToElement(lvmleftpane.getLVMexhibitor());
 		lvmleftpane.getLVMexhibitor().click();
-		Thread.sleep(2000);
+
 		//Scroll till Product Categories section
 		utl.scrollToElement(lvmds.getLVMProductCategSection());
 		prodcatgitemlist = lvmds.getLVMProductCategItemList();
 
 		for (int i = 0; i < prodcatgitemlist.size(); i++) {
 			if(lvmds.getLVMProductCategTable().isDisplayed()) {
-
+				//System.out.println(prodcatgitemlist.get(i).getText());
 				Assert.assertTrue(prodcatgitemlist.get(i).getText().contains(expectedprodcatg1) || prodcatgitemlist.get(i).getText().contains(expectedprodcatg2));
 				break;
 			}
@@ -273,7 +270,6 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		Thread.sleep(8000);
 
 		//Click on Product Categories expand btn
-		utl.scrollToElement(lvmleftpane.getLVMProdCatgExpandBtn());
 		lvmleftpane.getLVMProdCatgExpandBtn().click();
 
 		//Click on Styles expand btn
@@ -288,7 +284,6 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		//Click on IMC Test Exhibitor name in list
 		//lvmexhact.getIMCExhibitorName().click(); //For prod
-		utl.scrollToElement(lvmleftpane.getFirstVintageExhUat());
 		lvmleftpane.getFirstVintageExhUat().click(); //For UAT
 
 		//Scroll till Product Categories section
@@ -372,7 +367,6 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		//Verify the selected Product Category on Exh Digital Showroom page
 		//Select 1st Exhibitor from Search results grid
-		utl.scrollToElement(lvmleftpane.getLVMexhibitor());
 		lvmleftpane.getLVMexhibitor().click();
 
 		//Scroll till Product Categories section
@@ -406,10 +400,9 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("leftpanefilterinput")));
 		lvmgs.getLVMSearchButton().click();
-		Thread.sleep(7000);
+		Thread.sleep(6000);
 
 		//Click on Product Categories expand btn
-		utl.scrollToElement(lvmleftpane.getLVMProdCatgExpandBtn());
 		lvmleftpane.getLVMProdCatgExpandBtn().click();
 
 		utl.scrollToElement(lvmleftpane.getLVMHolidayProdCatg());
@@ -422,7 +415,6 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		//Verify the selected Product Categories on Exhibitor Digital Showroom page
 		//Select 1st Exhibitor from Search results grid
-		utl.scrollToElement(lvmleftpane.getLVMexhibitor());
 		lvmleftpane.getLVMexhibitor().click();
 
 		//Scroll till Product Categories section
@@ -505,7 +497,6 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		actions.click().perform();*/ //For Prod
 		
 		//Click on the 2nd exhibitor
-utl.scrollToElement(lvmleftpane.getSecondExhUat());
 		lvmleftpane.getSecondExhUat().click(); //For UAT
 
 		//Scroll till Product Categories section
@@ -563,8 +554,7 @@ utl.scrollToElement(lvmleftpane.getSecondExhUat());
 		
 		//Click on the first exhibitor
 		//lvmleftpane.getSecondExhUat().click();
-		utl.scrollToElement(lvmleftpane.getSecondExhUat());
-		lvmleftpane.getSecondExhUat().click(); //For UAT
+		lvmleftpane.getFirstVintageExhUat().click(); //For UAT
 		
 		//Scroll till Product Categories section
 		utl.scrollToElement(lvmds.getLVMProductCategSection());
@@ -613,7 +603,6 @@ utl.scrollToElement(lvmleftpane.getSecondExhUat());
 
 		//Verify the selected Product Categories on Exhibitor Digital Showroom page
 		//Select 1st Exhibitor from Search results grid
-		utl.scrollToElement(lvmleftpane.getLVMexhibitor());
 		lvmleftpane.getLVMexhibitor().click();
 
 		//Scroll till Product Categories section
@@ -700,7 +689,6 @@ utl.scrollToElement(lvmleftpane.getSecondExhUat());
 		
 		//Click on the 1st exhibitor
 		//lvmleftpane.getSecondExhUat().click();
-		utl.scrollToElement(lvmleftpane.getFirstVintageExhUat());
 		lvmleftpane.getFirstVintageExhUat().click(); //For UAT
 
 		//Scroll till Product Categories section
@@ -751,7 +739,6 @@ utl.scrollToElement(lvmleftpane.getSecondExhUat());
 		
 		//Click on the first exhibitor
 		//lvmleftpane.getSecondExhUat().click(); 
-		utl.scrollToElement(lvmleftpane.getLVMexhibitor());
 		lvmleftpane.getLVMexhibitor().click();//For UAT
 
 		//Scroll till Product Categories section
