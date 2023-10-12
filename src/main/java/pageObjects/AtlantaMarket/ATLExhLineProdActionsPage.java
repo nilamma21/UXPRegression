@@ -29,7 +29,7 @@ public class ATLExhLineProdActionsPage extends base{
 	By locationlinkinexhcard = By.xpath("//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div/div/div/div[2]/div[1]/div[1]/a"); //Locator for 1st Location link of an Exhibitor
 	By lineshownseealllink = By.xpath("//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div/div/div/div/div/a[contains(text(), 'See All')]"); //Locator for Lines Shown-See All link for 1st Exhibitor
 	By validatelinespage = By.xpath("//div[@id='Lines']"); //Locator for Lines tab on Lines page
-	By totalprodseealllink = By.xpath("//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div[2]/div[2]/div/div[2]/p[2]"); //Locator for Total Products-See All link for 1st Exhibitor
+	By totalprodseealllink = By.xpath("(//p[@class='imc-exhibitorcard--link imc-exhibitorcard--link--prod'][text()='See All'])[2]"); //Locator for Total Products-See All link for 1st Exhibitor
 	By validateproductspage = By.xpath("//div[@id='Products']"); //Locator for Products tab on Exhibitor products page
 	By totalprodcountonsearchgrid = By.xpath("//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div[2]/div[2]/div/div[2]/p[1]"); //Locator for Total Products count on Search Results grid
 	By matchingprodcountonsearchgrid = By.xpath("//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div[2]/div[2]/div/div[1]/p[1]"); //Locator for Matching Products count on Search Results grid
@@ -233,8 +233,8 @@ public class ATLExhLineProdActionsPage extends base{
 		return driver.findElement(validatelinespage);
 	}
 	public WebElement getTotalProdSeeAllLink() {
-		wait = new WebDriverWait (driver,20);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(totalprodseealllink));
+		wait = new WebDriverWait (driver,40);
+		wait.until(ExpectedConditions.elementToBeClickable(totalprodseealllink));
 		return driver.findElement(totalprodseealllink);
 	}
 	public WebElement getValidateProductsPage() {
