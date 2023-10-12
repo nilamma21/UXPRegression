@@ -13,11 +13,11 @@ public class LVMFloorPlansPage {
 
 	By lvmExhibitorsAndProductTab = By.xpath("//a[contains(text(),'Exhibitors & Products')]"); // Locator for Exhibitor And Product tab 
 	By lvmFloorPlansLink = By.xpath("//a[contains(text(),'Floor Plans')]"); //Locator for floor plans Link
-	By lvmBuildingFloor = By.xpath("//div[@class='imc-campus-view']/div[3]/div[11]/div[3]/a[1]"); //Locator for Building floor
+	By lvmBuildingFloor = By.xpath("(//a[@href='/Market Map/building/Building B/floor/8'])[2]"); //Locator for Building floor
 	By buildingFloor_lvmUAT = By.xpath("//div[@class='imc-campus-view']/div[3]/div[10]/div[3]/a[1]"); //Locator for Building floor 9th LVM UAT
 	By lvmBuildingFloorForFilter = By.xpath("//div[@class='imc-campus-view']/div[3]/div[4]/div[3]/a"); //Locator for Building floor
 	By lvmBuildingFloorNumber = By.xpath("//div[@class='imc-campus-view']/div[3]/div[10]/div[3]/a"); //Locator for Building floor number
-	By lvmFloorName = By.xpath("//div[@class='imc-type--title-6']");
+	By lvmFloorName = By.xpath("(//div[@class='imc-type--title-6 imc-section--padded-top-large'])[1]"); //Floor plan name Text
 	By lvmNoExpMsg = By.xpath("//div[@class='imc-manufacturing-line--alternated-section imc-lines-overview']/p[2]"); //Locator for No exhibitor msg
 	By lvmLoadingExhMsg = By.xpath("(//div[@class='section-wrapper imc-section--'])[1]/section[1]/div[1]/div[1]/div[1]/div[3]/p[]"); //Locator for Exhibitor loading msg
 	By lvmNoExhibitorFloor = By.xpath("//div[@class='imc-campus-view']/div[1]/div[18]/div[3]/a[1]"); //Locator for No Exhibitor
@@ -43,16 +43,16 @@ public class LVMFloorPlansPage {
 	By exhibitordetailsmodal = By.xpath("//div[@class='imc-content--padded-medium-desktop']"); //Locator for Exhibitor Details Modal
 	By exhnameonexhdetailsmodal = By.xpath("//div[@class='imc-content--padded-medium-desktop']/div/div/h5"); //Locator for Exhibitor name on Exh Details Modal
 	By overlayclosebtn = By.xpath("//button[@data-testid='meridian--private--close-overlay']"); //Locator for Overlay close btn
-	By lvmNextFloorBtn = By.xpath("//div[@class='imc-floor-plan--floorButtons']/a[2]"); //Locator for previous Floor button
-	By lvmPreviousFloorBtn = By.xpath("//div[@class='imc-floor-plan--floorButtons']/a[1]"); //Locator for Next Floor button
-	By lvmExpectedFloorNumber = By.xpath("//div[@class='imc-content--omni']"); //Locator for expected Floor number
-	By lvmExhibitorName = By.xpath("//div[@class='imc-content--padded-top-bottom']/div[1]/div[1]/div[2]/a[1]"); //Locator for Exhibitor Name
+	By lvmNextFloorBtn = By.xpath("//div[@class='imc-floor-plan--floorButtons imc-section--padded-left-medium imc-section--padded-medium imc-section--padded-right-medium']/a[2]"); //Locator for previous Floor button
+	By lvmPreviousFloorBtn = By.xpath("//div[@class='imc-floor-plan--floorButtons imc-section--padded-left-medium imc-section--padded-medium imc-section--padded-right-medium']/a[1]"); //Locator for Next Floor button
+	By lvmExpectedFloorNumber = By.xpath("//span[@class='imc-floor-plan-name']/h1"); //Locator for expected Floor number
+	By lvmExhibitorName = By.xpath("(//div[@class='imc-manufacturing-line-title-wrapper']/a)[1]"); //Locator for Exhibitor Name
 	By lvmExhibitorNameOnDGShowroomPage = By.xpath("//div[@class='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[3]/a[1]"); //Locator for Exhibitor Name on DG showroom Page 
 	By lvmReturnToBuildingList = By.xpath("//div[@class='imc-floor-plan']/div[1]/div[1]/a[1]"); //Locator for Return to Building list link
-	By scrollexhibitorsection = By.xpath("//div[@class = 'imc-manufacturing-line--alternated-section imc-lines-overview']"); //Locator for scroll to exhibitor section
+	By scrollexhibitorsection = By.xpath("//span[text()='Exhibitors on This Floor']"); //Locator for scroll to exhibitor section
 	By lvmexhibitorsection = By.xpath("//div[@class = 'imc-content--padded-top-bottom']/div[1]"); //locator for exhibitor section at floor plans
 	By lvmexhibitorsearch = By.xpath("//input[@placeholder = 'Filter By Name']"); //Locator for search input box
-	By lvmserachexhibitorbtn = By.xpath("//section[@class = 'imc-site-wrapper']/div[1]/section[1]/div[1]/div[1]/div[1]/div[3]/div[3]/div[1]/div[1]/section[1]/div[1]/form[1]/button[2]"); //Locator for Search button for search input field
+	By lvmserachexhibitorbtn = By.xpath("(//button[@class='imc-searchform--button--search' and @type='submit'])[2]"); //Locator for Search button for search input field
 	By verifyexhibitor = By.xpath("//div[@class = 'imc-manufacturing-line']/div[2]/a[1]"); //Locator for verification for searched exhibitor
 	By viewdgshowroombtn = By.xpath("//a[contains(text(),'View Digital Showroom')]"); //Locator for View Digital Showroom button
 	By lvmMoreOptions = By.xpath("//div[@class='imc-content--padded-top-bottom']/div[1]/div[1]/div[3]/div[1]"); //Locator for More Options 3dots
@@ -62,7 +62,7 @@ public class LVMFloorPlansPage {
 	By lvmExhSearchField = By.xpath("(//div[@class='imc-searchform--row'])[2]/form[1]/div[1]/input[1]"); //Locator for Exh Search filed
 	By lvmExhSearchFieldBtn = By.xpath("(//div[@class='imc-searchform--row'])[2]/form[1]/button[2]"); //Locator for Exh Search filed Btn
 	By noresultsforjuniperlinesmsg = By.xpath("//p[contains(text(),'Sorry, no results found.')]"); //Locator for No results found msg for Lines on Junipermarket filter
-	By exhibitedonfloormsg = By.xpath("//span[contains(text(),'Exhibited on this floor:')]");
+	By exhibitedonfloormsg = By.xpath("//span[contains(text(),'Exhibitors on This Floor')]");
 	
 	public LVMFloorPlansPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -70,117 +70,117 @@ public class LVMFloorPlansPage {
 	} 
 	
 	public WebElement getLVMExhibitorsAndProductTab() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmExhibitorsAndProductTab));
 		return driver.findElement(lvmExhibitorsAndProductTab);
 	}
 
 	public WebElement getLVMFloorPlansLink() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(lvmFloorPlansLink));
 		return driver.findElement(lvmFloorPlansLink);
 	}
 	public WebElement getLVMBuildingFloor() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(lvmBuildingFloor));
 		return driver.findElement(lvmBuildingFloor);
 	}
 	public WebElement getLVMBuildingFloorNumber() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(lvmBuildingFloorNumber));
 		return driver.findElement(lvmBuildingFloorNumber);
 	}
 	public WebElement getLVMFloorName() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmFloorName));
 		return driver.findElement(lvmFloorName);
 	}
 	public WebElement getLVMNoExpMsg() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmnoexhibitorsmsg));
 		return driver.findElement(lvmnoexhibitorsmsg);
 	}
 	public WebElement getLVMNoExhibitorFloor() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmNoExhibitorFloor));
 		return driver.findElement(lvmNoExhibitorFloor);
 	}
 
 	public WebElement getLVMExhibitorFloorZoomIn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmExhibitorFloorZoomIn));
 		return driver.findElement(lvmExhibitorFloorZoomIn);
 	}
 	public WebElement getLVMExhibitorFloorZoomOut() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmExhibitorFloorZoomOut));
 		return driver.findElement(lvmExhibitorFloorZoomOut);
 	}
 	public WebElement getLVMFloorPlanMapIamge() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmfloorplanmapimage));
 		return driver.findElement(lvmfloorplanmapimage);
 	}
 
 	public WebElement getLVMSelectBox() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitedonfloormsg));
 		return driver.findElement(lvmSelectBox);
 	}
 
 	public WebElement getLVMLoadingExhMsg() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmloadingexhmsg));
 		return driver.findElement(lvmloadingexhmsg);
 	}
 	public WebElement getVendingMachineIconOnMap() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(vendingmchineicononmap));
 		return driver.findElement(vendingmchineicononmap);
 	}
 	public WebElement getVendingMachineOverlayOnMap() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(vendingmachineoverlay));
 		return driver.findElement(vendingmachineoverlay);
 	}
 	public WebElement getElevatorIconOnMap() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(elevatoricononmap));
 		return driver.findElement(elevatoricononmap);
 	}
 	public WebElement getElevatorOverlayOnMap() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(elevatoroverlay));
 		return driver.findElement(elevatoroverlay);
 	}
 	public WebElement getWaterFountainIconOnMap() throws InterruptedException {
 		//Thread.sleep(4000);
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(waterfountainicononmap));
 		return driver.findElement(waterfountainicononmap);
 	}
 	public WebElement getWaterFountainOverlayOnMap() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(waterfountainoverlay));
 		return driver.findElement(waterfountainoverlay);
 	}
 	public WebElement getPhoneIconOnMap() throws InterruptedException{
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(phoneicononmap));
 		return driver.findElement(phoneicononmap);
 	}
 	public WebElement getPhoneOverlayOnMap() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(phoneoverlay));
 		return driver.findElement(phoneoverlay);
 	}
 	public WebElement getLocationPinIconOnMap() throws InterruptedException{
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(locationpinicononmap));
 		return driver.findElement(locationpinicononmap);
 	}
 	public WebElement getExhibitorDetailsModal() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitordetailsmodal));
 		return driver.findElement(exhibitordetailsmodal);
 	}
@@ -193,33 +193,33 @@ public class LVMFloorPlansPage {
 
 
 	public WebElement getLVMNextFloorBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmNextFloorBtn));
 		return driver.findElement(lvmNextFloorBtn);
 	}
 	public WebElement getLVMPreviousFloorBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmPreviousFloorBtn));
 		return driver.findElement(lvmPreviousFloorBtn);
 	}
 	public WebElement getLVMExpectedFloorNumber() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmExpectedFloorNumber));
 		return driver.findElement(lvmExpectedFloorNumber);
 	}
 
 	public WebElement getLVMExhibitorName() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmExhibitorName));
 		return driver.findElement(lvmExhibitorName);
 	}
 	public WebElement getLVMExhibitorNameOnDGShowroomPage() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmExhibitorNameOnDGShowroomPage));
 		return driver.findElement(lvmExhibitorNameOnDGShowroomPage);
 	}
 	public WebElement getLVMReturnToBuildingList() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmReturnToBuildingList));
 		return driver.findElement(lvmReturnToBuildingList);
 	}
@@ -228,94 +228,100 @@ public class LVMFloorPlansPage {
 		return driver.findElement(lvmexhibitorsection);
 	}
 	public WebElement getlvmexhibitorsearch() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitedonfloormsg));
 		return driver.findElement(lvmexhibitorsearch);
 	}
 	public WebElement getlvmserachexhibitorbtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmserachexhibitorbtn));
 		return driver.findElement(lvmserachexhibitorbtn);
 	}
 	public WebElement getverifyexhibitor() throws InterruptedException {
 		Thread.sleep(8000);
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.elementToBeClickable(verifyexhibitor));
 		return driver.findElement(verifyexhibitor);
 	}
 	public WebElement getscrollexhibitorsection() throws InterruptedException {
 		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.elementToBeClickable(scrollexhibitorsection));
 		return driver.findElement(scrollexhibitorsection);
 	}
 	public WebElement getViewDGShowroombtn() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.elementToBeClickable(viewdgshowroombtn));
 		return driver.findElement(viewdgshowroombtn);
 	}
 	public WebElement getLVMMoreOptions() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(lvmMoreOptions));
 		return driver.findElement(lvmMoreOptions);
 	}
 	public WebElement getLVMAddToList() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(lvmAddToList));
 		return driver.findElement(lvmAddToList);
 	}
 	public WebElement getLVMAddNote() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmAddNote));
 		return driver.findElement(lvmAddNote);
 	}
 	public WebElement getLVMBuildingFloorForFilter() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmBuildingFloorForFilter));
 		return driver.findElement(lvmBuildingFloorForFilter);
 	}
 
 	public WebElement getLVMAddFev() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmAddFev));
 		return driver.findElement(lvmAddFev);
 	}
 	public WebElement getLVMExhSearchField() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmExhSearchField));
 		return driver.findElement(lvmExhSearchField);
 	}
 	public WebElement getLVMExhSearchFieldBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmExhSearchFieldBtn));
 		return driver.findElement(lvmExhSearchFieldBtn);
 	}
 	public WebElement getNoResultsMsgForLinesOnJuniper() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(noresultsforjuniperlinesmsg));
 		return driver.findElement(noresultsforjuniperlinesmsg);
 	}
 	public WebElement getlvmNoExhibitorFloor_uat() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmNoExhibitorFloor_uat));
 		return driver.findElement(lvmNoExhibitorFloor_uat);
 	}
 	public WebElement getlvmflooricononmap_uat() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmflooricononmap_uat));
 		return driver.findElement(lvmflooricononmap_uat);
 	}
 	public WebElement getbuildingFloor_lvmUAT() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(buildingFloor_lvmUAT));
 		return driver.findElement(buildingFloor_lvmUAT);
 	}
 	public WebElement getlvmflooricononmap_lvmUAT() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmflooricononmap_lvmUAT));
 		return driver.findElement(lvmflooricononmap_lvmUAT);
 	}
 	public WebElement getlvmflooriconoverlay_lvmUAT() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmflooriconoverlay_lvmUAT));
 		return driver.findElement(lvmflooriconoverlay_lvmUAT);
 	}
 	public WebElement getExhibitedOnFloorMsg() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitedonfloormsg));
 		return driver.findElement(exhibitedonfloormsg);
 	}

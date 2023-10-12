@@ -2,25 +2,19 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 
-<suite name="LVM_RegressionTestSuite">
+<suite name="LVM_RegressionTestSuite" parallel="classes">
 	<listners>
 		<listner class-name="lasvegasmarket_PROD.TestListeners" />
 	</listners>
-		<test thread-count="5" name="RegressionTest">
+		<test thread-count="1"  name="RegressionTest">
 		<classes>
 
-		<class name="lasvegasmarket_PROD.GlobalSearch_ProductActions" /> 
-		<class name="lasvegasmarket_PROD.GlobalSearch_SearchFor" /> 
-		<class name="lasvegasmarket_PROD.ShowSpecials" /> 
-		<class name="lasvegasmarket_PROD.LineDigitalShowroom" /> 
-		<class name="lasvegasmarket_PROD.GlobalSearch_ExhibitorActions" /> 
-		<class name="lasvegasmarket_PROD.GlobalSearch_SuggestionList" /> 
-		<class name="lasvegasmarket_PROD.EvenntsAndWebinar" />
-		
-		
-				<!-- <methods>
-				      <include name="TS004_VerifyClickOnContactExhIconForExhibitorTest"/>   
-				</methods> -->
+		<class name="lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters" />
+<!-- 
+			 	<methods>
+				  <include name="TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest()"/> 
+				</methods>
+ -->
 		</classes>
 	</test>
 </suite>
@@ -60,18 +54,18 @@
 	<listners>
 		<listner class-name="MPTest.TestListeners" />
 	</listners>
-	<test thread-count="5" name="RegressionTest">
-	<test thread-count="5" name="MPGroupTest">
+	<test thread-count="5" name="RegressionTest"> -->
+	<!-- <test thread-count="5" name="MPGroupTest"> -->
 
-		<groups>
+		<!-- <groups>
 			<run>
 				<include name="MP_Group" />
 				<include name="Non_MP" />
 				
 			</run>
-		</groups>
+		</groups> -->
 
-		<classes>
+<!-- 		<classes>
 			<class name="lasvegasmarket_PROD.EvenntsAndWebinar" />
 				<methods>
 				      <include name="TS007_VerifyIMCEventsAddToListTest()"/>    
@@ -79,8 +73,8 @@
 		</classes>
 	</test>
 	
-</suite>
+</suite> -->
  
-  -->
+ 
  
  
