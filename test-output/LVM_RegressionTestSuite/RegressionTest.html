@@ -55,19 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>RegressionTest</h2><table border='1' align="center">
 <tr>
-<<<<<<< HEAD
-<td>Tests passed/Failed/Skipped:</td><td>9/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>32/7/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Oct 11 16:29:39 IST 2023</td>
+<td>Started on:</td><td>Fri Oct 13 13:04:41 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>491 seconds (491705 ms)</td>
-=======
-<td>Tests passed/Failed/Skipped:</td><td>34/5/0</td>
-</tr><tr>
-<td>Started on:</td><td>Mon Oct 09 14:41:29 IST 2023</td>
-</tr>
-<tr><td>Total time:</td><td>1795 seconds (1795603 ms)</td>
->>>>>>> 354ebf9997144f7b72a0c40574cd83de23ff84bc
+<tr><td>Total time:</td><td>1672 seconds (1672307 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -83,35 +75,23 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<<<<<<< HEAD
-<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest()'><b>TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest(GlobalSearch_LeftPaneFilters.java:233)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace422018896", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace422018896'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at org.testng.Assert.assertTrue(Assert.java:52)
-	at lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest(GlobalSearch_LeftPaneFilters.java:233)
-=======
 <td title='lasvegasmarket_PROD.ShowSpecials.TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest()'><b>TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest</b><br>Test class: lasvegasmarket_PROD.ShowSpecials</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//div[@class=&apos;imc-showSpecial--tableContainer&apos;]/p[1])[1] (tried for 20 second(s) with 500 milliseconds interval)
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//div[@class=&apos;imc-showSpecial--tableContainer&apos;]/p[1])[1] (tried for 30 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at pageObjects.LasVegasMarket.LVMGlobalSearchPage.getFirstShowSpecialName(LVMGlobalSearchPage.java:614)
 	at lasvegasmarket_PROD.ShowSpecials.TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest(ShowSpecials.java:101)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//div[@class=&apos;imc-showSpecial--tableContainer&apos;]/p[1])[1]&quot;}
   (Session info: chrome=117.0.5938.132)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
 System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59604}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3e27be2d4fc584e71419159125e0c239
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51838}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6ffdd3e19330bea0bcff970495d4612f
 *** Element info: {Using=xpath, value=(//div[@class=&apos;imc-showSpecial--tableContainer&apos;]/p[1])[1]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
@@ -125,146 +105,14 @@ Session ID: 3e27be2d4fc584e71419159125e0c239
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 26 more
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1283290160", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1283290160'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//div[@class=&apos;imc-showSpecial--tableContainer&apos;]/p[1])[1] (tried for 20 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at pageObjects.LasVegasMarket.LVMGlobalSearchPage.getFirstShowSpecialName(LVMGlobalSearchPage.java:614)
-	at lasvegasmarket_PROD.ShowSpecials.TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest(ShowSpecials.java:101)
->>>>>>> 354ebf9997144f7b72a0c40574cd83de23ff84bc
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-<<<<<<< HEAD
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-</pre></div></td>
-<td>40</td>
-<td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@29774679</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS007_VerifySelectionOfDecorativeAccessProdCatgFromLeftPaneFiltersTest()'><b>TS007_VerifySelectionOfDecorativeAccessProdCatgFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[@aria-label=&apos;Product Categories&apos;] (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at pageObjects.LasVegasMarket.LVMLeftPaneFilters.getLVMProdCatgExpandBtn(LVMLeftPaneFilters.java:49)
-	at lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS007_VerifySelectionOfDecorativeAccessProdCatgFromLeftPaneFiltersTest(GlobalSearch_LeftPaneFilters.java:488)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@aria-label=&apos;Product Categories&apos;]&quot;}
-  (Session info: chrome=117.0.5938.150)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.150, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Users\anuppa\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49864}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 977085ee4d65cbc7528c90bc4d602642
-*** Element info: {Using=xpath, value=//a[@aria-label=&apos;Product Categories&apos;]}
-=======
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//div[@class=&apos;imc-showSpecial--tableContainer&apos;]/p[1])[1]&quot;}
-  (Session info: chrome=117.0.5938.132)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
-System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59604}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3e27be2d4fc584e71419159125e0c239
-*** Element info: {Using=xpath, value=(//div[@class=&apos;imc-showSpecial--tableContainer&apos;]/p[1])[1]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 26 more
-</pre></div></td>
-<td>35</td>
-<td>lasvegasmarket_PROD.ShowSpecials@56ac3a89</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.ShowSpecials.TS002_VerifyShowroomLinkForShowSpecialsTest()'><b>TS002_VerifyShowroomLinkForShowSpecialsTest</b><br>Test class: lasvegasmarket_PROD.ShowSpecials</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class=&apos;ag-center-cols-container&apos;]/div[1]/div[2]/a (tried for 20 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at pageObjects.LasVegasMarket.LVMGlobalSearchPage.getlvmShowroomLink(LVMGlobalSearchPage.java:201)
-	at lasvegasmarket_PROD.ShowSpecials.TS002_VerifyShowroomLinkForShowSpecialsTest(ShowSpecials.java:139)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;ag-center-cols-container&apos;]/div[1]/div[2]/a&quot;}
-  (Session info: chrome=117.0.5938.132)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
-System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59604}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3e27be2d4fc584e71419159125e0c239
-*** Element info: {Using=xpath, value=//div[@class=&apos;ag-center-cols-container&apos;]/div[1]/div[2]/a}
->>>>>>> 354ebf9997144f7b72a0c40574cd83de23ff84bc
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-<<<<<<< HEAD
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
 	... 15 more
-... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace5102475", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace5102475'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //a[@aria-label=&apos;Product Categories&apos;] (tried for 30 second(s) with 500 milliseconds interval)
+... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1444154447", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1444154447'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//div[@class=&apos;imc-showSpecial--tableContainer&apos;]/p[1])[1] (tried for 30 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at pageObjects.LasVegasMarket.LVMLeftPaneFilters.getLVMProdCatgExpandBtn(LVMLeftPaneFilters.java:49)
-	at lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS007_VerifySelectionOfDecorativeAccessProdCatgFromLeftPaneFiltersTest(GlobalSearch_LeftPaneFilters.java:488)
-=======
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 26 more
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace813455850", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace813455850'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class=&apos;ag-center-cols-container&apos;]/div[1]/div[2]/a (tried for 20 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at pageObjects.LasVegasMarket.LVMGlobalSearchPage.getlvmShowroomLink(LVMGlobalSearchPage.java:201)
-	at lasvegasmarket_PROD.ShowSpecials.TS002_VerifyShowroomLinkForShowSpecialsTest(ShowSpecials.java:139)
->>>>>>> 354ebf9997144f7b72a0c40574cd83de23ff84bc
+	at pageObjects.LasVegasMarket.LVMGlobalSearchPage.getFirstShowSpecialName(LVMGlobalSearchPage.java:614)
+	at lasvegasmarket_PROD.ShowSpecials.TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest(ShowSpecials.java:101)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -275,44 +123,18 @@ Session ID: 3e27be2d4fc584e71419159125e0c239
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-<<<<<<< HEAD
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@aria-label=&apos;Product Categories&apos;]&quot;}
-  (Session info: chrome=117.0.5938.150)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.150, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Users\anuppa\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49864}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 977085ee4d65cbc7528c90bc4d602642
-*** Element info: {Using=xpath, value=//a[@aria-label=&apos;Product Categories&apos;]}
-=======
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;ag-center-cols-container&apos;]/div[1]/div[2]/a&quot;}
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//div[@class=&apos;imc-showSpecial--tableContainer&apos;]/p[1])[1]&quot;}
   (Session info: chrome=117.0.5938.132)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
 System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59604}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3e27be2d4fc584e71419159125e0c239
-*** Element info: {Using=xpath, value=//div[@class=&apos;ag-center-cols-container&apos;]/div[1]/div[2]/a}
->>>>>>> 354ebf9997144f7b72a0c40574cd83de23ff84bc
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51838}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6ffdd3e19330bea0bcff970495d4612f
+*** Element info: {Using=xpath, value=(//div[@class=&apos;imc-showSpecial--tableContainer&apos;]/p[1])[1]}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -329,26 +151,248 @@ Session ID: 3e27be2d4fc584e71419159125e0c239
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-<<<<<<< HEAD
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 15 more
+</pre></div></td>
+<td>35</td>
+<td>lasvegasmarket_PROD.ShowSpecials@77cd7a0</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.LineDigitalShowroom.TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest()'><b>TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest</b><br>Test class: lasvegasmarket_PROD.LineDigitalShowroom</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//div[@ID=&apos;react-autowhatever-input-1&apos;]/ul/li)[1] (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.LasVegasMarket.LVMLineDigitalShowroomPage.getsuggetionList(LVMLineDigitalShowroomPage.java:140)
+	at lasvegasmarket_PROD.LineDigitalShowroom.TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest(LineDigitalShowroom.java:125)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//div[@ID=&apos;react-autowhatever-input-1&apos;]/ul/li)[1]&quot;}
+  (Session info: chrome=117.0.5938.132)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
+System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51951}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f8ad0700e073f668e38c85ef05ebd7c6
+*** Element info: {Using=xpath, value=(//div[@ID=&apos;react-autowhatever-input-1&apos;]/ul/li)[1]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 15 more
+... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1863256724", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1863256724'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//div[@ID=&apos;react-autowhatever-input-1&apos;]/ul/li)[1] (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.LasVegasMarket.LVMLineDigitalShowroomPage.getsuggetionList(LVMLineDigitalShowroomPage.java:140)
+	at lasvegasmarket_PROD.LineDigitalShowroom.TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest(LineDigitalShowroom.java:125)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//div[@ID=&apos;react-autowhatever-input-1&apos;]/ul/li)[1]&quot;}
+  (Session info: chrome=117.0.5938.132)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
+System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51951}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f8ad0700e073f668e38c85ef05ebd7c6
+*** Element info: {Using=xpath, value=(//div[@ID=&apos;react-autowhatever-input-1&apos;]/ul/li)[1]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
 	... 15 more
 </pre></div></td>
 <td>37</td>
-<td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@29774679</td></tr>
-=======
+<td>lasvegasmarket_PROD.LineDigitalShowroom@e25b2fe</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.ShowSpecials.TS002_VerifyShowroomLinkForShowSpecialsTest()'><b>TS002_VerifyShowroomLinkForShowSpecialsTest</b><br>Test class: lasvegasmarket_PROD.ShowSpecials</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class=&apos;ag-center-cols-container&apos;]/div[1]/div[2]/a (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.LasVegasMarket.LVMGlobalSearchPage.getlvmShowroomLink(LVMGlobalSearchPage.java:201)
+	at lasvegasmarket_PROD.ShowSpecials.TS002_VerifyShowroomLinkForShowSpecialsTest(ShowSpecials.java:139)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;ag-center-cols-container&apos;]/div[1]/div[2]/a&quot;}
+  (Session info: chrome=117.0.5938.132)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
+System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51838}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6ffdd3e19330bea0bcff970495d4612f
+*** Element info: {Using=xpath, value=//div[@class=&apos;ag-center-cols-container&apos;]/div[1]/div[2]/a}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
 	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
 	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 26 more
+	... 15 more
+... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace904152910", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace904152910'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class=&apos;ag-center-cols-container&apos;]/div[1]/div[2]/a (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.LasVegasMarket.LVMGlobalSearchPage.getlvmShowroomLink(LVMGlobalSearchPage.java:201)
+	at lasvegasmarket_PROD.ShowSpecials.TS002_VerifyShowroomLinkForShowSpecialsTest(ShowSpecials.java:139)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;ag-center-cols-container&apos;]/div[1]/div[2]/a&quot;}
+  (Session info: chrome=117.0.5938.132)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
+System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51838}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6ffdd3e19330bea0bcff970495d4612f
+*** Element info: {Using=xpath, value=//div[@class=&apos;ag-center-cols-container&apos;]/div[1]/div[2]/a}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 15 more
 </pre></div></td>
 <td>39</td>
-<td>lasvegasmarket_PROD.ShowSpecials@56ac3a89</td></tr>
+<td>lasvegasmarket_PROD.ShowSpecials@77cd7a0</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.GlobalSearch_SuggestionList.TS003_VerifySelectionOfProductFromAutoSuggestionListTest()'><b>TS003_VerifySelectionOfProductFromAutoSuggestionListTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SuggestionList</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=117.0.5938.132)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
+System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52144}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2764d9fc2ba19d6db4cdf07148b8ae6b
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:166)
+	at lasvegasmarket_PROD.GlobalSearch_SuggestionList.TS003_VerifySelectionOfProductFromAutoSuggestionListTest(GlobalSearch_SuggestionList.java:147)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1737817689", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1737817689'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=117.0.5938.132)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
+System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.22.78&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.149 (e3344ddefa1..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52144}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2764d9fc2ba19d6db4cdf07148b8ae6b
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:166)
+	at lasvegasmarket_PROD.GlobalSearch_SuggestionList.TS003_VerifySelectionOfProductFromAutoSuggestionListTest(GlobalSearch_SuggestionList.java:147)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>6</td>
+<td>lasvegasmarket_PROD.GlobalSearch_SuggestionList@204f30ec</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.GlobalSearch_ExhibitorActions.TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest()'><b>TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_ExhibitorActions</td>
 <td><div><pre>java.lang.AssertionError: expected [224567] but found [331735]
 	at lasvegasmarket_PROD.GlobalSearch_ExhibitorActions.TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest(GlobalSearch_ExhibitorActions.java:407)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1299564036", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1299564036'><pre>java.lang.AssertionError: expected [224567] but found [331735]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace479157433", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace479157433'><pre>java.lang.AssertionError: expected [224567] but found [331735]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:494)
 	at org.testng.Assert.assertEquals(Assert.java:123)
@@ -365,29 +409,21 @@ Session ID: 3e27be2d4fc584e71419159125e0c239
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
-<td>39</td>
-<td>lasvegasmarket_PROD.GlobalSearch_ExhibitorActions@42dafa95</td></tr>
+<td>38</td>
+<td>lasvegasmarket_PROD.GlobalSearch_ExhibitorActions@754ba872</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.GlobalSearch_ExhibitorActions.TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest()'><b>TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_ExhibitorActions</td>
 <td><div><pre>java.lang.AssertionError: expected [371] but found [373]
 	at lasvegasmarket_PROD.GlobalSearch_ExhibitorActions.TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest(GlobalSearch_ExhibitorActions.java:452)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace981307724", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace981307724'><pre>java.lang.AssertionError: expected [371] but found [373]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1060049921", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1060049921'><pre>java.lang.AssertionError: expected [371] but found [373]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:494)
 	at org.testng.Assert.assertEquals(Assert.java:123)
@@ -404,29 +440,21 @@ Session ID: 3e27be2d4fc584e71419159125e0c239
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
 <td>34</td>
-<td>lasvegasmarket_PROD.GlobalSearch_ExhibitorActions@42dafa95</td></tr>
+<td>lasvegasmarket_PROD.GlobalSearch_ExhibitorActions@754ba872</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.GlobalSearch_SearchFor.TS010_VerifyShowSpecialsOverviewInGlobalSearchTest()'><b>TS010_VerifyShowSpecialsOverviewInGlobalSearchTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SearchFor</td>
 <td><div><pre>java.lang.ArrayIndexOutOfBoundsException: 2
 	at lasvegasmarket_PROD.GlobalSearch_SearchFor.TS010_VerifyShowSpecialsOverviewInGlobalSearchTest(GlobalSearch_SearchFor.java:876)
-... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace481947474", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace481947474'><pre>java.lang.ArrayIndexOutOfBoundsException: 2
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace602480995", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace602480995'><pre>java.lang.ArrayIndexOutOfBoundsException: 2
 	at lasvegasmarket_PROD.GlobalSearch_SearchFor.TS010_VerifyShowSpecialsOverviewInGlobalSearchTest(GlobalSearch_SearchFor.java:876)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
@@ -438,24 +466,12 @@ Session ID: 3e27be2d4fc584e71419159125e0c239
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
 <td>37</td>
-<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@27c20538</td></tr>
->>>>>>> 354ebf9997144f7b72a0c40574cd83de23ff84bc
+<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@4dfa3a9d</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -465,222 +481,165 @@ Session ID: 3e27be2d4fc584e71419159125e0c239
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<<<<<<< HEAD
-<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest()'><b>TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
-<td></td>
-<td>27</td>
-<td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@29774679</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest()'><b>TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
-<td></td>
-<td>28</td>
-<td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@29774679</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest()'><b>TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
-<td></td>
-<td>94</td>
-<td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@29774679</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS005_VerifySelectionOfAccentFurnitureProdCatgFromLeftPaneFiltersTest()'><b>TS005_VerifySelectionOfAccentFurnitureProdCatgFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
-<td></td>
-<td>30</td>
-<td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@29774679</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS006_VerifySelectionOfHolidayProdCatgFromLeftPaneFiltersTest()'><b>TS006_VerifySelectionOfHolidayProdCatgFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
-<td></td>
-<td>47</td>
-<td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@29774679</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS008_VerifySelectionOfGeneralGiftProdCatgFromLeftPaneFiltersTest()'><b>TS008_VerifySelectionOfGeneralGiftProdCatgFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
-<td></td>
-<td>36</td>
-<td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@29774679</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS009_VerifySelectionOfFashionAccProdCatgFromLeftPaneFiltersTest()'><b>TS009_VerifySelectionOfFashionAccProdCatgFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
-<td></td>
-<td>47</td>
-<td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@29774679</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS010_VerifySelectionOfFloralBotanicalsProdCatgFromLeftPaneFiltersTest()'><b>TS010_VerifySelectionOfFloralBotanicalsProdCatgFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
-<td></td>
-<td>32</td>
-<td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@29774679</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest()'><b>TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
-<td></td>
-<td>30</td>
-<td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@29774679</td></tr>
-=======
 <td title='lasvegasmarket_PROD.GlobalSearch_ProductActions.TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest()'><b>TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_ProductActions</td>
 <td></td>
-<td>42</td>
-<td>lasvegasmarket_PROD.GlobalSearch_ProductActions@6e06451e</td></tr>
+<td>48</td>
+<td>lasvegasmarket_PROD.GlobalSearch_ProductActions@6a41eaa2</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS001_VerifyEventsAndWebinarsOverviewTest()'><b>TS001_VerifyEventsAndWebinarsOverviewTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
 <td></td>
-<td>9</td>
-<td>lasvegasmarket_PROD.EvenntsAndWebinar@1e397ed7</td></tr>
+<td>7</td>
+<td>lasvegasmarket_PROD.EvenntsAndWebinar@146ba0ac</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.GlobalSearch_SearchFor.TS001_VerifyInformationTabInGlobalSearchTest()'><b>TS001_VerifyInformationTabInGlobalSearchTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SearchFor</td>
 <td></td>
 <td>23</td>
-<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@27c20538</td></tr>
+<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@4dfa3a9d</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.LineDigitalShowroom.TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest()'><b>TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest</b><br>Test class: lasvegasmarket_PROD.LineDigitalShowroom</td>
 <td></td>
 <td>10</td>
-<td>lasvegasmarket_PROD.LineDigitalShowroom@490ab905</td></tr>
+<td>lasvegasmarket_PROD.LineDigitalShowroom@e25b2fe</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.GlobalSearch_SuggestionList.TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest()'><b>TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SuggestionList</td>
 <td></td>
-<td>25</td>
-<td>lasvegasmarket_PROD.GlobalSearch_SuggestionList@72d818d1</td></tr>
+<td>19</td>
+<td>lasvegasmarket_PROD.GlobalSearch_SuggestionList@204f30ec</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS002_VerifyIMCEventsSearchbarTest()'><b>TS002_VerifyIMCEventsSearchbarTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
 <td></td>
-<td>14</td>
-<td>lasvegasmarket_PROD.EvenntsAndWebinar@1e397ed7</td></tr>
+<td>13</td>
+<td>lasvegasmarket_PROD.EvenntsAndWebinar@146ba0ac</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.GlobalSearch_SearchFor.TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest()'><b>TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SearchFor</td>
 <td></td>
-<td>30</td>
-<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@27c20538</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.LineDigitalShowroom.TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest()'><b>TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest</b><br>Test class: lasvegasmarket_PROD.LineDigitalShowroom</td>
-<td></td>
-<td>15</td>
-<td>lasvegasmarket_PROD.LineDigitalShowroom@490ab905</td></tr>
+<td>28</td>
+<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@4dfa3a9d</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.GlobalSearch_SuggestionList.TS002_VerifySelectionOfLineFromAutoSuggestionListTest()'><b>TS002_VerifySelectionOfLineFromAutoSuggestionListTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SuggestionList</td>
 <td></td>
-<td>19</td>
-<td>lasvegasmarket_PROD.GlobalSearch_SuggestionList@72d818d1</td></tr>
+<td>13</td>
+<td>lasvegasmarket_PROD.GlobalSearch_SuggestionList@204f30ec</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS003_VerifyIMCEventsCalendarViewTest()'><b>TS003_VerifyIMCEventsCalendarViewTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
 <td></td>
-<td>19</td>
-<td>lasvegasmarket_PROD.EvenntsAndWebinar@1e397ed7</td></tr>
+<td>17</td>
+<td>lasvegasmarket_PROD.EvenntsAndWebinar@146ba0ac</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.GlobalSearch_SearchFor.TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest()'><b>TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SearchFor</td>
 <td></td>
-<td>99</td>
-<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@27c20538</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_SuggestionList.TS003_VerifySelectionOfProductFromAutoSuggestionListTest()'><b>TS003_VerifySelectionOfProductFromAutoSuggestionListTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SuggestionList</td>
-<td></td>
-<td>24</td>
-<td>lasvegasmarket_PROD.GlobalSearch_SuggestionList@72d818d1</td></tr>
+<td>95</td>
+<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@4dfa3a9d</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.GlobalSearch_SearchFor.TS004_VerifyCatalogsOverviewInGlobalSearchTest()'><b>TS004_VerifyCatalogsOverviewInGlobalSearchTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SearchFor</td>
 <td></td>
 <td>39</td>
-<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@27c20538</td></tr>
+<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@4dfa3a9d</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.GlobalSearch_ExhibitorActions.TS004_VerifyClickOnContactExhIconForExhibitorTest()'><b>TS004_VerifyClickOnContactExhIconForExhibitorTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_ExhibitorActions</td>
 <td></td>
-<td>14</td>
-<td>lasvegasmarket_PROD.GlobalSearch_ExhibitorActions@42dafa95</td></tr>
+<td>13</td>
+<td>lasvegasmarket_PROD.GlobalSearch_ExhibitorActions@754ba872</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS004_VerifyIMCEventsEventsListTest()'><b>TS004_VerifyIMCEventsEventsListTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
 <td></td>
-<td>32</td>
-<td>lasvegasmarket_PROD.EvenntsAndWebinar@1e397ed7</td></tr>
+<td>17</td>
+<td>lasvegasmarket_PROD.EvenntsAndWebinar@146ba0ac</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.GlobalSearch_SearchFor.TS005_VerifyArticlesOverviewInGlobalSearchTest()'><b>TS005_VerifyArticlesOverviewInGlobalSearchTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SearchFor</td>
 <td></td>
-<td>63</td>
-<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@27c20538</td></tr>
+<td>56</td>
+<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@4dfa3a9d</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.GlobalSearch_ExhibitorActions.TS005_VerifyClickOnLocationLinksForExhibitorTest()'><b>TS005_VerifyClickOnLocationLinksForExhibitorTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_ExhibitorActions</td>
 <td></td>
-<td>32</td>
-<td>lasvegasmarket_PROD.GlobalSearch_ExhibitorActions@42dafa95</td></tr>
+<td>30</td>
+<td>lasvegasmarket_PROD.GlobalSearch_ExhibitorActions@754ba872</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS005_VerifyIMCEventsEventDetailstTest()'><b>TS005_VerifyIMCEventsEventDetailstTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
 <td></td>
-<td>24</td>
-<td>lasvegasmarket_PROD.EvenntsAndWebinar@1e397ed7</td></tr>
+<td>20</td>
+<td>lasvegasmarket_PROD.EvenntsAndWebinar@146ba0ac</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.GlobalSearch_SearchFor.TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest()'><b>TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SearchFor</td>
 <td></td>
-<td>175</td>
-<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@27c20538</td></tr>
+<td>184</td>
+<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@4dfa3a9d</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.GlobalSearch_ExhibitorActions.TS006_VerifyClickOnLinesShownLinkForExhibitorTest()'><b>TS006_VerifyClickOnLinesShownLinkForExhibitorTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_ExhibitorActions</td>
 <td></td>
-<td>44</td>
-<td>lasvegasmarket_PROD.GlobalSearch_ExhibitorActions@42dafa95</td></tr>
+<td>40</td>
+<td>lasvegasmarket_PROD.GlobalSearch_ExhibitorActions@754ba872</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.GlobalSearch_SearchFor.TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest()'><b>TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SearchFor</td>
 <td></td>
-<td>71</td>
-<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@27c20538</td></tr>
+<td>62</td>
+<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@4dfa3a9d</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.GlobalSearch_ProductActions.TS007_VerifyFullScreenViewerOnProductDetailsPageTest()'><b>TS007_VerifyFullScreenViewerOnProductDetailsPageTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_ProductActions</td>
 <td></td>
 <td>40</td>
-<td>lasvegasmarket_PROD.GlobalSearch_ProductActions@6e06451e</td></tr>
+<td>lasvegasmarket_PROD.GlobalSearch_ProductActions@6a41eaa2</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.LineDigitalShowroom.TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest()'><b>TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest</b><br>Test class: lasvegasmarket_PROD.LineDigitalShowroom</td>
 <td></td>
-<td>21</td>
-<td>lasvegasmarket_PROD.LineDigitalShowroom@490ab905</td></tr>
+<td>20</td>
+<td>lasvegasmarket_PROD.LineDigitalShowroom@e25b2fe</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.GlobalSearch_SearchFor.TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest()'><b>TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SearchFor</td>
 <td></td>
-<td>79</td>
-<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@27c20538</td></tr>
+<td>78</td>
+<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@4dfa3a9d</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.LineDigitalShowroom.TS008_VerifyLineDigitalShowroomProductscomponentTest()'><b>TS008_VerifyLineDigitalShowroomProductscomponentTest</b><br>Test class: lasvegasmarket_PROD.LineDigitalShowroom</td>
 <td></td>
-<td>28</td>
-<td>lasvegasmarket_PROD.LineDigitalShowroom@490ab905</td></tr>
+<td>23</td>
+<td>lasvegasmarket_PROD.LineDigitalShowroom@e25b2fe</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.GlobalSearch_SearchFor.TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest()'><b>TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SearchFor</td>
 <td></td>
-<td>66</td>
-<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@27c20538</td></tr>
+<td>64</td>
+<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@4dfa3a9d</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS009_VerifyExhibitorEventsSearchbarTest()'><b>TS009_VerifyExhibitorEventsSearchbarTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
 <td></td>
-<td>14</td>
-<td>lasvegasmarket_PROD.EvenntsAndWebinar@1e397ed7</td></tr>
+<td>13</td>
+<td>lasvegasmarket_PROD.EvenntsAndWebinar@146ba0ac</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS010_VerifyExhibitorEventsCalendarViewTest()'><b>TS010_VerifyExhibitorEventsCalendarViewTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
 <td></td>
-<td>19</td>
-<td>lasvegasmarket_PROD.EvenntsAndWebinar@1e397ed7</td></tr>
+<td>17</td>
+<td>lasvegasmarket_PROD.EvenntsAndWebinar@146ba0ac</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.LineDigitalShowroom.TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest()'><b>TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest</b><br>Test class: lasvegasmarket_PROD.LineDigitalShowroom</td>
 <td></td>
-<td>18</td>
-<td>lasvegasmarket_PROD.LineDigitalShowroom@490ab905</td></tr>
+<td>17</td>
+<td>lasvegasmarket_PROD.LineDigitalShowroom@e25b2fe</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.GlobalSearch_ExhibitorActions.TS010_VerifySelectionOfExhibitorFromSearchResultsTest()'><b>TS010_VerifySelectionOfExhibitorFromSearchResultsTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_ExhibitorActions</td>
 <td></td>
-<td>37</td>
-<td>lasvegasmarket_PROD.GlobalSearch_ExhibitorActions@42dafa95</td></tr>
+<td>36</td>
+<td>lasvegasmarket_PROD.GlobalSearch_ExhibitorActions@754ba872</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.GlobalSearch_SearchFor.TS011_VerifyEventsOverviewInGlobalSearchTest()'><b>TS011_VerifyEventsOverviewInGlobalSearchTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SearchFor</td>
 <td></td>
-<td>63</td>
-<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@27c20538</td></tr>
+<td>62</td>
+<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@4dfa3a9d</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS011_VerifyExhibitorEventsListTest()'><b>TS011_VerifyExhibitorEventsListTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
 <td></td>
-<td>52</td>
-<td>lasvegasmarket_PROD.EvenntsAndWebinar@1e397ed7</td></tr>
+<td>33</td>
+<td>lasvegasmarket_PROD.EvenntsAndWebinar@146ba0ac</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.LineDigitalShowroom.TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest()'><b>TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest</b><br>Test class: lasvegasmarket_PROD.LineDigitalShowroom</td>
 <td></td>
 <td>46</td>
-<td>lasvegasmarket_PROD.LineDigitalShowroom@490ab905</td></tr>
+<td>lasvegasmarket_PROD.LineDigitalShowroom@e25b2fe</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS012_VerifyExhibitorEventsDetailstTest()'><b>TS012_VerifyExhibitorEventsDetailstTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
 <td></td>
-<td>19</td>
-<td>lasvegasmarket_PROD.EvenntsAndWebinar@1e397ed7</td></tr>
->>>>>>> 354ebf9997144f7b72a0c40574cd83de23ff84bc
+<td>10</td>
+<td>lasvegasmarket_PROD.EvenntsAndWebinar@146ba0ac</td></tr>
 </table><p>
 </body>
 </html>
