@@ -59,11 +59,12 @@ public class LVMEventsAndWebinarPage {
 	By lvmCurrentDate = By.xpath("//button[@class='react-calendar__tile react-calendar__tile--now react-calendar__tile--active react-calendar__tile--range react-calendar__tile--rangeStart react-calendar__tile--rangeEnd react-calendar__tile--rangeBothEnds react-calendar__month-view__days__day']/abbr"); //Locator for All Events days
 	By lvmEventLocationLinkPROD = By.xpath("//div[@class='imc-eventdetail--location']/p"); //Locator for Event location link
 	By lvmEventTypePROD = By.xpath("//div[@class='imc-gallery__item imc-eventdetail--text-container']/div[1]/section/div[1]/p[@class='imc-eventdetail--event-type']"); //Locator for Event Type
-	By lvmEventsRegisterBtn = By.xpath("//div[@class='imc-gallery__item imc-eventdetail--text-container']/div[1]/section/div[1]/div[2]/a[1]/span[1]"); //Locator for Reg CTA
+	By lvmEventsRegisterBtn = By.xpath("//div[@class='imc-gallery__item imc-eventdetail--text-container']/div[1]/section/div[1]/div[2]/a[1]"); //Locator for Reg CTA
 	
 	By lvmEventsDetailsPageDayMonthYear = By.xpath("//div[@class='imc-gallery__item imc-eventdetail--text-container']/div[1]/section/div[1]/p/span[1]"); //Locator for DayMnthyear 
 	By lvmEventsDetailsPageTime = By.xpath("//div[@class='imc-gallery__item imc-eventdetail--text-container']/div[1]/section/div[1]/p/span[2]/span[1]"); //Locator for Time
 	By lvmEventsDetailsPageCalendarLink = By.xpath("//div[@class='imc-gallery__item imc-eventdetail--text-container']/div[1]/section/div[1]/p/span[3]/a[1]"); //Locator for cal link
+	By lvmEventsDetailsPageDetailsSection = By.xpath("//div[@class='imc-eventdetail--user-content-container']/div[1]/section[1]"); //Locator for Detail Sections
 	
 	//div[@class='event-card--info']/div[1]/div[1]/a[1]/p[1]
 	//button[@class='react-calendar__tile react-calendar__tile--now react-calendar__month-view__days__day react-calendar--no-event']/abbr
@@ -71,6 +72,11 @@ public class LVMEventsAndWebinarPage {
 	public LVMEventsAndWebinarPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
+	}
+	public WebElement getlvmEventsDetailsPageDetailsSection() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventsDetailsPageDetailsSection));
+		return driver.findElement(lvmEventsDetailsPageDetailsSection);
 	}
 	public WebElement getlvmEventsDetailsPageCalendarLink() {
 		wait = new WebDriverWait (driver,30);

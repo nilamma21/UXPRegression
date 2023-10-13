@@ -361,7 +361,7 @@ public class EvenntsAndWebinar extends base{
 		
 	}
 	
-	//@Test(priority = 5)
+	@Test(priority = 5)
 	public void TS005_VerifyIMCEventsEventDetailstTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T295: IMC Events: Event Details
@@ -410,6 +410,7 @@ public class EvenntsAndWebinar extends base{
 		//Verify Register CTA
 		Assert.assertTrue(lvmevents.getlvmEventsRegisterBtn().isDisplayed());
 		String RegisterCTA=lvmevents.getlvmEventsRegisterBtn().getAttribute("href");
+		System.out.println("Btn "+RegisterCTA);
 		//CLick on Register CTA
 		String currentWindowID = driver.getWindowHandle();
 		lvmevents.getlvmEventsRegisterBtn().click();
@@ -417,12 +418,19 @@ public class EvenntsAndWebinar extends base{
 			driver.switchTo().window(windowHandleID);
 		}
 		Thread.sleep(5000);
+		String url=driver.getCurrentUrl();
+		System.out.println("Current Url "+url);
 		// Verify Location floor plan page
-		Assert.assertEquals(RegisterCTA, driver.getCurrentUrl());
+		Assert.assertTrue(RegisterCTA.contains(url));
 		driver.close();
 		driver.switchTo().window(currentWindowID);
-		driver.navigate().back();
+		//driver.navigate().back();
 		System.out.println("register cta page opened");
+		
+		//Verify Detail Section
+		Assert.assertTrue(lvmevents.getlvmEventsDetailsPageDetailsSection().isDisplayed());
+		System.out.println("Event Details Section displayed");
+	
 		
 		//tags
 		/*Assert.assertTrue(lvmevents.getlvmTagIcon().isDisplayed());
@@ -1069,7 +1077,7 @@ public class EvenntsAndWebinar extends base{
 		Assert.assertEquals(allEventcount, allEventSeeDetailsLinkCount1);
 }
 	
-/*	//@Test(priority = 12)
+@Test(priority = 12)
 	public void TS012_VerifyExhibitorEventsDetailstTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T307: Exhibitor Events: Event Details
@@ -1082,14 +1090,69 @@ public class EvenntsAndWebinar extends base{
 		lvmmpp = new LVMMarketPlannerPage(driver);
 
 		//utl.clickOnEventLinkOfChannelLVM();	
-		
-		utl.clickOnEventLinkOfChannel();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		utl.clickOnEventLinkOfChannel();
+		
 		//Click on Exh Event Tab
 		lvmevents.getlvmExhibitorsEventsTab().click();
+		String eventTitle=lvmevents.getlvmClickOnEvent().getText();
+		lvmevents.getlvmClickOnEvent().click();
+		
+		Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUAT().getText()));
+		// Verify DayMntYear 
+		Assert.assertTrue(lvmevents.getlvmEventsDetailsPageDayMonthYear().isDisplayed());
+		System.out.println("Events   Day Month Year displayed");
+		// Verify Time
+		Assert.assertTrue(lvmevents.getlvmEventsDetailsPageTime().isDisplayed());
+		System.out.println("Events Timimg displayed");
+		// Verify Calendar
+		Assert.assertTrue(lvmevents.getlvmEventsDetailsPageCalendarLink().isDisplayed());
+		System.out.println("Events Calendar displayed");
+		//Verify Location Link
+		Assert.assertTrue(lvmevents.getlvmEventLocationLinkPROD().isDisplayed());
+		System.out.println("Events Location  displayed");
+		
+		//Verify Event Type
+		Assert.assertTrue(lvmevents.getlvmEventTypePROD().isDisplayed());
+		System.out.println("Event Type displayed");
+	
+	/*		
+		//Verify Add Calendar Icon
+		Assert.assertTrue(lvmevents.getlvmCalendarIconUAT().isDisplayed());
+		System.out.println("Calendar displayed");*/
+
+		
+		//Verify Register CTA
+		/*Assert.assertTrue(lvmevents.getlvmEventsRegisterBtn().isDisplayed());
+		String RegisterCTA=lvmevents.getlvmEventsRegisterBtn().getAttribute("href");
+		System.out.println("Btn "+RegisterCTA);
+		//CLick on Register CTA
+		String currentWindowID = driver.getWindowHandle();
+		lvmevents.getlvmEventsRegisterBtn().click();
+		for (String windowHandleID : driver.getWindowHandles()) {
+			driver.switchTo().window(windowHandleID);
+		}
+		Thread.sleep(5000);
+		String url=driver.getCurrentUrl();
+		System.out.println("Current Url "+url);
+		// Verify Location floor plan page
+		Assert.assertTrue(RegisterCTA.contains(url));
+		driver.close();
+		driver.switchTo().window(currentWindowID);
+		//driver.navigate().back();
+		System.out.println("register cta page opened");*/
+		
+		//Verify Detail Section
+		Assert.assertTrue(lvmevents.getlvmEventsDetailsPageDetailsSection().isDisplayed());
+		System.out.println("Event Details Section displayed");
 		
 		
+		
+		
+		
+		
+		
+		/*
 		//Click on Any Event title
 				lvmevents.getlvmClickOnEvent().click();
 				
@@ -1163,9 +1226,9 @@ public class EvenntsAndWebinar extends base{
 				driver.switchTo().window(currentWindowID);
 				driver.navigate().back();
 				System.out.println("register cta page opened");
+*/				
 				
-				
-	*/	
+	
 		
 		
 		
@@ -1266,7 +1329,7 @@ public class EvenntsAndWebinar extends base{
 			
 		}*/
 		
-		
+}
 
 	//@Test(priority = 13)
 	public void TS013_VerifyExhibitorEventsAddToFavoriteTest() throws InterruptedException, IOException {
