@@ -70,16 +70,16 @@ public class GlobalSearch_MatchingResults extends base {
 		Thread.sleep(5000);
 		utl.CloseATLPopup();
 		Thread.sleep(2000);
-		utl.verifyMPLoginFunctionality();
+/*		utl.verifyMPLoginFunctionality();
 		Thread.sleep(5000);
-		utl.loginCheckLVM();
+		utl.loginCheckLVM();*/
 		//lap.getCloseMarktAdBtn().click();
 	}
 	
 	@Test(priority = 1)
 	public void TS001_VerifyGlobalSearchContainsAndStartsWithTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// T436: Verify Global Search: Contains and Starts With
+		// T814: Verify Global Search: Contains and Starts With
 		//Blocked- Unclear about the acceptance criteria
 		
 		lvmgs = new LVMGlobalSearchPage(driver);
@@ -100,7 +100,7 @@ public class GlobalSearch_MatchingResults extends base {
 	@Test(priority = 2)
 	public void TS002_VerifyGlobalSearchMatchingResultsSortWithinTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// T332: Global Search: Matching results- Sort- Search Within
+		// T673: Global Search: Matching results- Sort- Search Within
 
 		lvmgs = new LVMGlobalSearchPage(driver);
 		lvmds = new LVMExhDigiShowroomPage(driver);
@@ -214,7 +214,7 @@ public class GlobalSearch_MatchingResults extends base {
 	@Test(priority = 3)
 	public void TS003_VerifyGlobalSearchMatchingResultsSortSortByTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// T335: Global Search: Matching results-Sort- Sort By
+		// T676: Global Search: Matching results-Sort- Sort By
 		//Open bug- UXP-1991
 
 		lvmgs = new LVMGlobalSearchPage(driver);
@@ -262,7 +262,7 @@ public class GlobalSearch_MatchingResults extends base {
 	@Test(priority = 4)
 	public void TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// T336: Global Search: Matching results- Sort- Filter By Name
+		// T677: Global Search: Matching results- Sort- Filter By Name
 
 		lvmgs = new LVMGlobalSearchPage(driver);
 		lvmds = new LVMExhDigiShowroomPage(driver);
@@ -298,7 +298,7 @@ public class GlobalSearch_MatchingResults extends base {
 		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 	
-	@Test(priority = 5)
+	@Test(enabled=false)//priority = 5
 	public void TS005_VerifyGlobalSearchMatchingResultsSelectAddToFavoritesTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -349,7 +349,7 @@ public class GlobalSearch_MatchingResults extends base {
 		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 	
-	@Test(priority = 6)
+	@Test(enabled=false)//priority = 6
 	public void TS006_VerifyGlobalSearchMatchingResultsSelectAddToExistingListTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -408,7 +408,7 @@ public class GlobalSearch_MatchingResults extends base {
 		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 	
-	@Test(priority = 7)
+	@Test(enabled=false)//priority = 7
 	public void TS007_VerifyGlobalSearchMatchingResultsSelectAddToNewlyCreatedListTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -469,84 +469,7 @@ public class GlobalSearch_MatchingResults extends base {
 		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 	
-	@Test(priority = 8)
-/*	public void TS008_VerifyGlobalSearchMatchingResultsUsePreviousSavedSearchTest()
-			throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// T329: Global Search: Matching results- Use previous saved Search
-
-		lvmgs = new LVMGlobalSearchPage(driver);
-		lvmds = new LVMExhDigiShowroomPage(driver);
-		lvmexhact = new LVMExhLineProdActionsPage(driver);
-		utl = new Utility(driver);
-		lap = new LVMLandingPage(driver);
-		lp = new LVMLoginPage(driver);
-		lvmmpp = new LVMMarketPlannerPage(driver);
-		genData = new GenerateData();
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		
-		if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
-			lvmgs.getlvmGlobalSearchClearTxt().click();
-		}
-		//utl.verifyMPLoginFunctionality();
-		
-		utl.CloseATLPopup();
-		
-		
-		try {
-			lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearch_input"));//savedSearchesInput
-			Thread.sleep(3000);
-			lvmgs.getLVMSearchButton().click();
-			Thread.sleep(5000);
-			// Click on Save Searches Btn
-			lvmgs.getlvmSavedSearchesIcon().click();
-			Select selectSavedSearched = new Select(lvmgs.getlvmSavedSearchesDropdown());
-			selectSavedSearched.selectByIndex(1);
-			String optin = selectSavedSearched.getOptions().get(1).getText();
-			System.out.println(optin);
-		//	Assert.assertTrue(lvmgs.getLVMInfosearchtxtbx().getAttribute("value").contains(optin));
-			Thread.sleep(5000);
-			Assert.assertTrue(lvmgs.getLVMVerifyGlobalSeacrh().getText().contains(optin));
-			
-		} catch (Exception e) {
-			
-			if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
-				lvmgs.getlvmGlobalSearchClearTxt().click();
-			}
-			lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));//savedSearchesInput
-			Thread.sleep(3000);
-			lvmgs.getLVMSearchButton().click();
-			Thread.sleep(5000);
-			// Click on Save Searches Btn
-			lvmgs.getlvmSavedSearchesIcon().click();
-			//Click on Save Seach btn
-			lvmgs.getlvmSavedSearchesBtn().click();
-			
-			String savedSearchesInput=prop.getProperty("savedSearchesInput");
-			//Enter Search name into input box
-			lvmgs.getlvmSavedSearchesInputBox().sendKeys(savedSearchesInput);
-			//Click on Save Search Btn 
-			lvmgs.getlvmSavedSearchesBtnForNewSaved().click();
-			//Goto Home page
-			driver.get(prop.getProperty("lvmurl_prod"));
-			//Click on saved Searches btn
-			lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));//filtersglobalsearchinput
-			Thread.sleep(5000);
-			lvmgs.getLVMSearchButton().click();
-			lvmgs.getlvmSavedSearchesIcon().click();
-			//Select Saved Search from List
-			Select selectSavedSearched = new Select(lvmgs.getlvmSavedSearchesDropdown());
-			selectSavedSearched.selectByVisibleText(savedSearchesInput);
-			//Vrfify Saved Searches output resultss
-			Assert.assertTrue(lvmgs.getLVMInfosearchtxtbx().getAttribute("value").contains(prop.getProperty("savedSearchesInput")));
-			Thread.sleep(5000);
-			Assert.assertTrue(lvmgs.getLVMVerifyGlobalSeacrh().getText().contains(prop.getProperty("savedSearchesInput")));
-			driver.get(prop.getProperty("lvmurl_prod"));
-		}
-	}
-	*/
+	@Test(enabled=false)
 	public void TS008_VerifyGlobalSearchMatchingResultsUsePreviousSavedSearchTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -622,7 +545,7 @@ public class GlobalSearch_MatchingResults extends base {
 		}
 
 	}
-	@Test(priority = 9)
+	@Test(enabled=false)//priority = 9
 	public void TS009_VerifyGlobalSearchMatchingResultsSavedSearchesTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-

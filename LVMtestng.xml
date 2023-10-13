@@ -2,13 +2,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 
-<suite name="LVM_RegressionTestSuite">
+<suite name="LVM_RegressionTestSuite" parallel="classes">
 	<listners>
 		<listner class-name="lasvegasmarket_PROD.TestListeners" />
 	</listners>
-		<test thread-count="5" name="RegressionTest">
+		<test thread-count="1"  name="RegressionTest">
 		<classes>
-
 		<!-- <class name="lasvegasmarket_PROD.GlobalSearch_ProductActions" /> 
 		<class name="lasvegasmarket_PROD.GlobalSearch_SearchFor" /> 
 		<class name="lasvegasmarket_PROD.ShowSpecials" /> 
@@ -16,73 +15,18 @@
 		<class name="lasvegasmarket_PROD.GlobalSearch_ExhibitorActions" /> 
 		<class name="lasvegasmarket_PROD.GlobalSearch_SuggestionList" /> 
 		<class name="lasvegasmarket_PROD.EvenntsAndWebinar" /> -->
-		<class name="lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters" />
+		<class name="lasvegasmarket_PROD.EvenntsAndWebinar" />
 		
-		
-		
-				<!-- <methods>
-				      <include name="TS004_VerifyClickOnContactExhIconForExhibitorTest"/>   
-				</methods> -->
-		</classes>
-	</test>
-</suite>
+		<methods>
+				 <include name="TS005_VerifyIMCEventsEventDetailstTest"/>   
+		</methods>
 
-
- <!-- 
- <suite name="LVM_RegressionTestSuite">
-	<listners>
-		<listner class-name="MPTest.TestListeners" />
-	</listners>
-	<test thread-count="5" name="RegressionTest">
-		
-		<groups>
-	<run>
-		<include name="MP_Group"/>
-	</run>
-</groups>
-		<classes>
-
-			<class name="MPTest.MPTest" />
-			
-			<methods>
-			<include name="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest" /> 
-				 <include name="TS006_VerifyProductAddToExistingListOnSearchResultsGridTest" />
-				<include name="TS018_VerifyCatalogsSectionForExhibitorTest" />
-				
-			</methods>
-		</classes>
-		</test>
-</suite>
- -->
- 
- 
- <!-- <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"> -->
-<!-- <suite name="MPGroupTestSuite">
-	<listners>
-		<listner class-name="MPTest.TestListeners" />
-	</listners>
-	<test thread-count="5" name="RegressionTest">
-	<test thread-count="5" name="MPGroupTest">
-
-		<groups>
-			<run>
-				<include name="MP_Group" />
-				<include name="Non_MP" />
-				
-			</run>
-		</groups>
-
-		<classes>
-			<class name="lasvegasmarket_PROD.EvenntsAndWebinar" />
-				<methods>
-				      <include name="TS007_VerifyIMCEventsAddToListTest()"/>    
-				</methods>
-		</classes>
-	</test>
 	
+	</test>
 </suite>
+
+
+  	
  
-  -->
  
  

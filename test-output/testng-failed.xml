@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<<<<<<< HEAD
+<suite name="Failed suite [ATLMrkt_RegressionTestSuite]" parallel="classes">
+  <test name="RegressionParallelest(failed)" parallel="classes">
+=======
 <suite name="Failed suite [LVM_RegressionTestSuite]">
   <test name="RegressionTest(failed)">
+>>>>>>> 354ebf9997144f7b72a0c40574cd83de23ff84bc
     <classes>
       <class name="lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters">
         <methods>
@@ -11,8 +16,45 @@
           <include name="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest"/>
           <include name="tearDown"/>
           <include name="initialize"/>
+<<<<<<< HEAD
+          <include name="TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest"/>
+          <include name="TS012_VerifyExhibitorDigitalEventsComponentTest"/>
+        </methods>
+      </class> <!-- lasvegasmarket_PROD.ExhibitorDigitalShowroom -->
+      <class name="lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters">
+        <methods>
+          <include name="TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest"/>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters -->
+      <class name="lasvegasmarket_PROD.GlobalSearch_MatchingResults">
+        <methods>
+          <include name="quit"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- lasvegasmarket_PROD.GlobalSearch_MatchingResults -->
+      <class name="lasvegasmarket_PROD.FloorPlans">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+          <include name="TS005_VerifyPaginationOnFloorPlansPageTest"/>
+        </methods>
+      </class> <!-- lasvegasmarket_PROD.FloorPlans -->
+      <class name="lasvegasmarket_PROD.GlobalSearch_LineActions">
+        <methods>
+          <include name="initialize"/>
+          <include name="tearDown"/>
+          <include name="TS003_VerifyClickOnMatchingProductsSeeAllLinkForLineTest"/>
+        </methods>
+      </class> <!-- lasvegasmarket_PROD.GlobalSearch_LineActions -->
+    </classes>
+  </test> <!-- RegressionParallelest(failed) -->
+</suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->
+=======
         </methods>
       </class> <!-- lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
+>>>>>>> 354ebf9997144f7b72a0c40574cd83de23ff84bc

@@ -58,14 +58,186 @@ public class GlobalSearch_LineActions extends base {
 		//lap.getCloseMarktAdBtn().click();
 		
 		//Login to Market Planner
-		utl.verifyMPLoginFunctionality();
-		utl.loginCheckLVM();
-		Thread.sleep(8000);
+		//utl.verifyMPLoginFunctionality();
+		//utl.loginCheckLVM();
+		//Thread.sleep(8000);
 //		lap.getCloseMarktAdBtn().click();
 	}
 
 	@Test(priority = 1)
-	public void TS001_VerifyClickOnContactExhIconForLineTest() throws InterruptedException, IOException {
+	public void TS001_VerifyClickOnShownByExhibitorNameLinkForLineTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T433: The Lines actions: Shown By <ExhibitorName> link
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		utl = new Utility(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		driver.get(prop.getProperty("lvmurl_prod"));
+		Thread.sleep(6000);
+		//lap.getCloseMarktAdBtn().click();
+		
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
+		atlgs.getATLSearchButton().click();
+
+		Thread.sleep(15000);
+		// Store the 1st Exhibitor name in String variable
+		String exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Line name: " + exhname);
+		// Click on ExhibitorName
+		atlexhact.getExhibitorNameLink().click();
+		// Verify DG showroom page
+		Assert.assertTrue(atlexhdgshw.getATLExhDigiShowPage().isDisplayed());
+	}
+
+	@Test(priority = 2)
+	public void TS002_VerifyClickOnLocationLinkForLineTest() throws InterruptedException, IOException {
+
+		// The purpose of this test case to verify:-
+		// T370: Lines Actions: Location links
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		utl = new Utility(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		driver.get(prop.getProperty("lvmurl_prod"));
+		Thread.sleep(6000);
+		//lap.getCloseMarktAdBtn().click();
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
+		atlgs.getATLSearchButton().click();
+
+		Thread.sleep(15000);
+		// Store the 1st Exhibitor name in String variable
+		String exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Line name: " + exhname);
+		String locationLink = atlexhact.getLineLocationLink().getAttribute("href");
+		// Click on Location Icon
+		atlexhact.getLineLocationLink().click();
+		// Verify Location page
+		Assert.assertTrue(locationLink.equals(driver.getCurrentUrl()));
+	}
+
+	@Test(priority = 3)
+	public void TS003_VerifyClickOnMatchingProductsSeeAllLinkForLineTest() throws InterruptedException, IOException {
+
+		// The purpose of this test case to verify:-
+		// T371: Lines Actions: Matching Products- See All
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		utl = new Utility(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		driver.get(prop.getProperty("lvmurl_prod"));
+		Thread.sleep(6000);
+		//lap.getCloseMarktAdBtn().click();
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLSearchButton().click();
+
+		Thread.sleep(15000);
+		// Store the 1st Exhibitor name in String variable
+		String linename = atlexhact.getExhibitorName().getText();
+		System.out.println("Line name: " +linename);
+
+		// Get the Matching Products count on Search grid
+		String temp = atlexhact.getMatchingProdCountOnSearchGrid().getText();
+		String matchingprodcountonsearchgrid = temp.replaceAll("[^0-9]", "");
+		System.out.println("Matching Products Count on Search Results grid is: " + matchingprodcountonsearchgrid);
+
+		// Click on See All link
+		atlexhact.getMatchingProdSeeAllLink().click();
+		Thread.sleep(15000);
+
+		// Verify that user should redirect to the Matching Products page
+		Assert.assertTrue(atlexhact.getValidateProductsPage().isDisplayed());
+		Thread.sleep(5000);
+		//Assert.assertTrue(driver.getTitle().contains("Products for "+linename+""));
+		Assert.assertTrue(driver.getTitle().contains(linename));
+
+		// Get the Matching Products count on Products page
+		String producttabtitle = atlexhact.getValidateProductsPage().getText();
+		String matchingprodcountonprodpage = producttabtitle.replaceAll("[^0-9]", "");
+		System.out.println("Matching Products Count on Products page is: " + matchingprodcountonprodpage);
+
+		// Verify Matching Products count on Search grid should match with Products page
+		Assert.assertEquals(matchingprodcountonsearchgrid, matchingprodcountonprodpage);
+	}
+
+	@Test(priority = 4)
+	public void TS004_VerifyClickOnTotalProductsSeeAllLinkForLineTest() throws InterruptedException, IOException {
+
+		// The purpose of this test case to verify:-
+		// T369: Lines actions: Total Products- See all
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		utl = new Utility(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		driver.get(prop.getProperty("lvmurl_prod"));
+		Thread.sleep(6000);
+		//lap.getCloseMarktAdBtn().click();
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLSearchButton().click();
+
+		Thread.sleep(15000);
+		// Store the 1st Line name in String variable
+		String linename = atlexhact.getExhibitorName().getText();
+		System.out.println("Line name: " +linename);
+
+		// Get the Matching Products count on Search grid
+		String temp = atlexhact.getMatchingProdCountOnSearchGrid().getText();
+		String matchingprodcountonsearchgrid = temp.replaceAll("[^0-9]", "");
+		System.out.println("Total Products Count on Search Results grid is: " + matchingprodcountonsearchgrid);
+		Thread.sleep(2000);
+		// Click on Total Product See All link
+		utl.scrollToElement(atlexhact.getTotalProdSeeAllLink());
+		atlexhact.getTotalProdSeeAllLink().click();
+
+		Thread.sleep(15000);
+		// Verify that user should redirect to the Matching Products page
+		Assert.assertTrue(atlexhact.getValidateProductsPage().isDisplayed());
+		/*String t=driver.getTitle();
+		System.out.println(t);*/
+		Thread.sleep(5000);
+		System.out.println(driver.getTitle());
+		//Assert.assertTrue(driver.getTitle().contains("Products for "+linename+""));
+		Assert.assertTrue(driver.getTitle().contains(linename));
+
+		// Get the Matching Products count on Products page
+		String producttabtitle = atlexhact.getValidateProductsPage().getText();
+		String matchingprodcountonprodpage = producttabtitle.replaceAll("[^0-9]", "");
+		System.out.println("Total Products Count on Products page is: " + matchingprodcountonprodpage);
+
+		// Verify Total Products count on Search grid should match with Products page
+		Assert.assertEquals(matchingprodcountonsearchgrid, matchingprodcountonprodpage);
+		
+		driver.get(prop.getProperty("lvmurl_prod"));
+		//lap.getCloseMarktAdBtn().click();
+	}
+	
+	@Test(enabled=false)
+	public void TS005_VerifyClickOnContactExhIconForLineTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T361: The click on 'Contact Exhibitor' functionality for a Line
 
@@ -103,8 +275,8 @@ public class GlobalSearch_LineActions extends base {
 		atlexhact.getPopUpCloseBtn().click();
 	}
 
-	@Test(priority = 2)
-	public void TS002_VerifyAddToFavoriteForLineTest() throws InterruptedException, IOException {
+	@Test(enabled=false)
+	public void TS006_VerifyAddToFavoriteForLineTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T360: The Add to Favorite functionality for a Line
 
@@ -171,8 +343,8 @@ public class GlobalSearch_LineActions extends base {
 		//Assert.assertFalse(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 	}
 
-	@Test(priority = 3)
-	public void TS003_VerifyClickOnOrderOnJuniperMarketBtnForLineTest() throws InterruptedException, IOException {
+	@Test(enabled=false)
+	public void TS007_VerifyClickOnOrderOnJuniperMarketBtnForLineTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T376: The click on 'Order On JuniperMarket' button functionality for a Line
 
@@ -214,8 +386,8 @@ public class GlobalSearch_LineActions extends base {
 		driver.switchTo().window(winHandleBefore);
 	}
 
-	@Test(priority = 4)
-	public void TS004_VerifyAddToNewListForLineTest() throws InterruptedException, IOException {
+	@Test(enabled=false)
+	public void TS008_VerifyAddToNewListForLineTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T423: The Add to Newly created list functionality for Line
 
@@ -278,8 +450,8 @@ public class GlobalSearch_LineActions extends base {
 		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 	}
 
-	@Test(priority = 5)
-	public void TS005_VerifyAddToExistingListForLineTest() throws InterruptedException, IOException {
+	@Test(enabled=false)
+	public void TS009_VerifyAddToExistingListForLineTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T362: The Add to Newly created list functionality for a Line
 
@@ -359,177 +531,6 @@ public class GlobalSearch_LineActions extends base {
 		Thread.sleep(8000);
 		Assert.assertFalse(atlmppge.getATLSavedExhNameInList().getText().contains(exhname));
 		driver.get(prop.getProperty("lvmurl_prod"));
-	}
-
-	@Test(priority = 06)
-	public void TS006_VerifyClickOnShownByExhibitorNameLinkForLineTest() throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// T433: The Lines actions: Shown By <ExhibitorName> link
-
-		atlgs = new ATLGlobalSearchPage(driver);
-		atlexhact = new ATLExhLineProdActionsPage(driver);
-		lap = new ATLLandingPage(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		utl = new Utility(driver);
-		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		driver.get(prop.getProperty("lvmurl_prod"));
-		Thread.sleep(6000);
-		//lap.getCloseMarktAdBtn().click();
-		
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
-		atlgs.getATLSearchButton().click();
-
-		Thread.sleep(15000);
-		// Store the 1st Exhibitor name in String variable
-		String exhname = atlexhact.getExhibitorName().getText();
-		System.out.println("Line name: " + exhname);
-		// Click on ExhibitorName
-		atlexhact.getExhibitorNameLink().click();
-		// Verify DG showroom page
-		Assert.assertTrue(atlexhdgshw.getATLExhDigiShowPage().isDisplayed());
-	}
-
-	@Test(priority = 7)
-	public void TS007_VerifyClickOnLocationLinkForLineTest() throws InterruptedException, IOException {
-
-		// The purpose of this test case to verify:-
-		// T370: Lines Actions: Location links
-
-		atlgs = new ATLGlobalSearchPage(driver);
-		atlexhact = new ATLExhLineProdActionsPage(driver);
-		lap = new ATLLandingPage(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		utl = new Utility(driver);
-		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
-		
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
-		driver.get(prop.getProperty("lvmurl_prod"));
-		Thread.sleep(6000);
-		//lap.getCloseMarktAdBtn().click();
-
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
-		atlgs.getATLSearchButton().click();
-
-		Thread.sleep(15000);
-		// Store the 1st Exhibitor name in String variable
-		String exhname = atlexhact.getExhibitorName().getText();
-		System.out.println("Line name: " + exhname);
-		String locationLink = atlexhact.getLineLocationLink().getAttribute("href");
-		// Click on Location Icon
-		atlexhact.getLineLocationLink().click();
-		// Verify Location page
-		Assert.assertTrue(locationLink.equals(driver.getCurrentUrl()));
-	}
-
-	@Test(priority = 8)
-	public void TS008_VerifyClickOnMatchingProductsSeeAllLinkForLineTest() throws InterruptedException, IOException {
-
-		// The purpose of this test case to verify:-
-		// T371: Lines Actions: Matching Products- See All
-
-		atlgs = new ATLGlobalSearchPage(driver);
-		atlexhact = new ATLExhLineProdActionsPage(driver);
-		lap = new ATLLandingPage(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		utl = new Utility(driver);
-		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
-		
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
-		driver.get(prop.getProperty("lvmurl_prod"));
-		Thread.sleep(6000);
-		//lap.getCloseMarktAdBtn().click();
-
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
-		atlgs.getATLSearchButton().click();
-
-		Thread.sleep(15000);
-		// Store the 1st Exhibitor name in String variable
-		String linename = atlexhact.getExhibitorName().getText();
-		System.out.println("Line name: " +linename);
-
-		// Get the Matching Products count on Search grid
-		String temp = atlexhact.getMatchingProdCountOnSearchGrid().getText();
-		String matchingprodcountonsearchgrid = temp.replaceAll("[^0-9]", "");
-		System.out.println("Matching Products Count on Search Results grid is: " + matchingprodcountonsearchgrid);
-
-		// Click on See All link
-		atlexhact.getMatchingProdSeeAllLink().click();
-		Thread.sleep(15000);
-
-		// Verify that user should redirect to the Matching Products page
-		Assert.assertTrue(atlexhact.getValidateProductsPage().isDisplayed());
-		Thread.sleep(5000);
-		//Assert.assertTrue(driver.getTitle().contains("Products for "+linename+""));
-		Assert.assertTrue(driver.getTitle().contains(linename));
-
-		// Get the Matching Products count on Products page
-		String producttabtitle = atlexhact.getValidateProductsPage().getText();
-		String matchingprodcountonprodpage = producttabtitle.replaceAll("[^0-9]", "");
-		System.out.println("Matching Products Count on Products page is: " + matchingprodcountonprodpage);
-
-		// Verify Matching Products count on Search grid should match with Products page
-		Assert.assertEquals(matchingprodcountonsearchgrid, matchingprodcountonprodpage);
-	}
-
-	@Test(priority = 9)
-	public void TS009_VerifyClickOnTotalProductsSeeAllLinkForLineTest() throws InterruptedException, IOException {
-
-		// The purpose of this test case to verify:-
-		// T369: Lines actions: Total Products- See all
-
-		atlgs = new ATLGlobalSearchPage(driver);
-		atlexhact = new ATLExhLineProdActionsPage(driver);
-		lap = new ATLLandingPage(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		utl = new Utility(driver);
-		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
-		
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
-		driver.get(prop.getProperty("lvmurl_prod"));
-		Thread.sleep(6000);
-		//lap.getCloseMarktAdBtn().click();
-
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
-		atlgs.getATLSearchButton().click();
-
-		Thread.sleep(15000);
-		// Store the 1st Line name in String variable
-		String linename = atlexhact.getExhibitorName().getText();
-		System.out.println("Line name: " +linename);
-
-		// Get the Matching Products count on Search grid
-		String temp = atlexhact.getMatchingProdCountOnSearchGrid().getText();
-		String matchingprodcountonsearchgrid = temp.replaceAll("[^0-9]", "");
-		System.out.println("Total Products Count on Search Results grid is: " + matchingprodcountonsearchgrid);
-
-		// Click on Total Product See All link
-		atlexhact.getTotalProdSeeAllLink().click();
-
-		Thread.sleep(15000);
-		// Verify that user should redirect to the Matching Products page
-		Assert.assertTrue(atlexhact.getValidateProductsPage().isDisplayed());
-		/*String t=driver.getTitle();
-		System.out.println(t);*/
-		Thread.sleep(5000);
-		System.out.println(driver.getTitle());
-		//Assert.assertTrue(driver.getTitle().contains("Products for "+linename+""));
-		Assert.assertTrue(driver.getTitle().contains(linename));
-
-		// Get the Matching Products count on Products page
-		String producttabtitle = atlexhact.getValidateProductsPage().getText();
-		String matchingprodcountonprodpage = producttabtitle.replaceAll("[^0-9]", "");
-		System.out.println("Total Products Count on Products page is: " + matchingprodcountonprodpage);
-
-		// Verify Total Products count on Search grid should match with Products page
-		Assert.assertEquals(matchingprodcountonsearchgrid, matchingprodcountonprodpage);
-		
-		driver.get(prop.getProperty("lvmurl_prod"));
-		//lap.getCloseMarktAdBtn().click();
 	}
 	
 	@AfterClass
