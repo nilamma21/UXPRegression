@@ -349,7 +349,7 @@ public class GlobalSearch_SearchFor extends base{
 		//Scroll to Catalog Section
 		utl.scrollToElement(lvmds.getLVMCatalogSection());
 		//Click on All Catalog Btn Btn
-		lvmds.getLVMCatalogSeeAllBtn().click();
+		lvmds.getSeeAllCatalogsButton().click();
 		Assert.assertTrue(lvmds.getLVMVerifyLinePageTitle().getText().contains("Catalogs"));
 		Thread.sleep(2000);
 		// Store the current window handle

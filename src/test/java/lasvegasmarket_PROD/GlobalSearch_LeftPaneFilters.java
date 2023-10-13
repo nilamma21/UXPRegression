@@ -72,7 +72,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));//Previous input = filtersglobalsearchinput
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputforInfoTab")));//Previous input = filtersglobalsearchinput
 		lvmgs.getLVMSearchButton().click();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
