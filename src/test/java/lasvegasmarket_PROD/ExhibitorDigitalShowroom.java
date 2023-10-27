@@ -374,7 +374,7 @@ public class ExhibitorDigitalShowroom extends base {
 
     // Get the Total Lines count on Search grid
     lvmds.getExhibitorName().click();
-    Thread.sleep(7000);
+    Thread.sleep(8000);
 
     // Click See in Other Market button and verify if the page opens
     lvmds.getSeeInOtherMarket().click();
@@ -991,7 +991,7 @@ public class ExhibitorDigitalShowroom extends base {
   @AfterClass
   public void tearDown() throws InterruptedException {
     Thread.sleep(2000);
-    // driver.quit();
+     driver.quit();
   }
 
 }

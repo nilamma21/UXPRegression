@@ -102,11 +102,66 @@ public class GlobalSearch_ProductActions extends base {
 		System.out.println("Product Name On Product Details page: " + productNameOnProductDetails);
 		// Verify that selected Product details page should be opened
 		Assert.assertTrue(productNameOnSearchGrid.equals(productNameOnProductDetails));
-		driver.get(prop.getProperty("lvmurl_prod"));
+		//driver.get(prop.getProperty("lvmurl_prod"));
 	}
 
-	//@Test(priority = 2)
-	public void TS002_VerifyProductAddToNewListOnProductDetailsPageTest() throws InterruptedException, IOException {
+	   @Test(priority = 2)
+	    public void TS002_VerifyFullScreenViewerOnProductDetailsPageTest() throws InterruptedException, IOException {
+	        // The purpose of this test case to verify:-
+	        // T387: Full Screen Viewer functionality on Product Details page
+
+	        atlgs = new ATLGlobalSearchPage(driver);
+	        atlexhact = new ATLExhLineProdActionsPage(driver);
+	        lap = new ATLLandingPage(driver);
+	        atlmppge = new ATLMarketPlannerPage(driver);
+	        utl = new Utility(driver);
+	        atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+	        atlproddet = new ATLProductDetailsPage(driver);
+
+	        driver.get(prop.getProperty("lvmurl_prod"));
+	        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	        Thread.sleep(6000);
+	        //lap.getCloseMarktAdBtn().click();
+
+	        atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearchinput"));
+	        atlgs.getATLSearchButton().click();
+	        Thread.sleep(15000);
+	        //Store the 1st Product name of Exhibitor
+	        //String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText(); //Old
+	        String productNameOnSearchGrid = atlexhact.getprodNameUAT().getText(); //New
+	        System.out.println("Selected Product Name: "+productNameOnSearchGrid);
+
+	        utl.scrollToElement(atlexhact.getExhibitorProduct());
+
+	        // Hovering on Product
+	        Actions actions = new Actions(driver);
+	        actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
+	        // To mouseover on See Details btn
+	        actions.moveToElement(atlexhact.getProdSeeDetailsBtn()).perform();
+
+	        //Click on See Details button
+	        actions.click().perform();
+	        Thread.sleep(5000);
+
+	        //Click on Product Full Screen Viewer button
+	        utl.scrollToElement(  atlproddet.getProductFullScreenViewerBtn());
+	        atlproddet.getProductFullScreenViewerBtn().click();
+
+	        //Verify that Full Screen viewer should be displayed with Product images
+	        Assert.assertTrue(atlproddet.getProductFullScreenViewer().isDisplayed());
+	        Thread.sleep(5000);
+
+	        //Verify the title of the Full screen viewer
+	        System.out.println(atlproddet.getProductFullScreenViewerTitle().getText());
+	        Assert.assertTrue(atlproddet.getProductFullScreenViewerTitle().getText().equals(productNameOnSearchGrid));
+
+	        //Dismiss the Full Screen Viewer
+	        atlproddet.getProductFullScreenViewer().click();
+	        //driver.get(prop.getProperty("lvmurl_prod"));
+	    }
+	
+	//@Test(priority = 3)
+	public void TS003_VerifyProductAddToNewListOnProductDetailsPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T435: Add to Newly created list functionality on Product details page
 
@@ -185,8 +240,8 @@ public class GlobalSearch_ProductActions extends base {
 		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 
-	//@Test(priority = 3)
-	public void TS003_VerifyProductAddToExistingListOnProductDetailsPageTest() throws InterruptedException, IOException {
+	//@Test(priority = 4)
+	public void TS004_VerifyProductAddToExistingListOnProductDetailsPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T384: Add to existing list functionality on Product details page
 
@@ -281,8 +336,8 @@ public class GlobalSearch_ProductActions extends base {
 		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 
-	//@Test(priority = 4)
-	public void TS004_VerifyAddToFavoriteOnProductDetailsPageTest() throws InterruptedException, IOException {
+	//@Test(priority = 5)
+	public void TS005_VerifyAddToFavoriteOnProductDetailsPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T385: Add to Favorite functionality on Product Details page
 
@@ -365,8 +420,8 @@ public class GlobalSearch_ProductActions extends base {
 		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 
-	//@Test(priority = 5)
-	public void TS005_VerifyAddNoteOnProductDetailsPageTest() throws InterruptedException, IOException {
+	//@Test(priority = 6)
+	public void TS006_VerifyAddNoteOnProductDetailsPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T386: Add Note functionality on Product Details page
 
@@ -442,8 +497,8 @@ public class GlobalSearch_ProductActions extends base {
 		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 
-	//@Test(priority = 6)
-	public void TS006_VerifyProductAddToExistingListOnSearchResultsGridTest() throws InterruptedException, IOException {
+	//@Test(priority = 7)
+	public void TS007_VerifyProductAddToExistingListOnSearchResultsGridTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T377: Products Actions: + icon to add to existing list
 
@@ -533,60 +588,6 @@ public class GlobalSearch_ProductActions extends base {
 		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 
-	@Test(priority = 7)
-	public void TS007_VerifyFullScreenViewerOnProductDetailsPageTest() throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// T387: Full Screen Viewer functionality on Product Details page
-
-		atlgs = new ATLGlobalSearchPage(driver);
-		atlexhact = new ATLExhLineProdActionsPage(driver);
-		lap = new ATLLandingPage(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		utl = new Utility(driver);
-		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
-		atlproddet = new ATLProductDetailsPage(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		driver.get(prop.getProperty("lvmurl_prod"));
-		Thread.sleep(6000);
-		//lap.getCloseMarktAdBtn().click();
-
-		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearchinput"));
-		atlgs.getATLSearchButton().click();
-		Thread.sleep(15000);
-		//Store the 1st Product name of Exhibitor
-		//String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText(); //Old
-		String productNameOnSearchGrid = atlexhact.getprodNameUAT().getText(); //New
-		System.out.println("Selected Product Name: "+productNameOnSearchGrid);
-
-		utl.scrollToElement(atlexhact.getExhibitorProduct());
-
-		// Hovering on Product
-		Actions actions = new Actions(driver);
-		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
-		// To mouseover on See Details btn
-		actions.moveToElement(atlexhact.getProdSeeDetailsBtn()).perform();
-
-		//Click on See Details button
-		actions.click().perform();
-		Thread.sleep(5000);
-
-		//Click on Product Full Screen Viewer button
-		atlproddet.getProductFullScreenViewerBtn().click();
-
-		//Verify that Full Screen viewer should be displayed with Product images
-		Assert.assertTrue(atlproddet.getProductFullScreenViewer().isDisplayed());
-		Thread.sleep(5000);
-
-		//Verify the title of the Full screen viewer
-		System.out.println(atlproddet.getProductFullScreenViewerTitle().getText());
-		Assert.assertTrue(atlproddet.getProductFullScreenViewerTitle().getText().equals(productNameOnSearchGrid));
-
-		//Dismiss the Full Screen Viewer
-		atlproddet.getProductFullScreenViewer().click();
-		driver.get(prop.getProperty("lvmurl_prod"));
-	}
 
 	//@Test(priority = 8)
 	public void TS008_VerifyAddToFavoriteOnSearchResultsGridTest() throws InterruptedException, IOException {
@@ -733,6 +734,6 @@ public class GlobalSearch_ProductActions extends base {
 
 	@AfterClass
 	public void tearDown() {
-		//driver.quit();
+		driver.quit();
 	}
 }

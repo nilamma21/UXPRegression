@@ -168,67 +168,67 @@ public class ATLExhLineProdActionsPage extends base{
 	}
 	
 	public WebElement getAddFavIcon() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(addfavicon));
 		return driver.findElement(addfavicon);
 	}
 	public WebElement getSearchResultMoreicon() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(searchresultmoreicon));
 		return driver.findElement(searchresultmoreicon);
 	}
 	public WebElement getAddToListOptn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(addtolistoptn));
 		return driver.findElement(addtolistoptn);
 	}
 	public WebElement getContactExhibitorIcon() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(contactexhibitoricon));
 		return driver.findElement(contactexhibitoricon);
 	}
 	public WebElement getContactExhibitorModal() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(contactexhibitormodal));
 		return driver.findElement(contactexhibitormodal);
 	}
 	public WebElement getPostalCodeTxtBx() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(postalcodetxtbx));
 		return driver.findElement(postalcodetxtbx);
 	}
 	public WebElement getMessageTxtBx() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(messagetxtbx));
 		return driver.findElement(messagetxtbx);
 	}
 	public WebElement getProductCateg1() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(prodcatg1));
 		return driver.findElement(prodcatg1);
 	}
 	public WebElement getProductCateg2() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(prodcatg2));
 		return driver.findElement(prodcatg2);
 	}
 	public WebElement getSendMessageBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(sendmessagebtn));
 		return driver.findElement(sendmessagebtn);
 	}
 	public WebElement getLocationLinkInExhCard() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(locationlinkinexhcard));
 		return driver.findElement(locationlinkinexhcard);
 	}
 	public WebElement getLinesShownSeeAlLink() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lineshownseealllink));
 		return driver.findElement(lineshownseealllink);
 	}
 	public WebElement getValidateLinesPage() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(validatelinespage));
 		return driver.findElement(validatelinespage);
 	}
@@ -243,7 +243,7 @@ public class ATLExhLineProdActionsPage extends base{
 		return driver.findElement(validateproductspage);
 	}
 	public WebElement getTotalProdCountOnSearchGrid() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(totalprodcountonsearchgrid));
 		return driver.findElement(totalprodcountonsearchgrid);
 	}
@@ -293,7 +293,7 @@ public class ATLExhLineProdActionsPage extends base{
 		return driver.findElements(savednotenameinallnoteslist);
 	}
 	public WebElement getNoteForAnExhibitorModal() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(noteforanexhibitormodal));
 		return driver.findElement(noteforanexhibitormodal);
 	}
@@ -341,12 +341,12 @@ public class ATLExhLineProdActionsPage extends base{
 		return driver.findElement(exhibitorProdcut);
 	}
 	public WebElement getExhProductNameOnSearchGrid() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(exhproductnameonsearchgrid));
 		return driver.findElement(exhproductnameonsearchgrid);
 	}
 	public WebElement getProductAddToFavBtnOnSearchGrid() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productaddtofavbtn));
 		return driver.findElement(productaddtofavbtn);
 	}
@@ -357,17 +357,17 @@ public class ATLExhLineProdActionsPage extends base{
 		return driver.findElement(seeDetailsBtn);
 	}
 	public WebElement getProductMoreBtnOnSearchGrid() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productmorebtn));
 		return driver.findElement(productmorebtn);
 	}
 	public WebElement getProductForMultipleCatg() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productformultiplecatg));
 		return driver.findElement(productformultiplecatg);
 	}
 	public WebElement getThirdExhProdSeeDetailsBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(seedetailsbtn3rdexhproduct));
 		return driver.findElement(seedetailsbtn3rdexhproduct);
 	}
@@ -377,83 +377,83 @@ public class ATLExhLineProdActionsPage extends base{
 		return driver.findElement(imcexhibitorname);
 	}
 	public WebElement getProductFevBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productFevBtn));
 		return driver.findElement(productFevBtn);
 	}	
 	public WebElement getCatalogsTab() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(catalogstab));
 		return driver.findElement(catalogstab);
 	}
 	public WebElement getCatalogsItem() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(catalogitem));
 		return driver.findElement(catalogitem);
 	}
 	public WebElement getEventCardInSearch() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(eventcardinsearch));
 		return driver.findElement(eventcardinsearch);
 	}
 	public WebElement getEventCardTitle() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(eventcardtitle));
 		return driver.findElement(eventcardtitle);
 	}
 	public WebElement getEventDetailsHeader() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(eventdetailsheader));
 		return driver.findElement(eventdetailsheader);
 	}
 	public WebElement getEventDetailsTag() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(eventdetailstag));
 		return driver.findElement(eventdetailstag);
 	}
 	public WebElement getEventCardTag() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(eventcardtag));
 		return driver.findElement(eventcardtag);
 	}
 	public WebElement getproductaddtofavbtn_ATLPROD() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productaddtofavbtn_ATLPROD));
 		return driver.findElement(productaddtofavbtn_ATLPROD);
 	}
 	public WebElement getexhibitorProdcut_ATLPROD() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitorProdcut_ATLPROD));
 		return driver.findElement(exhibitorProdcut_ATLPROD);
 	}
 	public WebElement getThirdExhName() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(thirdexhname));
 		return driver.findElement(thirdexhname);
 	}
 
 	public WebElement getSecondExhProduct() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(secondexhproduct));
 		return driver.findElement(secondexhproduct);
 	}
 	public WebElement getSecondExhProductSeeDetailsBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(secondexhprodseedetailsbtn));
 		return driver.findElement(secondexhprodseedetailsbtn);
 	}
 	public WebElement getTotalProdCountOnSearchGridNew() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(totalprodcountonsearchgridnew));
 		return driver.findElement(totalprodcountonsearchgridnew);
 	}
 	public WebElement getTotalProdSeeAllLinkNew() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(totalprodseealllinknew));
 		return driver.findElement(totalprodseealllinknew);
 	}
 	public WebElement getExhProductNameOnSearchGridNew() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(exhproductnameonsearchgridnew));
 		return driver.findElement(exhproductnameonsearchgridnew);
 	}

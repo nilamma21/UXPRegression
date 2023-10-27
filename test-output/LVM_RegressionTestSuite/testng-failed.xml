@@ -3,55 +3,13 @@
 <suite name="Failed suite [LVM_RegressionTestSuite]" parallel="classes">
   <test name="RegressionTest(failed)" parallel="classes">
     <classes>
-      <class name="lasvegasmarket_PROD.ShowSpecials">
+      <class name="lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters">
         <methods>
-          <include name="initialize"/>
-          <include name="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest"/>
-          <include name="TS002_VerifyShowroomLinkForShowSpecialsTest"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- lasvegasmarket_PROD.ShowSpecials -->
-      <class name="lasvegasmarket_PROD.GlobalSearch_ProductActions">
-        <methods>
-          <include name="initialize"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- lasvegasmarket_PROD.GlobalSearch_ProductActions -->
-      <class name="lasvegasmarket_PROD.GlobalSearch_SuggestionList">
-        <methods>
-          <include name="TS003_VerifySelectionOfProductFromAutoSuggestionListTest"/>
+          <include name="TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest"/>
           <include name="tearDown"/>
           <include name="initialize"/>
         </methods>
-      </class> <!-- lasvegasmarket_PROD.GlobalSearch_SuggestionList -->
-      <class name="lasvegasmarket_PROD.LineDigitalShowroom">
-        <methods>
-          <include name="initialize"/>
-          <include name="TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- lasvegasmarket_PROD.LineDigitalShowroom -->
-      <class name="lasvegasmarket_PROD.GlobalSearch_ExhibitorActions">
-        <methods>
-          <include name="TS008_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest"/>
-          <include name="initialize"/>
-          <include name="tearDown"/>
-          <include name="TS007_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest"/>
-        </methods>
-      </class> <!-- lasvegasmarket_PROD.GlobalSearch_ExhibitorActions -->
-      <class name="lasvegasmarket_PROD.EvenntsAndWebinar">
-        <methods>
-          <include name="tearDown"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- lasvegasmarket_PROD.EvenntsAndWebinar -->
-      <class name="lasvegasmarket_PROD.GlobalSearch_SearchFor">
-        <methods>
-          <include name="initialize"/>
-          <include name="tearDown"/>
-          <include name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest"/>
-        </methods>
-      </class> <!-- lasvegasmarket_PROD.GlobalSearch_SearchFor -->
+      </class> <!-- lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
