@@ -269,7 +269,8 @@ public class LVMEventsAndWebinarPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmCalendarPrevMonth));
 		return driver.findElement(lvmCalendarPrevMonth);
 	}
-	public WebElement getlvmTodaysDate() {
+	public WebElement getlvmTodaysDate() throws InterruptedException {
+	  Thread.sleep(2000);
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmTodaysDate));
 		return driver.findElement(lvmTodaysDate);

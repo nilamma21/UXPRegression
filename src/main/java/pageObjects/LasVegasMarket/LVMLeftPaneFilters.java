@@ -50,23 +50,23 @@ public class LVMLeftPaneFilters {
 		return driver.findElement(prodcatgexpandbtn);
 	}
 	public WebElement getAccentFurnExpandBtn(){
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(accentfurnexpandbtn));
 		return driver.findElement(accentfurnexpandbtn);
 	}
 	public WebElement getLVMAntiqueReprodAccbtn(){
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlAntiqueReprodAccbtn));
 		return driver.findElement(atlAntiqueReprodAccbtn);
 	}
 
 	public WebElement getLVMexhibitor(){
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlexhibitor));
 		return driver.findElement(atlexhibitor);
 	}
 	public WebElement getLVMStylesFilterbtn(){
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(stylesFilterbtn));
 		return driver.findElement(stylesFilterbtn);
 	}
@@ -74,12 +74,12 @@ public class LVMLeftPaneFilters {
 		return driver.findElement(apparelvintprodcatg);
 	}
 	public WebElement getLVMAntiqueVintProdCatg(){
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(antiquevintprodcatg));
 		return driver.findElement(antiquevintprodcatg);
 	}
 	public WebElement getLVMStylesExpandBtn(){
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(stylesexpandbtn));
 		return driver.findElement(stylesexpandbtn);
 	}
@@ -92,23 +92,23 @@ public class LVMLeftPaneFilters {
 		return driver.findElement(expexhdropdown);
 	}
 	public WebElement getTrippExhNameInEXP(){
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(trippexhnameinexp));
 		return driver.findElement(trippexhnameinexp);
 	}
 	public WebElement getEXPDigiShowroomTab(){
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(expdidgitalshowroomtab));
 		return driver.findElement(expdidgitalshowroomtab);
 	}
 	
 	public WebElement getEXPProfileInfoMenu(){
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(expprofileinfomenu));
 		return driver.findElement(expprofileinfomenu);
 	}
 	public WebElement getEXPProductCategSection() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(expproductcategsectn));
 		return driver.findElement(expproductcategsectn);
 	}
@@ -137,12 +137,12 @@ public class LVMLeftPaneFilters {
 		return driver.findElement(hometextilesprodcatg);
 	}
 	public WebElement getLVMSecondExhibitor(){
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(secondexhibitor));
 		return driver.findElement(secondexhibitor);
 	}
 	public WebElement getFirstVintageExhUat() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(firstVintageExhUat));
 		return driver.findElement(firstVintageExhUat);
 	}
