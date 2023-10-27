@@ -456,7 +456,8 @@ public class LVMExhDigiShowroomPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(VerifyLineSearch));
 		return driver.findElement(VerifyLineSearch);
 	}
-	public WebElement getSeeInOtherMarket() {
+	public WebElement getSeeInOtherMarket() throws InterruptedException {
+	  Thread.sleep(1000);
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(SeeInOtherMarket));
 		return driver.findElement(SeeInOtherMarket);
