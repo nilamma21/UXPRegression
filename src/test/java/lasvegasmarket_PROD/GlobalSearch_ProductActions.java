@@ -573,6 +573,7 @@ public class GlobalSearch_ProductActions extends base {
 		Thread.sleep(5000);
 
 		//Click on Product Full Screen Viewer button
+		utl.scrollToElement(atlproddet.getProductFullScreenViewerBtn());
 		atlproddet.getProductFullScreenViewerBtn().click();
 
 		//Verify that Full Screen viewer should be displayed with Product images
@@ -733,6 +734,6 @@ public class GlobalSearch_ProductActions extends base {
 
 	@AfterClass
 	public void tearDown() {
-		//driver.quit();
+		driver.quit();
 	}
 }

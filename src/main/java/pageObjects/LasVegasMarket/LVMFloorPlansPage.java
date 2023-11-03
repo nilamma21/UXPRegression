@@ -63,6 +63,8 @@ public class LVMFloorPlansPage {
 	By lvmExhSearchFieldBtn = By.xpath("(//div[@class='imc-searchform--row'])[2]/form[1]/button[2]"); //Locator for Exh Search filed Btn
 	By noresultsforjuniperlinesmsg = By.xpath("//p[contains(text(),'Sorry, no results found.')]"); //Locator for No results found msg for Lines on Junipermarket filter
 	By exhibitedonfloormsg = By.xpath("//span[contains(text(),'Exhibitors on This Floor')]");
+	By lvmBuildingFloorsix = By.xpath("//div[@class='imc-campus-view']/div[3]/div[13]/div[3]/a[1]"); //Locator for Building floor
+
 	
 	public LVMFloorPlansPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -325,7 +327,11 @@ public class LVMFloorPlansPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitedonfloormsg));
 		return driver.findElement(exhibitedonfloormsg);
 	}
-	
+	public WebElement getLVMBuildingFloorsix() {
+	     wait = new WebDriverWait (driver,30);
+	     wait.until(ExpectedConditions.elementToBeClickable(lvmBuildingFloorsix));
+	     return driver.findElement(lvmBuildingFloorsix);
+	 }
 	
 }
 

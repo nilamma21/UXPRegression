@@ -222,8 +222,11 @@ public class LVMMarketPlannerPage {
 	By EventsInMPList = By.xpath("(//div[@class='imc-saved-exhibitors__contentItems__col1']/div[2]/a)[1]"); //list of all events from MP list
 	By editlistitemmorebtnnew = By.xpath("//button[@class='imc-hover-menu__dropbtn imc-content--delta']");//Edit list button
 	By editlistitemdeleteoptnnew = By.xpath("//li[@class='imc-list-edit--draggable'][1]/div/div/div[4]/div/div/span[3]/a"); //Locator for Delete Option of 1st list item
-
-	
+	By moreEventOptionDeleteBtnUAT_LVM = By.xpath("(//div[@class='imc-market-planner-list--item-header'])[1]/div[3]/div[1]/div[1]/span[3]/a[1]");//More Option Delete LVM
+	By moreOptionUAT_LVM = By.xpath("//div[@class='imc-loading-relative']/div[3]/li[1]/div[1]/div[1]/div[3]/div[1]");//More Option LVM
+	By moreOptionDeleteBtnUAT_LVM = By.xpath("//div[@class='imc-gallery__item imc-vertical-tabs-content']/div[1]/div[3]/li[1]/div[1]/div[1]/div[3]/div[1]/div[1]/span[3]/a[1]");//More Option Delete LVM
+	By atlmpexistinglistnamenew = By.xpath("//form/div[4]/div[3]/label"); //Locator for existing list name
+	By favexhlist = By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a");//Favourite list from market planner
 	
 	public LVMMarketPlannerPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -1277,7 +1280,7 @@ public class LVMMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(createandaddaistbtn));
 		return driver.findElement(createandaddaistbtn);
 	}
-	public WebElement getATLEditListItemMoreBtnNew() {
+	public WebElement getLVMEditListItemMoreBtnNew() {
 		wait = new WebDriverWait (driver,20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(editlistitemmorebtnnew));
 		return driver.findElement(editlistitemmorebtnnew);
@@ -1287,6 +1290,31 @@ public class LVMMarketPlannerPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(editlistitemdeleteoptnnew));
 		return driver.findElement(editlistitemdeleteoptnnew);
 	}
+	   public WebElement getmoreEventOptionDeleteBtnUAT_LVM() {
+	        wait = new WebDriverWait (driver,20);
+	        wait.until(ExpectedConditions.visibilityOfElementLocated(moreEventOptionDeleteBtnUAT_LVM));
+	        return driver.findElement(moreEventOptionDeleteBtnUAT_LVM);
+	    }
+	   public WebElement getmoreOptionUAT_LVM() {
+	        wait = new WebDriverWait (driver,20);
+	        wait.until(ExpectedConditions.visibilityOfElementLocated(moreOptionUAT_LVM));
+	        return driver.findElement(moreOptionUAT_LVM);
+	    }
+	    public WebElement getmoreOptionDeleteBtnUAT_LVM() {
+	        wait = new WebDriverWait (driver,20);
+	        wait.until(ExpectedConditions.visibilityOfElementLocated(moreOptionDeleteBtnUAT_LVM));
+	        return driver.findElement(moreOptionDeleteBtnUAT_LVM);
+	    }
+	    public WebElement getLVMMPExistingListNameNew() {
+	        wait = new WebDriverWait (driver,30);
+	        wait.until(ExpectedConditions.visibilityOfElementLocated(atlmpexistinglistnamenew));
+	        return driver.findElement(atlmpexistinglistnamenew);
+	    }
+	    public List<WebElement> getFavExhList() {
+	        wait = new WebDriverWait (driver,30);
+	        wait.until(ExpectedConditions.visibilityOfElementLocated(favexhlist));
+	        return driver.findElements(favexhlist);
+	    }
 }
 
 

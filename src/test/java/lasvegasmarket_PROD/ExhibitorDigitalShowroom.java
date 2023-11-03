@@ -377,6 +377,7 @@ public class ExhibitorDigitalShowroom extends base {
     Thread.sleep(7000);
 
     // Click See in Other Market button and verify if the page opens
+    utl.scrollToElement( lvmds.getSeeInOtherMarket());
     lvmds.getSeeInOtherMarket().click();
     Assert.assertTrue(lvmds.getVerifyOtherMarketsPage().isDisplayed());
     System.out.println("See In Other Markets page is displayed properly.");
@@ -559,6 +560,7 @@ public class ExhibitorDigitalShowroom extends base {
     String eventName = lvmds.getEventNameNew().getText();
     System.out.println("Event Name : " + eventName);
     // lvmds.getEventName().click(); //Old
+    utl.scrollToElement(lvmds.getEventNameNew());
     lvmds.getEventNameNew().click(); // New
     Thread.sleep(3000);
     Assert.assertTrue(lvmevents.getlvmEventNameOnDetailsPageUAT().getText().contains(eventName));
@@ -639,6 +641,7 @@ public class ExhibitorDigitalShowroom extends base {
     System.out.println("Exhibitor name: " + exhname);
 
     // Get the Total Lines count on Search grid
+    utl.scrollToElement( lvmds.getExhibitorName());
     lvmds.getExhibitorName().click();
     Thread.sleep(7000);
 
@@ -991,7 +994,7 @@ public class ExhibitorDigitalShowroom extends base {
   @AfterClass
   public void tearDown() throws InterruptedException {
     Thread.sleep(2000);
-    // driver.quit();
+     driver.quit();
   }
 
 }
