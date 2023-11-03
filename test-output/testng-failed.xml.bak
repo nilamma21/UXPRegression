@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [LVM_RegressionTestSuite]" parallel="classes">
+  <test name="RegressionTest(failed)" parallel="classes">
+    <classes>
+<<<<<<< HEAD
+      <class name="lasvegasmarket_PROD.GlobalSearch_SearchFor">
+        <methods>
+          <include name="initialize"/>
+          <include name="tearDown"/>
+          <include name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest"/>
+        </methods>
+      </class> <!-- lasvegasmarket_PROD.GlobalSearch_SearchFor -->
+=======
+      <class name="lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters">
+        <methods>
+          <include name="TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest"/>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters -->
+>>>>>>> 8538c5b8fbecea4a476a30bf8f0c8a497e056077
+    </classes>
+  </test> <!-- RegressionTest(failed) -->
+</suite> <!-- Failed suite [LVM_RegressionTestSuite] -->

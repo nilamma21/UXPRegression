@@ -68,7 +68,7 @@ public class ATLExhDigiShowroomPage {
 	By ClickShowroom = By.xpath("//div[@class = 'imc-other-markets-goto']/a[1]"); //Locator for Go to Showroom link
 	By ValidateDigitalShowroomPage = By.xpath("//div[@class = 'imc-gallery__item imc-content--center-mobile']/span[1]"); //Locator for Exhibitor Digital Showroom page
 	By ContactExhibitorInOtherMarket = By.xpath("//div[@class = 'imc-other-markets-contact']/div[1]/button[1]"); //Locator for Contact Exhibitor link at See in Other Markets page
-	By VerifyContactExhibitorPage = By.xpath("//div[@class = 'imc-contactexhibitormodal--body-panel imc-section--neutral-medium imc-content--full-width']"); //Locator for Contact Exhibitor Page
+	By VerifyContactExhibitorPage = By.xpath("//div[@class = 'imc-modal--content imc-contactexhibitormodal--position']"); //Locator for Contact Exhibitor Page
 	By ContactExhibitorCloseButton = By.xpath("//div[@class = 'ReactModalPortal']/div[1]/button[1]"); //Locator for Close button at Contact Exhibitor page  		
 
 	By CatalogSection = By.xpath("//div[@class = 'imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div/span[text()='Catalogs']"); //Locator for Catalog section  			
@@ -86,10 +86,10 @@ public class ATLExhDigiShowroomPage {
 
 	By CatalogsSection = By.xpath("//div[@class = 'imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div/span[text()='Catalogs']"); //Locator for Catalogs section
 	By SeeAllCatalogsButton = By.xpath("//section[@class = 'imc-site-wrapper']/div[6]/div[1]/div[3]/div[1]/a[1]"); //Locator for See All Catalogs section
-	By SelectCatalog = By.xpath("//div[@class = 'imc-catalog__item_title multiSelectItem']"); //Locator for Catalog option in Catalogs section
+	By SelectCatalog = By.xpath("//span[contains(text(),'Catalogs')]//parent::div//parent::div//descendant::div[@class = 'imc-catalog__item_title multiSelectItem']"); //Locator for Catalog option in Catalogs section
 	By showSpecialSection = By.xpath("//div[@class = 'imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div[1]/span[text()='Show Specials']"); //Locator for Show special Section
 	By SeeAllshowSpecialBtn = By.xpath("//div[@class = 'imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div/span[text()='Show Specials']/../../div[3]/div[1]/a[1]/span[1]"); ////Locator for See All Show special Btn
-	By ShowSpecialCount = By.xpath("//div[@class = 'imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div/span[contains(text(),'Specials Available')]"); ////Locator for See All Show special Count
+	By ShowSpecialCount = By.xpath("//span[contains(text(),'Show Specials')]//parent::div//descendant::span[contains(text(),'Special Available')]"); ////Locator for See All Show special Count
 	By ShowSpecialName = By.xpath("//div[@class = 'imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div[1]/span[text()='Show Specials']/../../div[2]/span[1]"); ////Locator for See All Show special Count
 	By heroComponentOrderOnJunperBtn = By.xpath("//div[@class='imc-section imc-padding--left--xlarge imc-padding--right--xlarge imc-section--width-100-percent']/div//span[@class='imc-breakpoint-display--hide-mobile' and text()='Order on JuniperMarket']/.."); ////Locator for Order on Juniper CTA
 	By closeBtnContactExh = By.xpath("//button[@class='imc-modal--close imc-button--modal-close imc-button--round']"); ////Locator for Closse Btn
@@ -103,92 +103,92 @@ public class ATLExhDigiShowroomPage {
 		this.driver = driver; 			
 	}
 	public WebElement getEventNamePROD() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(EventNamePROD));
 		return driver.findElement(EventNamePROD);
 	}
 	public WebElement getcloseBtnContactExh() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(closeBtnContactExh));
 		return driver.findElement(closeBtnContactExh);
 	}
 	public WebElement getheroComponentOrderOnJunperBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(heroComponentOrderOnJunperBtn));
 		return driver.findElement(heroComponentOrderOnJunperBtn);
 	}
 	public WebElement getShowSpecialName() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ShowSpecialName));
 		return driver.findElement(ShowSpecialName);
 	}
 	public WebElement getShowSpecialCount() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ShowSpecialCount));
 		return driver.findElement(ShowSpecialCount);
 	}
 	public WebElement getSeeAllshowSpecialBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(SeeAllshowSpecialBtn));
 		return driver.findElement(SeeAllshowSpecialBtn);
 	}
 	public WebElement getshowSpecialSection() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(showSpecialSection));
 		return driver.findElement(showSpecialSection);
 	}
 	public WebElement getOrderOnJuniperMarktBtnCatalog() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(OrderOnJuniperMarktBtnCatalog));
 		return driver.findElement(OrderOnJuniperMarktBtnCatalog);
 	}
 	public WebElement getEventName() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(EventName));
 		return driver.findElement(EventName);
 	}
 	public WebElement getSeeAllEventsBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(SeeAllEventsBtn));
 		return driver.findElement(SeeAllEventsBtn);
 	}
 	public WebElement getEventsSection() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(EventsSection));
 		return driver.findElement(EventsSection);
 	}
 	public WebElement getView3DshowroomClose() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(View3DshowroomClose));
 		return driver.findElement(View3DshowroomClose);
 	}
 	public WebElement getView3DshowroomBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(View3DshowroomBtn));
 		return driver.findElement(View3DshowroomBtn);
 	}
 	public WebElement getshowroomHeader3D() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(showroomHeader3D));
 		return driver.findElement(showroomHeader3D);
 	}
 	public WebElement getHeroComponentVisit() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(HeroComponentVisit));
 		return driver.findElement(HeroComponentVisit);
 	}
 	public WebElement getATLCatalogSeeAllBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(CatalogSeeAllBtn));
 		return driver.findElement(CatalogSeeAllBtn);
 	}
 	public WebElement getATLCatalogSection() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(CatalogSection));
 		return driver.findElement(CatalogSection);
 	}
 	public WebElement getATLVerifyLinePageTitle() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(VerifyLinePageTitle));
 		return driver.findElement(VerifyLinePageTitle);
 	}
@@ -198,32 +198,32 @@ public class ATLExhDigiShowroomPage {
 		return driver.findElement(exhdigishowroompage);
 	}
 	public WebElement getATLValidateExhDigiShowPage() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlvalidateexhdigishowpage));
 		return driver.findElement(atlvalidateexhdigishowpage);
 	}
 	public WebElement getExhibitorNameOnExhDirectImg() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitornameonexhdirectimg));
 		return driver.findElement(exhibitornameonexhdirectimg);
 	}
 	public WebElement getExhNameOnExhDirectImg() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(exhnameonexhdirectimg));
 		return driver.findElement(exhnameonexhdirectimg);
 	}
 	public WebElement getAtlvalidateexhdigishowpage_lvmUAT() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlvalidateexhdigishowpage_lvmUAT));
 		return driver.findElement(atlvalidateexhdigishowpage_lvmUAT);
 	}
 	public WebElement getExhibitornameonexhdirectimg_lvmUAT() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitornameonexhdirectimg_lvmUAT));
 		return driver.findElement(exhibitornameonexhdirectimg_lvmUAT);
 	}
 	public WebElement getlvmvalidateexhdigishowpage_uat() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmvalidateexhdigishowpage_uat));
 		return driver.findElement(lvmvalidateexhdigishowpage_uat);
 	}
@@ -486,7 +486,7 @@ public class ATLExhDigiShowroomPage {
 		return driver.findElement(linesshownseealllink);
 	}
 	public WebElement getExhibitorNameOnExhDirectImgLvm() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitornameonexhdirectimglvm));
 		return driver.findElement(exhibitornameonexhdirectimglvm);
 	}

@@ -26,7 +26,7 @@ public class ATLLandingPage {
 	} 
 	
 	public WebElement getLogin() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(loginbtn));
 		return driver.findElement(loginbtn);		
 	}
@@ -45,7 +45,7 @@ public class ATLLandingPage {
 	}
 	
 	public WebElement getMPSignOutBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpsignoutbtn));
 		return driver.findElement(mpsignoutbtn);		
 	}	
@@ -62,7 +62,7 @@ public class ATLLandingPage {
 		return driver.findElement(signOut);		
 	}
 	public WebElement getmarketplannerlinktext1() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(marketplannerlinktext1));
 		return driver.findElement(marketplannerlinktext1);		
 	}

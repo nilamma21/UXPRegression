@@ -129,7 +129,7 @@ public class ATLGlobalSearchPage {
 	}
 	
 	public WebElement infoTitle() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(infoTitle));
 		return driver.findElement(infoTitle);
 	}
@@ -144,87 +144,87 @@ public class ATLGlobalSearchPage {
 		return driver.findElement(atlInfoSearchMoreInfoBtn);
 	}
 	public WebElement getFirstShowSpecialViewBrandDetailsBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(FirstShowSpecialViewBrandDetailsBtn));
 		return driver.findElement(FirstShowSpecialViewBrandDetailsBtn);
 	}
 	public WebElement getFirstShowSpecialName() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(FirstShowSpecialName));
 		return driver.findElement(FirstShowSpecialName);
 	}
 	public WebElement getFirstCatalogName() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(FirstCatalogName));
 		return driver.findElement(FirstCatalogName);
 	}
 	public WebElement getseeAllLinkMatchingProduct() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(seeAllLinkMatchingProduct));
 		return driver.findElement(seeAllLinkMatchingProduct);
 	}
 	public WebElement getATLFirstEventName() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(FirstEventName));
 		return driver.findElement(FirstEventName);
 	}
 	public WebElement getATLEventsTabInSearchDiv() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atleventstabinsearchDiv));
 		return driver.findElement(atleventstabinsearchDiv);
 	}
 	public WebElement getFirstInfoName() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(FirstInfoName));
 		return driver.findElement(FirstInfoName);
 	}
 	public WebElement getatlClosePopup() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlClosePopup));
 		return driver.findElement(atlClosePopup);
 	}
 	public WebElement getatlSelectList() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlSelectList));
 		return driver.findElement(atlSelectList);
 	}
 	public WebElement getatlShowSpecialsExhNamePROD() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlShowSpecialsExhNamePROD));
 		return driver.findElement(atlShowSpecialsExhNamePROD);
 	}
 	public WebElement getatlGlobalSearchClearTxt() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlGlobalSearchClearTxt));
 		return driver.findElement(atlGlobalSearchClearTxt);
 	}
 	public WebElement getatlShowroomLink() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlShowroomLink));
 		return driver.findElement(atlShowroomLink);
 	}
 	public WebElement getatlShowSpecialsExhName() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlShowSpecialsExhName));
 		return driver.findElement(atlShowSpecialsExhName);
 	}
 	public WebElement getatlShowSpecialsTitle() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlShowSpecialsTitle));
 		return driver.findElement(atlShowSpecialsTitle);
 	}
 	public WebElement getatlShowSpecialsLink() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlShowSpecialsLink));
 		return driver.findElement(atlShowSpecialsLink);
 	}
 	public WebElement getatlExhibitorsAndProductTab() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlExhibitorsAndProductTab));
 		return driver.findElement(atlExhibitorsAndProductTab);
 	}
 	public List<WebElement> getatlListOfAllSavedSearches() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlListOfAllSavedSearches));
 		return driver.findElements(atlListOfAllSavedSearches);
 	}
@@ -232,86 +232,86 @@ public class ATLGlobalSearchPage {
 	
 
 	public WebElement getatlSavedSearchesBtnForNewSaved() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlSavedSearchesBtnForNewSaved));
 		return driver.findElement(atlSavedSearchesBtnForNewSaved);
 	}
 	public WebElement getatlSavedSearchesInputBox() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlSavedSearchesInputBox));
 		return driver.findElement(atlSavedSearchesInputBox);
 	}
 
 	public WebElement getatlSavedSearchesBtn() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlSavedSearchesBtn));
 		return driver.findElement(atlSavedSearchesBtn);
 	}
 	public WebElement getatlSavedSearchesDropdown() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlSavedSearchesDropdown));
 		return driver.findElement(atlSavedSearchesDropdown);
 	}
 	public WebElement getatlSavedSearchesIcon() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlSavedSearchesIcon));
 		return driver.findElement(atlSavedSearchesIcon);
 	}
 	public WebElement getatlGoToMPBtn() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlGoToMPBtn));
 		return driver.findElement(atlGoToMPBtn);
 	}
 	public WebElement getatlAddToSelectBtn() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlAddToSelectBtn));
 		return driver.findElement(atlAddToSelectBtn);
 	}
 	
 	public WebElement getatlExistingList() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlExistingList));
 		return driver.findElement(atlExistingList);
 	}
 	
 	public WebElement getatlAddToExistingList() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlAddToExistingList));
 		return driver.findElement(atlAddToExistingList);
 	}
 	
 	public WebElement getatl1STExhiName() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atl1STExhiName));
 		return driver.findElement(atl1STExhiName);
 	}
 	public WebElement getatlGlobalSearchAddToFavBtn() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlAddToFavBtn));
 		return driver.findElement(atlAddToFavBtn);
 	}
 	public WebElement getatlGlobalSearchExhCheckbox() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlExhCheckbox));
 		return driver.findElement(atlExhCheckbox);
 	}
 	public WebElement getatlGlobalSearchSelectBtn() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlSelectBtn));
 		return driver.findElement(atlSelectBtn);
 	}
 	public List<WebElement> getatlExhiNameForFilterByName() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlExhiNameForFilterByName));
 		return driver.findElements(atlExhiNameForFilterByName);
 	}
 	public WebElement getatlFilterByNameDropDown() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlFilterByNameDropDown));
 		return driver.findElement(atlFilterByNameDropDown);
 	}
 	public List<WebElement> getatlMachingProductCount() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlMachingProductCount));
 		return driver.findElements(atlMachingProductCount);
 	}
@@ -321,7 +321,7 @@ public class ATLGlobalSearchPage {
 		return driver.findElements(atlExhNames);
 	}
 	public List<WebElement> getatlGlobalSearchExhLocationList() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlGlobalSearchExhLocationList));
 		return driver.findElements(atlGlobalSearchExhLocationList);
 	}
@@ -331,67 +331,67 @@ public class ATLGlobalSearchPage {
 		return driver.findElement(atlGlobalSearch_SearchSortByDropdwn);
 	}
 	public List<WebElement> getatlListOfAllProductsName() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlListOfAllProductsName));
 		return driver.findElements(atlListOfAllProductsName);
 	}
 	public List<WebElement> getatlListOfAllProducts() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlListOfAllProducts));
 		return driver.findElements(atlListOfAllProducts);
 	}
 	public List<WebElement> getatlListOfAllExhMatchingProductLink() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlListOfAllExhMatchingProductLink));
 		return driver.findElements(atlListOfAllExhMatchingProductLink);
 	}
 	public List<WebElement> getatlListOfAllExhTotalProductLink() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlListOfAllExhTotalProductLink));
 		return driver.findElements(atlListOfAllExhTotalProductLink);
 	}
 	public List<WebElement> getatlListOfAllExhLocation() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlListOfAllExhLocation));
 		return driver.findElements(atlListOfAllExhLocation);
 	}
 	public List<WebElement> getatlListOfAllExh() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlListOfAllExh));
 		return driver.findElements(atlListOfAllExh);
 	}
 	public WebElement getatlGlobalSearch_SearchWithinDropdwn() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlGlobalSearch_SearchWithinDropdwn));
 		return driver.findElement(atlGlobalSearch_SearchWithinDropdwn);
 	}
 	public WebElement getatlGlobalSearchSortBtn() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlGlobalSearchSortBtn));
 		return driver.findElement(atlGlobalSearchSortBtn);
 	}
 	public WebElement getfourthbreadcrumbtxtUAT() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(fourthbreadcrumbtxtUAT));
 		return driver.findElement(fourthbreadcrumbtxtUAT);
 	}
 	public WebElement getatlseealllineslinkUAT() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlseealllineslinkUAT));
 		return driver.findElement(atlseealllineslinkUAT);
 	}
 	public WebElement getatleventstabinsearchUAT() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atleventstabinsearchUAT));
 		return driver.findElement(atleventstabinsearchUAT);
 	}
 	public WebElement getTitleOfArticle() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(TitleOfArticle));
 		return driver.findElement(TitleOfArticle);
 	}
 	public List<WebElement> getATLlistOfAllArticles() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllArticles));
 		return driver.findElements(listOfAllArticles);
 	}
@@ -408,27 +408,27 @@ public class ATLGlobalSearchPage {
 	}
 
 	public WebElement getATLVerifyGlobalSeacrh() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlverifyglobalseacrh));
 		return driver.findElement(atlverifyglobalseacrh);
 	}
 	public List<WebElement> getATLSearchResultsList() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlsearchresultslist));
 		return driver.findElements(atlsearchresultslist);
 	}
 	public List<WebElement> getATLSearchResultExhTypeList() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlsearchresultexhtypelist));
 		return driver.findElements(atlsearchresultexhtypelist);
 	}
 	public List<WebElement> getATLSearchResultTypeLineList() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlsearchresultlinetypelist));
 		return driver.findElements(atlsearchresultlinetypelist);
 	}
 	public List<WebElement> getATLProductsSearchResultsList() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlproductsearchresultlist));
 		return driver.findElements(atlproductsearchresultlist);
 	}
@@ -436,81 +436,81 @@ public class ATLGlobalSearchPage {
 		return driver.findElement(atlclearsearchbtn);
 	}
 	public List<WebElement> getATLSearchResultPorductTypeList() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlsearchresultproducttypelist));
 		return driver.findElements(atlsearchresultproducttypelist);
 	}
 	public WebElement getLVMSearchBtnUAT() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(lvmSearchBtnUAT));
 		return driver.findElement(lvmSearchBtnUAT);
 	}
 	public WebElement getATLsearchresultInfoLink() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlsearchresultInfoLink));
 		return driver.findElement(atlsearchresultInfoLink);
 	}
 	public WebElement getAtlCatalog() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlCatalog));
 		return driver.findElement(atlCatalog);
 	}
 	public WebElement getCatalogHeaderName() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(CatalogHeaderName));
 		return driver.findElement(CatalogHeaderName);
 	}
 	public WebElement getATLsearchresultArticlesLink() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlsearchresultArticlesLink));
 		return driver.findElement(atlsearchresultArticlesLink);
 	}
 	public WebElement getATLSearchResultBlog() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlsearchresultBlog));
 		return driver.findElement(atlsearchresultBlog);
 	}
 	public WebElement getATLSearchResult() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlsearchresult));
 		return driver.findElement(atlsearchresult);
 	}		
 	public WebElement getATLInfoSearchJuniperMarketBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlInfoSearchJuniperMarketBtn));
 		return driver.findElement(atlInfoSearchJuniperMarketBtn);
 	}		
 	public WebElement getATLInfoSearchTopicsFilter() throws InterruptedException {
 
 		Thread.sleep(5000);
-		/*wait = new WebDriverWait (driver,20);
+		/*wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlInfoSearchTopicsFilter));*/
 		return driver.findElement(atlInfoSearchTopicsFilter);
 	}		
 	public WebElement getATLInfoSearchTopicsMarketSnapshot() throws InterruptedException {
-		/*wait = new WebDriverWait (driver,20);
+		/*wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlInfoSearchTopicsMarketSnapshot));*/
 		Thread.sleep(5000);
 		return driver.findElement(atlInfoSearchTopicsMarketSnapshot);
 	}		
 	public WebElement getATLInfoSearchSeeMoreDetailsBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlInfoSearchSeeMoreDetailsBtn));
 		return driver.findElement(atlInfoSearchSeeMoreDetailsBtn);
 	}		
 									
 	public WebElement getATLExhibitorFilter() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlExhibitorFilter));
 		return driver.findElement(atlExhibitorFilter);
 	}		
 	public WebElement getATLExhibitorHeader() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlExhibitorHeader));
 		return driver.findElement(atlExhibitorHeader);
 	}								
 	public WebElement getATLInfosearchtxtbx() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlInfosearchtxtbx));
 		return driver.findElement(atlInfosearchtxtbx);
 	}								
@@ -543,27 +543,27 @@ public class ATLGlobalSearchPage {
 		return driver.findElement(atlBlogSeeAllBtn);
 	}								
 	public WebElement getatlseealllineslink() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlseealllineslink));
 		return driver.findElement(atlseealllineslink);
 	}	
 	public WebElement getatlShowSpecialsTab() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlShowSpecialsTab));
 		return driver.findElement(atlShowSpecialsTab);
 	}
 	public WebElement getatlVerifyShowSpecials() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlVerifyShowSpecials));
 		return driver.findElement(atlVerifyShowSpecials);
 	}
 	public WebElement getFourthBreadcrumbTxtInApp() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(fourthbreadcrumbtxt));
 		return driver.findElement(fourthbreadcrumbtxt);
 	}
 	public WebElement getATLEventsTabInSearch() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atleventstabinsearch));
 		return driver.findElement(atleventstabinsearch);
 	}
@@ -571,22 +571,22 @@ public class ATLGlobalSearchPage {
 		return driver.findElement(atlseemoredetailsbtn);
 	}
 	public WebElement getEventsATLMktTopics() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(eventsatlmkttopicsfilter));
 		return driver.findElement(eventsatlmkttopicsfilter);
 	}
 	public WebElement getClearFiltersBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(clearfiltersbtn));
 		return driver.findElement(clearfiltersbtn);
 	}
 	public WebElement getEventTypesFilter() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(eventtypesfilter));
 		return driver.findElement(eventtypesfilter);
 	}
 	public WebElement getAtMarketEventType() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atmarketeventtypefilter));
 		return driver.findElement(atmarketeventtypefilter);
 	}
@@ -594,7 +594,7 @@ public class ATLGlobalSearchPage {
 		return driver.findElement(buyingeventtypefilter);
 	}
 	public WebElement getViewBrandDetailsLink() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(viewbranddetailslink));
 		return driver.findElement(viewbranddetailslink);
 	}

@@ -10,15 +10,6 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import pageObjects.AtlantaMarket.ATLExhDigiShowroomPage;
-import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
-import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
-import pageObjects.AtlantaMarket.ATLLandingPage;
-import pageObjects.AtlantaMarket.ATLLeftPaneFilters;
-import pageObjects.AtlantaMarket.ATLLoginPage;
-import pageObjects.AtlantaMarket.ATLMarketPlannerPage;
-import pageObjects.AtlantaMarket.ATLProductDetailsPage;
 import pageObjects.LasVegasMarket.LVMExhDigiShowroomPage;
 import pageObjects.LasVegasMarket.LVMExhLineProdActionsPage;
 import pageObjects.LasVegasMarket.LVMGlobalSearchPage;
@@ -45,14 +36,6 @@ public class GlobalSearch_MatchingResults extends base {
 	LVMExhLineProdActionsPage lvmexhact;
 	LVMMarketPlannerPage lvmmpp;
 	LVMLeftPaneFilters lvmleftpane;
-	ATLGlobalSearchPage atlgs;
-	
-	
-	ATLExhDigiShowroomPage atlexhdgshw;
-	ATLProductDetailsPage atlproddet;
-	ATLExhLineProdActionsPage atlexhact;
-	ATLMarketPlannerPage atlmppge;
-	ATLLeftPaneFilters atlleftpane;
 
 	@BeforeClass
 	public void initialize() throws IOException, InterruptedException {
@@ -475,73 +458,67 @@ public class GlobalSearch_MatchingResults extends base {
 		// The purpose of this test case to verify:-
 		// T329: Global Search: Matching results- Use previous saved Search
 
-		atlgs = new ATLGlobalSearchPage(driver);
-		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
-		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lvmgs = new LVMGlobalSearchPage(driver);
+		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
-		
-		atlmppge = new ATLMarketPlannerPage(driver);
 		genData = new GenerateData();
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		
-		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
-			atlgs.getatlGlobalSearchClearTxt().click();
+		if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
+			lvmgs.getlvmGlobalSearchClearTxt().click();
 		}
 		//utl.verifyMPLoginFunctionality();
-		
 		utl.CloseATLPopup();
-		
-		
+	
 		try {
-			atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("savedSearchesInput"));
+			lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("savedSearchesInput"));
 			Thread.sleep(3000);
-			atlgs.getATLSearchButton().click();
+			lvmgs.getLVMSearchButton().click();
 			Thread.sleep(5000);
 			// Click on Save Searches Btn
-			atlgs.getatlSavedSearchesIcon().click();
-			Select selectSavedSearched = new Select(atlgs.getatlSavedSearchesDropdown());
+			lvmgs.getlvmSavedSearchesIcon().click();
+			Select selectSavedSearched = new Select(lvmgs.getlvmSavedSearchesDropdown());
 			selectSavedSearched.selectByIndex(1);
 			String optin = selectSavedSearched.getOptions().get(1).getText();
 			System.out.println(optin);
-		//	Assert.assertTrue(atlgs.getATLInfosearchtxtbx().getAttribute("value").contains(optin));
+		//	Assert.assertTrue(lvmgs.getLVMInfosearchtxtbx().getAttribute("value").contains(optin));
 			Thread.sleep(5000);
-			Assert.assertTrue(atlgs.getATLVerifyGlobalSeacrh().getText().contains(optin));
+			Assert.assertTrue(lvmgs.getLVMVerifyGlobalSeacrh().getText().contains(optin));
 			
 		} catch (Exception e) {
 			
-			if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
-				atlgs.getatlGlobalSearchClearTxt().click();
+			if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
+				lvmgs.getlvmGlobalSearchClearTxt().click();
 			}
-			atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("savedSearchesInput"));
+			lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("savedSearchesInput"));
 			Thread.sleep(3000);
-			atlgs.getATLSearchButton().click();
+			lvmgs.getLVMSearchButton().click();
 			Thread.sleep(5000);
 			// Click on Save Searches Btn
-			atlgs.getatlSavedSearchesIcon().click();
+			lvmgs.getlvmSavedSearchesIcon().click();
 			//Click on Save Seach btn
-			atlgs.getatlSavedSearchesBtn().click();
+			lvmgs.getlvmSavedSearchesBtn().click();
 			
 			String savedSearchesInput=prop.getProperty("savedSearchesInput");
 			//Enter Search name into input box
-			atlgs.getatlSavedSearchesInputBox().sendKeys(savedSearchesInput);
+			lvmgs.getlvmSavedSearchesInputBox().sendKeys(savedSearchesInput);
 			//Click on Save Search Btn 
-			atlgs.getatlSavedSearchesBtnForNewSaved().click();
+			lvmgs.getlvmSavedSearchesBtnForNewSaved().click();
 			//Goto Home page
 			driver.get(prop.getProperty("atlmrkturl_prod"));
 			//Click on saved Searches btn
-			atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
+			lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
 			Thread.sleep(5000);
-			atlgs.getATLSearchButton().click();
-			atlgs.getatlSavedSearchesIcon().click();
+			lvmgs.getLVMSearchButton().click();
+			lvmgs.getlvmSavedSearchesIcon().click();
 			//Select Saved Search from List
-			Select selectSavedSearched = new Select(atlgs.getatlSavedSearchesDropdown());
+			Select selectSavedSearched = new Select(lvmgs.getlvmSavedSearchesDropdown());
 			selectSavedSearched.selectByVisibleText(savedSearchesInput);
 			//Vrfify Saved Searches output resultss
-			Assert.assertTrue(atlgs.getATLInfosearchtxtbx().getAttribute("value").contains(prop.getProperty("savedSearchesInput")));
+			Assert.assertTrue(lvmgs.getLVMInfosearchtxtbx().getAttribute("value").contains(prop.getProperty("savedSearchesInput")));
 			Thread.sleep(5000);
-			Assert.assertTrue(atlgs.getATLVerifyGlobalSeacrh().getText().contains(prop.getProperty("savedSearchesInput")));
+			Assert.assertTrue(lvmgs.getLVMVerifyGlobalSeacrh().getText().contains(prop.getProperty("savedSearchesInput")));
 		}
 
 	}
@@ -590,7 +567,7 @@ public class GlobalSearch_MatchingResults extends base {
 	@AfterClass
 	public void quit() throws InterruptedException {
 		Thread.sleep(1000);
-		//driver.quit();
+		driver.quit();
 	}
 	
 }

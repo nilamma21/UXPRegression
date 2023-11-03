@@ -3,21 +3,16 @@ package lasvegasmarket_PROD;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import atlantamarket_PROD.TestListeners;
-import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
 import pageObjects.LasVegasMarket.LVMExhDigiShowroomPage;
 import pageObjects.LasVegasMarket.LVMExhLineProdActionsPage;
 import pageObjects.LasVegasMarket.LVMGlobalSearchPage;
@@ -45,7 +40,6 @@ public class GlobalSearch_SearchFor extends base{
 	LVMExhLineProdActionsPage lvmexhact;
 	LVMMarketPlannerPage lvmmpp;
 	LVMLeftPaneFilters lvmleftpane;
-	ATLExhLineProdActionsPage atlexhact;
 	
 	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns,
 	allnoteslist, favlist, searchlinetypelist, tagBlogPost, taglist, infoFilterList, catlist;
@@ -125,7 +119,7 @@ public class GlobalSearch_SearchFor extends base{
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 		
-		driver.navigate().refresh();
+		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		utl.ClearGlobalSearch();
 		Thread.sleep(2000);
@@ -272,6 +266,7 @@ public class GlobalSearch_SearchFor extends base{
 			} catch (StaleElementReferenceException e) {
 				infoFilterList = driver.findElements(By.xpath("//div[@class='imc-filteritem__option']"));
 				String f = infoFilterList.get(i).getText();
+				System.out.println(f);
 			}
 		}
 		//driver.get(prop.getProperty("lvmurl_prod"));
@@ -288,6 +283,9 @@ public class GlobalSearch_SearchFor extends base{
 		lvmds = new LVMExhDigiShowroomPage(driver);
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
+
+		
+
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		utl.ClearGlobalSearch();
@@ -339,12 +337,14 @@ public class GlobalSearch_SearchFor extends base{
 		lvmexhact.getleftPaneFilterDGShowroom().click();
 		Thread.sleep(3000);
 		//Click on Catalog sub filter
+		utl.scrollToElement(lvmexhact.getleftPaneFilterDGShowroomCatalog());
 		lvmexhact.getleftPaneFilterDGShowroomCatalog().click();
 		Thread.sleep(3000);
 		//Store Catalog name
 		String catalogName = lvmgs.getFirstCatalogName().getText();
 		System.out.println(catalogName);
 		//click on 1st Exhibitor
+		utl.scrollToElement(lvmgs.getlvm1STExhiName());
 		lvmgs.getlvm1STExhiName().click();
 		Thread.sleep(3000);
 		//Scroll to Catalog Section
@@ -361,6 +361,7 @@ public class GlobalSearch_SearchFor extends base{
 			for(int i=0; i<catlist.size(); i++) {
 				String catName = catlist.get(i).getText();
 				if(catName.equalsIgnoreCase(catalogName)) {
+				  utl.scrollToElement(catlist.get(i));
 					catlist.get(i).click();
 					break;
 				}
@@ -391,7 +392,7 @@ public class GlobalSearch_SearchFor extends base{
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 		
-		driver.navigate().refresh();
+		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(2000);
 		utl.ClearGlobalSearch();
@@ -436,6 +437,9 @@ public class GlobalSearch_SearchFor extends base{
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		lvmleftpane = new LVMLeftPaneFilters(driver);
 		utl = new Utility(driver);
+
+		
+
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		utl.ClearGlobalSearch();
@@ -547,6 +551,7 @@ public class GlobalSearch_SearchFor extends base{
 					driver.navigate().refresh();
 
 					String filterResultTitle3 = lvmgs.getLVMArticleName().getText();
+					utl.scrollToElement(lvmgs.getLVMArticleSeeMoreBtn());
 					lvmgs.getLVMArticleSeeMoreBtn().click();
 
 					Assert.assertTrue(filterResultTitle3.contains(lvmgs.getLVMArticleHeader().getText()));
@@ -567,12 +572,15 @@ public class GlobalSearch_SearchFor extends base{
 						infoFilterList.get(i).click();
 					} catch (StaleElementReferenceException e) {
 						infoFilterList = driver.findElements(By.xpath("//div[@class='imc-filteritem__option']"));
+						utl.scrollToElement(infoFilterList.get(i));
 						infoFilterList.get(i).click();
+						utl.scrollToElement(lvmgs.getLVMInfoSearchTopicsFilter());
 						lvmgs.getLVMInfoSearchTopicsFilter().click();
 					}
 					break;
 				case "Fall Design Week":
 					//Thread.sleep(10000);
+				    utl.scrollToElement(infoFilterList.get(i));
 					infoFilterList.get(i).click();
 					Thread.sleep(10000);
 					driver.navigate().refresh();
@@ -602,13 +610,15 @@ public class GlobalSearch_SearchFor extends base{
 					}
 					break;
 				case "Market Snapshot":
-				  Thread.sleep(2000);
+
+
 				  utl.scrollToElement(infoFilterList.get(i));
 					infoFilterList.get(i).click();
 					Thread.sleep(5000);
 					driver.navigate().refresh();
 
 					String filterResultTitle5 = lvmgs.getLVMArticleName().getText();
+					utl.scrollToElement(lvmgs.getLVMArticleSeeMoreBtn());
 					lvmgs.getLVMArticleSeeMoreBtn().click();
 
 					Assert.assertTrue(filterResultTitle5.contains(lvmgs.getLVMArticleHeader().getText()));
@@ -641,6 +651,7 @@ public class GlobalSearch_SearchFor extends base{
 					driver.navigate().refresh();
 
 					String filterResultTitle6 = lvmgs.getLVMArticleName().getText();
+					utl.scrollToElement(lvmgs.getLVMArticleSeeMoreBtn());
 					lvmgs.getLVMArticleSeeMoreBtn().click();
 
 					Assert.assertTrue(filterResultTitle6.contains(lvmgs.getLVMArticleHeader().getText()));
@@ -674,6 +685,7 @@ public class GlobalSearch_SearchFor extends base{
 			} catch (StaleElementReferenceException e) {
 				infoFilterList = driver.findElements(By.xpath("//div[@class='imc-filteritem__option']"));
 				String f = infoFilterList.get(i).getText();
+				System.out.println(f);
 			}
 		}
 		//driver.get(prop.getProperty("lvmurl_prod"));
@@ -690,6 +702,9 @@ public class GlobalSearch_SearchFor extends base{
 		lvmds = new LVMExhDigiShowroomPage(driver);
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
+
+		
+
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(2000);
@@ -741,6 +756,9 @@ public class GlobalSearch_SearchFor extends base{
 		lvmds = new LVMExhDigiShowroomPage(driver);
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
+
+		
+
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(2000);
@@ -786,6 +804,9 @@ public class GlobalSearch_SearchFor extends base{
 		lvmgs = new LVMGlobalSearchPage(driver);
 		lvmds = new LVMExhDigiShowroomPage(driver);
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
+
+
+
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(4000);
@@ -867,7 +888,9 @@ public class GlobalSearch_SearchFor extends base{
 		lvmgs = new LVMGlobalSearchPage(driver);
 		lvmds = new LVMExhDigiShowroomPage(driver);
 		utl = new Utility(driver);
-		atlexhact = new ATLExhLineProdActionsPage(driver);
+
+		lvmexhact = new LVMExhLineProdActionsPage(driver);
+		
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(2000);
@@ -888,7 +911,10 @@ public class GlobalSearch_SearchFor extends base{
 		String ssFname =ssName.split(" ")[2].trim();
 		
 		//String ssSname =ssName.split(" ")[3].trim();
-		String ExhibitorName=ssFname ;
+
+		//String ExhibitorName=ssFname +" " + ssSname;
+		String ExhibitorName=ssFname;
+
 		String ShowSpciaslDetails=lvmgs.getlvmShowSpecialsDetailsOnShowSpecialsPage().getText();
 		
 		System.out.println(ExhibitorName);
@@ -905,7 +931,7 @@ public class GlobalSearch_SearchFor extends base{
 		lvmgs.getlvmShowSpecialsTab().click();
 */
 		//Click on Exhibitor name
-		atlexhact.getExhibitorName().click();
+		lvmexhact.getExhibitorName().click();
 		//Verify Show Specials section
 		//Assert.assertTrue(lvmgs.getlvmVerifyShowSpecials().isDisplayed());
 		Thread.sleep(5000);
@@ -930,6 +956,9 @@ public class GlobalSearch_SearchFor extends base{
 		lvmds = new LVMExhDigiShowroomPage(driver);
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
+
+		
+
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(4000);

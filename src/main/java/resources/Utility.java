@@ -521,7 +521,7 @@ public class Utility extends base {
 		lvmmpp = new LVMMarketPlannerPage(driver);
 		lvmevents=new LVMEventsAndWebinarPage(driver);
 
-		if(driver.getCurrentUrl().contains(prop.getProperty("lvmurl_uat"))) {
+		if(driver.getCurrentUrl().contains(prop.getProperty("lvmurl_prod"))) {
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			// Click on Attend Tab
 			Thread.sleep(2000);
@@ -529,20 +529,7 @@ public class Utility extends base {
 			Thread.sleep(2000);
 			//click on Events Link
 			lvmevents.getlvmEventsLink().click();
-
-			atlmppge = new ATLMarketPlannerPage(driver);
-			atlevents=new ATLEventsAndWebinarPage(driver);
-
-			if(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_uat"))) {
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-				// Click on Attend Tab
-				atlevents.getatlAttendTab().click();
-				Thread.sleep(2000);
-				//click on Events Link
-				atlevents.getatlEventsLink().click();
-
-				Thread.sleep(3000);
-			}
+		}
 			else {
 				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
@@ -558,7 +545,6 @@ public class Utility extends base {
 
 				Thread.sleep(3000);
 			}
-		}
 	}
 
 	public void clickOnEventLinkOfChannel_UAT() throws InterruptedException {
