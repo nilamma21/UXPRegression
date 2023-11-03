@@ -8,13 +8,19 @@
 	</listners>
 		<test thread-count="1"  name="RegressionTest">
 		<classes>
-
+<<<<<<< HEAD
 			<class name="lasvegasmarket_PROD.GlobalSearch_SearchFor" /> 
 
 		<methods>
 				 <include name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest()"/>   
 		</methods>
+=======
+		<class name="lasvegasmarket_PROD.ExhibitorDigitalShowroom" /> 
 
+		<methods>
+				 <include name="TS008_VerifySeeInOtherMarketsForExhibitorTest()"/>   
+		</methods> 
+>>>>>>> 8538c5b8fbecea4a476a30bf8f0c8a497e056077
 
 		</classes>
 	</test>

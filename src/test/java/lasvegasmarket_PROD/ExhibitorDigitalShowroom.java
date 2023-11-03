@@ -374,7 +374,7 @@ public class ExhibitorDigitalShowroom extends base {
 
     // Get the Total Lines count on Search grid
     lvmds.getExhibitorName().click();
-    Thread.sleep(7000);
+    Thread.sleep(8000);
 
     // Click See in Other Market button and verify if the page opens
     utl.scrollToElement( lvmds.getSeeInOtherMarket());

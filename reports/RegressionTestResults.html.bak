@@ -35,9 +35,11 @@
 <a href="#"><span class="badge badge-primary">Regression Automation Test Results</span></a>
 </li>
 <li class="m-r-10">
-
+<<<<<<< HEAD
 <a href="#"><span class="badge badge-primary">Nov 3, 2023 12:48:07 PM</span></a>
-
+=======
+<a href="#"><span class="badge badge-primary">Oct 27, 2023 02:38:41 PM</span></a>
+>>>>>>> 8538c5b8fbecea4a476a30bf8f0c8a497e056077
 </li>
 </ul>
 </div>
@@ -81,11 +83,15 @@
           tag=""
           device="">
           <div class="test-detail">
-
+<<<<<<< HEAD
             <p class="name">TS010_VerifyShowSpecialsOverviewInGlobalSearchTest</p>
             <p class="text-sm">
               <span>12:48:38 PM</span> / <span>00:00:34:378</span>
-
+=======
+            <p class="name">TS008_VerifySeeInOtherMarketsForExhibitorTest</p>
+            <p class="text-sm">
+              <span>14:39:09 PM</span> / <span>00:01:15:342</span>
+>>>>>>> 8538c5b8fbecea4a476a30bf8f0c8a497e056077
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -93,12 +99,17 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-
+<<<<<<< HEAD
 <h5 class="test-status text-pass">TS010_VerifyShowSpecialsOverviewInGlobalSearchTest</h5>
 <span class='badge badge-success'>11.03.2023 12:48:38</span>
 <span class='badge badge-danger'>11.03.2023 12:49:12</span>
 <span class='badge badge-default'>00:00:34:378</span>
-
+=======
+<h5 class="test-status text-pass">TS008_VerifySeeInOtherMarketsForExhibitorTest</h5>
+<span class='badge badge-success'>10.27.2023 14:39:09</span>
+<span class='badge badge-danger'>10.27.2023 14:40:24</span>
+<span class='badge badge-default'>00:01:15:342</span>
+>>>>>>> 8538c5b8fbecea4a476a30bf8f0c8a497e056077
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 </div>
 </div>
@@ -108,9 +119,11 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-
+<<<<<<< HEAD
         <td>12:49:12 PM</td>
-
+=======
+        <td>2:40:24 PM</td>
+>>>>>>> 8538c5b8fbecea4a476a30bf8f0c8a497e056077
         <td>
           Test Passed
         </td>
@@ -134,17 +147,21 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-
+<<<<<<< HEAD
 <h3>Nov 3, 2023 12:48:07 PM</h3>
-
+=======
+<h3>Oct 27, 2023 02:38:41 PM</h3>
+>>>>>>> 8538c5b8fbecea4a476a30bf8f0c8a497e056077
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-
+<<<<<<< HEAD
 <h3>Nov 3, 2023 12:49:12 PM</h3>
-
+=======
+<h3>Oct 27, 2023 02:40:26 PM</h3>
+>>>>>>> 8538c5b8fbecea4a476a30bf8f0c8a497e056077
 </div></div>
 </div>
 <div class="col-md-3">
@@ -214,9 +231,11 @@
 </div></div>
 <script>
 var timeline = {
-
+<<<<<<< HEAD
 "TS010_VerifyShowSpecialsOverviewInGlobalSearchTest":34.378
-
+=======
+"TS008_VerifySeeInOtherMarketsForExhibitorTest":75.342
+>>>>>>> 8538c5b8fbecea4a476a30bf8f0c8a497e056077
 };
 </script>
 <div class="row">

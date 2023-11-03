@@ -775,6 +775,7 @@ public class EvenntsAndWebinar extends base{
 		//Click on Exh Event Tab
 		lvmevents.getlvmExhibitorsEventsTab().click();
 		String eventTitle=lvmevents.getlvmClickOnEvent().getText();
+		Thread.sleep(2000);
 		lvmevents.getlvmClickOnEvent().click();
 		
 		Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUAT().getText()));

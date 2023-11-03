@@ -127,22 +127,22 @@ public class LVMGlobalSearchPage {
 		PageFactory.initElements(driver, this);
 	}
 	public WebElement getthirdThbreadCrumbtxt() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(thirdThbreadCrumbtxt));
 		return driver.findElement(thirdThbreadCrumbtxt);
 	}
 	public WebElement getlvmShowSpecialsDetails() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmShowSpecialsDetails));
 		return driver.findElement(lvmShowSpecialsDetails);
 	}
 	public WebElement getlvmShowSpecialsDetailsOnShowSpecialsPage() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmShowSpecialsDetailsOnShowSpecialsPage));
 		return driver.findElement(lvmShowSpecialsDetailsOnShowSpecialsPage);
 	}
 	public WebElement getlvmShowSpecialsSection() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmShowSpecialsSection));
 		return driver.findElement(lvmShowSpecialsSection);
 	}
