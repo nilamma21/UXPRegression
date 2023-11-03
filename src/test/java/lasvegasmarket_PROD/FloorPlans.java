@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -17,17 +16,11 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
-import pageObjects.AtlantaMarket.ATLExhDigiShowroomPage;
-import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
-import pageObjects.AtlantaMarket.ATLFloorPlansPage;
-import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
-import pageObjects.AtlantaMarket.ATLLandingPage;
-import pageObjects.AtlantaMarket.ATLLoginPage;
-import pageObjects.AtlantaMarket.ATLMarketPlannerPage;
-import pageObjects.AtlantaMarket.ATLProductDetailsPage;
 import pageObjects.LasVegasMarket.LVMExhDigiShowroomPage;
+import pageObjects.LasVegasMarket.LVMExhLineProdActionsPage;
 import pageObjects.LasVegasMarket.LVMFloorPlansPage;
+import pageObjects.LasVegasMarket.LVMLandingPage;
+import pageObjects.LasVegasMarket.LVMMarketPlannerPage;
 import resources.GenerateData;
 import resources.Utility;
 import resources.base;
@@ -39,16 +32,11 @@ public class FloorPlans extends base {
 	public GenerateData genData;
 	public Utility utl;
 	public String exhname;
-	ATLLoginPage lp;
-	ATLLandingPage lap;
-	ATLGlobalSearchPage atlgs;
-	ATLExhDigiShowroomPage atlexhdgshw;
-	ATLProductDetailsPage atlproddet;
-	ATLExhLineProdActionsPage atlexhact;
-	ATLMarketPlannerPage atlmppge;
-	ATLFloorPlansPage atlflpp;
+	LVMExhLineProdActionsPage lvmexhact;
+	LVMMarketPlannerPage lvmmppge;
 	LVMFloorPlansPage lvmflpp;
 	LVMExhDigiShowroomPage lvmexhdgshw;
+	LVMLandingPage lap;
 
 	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns, allnoteslist,favlist, searchlinetypelist;
 
@@ -56,7 +44,7 @@ public class FloorPlans extends base {
 	public void initialize() throws IOException, InterruptedException {
 		driver = initializeDriver(); // requires for Parallel text execution
 		utl = new Utility(driver);
-		lap = new ATLLandingPage(driver);
+		lap = new LVMLandingPage(driver);
 
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
@@ -78,8 +66,7 @@ public class FloorPlans extends base {
 	public void TS001_VerifyNavigationToDifferentFloorBuildingsTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T627: To verify Floor Plans: Navigation to different floor/buildings
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
+
 		utl = new Utility(driver);
 		lvmflpp= new LVMFloorPlansPage(driver);
 
@@ -119,8 +106,6 @@ public class FloorPlans extends base {
 		// The purpose of this test case to verify:-
 		// UXP-T628: To verify Floor Plans: No Exhibitors or Loading message
 
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
 		utl = new Utility(driver);
 		lvmflpp= new LVMFloorPlansPage(driver);
 
@@ -152,8 +137,6 @@ public class FloorPlans extends base {
 		// The purpose of this test case:-
 		// UXP-T629: To verify Floor Plans: Zoom Levels
 
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
 		utl = new Utility(driver);
 		lvmflpp=new LVMFloorPlansPage(driver);
 
@@ -202,8 +185,6 @@ public class FloorPlans extends base {
 		// The purpose of this test case to:-
 		// UXP-T808: To verify Floor Plans: Icons
 
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
 		utl = new Utility(driver);
 		lvmflpp=new LVMFloorPlansPage(driver);
 
@@ -279,8 +260,7 @@ public class FloorPlans extends base {
 	public void TS005_VerifyPaginationOnFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T633: Floor Plans: Pagination
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
+
 		utl = new Utility(driver);
 		lvmflpp=new LVMFloorPlansPage(driver);
 
@@ -326,8 +306,7 @@ public class FloorPlans extends base {
 	public void TS006_VerifySelectionOfExhibitorOnFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T666: Floor Plans: Select Exhibitors
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
+
 		utl = new Utility(driver);
 		lvmflpp=new LVMFloorPlansPage(driver);
 		lvmexhdgshw = new LVMExhDigiShowroomPage(driver);
@@ -368,8 +347,7 @@ public class FloorPlans extends base {
 	public void TS007_VerifyClickOnReturnToBuildingListBtnTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T669: Floor Plans: Return to Building list
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
+
 		utl = new Utility(driver);
 		lvmflpp=new LVMFloorPlansPage(driver);
 
@@ -398,8 +376,7 @@ public class FloorPlans extends base {
 
 		// The purpose of this test case to verify:-
 		// UXP-T635: Exhibitor functionality on floor plans page
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
+
 		utl = new Utility(driver);
 		lvmflpp=new LVMFloorPlansPage(driver);
 
@@ -435,59 +412,59 @@ public class FloorPlans extends base {
 	public void TS009_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T313: Floor Plans: Exhibitor Options - Add to List
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
+
 		utl = new Utility(driver);
-		atlflpp = new ATLFloorPlansPage(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
+		lvmflpp= new LVMFloorPlansPage(driver);
+		lvmmppge = new LVMMarketPlannerPage(driver);
+		
 		driver.navigate().refresh();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		// Click on Exh And Product Tab
 		Thread.sleep(3000);
-		atlflpp.getATLExhibitorsAndProductTab().click();
+		lvmflpp.getLVMExhibitorsAndProductTab().click();
 		Thread.sleep(2000);
 		// click on Floor plans link
-		atlflpp.getATLFloorPlansLink().click();
+		lvmflpp.getLVMFloorPlansLink().click();
 		Thread.sleep(5000);
 		// click on Exhibitor floor
 		//atlflpp.getLVMBuildingFloor().click(); //8th Floor
-		atlflpp.getLVMBuildingFloorsix().click(); //6th floor
+		lvmflpp.getLVMBuildingFloorsix().click(); //6th floor
 		Thread.sleep(12000);
 		// Scroll Down to Exhibitor list
-		utl.scrollToElement(atlflpp.getATLSelectBox());
+		utl.scrollToElement(lvmflpp.getLVMSelectBox());
 		Thread.sleep(15000);
 
 		// 1st Exhibitor Name
-		String exhnameonfloorplan = atlflpp.getATLExhibitorName().getText();
+		String exhnameonfloorplan = lvmflpp.getLVMExhibitorName().getText();
 		System.out.println("Exhibitor Name : " +exhnameonfloorplan );
 		// Click on More option 3dots
-		atlflpp.getATLMoreOptions().click();
+		lvmflpp.getLVMMoreOptions().click();
 		Thread.sleep(5000);
 		
 		// Click on Add To List
-		atlflpp.getATLAddToList().click();
+		lvmflpp.getLVMAddToList().click();
 		Thread.sleep(2000);
 		// Store the existing list name
-		String existinglistname = atlmppge.getATLMPExistingListNameNew().getText();
+		String existinglistname = lvmmppge.getLVMMPExistingListNameNew().getText();
 		System.out.println("Existing list name: " + existinglistname);
 
 		// Select Existing list name
-		atlmppge.getATLMPExistingListNameNew().click();
+		lvmmppge.getLVMMPExistingListNameNew().click();
 
 		// Scroll till Add to Selected button5
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",
-				atlmppge.getATLMPAddToSelectedBtn());
-		atlmppge.getATLMPAddToSelectedBtn().click();
+		    lvmmppge.getLVMMPAddToSelectedBtn());
+		lvmmppge.getLVMMPAddToSelectedBtn().click();
 
 		// Click on Go to Market Planner button
-		atlmppge.getGoToMarketPlannerBtn().click();
+		lvmmppge.getGoToMarketPlannerBtn().click();
 
 		// Click on Lists tab on MP home page
-		atlmppge.getMPHomeListsTab().click();
-		atlmppge.getListsPageListsMenu().click();
+		lvmmppge.getMPHomeListsTab().click();
+		lvmmppge.getListsPageListsMenu().click();
 
-		mplists = atlmppge.getATLMPListsNames();
-		mpeditlistoptns = atlmppge.getATLMPEditListOptns();
+		mplists = lvmmppge.getLVMMPListsNames();
+		mpeditlistoptns = lvmmppge.getLVMMPEditListOptns();
 
 		for (int i = 0; i < mplists.size(); i++) {
 			// System.out.println(mplists.get(i).getText());
@@ -498,63 +475,62 @@ public class FloorPlans extends base {
 			}
 		}
 		Thread.sleep(5000);
-		Assert.assertTrue(atlmppge.getATLSavedExhNameInList().getText().contains(exhnameonfloorplan));
+		Assert.assertTrue(lvmmppge.getLVMSavedExhNameInList().getText().contains(exhnameonfloorplan));
 	}
 
 	@Test(enabled=false)//priority = 11
 	public void TS010_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T314: Floor Plans: Exhibitor Options - Add Note
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
+
 		utl = new Utility(driver);
-		atlflpp = new ATLFloorPlansPage(driver);
+		lvmflpp= new LVMFloorPlansPage(driver);
+		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		genData = new GenerateData();
-		atlexhact = new ATLExhLineProdActionsPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(2000);
 		// Click on Exh And Product Tab
-		atlflpp.getATLExhibitorsAndProductTab().click();
+		lvmflpp.getLVMExhibitorsAndProductTab().click();
 		// click on Floor plans link
-		atlflpp.getATLFloorPlansLink().click();
+		lvmflpp.getLVMFloorPlansLink().click();
 		Thread.sleep(7000);
 		// click on Exhibitor floor
-		atlflpp.getATLBuildingFloor().click();
+		lvmflpp.getLVMBuildingFloor().click();
 		// Scroll Down to Exhibitor list
 		Thread.sleep(4000);
-		utl.scrollToElement(atlflpp.getATLSelectBox());
+		utl.scrollToElement(lvmflpp.getLVMSelectBox());
 		// 1st Exhibitor Name
-		String exhibitorName = atlflpp.getATLExhibitorName().getText();
+		String exhibitorName = lvmflpp.getLVMExhibitorName().getText();
 		System.out.println("Exhibitor Name : " + exhibitorName);
 		
 		// Click on More option 3dots
-		atlflpp.getATLMoreOptions().click();
+		lvmflpp.getLVMMoreOptions().click();
 		Thread.sleep(2000);
 		// Click on Add Note
-		atlflpp.getATLAddNote().click();
+		lvmflpp.getLVMAddNote().click();
 		// Store the new note name
 		String newnotetitle = "CybNote" + genData.generateRandomString(3);
 		System.out.println("Newly added Note is: " + newnotetitle);
 
 		// Enter Note title
-		atlexhact.getNoteTitleTxtBx().sendKeys(newnotetitle);
+		lvmexhact.getNoteTitleTxtBx().sendKeys(newnotetitle);
 		// Enter Note Content
-		atlexhact.getNoteContentTxtBx().sendKeys("TestNote" + genData.generateRandomString(6));
+		lvmexhact.getNoteContentTxtBx().sendKeys("TestNote" + genData.generateRandomString(6));
 		// Click on 'Save' button
-		atlexhact.getNoteSaveBtn().click();
+		lvmexhact.getNoteSaveBtn().click();
 		Thread.sleep(5000);
 
-		atlflpp.getATLMoreOptions().click();
+		lvmflpp.getLVMMoreOptions().click();
 		// Click on 'Add Note' icon for the same exhibitor
-		atlflpp.getATLAddNote().click();
+		lvmflpp.getLVMAddNote().click();
 		Thread.sleep(10000);
 
 		// Click on 'View all Notes for an Exhibitor' link on Add Notes pop-up
-		atlexhact.getViewAllNotesLink().click();
+		lvmexhact.getViewAllNotesLink().click();
 		Thread.sleep(5000);
 
-		allnoteslist = atlexhact.getSavedNoteNameInAllNotesList();
+		allnoteslist = lvmexhact.getSavedNoteNameInAllNotesList();
 
 		// Verify that recently added note should be appear on 'All Notes For Exhibitor' modal
 		for (int i = 0; i < allnoteslist.size(); i++) {
@@ -566,52 +542,52 @@ public class FloorPlans extends base {
 		}
 
 		// Delete the saved note
-		atlexhact.getDeleteNoteBtn().click();
+		lvmexhact.getDeleteNoteBtn().click();
 	}
 
 	@Test(enabled=false)//priority = 12
 	public void TS011_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T316: Floor Plans: Exhibitors Option - Add to Favorite
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
+
 		utl = new Utility(driver);
-		atlflpp = new ATLFloorPlansPage(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
+		lvmflpp= new LVMFloorPlansPage(driver);
+		lvmmppge = new LVMMarketPlannerPage(driver);
+		lap = new LVMLandingPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(2000);
 		// Click on Exh And Product Tab
-		atlflpp.getATLExhibitorsAndProductTab().click();
+		lvmflpp.getLVMExhibitorsAndProductTab().click();
 		// click on Floor plans link
-		atlflpp.getATLFloorPlansLink().click();
+		lvmflpp.getLVMFloorPlansLink().click();
 
 		// click on Exhibitor floor
-		atlflpp.getbuildingFloor_lvmUAT().click();
+		lvmflpp.getbuildingFloor_lvmUAT().click();
 		Thread.sleep(5000);
 		// Scroll Down to Exhibitor list
-		utl.scrollToElement(atlflpp.getATLSelectBox());
+		utl.scrollToElement(lvmflpp.getLVMSelectBox());
 		Thread.sleep(6000);
 		// 1st Exhibitor Name
-		String exhibitorName = atlflpp.getATLExhibitorName().getText();
+		String exhibitorName = lvmflpp.getLVMExhibitorName().getText();
 		System.out.println("Exhibitor Name : " + exhibitorName);
 		// Click on More option 3dots
 		//atlflpp.getATLMoreOptions().click();
 
 		// Click on Favorite icon of 1st exhibitor
-		atlflpp.getATLAddFev().click();
+		lvmflpp.getLVMAddFev().click();
 
 		// Click on Market Planner link
 		lap.getMPLinkText().click();
 
 		// Click on Lists tab on MP home page
-		atlmppge.getMPHomeListsTab().click();
-		atlmppge.getATLMPListsPageFavoritesMenu().click();
+		lvmmppge.getMPHomeListsTab().click();
+		lvmmppge.getLVMMPListsPageFavoritesMenu().click();
 		Thread.sleep(7000);
 
 		//System.out.println(atlmppge.getATLSavedExhNameInList().getText());
 		// Verify that the added favorites exhibitor should be displayed in to Favorites list
-		favlist = atlmppge.getFavExhList();
+		favlist = lvmmppge.getFavExhList();
 		for (int i = 0; i < favlist.size(); i++) {
 			if(favlist.contains(exhibitorName)) {
 				//System.out.println(prodcatgitemlist.get(i).getText());
@@ -624,8 +600,8 @@ public class FloorPlans extends base {
 		// Delete that favorites exhibitor from list
 		Actions action=new Actions(driver);
 		//action.moveToElement(atlmppge.getMoreBtnDeleteOptn_lvmUAT()).perform();
-		atlmppge.getMoreBtnDeleteOptn_lvmUAT().click();
-		atlmppge.getATLEditListItemDeleteOptn().click();
+		lvmmppge.getMoreBtnDeleteOptn_lvmUAT().click();
+		lvmmppge.getLVMEditListItemDeleteOptn().click();
 		Thread.sleep(7000);
 
 		// Verify that the added favorites exhibitor should be removed from Favorites list
@@ -639,8 +615,7 @@ public class FloorPlans extends base {
 	public void TS012_VerifyFunctionalityOfFiltersOFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T290: To verify Floor Plans: Filter
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
+
 		utl = new Utility(driver);
 		lvmflpp=new LVMFloorPlansPage(driver);
 		
@@ -715,7 +690,7 @@ public class FloorPlans extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 
 }

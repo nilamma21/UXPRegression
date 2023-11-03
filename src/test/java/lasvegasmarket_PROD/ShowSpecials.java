@@ -149,7 +149,7 @@ public class ShowSpecials extends base{
 
 	@AfterClass
 	public void tearDown() {
-		//driver.quit();
+		driver.quit();
 	}
 
 }

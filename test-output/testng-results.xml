@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="LVM_RegressionTestSuite" duration-ms="104561" started-at="2023-10-27T09:08:42Z" finished-at="2023-10-27T09:10:26Z">
+  <suite name="LVM_RegressionTestSuite" duration-ms="65259" started-at="2023-11-03T07:18:07Z" finished-at="2023-11-03T07:19:12Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="104561" started-at="2023-10-27T09:08:42Z" finished-at="2023-10-27T09:10:26Z">
-      <class name="lasvegasmarket_PROD.ExhibitorDigitalShowroom">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@3532ec19]" name="initialize" is-config="true" duration-ms="27168" started-at="2023-10-27T14:38:42Z" finished-at="2023-10-27T14:39:09Z">
+    <test name="RegressionTest" duration-ms="65259" started-at="2023-11-03T07:18:07Z" finished-at="2023-11-03T07:19:12Z">
+      <class name="lasvegasmarket_PROD.GlobalSearch_SearchFor">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_SearchFor@27efef64]" name="initialize" is-config="true" duration-ms="30849" started-at="2023-11-03T12:48:07Z" finished-at="2023-11-03T12:48:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS008_VerifySeeInOtherMarketsForExhibitorTest()[pri:0, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@3532ec19]" name="TS008_VerifySeeInOtherMarketsForExhibitorTest" duration-ms="75346" started-at="2023-10-27T14:39:09Z" finished-at="2023-10-27T14:40:24Z">
+        <test-method status="PASS" signature="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_SearchFor@27efef64]" name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest" duration-ms="34376" started-at="2023-11-03T12:48:38Z" finished-at="2023-11-03T12:49:12Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS008_VerifySeeInOtherMarketsForExhibitorTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@3532ec19]" name="tearDown" is-config="true" duration-ms="2008" started-at="2023-10-27T14:40:24Z" finished-at="2023-10-27T14:40:26Z">
+        </test-method> <!-- TS010_VerifyShowSpecialsOverviewInGlobalSearchTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_SearchFor@27efef64]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-11-03T12:49:12Z" finished-at="2023-11-03T12:49:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- lasvegasmarket_PROD.ExhibitorDigitalShowroom -->
+      </class> <!-- lasvegasmarket_PROD.GlobalSearch_SearchFor -->
     </test> <!-- RegressionTest -->
   </suite> <!-- LVM_RegressionTestSuite -->
 </testng-results>

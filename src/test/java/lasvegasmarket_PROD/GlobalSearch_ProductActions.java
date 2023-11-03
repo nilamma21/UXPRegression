@@ -588,6 +588,62 @@ public class GlobalSearch_ProductActions extends base {
 		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 
+	@Test(priority = 7)
+	public void TS007_VerifyFullScreenViewerOnProductDetailsPageTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T387: Full Screen Viewer functionality on Product Details page
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		utl = new Utility(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		atlproddet = new ATLProductDetailsPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		driver.get(prop.getProperty("lvmurl_prod"));
+		Thread.sleep(6000);
+		//lap.getCloseMarktAdBtn().click();
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearchinput"));
+		atlgs.getATLSearchButton().click();
+		Thread.sleep(15000);
+		//Store the 1st Product name of Exhibitor
+		//String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText(); //Old
+		String productNameOnSearchGrid = atlexhact.getprodNameUAT().getText(); //New
+		System.out.println("Selected Product Name: "+productNameOnSearchGrid);
+
+		utl.scrollToElement(atlexhact.getExhibitorProduct());
+
+		// Hovering on Product
+		Actions actions = new Actions(driver);
+		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
+		// To mouseover on See Details btn
+		actions.moveToElement(atlexhact.getProdSeeDetailsBtn()).perform();
+
+		//Click on See Details button
+		actions.click().perform();
+		Thread.sleep(5000);
+
+		//Click on Product Full Screen Viewer button
+		utl.scrollToElement(atlproddet.getProductFullScreenViewerBtn());
+		atlproddet.getProductFullScreenViewerBtn().click();
+
+		//Verify that Full Screen viewer should be displayed with Product images
+		Assert.assertTrue(atlproddet.getProductFullScreenViewer().isDisplayed());
+		Thread.sleep(5000);
+
+		//Verify the title of the Full screen viewer
+		System.out.println(atlproddet.getProductFullScreenViewerTitle().getText());
+		Assert.assertTrue(atlproddet.getProductFullScreenViewerTitle().getText().equals(productNameOnSearchGrid));
+
+		//Dismiss the Full Screen Viewer
+		atlproddet.getProductFullScreenViewer().click();
+		driver.get(prop.getProperty("lvmurl_prod"));
+	}
+
 
 	//@Test(priority = 8)
 	public void TS008_VerifyAddToFavoriteOnSearchResultsGridTest() throws InterruptedException, IOException {
