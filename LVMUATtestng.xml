@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="LVM_UAT_Suite" >
+
+  <listners>
+	<listner class-name="lasvegasmarket_UAT.TestListeners" />
+  </listners>
+  
+  <test name="LVM_UAT_RegressionTest">
+    <classes>
+    <!--   <class name="lasvegasmarket_UAT.GlobalSearch_LineActions"/> 
+      <class name="lasvegasmarket_UAT.GlobalSearch_SearchFor"/>
+      <class name="lasvegasmarket_UAT.GlobalSearch_MatchingResults"/>
+      <class name="lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters"/>
+    <class name="lasvegasmarket_UAT.FloorPlans"/>
+      <class name="lasvegasmarket_UAT.EvenntsAndWebinar"/>
+        <class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions"/>
+     <class name="lasvegasmarket_UAT.ShowSpecials"/>
+      <class name="lasvegasmarket_UAT.GlobalSearch_ProductActions"/>
+       <class name="lasvegasmarket_UAT.GlobalSearch_SuggestionList"/>-->
+      <class name="lasvegasmarket_UAT.ExhibitorDigitalShowroom"/> 
+   <!--    <class name="lasvegasmarket_UAT.LineDigitalShowroom"/> -->
+<!-- 
+      		<methods>
+				 <include name="TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest"/>   
+		</methods> 
+ -->
+    </classes>
+  </test> <!-- LVM_UAT_RegressionTest -->
+</suite> <!-- LVM_UAT_Suite -->
