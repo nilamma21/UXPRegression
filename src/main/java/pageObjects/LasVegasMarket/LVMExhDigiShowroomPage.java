@@ -537,4 +537,5 @@ public class LVMExhDigiShowroomPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ContactPopUpClose));
 		return driver.findElement(ContactPopUpClose);
 	}
+
 }
