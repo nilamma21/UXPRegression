@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>RegressionTest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/2</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Nov 01 11:39:34 IST 2023</td>
+<td>Started on:</td><td>Thu Nov 16 18:19:07 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>232 seconds (232978 ms)</td>
+<tr><td>Total time:</td><td>99 seconds (99792 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,34 +68,73 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='atlantamarket_PROD.GlobalSearch_ExhibitorActions.TS003_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest()'><b>TS003_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_ExhibitorActions</td>
-<td><div><pre>java.lang.AssertionError: expected [123020] but found [186185]
-	at atlantamarket_PROD.GlobalSearch_ExhibitorActions.TS003_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest(GlobalSearch_ExhibitorActions.java:168)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace161113555", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace161113555'><pre>java.lang.AssertionError: expected [123020] but found [186185]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertEquals(Assert.java:123)
-	at org.testng.Assert.assertEquals(Assert.java:176)
-	at org.testng.Assert.assertEquals(Assert.java:186)
-	at atlantamarket_PROD.GlobalSearch_ExhibitorActions.TS003_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest(GlobalSearch_ExhibitorActions.java:168)
+<td title='atlantamarket_PROD.ShowSpecials.initialize()'><b>initialize</b><br>Test class: atlantamarket_PROD.ShowSpecials</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[contains(text(),&apos;You have successfully added&apos;)]&quot;}
+  (Session info: chrome=119.0.6045.125)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.125, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\anuppa\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59468}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4bb927d59a06e9bef1d0cb9ab608d177
+*** Element info: {Using=xpath, value=//span[contains(text(),&apos;You have successfully added&apos;)]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at pageObjects.ExhibitorPortal.EXPMarketsPage.getShowSpecialSuccessMsg(EXPMarketsPage.java:74)
+	at resources.Utility.addNewShowSpecialFrmExp_PROD(Utility.java:750)
+	at atlantamarket_PROD.ShowSpecials.initialize(ShowSpecials.java:63)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace579447973", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace579447973'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[contains(text(),&apos;You have successfully added&apos;)]&quot;}
+  (Session info: chrome=119.0.6045.125)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.125, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\anuppa\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59468}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4bb927d59a06e9bef1d0cb9ab608d177
+*** Element info: {Using=xpath, value=//span[contains(text(),&apos;You have successfully added&apos;)]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at pageObjects.ExhibitorPortal.EXPMarketsPage.getShowSpecialSuccessMsg(EXPMarketsPage.java:74)
+	at resources.Utility.addNewShowSpecialFrmExp_PROD(Utility.java:750)
+	at atlantamarket_PROD.ShowSpecials.initialize(ShowSpecials.java:63)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:175)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:107)
 	at org.testng.TestRunner.privateRun(TestRunner.java:767)
 	at org.testng.TestRunner.run(TestRunner.java:617)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
@@ -111,70 +150,26 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
 </pre></div></td>
-<td>41</td>
-<td>atlantamarket_PROD.GlobalSearch_ExhibitorActions@29774679</td></tr>
-<tr>
-<td title='atlantamarket_PROD.GlobalSearch_ExhibitorActions.TS004_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest()'><b>TS004_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_ExhibitorActions</td>
-<td><div><pre>java.lang.AssertionError: expected [656] but found [123020]
-	at atlantamarket_PROD.GlobalSearch_ExhibitorActions.TS004_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest(GlobalSearch_ExhibitorActions.java:212)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1906549136", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1906549136'><pre>java.lang.AssertionError: expected [656] but found [123020]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertEquals(Assert.java:123)
-	at org.testng.Assert.assertEquals(Assert.java:176)
-	at org.testng.Assert.assertEquals(Assert.java:186)
-	at atlantamarket_PROD.GlobalSearch_ExhibitorActions.TS004_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest(GlobalSearch_ExhibitorActions.java:212)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
-</pre></div></td>
-<td>36</td>
-<td>atlantamarket_PROD.GlobalSearch_ExhibitorActions@29774679</td></tr>
+<td>0</td>
+<td>atlantamarket_PROD.ShowSpecials@4501b7af</td></tr>
 </table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='atlantamarket_PROD.GlobalSearch_ExhibitorActions.TS001_VerifyClickOnLocationLinksForExhibitorTest()'><b>TS001_VerifyClickOnLocationLinksForExhibitorTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_ExhibitorActions</td>
+<td title='atlantamarket_PROD.ShowSpecials.TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest()'><b>TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest</b><br>Test class: atlantamarket_PROD.ShowSpecials</td>
 <td></td>
-<td>27</td>
-<td>atlantamarket_PROD.GlobalSearch_ExhibitorActions@29774679</td></tr>
+<td>0</td>
+<td>atlantamarket_PROD.ShowSpecials@4501b7af</td></tr>
 <tr>
-<td title='atlantamarket_PROD.GlobalSearch_ExhibitorActions.TS002_VerifyClickOnLinesShownLinkForExhibitorTest()'><b>TS002_VerifyClickOnLinesShownLinkForExhibitorTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_ExhibitorActions</td>
+<td title='atlantamarket_PROD.ShowSpecials.TS002_VerifyLocationLinksForShowSpecialsTest()'><b>TS002_VerifyLocationLinksForShowSpecialsTest</b><br>Test class: atlantamarket_PROD.ShowSpecials</td>
 <td></td>
-<td>37</td>
-<td>atlantamarket_PROD.GlobalSearch_ExhibitorActions@29774679</td></tr>
-<tr>
-<td title='atlantamarket_PROD.GlobalSearch_ExhibitorActions.TS005_VerifySelectionOfExhibitorFromSearchResultsTest()'><b>TS005_VerifySelectionOfExhibitorFromSearchResultsTest</b><br>Test class: atlantamarket_PROD.GlobalSearch_ExhibitorActions</td>
-<td></td>
-<td>37</td>
-<td>atlantamarket_PROD.GlobalSearch_ExhibitorActions@29774679</td></tr>
+<td>0</td>
+<td>atlantamarket_PROD.ShowSpecials@4501b7af</td></tr>
 </table><p>
 </body>
 </html>

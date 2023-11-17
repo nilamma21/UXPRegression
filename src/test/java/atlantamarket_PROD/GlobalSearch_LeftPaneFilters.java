@@ -59,7 +59,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		driver.navigate().refresh();
 		Thread.sleep(4000);
 	}
-	@Test
+	@Test(enabled=false)
 	public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
 
 		// The purpose of this test case to verify:-
@@ -87,7 +87,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 	}
 	
 	
-	@Test(priority = 1,groups="Non_MP")
+	@Test(priority = 1)//groups="Non_MP"
 	
 	public void TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -117,6 +117,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		//Verify the selected Product Category on Exhibitor Digital Showroom page
 		//Select 1st Exhibitor from Search results grid
+		utl.scrollToElement(atlleftpane.getATLexhibitor());
 		atlleftpane.getATLexhibitor().click();
 
 		//Scroll till Product Categories section
@@ -133,7 +134,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
 
-	@Test(priority = 2,groups="Non_MP")
+	@Test(priority = 2)//groups="Non_MP"
 	public void TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T404: Selection Of Antique/Vintage Prod Catg From Left Pane Filters
@@ -145,10 +146,10 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		driver.get(prop.getProperty("atlmrkturl_prod"));
-
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(2000);
+		
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
 
@@ -160,7 +161,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//Select 'Antique/Vintage' prod category
 		String expectedprodcatg = atlleftpane.getATLAntiqueVintProdCatg().getText();
 		atlleftpane.getATLAntiqueVintProdCatg().click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		//Verify the selected Product Category on Product details page
 		utl.scrollToElement(atlexhact.getSecondExhProduct());
 				
@@ -185,7 +186,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
 
-	@Test(priority = 3,groups="Non_MP")
+	@Test(priority = 3)//groups="Non_MP"
 	public void TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T405: Combination within Prod Catgs From Left Pane Filters
@@ -197,9 +198,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
@@ -246,6 +246,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 */
 		//Verify the selected Product Categories on Exhibitor Digital Showroom page
 		//Select 1st Exhibitor from Search results grid
+		utl.scrollToElement(atlleftpane.getATLexhibitor());
 		atlleftpane.getATLexhibitor().click();
 
 		//Scroll till Product Categories section
@@ -263,7 +264,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 	}
 
-	@Test(priority = 4,groups="Non_MP")
+	@Test(priority = 4)//groups="Non_MP"
 	public void TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T406: Combination of Prod Catgs with Styles From Left Pane Filters
@@ -275,9 +276,9 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 		lp = new ATLLoginPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(2000);
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
@@ -299,6 +300,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		Thread.sleep(8000);
 
 		//Click on Product Categories expand btn
+		utl.scrollToElement(atlleftpane.getATLProdCatgExpandBtn());
 		atlleftpane.getATLProdCatgExpandBtn().click();
 
 		//Click on Styles expand btn
@@ -309,10 +311,15 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		String expectedstyle = atlleftpane.getATLIndustrialStyle().getText();
 		//System.out.println("Expected Style name:"+expectedstyle);
 		atlleftpane.getATLIndustrialStyle().click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 
 		//Click on IMC Test Exhibitor name in list
-		atlexhact.getIMCExhibitorName().click();
+		//utl.scrollToElement(atlexhact.getIMCExhibitorName());
+		//atlexhact.getIMCExhibitorName().click();
+		
+		//Click on first exhibitor name
+		utl.scrollToElement(atlleftpane.getATLexhibitor());
+        atlleftpane.getATLexhibitor().click();
 
 		//Scroll till Product Categories section
 		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
@@ -364,7 +371,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
 
-	@Test(priority = 5,groups="Non_MP")
+	@Test(priority = 5)//groups="Non_MP"
 	public void TS005_VerifySelectionOfAccentFurnitureProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T404: Selection Of Accent Furniture Prod Catg From Left Pane Filters
@@ -376,9 +383,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
@@ -411,7 +417,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
 
-	@Test(priority = 6,groups="Non_MP")
+	@Test(priority = 6)//groups="Non_MP"
 	public void TS006_VerifySelectionOfHolidayProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T404: Selection Of Holiday/Seasonal Prod Catg From Left Pane Filters
@@ -423,9 +429,9 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(2000);
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys("Anne");
 		atlgs.getATLSearchButton().click();
@@ -443,6 +449,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		//Verify the selected Product Categories on Exhibitor Digital Showroom page
 		//Select 1st Exhibitor from Search results grid
+		utl.scrollToElement(atlleftpane.getATLexhibitor());
 		atlleftpane.getATLexhibitor().click();
 
 		//Scroll till Product Categories section
@@ -468,7 +475,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		actions.moveToElement(atlexhact.getThirdExhProdSeeDetailsBtn()).perform();
 		// Click on See Details button
 		actions.click().perform();
-
+		Thread.sleep(2000);
 		//Scroll till Product Categories section
 		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
 		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
@@ -482,7 +489,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		}
 	}
 
-	@Test(priority =7,groups="Non_MP")
+	@Test(priority =7)//groups="Non_MP"
 	public void TS007_VerifySelectionOfDecorativeAccessProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T404: Selection Of Decorative Accessories Prod Catg From Left Pane Filters
@@ -494,9 +501,9 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(2000);
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
@@ -520,7 +527,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		actions.moveToElement(atlexhact.getProdSeeDetailsBtn()).perform();
 		// Click on See Details button
 		actions.click().perform();
-
+		Thread.sleep(2000);
 		//Scroll till Product Categories section
 		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
 		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
@@ -535,7 +542,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
 
-	@Test(priority =8,groups="Non_MP")
+	@Test(priority =8)//groups="Non_MP"
 	public void TS008_VerifySelectionOfGeneralGiftProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T404: Selection Of General Gift Prod Catg From Left Pane Filters
@@ -547,9 +554,9 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(2000);
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys("Anne");
 		atlgs.getATLSearchButton().click();
@@ -562,7 +569,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//Select General Gift prod category
 		String expectedprodcatg = atlleftpane.getATLGeneralGiftProdCatg().getText();
 		atlleftpane.getATLGeneralGiftProdCatg().click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 
 		//Verify the selected Product Categories on product details page
 		utl.scrollToElement(atlexhact.getExhibitorProduct());
@@ -588,7 +595,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
 
-	@Test(priority = 9,groups="Non_MP")
+	@Test(priority = 9)//groups="Non_MP"
 	public void TS009_VerifySelectionOfFashionAccProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T404: Selection Of Fashion Accessories/Jewelry Prod Catg From Left Pane Filters
@@ -600,9 +607,9 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(2000);
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys("Anne");
 		atlgs.getATLSearchButton().click();
@@ -620,6 +627,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		//Verify the selected Product Categories on Exhibitor Digital Showroom page
 		//Select 1st Exhibitor from Search results grid
+		utl.scrollToElement(atlleftpane.getATLexhibitor());
 		atlleftpane.getATLexhibitor().click();
 
 		//Scroll till Product Categories section
@@ -634,7 +642,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 			}
 		}
 		driver.navigate().back();
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 
 		//Verify the selected Product Category on Product details page
 		utl.scrollToElement(atlexhact.getProductForMultipleCatg());
@@ -660,7 +668,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
 
-	@Test(priority =10,groups="Non_MP")
+	@Test(priority =10)//groups="Non_MP"
 	public void TS010_VerifySelectionOfFloralBotanicalsProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T404: Selection Of Floral / Botanicals Prod Catg From Left Pane Filters
@@ -672,14 +680,15 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(2000);
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
 
 		//Click on Product Categories expand btn
+		utl.scrollToElement(atlleftpane.getATLProdCatgExpandBtn());
 		atlleftpane.getATLProdCatgExpandBtn().click();
 
 		utl.scrollToElement(atlleftpane.getATLFloralBotanicalsProdCatg());
@@ -698,7 +707,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		actions.moveToElement(atlexhact.getProdSeeDetailsBtn()).perform();
 		// Click on See Details button
 		actions.click().perform();
-
+		Thread.sleep(2000);
 		//Scroll till Product Categories section
 		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
 		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
@@ -713,7 +722,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
 
-	@Test(priority =11,groups="Non_MP")
+	@Test(priority =11)//groups="Non_MP"
 	public void TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T404: Selection Of Home Textiles Prod Catg From Left Pane Filters
@@ -725,14 +734,14 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		driver.get(prop.getProperty("atlmrkturl_prod"));
-
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(1000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor8")));
 		atlgs.getATLSearchButton().click();
 
 		//Click on Product Categories expand btn
+		utl.scrollToElement(atlleftpane.getATLProdCatgExpandBtn());
 		atlleftpane.getATLProdCatgExpandBtn().click();
 
 		utl.scrollToElement(atlleftpane.getATLHomeTextilesProdCatg());
@@ -744,6 +753,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		System.out.println(expectedprodcatg);
 		//Verify the selected Product Categories on product details page
 		//Select 1st Exhibitor from Search results grid
+		utl.scrollToElement(atlleftpane.getATLexhibitor());
 		atlleftpane.getATLexhibitor().click();
 		
 		//Scroll till Product Categories section

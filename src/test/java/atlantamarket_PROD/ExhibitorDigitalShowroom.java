@@ -247,7 +247,7 @@ public class ExhibitorDigitalShowroom extends base {
 	@Test(priority = 5)//groups="Non_MP"
 	public void TS005_VerifyClickOnLineSearchForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// T317: The click on Line Filters functionality for an Exhibitor Digital Show room
+		// T659: The click on Line Filters functionality for an Exhibitor Digital Show room
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
@@ -276,7 +276,7 @@ public class ExhibitorDigitalShowroom extends base {
 	@Test(priority = 6)//groups="Non_MP"
 	public void TS006_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// T350: Exhibitor Digital Showroom: Lines Component: See All Lines
+		// T691: Exhibitor Digital Showroom: Lines Component: See All Lines
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);

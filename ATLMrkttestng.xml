@@ -5,15 +5,14 @@
 	<listners>
 		<listner class-name="atlantamarket_PROD.TestListeners" />
 	</listners>
-	<test thread-count="5" name="RegressionTest">
+	<test thread-count="1" name="RegressionTest">
 		<classes>
-	
-		<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
-<!-- 		
+		<class name="atlantamarket_PROD.ShowSpecials" />
+<!-- 
 			<methods>
-				<include name="TS003_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest"/>  
+				<include name="TS004_VerifyClickOnTotalProductsSeeAllLinkForLineTest"/>  
 			</methods>
- -->
+  -->
 	</classes>
 	</test>
 </suite>

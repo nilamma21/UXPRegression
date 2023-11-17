@@ -13,15 +13,15 @@ public class ATLLineDigitalShowroomPage {
 	public WebDriverWait wait;
 
 	By atlLineDigiShowroomPageTitle = By.xpath("//div[@class='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[4]/a[1]"); // Locator Line Digi showroom page title
-	By digiShowroomExhName = By.xpath("//div[@class='imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div[1]/div[2]/a[1]"); // Locator  Exhibitor name shown by Digital Showroom page
+	By digiShowroomExhName = By.xpath("//div[@class='imc-content imc-type--title-6 imc-type--color-neutral-heavy-medium imc-vr--small ']/a"); // Locator  Exhibitor name shown by Digital Showroom page
 	By suggetionList = By.xpath("//div[@ID='react-autowhatever-input-1']"); // Locator Suggetion list 1st suggetion
-	By locationLink = By.xpath("//div[@class='imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div[1]/div[3]/span[2]/a[1]"); //Locator for Location liks
+	By locationLink = By.xpath("(//span[@class='imc-content--pipe']/a)[1]"); //Locator for Location liks
 	By favIconDigiShowroom = By.xpath("//div[@class='imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div[1]/div[4]/ul[1]/li[1]/div[1]/button[1]"); //Locator for Exhibitor name on Exhibitor Directory image
 	By addToListIcon = By.xpath("//div[@class='imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div[1]/div[4]/ul[1]/li[2]/button[1]"); //Locator for Add to list
 	By atl1stListName = By.xpath("(//div[@class='imc-vr--xlarge'])[2]/div[1]/label[1]"); //Locator for 1st List name
 	By addNoteIcon = By.xpath("//div[@class='imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div[1]/div[4]/ul[1]/li[3]/div[1]/div[1]/div[1]/button[1]"); //Locator for Add Note
 	By orderOnJuniperBtn = By.xpath("//div[@class='imc-section imc-padding--left--xlarge imc-padding--right--xlarge imc-section--width-100-percent']/div[1]/div[2]/a[1]"); //Locator for Order on Juniper Btn
-	By seeAllProductBtn = By.xpath("//div[@class='imc-section imc-padding--left--xlarge imc-padding--right--xlarge imc-section--width-100-percent']/div[1]/div[3]/a[1]/span[1]"); //Locator for See All Product Count Btn
+	By seeAllProductBtn = By.xpath("(//span[contains(text(),'See All')])[1]"); //Locator for See All Product Count Btn
 	By productTitle = By.xpath("//div[@class='imc-section imc-section--width-100-percent']/div[1]/span[1]"); //Locator for Product  titele
 	By productCount = By.xpath("//div[@class='imc-section imc-section--width-100-percent']/div[1]/span[2]"); //Locator for Product Count
 	By productTitleAndCount = By.xpath("//div[@class='imc-section imc-section--width-100-percent']/div[1]/span[contains(text(),'Products Shown')]/../span[1]"); //Locator for Product  titele and count

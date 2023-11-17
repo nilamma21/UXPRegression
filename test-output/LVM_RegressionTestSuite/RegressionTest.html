@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>RegressionTest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/15</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Nov 03 12:48:07 IST 2023</td>
+<td>Started on:</td><td>Fri Nov 17 10:54:29 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>65 seconds (65259 ms)</td>
+<tr><td>Total time:</td><td>68 seconds (68108 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,18 +67,140 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_SearchFor.TS010_VerifyShowSpecialsOverviewInGlobalSearchTest()'><b>TS010_VerifyShowSpecialsOverviewInGlobalSearchTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SearchFor</td>
+<td title='lasvegasmarket_UAT.EvenntsAndWebinar.initialize()'><b>initialize</b><br>Test class: lasvegasmarket_UAT.EvenntsAndWebinar</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[contains(text(),&apos;Login&apos;)] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\anuppa\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61112}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a4215c6612a98bcbdc6a0cb29c7d8dcc
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.AtlantaMarket.ATLLandingPage.getLogin(ATLLandingPage.java:30)
+	at resources.Utility.verifyMPLoginFunctionality(Utility.java:87)
+	at lasvegasmarket_UAT.EvenntsAndWebinar.initialize(EvenntsAndWebinar.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace370161267", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace370161267'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[contains(text(),&apos;Login&apos;)] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\anuppa\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61112}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a4215c6612a98bcbdc6a0cb29c7d8dcc
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.AtlantaMarket.ATLLandingPage.getLogin(ATLLandingPage.java:30)
+	at resources.Utility.verifyMPLoginFunctionality(Utility.java:87)
+	at lasvegasmarket_UAT.EvenntsAndWebinar.initialize(EvenntsAndWebinar.java:64)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:175)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:107)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>0</td>
+<td>lasvegasmarket_UAT.EvenntsAndWebinar@28d25987</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='lasvegasmarket_UAT.EvenntsAndWebinar.TS001_VerifyEventsAndWebinarsOverviewTest()'><b>TS001_VerifyEventsAndWebinarsOverviewTest</b><br>Test class: lasvegasmarket_UAT.EvenntsAndWebinar</td>
 <td></td>
-<td>34</td>
-<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@27efef64</td></tr>
+<td>0</td>
+<td>lasvegasmarket_UAT.EvenntsAndWebinar@28d25987</td></tr>
+<tr>
+<td title='lasvegasmarket_UAT.EvenntsAndWebinar.TS002_VerifyIMCEventsSearchbarTest()'><b>TS002_VerifyIMCEventsSearchbarTest</b><br>Test class: lasvegasmarket_UAT.EvenntsAndWebinar</td>
+<td></td>
+<td>0</td>
+<td>lasvegasmarket_UAT.EvenntsAndWebinar@28d25987</td></tr>
+<tr>
+<td title='lasvegasmarket_UAT.EvenntsAndWebinar.TS003_VerifyIMCEventsCalendarViewTest()'><b>TS003_VerifyIMCEventsCalendarViewTest</b><br>Test class: lasvegasmarket_UAT.EvenntsAndWebinar</td>
+<td></td>
+<td>0</td>
+<td>lasvegasmarket_UAT.EvenntsAndWebinar@28d25987</td></tr>
+<tr>
+<td title='lasvegasmarket_UAT.EvenntsAndWebinar.TS004_VerifyIMCEventsEventsListTest()'><b>TS004_VerifyIMCEventsEventsListTest</b><br>Test class: lasvegasmarket_UAT.EvenntsAndWebinar</td>
+<td></td>
+<td>0</td>
+<td>lasvegasmarket_UAT.EvenntsAndWebinar@28d25987</td></tr>
+<tr>
+<td title='lasvegasmarket_UAT.EvenntsAndWebinar.TS005_VerifyIMCEventsEventDetailstTest()'><b>TS005_VerifyIMCEventsEventDetailstTest</b><br>Test class: lasvegasmarket_UAT.EvenntsAndWebinar</td>
+<td></td>
+<td>0</td>
+<td>lasvegasmarket_UAT.EvenntsAndWebinar@28d25987</td></tr>
+<tr>
+<td title='lasvegasmarket_UAT.EvenntsAndWebinar.TS006_VerifyIMCEventsAddToFavoriteTest()'><b>TS006_VerifyIMCEventsAddToFavoriteTest</b><br>Test class: lasvegasmarket_UAT.EvenntsAndWebinar</td>
+<td></td>
+<td>0</td>
+<td>lasvegasmarket_UAT.EvenntsAndWebinar@28d25987</td></tr>
+<tr>
+<td title='lasvegasmarket_UAT.EvenntsAndWebinar.TS007_VerifyIMCEventsAddToListTest()'><b>TS007_VerifyIMCEventsAddToListTest</b><br>Test class: lasvegasmarket_UAT.EvenntsAndWebinar</td>
+<td></td>
+<td>0</td>
+<td>lasvegasmarket_UAT.EvenntsAndWebinar@28d25987</td></tr>
+<tr>
+<td title='lasvegasmarket_UAT.EvenntsAndWebinar.TS008_VerifyIMCEventsAddNoteTest()'><b>TS008_VerifyIMCEventsAddNoteTest</b><br>Test class: lasvegasmarket_UAT.EvenntsAndWebinar</td>
+<td></td>
+<td>0</td>
+<td>lasvegasmarket_UAT.EvenntsAndWebinar@28d25987</td></tr>
+<tr>
+<td title='lasvegasmarket_UAT.EvenntsAndWebinar.TS009_VerifyExhibitorEventsSearchbarTest()'><b>TS009_VerifyExhibitorEventsSearchbarTest</b><br>Test class: lasvegasmarket_UAT.EvenntsAndWebinar</td>
+<td></td>
+<td>0</td>
+<td>lasvegasmarket_UAT.EvenntsAndWebinar@28d25987</td></tr>
+<tr>
+<td title='lasvegasmarket_UAT.EvenntsAndWebinar.TS010_VerifyExhibitorEventsCalendarViewTest()'><b>TS010_VerifyExhibitorEventsCalendarViewTest</b><br>Test class: lasvegasmarket_UAT.EvenntsAndWebinar</td>
+<td></td>
+<td>0</td>
+<td>lasvegasmarket_UAT.EvenntsAndWebinar@28d25987</td></tr>
+<tr>
+<td title='lasvegasmarket_UAT.EvenntsAndWebinar.TS011_VerifyExhibitorEventsListTest()'><b>TS011_VerifyExhibitorEventsListTest</b><br>Test class: lasvegasmarket_UAT.EvenntsAndWebinar</td>
+<td></td>
+<td>0</td>
+<td>lasvegasmarket_UAT.EvenntsAndWebinar@28d25987</td></tr>
+<tr>
+<td title='lasvegasmarket_UAT.EvenntsAndWebinar.TS012_VerifyExhibitorEventsDetailstTest()'><b>TS012_VerifyExhibitorEventsDetailstTest</b><br>Test class: lasvegasmarket_UAT.EvenntsAndWebinar</td>
+<td></td>
+<td>0</td>
+<td>lasvegasmarket_UAT.EvenntsAndWebinar@28d25987</td></tr>
+<tr>
+<td title='lasvegasmarket_UAT.EvenntsAndWebinar.TS013_VerifyExhibitorEventsAddToFavoriteTest()'><b>TS013_VerifyExhibitorEventsAddToFavoriteTest</b><br>Test class: lasvegasmarket_UAT.EvenntsAndWebinar</td>
+<td></td>
+<td>0</td>
+<td>lasvegasmarket_UAT.EvenntsAndWebinar@28d25987</td></tr>
+<tr>
+<td title='lasvegasmarket_UAT.EvenntsAndWebinar.TS014_VerifyExhibitorEventsAddToListTest()'><b>TS014_VerifyExhibitorEventsAddToListTest</b><br>Test class: lasvegasmarket_UAT.EvenntsAndWebinar</td>
+<td></td>
+<td>0</td>
+<td>lasvegasmarket_UAT.EvenntsAndWebinar@28d25987</td></tr>
+<tr>
+<td title='lasvegasmarket_UAT.EvenntsAndWebinar.TS015_VerifyExhibitorEventsAddNoteTest()'><b>TS015_VerifyExhibitorEventsAddNoteTest</b><br>Test class: lasvegasmarket_UAT.EvenntsAndWebinar</td>
+<td></td>
+<td>0</td>
+<td>lasvegasmarket_UAT.EvenntsAndWebinar@28d25987</td></tr>
 </table><p>
 </body>
 </html>

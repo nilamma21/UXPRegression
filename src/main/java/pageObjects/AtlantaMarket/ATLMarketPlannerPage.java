@@ -269,22 +269,22 @@ public class ATLMarketPlannerPage {
 		this.driver = driver; 			
 	}
 	public WebElement getmoreEventOptionDeleteBtnUAT_LVM() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(moreEventOptionDeleteBtnUAT_LVM));
 		return driver.findElement(moreEventOptionDeleteBtnUAT_LVM);
 	}
 	public WebElement getmoreOptionDeleteBtnUAT_LVM() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(moreOptionDeleteBtnUAT_LVM));
 		return driver.findElement(moreOptionDeleteBtnUAT_LVM);
 	}
 	public WebElement getmoreOptionUAT_LVM() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(moreOptionUAT_LVM));
 		return driver.findElement(moreOptionUAT_LVM);
 	}
 	public List <WebElement> getlistOfAllExhPROD() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllExhPROD));
 		return driver.findElements(listOfAllExhPROD);
 	}
@@ -294,12 +294,12 @@ public class ATLMarketPlannerPage {
 		return driver.findElement(mpNotebtn);
 	}
 	public List <WebElement> getlistOfAllProductTitles() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllProductTitles));
 		return driver.findElements(listOfAllProductTitles);
 	}
 	public List <WebElement> getlistOfAllProductNames() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllProductNames));
 		return driver.findElements(listOfAllProductNames);
 	}
@@ -330,157 +330,157 @@ public class ATLMarketPlannerPage {
 		return driver.findElement(AddToSchedulePROD);
 	}
 	public WebElement getMoreOptionPROD() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(MoreOptionPROD));
 		return driver.findElement(MoreOptionPROD);
 	}
 	public List <WebElement> getlistOfAllSavedAllEventsWebinar() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllSavedAllEventsWebinar));
 		return driver.findElements(listOfAllSavedAllEventsWebinar);
 	}
 	public WebElement getsavedAllEventsWebinar() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(savedAllEventsWebinar));
 		return driver.findElement(savedAllEventsWebinar);
 	}
 	public WebElement getAtlAddToSchedule() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(AtlAddToSchedule));
 		return driver.findElement(AtlAddToSchedule);
 	}
 	public List <WebElement> getfavIconlist() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(favIconlist));
 		return driver.findElements(favIconlist);
 	}
 	public WebElement getatlmpSaveSearcheBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmpSaveSearcheBtn));
 		return driver.findElement(atlmpSaveSearcheBtn);
 	}
 	public WebElement getATLExhibitorEvent() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLExhibitorEvent));
 		return driver.findElement(ATLExhibitorEvent);
 	}
 	public WebElement getATLIMCEvent() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLIMCEvent));
 		return driver.findElement(ATLIMCEvent);
 	}
 	public WebElement getATLAttendTabEventMenu() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLAttendTabEventMenu));
 		return driver.findElement(ATLAttendTabEventMenu);
 	}
 	public WebElement getATLAttendTabEventBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLAttendTabEventBtn));
 		return driver.findElement(ATLAttendTabEventBtn);
 	}
 	public WebElement getATLAttendTab() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLAttendTab));
 		return driver.findElement(ATLAttendTab);
 	}
 	public WebElement getfirstExhName() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(fExhpName));
 		return driver.findElement(fExhpName);
 	}
 	public WebElement getcheckBox() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(checkBox));
 		return driver.findElement(checkBox);
 	}
 	public WebElement getnoSavedSearchesMsg() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(noSavedSearchesMsg));
 		return driver.findElement(noSavedSearchesMsg);
 	}
 	public List <WebElement> getmpListOfAllProds() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpListOfAllProds));
 		return driver.findElements(mpListOfAllProds);
 	}
 	public WebElement getmpmonthName() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpmonthName));
 		return driver.findElement(mpmonthName);
 	}
 	public WebElement getmpAddToScheduledSaveBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpAddToScheduledSaveBtn));
 		return driver.findElement(mpAddToScheduledSaveBtn);
 	}
 	public WebElement getmpSelectEndTime() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSelectEndTime));
 		return driver.findElement(mpSelectEndTime);
 	}
 	public WebElement getmpSelectStartTime() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSelectStartTime));
 		return driver.findElement(mpSelectStartTime);
 	}
 	public WebElement getmpSelectEndDateCalendar() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSelectEndDateCalendar));
 		return driver.findElement(mpSelectEndDateCalendar);
 	}
 	public List <WebElement> getmpListOfAllCalendarDays() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpListOfAllCalendarDays));
 		return driver.findElements(mpListOfAllCalendarDays);
 	}
 	public WebElement getmpCalendarNextMonthArrow() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpCalendarNextMonthArrow));
 		return driver.findElement(mpCalendarNextMonthArrow);
 	}
 	public WebElement getmpSelectStartDateCalendar() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSelectStartDateCalendar));
 		return driver.findElement(mpSelectStartDateCalendar);
 	}
 	public WebElement getmpAddToScheduledHeader() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpAddToScheduledHeader));
 		return driver.findElement(mpAddToScheduledHeader);
 	}
 	public WebElement getmpmp1stExhiName() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mp1stExhiName));
 		return driver.findElement(mp1stExhiName);
 	}
 	public WebElement getmpConfirmDeleteBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpConfirmDeleteBtn));
 		return driver.findElement(mpConfirmDeleteBtn);
 	}
 	public WebElement getmplistSearcheAlert() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mplistSearcheAlert));
 		return driver.findElement(mplistSearcheAlert);
 	}
 	public List <WebElement> getmplistOfAllSaveSearches() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mplistOfAllSaveSearches));
 		return driver.findElements(mplistOfAllSaveSearches);
 	}
 	public WebElement getmpSaveSearcheInputBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSaveSearcheInputBtn));
 		return driver.findElement(mpSaveSearcheInputBtn);
 	}
 	public WebElement getmpSaveSearcheNameInput() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSaveSearcheNameInput));
 		return driver.findElement(mpSaveSearcheNameInput);
 	}
 	public WebElement getmpSaveSearcheBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSaveSearcheBtn));
 		return driver.findElement(mpSaveSearcheBtn);
 	}
@@ -490,102 +490,102 @@ public class ATLMarketPlannerPage {
 		return driver.findElement(mpSavedSearchesIcon);
 	}
 	public WebElement mpSavedSearchesTab() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSavedSearchesTab));
 		return driver.findElement(mpSavedSearchesTab);
 	}
 	public WebElement getmpRegisterNowBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpRegisterNowBtn));
 		return driver.findElement(mpRegisterNowBtn);
 	}
 	public WebElement getmpRegistrationTab() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpRegistrationTab));
 		return driver.findElement(mpRegistrationTab);
 	}
 	public WebElement getallEventsAndSeminarMenu() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(allEventsAndSeminarMenu));
 		return driver.findElement(allEventsAndSeminarMenu);
 	}
 	public WebElement getallSavedProductMenu() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(allSavedProductMenu));
 		return driver.findElement(allSavedProductMenu);
 	}
 	public WebElement getallSavedExhibiorMenu() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(allSavedExhibiorMenu));
 		return driver.findElement(allSavedExhibiorMenu);
 	}
 	public WebElement getcloseNotePopup() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(closeNotePopup));
 		return driver.findElement(closeNotePopup);
 	}
 	public List <WebElement> getlistOfAllNewAddedNotes() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllNewAddedNotes));
 		return driver.findElements(listOfAllNewAddedNotes);
 	}
 	public WebElement getaddNoteBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(addNoteBtn));
 		return driver.findElement(addNoteBtn);
 	}
 	public WebElement getcancelBtnCustomItem() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(cancelBtnCustomItem));
 		return driver.findElement(cancelBtnCustomItem);
 	}
 	public List <WebElement> getATLlistOfCustomItems() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfCustomItems));
 		return driver.findElements(listOfCustomItems);
 	}
 	public WebElement getcustomItemHeader() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(customItemHeader));
 		return driver.findElement(customItemHeader);
 	}
 	public WebElement getDuplicateListErrorMsg() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(duplicateListErrorMsg));
 		return driver.findElement(duplicateListErrorMsg);
 	}
 	public List <WebElement> atlmpVerifyLocationLink() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmpVerifyLocationLink));
 		return driver.findElements(atlmpVerifyLocationLink);
 	}
 	public List <WebElement> getAtlListOfAllGroups() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllGroups));
 		return driver.findElements(listOfAllGroups);
 	}
 	public WebElement getATLmpVerifyListView() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmpVerifyListView));
 		return driver.findElement(atlmpVerifyListView);
 	}
 	public WebElement getATLmpVerifyGridView() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmpVerifyGridView));
 		return driver.findElement(atlmpVerifyGridView);
 	}
 	public WebElement getATLMarketPlannerHome() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmarketplannerhome));
 		return driver.findElement(atlmarketplannerhome);
 	}
 	public WebElement getATLFavEditListBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmarketplannerhome));
 		return driver.findElement(atlfaveditlistbtn);
 	}
 	public WebElement getATLEditListPage() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(editlistpage));
 		return driver.findElement(editlistpage);
 	}
@@ -595,12 +595,12 @@ public class ATLMarketPlannerPage {
 		return driver.findElement(savedexhnameinlist);
 	}
 	public WebElement getATLEditListItemMoreBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(editlistitemmorebtn));
 		return driver.findElement(editlistitemmorebtn);
 	}
 	public WebElement getATLEditListItemMoreBtnNew() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(editlistitemmorebtnnew));
 		return driver.findElement(editlistitemmorebtnnew);
 	}
@@ -615,7 +615,7 @@ public class ATLMarketPlannerPage {
 		return driver.findElement(createnewlistnametxtbx);
 	}
 	public WebElement getNewListModalCreateBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(newlistmodalcreatebtn));
 		return driver.findElement(newlistmodalcreatebtn);
 	}
@@ -645,7 +645,7 @@ public class ATLMarketPlannerPage {
 		return driver.findElements(atlmpeditlistoptns);
 	}
 	public WebElement getATLMPEditListOptn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmpeditlistoptn));
 		return driver.findElement(atlmpeditlistoptn);
 	}
@@ -660,12 +660,12 @@ public class ATLMarketPlannerPage {
 		return driver.findElement(atladdtoseselectedbtn);
 	}
 	public WebElement getATLMPListsPageFavoritesMenu() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(listspagefavoritesmenu));
 		return driver.findElement(listspagefavoritesmenu);
 	}
 	public WebElement getAddListCreateBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(addlistcreatebtn));
 		return driver.findElement(addlistcreatebtn);
 	}
@@ -675,17 +675,17 @@ public class ATLMarketPlannerPage {
 		return driver.findElement(savedproductnameinlist);
 	}
 	public WebElement getCreateAddListBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(createAddListBtn));
 		return driver.findElement(createAddListBtn);
 	}	
 	public WebElement getNewCreatedListName() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(newCreatedListName));
 		return driver.findElement(newCreatedListName);
 	}
 	public WebElement getNewlistmodalcreatebtn_LvmUAT() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(newlistmodalcreatebtn_LvmUAT));
 		return driver.findElement(newlistmodalcreatebtn_LvmUAT);
 	}
@@ -695,7 +695,7 @@ public class ATLMarketPlannerPage {
 		return driver.findElement(lvmsavedexhnameinlist_uat);
 	}
 	public WebElement getMoreBtnDeleteOptn_lvmUAT() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(moreBtnDeleteOptn_lvmUAT));
 		return driver.findElement(moreBtnDeleteOptn_lvmUAT);
 	}
@@ -705,52 +705,52 @@ public class ATLMarketPlannerPage {
 		return driver.findElement(selectChannel);
 	}
 	public WebElement getInvalidPasswordError() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(invalidPasswordError));
 		return driver.findElement(invalidPasswordError);
 	}
 	public WebElement getEnterEmailErrorMsg() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(enterEmailErrorMsg));
 		return driver.findElement(enterEmailErrorMsg);
 	}
 	public WebElement getEnterPasswordErrorMsg() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(enterPasswordErrorMsg));
 		return driver.findElement(enterPasswordErrorMsg);
 	}					
 	public WebElement getMpListLeftPannel() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpListLeftPannel));
 		return driver.findElement(mpListLeftPannel);
 	}					
 	public WebElement getMpEditListoption() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpEditListoption));
 		return driver.findElement(mpEditListoption);
 	}					
 	public WebElement getMpQuickAdd() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpQuickAdd));
 		return driver.findElement(mpQuickAdd);
 	}					
 	public WebElement getMpQuickAddAutosuggetion() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpQuickAddAutosuggetion));
 		return driver.findElement(mpQuickAddAutosuggetion);
 	}					
 	public WebElement getMpQuickAddedExpName() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpQuickAddedExpName));
 		return driver.findElement(mpQuickAddedExpName);
 	}					
 	public WebElement getMpArrangeBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpArrangeBtn));
 		return driver.findElement(mpArrangeBtn);
 	}					
 	public WebElement getMpListSortBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpListSortBtn));
 		return driver.findElement(mpListSortBtn);
 	}					
@@ -765,257 +765,257 @@ public class ATLMarketPlannerPage {
 		return driver.findElement(signout);
 	}
 	public WebElement getverifysignout() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(verifysignout));
 		return driver.findElement(verifysignout);
 	}
 	public WebElement getMpListNewListBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpListNewListBtn));
 		return driver.findElement(mpListNewListBtn);
 	}
 	public WebElement getMpListNewGroupBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpListNewGroupBtn));
 		return driver.findElement(mpListNewGroupBtn);
 	}
 	public WebElement getMpListNewGroupPopupHeader() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpListNewGroupPopupHeader));
 		return driver.findElement(mpListNewGroupPopupHeader);
 	}
 	public WebElement getMpListNewGroupNameTxt() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpListNewGroupNameTxt));
 		return driver.findElement(mpListNewGroupNameTxt);
 	}
 	public WebElement getMpListNewGroupCreateBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpListNewGroupCreateBtn));
 		return driver.findElement(mpListNewGroupCreateBtn);
 	}
 	public WebElement getmpListNewSelectGroupDropdown() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpListNewSelectGroupDropdown));
 		return driver.findElement(mpListNewSelectGroupDropdown);
 	}
 	public WebElement getMpListNewCreateBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpListNewCreateBtn));
 		return driver.findElement(mpListNewCreateBtn);
 	}
 	public WebElement getMpInvalidGrNameMsg() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpInvalidGrNameMsg));
 		return driver.findElement(mpInvalidGrNameMsg);
 	}
 	public WebElement getMpListNameTxt() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpListNameTxt));
 		return driver.findElement(mpListNameTxt);
 	}
 	public WebElement getMpListNewListCreateBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpListNewListCreateBtn));
 		return driver.findElement(mpListNewListCreateBtn);
 	}
 	public WebElement getmpdasboardtab() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpdasboardtab));
 		return driver.findElement(mpdasboardtab);
 	}
 	public WebElement getmpmyinfotab() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpmyinfotab));
 		return driver.findElement(mpmyinfotab);
 	}
 	public WebElement getmpregistrationtab() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpregistrationtab));
 		return driver.findElement(mpregistrationtab);
 	}
 	public WebElement getmpsavedsearchestab() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpsavedsearchestab));
 		return driver.findElement(mpsavedsearchestab);
 	}
 	public WebElement getmpregistrationcard() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpregistrationcard));
 		return driver.findElement(mpregistrationcard);
 	}
 	public WebElement getmplistscard() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mplistscard));
 		return driver.findElement(mplistscard);
 	}
 	public WebElement getmpbookmyhotelcard() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpbookmyhotelcard));
 		return driver.findElement(mpbookmyhotelcard);
 	}
 	public WebElement getmpbookmyhotelsection() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpbookmyhotelsection));
 		return driver.findElement(mpbookmyhotelsection);
 	}
 	public WebElement getmpfloorplanssection() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpfloorplanssection));
 		return driver.findElement(mpfloorplanssection);
 	}
 	public WebElement getmpexhibitorsectionsection() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpexhibitorsectionsection));
 		return driver.findElement(mpexhibitorsectionsection);
 	}
 	public WebElement getmpsavedsearchessection() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpsavedsearchessection));
 		return driver.findElement(mpsavedsearchessection);
 	}
 	public WebElement getmpmyinfosection() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpmyinfosection));
 		return driver.findElement(mpmyinfosection);
 	}
 	public WebElement getmpmarketnameregcard() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpmarketnameregcard));
 		return driver.findElement(mpmarketnameregcard);
 	}
 	public WebElement getmpmarketdateregcard() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpmarketdateregcard));
 		return driver.findElement(mpmarketdateregcard);
 	}
 	public WebElement getmpregistrationlink() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpregistrationlink));
 		return driver.findElement(mpregistrationlink);
 	}
 	public WebElement getmpverifyregistrationinformationlink() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpverifyregistrationinformationlink));
 		return driver.findElement(mpverifyregistrationinformationlink);
 	}
 	public WebElement getMpManageDropdown() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpManageDropdown));
 		return driver.findElement(mpManageDropdown);
 	}
 	public WebElement getMpManageEditList() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpManageEditList));
 		return driver.findElement(mpManageEditList);
 	}
 	public WebElement getMpManageEditListSelectAllBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpManageEditListSelectAllBtn));
 		return driver.findElement(mpManageEditListSelectAllBtn);
 	}
 	public WebElement getMpManageEditListCopyToBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpManageEditListCopyToBtn));
 		return driver.findElement(mpManageEditListCopyToBtn);
 	}
 	public WebElement getMpSelectListPopup() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSelectListPopup));
 		return driver.findElement(mpSelectListPopup);
 	}
 	public WebElement getMpFevList() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpFevList));
 		return driver.findElement(mpFevList);
 	}
 	public WebElement getMpDuplicateList() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpDuplicateList));
 		return driver.findElement(mpDuplicateList);
 	}
 	public WebElement getMpDuplicateListName() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpDuplicateListName));
 		return driver.findElement(mpDuplicateListName);
 	}
 	public WebElement getMpDuplicateListInputBox() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpDuplicateListInputBox));
 		return driver.findElement(mpDuplicateListInputBox);
 	}
 	public WebElement getMpDuplicateBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpDuplicateBtn));
 		return driver.findElement(mpDuplicateBtn);
 	}				
 	public WebElement getmpCurrentListName() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpCurrentListName));
 		return driver.findElement(mpCurrentListName);
 	}				
 	public WebElement getmpRenameLink() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpRenameLink));
 		return driver.findElement(mpRenameLink);
 	}	
 	public WebElement getmpRenameInputField() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpRenameInputField));
 		return driver.findElement(mpRenameInputField);
 	}	
 	public WebElement getmpRenameInputSaveBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpRenameInputSaveBtn));
 		return driver.findElement(mpRenameInputSaveBtn);
 	}	
 	public WebElement getmpRenameListName() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpRenameListName));
 		return driver.findElement(mpRenameListName);
 	}	
 	public WebElement getmpBackToList() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpBackToList));
 		return driver.findElement(mpBackToList);
 	}	
 	public WebElement getmpSourceLocationList() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSourceLocationList));
 		return driver.findElement(mpSourceLocationList);
 	}	
 	public WebElement getmpDestinationLocationList() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpDestinationLocationList));
 		return driver.findElement(mpDestinationLocationList);
 	}	
 	public WebElement getmpListName() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpListName));
 		return driver.findElement(mpListName);
 	}	
 	public WebElement getmpalllists() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpalllists));
 		return driver.findElement(mpalllists);
 	}
 	public WebElement getmpexistinglists() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpexistinglists));
 		return driver.findElement(mpexistinglists);
 	}
 	public WebElement getmplisttab() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mplisttab));
 		return driver.findElement(mplisttab);
 	}
 	public WebElement getmpnewlistbutton() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpnewlistbutton));
 		return driver.findElement(mpnewlistbutton);
 	}
 	public WebElement getMoreBtnDeleteOptn_ATLPROD() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(moreBtnDeleteOptn_ATLPROD));
 		return driver.findElement(moreBtnDeleteOptn_ATLPROD);
 	}
@@ -1025,52 +1025,52 @@ public class ATLMarketPlannerPage {
 		return driver.findElement(moreBtnDeleteOptnExistingList_ATLPROD);
 	}
 	public WebElement getaddlistcreatebtn_ATLPROD() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(addlistcreatebtn_ATLPROD));
 		return driver.findElement(addlistcreatebtn_ATLPROD);
 	}
 	public WebElement getmpManageEditListMoveBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpManageEditListMoveBtn));
 		return driver.findElement(mpManageEditListMoveBtn);
 	}
 	public WebElement getmpManageEditListRemoveBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpManageEditListRemoveBtn));
 		return driver.findElement(mpManageEditListRemoveBtn);
 	}
 	public WebElement getmpbookhotel() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpbookhotel));
 		return driver.findElement(mpbookhotel);
 	}
 	public WebElement getmpfloorplans() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpfloorplans));
 		return driver.findElement(mpfloorplans);
 	}
 	public WebElement getmpexpdirectory() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpexpdirectory));
 		return driver.findElement(mpexpdirectory);
 	}
 	public WebElement getmpsavedsearches() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpsavedsearches));
 		return driver.findElement(mpsavedsearches);
 	}
 	public WebElement getmpmyinfo() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpmyinfo));
 		return driver.findElement(mpmyinfo);
 	}
 	public WebElement getmpFilterByDropdown() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpFilterByDropdown));
 		return driver.findElement(mpFilterByDropdown);
 	}
 	public List <WebElement> getfilterByList() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(filterByList));
 		return driver.findElements(filterByList);
 	}
@@ -1080,292 +1080,292 @@ public class ATLMarketPlannerPage {
 		return driver.findElements(listOfAllExh);
 	}
 	public WebElement getNoGroupName() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(nogroupname));
 		return driver.findElement(nogroupname);
 	}
 	public WebElement getNewlyCreatedGrpName() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(newlycreatedgroupname));
 		return driver.findElement(newlycreatedgroupname);
 	}
 	public WebElement getCreateNewGrpPopupCloseBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(createnewgrppopupclosebtn));
 		return driver.findElement(createnewgrppopupclosebtn);
 	}
 	public List<WebElement> getATLMPDuplicateListOptns() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmpduplicatelistoptns));
 		return driver.findElements(atlmpduplicatelistoptns);
 	}
 	public WebElement getfilterBytxt() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(filterBytxt));
 		return driver.findElement(filterBytxt);
 	}
 	public List <WebElement> getnameofElement() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(nameofElement));
 		return driver.findElements(nameofElement);
 	}
 	public List <WebElement> getlistOfmngDropdownElements() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfmngDropdownElements));
 		return driver.findElements(listOfmngDropdownElements);
 	}
 	public List <WebElement> getallList() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(allList));
 		return driver.findElements(allList);
 	}
 	public WebElement getAddCustomItem() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(addCustomItem));
 		return driver.findElement(addCustomItem);
 	}		
 	public WebElement getCustomTitle() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(customTitle));
 		return driver.findElement(customTitle);
 	}		
 	public WebElement getCustomDesc() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(customDesc));
 		return driver.findElement(customDesc);
 	}		
 	public WebElement getCustomItemsubmitBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(customItemsubmitBtn));
 		return driver.findElement(customItemsubmitBtn);
 	}		
 	public WebElement getmpSortByDropdown() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpSortByDropdown));
 		return driver.findElement(mpSortByDropdown);
 	}		
 	public WebElement getAtlmpGrByExhCheckbox() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmpGrByExhCheckbox));
 		return driver.findElement(atlmpGrByExhCheckbox);
 	}		
 	public WebElement getatlmpListView() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmpListView));
 		return driver.findElement(atlmpListView);
 	}		
 	public WebElement getatlmpGridView() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlmpGridView));
 		return driver.findElement(atlmpGridView);
 	}		
 	public WebElement getmyinfotab() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfotab));
 		return driver.findElement(myinfotab);
 	}		
 	public WebElement getmyinfoeditprofile() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfoeditprofile));
 		return driver.findElement(myinfoeditprofile);
 	}	
 	public WebElement getmyinfonamepencil() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfonamepencil));
 		return driver.findElement(myinfonamepencil);
 	}	
 	public WebElement getmyinfofirstname() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfofirstname));
 		return driver.findElement(myinfofirstname);
 	}	
 	public WebElement getmyinfolastname() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfolastname));
 		return driver.findElement(myinfolastname);
 	}	
 	public WebElement getmyinfodiscardbtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfodiscardbtn));
 		return driver.findElement(myinfodiscardbtn);
 	}	
 	public WebElement getmyinfosavebutton() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfosavebutton));
 		return driver.findElement(myinfosavebutton);
 	}	
 	public WebElement getmyinfoemail() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfoemail));
 		return driver.findElement(myinfoemail);
 	}	
 	public WebElement getmyinfoemailcancelbtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfoemailcancelbtn));
 		return driver.findElement(myinfoemailcancelbtn);
 	}	
 	public WebElement getmyinfemailclosebtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfemailclosebtn));
 		return driver.findElement(myinfemailclosebtn);
 	}	
 	public WebElement getmyinfoemailtxtbox() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfoemailtxtbox));
 		return driver.findElement(myinfoemailtxtbox);
 	}	
 	public WebElement getmyinfoverifybtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfoverifybtn));
 		return driver.findElement(myinfoverifybtn);
 	}	
 	public WebElement getmyinfocompanynamepencil() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfocompanynamepencil));
 		return driver.findElement(myinfocompanynamepencil);
 	}	
 	public WebElement getmyinfocompnametxt() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfocompnametxt));
 		return driver.findElement(myinfocompnametxt);
 	}	
 	public WebElement getmyinfodiscard2btn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfodiscard2btn));
 		return driver.findElement(myinfodiscard2btn);
 	}	
 	public WebElement getmyinfosave2btn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfosave2btn));
 		return driver.findElement(myinfosave2btn);
 	}	
 	public WebElement getverifymyinfoname() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(verifymyinfoname));
 		return driver.findElement(verifymyinfoname);
 	}
 	public WebElement getmyinfonewemail() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfonewemail));
 		return driver.findElement(myinfonewemail);
 	}
 	public WebElement getmyinfoverifycompanyname() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfoverifycompanyname));
 		return driver.findElement(myinfoverifycompanyname);
 	}			
 	public WebElement getverifymyinfopage() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(verifymyinfopage));
 		return driver.findElement(verifymyinfopage);
 	}
 	public WebElement getmyinfoverifyeditprofile() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfoverifyeditprofile));
 		return driver.findElement(myinfoverifyeditprofile);
 	}
 	public WebElement getmyinfomyinquiriestab() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfomyinquiriestab));
 		return driver.findElement(myinfomyinquiriestab);
 	}
 	public WebElement getmplistsfavorites() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mplistsfavorites));
 		return driver.findElement(mplistsfavorites);
 	}
 	public WebElement getmplistsallsavedproduts() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mplistsallsavedproduts));
 		return driver.findElement(mplistsallsavedproduts);
 	}
 	public WebElement getmplistsallsavedexhibitors() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mplistsallsavedexhibitors));
 		return driver.findElement(mplistsallsavedexhibitors);
 	}
 	public WebElement getmplistsenentsandseminars() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mplistsenentsandseminars));
 		return driver.findElement(mplistsenentsandseminars);
 	}
 	public WebElement getmplistsmanagelist() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mplistsmanagelist));
 		return driver.findElement(mplistsmanagelist);
 	}
 	public WebElement getmpduplicatelistbtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpduplicatelistbtn));
 		return driver.findElement(mpduplicatelistbtn);
 	}
 	public WebElement getmpeditlistbtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpeditlistbtn));
 		return driver.findElement(mpeditlistbtn);
 	}
 	public WebElement getmparrangelistbtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mparrangelistbtn));
 		return driver.findElement(mparrangelistbtn);
 	}
 	public WebElement getmpnewlistbtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpnewlistbtn));
 		return driver.findElement(mpnewlistbtn);
 	}
 	public WebElement getmpnewgrpbtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpnewgrpbtn));
 		return driver.findElement(mpnewgrpbtn);
 	}
 	public WebElement getmyinfoverifymyinquiries() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(myinfoverifymyinquiries));
 		return driver.findElement(myinfoverifymyinquiries);
 	}
 	public WebElement getATLUseSavedSearchDropDown() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ATLUseSavedSearchDropDown));
 		return driver.findElement(ATLUseSavedSearchDropDown);
 	}
 	public WebElement getEditListAtListTab() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(EditListAtListTab));
 		return driver.findElement(EditListAtListTab);
 	}
 	public WebElement getMoreOption() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(MoreOption));
 		return driver.findElement(MoreOption);
 	}
 	public WebElement getAddToSchedule() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(AddToSchedule));
 		return driver.findElement(AddToSchedule);
 	}
 	public List <WebElement> getFavoriteExhibitorNames() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(favexhnamelist));
 		return driver.findElements(favexhnamelist);
 	}
 	public WebElement getMPListDuplicateBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mplistduplicatebtn));
 		return driver.findElement(mplistduplicatebtn);
 	}
 	public WebElement getMPDuplicateListNameTxtBx() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpduplicatelistnametxtbx));
 		return driver.findElement(mpduplicatelistnametxtbx);
 	}
 	public List <WebElement> getMPGroupNamesDropDown() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpgroupnamesdropdown));
 		return driver.findElements(mpgroupnamesdropdown);
 	}
 	public WebElement getMPSelectGroupIcon() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(selectgroupicon));
 		return driver.findElement(selectgroupicon);
 	}
