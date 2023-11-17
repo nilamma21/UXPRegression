@@ -1,25 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [LVM_RegressionTestSuite]" parallel="classes">
-  <test name="RegressionTest(failed)" parallel="classes">
+<suite thread-count="1" name="Failed suite [LVM_UAT_Suite]">
+  <test name="LVM_UAT_RegressionTest(failed)">
     <classes>
 <<<<<<< HEAD
-      <class name="lasvegasmarket_PROD.GlobalSearch_SearchFor">
+      <class name="lasvegasmarket_UAT.EvenntsAndWebinar">
         <methods>
+          <include name="TS015_VerifyExhibitorEventsAddNoteTest"/>
+          <include name="TS005_VerifyIMCEventsEventDetailstTest"/>
+          <include name="TS014_VerifyExhibitorEventsAddToListTest"/>
+          <include name="TS013_VerifyExhibitorEventsAddToFavoriteTest"/>
+          <include name="TS002_VerifyIMCEventsSearchbarTest"/>
+          <include name="TS010_VerifyExhibitorEventsCalendarViewTest"/>
+          <include name="TS011_VerifyExhibitorEventsListTest"/>
+          <include name="TS004_VerifyIMCEventsEventsListTest"/>
+          <include name="TS009_VerifyExhibitorEventsSearchbarTest"/>
           <include name="initialize"/>
-          <include name="tearDown"/>
-          <include name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest"/>
+          <include name="TS012_VerifyExhibitorEventsDetailstTest"/>
+          <include name="TS003_VerifyIMCEventsCalendarViewTest"/>
+          <include name="TS006_VerifyIMCEventsAddToFavoriteTest"/>
+          <include name="TS007_VerifyIMCEventsAddToListTest"/>
+          <include name="TS001_VerifyEventsAndWebinarsOverviewTest"/>
+          <include name="TS008_VerifyIMCEventsAddNoteTest"/>
         </methods>
-      </class> <!-- lasvegasmarket_PROD.GlobalSearch_SearchFor -->
+      </class> <!-- lasvegasmarket_UAT.EvenntsAndWebinar -->
 =======
-      <class name="lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters">
+      <class name="lasvegasmarket_UAT.ExhibitorDigitalShowroom">
         <methods>
-          <include name="TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest"/>
-          <include name="tearDown"/>
+          <include name="TS004_VerifyClickOnLineFiltersForExhibitorTest"/>
+          <include name="TS005_VerifyClickOnLineSearchForExhibitorTest"/>
           <include name="initialize"/>
+          <include name="TS011_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest"/>
+          <include name="tearDown"/>
+          <include name="TS001_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest"/>
+          <include name="TS015_VerifyExhibitorDigitalShowroomHeroComponentContactExhibitorTest"/>
+          <include name="TS008_VerifySeeInOtherMarketsForExhibitorTest"/>
+          <include name="TS010_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest"/>
+          <include name="TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest"/>
         </methods>
-      </class> <!-- lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters -->
->>>>>>> 8538c5b8fbecea4a476a30bf8f0c8a497e056077
+      </class> <!-- lasvegasmarket_UAT.ExhibitorDigitalShowroom -->
+>>>>>>> a98ebf2b18ebf1a2774915851d0632d1f3fe7923
     </classes>
-  </test> <!-- RegressionTest(failed) -->
-</suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
+  </test> <!-- LVM_UAT_RegressionTest(failed) -->
+</suite> <!-- Failed suite [LVM_UAT_Suite] -->

@@ -509,6 +509,6 @@ Session ID: a4215c6612a98bcbdc6a0cb29c7d8dcc
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 ]]>
-    </failure>
+    </error>
   </testcase> <!-- TS010_VerifyExhibitorEventsCalendarViewTest -->
 </testsuite> <!-- lasvegasmarket_UAT.EvenntsAndWebinar -->

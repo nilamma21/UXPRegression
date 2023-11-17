@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [LVM_RegressionTestSuite]" parallel="classes">
-  <test name="RegressionTest(failed)" parallel="classes">
+<suite thread-count="1" name="Failed suite [LVM_UAT_Suite]">
+  <test name="LVM_UAT_RegressionTest(failed)">
     <classes>
       <class name="lasvegasmarket_UAT.EvenntsAndWebinar">
         <methods>
@@ -24,5 +24,5 @@
         </methods>
       </class> <!-- lasvegasmarket_UAT.EvenntsAndWebinar -->
     </classes>
-  </test> <!-- RegressionTest(failed) -->
-</suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
+  </test> <!-- LVM_UAT_RegressionTest(failed) -->
+</suite> <!-- Failed suite [LVM_UAT_Suite] -->
