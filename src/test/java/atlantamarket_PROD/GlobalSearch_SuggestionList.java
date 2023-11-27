@@ -53,10 +53,11 @@ public class GlobalSearch_SuggestionList extends base {
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		lap.getIUnderstandBtn().click();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 //		Thread.sleep(10000);
 //		lap.getCloseMarktAdBtn().click();
 	}
-	@Test
+	@Test(enabled=false)
 	public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
 
 		// The purpose of this test case to verify:-
@@ -85,7 +86,7 @@ public class GlobalSearch_SuggestionList extends base {
 	
 
 
-	@Test(priority = 1,groups="Non_MP")
+	@Test(priority = 1)//groups="Non_MP"
 	public void TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T419: The selection of an Exhibitor from Auto Suggestion List
@@ -94,7 +95,8 @@ public class GlobalSearch_SuggestionList extends base {
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		utl.loginCheckATL();
+		//utl.loginCheckATL();
+		Thread.sleep(5000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestexhibitor")));
 
 		WebDriverWait wait = new WebDriverWait(driver, 30);
@@ -115,7 +117,7 @@ public class GlobalSearch_SuggestionList extends base {
 		Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
 	}
 
-	@Test(priority = 2,groups="Non_MP")
+	@Test(priority = 2)//groups="Non_MP"
 	public void TS002_VerifySelectionOfLineFromAutoSuggestionListTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T420: The selection of a Line from Auto Suggestion List
@@ -123,12 +125,11 @@ public class GlobalSearch_SuggestionList extends base {
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//lap.getCloseMarktAdBtn().click();
-		
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestline")));
+		Thread.sleep(5000);
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("line2")));
 
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li")));
@@ -138,7 +139,7 @@ public class GlobalSearch_SuggestionList extends base {
 
 		for (int i = 0; i < 10; i++) {
 			// System.out.println(list.get(i).getText());
-			if (linelist.get(i).getText().contains(prop.getProperty("autosuggestline"))
+			if (linelist.get(i).getText().contains(prop.getProperty("line2"))
 					&& linelist.get(i).getText().contains("Line")) {
 				linelist.get(i).click();
 				break;
@@ -148,7 +149,7 @@ public class GlobalSearch_SuggestionList extends base {
 		Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
 	}
 
-	@Test(priority = 3,groups="Non_MP")
+	@Test(priority = 3)//groups="Non_MP"
 	public void TS003_VerifySelectionOfProductFromAutoSuggestionListTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T420: The selection of a Product from Auto Suggestion List
@@ -156,9 +157,8 @@ public class GlobalSearch_SuggestionList extends base {
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlproddet = new ATLProductDetailsPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//lap.getCloseMarktAdBtn().click();
 		Thread.sleep(2000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestproduct")));

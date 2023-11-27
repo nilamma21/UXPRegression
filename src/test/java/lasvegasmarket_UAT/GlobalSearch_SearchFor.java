@@ -405,6 +405,7 @@ public class GlobalSearch_SearchFor extends base{
         Thread.sleep(3000);
         Assert.assertTrue(lvmgs.getLVMSearchResult().getText().contains(prop.getProperty("searchforArticlesInputLVM")));
         String filterResultTitle = lvmgs.getLVMArticleName().getText();
+        utl.scrollToElement( lvmgs.getLVMArticleSeeMoreBtn());
         lvmgs.getLVMArticleSeeMoreBtn().click();
         Thread.sleep(3000);
         Assert.assertTrue(filterResultTitle.contains(lvmgs.getLVMArticleHeader().getText()));
@@ -546,6 +547,7 @@ public class GlobalSearch_SearchFor extends base{
                     driver.navigate().refresh();
 
                     String filterResultTitle3 = lvmgs.getLVMArticleName().getText();
+                    utl.scrollToElement( lvmgs.getLVMArticleSeeMoreBtn());
                     lvmgs.getLVMArticleSeeMoreBtn().click();
 
                     Assert.assertTrue(filterResultTitle3.contains(lvmgs.getLVMArticleHeader().getText()));
@@ -608,6 +610,7 @@ public class GlobalSearch_SearchFor extends base{
                     driver.navigate().refresh();
 
                     String filterResultTitle5 = lvmgs.getLVMArticleName().getText();
+                    utl.scrollToElement( lvmgs.getLVMArticleSeeMoreBtn());
                     lvmgs.getLVMArticleSeeMoreBtn().click();
 
                     Assert.assertTrue(filterResultTitle5.contains(lvmgs.getLVMArticleHeader().getText()));
@@ -640,6 +643,7 @@ public class GlobalSearch_SearchFor extends base{
                     driver.navigate().refresh();
 
                     String filterResultTitle6 = lvmgs.getLVMArticleName().getText();
+                    utl.scrollToElement(lvmgs.getLVMArticleSeeMoreBtn());
                     lvmgs.getLVMArticleSeeMoreBtn().click();
 
                     Assert.assertTrue(filterResultTitle6.contains(lvmgs.getLVMArticleHeader().getText()));
@@ -713,6 +717,7 @@ public class GlobalSearch_SearchFor extends base{
         driver.navigate().refresh();
 
         String filterResultTitle = lvmgs.getLVMArticleName().getText();
+        utl.scrollToElement(lvmgs.getLVMArticleSeeMoreBtn());
         lvmgs.getLVMArticleSeeMoreBtn().click();
 
         Assert.assertTrue(filterResultTitle.contains(lvmgs.getLVMArticleHeader().getText()));
@@ -964,7 +969,7 @@ public class GlobalSearch_SearchFor extends base{
     @AfterClass
     public void tearDown()
     {
-        driver.quit();
+        //driver.quit();
     }
 
 }

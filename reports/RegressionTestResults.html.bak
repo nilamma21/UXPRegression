@@ -36,12 +36,10 @@
 </li>
 <li class="m-r-10">
 <<<<<<< HEAD
-<a href="#"><span class="badge badge-primary">Nov 7, 2023 04:30:02 PM</span></a>
+<a href="#"><span class="badge badge-primary">Nov 16, 2023 06:05:18 PM</span></a>
 =======
-
-<a href="#"><span class="badge badge-primary">Nov 3, 2023 12:48:07 PM</span></a>
-
->>>>>>> 3e0bdd9d02dcb360b8898346a5a38c1e42d0903c
+<a href="#"><span class="badge badge-primary">Nov 7, 2023 04:30:02 PM</span></a>
+>>>>>>> a98ebf2b18ebf1a2774915851d0632d1f3fe7923
 </li>
 </ul>
 </div>
@@ -92,6 +90,10 @@
           device="">
           <div class="test-detail">
 <<<<<<< HEAD
+            <p class="name">TS001_VerifyClickOnShownByExhibitorNameLinkForLineTest</p>
+            <p class="text-sm">
+              <span>18:05:41 PM</span> / <span>00:00:25:701</span>
+=======
             <p class="name">TS001_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest</p>
             <p class="text-sm">
               <span>16:30:31 PM</span> / <span>00:00:59:204</span>
@@ -194,13 +196,7 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
             <p class="name">TS002_VerifyClickOnTotalLinesSeeAllLinesForExhibitorTest</p>
             <p class="text-sm">
               <span>16:31:30 PM</span> / <span>00:00:58:133</span>
-=======
-
-            <p class="name">TS010_VerifyShowSpecialsOverviewInGlobalSearchTest</p>
-            <p class="text-sm">
-              <span>12:48:38 PM</span> / <span>00:00:34:378</span>
-
->>>>>>> 3e0bdd9d02dcb360b8898346a5a38c1e42d0903c
+>>>>>>> a98ebf2b18ebf1a2774915851d0632d1f3fe7923
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -209,20 +205,18 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
 <div class="p-v-10">
 <div class="info">
 <<<<<<< HEAD
+<h5 class="test-status text-pass">TS001_VerifyClickOnShownByExhibitorNameLinkForLineTest</h5>
+<span class='badge badge-success'>11.16.2023 18:05:41</span>
+<span class='badge badge-danger'>11.16.2023 18:06:07</span>
+<span class='badge badge-default'>00:00:25:701</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+=======
 <h5 class="test-status text-pass">TS002_VerifyClickOnTotalLinesSeeAllLinesForExhibitorTest</h5>
 <span class='badge badge-success'>11.07.2023 16:31:30</span>
 <span class='badge badge-danger'>11.07.2023 16:32:28</span>
 <span class='badge badge-default'>00:00:58:133</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
-=======
-
-<h5 class="test-status text-pass">TS010_VerifyShowSpecialsOverviewInGlobalSearchTest</h5>
-<span class='badge badge-success'>11.03.2023 12:48:38</span>
-<span class='badge badge-danger'>11.03.2023 12:49:12</span>
-<span class='badge badge-default'>00:00:34:378</span>
-
-&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
->>>>>>> 3e0bdd9d02dcb360b8898346a5a38c1e42d0903c
+>>>>>>> a98ebf2b18ebf1a2774915851d0632d1f3fe7923
 </div>
 </div>
 </div><div class="detail-body mt-4">
@@ -232,12 +226,124 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
 <<<<<<< HEAD
-        <td>4:32:28 PM</td>
+        <td>6:06:07 PM</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="2"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">TS002_VerifyClickOnLocationLinkForLineTest</p>
+            <p class="text-sm">
+              <span>18:06:07 PM</span> / <span>00:00:24:498</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TS002_VerifyClickOnLocationLinkForLineTest</h5>
+<span class='badge badge-success'>11.16.2023 18:06:07</span>
+<span class='badge badge-danger'>11.16.2023 18:06:31</span>
+<span class='badge badge-default'>00:00:24:498</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:06:31 PM</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="3"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">TS003_VerifyClickOnMatchingProductsSeeAllLinkForLineTest</p>
+            <p class="text-sm">
+              <span>18:06:31 PM</span> / <span>00:01:00:357</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TS003_VerifyClickOnMatchingProductsSeeAllLinkForLineTest</h5>
+<span class='badge badge-success'>11.16.2023 18:06:31</span>
+<span class='badge badge-danger'>11.16.2023 18:07:32</span>
+<span class='badge badge-default'>00:01:00:357</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:07:32 PM</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="4"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">TS004_VerifyClickOnTotalProductsSeeAllLinkForLineTest</p>
+            <p class="text-sm">
+              <span>18:07:32 PM</span> / <span>00:00:45:150</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TS004_VerifyClickOnTotalProductsSeeAllLinkForLineTest</h5>
+<span class='badge badge-success'>11.16.2023 18:07:32</span>
+<span class='badge badge-danger'>11.16.2023 18:08:17</span>
+<span class='badge badge-default'>00:00:45:150</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:08:17 PM</td>
 =======
-
-        <td>12:49:12 PM</td>
-
->>>>>>> 3e0bdd9d02dcb360b8898346a5a38c1e42d0903c
+        <td>4:32:28 PM</td>
+>>>>>>> a98ebf2b18ebf1a2774915851d0632d1f3fe7923
         <td>
           Test Passed
         </td>
@@ -1255,30 +1361,30 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
 <<<<<<< HEAD
-<h3>Nov 7, 2023 04:30:02 PM</h3>
+<h3>Nov 16, 2023 06:05:18 PM</h3>
 =======
-
-<h3>Nov 3, 2023 12:48:07 PM</h3>
-
->>>>>>> 3e0bdd9d02dcb360b8898346a5a38c1e42d0903c
+<h3>Nov 7, 2023 04:30:02 PM</h3>
+>>>>>>> a98ebf2b18ebf1a2774915851d0632d1f3fe7923
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
 <<<<<<< HEAD
-<h3>Nov 7, 2023 04:43:16 PM</h3>
+<h3>Nov 16, 2023 06:08:17 PM</h3>
 =======
-
-<h3>Nov 3, 2023 12:49:12 PM</h3>
-
->>>>>>> 3e0bdd9d02dcb360b8898346a5a38c1e42d0903c
+<h3>Nov 7, 2023 04:43:16 PM</h3>
+>>>>>>> a98ebf2b18ebf1a2774915851d0632d1f3fe7923
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
+<<<<<<< HEAD
+<h3>4</h3>
+=======
 <h3>7</h3>
+>>>>>>> a98ebf2b18ebf1a2774915851d0632d1f3fe7923
 </div></div>
 </div>
 <div class="col-md-3">
@@ -1300,8 +1406,13 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
 </div>
 </div>
 <div class="card-footer">
+<<<<<<< HEAD
+<div><small data-tooltip='100%'>
+<b>4</b> tests passed
+=======
 <div><small data-tooltip='46%'>
 <b>7</b> tests passed
+>>>>>>> a98ebf2b18ebf1a2774915851d0632d1f3fe7923
 </small>
 </div>
 <div>
@@ -1323,7 +1434,11 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
 </div>
 </div>
 <div class="card-footer">
+<<<<<<< HEAD
+<div><small data-tooltip='100%'><b>4</b> events passed</small></div>
+=======
 <div><small data-tooltip='46%'><b>7</b> events passed</small></div>
+>>>>>>> a98ebf2b18ebf1a2774915851d0632d1f3fe7923
 <div>
 <small data-tooltip='53%'><b>8</b> events failed,
 <b data-tooltip='%'>0</b> others
@@ -1343,12 +1458,10 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
 <script>
 var timeline = {
 <<<<<<< HEAD
-"TS001_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest":59.204,"TS002_VerifyClickOnTotalLinesSeeAllLinesForExhibitorTest":58.133,"TS003_VerifyClickOnProductShownLinkForExhibitorTest":59.666,"TS004_VerifyClickOnLineFiltersForExhibitorTest":37.716,"TS005_VerifyClickOnLineSearchForExhibitorTest":65.384,"TS006_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest":35.918,"TS007_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest":40.368,"TS008_VerifySeeInOtherMarketsForExhibitorTest":67.391,"TS009_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest":40.811,"TS010_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest":57.791,"TS011_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest":63.116,"TS012_VerifyExhibitorDigitalEventsComponentTest":42.957,"TS013_VerifyCatalogsSectionForExhibitorTest":47.982,"TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest":60.925,"TS015_VerifyExhibitorDigitalShowroomHeroComponentContactExhibitorTest":24.564
+"TS001_VerifyClickOnShownByExhibitorNameLinkForLineTest":25.701,"TS002_VerifyClickOnLocationLinkForLineTest":24.498,"TS003_VerifyClickOnMatchingProductsSeeAllLinkForLineTest":60.357,"TS004_VerifyClickOnTotalProductsSeeAllLinkForLineTest":45.15
 =======
-
-"TS010_VerifyShowSpecialsOverviewInGlobalSearchTest":34.378
-
->>>>>>> 3e0bdd9d02dcb360b8898346a5a38c1e42d0903c
+"TS001_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest":59.204,"TS002_VerifyClickOnTotalLinesSeeAllLinesForExhibitorTest":58.133,"TS003_VerifyClickOnProductShownLinkForExhibitorTest":59.666,"TS004_VerifyClickOnLineFiltersForExhibitorTest":37.716,"TS005_VerifyClickOnLineSearchForExhibitorTest":65.384,"TS006_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest":35.918,"TS007_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest":40.368,"TS008_VerifySeeInOtherMarketsForExhibitorTest":67.391,"TS009_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest":40.811,"TS010_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest":57.791,"TS011_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest":63.116,"TS012_VerifyExhibitorDigitalEventsComponentTest":42.957,"TS013_VerifyCatalogsSectionForExhibitorTest":47.982,"TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest":60.925,"TS015_VerifyExhibitorDigitalShowroomHeroComponentContactExhibitorTest":24.564
+>>>>>>> a98ebf2b18ebf1a2774915851d0632d1f3fe7923
 };
 </script>
 <div class="row">
@@ -1371,8 +1484,13 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
+<<<<<<< HEAD
+passParent: 4,
+failParent: 0,
+=======
 passParent: 7,
 failParent: 8,
+>>>>>>> a98ebf2b18ebf1a2774915851d0632d1f3fe7923
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -1388,8 +1506,13 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
+<<<<<<< HEAD
+passEvents: 4,
+failEvents: 0,
+=======
 passEvents: 7,
 failEvents: 8,
+>>>>>>> a98ebf2b18ebf1a2774915851d0632d1f3fe7923
 warningEvents: 0,
 skipEvents: 0,
 infoEvents: 0

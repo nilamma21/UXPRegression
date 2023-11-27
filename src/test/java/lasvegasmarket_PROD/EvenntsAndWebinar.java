@@ -347,6 +347,7 @@ public class EvenntsAndWebinar extends base{
 					String eventTitle=eventTitleLink.getText();
 					Assert.assertTrue(eventTitleLink.isDisplayed());
 					//eventSeeDetailsLink = lvmevents.lvmlvmListOfAllEventsSeeDetailsLink().get(1);
+					utl.scrollToElement(eventTitleLink);
 					eventTitleLink.click();
 					//Verify Event Details Page
 					Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUAT().getText()));
@@ -738,6 +739,7 @@ public class EvenntsAndWebinar extends base{
 			//eventSeeDetailsLink = lvmevents.lvmlvmListOfAllEventsSeeDetailsLink().get(1);
 			//WebDriverWait wait = new WebDriverWait(driver,30);//new added
 			//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("eventTitleLink")));
+			utl.scrollToElement(eventTitleLink);
 			eventTitleLink.click();
 			//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			//Thread.sleep(4000);
@@ -747,6 +749,7 @@ public class EvenntsAndWebinar extends base{
 			//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			//Thread.sleep(5000);
 			//Click on Exh Event Tab
+			utl.scrollToElement(lvmevents.getlvmExhibitorsEventsTab());
 			lvmevents.getlvmExhibitorsEventsTab().click();
 			Thread.sleep(2000);
 			//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -1567,7 +1570,7 @@ public class EvenntsAndWebinar extends base{
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 
 }

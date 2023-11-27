@@ -575,7 +575,7 @@ public class GlobalSearch_MatchingResults extends base {
   @AfterClass
   public void quit() throws InterruptedException {
       Thread.sleep(1000);
-      driver.quit();
+      //driver.quit();
   }
   
 }
