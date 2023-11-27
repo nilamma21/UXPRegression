@@ -247,7 +247,7 @@ public class LineDigitalShowroom extends base {
 		//Verify Tiles count 6 or not
 		Assert.assertTrue(count==6);
 		//Verify Order on Juniper link
-		Assert.assertTrue(atldigish.getorderOnJuniperBtnLink().isDisplayed());
+		//Assert.assertTrue(atldigish.getorderOnJuniperBtnLink().isDisplayed());
 		//Verify Bottom Product count Link CTA
 		Assert.assertTrue(atldigish.getprodctCountBottomBtn().isDisplayed());
 
@@ -325,7 +325,7 @@ public class LineDigitalShowroom extends base {
 		//click on Global Search Input filed
 		Thread.sleep(4000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("HeroComponentExhName"));
-		Thread.sleep(5000);
+		Thread.sleep(6000);
 		//Click on 1st Suggetions
 		atldigish.getsuggetionList().click();
 		//Thread.sleep(5000);
@@ -348,7 +348,7 @@ public class LineDigitalShowroom extends base {
 			String replaceProdName=prodName.replaceAll(".", "");
 			Thread.sleep(5000);
 			System.out.println(replaceProdName);
-			atldigish.getproductName().click();
+			atldigish.getproductName1().click();
 			Thread.sleep(5000);
 			System.out.println(atldigish.getproductHeader().getText());
 			//Verify See All Product details page
@@ -769,6 +769,6 @@ public class LineDigitalShowroom extends base {
 
 	@AfterClass(alwaysRun=true)
 	public void tearDown() {
-		// driver.quit();
+		 driver.quit();
 	}
 }

@@ -3,26 +3,13 @@
 <suite name="Failed suite [LVM_RegressionTestSuite]" parallel="classes">
   <test name="RegressionTest(failed)" parallel="classes">
     <classes>
-      <class name="lasvegasmarket_UAT.EvenntsAndWebinar">
+      <class name="lasvegasmarket_PROD.EvenntsAndWebinar">
         <methods>
-          <include name="TS015_VerifyExhibitorEventsAddNoteTest"/>
-          <include name="TS005_VerifyIMCEventsEventDetailstTest"/>
-          <include name="TS014_VerifyExhibitorEventsAddToListTest"/>
-          <include name="TS013_VerifyExhibitorEventsAddToFavoriteTest"/>
-          <include name="TS002_VerifyIMCEventsSearchbarTest"/>
-          <include name="TS010_VerifyExhibitorEventsCalendarViewTest"/>
-          <include name="TS011_VerifyExhibitorEventsListTest"/>
           <include name="TS004_VerifyIMCEventsEventsListTest"/>
-          <include name="TS009_VerifyExhibitorEventsSearchbarTest"/>
+          <include name="tearDown"/>
           <include name="initialize"/>
-          <include name="TS012_VerifyExhibitorEventsDetailstTest"/>
-          <include name="TS003_VerifyIMCEventsCalendarViewTest"/>
-          <include name="TS006_VerifyIMCEventsAddToFavoriteTest"/>
-          <include name="TS007_VerifyIMCEventsAddToListTest"/>
-          <include name="TS001_VerifyEventsAndWebinarsOverviewTest"/>
-          <include name="TS008_VerifyIMCEventsAddNoteTest"/>
         </methods>
-      </class> <!-- lasvegasmarket_UAT.EvenntsAndWebinar -->
+      </class> <!-- lasvegasmarket_PROD.EvenntsAndWebinar -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->

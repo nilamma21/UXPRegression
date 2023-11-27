@@ -347,6 +347,7 @@ public class EvenntsAndWebinar extends base{
 					String eventTitle=eventTitleLink.getText();
 					Assert.assertTrue(eventTitleLink.isDisplayed());
 					//eventSeeDetailsLink = lvmevents.lvmlvmListOfAllEventsSeeDetailsLink().get(1);
+					utl.scrollToElement(eventTitleLink);
 					eventTitleLink.click();
 					//Verify Event Details Page
 					Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUAT().getText()));

@@ -4,18 +4,17 @@
 
 <suite name="LVM_RegressionTestSuite" parallel="classes">
 	<listners>
-		<listner class-name="lasvegasmarket_UAT.TestListeners" />
+		<listner class-name="lasvegasmarket_PROD.TestListeners" />
 	</listners>
 		<test thread-count="1"  name="RegressionTest">
 		<classes>
 
-			<class name="lasvegasmarket_UAT.EvenntsAndWebinar" /> 
-			
-<!-- 
+			<class name="lasvegasmarket_PROD.EvenntsAndWebinar" /> 
+
 		<methods>
-				 <include name="TS008_VerifyExhibitorEventsListTest()"/>   
+				 <include name="TS004_VerifyIMCEventsEventsListTest"/>   
 		</methods>
-  -->
+
 		</classes>
 	</test>
 </suite>

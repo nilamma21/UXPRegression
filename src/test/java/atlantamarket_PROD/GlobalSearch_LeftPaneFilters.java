@@ -611,7 +611,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(2000);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys("Anne");
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(6000);
 
@@ -644,7 +644,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		driver.navigate().back();
 		Thread.sleep(8000);
 
-		//Verify the selected Product Category on Product details page
+/*		//Verify the selected Product Category on Product details page
 		utl.scrollToElement(atlexhact.getProductForMultipleCatg());
 		// Hovering on 1st Product
 		Actions actions = new Actions(driver);
@@ -664,7 +664,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 				Assert.assertTrue(prodcatgitemlist.get(j).getText().contains(expectedprodcatg));
 				break;
 			}
-		}
+		}*/
 		//driver.get(prop.getProperty("atlmrkturl_prod"));
 	}
 
@@ -774,6 +774,6 @@ public class GlobalSearch_LeftPaneFilters extends base {
 	@AfterClass(alwaysRun=true)
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 }

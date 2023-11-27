@@ -31,7 +31,7 @@ public class ATLLineDigitalShowroomPage {
 	By seeAllprodctCountBottomBtn = By.xpath("//div[@class='imc-products-overview--cta-bar__item imc-padding--left--xlarge--desktop']/a[1]"); //Locator for Product count Btn Bottom Link
 	By productName= By.xpath("//div[@class='imc-products-overview--gallery']/div[1]/div[1]/a[1]/div[1]/div[1]/span[1]/span[1]/span[1]"); //Locator for Product name
 	By productHeader= By.xpath("//h2[@class='imc-padding--left--smallmedium imc-padding--bottom--small']"); //Locator for Product name
-	By productName1= By.xpath("//div[@class='imc-products-overview--gallery']/div[1]/div[1]/a[1]/div[1]/div[1]/span[1]/span[1]"); //Locator for Product name
+	By productName1= By.xpath("//div[@class='imc-products-overview--gallery']/div[1]/div[1]/a[1]/div[1]/div[1]"); //Locator for Product name
 	
 	
 	

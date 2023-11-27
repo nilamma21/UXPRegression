@@ -59,8 +59,13 @@ public class ShowSpecials extends base  {
 		utl = new Utility(driver);
 		lap = new ATLLandingPage(driver);
 		atlgs=new ATLGlobalSearchPage(driver);
+		
+		driver.get(prop.getProperty("atlmrkturl_prod"));
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        lap.getIUnderstandBtn().click();
+        Thread.sleep(5000);
 		//Add new Show Special from EXP
-		utl.addNewShowSpecialFrmExp_PROD();
+		//utl.addNewShowSpecialFrmExp_PROD(); //Add show special for test.
 	}
 
 	@Test(priority = 1)//groups="Non_MP"
@@ -80,12 +85,12 @@ public class ShowSpecials extends base  {
 		genData = new GenerateData();
 		
 		//Open ATL market site in new tab
-		((JavascriptExecutor)driver).executeScript("window.open()");
+/*		((JavascriptExecutor)driver).executeScript("window.open()");
 		tabs = new ArrayList<String>(driver.getWindowHandles());
-		driver.switchTo().window(tabs.get(2));
-		driver.get(prop.getProperty("atlmrkturl_prod"));
+		driver.switchTo().window(tabs.get(2));*/
+/*		driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(5000);
+		Thread.sleep(5000);*/
 		
 		//click on Exhibitors And Product Tab
 		atlgs.getatlExhibitorsAndProductTab().click();
@@ -101,13 +106,18 @@ public class ShowSpecials extends base  {
 		String[] data = inbox.split("Shown By ");
 		String showSpecialExhName = data[1];
 		System.out.println(showSpecialExhName);
-		
+		utl.scrollToElement(atlgs.getViewBrandDetailsLink());
 		//Click on View Brand Details link
 		atlgs.getViewBrandDetailsLink().click();
-		
-		//Verify the Show special exhibitor page
-		Assert.assertTrue(atlexhdgshw.getExhNameOnExhDirectImg().getText().contains(showSpecialExhName));
-		//driver.get(prop.getProperty("atlmrkturl_prod"));
+		try {
+		  System.out.println(atlexhdgshw.getExhNameOnExhDirectImg().getText());
+	        //Verify the Show special exhibitor page
+	        Assert.assertTrue(atlexhdgshw.getExhNameOnExhDirectImg().getText().contains(showSpecialExhName));
+		}catch(Exception e){
+		  System.out.println(atlexhdgshw.getExhNameOnExhDirectImg1().getText());
+	        //Verify the Show special exhibitor page
+	        Assert.assertTrue(atlexhdgshw.getExhNameOnExhDirectImg1().getText().contains(showSpecialExhName));
+		}
 	}
 	
 	@Test(priority = 2)//groups="Non_MP"
@@ -126,7 +136,7 @@ public class ShowSpecials extends base  {
 		
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
+		Thread.sleep(4000);
 		//click on Exhibitors And Product Tab
 		atlgs.getatlExhibitorsAndProductTab().click();
 		
@@ -143,7 +153,7 @@ public class ShowSpecials extends base  {
 		
 		atlgs.getatlShowroomLink().click();
 		Thread.sleep(5000);
-		
+		System.out.println(driver.getCurrentUrl());
 		//Verify Floor plan page of selected location
 		Assert.assertTrue(driver.getCurrentUrl().contains(url));
 	}
@@ -179,7 +189,7 @@ public class ShowSpecials extends base  {
 
 	@AfterClass(alwaysRun=true)
 	public void tearDown() throws InterruptedException {
-		utl.deleteShowSpecialFrmExp();
+		//utl.deleteShowSpecialFrmExp(); // Delete created show special
 		driver.quit();
 
 	}

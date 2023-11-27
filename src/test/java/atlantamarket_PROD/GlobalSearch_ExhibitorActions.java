@@ -244,9 +244,12 @@ public class GlobalSearch_ExhibitorActions extends base {
 		Assert.assertTrue(atlexhdgshw.getATLExhDigiShowPage().isDisplayed());
 		Thread.sleep(10000);
 		Assert.assertTrue(driver.getTitle().contains(""+exhname+" at Atlanta Market"));
-		Assert.assertTrue(atlexhdgshw.getExhNameOnExhDirectImg().getText().contains(exhname));
-
-		driver.get(prop.getProperty("atlmrkturl_prod"));
+		try {
+	        Assert.assertTrue(atlexhdgshw.getExhNameOnExhDirectImg().getText().contains(exhname));
+		}catch (Exception e) {
+	      Assert.assertTrue(atlexhdgshw.getExhNameOnExhDirectImg1().getText().contains(exhname));
+        }
+		//driver.get(prop.getProperty("atlmrkturl_prod"));
 		//lap.getCloseMarktAdBtn().click();
 	}
 	
@@ -548,6 +551,6 @@ public class GlobalSearch_ExhibitorActions extends base {
 	@AfterClass(alwaysRun=true)
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 }

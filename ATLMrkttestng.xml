@@ -7,12 +7,12 @@
 	</listners>
 	<test thread-count="1" name="RegressionTest">
 		<classes>
-		<class name="atlantamarket_PROD.ShowSpecials" />
+		<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
 <!-- 
 			<methods>
-				<include name="TS004_VerifyClickOnTotalProductsSeeAllLinkForLineTest"/>  
+				<include name="TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest"/>  
 			</methods>
-  -->
+ -->
 	</classes>
 	</test>
 </suite>

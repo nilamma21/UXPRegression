@@ -62,39 +62,11 @@ public class GlobalSearch_MatchingResults extends base {
 		//lap.getCloseMarktAdBtn().click();
 		
 	}
-	@Test(enabled=false)
-	public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
 
-		// The purpose of this test case to verify:-
-		// TS1- Login to Market Planner
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-
-		// Click on Login button from Landing Page
-		lap.getLogin().click();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		// Enter the credentials on Login Page and click
-		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
-
-		lp.getPassword().sendKeys((prop.getProperty("passwordW")));
-
-
-		Thread.sleep(1000);
-	//	lp.getPassword().sendKeys((prop.getProperty("password")));
-		Thread.sleep(1000);
-
-		lp.getSignInBtn().click();
-		Thread.sleep(15000);
-		Assert.assertTrue(driver.getTitle().contains("Atlanta Market at AmericasMart"));
-	}
-	
-	
 	@Test(priority = 1)//groups="Non_MP"
 	public void TS001_VerifyGlobalSearchContainsAndStartsWithTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T436: Verify Global Search: Contains and Starts With
-
 		//Blocked- Unclear about the acceptance criteria
 		
 		atlgs = new ATLGlobalSearchPage(driver);
@@ -125,6 +97,7 @@ public class GlobalSearch_MatchingResults extends base {
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
@@ -236,6 +209,7 @@ public class GlobalSearch_MatchingResults extends base {
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
@@ -281,6 +255,7 @@ public class GlobalSearch_MatchingResults extends base {
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
@@ -310,6 +285,32 @@ public class GlobalSearch_MatchingResults extends base {
 		System.out.println("Displayed All Relevance ");
 
 	}
+	   @Test(enabled=false)
+	    public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
+
+	        // The purpose of this test case to verify:-
+	        // TS1- Login to Market Planner
+
+	        lap = new ATLLandingPage(driver);
+	        lp = new ATLLoginPage(driver);
+
+	        // Click on Login button from Landing Page
+	        lap.getLogin().click();
+	        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	        // Enter the credentials on Login Page and click
+	        lp.getEmailAddress().sendKeys((prop.getProperty("username")));
+
+	        lp.getPassword().sendKeys((prop.getProperty("passwordW")));
+
+
+	        Thread.sleep(1000);
+	    //  lp.getPassword().sendKeys((prop.getProperty("password")));
+	        Thread.sleep(1000);
+
+	        lp.getSignInBtn().click();
+	        Thread.sleep(15000);
+	        Assert.assertTrue(driver.getTitle().contains("Atlanta Market at AmericasMart"));
+	    }
 
 	@Test(enabled=false)//priority = 5,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality"
 	public void TS005_VerifyGlobalSearchMatchingResultsSelectAddToFavoritesTest()
@@ -610,7 +611,7 @@ public class GlobalSearch_MatchingResults extends base {
 	@AfterClass(alwaysRun=true)
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 
 }
