@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Regression Automation Test Results</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Nov 7, 2023 04:30:02 PM</span></a>
+<a href="#"><span class="badge badge-primary">Nov 27, 2023 01:50:45 PM</span></a>
 </li>
 </ul>
 </div>
@@ -80,98 +80,37 @@
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="fail" test-id="1"
+        <li class="test-item"  status="pass" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">TS001_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest</p>
+            <p class="name">TS001_VerifyInformationTabInGlobalSearchTest</p>
             <p class="text-sm">
-              <span>16:30:31 PM</span> / <span>00:00:59:204</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>13:51:17 PM</span> / <span>00:00:50:847</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">TS001_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest</h5>
-<span class='badge badge-success'>11.07.2023 16:30:31</span>
-<span class='badge badge-danger'>11.07.2023 16:31:30</span>
-<span class='badge badge-default'>00:00:59:204</span>
+<h5 class="test-status text-pass">TS001_VerifyInformationTabInGlobalSearchTest</h5>
+<span class='badge badge-success'>11.27.2023 13:51:17</span>
+<span class='badge badge-danger'>11.27.2023 13:52:08</span>
+<span class='badge badge-default'>00:00:50:847</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 </div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-    <img data-featherlight='C:\Users\anuppa\UXPRegression_local\UXPRegression\src\..\screenshots\TS001_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest.png' src="C:\Users\anuppa\UXPRegression_local\UXPRegression\src\..\screenshots\TS001_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>4:31:30 PM</td>
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:52:08 PM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //section[@class='imc-site-wrapper']/div[2]/div[1]/div[1]/div[2]/div[1]/span[2]/a[1] (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at pageObjects.LasVegasMarket.LVMExhDigiShowroomPage.getLocation(LVMExhDigiShowroomPage.java:351)
-	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS001_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest(ExhibitorDigitalShowroom.java:84)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//section[@class='imc-site-wrapper']/div[2]/div[1]/div[1]/div[2]/div[1]/span[2]/a[1]"}
-  (Session info: chrome=119.0.6045.106)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'ANUPPA-VD3', ip: '172.27.182.66', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_381'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.106, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\anuppa\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60407}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 507850226bebb7907d34ad6dbb3045f5
-*** Element info: {Using=xpath, value=//section[@class='imc-site-wrapper']/div[2]/div[1]/div[1]/div[2]/div[1]/span[2]/a[1]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 26 more
-</textarea>
-          
+          Test Passed
         </td>
       </tr>
   </tbody>
@@ -184,9 +123,9 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">TS002_VerifyClickOnTotalLinesSeeAllLinesForExhibitorTest</p>
+            <p class="name">TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest</p>
             <p class="text-sm">
-              <span>16:31:30 PM</span> / <span>00:00:58:133</span>
+              <span>13:52:08 PM</span> / <span>00:00:41:533</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -194,10 +133,10 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">TS002_VerifyClickOnTotalLinesSeeAllLinesForExhibitorTest</h5>
-<span class='badge badge-success'>11.07.2023 16:31:30</span>
-<span class='badge badge-danger'>11.07.2023 16:32:28</span>
-<span class='badge badge-default'>00:00:58:133</span>
+<h5 class="test-status text-pass">TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest</h5>
+<span class='badge badge-success'>11.27.2023 13:52:08</span>
+<span class='badge badge-danger'>11.27.2023 13:52:49</span>
+<span class='badge badge-default'>00:00:41:533</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 </div>
 </div>
@@ -207,7 +146,7 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>4:32:28 PM</td>
+        <td>1:52:49 PM</td>
         <td>
           Test Passed
         </td>
@@ -222,9 +161,9 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">TS003_VerifyClickOnProductShownLinkForExhibitorTest</p>
+            <p class="name">TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest</p>
             <p class="text-sm">
-              <span>16:32:28 PM</span> / <span>00:00:59:666</span>
+              <span>13:52:49 PM</span> / <span>00:01:32:603</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -232,10 +171,10 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">TS003_VerifyClickOnProductShownLinkForExhibitorTest</h5>
-<span class='badge badge-success'>11.07.2023 16:32:28</span>
-<span class='badge badge-danger'>11.07.2023 16:33:28</span>
-<span class='badge badge-default'>00:00:59:666</span>
+<h5 class="test-status text-pass">TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest</h5>
+<span class='badge badge-success'>11.27.2023 13:52:49</span>
+<span class='badge badge-danger'>11.27.2023 13:54:22</span>
+<span class='badge badge-default'>00:01:32:603</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 </div>
 </div>
@@ -245,7 +184,7 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>4:33:28 PM</td>
+        <td>1:54:22 PM</td>
         <td>
           Test Passed
         </td>
@@ -255,72 +194,37 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="4"
+        <li class="test-item"  status="pass" test-id="4"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">TS004_VerifyClickOnLineFiltersForExhibitorTest</p>
+            <p class="name">TS004_VerifyCatalogsOverviewInGlobalSearchTest</p>
             <p class="text-sm">
-              <span>16:33:28 PM</span> / <span>00:00:37:716</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>13:54:22 PM</span> / <span>00:00:55:424</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">TS004_VerifyClickOnLineFiltersForExhibitorTest</h5>
-<span class='badge badge-success'>11.07.2023 16:33:28</span>
-<span class='badge badge-danger'>11.07.2023 16:34:05</span>
-<span class='badge badge-default'>00:00:37:716</span>
+<h5 class="test-status text-pass">TS004_VerifyCatalogsOverviewInGlobalSearchTest</h5>
+<span class='badge badge-success'>11.27.2023 13:54:22</span>
+<span class='badge badge-danger'>11.27.2023 13:55:17</span>
+<span class='badge badge-default'>00:00:55:424</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
 </div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-    <img data-featherlight='C:\Users\anuppa\UXPRegression_local\UXPRegression\src\..\screenshots\TS004_VerifyClickOnLineFiltersForExhibitorTest.png' src="C:\Users\anuppa\UXPRegression_local\UXPRegression\src\..\screenshots\TS004_VerifyClickOnLineFiltersForExhibitorTest.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>4:34:05 PM</td>
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:55:17 PM</td>
         <td>
-          <textarea readonly class="code-block">java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at org.testng.Assert.assertTrue(Assert.java:52)
-	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS004_VerifyClickOnLineFiltersForExhibitorTest(ExhibitorDigitalShowroom.java:250)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
-</textarea>
-          
+          Test Passed
         </td>
       </tr>
   </tbody>
@@ -333,9 +237,9 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">TS005_VerifyClickOnLineSearchForExhibitorTest</p>
+            <p class="name">TS005_VerifyArticlesOverviewInGlobalSearchTest</p>
             <p class="text-sm">
-              <span>16:34:05 PM</span> / <span>00:01:05:384</span>
+              <span>13:55:17 PM</span> / <span>00:00:52:133</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -343,15 +247,15 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">TS005_VerifyClickOnLineSearchForExhibitorTest</h5>
-<span class='badge badge-success'>11.07.2023 16:34:05</span>
-<span class='badge badge-danger'>11.07.2023 16:35:11</span>
-<span class='badge badge-default'>00:01:05:384</span>
+<h5 class="test-status text-fail">TS005_VerifyArticlesOverviewInGlobalSearchTest</h5>
+<span class='badge badge-success'>11.27.2023 13:55:17</span>
+<span class='badge badge-danger'>11.27.2023 13:56:10</span>
+<span class='badge badge-default'>00:00:52:133</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
 </div>
 </div>
 </div>    <div class="row mb-3"><div class="col-md-3">
-    <img data-featherlight='C:\Users\anuppa\UXPRegression_local\UXPRegression\src\..\screenshots\TS005_VerifyClickOnLineSearchForExhibitorTest.png' src="C:\Users\anuppa\UXPRegression_local\UXPRegression\src\..\screenshots\TS005_VerifyClickOnLineSearchForExhibitorTest.png">
+    <img data-featherlight='C:\Users\anuppa\UXPRegression_local\UXPRegression\src\..\screenshots\TS005_VerifyArticlesOverviewInGlobalSearchTest.png' src="C:\Users\anuppa\UXPRegression_local\UXPRegression\src\..\screenshots\TS005_VerifyArticlesOverviewInGlobalSearchTest.png">
     
     </div></div>
 <div class="detail-body mt-4">
@@ -360,13 +264,14 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
   <tbody>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>4:35:11 PM</td>
+        <td>1:56:10 PM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class = 'imc-manufacturing-line-title-wrapper']/a[1] (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at pageObjects.LasVegasMarket.LVMExhDigiShowroomPage.getVerifyLineSearch(LVMExhDigiShowroomPage.java:456)
-	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS005_VerifyClickOnLineSearchForExhibitorTest(ExhibitorDigitalShowroom.java:282)
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at atlantamarket_PROD.GlobalSearch_SearchFor.TS005_VerifyArticlesOverviewInGlobalSearchTest(GlobalSearch_SearchFor.java:386)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -391,33 +296,6 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class = 'imc-manufacturing-line-title-wrapper']/a[1]"}
-  (Session info: chrome=119.0.6045.106)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'ANUPPA-VD3', ip: '172.27.182.66', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_381'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.106, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\anuppa\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60407}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 507850226bebb7907d34ad6dbb3045f5
-*** Element info: {Using=xpath, value=//div[@class = 'imc-manufacturing-line-title-wrapper']/a[1]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 26 more
 </textarea>
           
         </td>
@@ -432,9 +310,9 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">TS006_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest</p>
+            <p class="name">TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest</p>
             <p class="text-sm">
-              <span>16:35:11 PM</span> / <span>00:00:35:918</span>
+              <span>13:56:10 PM</span> / <span>00:04:44:432</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -442,10 +320,10 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">TS006_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest</h5>
-<span class='badge badge-success'>11.07.2023 16:35:11</span>
-<span class='badge badge-danger'>11.07.2023 16:35:47</span>
-<span class='badge badge-default'>00:00:35:918</span>
+<h5 class="test-status text-pass">TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest</h5>
+<span class='badge badge-success'>11.27.2023 13:56:10</span>
+<span class='badge badge-danger'>11.27.2023 14:00:54</span>
+<span class='badge badge-default'>00:04:44:432</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
 </div>
 </div>
@@ -455,7 +333,7 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>4:35:47 PM</td>
+        <td>2:00:54 PM</td>
         <td>
           Test Passed
         </td>
@@ -465,52 +343,14 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="7"
+        <li class="test-item"  status="fail" test-id="7"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">TS007_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest</p>
+            <p class="name">TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest</p>
             <p class="text-sm">
-              <span>16:35:47 PM</span> / <span>00:00:40:368</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">TS007_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest</h5>
-<span class='badge badge-success'>11.07.2023 16:35:47</span>
-<span class='badge badge-danger'>11.07.2023 16:36:27</span>
-<span class='badge badge-default'>00:00:40:368</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>4:36:27 PM</td>
-        <td>
-          Test Passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="fail" test-id="8"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">TS008_VerifySeeInOtherMarketsForExhibitorTest</p>
-            <p class="text-sm">
-              <span>16:36:27 PM</span> / <span>00:01:07:391</span>
+              <span>14:00:54 PM</span> / <span>00:00:54:758</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -518,15 +358,15 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">TS008_VerifySeeInOtherMarketsForExhibitorTest</h5>
-<span class='badge badge-success'>11.07.2023 16:36:27</span>
-<span class='badge badge-danger'>11.07.2023 16:37:34</span>
-<span class='badge badge-default'>00:01:07:391</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<h5 class="test-status text-fail">TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest</h5>
+<span class='badge badge-success'>11.27.2023 14:00:54</span>
+<span class='badge badge-danger'>11.27.2023 14:01:49</span>
+<span class='badge badge-default'>00:00:54:758</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
 </div>
 </div>
 </div>    <div class="row mb-3"><div class="col-md-3">
-    <img data-featherlight='C:\Users\anuppa\UXPRegression_local\UXPRegression\src\..\screenshots\TS008_VerifySeeInOtherMarketsForExhibitorTest.png' src="C:\Users\anuppa\UXPRegression_local\UXPRegression\src\..\screenshots\TS008_VerifySeeInOtherMarketsForExhibitorTest.png">
+    <img data-featherlight='C:\Users\anuppa\UXPRegression_local\UXPRegression\src\..\screenshots\TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest.png' src="C:\Users\anuppa\UXPRegression_local\UXPRegression\src\..\screenshots\TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest.png">
     
     </div></div>
 <div class="detail-body mt-4">
@@ -535,13 +375,14 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
   <tbody>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>4:37:34 PM</td>
+        <td>2:01:49 PM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //button[@class = 'imc-button imc-button--full-bleed-mobile imc-button--primary-inverted imc-margin--all--none'] (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at pageObjects.LasVegasMarket.LVMExhDigiShowroomPage.getSeeInOtherMarket(LVMExhDigiShowroomPage.java:462)
-	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS008_VerifySeeInOtherMarketsForExhibitorTest(ExhibitorDigitalShowroom.java:380)
+          <textarea readonly class="code-block">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at atlantamarket_PROD.GlobalSearch_SearchFor.TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest(GlobalSearch_SearchFor.java:681)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -566,35 +407,46 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@class = 'imc-button imc-button--full-bleed-mobile imc-button--primary-inverted imc-margin--all--none']"}
-  (Session info: chrome=119.0.6045.106)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'ANUPPA-VD3', ip: '172.27.182.66', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_381'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.106, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\anuppa\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60407}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 507850226bebb7907d34ad6dbb3045f5
-*** Element info: {Using=xpath, value=//button[@class = 'imc-button imc-button--full-bleed-mobile imc-button--primary-inverted imc-margin--all--none']}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 26 more
 </textarea>
           
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="8"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest</p>
+            <p class="text-sm">
+              <span>14:01:49 PM</span> / <span>00:01:16:917</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest</h5>
+<span class='badge badge-success'>11.27.2023 14:01:49</span>
+<span class='badge badge-danger'>11.27.2023 14:03:06</span>
+<span class='badge badge-default'>00:01:16:917</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:03:06 PM</td>
+        <td>
+          Test Passed
         </td>
       </tr>
   </tbody>
@@ -607,9 +459,9 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">TS009_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest</p>
+            <p class="name">TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest</p>
             <p class="text-sm">
-              <span>16:37:34 PM</span> / <span>00:00:40:811</span>
+              <span>14:03:06 PM</span> / <span>00:01:11:609</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -617,10 +469,10 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">TS009_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest</h5>
-<span class='badge badge-success'>11.07.2023 16:37:34</span>
-<span class='badge badge-danger'>11.07.2023 16:38:15</span>
-<span class='badge badge-default'>00:00:40:811</span>
+<h5 class="test-status text-pass">TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest</h5>
+<span class='badge badge-success'>11.27.2023 14:03:06</span>
+<span class='badge badge-danger'>11.27.2023 14:04:17</span>
+<span class='badge badge-default'>00:01:11:609</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
 </div>
 </div>
@@ -630,7 +482,7 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>4:38:15 PM</td>
+        <td>2:04:17 PM</td>
         <td>
           Test Passed
         </td>
@@ -640,98 +492,37 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="10"
+        <li class="test-item"  status="pass" test-id="10"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">TS010_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest</p>
+            <p class="name">TS010_VerifyShowSpecialsOverviewInGlobalSearchTest</p>
             <p class="text-sm">
-              <span>16:38:15 PM</span> / <span>00:00:57:791</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>14:04:17 PM</span> / <span>00:00:26:508</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">TS010_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest</h5>
-<span class='badge badge-success'>11.07.2023 16:38:15</span>
-<span class='badge badge-danger'>11.07.2023 16:39:13</span>
-<span class='badge badge-default'>00:00:57:791</span>
+<h5 class="test-status text-pass">TS010_VerifyShowSpecialsOverviewInGlobalSearchTest</h5>
+<span class='badge badge-success'>11.27.2023 14:04:17</span>
+<span class='badge badge-danger'>11.27.2023 14:04:44</span>
+<span class='badge badge-default'>00:00:26:508</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
 </div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-    <img data-featherlight='C:\Users\anuppa\UXPRegression_local\UXPRegression\src\..\screenshots\TS010_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest.png' src="C:\Users\anuppa\UXPRegression_local\UXPRegression\src\..\screenshots\TS010_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>4:39:13 PM</td>
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:04:44 PM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //span[contains(text(),'Visit')]/.. (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at pageObjects.LasVegasMarket.LVMExhDigiShowroomPage.getHeroComponentVisit(LVMExhDigiShowroomPage.java:213)
-	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS010_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest(ExhibitorDigitalShowroom.java:467)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[contains(text(),'Visit')]/.."}
-  (Session info: chrome=119.0.6045.106)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'ANUPPA-VD3', ip: '172.27.182.66', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_381'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.106, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\anuppa\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60407}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 507850226bebb7907d34ad6dbb3045f5
-*** Element info: {Using=xpath, value=//span[contains(text(),'Visit')]/..}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 26 more
-</textarea>
-          
+          Test Passed
         </td>
       </tr>
   </tbody>
@@ -739,346 +530,37 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="11"
+        <li class="test-item"  status="pass" test-id="11"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">TS011_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest</p>
+            <p class="name">TS011_VerifyEventsOverviewInGlobalSearchTest</p>
             <p class="text-sm">
-              <span>16:39:13 PM</span> / <span>00:01:03:116</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>14:04:44 PM</span> / <span>00:01:02:886</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">TS011_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest</h5>
-<span class='badge badge-success'>11.07.2023 16:39:13</span>
-<span class='badge badge-danger'>11.07.2023 16:40:16</span>
-<span class='badge badge-default'>00:01:03:116</span>
+<h5 class="test-status text-pass">TS011_VerifyEventsOverviewInGlobalSearchTest</h5>
+<span class='badge badge-success'>11.27.2023 14:04:44</span>
+<span class='badge badge-danger'>11.27.2023 14:05:47</span>
+<span class='badge badge-default'>00:01:02:886</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
 </div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-    <img data-featherlight='C:\Users\anuppa\UXPRegression_local\UXPRegression\src\..\screenshots\TS011_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest.png' src="C:\Users\anuppa\UXPRegression_local\UXPRegression\src\..\screenshots\TS011_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>4:40:16 PM</td>
-        <td>
-          <textarea readonly class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //span[contains(text(),'View 3D Showroom')] (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at pageObjects.LasVegasMarket.LVMExhDigiShowroomPage.getView3DshowroomBtn(LVMExhDigiShowroomPage.java:203)
-	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS011_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest(ExhibitorDigitalShowroom.java:513)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[contains(text(),'View 3D Showroom')]"}
-  (Session info: chrome=119.0.6045.106)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'ANUPPA-VD3', ip: '172.27.182.66', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_381'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.106, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\anuppa\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60407}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 507850226bebb7907d34ad6dbb3045f5
-*** Element info: {Using=xpath, value=//span[contains(text(),'View 3D Showroom')]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 26 more
-</textarea>
-          
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="12"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">TS012_VerifyExhibitorDigitalEventsComponentTest</p>
-            <p class="text-sm">
-              <span>16:40:16 PM</span> / <span>00:00:42:957</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">TS012_VerifyExhibitorDigitalEventsComponentTest</h5>
-<span class='badge badge-success'>11.07.2023 16:40:16</span>
-<span class='badge badge-danger'>11.07.2023 16:40:59</span>
-<span class='badge badge-default'>00:00:42:957</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
-</div>
-</div>
 </div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>4:40:59 PM</td>
+        <td>2:05:47 PM</td>
         <td>
           Test Passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="13"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">TS013_VerifyCatalogsSectionForExhibitorTest</p>
-            <p class="text-sm">
-              <span>16:40:59 PM</span> / <span>00:00:47:982</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">TS013_VerifyCatalogsSectionForExhibitorTest</h5>
-<span class='badge badge-success'>11.07.2023 16:40:59</span>
-<span class='badge badge-danger'>11.07.2023 16:41:47</span>
-<span class='badge badge-default'>00:00:47:982</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>4:41:47 PM</td>
-        <td>
-          Test Passed
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="fail" test-id="14"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest</p>
-            <p class="text-sm">
-              <span>16:41:47 PM</span> / <span>00:01:00:925</span>
-              <span class="badge fail-bg log float-right">Fail</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-fail">TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest</h5>
-<span class='badge badge-success'>11.07.2023 16:41:47</span>
-<span class='badge badge-danger'>11.07.2023 16:42:48</span>
-<span class='badge badge-default'>00:01:00:925</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
-</div>
-</div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-    <img data-featherlight='C:\Users\anuppa\UXPRegression_local\UXPRegression\src\..\screenshots\TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest.png' src="C:\Users\anuppa\UXPRegression_local\UXPRegression\src\..\screenshots\TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>4:42:48 PM</td>
-        <td>
-          <textarea readonly class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class = 'imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div/span[text()='Show Specials'] (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at pageObjects.LasVegasMarket.LVMExhDigiShowroomPage.getshowSpecialSection(LVMExhDigiShowroomPage.java:173)
-	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest(ExhibitorDigitalShowroom.java:646)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class = 'imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div/span[text()='Show Specials']"}
-  (Session info: chrome=119.0.6045.106)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'ANUPPA-VD3', ip: '172.27.182.66', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_381'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.106, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\anuppa\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60407}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 507850226bebb7907d34ad6dbb3045f5
-*** Element info: {Using=xpath, value=//div[@class = 'imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div/span[text()='Show Specials']}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	... 26 more
-</textarea>
-          
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="fail" test-id="15"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">TS015_VerifyExhibitorDigitalShowroomHeroComponentContactExhibitorTest</p>
-            <p class="text-sm">
-              <span>16:42:48 PM</span> / <span>00:00:24:564</span>
-              <span class="badge fail-bg log float-right">Fail</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-fail">TS015_VerifyExhibitorDigitalShowroomHeroComponentContactExhibitorTest</h5>
-<span class='badge badge-success'>11.07.2023 16:42:48</span>
-<span class='badge badge-danger'>11.07.2023 16:43:13</span>
-<span class='badge badge-default'>00:00:24:564</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
-</div>
-</div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-    <img data-featherlight='C:\Users\anuppa\UXPRegression_local\UXPRegression\src\..\screenshots\TS015_VerifyExhibitorDigitalShowroomHeroComponentContactExhibitorTest.png' src="C:\Users\anuppa\UXPRegression_local\UXPRegression\src\..\screenshots\TS015_VerifyExhibitorDigitalShowroomHeroComponentContactExhibitorTest.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>4:43:13 PM</td>
-        <td>
-          <textarea readonly class="code-block">java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at org.testng.Assert.assertTrue(Assert.java:52)
-	at lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS015_VerifyExhibitorDigitalShowroomHeroComponentContactExhibitorTest(ExhibitorDigitalShowroom.java:696)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
-</textarea>
-          
         </td>
       </tr>
   </tbody>
@@ -1099,7 +581,7 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
 <div class="test-list">
 <div class="test-list-tools">
 <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
 </div>
 <div class="test-list-wrapper scrollable">
 <ul class="test-list-item">
@@ -1127,84 +609,16 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>16:33:28 PM</td>
+<td>13:55:17 PM</td>
 <td>
-<a href="#" class="linked" test-id='4' id='4'>TS004_VerifyClickOnLineFiltersForExhibitorTest</a>
+<a href="#" class="linked" test-id='5' id='5'>TS005_VerifyArticlesOverviewInGlobalSearchTest</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>16:42:48 PM</td>
+<td>14:00:54 PM</td>
 <td>
-<a href="#" class="linked" test-id='15' id='15'>TS015_VerifyExhibitorDigitalShowroomHeroComponentContactExhibitorTest</a>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log badge-danger'>1</span>
-</span>
-<p class="name">org.openqa.selenium.TimeoutException</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>org.openqa.selenium.TimeoutException</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>16:30:31 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='1'>TS001_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>16:34:05 PM</td>
-<td>
-<a href="#" class="linked" test-id='5' id='5'>TS005_VerifyClickOnLineSearchForExhibitorTest</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>16:36:27 PM</td>
-<td>
-<a href="#" class="linked" test-id='8' id='8'>TS008_VerifySeeInOtherMarketsForExhibitorTest</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>16:38:15 PM</td>
-<td>
-<a href="#" class="linked" test-id='10' id='10'>TS010_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>16:39:13 PM</td>
-<td>
-<a href="#" class="linked" test-id='11' id='11'>TS011_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>16:41:47 PM</td>
-<td>
-<a href="#" class="linked" test-id='14' id='14'>TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest</a>
+<a href="#" class="linked" test-id='7' id='7'>TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest</a>
 </td>
 </tr>
 </tbody>
@@ -1224,25 +638,25 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Nov 7, 2023 04:30:02 PM</h3>
+<h3>Nov 27, 2023 01:50:45 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Nov 7, 2023 04:43:16 PM</h3>
+<h3>Nov 27, 2023 02:05:47 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>7</h3>
+<h3>9</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>8</h3>
+<h3>2</h3>
 </div></div>
 </div>
 </div>
@@ -1258,12 +672,12 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='46%'>
-<b>7</b> tests passed
+<div><small data-tooltip='81%'>
+<b>9</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='53%'><b>8</b> tests failed,
+<small data-tooltip='18%'><b>2</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -1281,9 +695,9 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='46%'><b>7</b> events passed</small></div>
+<div><small data-tooltip='81%'><b>9</b> events passed</small></div>
 <div>
-<small data-tooltip='53%'><b>8</b> events failed,
+<small data-tooltip='18%'><b>2</b> events failed,
 <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -1300,7 +714,7 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
 </div></div>
 <script>
 var timeline = {
-"TS001_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest":59.204,"TS002_VerifyClickOnTotalLinesSeeAllLinesForExhibitorTest":58.133,"TS003_VerifyClickOnProductShownLinkForExhibitorTest":59.666,"TS004_VerifyClickOnLineFiltersForExhibitorTest":37.716,"TS005_VerifyClickOnLineSearchForExhibitorTest":65.384,"TS006_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest":35.918,"TS007_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest":40.368,"TS008_VerifySeeInOtherMarketsForExhibitorTest":67.391,"TS009_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest":40.811,"TS010_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest":57.791,"TS011_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest":63.116,"TS012_VerifyExhibitorDigitalEventsComponentTest":42.957,"TS013_VerifyCatalogsSectionForExhibitorTest":47.982,"TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest":60.925,"TS015_VerifyExhibitorDigitalShowroomHeroComponentContactExhibitorTest":24.564
+"TS001_VerifyInformationTabInGlobalSearchTest":50.847,"TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest":41.533,"TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest":92.603,"TS004_VerifyCatalogsOverviewInGlobalSearchTest":55.424,"TS005_VerifyArticlesOverviewInGlobalSearchTest":52.133,"TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest":284.432,"TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest":54.758,"TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest":76.917,"TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest":71.609,"TS010_VerifyShowSpecialsOverviewInGlobalSearchTest":26.508,"TS011_VerifyEventsOverviewInGlobalSearchTest":62.886
 };
 </script>
 <div class="row">
@@ -1323,8 +737,8 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 7,
-failParent: 8,
+passParent: 9,
+failParent: 2,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -1340,8 +754,8 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 7,
-failEvents: 8,
+passEvents: 9,
+failEvents: 2,
 warningEvents: 0,
 skipEvents: 0,
 infoEvents: 0

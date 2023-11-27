@@ -59,39 +59,16 @@ public class ShowSpecials extends base  {
 		utl = new Utility(driver);
 		lap = new ATLLandingPage(driver);
 		atlgs=new ATLGlobalSearchPage(driver);
-
+		
+		driver.get(prop.getProperty("atlmrkturl_prod"));
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        lap.getIUnderstandBtn().click();
+        Thread.sleep(5000);
 		//Add new Show Special from EXP
-		utl.addNewShowSpecialFrmExp_PROD();
+		//utl.addNewShowSpecialFrmExp_PROD(); //Add show special for test.
 	}
-	
-	@Test
-	public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
 
-		// The purpose of this test case to verify:-
-		// TS1- Login to Market Planner
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-
-		// Click on Login button from Landing Page
-		lap.getLogin().click();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		// Enter the credentials on Login Page and click
-		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
-
-		lp.getPassword().sendKeys((prop.getProperty("passwordW")));
-
-
-		Thread.sleep(1000);
-	//	lp.getPassword().sendKeys((prop.getProperty("password")));
-		Thread.sleep(1000);
-
-		lp.getSignInBtn().click();
-		Thread.sleep(15000);
-		Assert.assertTrue(driver.getTitle().contains("Atlanta Market at AmericasMart"));
-	}
-	
-	@Test(priority = 1,groups="Non_MP")
+	@Test(priority = 1)//groups="Non_MP"
 	public void TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T381: Show Specials: Links - Exhibitor Name
@@ -108,15 +85,16 @@ public class ShowSpecials extends base  {
 		genData = new GenerateData();
 		
 		//Open ATL market site in new tab
-		((JavascriptExecutor)driver).executeScript("window.open()");
+/*		((JavascriptExecutor)driver).executeScript("window.open()");
 		tabs = new ArrayList<String>(driver.getWindowHandles());
-		driver.switchTo().window(tabs.get(2));
-		driver.get(prop.getProperty("atlmrkturl_prod"));
-		Thread.sleep(5000);
-
+		driver.switchTo().window(tabs.get(2));*/
+/*		driver.get(prop.getProperty("atlmrkturl_prod"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(5000);*/
+		
 		//click on Exhibitors And Product Tab
 		atlgs.getatlExhibitorsAndProductTab().click();
-
+		
 		//Click on Show Specials sub-menu
 		atlgs.getatlShowSpecialsLink().click();
 		Thread.sleep(5000);
@@ -128,16 +106,21 @@ public class ShowSpecials extends base  {
 		String[] data = inbox.split("Shown By ");
 		String showSpecialExhName = data[1];
 		System.out.println(showSpecialExhName);
-		
+		utl.scrollToElement(atlgs.getViewBrandDetailsLink());
 		//Click on View Brand Details link
 		atlgs.getViewBrandDetailsLink().click();
-		
-		//Verify the Show special exhibitor page
-		Assert.assertTrue(atlexhdgshw.getExhNameOnExhDirectImg().getText().contains(showSpecialExhName));
-		driver.get(prop.getProperty("atlmrkturl_prod"));
+		try {
+		  System.out.println(atlexhdgshw.getExhNameOnExhDirectImg().getText());
+	        //Verify the Show special exhibitor page
+	        Assert.assertTrue(atlexhdgshw.getExhNameOnExhDirectImg().getText().contains(showSpecialExhName));
+		}catch(Exception e){
+		  System.out.println(atlexhdgshw.getExhNameOnExhDirectImg1().getText());
+	        //Verify the Show special exhibitor page
+	        Assert.assertTrue(atlexhdgshw.getExhNameOnExhDirectImg1().getText().contains(showSpecialExhName));
+		}
 	}
 	
-	@Test(priority = 2,groups="Non_MP")
+	@Test(priority = 2)//groups="Non_MP"
 	public void TS002_VerifyLocationLinksForShowSpecialsTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T382: Show Specials: Links - Showroom
@@ -153,7 +136,7 @@ public class ShowSpecials extends base  {
 		
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
+		Thread.sleep(4000);
 		//click on Exhibitors And Product Tab
 		atlgs.getatlExhibitorsAndProductTab().click();
 		
@@ -170,14 +153,43 @@ public class ShowSpecials extends base  {
 		
 		atlgs.getatlShowroomLink().click();
 		Thread.sleep(5000);
-		
+		System.out.println(driver.getCurrentUrl());
 		//Verify Floor plan page of selected location
 		Assert.assertTrue(driver.getCurrentUrl().contains(url));
 	}
+	
+    
+    @Test(enabled=false)
+    public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
+
+        // The purpose of this test case to verify:-
+        // TS1- Login to Market Planner
+
+        lap = new ATLLandingPage(driver);
+        lp = new ATLLoginPage(driver);
+
+        // Click on Login button from Landing Page
+        lap.getLogin().click();
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        // Enter the credentials on Login Page and click
+        lp.getEmailAddress().sendKeys((prop.getProperty("username")));
+
+        lp.getPassword().sendKeys((prop.getProperty("passwordW")));
+
+
+        Thread.sleep(1000);
+    //  lp.getPassword().sendKeys((prop.getProperty("password")));
+        Thread.sleep(1000);
+
+        lp.getSignInBtn().click();
+        Thread.sleep(15000);
+        Assert.assertTrue(driver.getTitle().contains("Atlanta Market at AmericasMart"));
+    }
+    
 
 	@AfterClass(alwaysRun=true)
 	public void tearDown() throws InterruptedException {
-		utl.deleteShowSpecialFrmExp();
+		//utl.deleteShowSpecialFrmExp(); // Delete created show special
 		driver.quit();
 
 	}

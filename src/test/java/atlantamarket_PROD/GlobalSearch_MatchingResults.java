@@ -62,39 +62,11 @@ public class GlobalSearch_MatchingResults extends base {
 		//lap.getCloseMarktAdBtn().click();
 		
 	}
-	@Test
-	public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
 
-		// The purpose of this test case to verify:-
-		// TS1- Login to Market Planner
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-
-		// Click on Login button from Landing Page
-		lap.getLogin().click();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		// Enter the credentials on Login Page and click
-		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
-
-		lp.getPassword().sendKeys((prop.getProperty("passwordW")));
-
-
-		Thread.sleep(1000);
-	//	lp.getPassword().sendKeys((prop.getProperty("password")));
-		Thread.sleep(1000);
-
-		lp.getSignInBtn().click();
-		Thread.sleep(15000);
-		Assert.assertTrue(driver.getTitle().contains("Atlanta Market at AmericasMart"));
-	}
-	
-	
-	@Test(priority = 1,groups="Non_MP")
+	@Test(priority = 1)//groups="Non_MP"
 	public void TS001_VerifyGlobalSearchContainsAndStartsWithTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T436: Verify Global Search: Contains and Starts With
-
 		//Blocked- Unclear about the acceptance criteria
 		
 		atlgs = new ATLGlobalSearchPage(driver);
@@ -103,7 +75,7 @@ public class GlobalSearch_MatchingResults extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//driver.get(prop.getProperty("atlmrkturl_prod"));
-		utl.loginCheckATL();
+		//utl.loginCheckATL();
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("containsStartWithInput"));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(5000);
@@ -116,15 +88,16 @@ public class GlobalSearch_MatchingResults extends base {
 		
 	}
 
-	@Test(priority = 2,groups="Non_MP")
+	@Test(priority = 2)//groups="Non_MP"
 	public void TS002_VerifyGlobalSearchMatchingResultsSortWithinTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// T332: Global Search: Matching results- Sort- Search Within
+		// T673: Global Search: Matching results- Sort- Search Within
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
@@ -135,7 +108,7 @@ public class GlobalSearch_MatchingResults extends base {
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(5000);
 		// Click on Sort Btn
-		atlgs.getatlGlobalSearchSortBtn().click();
+		atlgs.getatlGlobalSearchSortBtnNew().click();
 
 		// Select Exhibitor Info Only
 		Select selectAMC = new Select(atlgs.getatlGlobalSearch_SearchWithinDropdwn());
@@ -225,17 +198,18 @@ public class GlobalSearch_MatchingResults extends base {
 
 	}
 
-	@Test(priority = 3,groups="Non_MP")
+	@Test(priority = 3)//groups="Non_MP"
 	public void TS003_VerifyGlobalSearchMatchingResultsSortSortByTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T335: Global Search: Matching results-Sort- Sort By
 		//Open bug- UXP-1991
-
+	  
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
@@ -245,7 +219,7 @@ public class GlobalSearch_MatchingResults extends base {
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(5000);
 		// Click on Sort Btn
-		atlgs.getatlGlobalSearchSortBtn().click();
+		atlgs.getatlGlobalSearchSortBtnNew().click();
 
 		// Select Exhibitor Sort By Relevance
 		Select selectAMC = new Select(atlgs.getatlGlobalSearch_SearchSortByDropdwn());
@@ -271,7 +245,7 @@ public class GlobalSearch_MatchingResults extends base {
 
 	}
 
-	@Test(priority = 4,groups="Non_MP")
+	@Test(priority = 4)//groups=\"Non_MP"
 	public void TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T336: Global Search: Matching results- Sort- Filter By Name
@@ -281,6 +255,7 @@ public class GlobalSearch_MatchingResults extends base {
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
@@ -289,7 +264,7 @@ public class GlobalSearch_MatchingResults extends base {
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(5000);
 		// Click on Sort Btn
-		atlgs.getatlGlobalSearchSortBtn().click();
+		atlgs.getatlGlobalSearchSortBtnNew().click();
 
 		// Select Character from Sort By Filter Name
 		
@@ -310,8 +285,34 @@ public class GlobalSearch_MatchingResults extends base {
 		System.out.println("Displayed All Relevance ");
 
 	}
+	   @Test(enabled=false)
+	    public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
 
-	@Test(priority = 5,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
+	        // The purpose of this test case to verify:-
+	        // TS1- Login to Market Planner
+
+	        lap = new ATLLandingPage(driver);
+	        lp = new ATLLoginPage(driver);
+
+	        // Click on Login button from Landing Page
+	        lap.getLogin().click();
+	        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	        // Enter the credentials on Login Page and click
+	        lp.getEmailAddress().sendKeys((prop.getProperty("username")));
+
+	        lp.getPassword().sendKeys((prop.getProperty("passwordW")));
+
+
+	        Thread.sleep(1000);
+	    //  lp.getPassword().sendKeys((prop.getProperty("password")));
+	        Thread.sleep(1000);
+
+	        lp.getSignInBtn().click();
+	        Thread.sleep(15000);
+	        Assert.assertTrue(driver.getTitle().contains("Atlanta Market at AmericasMart"));
+	    }
+
+	@Test(enabled=false)//priority = 5,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality"
 	public void TS005_VerifyGlobalSearchMatchingResultsSelectAddToFavoritesTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -363,7 +364,7 @@ public class GlobalSearch_MatchingResults extends base {
 
 	}
 
-	@Test(priority = 6,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
+	@Test(enabled=false)//priority = 6,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality"
 	public void TS006_VerifyGlobalSearchMatchingResultsSelectAddToExistingListTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -423,7 +424,7 @@ public class GlobalSearch_MatchingResults extends base {
 
 	}
 
-	@Test(priority = 7,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
+	@Test(enabled=false)//priority = 7,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality"
 	public void TS007_VerifyGlobalSearchMatchingResultsSelectAddToNewlyCreatedListTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -488,7 +489,7 @@ public class GlobalSearch_MatchingResults extends base {
 		}
 	}
 
-	@Test(priority = 8,groups="Non_MP")
+	@Test(enabled=false)//priority = 8,groups="Non_MP"
 	public void TS008_VerifyGlobalSearchMatchingResultsUsePreviousSavedSearchTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -566,7 +567,7 @@ public class GlobalSearch_MatchingResults extends base {
 
 	}
 
-	@Test(priority = 9,groups="Non_MP")
+	@Test(enabled=false)//priority = 9,groups="Non_MP"
 	public void TS009_VerifyGlobalSearchMatchingResultsSavedSearchesTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-

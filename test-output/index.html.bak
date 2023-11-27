@@ -36,8 +36,13 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
+<<<<<<< HEAD
+            <a href="#" class="navigator-link" panel-name="suite-LVM_RegressionTestSuite">
+              <span class="suite-name border-skipped">LVM_RegressionTestSuite</span>
+=======
             <a href="#" class="navigator-link" panel-name="suite-LVM_UAT_Suite">
               <span class="suite-name border-failed">LVM_UAT_Suite</span>
+>>>>>>> a98ebf2b18ebf1a2774915851d0632d1f3fe7923
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,6 +95,93 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
+<<<<<<< HEAD
+                    <span class="method-stats">15 methods,  15 skipped,  </span>
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-LVM_RegressionTestSuite" class="hide-methods skipped suite-LVM_RegressionTestSuite"> (hide)</a> <!-- hide-methods skipped suite-LVM_RegressionTestSuite -->
+                      <a href="#" panel-name="suite-LVM_RegressionTestSuite" class="show-methods skipped suite-LVM_RegressionTestSuite"> (show)</a> <!-- show-methods skipped suite-LVM_RegressionTestSuite -->
+                    </span>
+                    <div class="method-list-content skipped suite-LVM_RegressionTestSuite">
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="lasvegasmarket_UAT.EvenntsAndWebinar" hash-for-method="TS001_VerifyEventsAndWebinarsOverviewTest">TS001_VerifyEventsAndWebinarsOverviewTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="lasvegasmarket_UAT.EvenntsAndWebinar" hash-for-method="TS002_VerifyIMCEventsSearchbarTest">TS002_VerifyIMCEventsSearchbarTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="lasvegasmarket_UAT.EvenntsAndWebinar" hash-for-method="TS003_VerifyIMCEventsCalendarViewTest">TS003_VerifyIMCEventsCalendarViewTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="lasvegasmarket_UAT.EvenntsAndWebinar" hash-for-method="TS004_VerifyIMCEventsEventsListTest">TS004_VerifyIMCEventsEventsListTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="lasvegasmarket_UAT.EvenntsAndWebinar" hash-for-method="TS005_VerifyIMCEventsEventDetailstTest">TS005_VerifyIMCEventsEventDetailstTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="lasvegasmarket_UAT.EvenntsAndWebinar" hash-for-method="TS006_VerifyIMCEventsAddToFavoriteTest">TS006_VerifyIMCEventsAddToFavoriteTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="lasvegasmarket_UAT.EvenntsAndWebinar" hash-for-method="TS007_VerifyIMCEventsAddToListTest">TS007_VerifyIMCEventsAddToListTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="lasvegasmarket_UAT.EvenntsAndWebinar" hash-for-method="TS008_VerifyIMCEventsAddNoteTest">TS008_VerifyIMCEventsAddNoteTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="lasvegasmarket_UAT.EvenntsAndWebinar" hash-for-method="TS009_VerifyExhibitorEventsSearchbarTest">TS009_VerifyExhibitorEventsSearchbarTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="lasvegasmarket_UAT.EvenntsAndWebinar" hash-for-method="TS010_VerifyExhibitorEventsCalendarViewTest">TS010_VerifyExhibitorEventsCalendarViewTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="lasvegasmarket_UAT.EvenntsAndWebinar" hash-for-method="TS011_VerifyExhibitorEventsListTest">TS011_VerifyExhibitorEventsListTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="lasvegasmarket_UAT.EvenntsAndWebinar" hash-for-method="TS012_VerifyExhibitorEventsDetailstTest">TS012_VerifyExhibitorEventsDetailstTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="lasvegasmarket_UAT.EvenntsAndWebinar" hash-for-method="TS013_VerifyExhibitorEventsAddToFavoriteTest">TS013_VerifyExhibitorEventsAddToFavoriteTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="lasvegasmarket_UAT.EvenntsAndWebinar" hash-for-method="TS014_VerifyExhibitorEventsAddToListTest">TS014_VerifyExhibitorEventsAddToListTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="lasvegasmarket_UAT.EvenntsAndWebinar" hash-for-method="TS015_VerifyExhibitorEventsAddNoteTest">TS015_VerifyExhibitorEventsAddNoteTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-LVM_RegressionTestSuite -->
+=======
                     <span class="method-stats">15 methods, 8 failed,   7 passed</span>
                   </li>
                   <li>
@@ -150,11 +242,7 @@
                     <div class="method-list-content passed suite-LVM_UAT_Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-<<<<<<< HEAD
                         <a href="#" class="method navigator-link" panel-name="suite-LVM_UAT_Suite" title="lasvegasmarket_UAT.ExhibitorDigitalShowroom" hash-for-method="TS002_VerifyClickOnTotalLinesSeeAllLinesForExhibitorTest">TS002_VerifyClickOnTotalLinesSeeAllLinesForExhibitorTest</a> <!-- method navigator-link -->
-=======
-                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="lasvegasmarket_PROD.GlobalSearch_SearchFor" hash-for-method="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest">TS010_VerifyShowSpecialsOverviewInGlobalSearchTest</a> <!-- method navigator-link -->
->>>>>>> 3e0bdd9d02dcb360b8898346a5a38c1e42d0903c
                       </span>
                       <br/>
                       <span>
@@ -188,6 +276,7 @@
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-LVM_UAT_Suite -->
+>>>>>>> a98ebf2b18ebf1a2774915851d0632d1f3fe7923
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -198,22 +287,28 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
+<<<<<<< HEAD
+        <div panel-name="suite-LVM_RegressionTestSuite" class="panel LVM_RegressionTestSuite">
+          <div class="suite-LVM_RegressionTestSuite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">lasvegasmarket_UAT.EvenntsAndWebinar</span>
+=======
         <div panel-name="suite-LVM_UAT_Suite" class="panel LVM_UAT_Suite">
           <div class="suite-LVM_UAT_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-<<<<<<< HEAD
               <img src="failed.png"/>
               <span class="class-name">lasvegasmarket_UAT.ExhibitorDigitalShowroom</span>
-=======
-              <img src="passed.png"/>
-              <span class="class-name">lasvegasmarket_PROD.GlobalSearch_SearchFor</span>
-
->>>>>>> 3e0bdd9d02dcb360b8898346a5a38c1e42d0903c
+>>>>>>> a98ebf2b18ebf1a2774915851d0632d1f3fe7923
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
 <<<<<<< HEAD
+                  <a name="TS001_VerifyEventsAndWebinarsOverviewTest">
+                  </a> <!-- TS001_VerifyEventsAndWebinarsOverviewTest -->
+                  <span class="method-name">TS001_VerifyEventsAndWebinarsOverviewTest</span>
+=======
                   <a name="TS001_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest">
                   </a> <!-- TS001_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest -->
                   <span class="method-name">TS001_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest</span>
@@ -303,10 +398,16 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
 	... 26 more
 "</b><br>org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)<br>org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)<br>pageObjects.LasVegasMarket.LVMExhDigiShowroomPage.getLocation(LVMExhDigiShowroomPage.java:351)<br>lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS001_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest(ExhibitorDigitalShowroom.java:84)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br>java.lang.reflect.Method.invoke(Unknown Source)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)<br>
 </div> <!-- stack-trace -->
+>>>>>>> a98ebf2b18ebf1a2774915851d0632d1f3fe7923
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+<<<<<<< HEAD
+                  <a name="TS002_VerifyIMCEventsSearchbarTest">
+                  </a> <!-- TS002_VerifyIMCEventsSearchbarTest -->
+                  <span class="method-name">TS002_VerifyIMCEventsSearchbarTest</span>
+=======
                   <a name="TS004_VerifyClickOnLineFiltersForExhibitorTest">
                   </a> <!-- TS004_VerifyClickOnLineFiltersForExhibitorTest -->
                   <span class="method-name">TS004_VerifyClickOnLineFiltersForExhibitorTest</span>
@@ -344,10 +445,16 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
 "</b><br>org.testng.Assert.fail(Assert.java:94)<br>org.testng.Assert.failNotEquals(Assert.java:494)<br>org.testng.Assert.assertTrue(Assert.java:42)<br>org.testng.Assert.assertTrue(Assert.java:52)<br>lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS004_VerifyClickOnLineFiltersForExhibitorTest(ExhibitorDigitalShowroom.java:250)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br>java.lang.reflect.Method.invoke(Unknown Source)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)<br>
 </div> <!-- stack-trace -->
+>>>>>>> a98ebf2b18ebf1a2774915851d0632d1f3fe7923
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+<<<<<<< HEAD
+                  <a name="TS003_VerifyIMCEventsCalendarViewTest">
+                  </a> <!-- TS003_VerifyIMCEventsCalendarViewTest -->
+                  <span class="method-name">TS003_VerifyIMCEventsCalendarViewTest</span>
+=======
                   <a name="TS005_VerifyClickOnLineSearchForExhibitorTest">
                   </a> <!-- TS005_VerifyClickOnLineSearchForExhibitorTest -->
                   <span class="method-name">TS005_VerifyClickOnLineSearchForExhibitorTest</span>
@@ -437,10 +544,16 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
 	... 26 more
 "</b><br>org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)<br>org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)<br>pageObjects.LasVegasMarket.LVMExhDigiShowroomPage.getVerifyLineSearch(LVMExhDigiShowroomPage.java:456)<br>lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS005_VerifyClickOnLineSearchForExhibitorTest(ExhibitorDigitalShowroom.java:282)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br>java.lang.reflect.Method.invoke(Unknown Source)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)<br>
 </div> <!-- stack-trace -->
+>>>>>>> a98ebf2b18ebf1a2774915851d0632d1f3fe7923
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+<<<<<<< HEAD
+                  <a name="TS004_VerifyIMCEventsEventsListTest">
+                  </a> <!-- TS004_VerifyIMCEventsEventsListTest -->
+                  <span class="method-name">TS004_VerifyIMCEventsEventsListTest</span>
+=======
                   <a name="TS008_VerifySeeInOtherMarketsForExhibitorTest">
                   </a> <!-- TS008_VerifySeeInOtherMarketsForExhibitorTest -->
                   <span class="method-name">TS008_VerifySeeInOtherMarketsForExhibitorTest</span>
@@ -530,10 +643,16 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
 	... 26 more
 "</b><br>org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)<br>org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)<br>pageObjects.LasVegasMarket.LVMExhDigiShowroomPage.getSeeInOtherMarket(LVMExhDigiShowroomPage.java:462)<br>lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS008_VerifySeeInOtherMarketsForExhibitorTest(ExhibitorDigitalShowroom.java:380)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br>java.lang.reflect.Method.invoke(Unknown Source)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)<br>
 </div> <!-- stack-trace -->
+>>>>>>> a98ebf2b18ebf1a2774915851d0632d1f3fe7923
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+<<<<<<< HEAD
+                  <a name="TS005_VerifyIMCEventsEventDetailstTest">
+                  </a> <!-- TS005_VerifyIMCEventsEventDetailstTest -->
+                  <span class="method-name">TS005_VerifyIMCEventsEventDetailstTest</span>
+=======
                   <a name="TS010_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest">
                   </a> <!-- TS010_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest -->
                   <span class="method-name">TS010_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest</span>
@@ -623,10 +742,16 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
 	... 26 more
 "</b><br>org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)<br>org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)<br>pageObjects.LasVegasMarket.LVMExhDigiShowroomPage.getHeroComponentVisit(LVMExhDigiShowroomPage.java:213)<br>lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS010_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest(ExhibitorDigitalShowroom.java:467)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br>java.lang.reflect.Method.invoke(Unknown Source)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)<br>
 </div> <!-- stack-trace -->
+>>>>>>> a98ebf2b18ebf1a2774915851d0632d1f3fe7923
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+<<<<<<< HEAD
+                  <a name="TS006_VerifyIMCEventsAddToFavoriteTest">
+                  </a> <!-- TS006_VerifyIMCEventsAddToFavoriteTest -->
+                  <span class="method-name">TS006_VerifyIMCEventsAddToFavoriteTest</span>
+=======
                   <a name="TS011_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest">
                   </a> <!-- TS011_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest -->
                   <span class="method-name">TS011_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest</span>
@@ -716,10 +841,16 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
 	... 26 more
 "</b><br>org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)<br>org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)<br>pageObjects.LasVegasMarket.LVMExhDigiShowroomPage.getView3DshowroomBtn(LVMExhDigiShowroomPage.java:203)<br>lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS011_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest(ExhibitorDigitalShowroom.java:513)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br>java.lang.reflect.Method.invoke(Unknown Source)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)<br>
 </div> <!-- stack-trace -->
+>>>>>>> a98ebf2b18ebf1a2774915851d0632d1f3fe7923
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+<<<<<<< HEAD
+                  <a name="TS007_VerifyIMCEventsAddToListTest">
+                  </a> <!-- TS007_VerifyIMCEventsAddToListTest -->
+                  <span class="method-name">TS007_VerifyIMCEventsAddToListTest</span>
+=======
                   <a name="TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest">
                   </a> <!-- TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest -->
                   <span class="method-name">TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest</span>
@@ -809,10 +940,71 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
 	... 26 more
 "</b><br>org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)<br>org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)<br>pageObjects.LasVegasMarket.LVMExhDigiShowroomPage.getshowSpecialSection(LVMExhDigiShowroomPage.java:173)<br>lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest(ExhibitorDigitalShowroom.java:646)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br>java.lang.reflect.Method.invoke(Unknown Source)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)<br>
 </div> <!-- stack-trace -->
+>>>>>>> a98ebf2b18ebf1a2774915851d0632d1f3fe7923
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+<<<<<<< HEAD
+                  <a name="TS008_VerifyIMCEventsAddNoteTest">
+                  </a> <!-- TS008_VerifyIMCEventsAddNoteTest -->
+                  <span class="method-name">TS008_VerifyIMCEventsAddNoteTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TS009_VerifyExhibitorEventsSearchbarTest">
+                  </a> <!-- TS009_VerifyExhibitorEventsSearchbarTest -->
+                  <span class="method-name">TS009_VerifyExhibitorEventsSearchbarTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TS010_VerifyExhibitorEventsCalendarViewTest">
+                  </a> <!-- TS010_VerifyExhibitorEventsCalendarViewTest -->
+                  <span class="method-name">TS010_VerifyExhibitorEventsCalendarViewTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TS011_VerifyExhibitorEventsListTest">
+                  </a> <!-- TS011_VerifyExhibitorEventsListTest -->
+                  <span class="method-name">TS011_VerifyExhibitorEventsListTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TS012_VerifyExhibitorEventsDetailstTest">
+                  </a> <!-- TS012_VerifyExhibitorEventsDetailstTest -->
+                  <span class="method-name">TS012_VerifyExhibitorEventsDetailstTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TS013_VerifyExhibitorEventsAddToFavoriteTest">
+                  </a> <!-- TS013_VerifyExhibitorEventsAddToFavoriteTest -->
+                  <span class="method-name">TS013_VerifyExhibitorEventsAddToFavoriteTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TS014_VerifyExhibitorEventsAddToListTest">
+                  </a> <!-- TS014_VerifyExhibitorEventsAddToListTest -->
+                  <span class="method-name">TS014_VerifyExhibitorEventsAddToListTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TS015_VerifyExhibitorEventsAddNoteTest">
+                  </a> <!-- TS015_VerifyExhibitorEventsAddNoteTest -->
+                  <span class="method-name">TS015_VerifyExhibitorEventsAddNoteTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-LVM_RegressionTestSuite-class-skipped -->
+        </div> <!-- panel LVM_RegressionTestSuite -->
+        <div panel-name="test-xml-LVM_RegressionTestSuite" class="panel">
+=======
                   <a name="TS015_VerifyExhibitorDigitalShowroomHeroComponentContactExhibitorTest">
                   </a> <!-- TS015_VerifyExhibitorDigitalShowroomHeroComponentContactExhibitorTest -->
                   <span class="method-name">TS015_VerifyExhibitorDigitalShowroomHeroComponentContactExhibitorTest</span>
@@ -850,11 +1042,6 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
 "</b><br>org.testng.Assert.fail(Assert.java:94)<br>org.testng.Assert.failNotEquals(Assert.java:494)<br>org.testng.Assert.assertTrue(Assert.java:42)<br>org.testng.Assert.assertTrue(Assert.java:52)<br>lasvegasmarket_UAT.ExhibitorDigitalShowroom.TS015_VerifyExhibitorDigitalShowroomHeroComponentContactExhibitorTest(ExhibitorDigitalShowroom.java:696)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br>java.lang.reflect.Method.invoke(Unknown Source)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)<br>
 </div> <!-- stack-trace -->
-=======
-                  <a name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest">
-                  </a> <!-- TS010_VerifyShowSpecialsOverviewInGlobalSearchTest -->
-                  <span class="method-name">TS010_VerifyShowSpecialsOverviewInGlobalSearchTest</span>
->>>>>>> 3e0bdd9d02dcb360b8898346a5a38c1e42d0903c
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -918,6 +1105,7 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
           </div> <!-- suite-LVM_UAT_Suite-class-passed -->
         </div> <!-- panel LVM_UAT_Suite -->
         <div panel-name="test-xml-LVM_UAT_Suite" class="panel">
+>>>>>>> a98ebf2b18ebf1a2774915851d0632d1f3fe7923
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">C:\Users\anuppa\UXPRegression_local\UXPRegression\LVMUATtestng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
@@ -929,14 +1117,10 @@ Session ID: 507850226bebb7907d34ad6dbb3045f5
   &lt;test name=&quot;LVM_UAT_RegressionTest&quot;&gt;
     &lt;classes&gt;
 <<<<<<< HEAD
-      &lt;class name=&quot;lasvegasmarket_UAT.ExhibitorDigitalShowroom&quot;/&gt;
+      &lt;class name=&quot;lasvegasmarket_UAT.EvenntsAndWebinar&quot;/&gt;
 =======
-      &lt;class name=&quot;lasvegasmarket_PROD.GlobalSearch_SearchFor&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;TS010_VerifyShowSpecialsOverviewInGlobalSearchTest()&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- lasvegasmarket_PROD.GlobalSearch_SearchFor --&gt;
->>>>>>> 3e0bdd9d02dcb360b8898346a5a38c1e42d0903c
+      &lt;class name=&quot;lasvegasmarket_UAT.ExhibitorDigitalShowroom&quot;/&gt;
+>>>>>>> a98ebf2b18ebf1a2774915851d0632d1f3fe7923
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- LVM_UAT_RegressionTest --&gt;
 &lt;/suite&gt; &lt;!-- LVM_UAT_Suite --&gt;
@@ -979,6 +1163,73 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(15);
 data.setCell(0, 0, 0)
 <<<<<<< HEAD
+data.setCell(0, 1, 'TS001_VerifyEventsAndWebinarsOverviewTest')
+data.setCell(0, 2, 'lasvegasmarket_UAT.EvenntsAndWebinar')
+data.setCell(0, 3, 8);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'TS011_VerifyExhibitorEventsListTest')
+data.setCell(1, 2, 'lasvegasmarket_UAT.EvenntsAndWebinar')
+data.setCell(1, 3, 2);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'TS002_VerifyIMCEventsSearchbarTest')
+data.setCell(2, 2, 'lasvegasmarket_UAT.EvenntsAndWebinar')
+data.setCell(2, 3, 2);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'TS003_VerifyIMCEventsCalendarViewTest')
+data.setCell(3, 2, 'lasvegasmarket_UAT.EvenntsAndWebinar')
+data.setCell(3, 3, 2);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'TS015_VerifyExhibitorEventsAddNoteTest')
+data.setCell(4, 2, 'lasvegasmarket_UAT.EvenntsAndWebinar')
+data.setCell(4, 3, 1);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'TS012_VerifyExhibitorEventsDetailstTest')
+data.setCell(5, 2, 'lasvegasmarket_UAT.EvenntsAndWebinar')
+data.setCell(5, 3, 1);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'TS005_VerifyIMCEventsEventDetailstTest')
+data.setCell(6, 2, 'lasvegasmarket_UAT.EvenntsAndWebinar')
+data.setCell(6, 3, 1);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'TS007_VerifyIMCEventsAddToListTest')
+data.setCell(7, 2, 'lasvegasmarket_UAT.EvenntsAndWebinar')
+data.setCell(7, 3, 1);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'TS009_VerifyExhibitorEventsSearchbarTest')
+data.setCell(8, 2, 'lasvegasmarket_UAT.EvenntsAndWebinar')
+data.setCell(8, 3, 1);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'TS013_VerifyExhibitorEventsAddToFavoriteTest')
+data.setCell(9, 2, 'lasvegasmarket_UAT.EvenntsAndWebinar')
+data.setCell(9, 3, 1);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'TS004_VerifyIMCEventsEventsListTest')
+data.setCell(10, 2, 'lasvegasmarket_UAT.EvenntsAndWebinar')
+data.setCell(10, 3, 1);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'TS006_VerifyIMCEventsAddToFavoriteTest')
+data.setCell(11, 2, 'lasvegasmarket_UAT.EvenntsAndWebinar')
+data.setCell(11, 3, 1);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'TS014_VerifyExhibitorEventsAddToListTest')
+data.setCell(12, 2, 'lasvegasmarket_UAT.EvenntsAndWebinar')
+data.setCell(12, 3, 1);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'TS008_VerifyIMCEventsAddNoteTest')
+data.setCell(13, 2, 'lasvegasmarket_UAT.EvenntsAndWebinar')
+data.setCell(13, 3, 1);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'TS010_VerifyExhibitorEventsCalendarViewTest')
+data.setCell(14, 2, 'lasvegasmarket_UAT.EvenntsAndWebinar')
+data.setCell(14, 3, 0);
+window.suiteTableData['LVM_RegressionTestSuite']= { tableData: data, tableDiv: 'times-div-LVM_RegressionTestSuite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 24 ms</span>
+              <div id="times-div-LVM_RegressionTestSuite">
+              </div> <!-- times-div-LVM_RegressionTestSuite -->
+=======
 data.setCell(0, 1, 'TS008_VerifySeeInOtherMarketsForExhibitorTest')
 data.setCell(0, 2, 'lasvegasmarket_UAT.ExhibitorDigitalShowroom')
 data.setCell(0, 3, 67177);
@@ -1045,18 +1296,7 @@ return data;
               <span class="suite-total-time">Total running time: 12 minutes</span>
               <div id="times-div-LVM_UAT_Suite">
               </div> <!-- times-div-LVM_UAT_Suite -->
-=======
-data.setCell(0, 1, 'TS010_VerifyShowSpecialsOverviewInGlobalSearchTest')
-data.setCell(0, 2, 'lasvegasmarket_PROD.GlobalSearch_SearchFor')
-data.setCell(0, 3, 34376);
-window.suiteTableData['LVM_RegressionTestSuite']= { tableData: data, tableDiv: 'times-div-LVM_RegressionTestSuite'}
-return data;
-}
-              </script>
-              <span class="suite-total-time">Total running time: 34 seconds</span>
-              <div id="times-div-LVM_RegressionTestSuite">
-              </div> <!-- times-div-LVM_RegressionTestSuite -->
->>>>>>> 3e0bdd9d02dcb360b8898346a5a38c1e42d0903c
+>>>>>>> a98ebf2b18ebf1a2774915851d0632d1f3fe7923
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -1070,6 +1310,10 @@ return data;
         <div panel-name="ignored-methods-LVM_UAT_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
 <<<<<<< HEAD
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+=======
             <span class="header-content">6 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
@@ -1087,36 +1331,10 @@ return data;
                 <span class="ignored-method-name">TS017_VerifyAddToFavoritesTest</span>
                 <br/>
                 <span class="ignored-method-name">TS016_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest</span>
-=======
-            <span class="header-content">10 ignored methods</span>
-          </div> <!-- main-panel-header rounded-window-top -->
-          <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">lasvegasmarket_PROD.GlobalSearch_SearchFor</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest</span>
-                <br/>
-                <span class="ignored-method-name">TS011_VerifyEventsOverviewInGlobalSearchTest</span>
-                <br/>
-                <span class="ignored-method-name">TS005_VerifyArticlesOverviewInGlobalSearchTest</span>
-                <br/>
-                <span class="ignored-method-name">TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest</span>
-                <br/>
-                <span class="ignored-method-name">TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest</span>
-                <br/>
-                <span class="ignored-method-name">TS001_VerifyInformationTabInGlobalSearchTest</span>
-                <br/>
-                <span class="ignored-method-name">TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest</span>
-                <br/>
-                <span class="ignored-method-name">TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest</span>
-                <br/>
-                <span class="ignored-method-name">TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest</span>
-                <br/>
-                <span class="ignored-method-name">TS004_VerifyCatalogsOverviewInGlobalSearchTest</span>
->>>>>>> 3e0bdd9d02dcb360b8898346a5a38c1e42d0903c
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
+>>>>>>> a98ebf2b18ebf1a2774915851d0632d1f3fe7923
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-LVM_UAT_Suite" class="panel">
@@ -1126,16 +1344,78 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
 <<<<<<< HEAD
-              <div class="chronological-class-name">lasvegasmarket_UAT.ExhibitorDigitalShowroom</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">lasvegasmarket_UAT.EvenntsAndWebinar</div> <!-- chronological-class-name -->
 =======
-              <div class="chronological-class-name">lasvegasmarket_PROD.GlobalSearch_SearchFor</div> <!-- chronological-class-name -->
->>>>>>> 3e0bdd9d02dcb360b8898346a5a38c1e42d0903c
+              <div class="chronological-class-name">lasvegasmarket_UAT.ExhibitorDigitalShowroom</div> <!-- chronological-class-name -->
+>>>>>>> a98ebf2b18ebf1a2774915851d0632d1f3fe7923
               <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">initialize</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
 <<<<<<< HEAD
+                <span class="method-name">TS011_VerifyExhibitorEventsListTest</span>
+                <span class="method-start">68037 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS001_VerifyEventsAndWebinarsOverviewTest</span>
+                <span class="method-start">68040 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS002_VerifyIMCEventsSearchbarTest</span>
+                <span class="method-start">68055 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS003_VerifyIMCEventsCalendarViewTest</span>
+                <span class="method-start">68058 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS004_VerifyIMCEventsEventsListTest</span>
+                <span class="method-start">68061 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS005_VerifyIMCEventsEventDetailstTest</span>
+                <span class="method-start">68068 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS006_VerifyIMCEventsAddToFavoriteTest</span>
+                <span class="method-start">68070 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS008_VerifyIMCEventsAddNoteTest</span>
+                <span class="method-start">68072 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS009_VerifyExhibitorEventsSearchbarTest</span>
+                <span class="method-start">68073 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS010_VerifyExhibitorEventsCalendarViewTest</span>
+                <span class="method-start">68077 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS012_VerifyExhibitorEventsDetailstTest</span>
+                <span class="method-start">68078 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS013_VerifyExhibitorEventsAddToFavoriteTest</span>
+                <span class="method-start">68080 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS014_VerifyExhibitorEventsAddToListTest</span>
+                <span class="method-start">68081 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS015_VerifyExhibitorEventsAddNoteTest</span>
+                <span class="method-start">68083 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TS007_VerifyIMCEventsAddToListTest</span>
+                <span class="method-start">68084 ms</span>
+              </div> <!-- test-method -->
+=======
                 <img src="failed.png">
                 </img>
                 <span class="method-name">TS001_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest</span>
@@ -1214,15 +1494,8 @@ return data;
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
                 <span class="method-start">790354 ms</span>
-=======
-                <span class="method-name">TS010_VerifyShowSpecialsOverviewInGlobalSearchTest</span>
-                <span class="method-start">30852 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">65241 ms</span>
->>>>>>> 3e0bdd9d02dcb360b8898346a5a38c1e42d0903c
               </div> <!-- configuration-class after -->
+>>>>>>> a98ebf2b18ebf1a2774915851d0632d1f3fe7923
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

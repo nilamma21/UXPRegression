@@ -116,11 +116,11 @@ public class ATLGlobalSearchPage {
 
 	By FirstShowSpecialName = By.xpath("(//div[@class='imc-showSpecial--tableContainer']/p[1])[1]");  //Locator for 1st name of Catalog
 	By FirstShowSpecialViewBrandDetailsBtn = By.xpath("(//a[@class='imc-showSpecial--link'])[1]");  //Locator for 1st name of Catalog
-	By infoTitleOnSeeDetailsPage = By.xpath("//div[@class='imc-gallery imc-gallery--65-35 breadcrumbs__round']//ul//li[3]/a[1]");  //Locator for 1st name of Catalog
-	By infoTitle = By.xpath("//div[@class='imc-informationcard__body']/p[2]");  //Locator for 1st name of Catalog
-	
-	
+	By infoTitleOnSeeDetailsPage = By.xpath("//div[@class='imc-gallery imc-gallery--65-35 breadcrumbs__round']//ul//li[4]/a[1]");  //Locator for 1st name of Catalog
+	By infoTitle = By.xpath("(//h2[@class='imc-informationcard__title'])[1]");  //Locator for 1st name of Catalog
+	By atlGlobalSearchSortBtnNew = By.xpath("//div[@id='searchBarButton-2']/button"); //Locator for Global Search Sort Btn
 
+	
 	
 	public ATLGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -598,7 +598,12 @@ public class ATLGlobalSearchPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(viewbranddetailslink));
 		return driver.findElement(viewbranddetailslink);
 	}
-	
+    public WebElement getatlGlobalSearchSortBtnNew() {
+      wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.visibilityOfElementLocated(atlGlobalSearchSortBtnNew));
+      return driver.findElement(atlGlobalSearchSortBtnNew);
+  }
+
 }
 
 
