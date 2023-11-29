@@ -7,13 +7,13 @@
 		<listner class-name="atlantamarket_PROD.TestListeners" />
 	</listners>
 	<test thread-count="1" name="RegressionSequentialTest" >
-		<groups>
+	<!--	<groups>
 			<run>
 				<include name="MP_Group" />
 				<include name="Non_MP" />
 				
 			</run>
-		</groups>
+		</groups> -->
 		<classes>
 		 	<class name="atlantamarket_PROD.GlobalSearch_ShowSpecials" />
 		</classes>
