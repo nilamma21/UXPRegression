@@ -97,7 +97,7 @@ public class GlobalSearch_ProductActions extends base {
 	public void TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// T379: See Details functionality on Search Results grid
+		// T711: See Details functionality on Search Results grid
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
@@ -137,7 +137,7 @@ public class GlobalSearch_ProductActions extends base {
 	}
 
 	//@Test(priority = 2,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
-	@Test(priority = 2)
+	//@Test (priority = 2)
 	public void TS002_VerifyProductAddToNewListOnProductDetailsPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T434: Product Actions: + icon to add to newly created list
@@ -230,7 +230,7 @@ public class GlobalSearch_ProductActions extends base {
 		Assert.assertTrue(atlmppge.getSavedProductNameInList().getText().contains(prodName));
 	}
 
-	@Test(enabled=false, priority = 3,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
+	//@Test(enabled=false, priority = 3,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS003_VerifyProductAddToExistingListOnProductDetailsPageTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -330,7 +330,7 @@ public class GlobalSearch_ProductActions extends base {
 		}
 	}
 
-	@Test(enabled=false,priority = 4,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
+	//@Test(enabled=false,priority = 4,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS004_VerifyAddToFavoriteOnProductDetailsPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T385: Add to Favorite functionality on Product Details page
@@ -401,7 +401,7 @@ public class GlobalSearch_ProductActions extends base {
 		}
 	}
 
-	@Test(enabled=false,priority = 5,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
+	//@Test(enabled=false,priority = 5,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS005_VerifyAddNoteOnProductDetailsPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T386: Add Note functionality on Product Details page
@@ -580,7 +580,7 @@ public class GlobalSearch_ProductActions extends base {
 	@Test(priority = 7)
 	public void TS007_VerifyFullScreenViewerOnProductDetailsPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// T387: Full Screen Viewer functionality on Product Details page
+		// T719: Full Screen Viewer functionality on Product Details page
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
