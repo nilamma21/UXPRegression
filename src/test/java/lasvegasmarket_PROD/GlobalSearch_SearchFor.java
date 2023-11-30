@@ -179,7 +179,7 @@ public class GlobalSearch_SearchFor extends base{
 		// click on Topics filter
 		Thread.sleep(2000);
 		lvmgs.getLVMInfoSearchTopicsFilter().click();
-
+		Thread.sleep(2000);
 		infoFilterList = driver.findElements(By.xpath("//div[@class='imc-filteritem__option']"));
 		//taglist = driver.findElements(By.xpath("(//div[@class='imc-articlecard__tags imc-gallery__item'])[1]/ul/li/button"));
 
@@ -201,9 +201,8 @@ public class GlobalSearch_SearchFor extends base{
 							Assert.assertTrue(false);
 						}
 					}
-					
-				
 					infoFilterList.get(i).click();
+					Thread.sleep(1000);
 					break;
 				case "First-Time-To-Market":
 					infoFilterList.get(i).click();
@@ -221,6 +220,7 @@ public class GlobalSearch_SearchFor extends base{
 						}
 					}
 					infoFilterList.get(i).click();
+					Thread.sleep(1000);
 					break;
 				case "Exhibitors":
 					infoFilterList.get(i).click();
@@ -245,8 +245,7 @@ public class GlobalSearch_SearchFor extends base{
 					Thread.sleep(5000);
 					infoFilterList.get(i).click();
 					break;
-					
-					
+	
 				/*	for (int l = 0; l < taglist.size(); l++) {
 						utl.scrollToElement(taglist.get(l));
 						Assert.assertTrue(taglist.get(l).getText().contains("Exhibitors"));
@@ -283,8 +282,6 @@ public class GlobalSearch_SearchFor extends base{
 		lvmds = new LVMExhDigiShowroomPage(driver);
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
-
-		
 
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -346,11 +343,12 @@ public class GlobalSearch_SearchFor extends base{
 		//click on 1st Exhibitor
 		utl.scrollToElement(lvmgs.getlvm1STExhiName());
 		lvmgs.getlvm1STExhiName().click();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		//Scroll to Catalog Section
-		utl.scrollToElement(lvmds.getLVMCatalogSection());
+		utl.scrollToElement(lvmds.getSeeAllCatalogsButton());
 		//Click on All Catalog Btn Btn
 		lvmds.getSeeAllCatalogsButton().click();
+		Thread.sleep(2000);
 		Assert.assertTrue(lvmds.getLVMVerifyLinePageTitle().getText().contains("Catalogs"));
 		Thread.sleep(2000);
 		// Store the current window handle
@@ -366,7 +364,7 @@ public class GlobalSearch_SearchFor extends base{
 					break;
 				}
 			}
-		
+		Thread.sleep(2000);
 		for (String winHandle : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle);
 		}
@@ -378,7 +376,6 @@ public class GlobalSearch_SearchFor extends base{
 		driver.switchTo().window(winHandleBefore);
 		//driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(5000);
-		
 	}
 	
 	@Test(priority = 5)
@@ -437,8 +434,6 @@ public class GlobalSearch_SearchFor extends base{
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		lvmleftpane = new LVMLeftPaneFilters(driver);
 		utl = new Utility(driver);
-
-		
 
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -611,7 +606,6 @@ public class GlobalSearch_SearchFor extends base{
 					break;
 				case "Market Snapshot":
 
-
 				  utl.scrollToElement(infoFilterList.get(i));
 					infoFilterList.get(i).click();
 					Thread.sleep(5000);
@@ -674,6 +668,7 @@ public class GlobalSearch_SearchFor extends base{
 						infoFilterList = driver.findElements(By.xpath("//div[@class='imc-filteritem__option']"));
 						utl.scrollToElement(infoFilterList.get(i));
 						infoFilterList.get(i).click();
+						Thread.sleep(3000);
 						utl.scrollToElement(lvmgs.getLVMInfoSearchTopicsFilter());
 						lvmgs.getLVMInfoSearchTopicsFilter().click();
 					}
@@ -703,8 +698,6 @@ public class GlobalSearch_SearchFor extends base{
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 
-		
-
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(2000);
@@ -717,7 +710,7 @@ public class GlobalSearch_SearchFor extends base{
 		lvmgs.getLVMsearchresultArticlesLink().click();
 		Thread.sleep(2000);
 		lvmgs.getLVMInfosearchtxtbx().sendKeys(prop.getProperty("searchforArticlesInputLVM"));
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		lvmgs.getLVMInfosearchbtn().click();
 
 		Thread.sleep(5000);
@@ -730,7 +723,7 @@ public class GlobalSearch_SearchFor extends base{
 
 		String filterResultTitle = lvmgs.getLVMArticleName().getText();
 		lvmgs.getLVMArticleSeeMoreBtn().click();
-
+		Thread.sleep(2000);
 		Assert.assertTrue(filterResultTitle.contains(lvmgs.getLVMArticleHeader().getText()));
 		utl.scrollToElement(lvmgs.getLVMArticleTag());
 		boolean temp5 = false;
@@ -756,8 +749,6 @@ public class GlobalSearch_SearchFor extends base{
 		lvmds = new LVMExhDigiShowroomPage(driver);
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
-
-		
 
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -786,8 +777,7 @@ public class GlobalSearch_SearchFor extends base{
 		//String splitAlertTitleNext=alertTitle.split(" ")[6].trim(); //for Prod
 		String splitAlertTitleNext=alertTitle.split(" ")[5].trim(); //For LVM
 		Thread.sleep(5000);
-		
-	
+
 		String joinboth=splitAlertTitle +" " + splitAlertTitleNext;
 		
 		Assert.assertTrue(eventName.contains(joinboth));
@@ -804,8 +794,6 @@ public class GlobalSearch_SearchFor extends base{
 		lvmgs = new LVMGlobalSearchPage(driver);
 		lvmds = new LVMExhDigiShowroomPage(driver);
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
-
-
 
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -828,7 +816,7 @@ public class GlobalSearch_SearchFor extends base{
 		lvmgs.getLVMInfoSearchTopicsFilter().click();
 
 		//Select 'Las Vegas Market' topic
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		String topicName = lvmgs.getEventsLVMMktTopics().getText(); //for LVM Prod
 		//String topicName = lvmgs.getEventsLVMMktTopicsUat().getText(); //For UAT
 		System.out.println("Selected topic name is: "+topicName);
@@ -843,7 +831,7 @@ public class GlobalSearch_SearchFor extends base{
 		//Click on See More details btn
 		Thread.sleep(1000);
 		lvmgs.getLVMSeeMoreDetailsBtn().click();
-
+		Thread.sleep(2000);
 		//Verify that Selected topic name should be displayed as Tag on Event details page
 		//Assert.assertTrue(lvmexhact.getEventDetailsHeader().getText().contains(eventName)); //For Prod
 		Assert.assertTrue(lvmexhact.getEventDetailsHeaderUat().getText().contains(eventName)); //For UAT
@@ -851,10 +839,10 @@ public class GlobalSearch_SearchFor extends base{
 
 		//Click on Clear Filters btn
 		lvmgs.getClearFiltersBtn().click();
-
+		Thread.sleep(1000);
 		//Click on Event Types filter
 		lvmgs.getEventTypesFilter().click();
-
+		Thread.sleep(1000);
 		//Click on 'At Market' Event Type
 		String atmrkteventtype = lvmgs.getAtMarketEventType().getText(); //For Prod
 		lvmgs.getAtMarketEventType().click(); //For Prod
@@ -940,9 +928,7 @@ public class GlobalSearch_SearchFor extends base{
 		String ShowSpecialsDetails=lvmgs.getlvmShowSpecialsDetails().getText();
 		
 		Assert.assertTrue(ShowSpciaslDetails.contains(ShowSpecialsDetails));
-		
-		
-		
+
 		////driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(5000);
 	}
@@ -956,8 +942,6 @@ public class GlobalSearch_SearchFor extends base{
 		lvmds = new LVMExhDigiShowroomPage(driver);
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
-
-		
 
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -981,7 +965,7 @@ public class GlobalSearch_SearchFor extends base{
 		Assert.assertTrue(lvmexhact.getEventCardInSearch().isDisplayed());
 		System.out.println(eventname);
 		//Click on See More details btn
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		lvmgs.getLVMSeeMoreDetailsBtnNew().click();
 		
 		//Verify that selected event's details page should be opened
@@ -991,10 +975,10 @@ public class GlobalSearch_SearchFor extends base{
 		Thread.sleep(5000);
 	}
 	
-	@AfterClass
-	public void tearDown()
-	{
-		driver.quit();
-	}
+    	@AfterClass
+    	public void tearDown()
+    	{
+    		driver.quit();
+    	}
 
 }

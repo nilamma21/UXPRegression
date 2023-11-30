@@ -127,7 +127,7 @@ public class LVMExhLineProdActionsPage {
 		return driver.findElement(leftPaneFilterDGShowroomCatalog);
 	}
 	public WebElement getleftPaneFilterDGShowroom() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(leftPaneFilterDGShowroom));
 		return driver.findElement(leftPaneFilterDGShowroom);
 	}

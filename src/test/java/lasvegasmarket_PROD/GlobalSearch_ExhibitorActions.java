@@ -303,7 +303,11 @@ public class GlobalSearch_ExhibitorActions extends base {
 		// Verify that Selected Exhibitor Digital Showroom page should be opened
 		Assert.assertTrue(atlexhdgshw.getATLExhDigiShowPage().isDisplayed());
 		Assert.assertTrue(driver.getTitle().contains(""+exhname+" at Las Vegas Market"));
-		Assert.assertTrue(atlexhdgshw.getExhNameOnExhDirectImg().getText().contains(exhname));
+		try {
+		  Assert.assertTrue(atlexhdgshw.getExhNameOnExhDirectImg().getText().contains(exhname));
+		}catch (Exception e) {
+		  Assert.assertTrue(atlexhdgshw.getExhNameOnExhDirectImg1().getText().contains(exhname));
+        }
 
 		//driver.get(prop.getProperty("lvmurl_prod"));
 		//lap.getCloseMarktAdBtn().click();
@@ -494,8 +498,6 @@ public class GlobalSearch_ExhibitorActions extends base {
         }
     }
 
-	
-
     @Test(enabled=false)//old priority 9
     public void TS010_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest()
             throws InterruptedException, IOException {
@@ -574,7 +576,6 @@ public class GlobalSearch_ExhibitorActions extends base {
         driver.get(prop.getProperty("lvmurl_prod"));
     }
 
-	
 	@AfterClass
 	public void tearDown()
 	{

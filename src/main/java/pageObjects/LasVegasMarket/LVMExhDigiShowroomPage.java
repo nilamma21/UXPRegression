@@ -81,11 +81,11 @@ public class LVMExhDigiShowroomPage {
 	By OrderOnJuniperMarktBtnProduct = By.xpath("(//div[@class='imc-section imc-section--width-100-percent']/div[1]/span[contains(text(),'Products')]/../../div[3]/div[1]/a[1]/span[contains(text(),'Order on JuniperMarket')])[1]"); //Locator for Events Section
 	
 	By CatalogsSection = By.xpath("//div[@class = 'imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div/span[text()='Catalogs']"); //Locator for Catalogs section
-	By SeeAllCatalogsButton = By.xpath("//section[@class = 'imc-site-wrapper']/div[6]/div[1]/div[3]/div[1]/a[1]"); //Locator for See All Catalogs section
+	By SeeAllCatalogsButton = By.xpath("(//span[contains(text(),'See') and contains(text(),'Catalog')])[1]"); //Locator for See All Catalogs section
 	By SelectCatalog = By.xpath("//div[@class = 'imc-catalog__item_title multiSelectItem']"); //Locator for Catalog option in Catalogs section
 	By showSpecialSection = By.xpath("//div[@class = 'imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div/span[text()='Show Specials']"); //Locator for Show special Section
 	By SeeAllshowSpecialBtn = By.xpath("//div[@class = 'imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div/span[text()='Show Specials']/../../div[3]/div[1]/a[1]/span[1]"); ////Locator for See All Show special Btn
-	By ShowSpecialCount = By.xpath("//div[@class = 'imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div/span[contains(text(),'Specials Available')]"); ////Locator for See All Show special Count
+	By ShowSpecialCount = By.xpath("//span[contains(text(),'Special') and contains(text(),'Available')]"); ////Locator for See All Show special Count
 	By ShowSpecialName = By.xpath("//div[@class = 'imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div[1]/span[text()='Show Specials']/../../div[2]/span[1]"); ////Locator for See All Show special Count
 	By heroComponentOrderOnJunperBtn = By.xpath("//div[@class='imc-section imc-padding--left--xlarge imc-padding--right--xlarge imc-section--width-100-percent']/div//span[@class='imc-breakpoint-display--hide-mobile' and text()='Order on JuniperMarket']/.."); ////Locator for Order on Juniper CTA
 	By closeBtnContactExh = By.xpath("//button[@class='imc-modal--close imc-button--modal-close imc-button--round']"); ////Locator for Closse Btn
@@ -498,7 +498,7 @@ public class LVMExhDigiShowroomPage {
 		return driver.findElement(CatalogsSection);
 	}
 	public WebElement getSeeAllCatalogsButton() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(SeeAllCatalogsButton));
 		return driver.findElement(SeeAllCatalogsButton);
 	}

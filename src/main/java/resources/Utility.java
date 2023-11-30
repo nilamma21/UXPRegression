@@ -1016,4 +1016,41 @@ public class Utility extends base {
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		}
 	}
+	
+	public String LVMExhibitorWithEvent() throws InterruptedException {
+      lap = new ATLLandingPage(driver);
+      lp = new ATLLoginPage(driver);
+
+      lvmmpp = new LVMMarketPlannerPage(driver);
+      lvmevents=new LVMEventsAndWebinarPage(driver);
+
+      if(driver.getCurrentUrl().contains(prop.getProperty("lvmurl_prod"))) {
+          driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+          // Click on Attend Tab
+          Thread.sleep(2000);
+          lvmevents.getlvmExploreMarketTab().click();
+          Thread.sleep(2000);
+          //click on Events Link
+          lvmevents.getlvmEventsLink().click();
+      }
+          else {
+              driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+              lvmevents.getlvmAttendTab().click();  //For LVM Events  
+              Thread.sleep(2000);
+              //click on Events Link
+              lvmevents.getlvmEventsLink().click();
+              atlevents.getatlExploreMarketTab().click();  //For LVM Events
+              Thread.sleep(2000);
+              //click on Events Link
+              atlevents.getatlEventsLink().click();
+              Thread.sleep(3000);
+          }
+      //Click on Exh Event Tab
+      lvmevents.getlvmExhibitorsEventsTab().click();
+      scrollToElement(lvmevents.getlvmEventCardFirstExhName());
+      //Get Exhibitor name fron from first event card.
+     String exhName = lvmevents.getlvmEventCardFirstExhName().getText();
+	  return exhName;
+	}
+	
 }

@@ -3,6 +3,7 @@ package pageObjects.ExhibitorPortal;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class EXPMarketsPage {
@@ -53,84 +54,138 @@ public class EXPMarketsPage {
 		return driver.findElement(expmarketstab);
 	}
 	public WebElement getATLMarket() {
+	  wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.elementToBeClickable(atlmarket));
 		return driver.findElement(atlmarket);
 	}
 	public WebElement getATLWinterMarket() {
+	  wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.elementToBeClickable(atlwintermarket));
 		return driver.findElement(atlwintermarket);
 	}
 	public WebElement getAddShowSpecialMenu() {
+	  wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.elementToBeClickable(addshowspecialmenu));
 		return driver.findElement(addshowspecialmenu);
 	}
 	public WebElement getAddShowSpecialBtn() {
+	  wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.elementToBeClickable(addshowspecialbtn));
 		return driver.findElement(addshowspecialbtn);
 	}
 	public WebElement getShowSpecialTxtBx() {
+	  wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.elementToBeClickable(showspecialtxtbox));
 		return driver.findElement(showspecialtxtbox);
 	}
 	public WebElement getShowSpecialSubmitBtn() {
+	  wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.elementToBeClickable(showspecialsubmitbtn));
 		return driver.findElement(showspecialsubmitbtn);
 	}
 	public WebElement getShowSpecialSuccessMsg() {
+	  wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.elementToBeClickable(showspecialsuccessmsg));
 		return driver.findElement(showspecialsuccessmsg);
 	}
 	public WebElement getDismissSuccessModal() {
+	  wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.elementToBeClickable(dismisssuccessmodal));
 		return driver.findElement(dismisssuccessmodal);
 	}
 	public WebElement getDeleteShowSpecialBtn() {
+	  wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.elementToBeClickable(deleteshowspecialbtn));
 		return driver.findElement(deleteshowspecialbtn);
 	}
 	public WebElement getManageShowSpecialMenu() {
+	  wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.elementToBeClickable(manageshowspecialmenu));
 		return driver.findElement(manageshowspecialmenu);
 	}
 	public WebElement getAddEventsBtn() {
+	  wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.elementToBeClickable(addeventsbtn));
 		return driver.findElement(addeventsbtn);
 	}
 	public WebElement getEventTypeDD() {
+	  wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.elementToBeClickable(eventtypedd));
 		return driver.findElement(eventtypedd);
 	}
 	public WebElement getDemoEventType() {
+	  wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.elementToBeClickable(demoeventtype));
 		return driver.findElement(demoeventtype);
 	}
 	public WebElement getEventNameTxtBox() {
+	  wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.elementToBeClickable(eventnametxtbox));
 		return driver.findElement(eventnametxtbox);
 	}
 	public WebElement getEventDescptnTxtBox() {
+	  wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.elementToBeClickable(eventdescriptiontxtbox));
 		return driver.findElement(eventdescriptiontxtbox);
 	}
 	public WebElement getChooseLocationDD() {
+	  wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.elementToBeClickable(chooselocationdd));
 		return driver.findElement(chooselocationdd);
 	}
 	public WebElement getLocationValue() {
+	  wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.elementToBeClickable(locationvalue));
 		return driver.findElement(locationvalue);
 	}
 	public WebElement getEventStartDateTxtBx() {
+	  wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.elementToBeClickable(eventstartdatetxtbx));
 		return driver.findElement(eventstartdatetxtbx);
 	}
 	public WebElement getEventEndDateTxtBx() {
+	  wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.elementToBeClickable(eventenddatetxtbx));
 		return driver.findElement(eventenddatetxtbx);
 	}
 	public WebElement getEventStartTimeDD() {
+	  wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.elementToBeClickable(eventstarttimedd));
 		return driver.findElement(eventstarttimedd);
 	}
 	public WebElement getEventEndTimeDD() {
+	  wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.elementToBeClickable(evenetendtimedd));
 		return driver.findElement(evenetendtimedd);
 	}
 	public WebElement getEventStartTimeValue() {
+	  wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.elementToBeClickable(eventstarttimevalue));
 		return driver.findElement(eventstarttimevalue);
 	}
 	public WebElement getEventEndTimeValue() {
+	  wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.elementToBeClickable(eventendtimevalue));
 		return driver.findElement(eventendtimevalue);
 	}
 	public WebElement getOpenToEveryoneChckBx() {
+	  wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.elementToBeClickable(opentoeveryonechckbx));
 		return driver.findElement(opentoeveryonechckbx);
 	}
 	public WebElement getEventSaveBtn() {
+	  wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.elementToBeClickable(eventsavebtn));
 		return driver.findElement(eventsavebtn);
 	}
 	public WebElement getExhEventsSuccessMsg() {
+	  wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.elementToBeClickable(exheventssuccessmsg));
 		return driver.findElement(exheventssuccessmsg);
 	}
 	public WebElement getDeleteExhEventBtn() {
+	  wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.elementToBeClickable(deleteexheventbtn));
 		return driver.findElement(deleteexheventbtn);
 	}
 }
