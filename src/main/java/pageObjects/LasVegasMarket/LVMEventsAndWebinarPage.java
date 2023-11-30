@@ -66,6 +66,7 @@ public class LVMEventsAndWebinarPage {
 	By lvmEventsDetailsPageCalendarLink = By.xpath("//div[@class='imc-gallery__item imc-eventdetail--text-container']/div[1]/section/div[1]/p/span[3]/a[1]"); //Locator for cal link
 	By lvmEventsDetailsPageDetailsSection = By.xpath("//div[@class='imc-eventdetail--user-content-container']/div[1]/section[1]"); //Locator for Detail Sections
 	By lvmEventDateAndMonthFromCard = By.xpath("(//div[@class='event-card--info']/p)[1]");
+	By lvmEventCardFirstExhName = By.xpath("(//a[@class='event-card--exhibitor-name'])[1]");//Locator for exhibitor name from exhibitor event first card.
 	
 	//div[@class='event-card--info']/div[1]/div[1]/a[1]/p[1]
 	//button[@class='react-calendar__tile react-calendar__tile--now react-calendar__month-view__days__day react-calendar--no-event']/abbr
@@ -343,5 +344,9 @@ public class LVMEventsAndWebinarPage {
       wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventDateAndMonthFromCard));
       return driver.findElement(lvmEventDateAndMonthFromCard);
   }
-	
+    public WebElement getlvmEventCardFirstExhName() {
+      wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventCardFirstExhName));
+      return driver.findElement(lvmEventCardFirstExhName);
+  }
 }

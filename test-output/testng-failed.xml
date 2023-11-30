@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
-  <test name="RegressionTest(failed)">
+<suite name="Failed suite [LVM_RegressionTestSuite]" parallel="classes">
+  <test name="RegressionTest(failed)" parallel="classes">
     <classes>
-      <class name="atlantamarket_PROD.GlobalSearch_SearchFor">
+      <class name="lasvegasmarket_PROD.GlobalSearch_SearchFor">
         <methods>
-          <include name="TS005_VerifyArticlesOverviewInGlobalSearchTest"/>
-          <include name="TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest"/>
           <include name="initialize"/>
           <include name="tearDown"/>
+          <include name="TS004_VerifyCatalogsOverviewInGlobalSearchTest"/>
         </methods>
-      </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
+      </class> <!-- lasvegasmarket_PROD.GlobalSearch_SearchFor -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
-</suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->
+</suite> <!-- Failed suite [LVM_RegressionTestSuite] -->

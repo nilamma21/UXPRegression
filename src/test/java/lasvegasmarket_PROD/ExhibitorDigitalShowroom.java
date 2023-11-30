@@ -536,7 +536,9 @@ public class ExhibitorDigitalShowroom extends base {
     driver.get(prop.getProperty("lvmurl_prod"));
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     Thread.sleep(2000);
-    lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));
+    String abc = utl.LVMExhibitorWithEvent();
+    utl.scrollToElement(lvmgs.getLVMGlobalSearchTextBox());
+    lvmgs.getLVMGlobalSearchTextBox().sendKeys(abc);
     // Thread.sleep(5000);
     lvmgs.getLVMSearchButton().click();
     Thread.sleep(15000);
@@ -631,7 +633,23 @@ public class ExhibitorDigitalShowroom extends base {
     driver.get(prop.getProperty("lvmurl_prod"));
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     Thread.sleep(2000);
-    lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor14")));
+   // lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor14")));
+    
+    //click on Exhibitors And Product Tab
+    lvmgs.getlvmExhibitorsAndProductTab().click();
+    
+    //Click on Show Specials 
+    lvmgs.getlvmShowSpecialsLink().click();
+    Thread.sleep(5000);
+    
+    //Store the name of Show Special Exhibitor
+    String ename=lvmgs.getFirstShowSpecialName().getText();
+    System.out.println(ename);
+    String abc =ename.split(" ")[2].trim();
+    
+    //Send exhibitor name which has show specials
+    lvmgs.getLVMGlobalSearchTextBox().sendKeys(abc);
+
     // Thread.sleep(5000);
     lvmgs.getLVMSearchButton().click();
     Thread.sleep(15000);
@@ -650,8 +668,10 @@ public class ExhibitorDigitalShowroom extends base {
     // Verify both count
     String shwoSpecialCount = lvmds.getShowSpecialCount().getText();
     String splitShwSpecialCount = shwoSpecialCount.split(" ")[0].trim();
+    System.out.println(splitShwSpecialCount);
     String SeeAllBtnCount = lvmds.getSeeAllshowSpecialBtn().getText();
     String splitSeeAllBtnCount = SeeAllBtnCount.split(" ")[2].trim();
+    System.out.println(splitSeeAllBtnCount);
 
     Assert.assertTrue(splitShwSpecialCount.contains(splitSeeAllBtnCount));
     System.out.println("Both counts are same");
