@@ -1,45 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="1" name="Failed suite [LVM_UAT_Suite]">
-  <test name="LVM_UAT_RegressionTest(failed)">
-    <classes>
 <<<<<<< HEAD
-      <class name="lasvegasmarket_UAT.EvenntsAndWebinar">
+<suite name="Failed suite [LVM_RegressionTestSuite]" parallel="classes">
+  <test name="RegressionTest(failed)" parallel="classes">
+    <classes>
+      <class name="lasvegasmarket_PROD.GlobalSearch_SearchFor">
         <methods>
-          <include name="TS015_VerifyExhibitorEventsAddNoteTest"/>
-          <include name="TS005_VerifyIMCEventsEventDetailstTest"/>
-          <include name="TS014_VerifyExhibitorEventsAddToListTest"/>
-          <include name="TS013_VerifyExhibitorEventsAddToFavoriteTest"/>
-          <include name="TS002_VerifyIMCEventsSearchbarTest"/>
-          <include name="TS010_VerifyExhibitorEventsCalendarViewTest"/>
-          <include name="TS011_VerifyExhibitorEventsListTest"/>
-          <include name="TS004_VerifyIMCEventsEventsListTest"/>
-          <include name="TS009_VerifyExhibitorEventsSearchbarTest"/>
           <include name="initialize"/>
-          <include name="TS012_VerifyExhibitorEventsDetailstTest"/>
-          <include name="TS003_VerifyIMCEventsCalendarViewTest"/>
-          <include name="TS006_VerifyIMCEventsAddToFavoriteTest"/>
-          <include name="TS007_VerifyIMCEventsAddToListTest"/>
-          <include name="TS001_VerifyEventsAndWebinarsOverviewTest"/>
-          <include name="TS008_VerifyIMCEventsAddNoteTest"/>
-        </methods>
-      </class> <!-- lasvegasmarket_UAT.EvenntsAndWebinar -->
-=======
-      <class name="lasvegasmarket_UAT.ExhibitorDigitalShowroom">
-        <methods>
-          <include name="TS004_VerifyClickOnLineFiltersForExhibitorTest"/>
-          <include name="TS005_VerifyClickOnLineSearchForExhibitorTest"/>
-          <include name="initialize"/>
-          <include name="TS011_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest"/>
           <include name="tearDown"/>
-          <include name="TS001_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest"/>
-          <include name="TS015_VerifyExhibitorDigitalShowroomHeroComponentContactExhibitorTest"/>
-          <include name="TS008_VerifySeeInOtherMarketsForExhibitorTest"/>
-          <include name="TS010_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest"/>
-          <include name="TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest"/>
+          <include name="TS004_VerifyCatalogsOverviewInGlobalSearchTest"/>
         </methods>
-      </class> <!-- lasvegasmarket_UAT.ExhibitorDigitalShowroom -->
->>>>>>> a98ebf2b18ebf1a2774915851d0632d1f3fe7923
+      </class> <!-- lasvegasmarket_PROD.GlobalSearch_SearchFor -->
     </classes>
-  </test> <!-- LVM_UAT_RegressionTest(failed) -->
-</suite> <!-- Failed suite [LVM_UAT_Suite] -->
+  </test> <!-- RegressionTest(failed) -->
+</suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
+=======
+<suite parallel="none" name="Failed suite [Default suite]">
+  <test parallel="none" name="Default test(failed)">
+    <classes>
+      <class name="atlantamarket_PROD.FloorPlans">
+        <methods>
+          <include name="initialize"/>
+          <include name="tearDown"/>
+          <include name="TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.FloorPlans -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
+>>>>>>> 9d955914300048d75fa5cb68fdf62f975c7d3ce3

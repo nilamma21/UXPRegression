@@ -51,14 +51,20 @@ public class ATLLandingPage {
 	}	
 	public WebElement getCloseMarktAdBtn() throws InterruptedException{
 		Thread.sleep(7000);
+		wait = new WebDriverWait (driver,30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(closemrktadbtn));
 		return driver.findElement(closemrktadbtn);		
 	}
 	public WebElement getWelcomeMsg() throws InterruptedException{
 		Thread.sleep(7000);
+		wait = new WebDriverWait (driver,30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(welcomeMsg));
 		return driver.findElement(welcomeMsg);		
 	}
 	public WebElement getSignOut() throws InterruptedException{
 		Thread.sleep(7000);
+		wait = new WebDriverWait (driver,30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(signOut));
 		return driver.findElement(signOut);		
 	}
 	public WebElement getmarketplannerlinktext1() {

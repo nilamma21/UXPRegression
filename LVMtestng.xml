@@ -9,10 +9,10 @@
 		<test thread-count="1"  name="RegressionTest">
 		<classes>
 
-			<class name="lasvegasmarket_PROD.EvenntsAndWebinar" /> 
+			<class name="lasvegasmarket_PROD.GlobalSearch_SearchFor" /> 
 
 		<methods>
-				 <include name="TS004_VerifyIMCEventsEventsListTest"/>   
+				 <include name="TS004_VerifyCatalogsOverviewInGlobalSearchTest()"/>   
 		</methods>
 
 		</classes>

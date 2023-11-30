@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="2" passed="2" failed="0" skipped="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-29T12:08:44Z" name="Default suite" finished-at="2023-11-29T12:10:26Z" duration-ms="102321">
+  <suite name="LVM_RegressionTestSuite" duration-ms="86908" started-at="2023-11-30T04:27:47Z" finished-at="2023-11-30T04:29:14Z">
     <groups>
     </groups>
-    <test started-at="2023-11-29T12:08:44Z" name="Default test" finished-at="2023-11-29T12:10:26Z" duration-ms="102321">
-      <class name="atlantamarket_PROD.GlobalSearch_ProductActions">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@44d52de2]" started-at="2023-11-29T17:38:44Z" name="initialize" finished-at="2023-11-29T17:39:20Z" duration-ms="36398" status="PASS">
+    <test name="RegressionTest" duration-ms="86908" started-at="2023-11-30T04:27:47Z" finished-at="2023-11-30T04:29:14Z">
+      <class name="lasvegasmarket_PROD.GlobalSearch_SearchFor">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_SearchFor@27efef64]" name="initialize" is-config="true" duration-ms="29804" started-at="2023-11-30T09:57:47Z" finished-at="2023-11-30T09:58:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@44d52de2]" started-at="2023-11-29T17:39:20Z" name="TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest" finished-at="2023-11-29T17:39:50Z" duration-ms="30173" status="PASS">
+        <test-method status="PASS" signature="TS004_VerifyCatalogsOverviewInGlobalSearchTest()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_SearchFor@27efef64]" name="TS004_VerifyCatalogsOverviewInGlobalSearchTest" duration-ms="57081" started-at="2023-11-30T09:58:17Z" finished-at="2023-11-30T09:59:14Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest -->
-        <test-method signature="TS007_VerifyFullScreenViewerOnProductDetailsPageTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@44d52de2]" started-at="2023-11-29T17:39:50Z" name="TS007_VerifyFullScreenViewerOnProductDetailsPageTest" finished-at="2023-11-29T17:40:26Z" duration-ms="35391" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS007_VerifyFullScreenViewerOnProductDetailsPageTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ProductActions@44d52de2]" started-at="2023-11-29T17:40:26Z" name="tearDown" finished-at="2023-11-29T17:40:26Z" duration-ms="348" status="PASS">
+        </test-method> <!-- TS004_VerifyCatalogsOverviewInGlobalSearchTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_SearchFor@27efef64]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-11-30T09:59:14Z" finished-at="2023-11-30T09:59:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- atlantamarket_PROD.GlobalSearch_ProductActions -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- lasvegasmarket_PROD.GlobalSearch_SearchFor -->
+    </test> <!-- RegressionTest -->
+  </suite> <!-- LVM_RegressionTestSuite -->
 </testng-results>

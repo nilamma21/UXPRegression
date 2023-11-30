@@ -222,7 +222,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//Select 1st Exhibitor from Search results grid
 		utl.scrollToElement(lvmleftpane.getLVMexhibitor());
 		lvmleftpane.getLVMexhibitor().click();
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		//Scroll till Product Categories section
 		utl.scrollToElement(lvmds.getLVMProductCategSection());
 		prodcatgitemlist = lvmds.getLVMProductCategItemList();
@@ -505,7 +505,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		actions.click().perform();*/ //For Prod
 		
 		//Click on the 2nd exhibitor
-utl.scrollToElement(lvmleftpane.getSecondExhUat());
+		utl.scrollToElement(lvmleftpane.getSecondExhUat());
 		lvmleftpane.getSecondExhUat().click(); //For UAT
 
 		//Scroll till Product Categories section

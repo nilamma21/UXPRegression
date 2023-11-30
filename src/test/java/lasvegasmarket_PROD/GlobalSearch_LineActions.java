@@ -56,7 +56,7 @@ public class GlobalSearch_LineActions extends base {
 		//utl.verifyMPLoginFunctionality();
 		//utl.loginCheckLVM();
 		//Thread.sleep(8000);
-//		lap.getCloseMarktAdBtn().click();
+		//lap.getCloseMarktAdBtn().click();
 	}
 
 	@Test(priority = 1)
@@ -86,6 +86,7 @@ public class GlobalSearch_LineActions extends base {
 		// Click on ExhibitorName
 		lvmexhact.getExhibitorNameLink().click();
 		// Verify DG showroom page
+		Thread.sleep(2000);
 		Assert.assertTrue(lvmexhdgshw.getLVMExhDigiShowPage().isDisplayed());
 	}
 
@@ -313,7 +314,6 @@ public class GlobalSearch_LineActions extends base {
 				break;
 			}			
 		}
-
 
 		// Delete that favorites exhibitor from list
 	/*	lvmmppge.getLVMEditListItemMoreBtn().click();
