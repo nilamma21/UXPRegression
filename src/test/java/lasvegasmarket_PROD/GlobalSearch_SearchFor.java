@@ -166,7 +166,7 @@ public class GlobalSearch_SearchFor extends base{
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 		
-		//driver.get(prop.getProperty("lvmurl_prod"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(10000);
 		utl.ClearGlobalSearch();
@@ -285,6 +285,7 @@ public class GlobalSearch_SearchFor extends base{
 
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(5000);
 		utl.ClearGlobalSearch();
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
 		lvmgs.getLVMSearchButton().click();
@@ -448,6 +449,7 @@ public class GlobalSearch_SearchFor extends base{
 		// click on Topics filter
 		Thread.sleep(5000);
 		lvmgs.getLVMInfoSearchTopicsFilter().click();
+		Thread.sleep(2000);
 		infoFilterList = driver.findElements(By.xpath("//div[@class='imc-filteritem__option']"));
 
 		for (int i = 0; i < infoFilterList.size(); i++) {
@@ -486,10 +488,10 @@ public class GlobalSearch_SearchFor extends base{
 					infoFilterList.get(i).click();
 					Thread.sleep(5000);
 					driver.navigate().refresh();
-
+					Thread.sleep(3000);
 					String filterResultTitle1 = lvmgs.getLVMArticleName().getText();
 					lvmgs.getLVMArticleSeeMoreBtn().click();
-
+					Thread.sleep(2000);
 					Assert.assertTrue(filterResultTitle1.contains(lvmgs.getLVMArticleHeader().getText()));
 					utl.scrollToElement(lvmgs.getLVMArticleTag());
 					boolean temp1 = false;
@@ -515,10 +517,10 @@ public class GlobalSearch_SearchFor extends base{
 					infoFilterList.get(i).click();
 					Thread.sleep(5000);
 					driver.navigate().refresh();
-
+					Thread.sleep(500);
 					String filterResultTitle2 = lvmgs.getLVMArticleName().getText();
 					lvmgs.getLVMArticleSeeMoreBtn().click();
-
+					Thread.sleep(500);
 					Assert.assertTrue(filterResultTitle2.contains(lvmgs.getLVMArticleHeader().getText()));
 					utl.scrollToElement(lvmgs.getLVMArticleTag());
 					boolean temp2 = false;
@@ -544,11 +546,11 @@ public class GlobalSearch_SearchFor extends base{
 					infoFilterList.get(i).click();
 					Thread.sleep(5000);
 					driver.navigate().refresh();
-
+					Thread.sleep(2000);
 					String filterResultTitle3 = lvmgs.getLVMArticleName().getText();
 					utl.scrollToElement(lvmgs.getLVMArticleSeeMoreBtn());
 					lvmgs.getLVMArticleSeeMoreBtn().click();
-
+					Thread.sleep(2000);
 					Assert.assertTrue(filterResultTitle3.contains(lvmgs.getLVMArticleHeader().getText()));
 					utl.scrollToElement(lvmgs.getLVMArticleTag());
 					boolean temp3 = false;
@@ -582,6 +584,7 @@ public class GlobalSearch_SearchFor extends base{
 					Thread.sleep(8000);
 					String filterResultTitle4 = lvmgs.getLVMArticleName().getText();
 					lvmgs.getLVMArticleSeeMoreBtn().click();
+					Thread.sleep(2000);
 					Assert.assertTrue(filterResultTitle4.contains(lvmgs.getLVMArticleHeader().getText()));
 					utl.scrollToElement(lvmgs.getLVMArticleTag());
 					boolean temp4 = false;
@@ -605,16 +608,16 @@ public class GlobalSearch_SearchFor extends base{
 					}
 					break;
 				case "Market Snapshot":
-
+				  Thread.sleep(500);
 				  utl.scrollToElement(infoFilterList.get(i));
 					infoFilterList.get(i).click();
 					Thread.sleep(5000);
 					driver.navigate().refresh();
-
+					Thread.sleep(1000);
 					String filterResultTitle5 = lvmgs.getLVMArticleName().getText();
 					utl.scrollToElement(lvmgs.getLVMArticleSeeMoreBtn());
 					lvmgs.getLVMArticleSeeMoreBtn().click();
-
+					Thread.sleep(2000);
 					Assert.assertTrue(filterResultTitle5.contains(lvmgs.getLVMArticleHeader().getText()));
 					utl.scrollToElement(lvmgs.getLVMArticleTag());
 					boolean temp5 = false;
@@ -643,11 +646,11 @@ public class GlobalSearch_SearchFor extends base{
 					infoFilterList.get(i).click();
 					Thread.sleep(5000);
 					driver.navigate().refresh();
-
+					Thread.sleep(1000);
 					String filterResultTitle6 = lvmgs.getLVMArticleName().getText();
 					utl.scrollToElement(lvmgs.getLVMArticleSeeMoreBtn());
 					lvmgs.getLVMArticleSeeMoreBtn().click();
-
+					Thread.sleep(1000);
 					Assert.assertTrue(filterResultTitle6.contains(lvmgs.getLVMArticleHeader().getText()));
 					utl.scrollToElement(lvmgs.getLVMArticleTag());
 					Thread.sleep(5000);
@@ -700,7 +703,7 @@ public class GlobalSearch_SearchFor extends base{
 
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		utl.ClearGlobalSearch();
 		Thread.sleep(4000);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
@@ -765,7 +768,7 @@ public class GlobalSearch_SearchFor extends base{
 		catch(Exception e) {
 			lvmgs.getLVMEventsTabInSearchDiv().click();
 		}
-
+		Thread.sleep(2000);
 		String eventName=lvmgs.getLVMFirstEventName().getText();
 		//Click on Search text field;
 		lvmgs.getLVMInfosearchtxtbx().sendKeys(eventName);
@@ -839,16 +842,17 @@ public class GlobalSearch_SearchFor extends base{
 
 		//Click on Clear Filters btn
 		lvmgs.getClearFiltersBtn().click();
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		//Click on Event Types filter
 		lvmgs.getEventTypesFilter().click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		//Click on 'At Market' Event Type
 		String atmrkteventtype = lvmgs.getAtMarketEventType().getText(); //For Prod
 		lvmgs.getAtMarketEventType().click(); //For Prod
 		//String atmrkteventtype = lvmgs.getAtMarketEventTypeUat().getText(); //For UAT
 		//lvmgs.getAtMarketEventTypeUat().click(); //For UAT
 		Thread.sleep(2000);
+		
 		//Verify that Selected event type should be displayed as Tag on Event Card
 		Assert.assertTrue(lvmexhact.getEventCardTag().getText().contains(atmrkteventtype));
 
@@ -865,7 +869,7 @@ public class GlobalSearch_SearchFor extends base{
 		//Click on Clear Filters btn
 		lvmgs.getClearFiltersBtn().click();*/
 		//driver.get(prop.getProperty("lvmurl_prod"));
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 	}
 	
 	@Test(priority = 10)
@@ -881,11 +885,11 @@ public class GlobalSearch_SearchFor extends base{
 		
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 
 		// click on Exhibitors And Product Tab
 		lvmgs.getlvmExhibitorsAndProductTab().click();
-
+		Thread.sleep(2000);
 		// Click on Show Specials
 		lvmgs.getlvmShowSpecialsLink().click();
 		Thread.sleep(5000);
@@ -967,7 +971,7 @@ public class GlobalSearch_SearchFor extends base{
 		//Click on See More details btn
 		Thread.sleep(5000);
 		lvmgs.getLVMSeeMoreDetailsBtnNew().click();
-		
+		Thread.sleep(2000);
 		//Verify that selected event's details page should be opened
 		Assert.assertTrue(lvmexhact.geteventdetailsheaderLVM().getText().contains(eventname));
 		driver.navigate().back();

@@ -535,7 +535,7 @@ public class ExhibitorDigitalShowroom extends base {
 
     driver.get(prop.getProperty("lvmurl_prod"));
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    Thread.sleep(2000);
+    Thread.sleep(3000);
     String abc = utl.LVMExhibitorWithEvent();
     utl.scrollToElement(lvmgs.getLVMGlobalSearchTextBox());
     lvmgs.getLVMGlobalSearchTextBox().sendKeys(abc);
@@ -554,6 +554,7 @@ public class ExhibitorDigitalShowroom extends base {
     // Click on See All Events Btn
 
     lvmds.getSeeAllEventsBtn().click();
+    Thread.sleep(2000);
     /*
      * Assert.assertTrue(lvmds.getLVMVerifyLinePageTitle().getText().contains("Events"));
      * driver.navigate().back(); utl.scrollToElement(lvmds.getEventsSection());

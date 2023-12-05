@@ -86,7 +86,7 @@ public class GlobalSearch_LineActions extends base {
 		// Click on ExhibitorName
 		lvmexhact.getExhibitorNameLink().click();
 		// Verify DG showroom page
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		Assert.assertTrue(lvmexhdgshw.getLVMExhDigiShowPage().isDisplayed());
 	}
 

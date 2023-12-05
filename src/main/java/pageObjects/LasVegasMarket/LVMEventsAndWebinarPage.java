@@ -349,4 +349,5 @@ public class LVMEventsAndWebinarPage {
       wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventCardFirstExhName));
       return driver.findElement(lvmEventCardFirstExhName);
   }
+
 }
