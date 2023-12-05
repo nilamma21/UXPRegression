@@ -14,7 +14,7 @@ public class ATLFloorPlansPage {
 	By atlExhibitorsAndProductTab = By.xpath("//a[contains(text(),'Exhibitors & Products')]"); // Locator for Exhibitor And Product tab 
 	By atlFloorPlansLink = By.xpath("//a[contains(text(),'Floor Plans')]"); //Locator for floor plans Link
 	By atlBuildingFloor = By.xpath("//div[@class='imc-campus-view']/div[3]/div[11]/div[3]/a[1]"); //Locator for Building floor
-	By atlBuilding1Floor3 = By.xpath("//a [contains(text(), 'Casual/Outdoor Furnishings') and @href='/Market Map/building/Building 1/floor/3']"); //Locator for Building floor
+	By atlBuilding1Floor3 = By.xpath("(//a [@class='imc-campus-view-link' and @href='/Market Map/building/Building 1/floor/3'])[2]"); //Locator for Building floor 3
 	By buildingFloor_lvmUAT = By.xpath("//div[@class='imc-campus-view']/div[3]/div[10]/div[3]/a[1]"); //Locator for Building floor 9th LVM UAT
 	By lvmBuildingFloor = By.xpath("//div[@class='imc-campus-view']/div[3]/div[11]/div[3]/a[1]"); //Locator for Building floor
 	By atlBuildingFloorForFilter = By.xpath("//div[@class='imc-campus-view']/div[3]/div[4]/div[3]/a"); //Locator for Building floor

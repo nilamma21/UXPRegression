@@ -60,7 +60,7 @@ public class EvenntsAndWebinar extends base{
 		/*utl.verifyMPLoginFunctionality();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);*/
 		lap.getIUnderstandBtn().click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		//utl.verifyMPLoginFunctionality();
 		//utl.loginCheckLVM();
 		//lap.getCloseMarktAdBtn().click();
@@ -106,7 +106,6 @@ public class EvenntsAndWebinar extends base{
 		catch(Exception e) {
 			System.out.println("Events list not displayed");
 			Assert.assertTrue(lvmevents.getlvmListOfAllEvents().isEmpty());
-			
 		}
 		//Verify Calendar is displayed or not
 		Assert.assertTrue(lvmevents.getlvmEventsCalendar().isDisplayed());
@@ -114,7 +113,6 @@ public class EvenntsAndWebinar extends base{
 		//Verify Events Search Bar
 		Assert.assertTrue(lvmevents.getlvmEventsSearchBar().isDisplayed());
 		System.out.println("Events Search bar is Present");
-			
 	}
 
 	@Test(priority = 2)
@@ -138,8 +136,10 @@ public class EvenntsAndWebinar extends base{
 		Thread.sleep(3000);*/
 		//Click on IMC Event Tab
 		lvmevents.getlvmImcEventsTab().click();
+		Thread.sleep(500);
 		//Click on Search Bar of IMC Events
 		lvmevents.getlvmEventsSearchBar().click();
+		Thread.sleep(500);
 		String eventName=lvmevents.getlvmEventName().getText();
 		//Enter Events Name into Search field
 		lvmevents.getlvmEventsSearchBar().sendKeys(eventName);
@@ -169,7 +169,7 @@ public class EvenntsAndWebinar extends base{
 		//Click on IMC Event Tab
 		lvmevents.getlvmImcEventsTab().click();
 		
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		//Event Month and Year
 		String eventDateAndMonth=lvmevents.getlvmEventDateAndMonth().getText();
 		String trimDate=eventDateAndMonth.split(" ")[2].trim();
@@ -214,10 +214,11 @@ public class EvenntsAndWebinar extends base{
 		
 		//Click on Calendar Prev Btn
 		lvmevents.getlvmCalendarPrevMonth().click();
+		Thread.sleep(2000);
 		System.out.println("Previous Month From Calendar ::"+lvmevents.getlvmSelectMonth().getText());
 		Assert.assertTrue(lvmevents.getlvmSelectMonth().getText().contains(mm));
 		System.out.println("Previous Month "+lvmevents.getlvmSelectMonth().getText()+" is selected");
-		//utl.selectFilters(lvmevents.getatlListOfatlSelectAnyDate(), replaceDate);
+		utl.selectFilters(lvmevents.getlvmListOflvmSelectAnyDate(), replaceDate);
 		
 			lvmevents.getlvmCalendarNextMonthBtn().click();
 			Thread.sleep(5000);
@@ -227,19 +228,20 @@ public class EvenntsAndWebinar extends base{
 				 try {
 					 	Assert.assertTrue(lvmevents.getlvmTodaysDate().isDisplayed());
 						lvmevents.getlvmTodaysDate().click();
-						
+						Thread.sleep(500);
 						}catch (Exception e) {
 							utl.selectFilters(lvmevents.getlvmListOfEventDate(), replaceDate);
-						
+							Thread.sleep(500);
 						}			 
 			}
-		
+
 		// Verify Event is selected by datepicker
 		Assert.assertTrue(lvmevents.getlvmEventDateAndMonth().isDisplayed());
 		System.out.println("Event is selected by Date");
 
 		//Click on Reset Btn
 		lvmevents.getlvmResetBtn().click();
+		Thread.sleep(1000);
 		//Verify Current date and month should selected by default
 		try {
 		Assert.assertTrue(d.contains(lvmevents.getlvmTodaysDate().getText()));
@@ -263,12 +265,14 @@ public class EvenntsAndWebinar extends base{
 				lvmgs = new LVMGlobalSearchPage(driver);
 				lvmmpp = new LVMMarketPlannerPage(driver);
 				
+				driver.get(prop.getProperty("lvmurl_prod"));
 				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				Thread.sleep(3000);
 				utl.clickOnEventLinkOfChannelLVM();	
 				
 				//Click on IMC Event Tab
 				lvmevents.getlvmImcEventsTab().click();
-				
+				Thread.sleep(2000);
 				//Verify Event Calendar title
 				Assert.assertTrue(lvmevents.getlvmEventDateAndMonth().isDisplayed());
 				System.out.println("Event Calendar title is displayed");
@@ -292,7 +296,6 @@ public class EvenntsAndWebinar extends base{
 				}
 				System.out.println(allEventTitlesCount + " Titles displayed");
 				Assert.assertEquals(allEventcount, allEventTitlesCount);
-				
 
 				// Verify Events Type
 				int allEventTypeCount = 0;
@@ -349,6 +352,7 @@ public class EvenntsAndWebinar extends base{
 					//eventSeeDetailsLink = lvmevents.lvmlvmListOfAllEventsSeeDetailsLink().get(1);
 					utl.scrollToElement(eventTitleLink);
 					eventTitleLink.click();
+					Thread.sleep(500);
 					//Verify Event Details Page
 					Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUAT().getText()));
 					Thread.sleep(3000);
@@ -358,7 +362,6 @@ public class EvenntsAndWebinar extends base{
 				
 				System.out.println(allEventSeeDetailsLinkCount + " Events Details Page displayed");
 				Assert.assertEquals(allEventcount, allEventSeeDetailsLinkCount1);
-		
 	}
 	
 	@Test(priority = 5)
@@ -373,16 +376,19 @@ public class EvenntsAndWebinar extends base{
 		lvmgs = new LVMGlobalSearchPage(driver);
 		lvmmpp = new LVMMarketPlannerPage(driver);
 
+		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(5000);
 		utl.clickOnEventLinkOfChannelLVM();	
 		String eventTitle=lvmevents.getlvmClickOnEvent().getText();
 		Thread.sleep(5000);
 		
 		//Click on IMC Event Tab
 		lvmevents.getlvmImcEventsTab().click();
-		
+		Thread.sleep(2000);
 		//Click on Any Event title
 		lvmevents.getlvmClickOnEvent().click();
+		Thread.sleep(4000);
 		Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUAT().getText()));
 		// Verify DayMntYear 
 		Assert.assertTrue(lvmevents.getlvmEventsDetailsPageDayMonthYear().isDisplayed());
@@ -406,7 +412,6 @@ public class EvenntsAndWebinar extends base{
 		Assert.assertTrue(lvmevents.getlvmCalendarIconUAT().isDisplayed());
 		System.out.println("Calendar displayed");*/
 
-		
 		//Verify Register CTA
 		Assert.assertTrue(lvmevents.getlvmEventsRegisterBtn().isDisplayed());
 		String RegisterCTA=lvmevents.getlvmEventsRegisterBtn().getAttribute("href");
@@ -414,6 +419,7 @@ public class EvenntsAndWebinar extends base{
 		//CLick on Register CTA
 		String currentWindowID = driver.getWindowHandle();
 		lvmevents.getlvmEventsRegisterBtn().click();
+		Thread.sleep(2000);
 		for (String windowHandleID : driver.getWindowHandles()) {
 			driver.switchTo().window(windowHandleID);
 		}
@@ -490,8 +496,10 @@ public class EvenntsAndWebinar extends base{
 		Thread.sleep(3000);*/
 		//Click on Exh Event Tab
 		lvmevents.getlvmExhibitorsEventsTab().click();
+		Thread.sleep(500);
 		//Click on Search Bar of IMC Events
 		lvmevents.getlvmEventsSearchBar().click();
+		Thread.sleep(500);
 		String eventName=lvmevents.getlvmEventName().getText();
 		//Enter Events Name into Search field
 		lvmevents.getlvmEventsSearchBar().sendKeys(eventName);
@@ -518,9 +526,10 @@ public class EvenntsAndWebinar extends base{
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		utl.clickOnEventLinkOfChannelLVM();
 		//Click on Exh Event Tab
+		Thread.sleep(2000);
 		lvmevents.getlvmExhibitorsEventsTab().click();
 		
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		//Event Month and Year
 		String eventDateAndMonth=lvmevents.getlvmEventDateAndMonth().getText();
 		String trimDate=eventDateAndMonth.split(" ")[2].trim();
@@ -582,7 +591,9 @@ public class EvenntsAndWebinar extends base{
 		
 		//Click on Calendar Prev Btn
 		lvmevents.getlvmCalendarPrevMonth().click();
+		Thread.sleep(500);
 		lvmevents.getlvmCalendarPrevMonth().click();
+		Thread.sleep(500);
 		System.out.println("Previous Month From Calendar ::"+lvmevents.getlvmSelectMonth().getText());
 		Assert.assertTrue(lvmevents.getlvmSelectMonth().getText().contains(mm));
 		System.out.println("Previous Month "+lvmevents.getlvmSelectMonth().getText()+" is selected");
@@ -592,7 +603,7 @@ public class EvenntsAndWebinar extends base{
 		for(int i=0;i>=0;i++)
 		{
 			lvmevents.getlvmCalendarNextMonthBtn().click();
-			
+			Thread.sleep(500);
 			if(lvmevents.getlvmSelectMonth().getText().contains(EventmonthAndYear))
 			{
 				try {
@@ -611,16 +622,14 @@ public class EvenntsAndWebinar extends base{
 
 		//Click on Reset Btn
 		lvmevents.getlvmResetBtn().click();
+		Thread.sleep(2000);
 		//Verify Current date and month should selected by default
 		//Assert.assertTrue(d.contains(lvmevents.getlvmTodaysDate().getText()));
 		try {
 			Assert.assertTrue(d.contains(lvmevents.getlvmTodaysDate().getText()));
 			System.out.println("Current Date "+lvmevents.getlvmTodaysDate().getText()+" is Heighlighted");
-			
 		}catch (Exception e) {
-			// TODO: handle exception
-		
-		
+
 		try {
 			Assert.assertTrue(exactDate.contains(lvmevents.getlvmTodaysDate().getText()));
 			System.out.println("Current Date "+lvmevents.getlvmTodaysDate().getText()+" is Heighlighted");
@@ -629,11 +638,8 @@ public class EvenntsAndWebinar extends base{
 				Assert.assertTrue(exactDate.contains(lvmevents.getlvmListOfAllEventsDay().getText()));
 				System.out.println("Current Date "+lvmevents.getlvmListOfAllEventsDay().getText()+" is Heighlighted");
 			}
-		
-		
 		}
-		
-		
+
 		System.out.println("By Default "+d +" today's date is selected.");
 		Thread.sleep(4000);
 	}
@@ -650,13 +656,13 @@ public class EvenntsAndWebinar extends base{
 		lvmgs = new LVMGlobalSearchPage(driver);
 		lvmmpp = new LVMMarketPlannerPage(driver);
 
-		driver.navigate().refresh();
+		driver.get(prop.getProperty("lvmurl_prod"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(5000);
 		utl.clickOnEventLinkOfChannelLVM();	
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//Click on Exh Event Tab
 		lvmevents.getlvmExhibitorsEventsTab().click();
-		
+		Thread.sleep(500);
 		//Verify Event Calendar title
 		Assert.assertTrue(lvmevents.getlvmEventDateAndMonth().isDisplayed());
 		System.out.println("Event Calendar title is displayed");
@@ -741,6 +747,7 @@ public class EvenntsAndWebinar extends base{
 			//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("eventTitleLink")));
 			utl.scrollToElement(eventTitleLink);
 			eventTitleLink.click();
+			Thread.sleep(500);
 			//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			//Thread.sleep(4000);
 			//Verify Event Details Page
@@ -777,10 +784,11 @@ public class EvenntsAndWebinar extends base{
 		
 		//Click on Exh Event Tab
 		lvmevents.getlvmExhibitorsEventsTab().click();
-		String eventTitle=lvmevents.getlvmClickOnEvent().getText();
 		Thread.sleep(2000);
+		String eventTitle=lvmevents.getlvmClickOnEvent().getText();
+		Thread.sleep(3000);
 		lvmevents.getlvmClickOnEvent().click();
-		
+		Thread.sleep(2000);
 		Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUAT().getText()));
 		// Verify DayMntYear 
 		Assert.assertTrue(lvmevents.getlvmEventsDetailsPageDayMonthYear().isDisplayed());
@@ -804,7 +812,6 @@ public class EvenntsAndWebinar extends base{
 		Assert.assertTrue(lvmevents.getlvmCalendarIconUAT().isDisplayed());
 		System.out.println("Calendar displayed");*/
 
-		
 		//Verify Register CTA
 		/*Assert.assertTrue(lvmevents.getlvmEventsRegisterBtn().isDisplayed());
 		String RegisterCTA=lvmevents.getlvmEventsRegisterBtn().getAttribute("href");
@@ -828,13 +835,7 @@ public class EvenntsAndWebinar extends base{
 		//Verify Detail Section
 		Assert.assertTrue(lvmevents.getlvmEventsDetailsPageDetailsSection().isDisplayed());
 		System.out.println("Event Details Section displayed");
-		
-		
-		
-		
-		
-		
-		
+
 		/*
 		//Click on Any Event title
 				lvmevents.getlvmClickOnEvent().click();
@@ -903,18 +904,12 @@ public class EvenntsAndWebinar extends base{
 				Thread.sleep(5000);
 				// Verify Location floor plan page
 				Assert.assertEquals(RegisterCTA, driver.getCurrentUrl());
-				
-				
+
 				driver.close();
 				driver.switchTo().window(currentWindowID);
 				driver.navigate().back();
 				System.out.println("register cta page opened");
 */				
-				
-	
-		
-        		
-        		
         		/*//Click on IMC Event Tab
         		//lvmevents.getlvmImcEventsTab().click();
         		String eventTitle=lvmevents.getlvmClickOnEvent().getText();
@@ -966,8 +961,7 @@ public class EvenntsAndWebinar extends base{
         		  Assert.assertTrue(lvmevents.getlvmSearchResultsTitle().getText().
         		  contains("Search Results"));
         		  System.out.println("Search Results page opened");
-        		 
-        
+    
         		// Click on Event Title page
         		
         		driver.navigate().back();
@@ -1013,8 +1007,7 @@ public class EvenntsAndWebinar extends base{
         		}*/
         		
         }
-        
-        
+
         @Test(enabled=false)//priority = 6
         public void TS010_VerifyIMCEventsAddToFavoriteTest() throws InterruptedException, IOException {
         
@@ -1038,21 +1031,23 @@ public class EvenntsAndWebinar extends base{
         
             // Click on IMC Event Tab
             lvmevents.getlvmImcEventsTab().click();
-            
+            Thread.sleep(500);
             // Click on Any Event title
             lvmevents.getlvmClickOnEvent().click();
+            Thread.sleep(500);
             Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUAT().getText()));
         
             // Click on Fav Icon
             lvmevents.getlvmFavIcon().click();
-        
+            Thread.sleep(500);
             // Click on Market Planner link
             lap.getMPLinkText().click();
-        
+            Thread.sleep(500);
             // Click on Lists tab on MP home page
             lvmmpp.getMPHomeListsTab().click();
+            Thread.sleep(500);
             lvmmpp.getLVMMPListsPageFavoritesMenu().click();
-        
+            Thread.sleep(500);
             // Verify that the added favorites event should be displayed in to Favorites
             // list
             Assert.assertTrue(lvmmpp.getLVMSavedExhNameInList().getText().contains(eventTitle));
@@ -1066,13 +1061,13 @@ public class EvenntsAndWebinar extends base{
             //actions.click().perform();
             Thread.sleep(10000);
             lvmmpp.getmoreOptionUAT_LVM().click();
+            Thread.sleep(500);
             lvmmpp.getmoreOptionDeleteBtnUAT_LVM().click();
             Thread.sleep(6000);
         
             // Verify that the added favorites exhibitor should be removed from Favorites
             // list
-            
-            
+
             try {
                 Assert.assertFalse(lvmmpp.getLVMSavedExhNameInList().getText().contains(eventTitle));
                 }catch (Exception e) {
@@ -1091,8 +1086,7 @@ public class EvenntsAndWebinar extends base{
             lvmevents = new LVMEventsAndWebinarPage(driver);
             lvmgs = new LVMGlobalSearchPage(driver);
             lvmmpp = new LVMMarketPlannerPage(driver);
-        
-            
+
             // Login to MP
                     utl.verifyMPLoginFunctionality();
                     Thread.sleep(5000);
@@ -1164,7 +1158,6 @@ public class EvenntsAndWebinar extends base{
             lvmgs = new LVMGlobalSearchPage(driver);
             lvmmpp = new LVMMarketPlannerPage(driver);
 
-            
             // Login to MP
             /*      utl.verifyMPLoginFunctionality();
                     Thread.sleep(5000);*/
@@ -1176,9 +1169,10 @@ public class EvenntsAndWebinar extends base{
 
             // Click on IMC Event Tab
             lvmevents.getlvmImcEventsTab().click();
-            
+            Thread.sleep(500);
             // Click on Any Event title
             lvmevents.getlvmClickOnEvent().click();
+            Thread.sleep(500);
             Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUAT().getText()));
 
             // Click on Add to List Icon
@@ -1190,6 +1184,7 @@ public class EvenntsAndWebinar extends base{
 
             lp.getSignInBtn().click();*/
             lvmevents.getlvmListIcon().click();
+            Thread.sleep(500);
             // Store the existing list name
             String existinglistname = lvmmpp.getLVMMPExistingListName().getText();
             System.out.println("Existing list name: " + existinglistname);
@@ -1203,16 +1198,20 @@ public class EvenntsAndWebinar extends base{
                     lvmevents.getlvmaddtoseselectedbtn());
             Thread.sleep(2000);
             lvmevents.getlvmaddtoseselectedbtn().click();
+            Thread.sleep(500);
             //lvmmpp.getATLMPAddToSelectedBtn().click();
             
             // Click on Go to Market Planner button
-        //  utl.clickOnEventLinkOfChannelLVM();
+            //  utl.clickOnEventLinkOfChannelLVM();
             Thread.sleep(2000);
             // Click on Go to Market Planner button
             lvmmpp.getGoToMarketPlannerBtn().click();
+            Thread.sleep(500);
             // Click on Lists tab on MP home page
             lvmmpp.getMPHomeListsTab().click();
+            Thread.sleep(500);
             lvmmpp.getListsPageListsMenu().click();
+            Thread.sleep(500);
             mplists = lvmmpp.getLVMMPListsNames();
             mpeditlistoptns = lvmmpp.getLVMMPEditListOptns();
 
@@ -1221,6 +1220,7 @@ public class EvenntsAndWebinar extends base{
                 // System.out.println(mpeditlistoptns.get(i).getText());
                 if (mplists.get(i).getText().equals(existinglistname)) {
                     mpeditlistoptns.get(i).click();
+                    Thread.sleep(500);
                     break;
                 }
             }
@@ -1241,8 +1241,7 @@ public class EvenntsAndWebinar extends base{
 
             // Verify that the added favorites exhibitor should be removed from Favorites
             // list
-            
-            
+
             try {
                 Assert.assertFalse(lvmmpp.getLVMSavedExhNameInList().getText().contains(eventTitle));
                 }catch (Exception e) {
@@ -1277,13 +1276,15 @@ public class EvenntsAndWebinar extends base{
       
           // Click on IMC Event Tab
           lvmevents.getlvmImcEventsTab().click();
-          
+          Thread.sleep(500);
           // Click on Any Event title
           lvmevents.getlvmClickOnEvent().click();
+          Thread.sleep(500);
           Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUAT().getText()));
       
           // Click on Add to List Icon
           lvmevents.getlvmNoteIcon().click();
+          Thread.sleep(500);
           /*Thread.sleep(5000);
           lp.getEmailAddress().sendKeys((prop.getProperty("username")));
           lp.getPassword().sendKeys((prop.getProperty("password")));
@@ -1325,13 +1326,14 @@ public class EvenntsAndWebinar extends base{
               //System.out.println(allnoteslist.get(i).getText());
               if (allnoteslist.get(i).getText().equals(newnotetitle)) {
                   allnoteslist.get(i).click();
-      
+                  Thread.sleep(500);
                   break;
               }
           }
       
           // Delete the saved note
           atlexhact.getDeleteNoteBtn().click();
+          Thread.sleep(500);
       }
 
 
@@ -1352,28 +1354,29 @@ public class EvenntsAndWebinar extends base{
 				//utl.verifyMPLoginFunctionality();
 				utl.clickOnEventLinkOfChannelLVM();
 				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-				
 
 				/*// Click on IMC Event Tab
 				lvmevents.getlvmImcEventsTab().click();*/
 				//Click on Exh Event Tab
 				lvmevents.getlvmExhibitorsEventsTab().click();
+				Thread.sleep(500);
 				String eventTitle = lvmevents.getlvmClickOnEvent().getText();
 				System.out.println(eventTitle);
 				// Click on Any Event title
 				lvmevents.getlvmClickOnEvent().click();
-
+				Thread.sleep(500);
 				//Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUATUAT().getText()));
 				// Click on Fav Icon
 				lvmevents.getlvmFavIcon().click();
-
+				Thread.sleep(500);
 				// Click on Market Planner link
 				lap.getMPLinkText().click();
-
+				Thread.sleep(500);
 				// Click on Lists tab on MP home page
 				lvmmpp.getMPHomeListsTab().click();
+				Thread.sleep(500);
 				lvmmpp.getLVMMPListsPageFavoritesMenu().click();
-
+				Thread.sleep(500);
 				// Verify that the added favorites event should be displayed in to Favorites
 				// list
 				//Assert.assertTrue(lvmmpp.getlistOfAllEventsInMPList().getText().contains(eventTitle));
@@ -1418,12 +1421,13 @@ public class EvenntsAndWebinar extends base{
 		
 		//Click on Exh Event Tab
 		lvmevents.getlvmExhibitorsEventsTab().click();
+		Thread.sleep(500);
 		/*// Click on IMC Event Tab
 		lvmevents.getlvmImcEventsTab().click();*/
 		String eventTitle = lvmevents.getlvmClickOnEvent().getText();
 		// Click on Any Event title
 		lvmevents.getlvmClickOnEvent().click();
-
+		Thread.sleep(500);
 		//Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUATUAT().getText()));
 		// Click on Add to List Icon
 
@@ -1434,6 +1438,7 @@ public class EvenntsAndWebinar extends base{
 
 		lp.getSignInBtn().click();*/
 		lvmevents.getlvmListIcon().click();
+		Thread.sleep(500);
 		// Store the existing list name
 		String existinglistname = lvmmpp.getLVMMPExistingListName().getText();
 		System.out.println("Existing list name: " + existinglistname);
@@ -1451,11 +1456,12 @@ public class EvenntsAndWebinar extends base{
 		Thread.sleep(2000);
 		// Click on Go to Market Planner button
 		lvmmpp.getGoToMarketPlannerBtn().click();
-
+		Thread.sleep(500);
 		// Click on Lists tab on MP home page
 		lvmmpp.getMPHomeListsTab().click();
+		Thread.sleep(500);
 		lvmmpp.getListsPageListsMenu().click();
-
+		Thread.sleep(500);
 		mplists = lvmmpp.getLVMMPListsNames();
 		mpeditlistoptns = lvmmpp.getLVMMPEditListOptns();
 
@@ -1477,9 +1483,9 @@ public class EvenntsAndWebinar extends base{
 		Thread.sleep(8000);*/
 		//atlmppge.getATLEditListItemMoreBtn().click(); //Old btn not working
 		lvmmpp.getLVMEditListItemMoreBtnNew().click(); // new btn
+		Thread.sleep(500);
 		lvmmpp.getLVMEditListItemDeleteOptn().click();
 		Thread.sleep(8000);
-
 	}
 	
 	@Test(enabled=false)//priority = 15
@@ -1506,17 +1512,18 @@ public class EvenntsAndWebinar extends base{
 		//String eventTitle = lvmevents.getlvmClickOnEvent().getText();
 
 		//Click on Exh Event Tab
-				lvmevents.getlvmExhibitorsEventsTab().click();
+		lvmevents.getlvmExhibitorsEventsTab().click();
+		Thread.sleep(500);
 		/*// Click on IMC Event Tab
 		lvmevents.getlvmImcEventsTab().click();*/
 		// Click on Any Event title
 		lvmevents.getlvmClickOnEvent().click();
-
+		Thread.sleep(500);
 		//Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUATUAT().getText()));
 		// Click on Add to List Icon
 
 		lvmevents.getlvmNoteIcon().click();
-		
+		Thread.sleep(500);
 		/*Thread.sleep(5000);
 		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
 		lp.getPassword().sendKeys((prop.getProperty("password")));
@@ -1558,19 +1565,20 @@ public class EvenntsAndWebinar extends base{
 			//System.out.println(allnoteslist.get(i).getText());
 			if (allnoteslist.get(i).getText().equals(newnotetitle)) {
 				allnoteslist.get(i).click();
-
+				Thread.sleep(500);
 				break;
 			}
 		}
 
 		// Delete the saved note
 		atlexhact.getDeleteNoteBtn().click();
+		Thread.sleep(500);
 	}
 	
 	@AfterClass
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 
 }

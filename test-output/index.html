@@ -28,8 +28,8 @@
     <div class="navigator-root">
       <div class="navigator-suite-header">
         <span>All suites</span>
-        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
-          <img src="collapseall.gif" class="collapse-all-icon">
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
           </img> <!-- collapse-all-icon -->
         </a> <!-- collapse-all-link -->
       </div> <!-- navigator-suite-header -->
@@ -101,7 +101,7 @@
                     <div class="method-list-content passed suite-LVM_RegressionTestSuite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="lasvegasmarket_PROD.GlobalSearch_SearchFor" hash-for-method="TS004_VerifyCatalogsOverviewInGlobalSearchTest">TS004_VerifyCatalogsOverviewInGlobalSearchTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-LVM_RegressionTestSuite" title="lasvegasmarket_PROD.GlobalSearch_LineActions" hash-for-method="TS001_VerifyClickOnShownByExhibitorNameLinkForLineTest">TS001_VerifyClickOnShownByExhibitorNameLinkForLineTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-LVM_RegressionTestSuite -->
@@ -119,14 +119,14 @@
           <div class="suite-LVM_RegressionTestSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">lasvegasmarket_PROD.GlobalSearch_SearchFor</span>
+              <span class="class-name">lasvegasmarket_PROD.GlobalSearch_LineActions</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TS004_VerifyCatalogsOverviewInGlobalSearchTest">
-                  </a> <!-- TS004_VerifyCatalogsOverviewInGlobalSearchTest -->
-                  <span class="method-name">TS004_VerifyCatalogsOverviewInGlobalSearchTest</span>
+                  <a name="TS001_VerifyClickOnShownByExhibitorNameLinkForLineTest">
+                  </a> <!-- TS001_VerifyClickOnShownByExhibitorNameLinkForLineTest -->
+                  <span class="method-name">TS001_VerifyClickOnShownByExhibitorNameLinkForLineTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -143,11 +143,11 @@
 &lt;suite name=&quot;LVM_RegressionTestSuite&quot; parallel=&quot;classes&quot;&gt;
   &lt;test thread-count=&quot;1&quot; name=&quot;RegressionTest&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;lasvegasmarket_PROD.GlobalSearch_SearchFor&quot;&gt;
+      &lt;class name=&quot;lasvegasmarket_PROD.GlobalSearch_LineActions&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;TS004_VerifyCatalogsOverviewInGlobalSearchTest()&quot;/&gt;
+          &lt;include name=&quot;TS001_VerifyClickOnShownByExhibitorNameLinkForLineTest()&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- lasvegasmarket_PROD.GlobalSearch_SearchFor --&gt;
+      &lt;/class&gt; &lt;!-- lasvegasmarket_PROD.GlobalSearch_LineActions --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- RegressionTest --&gt;
 &lt;/suite&gt; &lt;!-- LVM_RegressionTestSuite --&gt;
@@ -161,7 +161,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Default test (1 class)</span>
+                <span class="test-name">RegressionTest (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -189,14 +189,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TS004_VerifyCatalogsOverviewInGlobalSearchTest')
-data.setCell(0, 2, 'lasvegasmarket_PROD.GlobalSearch_SearchFor')
-data.setCell(0, 3, 57081);
+data.setCell(0, 1, 'TS001_VerifyClickOnShownByExhibitorNameLinkForLineTest')
+data.setCell(0, 2, 'lasvegasmarket_PROD.GlobalSearch_LineActions')
+data.setCell(0, 3, 27650);
 window.suiteTableData['LVM_RegressionTestSuite']= { tableData: data, tableDiv: 'times-div-LVM_RegressionTestSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 57 seconds</span>
+              <span class="suite-total-time">Total running time: 27 seconds</span>
               <div id="times-div-LVM_RegressionTestSuite">
               </div> <!-- times-div-LVM_RegressionTestSuite -->
             </div> <!-- times-div -->
@@ -211,31 +211,27 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-LVM_RegressionTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">10 ignored methods</span>
+            <span class="header-content">8 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">lasvegasmarket_PROD.GlobalSearch_SearchFor</span>
+              <span class="ignored-class-name">lasvegasmarket_PROD.GlobalSearch_LineActions</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest</span>
+                <span class="ignored-method-name">TS002_VerifyClickOnLocationLinkForLineTest</span>
                 <br/>
-                <span class="ignored-method-name">TS011_VerifyEventsOverviewInGlobalSearchTest</span>
+                <span class="ignored-method-name">TS005_VerifyClickOnContactExhIconForLineTest</span>
                 <br/>
-                <span class="ignored-method-name">TS005_VerifyArticlesOverviewInGlobalSearchTest</span>
+                <span class="ignored-method-name">TS007_VerifyClickOnOrderOnJuniperMarketBtnForLineTest</span>
                 <br/>
-                <span class="ignored-method-name">TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest</span>
+                <span class="ignored-method-name">TS003_VerifyClickOnMatchingProductsSeeAllLinkForLineTest</span>
                 <br/>
-                <span class="ignored-method-name">TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest</span>
+                <span class="ignored-method-name">TS004_VerifyClickOnTotalProductsSeeAllLinkForLineTest</span>
                 <br/>
-                <span class="ignored-method-name">TS001_VerifyInformationTabInGlobalSearchTest</span>
+                <span class="ignored-method-name">TS006_VerifyAddToFavoriteForLineTest</span>
                 <br/>
-                <span class="ignored-method-name">TS010_VerifyShowSpecialsOverviewInGlobalSearchTest</span>
+                <span class="ignored-method-name">TS009_VerifyAddToExistingListForLineTest</span>
                 <br/>
-                <span class="ignored-method-name">TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest</span>
-                <br/>
-                <span class="ignored-method-name">TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest</span>
-                <br/>
-                <span class="ignored-method-name">TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest</span>
+                <span class="ignored-method-name">TS008_VerifyAddToNewListForLineTest</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -247,18 +243,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">lasvegasmarket_PROD.GlobalSearch_SearchFor</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">lasvegasmarket_PROD.GlobalSearch_LineActions</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">initialize</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">TS004_VerifyCatalogsOverviewInGlobalSearchTest</span>
-                <span class="method-start">29807 ms</span>
+                <span class="method-name">TS001_VerifyClickOnShownByExhibitorNameLinkForLineTest</span>
+                <span class="method-start">28055 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">86896 ms</span>
+                <span class="method-start">55711 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

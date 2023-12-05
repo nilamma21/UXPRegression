@@ -3,13 +3,13 @@
 <suite name="Failed suite [LVM_RegressionTestSuite]" parallel="classes">
   <test name="RegressionTest(failed)" parallel="classes">
     <classes>
-      <class name="lasvegasmarket_PROD.GlobalSearch_SearchFor">
+      <class name="lasvegasmarket_PROD.GlobalSearch_LineActions">
         <methods>
           <include name="initialize"/>
           <include name="tearDown"/>
-          <include name="TS004_VerifyCatalogsOverviewInGlobalSearchTest"/>
+          <include name="TS001_VerifyClickOnShownByExhibitorNameLinkForLineTest"/>
         </methods>
-      </class> <!-- lasvegasmarket_PROD.GlobalSearch_SearchFor -->
+      </class> <!-- lasvegasmarket_PROD.GlobalSearch_LineActions -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->

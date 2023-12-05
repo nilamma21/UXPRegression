@@ -173,7 +173,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		Thread.sleep(5000);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));//Previous input = filtersglobalsearchinput
 		lvmgs.getLVMSearchButton().click();
 		

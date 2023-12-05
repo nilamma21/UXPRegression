@@ -75,10 +75,11 @@ public class EvenntsAndWebinar extends base{
 		atlgs = new ATLGlobalSearchPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(5000);
 		//driver.get(prop.getProperty("atlmrkturl_prod"));
 		//utl.loginCheckATL();
 		utl.clickOnEventLinkOfChannel();
-		
+		Thread.sleep(2000);
 		/*// Click on Attend Tab
 		atlevents.getatlAttendTab().click();
 		Thread.sleep(2000);
@@ -124,7 +125,9 @@ public class EvenntsAndWebinar extends base{
 		atlevents=new ATLEventsAndWebinarPage(driver);
 		atlgs = new ATLGlobalSearchPage(driver);
 
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(5000);
 		utl.clickOnEventLinkOfChannel();
 		/*// Click on Attend Tab
 		atlevents.getatlAttendTab().click();
@@ -134,8 +137,10 @@ public class EvenntsAndWebinar extends base{
 		Thread.sleep(3000);*/
 		//Click on IMC Event Tab
 		atlevents.getatlImcEventsTab().click();
+		Thread.sleep(500);
 		//Click on Search Bar of IMC Events
 		atlevents.getatlEventsSearchBar().click();
+		Thread.sleep(500);
 		String eventName=atlevents.getatlEventName().getText();
 		//Enter Events Name into Search field
 		atlevents.getatlEventsSearchBar().sendKeys(eventName);
@@ -159,8 +164,10 @@ public class EvenntsAndWebinar extends base{
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
 
+		driver.get(prop.getProperty("atlmrkturl_prod"));
+		Thread.sleep(5000);
+        utl.clickOnEventLinkOfChannel();    
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		utl.clickOnEventLinkOfChannel();	
 
 		//Click on IMC Event Tab
 		atlevents.getatlImcEventsTab().click();
@@ -210,6 +217,7 @@ public class EvenntsAndWebinar extends base{
 		
 		//Click on Calendar Prev Btn
 		atlevents.getatlCalendarPrevMonth().click();
+		Thread.sleep(500);
 		System.out.println("Previous Month From Calendar ::"+atlevents.getatlSelectMonth().getText());
 		Assert.assertTrue(atlevents.getatlSelectMonth().getText().contains(mm));
 		System.out.println("Previous Month "+atlevents.getatlSelectMonth().getText()+" is selected");
@@ -223,7 +231,7 @@ public class EvenntsAndWebinar extends base{
 				 try {
 					 	Assert.assertTrue(atlevents.getatlTodaysDatePROD().isDisplayed());
 						atlevents.getatlTodaysDatePROD().click();
-						
+						Thread.sleep(500);
 						}catch (Exception e) {
 							utl.selectFilters(atlevents.getatlListOfEventDate(), replaceDate);
 						
@@ -236,6 +244,7 @@ public class EvenntsAndWebinar extends base{
 
 		//Click on Reset Btn
 		atlevents.getatlResetBtn().click();
+		Thread.sleep(500);
 		//Verify Current date and month should selected by default
 		try {
 		Assert.assertTrue(d.contains(atlevents.getatlTodaysDate().getText()));
@@ -257,14 +266,14 @@ public class EvenntsAndWebinar extends base{
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		utl.clickOnEventLinkOfChannel();	
-		
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 		Thread.sleep(5000);
+		utl.clickOnEventLinkOfChannel();	
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
 		//Click on IMC Event Tab
 		atlevents.getatlImcEventsTab().click();
-		
+		Thread.sleep(500);
 		//Verify Event Calendar title
 		Assert.assertTrue(atlevents.getatlEventDateAndMonth().isDisplayed());
 		System.out.println("Event Calendar title is displayed");
@@ -347,6 +356,7 @@ public class EvenntsAndWebinar extends base{
 			//eventSeeDetailsLink = atlevents.atlatlListOfAllEventsSeeDetailsLink().get(1);
 			utl.scrollToElement(eventTitleLink);
 			eventTitleLink.click();
+			Thread.sleep(500);
 			//Verify Event Details Page
 			Assert.assertTrue(eventTitle.contains(atlevents.getatlEventNameOnDetailsPage().getText()));
 			Thread.sleep(3000);
@@ -372,18 +382,19 @@ public class EvenntsAndWebinar extends base{
 		atlmppge = new ATLMarketPlannerPage(driver);
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
+		Thread.sleep(3000);
 		utl.clickOnEventLinkOfChannel();	
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		String eventTitle=atlevents.getatlClickOnEvent().getText();
 		Thread.sleep(5000);
 		//Click on IMC Event Tab
 		atlevents.getatlImcEventsTab().click();
+		Thread.sleep(500);
 		//Click on Any Event title
 		utl.scrollToElement(atlevents.getatlClickOnEvent());
 		atlevents.getatlClickOnEvent().click();
-		
+		Thread.sleep(500);
 		Assert.assertTrue(eventTitle.contains(atlevents.getatlEventNameOnDetailsPage().getText()));
 		
 		//Verify Location Link
@@ -413,6 +424,7 @@ public class EvenntsAndWebinar extends base{
 		
 		String currentWindowID=driver.getWindowHandle();
 		atlevents.getatlEventLocationLink().click();
+		Thread.sleep(500);
 		for (String windowHandleID : driver.getWindowHandles()) {
 			driver.switchTo().window(windowHandleID);
 		}
@@ -444,6 +456,7 @@ public class EvenntsAndWebinar extends base{
 				{
 					String searchResultPageURL=atlevents.getatlEventsTag().getAttribute("href");
 					  atlevents.getatlEventsTag().click();
+					  Thread.sleep(500);
 					  Assert.assertTrue(searchResultPageURL.contains(driver.getCurrentUrl()));
 					  Assert.assertTrue(atlevents.getatlSearchResultsTitle().getText().contains("Search"));
 					  System.out.println("Search Results page opened");
@@ -484,8 +497,9 @@ public class EvenntsAndWebinar extends base{
 		atlgs = new ATLGlobalSearchPage(driver);
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        Thread.sleep(5000);
 		utl.clickOnEventLinkOfChannel();
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		/*// Click on Attend Tab
 		atlevents.getatlAttendTab().click();
@@ -495,8 +509,10 @@ public class EvenntsAndWebinar extends base{
 		Thread.sleep(3000);*/
 		//Click on Exh Event Tab
 		atlevents.getatlExhibitorsEventsTab().click();
+		Thread.sleep(500);
 		//Click on Search Bar of IMC Events
 		atlevents.getatlEventsSearchBar().click();
+		Thread.sleep(500);
 		String eventName=atlevents.getatlEventName().getText();
 		//Enter Events Name into Search field
 		atlevents.getatlEventsSearchBar().sendKeys(eventName);
@@ -520,11 +536,12 @@ public class EvenntsAndWebinar extends base{
 		atlmppge = new ATLMarketPlannerPage(driver);
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(5000);
 		utl.clickOnEventLinkOfChannel();  
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		//Click on Exh Event Tab
-				atlevents.getatlExhibitorsEventsTab().click();
+		atlevents.getatlExhibitorsEventsTab().click();
 		
 		Thread.sleep(2000);
 		//Event Month and Year
@@ -570,6 +587,7 @@ public class EvenntsAndWebinar extends base{
 		
 		//Click on Calendar Prev Btn
 		atlevents.getatlCalendarPrevMonth().click();
+		Thread.sleep(500);
 		System.out.println("Previous Month From Calendar ::"+atlevents.getatlSelectMonth().getText());
 		Assert.assertTrue(atlevents.getatlSelectMonth().getText().contains(mm));
 		System.out.println("Previous Month "+atlevents.getatlSelectMonth().getText()+" is selected");
@@ -584,7 +602,7 @@ public class EvenntsAndWebinar extends base{
 			 try {
 				 	Assert.assertTrue(atlevents.getatlTodaysDatePROD().isDisplayed());
 					atlevents.getatlTodaysDatePROD().click();
-					
+					Thread.sleep(500);
 					}catch (Exception e) {
 						utl.selectFilters(atlevents.getatlListOfEventDate(), replaceDate);
 					
@@ -596,6 +614,7 @@ public class EvenntsAndWebinar extends base{
 
 		//Click on Reset Btn
 		atlevents.getatlResetBtn().click();
+		Thread.sleep(500);
 		//Verify Current date and month should selected by default
 		try {
 			Assert.assertTrue(d.contains(atlevents.getatlTodaysDate().getText()));
@@ -604,7 +623,7 @@ public class EvenntsAndWebinar extends base{
 				Assert.assertTrue(d.contains(atlevents.getatlTodaysDatePROD().getText()));
 				System.out.println("By Default "+d +" today's date is selected.");
 			}
-		Thread.sleep(4000);
+		Thread.sleep(5000);
 	}
 	
 	@Test(priority = 8)//Previous priority = 11,groups="Non_MP"
@@ -619,14 +638,15 @@ public class EvenntsAndWebinar extends base{
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
 
-		driver.navigate().refresh();
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 		Thread.sleep(5000);
-		utl.clickOnEventLinkOfChannel();	
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		utl.clickOnEventLinkOfChannel();  
+		
 		//Click on Exh Event Tab
 		Thread.sleep(15000);
 		atlevents.getatlExhibitorsEventsTab().click();
-		
+		Thread.sleep(3000);
 		
 		//Verify Event Calendar title
 		Assert.assertTrue(atlevents.getatlEventDateAndMonth().isDisplayed());
@@ -745,17 +765,19 @@ public class EvenntsAndWebinar extends base{
 		atlmppge = new ATLMarketPlannerPage(driver);
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(5000);
 		utl.clickOnEventLinkOfChannel();  
-
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
 		//Click on Exh Event Tab
 		atlevents.getatlExhibitorsEventsTab().click();
+		Thread.sleep(500);
 		//Click on IMC Event Tab
 		//atlevents.getatlImcEventsTab().click();
 		String eventTitle=atlevents.getatlClickOnEvent().getText();
 		utl.scrollToElement(atlevents.getatlClickOnEvent());
 		atlevents.getatlClickOnEvent().click();
-		
+		Thread.sleep(500);
 		Assert.assertTrue(eventTitle.contains(atlevents.getatlEventNameOnDetailsPage().getText()));
 		
 		//Verify Location Link
@@ -793,7 +815,7 @@ public class EvenntsAndWebinar extends base{
 		Assert.assertTrue(driver.getCurrentUrl().contains(locationURL));
 		driver.close();
 		driver.switchTo().window(currentWindowID);
-		// driver.navigate().back();
+		driver.navigate().back();
 
 		
 /*		  //Click on Tags String
@@ -807,7 +829,7 @@ public class EvenntsAndWebinar extends base{
 
 		// Click on Event Title page
 		
-		driver.navigate().back();
+		//driver.navigate().back();
 		//Click on Exh Event Tab
 		//atlevents.getatlExhibitorsEventsTab().click();
 	/*	
@@ -1325,10 +1347,9 @@ public class EvenntsAndWebinar extends base{
                 Thread.sleep(8000);
     }
 
-@AfterClass(alwaysRun=true)
-public void tearDown()
-{
-	driver.quit();
-}
+      @AfterClass(alwaysRun=true)
+      public void tearDown(){
+      	    driver.quit();
+      }
 
 }

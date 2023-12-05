@@ -499,7 +499,7 @@ public class Utility extends base {
 			Thread.sleep(2000);
 			//click on Events Link
 			atlevents.getatlEventsLink().click();
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 		}
 		else {
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -508,7 +508,7 @@ public class Utility extends base {
 			Thread.sleep(2000);
 			//click on Events Link
 			atlevents.getatlEventsLink().click();
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 		}
 
 	}

@@ -618,7 +618,7 @@ public class GlobalSearch_ProductActions extends base {
 
 		// Click on product
 		atlexhact.getprodNameFromDGshhowroomPage().click();
-
+		Thread.sleep(1000);
 		/*
 		 * utl.scrollToElement(atlexhact.getExhibitorProduct());
 		 * 
@@ -630,6 +630,7 @@ public class GlobalSearch_ProductActions extends base {
 		 * //Click on See Details button actions.click().perform(); Thread.sleep(5000);
 		 */
 		// Click on Product Full Screen Viewer button
+		utl.scrollToElement(atlproddet.getProductFullScreenViewerBtn());
 		atlproddet.getProductFullScreenViewerBtn().click();
 
 		// Verify that Full Screen viewer should be displayed with Product images
