@@ -179,7 +179,7 @@ public class GlobalSearch_SearchFor extends base{
 		// click on Topics filter
 		Thread.sleep(2000);
 		lvmgs.getLVMInfoSearchTopicsFilter().click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		infoFilterList = driver.findElements(By.xpath("//div[@class='imc-filteritem__option']"));
 		//taglist = driver.findElements(By.xpath("(//div[@class='imc-articlecard__tags imc-gallery__item'])[1]/ul/li/button"));
 
@@ -332,6 +332,7 @@ public class GlobalSearch_SearchFor extends base{
 		Thread.sleep(5000);*/
 		
 		//Click on DG showroom filter
+		utl.scrollToElement(lvmexhact.getleftPaneFilterDGShowroom());
 		lvmexhact.getleftPaneFilterDGShowroom().click();
 		Thread.sleep(3000);
 		//Click on Catalog sub filter
@@ -405,6 +406,7 @@ public class GlobalSearch_SearchFor extends base{
 		Thread.sleep(3000);
 		Assert.assertTrue(lvmgs.getLVMSearchResult().getText().contains(prop.getProperty("searchforArticlesInputLVM")));
 		String filterResultTitle = lvmgs.getLVMArticleName().getText();
+		utl.scrollToElement(lvmgs.getLVMArticleSeeMoreBtn());
 		lvmgs.getLVMArticleSeeMoreBtn().click();
 		Thread.sleep(3000);
 		Assert.assertTrue(filterResultTitle.contains(lvmgs.getLVMArticleHeader().getText()));
@@ -725,6 +727,7 @@ public class GlobalSearch_SearchFor extends base{
 		driver.navigate().refresh();
 
 		String filterResultTitle = lvmgs.getLVMArticleName().getText();
+		utl.scrollToElement(lvmgs.getLVMArticleSeeMoreBtn());
 		lvmgs.getLVMArticleSeeMoreBtn().click();
 		Thread.sleep(2000);
 		Assert.assertTrue(filterResultTitle.contains(lvmgs.getLVMArticleHeader().getText()));
@@ -833,6 +836,7 @@ public class GlobalSearch_SearchFor extends base{
 
 		//Click on See More details btn
 		Thread.sleep(1000);
+		utl.scrollToElement(  lvmgs.getLVMSeeMoreDetailsBtn());
 		lvmgs.getLVMSeeMoreDetailsBtn().click();
 		Thread.sleep(2000);
 		//Verify that Selected topic name should be displayed as Tag on Event details page
@@ -958,9 +962,11 @@ public class GlobalSearch_SearchFor extends base{
 		//Click on Events & Seminars tab
 		try {
 			//Click on Events & Seminars tab
+		  utl.scrollToElement(lvmgs.getLVMEventsTabInSearch());
 			lvmgs.getLVMEventsTabInSearch().click();
 			}
 			catch(Exception e) {
+			  utl.scrollToElement(lvmgs.getLVMEventsTabInSearchDiv());
 				lvmgs.getLVMEventsTabInSearchDiv().click();
 			}
 		Thread.sleep(3000);
@@ -982,7 +988,7 @@ public class GlobalSearch_SearchFor extends base{
     	@AfterClass
     	public void tearDown()
     	{
-    		driver.quit();
+    		//driver.quit();
     	}
 
 }

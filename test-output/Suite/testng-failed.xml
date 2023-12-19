@@ -1,23 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]">
-  <test name="Test(failed)">
+<suite thread-count="1" name="Failed suite [Suite]" parallel="classes">
+  <test name="Test(failed)" parallel="classes">
     <classes>
-      <class name="atlantamarket_PROD.LineDigitalShowroom">
+      <class name="atlantamarket_UAT.LineDigitalShowroom">
         <methods>
-          <include name="TS004_VerifyLineDigitalShowroomHeroComponentAddTolistTest"/>
-          <include name="TS006_VerifyLineDigitalShowroomHeroComponentOrderOnJuniperMarketTest"/>
-          <include name="TS005_VerifyLineDigitalShowroomHeroComponentAddNoteTest"/>
-          <include name="TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest"/>
-          <include name="TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest"/>
-          <include name="TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest"/>
-          <include name="TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest"/>
-          <include name="TS003_VerifyLineDigitalShowroomHeroComponentAddToFavoriteTest"/>
-          <include name="tearDown"/>
+          <include name="TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest"/>
           <include name="initialize"/>
-          <include name="TS008_VerifyLineDigitalShowroomProductscomponentTest"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- atlantamarket_PROD.LineDigitalShowroom -->
+      </class> <!-- atlantamarket_UAT.LineDigitalShowroom -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

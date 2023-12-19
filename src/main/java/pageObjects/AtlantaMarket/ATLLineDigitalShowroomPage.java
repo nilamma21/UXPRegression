@@ -32,37 +32,37 @@ public class ATLLineDigitalShowroomPage {
 	By productName= By.xpath("//div[@class='imc-products-overview--gallery']/div[1]/div[1]/a[1]/div[1]/div[1]/span[1]/span[1]/span[1]"); //Locator for Product name
 	By productHeader= By.xpath("//h2[@class='imc-padding--left--smallmedium imc-padding--bottom--small']"); //Locator for Product name
 	By productName1= By.xpath("//div[@class='imc-products-overview--gallery']/div[1]/div[1]/a[1]/div[1]/div[1]"); //Locator for Product name
-	
-	
+	By suggetionListUAT = By.xpath("(//div[@ID='react-autowhatever-input-1']/ul/li)[1]");
+	By digiShowroomExhName1 = By.xpath("//section[@class='imc-site-wrapper']//descendant::span[@class='imc-heading imc-heading--giga-desktop imc-vr--medium imc-content--inline-block']"); // Locator  Exhibitor name shown by Digital Showroom page
+
 	
 	public ATLLineDigitalShowroomPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	}
 
-	
 	public WebElement getproductName1() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productName1));
 		return driver.findElement(productName1);
 	}
 	public WebElement getproductHeader() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productHeader));
 		return driver.findElement(productHeader);
 	}
 	public WebElement getproductName() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productName));
 		return driver.findElement(productName);
 	}
 	public WebElement getSeeAllprodctCountBottomBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(seeAllprodctCountBottomBtn));
 		return driver.findElement(seeAllprodctCountBottomBtn);
 	}
 	public WebElement getprodctCountBottomBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(prodctCountBottomBtn));
 		return driver.findElement(prodctCountBottomBtn);
 	}
@@ -71,19 +71,18 @@ public class ATLLineDigitalShowroomPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(orderOnJuniperBtnLink));
 		return driver.findElement(orderOnJuniperBtnLink);
 	}
-
 	public List <WebElement> gelistOfproductTile() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfproductTile));
 		return driver.findElements(listOfproductTile);
 	}
 	public WebElement getproductTitleAndCount() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productTitleAndCount));
 		return driver.findElement(productTitleAndCount);
 	}
 	public WebElement getproductCount() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productCount));
 		return driver.findElement(productCount);
 	}
@@ -93,32 +92,32 @@ public class ATLLineDigitalShowroomPage {
 		return driver.findElement(productTitle);
 	}
 	public WebElement getseeAllProductBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(seeAllProductBtn));
 		return driver.findElement(seeAllProductBtn);
 	}
 	public WebElement getorderOnJuniperBtn() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(orderOnJuniperBtn));
 		return driver.findElement(orderOnJuniperBtn);
 	}
 	public WebElement getaddNoteIcon() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(addNoteIcon));
 		return driver.findElement(addNoteIcon);
 	}
 	public WebElement getatl1stListName() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atl1stListName));
 		return driver.findElement(atl1stListName);
 	}
 	public WebElement getaddToListIcon() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(addToListIcon));
 		return driver.findElement(addToListIcon);
 	}
 	public WebElement getfavIconDigiShowroom() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(favIconDigiShowroom));
 		return driver.findElement(favIconDigiShowroom);
 	}
@@ -133,7 +132,7 @@ public class ATLLineDigitalShowroomPage {
 		return driver.findElement(suggetionList);
 	}
 	public WebElement getdigiShowroomExhName() {
-		wait = new WebDriverWait (driver,20);
+		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(digiShowroomExhName));
 		return driver.findElement(digiShowroomExhName);
 	}
@@ -141,5 +140,15 @@ public class ATLLineDigitalShowroomPage {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlLineDigiShowroomPageTitle));
 		return driver.findElement(atlLineDigiShowroomPageTitle);
+	}
+    public WebElement getsuggetionListUAT() {
+      wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.visibilityOfElementLocated(suggetionListUAT));
+      return driver.findElement(suggetionListUAT);
+  }
+	public WebElement getdigiShowroomExhName1() {
+      wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.visibilityOfElementLocated(digiShowroomExhName1));
+      return driver.findElement(digiShowroomExhName1);
 	}
 }
