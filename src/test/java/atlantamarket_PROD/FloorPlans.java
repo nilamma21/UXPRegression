@@ -123,7 +123,8 @@ public class FloorPlans extends base {
 
 		String locationlink = atlflpp.getATLBuildingFloor().getAttribute("href");
 		System.out.println(locationlink);
-
+		
+		utl.scrollToElement(atlflpp.getATLBuildingFloor());
 		atlflpp.getATLBuildingFloor().click();
 		Thread.sleep(2000);
 
@@ -166,8 +167,9 @@ public class FloorPlans extends base {
 		atlflpp=new ATLFloorPlansPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		Thread.sleep(2000);
 		// Click on Exh And Product Tab
+		utl.scrollToElement(atlflpp.getATLExhibitorsAndProductTab());
 		atlflpp.getATLExhibitorsAndProductTab().click();
 		Thread.sleep(500);
 		//click on Floor plans link
@@ -207,6 +209,7 @@ public class FloorPlans extends base {
 		atlflpp.getATLFloorPlansLink().click();
 		Thread.sleep(500);
 		//click on any floor
+		utl.scrollToElement(atlflpp.getATLBuildingFloor());
 		atlflpp.getATLBuildingFloor().click();
 		Thread.sleep(3000);
 		//Click on Zoom In icon
@@ -249,25 +252,27 @@ public class FloorPlans extends base {
 		atlgs = new ATLGlobalSearchPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		Thread.sleep(2000);
 		// Click on Exh And Product Tab
+		utl.scrollToElement(atlflpp.getATLExhibitorsAndProductTab());
 		atlflpp.getATLExhibitorsAndProductTab().click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		//click on Floor plans link
 		atlflpp.getATLFloorPlansLink().click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		//click on any floor
+		utl.scrollToElement(atlflpp.getATLBuildingFloor());
 		atlflpp.getATLBuildingFloor().click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		//Click on Vending Machine icon on Map image
 		atlflpp.getVendingMachineIconOnMap().click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		//Verify that Vending Machine Overlay should appeared on Map
 		Assert.assertTrue(atlflpp.getVendingMachineOverlayOnMap().isDisplayed());
 
 		//Click on Elevator icon on Map image
 		atlflpp.getElevatorIconOnMap().click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		//Verify that Elevator Overlay should appeared on Map
 		Assert.assertTrue(atlflpp.getElevatorOverlayOnMap().isDisplayed());
 
@@ -394,13 +399,14 @@ public class FloorPlans extends base {
 		Thread.sleep(1000);
 		// Click on Exh And Product Tab
 		atlflpp.getATLExhibitorsAndProductTab().click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		//click on Floor plans link
 		atlflpp.getATLFloorPlansLink().click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		//Click on Building floor
+		utl.scrollToElement(atlflpp.getATLBuildingFloor());
 		atlflpp.getATLBuildingFloor().click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		//Scroll Down to Exhibitor list
 		utl.scrollToElement(atlflpp.getATLNextFloorBtn());
 
@@ -437,8 +443,9 @@ public class FloorPlans extends base {
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		Thread.sleep(2000);
 		// Click on Exh And Product Tab
+		utl.scrollToElement(atlflpp.getATLExhibitorsAndProductTab());
 		atlflpp.getATLExhibitorsAndProductTab().click();
 		Thread.sleep(2000);
 		//click on Floor plans link
@@ -491,11 +498,12 @@ public class FloorPlans extends base {
 		Thread.sleep(500);
 		//click on Floor plans link
 		atlflpp.getATLFloorPlansLink().click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		//Verify that user should redirect to Floor plans page
 		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_prod")+"Market-Map"));
 
 		//Click on Building floor
+		utl.scrollToElement(atlflpp.getATLBuildingFloor());
 		atlflpp.getATLBuildingFloor().click();
 		Thread.sleep(500);
 		//Click on Return to Building Page link
@@ -517,8 +525,9 @@ public class FloorPlans extends base {
 		atlflpp=new ATLFloorPlansPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		Thread.sleep(2000);
 		// Click on Exh And Product Tab
+		utl.scrollToElement(atlflpp.getATLExhibitorsAndProductTab());
 		atlflpp.getATLExhibitorsAndProductTab().click();
 		Thread.sleep(500);
 		//click on Floor plans link

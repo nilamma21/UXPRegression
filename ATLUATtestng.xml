@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Suite" parallel="classes">
+  <test name="Test">
+    <classes>
+     	<class name="atlantamarket_UAT.LineDigitalShowroom"/>
+<!-- 
+	 <class name="atlantamarket_UAT.GlobalSearch_SuggestionList"/>
+	 <class name="atlantamarket_UAT.LineDigitalShowroom"/>
+      <class name="atlantamarket_UAT.EvenntsAndWebinar"/>
+      <class name="atlantamarket_UAT.GlobalSearch_LineActions"/>
+      <class name="atlantamarket_UAT.ExhibitorDigitalShowroom"/>
+      <class name="atlantamarket_UAT.FloorPlans"/>
+      <class name="atlantamarket_UAT.GlobalSearch_ProductActions"/>
+      <class name="atlantamarket_UAT.ShowSpecials"/>
+      <class name="atlantamarket_UAT.GlobalSearch_ExhibitorActions"/>
+      <class name="atlantamarket_UAT.GlobalSearch_MatchingResults"/>
+      <class name="atlantamarket_UAT.GlobalSearch_LeftPaneFilters"/>
+      <class name="atlantamarket_UAT.GlobalSearch_SearchFor"/>
+ -->
+<!-- 
+ 			<methods>
+				<include name="TS006_VerifyLineDigitalShowroomProductscomponentSelectProductTest()"/>  
+			</methods>
+ -->
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

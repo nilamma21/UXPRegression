@@ -136,6 +136,7 @@ public class EvenntsAndWebinar extends base{
 		atlevents.getatlEventsLink().click();
 		Thread.sleep(3000);*/
 		//Click on IMC Event Tab
+		utl.scrollToElement(atlevents.getatlExhibitorsEventsTab());
 		atlevents.getatlImcEventsTab().click();
 		Thread.sleep(500);
 		//Click on Search Bar of IMC Events
@@ -170,6 +171,7 @@ public class EvenntsAndWebinar extends base{
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click on IMC Event Tab
+		utl.scrollToElement(atlevents.getatlExhibitorsEventsTab());
 		atlevents.getatlImcEventsTab().click();
 		
 		Thread.sleep(2000);
@@ -272,6 +274,7 @@ public class EvenntsAndWebinar extends base{
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click on IMC Event Tab
+        utl.scrollToElement(atlevents.getatlExhibitorsEventsTab());
 		atlevents.getatlImcEventsTab().click();
 		Thread.sleep(500);
 		//Verify Event Calendar title
@@ -389,6 +392,7 @@ public class EvenntsAndWebinar extends base{
 		String eventTitle=atlevents.getatlClickOnEvent().getText();
 		Thread.sleep(5000);
 		//Click on IMC Event Tab
+		utl.scrollToElement(atlevents.getatlExhibitorsEventsTab());
 		atlevents.getatlImcEventsTab().click();
 		Thread.sleep(500);
 		//Click on Any Event title
@@ -508,6 +512,7 @@ public class EvenntsAndWebinar extends base{
 		atlevents.getatlEventsLink().click();
 		Thread.sleep(3000);*/
 		//Click on Exh Event Tab
+        utl.scrollToElement(atlevents.getatlExhibitorsEventsTab());
 		atlevents.getatlExhibitorsEventsTab().click();
 		Thread.sleep(500);
 		//Click on Search Bar of IMC Events
@@ -536,11 +541,12 @@ public class EvenntsAndWebinar extends base{
 		atlmppge = new ATLMarketPlannerPage(driver);
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(5000);
 		utl.clickOnEventLinkOfChannel();  
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		//Click on Exh Event Tab
+		utl.scrollToElement(atlevents.getatlExhibitorsEventsTab());
 		atlevents.getatlExhibitorsEventsTab().click();
 		
 		Thread.sleep(2000);
@@ -645,6 +651,7 @@ public class EvenntsAndWebinar extends base{
 		
 		//Click on Exh Event Tab
 		Thread.sleep(15000);
+		utl.scrollToElement(atlevents.getatlExhibitorsEventsTab());
 		atlevents.getatlExhibitorsEventsTab().click();
 		Thread.sleep(3000);
 		
@@ -765,11 +772,13 @@ public class EvenntsAndWebinar extends base{
 		atlmppge = new ATLMarketPlannerPage(driver);
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(5000);
 		utl.clickOnEventLinkOfChannel();  
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(2000);
 		
 		//Click on Exh Event Tab
+		utl.scrollToElement(atlevents.getatlExhibitorsEventsTab());
 		atlevents.getatlExhibitorsEventsTab().click();
 		Thread.sleep(500);
 		//Click on IMC Event Tab

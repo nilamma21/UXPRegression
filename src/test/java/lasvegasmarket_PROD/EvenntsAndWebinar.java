@@ -387,6 +387,7 @@ public class EvenntsAndWebinar extends base{
 		lvmevents.getlvmImcEventsTab().click();
 		Thread.sleep(2000);
 		//Click on Any Event title
+		utl.scrollToElement(lvmevents.getlvmClickOnEvent());
 		lvmevents.getlvmClickOnEvent().click();
 		Thread.sleep(4000);
 		Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUAT().getText()));
@@ -785,6 +786,7 @@ public class EvenntsAndWebinar extends base{
 		//Click on Exh Event Tab
 		lvmevents.getlvmExhibitorsEventsTab().click();
 		Thread.sleep(2000);
+		utl.scrollToElement(lvmevents.getlvmClickOnEvent());
 		String eventTitle=lvmevents.getlvmClickOnEvent().getText();
 		Thread.sleep(3000);
 		lvmevents.getlvmClickOnEvent().click();
@@ -1578,7 +1580,7 @@ public class EvenntsAndWebinar extends base{
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 
 }

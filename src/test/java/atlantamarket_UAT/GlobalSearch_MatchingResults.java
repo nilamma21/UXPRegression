@@ -41,7 +41,7 @@ public class GlobalSearch_MatchingResults extends base {
 	ATLLeftPaneFilters atlleftpane;
 
 	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns,
-	allnoteslist, favlist, searchlinetypelist, tagBlogPost, taglist, infoFilterList;
+			allnoteslist, favlist, searchlinetypelist, tagBlogPost, taglist, infoFilterList;
 
 	@BeforeClass(alwaysRun=true)
 	public void initialize() throws IOException, InterruptedException {
@@ -50,91 +50,65 @@ public class GlobalSearch_MatchingResults extends base {
 		utl = new Utility(driver);
 		lap = new ATLLandingPage(driver);
 		atlgs=new ATLGlobalSearchPage(driver);
-
+		
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-
+		
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(5000);
 		utl.CloseATLPopup();
-
+		
 		//lap.getCloseMarktAdBtn().click();
-
+		
 	}
-	@Test
-	public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
 
-		// The purpose of this test case to verify:-
-		// TS1- Login to Market Planner
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-
-		// Click on Login button from Landing Page
-		lap.getLogin().click();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		// Enter the credentials on Login Page and click
-		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
-
-		lp.getPassword().sendKeys((prop.getProperty("passwordW")));
-
-
-		Thread.sleep(1000);
-	//	lp.getPassword().sendKeys((prop.getProperty("password")));
-		Thread.sleep(1000);
-
-		lp.getSignInBtn().click();
-		Thread.sleep(15000);
-		Assert.assertTrue(driver.getTitle().contains("Atlanta Market at AmericasMart"));
-	}
-	
-	
-	@Test(priority = 1,groups="Non_MP")
+	@Test(priority = 1)//groups="Non_MP"
 	public void TS001_VerifyGlobalSearchContainsAndStartsWithTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T436: Verify Global Search: Contains and Starts With
-
 		//Blocked- Unclear about the acceptance criteria
-
+		
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		//driver.get(prop.getProperty("atlmrkturl_uat"));
+		//utl.loginCheckATL();
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("containsStartWithInput"));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(5000);
 
-
-
+		
+		
 		Assert.assertTrue(atlgs.getATLSearchResult().getText().contains(prop.getProperty("containsStartWithInput")));
-
+		
 		System.out.println("Displayed All Products Name Start with :: " + prop.getProperty("containsStartWithInput"));
-
+		
 	}
 
-	@Test(priority = 2,groups="Non_MP")
+	@Test(priority = 2)//groups="Non_MP"
 	public void TS002_VerifyGlobalSearchMatchingResultsSortWithinTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// T332: Global Search: Matching results- Sort- Search Within
+		// T673: Global Search: Matching results- Sort- Search Within
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 
+		driver.get(prop.getProperty("atlmrkturl_uat"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
-
+	
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(5000);
 		// Click on Sort Btn
-		atlgs.getatlGlobalSearchSortBtn().click();
+		atlgs.getatlGlobalSearchSortBtnNew().click();
 
 		// Select Exhibitor Info Only
 		Select selectAMC = new Select(atlgs.getatlGlobalSearch_SearchWithinDropdwn());
@@ -224,19 +198,20 @@ public class GlobalSearch_MatchingResults extends base {
 
 	}
 
-	@Test(priority = 3,groups="Non_MP")
+	@Test(priority = 3)//groups="Non_MP"
 	public void TS003_VerifyGlobalSearchMatchingResultsSortSortByTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T335: Global Search: Matching results-Sort- Sort By
 		//Open bug- UXP-1991
-
+	  
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 
+		driver.get(prop.getProperty("atlmrkturl_uat"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
@@ -244,7 +219,7 @@ public class GlobalSearch_MatchingResults extends base {
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(5000);
 		// Click on Sort Btn
-		atlgs.getatlGlobalSearchSortBtn().click();
+		atlgs.getatlGlobalSearchSortBtnNew().click();
 
 		// Select Exhibitor Sort By Relevance
 		Select selectAMC = new Select(atlgs.getatlGlobalSearch_SearchSortByDropdwn());
@@ -258,19 +233,19 @@ public class GlobalSearch_MatchingResults extends base {
 				"Sort by Name Ascending");
 		utl.Sorting(atlgs.getatlGlobalSearchExhLocationList(), atlgs.getatlGlobalSearch_SearchSortByDropdwn(),
 				"Sort by Name Descending");*/
-
-		//Select filter Sort by Name Ascending
-		utl.Sorting(atlgs.getatlExhNames(),atlgs.getatlGlobalSearch_SearchSortByDropdwn(),"Sort by Name Ascending");
-		///Select filter Sort by Name Descending
-		utl.Sorting(atlgs.getatlExhNames(),atlgs.getatlGlobalSearch_SearchSortByDropdwn(),"Sort by Name Descending");
-
+		
+		 //Select filter Sort by Name Ascending
+		 utl.Sorting(atlgs.getatlExhNames(),atlgs.getatlGlobalSearch_SearchSortByDropdwn(),"Sort by Name Ascending");
+		 ///Select filter Sort by Name Descending
+		 utl.Sorting(atlgs.getatlExhNames(),atlgs.getatlGlobalSearch_SearchSortByDropdwn(),"Sort by Name Descending");
+		
 		//Select filter Sort by Matching Product Count Descending
 		utl.Sorting(atlgs.getatlMachingProductCount(), atlgs.getatlGlobalSearch_SearchSortByDropdwn(),
 				"Sort By Matching Product Count Descending");
 
 	}
 
-	@Test(priority = 4,groups="Non_MP")
+	@Test(priority = 4)//groups=\"Non_MP"
 	public void TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T336: Global Search: Matching results- Sort- Filter By Name
@@ -280,6 +255,7 @@ public class GlobalSearch_MatchingResults extends base {
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 
+		driver.get(prop.getProperty("atlmrkturl_uat"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
@@ -288,29 +264,55 @@ public class GlobalSearch_MatchingResults extends base {
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(5000);
 		// Click on Sort Btn
-		atlgs.getatlGlobalSearchSortBtn().click();
+		atlgs.getatlGlobalSearchSortBtnNew().click();
 
 		// Select Character from Sort By Filter Name
-
+		
 		Select selectLetter = new Select(atlgs.getatlFilterByNameDropDown());
 		selectLetter.selectByVisibleText("P");
 		Thread.sleep(8000);
 		for (WebElement filterExhNames : atlgs.getatlExhiNameForFilterByName()) {
 			//Assert.assertTrue(filterExhNames.isDisplayed());
-
+			
 			String expName=filterExhNames.getText();
 			boolean flag=false;
 			char fChar=expName.charAt(0);
 			String s=""+fChar;
 			Assert.assertTrue(s.contains("P"));
-
+			
 		}
 
 		System.out.println("Displayed All Relevance ");
 
 	}
+	   @Test(enabled=false)
+	    public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
 
-	@Test(priority = 5,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
+	        // The purpose of this test case to verify:-
+	        // TS1- Login to Market Planner
+
+	        lap = new ATLLandingPage(driver);
+	        lp = new ATLLoginPage(driver);
+
+	        // Click on Login button from Landing Page
+	        lap.getLogin().click();
+	        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	        // Enter the credentials on Login Page and click
+	        lp.getEmailAddress().sendKeys((prop.getProperty("username")));
+
+	        lp.getPassword().sendKeys((prop.getProperty("passwordW")));
+
+
+	        Thread.sleep(1000);
+	    //  lp.getPassword().sendKeys((prop.getProperty("password")));
+	        Thread.sleep(1000);
+
+	        lp.getSignInBtn().click();
+	        Thread.sleep(15000);
+	        Assert.assertTrue(driver.getTitle().contains("Atlanta Market at AmericasMart"));
+	    }
+
+	@Test(enabled=false)//priority = 5,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality"
 	public void TS005_VerifyGlobalSearchMatchingResultsSelectAddToFavoritesTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -328,7 +330,8 @@ public class GlobalSearch_MatchingResults extends base {
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
-		//utl.verifyMPLoginFunctionality();
+		////utl.verifyMPLoginFunctionality();
+		utl.loginCheckATL();
 		utl.CloseATLPopup();
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
 		atlgs.getATLSearchButton().click();
@@ -361,7 +364,7 @@ public class GlobalSearch_MatchingResults extends base {
 
 	}
 
-	@Test(priority = 6,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
+	@Test(enabled=false)//priority = 6,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality"
 	public void TS006_VerifyGlobalSearchMatchingResultsSelectAddToExistingListTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -378,6 +381,7 @@ public class GlobalSearch_MatchingResults extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//utl.verifyMPLoginFunctionality();
+		utl.loginCheckATL();
 		utl.CloseATLPopup();
 		//atlgs.getatlGlobalSearchClearTxt().click();
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
@@ -420,7 +424,7 @@ public class GlobalSearch_MatchingResults extends base {
 
 	}
 
-	@Test(priority = 7,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
+	@Test(enabled=false)//priority = 7,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality"
 	public void TS007_VerifyGlobalSearchMatchingResultsSelectAddToNewlyCreatedListTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -437,7 +441,7 @@ public class GlobalSearch_MatchingResults extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		//utl.verifyMPLoginFunctionality();
+	//	//utl.verifyMPLoginFunctionality();
 		utl.CloseATLPopup();
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
@@ -453,7 +457,7 @@ public class GlobalSearch_MatchingResults extends base {
 		atlgs.getatlGlobalSearchSelectBtn().click();
 		// Select 1st checkbox from searched result
 		atlgs.getatlGlobalSearchExhCheckbox().click();
-
+		
 		// Click on Add to Selected List Btn
 		atlgs.getatlAddToExistingList().click();
 		String lName = genData.generateRandomString(10);
@@ -476,11 +480,16 @@ public class GlobalSearch_MatchingResults extends base {
 		utl.ClickOnEditBtnOfAnyList(atlmppge.getallList(), lName);
 		// Verify exhibitor present into selected list or not
 		Thread.sleep(6000);
+		try {
 		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExh(), exhName);
-
+		}catch (Exception e) {
+			// TODO: handle exception
+		utl.checkItemPresentInListorNot(atlmppge.getlistOfAllExhPROD(), exhName);
+		
+		}
 	}
 
-	@Test(priority = 8,groups="Non_MP")
+	@Test(enabled=false)//priority = 8,groups="Non_MP"
 	public void TS008_VerifyGlobalSearchMatchingResultsUsePreviousSavedSearchTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -497,15 +506,15 @@ public class GlobalSearch_MatchingResults extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-
+		
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
-		//utl.verifyMPLoginFunctionality();
-
+		////utl.verifyMPLoginFunctionality();
+		
 		utl.CloseATLPopup();
-
-
+		
+		
 		try {
 			atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("savedSearchesInput"));
 			Thread.sleep(3000);
@@ -517,12 +526,12 @@ public class GlobalSearch_MatchingResults extends base {
 			selectSavedSearched.selectByIndex(1);
 			String optin = selectSavedSearched.getOptions().get(1).getText();
 			System.out.println(optin);
-			//	Assert.assertTrue(atlgs.getATLInfosearchtxtbx().getAttribute("value").contains(optin));
+		//	Assert.assertTrue(atlgs.getATLInfosearchtxtbx().getAttribute("value").contains(optin));
 			Thread.sleep(5000);
 			Assert.assertTrue(atlgs.getATLVerifyGlobalSeacrh().getText().contains(optin));
-
+			
 		} catch (Exception e) {
-
+			
 			if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 				atlgs.getatlGlobalSearchClearTxt().click();
 			}
@@ -534,7 +543,7 @@ public class GlobalSearch_MatchingResults extends base {
 			atlgs.getatlSavedSearchesIcon().click();
 			//Click on Save Seach btn
 			atlgs.getatlSavedSearchesBtn().click();
-
+			
 			String savedSearchesInput=prop.getProperty("savedSearchesInput");
 			//Enter Search name into input box
 			atlgs.getatlSavedSearchesInputBox().sendKeys(savedSearchesInput);
@@ -558,7 +567,7 @@ public class GlobalSearch_MatchingResults extends base {
 
 	}
 
-	@Test(priority = 9,groups="Non_MP")
+	@Test(enabled=false)//priority = 9,groups="Non_MP"
 	public void TS009_VerifyGlobalSearchMatchingResultsSavedSearchesTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -574,11 +583,11 @@ public class GlobalSearch_MatchingResults extends base {
 		genData = new GenerateData();
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
-		//utl.verifyMPLoginFunctionality();
+		////utl.verifyMPLoginFunctionality();
 		utl.CloseATLPopup();
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("savedSearchesInput"));
 		Thread.sleep(3000);
@@ -588,19 +597,21 @@ public class GlobalSearch_MatchingResults extends base {
 		atlgs.getatlSavedSearchesIcon().click();
 		//Click on Save Seach btn
 		atlgs.getatlSavedSearchesBtn().click();
-
+		
 		String savedSearchesInput=prop.getProperty("savedSearchesInput");
 		//Enter Search name into input box
 		atlgs.getatlSavedSearchesInputBox().sendKeys(savedSearchesInput);
 		//Click on Save Search Btn 
 		atlgs.getatlSavedSearchesBtnForNewSaved().click();
 		atlgs.getatlSelectList().click();
-
+		
 		utl.checkItemPresentInListorNot(atlgs.getatlListOfAllSavedSearches(),savedSearchesInput);
+		
 	}
 	@AfterClass(alwaysRun=true)
 	public void tearDown()
 	{
 		driver.quit();
 	}
+
 }

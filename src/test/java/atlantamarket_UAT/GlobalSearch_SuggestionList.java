@@ -53,39 +53,12 @@ public class GlobalSearch_SuggestionList extends base {
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 		lap.getIUnderstandBtn().click();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 //		Thread.sleep(10000);
 //		lap.getCloseMarktAdBtn().click();
 	}
-	@Test
-	public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
 
-		// The purpose of this test case to verify:-
-		// TS1- Login to Market Planner
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-
-		// Click on Login button from Landing Page
-		lap.getLogin().click();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		// Enter the credentials on Login Page and click
-		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
-
-		lp.getPassword().sendKeys((prop.getProperty("passwordW")));
-
-
-		Thread.sleep(1000);
-	//	lp.getPassword().sendKeys((prop.getProperty("password")));
-		Thread.sleep(1000);
-
-		lp.getSignInBtn().click();
-		Thread.sleep(15000);
-		Assert.assertTrue(driver.getTitle().contains("Atlanta Market at AmericasMart"));
-	}
-	
-
-
-	@Test(priority = 1,groups="Non_MP")
+	@Test(priority = 1)//groups="Non_MP"
 	public void TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T419: The selection of an Exhibitor from Auto Suggestion List
@@ -94,7 +67,8 @@ public class GlobalSearch_SuggestionList extends base {
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		//utl.loginCheckATL();
+		Thread.sleep(5000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestexhibitor")));
 
 		WebDriverWait wait = new WebDriverWait(driver, 30);
@@ -115,7 +89,7 @@ public class GlobalSearch_SuggestionList extends base {
 		Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
 	}
 
-	@Test(priority = 2,groups="Non_MP")
+	@Test(priority = 2)//groups="Non_MP"
 	public void TS002_VerifySelectionOfLineFromAutoSuggestionListTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T420: The selection of a Line from Auto Suggestion List
@@ -123,13 +97,12 @@ public class GlobalSearch_SuggestionList extends base {
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		driver.get(prop.getProperty("atlmrkturl_uat"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//lap.getCloseMarktAdBtn().click();
-		
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestline")));
-
+		Thread.sleep(5000);
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("line3")));
+		Thread.sleep(2000);
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li")));
 
@@ -138,17 +111,17 @@ public class GlobalSearch_SuggestionList extends base {
 
 		for (int i = 0; i < 10; i++) {
 			// System.out.println(list.get(i).getText());
-			if (linelist.get(i).getText().contains(prop.getProperty("autosuggestline"))
+			if (linelist.get(i).getText().contains(prop.getProperty("line3"))
 					&& linelist.get(i).getText().contains("Line")) {
 				linelist.get(i).click();
 				break;
 			}
 		}
 		Thread.sleep(8000);
-		Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
+		Assert.assertTrue(atlexhdgshw.getExhibitorNameOnExhDirectImg().isDisplayed());
 	}
 
-	@Test(priority = 3,groups="Non_MP")
+	@Test(priority = 3)//groups="Non_MP"
 	public void TS003_VerifySelectionOfProductFromAutoSuggestionListTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T420: The selection of a Product from Auto Suggestion List
@@ -156,12 +129,11 @@ public class GlobalSearch_SuggestionList extends base {
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlproddet = new ATLProductDetailsPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 		driver.get(prop.getProperty("atlmrkturl_uat"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//lap.getCloseMarktAdBtn().click();
-		
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestproduct")));
+		Thread.sleep(2000);
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestproduct_lvm2")));
 
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li")));
@@ -171,7 +143,7 @@ public class GlobalSearch_SuggestionList extends base {
 
 		for (int i = 0; i < prodlist.size(); i++) {
 			//System.out.println(prodlist.get(i).getText());			
-			if (prodlist.get(i).getText().contains(prop.getProperty("autosuggestproduct"))
+			if (prodlist.get(i).getText().contains(prop.getProperty("autosuggestproduct_lvm2"))
 					&& prodlist.get(i).getText().contains("Product")) {	
 				prodlist.get(i).click();
 				break;
@@ -183,9 +155,35 @@ public class GlobalSearch_SuggestionList extends base {
 		//lap.getCloseMarktAdBtn().click();
 	}
 	
+    @Test(enabled=false)
+    public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
+        // The purpose of this test case to verify:-
+        // TS1- Login to Market Planner
+
+        lap = new ATLLandingPage(driver);
+        lp = new ATLLoginPage(driver);
+
+        // Click on Login button from Landing Page
+        lap.getLogin().click();
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        // Enter the credentials on Login Page and click
+        lp.getEmailAddress().sendKeys((prop.getProperty("username")));
+
+        lp.getPassword().sendKeys((prop.getProperty("passwordW")));
+
+        Thread.sleep(1000);
+    //  lp.getPassword().sendKeys((prop.getProperty("password")));
+        Thread.sleep(1000);
+
+        lp.getSignInBtn().click();
+        Thread.sleep(15000);
+        Assert.assertTrue(driver.getTitle().contains("Atlanta Market at AmericasMart"));
+    }
+    
+	
 	@AfterClass(alwaysRun=true)
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 }

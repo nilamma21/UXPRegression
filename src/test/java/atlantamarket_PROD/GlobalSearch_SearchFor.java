@@ -133,6 +133,7 @@ public class GlobalSearch_SearchFor extends base {
 
 		String seeMoreDetailsURL=atlgs.getatlInfoSearchMoreInfoBtn().getAttribute("href");
 		// Click on See More details Btn from result
+		utl.scrollToElement(atlgs.getatlInfoSearchMoreInfoBtn());
 		atlgs.getatlInfoSearchMoreInfoBtn().click();
 		Thread.sleep(5000);
 		System.out.println("First Info Name: "+FirstInfoName);
@@ -281,6 +282,7 @@ public class GlobalSearch_SearchFor extends base {
 		Thread.sleep(5000);*/
 		
 		//Click on DG showroom filter
+		utl.scrollToElement(atlexhact.getleftPaneFilterDGShowroom());
 		atlexhact.getleftPaneFilterDGShowroom().click();
 		Thread.sleep(3000);
 		//Click on Catalog sub filter
@@ -347,6 +349,7 @@ public class GlobalSearch_SearchFor extends base {
 		Assert.assertTrue(atlgs.getATLSearchResult().getText().contains(prop.getProperty("searchforArticlesInput2")));
 		String filterResultTitle = atlgs.getATLArticleName().getText();
 		System.out.println("Article Title on Search Page: "+filterResultTitle);
+		utl.scrollToElement(atlgs.getATLArticleSeeMoreBtn());
 		atlgs.getATLArticleSeeMoreBtn().click();
 		Thread.sleep(3000);
 		String articleTitle =atlgs.getATLArticleHeader().getText();
@@ -404,6 +407,7 @@ public class GlobalSearch_SearchFor extends base {
 					driver.navigate().refresh();
 					Thread.sleep(5000);
 					String filterResultTitle = atlgs.getATLArticleName().getText();
+					utl.scrollToElement(atlgs.getATLArticleSeeMoreBtn());
 					atlgs.getATLArticleSeeMoreBtn().click();
 					Thread.sleep(500);
 					Assert.assertTrue(filterResultTitle.contains(atlgs.getATLArticleHeader().getText()));
@@ -666,8 +670,9 @@ public class GlobalSearch_SearchFor extends base {
 		Assert.assertTrue(atlgs.getATLSearchResult().getText().contains(prop.getProperty("searchforArticlesInput2")));
 
 		driver.navigate().refresh();
-
+		Thread.sleep(3000);
 		String filterResultTitle = atlgs.getATLArticleName().getText();
+		utl.scrollToElement(atlgs.getATLArticleSeeMoreBtn());
 		atlgs.getATLArticleSeeMoreBtn().click();
 		Thread.sleep(500);
 		Assert.assertTrue(filterResultTitle.contains(atlgs.getATLArticleHeader().getText()));
@@ -776,6 +781,7 @@ public class GlobalSearch_SearchFor extends base {
 		//atlgs.getEventsATLMktTopics().click();
 		Thread.sleep(500);
 		//Click on See More details btn
+		utl.scrollToElement(atlgs.getATLSeeMoreDetailsBtn());
 		atlgs.getATLSeeMoreDetailsBtn().click();
 		Thread.sleep(500);
 		//Verify that Selected topic name should be displayed as Tag on Event details page
@@ -830,7 +836,7 @@ public class GlobalSearch_SearchFor extends base {
 
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(5000);
-
+		utl.scrollToElement(atlgs.getseeAllLinkMatchingProduct());
 		atlgs.getseeAllLinkMatchingProduct().click();
 		//atlgs.getseeAllLinkMatchingProduct().click();
 		Thread.sleep(5000);
@@ -871,12 +877,13 @@ public class GlobalSearch_SearchFor extends base {
 			catch(Exception e) {
 				atlgs.getATLEventsTabInSearchDiv().click();
 			}
-
+		Thread.sleep(1000);
 		//Verify that Events data should be displayed
 		String eventname = atlexhact.getEventCardTitle().getText();
 		Assert.assertTrue(atlexhact.getEventCardInSearch().isDisplayed());
 		System.out.println(eventname);
 		//Click on See More details btn
+		utl.scrollToElement(atlgs.getATLSeeMoreDetailsBtn());
 		atlgs.getATLSeeMoreDetailsBtn().click();
 		Thread.sleep(500);
 		System.out.println(atlexhact.getEventDetailsHeader().getText());
