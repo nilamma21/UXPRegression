@@ -128,8 +128,8 @@ public class GlobalSearch_SuggestionList extends base {
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//lap.getCloseMarktAdBtn().click();
-		Thread.sleep(5000);
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("line2")));
+		Thread.sleep(2000);
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestline")));
 
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li")));
@@ -139,13 +139,13 @@ public class GlobalSearch_SuggestionList extends base {
 
 		for (int i = 0; i < 10; i++) {
 			// System.out.println(list.get(i).getText());
-			if (linelist.get(i).getText().contains(prop.getProperty("line2"))
+			if (linelist.get(i).getText().contains(prop.getProperty("autosuggestline"))
 					&& linelist.get(i).getText().contains("Line")) {
 				linelist.get(i).click();
 				break;
 			}
 		}
-		Thread.sleep(8000);
+		Thread.sleep(3000);
 		Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
 	}
 
