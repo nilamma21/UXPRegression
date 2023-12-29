@@ -254,10 +254,84 @@ public class FloorPlans extends base {
 */
 	}
 
-	
+    @Test(priority = 5)
+    public void TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest() throws InterruptedException, IOException {
+        // The purpose of this test case to verify:-
+        // UXP-T290: To verify Floor Plans: Filter
 
-	@Test(priority = 5)
-	public void TS005_VerifyPaginationOnFloorPlansPageTest() throws InterruptedException, IOException {
+        utl = new Utility(driver);
+        lvmflpp=new LVMFloorPlansPage(driver);
+        
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        // Click on Exh And Product Tab
+        lvmflpp.getLVMExhibitorsAndProductTab().click();
+        Thread.sleep(2000);
+        //click on Floor plans link
+        lvmflpp.getLVMFloorPlansLink().click();
+        Thread.sleep(2000);
+        //Click on Building floorr
+        lvmflpp.getLVMBuildingFloorForFilter().click();
+        Thread.sleep(6000);
+        //Scroll Down to Exhibitor list
+        utl.scrollToElement(lvmflpp.getLVMSelectBox());
+        Thread.sleep(7000);
+        
+        //Create current Exhibitor list without sort
+        List<String> currentList=new ArrayList<String>();
+        List<WebElement> elementList= driver.findElements(By.xpath("//a[@class='imc-type--title-5-link']"));
+        for(WebElement we:elementList){
+            currentList.add(we.getText().toLowerCase());
+        }
+        System.out.println("Current Exhibitor List : "+currentList);
+
+        //Create sorted list
+        List<String> sortedList = new ArrayList<String>();   
+        for(String s:currentList){
+            sortedList.add(s.toLowerCase());
+        }
+        Collections.sort(sortedList);
+        //System.out.println("Sorted list : "+sortedList);
+
+        //Select Filter Sort A-Z
+        Select selectFilter=new Select(lvmflpp.getLVMSelectBox());
+        selectFilter.selectByValue("Sort A-Z");
+        Thread.sleep(25000);
+
+        //Sorted list from filter Sort A-Z
+        List<String> expectedSortedList = new ArrayList<String>(); 
+        for(WebElement we:elementList){
+            expectedSortedList.add(we.getText().toLowerCase());
+        }
+        Thread.sleep(2000);
+        //System.out.println("Expected sorted Exhibitor List : "+expectedSortedList);
+        //Verify Exhibitor List is Sorted or not
+        Assert.assertEquals(sortedList, expectedSortedList, "Exhibitor List Should be sorted");
+
+/*
+        //Select Exhibitor on JuniperMarket from List
+        selectFilter.selectByValue("Lines on JuniperMarket");
+        Thread.sleep(10000);
+        
+        List<WebElement> currentJuniperMarketList= driver.findElements(By.xpath("//a[@class='imc-type--title-5-link']"));
+        List<String> juniperMarketList = new ArrayList<String>(); 
+        for(WebElement we:currentJuniperMarketList){
+
+            juniperMarketList.add(we.getText());
+        }
+        //System.out.println("Expected sorted Exhibitor List : "+juniperMarketList);
+        //Verify JuniperMarket List is Displayed or not
+        Assert.assertTrue(!juniperMarketList.isEmpty(),"JuniperMarket Exhibitor list should displayed.");   
+        if(atlflpp.getResultsMsgForLinesOnJuniper().isDisplayed()) {
+            System.out.println("Lines on JuniperMarket is present");
+        }else {
+            Assert.assertTrue(atlflpp.getNoResultsMsgForLinesOnJuniper().isDisplayed());
+            System.out.println("Lines on JuniperMarket is not present");
+        }
+*/
+    }
+    
+	@Test(priority = 6)
+	public void TS006_VerifyPaginationOnFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T633: Floor Plans: Pagination
 
@@ -302,8 +376,8 @@ public class FloorPlans extends base {
 		Assert.assertTrue(exptectedPeviousFloorNumber.contains(actualPreviousFloorNumber));	
 	}
 
-	@Test(priority = 6)
-	public void TS006_VerifySelectionOfExhibitorOnFloorPlansPageTest() throws InterruptedException, IOException {
+	@Test(priority = 7)
+	public void TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T666: Floor Plans: Select Exhibitors
 
@@ -343,8 +417,8 @@ public class FloorPlans extends base {
 		Assert.assertTrue(lvmexhdgshw.getlvmexhibitornameonexhdirectimg_uat().getText().contains(exhibitorName));
 	}
 
-	@Test(priority = 7)
-	public void TS007_VerifyClickOnReturnToBuildingListBtnTest() throws InterruptedException, IOException {
+	@Test(priority = 8)
+	public void TS008_VerifyClickOnReturnToBuildingListBtnTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T669: Floor Plans: Return to Building list
 
@@ -371,8 +445,8 @@ public class FloorPlans extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("lvmurl_prod")+"Market-Map"));
 	}
 
-	@Test(priority = 8)
-	public void TS008_VerifySearchFunctionalityForExhListOnFloorPlansPageTest() throws InterruptedException, IOException {
+	@Test(priority = 9)
+	public void TS009_VerifySearchFunctionalityForExhListOnFloorPlansPageTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
 		// UXP-T635: Exhibitor functionality on floor plans page
@@ -409,7 +483,7 @@ public class FloorPlans extends base {
 	}
 
 	@Test(enabled=false)//priority = 10
-	public void TS009_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest() throws InterruptedException, IOException {
+	public void TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T313: Floor Plans: Exhibitor Options - Add to List
 
@@ -479,7 +553,7 @@ public class FloorPlans extends base {
 	}
 
 	@Test(enabled=false)//priority = 11
-	public void TS010_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest() throws InterruptedException, IOException {
+	public void TS011_VerifyAddNoteFunctionalityForExhibitorOnFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T314: Floor Plans: Exhibitor Options - Add Note
 
@@ -546,7 +620,7 @@ public class FloorPlans extends base {
 	}
 
 	@Test(enabled=false)//priority = 12
-	public void TS011_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest() throws InterruptedException, IOException {
+	public void TS012_VerifyAddToFavoriteFunctionalityForExhibitorOnFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T316: Floor Plans: Exhibitors Option - Add to Favorite
 
@@ -611,82 +685,7 @@ public class FloorPlans extends base {
 		}
 	}
 	
-	@Test(enabled=false)//priority = 5
-	public void TS012_VerifyFunctionalityOfFiltersOFloorPlansPageTest() throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// UXP-T290: To verify Floor Plans: Filter
 
-		utl = new Utility(driver);
-		lvmflpp=new LVMFloorPlansPage(driver);
-		
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		// Click on Exh And Product Tab
-		lvmflpp.getLVMExhibitorsAndProductTab().click();
-		Thread.sleep(2000);
-		//click on Floor plans link
-		lvmflpp.getLVMFloorPlansLink().click();
-		Thread.sleep(2000);
-		//Click on Building floorr
-		lvmflpp.getLVMBuildingFloorForFilter().click();
-		Thread.sleep(6000);
-		//Scroll Down to Exhibitor list
-		utl.scrollToElement(lvmflpp.getLVMSelectBox());
-		Thread.sleep(7000);
-		
-		//Create current Exhibitor list without sort
-		List<String> currentList=new ArrayList<String>();
-		List<WebElement> elementList= driver.findElements(By.xpath("//a[@class='imc-type--title-5-link']"));
-		for(WebElement we:elementList){
-			currentList.add(we.getText().toLowerCase());
-		}
-		System.out.println("Current Exhibitor List : "+currentList);
-
-		//Create sorted list
-		List<String> sortedList = new ArrayList<String>();   
-		for(String s:currentList){
-			sortedList.add(s.toLowerCase());
-		}
-		Collections.sort(sortedList);
-		//System.out.println("Sorted list : "+sortedList);
-
-		//Select Filter Sort A-Z
-		Select selectFilter=new Select(lvmflpp.getLVMSelectBox());
-		selectFilter.selectByValue("Sort A-Z");
-		Thread.sleep(25000);
-
-		//Sorted list from filter Sort A-Z
-		List<String> expectedSortedList = new ArrayList<String>(); 
-		for(WebElement we:elementList){
-			expectedSortedList.add(we.getText().toLowerCase());
-		}
-		Thread.sleep(2000);
-		//System.out.println("Expected sorted Exhibitor List : "+expectedSortedList);
-		//Verify Exhibitor List is Sorted or not
-		Assert.assertEquals(sortedList, expectedSortedList, "Exhibitor List Should be sorted");
-
-/*
-		//Select Exhibitor on JuniperMarket from List
-		selectFilter.selectByValue("Lines on JuniperMarket");
-		Thread.sleep(10000);
-		
-		List<WebElement> currentJuniperMarketList= driver.findElements(By.xpath("//a[@class='imc-type--title-5-link']"));
-		List<String> juniperMarketList = new ArrayList<String>(); 
-		for(WebElement we:currentJuniperMarketList){
-
-			juniperMarketList.add(we.getText());
-		}
-		//System.out.println("Expected sorted Exhibitor List : "+juniperMarketList);
-		//Verify JuniperMarket List is Displayed or not
-		Assert.assertTrue(!juniperMarketList.isEmpty(),"JuniperMarket Exhibitor list should displayed.");	
-		if(atlflpp.getResultsMsgForLinesOnJuniper().isDisplayed()) {
-			System.out.println("Lines on JuniperMarket is present");
-		}else {
-			Assert.assertTrue(atlflpp.getNoResultsMsgForLinesOnJuniper().isDisplayed());
-			System.out.println("Lines on JuniperMarket is not present");
-		}
-*/
-	}
-	
 	@AfterClass
 	public void tearDown()
 	{

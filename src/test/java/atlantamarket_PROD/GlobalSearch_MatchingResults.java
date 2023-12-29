@@ -104,6 +104,7 @@ public class GlobalSearch_MatchingResults extends base {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
 	
+		Thread.sleep(5000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(5000);
