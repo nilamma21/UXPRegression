@@ -96,7 +96,7 @@ public class FloorPlans extends base {
 		Assert.assertTrue(driver.getTitle().contains("Atlanta Market at AmericasMart"));
 	}
 	
-	@Test(priority = 1,groups="Non_MP")
+	@Test(priority = 1)//groups="Non_MP"
 	public void TS001_VerifyNavigationToDifferentFloorBuildingsTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T627: To verify Floor Plans: Navigation to different floor/buildings
@@ -156,7 +156,7 @@ public class FloorPlans extends base {
 		Assert.assertTrue(exptectedPeviousFloorNumber.contains(actualPreviousFloorNumber));	
 	}
 
-	@Test(priority = 2,groups="Non_MP")
+	@Test(priority = 2)//groups="Non_MP"
 	public void TS002_VerifyNoExhibitorsOnThisFloorMessageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T628: To verify Floor Plans: No Exhibitors or Loading message
@@ -190,7 +190,7 @@ public class FloorPlans extends base {
 		Assert.assertTrue(atlflpp.getatlLoadingNoExhiMsg().isDisplayed());
 	}
 
-	@Test(priority = 3,groups="Non_MP")
+	@Test(priority = 3)//groups="Non_MP'
 	public void TS003_VerifyZoomInOutLevelOnFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case:-
 		// UXP-T629: To verify Floor Plans: Zoom Levels
@@ -239,7 +239,7 @@ public class FloorPlans extends base {
 		Assert.assertNotEquals(x1, out);
 	}
 
-	@Test(priority = 4,groups="Non_MP")
+	@Test(priority = 4)//groups="Non_MP"
 	public void TS004_VerifyIconsOnFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to:-
 		// UXP-T808: To verify Floor Plans: Icons
@@ -312,7 +312,7 @@ public class FloorPlans extends base {
 	//	Assert.assertTrue(atlgs.getinfoTitleOnSeeDetailsPage().getText().contains(exhnameondetailsmodal));
 	}
 
-	@Test(priority = 5,groups="Non_MP")
+	@Test(priority = 5)//groups="Non_MP"
 	public void TS005_VerifyFunctionalityOfFiltersOnFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T290: To verify Floor Plans: Filter
@@ -385,7 +385,7 @@ public class FloorPlans extends base {
 	*/
 	}
 
-	@Test(priority = 6,groups="Non_MP")
+	@Test(priority = 6)//groups="Non_MP"
 	public void TS006_VerifyPaginationOnFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T633: Floor Plans: Pagination
@@ -431,7 +431,7 @@ public class FloorPlans extends base {
 		Assert.assertTrue(exptectedPeviousFloorNumber.contains(actualPreviousFloorNumber));	
 	}
 
-	@Test(priority = 7,groups="Non_MP")
+	@Test(priority = 7)//groups="Non_MP"
 	public void TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T666: Floor Plans: Select Exhibitors
@@ -482,7 +482,7 @@ public class FloorPlans extends base {
 		System.out.println("Verified that the Exhibitor name is in the breadcrumb");
 	}
 
-	@Test(priority = 8,groups="Non_MP")
+	@Test(priority = 8)//groups="Non_MP"
 	public void TS008_VerifyClickOnReturnToBuildingListBtnTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T669: Floor Plans: Return to Building list
@@ -514,7 +514,7 @@ public class FloorPlans extends base {
 		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_prod")+"Market-Map"));
 	}
 
-	@Test(priority = 9,groups="Non_MP")
+	@Test(priority = 9)//groups="Non_MP"
 	public void TS009_VerifySearchFunctionalityForExhListOnFloorPlansPageTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-

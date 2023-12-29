@@ -23,6 +23,10 @@ import pageObjects.AtlantaMarket.ATLLeftPaneFilters;
 import pageObjects.AtlantaMarket.ATLLoginPage;
 import pageObjects.AtlantaMarket.ATLMarketPlannerPage;
 import pageObjects.AtlantaMarket.ATLProductDetailsPage;
+import pageObjects.LasVegasMarket.LVMExhDigiShowroomPage;
+import pageObjects.LasVegasMarket.LVMExhLineProdActionsPage;
+import pageObjects.LasVegasMarket.LVMGlobalSearchPage;
+import pageObjects.LasVegasMarket.LVMLandingPage;
 import resources.GenerateData;
 import resources.Utility;
 import resources.base;
@@ -256,7 +260,7 @@ public class ExhibitorDigitalShowroom extends base {
 		
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
+		Thread.sleep(2000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(8000);
@@ -646,9 +650,43 @@ public class ExhibitorDigitalShowroom extends base {
 		utl.scrollToElement(atlexhdgshw.getshowSpecialSection());
 		String ShowSpecialName = atlexhdgshw.getShowSpecialName().getText();
 		System.out.println("Show Special Name : "+ShowSpecialName);
-
-
 	}
+	
+	  @Test(priority = 15)
+	  public void TS015_VerifyExhibitorDigitalShowroomHeroComponentContactExhibitorTest()
+	      throws InterruptedException, IOException {
+	    // The purpose of this test case to verify:-
+	    // T644: Exhibitor Digital showroom: Hero component: Contact Exhibitor
+
+	    atlgs = new ATLGlobalSearchPage(driver);
+	    atlexhact = new ATLExhLineProdActionsPage(driver);
+	    lap = new ATLLandingPage(driver);
+	    atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+
+	    driver.get(prop.getProperty("lvmurl_prod"));
+	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	    Thread.sleep(2000);
+	    atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+	    Thread.sleep(2000);
+	    atlgs.getATLSearchButton().click();
+	    Thread.sleep(10000);
+
+	    // Store the 1st Exhibitor name in String variable
+	    exhname = atlexhact.getExhibitorName().getText();
+	    System.out.println("Exhibitor name: " + exhname);
+
+	    atlexhdgshw.getExhibitorName().click();
+	    Thread.sleep(2000);
+
+	    // Click on Hero component Contact Exhibitor
+	    atlexhdgshw.getContactExhibitorHero().click();
+	    Thread.sleep(2000);
+	    String header3Dshowroom = atlexhdgshw.getContactPopUp().getText();
+	    System.out.println(exhname + "Contact Exhibitor btn");
+	    Assert.assertTrue(header3Dshowroom.contains("Contact " + exhname));
+	    System.out.println("Hero component: View Contact Exhibitor Btn functionality is working properly.");
+	    atlexhdgshw.getContactPopUpClose().click();
+	  }
 	
 	
 	   @Test(enabled=false)
@@ -681,7 +719,7 @@ public class ExhibitorDigitalShowroom extends base {
 	    
 	    @Test(enabled=false)//priority = 1,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality"
 	    
-	    public void TS015_VerifyAddToFavoritesTest() throws InterruptedException, IOException {
+	    public void TS016_VerifyAddToFavoritesTest() throws InterruptedException, IOException {
 
 	        // The purpose of this test case to verify:-
 	        // T294: Add To Favorites
@@ -758,7 +796,7 @@ public class ExhibitorDigitalShowroom extends base {
 	    }
 
 	    @Test(enabled=false)//priority = 2,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality"
-	    public void TS016_VerifyAddToExistingListWithPlusIconTest() throws InterruptedException, IOException {
+	    public void TS017_VerifyAddToExistingListWithPlusIconTest() throws InterruptedException, IOException {
 	        // The purpose of this test case to verify:-
 	        // T297: The Add to existing list functionality for an Exhibitor using Plus icon
 
@@ -832,7 +870,7 @@ public class ExhibitorDigitalShowroom extends base {
 	    }
 
 	    @Test(enabled=false)//priority = 3,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality"
-	    public void TS017_VerifyAddNoteListWithPlusIconTest() throws InterruptedException, IOException {
+	    public void TS018_VerifyAddNoteListWithPlusIconTest() throws InterruptedException, IOException {
 	        // The purpose of this test case to verify:-
 	        // T300: Add Note for an exhibitor
 
@@ -884,7 +922,7 @@ public class ExhibitorDigitalShowroom extends base {
 	    }
 	    
 	    @Test(enabled=false)//priority = 10, groups="Non_MP"
-	    public void TS018_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest() throws InterruptedException, IOException {
+	    public void TS019_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest() throws InterruptedException, IOException {
 	        // The purpose of this test case to verify:-
 	        // T349: Exhibitor Digital showroom: Products Component: Order on JuniperMarket
 
@@ -927,7 +965,7 @@ public class ExhibitorDigitalShowroom extends base {
 	    }
 	    
 	    @Test(enabled=false)//priority = 14, groups="Non_MP"
-	    public void TS019_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest() throws InterruptedException, IOException {
+	    public void TS020_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest() throws InterruptedException, IOException {
 	        // The purpose of this test case to verify:-
 	        // T352: Exhibitor Digital Sowroom: Catalogs Component: Order on JuniperMarket
 
@@ -963,7 +1001,7 @@ public class ExhibitorDigitalShowroom extends base {
 	    }
 	    
 	    @Test(enabled=false)//priority = 20, groups="Non_MP"
-	    public void TS020_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest() throws InterruptedException, IOException {
+	    public void TS021_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest() throws InterruptedException, IOException {
 	        // The purpose of this test case to verify:-
 	        // T303: Exhibitor Digital showroom: Hero component: Order on Juniper Market
 

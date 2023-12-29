@@ -392,7 +392,7 @@ public class ExhibitorDigitalShowroom extends base {
     }
     // lap.getIUnderstandBtn().click();
     Assert.assertTrue(driver.getCurrentUrl()
-        .contains("https://www.andmorehighpointmarket.com/exhibitor-directory"));
+        .contains("https://www.andmorehighpointmarket.com/exhibitor"));
     System.out.println("Showroom page is displayed properly.");
     driver.close();
     driver.switchTo().window(winHandleBefore);

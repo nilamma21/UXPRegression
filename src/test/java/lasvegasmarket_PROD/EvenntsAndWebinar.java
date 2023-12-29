@@ -428,7 +428,7 @@ public class EvenntsAndWebinar extends base{
 		String url=driver.getCurrentUrl();
 		System.out.println("Current Url "+url);
 		// Verify Location floor plan page
-		Assert.assertTrue(RegisterCTA.contains(url));
+		Assert.assertTrue(url.contains(RegisterCTA));
 		driver.close();
 		driver.switchTo().window(currentWindowID);
 		//driver.navigate().back();

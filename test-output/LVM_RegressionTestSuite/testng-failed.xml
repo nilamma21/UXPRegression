@@ -3,13 +3,14 @@
 <suite name="Failed suite [LVM_RegressionTestSuite]" parallel="classes">
   <test name="RegressionTest(failed)" parallel="classes">
     <classes>
-      <class name="lasvegasmarket_PROD.GlobalSearch_SearchFor">
+      <class name="lasvegasmarket_PROD.EvenntsAndWebinar">
         <methods>
-          <include name="initialize"/>
+          <include name="TS004_VerifyIMCEventsEventsListTest"/>
           <include name="tearDown"/>
-          <include name="TS004_VerifyCatalogsOverviewInGlobalSearchTest"/>
+          <include name="initialize"/>
+          <include name="TS003_VerifyIMCEventsCalendarViewTest"/>
         </methods>
-      </class> <!-- lasvegasmarket_PROD.GlobalSearch_SearchFor -->
+      </class> <!-- lasvegasmarket_PROD.EvenntsAndWebinar -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->

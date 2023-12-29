@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>5/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/11</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Dec 12 10:18:03 IST 2023</td>
+<td>Started on:</td><td>Thu Dec 21 10:41:22 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>287 seconds (287289 ms)</td>
+<tr><td>Total time:</td><td>62 seconds (62254 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,87 +68,161 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='atlantamarket_UAT.LineDigitalShowroom.TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest()'><b>TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest</b><br>Test class: atlantamarket_UAT.LineDigitalShowroom</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@ID=&apos;react-autowhatever-input-1&apos;] (tried for 40 second(s) with 500 milliseconds interval)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: C:\Users\anuppa\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53847}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4ffe597936c8048331126af86aef15ba
+<td title='atlantamarket_UAT.GlobalSearch_SearchFor.initialize()'><b>initialize</b><br>Test class: atlantamarket_UAT.GlobalSearch_SearchFor</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //button[@id=&apos;gdpr-btn&apos;] (tried for 30 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at pageObjects.AtlantaMarket.ATLLineDigitalShowroomPage.getsuggetionList(ATLLineDigitalShowroomPage.java:131)
-	at atlantamarket_UAT.LineDigitalShowroom.TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest(LineDigitalShowroom.java:94)
+	at pageObjects.AtlantaMarket.ATLLandingPage.getIUnderstandBtn(ATLLandingPage.java:43)
+	at atlantamarket_UAT.GlobalSearch_SearchFor.initialize(GlobalSearch_SearchFor.java:59)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1925116802", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1925116802'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@ID=&apos;react-autowhatever-input-1&apos;] (tried for 40 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@id=&apos;gdpr-btn&apos;]&quot;}
+  (Session info: chrome=120.0.6099.110)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: C:\Users\anuppa\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53847}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4ffe597936c8048331126af86aef15ba
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.110, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\anuppa\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59517}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 10ae8227baeec6b135dd7ce349a3a196
+*** Element info: {Using=xpath, value=//button[@id=&apos;gdpr-btn&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 15 more
+... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2049094778", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2049094778'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //button[@id=&apos;gdpr-btn&apos;] (tried for 30 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at pageObjects.AtlantaMarket.ATLLineDigitalShowroomPage.getsuggetionList(ATLLineDigitalShowroomPage.java:131)
-	at atlantamarket_UAT.LineDigitalShowroom.TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest(LineDigitalShowroom.java:94)
+	at pageObjects.AtlantaMarket.ATLLandingPage.getIUnderstandBtn(ATLLandingPage.java:43)
+	at atlantamarket_UAT.GlobalSearch_SearchFor.initialize(GlobalSearch_SearchFor.java:59)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:175)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:107)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@id=&apos;gdpr-btn&apos;]&quot;}
+  (Session info: chrome=120.0.6099.110)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.110, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\anuppa\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59517}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 10ae8227baeec6b135dd7ce349a3a196
+*** Element info: {Using=xpath, value=//button[@id=&apos;gdpr-btn&apos;]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 15 more
 </pre></div></td>
-<td>50</td>
-<td>atlantamarket_UAT.LineDigitalShowroom@523884b2</td></tr>
+<td>0</td>
+<td>atlantamarket_UAT.GlobalSearch_SearchFor@3532ec19</td></tr>
 </table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='atlantamarket_UAT.LineDigitalShowroom.TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest()'><b>TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest</b><br>Test class: atlantamarket_UAT.LineDigitalShowroom</td>
+<td title='atlantamarket_UAT.GlobalSearch_SearchFor.TS001_VerifyInformationTabInGlobalSearchTest()'><b>TS001_VerifyInformationTabInGlobalSearchTest</b><br>Test class: atlantamarket_UAT.GlobalSearch_SearchFor</td>
 <td></td>
-<td>27</td>
-<td>atlantamarket_UAT.LineDigitalShowroom@523884b2</td></tr>
+<td>0</td>
+<td>atlantamarket_UAT.GlobalSearch_SearchFor@3532ec19</td></tr>
 <tr>
-<td title='atlantamarket_UAT.LineDigitalShowroom.TS003_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest()'><b>TS003_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest</b><br>Test class: atlantamarket_UAT.LineDigitalShowroom</td>
+<td title='atlantamarket_UAT.GlobalSearch_SearchFor.TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest()'><b>TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest</b><br>Test class: atlantamarket_UAT.GlobalSearch_SearchFor</td>
 <td></td>
-<td>53</td>
-<td>atlantamarket_UAT.LineDigitalShowroom@523884b2</td></tr>
+<td>0</td>
+<td>atlantamarket_UAT.GlobalSearch_SearchFor@3532ec19</td></tr>
 <tr>
-<td title='atlantamarket_UAT.LineDigitalShowroom.TS004_VerifyLineDigitalShowroomProductscomponentTest()'><b>TS004_VerifyLineDigitalShowroomProductscomponentTest</b><br>Test class: atlantamarket_UAT.LineDigitalShowroom</td>
+<td title='atlantamarket_UAT.GlobalSearch_SearchFor.TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest()'><b>TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest</b><br>Test class: atlantamarket_UAT.GlobalSearch_SearchFor</td>
 <td></td>
-<td>27</td>
-<td>atlantamarket_UAT.LineDigitalShowroom@523884b2</td></tr>
+<td>0</td>
+<td>atlantamarket_UAT.GlobalSearch_SearchFor@3532ec19</td></tr>
 <tr>
-<td title='atlantamarket_UAT.LineDigitalShowroom.TS005_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest()'><b>TS005_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest</b><br>Test class: atlantamarket_UAT.LineDigitalShowroom</td>
+<td title='atlantamarket_UAT.GlobalSearch_SearchFor.TS004_VerifyCatalogsOverviewInGlobalSearchTest()'><b>TS004_VerifyCatalogsOverviewInGlobalSearchTest</b><br>Test class: atlantamarket_UAT.GlobalSearch_SearchFor</td>
 <td></td>
-<td>18</td>
-<td>atlantamarket_UAT.LineDigitalShowroom@523884b2</td></tr>
+<td>0</td>
+<td>atlantamarket_UAT.GlobalSearch_SearchFor@3532ec19</td></tr>
 <tr>
-<td title='atlantamarket_UAT.LineDigitalShowroom.TS006_VerifyLineDigitalShowroomProductscomponentSelectProductTest()'><b>TS006_VerifyLineDigitalShowroomProductscomponentSelectProductTest</b><br>Test class: atlantamarket_UAT.LineDigitalShowroom</td>
+<td title='atlantamarket_UAT.GlobalSearch_SearchFor.TS005_VerifyArticlesOverviewInGlobalSearchTest()'><b>TS005_VerifyArticlesOverviewInGlobalSearchTest</b><br>Test class: atlantamarket_UAT.GlobalSearch_SearchFor</td>
 <td></td>
-<td>67</td>
-<td>atlantamarket_UAT.LineDigitalShowroom@523884b2</td></tr>
+<td>0</td>
+<td>atlantamarket_UAT.GlobalSearch_SearchFor@3532ec19</td></tr>
+<tr>
+<td title='atlantamarket_UAT.GlobalSearch_SearchFor.TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest()'><b>TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest</b><br>Test class: atlantamarket_UAT.GlobalSearch_SearchFor</td>
+<td></td>
+<td>0</td>
+<td>atlantamarket_UAT.GlobalSearch_SearchFor@3532ec19</td></tr>
+<tr>
+<td title='atlantamarket_UAT.GlobalSearch_SearchFor.TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest()'><b>TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest</b><br>Test class: atlantamarket_UAT.GlobalSearch_SearchFor</td>
+<td></td>
+<td>0</td>
+<td>atlantamarket_UAT.GlobalSearch_SearchFor@3532ec19</td></tr>
+<tr>
+<td title='atlantamarket_UAT.GlobalSearch_SearchFor.TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest()'><b>TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest</b><br>Test class: atlantamarket_UAT.GlobalSearch_SearchFor</td>
+<td></td>
+<td>0</td>
+<td>atlantamarket_UAT.GlobalSearch_SearchFor@3532ec19</td></tr>
+<tr>
+<td title='atlantamarket_UAT.GlobalSearch_SearchFor.TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest()'><b>TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest</b><br>Test class: atlantamarket_UAT.GlobalSearch_SearchFor</td>
+<td></td>
+<td>0</td>
+<td>atlantamarket_UAT.GlobalSearch_SearchFor@3532ec19</td></tr>
+<tr>
+<td title='atlantamarket_UAT.GlobalSearch_SearchFor.TS010_VerifyShowSpecialsOverviewInGlobalSearchTest()'><b>TS010_VerifyShowSpecialsOverviewInGlobalSearchTest</b><br>Test class: atlantamarket_UAT.GlobalSearch_SearchFor</td>
+<td></td>
+<td>0</td>
+<td>atlantamarket_UAT.GlobalSearch_SearchFor@3532ec19</td></tr>
+<tr>
+<td title='atlantamarket_UAT.GlobalSearch_SearchFor.TS011_VerifyEventsOverviewInGlobalSearchTest()'><b>TS011_VerifyEventsOverviewInGlobalSearchTest</b><br>Test class: atlantamarket_UAT.GlobalSearch_SearchFor</td>
+<td></td>
+<td>0</td>
+<td>atlantamarket_UAT.GlobalSearch_SearchFor@3532ec19</td></tr>
 </table><p>
 </body>
 </html>

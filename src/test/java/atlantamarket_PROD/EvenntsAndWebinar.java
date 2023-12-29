@@ -301,12 +301,12 @@ public class EvenntsAndWebinar extends base{
 		System.out.println(allEventTitlesCount + " Titles displayed");
 		Assert.assertEquals(allEventcount, allEventTitlesCount);
 		
-
 		// Verify Events Type
 		int allEventTypeCount = 0;
 		for (WebElement eventType : atlevents.getatlListOfAllEventsType()) {
 			allEventTypeCount++;
 			Assert.assertTrue(eventType.isDisplayed());
+			System.out.println(allEventTypeCount + " Types displayed");
 		}
 		System.out.println(allEventTypeCount + " Types displayed");
 		Assert.assertEquals(allEventcount, allEventTypeCount);
@@ -1358,7 +1358,7 @@ public class EvenntsAndWebinar extends base{
 
       @AfterClass(alwaysRun=true)
       public void tearDown(){
-      	    driver.quit();
+      	   // driver.quit();
       }
 
 }
