@@ -755,7 +755,7 @@ public class GlobalSearch_SearchFor extends base {
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
 		atlgs.getATLSearchButton().click();
-		Thread.sleep(15000);
+		Thread.sleep(8000);
 
 		//Click on Events & Seminars tab
 		//	atlgs.getATLEventsTabInSearch().click();
@@ -771,10 +771,12 @@ public class GlobalSearch_SearchFor extends base {
 		//Click on Topics filter
 		Thread.sleep(3000);
 		atlgs.getATLInfoSearchTopicsFilter().click();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		atlgs.getEventsATLMktTopics();
 		Thread.sleep(3000);
+		
 		//Select 'Atlanta Market' topic
+		atlgs.getEventsATLMktTopics().click();
 		String topicName = atlgs.getEventsATLMktTopics().getText();
 		String eventName = atlgs.getATLFirstEventName().getText();
 		System.out.println(eventName);
@@ -783,7 +785,7 @@ public class GlobalSearch_SearchFor extends base {
 		//Click on See More details btn
 		utl.scrollToElement(atlgs.getATLSeeMoreDetailsBtn());
 		atlgs.getATLSeeMoreDetailsBtn().click();
-		Thread.sleep(500);
+		Thread.sleep(2000);
 		//Verify that Selected topic name should be displayed as Tag on Event details page
 		System.out.println(atlexhact.getEventDetailsHeader().getText());
 		Assert.assertTrue(atlexhact.getEventDetailsHeader().getText().contains(eventName));

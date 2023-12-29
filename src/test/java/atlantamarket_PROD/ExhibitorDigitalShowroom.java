@@ -260,7 +260,7 @@ public class ExhibitorDigitalShowroom extends base {
 		
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(8000);
@@ -272,10 +272,10 @@ public class ExhibitorDigitalShowroom extends base {
 
 		//Verify Line Search functionality
 		atlexhdgshw.getLineSearch().click();
-		atlexhdgshw.getLineSearch().sendKeys(prop.getProperty("line2"));
+		atlexhdgshw.getLineSearch().sendKeys(prop.getProperty("line4"));
 		atlexhdgshw.getLineSearchButton().click();
 		Thread.sleep(5000);
-		Assert.assertTrue(atlexhdgshw.getVerifyLineSearch().getText().contains(prop.getProperty("line2")));	
+		Assert.assertTrue(atlexhdgshw.getVerifyLineSearch().getText().contains(prop.getProperty("line4")));	
 	}
 	@Test(priority = 6)//groups="Non_MP"
 	public void TS006_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest() throws InterruptedException, IOException {

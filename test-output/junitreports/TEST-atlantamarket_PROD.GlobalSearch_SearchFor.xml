@@ -60,6 +60,49 @@ Session ID: 4e7c393a972276587c921ea9fedefcd5
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
 	... 26 more
 ]]>
-    </failure>
+    </error>
   </testcase> <!-- TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest -->
+  <testcase classname="atlantamarket_PROD.GlobalSearch_SearchFor" name="TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest" time="333.176"/>
+  <testcase classname="atlantamarket_PROD.GlobalSearch_SearchFor" name="TS004_VerifyCatalogsOverviewInGlobalSearchTest" time="64.815"/>
+  <testcase classname="atlantamarket_PROD.GlobalSearch_SearchFor" name="TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest" time="114.779"/>
+  <testcase classname="atlantamarket_PROD.GlobalSearch_SearchFor" name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest" time="34.154"/>
+  <testcase classname="atlantamarket_PROD.GlobalSearch_SearchFor" name="TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest" time="51.734"/>
+  <testcase classname="atlantamarket_PROD.GlobalSearch_SearchFor" name="TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest" time="69.883"/>
+  <testcase classname="atlantamarket_PROD.GlobalSearch_SearchFor" name="TS001_VerifyInformationTabInGlobalSearchTest" time="19.937">
+    <error message="expected [true] but found [false]" type="java.lang.AssertionError">
+      <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at atlantamarket_PROD.GlobalSearch_SearchFor.TS001_VerifyInformationTabInGlobalSearchTest(GlobalSearch_SearchFor.java:96)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+    </error>
+  </testcase> <!-- TS001_VerifyInformationTabInGlobalSearchTest -->
+  <testcase classname="atlantamarket_PROD.GlobalSearch_SearchFor" name="TS005_VerifyArticlesOverviewInGlobalSearchTest" time="65.168"/>
+  <testcase classname="atlantamarket_PROD.GlobalSearch_SearchFor" name="TS011_VerifyEventsOverviewInGlobalSearchTest" time="106.115"/>
 </testsuite> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
