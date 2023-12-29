@@ -18,9 +18,12 @@ import pageObjects.AtlantaMarket.ATLExhDigiShowroomPage;
 import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
 import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
 import pageObjects.AtlantaMarket.ATLLandingPage;
+import pageObjects.AtlantaMarket.ATLLineDigitalShowroomPage;
 import pageObjects.AtlantaMarket.ATLLoginPage;
 import pageObjects.AtlantaMarket.ATLMarketPlannerPage;
 import pageObjects.AtlantaMarket.ATLProductDetailsPage;
+import pageObjects.LasVegasMarket.LVMLandingPage;
+import pageObjects.LasVegasMarket.LVMLineDigitalShowroomPage;
 import resources.GenerateData;
 import resources.Utility;
 import resources.base;
@@ -39,6 +42,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 	ATLProductDetailsPage atlproddet;
 	ATLExhLineProdActionsPage atlexhact;
 	ATLMarketPlannerPage atlmppge;
+	ATLLineDigitalShowroomPage atldigish;
 
 	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns, allnoteslist,favlist, searchlinetypelist;
 
@@ -63,9 +67,52 @@ public class GlobalSearch_ExhibitorActions extends base {
 //		lap.getCloseMarktAdBtn().click();
 	}
 
+	   @Test(priority = 1)
+	    public void TS001_VerifyClickOnContactExhIconForExhibitorTest() throws InterruptedException, IOException {
+	        // The purpose of this test case to verify:-
+	        // T323: The click on 'Contact Exhibitor' functionality for an Exhibitor
 
-	@Test(priority = 1)//groups="Non_MP"
-	public void TS001_VerifyClickOnLocationLinksForExhibitorTest() throws InterruptedException, IOException {
+	        atlgs = new ATLGlobalSearchPage(driver);
+	        atlexhact = new ATLExhLineProdActionsPage(driver);
+	        atldigish=new ATLLineDigitalShowroomPage(driver);
+
+	        //driver.get(prop.getProperty("lvmurl_prod"));
+	        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	        Thread.sleep(2000);
+	        //lap.getCloseMarktAdBtn().click();
+
+	        atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor14"));
+	        Thread.sleep(2000);
+	        //Click on 1st Suggetions
+	        atldigish.getsuggetionList().click();
+	        Thread.sleep(5000);
+	        // Click on Contact Exhibitor icon
+	        atlexhact.getcontactExhibitorHeroComponent().click();
+	        Assert.assertTrue(atlexhact.getContactExhibitorModal().isDisplayed());
+
+	        // Enter Postal code
+	/*      atlexhact.getPostalCodeTxtBx().sendKeys("99950");
+
+	        // Enter Message
+	        atlexhact.getMessageTxtBx().sendKeys("This is a Test Exhibitor");
+
+	        // Select 1st two Product Category
+	        atlexhact.getProductCateg1().click();
+	        //atlexhact.getProductCateg2().click();
+
+	        utl.scrollToElement(atlexhact.getSendMessageBtn());
+
+	        // Click on Send Message button
+	        // Will send msg once test exhibitor will get
+	        // atlexhact.getSendMessageBtn().click();
+	*/
+	        // Close the pop-up
+	        //atlexhact.getPopUpCloseBtn().click();
+	        //driver.get(prop.getProperty("lvmurl_prod"));
+	    }
+
+	@Test(priority = 2)//groups="Non_MP"
+	public void TS002_VerifyClickOnLocationLinksForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T356: The click on 'Location Links' functionality for an Exhibitor
 
@@ -90,8 +137,8 @@ public class GlobalSearch_ExhibitorActions extends base {
 		Assert.assertTrue(locationlink.equals(driver.getCurrentUrl()));
 	}
 
-	@Test(priority = 2)//groups="Non_MP"
-	public void TS002_VerifyClickOnLinesShownLinkForExhibitorTest() throws InterruptedException, IOException {
+	@Test(priority = 3)//groups="Non_MP"
+	public void TS003_VerifyClickOnLinesShownLinkForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T325: The click on 'Lines Shown-See All' functionality for an Exhibitor
 
@@ -121,8 +168,8 @@ public class GlobalSearch_ExhibitorActions extends base {
 		Assert.assertTrue(driver.getTitle().contains(exhname+" Lines"));
 	}
 
-	@Test(priority = 3)//groups="Non_MP"
-	public void TS003_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest() throws InterruptedException, IOException {
+	@Test(priority = 4)//groups="Non_MP"
+	public void TS004_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T368: The click on 'Total products-See All' functionality for an Exhibitor
 
@@ -168,8 +215,8 @@ public class GlobalSearch_ExhibitorActions extends base {
 		Assert.assertEquals(totalprodcountonsearchgrid, totalprodcountonprodpage);
 	}
 
-	@Test(priority = 4)//groups="Non_MP"
-	public void TS004_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest() throws InterruptedException, IOException {
+	@Test(priority = 5)//groups="Non_MP"
+	public void TS005_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T327: The click on 'Matching products-See All' functionality for an Exhibitor
 
@@ -213,8 +260,8 @@ public class GlobalSearch_ExhibitorActions extends base {
 	}
 
 	
-	@Test(priority = 5)//groups="Non_MP"
-	public void TS005_VerifySelectionOfExhibitorFromSearchResultsTest() throws InterruptedException, IOException {
+	@Test(priority = 6)//groups="Non_MP"
+	public void TS006_VerifySelectionOfExhibitorFromSearchResultsTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T383: The selection of an Exhibitor from Search results grid
 
@@ -281,7 +328,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 	    }
 	    
 	    @Test(enabled=false)//priority = 1,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality"
-	    public void TS006_VerifyAddToFavoriteForExhibitorTest() throws InterruptedException, IOException {
+	    public void TS007_VerifyAddToFavoriteForExhibitorTest() throws InterruptedException, IOException {
 	        // The purpose of this test case to verify:-
 	        // T320: The Add to Favorite functionality for an Exhibitor
 
@@ -335,7 +382,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 	    }
 
 	    @Test(enabled=false)//priority = 2,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality"
-	    public void TS007_VerifyAddToNewListForExhibitorTest() throws InterruptedException, IOException {
+	    public void TS008_VerifyAddToNewListForExhibitorTest() throws InterruptedException, IOException {
 	        // The purpose of this test case to verify:-
 	        // T422: The Add to Newly created list functionality for an Exhibitor
 
@@ -395,7 +442,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 	    }
 
 	    @Test(enabled=false)//priority = 3,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality"
-	    public void TS008_VerifyAddToExistingListForExhibitorTest() throws InterruptedException, IOException {
+	    public void TS009_VerifyAddToExistingListForExhibitorTest() throws InterruptedException, IOException {
 	        // The purpose of this test case to verify:-
 	        // T321: The Add to Newly created list functionality for an Exhibitor
 
@@ -471,7 +518,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 	    }
 	  
 	    @Test(enabled=false)//priority = 8,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality"
-	    public void TS009_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest()
+	    public void TS010_VerifyMatchingProductsAddNoteFunctionalityForExhibitorTest()
 	            throws InterruptedException, IOException {
 	        // The purpose of this test case to verify:-
 	        // T322: The click on 'Matching products-Add Note' functionality for an Exhibitor

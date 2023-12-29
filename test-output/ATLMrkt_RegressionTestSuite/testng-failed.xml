@@ -8,8 +8,6 @@
           <include name="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest"/>
           <include name="initialize"/>
           <include name="tearDown"/>
-          <include name="TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest"/>
-          <include name="TS001_VerifyInformationTabInGlobalSearchTest"/>
         </methods>
       </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
     </classes>

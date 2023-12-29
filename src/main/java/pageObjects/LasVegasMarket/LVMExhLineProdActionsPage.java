@@ -83,7 +83,7 @@ public class LVMExhLineProdActionsPage {
 	By catalogitemPROD_LVM = By.xpath("(//div[@class='imc-catalog__item_title multiSelectItem']/div[1])[1]"); //Locator for Catalog item
 	
 	By listCatalogitemPROD = By.xpath("//div[@class='imc-catalog__item_title multiSelectItem']/div"); //Locator for Catalog item
-	
+	By CatalogitemPROD = By.xpath("(//div[@class='imc-catalog__item_title multiSelectItem']/div)[1]");
 	By eventdetailsheaderLVM = By.xpath("//div[@class='imc-eventdetail--header']/div[2]/section[1]/div[1]/h1[1]");
 	
 
@@ -426,4 +426,10 @@ public class LVMExhLineProdActionsPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(catalogitemnew));
 		return driver.findElements(catalogitemnew);
 	}
+    public WebElement getCatalogitemPROD() {
+      wait = new WebDriverWait (driver,30);
+      wait.until(ExpectedConditions.visibilityOfElementLocated(CatalogitemPROD));
+      return driver.findElement(CatalogitemPROD);
+  }
+
 }

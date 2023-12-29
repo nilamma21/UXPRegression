@@ -524,17 +524,18 @@ public class Utility extends base {
 		if(driver.getCurrentUrl().contains(prop.getProperty("lvmurl_prod"))) {
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			// Click on Attend Tab
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 			lvmevents.getlvmExploreMarketTab().click();
 			Thread.sleep(2000);
 			//click on Events Link
 			lvmevents.getlvmEventsLink().click();
+			Thread.sleep(1000);
 		}
 			else {
 				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+				Thread.sleep(1000);
 				lvmevents.getlvmAttendTab().click();  //For LVM Events  
-				Thread.sleep(2000);
+				Thread.sleep(3000);
 				//click on Events Link
 				lvmevents.getlvmEventsLink().click();
 

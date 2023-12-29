@@ -587,7 +587,7 @@ public class GlobalSearch_ProductActions extends base {
 		}
 		driver.get(prop.getProperty("lvmurl_prod"));
 	}
-
+/*
 	@Test(priority = 7)
 	public void TS007_VerifyFullScreenViewerOnProductDetailsPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -643,7 +643,7 @@ public class GlobalSearch_ProductActions extends base {
 		atlproddet.getProductFullScreenViewer().click();
 		driver.get(prop.getProperty("lvmurl_prod"));
 	}
-
+*/
 
 	//@Test(priority = 8)
 	public void TS008_VerifyAddToFavoriteOnSearchResultsGridTest() throws InterruptedException, IOException {

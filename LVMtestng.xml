@@ -9,12 +9,12 @@
 		<test thread-count="1"  name="RegressionTest">
 		<classes>
 
-			<class name="lasvegasmarket_PROD.GlobalSearch_SearchFor" /> 
+			<class name="lasvegasmarket_PROD.EvenntsAndWebinar" /> 
 <!-- 
 		<methods>
-				 <include name="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest"/>   
+				 <include name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest()"/>   
 		</methods>
- -->
+    -->
 		</classes>
 	</test>
 </suite>

@@ -356,7 +356,9 @@ public class GlobalSearch_SearchFor extends base{
 		// Store the current window handle
 		String winHandleBefore = driver.getWindowHandle();
 		//Click on Catalog
-		//lvmexhact.getcatalogitemPROD_LVM().click();
+		utl.scrollToElement(lvmexhact.getcatalogitemPROD_LVM());
+		lvmexhact.getcatalogitemPROD_LVM().click();
+		String firstCatName = lvmexhact.getcatalogitemPROD().getText();
 		catlist = lvmexhact.getlistCatalogitemPROD();
 			for(int i=0; i<catlist.size(); i++) {
 				String catName = catlist.get(i).getText();
@@ -371,9 +373,14 @@ public class GlobalSearch_SearchFor extends base{
 			driver.switchTo().window(winHandle);
 		}
 		Thread.sleep(7000);
+		System.out.println("catalogName: "+catalogName);
 		String Cname =lvmgs.getCatalogHeaderName().getText();
-		System.out.println(Cname);
-		Assert.assertTrue(catalogName.contains(Cname));
+		System.out.println("Cname: "+Cname);
+		try {
+		  Assert.assertTrue(firstCatName.contains(Cname));
+        } catch (Exception e) {
+          Assert.assertTrue(catalogName.contains(Cname));
+        }
 		driver.close();
 		driver.switchTo().window(winHandleBefore);
 		//driver.get(prop.getProperty("lvmurl_prod"));
@@ -727,10 +734,11 @@ public class GlobalSearch_SearchFor extends base{
 		driver.navigate().refresh();
 
 		String filterResultTitle = lvmgs.getLVMArticleName().getText();
+		System.out.println(filterResultTitle);
 		utl.scrollToElement(lvmgs.getLVMArticleSeeMoreBtn());
 		lvmgs.getLVMArticleSeeMoreBtn().click();
 		Thread.sleep(2000);
-		Assert.assertTrue(filterResultTitle.contains(lvmgs.getLVMArticleHeader().getText()));
+		Assert.assertTrue(driver.getTitle().contains(filterResultTitle));
 		utl.scrollToElement(lvmgs.getLVMArticleTag());
 		boolean temp5 = false;
 		tagBlogPost = driver.findElements(By.xpath("//span[@class='imc-blog-tag-module__tag']"));

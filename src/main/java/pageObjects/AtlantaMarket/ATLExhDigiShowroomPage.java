@@ -98,11 +98,13 @@ public class ATLExhDigiShowroomPage {
 	By exhibitornameonexhdirectimglvm = By.xpath("//span[@class='imc-heading imc-heading--giga-desktop ']"); //Locator for Exhibitor name on Exhibitor Directory image
 	By EventNamePROD = By.xpath("(//div[@class='event-card--info'])[1]/div[1]/div[1]/a[1]/p"); //Locator for Events Section
 	By exhnameonexhdirectimg1 = By.xpath("//section[@class='imc-site-wrapper']//descendant::span[@class='imc-heading imc-heading--giga-desktop imc-vr--medium imc-content--inline-block']"); //Locator for Exhibitor name on Exhibitor Directory image
-
+	By ContactExhibitorHero = By.xpath("(//span[contains(text(),'Contact Exhibitor')])[1]");
+	By ContactPopUp = By.xpath("//h2[@class='imc-heading--box-modal']");
+	By ContactPopUpClose = By.xpath("//button[@class='imc-modal--close imc-button--modal-close imc-button--round']");
 	
 	public ATLExhDigiShowroomPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
-		this.driver = driver; 			
+		this.driver = driver;
 	}
 	public WebElement getEventNamePROD() {
 		wait = new WebDriverWait (driver,30);
@@ -492,11 +494,26 @@ public class ATLExhDigiShowroomPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitornameonexhdirectimglvm));
 		return driver.findElement(exhibitornameonexhdirectimglvm);
 	}
-	   public WebElement getExhNameOnExhDirectImg1() {
-	        wait = new WebDriverWait (driver,30);
-	        wait.until(ExpectedConditions.visibilityOfElementLocated(exhnameonexhdirectimg1));
-	        return driver.findElement(exhnameonexhdirectimg1);
-	    }
+	 public WebElement getExhNameOnExhDirectImg1() {
+	      wait = new WebDriverWait (driver,30);
+	      wait.until(ExpectedConditions.visibilityOfElementLocated(exhnameonexhdirectimg1));
+	      return driver.findElement(exhnameonexhdirectimg1);
+	 }
+	  public WebElement getContactExhibitorHero() {
+        wait = new WebDriverWait (driver,30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(ContactExhibitorHero));
+        return driver.findElement(ContactExhibitorHero);
+    }
+	  public WebElement getContactPopUp() {
+        wait = new WebDriverWait (driver,30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(ContactPopUp));
+        return driver.findElement(ContactPopUp);
+    }
+	 public WebElement getContactPopUpClose() {
+	     wait = new WebDriverWait (driver,30);
+	     wait.until(ExpectedConditions.visibilityOfElementLocated(ContactPopUpClose));
+	     return driver.findElement(ContactPopUpClose);
+	 }
 }
 
 
