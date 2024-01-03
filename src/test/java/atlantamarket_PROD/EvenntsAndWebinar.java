@@ -54,7 +54,9 @@ public class EvenntsAndWebinar extends base{
 
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
+		Thread.sleep(1000);
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		Thread.sleep(4000);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(7000);
