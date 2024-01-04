@@ -213,16 +213,21 @@ public class FloorPlans extends base {
 		atlflpp.getATLBuildingFloor().click();
 		Thread.sleep(3000);
 		//Click on Zoom In icon
+		String x0=atlflpp.getATLFloorPlanMapIamge().getAttribute("style");
+        System.out.println("x0 = "+x0);
 		atlflpp.getATLExhibitorFloorZoomIn().click();
+		Thread.sleep(2000);
 		//Store Zoom in Attribute
 		String x1=atlflpp.getATLFloorPlanMapIamge().getAttribute("style");
 		System.out.println("x1 = "+x1);
 		atlflpp.getATLExhibitorFloorZoomIn().click();
+		Thread.sleep(2000);
 		//Stored Zoom in Attribute
 		String x2=atlflpp.getATLFloorPlanMapIamge().getAttribute("style");
 		System.out.println("x2 = "+x2);
 		//Store Zoom in Attribute
 		atlflpp.getATLExhibitorFloorZoomIn().click();
+		Thread.sleep(2000);
 		String x3=atlflpp.getATLFloorPlanMapIamge().getAttribute("style");
 		System.out.println("x3 = "+x3);
 		//Verify Zoom In functionality
@@ -236,6 +241,8 @@ public class FloorPlans extends base {
 		String out=atlflpp.getATLFloorPlanMapIamge().getAttribute("style");
 		System.out.println("out = "+out);
 		//Verify Zoom Out functionality
+		System.out.println(x1);
+		System.out.println(out);
 		Assert.assertNotEquals(x1, out);
 	}
 

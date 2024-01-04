@@ -57,43 +57,18 @@ public class FloorPlans extends base {
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		lap.getIUnderstandBtn().click();
-		Thread.sleep(7000);
+		Thread.sleep(8000);
 		//lap.getCloseMarktAdBtn().click();
 
 		//Login to Market Planner
 		//utl.verifyMPLoginFunctionality();
 		//utl.loginCheckATL();
-		Thread.sleep(2000);
+		/*Thread.sleep(2000);
 		driver.navigate().refresh();
-		Thread.sleep(8000);
+		Thread.sleep(8000);*/
 		//lap.getCloseMarktAdBtn().click();
-	}
-	@Test (enabled=false)
-	public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
-
-		// The purpose of this test case to verify:-
-		// TS1- Login to Market Planner
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-
-		// Click on Login button from Landing Page
-		lap.getLogin().click();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		// Enter the credentials on Login Page and click
-		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
-
-		lp.getPassword().sendKeys((prop.getProperty("passwordW")));
-
-
-		Thread.sleep(1000);
-	//	lp.getPassword().sendKeys((prop.getProperty("password")));
-		Thread.sleep(1000);
-
-		lp.getSignInBtn().click();
-		Thread.sleep(15000);
-		Assert.assertTrue(driver.getTitle().contains("Atlanta Market at AmericasMart"));
 	}
 	
 	@Test(priority = 1)//groups="Non_MP"
@@ -106,10 +81,10 @@ public class FloorPlans extends base {
 		atlflpp=new ATLFloorPlansPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		Thread.sleep(2000);
 		// Click on Exh And Product Tab
 		atlflpp.getATLExhibitorsAndProductTab().click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		//click on Floor plans link
 		atlflpp.getATLFloorPlansLink().click();
 		Thread.sleep(2000);
@@ -171,17 +146,17 @@ public class FloorPlans extends base {
 		// Click on Exh And Product Tab
 		utl.scrollToElement(atlflpp.getATLExhibitorsAndProductTab());
 		atlflpp.getATLExhibitorsAndProductTab().click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		//click on Floor plans link
 		atlflpp.getATLFloorPlansLink().click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		//click on Floor whose not having an Exhibitors
 		String floorName=atlflpp.getATLBuildingFloor().getText();
 		System.out.println("Floor Name : " +floorName);
 
 		//click on No Exhibitor floor
 		atlflpp.getATLNoExhibitorFloor().click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		//Verify that Loading Exhibitors msg should be displayed
 		//Assert.assertTrue(atlflpp.getATLLoadingExhMsg().isDisplayed());
 
@@ -204,25 +179,31 @@ public class FloorPlans extends base {
 		Thread.sleep(3000);
 		// Click on Exh And Product Tab
 		atlflpp.getATLExhibitorsAndProductTab().click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		//click on Floor plans link
 		atlflpp.getATLFloorPlansLink().click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		//click on any floor
 		utl.scrollToElement(atlflpp.getATLBuildingFloor());
 		atlflpp.getATLBuildingFloor().click();
 		Thread.sleep(3000);
+		String x0=atlflpp.getATLFloorPlanMapIamge().getAttribute("style");
+        System.out.println("x1 = "+x0);
+        Thread.sleep(2000);
 		//Click on Zoom In icon
 		atlflpp.getATLExhibitorFloorZoomIn().click();
+		Thread.sleep(1000);
 		//Store Zoom in Attribute
 		String x1=atlflpp.getATLFloorPlanMapIamge().getAttribute("style");
 		System.out.println("x1 = "+x1);
 		atlflpp.getATLExhibitorFloorZoomIn().click();
+		Thread.sleep(1000);
 		//Stored Zoom in Attribute
 		String x2=atlflpp.getATLFloorPlanMapIamge().getAttribute("style");
 		System.out.println("x2 = "+x2);
 		//Store Zoom in Attribute
 		atlflpp.getATLExhibitorFloorZoomIn().click();
+		Thread.sleep(1000);
 		String x3=atlflpp.getATLFloorPlanMapIamge().getAttribute("style");
 		System.out.println("x3 = "+x3);
 		//Verify Zoom In functionality
@@ -550,6 +531,33 @@ public class FloorPlans extends base {
 		Thread.sleep(9000);
 		Assert.assertTrue(atlflpp.getverifyexhibitor().getText().contains(prop.getProperty("atlFloorPlanExhibitorSearch")));
 	}
+	
+	   @Test (enabled=false)
+	    public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
+
+	        // The purpose of this test case to verify:-
+	        // TS1- Login to Market Planner
+
+	        lap = new ATLLandingPage(driver);
+	        lp = new ATLLoginPage(driver);
+
+	        // Click on Login button from Landing Page
+	        lap.getLogin().click();
+	        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	        // Enter the credentials on Login Page and click
+	        lp.getEmailAddress().sendKeys((prop.getProperty("username")));
+
+	        lp.getPassword().sendKeys((prop.getProperty("passwordW")));
+
+
+	        Thread.sleep(1000);
+	    //  lp.getPassword().sendKeys((prop.getProperty("password")));
+	        Thread.sleep(1000);
+
+	        lp.getSignInBtn().click();
+	        Thread.sleep(15000);
+	        Assert.assertTrue(driver.getTitle().contains("Atlanta Market at AmericasMart"));
+	    }
 
 	@Test(enabled=false)//(priority = 10,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS010_VerifyAddToListFunctionalityForExhibitorOnFloorPlansPageTest() throws InterruptedException, IOException {
