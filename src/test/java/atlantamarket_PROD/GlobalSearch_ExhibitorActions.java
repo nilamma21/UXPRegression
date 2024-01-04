@@ -108,7 +108,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 	*/
 	        // Close the pop-up
 	        //atlexhact.getPopUpCloseBtn().click();
-	        //driver.get(prop.getProperty("lvmurl_prod"));
+	        driver.get(prop.getProperty("atlmrkturl_prod"));
 	    }
 
 	@Test(priority = 2)//groups="Non_MP"
@@ -598,6 +598,6 @@ public class GlobalSearch_ExhibitorActions extends base {
 	@AfterClass(alwaysRun=true)
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 }

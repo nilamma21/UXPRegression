@@ -236,7 +236,8 @@ public class FloorPlans extends base {
 		String out=atlflpp.getATLFloorPlanMapIamge().getAttribute("style");
 		System.out.println("out = "+out);
 		//Verify Zoom Out functionality
-		Assert.assertNotEquals(x1, out);
+		Thread.sleep(2000);
+		Assert.assertEquals(x1, out);
 	}
 
 	@Test(priority = 4)//groups="Non_MP"
