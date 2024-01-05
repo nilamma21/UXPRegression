@@ -17,5 +17,5 @@
 		<classes>
 		 	<class name="atlantamarket_PROD.EvenntsAndWebinar" />
 		</classes>
-	</test>
+	</test>//
 </suite>
