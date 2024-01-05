@@ -26,7 +26,7 @@ public class ATLEventsAndWebinarPage {
 	By atlEventSearchIconUAT = By.xpath("//div[@class='event-card--cal-btn-container']/div[1]/button[1]"); //Locator for Search btn
 	By atlEventDateAndMonth = By.xpath("//div[@class='event-date--container']/p[1]"); //Locator for Events date and month
 	By atlCalendarNextMonthBtn = By.xpath("//div[@class='calendar-container']/div[2]/div[1]/button[4]"); //Locator for Calendar nxt month btn
-	By atlListOfEventDate = By.xpath("//button[@class='react-calendar__tile react-calendar__month-view__days__day']/abbr[1]"); //List for Event Date
+	By atlListOfEventDate = By.xpath("//div[@class='react-calendar__month-view__days']/button/abbr[1]"); //List for Event Date
 	By atlSelectMonth = By.xpath("//button[@class='react-calendar__navigation__label']/span[1]"); //List for Month
 	By atlTodaysDate = By.xpath("//button[@class='react-calendar__tile react-calendar__tile--now react-calendar__month-view__days__day react-calendar--no-event']/abbr[1]");//Locator for Todays Date
 	By atlTodaysDatePROD = By.xpath("//button[@class='react-calendar__tile react-calendar__tile--now react-calendar__month-view__days__day']/abbr");//Locator for Todays Date

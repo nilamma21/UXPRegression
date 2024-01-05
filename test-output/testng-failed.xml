@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
 <suite thread-count="1" name="Failed suite [Suite]" parallel="classes">
   <test name="Test(failed)" parallel="classes">
     <classes>
@@ -14,3 +15,18 @@
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
+
+<suite parallel="none" name="Failed suite [Default suite]">
+  <test parallel="none" name="Default test(failed)">
+    <classes>
+      <class name="atlantamarket_PROD.GlobalSearch_ShowSpecials">
+        <methods>
+          <include name="initialize"/>
+          <include name="tearDown"/>
+          <include name="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.GlobalSearch_ShowSpecials -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
+
