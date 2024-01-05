@@ -772,20 +772,21 @@ public class GlobalSearch_SearchFor extends base {
 		Thread.sleep(3000);
 		atlgs.getATLInfoSearchTopicsFilter().click();
 		Thread.sleep(4000);
-		atlgs.getEventsATLMktTopics();
-		Thread.sleep(3000);
+		//atlgs.getEventsATLMktTopics();
+		//Thread.sleep(3000);
 		
 		//Select 'Atlanta Market' topic
 		atlgs.getEventsATLMktTopics().click();
+		Thread.sleep(8000);
 		String topicName = atlgs.getEventsATLMktTopics().getText();
 		String eventName = atlgs.getATLFirstEventName().getText();
 		System.out.println(eventName);
 		//atlgs.getEventsATLMktTopics().click();
-		Thread.sleep(500);
+		Thread.sleep(800);
 		//Click on See More details btn
 		utl.scrollToElement(atlgs.getATLSeeMoreDetailsBtn());
 		atlgs.getATLSeeMoreDetailsBtn().click();
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		//Verify that Selected topic name should be displayed as Tag on Event details page
 		System.out.println(atlexhact.getEventDetailsHeader().getText());
 		Assert.assertTrue(atlexhact.getEventDetailsHeader().getText().contains(eventName));
@@ -800,15 +801,16 @@ public class GlobalSearch_SearchFor extends base {
 		//Click on 'At Market' Event Type
 		String atmrkteventtype = atlgs.getAtMarketEventType().getText();
 		System.out.println(atmrkteventtype);
+		Thread.sleep(2000);
 		atlgs.getAtMarketEventType().click();
-		Thread.sleep(4000);
+		Thread.sleep(12000);
 		//Verify that Selected event type should be displayed as Tag on Event Card
 		System.out.println(atlexhact.getEventCardTag().getText());
 		Assert.assertTrue(atlexhact.getEventCardTag().getText().contains(atmrkteventtype));
 
 		//Click on Clear Filters btn
 		atlgs.getClearFiltersBtn().click();
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		/*	Exhibitor events are available on test environment
 	  String buyingeventtype = atlgs.getBuyingEventType().getText();
 		atlgs.getBuyingEventType().click();

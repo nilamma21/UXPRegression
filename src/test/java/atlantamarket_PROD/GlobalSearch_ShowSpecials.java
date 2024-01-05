@@ -63,7 +63,7 @@ public class GlobalSearch_ShowSpecials extends base  {
 	public void TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// T381: Show Specials: Links - Exhibitor Name
+		// T381: Show Specials: Links - Line Name
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
@@ -92,13 +92,15 @@ public class GlobalSearch_ShowSpecials extends base  {
 		
 		String inbox = atlgs.getatlShowSpecialsExhNamePROD().getText();
 		String[] data = inbox.split("Shown By ");
-		String showSpecialExhName = data[1];
-		System.out.println(showSpecialExhName);
+		String showSpecialLineName = data[0];
+		System.out.println(showSpecialLineName);
 		
 		atlgs.getViewBrandDetailsLink().click();
+		System.out.println("Exhibitor name: "+atlgs.getatlShowSpecialsTitle().getText());
+		System.out.println("Line name: "+atlgs.getatlLineBreadcrumbForShowSpecials().getText());
 		Thread.sleep(5000);
 		//Verify Show Special Exh Page 
-		Assert.assertTrue(atlgs.getatlShowSpecialsTitle().getText().contains(showSpecialExhName));
+		Assert.assertTrue(atlgs.getatlLineBreadcrumbForShowSpecials().getText().contains(showSpecialLineName));
 		
 	}
 	@Test(priority = 2)

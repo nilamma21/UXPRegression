@@ -3,13 +3,13 @@
 <suite parallel="none" name="Failed suite [Default suite]">
   <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="atlantamarket_PROD.GlobalSearch_MatchingResults">
+      <class name="atlantamarket_PROD.GlobalSearch_SearchFor">
         <methods>
-          <include name="tearDown"/>
+          <include name="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest"/>
           <include name="initialize"/>
-          <include name="TS002_VerifyGlobalSearchMatchingResultsSortWithinTest"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- atlantamarket_PROD.GlobalSearch_MatchingResults -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

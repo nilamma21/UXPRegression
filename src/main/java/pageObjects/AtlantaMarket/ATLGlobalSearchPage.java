@@ -100,6 +100,7 @@ public class ATLGlobalSearchPage {
 	By atlExhibitorsAndProductTab = By.xpath("//div[@class='imc-navigation imc-breakpoint-display--hide-mobile']/div[2]");  //Locator for Exhibitors And Product Tab
 	By atlShowSpecialsLink = By.xpath("//a[contains(text(),'Show Specials')]");  //Locator for Show Secials
 	By atlShowSpecialsTitle = By.xpath("//div[@class='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[3]/a[1]");  //Locator for Show Secials Title
+	By atlLineBreadcrumbForShowSpecials = By.xpath("//div[@class='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[4]/a[1]");  //Locator for Show Secials Title
 	By atlShowSpecialsExhName = By.xpath("//div[@class='imc-gallery imc-gallery--align-flex-start imc-gallery--1-4 imc-vr--collosal imc-fprod-cont imc-specials-list']/div[1]/div[1]/a[1]");  //Locator for Show Secials Name
 	By atlShowroomLink = By.xpath("//div[@class='ag-center-cols-container']/div[1]/div[2]/a");  //Locator for Showroom Name
 	By atlGlobalSearchClearTxt = By.xpath("//div[@class='imc-header-subnav']/div[1]/div[1]/section[1]/div[1]/form[1]/button[1]");  //Locator for Showroom Name
@@ -212,6 +213,11 @@ public class ATLGlobalSearchPage {
 		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.elementToBeClickable(atlShowSpecialsTitle));
 		return driver.findElement(atlShowSpecialsTitle);
+	}
+	public WebElement getatlLineBreadcrumbForShowSpecials() throws InterruptedException {
+		wait = new WebDriverWait (driver,40);
+		wait.until(ExpectedConditions.elementToBeClickable(atlLineBreadcrumbForShowSpecials));
+		return driver.findElement(atlLineBreadcrumbForShowSpecials);
 	}
 	public WebElement getatlShowSpecialsLink() throws InterruptedException {
 		wait = new WebDriverWait (driver,40);
