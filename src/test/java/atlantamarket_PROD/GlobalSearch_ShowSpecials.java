@@ -98,8 +98,23 @@ public class GlobalSearch_ShowSpecials extends base  {
 		atlgs.getViewBrandDetailsLink().click();
 		Thread.sleep(5000);
 		//Verify Show Special Exh Page 
-		Assert.assertTrue(atlgs.getatlShowSpecialsTitle().getText().contains(showSpecialExhName));
-		
+		try { 
+			Assert.assertTrue(atlgs.getatlShowSpecialsTitle().getText().contains(showSpecialExhName));		
+		}
+		catch(Exception e) {
+			System.out.println("Show Specials are available for Lines");
+			String inbox2 = atlgs.getatlShowSpecialsExhNamePROD().getText();
+			String[] data2 = inbox2.split("Shown By ");
+			String showSpecialLineName = data2[0];
+			System.out.println(showSpecialLineName);
+			
+			atlgs.getViewBrandDetailsLink().click();
+			System.out.println("Exhibitor name: "+atlgs.getatlShowSpecialsTitle().getText());
+			System.out.println("Line name: "+atlgs.getatlLineBreadcrumbForShowSpecials().getText());
+			Thread.sleep(5000);
+			//Verify Show Special Exh Page 
+			Assert.assertTrue(atlgs.getatlLineBreadcrumbForShowSpecials().getText().contains(showSpecialLineName));
+		}
 	}
 	@Test(priority = 2)
 	public void TS002_VerifyShowroomLinkForShowSpecialsTest()
