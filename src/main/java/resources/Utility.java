@@ -491,7 +491,7 @@ public class Utility extends base {
 		atlmppge = new ATLMarketPlannerPage(driver);
 		atlevents=new ATLEventsAndWebinarPage(driver);
 
-		if(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_prod"))) {
+		if(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_prod")) || driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_uat")) ) {
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			// Click on Attend Tab
 			Thread.sleep(2000);
