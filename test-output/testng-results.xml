@@ -1,169 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" total="15" passed="13">
+<testng-results skipped="0" failed="0" total="9" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="552954" started-at="2024-01-04T07:44:06Z" finished-at="2024-01-04T07:53:19Z">
+  <suite name="Suite" duration-ms="478270" started-at="2024-01-05T06:47:44Z" finished-at="2024-01-05T06:55:42Z">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="552954" started-at="2024-01-04T07:44:06Z" finished-at="2024-01-04T07:53:19Z">
-      <class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@5e3a8624]" name="initialize" is-config="true" duration-ms="36591" started-at="2024-01-04T13:19:10Z" finished-at="2024-01-04T13:19:46Z">
+    <test name="Test" duration-ms="478270" started-at="2024-01-05T06:47:44Z" finished-at="2024-01-05T06:55:42Z">
+      <class name="atlantamarket_UAT.EvenntsAndWebinar">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@61832929]" name="initialize" is-config="true" duration-ms="29342" started-at="2024-01-05T12:17:44Z" finished-at="2024-01-05T12:18:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyClickOnContactExhIconForExhibitorTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@5e3a8624]" name="TS001_VerifyClickOnContactExhIconForExhibitorTest" duration-ms="11304" started-at="2024-01-04T13:19:46Z" finished-at="2024-01-04T13:19:58Z">
+        <test-method status="PASS" signature="TS001_VerifyEventsAndWebinarsOverviewTest()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@61832929]" name="TS001_VerifyEventsAndWebinarsOverviewTest" duration-ms="16936" started-at="2024-01-05T12:18:13Z" finished-at="2024-01-05T12:18:30Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS001_VerifyClickOnContactExhIconForExhibitorTest -->
-        <test-method status="PASS" signature="TS002_VerifyClickOnLocationLinksForExhibitorTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@5e3a8624]" name="TS002_VerifyClickOnLocationLinksForExhibitorTest" duration-ms="26948" started-at="2024-01-04T13:19:58Z" finished-at="2024-01-04T13:20:25Z">
+        </test-method> <!-- TS001_VerifyEventsAndWebinarsOverviewTest -->
+        <test-method status="PASS" signature="TS002_VerifyIMCEventsSearchbarTest()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@61832929]" name="TS002_VerifyIMCEventsSearchbarTest" duration-ms="27004" started-at="2024-01-05T12:18:30Z" finished-at="2024-01-05T12:18:57Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS002_VerifyClickOnLocationLinksForExhibitorTest -->
-        <test-method status="PASS" signature="TS003_VerifyClickOnLinesShownLinkForExhibitorTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@5e3a8624]" name="TS003_VerifyClickOnLinesShownLinkForExhibitorTest" duration-ms="34427" started-at="2024-01-04T13:20:25Z" finished-at="2024-01-04T13:20:59Z">
+        </test-method> <!-- TS002_VerifyIMCEventsSearchbarTest -->
+        <test-method status="PASS" signature="TS003_VerifyIMCEventsCalendarViewTest()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@61832929]" name="TS003_VerifyIMCEventsCalendarViewTest" duration-ms="31805" started-at="2024-01-05T12:18:57Z" finished-at="2024-01-05T12:19:29Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS003_VerifyClickOnLinesShownLinkForExhibitorTest -->
-        <test-method status="FAIL" signature="TS004_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@5e3a8624]" name="TS004_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest" duration-ms="40121" started-at="2024-01-04T13:20:59Z" finished-at="2024-01-04T13:21:39Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [265683] but found [333355]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [265683] but found [333355]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertEquals(Assert.java:123)
-	at org.testng.Assert.assertEquals(Assert.java:176)
-	at org.testng.Assert.assertEquals(Assert.java:186)
-	at atlantamarket_PROD.GlobalSearch_ExhibitorActions.TS004_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest(GlobalSearch_ExhibitorActions.java:215)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- TS003_VerifyIMCEventsCalendarViewTest -->
+        <test-method status="PASS" signature="TS004_VerifyIMCEventsEventsListTest()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@61832929]" name="TS004_VerifyIMCEventsEventsListTest" duration-ms="35878" started-at="2024-01-05T12:19:29Z" finished-at="2024-01-05T12:20:05Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS004_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest -->
-        <test-method status="FAIL" signature="TS005_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@5e3a8624]" name="TS005_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest" duration-ms="34671" started-at="2024-01-04T13:21:40Z" finished-at="2024-01-04T13:22:14Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [2333] but found [265683]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [2333] but found [265683]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertEquals(Assert.java:123)
-	at org.testng.Assert.assertEquals(Assert.java:176)
-	at org.testng.Assert.assertEquals(Assert.java:186)
-	at atlantamarket_PROD.GlobalSearch_ExhibitorActions.TS005_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest(GlobalSearch_ExhibitorActions.java:259)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- TS004_VerifyIMCEventsEventsListTest -->
+        <test-method status="PASS" signature="TS005_VerifyIMCEventsEventDetailstTest()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@61832929]" name="TS005_VerifyIMCEventsEventDetailstTest" duration-ms="75021" started-at="2024-01-05T12:20:05Z" finished-at="2024-01-05T12:21:20Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS005_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest -->
-        <test-method status="PASS" signature="TS006_VerifySelectionOfExhibitorFromSearchResultsTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@5e3a8624]" name="TS006_VerifySelectionOfExhibitorFromSearchResultsTest" duration-ms="64515" started-at="2024-01-04T13:22:14Z" finished-at="2024-01-04T13:23:19Z">
+        </test-method> <!-- TS005_VerifyIMCEventsEventDetailstTest -->
+        <test-method status="PASS" signature="TS006_VerifyExhibitorEventsSearchbarTest()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@61832929]" name="TS006_VerifyExhibitorEventsSearchbarTest" duration-ms="27047" started-at="2024-01-05T12:21:20Z" finished-at="2024-01-05T12:21:47Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS006_VerifySelectionOfExhibitorFromSearchResultsTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ExhibitorActions@5e3a8624]" name="tearDown" is-config="true" duration-ms="0" started-at="2024-01-04T13:23:19Z" finished-at="2024-01-04T13:23:19Z">
+        </test-method> <!-- TS006_VerifyExhibitorEventsSearchbarTest -->
+        <test-method status="PASS" signature="TS007_VerifyExhibitorEventsCalendarViewTest()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@61832929]" name="TS007_VerifyExhibitorEventsCalendarViewTest" duration-ms="97502" started-at="2024-01-05T12:21:47Z" finished-at="2024-01-05T12:23:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifyExhibitorEventsCalendarViewTest -->
+        <test-method status="PASS" signature="TS008_VerifyExhibitorEventsListTest()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@61832929]" name="TS008_VerifyExhibitorEventsListTest" duration-ms="101258" started-at="2024-01-05T12:23:24Z" finished-at="2024-01-05T12:25:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS008_VerifyExhibitorEventsListTest -->
+        <test-method status="PASS" signature="TS009_VerifyExhibitorEventsDetailstTest()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@61832929]" name="TS009_VerifyExhibitorEventsDetailstTest" duration-ms="36455" started-at="2024-01-05T12:25:06Z" finished-at="2024-01-05T12:25:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_VerifyExhibitorEventsDetailstTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@61832929]" name="tearDown" is-config="true" duration-ms="0" started-at="2024-01-05T12:25:42Z" finished-at="2024-01-05T12:25:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- atlantamarket_PROD.GlobalSearch_ExhibitorActions -->
-      <class name="atlantamarket_PROD.FloorPlans">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.FloorPlans@26653222]" name="initialize" is-config="true" duration-ms="36549" started-at="2024-01-04T13:14:06Z" finished-at="2024-01-04T13:14:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyNavigationToDifferentFloorBuildingsTest()[pri:0, instance:atlantamarket_PROD.FloorPlans@26653222]" name="TS001_VerifyNavigationToDifferentFloorBuildingsTest" duration-ms="25459" started-at="2024-01-04T13:14:43Z" finished-at="2024-01-04T13:15:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS001_VerifyNavigationToDifferentFloorBuildingsTest -->
-        <test-method status="PASS" signature="TS002_VerifyNoExhibitorsOnThisFloorMessageTest()[pri:0, instance:atlantamarket_PROD.FloorPlans@26653222]" name="TS002_VerifyNoExhibitorsOnThisFloorMessageTest" duration-ms="9887" started-at="2024-01-04T13:15:08Z" finished-at="2024-01-04T13:15:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS002_VerifyNoExhibitorsOnThisFloorMessageTest -->
-        <test-method status="PASS" signature="TS003_VerifyZoomInOutLevelOnFloorPlansPageTest()[pri:0, instance:atlantamarket_PROD.FloorPlans@26653222]" name="TS003_VerifyZoomInOutLevelOnFloorPlansPageTest" duration-ms="19932" started-at="2024-01-04T13:15:18Z" finished-at="2024-01-04T13:15:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS003_VerifyZoomInOutLevelOnFloorPlansPageTest -->
-        <test-method status="PASS" signature="TS004_VerifyIconsOnFloorPlansPageTest()[pri:0, instance:atlantamarket_PROD.FloorPlans@26653222]" name="TS004_VerifyIconsOnFloorPlansPageTest" duration-ms="34668" started-at="2024-01-04T13:15:38Z" finished-at="2024-01-04T13:16:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS004_VerifyIconsOnFloorPlansPageTest -->
-        <test-method status="PASS" signature="TS005_VerifyFunctionalityOfFiltersOnFloorPlansPageTest()[pri:0, instance:atlantamarket_PROD.FloorPlans@26653222]" name="TS005_VerifyFunctionalityOfFiltersOnFloorPlansPageTest" duration-ms="34700" started-at="2024-01-04T13:16:13Z" finished-at="2024-01-04T13:16:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS005_VerifyFunctionalityOfFiltersOnFloorPlansPageTest -->
-        <test-method status="PASS" signature="TS006_VerifyPaginationOnFloorPlansPageTest()[pri:0, instance:atlantamarket_PROD.FloorPlans@26653222]" name="TS006_VerifyPaginationOnFloorPlansPageTest" duration-ms="31279" started-at="2024-01-04T13:16:47Z" finished-at="2024-01-04T13:17:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS006_VerifyPaginationOnFloorPlansPageTest -->
-        <test-method status="PASS" signature="TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest()[pri:0, instance:atlantamarket_PROD.FloorPlans@26653222]" name="TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest" duration-ms="52760" started-at="2024-01-04T13:17:19Z" finished-at="2024-01-04T13:18:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest -->
-        <test-method status="PASS" signature="TS008_VerifyClickOnReturnToBuildingListBtnTest()[pri:0, instance:atlantamarket_PROD.FloorPlans@26653222]" name="TS008_VerifyClickOnReturnToBuildingListBtnTest" duration-ms="12168" started-at="2024-01-04T13:18:11Z" finished-at="2024-01-04T13:18:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS008_VerifyClickOnReturnToBuildingListBtnTest -->
-        <test-method status="PASS" signature="TS009_VerifySearchFunctionalityForExhListOnFloorPlansPageTest()[pri:0, instance:atlantamarket_PROD.FloorPlans@26653222]" name="TS009_VerifySearchFunctionalityForExhListOnFloorPlansPageTest" duration-ms="45557" started-at="2024-01-04T13:18:23Z" finished-at="2024-01-04T13:19:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS009_VerifySearchFunctionalityForExhListOnFloorPlansPageTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.FloorPlans@26653222]" name="tearDown" is-config="true" duration-ms="834" started-at="2024-01-04T13:19:09Z" finished-at="2024-01-04T13:19:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- atlantamarket_PROD.FloorPlans -->
-    </test> <!-- RegressionTest -->
-  </suite> <!-- ATLMrkt_RegressionTestSuite -->
+      </class> <!-- atlantamarket_UAT.EvenntsAndWebinar -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

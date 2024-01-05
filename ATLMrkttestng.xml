@@ -7,11 +7,11 @@
 	</listners>
 	<test thread-count="1" name="RegressionTest">
 		<classes>
-		<class name="atlantamarket_PROD.FloorPlans" />
-		<class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
+		<class name="atlantamarket_PROD.EvenntsAndWebinar" />
+		<!-- <class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" /> -->
 
 			<methods>
-			<!-- <include name="TS001_VerifyClickOnContactExhIconForExhibitorTest"/> -->
+			<include name="TS001_VerifyEventsAndWebinarsOverviewTest"/>
 			<!-- 	<include name="TS005_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest"/>   -->
 			</methods>
  
