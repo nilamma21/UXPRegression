@@ -8,7 +8,6 @@
           <include name="TS004_VerifyIMCEventsEventsListTest"/>
           <include name="tearDown"/>
           <include name="initialize"/>
-          <include name="TS003_VerifyIMCEventsCalendarViewTest"/>
         </methods>
       </class> <!-- lasvegasmarket_PROD.EvenntsAndWebinar -->
     </classes>

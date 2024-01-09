@@ -1,83 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<testng-results skipped="0" failed="0" total="9" passed="9">
+<testng-results skipped="0" failed="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="478270" started-at="2024-01-05T06:47:44Z" finished-at="2024-01-05T06:55:42Z">
+  <suite name="LVM_RegressionTestSuite" duration-ms="123873" started-at="2024-01-09T11:41:46Z" finished-at="2024-01-09T11:43:49Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="478270" started-at="2024-01-05T06:47:44Z" finished-at="2024-01-05T06:55:42Z">
-      <class name="atlantamarket_UAT.EvenntsAndWebinar">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@61832929]" name="initialize" is-config="true" duration-ms="29342" started-at="2024-01-05T12:17:44Z" finished-at="2024-01-05T12:18:13Z">
+    <test name="RegressionTest" duration-ms="123873" started-at="2024-01-09T11:41:46Z" finished-at="2024-01-09T11:43:49Z">
+      <class name="lasvegasmarket_PROD.EvenntsAndWebinar">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@26653222]" name="initialize" is-config="true" duration-ms="25523" started-at="2024-01-09T17:11:46Z" finished-at="2024-01-09T17:12:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyEventsAndWebinarsOverviewTest()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@61832929]" name="TS001_VerifyEventsAndWebinarsOverviewTest" duration-ms="16936" started-at="2024-01-05T12:18:13Z" finished-at="2024-01-05T12:18:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS001_VerifyEventsAndWebinarsOverviewTest -->
-        <test-method status="PASS" signature="TS002_VerifyIMCEventsSearchbarTest()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@61832929]" name="TS002_VerifyIMCEventsSearchbarTest" duration-ms="27004" started-at="2024-01-05T12:18:30Z" finished-at="2024-01-05T12:18:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS002_VerifyIMCEventsSearchbarTest -->
-        <test-method status="PASS" signature="TS003_VerifyIMCEventsCalendarViewTest()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@61832929]" name="TS003_VerifyIMCEventsCalendarViewTest" duration-ms="31805" started-at="2024-01-05T12:18:57Z" finished-at="2024-01-05T12:19:29Z">
+        <test-method status="PASS" signature="TS003_VerifyIMCEventsCalendarViewTest()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@26653222]" name="TS003_VerifyIMCEventsCalendarViewTest" duration-ms="64956" started-at="2024-01-09T17:12:11Z" finished-at="2024-01-09T17:13:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS003_VerifyIMCEventsCalendarViewTest -->
-        <test-method status="PASS" signature="TS004_VerifyIMCEventsEventsListTest()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@61832929]" name="TS004_VerifyIMCEventsEventsListTest" duration-ms="35878" started-at="2024-01-05T12:19:29Z" finished-at="2024-01-05T12:20:05Z">
+        <test-method status="FAIL" signature="TS004_VerifyIMCEventsEventsListTest()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@26653222]" name="TS004_VerifyIMCEventsEventsListTest" duration-ms="33380" started-at="2024-01-09T17:13:16Z" finished-at="2024-01-09T17:13:49Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [35] but found [50]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [35] but found [50]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:370)
+	at org.testng.Assert.assertEquals(Assert.java:380)
+	at lasvegasmarket_PROD.EvenntsAndWebinar.TS004_VerifyIMCEventsEventsListTest(EvenntsAndWebinar.java:448)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS004_VerifyIMCEventsEventsListTest -->
-        <test-method status="PASS" signature="TS005_VerifyIMCEventsEventDetailstTest()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@61832929]" name="TS005_VerifyIMCEventsEventDetailstTest" duration-ms="75021" started-at="2024-01-05T12:20:05Z" finished-at="2024-01-05T12:21:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS005_VerifyIMCEventsEventDetailstTest -->
-        <test-method status="PASS" signature="TS006_VerifyExhibitorEventsSearchbarTest()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@61832929]" name="TS006_VerifyExhibitorEventsSearchbarTest" duration-ms="27047" started-at="2024-01-05T12:21:20Z" finished-at="2024-01-05T12:21:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS006_VerifyExhibitorEventsSearchbarTest -->
-        <test-method status="PASS" signature="TS007_VerifyExhibitorEventsCalendarViewTest()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@61832929]" name="TS007_VerifyExhibitorEventsCalendarViewTest" duration-ms="97502" started-at="2024-01-05T12:21:47Z" finished-at="2024-01-05T12:23:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS007_VerifyExhibitorEventsCalendarViewTest -->
-        <test-method status="PASS" signature="TS008_VerifyExhibitorEventsListTest()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@61832929]" name="TS008_VerifyExhibitorEventsListTest" duration-ms="101258" started-at="2024-01-05T12:23:24Z" finished-at="2024-01-05T12:25:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS008_VerifyExhibitorEventsListTest -->
-        <test-method status="PASS" signature="TS009_VerifyExhibitorEventsDetailstTest()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@61832929]" name="TS009_VerifyExhibitorEventsDetailstTest" duration-ms="36455" started-at="2024-01-05T12:25:06Z" finished-at="2024-01-05T12:25:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS009_VerifyExhibitorEventsDetailstTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@61832929]" name="tearDown" is-config="true" duration-ms="0" started-at="2024-01-05T12:25:42Z" finished-at="2024-01-05T12:25:42Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@26653222]" name="tearDown" is-config="true" duration-ms="0" started-at="2024-01-09T17:13:49Z" finished-at="2024-01-09T17:13:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- atlantamarket_UAT.EvenntsAndWebinar -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
-
-<testng-results total="1" passed="1" failed="0" skipped="0">
-  <reporter-output>
-  </reporter-output>
-  <suite started-at="2024-01-05T08:48:07Z" name="Default suite" finished-at="2024-01-05T08:49:25Z" duration-ms="77852">
-    <groups>
-    </groups>
-    <test started-at="2024-01-05T08:48:07Z" name="Default test" finished-at="2024-01-05T08:49:25Z" duration-ms="77852">
-      <class name="atlantamarket_PROD.GlobalSearch_ShowSpecials">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ShowSpecials@7d9e8ef7]" started-at="2024-01-05T14:18:07Z" name="initialize" finished-at="2024-01-05T14:19:12Z" duration-ms="65213" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method signature="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ShowSpecials@7d9e8ef7]" started-at="2024-01-05T14:19:12Z" name="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest" finished-at="2024-01-05T14:19:25Z" duration-ms="12385" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ShowSpecials@7d9e8ef7]" started-at="2024-01-05T14:19:25Z" name="tearDown" finished-at="2024-01-05T14:19:25Z" duration-ms="244" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- atlantamarket_PROD.GlobalSearch_ShowSpecials -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
-
+      </class> <!-- lasvegasmarket_PROD.EvenntsAndWebinar -->
+    </test> <!-- RegressionTest -->
+  </suite> <!-- LVM_RegressionTestSuite -->
 </testng-results>

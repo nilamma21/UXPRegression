@@ -81,7 +81,7 @@ public class GlobalSearch_LineActions extends base {
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 		
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("line2")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("line3")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -144,7 +144,7 @@ public class GlobalSearch_LineActions extends base {
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor3")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("line3")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -195,7 +195,7 @@ public class GlobalSearch_LineActions extends base {
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("line2")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("line3")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -502,6 +502,6 @@ public class GlobalSearch_LineActions extends base {
 	@AfterClass(alwaysRun=true)
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 }

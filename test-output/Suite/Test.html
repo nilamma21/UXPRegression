@@ -55,19 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-
-<td>Tests passed/Failed/Skipped:</td><td>9/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Jan 05 12:17:44 IST 2024</td>
+<td>Started on:</td><td>Mon Jan 08 18:15:41 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>478 seconds (478270 ms)</td>
-
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
-</tr><tr>
-<td>Started on:</td><td>Wed Jan 03 18:27:26 IST 2024</td>
-</tr>
-<tr><td>Total time:</td><td>77 seconds (77699 ms)</td>
-
+<tr><td>Total time:</td><td>187 seconds (187640 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,6 +67,45 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='atlantamarket_UAT.GlobalSearch_LineActions.TS003_VerifyClickOnMatchingProductsSeeAllLinkForLineTest()'><b>TS003_VerifyClickOnMatchingProductsSeeAllLinkForLineTest</b><br>Test class: atlantamarket_UAT.GlobalSearch_LineActions</td>
+<td><div><pre>java.lang.AssertionError: expected [2] but found [401]
+	at atlantamarket_UAT.GlobalSearch_LineActions.TS003_VerifyClickOnMatchingProductsSeeAllLinkForLineTest(GlobalSearch_LineActions.java:177)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace465908318", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace465908318'><pre>java.lang.AssertionError: expected [2] but found [401]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at atlantamarket_UAT.GlobalSearch_LineActions.TS003_VerifyClickOnMatchingProductsSeeAllLinkForLineTest(GlobalSearch_LineActions.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>56</td>
+<td>atlantamarket_UAT.GlobalSearch_LineActions@5e5792a0</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -83,57 +114,20 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-
-<td title='atlantamarket_UAT.EvenntsAndWebinar.TS001_VerifyEventsAndWebinarsOverviewTest()'><b>TS001_VerifyEventsAndWebinarsOverviewTest</b><br>Test class: atlantamarket_UAT.EvenntsAndWebinar</td>
+<td title='atlantamarket_UAT.GlobalSearch_LineActions.TS001_VerifyClickOnShownByExhibitorNameLinkForLineTest()'><b>TS001_VerifyClickOnShownByExhibitorNameLinkForLineTest</b><br>Test class: atlantamarket_UAT.GlobalSearch_LineActions</td>
 <td></td>
-<td>16</td>
-<td>atlantamarket_UAT.EvenntsAndWebinar@61832929</td></tr>
+<td>25</td>
+<td>atlantamarket_UAT.GlobalSearch_LineActions@5e5792a0</td></tr>
 <tr>
-<td title='atlantamarket_UAT.EvenntsAndWebinar.TS002_VerifyIMCEventsSearchbarTest()'><b>TS002_VerifyIMCEventsSearchbarTest</b><br>Test class: atlantamarket_UAT.EvenntsAndWebinar</td>
+<td title='atlantamarket_UAT.GlobalSearch_LineActions.TS002_VerifyClickOnLocationLinkForLineTest()'><b>TS002_VerifyClickOnLocationLinkForLineTest</b><br>Test class: atlantamarket_UAT.GlobalSearch_LineActions</td>
 <td></td>
-<td>27</td>
-<td>atlantamarket_UAT.EvenntsAndWebinar@61832929</td></tr>
+<td>24</td>
+<td>atlantamarket_UAT.GlobalSearch_LineActions@5e5792a0</td></tr>
 <tr>
-<td title='atlantamarket_UAT.EvenntsAndWebinar.TS003_VerifyIMCEventsCalendarViewTest()'><b>TS003_VerifyIMCEventsCalendarViewTest</b><br>Test class: atlantamarket_UAT.EvenntsAndWebinar</td>
+<td title='atlantamarket_UAT.GlobalSearch_LineActions.TS004_VerifyClickOnTotalProductsSeeAllLinkForLineTest()'><b>TS004_VerifyClickOnTotalProductsSeeAllLinkForLineTest</b><br>Test class: atlantamarket_UAT.GlobalSearch_LineActions</td>
 <td></td>
-<td>31</td>
-<td>atlantamarket_UAT.EvenntsAndWebinar@61832929</td></tr>
-<tr>
-<td title='atlantamarket_UAT.EvenntsAndWebinar.TS004_VerifyIMCEventsEventsListTest()'><b>TS004_VerifyIMCEventsEventsListTest</b><br>Test class: atlantamarket_UAT.EvenntsAndWebinar</td>
-<td></td>
-<td>35</td>
-<td>atlantamarket_UAT.EvenntsAndWebinar@61832929</td></tr>
-<tr>
-<td title='atlantamarket_UAT.EvenntsAndWebinar.TS005_VerifyIMCEventsEventDetailstTest()'><b>TS005_VerifyIMCEventsEventDetailstTest</b><br>Test class: atlantamarket_UAT.EvenntsAndWebinar</td>
-<td></td>
-<td>75</td>
-<td>atlantamarket_UAT.EvenntsAndWebinar@61832929</td></tr>
-<tr>
-<td title='atlantamarket_UAT.EvenntsAndWebinar.TS006_VerifyExhibitorEventsSearchbarTest()'><b>TS006_VerifyExhibitorEventsSearchbarTest</b><br>Test class: atlantamarket_UAT.EvenntsAndWebinar</td>
-<td></td>
-<td>27</td>
-<td>atlantamarket_UAT.EvenntsAndWebinar@61832929</td></tr>
-<tr>
-<td title='atlantamarket_UAT.EvenntsAndWebinar.TS007_VerifyExhibitorEventsCalendarViewTest()'><b>TS007_VerifyExhibitorEventsCalendarViewTest</b><br>Test class: atlantamarket_UAT.EvenntsAndWebinar</td>
-<td></td>
-<td>97</td>
-<td>atlantamarket_UAT.EvenntsAndWebinar@61832929</td></tr>
-<tr>
-<td title='atlantamarket_UAT.EvenntsAndWebinar.TS008_VerifyExhibitorEventsListTest()'><b>TS008_VerifyExhibitorEventsListTest</b><br>Test class: atlantamarket_UAT.EvenntsAndWebinar</td>
-<td></td>
-<td>101</td>
-<td>atlantamarket_UAT.EvenntsAndWebinar@61832929</td></tr>
-<tr>
-<td title='atlantamarket_UAT.EvenntsAndWebinar.TS009_VerifyExhibitorEventsDetailstTest()'><b>TS009_VerifyExhibitorEventsDetailstTest</b><br>Test class: atlantamarket_UAT.EvenntsAndWebinar</td>
-<td></td>
-<td>36</td>
-<td>atlantamarket_UAT.EvenntsAndWebinar@61832929</td></tr>
-
-<td title='atlantamarket_UAT.GlobalSearch_ExhibitorActions.TS004_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest()'><b>TS004_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest</b><br>Test class: atlantamarket_UAT.GlobalSearch_ExhibitorActions</td>
-<td></td>
-<td>35</td>
-<td>atlantamarket_UAT.GlobalSearch_ExhibitorActions@3532ec19</td></tr>
-
+<td>47</td>
+<td>atlantamarket_UAT.GlobalSearch_LineActions@5e5792a0</td></tr>
 </table><p>
 </body>
 </html>

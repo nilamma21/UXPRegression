@@ -10,11 +10,13 @@
 		<classes>
 
 			<class name="lasvegasmarket_PROD.EvenntsAndWebinar" /> 
-<!-- 
+
 		<methods>
-				 <include name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest()"/>   
+				 <include name="TS003_VerifyIMCEventsCalendarViewTest"/>   
+				 <include name="TS004_VerifyIMCEventsEventsListTest"/>
+				 
 		</methods>
-    -->
+   
 		</classes>
 	</test>
 </suite>
