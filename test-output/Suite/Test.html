@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>10/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jan 08 18:15:41 IST 2024</td>
+<td>Started on:</td><td>Fri Jan 19 16:19:01 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>187 seconds (187640 ms)</td>
+<tr><td>Total time:</td><td>1055 seconds (1055807 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,20 +75,46 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='atlantamarket_UAT.GlobalSearch_LineActions.TS003_VerifyClickOnMatchingProductsSeeAllLinkForLineTest()'><b>TS003_VerifyClickOnMatchingProductsSeeAllLinkForLineTest</b><br>Test class: atlantamarket_UAT.GlobalSearch_LineActions</td>
-<td><div><pre>java.lang.AssertionError: expected [2] but found [401]
-	at atlantamarket_UAT.GlobalSearch_LineActions.TS003_VerifyClickOnMatchingProductsSeeAllLinkForLineTest(GlobalSearch_LineActions.java:177)
+<td title='atlantamarket_UAT.GlobalSearch_SearchFor.TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest()'><b>TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest</b><br>Test class: atlantamarket_UAT.GlobalSearch_SearchFor</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@id=&apos;root&apos;]/section[1]/section[1]/section[1]/h1[1] (tried for 40 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.AtlantaMarket.ATLGlobalSearchPage.getATLArticleHeader(ATLGlobalSearchPage.java:543)
+	at atlantamarket_UAT.GlobalSearch_SearchFor.TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest(GlobalSearch_SearchFor.java:583)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace465908318", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace465908318'><pre>java.lang.AssertionError: expected [2] but found [401]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertEquals(Assert.java:123)
-	at org.testng.Assert.assertEquals(Assert.java:176)
-	at org.testng.Assert.assertEquals(Assert.java:186)
-	at atlantamarket_UAT.GlobalSearch_LineActions.TS003_VerifyClickOnMatchingProductsSeeAllLinkForLineTest(GlobalSearch_LineActions.java:177)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id=&apos;root&apos;]/section[1]/section[1]/section[1]/h1[1]&quot;}
+  (Session info: chrome=120.0.6099.225)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.90.18&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.225, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56015}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f7a6013fd78987dc47b42e3fe471a884
+*** Element info: {Using=xpath, value=//div[@id=&apos;root&apos;]/section[1]/section[1]/section[1]/h1[1]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 15 more
+... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace774560984", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace774560984'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@id=&apos;root&apos;]/section[1]/section[1]/section[1]/h1[1] (tried for 40 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.AtlantaMarket.ATLGlobalSearchPage.getATLArticleHeader(ATLGlobalSearchPage.java:543)
+	at atlantamarket_UAT.GlobalSearch_SearchFor.TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest(GlobalSearch_SearchFor.java:583)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -102,9 +128,38 @@ function toggleAllBoxes() {
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id=&apos;root&apos;]/section[1]/section[1]/section[1]/h1[1]&quot;}
+  (Session info: chrome=120.0.6099.225)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.90.18&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.225, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56015}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f7a6013fd78987dc47b42e3fe471a884
+*** Element info: {Using=xpath, value=//div[@id=&apos;root&apos;]/section[1]/section[1]/section[1]/h1[1]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 15 more
 </pre></div></td>
-<td>56</td>
-<td>atlantamarket_UAT.GlobalSearch_LineActions@5e5792a0</td></tr>
+<td>286</td>
+<td>atlantamarket_UAT.GlobalSearch_SearchFor@ae45eb6</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -114,20 +169,55 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='atlantamarket_UAT.GlobalSearch_LineActions.TS001_VerifyClickOnShownByExhibitorNameLinkForLineTest()'><b>TS001_VerifyClickOnShownByExhibitorNameLinkForLineTest</b><br>Test class: atlantamarket_UAT.GlobalSearch_LineActions</td>
+<td title='atlantamarket_UAT.GlobalSearch_SearchFor.TS001_VerifyInformationTabInGlobalSearchTest()'><b>TS001_VerifyInformationTabInGlobalSearchTest</b><br>Test class: atlantamarket_UAT.GlobalSearch_SearchFor</td>
 <td></td>
-<td>25</td>
-<td>atlantamarket_UAT.GlobalSearch_LineActions@5e5792a0</td></tr>
+<td>16</td>
+<td>atlantamarket_UAT.GlobalSearch_SearchFor@ae45eb6</td></tr>
 <tr>
-<td title='atlantamarket_UAT.GlobalSearch_LineActions.TS002_VerifyClickOnLocationLinkForLineTest()'><b>TS002_VerifyClickOnLocationLinkForLineTest</b><br>Test class: atlantamarket_UAT.GlobalSearch_LineActions</td>
+<td title='atlantamarket_UAT.GlobalSearch_SearchFor.TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest()'><b>TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest</b><br>Test class: atlantamarket_UAT.GlobalSearch_SearchFor</td>
 <td></td>
-<td>24</td>
-<td>atlantamarket_UAT.GlobalSearch_LineActions@5e5792a0</td></tr>
+<td>48</td>
+<td>atlantamarket_UAT.GlobalSearch_SearchFor@ae45eb6</td></tr>
 <tr>
-<td title='atlantamarket_UAT.GlobalSearch_LineActions.TS004_VerifyClickOnTotalProductsSeeAllLinkForLineTest()'><b>TS004_VerifyClickOnTotalProductsSeeAllLinkForLineTest</b><br>Test class: atlantamarket_UAT.GlobalSearch_LineActions</td>
+<td title='atlantamarket_UAT.GlobalSearch_SearchFor.TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest()'><b>TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest</b><br>Test class: atlantamarket_UAT.GlobalSearch_SearchFor</td>
 <td></td>
-<td>47</td>
-<td>atlantamarket_UAT.GlobalSearch_LineActions@5e5792a0</td></tr>
+<td>97</td>
+<td>atlantamarket_UAT.GlobalSearch_SearchFor@ae45eb6</td></tr>
+<tr>
+<td title='atlantamarket_UAT.GlobalSearch_SearchFor.TS004_VerifyCatalogsOverviewInGlobalSearchTest()'><b>TS004_VerifyCatalogsOverviewInGlobalSearchTest</b><br>Test class: atlantamarket_UAT.GlobalSearch_SearchFor</td>
+<td></td>
+<td>66</td>
+<td>atlantamarket_UAT.GlobalSearch_SearchFor@ae45eb6</td></tr>
+<tr>
+<td title='atlantamarket_UAT.GlobalSearch_SearchFor.TS005_VerifyArticlesOverviewInGlobalSearchTest()'><b>TS005_VerifyArticlesOverviewInGlobalSearchTest</b><br>Test class: atlantamarket_UAT.GlobalSearch_SearchFor</td>
+<td></td>
+<td>61</td>
+<td>atlantamarket_UAT.GlobalSearch_SearchFor@ae45eb6</td></tr>
+<tr>
+<td title='atlantamarket_UAT.GlobalSearch_SearchFor.TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest()'><b>TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest</b><br>Test class: atlantamarket_UAT.GlobalSearch_SearchFor</td>
+<td></td>
+<td>69</td>
+<td>atlantamarket_UAT.GlobalSearch_SearchFor@ae45eb6</td></tr>
+<tr>
+<td title='atlantamarket_UAT.GlobalSearch_SearchFor.TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest()'><b>TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest</b><br>Test class: atlantamarket_UAT.GlobalSearch_SearchFor</td>
+<td></td>
+<td>111</td>
+<td>atlantamarket_UAT.GlobalSearch_SearchFor@ae45eb6</td></tr>
+<tr>
+<td title='atlantamarket_UAT.GlobalSearch_SearchFor.TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest()'><b>TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest</b><br>Test class: atlantamarket_UAT.GlobalSearch_SearchFor</td>
+<td></td>
+<td>138</td>
+<td>atlantamarket_UAT.GlobalSearch_SearchFor@ae45eb6</td></tr>
+<tr>
+<td title='atlantamarket_UAT.GlobalSearch_SearchFor.TS010_VerifyShowSpecialsOverviewInGlobalSearchTest()'><b>TS010_VerifyShowSpecialsOverviewInGlobalSearchTest</b><br>Test class: atlantamarket_UAT.GlobalSearch_SearchFor</td>
+<td></td>
+<td>30</td>
+<td>atlantamarket_UAT.GlobalSearch_SearchFor@ae45eb6</td></tr>
+<tr>
+<td title='atlantamarket_UAT.GlobalSearch_SearchFor.TS011_VerifyEventsOverviewInGlobalSearchTest()'><b>TS011_VerifyEventsOverviewInGlobalSearchTest</b><br>Test class: atlantamarket_UAT.GlobalSearch_SearchFor</td>
+<td></td>
+<td>101</td>
+<td>atlantamarket_UAT.GlobalSearch_SearchFor@ae45eb6</td></tr>
 </table><p>
 </body>
 </html>

@@ -4,7 +4,8 @@
   <test name="Test">
     <classes>
 
-     	<class name="atlantamarket_UAT.GlobalSearch_LineActions"/>
+     	<!-- <class name="atlantamarket_UAT.GlobalSearch_SearchFor"/> -->
+     	<class name="atlantamarket_UAT.GlobalSearch_SearchFor"/>
 
 <!-- 
 	 <class name="atlantamarket_UAT.GlobalSearch_SuggestionList"/>
@@ -21,9 +22,9 @@
       <class name="atlantamarket_UAT.GlobalSearch_SearchFor"/>
  -->
 
-
- 		<!-- 	<methods>
-				<include name="TS001_VerifyEventsAndWebinarsOverviewTest"/>  
+<!--  -->
+ 			<!-- <methods>
+				<include name="TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest"/>  
 			</methods> -->
 
  			<!-- <methods>

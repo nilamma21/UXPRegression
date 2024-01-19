@@ -9,12 +9,11 @@
 		<test thread-count="1"  name="RegressionTest">
 		<classes>
 
-			<class name="lasvegasmarket_PROD.EvenntsAndWebinar" /> 
+			<class name="lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters" /> 
 
 		<methods>
-				 <include name="TS003_VerifyIMCEventsCalendarViewTest"/>   
-				 <include name="TS004_VerifyIMCEventsEventsListTest"/>
-				 
+				 <include name="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest"/>   
+				
 		</methods>
    
 		</classes>
