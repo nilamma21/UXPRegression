@@ -1,83 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<testng-results skipped="0" failed="0" total="9" passed="9">
+<testng-results skipped="0" failed="1" total="11" passed="10">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="478270" started-at="2024-01-05T06:47:44Z" finished-at="2024-01-05T06:55:42Z">
+  <suite name="Suite" duration-ms="1055807" started-at="2024-01-19T10:49:01Z" finished-at="2024-01-19T11:06:37Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="478270" started-at="2024-01-05T06:47:44Z" finished-at="2024-01-05T06:55:42Z">
-      <class name="atlantamarket_UAT.EvenntsAndWebinar">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@61832929]" name="initialize" is-config="true" duration-ms="29342" started-at="2024-01-05T12:17:44Z" finished-at="2024-01-05T12:18:13Z">
+    <test name="Test" duration-ms="1055807" started-at="2024-01-19T10:49:01Z" finished-at="2024-01-19T11:06:37Z">
+      <class name="atlantamarket_UAT.GlobalSearch_SearchFor">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_UAT.GlobalSearch_SearchFor@ae45eb6]" name="initialize" is-config="true" duration-ms="27849" started-at="2024-01-19T16:19:01Z" finished-at="2024-01-19T16:19:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyEventsAndWebinarsOverviewTest()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@61832929]" name="TS001_VerifyEventsAndWebinarsOverviewTest" duration-ms="16936" started-at="2024-01-05T12:18:13Z" finished-at="2024-01-05T12:18:30Z">
+        <test-method status="PASS" signature="TS001_VerifyInformationTabInGlobalSearchTest()[pri:0, instance:atlantamarket_UAT.GlobalSearch_SearchFor@ae45eb6]" name="TS001_VerifyInformationTabInGlobalSearchTest" duration-ms="16298" started-at="2024-01-19T16:19:29Z" finished-at="2024-01-19T16:19:46Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS001_VerifyEventsAndWebinarsOverviewTest -->
-        <test-method status="PASS" signature="TS002_VerifyIMCEventsSearchbarTest()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@61832929]" name="TS002_VerifyIMCEventsSearchbarTest" duration-ms="27004" started-at="2024-01-05T12:18:30Z" finished-at="2024-01-05T12:18:57Z">
+        </test-method> <!-- TS001_VerifyInformationTabInGlobalSearchTest -->
+        <test-method status="PASS" signature="TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest()[pri:0, instance:atlantamarket_UAT.GlobalSearch_SearchFor@ae45eb6]" name="TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest" duration-ms="48558" started-at="2024-01-19T16:19:46Z" finished-at="2024-01-19T16:20:34Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS002_VerifyIMCEventsSearchbarTest -->
-        <test-method status="PASS" signature="TS003_VerifyIMCEventsCalendarViewTest()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@61832929]" name="TS003_VerifyIMCEventsCalendarViewTest" duration-ms="31805" started-at="2024-01-05T12:18:57Z" finished-at="2024-01-05T12:19:29Z">
+        </test-method> <!-- TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest -->
+        <test-method status="PASS" signature="TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest()[pri:0, instance:atlantamarket_UAT.GlobalSearch_SearchFor@ae45eb6]" name="TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest" duration-ms="97765" started-at="2024-01-19T16:20:34Z" finished-at="2024-01-19T16:22:12Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS003_VerifyIMCEventsCalendarViewTest -->
-        <test-method status="PASS" signature="TS004_VerifyIMCEventsEventsListTest()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@61832929]" name="TS004_VerifyIMCEventsEventsListTest" duration-ms="35878" started-at="2024-01-05T12:19:29Z" finished-at="2024-01-05T12:20:05Z">
+        </test-method> <!-- TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest -->
+        <test-method status="PASS" signature="TS004_VerifyCatalogsOverviewInGlobalSearchTest()[pri:0, instance:atlantamarket_UAT.GlobalSearch_SearchFor@ae45eb6]" name="TS004_VerifyCatalogsOverviewInGlobalSearchTest" duration-ms="66118" started-at="2024-01-19T16:22:12Z" finished-at="2024-01-19T16:23:18Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS004_VerifyIMCEventsEventsListTest -->
-        <test-method status="PASS" signature="TS005_VerifyIMCEventsEventDetailstTest()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@61832929]" name="TS005_VerifyIMCEventsEventDetailstTest" duration-ms="75021" started-at="2024-01-05T12:20:05Z" finished-at="2024-01-05T12:21:20Z">
+        </test-method> <!-- TS004_VerifyCatalogsOverviewInGlobalSearchTest -->
+        <test-method status="PASS" signature="TS005_VerifyArticlesOverviewInGlobalSearchTest()[pri:0, instance:atlantamarket_UAT.GlobalSearch_SearchFor@ae45eb6]" name="TS005_VerifyArticlesOverviewInGlobalSearchTest" duration-ms="61722" started-at="2024-01-19T16:23:18Z" finished-at="2024-01-19T16:24:20Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS005_VerifyIMCEventsEventDetailstTest -->
-        <test-method status="PASS" signature="TS006_VerifyExhibitorEventsSearchbarTest()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@61832929]" name="TS006_VerifyExhibitorEventsSearchbarTest" duration-ms="27047" started-at="2024-01-05T12:21:20Z" finished-at="2024-01-05T12:21:47Z">
+        </test-method> <!-- TS005_VerifyArticlesOverviewInGlobalSearchTest -->
+        <test-method status="FAIL" signature="TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest()[pri:0, instance:atlantamarket_UAT.GlobalSearch_SearchFor@ae45eb6]" name="TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest" duration-ms="286728" started-at="2024-01-19T16:24:20Z" finished-at="2024-01-19T16:29:07Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //div[@id='root']/section[1]/section[1]/section[1]/h1[1] (tried for 40 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@id='root']/section[1]/section[1]/section[1]/h1[1] (tried for 40 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.AtlantaMarket.ATLGlobalSearchPage.getATLArticleHeader(ATLGlobalSearchPage.java:543)
+	at atlantamarket_UAT.GlobalSearch_SearchFor.TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest(GlobalSearch_SearchFor.java:583)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='root']/section[1]/section[1]/section[1]/h1[1]"}
+  (Session info: chrome=120.0.6099.225)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'EON-SWAPNILI', ip: '172.22.90.18', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_311'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.225, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56015}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f7a6013fd78987dc47b42e3fe471a884
+*** Element info: {Using=xpath, value=//div[@id='root']/section[1]/section[1]/section[1]/h1[1]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 15 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS006_VerifyExhibitorEventsSearchbarTest -->
-        <test-method status="PASS" signature="TS007_VerifyExhibitorEventsCalendarViewTest()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@61832929]" name="TS007_VerifyExhibitorEventsCalendarViewTest" duration-ms="97502" started-at="2024-01-05T12:21:47Z" finished-at="2024-01-05T12:23:24Z">
+        </test-method> <!-- TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest -->
+        <test-method status="PASS" signature="TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest()[pri:0, instance:atlantamarket_UAT.GlobalSearch_SearchFor@ae45eb6]" name="TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest" duration-ms="69866" started-at="2024-01-19T16:29:07Z" finished-at="2024-01-19T16:30:17Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS007_VerifyExhibitorEventsCalendarViewTest -->
-        <test-method status="PASS" signature="TS008_VerifyExhibitorEventsListTest()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@61832929]" name="TS008_VerifyExhibitorEventsListTest" duration-ms="101258" started-at="2024-01-05T12:23:24Z" finished-at="2024-01-05T12:25:06Z">
+        </test-method> <!-- TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest -->
+        <test-method status="PASS" signature="TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest()[pri:0, instance:atlantamarket_UAT.GlobalSearch_SearchFor@ae45eb6]" name="TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest" duration-ms="111156" started-at="2024-01-19T16:30:17Z" finished-at="2024-01-19T16:32:08Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS008_VerifyExhibitorEventsListTest -->
-        <test-method status="PASS" signature="TS009_VerifyExhibitorEventsDetailstTest()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@61832929]" name="TS009_VerifyExhibitorEventsDetailstTest" duration-ms="36455" started-at="2024-01-05T12:25:06Z" finished-at="2024-01-05T12:25:42Z">
+        </test-method> <!-- TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest -->
+        <test-method status="PASS" signature="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest()[pri:0, instance:atlantamarket_UAT.GlobalSearch_SearchFor@ae45eb6]" name="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest" duration-ms="138382" started-at="2024-01-19T16:32:08Z" finished-at="2024-01-19T16:34:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS009_VerifyExhibitorEventsDetailstTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.EvenntsAndWebinar@61832929]" name="tearDown" is-config="true" duration-ms="0" started-at="2024-01-05T12:25:42Z" finished-at="2024-01-05T12:25:42Z">
+        </test-method> <!-- TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest -->
+        <test-method status="PASS" signature="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest()[pri:0, instance:atlantamarket_UAT.GlobalSearch_SearchFor@ae45eb6]" name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest" duration-ms="30011" started-at="2024-01-19T16:34:26Z" finished-at="2024-01-19T16:34:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS010_VerifyShowSpecialsOverviewInGlobalSearchTest -->
+        <test-method status="PASS" signature="TS011_VerifyEventsOverviewInGlobalSearchTest()[pri:0, instance:atlantamarket_UAT.GlobalSearch_SearchFor@ae45eb6]" name="TS011_VerifyEventsOverviewInGlobalSearchTest" duration-ms="101169" started-at="2024-01-19T16:34:56Z" finished-at="2024-01-19T16:36:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS011_VerifyEventsOverviewInGlobalSearchTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_UAT.GlobalSearch_SearchFor@ae45eb6]" name="tearDown" is-config="true" duration-ms="0" started-at="2024-01-19T16:36:37Z" finished-at="2024-01-19T16:36:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- atlantamarket_UAT.EvenntsAndWebinar -->
+      </class> <!-- atlantamarket_UAT.GlobalSearch_SearchFor -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
-
-<testng-results total="1" passed="1" failed="0" skipped="0">
-  <reporter-output>
-  </reporter-output>
-  <suite started-at="2024-01-05T08:48:07Z" name="Default suite" finished-at="2024-01-05T08:49:25Z" duration-ms="77852">
-    <groups>
-    </groups>
-    <test started-at="2024-01-05T08:48:07Z" name="Default test" finished-at="2024-01-05T08:49:25Z" duration-ms="77852">
-      <class name="atlantamarket_PROD.GlobalSearch_ShowSpecials">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ShowSpecials@7d9e8ef7]" started-at="2024-01-05T14:18:07Z" name="initialize" finished-at="2024-01-05T14:19:12Z" duration-ms="65213" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method signature="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ShowSpecials@7d9e8ef7]" started-at="2024-01-05T14:19:12Z" name="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest" finished-at="2024-01-05T14:19:25Z" duration-ms="12385" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:atlantamarket_PROD.GlobalSearch_ShowSpecials@7d9e8ef7]" started-at="2024-01-05T14:19:25Z" name="tearDown" finished-at="2024-01-05T14:19:25Z" duration-ms="244" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- atlantamarket_PROD.GlobalSearch_ShowSpecials -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
-
 </testng-results>

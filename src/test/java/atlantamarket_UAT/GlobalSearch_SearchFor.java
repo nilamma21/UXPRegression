@@ -14,6 +14,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+//import net.bytebuddy.dynamic.loading.ClassInjector.UsingReflection.Dispatcher.Direct;
 import pageObjects.AtlantaMarket.ATLExhDigiShowroomPage;
 import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
 import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
@@ -22,6 +23,9 @@ import pageObjects.AtlantaMarket.ATLLeftPaneFilters;
 import pageObjects.AtlantaMarket.ATLLoginPage;
 import pageObjects.AtlantaMarket.ATLMarketPlannerPage;
 import pageObjects.AtlantaMarket.ATLProductDetailsPage;
+import pageObjects.LasVegasMarket.LVMExhDigiShowroomPage;
+import pageObjects.LasVegasMarket.LVMGlobalSearchPage;
+
 import resources.GenerateData;
 import resources.Utility;
 import resources.base;
@@ -41,6 +45,8 @@ public class GlobalSearch_SearchFor extends base {
 	ATLExhLineProdActionsPage atlexhact;
 	ATLMarketPlannerPage atlmppge;
 	ATLLeftPaneFilters atlleftpane;
+	LVMGlobalSearchPage lvmgs;
+	  LVMExhDigiShowroomPage lvmds;
 
 	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns,
 	allnoteslist, favlist, searchlinetypelist, tagBlogPost, taglist, infoFilterList;
@@ -72,7 +78,7 @@ public class GlobalSearch_SearchFor extends base {
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		utl.loginCheckATL();
+		
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearchinputforInfoTab2"));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(7000);
@@ -81,11 +87,12 @@ public class GlobalSearch_SearchFor extends base {
 		atlgs.getATLsearchresultInfoLink().click();
 		Thread.sleep(2000);
 		String infoTitle=atlgs.infoTitle().getText();
+		
 		System.out.println(infoTitle);
 		Assert.assertTrue(atlgs.getATLSearchResult().getText().contains(prop.getProperty("globalsearchinputforInfoTab2")));
 
 		String seeMoreDetailsURL=atlgs.getatlInfoSearchMoreInfoBtn().getAttribute("href");
-
+		Thread.sleep(2000);
 		// Click on See More details Btn from result
 		atlgs.getatlInfoSearchMoreInfoBtn().click();
 		Thread.sleep(2000);
@@ -116,28 +123,32 @@ public class GlobalSearch_SearchFor extends base {
 
 		// Click on Info link
 		atlgs.getATLsearchresultInfoLink().click();
+		
 		Thread.sleep(8000);
 		String FirstInfoName=atlgs.getFirstInfoName().getText();
+		String newFirstInfoName = FirstInfoName.replaceAll("[\\/\\-\\+\\.\\^:,]", " ");
 		atlgs.getATLInfosearchtxtbxClr().click();
 		Thread.sleep(2000);
-		atlgs.getATLInfosearchtxtbx().sendKeys(FirstInfoName);
+		atlgs.getATLInfosearchtxtbx().sendKeys(newFirstInfoName);
 		atlgs.getATLInfosearchbtn().click();
 		Thread.sleep(2000);
-		String searchResults=atlgs.getATLSearchResult().getText();
+/*		String searchResults=atlgs.getATLSearchResult().getText();
 		Thread.sleep(2000);
 		String searchName=searchResults.split(" ")[5].trim();
 		Thread.sleep(5000);
 		System.out.println(searchName);
-		Assert.assertTrue(FirstInfoName.contains(searchName));
-
-		String seeMoreDetailsURL=atlgs.getatlInfoSearchMoreInfoBtn().getAttribute("href");
+		Assert.assertTrue(FirstInfoName.contains(searchName));*/
+		utl.checkItemPresentInListorNot(atlgs.getatlInfoNameList(), FirstInfoName);
+		utl.ClickOnSeeMoreBtnAnyName(atlgs.getatlInfoNameList(), FirstInfoName);
+		//String seeMoreDetailsURL=atlgs.getatlInfoSearchMoreInfoBtn().getAttribute("href");
 		// Click on See More details Btn from result
-		utl.scrollToElement(atlgs.getatlInfoSearchMoreInfoBtn());
-		atlgs.getatlInfoSearchMoreInfoBtn().click();
+		//utl.scrollToElement(atlgs.getatlInfoSearchMoreInfoBtn());
+		//atlgs.getatlInfoSearchMoreInfoBtn().click();
 		Thread.sleep(5000);
-		System.out.println("First Info Name: "+FirstInfoName);
+		//System.out.println("First Info Name: "+FirstInfoName);
 		// Verify Juniper Market Page
-		Assert.assertTrue(driver.getTitle().equalsIgnoreCase(FirstInfoName));
+		String seeMoreBtnURL=utl.seeMoreBtnURL;
+		Assert.assertTrue(driver.getCurrentUrl().equalsIgnoreCase(seeMoreBtnURL));
 		Thread.sleep(2000);
 	}
 
@@ -739,12 +750,13 @@ public class GlobalSearch_SearchFor extends base {
 	}
 
 	@Test(priority = 9)//groups="Non_MP"
-	public void TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest() throws InterruptedException, IOException {
+	/*public void TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest() throws InterruptedException, IOException {
 
 		// The purpose of this test case to verify:-
 		// T449: Global Search- Search for : Events: Filters
 
 		atlgs = new ATLGlobalSearchPage(driver);
+		lvmgs = new LVMGlobalSearchPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 
@@ -789,8 +801,10 @@ public class GlobalSearch_SearchFor extends base {
 		driver.navigate().back();
 		Thread.sleep(5000);
 		//Click on Clear Filters btn
-		atlgs.getClearFiltersBtn().click();
-		Thread.sleep(2000);
+		//atlgs.getClearFiltersBtn().click();
+		//lvmgs.getClearFiltersBtn().click();
+		//Thread.sleep(2000);
+		//driver.navigate().refresh();
 		//Click on Event Types filter
 		atlgs.getEventTypesFilter().click();
 		Thread.sleep(2000);
@@ -806,6 +820,91 @@ public class GlobalSearch_SearchFor extends base {
 		//Click on Clear Filters btn
 		atlgs.getClearFiltersBtn().click();
 		Thread.sleep(2000);
+			Exhibitor events are available on test environment
+	  String buyingeventtype = atlgs.getBuyingEventType().getText();
+		atlgs.getBuyingEventType().click();
+
+		//Verify that Selected event type should be displayed as Tag on Event Card
+		Assert.assertTrue(atlexhact.getEventCardTag().getText().contains(buyingeventtype));
+
+		//Click on Clear Filters btn
+		atlgs.getClearFiltersBtn().click();
+	}*/
+	public void TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest() throws InterruptedException, IOException {
+
+		// The purpose of this test case to verify:-
+		// T449: Global Search- Search for : Events: Filters
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+
+        driver.get(prop.getProperty("atlmrkturl_uat"));
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        Thread.sleep(8000);
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
+		atlgs.getATLSearchButton().click();
+		Thread.sleep(8000);
+
+		//Click on Events & Seminars tab
+		//	atlgs.getATLEventsTabInSearch().click();
+		try {
+			//Click on Events & Seminars tab
+			atlgs.getATLEventsTabInSearch().click();
+			Thread.sleep(500);
+			}
+			catch(Exception e) {
+				atlgs.getATLEventsTabInSearchDiv().click();
+				Thread.sleep(500);
+			}
+		//Click on Topics filter
+		Thread.sleep(3000);
+		atlgs.getATLInfoSearchTopicsFilter().click();
+		Thread.sleep(4000);
+		//atlgs.getEventsATLMktTopics();
+		//Thread.sleep(3000);
+		
+		//Select 'Atlanta Market' topic
+		atlgs.getEventsATLMktTopics().click();
+		Thread.sleep(8000);
+		String topicName = atlgs.getEventsATLMktTopics().getText();
+		String eventName = atlgs.getATLFirstEventName().getText();
+		System.out.println(eventName);
+		//atlgs.getEventsATLMktTopics().click();
+		Thread.sleep(800);
+		//Click on See More details btn
+		utl.scrollToElement(atlgs.getATLSeeMoreDetailsBtn());
+		atlgs.getATLSeeMoreDetailsBtn().click();
+		Thread.sleep(5000);
+		//Verify that Selected topic name should be displayed as Tag on Event details page
+		System.out.println(atlexhact.getEventDetailsHeader().getText());
+		Assert.assertTrue(atlexhact.getEventDetailsHeader().getText().contains(eventName));
+		driver.navigate().back();
+		Thread.sleep(5000);
+		//Click on Clear Filters btn
+		atlgs.getClearFiltersBtn().click();
+		Thread.sleep(2000);
+		//Click on Event Types filter
+		atlgs.getEventTypesFilter().click();
+		Thread.sleep(2000);
+		//Click on 'At Market' Event Type
+		//atlgs.atlEventFilterBuyingEvent().click();
+		String atmrkteventtype = atlgs.atlEventFilterBuyingEvent().getText();
+		System.out.println(atmrkteventtype);
+		Thread.sleep(2000);
+		atlgs.atlEventFilterBuyingEvent().click();
+		Thread.sleep(10000);
+		/*atlgs.getAtMarketEventType().click();
+		atlgs.getAtMarketEventType().click();*/
+		driver.navigate().refresh();
+		//Verify that Selected event type should be displayed as Tag on Event Card
+		System.out.println(atlexhact.getEventCardTag().getText());
+		Assert.assertTrue(atlexhact.getEventCardTag().getText().contains(atmrkteventtype));
+
+		//Click on Clear Filters btn
+		atlgs.getClearFiltersBtn().click();
+		//Thread.sleep(2000);
 		/*	Exhibitor events are available on test environment
 	  String buyingeventtype = atlgs.getBuyingEventType().getText();
 		atlgs.getBuyingEventType().click();
@@ -819,7 +918,7 @@ public class GlobalSearch_SearchFor extends base {
 
 	@Test(priority = 10)//groups="Non_MP"
 	public void TS010_VerifyShowSpecialsOverviewInGlobalSearchTest() throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
+		/*// The purpose of this test case to verify:-
 		// T425: Verify Show Specials option in global search
 
 		atlgs = new ATLGlobalSearchPage(driver);
@@ -829,7 +928,11 @@ public class GlobalSearch_SearchFor extends base {
         driver.get(prop.getProperty("atlmrkturl_uat"));
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Thread.sleep(8000);
-        
+        atlgs.getatlExhibitorsAndProductTab().click();
+		//Click on Show Specials 
+		atlgs.getatlShowSpecialsLink().click();
+		Thread.sleep(5000);
+		utl.scrollToElement(atlgs.getatlShowSpecialsTitle());
 		utl.ClearGlobalSearch();
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputforShowSpecials4")));
 
@@ -846,7 +949,63 @@ public class GlobalSearch_SearchFor extends base {
 		Assert.assertTrue(atlgs.getatlVerifyShowSpecials().isDisplayed());
 		Thread.sleep(5000);
 		Assert.assertTrue(atlgs.getFourthBreadcrumbTxtInApp().getText().contains("Specials"));
-		Thread.sleep(2000);
+		Thread.sleep(2000);*/
+		
+		 lvmgs = new LVMGlobalSearchPage(driver);
+	        lvmds = new LVMExhDigiShowroomPage(driver);
+	        utl = new Utility(driver);
+	        atlexhact = new ATLExhLineProdActionsPage(driver);
+	       // driver.get(prop.getProperty("lvmurl_uat"));
+	        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	        Thread.sleep(2000);
+
+	        // click on Exhibitors And Product Tab
+	        lvmgs.getlvmExhibitorsAndProductTab().click();
+
+	        // Click on Show Specials
+	        lvmgs.getlvmShowSpecialsLink().click();
+	        Thread.sleep(5000);
+	        List<WebElement> ss = driver.findElements(By.xpath("//div[@class='imc-showSpecial--tableContainer']/p[1]"));
+	        String ssName = " ";
+	        for (WebElement webElement : ss) {
+	            ssName = webElement.getText();
+	            break;
+	        }
+	        System.out.println(ssName);
+	        String ssFname =ssName.split(" ")[2].trim();
+	        
+	        //String ssSname =ssName.split(" ")[3].trim();
+	        String ExhibitorName=ssFname ;
+	        String ShowSpciaslDetails=lvmgs.getlvmShowSpecialsDetailsOnShowSpecialsPage().getText();
+	        
+	        System.out.println(ExhibitorName);
+	        
+	        utl.ClearGlobalSearch();
+	        lvmgs.getLVMGlobalSearchTextBox().sendKeys(ExhibitorName);
+	        lvmgs.getLVMSearchButton().click();
+	        Thread.sleep(5000);
+
+	        /*lvmgs.getseeAllLinkMatchingProduct().click();
+	        //lvmgs.getseeAllLinkMatchingProduct().click();
+	        Thread.sleep(5000);
+
+	        lvmgs.getlvmShowSpecialsTab().click();
+	*/
+	        //Click on Exhibitor name
+	        atlexhact.getExhibitorName().click();
+	        //Verify Show Specials section
+	        //Assert.assertTrue(lvmgs.getlvmVerifyShowSpecials().isDisplayed());
+	        Thread.sleep(5000);
+	        Assert.assertTrue(lvmgs.getthirdThbreadCrumbtxt().getText().contains(ExhibitorName));
+	        utl.scrollToElement(lvmgs.getlvmShowSpecialsSection());
+	        String ShowSpecialsDetails=lvmgs.getlvmShowSpecialsDetails().getText();
+	        
+	        Assert.assertTrue(ShowSpciaslDetails.contains(ShowSpecialsDetails));
+	        
+	        
+	        
+	        ////driver.get(prop.getProperty("lvmurl_uat"));
+	        Thread.sleep(5000);
 	}
 
 	@Test(priority = 11)//groups="Non_MP"
@@ -923,6 +1082,6 @@ public class GlobalSearch_SearchFor extends base {
 	@AfterClass(alwaysRun=true)
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 }

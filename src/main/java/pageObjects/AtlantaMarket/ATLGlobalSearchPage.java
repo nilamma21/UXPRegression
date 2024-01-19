@@ -121,6 +121,9 @@ public class ATLGlobalSearchPage {
 	By infoTitle = By.xpath("(//h2[@class='imc-informationcard__title'])[1]");  //Locator for 1st name of Catalog
 	By atlGlobalSearchSortBtnNew = By.xpath("//div[@id='searchBarButton-2']/button"); //Locator for Global Search Sort Btn
 	By atlInfosearchtxtbxclr = By.xpath("(//div[@class='imc-searchform--row']//descendant::button[@aria-label='Clear Search'])[2]");
+	By atlEventFilterBuyingEvent= By.xpath("//label[contains(text(),'Buying Event')]");
+	By atlInfoNameList= By.xpath("//h2[@class='imc-informationcard__title']");
+	
 	
 	
 	public ATLGlobalSearchPage(WebDriver driver) {
@@ -128,7 +131,17 @@ public class ATLGlobalSearchPage {
 		this.driver = driver; 			
 		PageFactory.initElements(driver, this);
 	}
+	public List<WebElement> getatlInfoNameList() {
+		wait = new WebDriverWait (driver,40);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlInfoNameList));
+		return driver.findElements(atlInfoNameList);
+	}
 	
+	public WebElement atlEventFilterBuyingEvent() {
+		wait = new WebDriverWait (driver,40);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlEventFilterBuyingEvent));
+		return driver.findElement(atlEventFilterBuyingEvent);
+	}
 	public WebElement infoTitle() {
 		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(infoTitle));

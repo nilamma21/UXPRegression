@@ -4,9 +4,8 @@
   <test name="Test">
     <classes>
 
-     	<class name="atlantamarket_UAT.EvenntsAndWebinar"/>
-
-     	<class name="atlantamarket_UAT.GlobalSearch_ExhibitorActions"/>
+     	<!-- <class name="atlantamarket_UAT.GlobalSearch_SearchFor"/> -->
+     	<class name="atlantamarket_UAT.GlobalSearch_SearchFor"/>
 
 <!-- 
 	 <class name="atlantamarket_UAT.GlobalSearch_SuggestionList"/>
@@ -23,15 +22,15 @@
       <class name="atlantamarket_UAT.GlobalSearch_SearchFor"/>
  -->
 
-
- 		<!-- 	<methods>
-				<include name="TS001_VerifyEventsAndWebinarsOverviewTest"/>  
+<!--  -->
+ 			<!-- <methods>
+				<include name="TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest"/>  
 			</methods> -->
 
- 			<methods>
-				<include name="TS004_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest()"/>  
+ 			<!-- <methods>
+				<include name="TS004_VerifyClickOnTotalProductsSeeAllLinkForLineTest"/>  
 			</methods>
-
+ -->
 
     </classes>
   </test> <!-- Test -->

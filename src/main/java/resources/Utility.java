@@ -61,6 +61,7 @@ public class Utility extends base {
 	
 	ArrayList<String> tabs;
 	List<WebElement> showspecialslist, exheventslist, exheventnameslist, exheventdeletebtnlist;
+	public String seeMoreBtnURL;
 
 	@SuppressWarnings("static-access")
 	public Utility(WebDriver driver) {
@@ -327,7 +328,36 @@ public class Utility extends base {
 		}
 
 	}
+	public void ClickOnSeeMoreBtnAnyName(List<WebElement> list, String InfoName)
+			throws IOException, InterruptedException {
 
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+
+		boolean flag = false;
+		for (WebElement selectListName : list) {
+			if (selectListName.getText().equals(InfoName)) {
+				scrollToElement(selectListName);
+				WebElement seeMoreDetailsBtn = driver.findElement(By.xpath("//h2[text()='" + InfoName + "']/../div/div[1]/div[1]/a[1]"));
+				// click on Edit btn
+				Thread.sleep(2000);
+				seeMoreBtnURL=seeMoreDetailsBtn.getAttribute("href");
+				seeMoreDetailsBtn.click();
+				System.out.println("Click on See More Btn");
+				Thread.sleep(5000);
+				flag = true;
+				break;
+			}
+		}
+		if (flag == true) {
+			System.out.println("List " + InfoName + " selected");
+			Assert.assertTrue(flag = true);
+		} else {
+			Assert.assertTrue(flag = false);
+		}
+
+	}
 	public void ClickOnListSelectBtn(List<WebElement> list, String listName) throws IOException, InterruptedException {
 
 		lap = new ATLLandingPage(driver);
@@ -338,9 +368,9 @@ public class Utility extends base {
 		for (WebElement selectListName : list) {
 			if (selectListName.getText().equals(listName)) {
 				scrollToElement(selectListName);
-				WebElement editBtn = driver.findElement(By.xpath("//div[text()='" + listName + "']/../div[2]/span[1]"));
+				WebElement seeMoreBtn = driver.findElement(By.xpath("//h2[text()='" + listName + "']/../div/div[1]"));
 				// click on Edit btn
-				editBtn.click();
+				seeMoreBtn.click();
 				Thread.sleep(5000);
 				flag = true;
 				break;

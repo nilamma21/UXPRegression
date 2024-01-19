@@ -477,7 +477,7 @@ public class GlobalSearch_ProductActions extends base {
 		atlexhact.getDeleteNoteBtn().click();
 	}
 
-	@Test(enabled=false,priority = 6,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
+	//@Test(enabled=false,priority = 6,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS006_VerifyProductAddToExistingListOnSearchResultsGridTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T377: Products Actions: + icon to add to existing list
@@ -596,7 +596,7 @@ public class GlobalSearch_ProductActions extends base {
 		Thread.sleep(6000);
 		// lap.getCloseMarktAdBtn().click();
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearchinputforProduct"));
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearch_input"));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(15000);
 		// Store the 1st Product name of Exhibitor
@@ -643,7 +643,7 @@ public class GlobalSearch_ProductActions extends base {
 		atlproddet.getProductFullScreenViewer().click();
 	}
 
-	@Test(enabled=false,priority = 8,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
+	//@Test(enabled=false,priority = 8,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS008_VerifyAddToFavoriteOnSearchResultsGridTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T378: Add To Favorite functionality for Product on Search Results grid
@@ -709,7 +709,7 @@ public class GlobalSearch_ProductActions extends base {
 		}
 	}
 
-	@Test(enabled=false,priority = 9,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
+	//@Test(enabled=false,priority = 9,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS009_VerifyProductAddToNewlyCreatedListOnSearchResultsGridTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -795,6 +795,6 @@ public class GlobalSearch_ProductActions extends base {
 
 	@AfterClass(alwaysRun=true)
 	public void tearDown() {
-		driver.quit();
+		//driver.quit();
 	}
 }
