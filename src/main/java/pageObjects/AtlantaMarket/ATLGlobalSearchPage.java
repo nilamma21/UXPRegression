@@ -125,7 +125,6 @@ public class ATLGlobalSearchPage {
 	By atlInfoNameList= By.xpath("//h2[@class='imc-informationcard__title']");
 	
 	
-	
 	public ATLGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
@@ -636,7 +635,7 @@ public class ATLGlobalSearchPage {
       wait = new WebDriverWait (driver,40);
       wait.until(ExpectedConditions.elementToBeClickable(atlInfosearchtxtbxclr));
       return driver.findElement(atlInfosearchtxtbxclr);
-  }   
+  }
 
 }
 

@@ -194,7 +194,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		String temp = atlexhact.getTotalProdCountOnSearchGrid().getText();
 		String totalprodcountonsearchgrid = temp.replaceAll("[^0-9]", "");
 		System.out.println("Total Products Count on Search Results grid is: " + totalprodcountonsearchgrid);
-
+		Thread.sleep(2000);
 		// Click on Total Products-See All link for 1st Exhibitor
 		utl.scrollToElement(atlexhact.getTotalProdSeeAllLink());
 		atlexhact.getTotalProdSeeAllLink().click();

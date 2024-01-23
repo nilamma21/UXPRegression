@@ -182,7 +182,7 @@ public class GlobalSearch_SearchFor extends base{
 		Thread.sleep(3000);
 		infoFilterList = driver.findElements(By.xpath("//div[@class='imc-filteritem__option']"));
 		//taglist = driver.findElements(By.xpath("(//div[@class='imc-articlecard__tags imc-gallery__item'])[1]/ul/li/button"));
-
+		Thread.sleep(1000);
 		for (int i = 0; i < infoFilterList.size(); i++) {
 			try {
 				String f = infoFilterList.get(i).getText();
@@ -864,7 +864,8 @@ public class GlobalSearch_SearchFor extends base{
 		//String atmrkteventtype = lvmgs.getAtMarketEventTypeUat().getText(); //For UAT
 		//lvmgs.getAtMarketEventTypeUat().click(); //For UAT
 		Thread.sleep(2000);
-		
+		driver.navigate().refresh();
+		Thread.sleep(5000);
 		//Verify that Selected event type should be displayed as Tag on Event Card
 		Assert.assertTrue(lvmexhact.getEventCardTag().getText().contains(atmrkteventtype));
 

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="1" name="Failed suite [Suite]" parallel="classes">
-  <test name="Test(failed)" parallel="classes">
+<suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
+  <test name="RegressionTest(failed)">
     <classes>
-      <class name="atlantamarket_UAT.GlobalSearch_SearchFor">
+      <class name="atlantamarket_PROD.GlobalSearch_LineActions">
         <methods>
-          <include name="TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest"/>
+          <include name="TS004_VerifyClickOnTotalProductsSeeAllLinkForLineTest"/>
           <include name="tearDown"/>
           <include name="initialize"/>
         </methods>
-      </class> <!-- atlantamarket_UAT.GlobalSearch_SearchFor -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_LineActions -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- RegressionTest(failed) -->
+</suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->

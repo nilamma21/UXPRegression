@@ -9,13 +9,12 @@
 		<test thread-count="1"  name="RegressionTest">
 		<classes>
 
-			<class name="lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters" /> 
+			<class name="lasvegasmarket_PROD.GlobalSearch_LineActions" /> 
 
 		<methods>
-				 <include name="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest"/>   
-				
+				 <include name="TS003_VerifyClickOnMatchingProductsSeeAllLinkForLineTest()"/>   
 		</methods>
-   
+  
 		</classes>
 	</test>
 </suite>
