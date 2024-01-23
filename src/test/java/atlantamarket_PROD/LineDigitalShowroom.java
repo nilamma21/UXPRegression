@@ -59,7 +59,7 @@ public class LineDigitalShowroom extends base {
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 
 		lap.getIUnderstandBtn().click();
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		//utl.CloseATLPopup();
 		//Login to Market Planner
 		//utl.verifyMPLoginFunctionality();
@@ -88,7 +88,7 @@ public class LineDigitalShowroom extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//driver.get(prop.getProperty("atlmrkturl_prod"));
-		utl.loginCheckATL();
+		//utl.loginCheckATL();
 		//click on Global Search Input filed
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("HeroComponentExhName"));
 		Thread.sleep(5000);
@@ -100,11 +100,11 @@ public class LineDigitalShowroom extends base {
 		//Click on Shown By Exhibitor Name
 		String heroompName=atldigish.getdigiShowroomExhName().getText();
 		atldigish.getdigiShowroomExhName().click();
-
+		Thread.sleep(2000);
 		//verify Selected exhitor digi showroom ppage
 		Assert.assertTrue(atlgs.getatlShowSpecialsTitle().getText().equals(heroompName));
-
 	}
+	
 	@Test(priority = 2)//groups="Non_MP"
 	public void TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest()throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-

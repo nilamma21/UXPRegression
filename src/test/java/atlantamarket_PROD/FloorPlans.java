@@ -84,7 +84,7 @@ public class FloorPlans extends base {
 		Thread.sleep(2000);
 		// Click on Exh And Product Tab
 		atlflpp.getATLExhibitorsAndProductTab().click();
-		Thread.sleep(1000);
+		Thread.sleep(1500);
 		//click on Floor plans link
 		atlflpp.getATLFloorPlansLink().click();
 		Thread.sleep(2000);
@@ -112,13 +112,14 @@ public class FloorPlans extends base {
 		
 		String actualNextFloorNumber=atlflpp.getATLNextFloorBtn().getText();
 		System.out.println("Actual Next Floor Number: " +actualNextFloorNumber);
+		utl.scrollToElement(atlflpp.getATLNextFloorBtn());
 		atlflpp.getATLNextFloorBtn().click();
 		Thread.sleep(5000);
 		String exptectedFloorNumber=atlflpp.getATLExpectedFloorNumber().getText();
 		System.out.println("Exptected Floor Number: " +exptectedFloorNumber);
 		//Verify Next Floor
 		Assert.assertTrue(exptectedFloorNumber.contains(actualNextFloorNumber));
-		Thread.sleep(1000);
+		Thread.sleep(1500);
 		//Previous floor Btn
 		utl.scrollToElement(atlflpp.getATLPreviousFloorBtn());
 		String actualPreviousFloorNumber=atlflpp.getATLPreviousFloorBtn().getText();
@@ -141,22 +142,24 @@ public class FloorPlans extends base {
 		utl = new Utility(driver);
 		atlflpp=new ATLFloorPlansPage(driver);
 
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(2000);
 		// Click on Exh And Product Tab
 		utl.scrollToElement(atlflpp.getATLExhibitorsAndProductTab());
 		atlflpp.getATLExhibitorsAndProductTab().click();
-		Thread.sleep(1000);
+		Thread.sleep(1500);
 		//click on Floor plans link
 		atlflpp.getATLFloorPlansLink().click();
-		Thread.sleep(1000);
+		Thread.sleep(1500);
 		//click on Floor whose not having an Exhibitors
 		String floorName=atlflpp.getATLBuildingFloor().getText();
 		System.out.println("Floor Name : " +floorName);
 
 		//click on No Exhibitor floor
+		utl.scrollToElement(atlflpp.getATLNoExhibitorFloor());
 		atlflpp.getATLNoExhibitorFloor().click();
-		Thread.sleep(1000);
+		Thread.sleep(1500);
 		//Verify that Loading Exhibitors msg should be displayed
 		//Assert.assertTrue(atlflpp.getATLLoadingExhMsg().isDisplayed());
 
@@ -175,6 +178,7 @@ public class FloorPlans extends base {
 		utl = new Utility(driver);
 		atlflpp=new ATLFloorPlansPage(driver);
 
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(3000);
 		// Click on Exh And Product Tab
@@ -188,9 +192,10 @@ public class FloorPlans extends base {
 		atlflpp.getATLBuildingFloor().click();
 		Thread.sleep(3000);
 		String x0=atlflpp.getATLFloorPlanMapIamge().getAttribute("style");
-        System.out.println("x1 = "+x0);
+        System.out.println("x0 = "+x0);
         Thread.sleep(2000);
 		//Click on Zoom In icon
+		utl.scrollToElement(atlflpp.getATLExhibitorFloorZoomIn());
 		atlflpp.getATLExhibitorFloorZoomIn().click();
 		Thread.sleep(1000);
 		//Store Zoom in Attribute
@@ -218,7 +223,7 @@ public class FloorPlans extends base {
 		System.out.println("out = "+out);
 		//Verify Zoom Out functionality
 		Thread.sleep(2000);
-		Assert.assertEquals(x1, out);
+		Assert.assertEquals(x0, out);
 	}
 
 	@Test(priority = 4)//groups="Non_MP"
@@ -233,6 +238,7 @@ public class FloorPlans extends base {
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 		atlgs = new ATLGlobalSearchPage(driver);
 
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(2000);
 		// Click on Exh And Product Tab
@@ -245,14 +251,16 @@ public class FloorPlans extends base {
 		//click on any floor
 		utl.scrollToElement(atlflpp.getATLBuildingFloor());
 		atlflpp.getATLBuildingFloor().click();
-		Thread.sleep(1000);
+		Thread.sleep(1500);
 		//Click on Vending Machine icon on Map image
+		utl.scrollToElement(atlflpp.getVendingMachineIconOnMap());
 		atlflpp.getVendingMachineIconOnMap().click();
-		Thread.sleep(1000);
+		Thread.sleep(1500);
 		//Verify that Vending Machine Overlay should appeared on Map
 		Assert.assertTrue(atlflpp.getVendingMachineOverlayOnMap().isDisplayed());
 
 		//Click on Elevator icon on Map image
+		utl.scrollToElement(atlflpp.getElevatorIconOnMap());
 		atlflpp.getElevatorIconOnMap().click();
 		Thread.sleep(1000);
 		//Verify that Elevator Overlay should appeared on Map
@@ -265,15 +273,18 @@ public class FloorPlans extends base {
 		Assert.assertTrue(atlflpp.getWaterFountainOverlayOnMap().isDisplayed());
 */
 		//Click on Phone icon on Map image
+		utl.scrollToElement(atlflpp.getPhoneIconOnMap());
 		atlflpp.getPhoneIconOnMap().click();
 		Thread.sleep(1000);
 		//Verify that Phone Overlay should appeared on Map
 		Assert.assertTrue(atlflpp.getPhoneOverlayOnMap().isDisplayed());
 
 		//Click on Overlay Close btn
+		utl.scrollToElement(atlflpp.getOverlayCloseBtn());
 		atlflpp.getOverlayCloseBtn().click();
 		Thread.sleep(1000);
 		//Click on Location pin of any Exhibitor on Map
+		utl.scrollToElement(atlflpp.getLocationPinIconOnMap());
 		atlflpp.getLocationPinIconOnMap().click();
 		Thread.sleep(500);
 		//Verify that select Exhibitor's location details should be displayed in popup
@@ -283,6 +294,7 @@ public class FloorPlans extends base {
 		String exhnameondetailsmodal = atlflpp.getExhNameOnExhibitorDetailsModal().getText();
 
 		//Click on 'View Digital Showroom' button
+		utl.scrollToElement(atlflpp.getViewDGShowroombtn());
 		atlflpp.getViewDGShowroombtn().click();
 		Thread.sleep(500);
 		//Verify that user should redirected to Exh Digital Showroom page
@@ -307,13 +319,14 @@ public class FloorPlans extends base {
 
 		// Click on Exh And Product Tab
 		atlflpp.getATLExhibitorsAndProductTab().click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		//click on Floor plans link
 		atlflpp.getATLFloorPlansLink().click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		//Click on Building floor
+		utl.scrollToElement(atlflpp.getATLBuildingFloorForFilter());
 		atlflpp.getATLBuildingFloorForFilter().click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		//Scroll Down to Exhibitor list
 		utl.scrollToElement(atlflpp.getATLSelectBox());
 
@@ -511,24 +524,26 @@ public class FloorPlans extends base {
 		// Click on Exh And Product Tab
 		utl.scrollToElement(atlflpp.getATLExhibitorsAndProductTab());
 		atlflpp.getATLExhibitorsAndProductTab().click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		//click on Floor plans link
 		atlflpp.getATLFloorPlansLink().click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		//Click on building floor
+		utl.scrollToElement(atlflpp.getATLBuildingFloor());
 		atlflpp.getATLBuildingFloor().click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		utl.scrollToElement(atlflpp.getscrollexhibitorsection());
 		Thread.sleep(5000);
 		Assert.assertTrue(atlflpp.getatlexhibitorsection().isDisplayed());
-
+		utl.scrollToElement(atlflpp.getatlexhibitorsearch());
 		atlflpp.getatlexhibitorsearch().click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		atlflpp.getatlexhibitorsearch().sendKeys(prop.getProperty("atlFloorPlanExhibitorSearch"));
 		System.out.println("Search the Exhibitor: " +prop.getProperty("atlFloorPlanExhibitorSearch"));
 		
 		atlflpp.getatlserachexhibitorbtn().click();
 		Thread.sleep(9000);
+		System.out.println(atlflpp.getverifyexhibitor().getText());
 		Assert.assertTrue(atlflpp.getverifyexhibitor().getText().contains(prop.getProperty("atlFloorPlanExhibitorSearch")));
 	}
 	
@@ -769,7 +784,7 @@ public class FloorPlans extends base {
 	@AfterClass(alwaysRun=true)
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 
 }

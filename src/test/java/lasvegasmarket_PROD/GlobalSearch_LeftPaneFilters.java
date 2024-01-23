@@ -289,7 +289,9 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//Click on IMC Test Exhibitor name in list
 		//lvmexhact.getIMCExhibitorName().click(); //For prod
 		utl.scrollToElement(lvmleftpane.getFirstVintageExhUat());
-		lvmleftpane.getFirstVintageExhUat().click(); //For UAT
+		//lvmleftpane.getFirstVintageExhUat().click(); //For UAT
+		//Click on the second exhibitor from search result.
+		lvmleftpane.getSecondExhUat().click(); //For UAT
 
 		//Scroll till Product Categories section
 		utl.scrollToElement(lvmds.getLVMProductCategSection());
@@ -451,7 +453,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		
 		//Click on the first exhibitor
 		lvmleftpane.getFirstVintageExhUat().click(); //For UAT
-
+		Thread.sleep(1000);
 		//Scroll till Product Categories section
 		utl.scrollToElement(lvmds.getLVMProductCategSection());
 		prodcatgitemlist = lvmds.getLVMProductCategItemList();
@@ -771,7 +773,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 	 
 }

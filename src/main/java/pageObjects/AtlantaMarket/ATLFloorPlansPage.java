@@ -268,10 +268,14 @@ public class ATLFloorPlansPage {
 	}
 	public WebElement getverifyexhibitor() throws InterruptedException {
 		Thread.sleep(8000);
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(verifyexhibitor));
 		return driver.findElement(verifyexhibitor);
 	}
 	public WebElement getscrollexhibitorsection() throws InterruptedException {
 		Thread.sleep(10000);
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.elementToBeClickable(scrollexhibitorsection));
 		return driver.findElement(scrollexhibitorsection);
 	}
 	public WebElement getViewDGShowroombtn() {

@@ -261,7 +261,7 @@ public class FloorPlans extends base {
 
         utl = new Utility(driver);
         lvmflpp=new LVMFloorPlansPage(driver);
-        
+        driver.get(prop.getProperty("lvmurl_prod"));
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         // Click on Exh And Product Tab
         lvmflpp.getLVMExhibitorsAndProductTab().click();

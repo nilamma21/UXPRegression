@@ -6,21 +6,11 @@
 		<listner class-name="atlantamarket_PROD.TestListeners" />
 	</listners>
 	<test thread-count="1" name="RegressionTest">
-		<classes>
-		<class name="atlantamarket_PROD.EvenntsAndWebinar" />
-
-		<!-- <class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" /> -->
-
+	<classes>
+		<class name="atlantamarket_PROD.GlobalSearch_LineActions" />
 			<methods>
-			<include name="TS001_VerifyEventsAndWebinarsOverviewTest"/>
-			<!-- 	<include name="TS005_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest"/>   -->
-
-<!-- 
-			<methods>
-				<include name="TS007_VerifyExhibitorEventsCalendarViewTest()"/>  
-
+				<include name="TS004_VerifyClickOnTotalProductsSeeAllLinkForLineTest()"/>
 			</methods>
-  -->
 	</classes>
 	</test>
 </suite>

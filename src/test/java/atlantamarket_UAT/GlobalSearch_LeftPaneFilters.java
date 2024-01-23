@@ -56,8 +56,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(7000);
-		driver.navigate().refresh();
-		Thread.sleep(4000);
+		//driver.navigate().refresh();
+		//Thread.sleep(4000);
 	}
 	@Test(enabled=false)
 	public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
@@ -150,7 +150,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(2000);
 		
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("searchexhwithlinesinput")));
 		atlgs.getATLSearchButton().click();
 
 		//Click on Product Categories expand btn
@@ -448,10 +448,13 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		Thread.sleep(8000);
 
 		//Verify the selected Product Categories on Exhibitor Digital Showroom page
+		utl.scrollToElement(atlleftpane.getATLSecondExhibitor());
 		//Select 1st Exhibitor from Search results grid
-		utl.scrollToElement(atlleftpane.getATLexhibitor());
-		atlleftpane.getATLexhibitor().click();
-
+		//atlleftpane.getATLexhibitor().click();
+		//Select 2nd Exhibitor from Search results grid
+		Thread.sleep(1000);
+		atlleftpane.getATLSecondExhibitor().click();
+		
 		//Scroll till Product Categories section
 		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
 		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
@@ -774,6 +777,6 @@ public class GlobalSearch_LeftPaneFilters extends base {
 	@AfterClass(alwaysRun=true)
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 }

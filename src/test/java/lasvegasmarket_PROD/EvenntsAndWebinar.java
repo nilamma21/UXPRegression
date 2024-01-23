@@ -73,7 +73,7 @@ public class EvenntsAndWebinar extends base{
 	@Test(priority = 1)
 	public void TS001_VerifyEventsAndWebinarsOverviewTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// UXP-T283: Events and Webinars Overview
+		// UXP-T625: Events and Webinars Overview
 		lap = new LVMLandingPage(driver);
 		lp = new LVMLoginPage(driver);
 		utl = new Utility(driver);
@@ -118,7 +118,7 @@ public class EvenntsAndWebinar extends base{
 	@Test(priority = 2)
 	public void TS002_VerifyIMCEventsSearchbarTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// UXP-T284: IMC Events: Search bar
+		// UXP-T626: IMC Events: Search bar
 		lap = new LVMLandingPage(driver);
 		lp = new LVMLoginPage(driver);
 		utl = new Utility(driver);
@@ -154,7 +154,7 @@ public class EvenntsAndWebinar extends base{
 	@Test(priority = 3)
 	public void TS003_VerifyIMCEventsCalendarViewTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// UXP-T288: IMC Events: Calendar View
+		// UXP-T630: IMC Events: Calendar View
 		lap = new LVMLandingPage(driver);
 		lp = new LVMLoginPage(driver);
 		utl = new Utility(driver);
@@ -256,7 +256,7 @@ public class EvenntsAndWebinar extends base{
 	public void TS004_VerifyIMCEventsEventsListTest() throws InterruptedException, IOException {
 		
 		// The purpose of this test case to verify:-
-				// UXP-T292: IMC Events: Events List
+				// UXP-T634: IMC Events: Events List
 				lap = new LVMLandingPage(driver);
 				lp = new LVMLoginPage(driver);
 				utl = new Utility(driver);
@@ -367,7 +367,7 @@ public class EvenntsAndWebinar extends base{
 	@Test(priority = 5)
 	public void TS005_VerifyIMCEventsEventDetailstTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// UXP-T295: IMC Events: Event Details
+		// UXP-T637: IMC Events: Event Details
 		lap = new LVMLandingPage(driver);
 		lp = new LVMLoginPage(driver);
 		utl = new Utility(driver);
@@ -479,7 +479,7 @@ public class EvenntsAndWebinar extends base{
 	@Test(priority = 6)
 	public void TS006_VerifyExhibitorEventsSearchbarTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// UXP-T304: Exhibitor Events: Search bar
+		// UXP-T646: Exhibitor Events: Search bar
 		lap = new LVMLandingPage(driver);
 		lp = new LVMLoginPage(driver);
 		utl = new Utility(driver);
@@ -515,7 +515,7 @@ public class EvenntsAndWebinar extends base{
 	@Test(priority = 7)
 	public void TS007_VerifyExhibitorEventsCalendarViewTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// UXP-T305: Exhibitor Events: Calendar View
+		// UXP-T647: Exhibitor Events: Calendar View
 		lap = new LVMLandingPage(driver);
 		lp = new LVMLoginPage(driver);
 		utl = new Utility(driver);
@@ -648,7 +648,7 @@ public class EvenntsAndWebinar extends base{
 	@Test(priority = 8)//Previous priority = 11
 	public void TS008_VerifyExhibitorEventsListTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// UXP-T306: Exhibitor Events: Events List
+		// UXP-T648: Exhibitor Events: Events List
 		lap = new LVMLandingPage(driver);
 		lp = new LVMLoginPage(driver);
 		utl = new Utility(driver);
@@ -770,7 +770,7 @@ public class EvenntsAndWebinar extends base{
 	@Test(priority = 9)
 	  public void TS009_VerifyExhibitorEventsDetailstTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// UXP-T307: Exhibitor Events: Event Details
+		// UXP-T649: Exhibitor Events: Event Details
 		lap = new LVMLandingPage(driver);
 		lp = new LVMLoginPage(driver);
 		utl = new Utility(driver);

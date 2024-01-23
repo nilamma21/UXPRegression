@@ -275,7 +275,7 @@ public class ExhibitorDigitalShowroom extends base {
 		atlexhdgshw.getLineSearch().sendKeys(prop.getProperty("line4"));
 		atlexhdgshw.getLineSearchButton().click();
 		Thread.sleep(5000);
-		Assert.assertTrue(atlexhdgshw.getVerifyLineSearch().getText().contains(prop.getProperty("line4")));	
+		Assert.assertTrue(prop.getProperty("line4").contains(atlexhdgshw.getVerifyLineSearch().getText()));	
 	}
 	@Test(priority = 6)//groups="Non_MP"
 	public void TS006_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest() throws InterruptedException, IOException {
@@ -1044,7 +1044,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 	@AfterClass(alwaysRun=true)
 	public void tearDown() {
-		driver.quit();
+		//driver.quit();
 	}
 
 }

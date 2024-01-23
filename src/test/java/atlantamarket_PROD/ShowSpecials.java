@@ -103,12 +103,14 @@ public class ShowSpecials extends base  {
 		
 		//Store the name of Show Special Exhibitor
 		String inbox = atlgs.getatlShowSpecialsExhNamePROD().getText();
+		System.out.println(inbox);
 		String[] data = inbox.split("Shown By ");
-		String showSpecialExhName = data[1];
+		String showSpecialExhName = data[0];
 		System.out.println(showSpecialExhName);
 		utl.scrollToElement(atlgs.getViewBrandDetailsLink());
 		//Click on View Brand Details link
 		atlgs.getViewBrandDetailsLink().click();
+		Thread.sleep(2000);
 		try {
 		  System.out.println(atlexhdgshw.getExhNameOnExhDirectImg().getText());
 	        //Verify the Show special exhibitor page
@@ -190,7 +192,7 @@ public class ShowSpecials extends base  {
 	@AfterClass(alwaysRun=true)
 	public void tearDown() throws InterruptedException {
 		//utl.deleteShowSpecialFrmExp(); // Delete created show special
-		driver.quit();
+		//driver.quit();
 
 	}
 }

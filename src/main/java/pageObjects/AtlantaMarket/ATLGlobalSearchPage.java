@@ -122,7 +122,6 @@ public class ATLGlobalSearchPage {
 	By atlGlobalSearchSortBtnNew = By.xpath("//div[@id='searchBarButton-2']/button"); //Locator for Global Search Sort Btn
 	By atlInfosearchtxtbxclr = By.xpath("(//div[@class='imc-searchform--row']//descendant::button[@aria-label='Clear Search'])[2]");
 	
-	
 	public ATLGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
@@ -623,7 +622,7 @@ public class ATLGlobalSearchPage {
       wait = new WebDriverWait (driver,40);
       wait.until(ExpectedConditions.elementToBeClickable(atlInfosearchtxtbxclr));
       return driver.findElement(atlInfosearchtxtbxclr);
-  }   
+  }
 
 }
 

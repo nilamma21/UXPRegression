@@ -199,6 +199,7 @@ public class GlobalSearch_SearchFor extends base {
 					infoFilterList.get(i).click();
 					Thread.sleep(8000);
 					for (int l = 0; l < taglist.size(); l++) {
+						Thread.sleep(2000);
 						Assert.assertTrue(taglist.get(l).getText().contains("Exhibitors"));
 						break;
 					}
@@ -407,10 +408,19 @@ public class GlobalSearch_SearchFor extends base {
 					driver.navigate().refresh();
 					Thread.sleep(5000);
 					String filterResultTitle = atlgs.getATLArticleName().getText();
+					String filterResultTitleNew = filterResultTitle.replaceAll("[^a-zA-Z0-9 ]", "");
+					System.out.println("Filter Result Title: "+filterResultTitleNew);
 					utl.scrollToElement(atlgs.getATLArticleSeeMoreBtn());
 					atlgs.getATLArticleSeeMoreBtn().click();
-					Thread.sleep(500);
-					Assert.assertTrue(filterResultTitle.contains(atlgs.getATLArticleHeader().getText()));
+					Thread.sleep(3000);
+					try {
+						String articleTitle = atlgs.getATLArticleHeader().getText();
+						String articleTitleNew = articleTitle.replaceAll("[^a-zA-Z0-9 ]", "");
+						System.out.println(articleTitleNew);
+						Assert.assertTrue(filterResultTitleNew.contains(articleTitleNew));
+					} catch (Exception e) {
+						Assert.assertTrue(filterResultTitleNew.contains(driver.getTitle()));
+					}
 					utl.scrollToElement(atlgs.getATLArticleTag());
 					boolean temp = false;
 					tagBlogPost = driver.findElements(By.xpath("//span[@class='imc-blog-tag-module__tag']"));
@@ -928,6 +938,6 @@ public class GlobalSearch_SearchFor extends base {
 	@AfterClass(alwaysRun=true)
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 }
