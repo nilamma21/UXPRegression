@@ -87,12 +87,19 @@ public class ATLExhLineProdActionsPage extends base{
 	By seeDetailsProd = By.xpath("(//div[@class='imc-gallery imc-gallery--80-20 imc-exhibitorcard--gallery-nowrap'])[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/a[1]"); //Locator for See Detals btn
 	By contactExhibitorHeroComponent = By.xpath("//div[@class='contact-exhibitor-wrapper']/button/span[1]"); //Locator for Contact Exhibitor icon of 1st Exhibitor
 	By catalogitemName = By.xpath("(//div[@class='imc-gallery imc-vr--collosal imc-gallery--justify-left imc-catalog']//descendant::a)[2]/div/div"); //Locator for Catalog item
+	By lineName = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]"); //Locator for 1st Line Name
+	
 	
 	public ATLExhLineProdActionsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 
 	} 
+	public WebElement getlineName() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lineName));
+		return driver.findElement(lineName);
+	}
 	public WebElement getcontactExhibitorHeroComponent() {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(contactExhibitorHeroComponent));

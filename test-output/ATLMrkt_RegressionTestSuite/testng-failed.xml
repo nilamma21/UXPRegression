@@ -8,6 +8,7 @@
           <include name="TS004_VerifyClickOnTotalProductsSeeAllLinkForLineTest"/>
           <include name="tearDown"/>
           <include name="initialize"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- atlantamarket_PROD.GlobalSearch_LineActions -->
     </classes>

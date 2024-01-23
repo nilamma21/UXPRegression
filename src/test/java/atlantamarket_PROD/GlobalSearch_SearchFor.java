@@ -814,6 +814,9 @@ public class GlobalSearch_SearchFor extends base {
 		Thread.sleep(2000);
 		atlgs.getAtMarketEventType().click();
 		Thread.sleep(10000);
+		/*atlgs.getAtMarketEventType().click();
+		atlgs.getAtMarketEventType().click();*/
+		driver.navigate().refresh();
 		//Verify that Selected event type should be displayed as Tag on Event Card
 		System.out.println(atlexhact.getEventCardTag().getText());
 		Assert.assertTrue(atlexhact.getEventCardTag().getText().contains(atmrkteventtype));
