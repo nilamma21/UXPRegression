@@ -78,7 +78,6 @@ public class ATLGlobalSearchPage {
 	By atlListOfAllProducts = By.xpath("//div[@class='imc-exhibitorcard-products-row imc-content--display-flex-space-between-mobile ']"); //Locator for All Product Links
 	By atlListOfAllProductsName = By.xpath("//div[@class='imc-exhibitorcard-products-row imc-content--display-flex-space-between-mobile ']/div/p"); //Locator for All Product Names
 	By atlGlobalSearch_SearchSortByDropdwn = By.xpath("//select[@name='Sort by']");  //Locator for Global Search Sort By Dropdown
-	By atlGlobalSearch_SearchSortByDropdwn_UAT = By.xpath("//select[@id='dropdown-sort-search' and @name='Sort by']");  //Locator for Global Search Sort By Dropdown
 	By atlGlobalSearchExhLocationList = By.xpath("//div[@class='imc-exhibitorcard-title-row']/div[2]/div[1]/div[1]/a");  //Locator for Location list
 	By atlExhNames = By.xpath("//div[@class='imc-exhibitorcard-title-row']/div[1]/a[1]/h2");  //Locator for Exhibitors Name list
 	By atlMachingProductCount = By.xpath("//div[@class='imc-exhibitorcard--prod-item-container imc-exhibitorcard--prod-item-container--divider']/p[1]");  //Locator for Matching prod count list
@@ -343,11 +342,6 @@ public class ATLGlobalSearchPage {
 		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.elementToBeClickable(atlGlobalSearch_SearchSortByDropdwn));
 		return driver.findElement(atlGlobalSearch_SearchSortByDropdwn);
-	}
-	public WebElement getatlGlobalSearch_SearchSortByDropdwn_UAT() throws InterruptedException {
-		wait = new WebDriverWait (driver,40);
-		wait.until(ExpectedConditions.elementToBeClickable(atlGlobalSearch_SearchSortByDropdwn_UAT));
-		return driver.findElement(atlGlobalSearch_SearchSortByDropdwn_UAT);
 	}
 	public List<WebElement> getatlListOfAllProductsName() {
 		wait = new WebDriverWait (driver,40);
