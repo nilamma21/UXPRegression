@@ -104,6 +104,7 @@ public class GlobalSearch_MatchingResults extends base {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
 	
+		Thread.sleep(5000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(5000);
@@ -215,11 +216,15 @@ public class GlobalSearch_MatchingResults extends base {
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
-		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("sortByInput"));
-		atlgs.getATLSearchButton().click();
+
 		Thread.sleep(5000);
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("filterByInput"));
+		Thread.sleep(5000);
+
+		atlgs.getATLSearchButton().click();
+		Thread.sleep(7000);
 		// Click on Sort Btn
-		atlgs.getatlGlobalSearchSortBtnNew().click();
+		atlgs.getatlGlobalSearchSortBtnNewUAT().click();
 
 		// Select Exhibitor Sort By Relevance
 		Select selectAMC = new Select(atlgs.getatlGlobalSearch_SearchSortByDropdwn());
@@ -260,11 +265,13 @@ public class GlobalSearch_MatchingResults extends base {
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
+		Thread.sleep(5000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("filterByInput"));
+		Thread.sleep(5000);
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(5000);
 		// Click on Sort Btn
-		atlgs.getatlGlobalSearchSortBtnNew().click();
+		atlgs.getatlGlobalSearchSortBtnNewUAT().click();
 
 		// Select Character from Sort By Filter Name
 		

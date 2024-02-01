@@ -1,25 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results total="15" passed="15" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="ATLMrkt_RegressionTestSuite" duration-ms="95084" started-at="2024-01-23T14:07:25Z" finished-at="2024-01-23T14:09:01Z">
+  <suite started-at="2024-02-01T09:01:30Z" name="Default suite" finished-at="2024-02-01T09:09:59Z" duration-ms="509020">
     <groups>
     </groups>
-    <test name="RegressionTest" duration-ms="95084" started-at="2024-01-23T14:07:25Z" finished-at="2024-01-23T14:09:01Z">
-      <class name="atlantamarket_PROD.GlobalSearch_LineActions">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@3532ec19]" name="initialize" is-config="true" duration-ms="47018" started-at="2024-01-23T19:37:26Z" finished-at="2024-01-23T19:38:13Z">
+    <test started-at="2024-02-01T09:01:30Z" name="Default test" finished-at="2024-02-01T09:09:59Z" duration-ms="509020">
+      <class name="atlantamarket_UAT.ExhibitorDigitalShowroom">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:atlantamarket_UAT.ExhibitorDigitalShowroom@457c9034]" started-at="2024-02-01T14:31:30Z" name="initialize" finished-at="2024-02-01T14:31:57Z" duration-ms="26447" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS004_VerifyClickOnTotalProductsSeeAllLinkForLineTest()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@3532ec19]" name="TS004_VerifyClickOnTotalProductsSeeAllLinkForLineTest" duration-ms="46502" started-at="2024-01-23T19:38:13Z" finished-at="2024-01-23T19:38:59Z">
+        <test-method signature="TS001_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest()[pri:0, instance:atlantamarket_UAT.ExhibitorDigitalShowroom@457c9034]" started-at="2024-02-01T14:31:57Z" name="TS001_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest" finished-at="2024-02-01T14:32:35Z" duration-ms="38311" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS004_VerifyClickOnTotalProductsSeeAllLinkForLineTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.GlobalSearch_LineActions@3532ec19]" name="tearDown" is-config="true" duration-ms="1541" started-at="2024-01-23T19:38:59Z" finished-at="2024-01-23T19:39:01Z">
+        </test-method> <!-- TS001_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest -->
+        <test-method signature="TS002_VerifyClickOnTotalLinesSeeAllLinkForExhibitorTest()[pri:0, instance:atlantamarket_UAT.ExhibitorDigitalShowroom@457c9034]" started-at="2024-02-01T14:32:35Z" name="TS002_VerifyClickOnTotalLinesSeeAllLinkForExhibitorTest" finished-at="2024-02-01T14:33:16Z" duration-ms="41065" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifyClickOnTotalLinesSeeAllLinkForExhibitorTest -->
+        <test-method signature="TS003_VerifyClickOnProductShownLinkForExhibitorTest()[pri:0, instance:atlantamarket_UAT.ExhibitorDigitalShowroom@457c9034]" started-at="2024-02-01T14:33:16Z" name="TS003_VerifyClickOnProductShownLinkForExhibitorTest" finished-at="2024-02-01T14:33:53Z" duration-ms="37193" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifyClickOnProductShownLinkForExhibitorTest -->
+        <test-method signature="TS004_VerifyClickOnLineFiltersForExhibitorTest()[pri:0, instance:atlantamarket_UAT.ExhibitorDigitalShowroom@457c9034]" started-at="2024-02-01T14:33:53Z" name="TS004_VerifyClickOnLineFiltersForExhibitorTest" finished-at="2024-02-01T14:34:18Z" duration-ms="25123" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyClickOnLineFiltersForExhibitorTest -->
+        <test-method signature="TS005_VerifyClickOnLineSearchForExhibitorTest()[pri:0, instance:atlantamarket_UAT.ExhibitorDigitalShowroom@457c9034]" started-at="2024-02-01T14:34:18Z" name="TS005_VerifyClickOnLineSearchForExhibitorTest" finished-at="2024-02-01T14:34:49Z" duration-ms="30354" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifyClickOnLineSearchForExhibitorTest -->
+        <test-method signature="TS006_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest()[pri:0, instance:atlantamarket_UAT.ExhibitorDigitalShowroom@457c9034]" started-at="2024-02-01T14:34:49Z" name="TS006_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest" finished-at="2024-02-01T14:35:22Z" duration-ms="33598" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS006_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest -->
+        <test-method signature="TS007_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest()[pri:0, instance:atlantamarket_UAT.ExhibitorDigitalShowroom@457c9034]" started-at="2024-02-01T14:35:22Z" name="TS007_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest" finished-at="2024-02-01T14:35:49Z" duration-ms="26371" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest -->
+        <test-method signature="TS008_VerifySeeInOtherMarketsForExhibitorTest()[pri:0, instance:atlantamarket_UAT.ExhibitorDigitalShowroom@457c9034]" started-at="2024-02-01T14:35:49Z" name="TS008_VerifySeeInOtherMarketsForExhibitorTest" finished-at="2024-02-01T14:36:28Z" duration-ms="39500" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS008_VerifySeeInOtherMarketsForExhibitorTest -->
+        <test-method signature="TS009_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest()[pri:0, instance:atlantamarket_UAT.ExhibitorDigitalShowroom@457c9034]" started-at="2024-02-01T14:36:28Z" name="TS009_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest" finished-at="2024-02-01T14:37:02Z" duration-ms="34016" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest -->
+        <test-method signature="TS010_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest()[pri:0, instance:atlantamarket_UAT.ExhibitorDigitalShowroom@457c9034]" started-at="2024-02-01T14:37:02Z" name="TS010_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest" finished-at="2024-02-01T14:37:30Z" duration-ms="27976" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS010_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest -->
+        <test-method signature="TS011_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest()[pri:0, instance:atlantamarket_UAT.ExhibitorDigitalShowroom@457c9034]" started-at="2024-02-01T14:37:30Z" name="TS011_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest" finished-at="2024-02-01T14:37:56Z" duration-ms="26030" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS011_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest -->
+        <test-method signature="TS012_VerifyExhibitorDigitalEventsComponentTest()[pri:0, instance:atlantamarket_UAT.ExhibitorDigitalShowroom@457c9034]" started-at="2024-02-01T14:37:56Z" name="TS012_VerifyExhibitorDigitalEventsComponentTest" finished-at="2024-02-01T14:38:27Z" duration-ms="31223" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS012_VerifyExhibitorDigitalEventsComponentTest -->
+        <test-method signature="TS013_VerifyCatalogsSectionForExhibitorTest()[pri:0, instance:atlantamarket_UAT.ExhibitorDigitalShowroom@457c9034]" started-at="2024-02-01T14:38:27Z" name="TS013_VerifyCatalogsSectionForExhibitorTest" finished-at="2024-02-01T14:39:02Z" duration-ms="34788" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS013_VerifyCatalogsSectionForExhibitorTest -->
+        <test-method signature="TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest()[pri:0, instance:atlantamarket_UAT.ExhibitorDigitalShowroom@457c9034]" started-at="2024-02-01T14:39:02Z" name="TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest" finished-at="2024-02-01T14:39:38Z" duration-ms="36240" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest -->
+        <test-method signature="TS015_VerifyExhibitorDigitalShowroomHeroComponentContactExhibitorTest()[pri:0, instance:atlantamarket_UAT.ExhibitorDigitalShowroom@457c9034]" started-at="2024-02-01T14:39:38Z" name="TS015_VerifyExhibitorDigitalShowroomHeroComponentContactExhibitorTest" finished-at="2024-02-01T14:39:59Z" duration-ms="20436" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS015_VerifyExhibitorDigitalShowroomHeroComponentContactExhibitorTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:atlantamarket_UAT.ExhibitorDigitalShowroom@457c9034]" started-at="2024-02-01T14:39:59Z" name="tearDown" finished-at="2024-02-01T14:39:59Z" duration-ms="320" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- atlantamarket_PROD.GlobalSearch_LineActions -->
-    </test> <!-- RegressionTest -->
-  </suite> <!-- ATLMrkt_RegressionTestSuite -->
+      </class> <!-- atlantamarket_UAT.ExhibitorDigitalShowroom -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
