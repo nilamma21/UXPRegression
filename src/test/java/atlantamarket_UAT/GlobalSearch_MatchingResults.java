@@ -216,11 +216,13 @@ public class GlobalSearch_MatchingResults extends base {
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
+
 		Thread.sleep(5000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("filterByInput"));
 		Thread.sleep(5000);
+
 		atlgs.getATLSearchButton().click();
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 		// Click on Sort Btn
 		atlgs.getatlGlobalSearchSortBtnNewUAT().click();
 

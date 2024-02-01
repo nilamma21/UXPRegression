@@ -5,6 +5,7 @@
     <classes>
       <class name="atlantamarket_UAT.GlobalSearch_MatchingResults">
         <methods>
+          <include name="TS003_VerifyGlobalSearchMatchingResultsSortSortByTest"/>
           <include name="initialize"/>
           <include name="tearDown"/>
           <include name="TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest"/>

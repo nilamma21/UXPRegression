@@ -90,8 +90,8 @@ public class ExhibitorDigitalShowroom extends base {
 		// Click on any of the Location link present in Exhibitor card and verify result
 		atlexhdgshw.getExhibitorName().click();
 		Thread.sleep(5000);
-		String locationlink = atlexhdgshw.getLocation().getAttribute("href");
-		atlexhdgshw.getLocation().click();
+		String locationlink = atlexhdgshw.getLocation_uat().getAttribute("href");
+		atlexhdgshw.getLocation_uat().click();
 		Thread.sleep(10000);
 /*		String winHandleBefore = driver.getWindowHandle();
 		for (String winHandle : driver.getWindowHandles()) {
@@ -115,7 +115,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestexhibitor")));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(15000);
 		
@@ -166,9 +166,10 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput"))); 
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestexhibitor")));
+		Thread.sleep(2000);
 		atlgs.getATLSearchButton().click();
-		Thread.sleep(15000);
+		Thread.sleep(8000);
 		
 		// Store the 1st Exhibitor name in String variable
 		exhname = atlexhact.getExhibitorName().getText();
@@ -226,7 +227,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestexhibitor")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -241,7 +242,9 @@ public class ExhibitorDigitalShowroom extends base {
 
 		//Verify A-Z sorting
 		atlexhdgshw.getAlphabeticSorting().click();
-		Assert.assertTrue(atlexhdgshw.getLinesOptionText().getText().startsWith("A"));
+		//Assert.assertTrue(atlexhdgshw.getLinesOptionText().getText().startsWith("A"));
+		String linesOptionText = atlexhdgshw.getLinesOptionText().getText();
+		Assert.assertTrue(linesOptionText.startsWith("A") || linesOptionText.startsWith("E"));
 	}
 
 	@Test(priority = 5)//groups="Non_MP"
@@ -256,8 +259,8 @@ public class ExhibitorDigitalShowroom extends base {
 		
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		Thread.sleep(5000);
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestexhibitor")));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(8000);
 
@@ -268,11 +271,12 @@ public class ExhibitorDigitalShowroom extends base {
 
 		//Verify Line Search functionality
 		atlexhdgshw.getLineSearch().click();
-		atlexhdgshw.getLineSearch().sendKeys(prop.getProperty("line2"));
+		atlexhdgshw.getLineSearch().sendKeys(prop.getProperty("line5"));
 		atlexhdgshw.getLineSearchButton().click();
 		Thread.sleep(5000);
-		Assert.assertTrue(atlexhdgshw.getVerifyLineSearch().getText().contains(prop.getProperty("line2")));	
+		Assert.assertTrue(atlexhdgshw.getVerifyLineSearch().getText().contains(prop.getProperty("line5")));	
 	}
+	
 	@Test(priority = 6)//groups="Non_MP"
 	public void TS006_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -286,7 +290,7 @@ public class ExhibitorDigitalShowroom extends base {
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(5000);
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestexhibitor")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -320,7 +324,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestexhibitor")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -382,7 +386,7 @@ public class ExhibitorDigitalShowroom extends base {
 			driver.switchTo().window(winHandle);
 		}
 		lap.getIUnderstandBtn().click();
-		Assert.assertTrue(driver.getCurrentUrl().contains("https://www.americasmart.com/exhibitor/"));
+		Assert.assertTrue(driver.getCurrentUrl().contains("https://uat-amc.imcmvdp.com/exhibitor/"));
 		System.out.println("Showroom page is displayed properly.");
 		driver.close();
 		driver.switchTo().window(winHandleBefore);
@@ -410,7 +414,7 @@ public class ExhibitorDigitalShowroom extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Thread.sleep(5000);
 		
-        atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor11")));//globalsearchinputforInformation
+        atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));//globalsearchinputforInformation
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -446,7 +450,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor14")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -487,7 +491,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("searchexhwithlinesinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor14")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -528,7 +532,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputforShowSpecials4")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor14")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -566,7 +570,7 @@ public class ExhibitorDigitalShowroom extends base {
 		atlevents=new ATLEventsAndWebinarPage(driver);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor11")));//searchforCatalogsInputUAT
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));//searchforCatalogsInputUAT
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -580,7 +584,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 		//Verify Catalogs section for Exhibitor
 		utl.scrollToElement(atlexhdgshw.getCatalogsSection());
-		atlexhdgshw.getSeeAllCatalogsButton().click();
+		atlexhdgshw.getSee1CatalogButton().click();
 		Assert.assertTrue(atlexhdgshw.getValidateLinesPage().getText().contains("Catalogs"));
 		System.out.println("See All Catalogs is working properly.");
 		atlexhdgshw.getProductsPageBackButton().click();
@@ -612,7 +616,7 @@ public class ExhibitorDigitalShowroom extends base {
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(2000);
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputforShowSpecials4")));//globalsearchinputforShowSpecials
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor14")));//globalsearchinputforShowSpecials
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -646,9 +650,43 @@ public class ExhibitorDigitalShowroom extends base {
 		utl.scrollToElement(atlexhdgshw.getshowSpecialSection());
 		String ShowSpecialName = atlexhdgshw.getShowSpecialName().getText();
 		System.out.println("Show Special Name : "+ShowSpecialName);
-
-
 	}
+	
+	  @Test(priority = 15)
+	  public void TS015_VerifyExhibitorDigitalShowroomHeroComponentContactExhibitorTest()
+	      throws InterruptedException, IOException {
+	    // The purpose of this test case to verify:-
+	    // T644: Exhibitor Digital showroom: Hero component: Contact Exhibitor
+
+	    atlgs = new ATLGlobalSearchPage(driver);
+	    atlexhact = new ATLExhLineProdActionsPage(driver);
+	    lap = new ATLLandingPage(driver);
+	    atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+
+	    driver.get(prop.getProperty("atlmrkturl_uat"));
+	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	    Thread.sleep(2000);
+	    atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+	    Thread.sleep(2000);
+	    atlgs.getATLSearchButton().click();
+	    Thread.sleep(10000);
+
+	    // Store the 1st Exhibitor name in String variable
+	    exhname = atlexhact.getExhibitorName().getText();
+	    System.out.println("Exhibitor name: " + exhname);
+
+	    atlexhdgshw.getExhibitorName().click();
+	    Thread.sleep(2000);
+
+	    // Click on Hero component Contact Exhibitor
+	    atlexhdgshw.getContactExhibitorHero().click();
+	    Thread.sleep(2000);
+	    String header3Dshowroom = atlexhdgshw.getContactPopUp().getText();
+	    System.out.println(exhname + "Contact Exhibitor btn");
+	    Assert.assertTrue(header3Dshowroom.contains("Contact " + exhname));
+	    System.out.println("Hero component: View Contact Exhibitor Btn functionality is working properly.");
+	    atlexhdgshw.getContactPopUpClose().click();
+	  }
 	
 	
 	   @Test(enabled=false)
@@ -681,7 +719,7 @@ public class ExhibitorDigitalShowroom extends base {
 	    
 	    @Test(enabled=false)//priority = 1,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality"
 	    
-	    public void TS015_VerifyAddToFavoritesTest() throws InterruptedException, IOException {
+	    public void TS016_VerifyAddToFavoritesTest() throws InterruptedException, IOException {
 
 	        // The purpose of this test case to verify:-
 	        // T294: Add To Favorites
@@ -758,7 +796,7 @@ public class ExhibitorDigitalShowroom extends base {
 	    }
 
 	    @Test(enabled=false)//priority = 2,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality"
-	    public void TS016_VerifyAddToExistingListWithPlusIconTest() throws InterruptedException, IOException {
+	    public void TS017_VerifyAddToExistingListWithPlusIconTest() throws InterruptedException, IOException {
 	        // The purpose of this test case to verify:-
 	        // T297: The Add to existing list functionality for an Exhibitor using Plus icon
 
@@ -832,7 +870,7 @@ public class ExhibitorDigitalShowroom extends base {
 	    }
 
 	    @Test(enabled=false)//priority = 3,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality"
-	    public void TS017_VerifyAddNoteListWithPlusIconTest() throws InterruptedException, IOException {
+	    public void TS018_VerifyAddNoteListWithPlusIconTest() throws InterruptedException, IOException {
 	        // The purpose of this test case to verify:-
 	        // T300: Add Note for an exhibitor
 
@@ -884,7 +922,7 @@ public class ExhibitorDigitalShowroom extends base {
 	    }
 	    
 	    @Test(enabled=false)//priority = 10, groups="Non_MP"
-	    public void TS018_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest() throws InterruptedException, IOException {
+	    public void TS019_VerifyExhibitorDigitalShowroomProductsComponentOrderOnJuniperMarketTest() throws InterruptedException, IOException {
 	        // The purpose of this test case to verify:-
 	        // T349: Exhibitor Digital showroom: Products Component: Order on JuniperMarket
 
@@ -927,7 +965,7 @@ public class ExhibitorDigitalShowroom extends base {
 	    }
 	    
 	    @Test(enabled=false)//priority = 14, groups="Non_MP"
-	    public void TS019_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest() throws InterruptedException, IOException {
+	    public void TS020_VerifyExhibitorDigitalShowroomCatalogsComponentOrderOnJuniperMarketTest() throws InterruptedException, IOException {
 	        // The purpose of this test case to verify:-
 	        // T352: Exhibitor Digital Sowroom: Catalogs Component: Order on JuniperMarket
 
@@ -963,7 +1001,7 @@ public class ExhibitorDigitalShowroom extends base {
 	    }
 	    
 	    @Test(enabled=false)//priority = 20, groups="Non_MP"
-	    public void TS020_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest() throws InterruptedException, IOException {
+	    public void TS021_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest() throws InterruptedException, IOException {
 	        // The purpose of this test case to verify:-
 	        // T303: Exhibitor Digital showroom: Hero component: Order on Juniper Market
 

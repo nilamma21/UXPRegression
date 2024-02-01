@@ -643,6 +643,7 @@ public class ATLGlobalSearchPage {
         wait = new WebDriverWait (driver,40);
         wait.until(ExpectedConditions.visibilityOfElementLocated(atlGlobalSearchSortBtnNewUAT));
         return driver.findElement(atlGlobalSearchSortBtnNewUAT);
+
     }
     public WebElement getATLInfosearchtxtbxClr() {
       wait = new WebDriverWait (driver,40);

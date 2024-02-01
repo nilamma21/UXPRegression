@@ -40,6 +40,7 @@ public class ATLExhDigiShowroomPage {
 	By VerifyAddedNote = By.xpath("//ul[@class = 'imc-market-planner-list imc-addnote-modal__list']"); //Locator for Added Notes section
 	By SaveNoteOKButton = By.xpath("//div[@class = 'imc-content imc-content--right']/button[1]"); //Locator for OK button for save note
 	By Location = By.xpath("//section[@class='imc-site-wrapper']/div[2]/div[1]/div[1]/div[2]/div[1]/span[2]/a[1]"); //Locator for Location symbol at Digital Showroom page
+	By Location_uat = By.xpath("(//a[@class='imc-link imc-type--title-6 imc-content--inline-block imc-vr--large'])[1]"); //Locator for Location symbol at Digital Showroom page
 	By ContactExhibitor = By.xpath("//div[@class = 'contact-exhibitor-wrapper']/button[1]"); //Locator for Contact Exhibitor button
 	By ProductSection = By.xpath("//div[@class = 'imc-content--display-flex-wrap']/span[contains(text(),'Products Shown')]"); //Locator for Product section in Exhibitor Digital Showroom
 	By AllProductsButton = By.xpath("//a[@class = 'imc-content--inline-block imc-button imc-button--primary-inverted imc-button--full-bleed-mobile']"); //Locator for See All Products button
@@ -86,6 +87,7 @@ public class ATLExhDigiShowroomPage {
 
 	By CatalogsSection = By.xpath("//div[@class = 'imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div/span[text()='Catalogs']"); //Locator for Catalogs section
 	By SeeAllCatalogsButton = By.xpath("//section[@class = 'imc-site-wrapper']/div[6]/div[1]/div[3]/div[1]/a[1]"); //Locator for See All Catalogs section
+	By See1CatalogButton_Uat = By.xpath("//section[@class = 'imc-site-wrapper']/div[5]/div[1]/div[3]/div[1]/a[1]"); //Locator for See 1 Catalog section
 	By SelectCatalog = By.xpath("//span[contains(text(),'Catalogs')]//parent::div//parent::div//descendant::div[@class = 'imc-catalog__item_title multiSelectItem']"); //Locator for Catalog option in Catalogs section
 	By showSpecialSection = By.xpath("//div[@class = 'imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div[1]/span[text()='Show Specials']"); //Locator for Show special Section
 	By SeeAllshowSpecialBtn = By.xpath("//div[@class = 'imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div/span[text()='Show Specials']/../../div[3]/div[1]/a[1]/span[1]"); ////Locator for See All Show special Btn
@@ -324,6 +326,11 @@ public class ATLExhDigiShowroomPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(Location));
 		return driver.findElement(Location);
 	}
+	public WebElement getLocation_uat() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(Location_uat));
+		return driver.findElement(Location_uat);
+	}
 	public WebElement getContactExhibitor() {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ContactExhibitor));
@@ -473,6 +480,11 @@ public class ATLExhDigiShowroomPage {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(SeeAllCatalogsButton));
 		return driver.findElement(SeeAllCatalogsButton);
+	}
+	public WebElement getSee1CatalogButton() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(See1CatalogButton_Uat));
+		return driver.findElement(See1CatalogButton_Uat);
 	}
 	public WebElement getSelectCatalog() {
 		wait = new WebDriverWait (driver,30);
