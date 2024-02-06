@@ -4,12 +4,14 @@
   <test name="Test">
     <classes>
 
-     	<class name="atlantamarket_UAT.GlobalSearch_LeftPaneFilters"/>
+     	<class name="atlantamarket_UAT.GlobalSearch_MatchingResults"/>
 
- 			<methods>
-				<include name="TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest"/>  
+ 			<!-- <methods>
+				<include name="TS004_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest"/>  
+				<include name="TS005_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest"/>
+				
 			</methods>
-
+ -->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -83,7 +83,7 @@ public class ExhibitorDigitalShowroom extends base {
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor14")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -115,7 +115,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor14")));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(15000);
 		
@@ -166,7 +166,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput"))); 
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor14"))); 
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(15000);
 		
@@ -226,7 +226,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor14")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -257,7 +257,7 @@ public class ExhibitorDigitalShowroom extends base {
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor14")));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(8000);
 
@@ -286,7 +286,7 @@ public class ExhibitorDigitalShowroom extends base {
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(5000);
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor14")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -320,7 +320,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor14")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -355,7 +355,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor14")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -410,7 +410,7 @@ public class ExhibitorDigitalShowroom extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Thread.sleep(5000);
 		
-        atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor11")));//globalsearchinputforInformation
+        atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor11")));//exhibitor14forInformation
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -446,7 +446,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor14")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -528,7 +528,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputforShowSpecials4")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor14forShowSpecials4")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -612,7 +612,7 @@ public class ExhibitorDigitalShowroom extends base {
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(2000);
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputforShowSpecials4")));//globalsearchinputforShowSpecials
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor14forShowSpecials4")));//exhibitor14forShowSpecials
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -938,7 +938,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 	        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-	        atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputforInformation")));
+	        atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor14forInformation")));
 	        atlgs.getATLSearchButton().click();
 
 	        Thread.sleep(15000);
