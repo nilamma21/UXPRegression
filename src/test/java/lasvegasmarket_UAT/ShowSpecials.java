@@ -91,15 +91,28 @@ public class ShowSpecials extends base{
       //Store the name of Show Special Exhibitor
       String ename=lvmgs.getFirstShowSpecialName().getText();
       System.out.println(ename);
+      try {
       String abc =ename.split(" ")[2].trim();
-      
-      //Click on Show Special Exhibitor
-      lvmgs.getFirstShowSpecialViewBrandDetailsBtn().click();
-      Thread.sleep(5000);
-      
-      //Verify Show Special Exh Page 
       Assert.assertTrue(lvmgs.getlvmShowSpecialsTitle().getText().contains(abc));
+      }catch(Exception e){
+    	  lvmgs.getFirstShowSpecialViewBrandDetailsBtn().click();
+          Thread.sleep(5000);
+      }
+      //Click on Show Special Exhibitor
+     
+     /* try {
+      //Verify Show Special Exh Page 
+    	  Assert.assertTrue(lvmgs.getlvmShowSpecialsTitle2().getText().contains(ename)); 	  
+      Assert.assertTrue(lvmgs.getlvmShowSpecialsTitle().getText().contains(ename));
       driver.get(prop.getProperty("lvmurl_uat"));
+      }catch (Exception e1) {
+            Assert.assertTrue(lvmgs.getlvmShowSpecialsTitle2().getText().contains(ename)); 	  
+            driver.get(prop.getProperty("lvmurl_uat"));
+      }
+	*/	// TODO: handle exception
+      Assert.assertTrue(lvmgs.getlvmShowSpecialsTitle2().getText().contains(ename)); 
+      driver.get(prop.getProperty("lvmurl_uat"));
+	  
       
   }
   @Test(priority = 2)
@@ -140,7 +153,7 @@ public class ShowSpecials extends base{
 
   @AfterClass
   public void tearDown() {
-      driver.quit();
+      //driver.quit();
   }
 
 }

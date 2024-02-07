@@ -4,12 +4,12 @@
   <test name="Test">
     <classes>
 
-     	<class name="atlantamarket_UAT.GlobalSearch_LeftPaneFilters"/>
-
+     	<class name="lasvegasmarket_UAT.LineDigitalShowroom"/>
+<!-- 
  			<methods>
-				<include name="TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest"/>  
+				<include name="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest"/>  
 			</methods>
-
+ -->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite parallel="none" name="Failed suite [Default suite]">
-  <test parallel="none" name="Default test(failed)">
+<suite thread-count="1" name="Failed suite [Suite]" parallel="classes">
+  <test name="Test(failed)" parallel="classes">
     <classes>
-      <class name="atlantamarket_UAT.GlobalSearch_MatchingResults">
+      <class name="lasvegasmarket_UAT.ShowSpecials">
         <methods>
-          <include name="TS003_VerifyGlobalSearchMatchingResultsSortSortByTest"/>
-          <include name="initialize"/>
           <include name="tearDown"/>
-          <include name="TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest"/>
+          <include name="initialize"/>
+          <include name="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest"/>
         </methods>
-      </class> <!-- atlantamarket_UAT.GlobalSearch_MatchingResults -->
+      </class> <!-- lasvegasmarket_UAT.ShowSpecials -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
