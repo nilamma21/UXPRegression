@@ -565,7 +565,7 @@ public class EvenntsAndWebinar extends base{
         String trimYear = eventDateAndMonth.split(" ")[3].trim();
         // System.out.println(trimYear);
         String EventmonthAndYear = trimMonth.concat(" ").concat(trimYear);
-        // System.out.println("Concat Month And Year :: "+EventmonthAndYear);
+         System.out.println("Concat Month And Year :: "+EventmonthAndYear);
 
         // Verify Current Date is Heighlighetd or not
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-MMM");

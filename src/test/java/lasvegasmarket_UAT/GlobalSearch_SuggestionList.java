@@ -118,7 +118,8 @@ public class GlobalSearch_SuggestionList extends base {
             }
         }
         Thread.sleep(8000);
-        Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
+        Assert.assertTrue(atlexhdgshw.getExhibitorNameOnExhDirectImg().isDisplayed());
+        //Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
     }
 
     @Test(priority = 3)

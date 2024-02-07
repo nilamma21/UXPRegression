@@ -14,8 +14,14 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import pageObjects.AtlantaMarket.ATLEventsAndWebinarPage;
 import pageObjects.AtlantaMarket.ATLExhDigiShowroomPage;
 import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
+import pageObjects.AtlantaMarket.ATLFloorPlansPage;
+import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
+import pageObjects.AtlantaMarket.ATLLandingPage;
+import pageObjects.AtlantaMarket.ATLLoginPage;
 import pageObjects.AtlantaMarket.ATLMarketPlannerPage;
 import pageObjects.AtlantaMarket.ATLProductDetailsPage;
 import pageObjects.LasVegasMarket.LVMEventsAndWebinarPage;
@@ -34,6 +40,7 @@ public class EvenntsAndWebinar extends base{
   public GenerateData genData;
   public Utility utl;
   public String exhname;
+  
   LVMLoginPage lp;
   LVMLandingPage lap;
   LVMGlobalSearchPage lvmgs;
@@ -44,6 +51,9 @@ public class EvenntsAndWebinar extends base{
   LVMFloorPlansPage lvmflpp;
   LVMEventsAndWebinarPage lvmevents;
   ATLMarketPlannerPage atlmppge;
+  ATLFloorPlansPage atlflpp;
+  ATLEventsAndWebinarPage atlevents;
+  ATLGlobalSearchPage atlgs;
   List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns, allnoteslist,favlist, searchlinetypelist;
 
   @BeforeClass
@@ -829,7 +839,7 @@ public class EvenntsAndWebinar extends base{
   public void TS010_VerifyExhibitorEventsCalendarViewTest() throws InterruptedException, IOException {
       // The purpose of this test case to verify:-
       // UXP-T305: Exhibitor Events: Calendar View
-      lap = new LVMLandingPage(driver);
+     /* lap = new LVMLandingPage(driver);
       lp = new LVMLoginPage(driver);
       utl = new Utility(driver);
       lvmflpp=new LVMFloorPlansPage(driver);
@@ -843,7 +853,7 @@ public class EvenntsAndWebinar extends base{
       lvmevents.getlvmExhibitorsEventsTab().click();
       
       Thread.sleep(2000);
-/*   //Event Month and Year
+   //Event Month and Year
       String eventDateAndMonth=lvmevents.getlvmEventDateAndMonth().getText();
      
       String trimDate=eventDateAndMonth.split(" ")[2].trim();
@@ -860,7 +870,7 @@ public class EvenntsAndWebinar extends base{
       String trimYear = eventDateAndMonth.split(" ")[3].trim();
       System.out.println("Trim year: "+trimYear);
       String EventmonthAndYear = trimMonth.concat(" ").concat(trimYear);
-      System.out.println("Event Month And Year :: "+EventmonthAndYear);*/
+      System.out.println("Event Month And Year :: "+EventmonthAndYear);
       
     //Event Month and Year
       String eventDateAndMonth=lvmevents.getlvmEventDateAndMonthFromCard().getText();
@@ -977,7 +987,108 @@ public class EvenntsAndWebinar extends base{
       
       
       System.out.println("By Default "+d +" today's date is selected.");
-      Thread.sleep(4000);
+      Thread.sleep(4000);*/
+	  
+	  
+	  lap = new LVMLandingPage(driver);
+      lp = new LVMLoginPage(driver);
+      utl = new Utility(driver);
+      atlflpp=new ATLFloorPlansPage(driver);
+      atlevents=new ATLEventsAndWebinarPage(driver);
+      atlgs = new ATLGlobalSearchPage(driver);
+      atlmppge = new ATLMarketPlannerPage(driver);
+
+      //driver.get(prop.getProperty("atlmrkturl_uat"));
+      driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+      Thread.sleep(5000);
+      utl.clickOnEventLinkOfChannel();  
+      
+      //Click on Exh Event Tab
+      utl.scrollToElement(atlevents.getatlExhibitorsEventsTab());
+      atlevents.getatlExhibitorsEventsTab().click();
+      
+      Thread.sleep(2000);
+      //Event Month and Year
+      String eventDateAndMonth=atlevents.getatlEventDateAndMonth().getText();
+      String trimDate=eventDateAndMonth.split(" ")[2].trim();
+      //System.out.println(trimDate);
+      Thread.sleep(2000);
+      String date=trimDate.replaceAll("[,]", "");
+      String trimOnlyDate=date.split(" ")[0].trim();
+      String replaceDate=trimOnlyDate.replaceFirst("^0+(?!$)", "");
+      System.out.println(replaceDate);
+
+      String trimMonth = eventDateAndMonth.split(" ")[1].trim();
+      // System.out.println(trimMonth);
+      String trimYear = eventDateAndMonth.split(" ")[3].trim();
+      // System.out.println(trimYear);
+      String EventmonthAndYear = trimMonth.concat(" ").concat(trimYear);
+       System.out.println("Concat Month And Year :: "+EventmonthAndYear);
+
+      // Verify Current Date is Heighlighetd or not
+      DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-MMM");
+      LocalDate localDate = LocalDate.now();
+      String d = dtf.format(localDate);
+      System.out.println("Current Date ::" + dtf.format(localDate));
+      try {
+          Assert.assertTrue(d.contains(atlevents.getatlTodaysDate().getText()));
+          System.out.println("Current Date "+atlevents.getatlTodaysDate().getText()+" is Heighlighted");
+          }catch (Exception e) {
+              Assert.assertTrue(d.contains(atlevents.getatlTodaysDatePROD().getText()));
+              System.out.println("Current Date "+atlevents.getatlTodaysDatePROD().getText()+" is Heighlighted");
+          }
+      //Current Month
+      DateTimeFormatter month = DateTimeFormatter.ofPattern("MMM");
+      LocalDate localMonth = LocalDate.now();
+      LocalDate prevMonth= localMonth.minusMonths(1);     
+              
+      String m = month.format(localMonth);//current month
+      String mm = month.format(prevMonth);//previous month
+      
+  
+      System.out.println("Current Month ::" +m );
+      System.out.println("Previous Month ::" +mm );
+      
+      //Click on Calendar Prev Btn
+      atlevents.getatlCalendarPrevMonth().click();
+      Thread.sleep(500);
+      System.out.println("Previous Month From Calendar ::"+atlevents.getatlSelectMonth().getText());
+      Assert.assertTrue(atlevents.getatlSelectMonth().getText().contains(mm));
+      System.out.println("Previous Month "+atlevents.getatlSelectMonth().getText()+" is selected");
+      //utl.selectFilters(atlevents.getatlListOfatlSelectAnyDate(), replaceDate);
+      
+      
+      atlevents.getatlCalendarNextMonthBtn().click();
+      Thread.sleep(5000);
+  
+       if(atlevents.getatlSelectMonth().getText().contains(EventmonthAndYear))
+      {
+           try {
+                  Assert.assertTrue(atlevents.getatlTodaysDatePROD().isDisplayed());
+                  atlevents.getatlTodaysDatePROD().click();
+                  Thread.sleep(500);
+                  }catch (Exception e) {
+                      utl.selectFilters(atlevents.getatlListOfEventDate(), replaceDate);
+                  
+                  }            
+      }
+      // Verify Event is selected by datepicker
+      Assert.assertTrue(atlevents.getatlEventDateAndMonth().isDisplayed());
+      System.out.println("Event is selected by Date");
+
+      //Click on Reset Btn
+      atlevents.getatlResetBtn().click();
+      Thread.sleep(500);
+      //Verify Current date and month should selected by default
+      try {
+          Assert.assertTrue(d.contains(atlevents.getatlTodaysDate().getText()));
+          System.out.println("By Default "+d +" today's date is selected.");
+          }catch (Exception e) {
+              Assert.assertTrue(d.contains(atlevents.getatlTodaysDatePROD().getText()));
+              System.out.println("By Default "+d +" today's date is selected.");
+          }
+      Thread.sleep(5000);
+	  
   }
   
   @Test(priority = 0)//Previous priority = 11

@@ -246,11 +246,15 @@ public class Utility extends base {
 	}
 
 	// Click on FilterBy Options(All , Exhibitor, Line , Product , etc)
-	public void selectFilters(List<WebElement> list, String filterName) {
+	public void selectFilters(List<WebElement> list, String filterName) throws InterruptedException {
 
 		boolean flag = false;
 		for (WebElement listExhibitor : list) {
-			if (listExhibitor.getText().contains(filterName)) {
+			if (listExhibitor.getText().equals(filterName))
+			{
+				Thread.sleep(5000);
+				listExhibitor.click();
+				
 				listExhibitor.click();
 				flag = true;
 				break;
@@ -259,6 +263,7 @@ public class Utility extends base {
 		if (flag == true) {
 			System.out.println(filterName + " Selected");
 			Assert.assertTrue(flag = true);
+			
 		} else {
 			System.out.println(filterName + " Not Selected");
 			Assert.assertTrue(flag = false);
