@@ -4,10 +4,10 @@
   <test name="Test">
     <classes>
 
-     	<class name="atlantamarket_UAT.GlobalSearch_LeftPaneFilters"/>
+     	<class name="atlantamarket_UAT.LineDigitalShowroom"/>
 
  			<methods>
-				<include name="TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest"/>  
+				<include name="TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest"/>  
 			</methods>
 
     </classes>

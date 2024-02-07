@@ -8,23 +8,12 @@
   
   <test name="LVM_UAT_RegressionTest">
     <classes>
-    <!--   <class name="lasvegasmarket_UAT.GlobalSearch_LineActions"/> 
-      <class name="lasvegasmarket_UAT.GlobalSearch_SearchFor"/>
-      <class name="lasvegasmarket_UAT.GlobalSearch_MatchingResults"/>
-      <class name="lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters"/>
-    <class name="lasvegasmarket_UAT.FloorPlans"/>
-      <class name="lasvegasmarket_UAT.EvenntsAndWebinar"/>
-        <class name="lasvegasmarket_UAT.GlobalSearch_ExhibitorActions"/>
-     <class name="lasvegasmarket_UAT.ShowSpecials"/>
-      <class name="lasvegasmarket_UAT.GlobalSearch_ProductActions"/>
-       <class name="lasvegasmarket_UAT.GlobalSearch_SuggestionList"/>-->
-      <class name="lasvegasmarket_UAT.ExhibitorDigitalShowroom"/> 
-   <!--    <class name="lasvegasmarket_UAT.LineDigitalShowroom"/> -->
-<!-- 
-      		<methods>
-				 <include name="TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest"/>   
+    	<class name="lasvegasmarket_UAT.ShowSpecials"/> 
+
+      	<methods>
+			<include name="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest()"/>   
 		</methods> 
- -->
+
     </classes>
   </test> <!-- LVM_UAT_RegressionTest -->
 </suite> <!-- LVM_UAT_Suite -->

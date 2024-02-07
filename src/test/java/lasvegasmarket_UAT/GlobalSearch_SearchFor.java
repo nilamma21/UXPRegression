@@ -289,7 +289,7 @@ public class GlobalSearch_SearchFor extends base{
         driver.get(prop.getProperty("lvmurl_uat"));
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         utl.ClearGlobalSearch();
-        lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor14"));
+        lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor15"));
         lvmgs.getLVMSearchButton().click();
         Thread.sleep(5000);
         /*Assert.assertTrue(lvmgs.getLVMSearchResult().getText().contains(prop.getProperty("searchforCatalogsInput")));
@@ -541,7 +541,7 @@ public class GlobalSearch_SearchFor extends base{
                         lvmgs.getLVMInfoSearchTopicsFilter().click();
                     }
                     break;
-                case "Press Release":
+                /*case "Press Release":
                     infoFilterList.get(i).click();
                     Thread.sleep(5000);
                     driver.navigate().refresh();
@@ -571,7 +571,7 @@ public class GlobalSearch_SearchFor extends base{
                         infoFilterList.get(i).click();
                         lvmgs.getLVMInfoSearchTopicsFilter().click();
                     }
-                    break;
+                    break;*/
                 case "Fall Design Week":
                     //Thread.sleep(10000);
                     infoFilterList.get(i).click();

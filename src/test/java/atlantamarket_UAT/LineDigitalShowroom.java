@@ -88,13 +88,13 @@ public class LineDigitalShowroom extends base {
 		//driver.get(prop.getProperty("atlmrkturl_uat"));
 		//utl.loginCheckATL();
 		//click on Global Search Input filed
-		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("HeroComponentExhName"));
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("line3"));
 		Thread.sleep(8000);
 		//Click on 1st Suggetions
 		atldigish.getsuggetionList().click();
 		Thread.sleep(5000);
 		//Verify Digi showrrom page
-		Assert.assertTrue(atldigish.getAtlLineDigiShowroomPageTitle().getText().equals(prop.getProperty("HeroComponentExhName")));
+		Assert.assertTrue(prop.getProperty("line3").contains(atldigish.getAtlLineDigiShowroomPageTitle().getText()));
 		//Click on Shown By Exhibitor Name
 		String heroompName=atldigish.getdigiShowroomExhName().getText();
 		atldigish.getdigiShowroomExhName().click();

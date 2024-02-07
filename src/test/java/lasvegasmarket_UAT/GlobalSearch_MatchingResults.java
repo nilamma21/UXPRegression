@@ -222,7 +222,7 @@ public class GlobalSearch_MatchingResults extends base {
       if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
           lvmgs.getlvmGlobalSearchClearTxt().click();
       }
-      lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor5"));//sortByInput
+      lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("autosuggestexhibitor"));//sortByInput
       Thread.sleep(2000);
       lvmgs.getLVMSearchButton().click();
       Thread.sleep(5000);

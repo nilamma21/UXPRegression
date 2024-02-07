@@ -276,10 +276,10 @@ public class ExhibitorDigitalShowroom extends base {
 
     // Verify Line Search functionality
     lvmds.getLineSearch().click();
-    lvmds.getLineSearch().sendKeys(prop.getProperty("line2"));
+    lvmds.getLineSearch().sendKeys(prop.getProperty("line5"));
     lvmds.getLineSearchButton().click();
     Thread.sleep(5000);
-    Assert.assertTrue(lvmds.getVerifyLineSearch().getText().contains(prop.getProperty("line2")));
+    Assert.assertTrue(lvmds.getVerifyLineSearch().getText().contains(prop.getProperty("line5")));
   }
 
   @Test(priority = 6)
@@ -629,7 +629,7 @@ public class ExhibitorDigitalShowroom extends base {
     driver.get(prop.getProperty("lvmurl_uat"));
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     Thread.sleep(2000);
-    lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("searchexhwithlinesinput")));
+    lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputforShowSpecials3")));
     // Thread.sleep(5000);
     lvmgs.getLVMSearchButton().click();
     Thread.sleep(15000);
