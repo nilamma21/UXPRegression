@@ -34,11 +34,16 @@ public class ATLLineDigitalShowroomPage {
 	By productName1= By.xpath("//div[@class='imc-products-overview--gallery']/div[1]/div[1]/a[1]/div[1]/div[1]"); //Locator for Product name
 	By suggetionListUAT = By.xpath("(//div[@ID='react-autowhatever-input-1']/ul/li)[1]");
 	By digiShowroomExhName1 = By.xpath("//section[@class='imc-site-wrapper']//descendant::span[@class='imc-heading imc-heading--giga-desktop imc-vr--medium imc-content--inline-block']"); // Locator  Exhibitor name shown by Digital Showroom page
-
+	By digiShowroomExhNameUAT = By.xpath("//div[@class='imc-gallery imc-gallery--25-75 imc-gallery--align-flex-start-desktop']/div[2]/div[1]/a"); // Locator  Exhibitor name shown by Digital Showroom page
 	
 	public ATLLineDigitalShowroomPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
+	}
+	public WebElement getdigiShowroomExhNameUAT() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(digiShowroomExhNameUAT));
+		return driver.findElement(digiShowroomExhNameUAT);
 	}
 
 	public WebElement getproductName1() {

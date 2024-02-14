@@ -120,11 +120,18 @@ public class LVMGlobalSearchPage {
 	By lvmShowSpecialsDetailsOnShowSpecialsPage = By.xpath("//div[@class='ag-center-cols-clipper']/div[1]/div[1]/div[1]/div[3]"); //Locator for Show Special Sections
 	By lvmShowSpecialsDetails = By.xpath("//div[@class = 'imc-content--display-flex-wrap']/span/span[1]"); //Locator for Show Special Sections
 	By thirdThbreadCrumbtxt = By.xpath("//li[@data-xpath='breadcrumb.active.link'][2]"); //Locator for 4th Breadcrumb text in app
+	By lvmShowSpecialsTitle2 = By.xpath("//div[@class='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[4]/a[1]");  //Locator for Show Secials Title
+	
 	
 	public LVMGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 		PageFactory.initElements(driver, this);
+	}
+	public WebElement getlvmShowSpecialsTitle2() {
+		wait = new WebDriverWait (driver,40);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmShowSpecialsTitle2));
+		return driver.findElement(lvmShowSpecialsTitle2);
 	}
 	public WebElement getthirdThbreadCrumbtxt() {
 		wait = new WebDriverWait (driver,40);

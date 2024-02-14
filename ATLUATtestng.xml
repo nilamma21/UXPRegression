@@ -9,7 +9,7 @@
  			<methods>
 				<include name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest()"/>  
 			</methods>
-
+ -->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
