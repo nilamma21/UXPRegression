@@ -222,7 +222,7 @@ public class GlobalSearch_MatchingResults extends base {
       if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
           lvmgs.getlvmGlobalSearchClearTxt().click();
       }
-      lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor5"));//sortByInput
+      lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("autosuggestexhibitor"));//sortByInput
       Thread.sleep(2000);
       lvmgs.getLVMSearchButton().click();
       Thread.sleep(5000);
@@ -243,7 +243,7 @@ public class GlobalSearch_MatchingResults extends base {
        utl.Sorting(lvmgs.getlvmExhNames(),lvmgs.getlvmGlobalSearch_SearchSortByDropdwn(),"Sort by Name Ascending");
        Thread.sleep(2000);
        utl.Sorting(lvmgs.getlvmExhNames(),lvmgs.getlvmGlobalSearch_SearchSortByDropdwn(),"Sort by Name Descending");
-      
+       Thread.sleep(2000);
       //Select filter Sort by Matching Product Count Descending
       utl.Sorting(lvmgs.getlvmMachingProductCount(), lvmgs.getlvmGlobalSearch_SearchSortByDropdwn(),
               "Sort By Matching Product Count Descending");
@@ -274,7 +274,7 @@ public class GlobalSearch_MatchingResults extends base {
       // Select Character from Sort By Filter Name
       Select selectLetter = new Select(lvmgs.getlvmFilterByNameDropDown());
       selectLetter.selectByVisibleText("P");
-      Thread.sleep(8000);
+      Thread.sleep(10000);
       for (WebElement filterExhNames : lvmgs.getlvmExhiNameForFilterByNameNew()) {
           //Assert.assertTrue(filterExhNames.isDisplayed());
           
@@ -575,7 +575,7 @@ public class GlobalSearch_MatchingResults extends base {
   @AfterClass
   public void quit() throws InterruptedException {
       Thread.sleep(1000);
-      //driver.quit();
+      driver.quit();
   }
   
 }

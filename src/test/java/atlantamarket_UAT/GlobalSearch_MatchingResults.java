@@ -265,14 +265,12 @@ public class GlobalSearch_MatchingResults extends base {
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
-		Thread.sleep(5000);
-		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("filterByInput"));
-		Thread.sleep(5000);
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(5000);
 		// Click on Sort Btn
-		atlgs.getatlGlobalSearchSortBtnNewUAT().click();
-
+		atlgs.getatlGlobalSearchSortBtnNew().click();
+		Thread.sleep(1000);
 		// Select Character from Sort By Filter Name
 		
 		Select selectLetter = new Select(atlgs.getatlFilterByNameDropDown());
@@ -618,7 +616,7 @@ public class GlobalSearch_MatchingResults extends base {
 	@AfterClass(alwaysRun=true)
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 
 }

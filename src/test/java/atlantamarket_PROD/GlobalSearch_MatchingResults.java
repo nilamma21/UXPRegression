@@ -612,7 +612,7 @@ public class GlobalSearch_MatchingResults extends base {
 	@AfterClass(alwaysRun=true)
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 
 }

@@ -3,20 +3,13 @@
 <suite thread-count="1" name="Failed suite [LVM_UAT_Suite]">
   <test name="LVM_UAT_RegressionTest(failed)">
     <classes>
-      <class name="lasvegasmarket_UAT.ExhibitorDigitalShowroom">
+      <class name="lasvegasmarket_UAT.GlobalSearch_SearchFor">
         <methods>
-          <include name="TS004_VerifyClickOnLineFiltersForExhibitorTest"/>
-          <include name="TS005_VerifyClickOnLineSearchForExhibitorTest"/>
+          <include name="TS005_VerifyArticlesOverviewInGlobalSearchTest"/>
           <include name="initialize"/>
-          <include name="TS011_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest"/>
           <include name="tearDown"/>
-          <include name="TS001_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest"/>
-          <include name="TS015_VerifyExhibitorDigitalShowroomHeroComponentContactExhibitorTest"/>
-          <include name="TS008_VerifySeeInOtherMarketsForExhibitorTest"/>
-          <include name="TS010_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest"/>
-          <include name="TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest"/>
         </methods>
-      </class> <!-- lasvegasmarket_UAT.ExhibitorDigitalShowroom -->
+      </class> <!-- lasvegasmarket_UAT.GlobalSearch_SearchFor -->
     </classes>
   </test> <!-- LVM_UAT_RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_UAT_Suite] -->

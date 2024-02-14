@@ -199,7 +199,7 @@ public class GlobalSearch_SearchFor extends base {
 					infoFilterList.get(i).click();
 					Thread.sleep(8000);
 					for (int l = 0; l < taglist.size(); l++) {
-						Thread.sleep(2000);
+						Thread.sleep(3000);
 						Assert.assertTrue(taglist.get(l).getText().contains("Exhibitors"));
 						break;
 					}
@@ -438,6 +438,7 @@ public class GlobalSearch_SearchFor extends base {
 						Thread.sleep(500);
 					} catch (StaleElementReferenceException e) {
 						infoFilterList = driver.findElements(By.xpath("//div[@class='imc-filteritem__option']"));
+						Thread.sleep(100);
 						infoFilterList.get(i).click();
 						atlgs.getATLInfoSearchTopicsFilter().click();
 						Thread.sleep(500);
