@@ -31,31 +31,33 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Test</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">153.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">LVM_UAT_RegressionTest</td><td class="numi">10</td><td class="numi">10</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">1,082.9 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">Test &#8212; failed</th></tr>
-<tr class="failedodd"><td rowspan="1">atlantamarket_UAT.LineDigitalShowroom</td><td><a href="#m1"><b>TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest</b>  </a></td><td class="numi">1</td><td>1707200028071</td><td class="numi">53757</td></tr>
+<tr><th colspan="4">LVM_UAT_RegressionTest &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">lasvegasmarket_UAT.GlobalSearch_SearchFor</td><td><a href="#m1"><b>TS005_VerifyArticlesOverviewInGlobalSearchTest</b>  </a></td><td class="numi">1</td><td>1707896229512</td><td class="numi">108504</td></tr>
+<tr><th colspan="4">LVM_UAT_RegressionTest &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="10">lasvegasmarket_UAT.GlobalSearch_SearchFor</td><td><a href="#m2"><b>TS001_VerifyInformationTabInGlobalSearchTest</b>  </a></td><td class="numi">1</td><td>1707896115342</td><td class="numi">26663</td></tr><tr class="passedodd"><td><a href="#m3"><b>TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest</b>  </a></td><td class="numi">1</td><td>1707896142014</td><td class="numi">40671</td></tr><tr class="passedodd"><td><a href="#m4"><b>TS004_VerifyCatalogsOverviewInGlobalSearchTest</b>  </a></td><td class="numi">1</td><td>1707896182687</td><td class="numi">46822</td></tr><tr class="passedodd"><td><a href="#m5"><b>TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest</b>  </a></td><td class="numi">1</td><td>1707896338234</td><td class="numi">238132</td></tr><tr class="passedodd"><td><a href="#m6"><b>TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest</b>  </a></td><td class="numi">1</td><td>1707896576368</td><td class="numi">119003</td></tr><tr class="passedodd"><td><a href="#m7"><b>TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest</b>  </a></td><td class="numi">1</td><td>1707896695373</td><td class="numi">115511</td></tr><tr class="passedodd"><td><a href="#m8"><b>TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest</b>  </a></td><td class="numi">1</td><td>1707896810886</td><td class="numi">98361</td></tr><tr class="passedodd"><td><a href="#m9"><b>TS010_VerifyShowSpecialsOverviewInGlobalSearchTest</b>  </a></td><td class="numi">1</td><td>1707896909248</td><td class="numi">30539</td></tr><tr class="passedodd"><td><a href="#m10"><b>TS011_VerifyEventsOverviewInGlobalSearchTest</b>  </a></td><td class="numi">1</td><td>1707896939790</td><td class="numi">100358</td></tr><tr class="passedodd"><td><a href="#m11"><b>TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest</b>  </a></td><td class="numi">1</td><td>1707897040150</td><td class="numi">102941</td></tr>
 </table>
-<h1>Test</h1>
-<h2 id="m1">atlantamarket_UAT.LineDigitalShowroom:TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest</h2>
+<h1>LVM_UAT_RegressionTest</h1>
+<h2 id="m1">lasvegasmarket_UAT.GlobalSearch_SearchFor:TS005_VerifyArticlesOverviewInGlobalSearchTest</h2>
 <div style="padding-left:3em">
-<p>Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;imc-content imc-type--title-6 imc-type--color-neutral-heavy-medium imc-vr--small &apos;]/a (tried for 30 second(s) with 500 milliseconds interval)</p>
+<p>Expected condition failed: waiting for element to be clickable: By.xpath: //div[@id=&apos;root&apos;]/section[1]/section[1]/section[1]/h1[1] (tried for 40 second(s) with 500 milliseconds interval)</p>
 org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 <br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-<br/>at pageObjects.AtlantaMarket.ATLLineDigitalShowroomPage.getdigiShowroomExhName(ATLLineDigitalShowroomPage.java:136)
-<br/>at atlantamarket_UAT.LineDigitalShowroom.TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest(LineDigitalShowroom.java:99)
-<br/>14 lines not shown
-<p>Caused by no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;imc-content imc-type--title-6 imc-type--color-neutral-heavy-medium imc-vr--small &apos;]/a&quot;}
-  (Session info: chrome=121.0.6167.140)
+<br/>at pageObjects.LasVegasMarket.LVMGlobalSearchPage.getLVMArticleHeader(LVMGlobalSearchPage.java:524)
+<br/>at lasvegasmarket_UAT.GlobalSearch_SearchFor.TS005_VerifyArticlesOverviewInGlobalSearchTest(GlobalSearch_SearchFor.java:410)
+<br/>25 lines not shown
+<p>Caused by no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id=&apos;root&apos;]/section[1]/section[1]/section[1]/h1[1]&quot;}
+  (Session info: chrome=121.0.6167.161)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;ANUPPA-VD3&apos;, ip: &apos;172.27.182.66&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_381&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.140, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\anuppa\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60428}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f1f20c568cf7a7d84419674cd0bb504d
-*** Element info: {Using=xpath, value=//div[@class=&apos;imc-content imc-type--title-6 imc-type--color-neutral-heavy-medium imc-vr--small &apos;]/a}</p>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\anuppa\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55739}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7fd7bf1e9572031897301c7d7b761e22
+*** Element info: {Using=xpath, value=//div[@id=&apos;root&apos;]/section[1]/section[1]/section[1]/h1[1]}</p>
 sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 <br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 <br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -72,10 +74,32 @@ sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 <br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 <br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
 <br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
 <br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-<br/>at pageObjects.AtlantaMarket.ATLLineDigitalShowroomPage.getdigiShowroomExhName(ATLLineDigitalShowroomPage.java:136)
-<br/>at atlantamarket_UAT.LineDigitalShowroom.TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest(LineDigitalShowroom.java:99)
-<br/>14 lines not shown
+<br/>at pageObjects.LasVegasMarket.LVMGlobalSearchPage.getLVMArticleHeader(LVMGlobalSearchPage.java:524)
+<br/>at lasvegasmarket_UAT.GlobalSearch_SearchFor.TS005_VerifyArticlesOverviewInGlobalSearchTest(GlobalSearch_SearchFor.java:410)
+<br/>25 lines not shown
 </div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">lasvegasmarket_UAT.GlobalSearch_SearchFor:TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">lasvegasmarket_UAT.GlobalSearch_SearchFor:TS001_VerifyInformationTabInGlobalSearchTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">lasvegasmarket_UAT.GlobalSearch_SearchFor:TS004_VerifyCatalogsOverviewInGlobalSearchTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">lasvegasmarket_UAT.GlobalSearch_SearchFor:TS010_VerifyShowSpecialsOverviewInGlobalSearchTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">lasvegasmarket_UAT.GlobalSearch_SearchFor:TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">lasvegasmarket_UAT.GlobalSearch_SearchFor:TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">lasvegasmarket_UAT.GlobalSearch_SearchFor:TS011_VerifyEventsOverviewInGlobalSearchTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m9">lasvegasmarket_UAT.GlobalSearch_SearchFor:TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">lasvegasmarket_UAT.GlobalSearch_SearchFor:TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m11">lasvegasmarket_UAT.GlobalSearch_SearchFor:TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

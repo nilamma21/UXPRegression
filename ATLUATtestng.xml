@@ -4,10 +4,10 @@
   <test name="Test">
     <classes>
 
-     	<class name="atlantamarket_UAT.LineDigitalShowroom"/>
+     	<class name="atlantamarket_UAT.GlobalSearch_SearchFor"/>
 
  			<methods>
-				<include name="TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest"/>  
+				<include name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest()"/>  
 			</methods>
 
     </classes>

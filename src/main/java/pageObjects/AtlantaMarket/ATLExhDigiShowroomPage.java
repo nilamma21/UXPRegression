@@ -103,6 +103,7 @@ public class ATLExhDigiShowroomPage {
 	By ContactExhibitorHero = By.xpath("(//span[contains(text(),'Contact Exhibitor')])[1]");
 	By ContactPopUp = By.xpath("//h2[@class='imc-heading--box-modal']");
 	By ContactPopUpClose = By.xpath("//button[@class='imc-modal--close imc-button--modal-close imc-button--round']");
+	By exhdigishowroompagenew = By.xpath("//div[@class='imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1 imc-section--divided-bottom imc-section--padded-bottom-none']");
 	
 	public ATLExhDigiShowroomPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -525,6 +526,11 @@ public class ATLExhDigiShowroomPage {
 	     wait = new WebDriverWait (driver,30);
 	     wait.until(ExpectedConditions.visibilityOfElementLocated(ContactPopUpClose));
 	     return driver.findElement(ContactPopUpClose);
+	 }
+	 public WebElement getATLExhDigiShowPageNew() {
+		 wait = new WebDriverWait (driver,30);
+		 wait.until(ExpectedConditions.visibilityOfElementLocated(exhdigishowroompagenew));
+		 return driver.findElement(exhdigishowroompagenew);
 	 }
 }
 

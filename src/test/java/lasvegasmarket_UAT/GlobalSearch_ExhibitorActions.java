@@ -438,11 +438,11 @@ public class GlobalSearch_ExhibitorActions extends base {
         // Click on Matching Products-See All link for 1st Exhibitor
         atlexhact.getMatchingProdSeeAllLink().click();
 
-        Thread.sleep(10000);
+        Thread.sleep(12000);
         // Verify that user should redirect to the Matching Products page
         Assert.assertTrue(atlexhact.getValidateProductsPage().isDisplayed());
         Assert.assertTrue(driver.getTitle().contains("Products"));
-
+        utl.scrollToElement(atlexhact.getValidateProductsPage());
         // Get the Matching Products count on Products page
         String producttabtitle = atlexhact.getValidateProductsPage().getText();
         String matchingprodcountonprodpage = producttabtitle.replaceAll("[^0-9]", "");
@@ -558,9 +558,13 @@ public class GlobalSearch_ExhibitorActions extends base {
         //Click on Exhibitor name
         atlexhact.getExhibitorName().click();
 
-        Thread.sleep(10000);
+        Thread.sleep(12000);
         // Verify that Selected Exhibitor Digital Showroom page should be opened
-        Assert.assertTrue(atlexhdgshw.getATLExhDigiShowPage().isDisplayed());
+        try {
+        	Assert.assertTrue(atlexhdgshw.getATLExhDigiShowPage().isDisplayed());
+		} catch (Exception e) {
+			Assert.assertTrue(atlexhdgshw.getATLExhDigiShowPageNew().isDisplayed());
+		}
         Assert.assertTrue(driver.getTitle().contains("Las Vegas Market"));
         Assert.assertTrue(atlexhdgshw.getExhNameOnExhDirectImg().getText().contains(exhname));
 
@@ -571,6 +575,6 @@ public class GlobalSearch_ExhibitorActions extends base {
     @AfterClass
     public void tearDown()
     {
-       // driver.quit();
+    	driver.quit();
     }
 }

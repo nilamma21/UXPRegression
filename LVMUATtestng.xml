@@ -8,12 +8,12 @@
   
   <test name="LVM_UAT_RegressionTest">
     <classes>
-    	<class name="lasvegasmarket_UAT.ShowSpecials"/> 
-
+    	<class name="lasvegasmarket_UAT.GlobalSearch_SearchFor"/> 
+<!--  
       	<methods>
-			<include name="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest()"/>   
+			<include name="TS005_VerifyArticlesOverviewInGlobalSearchTest"/>   
 		</methods> 
-
+ -->
     </classes>
   </test> <!-- LVM_UAT_RegressionTest -->
 </suite> <!-- LVM_UAT_Suite -->

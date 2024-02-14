@@ -369,7 +369,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 		// Get the Total Lines count on Search grid
 		atlexhdgshw.getExhibitorName().click();
-		Thread.sleep(5000);
+		Thread.sleep(6000);
 
 
 		//Click See in Other Market button and verify if the page opens
@@ -676,7 +676,7 @@ public class ExhibitorDigitalShowroom extends base {
 	    System.out.println("Exhibitor name: " + exhname);
 
 	    atlexhdgshw.getExhibitorName().click();
-	    Thread.sleep(2000);
+	    Thread.sleep(5000);
 
 	    // Click on Hero component Contact Exhibitor
 	    atlexhdgshw.getContactExhibitorHero().click();

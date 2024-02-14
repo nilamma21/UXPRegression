@@ -124,11 +124,11 @@ public class GlobalSearch_SearchFor extends base {
 		// Click on Info link
 		atlgs.getATLsearchresultInfoLink().click();
 		
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		String FirstInfoName=atlgs.getFirstInfoName().getText();
 		String newFirstInfoName = FirstInfoName.replaceAll("[\\/\\-\\+\\.\\^:,]", " ");
 		atlgs.getATLInfosearchtxtbxClr().click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		atlgs.getATLInfosearchtxtbx().sendKeys(newFirstInfoName);
 		atlgs.getATLInfosearchbtn().click();
 		Thread.sleep(2000);
@@ -957,11 +957,11 @@ public class GlobalSearch_SearchFor extends base {
 	        atlexhact = new ATLExhLineProdActionsPage(driver);
 	       // driver.get(prop.getProperty("lvmurl_uat"));
 	        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	        Thread.sleep(2000);
+	        Thread.sleep(4000);
 
 	        // click on Exhibitors And Product Tab
 	        lvmgs.getlvmExhibitorsAndProductTab().click();
-
+	        Thread.sleep(2000);
 	        // Click on Show Specials
 	        lvmgs.getlvmShowSpecialsLink().click();
 	        Thread.sleep(5000);
@@ -1082,6 +1082,6 @@ public class GlobalSearch_SearchFor extends base {
 	@AfterClass(alwaysRun=true)
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 }

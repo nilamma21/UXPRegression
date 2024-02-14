@@ -169,9 +169,9 @@ public class ExhibitorDigitalShowroom extends base {
 
     driver.get(prop.getProperty("lvmurl_uat"));
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    Thread.sleep(2000);
+    Thread.sleep(3000);
     lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("searchexhwithlinesinput")));
-    // Thread.sleep(5000);
+    Thread.sleep(2000);
     lvmgs.getLVMSearchButton().click();
     Thread.sleep(15000);
 
@@ -230,7 +230,7 @@ public class ExhibitorDigitalShowroom extends base {
 
     driver.get(prop.getProperty("lvmurl_uat"));
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    Thread.sleep(2000);
+    Thread.sleep(3000);
     lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("searchexhwithlinesinput")));
     Thread.sleep(5000);
     lvmgs.getLVMSearchButton().click();
@@ -263,11 +263,11 @@ public class ExhibitorDigitalShowroom extends base {
 
     driver.get(prop.getProperty("lvmurl_uat"));
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    Thread.sleep(2000);
+    Thread.sleep(3000);
     lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("searchexhwithlinesinput")));
     Thread.sleep(5000);
     lvmgs.getLVMSearchButton().click();
-    Thread.sleep(8000);
+    Thread.sleep(10000);
 
     // Click on the 1st Exhibitor name
     lvmds.getExhibitorName().click();
@@ -417,7 +417,7 @@ public class ExhibitorDigitalShowroom extends base {
 
     driver.get(prop.getProperty("lvmurl_uat"));
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    Thread.sleep(2000);
+    Thread.sleep(3000);
     lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));
     Thread.sleep(5000);
     lvmgs.getLVMSearchButton().click();
@@ -453,7 +453,7 @@ public class ExhibitorDigitalShowroom extends base {
 
     driver.get(prop.getProperty("lvmurl_uat"));
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    Thread.sleep(2000);
+    Thread.sleep(3000);
     lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("searchexhwithlinesinput")));
     // Thread.sleep(5000);
     lvmgs.getLVMSearchButton().click();
@@ -464,8 +464,10 @@ public class ExhibitorDigitalShowroom extends base {
 
     lvmds.getExhibitorName().click();
     Thread.sleep(5000);
+    utl.scrollToElement(lvmds.getHeroComponentVisit());
     String visitURL = lvmds.getHeroComponentVisit().getAttribute("href");
-    System.out.println(visitURL);
+    String visitURLNew = visitURL.replace("http://",""); 
+    System.out.println("Visit URL: "+visitURLNew);
     // Click on Hero Component Visit
     String currentWindowID = driver.getWindowHandle();
     lvmds.getHeroComponentVisit().click();
@@ -473,10 +475,10 @@ public class ExhibitorDigitalShowroom extends base {
       driver.switchTo().window(winddowHandle);
     }
 
-    Thread.sleep(7000);
+    Thread.sleep(8000);
     String URL = driver.getCurrentUrl();
-    System.out.println(URL);
-    Assert.assertTrue(URL.contains(visitURL));
+    System.out.println("Current URL: "+URL);
+    Assert.assertTrue(URL.contains(visitURLNew));
     driver.close();
     driver.switchTo().window(currentWindowID);
     System.out
@@ -496,7 +498,7 @@ public class ExhibitorDigitalShowroom extends base {
 
     driver.get(prop.getProperty("lvmurl_uat"));
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    Thread.sleep(2000);
+    Thread.sleep(3000);
     lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor11")));
     Thread.sleep(5000);
     lvmgs.getLVMSearchButton().click();
@@ -534,7 +536,7 @@ public class ExhibitorDigitalShowroom extends base {
 
     driver.get(prop.getProperty("lvmurl_uat"));
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    Thread.sleep(2000);
+    Thread.sleep(3000);
     lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));
     // Thread.sleep(5000);
     lvmgs.getLVMSearchButton().click();
@@ -555,6 +557,7 @@ public class ExhibitorDigitalShowroom extends base {
      * Assert.assertTrue(lvmds.getLVMVerifyLinePageTitle().getText().contains("Events"));
      * driver.navigate().back(); utl.scrollToElement(lvmds.getEventsSection());
      */
+    Thread.sleep(4000);
     utl.scrollToElement(lvmds.getEventNameNew());
     String eventName = lvmds.getEventNameNew().getText();
     System.out.println("Event Name : " + eventName);
@@ -628,7 +631,7 @@ public class ExhibitorDigitalShowroom extends base {
 
     driver.get(prop.getProperty("lvmurl_uat"));
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    Thread.sleep(2000);
+    Thread.sleep(3000);
     lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputforShowSpecials3")));
     // Thread.sleep(5000);
     lvmgs.getLVMSearchButton().click();
@@ -654,6 +657,7 @@ public class ExhibitorDigitalShowroom extends base {
     System.out.println("Both counts are same");
     // Click on See All Show Special
     lvmds.getSeeAllshowSpecialBtn().click();
+    Thread.sleep(3000);
     Assert.assertTrue(lvmds.getValidateLinesPage().getText().contains("Specials"));
     System.out.println("See All Show Specials Btn is working properly.");
     lvmds.getProductsPageBackButton().click();
@@ -991,7 +995,7 @@ public class ExhibitorDigitalShowroom extends base {
   @AfterClass
   public void tearDown() throws InterruptedException {
     Thread.sleep(2000);
-     //driver.quit();
+     driver.quit();
   }
 
 }

@@ -126,7 +126,7 @@ public class FloorPlans extends base {
 		
 		utl.scrollToElement(atlflpp.getATLBuildingFloor());
 		atlflpp.getATLBuildingFloor().click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 
 		// Verify that selected building-floor plan page should be opened
 		Assert.assertTrue(locationlink.equals(driver.getCurrentUrl()));
@@ -174,14 +174,14 @@ public class FloorPlans extends base {
 		Thread.sleep(500);
 		//click on Floor plans link
 		atlflpp.getATLFloorPlansLink().click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		//click on Floor whose not having an Exhibitors
 		String floorName=atlflpp.getATLBuildingFloor().getText();
 		System.out.println("Floor Name : " +floorName);
 
 		//click on No Exhibitor floor
 		atlflpp.getATLNoExhibitorFloor().click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		//Verify that Loading Exhibitors msg should be displayed
 		//Assert.assertTrue(atlflpp.getATLLoadingExhMsg().isDisplayed());
 
@@ -207,7 +207,7 @@ public class FloorPlans extends base {
 		Thread.sleep(500);
 		//click on Floor plans link
 		atlflpp.getATLFloorPlansLink().click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		//click on any floor
 		utl.scrollToElement(atlflpp.getATLBuildingFloor());
 		atlflpp.getATLBuildingFloor().click();
@@ -273,13 +273,13 @@ public class FloorPlans extends base {
 		Thread.sleep(1000);
 		//Click on Vending Machine icon on Map image
 		atlflpp.getVendingMachineIconOnMap().click();
-		Thread.sleep(1000);
+		Thread.sleep(1500);
 		//Verify that Vending Machine Overlay should appeared on Map
 		Assert.assertTrue(atlflpp.getVendingMachineOverlayOnMap().isDisplayed());
 
 		//Click on Elevator icon on Map image
 		atlflpp.getElevatorIconOnMap().click();
-		Thread.sleep(1000);
+		Thread.sleep(1500);
 		//Verify that Elevator Overlay should appeared on Map
 		Assert.assertTrue(atlflpp.getElevatorOverlayOnMap().isDisplayed());
 
@@ -539,7 +539,7 @@ public class FloorPlans extends base {
 		Thread.sleep(500);
 		//click on Floor plans link
 		atlflpp.getATLFloorPlansLink().click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		//Click on building floor
 		atlflpp.getATLBuildingFloor().click();
 		Thread.sleep(500);

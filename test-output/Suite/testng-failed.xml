@@ -3,13 +3,13 @@
 <suite thread-count="1" name="Failed suite [Suite]" parallel="classes">
   <test name="Test(failed)" parallel="classes">
     <classes>
-      <class name="atlantamarket_UAT.LineDigitalShowroom">
+      <class name="atlantamarket_UAT.GlobalSearch_SearchFor">
         <methods>
-          <include name="TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest"/>
-          <include name="initialize"/>
+          <include name="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest"/>
           <include name="tearDown"/>
+          <include name="initialize"/>
         </methods>
-      </class> <!-- atlantamarket_UAT.LineDigitalShowroom -->
+      </class> <!-- atlantamarket_UAT.GlobalSearch_SearchFor -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
