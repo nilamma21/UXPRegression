@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="1" name="Failed suite [LVM_UAT_Suite]">
-  <test name="LVM_UAT_RegressionTest(failed)">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [LVM_UAT_Suite]">
+  <listeners>
+    <listener class-name="lasvegasmarket_UAT.TestListeners"/>
+  </listeners>
+  <test name="LVM_UAT_RegressionTest">
     <classes>
-      <class name="lasvegasmarket_UAT.GlobalSearch_SearchFor">
+      <class name="lasvegasmarket_UAT.GlobalSearch_MatchingResults">
         <methods>
-          <include name="TS005_VerifyArticlesOverviewInGlobalSearchTest"/>
-          <include name="initialize"/>
-          <include name="tearDown"/>
+          <include name="TS003_VerifyGlobalSearchMatchingResultsSortSortByTest"/>
         </methods>
-      </class> <!-- lasvegasmarket_UAT.GlobalSearch_SearchFor -->
+      </class> <!-- lasvegasmarket_UAT.GlobalSearch_MatchingResults -->
     </classes>
-  </test> <!-- LVM_UAT_RegressionTest(failed) -->
+  </test> <!-- LVM_UAT_RegressionTest -->
 </suite> <!-- Failed suite [LVM_UAT_Suite] -->

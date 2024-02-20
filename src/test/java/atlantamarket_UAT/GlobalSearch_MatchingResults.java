@@ -20,6 +20,7 @@ import pageObjects.AtlantaMarket.ATLLeftPaneFilters;
 import pageObjects.AtlantaMarket.ATLLoginPage;
 import pageObjects.AtlantaMarket.ATLMarketPlannerPage;
 import pageObjects.AtlantaMarket.ATLProductDetailsPage;
+import pageObjects.LasVegasMarket.LVMGlobalSearchPage;
 import resources.GenerateData;
 import resources.Utility;
 import resources.base;
@@ -39,6 +40,7 @@ public class GlobalSearch_MatchingResults extends base {
 	ATLExhLineProdActionsPage atlexhact;
 	ATLMarketPlannerPage atlmppge;
 	ATLLeftPaneFilters atlleftpane;
+	LVMGlobalSearchPage lvmgs;
 
 	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns,
 			allnoteslist, favlist, searchlinetypelist, tagBlogPost, taglist, infoFilterList;
@@ -208,6 +210,7 @@ public class GlobalSearch_MatchingResults extends base {
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lvmgs = new LVMGlobalSearchPage(driver);
 		utl = new Utility(driver);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
@@ -218,7 +221,7 @@ public class GlobalSearch_MatchingResults extends base {
 		}
 
 		Thread.sleep(5000);
-		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("filterByInput"));
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearch_input"));
 		Thread.sleep(5000);
 
 		atlgs.getATLSearchButton().click();
@@ -243,10 +246,17 @@ public class GlobalSearch_MatchingResults extends base {
 		 utl.Sorting(atlgs.getatlExhNames(),atlgs.getatlGlobalSearch_SearchSortByDropdwn(),"Sort by Name Ascending");
 		 ///Select filter Sort by Name Descending
 		 utl.Sorting(atlgs.getatlExhNames(),atlgs.getatlGlobalSearch_SearchSortByDropdwn(),"Sort by Name Descending");
+		//Select filter Sort by Matching Product Count Ascending
 		
-		//Select filter Sort by Matching Product Count Descending
-		utl.Sorting(atlgs.getatlMachingProductCount(), atlgs.getatlGlobalSearch_SearchSortByDropdwn(),
-				"Sort By Matching Product Count Descending");
+			selectAMC.selectByVisibleText("Sort By Relevance");
+		 Thread.sleep(5000);
+		 System.out.println("----Sort By Matching Product Count Ascending--");
+		 utl.Sorting(atlgs.getatlMachingProductCount(), atlgs.getatlGlobalSearch_SearchSortByDropdwn(),
+					"Sort By Matching Product Count Ascending");
+		 System.out.println("----Sort By Matching Product Count Descending--");
+		 Thread.sleep(3000);
+		 utl.Sorting(atlgs.getatlMachingProductCount(), atlgs.getatlGlobalSearch_SearchSortByDropdwn(),
+					"Sort By Matching Product Count Descending");
 
 	}
 
