@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="1" name="Suite" parallel="classes">
-  <test name="Test">
-    <classes>
+<suite thread-count="1" name="ATL_UAT_Suite">
+	<listeners>
+		<listener class-name="atlantamarket_UAT.TestListeners" />
+	</listeners>
 
-     	<class name="atlantamarket_UAT.GlobalSearch_SearchFor"/>
-
- 			<methods>
-				<include name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest()"/>  
+	<test name="ATL_UAT_RegressionTest">
+		<classes>
+			<class name="atlantamarket_UAT.GlobalSearch_MatchingResults" >
+			<methods>
+			<include name="TS003_VerifyGlobalSearchMatchingResultsSortSortByTest">
+			</include>
 			</methods>
- -->
-    </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+			</class>
+			
+		</classes>
+	</test>
+</suite>

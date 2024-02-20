@@ -222,7 +222,7 @@ public class GlobalSearch_MatchingResults extends base {
       if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
           lvmgs.getlvmGlobalSearchClearTxt().click();
       }
-      lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("autosuggestexhibitor"));//sortByInput
+      lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearch_input"));//sortByInput
       Thread.sleep(2000);
       lvmgs.getLVMSearchButton().click();
       Thread.sleep(5000);
@@ -243,7 +243,12 @@ public class GlobalSearch_MatchingResults extends base {
        utl.Sorting(lvmgs.getlvmExhNames(),lvmgs.getlvmGlobalSearch_SearchSortByDropdwn(),"Sort by Name Ascending");
        Thread.sleep(2000);
        utl.Sorting(lvmgs.getlvmExhNames(),lvmgs.getlvmGlobalSearch_SearchSortByDropdwn(),"Sort by Name Descending");
-       Thread.sleep(2000);
+       Thread.sleep(5000);
+       System.out.println("----Sort By Matching Product Count Ascending--");
+     //Select filter Sort by Matching Product Count Ascending
+       utl.Sorting(lvmgs.getlvmMachingProductCount(), lvmgs.getlvmGlobalSearch_SearchSortByDropdwn(),
+               "Sort By Matching Product Count Ascending");
+       System.out.println("----Sort By Matching Product Count Descending--");
       //Select filter Sort by Matching Product Count Descending
       utl.Sorting(lvmgs.getlvmMachingProductCount(), lvmgs.getlvmGlobalSearch_SearchSortByDropdwn(),
               "Sort By Matching Product Count Descending");

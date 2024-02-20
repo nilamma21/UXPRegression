@@ -1089,4 +1089,20 @@ public class Utility extends base {
 	  return exhName;
 	}
 	
+	
+	public void siteCoreLogin() throws InterruptedException {
+		
+		sclogin = new SCLoginPage(driver);
+		scdash = new SCDashboard(driver);
+		scshow = new SCShowSpecials(driver);
+		
+		driver.get(prop.getProperty("sitecoreurl_prod"));
+		Thread.sleep(5000);
+		//Login to Sitecore
+		sclogin.getSCUsername().sendKeys(prop.getProperty("scusername_prod"));
+		sclogin.getSCPassword().sendKeys(prop.getProperty("scpassword_prod"));
+		sclogin.getSCLoginbtn().click();
+		
+	}
+	
 }

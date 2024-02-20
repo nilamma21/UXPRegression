@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="sitecore_PROD_Suite">
+	<listeners>
+		<listener class-name="sitecore_PROD.TestListeners" />
+	</listeners>
+
+	<test name="sitecore_PROD">
+		<classes>
+			<class name="sitecore_PROD.DigitalAdminPanel" >
+			<methods>
+			<include name="TS001_VerifyDigitalAdminPanelTest">
+			</include>
+			</methods>
+			</class>
+			
+		</classes>
+	</test>
+</suite>
