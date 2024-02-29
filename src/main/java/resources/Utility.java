@@ -35,6 +35,7 @@ import pageObjects.ExhibitorPortal.EXPMarketsPage;
 import pageObjects.LasVegasMarket.LVMEventsAndWebinarPage;
 import pageObjects.LasVegasMarket.LVMMarketPlannerPage;
 import pageObjects.Sitecore.SCDashboard;
+import pageObjects.Sitecore.SCDigitalAdminPanelPage;
 import pageObjects.Sitecore.SCLoginPage;
 import pageObjects.Sitecore.SCShowSpecials;
 
@@ -58,6 +59,7 @@ public class Utility extends base {
 	SCLoginPage sclogin;
 	SCDashboard scdash;
 	SCShowSpecials scshow;
+	SCDigitalAdminPanelPage digiAdmin;
 	
 	ArrayList<String> tabs;
 	List<WebElement> showspecialslist, exheventslist, exheventnameslist, exheventdeletebtnlist;
@@ -255,7 +257,7 @@ public class Utility extends base {
 				Thread.sleep(5000);
 				listExhibitor.click();
 				
-				listExhibitor.click();
+				//listExhibitor.click();
 				flag = true;
 				break;
 			}
@@ -491,6 +493,70 @@ public class Utility extends base {
 		//Assert.assertEquals(sortedList, expectedSortedList, " List Should be sorted");
 
 		System.out.println("Displayed " + filterName);
+
+	}
+	public void SortByDigitalIdentity(List<WebElement> listOfSearchResults,List<WebElement> sortByOptions, String optionName )
+			throws IOException, InterruptedException {
+
+		// Store Current list
+		List<String> currentList = new ArrayList<String>();
+		for (WebElement currentElement : listOfSearchResults) {
+			currentList.add(currentElement.getText().toLowerCase());
+		}
+		System.out.println("Current List : " + currentList);
+		// Create sorted list
+		List<String> sortedList = new ArrayList<String>();
+		for (String s : currentList) {
+			sortedList.add(s.toLowerCase());
+		}
+		//Sorting the list
+		Collections.sort(sortedList);
+		System.out.println("Sorted List : " + sortedList);
+		//Click on Option
+		selectFilters(sortByOptions, optionName);
+		Thread.sleep(5000);
+		//Verify sorted list
+		List<String> expectedSortedList = new ArrayList<String>();
+		List<WebElement>listOfSearchResults1=driver.findElements(By.xpath("//table[@class='table table-bordered']/tbody/tr/td[2]"));
+		for (WebElement sortedListAfterClickOnOptions : listOfSearchResults1) {
+			expectedSortedList.add(sortedListAfterClickOnOptions.getText().toLowerCase());
+		}
+		System.out.println("Expected sorted Exhibitor List : " + expectedSortedList);
+	    System.out.println("Current List : " + currentList);
+		// Verify List is Sorted or not
+		Assert.assertEquals(sortedList, expectedSortedList, " List Should be sorted");
+
+	}
+	public void SortByLastName(List<WebElement> listOfSearchResults,List<WebElement> sortByOptions, String optionName )
+			throws IOException, InterruptedException {
+
+		// Store Current list
+		List<String> currentList = new ArrayList<String>();
+		for (WebElement currentElement : listOfSearchResults) {
+			currentList.add(currentElement.getText().toLowerCase());
+		}
+		System.out.println("Current List : " + currentList);
+		// Create sorted list
+		List<String> sortedList = new ArrayList<String>();
+		for (String s : currentList) {
+			sortedList.add(s.toLowerCase());
+		}
+		//Sorting the list
+		Collections.sort(sortedList);
+		System.out.println("Sorted List : " + sortedList);
+		//Click on Option
+		selectFilters(sortByOptions, optionName);
+		Thread.sleep(5000);
+		//Verify sorted list
+		List<String> expectedSortedList = new ArrayList<String>();
+		List<WebElement>listOfSearchResults1=driver.findElements(By.xpath("//table[@class='table table-bordered']/tbody/tr/td[4]"));
+		for (WebElement sortedListAfterClickOnOptions : listOfSearchResults1) {
+			expectedSortedList.add(sortedListAfterClickOnOptions.getText().toLowerCase());
+		}
+		System.out.println("Expected sorted Exhibitor List : " + expectedSortedList);
+	    System.out.println("Current List : " + currentList);
+		// Verify List is Sorted or not
+		Assert.assertEquals(sortedList, expectedSortedList, " List Should be sorted");
 
 	}
 
