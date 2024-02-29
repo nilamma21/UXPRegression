@@ -5,7 +5,7 @@
     <classes>
       <class name="sitecore_PROD.DigitalAdminPanel">
         <methods>
-          <include name="TS001_VerifyDigitalAdminPanelTest"/>
+          <include name="TS003_VerifyDigitalAdminPanelSortByOptionsFunctinalityTest"/>
         </methods>
       </class> <!-- sitecore_PROD.DigitalAdminPanel -->
     </classes>
