@@ -1170,5 +1170,91 @@ public class Utility extends base {
 		sclogin.getSCLoginbtn().click();
 		
 	}
+	public void siteCoreLoginUAT() throws InterruptedException {
+		
+		sclogin = new SCLoginPage(driver);
+		scdash = new SCDashboard(driver);
+		scshow = new SCShowSpecials(driver);
+		
+		driver.get(prop.getProperty("sitecoreurl_uat"));
+		Thread.sleep(5000);
+		//Login to Sitecore
+		sclogin.getSCUsername().sendKeys(prop.getProperty("sitecoreusername"));
+		sclogin.getSCPassword().sendKeys(prop.getProperty("sitecorepassword"));
+		sclogin.getSCLoginbtn().click();
+		
+	}
 	
+	public void siteCoreFiterByNoAssociation(List<WebElement>associationColList) {
+		
+		boolean flag=true;
+		List<String>allNotAssociated=new ArrayList<>();
+		for (WebElement notAss : associationColList) {
+		    String text = notAss.getText().toLowerCase();
+		    if (!text.trim().isEmpty()) { // Ignore elements that are empty or contain only whitespace
+		        allNotAssociated.add(text);
+		        flag=true;
+		    }
+		}
+		System.out.println(allNotAssociated);
+		if(allNotAssociated.isEmpty()) {
+			System.out.println("No Associations is working as expeced");
+			Assert.assertTrue(flag = true);	
+
+		}else{
+			System.out.println("No Associations is not working as expeced");
+			Assert.assertTrue(flag = false);
+		}
+	}
+	public void siteCoreFiterByExhibitor(List<WebElement>associationColList) {
+		
+		boolean flag=true;
+		List<String>allNotAssociated=new ArrayList<>();
+		for (WebElement notAss : associationColList) {
+		    String text = notAss.getText().toLowerCase();
+		    if (!text.trim().isEmpty()) { // Ignore elements that are empty or contain only whitespace
+		        allNotAssociated.add(text);
+		        flag=true;
+		    }
+		}
+		System.out.println(allNotAssociated);
+		if(!allNotAssociated.isEmpty()) {
+			System.out.println("Exhibitor is working as expeced");
+			Assert.assertTrue(flag = true);	
+
+		}else{
+			System.out.println("Exhibitor is not working as expeced");
+			Assert.assertTrue(flag = false);
+		}
+	}
+	public void checkSiteCoreFilterByAssociation(List<WebElement> associationColList, boolean expectAssociations) {
+		List<String> allAssociations = new ArrayList<>();
+		for (WebElement element : associationColList) {
+			String text = element.getText().toLowerCase().trim();
+			if (!text.isEmpty()) { // Ignore elements that are empty or contain only whitespace
+				allAssociations.add(text);
+			}
+		}
+		System.out.println(allAssociations);
+		// Check the condition based on the expectation
+		if (expectAssociations) {
+			// Expecting associations
+			if (!allAssociations.isEmpty()) {
+				System.out.println("Filter by Exhibitor is working as expected");
+				Assert.assertTrue(true);
+			} else {
+				System.out.println("Filter by Exhibitor is not working as expected");
+				Assert.assertTrue(false);
+			}
+		} else {
+			// Not expecting associations
+			if (allAssociations.isEmpty()) {
+				System.out.println("Filter by No Association is working as expected");
+				Assert.assertTrue(true);
+			} else {
+				System.out.println("Filter by No Association is not working as expected");
+				Assert.assertTrue(false);
+			}
+		}
+	}
 }
