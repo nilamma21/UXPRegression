@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [LVM_RegressionTestSuite]" parallel="classes">
-  <test name="RegressionTest(failed)" parallel="classes">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [LVM_RegressionTestSuite]">
+  <listeners>
+    <listener class-name="lasvegasmarket_PROD.TestListeners"/>
+  </listeners>
+  <test name="RegressionTest">
     <classes>
-      <class name="lasvegasmarket_PROD.EvenntsAndWebinar">
-        <methods>
-          <include name="TS007_VerifyExhibitorEventsCalendarViewTest"/>
-          <include name="tearDown"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- lasvegasmarket_PROD.EvenntsAndWebinar -->
+      <class name="lasvegasmarket_PROD.EvenntsAndWebinar"/>
     </classes>
-  </test> <!-- RegressionTest(failed) -->
+  </test> <!-- RegressionTest -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->

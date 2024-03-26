@@ -11,13 +11,14 @@
 			<class name="lasvegasmarket_PROD.GlobalSearch_LineActions" />
 			<class name="lasvegasmarket_PROD.GlobalSearch_MatchingResults" />
 			  
-			 <!--
+			   <class name="lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters" />
+			 
 			 <class name="atlantamarket_PROD.GlobalSearch_SuggestionList" /> 
 			 <class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
 			 <class name="atlantamarket_PROD.LineDigitalShowroom"/>
 			 <class name="atlantamarket_PROD.GlobalSearch_ExhibitorActions" />
 			<class name="atlantamarket_PROD.GlobalSearch_ProductActions" />
-			 -->
+			
 			 
 		</classes>
 	</test>

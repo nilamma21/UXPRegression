@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [ATLMrkt_RegressionTestSuite]">
-  <test name="RegressionTest(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [ATLMrkt_RegressionTestSuite]" parallel="classes">
+  <test thread-count="1" name="RegressionParallelest">
     <classes>
-      <class name="atlantamarket_PROD.GlobalSearch_SearchFor">
-        <methods>
-          <include name="TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest"/>
-          <include name="initialize"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
+      <class name="lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters"/>
     </classes>
-  </test> <!-- RegressionTest(failed) -->
+  </test> <!-- RegressionParallelest -->
+  <test name="RegressionParallelest(failed)" parallel="classes">
+    <classes>
+      <class name="lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters">
+        <methods>
+          <include name="TS009_VerifySelectionOfFashionAccProdCatgFromLeftPaneFiltersTest"/>
+          <include name="tearDown"/>
+          <include name="TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters -->
+    </classes>
+  </test> <!-- RegressionParallelest(failed) -->
 </suite> <!-- Failed suite [ATLMrkt_RegressionTestSuite] -->
