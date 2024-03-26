@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Mar 26 17:32:25 IST 2024</td>
+<td>Started on:</td><td>Tue Mar 26 18:16:28 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>38 seconds (38665 ms)</td>
+<tr><td>Total time:</td><td>28 seconds (28669 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,13 +76,26 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='sitecore_PROD.ShowSpecialsApprovals.TS002_VerifyDigitalAdminPanelSortByOptionsFunctinalityTest()'><b>TS002_VerifyDigitalAdminPanelSortByOptionsFunctinalityTest</b><br>Test class: sitecore_PROD.ShowSpecialsApprovals</td>
-<td><div><pre>java.lang.AssertionError:  List Should be sorted: Lists differ at element [5]: andmore test company != anne mcgilvray &amp; company expected [andmore test company] but found [anne mcgilvray &amp; company]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:568)
-	at resources.Utility.SortByDigitalIdentity(Utility.java:527)
-	at sitecore_PROD.ShowSpecialsApprovals.TS002_VerifyDigitalAdminPanelSortByOptionsFunctinalityTest(ShowSpecialsApprovals.java:82)
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button class=&quot;dropdown-toggle-sort btn&quot; type=&quot;button&quot; onclick=&quot;toggleDropdown(&apos;dropdown-sort&apos;)&quot;&gt;...&lt;/button&gt; is not clickable at point (396, 16). Other element would receive the click: &lt;div class=&quot;col-md-6&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=123.0.6312.58)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.90.18&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.58, chrome: {chromedriverVersion: 123.0.6312.58 (6b4b19e9dfbb..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55536}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5d5109e93bd04acf81eedd6544959893
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at sitecore_PROD.ShowSpecialsApprovals.TS002_VerifyDigitalAdminPanelSortByOptionsFunctinalityTest(ShowSpecialsApprovals.java:79)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -107,14 +120,27 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1700421020", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1700421020'><pre>java.lang.AssertionError:  List Should be sorted: Lists differ at element [5]: andmore test company != anne mcgilvray &amp; company expected [andmore test company] but found [anne mcgilvray &amp; company]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:568)
-	at resources.Utility.SortByDigitalIdentity(Utility.java:527)
-	at sitecore_PROD.ShowSpecialsApprovals.TS002_VerifyDigitalAdminPanelSortByOptionsFunctinalityTest(ShowSpecialsApprovals.java:82)
+</pre></div><a href='#' onClick='toggleBox("stack-trace669053685", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace669053685'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button class=&quot;dropdown-toggle-sort btn&quot; type=&quot;button&quot; onclick=&quot;toggleDropdown(&apos;dropdown-sort&apos;)&quot;&gt;...&lt;/button&gt; is not clickable at point (396, 16). Other element would receive the click: &lt;div class=&quot;col-md-6&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=123.0.6312.58)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;EON-SWAPNILI&apos;, ip: &apos;172.22.90.18&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_311&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.58, chrome: {chromedriverVersion: 123.0.6312.58 (6b4b19e9dfbb..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55536}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5d5109e93bd04acf81eedd6544959893
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at sitecore_PROD.ShowSpecialsApprovals.TS002_VerifyDigitalAdminPanelSortByOptionsFunctinalityTest(ShowSpecialsApprovals.java:79)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -140,7 +166,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
 </pre></div></td>
-<td>20</td>
+<td>11</td>
 <td>sitecore_PROD.ShowSpecialsApprovals@39ba5a14</td></tr>
 </table><p>
 </body>

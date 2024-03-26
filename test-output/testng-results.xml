@@ -2,28 +2,47 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="38665" started-at="2024-03-26T12:02:25Z" finished-at="2024-03-26T12:03:04Z">
+  <suite name="Default suite" duration-ms="28669" started-at="2024-03-26T12:46:28Z" finished-at="2024-03-26T12:46:56Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="38665" started-at="2024-03-26T12:02:25Z" finished-at="2024-03-26T12:03:04Z">
+    <test name="Default test" duration-ms="28669" started-at="2024-03-26T12:46:28Z" finished-at="2024-03-26T12:46:56Z">
       <class name="sitecore_PROD.ShowSpecialsApprovals">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:sitecore_PROD.ShowSpecialsApprovals@39ba5a14]" name="initialize" is-config="true" duration-ms="18157" started-at="2024-03-26T17:32:25Z" finished-at="2024-03-26T17:32:43Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:sitecore_PROD.ShowSpecialsApprovals@39ba5a14]" name="initialize" is-config="true" duration-ms="17230" started-at="2024-03-26T18:16:28Z" finished-at="2024-03-26T18:16:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="FAIL" signature="TS002_VerifyDigitalAdminPanelSortByOptionsFunctinalityTest()[pri:2, instance:sitecore_PROD.ShowSpecialsApprovals@39ba5a14]" name="TS002_VerifyDigitalAdminPanelSortByOptionsFunctinalityTest" duration-ms="20411" started-at="2024-03-26T17:32:43Z" finished-at="2024-03-26T17:33:03Z">
-          <exception class="java.lang.AssertionError">
+        <test-method status="FAIL" signature="TS002_VerifyDigitalAdminPanelSortByOptionsFunctinalityTest()[pri:2, instance:sitecore_PROD.ShowSpecialsApprovals@39ba5a14]" name="TS002_VerifyDigitalAdminPanelSortByOptionsFunctinalityTest" duration-ms="11350" started-at="2024-03-26T18:16:45Z" finished-at="2024-03-26T18:16:56Z">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
-              <![CDATA[ List Should be sorted: Lists differ at element [5]: andmore test company != anne mcgilvray & company expected [andmore test company] but found [anne mcgilvray & company]]]>
+              <![CDATA[element click intercepted: Element <button class="dropdown-toggle-sort btn" type="button" onclick="toggleDropdown('dropdown-sort')">...</button> is not clickable at point (396, 16). Other element would receive the click: <div class="col-md-6">...</div>
+  (Session info: chrome=123.0.6312.58)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'EON-SWAPNILI', ip: '172.22.90.18', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_311'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.58, chrome: {chromedriverVersion: 123.0.6312.58 (6b4b19e9dfbb..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55536}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5d5109e93bd04acf81eedd6544959893]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError:  List Should be sorted: Lists differ at element [5]: andmore test company != anne mcgilvray & company expected [andmore test company] but found [anne mcgilvray & company]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:568)
-	at resources.Utility.SortByDigitalIdentity(Utility.java:527)
-	at sitecore_PROD.ShowSpecialsApprovals.TS002_VerifyDigitalAdminPanelSortByOptionsFunctinalityTest(ShowSpecialsApprovals.java:82)
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button class="dropdown-toggle-sort btn" type="button" onclick="toggleDropdown('dropdown-sort')">...</button> is not clickable at point (396, 16). Other element would receive the click: <div class="col-md-6">...</div>
+  (Session info: chrome=123.0.6312.58)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'EON-SWAPNILI', ip: '172.22.90.18', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_311'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.58, chrome: {chromedriverVersion: 123.0.6312.58 (6b4b19e9dfbb..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55536}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5d5109e93bd04acf81eedd6544959893
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at sitecore_PROD.ShowSpecialsApprovals.TS002_VerifyDigitalAdminPanelSortByOptionsFunctinalityTest(ShowSpecialsApprovals.java:79)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -50,7 +69,7 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TS002_VerifyDigitalAdminPanelSortByOptionsFunctinalityTest -->

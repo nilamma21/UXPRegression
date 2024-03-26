@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Regression Automation Test Results</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Mar 26, 2024 05:32:25 PM</span></a>
+<a href="#"><span class="badge badge-primary">Mar 26, 2024 06:16:27 PM</span></a>
 </li>
 </ul>
 </div>
@@ -86,7 +86,7 @@
           <div class="test-detail">
             <p class="name">TS002_VerifyDigitalAdminPanelSortByOptionsFunctinalityTest</p>
             <p class="text-sm">
-              <span>17:32:43 PM</span> / <span>00:00:20:499</span>
+              <span>18:16:45 PM</span> / <span>00:00:11:427</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -95,9 +95,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-fail">TS002_VerifyDigitalAdminPanelSortByOptionsFunctinalityTest</h5>
-<span class='badge badge-success'>03.26.2024 17:32:43</span>
-<span class='badge badge-danger'>03.26.2024 17:33:04</span>
-<span class='badge badge-default'>00:00:20:499</span>
+<span class='badge badge-success'>03.26.2024 18:16:45</span>
+<span class='badge badge-danger'>03.26.2024 18:16:56</span>
+<span class='badge badge-default'>00:00:11:427</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 </div>
 </div>
@@ -111,15 +111,28 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>5:33:04 PM</td>
+        <td>6:16:56 PM</td>
         <td>
-          <textarea readonly class="code-block">java.lang.AssertionError:  List Should be sorted: Lists differ at element [5]: andmore test company != anne mcgilvray & company expected [andmore test company] but found [anne mcgilvray & company]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:568)
-	at resources.Utility.SortByDigitalIdentity(Utility.java:527)
-	at sitecore_PROD.ShowSpecialsApprovals.TS002_VerifyDigitalAdminPanelSortByOptionsFunctinalityTest(ShowSpecialsApprovals.java:82)
+          <textarea readonly class="code-block">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button class="dropdown-toggle-sort btn" type="button" onclick="toggleDropdown('dropdown-sort')">...</button> is not clickable at point (396, 16). Other element would receive the click: <div class="col-md-6">...</div>
+  (Session info: chrome=123.0.6312.58)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'EON-SWAPNILI', ip: '172.22.90.18', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_311'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.58, chrome: {chromedriverVersion: 123.0.6312.58 (6b4b19e9dfbb..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55536}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5d5109e93bd04acf81eedd6544959893
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at sitecore_PROD.ShowSpecialsApprovals.TS002_VerifyDigitalAdminPanelSortByOptionsFunctinalityTest(ShowSpecialsApprovals.java:79)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -175,12 +188,12 @@
 <span class="meta">
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">java.lang.AssertionError</p>
+<p class="name">org.openqa.selenium.ElementClickInterceptedException</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>java.lang.AssertionError</h4>
+<h4>org.openqa.selenium.ElementClickInterceptedException</h4>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -194,7 +207,7 @@
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>17:32:43 PM</td>
+<td>18:16:45 PM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='1'>TS002_VerifyDigitalAdminPanelSortByOptionsFunctinalityTest</a>
 </td>
@@ -216,13 +229,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Mar 26, 2024 05:32:25 PM</h3>
+<h3>Mar 26, 2024 06:16:27 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Mar 26, 2024 05:33:04 PM</h3>
+<h3>Mar 26, 2024 06:16:56 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -292,7 +305,7 @@
 </div></div>
 <script>
 var timeline = {
-"TS002_VerifyDigitalAdminPanelSortByOptionsFunctinalityTest":20.499
+"TS002_VerifyDigitalAdminPanelSortByOptionsFunctinalityTest":11.427
 };
 </script>
 <div class="row">
