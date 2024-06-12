@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="1" name="Failed suite [Suite]" parallel="classes">
-  <test name="Test(failed)" parallel="classes">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test(failed)">
     <classes>
-      <class name="atlantamarket_UAT.GlobalSearch_SearchFor">
+      <class name="lasvegasmarket_PROD.EvenntsAndWebinar">
         <methods>
-          <include name="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest"/>
+          <include name="TS007_VerifyExhibitorEventsCalendarViewTest"/>
+          <include name="TS004_VerifyIMCEventsEventsListTest"/>
+          <include name="TS006_VerifyExhibitorEventsSearchbarTest"/>
           <include name="tearDown"/>
+          <include name="TS005_VerifyIMCEventsEventDetailstTest"/>
+          <include name="TS008_VerifyExhibitorEventsListTest"/>
+          <include name="TS009_VerifyExhibitorEventsDetailstTest"/>
           <include name="initialize"/>
+          <include name="TS003_VerifyIMCEventsCalendarViewTest"/>
         </methods>
-      </class> <!-- atlantamarket_UAT.GlobalSearch_SearchFor -->
+      </class> <!-- lasvegasmarket_PROD.EvenntsAndWebinar -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

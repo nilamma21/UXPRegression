@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test verbose="2" name="Default test">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test(failed)">
     <classes>
-      <class name="sitecore_PROD.ShowSpecialsApprovals">
+      <class name="lasvegasmarket_PROD.EvenntsAndWebinar">
         <methods>
-          <include name="TS002_VerifyDigitalAdminPanelSortByOptionsFunctinalityTest"/>
-        </methods>
-      </class> <!-- sitecore_PROD.ShowSpecialsApprovals -->
-    </classes>
-  </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="sitecore_PROD.ShowSpecialsApprovals">
-        <methods>
+          <include name="TS007_VerifyExhibitorEventsCalendarViewTest"/>
+          <include name="TS004_VerifyIMCEventsEventsListTest"/>
+          <include name="TS006_VerifyExhibitorEventsSearchbarTest"/>
+          <include name="tearDown"/>
+          <include name="TS005_VerifyIMCEventsEventDetailstTest"/>
+          <include name="TS008_VerifyExhibitorEventsListTest"/>
+          <include name="TS009_VerifyExhibitorEventsDetailstTest"/>
           <include name="initialize"/>
-          <include name="TS002_VerifyDigitalAdminPanelSortByOptionsFunctinalityTest"/>
+          <include name="TS003_VerifyIMCEventsCalendarViewTest"/>
         </methods>
-      </class> <!-- sitecore_PROD.ShowSpecialsApprovals -->
+      </class> <!-- lasvegasmarket_PROD.EvenntsAndWebinar -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

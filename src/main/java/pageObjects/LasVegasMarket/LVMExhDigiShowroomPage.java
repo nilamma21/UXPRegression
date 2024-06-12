@@ -38,7 +38,9 @@ public class LVMExhDigiShowroomPage {
 	By ViewAllNotes = By.xpath("//a[contains(text(), 'View all Notes')]"); //Locator for View All Notes link
 	By VerifyAddedNote = By.xpath("//ul[@class = 'imc-market-planner-list imc-addnote-modal__list']"); //Locator for Added Notes section
 	By SaveNoteOKButton = By.xpath("//div[@class = 'imc-content imc-content--right']/button[1]"); //Locator for OK button for save note
-	By Location = By.xpath("//section[@class='imc-site-wrapper']/div[2]/div[1]/div[1]/div[2]/div[1]/span[2]/a[1]"); //Locator for Location symbol at Digital Showroom page
+	//By Location = By.xpath("//section[@class='imc-site-wrapper']/div[2]/div[1]/div[1]/div[2]/div[1]/span[2]/a[1]"); //Locator for Location symbol at Digital Showroom page
+	By Location = By.xpath("//section[@class='imc-site-wrapper']/div[2]/div[1]/div[2]/div[2]/div[1]/span[2]/a[1]"); //Locator for Location symbol at Digital Showroom page
+	
 	By ContactExhibitor = By.xpath("//div[@class = 'contact-exhibitor-wrapper']/button[1]"); //Locator for Contact Exhibitor button
 	By ProductSection = By.xpath("//div[@class = 'imc-content--display-flex-wrap']/span[text()='Products']"); //Locator for Product section in Exhibitor Digital Showroom
 	By AllProductsButton = By.xpath("//a[@class = 'imc-content--inline-block imc-button imc-button--primary-inverted imc-button--full-bleed-mobile']"); //Locator for See All Products button
@@ -49,7 +51,10 @@ public class LVMExhDigiShowroomPage {
 	By TotalLinesButton = By.xpath("//div[@class = 'imc-content--display-flex imc-content--display-flex-space-between imc-lines-overview-actions']/div[2]/a[1]"); //Locator for Sell All Lines button
 	By ValidateLinesPage = By.xpath("//ul[@class = 'imc-breadcrumb']/li[4]"); //Locator for Validate Lines page
 	By LinesCountAtLinesPage = By.xpath("//div[@id = 'Lines']"); //Locator for Lines tab at All Lines page
-	By LinesOption = By.xpath("//div[@class = 'imc-content--display-flex-wrap imc-content--display-flex imc-content--display-flex-space-between']/div[1]/div[2]/a[1]"); //Locator for First Lines option
+	//By LinesOption = By.xpath("//div[@class = 'imc-content--display-flex-wrap imc-content--display-flex imc-content--display-flex-space-between']/div[1]/div[2]/a[1]"); //Locator for First Lines option
+	By LinesOption = By.xpath("//div[@class ='imc-content--padded-top-bottom']/div[1]/div[1]"); //Locator for First Lines option
+	By LinesOptionPROD = By.xpath("//div[@class ='imc-content--padded-top-bottom']/div[1]/div[1]/div/div[2]/a"); //Locator for First Lines option
+	
 	By LinesPage = By.xpath("//section[@class = 'imc-site-wrapper']/div[2]/div[1]"); //Locator for Lines page
 	By LinesOptionText = By.xpath("//div[@class = 'imc-manufacturing-line']/div[2]/a[1]"); //Locator for Lines option text
 	By ProductText = By.xpath("//div[@class = 'imc-catalog__item_title multiSelectItem']"); //Locator for Product text
@@ -61,7 +66,7 @@ public class LVMExhDigiShowroomPage {
 	//By LineSearchButton = By.xpath("//button[@class = 'imc-searchform--button--search']"); //Locator for line search button 		
 	By VerifyLineSearch = By.xpath("//div[@class = 'imc-manufacturing-line-title-wrapper']/a[1]"); //Locator for verify line search  
 	By VerifyLinePageTitle = By.xpath("//div[@class = 'imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[4]/a[1]"); //Locator for verify line page title
-	By LineSearchButton = By.xpath("(//button[@class = 'imc-searchform--button--search'])[2]"); //Locator for line search button 		
+	By LineSearchButton = By.xpath("(//div[@class = 'imc-searchform--button--search'])[2]"); //Locator for line search button 		
 	By SeeInOtherMarket = By.xpath("//button[@class = 'imc-button imc-button--full-bleed-mobile imc-button--primary-inverted imc-margin--all--none']"); //Locator for See In Other Markets button
 	By VerifyOtherMarketsPage = By.xpath("//div[@class = 'ReactModal__Content ReactModal__Content--after-open imc-modal--box imc-modal--box-wide']"); //Locator for See In Other Markets page title
 	By ClickShowroom = By.xpath("//div[@class = 'imc-other-markets-goto']/a[1]"); //Locator for Go to Showroom link
@@ -72,6 +77,8 @@ public class LVMExhDigiShowroomPage {
 	By CatalogSection = By.xpath("//div[@class = 'imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div/span[text()='Catalogs']"); //Locator for Catalog section  			
 	By CatalogSeeAllBtn = By.xpath("(//span[contains(text(),'Catalogs')])[1]/../../div[3]/div/a/span[contains(text(),'See All') and @class='imc-breakpoint-display--hide-mobile']"); //Locator for Catalog see All Btn
 	By HeroComponentVisit = By.xpath("//span[contains(text(),'Visit')]/.."); //Locator for Hero Component Visit Btn
+	By HeroComponentVisitPROD = By.xpath("//span[@class='imc-breakpoint-display--hide-desktop']/../span[contains(text(),'Visit')]/.."); //Locator for Hero Component Visit Btn
+	
 	By showroomHeader3D = By.xpath("//div[@class='imc-content--display-flex imc-content--display-flex--center']/span[1]"); //Locator for 3D showroom Header
 	By View3DshowroomBtn = By.xpath("//span[contains(text(),'View 3D Showroom')]"); //Locator for 3D showroom Header
 	By View3DshowroomClose = By.xpath("//button[@class='imc-modal--close imc-button--modal-close imc-button--round']"); //Locator for 3D showroom Header
@@ -99,6 +106,7 @@ public class LVMExhDigiShowroomPage {
 	By OrderOnJuniperMarktBtnProdURL = By.xpath("//div[@class='imc-section imc-section--width-100-percent']/div[1]/span[contains(text(),'Products')]/../../div[3]/div[1]/a[1]"); //URl for juniper markt prod btn
 	By OrderOnJuniperMarktBtnCatalogURL = By.xpath("//div[@class='imc-section imc-section--width-100-percent']/div[1]/span[contains(text(),'Catalogs')]/../../div[3]/div[1]/a[1]"); //URl for juniper markt catalog btn
 	By EventNameNew = By.xpath("//div[contains(@class,'event-card--title--container')]/a/p");
+	By EventNameNewPROD = By.xpath("(//div[contains(@class,'event-card--title--container')])[1]/a/p");
 	By SelectCatalogProd = By.xpath("(//div[@class = 'imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/descendant::a/div/div)[1]");//First catalog in catalog section in Exhibitor Digital Showroom.
 	By ContactExhibitorHero = By.xpath("(//span[contains(text(),'Contact Exhibitor')])[1]");
 	By ContactPopUp = By.xpath("//h2[@class=\"imc-heading--box-modal\"]");
@@ -106,6 +114,22 @@ public class LVMExhDigiShowroomPage {
 	
 	public LVMExhDigiShowroomPage(WebDriver driver) {
 		this.driver = driver;
+	}
+	
+	public WebElement getHeroComponentVisitPROD() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(HeroComponentVisitPROD));
+		return driver.findElement(HeroComponentVisitPROD);
+	}
+	public WebElement getEventNameNewPROD() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(EventNameNewPROD));
+		return driver.findElement(EventNameNewPROD);
+	}
+	public WebElement getLinesOptionPROD() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(LinesOptionPROD));
+		return driver.findElement(LinesOptionPROD);
 	}
 	public WebElement getOrderOnJuniperMarktBtnCatalogURL() {
 		wait = new WebDriverWait (driver,30);
@@ -412,7 +436,7 @@ public class LVMExhDigiShowroomPage {
 		return driver.findElement(LinesPage);
 	}
 	public WebElement getLinesOptionText() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait (driver,50);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(LinesOptionText));
 		return driver.findElement(LinesOptionText);
 	}
