@@ -77,6 +77,13 @@ public class Utility extends base {
 		Thread.sleep(4000);
 		return element;
 	}
+	
+	public void scrollToTop() throws InterruptedException {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollTo(0, -document.body.scrollHeight)");
+		Thread.sleep(4000);
+	}
+
 
 	public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
 
@@ -1119,9 +1126,12 @@ public class Utility extends base {
 		}
 	}
 	
-	public String LVMExhibitorWithEvent() throws InterruptedException {
+	public String LVMExhibitorWithEvent() throws InterruptedException, IOException {
       lap = new ATLLandingPage(driver);
       lp = new ATLLoginPage(driver);
+		sclogin = new SCLoginPage(driver);
+		scdash = new SCDashboard(driver);
+		scshow = new SCShowSpecials(driver);
 
       lvmmpp = new LVMMarketPlannerPage(driver);
       lvmevents=new LVMEventsAndWebinarPage(driver);
@@ -1149,13 +1159,39 @@ public class Utility extends base {
           }
       //Click on Exh Event Tab
       lvmevents.getlvmExhibitorsEventsTab().click();
+      /*try {
       scrollToElement(lvmevents.getlvmEventCardFirstExhName());
       //Get Exhibitor name fron from first event card.
      String exhName = lvmevents.getlvmEventCardFirstExhName().getText();
 	  return exhName;
+      }catch (Exception e) {
+    	
+    	  siteCoreLoginUAT();//login to siteCore
+    	  scdash.getSC_DashboardCTA().click(); //Click on Dashboard
+    	  scdash.getSC_ContentEditor().click(); //CLick on COntent Editor
+    	 scdash.getSC_ContentEditorIMCDropdown().click();//Click on IMC
+    	 scdash.getSC_ContentEditorIMCLVM().click();//Click on LVM
+    	 scdash.getSC_ContentEditorIMCLVMHome().click();//Click on Home
+    	 scdash.getSC_ContentEditorIMCLVMHomeEvents().click();//Click on LVM
+    	 scdash.getSC_ContentEditorIMCLVMHomeEventYearFolder().click();//click on Event folder
+    	 scdash.getSC_ContentEditorIMCLVMHomeEventsFirstFolder().click();//click on Event folder
+    	 scdash.getSC_ContentEditorIMCLVMHomeEventsFirstFolderSubFolder().click();//click on Event Sub folder
+    	 scdash.getSC_ContentEditorIMCLVMHomeEventsFirstFolderSubFolder1().click();//click on Event Sub folder
+    	 scdash.getSC_ContentEditorIMCLVMHomeEventsFirstFolderSubFolder2().click();//click on Event Sub folder
+    	 scdash.getSC_ContentEditorIMCLVMHomeEventsLastPage().click();//click on Event Sub folder
+    	 
+	}*/
+	return neweventname;
 	}
+	public void SC_selectAnyDropdown(String dropDownName) throws IOException, InterruptedException {
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		
+		By.xpath("//span[contains(text(),'"+ dropDownName +"')]/../../img");
+		Thread.sleep(3000);
 	
-	
+	}
 	public void siteCoreLogin() throws InterruptedException {
 		
 		sclogin = new SCLoginPage(driver);

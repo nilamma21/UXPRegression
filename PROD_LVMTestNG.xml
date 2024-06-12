@@ -4,10 +4,10 @@
   <test name="Test">
     <classes>
     		<class name="lasvegasmarket_PROD.ExhibitorDigitalShowroom" />
-			<methods>
-			<include name="TS002_VerifyClickOnTotalLinesSeeAllLinesForExhibitorTest">
+			<!-- <methods>
+			<include name="TS010_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest">
 			</include>
-			</methods>
+			</methods> -->
 			
     </classes>
   </test> <!-- Test -->
