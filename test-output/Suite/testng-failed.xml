@@ -3,19 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
-      <class name="lasvegasmarket_PROD.EvenntsAndWebinar">
+      <class name="lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters">
         <methods>
-          <include name="TS007_VerifyExhibitorEventsCalendarViewTest"/>
-          <include name="TS004_VerifyIMCEventsEventsListTest"/>
-          <include name="TS006_VerifyExhibitorEventsSearchbarTest"/>
+          <include name="TS008_VerifySelectionOfGeneralGiftProdCatgFromLeftPaneFiltersTest"/>
           <include name="tearDown"/>
-          <include name="TS005_VerifyIMCEventsEventDetailstTest"/>
-          <include name="TS008_VerifyExhibitorEventsListTest"/>
-          <include name="TS009_VerifyExhibitorEventsDetailstTest"/>
           <include name="initialize"/>
-          <include name="TS003_VerifyIMCEventsCalendarViewTest"/>
         </methods>
-      </class> <!-- lasvegasmarket_PROD.EvenntsAndWebinar -->
+      </class> <!-- lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
