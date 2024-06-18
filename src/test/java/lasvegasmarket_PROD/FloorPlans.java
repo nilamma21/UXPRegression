@@ -82,14 +82,15 @@ public class FloorPlans extends base {
 		//Verify that user should redirect to Floor plans page
 		Assert.assertTrue(driver.getCurrentUrl().contains(prop.getProperty("lvmurl_prod")+"Market-Map"));
 
-		utl.scrollToElement(lvmflpp.getLVMBuildingFloor());
+		//utl.scrollToElement(lvmflpp.getLVMBuildingFloor());
 		//Click on Building/floor
 		String floorName=lvmflpp.getLVMBuildingFloor().getText();
 		System.out.println("Floor Name : " +floorName);
 
 		String locationlink = lvmflpp.getLVMBuildingFloor().getAttribute("href");
 		System.out.println(locationlink);
-
+		Thread.sleep(5000);
+		//utl.scrollToElement(lvmflpp.getLVMBuildingFloor());
 		//Click on !st floor of first building.
 		lvmflpp.getLVMBuildingFloor().click();
 		Thread.sleep(5000);
@@ -147,12 +148,12 @@ public class FloorPlans extends base {
 
 		//click on Floor plans link
 		lvmflpp.getLVMFloorPlansLink().click();
-		utl.scrollToElement(lvmflpp.getLVMBuildingFloor());
+		//utl.scrollToElement(lvmflpp.getLVMBuildingFloor());
 		
 		//click on any floor
 		lvmflpp.getLVMBuildingFloor().click();
 
-		utl.scrollToElement(lvmflpp.getLVMExhibitorFloorZoomIn());
+		//utl.scrollToElement(lvmflpp.getLVMExhibitorFloorZoomIn());
 		//Click on Zoom In icon
 		lvmflpp.getLVMExhibitorFloorZoomIn().click();
 		//Store Zoom in Attribute
@@ -161,11 +162,11 @@ public class FloorPlans extends base {
 		lvmflpp.getLVMExhibitorFloorZoomIn().click();
 		//Stored Zoom in Attribute
 		String x2=lvmflpp.getLVMFloorPlanMapIamge().getAttribute("style");
-
+System.out.println("x2 "+x2);
 		//Store Zoom in Attribute
 		lvmflpp.getLVMExhibitorFloorZoomIn().click();
 		String x3=lvmflpp.getLVMFloorPlanMapIamge().getAttribute("style");
-
+		System.out.println("x3 "+x3);
 		//Verify Zoom In functionality
 		Assert.assertNotEquals(x2, x3);
 		Thread.sleep(5000);
@@ -197,13 +198,13 @@ public class FloorPlans extends base {
 		//click on Floor plans link
 		lvmflpp.getLVMFloorPlansLink().click();
 
-		utl.scrollToElement(lvmflpp.getLVMBuildingFloor());
+		//utl.scrollToElement(lvmflpp.getLVMBuildingFloor());
 		//click on any floor
 		lvmflpp.getLVMBuildingFloor().click();
 
 		//Click on Vending Machine icon on Map image
 		Thread.sleep(5000);
-		utl.scrollToElement(lvmflpp.getlvmflooricononmap_lvmUAT());
+		//utl.scrollToElement(lvmflpp.getlvmflooricononmap_lvmUAT());
 		lvmflpp.getlvmflooricononmap_lvmUAT().click();
 
 		//Verify that Vending Machine Overlay should appeared on Map
@@ -273,7 +274,7 @@ public class FloorPlans extends base {
         lvmflpp.getLVMBuildingFloorForFilter().click();
         Thread.sleep(6000);
         //Scroll Down to Exhibitor list
-        utl.scrollToElement(lvmflpp.getLVMSelectBox());
+        //utl.scrollToElement(lvmflpp.getLVMSelectBox());
         Thread.sleep(7000);
         
         //Create current Exhibitor list without sort
@@ -347,14 +348,14 @@ public class FloorPlans extends base {
 		//click on Floor plans link
 		lvmflpp.getLVMFloorPlansLink().click();
 
-		utl.scrollToElement(lvmflpp.getLVMBuildingFloor());
+		//utl.scrollToElement(lvmflpp.getLVMBuildingFloor());
 		//Click on Building floor
 		lvmflpp.getLVMBuildingFloor().click();
 
 		//Scroll Down to Exhibitor list
-		utl.scrollToElement(lvmflpp.getLVMNextFloorBtn());
+		//utl.scrollToElement(lvmflpp.getLVMNextFloorBtn());
 
-		utl.scrollToElement(lvmflpp.getLVMNextFloorBtn());
+		//utl.scrollToElement(lvmflpp.getLVMNextFloorBtn());
 		String actualNextFloorNumber=lvmflpp.getLVMNextFloorBtn().getText();
 		System.out.println(actualNextFloorNumber);
 		lvmflpp.getLVMNextFloorBtn().click();
@@ -365,7 +366,7 @@ public class FloorPlans extends base {
 		Assert.assertTrue(exptectedFloorNumber.contains(actualNextFloorNumber));
 		Thread.sleep(1000);
 		//Previous floor Btn
-		utl.scrollToElement(lvmflpp.getLVMPreviousFloorBtn());
+		//utl.scrollToElement(lvmflpp.getLVMPreviousFloorBtn());
 		String actualPreviousFloorNumber=lvmflpp.getLVMPreviousFloorBtn().getText();
 		System.out.println(actualPreviousFloorNumber);
 		lvmflpp.getLVMPreviousFloorBtn().click();
@@ -394,12 +395,12 @@ public class FloorPlans extends base {
 		lvmflpp.getLVMFloorPlansLink().click();
 
 		//Click on Building floor
-		utl.scrollToElement(lvmflpp.getLVMBuildingFloor());
+		//utl.scrollToElement(lvmflpp.getLVMBuildingFloor());
 		lvmflpp.getLVMBuildingFloor().click();
 
 		Thread.sleep(8000);
 		//Scroll Down to Exhibitor list
-		utl.scrollToElement(lvmflpp.getLVMExhibitorName());
+		//utl.scrollToElement(lvmflpp.getLVMExhibitorName());
 		Thread.sleep(2000);
 		//Stored 1st Exhibitor Name
 		String exhibitorName=lvmflpp.getLVMExhibitorName().getText();
@@ -414,7 +415,7 @@ public class FloorPlans extends base {
 		Assert.assertTrue(lvmexhdgshw.getlvmvalidateexhdigishowpage_uat().isDisplayed());
 		Thread.sleep(5000);
 		//Assert.assertTrue(driver.getTitle().contains(""+exhibitorName+" at Atlanta Market"));
-		Assert.assertTrue(lvmexhdgshw.getlvmexhibitornameonexhdirectimg_uat().getText().contains(exhibitorName));
+		Assert.assertTrue(lvmexhdgshw.getlvmexhibitornameonexhdirectimg_PROD().getText().contains(exhibitorName));
 	}
 
 	@Test(priority = 8)
@@ -434,7 +435,7 @@ public class FloorPlans extends base {
 		lvmflpp.getLVMFloorPlansLink().click();
 
 		//Click on Building floor
-		utl.scrollToElement(lvmflpp.getLVMBuildingFloor());
+		//utl.scrollToElement(lvmflpp.getLVMBuildingFloor());
 		lvmflpp.getLVMBuildingFloor().click();
 
 		//Click on Return to Building Page link
@@ -463,20 +464,24 @@ public class FloorPlans extends base {
 		lvmflpp.getLVMFloorPlansLink().click();
 
 		//Click on building floor
-		utl.scrollToElement(lvmflpp.getLVMBuildingFloor());
+		//utl.scrollToElement(lvmflpp.getLVMBuildingFloor());
 		lvmflpp.getLVMBuildingFloor().click();
 
-		utl.scrollToElement(lvmflpp.getscrollexhibitorsection());
+		//utl.scrollToElement(lvmflpp.getscrollexhibitorsection());
 		Thread.sleep(5000);
 		Assert.assertTrue(lvmflpp.getlvmexhibitorsection().isDisplayed());
 
 		lvmflpp.getlvmexhibitorsearch().click();
+		
+		String exhibitorName=lvmflpp.getLVMExhibitorName().getText();
+		System.out.println("Exhi Name: "+exhibitorName);
+		
+		lvmflpp.getlvmexhibitorsearch().sendKeys(exhibitorName);
 
-		lvmflpp.getlvmexhibitorsearch().sendKeys(prop.getProperty("floorplanexhibitorseacrch"));
-
-		lvmflpp.getlvmserachexhibitorbtn().click();
-		Thread.sleep(8000);
-		Assert.assertTrue(lvmflpp.getverifyexhibitor().getText().contains(prop.getProperty("floorplanexhibitorseacrch")));
+		lvmflpp.getlvmserachexhibitorbtnPROD().click();
+		driver.navigate().refresh();
+		Thread.sleep(5000);
+		Assert.assertTrue(lvmflpp.getverifyexhibitor().getText().contains(exhibitorName));
 
 		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(8000);
@@ -689,7 +694,7 @@ public class FloorPlans extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 
 }

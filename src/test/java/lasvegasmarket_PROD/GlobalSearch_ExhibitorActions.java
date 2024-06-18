@@ -579,6 +579,6 @@ public class GlobalSearch_ExhibitorActions extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 }

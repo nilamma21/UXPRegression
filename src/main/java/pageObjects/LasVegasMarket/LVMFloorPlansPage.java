@@ -13,7 +13,7 @@ public class LVMFloorPlansPage {
 
 	By lvmExhibitorsAndProductTab = By.xpath("//a[contains(text(),'Exhibitors & Products')]"); // Locator for Exhibitor And Product tab 
 	By lvmFloorPlansLink = By.xpath("//a[contains(text(),'Floor Plans')]"); //Locator for floor plans Link
-	By lvmBuildingFloor = By.xpath("(//a[@href='/Market Map/building/Building B/floor/8'])[2]"); //Locator for Building floor
+	By lvmBuildingFloor = By.xpath("(//a[@href='/Market Map/building/Building B/floor/3'])[2]"); //Locator for Building floor
 	By buildingFloor_lvmUAT = By.xpath("//div[@class='imc-campus-view']/div[3]/div[10]/div[3]/a[1]"); //Locator for Building floor 9th LVM UAT
 	By lvmBuildingFloorForFilter = By.xpath("//div[@class='imc-campus-view']/div[3]/div[4]/div[3]/a"); //Locator for Building floor
 	By lvmBuildingFloorNumber = By.xpath("//div[@class='imc-campus-view']/div[3]/div[10]/div[3]/a"); //Locator for Building floor number
@@ -53,6 +53,8 @@ public class LVMFloorPlansPage {
 	By lvmexhibitorsection = By.xpath("//div[@class = 'imc-content--padded-top-bottom']/div[1]"); //locator for exhibitor section at floor plans
 	By lvmexhibitorsearch = By.xpath("//input[@placeholder = 'Filter By Name']"); //Locator for search input box
 	By lvmserachexhibitorbtn = By.xpath("(//button[@class='imc-searchform--button--search' and @type='submit'])[2]"); //Locator for Search button for search input field
+	By lvmserachexhibitorbtnPROD = By.xpath("(//div[@class='imc-searchform--button--search'])[2]"); //Locator for Search button for search input field
+	
 	By verifyexhibitor = By.xpath("//div[@class = 'imc-manufacturing-line']/div[2]/a[1]"); //Locator for verification for searched exhibitor
 	By viewdgshowroombtn = By.xpath("//a[contains(text(),'View Digital Showroom')]"); //Locator for View Digital Showroom button
 	By lvmMoreOptions = By.xpath("//div[@class='imc-content--padded-top-bottom']/div[1]/div[1]/div[3]/div[1]"); //Locator for More Options 3dots
@@ -69,7 +71,12 @@ public class LVMFloorPlansPage {
 	public LVMFloorPlansPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
-	} 
+	}
+	public WebElement getlvmserachexhibitorbtnPROD() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmserachexhibitorbtnPROD));
+		return driver.findElement(lvmserachexhibitorbtnPROD);
+	}
 	
 	public WebElement getLVMExhibitorsAndProductTab() {
 		wait = new WebDriverWait (driver,30);

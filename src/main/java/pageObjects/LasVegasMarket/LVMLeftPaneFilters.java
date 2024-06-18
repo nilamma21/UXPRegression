@@ -1,5 +1,7 @@
 package pageObjects.LasVegasMarket;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -37,12 +39,18 @@ public class LVMLeftPaneFilters {
 	By SecondExhUat = By.xpath("(//div[contains(@class,'imc-exhibitorcard-title-row')]/div/a/h2)[2]");
 	By industrialstyle = By.xpath("//label[contains(text(),'Industrial')]"); //Locator for Industrial Styles
 	By expindustrialstyleonprofile = By.xpath("//span[contains(@class,'EPUpdateExhibitorProfile_categoriesList') and text()='Industrial']"); //Locator for Industrial Style on Profile
-
+	By ListLFsubMenus = By.xpath("//input[@type='checkbox' and @aria-checked='true']/../label[@class='imc-checkbox--label imc-filteritem--label-width imc-type--title-2-ui']"); //Locator for Industrial Style on Profile
+	
 	
 	public LVMLeftPaneFilters(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
+	public List<WebElement> getListLFsubMenus() {
+		wait = new WebDriverWait (driver,40);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ListLFsubMenus));
+		return driver.findElements(ListLFsubMenus);
+	}
 	
 	public WebElement getLVMProdCatgExpandBtn(){
 		wait = new WebDriverWait (driver,30);
