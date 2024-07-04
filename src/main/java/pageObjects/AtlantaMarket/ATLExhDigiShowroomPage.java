@@ -19,7 +19,7 @@ public class ATLExhDigiShowroomPage {
 	By exhibitornameonexhdirectimg = By.xpath("//span[@class='imc-heading imc-heading--giga-desktop imc-vr--medium imc-content--inline-block']"); //Locator for Exhibitor name on Exhibitor Directory image
 	By lvmexhibitornameonexhdirectimg_uat = By.xpath("//span[@class='imc-heading imc-heading--giga-desktop ']"); //Locator for Exhibitor name on Exhibitor Directory image
 	By exhibitornameonexhdirectimg_lvmUAT = By.xpath("//span[@class='imc-heading imc-heading--giga-desktop imc-vr--medium imc-content--inline-block']"); //Locator for Exhibitor name on Exhibitor Directory image LVM UAT
-	By exhdigishowroompage = By.xpath("//div[@class='imc-exhibitors--info imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1 imc-section--divided-bottom']"); //Locator for Exhibitor Digital Showroom page
+	By exhdigishowroompage = By.xpath("//div[@class='imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1 imc-section--divided']"); //Locator for Exhibitor Digital Showroom page
 	By exhnameonexhdirectimg = By.xpath("//section[@class='imc-site-wrapper']//descendant::span[@class='imc-heading imc-heading--giga-desktop ']"); //Locator for Exhibitor name on Exhibitor Directory image
 	By productcategsectn = By.xpath("//h5[contains(text(),'Product Categories')]"); //Locator for Products Categories section title
 	By productcategitemlist = By.xpath("//div[contains(@class,'imc-gallery imc-gallery--justify-left imc-gallery')]"); //Locator for Product Categories list
@@ -39,7 +39,7 @@ public class ATLExhDigiShowroomPage {
 	By ViewAllNotes = By.xpath("//a[contains(text(), 'View all Notes')]"); //Locator for View All Notes link
 	By VerifyAddedNote = By.xpath("//ul[@class = 'imc-market-planner-list imc-addnote-modal__list']"); //Locator for Added Notes section
 	By SaveNoteOKButton = By.xpath("//div[@class = 'imc-content imc-content--right']/button[1]"); //Locator for OK button for save note
-	By Location = By.xpath("//section[@class='imc-site-wrapper']/div[2]/div[1]/div[1]/div[2]/div[1]/span[2]/a[1]"); //Locator for Location symbol at Digital Showroom page
+	By Location = By.xpath("//div[@class='imc-content--block']/descendant::span[@class='imc-content--pipe']/a"); //Locator for Location text at Digital Showroom page
 	By Location_uat = By.xpath("(//a[@class='imc-link imc-type--title-6 imc-content--inline-block imc-vr--large'])[1]"); //Locator for Location symbol at Digital Showroom page
 	By ContactExhibitor = By.xpath("//div[@class = 'contact-exhibitor-wrapper']/button[1]"); //Locator for Contact Exhibitor button
 	By ProductSection = By.xpath("//div[@class = 'imc-content--display-flex-wrap']/span[contains(text(),'Products Shown')]"); //Locator for Product section in Exhibitor Digital Showroom
@@ -63,7 +63,7 @@ public class ATLExhDigiShowroomPage {
 	//By LineSearchButton = By.xpath("//button[@class = 'imc-searchform--button--search']"); //Locator for line search button 		
 	By VerifyLineSearch = By.xpath("//div[@class = 'imc-manufacturing-line-title-wrapper']/a[1]"); //Locator for verify line search  
 	By VerifyLinePageTitle = By.xpath("//div[@class = 'imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[4]/a[1]"); //Locator for verify line page title
-	By LineSearchButton = By.xpath("(//button[@class = 'imc-searchform--button--search'])[2]"); //Locator for line search button 		
+	By LineSearchButton = By.xpath("(//div[@class = 'imc-searchform--button--search'])[2]"); //Locator for line search button 		
 	By SeeInOtherMarket = By.xpath("//button[@class = 'imc-button imc-button--full-bleed-mobile imc-button--primary-inverted imc-margin--all--none']"); //Locator for See In Other Markets button
 	By VerifyOtherMarketsPage = By.xpath("//div[@class = 'ReactModal__Content ReactModal__Content--after-open imc-modal--box imc-modal--box-wide']"); //Locator for See In Other Markets page title
 	By ClickShowroom = By.xpath("//div[@class = 'imc-other-markets-goto']/a[1]"); //Locator for Go to Showroom link
@@ -74,7 +74,7 @@ public class ATLExhDigiShowroomPage {
 
 	By CatalogSection = By.xpath("//div[@class = 'imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div/span[text()='Catalogs']"); //Locator for Catalog section  			
 	By CatalogSeeAllBtn = By.xpath("(//span[contains(text(),'See') and contains(text(),'Catalog')])[1]"); //Locator for Catalog see All Btn
-	By HeroComponentVisit = By.xpath("//span[contains(text(),'Visit')]/.."); //Locator for Hero Component Visit Btn
+	By HeroComponentVisit = By.xpath("//span[contains(text(),'Visit ')]/.."); //Locator for Hero Component Visit Btn
 	By showroomHeader3D = By.xpath("//div[@class='imc-content--display-flex imc-content--display-flex--center']/span[1]"); //Locator for 3D showroom Header
 	By View3DshowroomBtn = By.xpath("//span[contains(text(),'View 3D Showroom')]"); //Locator for 3D showroom Header
 	By View3DshowroomClose = By.xpath("//button[@class='imc-modal--close imc-button--modal-close imc-button--round']"); //Locator for 3D showroom Header
@@ -95,7 +95,7 @@ public class ATLExhDigiShowroomPage {
 	By ShowSpecialName = By.xpath("//div[@class = 'imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div[1]/span[text()='Show Specials']/../../div[2]/span[1]"); ////Locator for See All Show special Count
 	By heroComponentOrderOnJunperBtn = By.xpath("//div[@class='imc-section imc-padding--left--xlarge imc-padding--right--xlarge imc-section--width-100-percent']/div//span[@class='imc-breakpoint-display--hide-mobile' and text()='Order on JuniperMarket']/.."); ////Locator for Order on Juniper CTA
 	By closeBtnContactExh = By.xpath("//button[@class='imc-modal--close imc-button--modal-close imc-button--round']"); ////Locator for Closse Btn
-	By linesshowntextonsearchgrid = By.xpath("(//div[@class='imc-exhibitorcard-title-row'])[1]/div[1]/div[1]/p"); //Locator for Line shown text on Search grid
+	By linesshowntextonsearchgrid = By.xpath("(//div[@class='imc-exhibitorcard-title-row ']/descendant::div[@class='imc-exhibitorcard--text-container-row']/p)[1]"); //Locator for Line shown text on Search grid
 	By linesshownseealllink = By.xpath("(//div[@class='imc-exhibitorcard-title-row'])[1]/div[1]/div[1]/a"); //Locator for Lines shown-see all link
 	By exhibitornameonexhdirectimglvm = By.xpath("//span[@class='imc-heading imc-heading--giga-desktop ']"); //Locator for Exhibitor name on Exhibitor Directory image
 	By EventNamePROD = By.xpath("(//div[@class='event-card--info'])[1]/div[1]/div[1]/a[1]/p"); //Locator for Events Section
@@ -104,6 +104,7 @@ public class ATLExhDigiShowroomPage {
 	By ContactPopUp = By.xpath("//h2[@class='imc-heading--box-modal']");
 	By ContactPopUpClose = By.xpath("//button[@class='imc-modal--close imc-button--modal-close imc-button--round']");
 	By exhdigishowroompagenew = By.xpath("//div[@class='imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1 imc-section--divided-bottom imc-section--padded-bottom-none']");
+	By ShownByTextValidate = By.xpath("//div[@class='imc-content imc-type--title-6 imc-type--color-neutral-heavy-medium imc-vr--small imc-content--inline-block imc-margin--left--small']"); //Shown By Text to validate the line digital showroom page with no image
 	
 	public ATLExhDigiShowroomPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -531,6 +532,11 @@ public class ATLExhDigiShowroomPage {
 		 wait = new WebDriverWait (driver,30);
 		 wait.until(ExpectedConditions.visibilityOfElementLocated(exhdigishowroompagenew));
 		 return driver.findElement(exhdigishowroompagenew);
+	 }
+	 public WebElement getShownByTextValidate() {
+		 wait = new WebDriverWait (driver,30);
+		 wait.until(ExpectedConditions.visibilityOfElementLocated(ShownByTextValidate));
+		 return driver.findElement(ShownByTextValidate);
 	 }
 }
 

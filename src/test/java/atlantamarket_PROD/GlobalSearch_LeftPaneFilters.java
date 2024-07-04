@@ -104,24 +104,25 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl.loginCheckATL();
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
-
+		Thread.sleep(5000);
 		//Click on Product Categories expand btn
 		atlleftpane.getATLProdCatgExpandBtn().click();
-
-		utl.scrollToElement(atlleftpane.getATLApparelVintProdCatg());
-
+		Thread.sleep(100);
+		utl.scrollElementIntoMiddle(atlleftpane.getATLApparelVintProdCatg());
+		Thread.sleep(200);
 		//Select 'Apparel, Vintage' prod category
 		String expectedprodcatg = atlleftpane.getATLApparelVintProdCatg().getText();
 		atlleftpane.getATLApparelVintProdCatg().click();
-		Thread.sleep(8000);
+		Thread.sleep(5000);
 
 		//Verify the selected Product Category on Exhibitor Digital Showroom page
 		//Select 1st Exhibitor from Search results grid
-		utl.scrollToElement(atlleftpane.getATLexhibitor());
+		utl.scrollElementIntoMiddle(atlleftpane.getATLexhibitor());
+		Thread.sleep(200);
 		atlleftpane.getATLexhibitor().click();
-
 		//Scroll till Product Categories section
-		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
+		utl.scrollElementIntoMiddle(atlexhdgshw.getATLProductCategSection());
+		Thread.sleep(200);
 		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
 
 		for (int i = 0; i < prodcatgitemlist.size(); i++) {
@@ -152,28 +153,29 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
-
+		Thread.sleep(5000);
 		//Click on Product Categories expand btn
 		atlleftpane.getATLProdCatgExpandBtn().click();
 
-		utl.scrollToElement(atlleftpane.getATLAntiqueVintProdCatg());
-
+		utl.scrollElementIntoMiddle(atlleftpane.getATLAntiqueVintProdCatg());
+		Thread.sleep(200);
 		//Select 'Antique/Vintage' prod category
 		String expectedprodcatg = atlleftpane.getATLAntiqueVintProdCatg().getText();
 		atlleftpane.getATLAntiqueVintProdCatg().click();
 		Thread.sleep(10000);
 		//Verify the selected Product Category on Product details page
-		utl.scrollToElement(atlexhact.getSecondExhProduct());
-				
+		utl.scrollElementIntoMiddle(atlexhact.getSecondExhProduct());
+		Thread.sleep(200);
 		Actions actions = new Actions(driver);
 		actions.moveToElement(atlexhact.getSecondExhProduct()).perform();
 		// To mouseover on See Details btn
 		actions.moveToElement(atlexhact.getSecondExhProductSeeDetailsBtn()).perform();
 		// Click on See Details button
-		actions.click().perform();		
+		actions.click().perform();	
 
 		//Scroll till Product Categories section
-		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
+		utl.scrollElementIntoMiddle(atlexhdgshw.getATLProductCategSection());
+		Thread.sleep(200);
 		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
 
 		for (int j = 0; j < prodcatgitemlist.size(); j++) {
@@ -200,15 +202,15 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		Thread.sleep(2000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
-
+		Thread.sleep(5000);
 		//Click on Product Categories expand btn
 		atlleftpane.getATLProdCatgExpandBtn().click();
 
-		utl.scrollToElement(atlleftpane.getATLAntiqueVintProdCatg());
-
+		utl.scrollElementIntoMiddle(atlleftpane.getATLAntiqueVintProdCatg());
+		Thread.sleep(200);
 		//Select 'Antique/Vintage' prod category
 		String expectedprodcatg1 = atlleftpane.getATLAntiqueVintProdCatg().getText();
 		atlleftpane.getATLAntiqueVintProdCatg().click();
@@ -220,7 +222,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		Thread.sleep(8000);
 /*
 		//Verify the selected Product Category on Product details page
-		utl.scrollToElement(atlexhact.getProductForMultipleCatg());
+		utl.scrollElementIntoMiddle(atlexhact.getProductForMultipleCatg());
 		// Hovering on 1st Product
 		Actions actions = new Actions(driver);
 		actions.moveToElement(atlexhact.getProductForMultipleCatg()).perform();
@@ -230,7 +232,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		actions.click().perform();
 
 		//Scroll till Product Categories section
-		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
+		utl.scrollElementIntoMiddle(atlexhdgshw.getATLProductCategSection());
 		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
 
 		for (int j = 0; j < prodcatgitemlist.size(); j++) {
@@ -246,11 +248,13 @@ public class GlobalSearch_LeftPaneFilters extends base {
 */
 		//Verify the selected Product Categories on Exhibitor Digital Showroom page
 		//Select 1st Exhibitor from Search results grid
-		utl.scrollToElement(atlleftpane.getATLexhibitor());
+		utl.scrollElementIntoMiddle(atlleftpane.getATLexhibitor());
+		Thread.sleep(200);
 		atlleftpane.getATLexhibitor().click();
 
 		//Scroll till Product Categories section
-		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
+		utl.scrollElementIntoMiddle(atlexhdgshw.getATLProductCategSection());
+		Thread.sleep(200);
 		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
 
 		for (int i = 0; i < prodcatgitemlist.size(); i++) {
@@ -282,7 +286,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
-
+		Thread.sleep(5000);
 		//Click on Product Categories expand btn
 		atlleftpane.getATLProdCatgExpandBtn().click();		
 
@@ -292,37 +296,41 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		String display = js.executeScript("return window.getComputedStyle(arguments[0], ':after').getPropertyValue('display');",pseudoEle).toString();
 		System.out.println(display);*/
 
-		utl.scrollToElement(atlleftpane.getATLAntiqueVintProdCatg());
-
+		utl.scrollElementIntoMiddle(atlleftpane.getATLAntiqueVintProdCatg());
+		Thread.sleep(200);
 		//Select 'Antique/Vintage' prod category
 		String expectedprodcatg = atlleftpane.getATLAntiqueVintProdCatg().getText();
 		atlleftpane.getATLAntiqueVintProdCatg().click();
 		Thread.sleep(8000);
 
 		//Click on Product Categories expand btn
-		utl.scrollToElement(atlleftpane.getATLProdCatgExpandBtn());
+		utl.scrollElementIntoMiddle(atlleftpane.getATLProdCatgExpandBtn());
+		Thread.sleep(200);
 		atlleftpane.getATLProdCatgExpandBtn().click();
 
 		//Click on Styles expand btn
 		atlleftpane.getATLStylesExpandBtn().click();
 
 		//Select Style name 'Industrial'
-		utl.scrollToElement(atlleftpane.getATLIndustrialStyle());
+		utl.scrollElementIntoMiddle(atlleftpane.getATLIndustrialStyle());
+		Thread.sleep(200);
 		String expectedstyle = atlleftpane.getATLIndustrialStyle().getText();
 		//System.out.println("Expected Style name:"+expectedstyle);
 		atlleftpane.getATLIndustrialStyle().click();
 		Thread.sleep(10000);
 
 		//Click on IMC Test Exhibitor name in list
-		//utl.scrollToElement(atlexhact.getIMCExhibitorName());
+		//utl.scrollElementIntoMiddle(atlexhact.getIMCExhibitorName());
 		//atlexhact.getIMCExhibitorName().click();
 		
 		//Click on first exhibitor name
-		utl.scrollToElement(atlleftpane.getATLexhibitor());
+		utl.scrollElementIntoMiddle(atlleftpane.getATLexhibitor());
+		Thread.sleep(200);
         atlleftpane.getATLexhibitor().click();
 
 		//Scroll till Product Categories section
-		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
+		utl.scrollElementIntoMiddle(atlexhdgshw.getATLProductCategSection());
+		Thread.sleep(200);
 		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
 
 		for (int i = 0; i < prodcatgitemlist.size(); i++) {
@@ -362,8 +370,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		Thread.sleep(6000);
 
 		//Scroll till Product Categories section
-		utl.scrollToElement(atlleftpane.getEXPProductCategSection());
-
+		utl.scrollElementIntoMiddle(atlleftpane.getEXPProductCategSection());
+		Thread.sleep(200);
 		//Verify that expected Style should be displayed on profile
 		Assert.assertTrue(atlleftpane.getEXPIndustrialStyleOnProfile().isDisplayed());
 		driver.close();
@@ -385,15 +393,15 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		Thread.sleep(2000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
-
+		Thread.sleep(5000);
 		//Click on Product Categories expand btn
 		atlleftpane.getATLProdCatgExpandBtn().click();
 
-		utl.scrollToElement(atlleftpane.getATLAccentFurnitureProdCatg());
-
+		utl.scrollElementIntoMiddle(atlleftpane.getATLAccentFurnitureProdCatg());
+		Thread.sleep(200);
 		//Select Accent Furniture prod category
 		String expectedprodcatg = atlleftpane.getATLAccentFurnitureProdCatg().getText();
 		atlleftpane.getATLAccentFurnitureProdCatg().click();
@@ -404,7 +412,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		atlleftpane.getATLexhibitor().click();
 
 		//Scroll till Product Categories section
-		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
+		utl.scrollElementIntoMiddle(atlexhdgshw.getATLProductCategSection());
+		Thread.sleep(200);
 		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
 
 		for (int i = 0; i < prodcatgitemlist.size(); i++) {
@@ -433,15 +442,15 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(2000);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys("Anne");
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("leftpanefilterinput"));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(6000);
 
 		//Click on Product Categories expand btn
 		atlleftpane.getATLProdCatgExpandBtn().click();
 
-		utl.scrollToElement(atlleftpane.getATLHolidayProdCatg());
-
+		utl.scrollElementIntoMiddle(atlleftpane.getATLHolidayProdCatg());
+		Thread.sleep(200);
 		//Select Holiday/Seasonal prod category
 		String expectedprodcatg = atlleftpane.getATLHolidayProdCatg().getText();
 		atlleftpane.getATLHolidayProdCatg().click();
@@ -449,11 +458,13 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		//Verify the selected Product Categories on Exhibitor Digital Showroom page
 		//Select 1st Exhibitor from Search results grid
-		utl.scrollToElement(atlleftpane.getATLexhibitor());
+		utl.scrollElementIntoMiddle(atlleftpane.getATLexhibitor());
+		Thread.sleep(200);
 		atlleftpane.getATLexhibitor().click();
 
 		//Scroll till Product Categories section
-		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
+		utl.scrollElementIntoMiddle(atlexhdgshw.getATLProductCategSection());
+		Thread.sleep(200);
 		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
 
 		for (int i = 0; i < prodcatgitemlist.size(); i++) {
@@ -467,17 +478,20 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		Thread.sleep(5000);
 
 		//Verify the selected Product Category on Product details page
-		utl.scrollToElement(atlexhact.getProductForMultipleCatg());
+		utl.scrollElementIntoMiddle(atlexhact.getProductForMultipleCatg());
+		Thread.sleep(1000);
 		// Hovering on 1st Product
 		Actions actions = new Actions(driver);
 		actions.moveToElement(atlexhact.getProductForMultipleCatg()).perform();
+		Thread.sleep(200);
 		// To mouseover on See Details btn
-		actions.moveToElement(atlexhact.getThirdExhProdSeeDetailsBtn()).perform();
+		actions.moveToElement(atlexhact.getProdSeeDetailsBtn()).perform();
 		// Click on See Details button
 		actions.click().perform();
 		Thread.sleep(2000);
 		//Scroll till Product Categories section
-		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
+		utl.scrollElementIntoMiddle(atlexhdgshw.getATLProductCategSection());
+		Thread.sleep(200);
 		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
 
 		for (int j = 0; j < prodcatgitemlist.size(); j++) {
@@ -503,23 +517,24 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("leftpanefilterinput6")));
 		atlgs.getATLSearchButton().click();
-
+		Thread.sleep(5000);
 		//Click on Product Categories expand btn
 		atlleftpane.getATLProdCatgExpandBtn().click();
 
-		utl.scrollToElement(atlleftpane.getATLDecorativeAccProdCatg());
-
+		utl.scrollElementIntoMiddle(atlleftpane.getATLDecorativeAccProdCatg());
+		Thread.sleep(200);
 		//Select Decorative Accessories prod category
 		String expectedprodcatg = atlleftpane.getATLDecorativeAccProdCatg().getText();
 		atlleftpane.getATLDecorativeAccProdCatg().click();
 		Thread.sleep(8000);
 
 		//Verify the selected Product Categories on product details page
-		utl.scrollToElement(atlexhact.getExhibitorProduct());
+		utl.scrollElementIntoMiddle(atlexhact.getExhibitorProduct());
+		Thread.sleep(200);
 		// Hovering on 1st Product
 		Actions actions = new Actions(driver);
 		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
@@ -529,7 +544,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		actions.click().perform();
 		Thread.sleep(2000);
 		//Scroll till Product Categories section
-		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
+		utl.scrollElementIntoMiddle(atlexhdgshw.getATLProductCategSection());
+		Thread.sleep(200);
 		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
 
 		for (int j = 0; j < prodcatgitemlist.size(); j++) {
@@ -558,21 +574,22 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(2000);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys("Anne");
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("leftpanefilterinput2"));
 		atlgs.getATLSearchButton().click();
-
+		Thread.sleep(5000);
 		//Click on Product Categories expand btn
 		atlleftpane.getATLProdCatgExpandBtn().click();
 
-		utl.scrollToElement(atlleftpane.getATLGeneralGiftProdCatg());
-
+		utl.scrollElementIntoMiddle(atlleftpane.getATLGeneralGiftProdCatg());
+		Thread.sleep(200);
 		//Select General Gift prod category
 		String expectedprodcatg = atlleftpane.getATLGeneralGiftProdCatg().getText();
 		atlleftpane.getATLGeneralGiftProdCatg().click();
 		Thread.sleep(10000);
 
 		//Verify the selected Product Categories on product details page
-		utl.scrollToElement(atlexhact.getExhibitorProduct());
+		utl.scrollElementIntoMiddle(atlexhact.getExhibitorProduct());
+		Thread.sleep(200);
 		// Hovering on 1st Product
 		Actions actions = new Actions(driver);
 		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
@@ -582,7 +599,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		actions.click().perform();
 
 		//Scroll till Product Categories section
-		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
+		utl.scrollElementIntoMiddle(atlexhdgshw.getATLProductCategSection());
+		Thread.sleep(200);
 		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
 
 		for (int j = 0; j < prodcatgitemlist.size(); j++) {
@@ -611,15 +629,15 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(2000);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("leftpanefilterinput5")));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(6000);
 
 		//Click on Product Categories expand btn
 		atlleftpane.getATLProdCatgExpandBtn().click();
 
-		utl.scrollToElement(atlleftpane.getATLFashionAccProdCatg());
-
+		utl.scrollElementIntoMiddle(atlleftpane.getATLFashionAccProdCatg());
+		Thread.sleep(200);
 		//Select Fashion Accessories/Jewelry prod category
 		String expectedprodcatg = atlleftpane.getATLFashionAccProdCatg().getText();
 		atlleftpane.getATLFashionAccProdCatg().click();
@@ -627,11 +645,13 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		//Verify the selected Product Categories on Exhibitor Digital Showroom page
 		//Select 1st Exhibitor from Search results grid
-		utl.scrollToElement(atlleftpane.getATLexhibitor());
+		utl.scrollElementIntoMiddle(atlleftpane.getATLexhibitor());
+		Thread.sleep(200);
 		atlleftpane.getATLexhibitor().click();
 
 		//Scroll till Product Categories section
-		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
+		utl.scrollElementIntoMiddle(atlexhdgshw.getATLProductCategSection());
+		Thread.sleep(200);
 		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
 
 		for (int i = 0; i < prodcatgitemlist.size(); i++) {
@@ -645,7 +665,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		Thread.sleep(8000);
 
 /*		//Verify the selected Product Category on Product details page
-		utl.scrollToElement(atlexhact.getProductForMultipleCatg());
+		utl.scrollElementIntoMiddle(atlexhact.getProductForMultipleCatg());
 		// Hovering on 1st Product
 		Actions actions = new Actions(driver);
 		actions.moveToElement(atlexhact.getProductForMultipleCatg()).perform();
@@ -655,7 +675,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		actions.click().perform();
 
 		//Scroll till Product Categories section
-		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
+		utl.scrollElementIntoMiddle(atlexhdgshw.getATLProductCategSection());
 		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
 
 		for (int j = 0; j < prodcatgitemlist.size(); j++) {
@@ -682,24 +702,26 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("leftpanefilterinput7")));
 		atlgs.getATLSearchButton().click();
-
+		Thread.sleep(5000);
 		//Click on Product Categories expand btn
-		utl.scrollToElement(atlleftpane.getATLProdCatgExpandBtn());
+		utl.scrollElementIntoMiddle(atlleftpane.getATLProdCatgExpandBtn());
+		Thread.sleep(200);
 		atlleftpane.getATLProdCatgExpandBtn().click();
-
-		utl.scrollToElement(atlleftpane.getATLFloralBotanicalsProdCatg());
-
+		Thread.sleep(3000);
+		utl.scrollElementIntoMiddle(atlleftpane.getATLFloralBotanicalsProdCatg());
+		Thread.sleep(200);
 		//Select Floral / Botanicals prod category
 		String expectedprodcatg = atlleftpane.getATLFloralBotanicalsProdCatg().getText();
 		atlleftpane.getATLFloralBotanicalsProdCatg().click();
 		Thread.sleep(8000);
 
 		//Verify the selected Product Categories on product details page
-		utl.scrollToElement(atlexhact.getExhibitorProduct());
+		utl.scrollElementIntoMiddle(atlexhact.getExhibitorProduct());
+		Thread.sleep(200);
 		// Hovering on 1st Product
 		Actions actions = new Actions(driver);
 		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
@@ -707,9 +729,9 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		actions.moveToElement(atlexhact.getProdSeeDetailsBtn()).perform();
 		// Click on See Details button
 		actions.click().perform();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		//Scroll till Product Categories section
-		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
+		utl.scrollElementIntoMiddle(atlexhdgshw.getATLProductCategSection());
 		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
 
 		for (int j = 0; j < prodcatgitemlist.size(); j++) {
@@ -739,12 +761,12 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		Thread.sleep(1000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor8")));
 		atlgs.getATLSearchButton().click();
-
+		Thread.sleep(5000);
 		//Click on Product Categories expand btn
-		utl.scrollToElement(atlleftpane.getATLProdCatgExpandBtn());
+		utl.scrollElementIntoMiddle(atlleftpane.getATLProdCatgExpandBtn());
 		atlleftpane.getATLProdCatgExpandBtn().click();
 
-		utl.scrollToElement(atlleftpane.getATLHomeTextilesProdCatg());
+		utl.scrollElementIntoMiddle(atlleftpane.getATLHomeTextilesProdCatg());
 
 		//Select Home Textiles prod category
 		String expectedprodcatg = atlleftpane.getATLHomeTextilesProdCatg().getText();
@@ -753,11 +775,12 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		System.out.println(expectedprodcatg);
 		//Verify the selected Product Categories on product details page
 		//Select 1st Exhibitor from Search results grid
-		utl.scrollToElement(atlleftpane.getATLexhibitor());
+		utl.scrollElementIntoMiddle(atlleftpane.getATLexhibitor());
+		Thread.sleep(200);
 		atlleftpane.getATLexhibitor().click();
 		
 		//Scroll till Product Categories section
-		utl.scrollToElement(atlexhdgshw.getATLProductCategSection());
+		utl.scrollElementIntoMiddle(atlexhdgshw.getATLProductCategSection());
 		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
 
 		for (int i = 0; i < prodcatgitemlist.size(); i++) {
@@ -774,6 +797,6 @@ public class GlobalSearch_LeftPaneFilters extends base {
 	@AfterClass(alwaysRun=true)
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 }

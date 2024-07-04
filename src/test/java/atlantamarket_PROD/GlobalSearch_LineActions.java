@@ -53,12 +53,12 @@ public class GlobalSearch_LineActions extends base {
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		lap.getIUnderstandBtn().click();
-		Thread.sleep(7000);
+		Thread.sleep(5000);
 		//lap.getCloseMarktAdBtn().click();
 		
 		//Login to Market Planner
 		//utl.verifyMPLoginFunctionality();		
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		//utl.loginCheckATL();
 		//Thread.sleep(8000);
 //		lap.getCloseMarktAdBtn().click();
@@ -76,9 +76,9 @@ public class GlobalSearch_LineActions extends base {
 		utl = new Utility(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 
-		driver.get(prop.getProperty("atlmrkturl_prod"));
+		//driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(6000);
+		//Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 		
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("line2")));
@@ -89,7 +89,7 @@ public class GlobalSearch_LineActions extends base {
 		String exhname = atlexhact.getExhibitorName().getText();
 		System.out.println("Line Name: " + exhname);
 		// Click on ExhibitorName
-		atlexhact.getExhibitorNameLink().click();
+		atlexhact.getExhibitorName().click();
 		// Verify DG showroom page
 		Assert.assertTrue(atlexhdgshw.getATLExhDigiShowPage().isDisplayed());
 	}
@@ -209,7 +209,7 @@ public class GlobalSearch_LineActions extends base {
 		System.out.println("Total Products Count on Search Results grid is: " + matchingprodcountonsearchgrid);
 
 		// Click on Total Product See All link
-		utl.scrollToElement(atlexhact.getTotalProdSeeAllLink());
+		utl.scrollElementIntoMiddle(atlexhact.getTotalProdSeeAllLink());
 		atlexhact.getTotalProdSeeAllLink().click();
 
 		Thread.sleep(15000);
@@ -502,6 +502,6 @@ public class GlobalSearch_LineActions extends base {
 	@AfterClass(alwaysRun=true)
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 }

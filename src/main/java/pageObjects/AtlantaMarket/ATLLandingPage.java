@@ -39,7 +39,7 @@ public class ATLLandingPage {
 	
 	public WebElement getIUnderstandBtn() throws InterruptedException {
 		Thread.sleep(8000);
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.elementToBeClickable(iunderstandbtn));
 		return driver.findElement(iunderstandbtn);		
 	}

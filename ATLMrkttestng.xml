@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="LVM_RegressionTestSuite">
+	<listeners>
+		<listener class-name="atlantamarket_PROD.TestListeners" />
+	</listeners>
 
-<suite name="ATLMrkt_RegressionTestSuite">
-	<listners>
-		<listner class-name="atlantamarket_PROD.TestListeners" />
-	</listners>
-	<test thread-count="1" name="RegressionTest">
-	<classes>
-		<class name="atlantamarket_PROD.GlobalSearch_SearchFor" />
-			<methods>
-				<include name="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest()"/>
-			</methods>
-	</classes>
+	<test name="RegressionTest">
+		<classes>
+			 <class name="atlantamarket_PROD.FloorPlans" />
+<!-- 				 <methods>
+					<include name="TS003_VerifyZoomInOutLevelOnFloorPlansPageTest"/>
+				</methods> -->
+		</classes>
 	</test>
 </suite>
-

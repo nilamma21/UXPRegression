@@ -83,6 +83,19 @@ public class Utility extends base {
 		js.executeScript("window.scrollTo(0, -document.body.scrollHeight)");
 		Thread.sleep(4000);
 	}
+	
+	public void scrollIntoView(WebElement element)
+	{
+		((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
+	}
+	
+	public void scrollElementIntoMiddle (WebElement element) {
+		String scrollElementIntoMiddle = "var viewPortHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);"
+                + "var elementTop = arguments[0].getBoundingClientRect().top;"
+                + "window.scrollBy(0, elementTop-(viewPortHeight/2));";
+
+		((JavascriptExecutor) driver).executeScript(scrollElementIntoMiddle, element);
+	}
 
 
 	public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
