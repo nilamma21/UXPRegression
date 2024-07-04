@@ -100,7 +100,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 	        atlexhact.getProductCateg1().click();
 	        //atlexhact.getProductCateg2().click();
 
-	        utl.scrollToElement(atlexhact.getSendMessageBtn());
+	        utl.scrollElementIntoMiddle(atlexhact.getSendMessageBtn());
 
 	        // Click on Send Message button
 	        // Will send msg once test exhibitor will get
@@ -196,7 +196,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		System.out.println("Total Products Count on Search Results grid is: " + totalprodcountonsearchgrid);
 		Thread.sleep(2000);
 		// Click on Total Products-See All link for 1st Exhibitor
-		utl.scrollToElement(atlexhact.getTotalProdSeeAllLink());
+		utl.scrollElementIntoMiddle(atlexhact.getTotalProdSeeAllLink());
 		atlexhact.getTotalProdSeeAllLink().click();
 		Thread.sleep(6000);
 
@@ -275,7 +275,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
+		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalSearchEventsInput")));
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(15000);
@@ -286,7 +286,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 
 		//Click on Exhibitor name
 		atlexhact.getExhibitorName().click();
-
+		Thread.sleep(1000);
 		// Verify that Selected Exhibitor Digital Showroom page should be opened
 		Assert.assertTrue(atlexhdgshw.getATLExhDigiShowPage().isDisplayed());
 		Thread.sleep(10000);

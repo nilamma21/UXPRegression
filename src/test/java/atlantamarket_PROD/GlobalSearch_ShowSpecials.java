@@ -90,31 +90,41 @@ public class GlobalSearch_ShowSpecials extends base  {
 		String showSpecialExhName=atlgs.getatlShowSpecialsExhNamePROD().getText();
 		System.out.println(showSpecialExhName);*/
 		
-		String inbox = atlgs.getatlShowSpecialsExhNamePROD().getText();
-		String[] data = inbox.split("Shown By ");
-		String showSpecialExhName = data[1];
-		System.out.println(showSpecialExhName);
+		//Check if show special is for Exhibitor or line
+		String showSpecialName = atlgs.getatlShowSpecialsExhNamePROD().getText();
 		
-		atlgs.getViewBrandDetailsLink().click();
-		Thread.sleep(5000);
-		//Verify Show Special Exh Page 
-		try { 
-			Assert.assertTrue(atlgs.getatlShowSpecialsTitle().getText().contains(showSpecialExhName));		
-		}
-		catch(Exception e) {
-			System.out.println("Show Specials are available for Lines");
-			String inbox2 = atlgs.getatlShowSpecialsExhNamePROD().getText();
-			String[] data2 = inbox2.split("Shown By ");
-			String showSpecialLineName = data2[0];
-			System.out.println(showSpecialLineName);
+		if (showSpecialName.contains("Shown By ")) {
+			System.out.println("Show Specials are available for Exhibitor");
+			String getExhibitorName = atlgs.getatlShowSpecialsExhNamePROD().getText();
+			String[] data = getExhibitorName.split("Shown By ");
+			String showSpecialExhName = data[1];
+			System.out.println("Exhibitor Name on Show Special Name: "+showSpecialExhName);
 			
 			atlgs.getViewBrandDetailsLink().click();
-			System.out.println("Exhibitor name: "+atlgs.getatlShowSpecialsTitle().getText());
-			System.out.println("Line name: "+atlgs.getatlLineBreadcrumbForShowSpecials().getText());
 			Thread.sleep(5000);
+			String exhibitorName = atlgs.getatlShowSpecialsTitle().getText();
+			System.out.println("Exhibitor Name on Digital Showroom: "+exhibitorName);
 			//Verify Show Special Exh Page 
-			Assert.assertTrue(atlgs.getatlLineBreadcrumbForShowSpecials().getText().contains(showSpecialLineName));
+			Assert.assertTrue(exhibitorName.contains(showSpecialExhName));
+			
+		} else {
+			System.out.println("Show Specials are available for Lines");
+			String getLineName = atlgs.getatlShowSpecialsLineNamePROD().getText();
+			//String[] data2 = inbox2.split("Shown By ");
+			//String showSpecialLineName = data2[0];
+			System.out.println("Line Name on Show Special Name: "+getLineName);
+			
+			atlgs.getViewBrandDetailsLink().click();
+			Thread.sleep(2000);
+			//System.out.println("Exhibitor name: "+atlgs.getatlShowSpecialsTitle().getText());
+			String lineName = atlgs.getatlLineBreadcrumbForShowSpecials().getText();
+			System.out.println("Line Name on Digital Showroom: "+lineName);
+
+			//Verify Show Special Exh Page 
+			Assert.assertTrue(lineName.contains(getLineName));
 		}
+		
+		
 	}
 	@Test(priority = 2)
 	public void TS002_VerifyShowroomLinkForShowSpecialsTest()
@@ -153,6 +163,6 @@ public class GlobalSearch_ShowSpecials extends base  {
 
 	@AfterClass
 	public void tearDown() {
-		 driver.quit();
+		 //driver.quit();
 	}
 }

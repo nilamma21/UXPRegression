@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test name="Test(failed)">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [LVM_RegressionTestSuite]">
+  <listeners>
+    <listener class-name="atlantamarket_PROD.TestListeners"/>
+  </listeners>
+  <test thread-count="1" name="RegressionTest(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="lasvegasmarket_PROD.EvenntsAndWebinar">
         <methods>
           <include name="TS007_VerifyExhibitorEventsCalendarViewTest"/>
@@ -85,12 +89,19 @@
         </methods>
       </class> <!-- lasvegasmarket_PROD.GlobalSearch_MatchingResults -->
       <class name="lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters">
+=======
+      <class name="atlantamarket_PROD.FloorPlans">
+>>>>>>> 55b13c5cadf616bab6181e479a176d9c219e9d9e
         <methods>
-          <include name="TS008_VerifySelectionOfGeneralGiftProdCatgFromLeftPaneFiltersTest"/>
-          <include name="tearDown"/>
           <include name="initialize"/>
+          <include name="TS009_VerifySearchFunctionalityForExhListOnFloorPlansPageTest"/>
+          <include name="tearDown"/>
+          <include name="TS005_VerifyFunctionalityOfFiltersOnFloorPlansPageTest"/>
+          <include name="TS002_VerifyNoExhibitorsOnThisFloorMessageTest"/>
+          <include name="TS004_VerifyIconsOnFloorPlansPageTest"/>
+          <include name="TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest"/>
         </methods>
-      </class> <!-- lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters -->
+      </class> <!-- atlantamarket_PROD.FloorPlans -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- RegressionTest(failed) -->
+</suite> <!-- Failed suite [LVM_RegressionTestSuite] -->

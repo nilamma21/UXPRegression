@@ -2,11 +2,21 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [LVM_RegressionTestSuite]">
   <listeners>
-    <listener class-name="lasvegasmarket_PROD.TestListeners"/>
+    <listener class-name="atlantamarket_PROD.TestListeners"/>
   </listeners>
-  <test name="RegressionTest">
+  <test thread-count="1" name="RegressionTest(failed)">
     <classes>
-      <class name="lasvegasmarket_PROD.EvenntsAndWebinar"/>
+      <class name="atlantamarket_PROD.FloorPlans">
+        <methods>
+          <include name="initialize"/>
+          <include name="TS009_VerifySearchFunctionalityForExhListOnFloorPlansPageTest"/>
+          <include name="tearDown"/>
+          <include name="TS005_VerifyFunctionalityOfFiltersOnFloorPlansPageTest"/>
+          <include name="TS002_VerifyNoExhibitorsOnThisFloorMessageTest"/>
+          <include name="TS004_VerifyIconsOnFloorPlansPageTest"/>
+          <include name="TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest"/>
+        </methods>
+      </class> <!-- atlantamarket_PROD.FloorPlans -->
     </classes>
-  </test> <!-- RegressionTest -->
+  </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
