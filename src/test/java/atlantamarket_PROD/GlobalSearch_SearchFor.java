@@ -125,19 +125,21 @@ public class GlobalSearch_SearchFor extends base {
 		atlgs.getATLInfosearchbtn().click();
 		Thread.sleep(2000);
 		String searchResults=atlgs.getATLSearchResult().getText();
+		System.out.println(searchResults);
 		Thread.sleep(2000);
-		String searchName=searchResults.split(" ")[5].trim();
+		String searchName=searchResults.split(" ")[4].trim();
 		Thread.sleep(5000);
 		System.out.println(searchName);
 		Assert.assertTrue(FirstInfoName.contains(searchName));
 
 		String seeMoreDetailsURL=atlgs.getatlInfoSearchMoreInfoBtn().getAttribute("href");
 		// Click on See More details Btn from result
-		utl.scrollToElement(atlgs.getatlInfoSearchMoreInfoBtn());
+		utl.scrollElementIntoMiddle(atlgs.getatlInfoSearchMoreInfoBtn());
 		atlgs.getatlInfoSearchMoreInfoBtn().click();
 		Thread.sleep(5000);
 		System.out.println("First Info Name: "+FirstInfoName);
 		// Verify Juniper Market Page
+		System.out.println("Page title: "+driver.getTitle());
 		Assert.assertTrue(driver.getTitle().equalsIgnoreCase(FirstInfoName));
 		Thread.sleep(2000);
 	}
@@ -283,24 +285,28 @@ public class GlobalSearch_SearchFor extends base {
 		Thread.sleep(5000);*/
 		
 		//Click on DG showroom filter
-		utl.scrollToElement(atlexhact.getleftPaneFilterDGShowroom());
+		utl.scrollElementIntoMiddle(atlexhact.getleftPaneFilterDGShowroom());
+		Thread.sleep(500);
 		atlexhact.getleftPaneFilterDGShowroom().click();
 		Thread.sleep(3000);
 		//Click on Catalog sub filter
-		utl.scrollToElement(atlexhact.getleftPaneFilterDGShowroomCatalog());
+		utl.scrollElementIntoMiddle(atlexhact.getleftPaneFilterDGShowroomCatalog());
 		atlexhact.getleftPaneFilterDGShowroomCatalog().click();
 		Thread.sleep(3000);
 		//Store Catalog name
 		String catalogName = atlgs.getFirstCatalogName().getText();
 		System.out.println(catalogName);
 		//click on 1st Exhibitor
-		utl.scrollToElement(atlgs.getatl1STExhiName());
+		utl.scrollElementIntoMiddle(atlgs.getatl1STExhiName());
+		Thread.sleep(200);
 		atlgs.getatl1STExhiName().click();
 		Thread.sleep(3000);
 		//Scroll to Catalog Section
-		utl.scrollToElement(atlexhdgshw.getATLCatalogSection());
+		utl.scrollElementIntoMiddle(atlexhdgshw.getATLCatalogSection());
 		//Click on All Catalog Btn Btn
-		utl.scrollToElement(atlexhdgshw.getATLCatalogSeeAllBtn());
+		Thread.sleep(200);
+		utl.scrollElementIntoMiddle(atlexhdgshw.getATLCatalogSeeAllBtn());
+		Thread.sleep(500);
 		atlexhdgshw.getATLCatalogSeeAllBtn().click();
 		Thread.sleep(2000);
 		Assert.assertTrue(atlexhdgshw.getATLVerifyLinePageTitle().getText().contains("Catalogs"));
@@ -308,20 +314,20 @@ public class GlobalSearch_SearchFor extends base {
 		// Store the current window handle
 		String winHandleBefore = driver.getWindowHandle();
 		//Click on Catalog
-		utl.scrollToElement(atlexhact.getCatalogsItem());
+		utl.scrollElementIntoMiddle(atlexhact.getCatalogsItem());
 		String CatName = atlexhact.getCatalogsItemName().getText();
 		atlexhact.getCatalogsItem().click();
-		Thread.sleep(2000);
-		for (String winHandle : driver.getWindowHandles()) {
+		//Thread.sleep(2000);
+		/*	for (String winHandle : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle);
-		}
+		}*/
 		Thread.sleep(5000);
 		String Cname =atlgs.getCatalogHeaderName().getText();
 		System.out.println(Cname);
 		Assert.assertTrue(CatName.contains(Cname));
-		driver.close();
-		driver.switchTo().window(winHandleBefore);
-		Thread.sleep(2000);
+		//driver.close();
+		//driver.switchTo().window(winHandleBefore);
+		//Thread.sleep(2000);
 	}
 
 	@Test(priority = 5)//groups="Non_MP"
@@ -351,12 +357,14 @@ public class GlobalSearch_SearchFor extends base {
 		String filterResultTitle = atlgs.getATLArticleName().getText();
 		System.out.println("Article Title on Search Page: "+filterResultTitle);
 		utl.scrollToElement(atlgs.getATLArticleSeeMoreBtn());
+		Thread.sleep(200);
 		atlgs.getATLArticleSeeMoreBtn().click();
 		Thread.sleep(3000);
 		String articleTitle =atlgs.getATLArticleHeader().getText();
 		System.out.println("Article Title on Details Page: "+articleTitle);
 		Assert.assertTrue(filterResultTitle.contains(articleTitle));
 		utl.scrollToElement(atlgs.getATLArticleTag());
+		Thread.sleep(200);
 		boolean temp = false;
 		tagBlogPost = driver.findElements(By.xpath("//span[@class='imc-blog-tag-module__tag']"));
 		for (WebElement blogPost : tagBlogPost) {
@@ -410,7 +418,7 @@ public class GlobalSearch_SearchFor extends base {
 					String filterResultTitle = atlgs.getATLArticleName().getText();
 					String filterResultTitleNew = filterResultTitle.replaceAll("[^a-zA-Z0-9 ]", "");
 					System.out.println("Filter Result Title: "+filterResultTitleNew);
-					utl.scrollToElement(atlgs.getATLArticleSeeMoreBtn());
+					utl.scrollElementIntoMiddle(atlgs.getATLArticleSeeMoreBtn());
 					atlgs.getATLArticleSeeMoreBtn().click();
 					Thread.sleep(3000);
 					try {
@@ -421,7 +429,7 @@ public class GlobalSearch_SearchFor extends base {
 					} catch (Exception e) {
 						Assert.assertTrue(filterResultTitleNew.contains(driver.getTitle()));
 					}
-					utl.scrollToElement(atlgs.getATLArticleTag());
+					utl.scrollElementIntoMiddle(atlgs.getATLArticleTag());
 					boolean temp = false;
 					tagBlogPost = driver.findElements(By.xpath("//span[@class='imc-blog-tag-module__tag']"));
 					for (WebElement blogPost : tagBlogPost) {
@@ -454,7 +462,7 @@ public class GlobalSearch_SearchFor extends base {
 					atlgs.getATLArticleSeeMoreBtn().click();
 					Thread.sleep(500);
 					Assert.assertTrue(filterResultTitle1.contains(atlgs.getATLArticleHeader().getText()));
-					utl.scrollToElement(atlgs.getATLArticleTag());
+					utl.scrollElementIntoMiddle(atlgs.getATLArticleTag());
 					boolean temp1 = false;
 					tagBlogPost = driver.findElements(By.xpath("//span[@class='imc-blog-tag-module__tag']"));
 					for (WebElement blogPost : tagBlogPost) {
@@ -485,7 +493,7 @@ public class GlobalSearch_SearchFor extends base {
 					atlgs.getATLArticleSeeMoreBtn().click();
 					Thread.sleep(500);
 					Assert.assertTrue(filterResultTitle2.contains(atlgs.getATLArticleHeader().getText()));
-					utl.scrollToElement(atlgs.getATLArticleTag());
+					utl.scrollElementIntoMiddle(atlgs.getATLArticleTag());
 					boolean temp2 = false;
 					List<WebElement>tagBlogPost1 = driver.findElements(By.xpath("//span[@class='imc-blog-tag-module__tag']"));
 					for (WebElement blogPost : tagBlogPost1) {
@@ -517,7 +525,7 @@ public class GlobalSearch_SearchFor extends base {
 					atlgs.getATLArticleSeeMoreBtn().click();
 					Thread.sleep(500);
 					Assert.assertTrue(filterResultTitle3.contains(atlgs.getATLArticleHeader().getText()));
-					utl.scrollToElement(atlgs.getATLArticleTag());
+					utl.scrollElementIntoMiddle(atlgs.getATLArticleTag());
 					boolean temp3 = false;
 					tagBlogPost = driver.findElements(By.xpath("//span[@class='imc-blog-tag-module__tag']"));
 					for (WebElement blogPost : tagBlogPost) {
@@ -548,10 +556,12 @@ public class GlobalSearch_SearchFor extends base {
 					driver.navigate().refresh();
 					Thread.sleep(8000);
 					String filterResultTitle4 = atlgs.getATLArticleName().getText();
+					utl.scrollElementIntoMiddle(atlgs.getATLArticleSeeMoreBtn());
+					Thread.sleep(200);
 					atlgs.getATLArticleSeeMoreBtn().click();
 					Thread.sleep(500);
 					Assert.assertTrue(filterResultTitle4.contains(atlgs.getATLArticleHeader().getText()));
-					utl.scrollToElement(atlgs.getATLArticleTag());
+					utl.scrollElementIntoMiddle(atlgs.getATLArticleTag());
 					boolean temp4 = false;
 					tagBlogPost = driver.findElements(By.xpath("//span[@class='imc-blog-tag-module__tag']"));
 					for (WebElement blogPost : tagBlogPost) {
@@ -582,7 +592,8 @@ public class GlobalSearch_SearchFor extends base {
 					atlgs.getATLArticleSeeMoreBtn().click();
 					Thread.sleep(500);
 					Assert.assertTrue(filterResultTitle5.contains(atlgs.getATLArticleHeader().getText()));
-					utl.scrollToElement(atlgs.getATLArticleTag());
+					utl.scrollElementIntoMiddle(atlgs.getATLArticleTag());
+					Thread.sleep(200);
 					boolean temp5 = false;
 					tagBlogPost = driver.findElements(By.xpath("//span[@class='imc-blog-tag-module__tag']"));
 					for (WebElement blogPost : tagBlogPost) {
@@ -614,7 +625,7 @@ public class GlobalSearch_SearchFor extends base {
 					atlgs.getATLArticleSeeMoreBtn().click();
 					Thread.sleep(500);
 					Assert.assertTrue(filterResultTitle6.contains(atlgs.getATLArticleHeader().getText()));
-					utl.scrollToElement(atlgs.getATLArticleTag());
+					utl.scrollElementIntoMiddle(atlgs.getATLArticleTag());
 					Thread.sleep(5000);
 					boolean temp6 = false;
 					tagBlogPost = driver.findElements(By.xpath("//span[@class='imc-blog-tag-module__tag']"));
@@ -684,8 +695,9 @@ public class GlobalSearch_SearchFor extends base {
 		Thread.sleep(3000);
 		String filterResultTitle = atlgs.getATLArticleName().getText();
 		utl.scrollToElement(atlgs.getATLArticleSeeMoreBtn());
-		atlgs.getATLArticleSeeMoreBtn().click();
 		Thread.sleep(500);
+		atlgs.getATLArticleSeeMoreBtn().click();
+		Thread.sleep(2000);
 		Assert.assertTrue(filterResultTitle.contains(atlgs.getATLArticleHeader().getText()));
 		utl.scrollToElement(atlgs.getATLArticleTag());
 		boolean temp5 = false;
@@ -795,7 +807,8 @@ public class GlobalSearch_SearchFor extends base {
 		//atlgs.getEventsATLMktTopics().click();
 		Thread.sleep(800);
 		//Click on See More details btn
-		utl.scrollToElement(atlgs.getATLSeeMoreDetailsBtn());
+		utl.scrollElementIntoMiddle(atlgs.getATLSeeMoreDetailsBtn());
+		Thread.sleep(500);
 		atlgs.getATLSeeMoreDetailsBtn().click();
 		Thread.sleep(5000);
 		//Verify that Selected topic name should be displayed as Tag on Event details page
@@ -851,16 +864,21 @@ public class GlobalSearch_SearchFor extends base {
         
 		utl.ClearGlobalSearch();
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputforShowSpecials4")));
-
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(5000);
-		utl.scrollToElement(atlgs.getseeAllLinkMatchingProduct());
+		
+		//Click on First Exhibitor
+		utl.scrollElementIntoMiddle(atlgs.getseeAllLinkMatchingProduct());
+		Thread.sleep(500);
 		atlgs.getseeAllLinkMatchingProduct().click();
-		//atlgs.getseeAllLinkMatchingProduct().click();
 		Thread.sleep(5000);
-
+		
+		//Click on see all show specials button
+		utl.scrollElementIntoMiddle(atlgs.getatlShowSpecialsTab());
+		Thread.sleep(500);
 		atlgs.getatlShowSpecialsTab().click();
 		Thread.sleep(500);
+		
 		//Verify Show Specials section
 		Assert.assertTrue(atlgs.getatlVerifyShowSpecials().isDisplayed());
 		Thread.sleep(5000);
@@ -895,15 +913,15 @@ public class GlobalSearch_SearchFor extends base {
 			catch(Exception e) {
 				atlgs.getATLEventsTabInSearchDiv().click();
 			}
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		//Verify that Events data should be displayed
 		String eventname = atlexhact.getEventCardTitle().getText();
 		Assert.assertTrue(atlexhact.getEventCardInSearch().isDisplayed());
 		System.out.println(eventname);
 		//Click on See More details btn
-		utl.scrollToElement(atlgs.getATLSeeMoreDetailsBtn());
+		utl.scrollElementIntoMiddle(atlgs.getATLSeeMoreDetailsBtn());
 		atlgs.getATLSeeMoreDetailsBtn().click();
-		Thread.sleep(500);
+		Thread.sleep(5000);
 		System.out.println(atlexhact.getEventDetailsHeader().getText());
 		//Verify that selected event's details page should be opened
 		Assert.assertTrue(atlexhact.getEventDetailsHeader().getText().contains(eventname));

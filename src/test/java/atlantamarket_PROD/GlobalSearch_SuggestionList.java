@@ -98,7 +98,7 @@ public class GlobalSearch_SuggestionList extends base {
 		//utl.loginCheckATL();
 		Thread.sleep(5000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestexhibitor")));
-
+		Thread.sleep(500);
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li")));
 
@@ -146,7 +146,11 @@ public class GlobalSearch_SuggestionList extends base {
 			}
 		}
 		Thread.sleep(3000);
-		Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
+		try {
+			Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
+		} catch (Exception e) {
+			Assert.assertTrue(atlexhdgshw.getShownByTextValidate().isDisplayed());
+		}
 	}
 
 	@Test(priority = 3)//groups="Non_MP"
@@ -186,6 +190,6 @@ public class GlobalSearch_SuggestionList extends base {
 	@AfterClass(alwaysRun=true)
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 }

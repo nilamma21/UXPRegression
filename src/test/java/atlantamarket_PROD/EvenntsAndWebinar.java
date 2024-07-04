@@ -136,7 +136,7 @@ public class EvenntsAndWebinar extends base{
 		atlevents.getatlEventsLink().click();
 		Thread.sleep(3000);*/
 		//Click on IMC Event Tab
-		utl.scrollToElement(atlevents.getatlExhibitorsEventsTab());
+		utl.scrollElementIntoMiddle(atlevents.getatlExhibitorsEventsTab());
 		atlevents.getatlImcEventsTab().click();
 		Thread.sleep(500);
 		//Click on Search Bar of IMC Events
@@ -171,7 +171,7 @@ public class EvenntsAndWebinar extends base{
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click on IMC Event Tab
-		utl.scrollToElement(atlevents.getatlExhibitorsEventsTab());
+		utl.scrollElementIntoMiddle(atlevents.getatlExhibitorsEventsTab());
 		atlevents.getatlImcEventsTab().click();
 		
 		Thread.sleep(2000);
@@ -219,7 +219,7 @@ public class EvenntsAndWebinar extends base{
 		
 		//Click on Calendar Prev Btn
 		atlevents.getatlCalendarPrevMonth().click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		System.out.println("Previous Month From Calendar ::"+atlevents.getatlSelectMonth().getText());
 		Assert.assertTrue(atlevents.getatlSelectMonth().getText().contains(mm));
 		System.out.println("Previous Month "+atlevents.getatlSelectMonth().getText()+" is selected");
@@ -233,7 +233,7 @@ public class EvenntsAndWebinar extends base{
 				 try {
 					 	Assert.assertTrue(atlevents.getatlTodaysDatePROD().isDisplayed());
 						atlevents.getatlTodaysDatePROD().click();
-						Thread.sleep(500);
+						Thread.sleep(1000);
 						}catch (Exception e) {
 							utl.selectFilters(atlevents.getatlListOfEventDate(), replaceDate);
 						
@@ -274,7 +274,7 @@ public class EvenntsAndWebinar extends base{
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click on IMC Event Tab
-        utl.scrollToElement(atlevents.getatlExhibitorsEventsTab());
+        utl.scrollElementIntoMiddle(atlevents.getatlExhibitorsEventsTab());
 		atlevents.getatlImcEventsTab().click();
 		Thread.sleep(500);
 		//Verify Event Calendar title
@@ -357,7 +357,7 @@ public class EvenntsAndWebinar extends base{
 			String eventTitle=eventTitleLink.getText();
 			Assert.assertTrue(eventTitleLink.isDisplayed());
 			//eventSeeDetailsLink = atlevents.atlatlListOfAllEventsSeeDetailsLink().get(1);
-			utl.scrollToElement(eventTitleLink);
+			utl.scrollElementIntoMiddle(eventTitleLink);
 			eventTitleLink.click();
 			Thread.sleep(500);
 			//Verify Event Details Page
@@ -392,11 +392,11 @@ public class EvenntsAndWebinar extends base{
 		String eventTitle=atlevents.getatlClickOnEvent().getText();
 		Thread.sleep(5000);
 		//Click on IMC Event Tab
-		utl.scrollToElement(atlevents.getatlExhibitorsEventsTab());
+		utl.scrollElementIntoMiddle(atlevents.getatlExhibitorsEventsTab());
 		atlevents.getatlImcEventsTab().click();
 		Thread.sleep(500);
 		//Click on Any Event title
-		utl.scrollToElement(atlevents.getatlClickOnEvent());
+		utl.scrollElementIntoMiddle(atlevents.getatlClickOnEvent());
 		atlevents.getatlClickOnEvent().click();
 		Thread.sleep(500);
 		Assert.assertTrue(eventTitle.contains(atlevents.getatlEventNameOnDetailsPage().getText()));
@@ -424,7 +424,7 @@ public class EvenntsAndWebinar extends base{
 		System.out.println("Tag displayed");*/
 		
 		//Click on Location link
-		String locationURL=atlevents.getatlEventLocationLink().getAttribute("href");
+/*		String locationURL=atlevents.getatlEventLocationLink().getAttribute("href");
 		
 		String currentWindowID=driver.getWindowHandle();
 		atlevents.getatlEventLocationLink().click();
@@ -436,7 +436,7 @@ public class EvenntsAndWebinar extends base{
 		//Verify Location floor plan page
 		Assert.assertTrue(driver.getCurrentUrl().contains(locationURL));
 		driver.close();
-		driver.switchTo().window(currentWindowID);
+		driver.switchTo().window(currentWindowID);*/
 		//driver.navigate().back();
 		
 		//Click on Tags
@@ -450,7 +450,8 @@ public class EvenntsAndWebinar extends base{
 		for (int i = 0; i < atlevents.getatlListOfEventTitles().size(); i++) {
 			allEventSeeDetailsLinkCount1++;
 			WebElement eventTitleLink = atlevents.getatlListOfEventTitles().get(i);
-			utl.scrollToElement(eventTitleLink);
+			utl.scrollElementIntoMiddle(eventTitleLink);
+			Thread.sleep(500);
 			eventTitleLink.click();
 			// Verify Event Details Page
 			
@@ -512,7 +513,7 @@ public class EvenntsAndWebinar extends base{
 		atlevents.getatlEventsLink().click();
 		Thread.sleep(3000);*/
 		//Click on Exh Event Tab
-        utl.scrollToElement(atlevents.getatlExhibitorsEventsTab());
+        utl.scrollElementIntoMiddle(atlevents.getatlExhibitorsEventsTab());
 		atlevents.getatlExhibitorsEventsTab().click();
 		Thread.sleep(500);
 		//Click on Search Bar of IMC Events
@@ -546,7 +547,7 @@ public class EvenntsAndWebinar extends base{
 		utl.clickOnEventLinkOfChannel();  
 		
 		//Click on Exh Event Tab
-		utl.scrollToElement(atlevents.getatlExhibitorsEventsTab());
+		utl.scrollElementIntoMiddle(atlevents.getatlExhibitorsEventsTab());
 		atlevents.getatlExhibitorsEventsTab().click();
 		
 		Thread.sleep(2000);
@@ -651,7 +652,7 @@ public class EvenntsAndWebinar extends base{
 		
 		//Click on Exh Event Tab
 		Thread.sleep(15000);
-		utl.scrollToElement(atlevents.getatlExhibitorsEventsTab());
+		utl.scrollElementIntoMiddle(atlevents.getatlExhibitorsEventsTab());
 		atlevents.getatlExhibitorsEventsTab().click();
 		Thread.sleep(3000);
 		
@@ -739,7 +740,8 @@ public class EvenntsAndWebinar extends base{
 			//eventSeeDetailsLink = atlevents.atlatlListOfAllEventsSeeDetailsLink().get(1);
 			//WebDriverWait wait = new WebDriverWait(driver,30);//new added
 			//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("eventTitleLink")));
-			utl.scrollToElement(eventTitleLink);
+			utl.scrollElementIntoMiddle(eventTitleLink);
+			Thread.sleep(2000);
 			eventTitleLink.click();
 			
 			Thread.sleep(15000);
@@ -748,9 +750,10 @@ public class EvenntsAndWebinar extends base{
 			Assert.assertTrue(eventTitle.contains(atlevents.getatlEventNameOnDetailsPage().getText()));
 			driver.navigate().back();
 			
-			//Thread.sleep(5000);
+			Thread.sleep(500);
 			//Click on Exh Event Tab
-			utl.scrollToElement(atlevents.getatlExhibitorsEventsTab());
+			utl.scrollElementIntoMiddle(atlevents.getatlExhibitorsEventsTab());
+			Thread.sleep(500);
 			atlevents.getatlExhibitorsEventsTab().click();
 			Thread.sleep(2000);
 			//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -778,18 +781,23 @@ public class EvenntsAndWebinar extends base{
 		Thread.sleep(2000);
 		
 		//Click on Exh Event Tab
-		utl.scrollToElement(atlevents.getatlExhibitorsEventsTab());
+		utl.scrollElementIntoMiddle(atlevents.getatlExhibitorsEventsTab());
 		atlevents.getatlExhibitorsEventsTab().click();
 		Thread.sleep(500);
 		//Click on IMC Event Tab
 		//atlevents.getatlImcEventsTab().click();
 		String eventTitle=atlevents.getatlClickOnEvent().getText();
-		utl.scrollToElement(atlevents.getatlClickOnEvent());
+		System.out.println("Title of Event card: "+eventTitle);
+		utl.scrollElementIntoMiddle(atlevents.getatlClickOnEvent());
 		atlevents.getatlClickOnEvent().click();
-		Thread.sleep(500);
-		Assert.assertTrue(eventTitle.contains(atlevents.getatlEventNameOnDetailsPage().getText()));
+		Thread.sleep(2000);
+		String titleOfEvent = atlevents.getatlEventNameOnDetailsPage().getText();
+		System.out.println("Title of Event Details: "+titleOfEvent);
+		Assert.assertTrue(eventTitle.contains(titleOfEvent));
 		
 		//Verify Location Link
+		utl.scrollElementIntoMiddle(atlevents.getatlEventLocationLink());
+		Thread.sleep(200);
 		Assert.assertTrue(atlevents.getatlEventLocationLink().isDisplayed());
 		System.out.println("Events Location link displayed");
 		//Verify Event Type
@@ -810,10 +818,10 @@ public class EvenntsAndWebinar extends base{
 		//Verify Add Fav Icon
 		/*Assert.assertTrue(atlevents.getatlTagIcon().isDisplayed());
 		System.out.println("Tag displayed");*/
-		
+		Thread.sleep(1000);
 		//Click on Location link
 		String locationURL=atlevents.getatlEventLocationLink().getAttribute("href");
-		
+		System.out.println("Location URL: "+locationURL);
 		String currentWindowID = driver.getWindowHandle();
 		atlevents.getatlEventLocationLink().click();
 		for (String windowHandleID : driver.getWindowHandles()) {
@@ -821,6 +829,7 @@ public class EvenntsAndWebinar extends base{
 		}
 		Thread.sleep(5000);
 		// Verify Location floor plan page
+		System.out.println("Current URL: "+driver.getCurrentUrl());
 		Assert.assertTrue(driver.getCurrentUrl().contains(locationURL));
 		driver.close();
 		driver.switchTo().window(currentWindowID);

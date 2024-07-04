@@ -117,17 +117,18 @@ public class GlobalSearch_ProductActions extends base {
 		String catalogName = atlgs.getFirstCatalogName().getText();
 		System.out.println("Selected Product Name:" + catalogName);
 
-		utl.scrollToElement(atlexhact.getExhibitorProduct());
+		utl.scrollElementIntoMiddle(atlexhact.getExhibitorProduct());
 
 		// Hover on Product
 		Actions actions = new Actions(driver);
 		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
 		// To mouseover on See Details btn
+		Thread.sleep(1000);
 		actions.moveToElement(atlexhact.getProdSeeDetailsBtn()).perform();
 
 		// Click on See Details button
 		actions.click().perform();
-		Thread.sleep(10000);
+		Thread.sleep(3000);
 
 		// Store the Product Name on Product Details page
 		String productNameOnProductDetails = atlproddet.getProductNameOnProductDetails().getText();
@@ -135,10 +136,78 @@ public class GlobalSearch_ProductActions extends base {
 		// Verify that selected Product details page should be opened
 		Assert.assertTrue(catalogName.equals(productNameOnProductDetails));
 	}
+	
+	//@Test(priority = 7,groups="Non_MP")
+	@Test(priority = 2)
+	public void TS002_VerifyFullScreenViewerOnProductDetailsPageTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// T719: Full Screen Viewer functionality on Product Details page
+
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lap = new ATLLandingPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		utl = new Utility(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		atlproddet = new ATLProductDetailsPage(driver);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		driver.get(prop.getProperty("atlmrkturl_prod"));
+		Thread.sleep(6000);
+		// lap.getCloseMarktAdBtn().click();
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearchinputforProduct"));
+		atlgs.getATLSearchButton().click();
+		Thread.sleep(15000);
+		// Store the 1st Product name of Exhibitor
+		/*
+		 * String productNameOnSearchGrid =
+		 * atlexhact.getExhProductNameOnSearchGrid().getText();
+		 * System.out.println("Selected Product Name: "+productNameOnSearchGrid);
+		 */
+		exhname = atlexhact.getExhibitorName().getText();
+		System.out.println("Exhibitor name: " + exhname);
+
+		// Click on Exhibitor
+		atlexhact.getExhibitorName().click();
+		// Scroll To Products Section
+		utl.scrollToElement(atlexhdgshw.getProductSection());
+		String prodName = atlexhact.getprodNameFromDGshhowroomPage().getText();
+		String prodNameTitle = prodName.replaceAll("\\.", "");
+		System.out.println("Selected Product Name:" + prodNameTitle);
+
+		// Click on product
+		atlexhact.getprodNameFromDGshhowroomPage().click();
+		Thread.sleep(1000);
+		/*
+		 * utl.scrollToElement(atlexhact.getExhibitorProduct());
+		 * 
+		 * // Hovering on Product Actions actions = new Actions(driver);
+		 * actions.moveToElement(atlexhact.getExhibitorProduct()).perform(); // To
+		 * mouseover on See Details btn
+		 * actions.moveToElement(atlexhact.getProdSeeDetailsBtn()).perform();
+		 * 
+		 * //Click on See Details button actions.click().perform(); Thread.sleep(5000);
+		 */
+		// Click on Product Full Screen Viewer button
+		utl.scrollElementIntoMiddle(atlproddet.getProductFullScreenViewerBtn());
+		Thread.sleep(500);
+		atlproddet.getProductFullScreenViewerBtn().click();
+
+		// Verify that Full Screen viewer should be displayed with Product images
+		Assert.assertTrue(atlproddet.getProductFullScreenViewer().isDisplayed());
+		Thread.sleep(5000);
+		// Verify the title of the Full screen viewer
+		Assert.assertTrue(atlproddet.getProductFullScreenViewerTitle().getText().contains(prodNameTitle));
+
+		// Dismiss the Full Screen Viewer
+		atlproddet.getProductFullScreenViewer().click();
+	}
 
 	//@Test(priority = 2,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	//@Test (priority = 2)
-	public void TS002_VerifyProductAddToNewListOnProductDetailsPageTest() throws InterruptedException, IOException {
+	public void TS003_VerifyProductAddToNewListOnProductDetailsPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T434: Product Actions: + icon to add to newly created list
 
@@ -231,7 +300,7 @@ public class GlobalSearch_ProductActions extends base {
 	}
 
 	//@Test(enabled=false, priority = 3,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
-	public void TS003_VerifyProductAddToExistingListOnProductDetailsPageTest()
+	public void TS004_VerifyProductAddToExistingListOnProductDetailsPageTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T384: Add to existing list functionality on Product details page
@@ -331,7 +400,7 @@ public class GlobalSearch_ProductActions extends base {
 	}
 
 	//@Test(enabled=false,priority = 4,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
-	public void TS004_VerifyAddToFavoriteOnProductDetailsPageTest() throws InterruptedException, IOException {
+	public void TS005_VerifyAddToFavoriteOnProductDetailsPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T385: Add to Favorite functionality on Product Details page
 
@@ -402,7 +471,7 @@ public class GlobalSearch_ProductActions extends base {
 	}
 
 	//@Test(enabled=false,priority = 5,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
-	public void TS005_VerifyAddNoteOnProductDetailsPageTest() throws InterruptedException, IOException {
+	public void TS006_VerifyAddNoteOnProductDetailsPageTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T386: Add Note functionality on Product Details page
 
@@ -478,7 +547,7 @@ public class GlobalSearch_ProductActions extends base {
 	}
 
 	@Test(enabled=false,priority = 6,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
-	public void TS006_VerifyProductAddToExistingListOnSearchResultsGridTest() throws InterruptedException, IOException {
+	public void TS007_VerifyProductAddToExistingListOnSearchResultsGridTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T377: Products Actions: + icon to add to existing list
 
@@ -576,72 +645,6 @@ public class GlobalSearch_ProductActions extends base {
 		}
 	}
 
-	//@Test(priority = 7,groups="Non_MP")
-	@Test(priority = 7)
-	public void TS007_VerifyFullScreenViewerOnProductDetailsPageTest() throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// T719: Full Screen Viewer functionality on Product Details page
-
-		atlgs = new ATLGlobalSearchPage(driver);
-		atlexhact = new ATLExhLineProdActionsPage(driver);
-		lap = new ATLLandingPage(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		utl = new Utility(driver);
-		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
-		atlproddet = new ATLProductDetailsPage(driver);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		driver.get(prop.getProperty("atlmrkturl_prod"));
-		Thread.sleep(6000);
-		// lap.getCloseMarktAdBtn().click();
-
-		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearchinputforProduct"));
-		atlgs.getATLSearchButton().click();
-		Thread.sleep(15000);
-		// Store the 1st Product name of Exhibitor
-		/*
-		 * String productNameOnSearchGrid =
-		 * atlexhact.getExhProductNameOnSearchGrid().getText();
-		 * System.out.println("Selected Product Name: "+productNameOnSearchGrid);
-		 */
-		exhname = atlexhact.getExhibitorName().getText();
-		System.out.println("Exhibitor name: " + exhname);
-
-		// Click on Exhibitor
-		atlexhact.getExhibitorName().click();
-		// Scroll To Products Section
-		utl.scrollToElement(atlexhdgshw.getProductSection());
-		String prodName = atlexhact.getprodNameFromDGshhowroomPage().getText();
-		String prodNameTitle = prodName.replaceAll("\\.", "");
-		System.out.println("Selected Product Name:" + prodNameTitle);
-
-		// Click on product
-		atlexhact.getprodNameFromDGshhowroomPage().click();
-		Thread.sleep(1000);
-		/*
-		 * utl.scrollToElement(atlexhact.getExhibitorProduct());
-		 * 
-		 * // Hovering on Product Actions actions = new Actions(driver);
-		 * actions.moveToElement(atlexhact.getExhibitorProduct()).perform(); // To
-		 * mouseover on See Details btn
-		 * actions.moveToElement(atlexhact.getProdSeeDetailsBtn()).perform();
-		 * 
-		 * //Click on See Details button actions.click().perform(); Thread.sleep(5000);
-		 */
-		// Click on Product Full Screen Viewer button
-		utl.scrollToElement(atlproddet.getProductFullScreenViewerBtn());
-		atlproddet.getProductFullScreenViewerBtn().click();
-
-		// Verify that Full Screen viewer should be displayed with Product images
-		Assert.assertTrue(atlproddet.getProductFullScreenViewer().isDisplayed());
-		Thread.sleep(5000);
-		// Verify the title of the Full screen viewer
-		Assert.assertTrue(atlproddet.getProductFullScreenViewerTitle().getText().contains(prodNameTitle));
-
-		// Dismiss the Full Screen Viewer
-		atlproddet.getProductFullScreenViewer().click();
-	}
 
 	@Test(enabled=false,priority = 8,groups= "MP_Group",dependsOnMethods= "verifyMPLoginFunctionality")
 	public void TS008_VerifyAddToFavoriteOnSearchResultsGridTest() throws InterruptedException, IOException {
@@ -795,6 +798,6 @@ public class GlobalSearch_ProductActions extends base {
 
 	@AfterClass(alwaysRun=true)
 	public void tearDown() {
-		driver.quit();
+		//driver.quit();
 	}
 }

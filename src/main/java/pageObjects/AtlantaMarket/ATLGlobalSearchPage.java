@@ -18,8 +18,8 @@ public class ATLGlobalSearchPage {
 
 	By atlglobalsearchtxtbx = By.xpath("//input[@id='input-1']"); // Locator for Global Search field 
 	By atlInfosearchtxtbx = By.xpath("(//input[@id='input-1'])[2]"); // Locator for Information Search field
-	By atlInfosearchbtn = By.xpath("(//button[@class = 'imc-searchform--button--search'])[2]"); //Locator for Seach button for global search
-	By atlsearchbtn = By.xpath("//button[@class = 'imc-searchform--button--search']"); //Locator for Seach button for global search
+	By atlInfosearchbtn = By.xpath("(//div[@class = 'imc-searchform--button--search'])[2]"); //Locator for Seach button for global search
+	By atlsearchbtn = By.xpath("//div[@class = 'imc-searchform--button--search']"); //Locator for Seach button for global search
 	By lvmSearchBtnUAT = By.xpath("(//div[@class='imc-searchform--row'])[1]/form[1]/button[2]"); //Locator for Seach button for global search
 	By atlverifyglobalseacrh = By.xpath("//div[@class = 'imc-gallery__item']/div[1]/section[1]/span[1]/div[1]"); // Locator for global search verification
 	By atlsearchresultslist = By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li/span/span"); //Locator for Search results list
@@ -52,7 +52,7 @@ public class ATLGlobalSearchPage {
 	By atlBlogSeeAllBtn = By.xpath("//div[@class='imc-vr--xxlarge imc-margin--top--large--mobile']/div[1]/div[2]/div[3]/a[1]"); //Locator for Blog See All Btn
 	By atlseealllineslink = By.xpath("//div[@class = 'imc-exhibitorcard--text-container-row']/a[1]"); //Locator for Sell All lines link
 	
-	By atlShowSpecialsTab = By.xpath("//a[@id = 'Specials']"); //Locator for Show Specials tab
+	By atlShowSpecialsTab = By.xpath("//div[@class='imc-content--display-flex--right imc-content--full-width-mobile imc-products-overview--cta-bar imc-content--display-flex imc-content--display-flex-center']/descendant::span[contains(text(),'Specials')][1]"); //Locator for Show Specials tab
 	By atlVerifyShowSpecials = By.xpath("//div[@class = 'imc-tabs__body imc-section']"); //Locator for Show Specials section
 	By atlVerifyShowSpecialsUAT = By.xpath("//a[@class = 'imc-tabs__body imc-section']"); //Locator for Show Specials section
 	By fourthbreadcrumbtxt = By.xpath("//li[@data-xpath='breadcrumb.active.link'][3]/a"); //Locator for 4th Breadcrumb text in app
@@ -71,22 +71,22 @@ public class ATLGlobalSearchPage {
 	By fourthbreadcrumbtxtUAT = By.xpath("//ul[@class='imc-breadcrumb']/li[4]/a[1]"); //Locator for 4th Breadcrumb text in app
 	By atlGlobalSearchSortBtn = By.xpath("//div[@class='imc-vr--large']/section[1]/div[1]/div[3]"); //Locator for Global Search Sort Btn
 	By atlGlobalSearch_SearchWithinDropdwn = By.xpath("//select[@name='Search Type']"); //Locator for Global Search SearchWithhn Dropdown
-	By atlListOfAllExh = By.xpath("//div[@class='imc-exhibitorcard-title-row']"); //Locator for All Exhibitors
-	By atlListOfAllExhLocation = By.xpath("//div[@class='imc-exhibitorcard-title-row']/div[2]"); //Locator for All Exhibitors Location
+	By atlListOfAllExh = By.xpath("//div[@class='imc-exhibitorcard-title-row ']"); //Locator for All Exhibitors
+	By atlListOfAllExhLocation = By.xpath("//div[@class='imc-exhibitorcard-title-row ']/div[2]"); //Locator for All Exhibitors Location
 	By atlListOfAllExhTotalProductLink = By.xpath("//div[@class='imc-exhibitorcard--prod-item-container']/p"); //Locator for All Exhibitors Total Product Links
 	By atlListOfAllExhMatchingProductLink = By.xpath("//div[@class='imc-exhibitorcard--prod-item-container imc-exhibitorcard--prod-item-container--divider']/p"); //Locator for All Exhibitors Matching Product Links
 	By atlListOfAllProducts = By.xpath("//div[@class='imc-exhibitorcard-products-row imc-content--display-flex-space-between-mobile ']"); //Locator for All Product Links
 	By atlListOfAllProductsName = By.xpath("//div[@class='imc-exhibitorcard-products-row imc-content--display-flex-space-between-mobile ']/div/p"); //Locator for All Product Names
 	By atlGlobalSearch_SearchSortByDropdwn = By.xpath("//select[@name='Sort by']");  //Locator for Global Search Sort By Dropdown
-	By atlGlobalSearchExhLocationList = By.xpath("//div[@class='imc-exhibitorcard-title-row']/div[2]/div[1]/div[1]/a");  //Locator for Location list
-	By atlExhNames = By.xpath("//div[@class='imc-exhibitorcard-title-row']/div[1]/a[1]/h2");  //Locator for Exhibitors Name list
+	By atlGlobalSearchExhLocationList = By.xpath("//div[@class='imc-exhibitorcard-title-row ']/div[2]/div[1]/div[1]/a");  //Locator for Location list
+	By atlExhNames = By.xpath("//div[@class='imc-exhibitorcard-title-row ']/div[1]/a[1]/h2");  //Locator for Exhibitors Name list
 	By atlMachingProductCount = By.xpath("//div[@class='imc-exhibitorcard--prod-item-container imc-exhibitorcard--prod-item-container--divider']/p[1]");  //Locator for Matching prod count list
 	By atlFilterByNameDropDown = By.xpath("//select[@id='dropdown-filter-by-letter']");  //Locator for Filter By Name Dropdown
-	By atlExhiNameForFilterByName = By.xpath("//div[@class='imc-exhibitorcard-title-row']/div[1]");  //Locator for Exh Name for Filter by name
+	By atlExhiNameForFilterByName = By.xpath("//div[@class='imc-exhibitorcard-title-row ']/div[1]");  //Locator for Exh Name for Filter by name
 	By atlSelectBtn = By.xpath("//div[@class='imc-vr--large']/section[1]/div[1]/div[2]");  //Locator for Select Btn
 	By atlExhCheckbox = By.xpath("(//div[@class='imc-padding--right--large']/input[1])[1]");  //Locator for Exh checkbox
 	By atlAddToFavBtn = By.xpath("//div[@class='imc-searchform--bar--dropdown open']/div[2]/button[1]");  //Locator for Add To Fav Btn
-	By atl1STExhiName = By.xpath("(//div[@class='imc-exhibitorcard-title-row']/div[1]/a[1]/h2[1])[1]");  //Locator for Exh Name 
+	By atl1STExhiName = By.xpath("(//div[@class='imc-exhibitorcard-title-row ']/div[1]/a[1]/h2[1])[1]");  //Locator for Exh Name 
 	By atlAddToExistingList = By.xpath("//div[@class='imc-searchform--bar--dropdown open']/div[3]/button[1]");  //Locator for Add Existing list Btn
 	By atlExistingList = By.xpath("//div[@class='imc-vr--xlarge']/div[2]/label[1]");  //Locator for  Existing list
 	By atlAddToSelectBtn = By.xpath("//div[@class='imc-button--justify-right']/input[1]");  //Locator for Add To list Btn
@@ -105,12 +105,12 @@ public class ATLGlobalSearchPage {
 	By atlShowroomLink = By.xpath("//div[@class='ag-center-cols-container']/div[1]/div[2]/a");  //Locator for Showroom Name
 	By atlGlobalSearchClearTxt = By.xpath("//div[@class='imc-header-subnav']/div[1]/div[1]/section[1]/div[1]/form[1]/button[1]");  //Locator for Showroom Name
 	
-	By atlShowSpecialsExhNamePROD = By.xpath("(//div[@class='imc-showSpecial--tableContainer'])[1]/p[1]");  //Locator for Show Secials Name
+	By atlShowSpecialsExhNamePROD = By.xpath("(//div[@class='imc-showSpecial--tableContainer'])[1]/p[1]");  //Locator for Show Secials Name Exhibitor
 	By atlSelectList = By.xpath("//select[@name='Saved Searches']");  //Locator for Show Secials Name
 	By atlClosePopup = By.xpath("//div[@class=' contact-exit']");  //Locator for Show Secials Name
 	By FirstInfoName = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/h2[1]");  //Locator for Show Secials Name
 	By FirstEventName = By.xpath("//div[@class='imc-vr--xxlarge imc-margin--top--large--mobile']/div[1]/div[1]/span[1]");  //Locator for 1st name of Event
-	By seeAllLinkMatchingProduct = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[2]/div[1]/div[1]/p[2]");  //Locator for 1st name of Event
+	By seeAllLinkMatchingProduct = By.xpath("(//div[@class='imc-gallery__item imc-exhibitorcard imc-line']/descendant::h2[@class='imc-exhibitorcard__exhibitorname imc-exhibitorcard--title-hover'])[1]");  //Locator for 1st name of Event
 	By FirstCatalogName = By.xpath("(//div[@class='imc-exhibitorcard-products-row imc-content--display-flex-space-between-mobile '])[1]/div[2]/p[1]");  //Locator for 1st name of Catalog
 
 	By viewbranddetailslink = By.xpath("(//div[@col-id='viewDetails'])[2]"); //Locator for View Brand details link of 1st Show Special
@@ -124,6 +124,7 @@ public class ATLGlobalSearchPage {
 	By atlInfosearchtxtbxclr = By.xpath("(//div[@class='imc-searchform--row']//descendant::button[@aria-label='Clear Search'])[2]");
 	By atlEventFilterBuyingEvent= By.xpath("//label[contains(text(),'Buying Event')]");
 	By atlInfoNameList= By.xpath("//h2[@class='imc-informationcard__title']");
+	By atlShowSpecialsLineNamePROD = By.xpath("(//div[@class='imc-showSpecial--tableContainer'])[1]/p[1]");  //Locator for Show Secials Name Line
 	
 	
 	
@@ -644,6 +645,11 @@ public class ATLGlobalSearchPage {
       wait.until(ExpectedConditions.elementToBeClickable(atlInfosearchtxtbxclr));
       return driver.findElement(atlInfosearchtxtbxclr);
   }   
+	public WebElement getatlShowSpecialsLineNamePROD() throws InterruptedException {
+		wait = new WebDriverWait (driver,40);
+		wait.until(ExpectedConditions.elementToBeClickable(atlShowSpecialsLineNamePROD));
+		return driver.findElement(atlShowSpecialsLineNamePROD);
+	}
 
 }
 

@@ -54,7 +54,7 @@ public class ATLExhLineProdActionsPage extends base{
 	By exhproductnameonsearchgrid = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/p"); //Locator for productName
 	By productaddtofavbtn = By.xpath("(//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div[2]/div/div/div/div/div/div/div/div/span/div/button)[1]"); //Locator for Add to Favorite button for Product on Search Results grid
 	By productaddtofavbtn_ATLPROD = By.xpath("(//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div[2]/div/div/div/div/div/div/div/div/span/div/button)[2]"); //Locator for Add to Favorite button for Product on Search Results grid
-	By seeDetailsBtn = By.xpath("(//div[@class='searchItemThumb--button-container']/a)[1]"); //Locator for See Details button
+	By seeDetailsBtnNew = By.xpath("(//div[@class='searchItemThumb--button-container']/div[1])[1]"); //Locator for See Details button
 	By productmorebtn = By.xpath("(//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div[2]/div/div/div/div/div/div/div/div/span[2]/div)[1]"); //Locator for Add to List button for Product on Search Results grid
 	By productformultiplecatg = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]"); //Locator for product to verify multiple Prod categ selection
 	By seedetailsbtn3rdexhproduct = By.xpath("(//div[@class='imc-gallery imc-gallery--80-20 imc-exhibitorcard--gallery-nowrap'])[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/a"); //Locator for See Details button of 3rd exh product
@@ -77,7 +77,7 @@ public class ATLExhLineProdActionsPage extends base{
 	By prodName = By.xpath("//a[@class='imc-type--title-5-ui']"); //Locator for DG showroom Filter Catalog
 	By prodNameFromDGshhowroomPage = By.xpath("//div[@class = 'imc-content--display-flex-wrap']/span[text()='Products']/../../div[2]/div[1]/div[1]/div[1]/a"); //Locator for DG showroom Prod Name
 	By secondexhproduct = By.xpath("//div[@class='imc-vr--xxlarge']/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]"); //Locator for Second exhibitor product
-	By secondexhprodseedetailsbtn = By.xpath("(//div[@class='imc-gallery imc-gallery--80-20 imc-exhibitorcard--gallery-nowrap'])[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/a"); //Locator for Second exhibitor product see details btn
+	By secondexhprodseedetailsbtn = By.xpath("//div[@class='imc-vr--xxlarge']/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/a[1]/div[1]/div[1]"); //Locator for Second exhibitor product see details btn
 	By totalprodcountonsearchgridnew = By.xpath("//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div[2]/div[2]/div/div/p[1]");
 	By totalprodseealllinknew = By.xpath("//div[@class='imc-gallery__item imc-exhibitorcard imc-line'][1]/div[2]/div[2]/div/div/p[2]");
 	By exhproductnameonsearchgridnew = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]/h2");
@@ -353,8 +353,8 @@ public class ATLExhLineProdActionsPage extends base{
 
 	public WebElement getProdSeeDetailsBtn() {
 		wait = new WebDriverWait (driver,30);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(seeDetailsBtn));
-		return driver.findElement(seeDetailsBtn);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(seeDetailsBtnNew));
+		return driver.findElement(seeDetailsBtnNew);
 	}
 	public WebElement getProductMoreBtnOnSearchGrid() {
 		wait = new WebDriverWait (driver,30);
@@ -412,7 +412,7 @@ public class ATLExhLineProdActionsPage extends base{
 		return driver.findElement(eventdetailstag);
 	}
 	public WebElement getEventCardTag() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(eventcardtag));
 		return driver.findElement(eventcardtag);
 	}
