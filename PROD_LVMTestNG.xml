@@ -16,12 +16,14 @@
     		<class name="lasvegasmarket_PROD.GlobalSearch_SearchFor" />
     		<class name="lasvegasmarket_PROD.LineDigitalShowroom" />
     		<class name="lasvegasmarket_PROD.ShowSpecials" />
-    		<!-- <class name="lasvegasmarket_PROD.ExhibitorDigitalShowroom" />  -->
-			 <!-- <methods>
-			<include name="TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest">
+    		
+			<!--   <methods>
+			<include name="TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest">
+			</include>  -->
+			<!-- <include name="TS008_VerifyExhibitorEventsListTest">
 			</include> 
-			
-			</methods>   -->
+			 
+			</methods>  -->
 		</classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

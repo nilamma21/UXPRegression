@@ -13,6 +13,12 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import atlantamarket_PROD.TestListeners;
+import pageObjects.AtlantaMarket.ATLExhDigiShowroomPage;
+import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
+import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
+import pageObjects.AtlantaMarket.ATLLeftPaneFilters;
+import pageObjects.AtlantaMarket.ATLMarketPlannerPage;
+import pageObjects.AtlantaMarket.ATLProductDetailsPage;
 import pageObjects.LasVegasMarket.LVMExhDigiShowroomPage;
 import pageObjects.LasVegasMarket.LVMExhLineProdActionsPage;
 import pageObjects.LasVegasMarket.LVMGlobalSearchPage;
@@ -40,6 +46,12 @@ public class GlobalSearch_SearchFor extends base{
 	LVMExhLineProdActionsPage lvmexhact;
 	LVMMarketPlannerPage lvmmpp;
 	LVMLeftPaneFilters lvmleftpane;
+	ATLGlobalSearchPage atlgs;
+	ATLExhDigiShowroomPage atlexhdgshw;
+	ATLProductDetailsPage atlproddet;
+	ATLExhLineProdActionsPage atlexhact;
+	ATLMarketPlannerPage atlmppge;
+	ATLLeftPaneFilters atlleftpane;
 	
 	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns,
 	allnoteslist, favlist, searchlinetypelist, tagBlogPost, taglist, infoFilterList, catlist;
@@ -476,7 +488,7 @@ public class GlobalSearch_SearchFor extends base{
 		// The purpose of this test case to verify:-
 		// T440: Global Search- Search for : Articles : Filters
 
-		lvmgs = new LVMGlobalSearchPage(driver);
+		/*lvmgs = new LVMGlobalSearchPage(driver);
 		lvmds = new LVMExhDigiShowroomPage(driver);
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		lvmleftpane = new LVMLeftPaneFilters(driver);
@@ -502,7 +514,7 @@ public class GlobalSearch_SearchFor extends base{
 			try {
 				String f = infoFilterList.get(i).getText();
 				switch (f) {
-				/*case "Blog Post":
+				case "Blog Post":
 					infoFilterList.get(i).click();
 					driver.navigate().refresh();
 					Thread.sleep(5000);
@@ -528,7 +540,7 @@ public class GlobalSearch_SearchFor extends base{
 						infoFilterList.get(i).click();
 						lvmgs.getLVMInfoSearchTopicsFilter().click();
 					}
-					break;*/
+					break;
 
 				case "Atlanta Market":
 					infoFilterList.get(i).click();
@@ -735,7 +747,284 @@ public class GlobalSearch_SearchFor extends base{
 			}
 		}
 		driver.get(prop.getProperty("lvmurl_prod"));
+		Thread.sleep(5000);*/
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		atlleftpane = new ATLLeftPaneFilters(driver);
+		utl = new Utility(driver);
+
+        driver.get(prop.getProperty("lvmurl_prod"));
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        Thread.sleep(8000);
+		utl.ClearGlobalSearch();
+
+		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
+		atlgs.getATLSearchButton().click();
 		Thread.sleep(5000);
+
+		// Click on Articles link
+		atlgs.getATLsearchresultArticlesLink().click();
+		Thread.sleep(500);
+		// click on Topics filter
+		atlgs.getATLInfoSearchTopicsFilter().click();
+		Thread.sleep(500);
+		infoFilterList = driver.findElements(By.xpath("//div[@class='imc-filteritem__option']"));
+
+		for (int i = 0; i < infoFilterList.size(); i++) {
+			try {
+				String f = infoFilterList.get(i).getText();
+				switch (f) {
+				/*case "Blog Post":
+					infoFilterList.get(i).click();
+					Thread.sleep(500);
+					driver.navigate().refresh();
+					Thread.sleep(5000);
+					String filterResultTitle = atlgs.getATLArticleName().getText();
+					String filterResultTitleNew = filterResultTitle.replaceAll("[^a-zA-Z0-9 ]", "");
+					System.out.println("Filter Result Title: "+filterResultTitleNew);
+					utl.scrollElementIntoMiddle(atlgs.getATLArticleSeeMoreBtn());
+					atlgs.getATLArticleSeeMoreBtn().click();
+					Thread.sleep(3000);
+					try {
+						String articleTitle = atlgs.getATLArticleHeader().getText();
+						String articleTitleNew = articleTitle.replaceAll("[^a-zA-Z0-9 ]", "");
+						System.out.println(articleTitleNew);
+						Assert.assertTrue(filterResultTitleNew.contains(articleTitleNew));
+					} catch (Exception e) {
+						Assert.assertTrue(filterResultTitleNew.contains(driver.getTitle()));
+					}
+					utl.scrollElementIntoMiddle(atlgs.getATLArticleTag());
+					boolean temp = false;
+					tagBlogPost = driver.findElements(By.xpath("//span[@class='imc-blog-tag-module__tag']"));
+					for (WebElement blogPost : tagBlogPost) {
+						if (blogPost.getText().equals(f)) {
+							temp = true;
+							break;
+						}
+					}
+					Assert.assertTrue(temp);
+					driver.navigate().back();
+					Thread.sleep(5000);
+					try {
+						infoFilterList.get(i).click();
+						Thread.sleep(500);
+					} catch (StaleElementReferenceException e) {
+						infoFilterList = driver.findElements(By.xpath("//div[@class='imc-filteritem__option']"));
+						Thread.sleep(100);
+						infoFilterList.get(i).click();
+						atlgs.getATLInfoSearchTopicsFilter().click();
+						Thread.sleep(500);
+					}
+					break;*/
+
+				case "Atlanta Market":
+					infoFilterList.get(i).click();
+					Thread.sleep(5000);
+					driver.navigate().refresh();
+
+					String filterResultTitle1 = atlgs.getATLArticleName().getText();
+					atlgs.getATLArticleSeeMoreBtn().click();
+					Thread.sleep(500);
+					Assert.assertTrue(filterResultTitle1.contains(atlgs.getATLArticleHeader().getText()));
+					utl.scrollElementIntoMiddle(atlgs.getATLArticleTag());
+					boolean temp1 = false;
+					tagBlogPost = driver.findElements(By.xpath("//span[@class='imc-blog-tag-module__tag']"));
+					for (WebElement blogPost : tagBlogPost) {
+						if (blogPost.getText().equals(f)) {
+							temp1 = true;
+							break;
+						}
+					}
+					Assert.assertTrue(temp1);
+					driver.navigate().back();
+					Thread.sleep(5000);
+					try {
+						infoFilterList.get(i).click();
+						Thread.sleep(500);
+					} catch (StaleElementReferenceException e) {
+						infoFilterList = driver.findElements(By.xpath("//div[@class='imc-filteritem__option']"));
+						infoFilterList.get(i).click();
+						Thread.sleep(500);
+						atlgs.getATLInfoSearchTopicsFilter().click();
+					}
+					break;
+				case "Shop The Show":
+					infoFilterList.get(i).click();
+					Thread.sleep(5000);
+					driver.navigate().refresh();
+
+					String filterResultTitle2 = atlgs.getATLArticleName().getText();
+					atlgs.getATLArticleSeeMoreBtn().click();
+					Thread.sleep(500);
+					Assert.assertTrue(filterResultTitle2.contains(atlgs.getATLArticleHeader().getText()));
+					utl.scrollElementIntoMiddle(atlgs.getATLArticleTag());
+					boolean temp2 = false;
+					List<WebElement>tagBlogPost1 = driver.findElements(By.xpath("//span[@class='imc-blog-tag-module__tag']"));
+					for (WebElement blogPost : tagBlogPost1) {
+						if (blogPost.getText().equalsIgnoreCase(f)) {
+							temp2 = true;
+							break;
+						}
+					}
+					Assert.assertTrue(temp2);
+					driver.navigate().back();
+					Thread.sleep(5000);
+					try {
+						infoFilterList.get(i).click();
+						Thread.sleep(500);
+					} catch (StaleElementReferenceException e) {
+						infoFilterList = driver.findElements(By.xpath("//div[@class='imc-filteritem__option']"));
+						infoFilterList.get(i).click();
+						Thread.sleep(500);
+						atlgs.getATLInfoSearchTopicsFilter().click();
+						Thread.sleep(500);
+					}
+					break;
+				case "Press Release":
+					infoFilterList.get(i).click();
+					Thread.sleep(5000);
+					driver.navigate().refresh();
+
+					String filterResultTitle3 = atlgs.getATLArticleName().getText();
+					atlgs.getATLArticleSeeMoreBtn().click();
+					Thread.sleep(500);
+					Assert.assertTrue(filterResultTitle3.contains(atlgs.getATLArticleHeader().getText()));
+					utl.scrollElementIntoMiddle(atlgs.getATLArticleTag());
+					boolean temp3 = false;
+					tagBlogPost = driver.findElements(By.xpath("//span[@class='imc-blog-tag-module__tag']"));
+					for (WebElement blogPost : tagBlogPost) {
+						if (blogPost.getText().equals(f)) {
+							temp3 = true;
+							System.out.println("In Side 3::"+temp3);
+							break;
+						}
+					}
+					Assert.assertTrue(temp3);
+					driver.navigate().back();
+					Thread.sleep(5000);
+					try {
+						infoFilterList.get(i).click();
+						Thread.sleep(500);
+					} catch (StaleElementReferenceException e) {
+						infoFilterList = driver.findElements(By.xpath("//div[@class='imc-filteritem__option']"));
+						infoFilterList.get(i).click();
+						Thread.sleep(500);
+						atlgs.getATLInfoSearchTopicsFilter().click();
+						Thread.sleep(500);
+					}
+					break;
+				case "Fall Design Week":
+					//Thread.sleep(10000);
+					infoFilterList.get(i).click();
+					Thread.sleep(10000);
+					driver.navigate().refresh();
+					Thread.sleep(8000);
+					String filterResultTitle4 = atlgs.getATLArticleName().getText();
+					utl.scrollElementIntoMiddle(atlgs.getATLArticleSeeMoreBtn());
+					Thread.sleep(200);
+					atlgs.getATLArticleSeeMoreBtn().click();
+					Thread.sleep(500);
+					Assert.assertTrue(filterResultTitle4.contains(atlgs.getATLArticleHeader().getText()));
+					utl.scrollElementIntoMiddle(atlgs.getATLArticleTag());
+					boolean temp4 = false;
+					tagBlogPost = driver.findElements(By.xpath("//span[@class='imc-blog-tag-module__tag']"));
+					for (WebElement blogPost : tagBlogPost) {
+						if (blogPost.getText().equals(f)) {
+							temp4 = true;
+							break;
+						}
+					}
+					Assert.assertTrue(temp4);
+					driver.navigate().back();
+					Thread.sleep(5000);
+					try {
+						infoFilterList.get(i).click();
+						Thread.sleep(500);
+					} catch (StaleElementReferenceException e) {
+						infoFilterList = driver.findElements(By.xpath("//div[@class='imc-filteritem__option']"));
+						infoFilterList.get(i).click();
+						Thread.sleep(500);
+						atlgs.getATLInfoSearchTopicsFilter().click();
+					}
+					break;
+				/*case "Market Snapshot":
+					infoFilterList.get(i).click();
+					Thread.sleep(5000);
+					driver.navigate().refresh();
+
+					String filterResultTitle5 = atlgs.getATLArticleName().getText();
+					atlgs.getATLArticleSeeMoreBtn().click();
+					Thread.sleep(500);
+					Assert.assertTrue(filterResultTitle5.contains(atlgs.getATLArticleHeader().getText()));
+					utl.scrollElementIntoMiddle(atlgs.getATLArticleTag());
+					Thread.sleep(200);
+					boolean temp5 = false;
+					tagBlogPost = driver.findElements(By.xpath("//span[@class='imc-blog-tag-module__tag']"));
+					for (WebElement blogPost : tagBlogPost) {
+						if (blogPost.getText().equals(f)) {
+							temp5 = true;
+							break;
+						}
+					}
+					Assert.assertTrue(temp5);
+					driver.navigate().back();
+					Thread.sleep(5000);
+					try {
+						infoFilterList.get(i).click();
+						Thread.sleep(500);
+					} catch (StaleElementReferenceException e) {
+						infoFilterList = driver.findElements(By.xpath("//div[@class='imc-filteritem__option']"));
+						infoFilterList.get(i).click();
+						Thread.sleep(500);
+						atlgs.getATLInfoSearchTopicsFilter().click();
+						Thread.sleep(500);
+					}
+					break;*/
+				/*case "Press Releases":
+					infoFilterList.get(i).click();
+					Thread.sleep(5000);
+					driver.navigate().refresh();
+
+					String filterResultTitle6 = atlgs.getATLArticleName().getText();
+					atlgs.getATLArticleSeeMoreBtn().click();
+					Thread.sleep(500);
+					Assert.assertTrue(filterResultTitle6.contains(atlgs.getATLArticleHeader().getText()));
+					utl.scrollElementIntoMiddle(atlgs.getATLArticleTag());
+					Thread.sleep(5000);
+					boolean temp6 = false;
+					tagBlogPost = driver.findElements(By.xpath("//span[@class='imc-blog-tag-module__tag']"));
+					for (WebElement blogPost : tagBlogPost) {
+						if (blogPost.getText().equals(f)) {
+							temp6 = true;
+							break;
+						}
+					}
+					Assert.assertTrue(temp6);
+					driver.navigate().back();
+					Thread.sleep(5000);
+					try {
+						infoFilterList.get(i).click();
+						Thread.sleep(500);
+					} catch (StaleElementReferenceException e) {
+						infoFilterList = driver.findElements(By.xpath("//div[@class='imc-filteritem__option']"));
+						infoFilterList.get(i).click();
+						Thread.sleep(500);
+						atlgs.getATLInfoSearchTopicsFilter().click();
+						Thread.sleep(500);
+					}
+					break;*/
+
+				default:
+					break;
+				}
+			} catch (StaleElementReferenceException e) {
+				infoFilterList = driver.findElements(By.xpath("//div[@class='imc-filteritem__option']"));
+				String f = infoFilterList.get(i).getText();
+			}
+		}
+		Thread.sleep(2000);
+		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 	
 	@Test(priority = 7)
