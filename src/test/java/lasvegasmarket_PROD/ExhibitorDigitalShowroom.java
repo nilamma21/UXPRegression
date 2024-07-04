@@ -677,7 +677,7 @@ public class ExhibitorDigitalShowroom extends base {
     String splitShwSpecialCount = shwoSpecialCount.split(" ")[0].trim();
     System.out.println(splitShwSpecialCount);
     String SeeAllBtnCount = lvmds.getSeeAllshowSpecialBtn().getText();
-    String splitSeeAllBtnCount = SeeAllBtnCount.split(" ")[2].trim();
+    String splitSeeAllBtnCount = SeeAllBtnCount.split(" ")[1].trim();
     System.out.println(splitSeeAllBtnCount);
 
     Assert.assertTrue(splitShwSpecialCount.contains(splitSeeAllBtnCount));
@@ -1021,7 +1021,7 @@ public class ExhibitorDigitalShowroom extends base {
   @AfterClass
   public void tearDown() throws InterruptedException {
     Thread.sleep(2000);
-    // driver.quit();
+    driver.quit();
   }
 
 }

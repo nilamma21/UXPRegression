@@ -287,7 +287,7 @@ public class EvenntsAndWebinar extends base{
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click on IMC Event Tab
-		utl.scrollToElement(atlevents.getatlExhibitorsEventsTab());
+		//utl.scrollToElement(atlevents.getatlExhibitorsEventsTab());
 		atlevents.getatlImcEventsTab().click();
 		
 		Thread.sleep(2000);
@@ -390,7 +390,7 @@ public class EvenntsAndWebinar extends base{
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click on IMC Event Tab
-        utl.scrollToElement(atlevents.getatlExhibitorsEventsTab());
+        //utl.scrollToElement(atlevents.getatlExhibitorsEventsTab());
 		atlevents.getatlImcEventsTab().click();
 		Thread.sleep(500);
 		//Verify Event Calendar title
@@ -473,7 +473,7 @@ public class EvenntsAndWebinar extends base{
 			String eventTitle=eventTitleLink.getText();
 			Assert.assertTrue(eventTitleLink.isDisplayed());
 			//eventSeeDetailsLink = atlevents.atlatlListOfAllEventsSeeDetailsLink().get(1);
-			utl.scrollToElement(eventTitleLink);
+			//utl.scrollToElement(eventTitleLink);
 			eventTitleLink.click();
 			Thread.sleep(500);
 			//Verify Event Details Page
@@ -624,7 +624,7 @@ public class EvenntsAndWebinar extends base{
 		lvmevents.getlvmImcEventsTab().click();
 		Thread.sleep(2000);
 		//Click on Any Event title
-		utl.scrollToElement(lvmevents.getlvmClickOnEvent());
+		//utl.scrollToElement(lvmevents.getlvmClickOnEvent());
 		lvmevents.getlvmClickOnEvent().click();
 		Thread.sleep(4000);
 		Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUAT().getText()));
@@ -674,7 +674,6 @@ public class EvenntsAndWebinar extends base{
 		//Verify Detail Section
 		Assert.assertTrue(lvmevents.getlvmEventsDetailsPageDetailsSection().isDisplayed());
 		System.out.println("Event Details Section displayed");
-	
 		
 		//tags
 		/*Assert.assertTrue(lvmevents.getlvmTagIcon().isDisplayed());
@@ -724,6 +723,7 @@ public class EvenntsAndWebinar extends base{
 		lvmevents=new LVMEventsAndWebinarPage(driver);
 		lvmgs = new LVMGlobalSearchPage(driver);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.get(prop.getProperty("lvmurl_prod"));
 		utl.clickOnEventLinkOfChannelLVM();
 		
 		/*// Click on Attend Tab
@@ -983,7 +983,7 @@ public class EvenntsAndWebinar extends base{
 			//eventSeeDetailsLink = lvmevents.lvmlvmListOfAllEventsSeeDetailsLink().get(1);
 			//WebDriverWait wait = new WebDriverWait(driver,30);//new added
 			//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("eventTitleLink")));
-			utl.scrollToElement(eventTitleLink);
+			//utl.scrollToElement(eventTitleLink);
 			eventTitleLink.click();
 			Thread.sleep(500);
 			//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -992,10 +992,10 @@ public class EvenntsAndWebinar extends base{
 			Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUAT().getText()));
 			driver.navigate().back();
 			//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			//Thread.sleep(5000);
+			Thread.sleep(8000);
 			//Click on Exh Event Tab
-			utl.scrollToElement(lvmevents.getlvmExhibitorsEventsTab());
-			lvmevents.getlvmExhibitorsEventsTab().click();
+			//utl.scrollToElement(lvmevents.getlvmExhibitorsEventsTab());
+			//lvmevents.getlvmExhibitorsEventsTab().click();
 			Thread.sleep(2000);
 			//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		}
@@ -1023,7 +1023,7 @@ public class EvenntsAndWebinar extends base{
 		//Click on Exh Event Tab
 		lvmevents.getlvmExhibitorsEventsTab().click();
 		Thread.sleep(2000);
-		utl.scrollToElement(lvmevents.getlvmClickOnEvent());
+		//utl.scrollToElement(lvmevents.getlvmClickOnEvent());
 		String eventTitle=lvmevents.getlvmClickOnEvent().getText();
 		Thread.sleep(3000);
 		lvmevents.getlvmClickOnEvent().click();
@@ -1817,7 +1817,7 @@ public class EvenntsAndWebinar extends base{
 	@AfterClass
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 
 }

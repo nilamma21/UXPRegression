@@ -2,13 +2,26 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
   <test name="Test">
+  
     <classes>
+    		<class name="lasvegasmarket_PROD.ExhibitorDigitalShowroom" /> 
+    		<class name="lasvegasmarket_PROD.FloorPlans" />
+    		<class name="lasvegasmarket_PROD.GlobalSearch_ExhibitorActions" />
     		<class name="lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters" />
-		<!-- 	<methods>
-			<include name="TS010_VerifySelectionOfFloralBotanicalsProdCatgFromLeftPaneFiltersTest">
-			</include>
-			</methods> -->
+    		<class name="lasvegasmarket_PROD.GlobalSearch_LineActions" />
+    		<class name="lasvegasmarket_PROD.GlobalSearch_MatchingResults" />
+    		<class name="lasvegasmarket_PROD.GlobalSearch_ProductActions" />
+    		<class name="lasvegasmarket_PROD.GlobalSearch_SuggestionList" />
+    		<class name="lasvegasmarket_PROD.EvenntsAndWebinar" />
+    		<class name="lasvegasmarket_PROD.GlobalSearch_SearchFor" />
+    		<class name="lasvegasmarket_PROD.LineDigitalShowroom" />
+    		<class name="lasvegasmarket_PROD.ShowSpecials" />
+    		<!-- <class name="lasvegasmarket_PROD.ExhibitorDigitalShowroom" />  -->
+			 <!-- <methods>
+			<include name="TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest">
+			</include> 
 			
-    </classes>
+			</methods>   -->
+		</classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

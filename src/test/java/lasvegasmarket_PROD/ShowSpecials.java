@@ -100,7 +100,7 @@ public class ShowSpecials extends base{
 		//Store the name of Show Special Exhibitor
 		String ename=lvmgs.getFirstShowSpecialName().getText();
 		System.out.println(ename);
-		String abc =ename.split(" ")[2].trim();
+		String abc =ename.split(" ")[0].trim();
 		
 		//Click on Show Special Exhibitor
 		lvmgs.getFirstShowSpecialViewBrandDetailsBtn().click();
@@ -129,6 +129,7 @@ public class ShowSpecials extends base{
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//click on Exhibitors And Product Tab
 		lvmgs.getlvmExhibitorsAndProductTab().click();
+		Thread.sleep(5000);
 		//Click on Show Specials 
 		lvmgs.getlvmShowSpecialsLink().click();
 		Thread.sleep(5000);

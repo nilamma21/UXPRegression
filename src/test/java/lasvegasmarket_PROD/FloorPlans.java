@@ -128,7 +128,7 @@ public class FloorPlans extends base {
 
 		//Verify that Loading Exhibitors msg should be displayed
 		//Assert.assertTrue(atlflpp.getATLLoadingExhMsg().isDisplayed());
-		Thread.sleep(4000);
+		Thread.sleep(10000);
 		//Verify that No Exhibitor msg should be displayed
 		Assert.assertTrue(lvmflpp.getLVMNoExpMsg().isDisplayed());
 	}
@@ -468,7 +468,7 @@ System.out.println("x2 "+x2);
 		lvmflpp.getLVMBuildingFloor().click();
 
 		//utl.scrollToElement(lvmflpp.getscrollexhibitorsection());
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 		Assert.assertTrue(lvmflpp.getlvmexhibitorsection().isDisplayed());
 
 		lvmflpp.getlvmexhibitorsearch().click();

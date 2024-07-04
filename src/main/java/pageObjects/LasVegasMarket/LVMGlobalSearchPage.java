@@ -16,7 +16,7 @@ public class LVMGlobalSearchPage {
 
 	By lvmglobalsearchtxtbx = By.xpath("//input[@id='input-1']"); // Locator for Global Search field 
 	By lvmInfosearchtxtbx = By.xpath("(//input[@id='input-1'])[2]"); // Locator for Information Search field
-	By lvmInfosearchbtn = By.xpath("(//button[@class = 'imc-searchform--button--search'])[2]"); //Locator for Seach button for global search
+	By lvmInfosearchbtn = By.xpath("(//div[@class = 'imc-searchform--button--search'])[2]"); //Locator for Seach button for global search
 	//By lvmsearchbtn = By.xpath("//button[@class = 'imc-searchform--button--search']"); //Locator for Seach button for global search
 	By lvmsearchbtn = By.xpath("//div[@class = 'imc-searchform--button--search']"); //Locator for Seach button for global search
 	By lvmSearchBtnUAT = By.xpath("(//div[@class='imc-searchform--row'])[1]/form[1]/button[2]"); //Locator for Seach button for global search
@@ -43,6 +43,8 @@ public class LVMGlobalSearchPage {
 	By lvmExhibitorHeader = By.xpath("//div[@class='imc-gallery imc-gallery--65-35 breadcrumbs__round']//ul//li[2]/a[1]"); //Locator for Exhibitor Header
 	By lvmExhibitorCatalogName = By.xpath("//div[@class='imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div[1]/div[2]//div[1]/div[1]/div[1]//a[1]/div[1]/div[1]/span[1]/span[1]"); //Locator for Exhibitor Catalog name
 	By lvmArticleHeader = By.xpath("//div[@id='root']/section[1]/section[1]/section[1]/h1[1]"); //Locator for Article Header	
+	By lvmArticleTitle = By.xpath("//section[@class='imc-site-wrapper']/section/section/h1"); //Locator for Article Header
+	
 	By lvmArticleTag = By.xpath("//div[@class='imc-blog-tag-module imc-vr--titan imc-breakpoint-display--hide-mobile']/span[1]"); //Locator for Article Tag
 	By lvmArticleName = By.xpath("//div[@class='imc-vr--xxlarge imc-margin--top--large--mobile']/div[1]/div[1]/a[1]"); //Locator for Article Name
 	By lvmArticleSeeMoreBtn = By.xpath("//div[@class='imc-vr--xxlarge imc-margin--top--large--mobile']/div[1]/div[2]/div[3]/a[1]"); //Locator for Article See More Btn
@@ -67,15 +69,15 @@ public class LVMGlobalSearchPage {
 	By fourthbreadcrumbtxtUAT = By.xpath("//ul[@class='imc-breadcrumb']/li[4]/a[1]"); //Locator for 4th Breadcrumb text in app
 	By lvmGlobalSearchSortBtn = By.xpath("//button[@class='imc-searchform--bar--button ' and text()='Sort']"); //Locator for Global Search Sort Btn
 	By lvmGlobalSearch_SearchWithinDropdwn = By.xpath("//select[@name='Search Type']"); //Locator for Global Search SearchWithhn Dropdown
-	By lvmListOfAllExh = By.xpath("//div[@class='imc-exhibitorcard-title-row']"); //Locator for All Exhibitors
-	By lvmListOfAllExhLocation = By.xpath("//div[@class='imc-exhibitorcard-title-row']/div[2]"); //Locator for All Exhibitors Location
+	By lvmListOfAllExh = By.xpath("//div[@class='imc-exhibitorcard-title-row ']"); //Locator for All Exhibitors
+	By lvmListOfAllExhLocation = By.xpath("//div[@class='imc-exhibitorcard-title-row ']/div[2]"); //Locator for All Exhibitors Location
 	By lvmListOfAllExhTotalProductLink = By.xpath("//div[@class='imc-exhibitorcard--prod-item-container']/p"); //Locator for All Exhibitors Total Product Links
 	By lvmListOfAllExhMatchingProductLink = By.xpath("//div[@class='imc-exhibitorcard--prod-item-container imc-exhibitorcard--prod-item-container--divider']/p"); //Locator for All Exhibitors Matching Product Links
 	By lvmListOfAllProducts = By.xpath("//div[@class='imc-exhibitorcard-products-row imc-content--display-flex-space-between-mobile ']"); //Locator for All Product Links
 	By lvmListOfAllProductsName = By.xpath("//div[@class='imc-exhibitorcard-products-row imc-content--display-flex-space-between-mobile ']/div/p"); //Locator for All Product Names
 	By lvmGlobalSearch_SearchSortByDropdwn = By.xpath("//select[@name='Sort by']");  //Locator for Global Search Sort By Dropdown
 	By lvmGlobalSearchExhLocationList = By.xpath("//div[@class='imc-exhibitorcard-title-row']/div[2]/div[1]/div[1]/a");  //Locator for Location list
-	By lvmExhNames = By.xpath("//div[@class='imc-exhibitorcard-title-row']/div[1]/a[1]/h2");  //Locator for Exhibitors Name list
+	By lvmExhNames = By.xpath("//div[@class='imc-exhibitorcard-title-row ']/div[1]/a[1]/h2");  //Locator for Exhibitors Name list
 	By lvmMachingProductCount = By.xpath("//div[@class='imc-exhibitorcard--prod-item-container imc-exhibitorcard--prod-item-container--divider']/p[1]");  //Locator for Matching prod count list
 	By lvmFilterByNameDropDown = By.xpath("//select[@id='dropdown-filter-by-letter']");  //Locator for Filter By Name Dropdown
 	By lvmExhiNameForFilterByName = By.xpath("//div[@class='imc-exhibitorcard-title-row']/div[1]");  //Locator for Exh Name for Filter by name
@@ -84,6 +86,8 @@ public class LVMGlobalSearchPage {
 	By lvmAddToFavBtn = By.xpath("//div[@class='imc-searchform--bar--dropdown open']/div[2]/button[1]");  //Locator for Add To Fav Btn
 	By lvm1STExhiName = By.xpath("(//div[@class='imc-exhibitorcard-title-row']/div[1]/a[1]/h2[1])[1]");  //Locator for Exh Name 
 	By lvmAddToExistingList = By.xpath("//div[@class='imc-searchform--bar--dropdown open']/div[3]/button[1]");  //Locator for Add Existing list Btn
+	By lvm1STExhiNamePROD = By.xpath("(//div[@class='imc-exhibitorcard-title-row ']/div[1]/a[1])[1]");  //Locator for Add Existing list Btn
+	
 	By lvmExistingList = By.xpath("//div[@class='imc-vr--xlarge']/div[2]/label[1]");  //Locator for  Existing list
 	By lvmAddToSelectBtn = By.xpath("//div[@class='imc-button--justify-right']/input[1]");  //Locator for Add To list Btn
 	By lvmGoToMPBtn = By.xpath("//div[@class='imc-modal--content']/div[1]/div[1]/a[1]");  //Locator for Go to MP Btn
@@ -113,8 +117,11 @@ public class LVMGlobalSearchPage {
 	By atmarketeventtypefilterUat = By.xpath("//label[contains(text(),'Buying Event')]"); //Locator for At Market Event Type
 	By lvmseemoredetailsbtnneww = By.xpath("//a[contains(text(),'View Brand Details')]"); //Locator for See More Details button
 	By atmarketeventtypefilterUAT_LVM = By.xpath("(//div[@class='imc-filteritem__tier2'])[2]/div[1]/label[1]"); //Locator for At Market Event Type
-	By lvmExhiNameForFilterByNameNew = By.xpath("(//div[@class='imc-exhibitorcard-title-row']/div[1])[1]");  //Locator for Exh Name for Filter by name
+	By lvmExhiNameForFilterByNameNew = By.xpath("(//div[@class='imc-exhibitorcard-title-row ']/div[1])[1]");  //Locator for Exh Name for Filter by name
 	By infoTitle = By.xpath("//div[@class='imc-informationcard__body']/p[2]");  //Locator for 1st name of Catalog
+	By infoTitleForInfoPage = By.xpath("(//div[@class='imc-section--inner-content imc-section--align-  imc-section-- imc-content--center-mobile'])[4]/div[3]/h2[1]/span/span[1]");  //Locator for 1st name of Catalog
+	
+	
 	By atlsearchresult = By.xpath("//div[@class='alert-box  ']"); //Locator for Search result 
 	By atlInfoSearchMoreInfoBtn = By.xpath("(//a[contains(text(),'See More Details')])[1]"); //Locator for Juniper Market Btn
 	By lvmShowSpecialsSection = By.xpath("//div[@class = 'imc-content--display-flex-wrap']/span[contains(text(),'Show Specials')]"); //Locator for Show Special Sections
@@ -128,6 +135,17 @@ public class LVMGlobalSearchPage {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 		PageFactory.initElements(driver, this);
+	}
+	
+	public WebElement getlvm1STExhiNamePROD() {
+		wait = new WebDriverWait (driver,40);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvm1STExhiNamePROD));
+		return driver.findElement(lvm1STExhiNamePROD);
+	}
+	public WebElement getinfoTitleForInfoPage() {
+		wait = new WebDriverWait (driver,40);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(infoTitleForInfoPage));
+		return driver.findElement(infoTitleForInfoPage);
 	}
 	public WebElement getlvmShowSpecialsTitle2() {
 		wait = new WebDriverWait (driver,40);
