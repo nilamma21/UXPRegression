@@ -287,7 +287,7 @@ public class EvenntsAndWebinar extends base{
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click on IMC Event Tab
-		utl.scrollToElement(atlevents.getatlExhibitorsEventsTab());
+		//utl.scrollToElement(atlevents.getatlExhibitorsEventsTab());
 		atlevents.getatlImcEventsTab().click();
 		
 		Thread.sleep(2000);
@@ -385,12 +385,12 @@ public class EvenntsAndWebinar extends base{
 		atlmppge = new ATLMarketPlannerPage(driver);
 
 		driver.get(prop.getProperty("lvmurl_prod"));
-		Thread.sleep(5000);
+		/*Thread.sleep(5000);
 		utl.clickOnEventLinkOfChannel();	
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		//Click on IMC Event Tab
-        utl.scrollToElement(atlevents.getatlExhibitorsEventsTab());
+        //utl.scrollToElement(atlevents.getatlExhibitorsEventsTab());
 		atlevents.getatlImcEventsTab().click();
 		Thread.sleep(500);
 		//Verify Event Calendar title
@@ -473,7 +473,107 @@ public class EvenntsAndWebinar extends base{
 			String eventTitle=eventTitleLink.getText();
 			Assert.assertTrue(eventTitleLink.isDisplayed());
 			//eventSeeDetailsLink = atlevents.atlatlListOfAllEventsSeeDetailsLink().get(1);
-			utl.scrollToElement(eventTitleLink);
+			//utl.scrollToElement(eventTitleLink);
+			eventTitleLink.click();
+			Thread.sleep(500);
+			//Verify Event Details Page
+			Assert.assertTrue(eventTitle.contains(atlevents.getatlEventNameOnDetailsPage().getText()));
+			Thread.sleep(3000);
+			driver.navigate().back();
+			Thread.sleep(3000);
+		}
+		
+		System.out.println(allEventSeeDetailsLinkCount + " Events Details Page displayed");
+		Assert.assertEquals(allEventcount, allEventSeeDetailsLinkCount1);*/
+		Thread.sleep(5000);
+		utl.clickOnEventLinkOfChannel();	
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//Click on IMC Event Tab
+        utl.scrollElementIntoMiddle(atlevents.getatlExhibitorsEventsTab());
+		atlevents.getatlImcEventsTab().click();
+		Thread.sleep(500);
+		//Verify Event Calendar title
+		Assert.assertTrue(atlevents.getatlEventDateAndMonth().isDisplayed());
+		System.out.println("Event Calendar title is displayed");
+		
+		int allEventcount=0;
+		for (WebElement allEvents : atlevents.getatlListOfAllEvents()) {
+			allEventcount++;
+			allEvents.isDisplayed();
+		}
+		System.out.println(allEventcount+ " Events Present");
+		
+		//Verify Events Titles
+		int allEventTitlesCount=0;
+		for (WebElement eventTitles : atlevents.getatlListOfEventTitles()) {
+			allEventTitlesCount++;
+			Assert.assertTrue(eventTitles.isDisplayed());
+			String title=eventTitles.getText();
+			List<WebElement>SeeAllLinks=driver.findElements(By.linkText(title));
+			//Verify See Details HyperLinks
+			utl.checkItemPresentInListorNot(SeeAllLinks, title);
+		}
+		System.out.println(allEventTitlesCount + " Titles displayed");
+		Assert.assertEquals(allEventcount, allEventTitlesCount);
+		
+		// Verify Events Type
+		int allEventTypeCount = 0;
+		for (WebElement eventType : atlevents.getatlListOfAllEventsType()) {
+			allEventTypeCount++;
+			Assert.assertTrue(eventType.isDisplayed());
+			System.out.println(allEventTypeCount + " Types displayed");
+		}
+		System.out.println(allEventTypeCount + " Types displayed");
+		Assert.assertEquals(allEventcount, allEventTypeCount);
+
+		// Verify Events Time
+		int allEventTimeCount = 0;
+		for (WebElement eventTime : atlevents.getatlListOfAllEventsTime()) {
+			allEventTimeCount++;
+			Assert.assertTrue(eventTime.isDisplayed());
+		} 
+		System.out.println(allEventTimeCount + " Time displayed");
+		Assert.assertEquals(allEventcount, allEventTimeCount);
+
+		// Verify Events Location
+		int allEventLocationCount = 0;
+		for (WebElement eventLocation : atlevents.getatlListOfAllEventsLocations()) {
+			
+			allEventLocationCount++;
+			Assert.assertTrue(eventLocation.isDisplayed());
+		}
+		System.out.println(allEventLocationCount + " Location displayed");
+		
+		Assert.assertEquals(allEventcount, allEventLocationCount);
+	
+		// Verify Events Image
+		int allEventImageCount = 0;
+		for (WebElement eventImage : atlevents.atlListOfAllEventsImages()) {
+			allEventImageCount++;
+			Assert.assertTrue(eventImage.isDisplayed());
+		}
+		System.out.println(allEventImageCount + "  Images displayed");
+		Assert.assertEquals(allEventcount, allEventImageCount);
+
+		// Verify Events See Details Link
+		int allEventSeeDetailsLinkCount = 0;
+		for (WebElement eventSeeDetailsLink : atlevents.atlatlListOfAllEventsSeeDetailsLink()) {
+			allEventSeeDetailsLinkCount++;
+			Assert.assertTrue(eventSeeDetailsLink.isDisplayed());
+		}
+		System.out.println(allEventSeeDetailsLinkCount + " See Details Link displayed");
+		Assert.assertEquals(allEventcount, allEventSeeDetailsLinkCount);
+
+		// Click on Event Title page
+		int allEventSeeDetailsLinkCount1 = 0;
+		for( int i=0;i < atlevents.getatlListOfEventTitles().size(); i++) {
+			allEventSeeDetailsLinkCount1++;
+			WebElement eventTitleLink = atlevents.getatlListOfEventTitles().get(i);
+			String eventTitle=eventTitleLink.getText();
+			Assert.assertTrue(eventTitleLink.isDisplayed());
+			//eventSeeDetailsLink = atlevents.atlatlListOfAllEventsSeeDetailsLink().get(1);
+			utl.scrollElementIntoMiddle(eventTitleLink);
 			eventTitleLink.click();
 			Thread.sleep(500);
 			//Verify Event Details Page
@@ -485,6 +585,7 @@ public class EvenntsAndWebinar extends base{
 		
 		System.out.println(allEventSeeDetailsLinkCount + " Events Details Page displayed");
 		Assert.assertEquals(allEventcount, allEventSeeDetailsLinkCount1);
+		
 		
 
 	}
@@ -624,7 +725,7 @@ public class EvenntsAndWebinar extends base{
 		lvmevents.getlvmImcEventsTab().click();
 		Thread.sleep(2000);
 		//Click on Any Event title
-		utl.scrollToElement(lvmevents.getlvmClickOnEvent());
+		//utl.scrollToElement(lvmevents.getlvmClickOnEvent());
 		lvmevents.getlvmClickOnEvent().click();
 		Thread.sleep(4000);
 		Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUAT().getText()));
@@ -674,7 +775,6 @@ public class EvenntsAndWebinar extends base{
 		//Verify Detail Section
 		Assert.assertTrue(lvmevents.getlvmEventsDetailsPageDetailsSection().isDisplayed());
 		System.out.println("Event Details Section displayed");
-	
 		
 		//tags
 		/*Assert.assertTrue(lvmevents.getlvmTagIcon().isDisplayed());
@@ -724,6 +824,7 @@ public class EvenntsAndWebinar extends base{
 		lvmevents=new LVMEventsAndWebinarPage(driver);
 		lvmgs = new LVMGlobalSearchPage(driver);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.get(prop.getProperty("lvmurl_prod"));
 		utl.clickOnEventLinkOfChannelLVM();
 		
 		/*// Click on Attend Tab
@@ -760,11 +861,13 @@ public class EvenntsAndWebinar extends base{
 		lvmevents=new LVMEventsAndWebinarPage(driver);
 		lvmgs = new LVMGlobalSearchPage(driver);
 		lvmmpp = new LVMMarketPlannerPage(driver);
+		atlevents=new ATLEventsAndWebinarPage(driver);
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		utl.clickOnEventLinkOfChannelLVM();
+		//Thread.sleep(2000);
 		//Click on Exh Event Tab
-		Thread.sleep(2000);
+		/*Thread.sleep(2000);
 		lvmevents.getlvmExhibitorsEventsTab().click();
 		
 		Thread.sleep(5000);
@@ -879,7 +982,95 @@ public class EvenntsAndWebinar extends base{
 		}
 
 		System.out.println("By Default "+d +" today's date is selected.");
-		Thread.sleep(4000);
+		Thread.sleep(4000);*/
+		Thread.sleep(5000);
+		//utl.clickOnEventLinkOfChannel();  
+		
+		//Click on Exh Event Tab
+		//utl.scrollElementIntoMiddle(atlevents.getatlExhibitorsEventsTab());
+		atlevents.getatlExhibitorsEventsTab().click();
+		
+		Thread.sleep(2000);
+		//Event Month and Year
+		String eventDateAndMonth=atlevents.getatlEventDateAndMonth().getText();
+		String trimDate=eventDateAndMonth.split(" ")[2].trim();
+		//System.out.println(trimDate);
+		Thread.sleep(2000);
+		String date=trimDate.replaceAll("[,]", "");
+		String trimOnlyDate=date.split(" ")[0].trim();
+		String replaceDate=trimOnlyDate.replaceFirst("^0+(?!$)", "");
+		System.out.println(replaceDate);
+
+		String trimMonth = eventDateAndMonth.split(" ")[1].trim();
+		// System.out.println(trimMonth);
+		String trimYear = eventDateAndMonth.split(" ")[3].trim();
+		// System.out.println(trimYear);
+		String EventmonthAndYear = trimMonth.concat(" ").concat(trimYear);
+		// System.out.println("Concat Month And Year :: "+EventmonthAndYear);
+
+		// Verify Current Date is Heighlighetd or not
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-MMM");
+		LocalDate localDate = LocalDate.now();
+		String d = dtf.format(localDate);
+		System.out.println("Current Date ::" + dtf.format(localDate));
+		try {
+			Assert.assertTrue(d.contains(atlevents.getatlTodaysDate().getText()));
+			System.out.println("Current Date "+atlevents.getatlTodaysDate().getText()+" is Heighlighted");
+			}catch (Exception e) {
+				Assert.assertTrue(d.contains(atlevents.getatlTodaysDatePROD().getText()));
+				System.out.println("Current Date "+atlevents.getatlTodaysDatePROD().getText()+" is Heighlighted");
+			}
+		//Current Month
+		DateTimeFormatter month = DateTimeFormatter.ofPattern("MMM");
+		LocalDate localMonth = LocalDate.now();
+		LocalDate prevMonth= localMonth.minusMonths(1);		
+				
+		String m = month.format(localMonth);//current month
+		String mm = month.format(prevMonth);//previous month
+		
+	
+		System.out.println("Current Month ::" +m );
+		System.out.println("Previous Month ::" +mm );
+		
+		//Click on Calendar Prev Btn
+		atlevents.getatlCalendarPrevMonth().click();
+		Thread.sleep(500);
+		System.out.println("Previous Month From Calendar ::"+atlevents.getatlSelectMonth().getText());
+		Assert.assertTrue(atlevents.getatlSelectMonth().getText().contains(mm));
+		System.out.println("Previous Month "+atlevents.getatlSelectMonth().getText()+" is selected");
+		//utl.selectFilters(atlevents.getatlListOfatlSelectAnyDate(), replaceDate);
+		
+		
+		atlevents.getatlCalendarNextMonthBtn().click();
+		Thread.sleep(5000);
+	
+		 if(atlevents.getatlSelectMonth().getText().contains(EventmonthAndYear))
+		{
+			 try {
+				 	Assert.assertTrue(atlevents.getatlTodaysDatePROD().isDisplayed());
+					atlevents.getatlTodaysDatePROD().click();
+					Thread.sleep(500);
+					}catch (Exception e) {
+						utl.selectFilters(atlevents.getatlListOfEventDate(), replaceDate);
+					
+					}			 
+		}
+		// Verify Event is selected by datepicker
+		Assert.assertTrue(atlevents.getatlEventDateAndMonth().isDisplayed());
+		System.out.println("Event is selected by Date");
+
+		//Click on Reset Btn
+		atlevents.getatlResetBtn().click();
+		Thread.sleep(500);
+		//Verify Current date and month should selected by default
+		try {
+			Assert.assertTrue(d.contains(atlevents.getatlTodaysDate().getText()));
+			System.out.println("By Default "+d +" today's date is selected.");
+			}catch (Exception e) {
+				Assert.assertTrue(d.contains(atlevents.getatlTodaysDatePROD().getText()));
+				System.out.println("By Default "+d +" today's date is selected.");
+			}
+		Thread.sleep(5000);
 	}
 	
 	@Test(priority = 8)//Previous priority = 11
@@ -896,7 +1087,7 @@ public class EvenntsAndWebinar extends base{
 
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(5000);
+		/*Thread.sleep(5000);
 		utl.clickOnEventLinkOfChannelLVM();	
 		//Click on Exh Event Tab
 		lvmevents.getlvmExhibitorsEventsTab().click();
@@ -983,7 +1174,7 @@ public class EvenntsAndWebinar extends base{
 			//eventSeeDetailsLink = lvmevents.lvmlvmListOfAllEventsSeeDetailsLink().get(1);
 			//WebDriverWait wait = new WebDriverWait(driver,30);//new added
 			//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("eventTitleLink")));
-			utl.scrollToElement(eventTitleLink);
+			//utl.scrollToElement(eventTitleLink);
 			eventTitleLink.click();
 			Thread.sleep(500);
 			//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -992,10 +1183,125 @@ public class EvenntsAndWebinar extends base{
 			Assert.assertTrue(eventTitle.contains(lvmevents.getlvmEventNameOnDetailsPageUAT().getText()));
 			driver.navigate().back();
 			//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			//Thread.sleep(5000);
+			Thread.sleep(8000);
 			//Click on Exh Event Tab
-			utl.scrollToElement(lvmevents.getlvmExhibitorsEventsTab());
-			lvmevents.getlvmExhibitorsEventsTab().click();
+			//utl.scrollToElement(lvmevents.getlvmExhibitorsEventsTab());
+			//lvmevents.getlvmExhibitorsEventsTab().click();
+			Thread.sleep(2000);
+			//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		}
+		
+		System.out.println(allEventSeeDetailsLinkCount + " Events Details Page displayed");
+		Assert.assertEquals(allEventcount, allEventSeeDetailsLinkCount1);*/
+		Thread.sleep(5000);
+		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		utl.clickOnEventLinkOfChannel();  
+		
+		//Click on Exh Event Tab
+		Thread.sleep(15000);
+		//utl.scrollElementIntoMiddle(atlevents.getatlExhibitorsEventsTab());
+		atlevents.getatlExhibitorsEventsTab().click();
+		Thread.sleep(3000);
+		
+		//Verify Event Calendar title
+		Assert.assertTrue(atlevents.getatlEventDateAndMonth().isDisplayed());
+		System.out.println("Event Calendar title is displayed");
+		
+		int allEventcount=0;
+		for (WebElement allEvents : atlevents.getatlListOfAllEvents()) {
+			allEventcount++;
+			allEvents.isDisplayed();
+		}
+		System.out.println(allEventcount+ " Events Present");
+		
+		//Verify Events Titles
+		int allEventTitlesCount=0;
+		for (WebElement eventTitles : atlevents.getatlListOfEventTitles()) {
+			allEventTitlesCount++;
+			Assert.assertTrue(eventTitles.isDisplayed());
+			String title=eventTitles.getText();
+			List<WebElement>SeeAllLinks=driver.findElements(By.linkText(title));
+			//Verify See Details HyperLinks
+			utl.checkItemPresentInListorNot(SeeAllLinks, title);
+		}
+		System.out.println(allEventTitlesCount + " Titles displayed");
+		Assert.assertEquals(allEventcount, allEventTitlesCount);
+		
+
+		// Verify Events Type
+		int allEventTypeCount = 0;
+		for (WebElement eventType : atlevents.getatlListOfAllEventsType()) {
+			allEventTypeCount++;
+			Assert.assertTrue(eventType.isDisplayed());
+		}
+		System.out.println(allEventTypeCount + " Types displayed");
+		Assert.assertEquals(allEventcount, allEventTypeCount);
+
+		// Verify Events Time
+		int allEventTimeCount = 0;
+		for (WebElement eventTime : atlevents.getatlListOfAllEventsTime()) {
+			allEventTimeCount++;
+			Assert.assertTrue(eventTime.isDisplayed());
+		} 
+		System.out.println(allEventTimeCount + " Time displayed");
+		Assert.assertEquals(allEventcount, allEventTimeCount);
+
+		// Verify Events Location
+		int allEventLocationCount = 0;
+		for (WebElement eventLocation : atlevents.getatlListOfAllEventsLocations()) {
+			allEventLocationCount++;
+			Assert.assertTrue(eventLocation.isDisplayed());
+		}
+		System.out.println(allEventLocationCount + " Location displayed");
+		Assert.assertEquals(allEventcount, allEventLocationCount);
+	
+		// Verify Events Image
+		int allEventImageCount = 0;
+		for (WebElement eventImage : atlevents.atlListOfAllEventsImages()) {
+			allEventImageCount++;
+			Assert.assertTrue(eventImage.isDisplayed());
+		}
+		System.out.println(allEventImageCount + "  Images displayed");
+		Assert.assertEquals(allEventcount, allEventImageCount);
+
+		// Verify Events See Details Link
+		int allEventSeeDetailsLinkCount = 0;
+		for (WebElement eventSeeDetailsLink : atlevents.atlatlListOfAllEventsSeeDetailsLink()) {
+			allEventSeeDetailsLinkCount++;
+			Assert.assertTrue(eventSeeDetailsLink.isDisplayed());
+		}
+		System.out.println(allEventSeeDetailsLinkCount + " See Details Link displayed");
+		Assert.assertEquals(allEventcount, allEventSeeDetailsLinkCount);
+		Thread.sleep(5000);
+		//driver.navigate().refresh();
+
+		// Click on Event Title page
+		int allEventSeeDetailsLinkCount1 = 0;
+		for( int i=0;i < atlevents.getatlListOfEventTitles().size(); i++) {
+			allEventSeeDetailsLinkCount1++;
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			//Thread.sleep(5000);
+			WebElement eventTitleLink = atlevents.getatlListOfEventTitles().get(i);
+			String eventTitle=eventTitleLink.getText();
+			Assert.assertTrue(eventTitleLink.isDisplayed());
+			//eventSeeDetailsLink = atlevents.atlatlListOfAllEventsSeeDetailsLink().get(1);
+			//WebDriverWait wait = new WebDriverWait(driver,30);//new added
+			//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("eventTitleLink")));
+			utl.scrollElementIntoMiddle(eventTitleLink);
+			Thread.sleep(2000);
+			eventTitleLink.click();
+			
+			Thread.sleep(15000);
+			driver.navigate().refresh();
+			//Verify Event Details Page
+			Assert.assertTrue(eventTitle.contains(atlevents.getatlEventNameOnDetailsPage().getText()));
+			driver.navigate().back();
+			
+			Thread.sleep(500);
+			//Click on Exh Event Tab
+			utl.scrollElementIntoMiddle(atlevents.getatlExhibitorsEventsTab());
+			Thread.sleep(500);
+			atlevents.getatlExhibitorsEventsTab().click();
 			Thread.sleep(2000);
 			//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		}
@@ -1023,7 +1329,7 @@ public class EvenntsAndWebinar extends base{
 		//Click on Exh Event Tab
 		lvmevents.getlvmExhibitorsEventsTab().click();
 		Thread.sleep(2000);
-		utl.scrollToElement(lvmevents.getlvmClickOnEvent());
+		//utl.scrollToElement(lvmevents.getlvmClickOnEvent());
 		String eventTitle=lvmevents.getlvmClickOnEvent().getText();
 		Thread.sleep(3000);
 		lvmevents.getlvmClickOnEvent().click();

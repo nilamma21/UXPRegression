@@ -95,7 +95,7 @@ public class GlobalSearch_MatchingResults extends base {
 			lvmgs.getlvmGlobalSearchClearTxt().click();
 		}*/
 		Thread.sleep(5000);
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor5"));//filtersglobalsearchinput
+		lvmgs.getLVMGlobalSearchTextBox().sendKeys("   ");//filtersglobalsearchinput
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(5000);
 		// Click on Sort Btn
@@ -235,7 +235,7 @@ public class GlobalSearch_MatchingResults extends base {
 		 utl.Sorting(lvmgs.getlvmExhNames(),lvmgs.getlvmGlobalSearch_SearchSortByDropdwn(),"Sort by Name Ascending");
 		 Thread.sleep(2000);
 		 utl.Sorting(lvmgs.getlvmExhNames(),lvmgs.getlvmGlobalSearch_SearchSortByDropdwn(),"Sort by Name Descending");
-		
+		 Thread.sleep(8000);
 		//Select filter Sort by Matching Product Count Descending
 		utl.Sorting(lvmgs.getlvmMachingProductCount(), lvmgs.getlvmGlobalSearch_SearchSortByDropdwn(),
 				"Sort By Matching Product Count Descending");

@@ -85,11 +85,12 @@ public class GlobalSearch_ProductActions extends base {
 		String productNameOnSearchGrid = atlexhact.getprodNameUAT().getText(); //New
 		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
 
-		utl.scrollToElement(atlexhact.getExhibitorProduct());
+		//utl.scrollToElement(atlexhact.getExhibitorProduct());
 
 		// Hover on Product
 		Actions actions = new Actions(driver);
 		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
+		Thread.sleep(3000);
 		// To mouseover on See Details btn
 		actions.moveToElement(atlexhact.getProdSeeDetailsBtn()).perform();
 
@@ -131,11 +132,12 @@ public class GlobalSearch_ProductActions extends base {
 	        String productNameOnSearchGrid = atlexhact.getprodNameUAT().getText(); //New
 	        System.out.println("Selected Product Name: "+productNameOnSearchGrid);
 
-	        utl.scrollToElement(atlexhact.getExhibitorProduct());
+	        //utl.scrollToElement(atlexhact.getExhibitorProduct());
 
 	        // Hovering on Product
 	        Actions actions = new Actions(driver);
 	        actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
+	        Thread.sleep(3000);
 	        // To mouseover on See Details btn
 	        actions.moveToElement(atlexhact.getProdSeeDetailsBtn()).perform();
 
@@ -144,7 +146,7 @@ public class GlobalSearch_ProductActions extends base {
 	        Thread.sleep(5000);
 
 	        //Click on Product Full Screen Viewer button
-	        utl.scrollToElement(  atlproddet.getProductFullScreenViewerBtn());
+	        //utl.scrollToElement(  atlproddet.getProductFullScreenViewerBtn());
 	        atlproddet.getProductFullScreenViewerBtn().click();
 
 	        //Verify that Full Screen viewer should be displayed with Product images

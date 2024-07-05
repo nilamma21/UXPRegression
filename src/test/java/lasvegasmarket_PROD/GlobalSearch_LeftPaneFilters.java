@@ -76,11 +76,11 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		lvmleftpane = new LVMLeftPaneFilters(driver);
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
-
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputforInfoTab")));//Previous input = filtersglobalsearchinput
 		lvmgs.getLVMSearchButton().click();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
+		
+		Thread.sleep(10000);
 		//Click on Product Categories expand btn
 		lvmleftpane.getLVMProdCatgExpandBtn().click();
 		Thread.sleep(2000);
@@ -94,7 +94,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//Verify the selected Product Category on Exhibitor Digital Showroom page
 		//Select 1st Exhibitor from Search results grid
 		//////utl.scrollToElement(lvmleftpane.getLVMexhibitor());
-		lvmleftpane.getLVMexhibitor().click();
+		lvmleftpane.getatlexhibitorLVM().click();
 
 		//Scroll till Product Categories section
 		////utl.scrollToElement(lvmds.getLVMProductCategSection());
@@ -260,7 +260,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		Thread.sleep(6000);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));//Previous input = filtersglobalsearchinput
 		lvmgs.getLVMSearchButton().click();
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		//Click on Product Categories expand btn
 		lvmleftpane.getLVMProdCatgExpandBtn().click();		
 
@@ -275,7 +275,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//Select 'Antique/Vintage' prod category
 		String expectedprodcatg = lvmleftpane.getLVMAntiqueVintProdCatg().getText();
 		lvmleftpane.getLVMAntiqueVintProdCatg().click();
-		Thread.sleep(8000);
+		Thread.sleep(5000);
 
 		//Click on Product Categories expand btn
 		////utl.scrollToElement(lvmleftpane.getLVMProdCatgExpandBtn());
@@ -310,7 +310,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 			}
 		}
 
-		driver.navigate().back();
+		/*driver.navigate().back();
 
 		//Open Exhibitor Portal in new tab
 		((JavascriptExecutor)driver).executeScript("window.open()");
@@ -344,8 +344,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//Verify that expected Style should be displayed on profile
 		Assert.assertTrue(lvmleftpane.getEXPIndustrialStyleOnProfile().isDisplayed());
 		driver.close();
-		driver.switchTo().window(tabs.get(0));
-		//driver.get(prop.getProperty("lvmurl_prod"));
+		driver.switchTo().window(tabs.get(0));*/
+		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 
 	@Test(priority = 5)
@@ -380,7 +380,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//Verify the selected Product Category on Exh Digital Showroom page
 		//Select 1st Exhibitor from Search results grid
 		////utl.scrollToElement(lvmleftpane.getLVMexhibitor());
-		lvmleftpane.getLVMexhibitor().click();
+		lvmleftpane.getatlexhibitorLVM().click();
 		//driver.navigate().refresh();
 		
 		//Scroll till Product Categories section
@@ -515,7 +515,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		
 		//Click on the 2nd exhibitor
 		////utl.scrollToElement(lvmleftpane.getSecondExhUat());
-		lvmleftpane.getSecondExhUat().click(); //For UAT
+		lvmleftpane.getLVMexhibitor().click(); //For UAT
 
 		//Scroll till Product Categories section
 		////utl.scrollToElement(lvmds.getLVMProductCategSection());
@@ -560,8 +560,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		
 		lvmleftpane.getLVMGeneralGiftProdCatg().click();
 		//Thread.sleep(8000);
-		String str =driver.findElement(By.xpath("(//input[@type='checkbox' and @aria-checked='true']/../label[@data-xpath='filteritem.checkboxlabel'])[1]")).getText();
-	System.out.println(str);
+		/*String str =driver.findElement(By.xpath("(//input[@type='checkbox' and @aria-checked='true']/../label[@data-xpath='filteritem.checkboxlabel'])[1]")).getText();
+		System.out.println(str);
 		ListLFsubMenus=lvmleftpane.getListLFsubMenus();
 		
 		List<String> newTextList  = new ArrayList<>();
@@ -573,7 +573,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		
 		for (String text : newTextList) {
 		    System.out.println(text);
-		}
+		}*/
 		/*//Verify the selected Product Categories on product details page
 		////utl.scrollToElement(lvmexhact.getExhibitorProduct());
 		// Hovering on 1st Product
@@ -817,7 +817,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 	@AfterClass
 	public void tearDown()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 	 
 }

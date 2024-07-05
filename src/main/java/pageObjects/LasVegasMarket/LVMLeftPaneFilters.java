@@ -15,7 +15,8 @@ public class LVMLeftPaneFilters {
 	By prodcatgexpandbtn = By.xpath("//a[@aria-label='Product Categories']"); //Locator for Product category expand btn
 	By accentfurnexpandbtn = By.xpath("//div[contains(@class,'imc-filter imc-content imc-expand-collapse')]//div[1]//div[1]//div[2]//div[1]//div[1]//div[1]//div[1]//a[1]//div[1]//div[1]//div[1]");//Locator for accent furniture expan
 	By atlAntiqueReprodAccbtn = By.xpath("(//div[contains(@class,'imc-filter imc-content imc-expand-collapse')]//div[1]//div[1]//div[2]//div[1]//div[20])[1]"); //Locator for Antique Reprod Accbtn
-	By atlexhibitor = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[1]/div[1]/div[1]//a[1]/h2[1]");//Locator for 1st Exhibitor
+	By atlexhibitor = By.xpath("//div[@class='imc-vr--xxlarge']/div[2]/div[1]/div[1]/div/div[1]/a[1]/h2");//Locator for 1st Exhibitor
+	By atlexhibitorLVM = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[1]/div[1]/div/div[1]/a[1]/h2");
 	By stylesFilterbtn = By.xpath("//a[@aria-label='Styles']"); //Locator for Styles filter
 	By apparelvintprodcatg = By.xpath("//label[contains(text(),'Apparel, Vintage')]"); //Locator for name of 'Apparel, Vintage' Categ.
 	By antiquevintprodcatg = By.xpath("//label[contains(text(),'Antique/Vintage')]"); //Locator for name of 'Antique/Vintage' Categ.
@@ -46,6 +47,12 @@ public class LVMLeftPaneFilters {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	} 
+
+	public WebElement getatlexhibitorLVM(){
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlexhibitorLVM));
+		return driver.findElement(atlexhibitorLVM);
+	}
 	public List<WebElement> getListLFsubMenus() {
 		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ListLFsubMenus));
