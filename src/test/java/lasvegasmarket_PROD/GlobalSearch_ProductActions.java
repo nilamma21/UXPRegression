@@ -146,7 +146,8 @@ public class GlobalSearch_ProductActions extends base {
 	        Thread.sleep(5000);
 
 	        //Click on Product Full Screen Viewer button
-	        //utl.scrollToElement(  atlproddet.getProductFullScreenViewerBtn());
+	       utl.scrollElementIntoMiddle(atlproddet.getProductFullScreenViewerBtn());
+	       Thread.sleep(200);
 	        atlproddet.getProductFullScreenViewerBtn().click();
 
 	        //Verify that Full Screen viewer should be displayed with Product images

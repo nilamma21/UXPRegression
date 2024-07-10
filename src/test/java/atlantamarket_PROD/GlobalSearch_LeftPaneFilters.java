@@ -56,8 +56,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(7000);
-		driver.navigate().refresh();
-		Thread.sleep(4000);
+		//driver.navigate().refresh();
+		//Thread.sleep(4000);
 	}
 	@Test(enabled=false)
 	public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
@@ -75,7 +75,6 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
 
 		lp.getPassword().sendKeys((prop.getProperty("passwordW")));
-
 
 		Thread.sleep(1000);
 	//	lp.getPassword().sendKeys((prop.getProperty("password")));
@@ -105,9 +104,13 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(5000);
+		
 		//Click on Product Categories expand btn
+		utl.scrollElementIntoMiddle(atlleftpane.getATLProdCatgExpandBtn());
+		Thread.sleep(200);
 		atlleftpane.getATLProdCatgExpandBtn().click();
-		Thread.sleep(100);
+		Thread.sleep(500);
+		
 		utl.scrollElementIntoMiddle(atlleftpane.getATLApparelVintProdCatg());
 		Thread.sleep(200);
 		//Select 'Apparel, Vintage' prod category

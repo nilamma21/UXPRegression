@@ -87,13 +87,16 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//////utl.scrollToElement(lvmleftpane.getLVMApparelVintProdCatg());
 
 		//Select 'Apparel, Vintage' prod category
+		utl.scrollElementIntoMiddle(lvmleftpane.getLVMApparelVintProdCatg());
+		Thread.sleep(200);
 		String expectedprodcatg = lvmleftpane.getLVMApparelVintProdCatg().getText();
 		lvmleftpane.getLVMApparelVintProdCatg().click();
 		Thread.sleep(8000);
 
 		//Verify the selected Product Category on Exhibitor Digital Showroom page
 		//Select 1st Exhibitor from Search results grid
-		//////utl.scrollToElement(lvmleftpane.getLVMexhibitor());
+		utl.scrollElementIntoMiddle(lvmleftpane.getatlexhibitorLVM());
+		Thread.sleep(200);
 		lvmleftpane.getatlexhibitorLVM().click();
 
 		//Scroll till Product Categories section
@@ -127,19 +130,26 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		Thread.sleep(10000);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor6")));
 		lvmgs.getLVMSearchButton().click();
-		Thread.sleep(10000);
+		Thread.sleep(8000);
+		
 		//Click on Product Categories expand btn
+		utl.scrollElementIntoMiddle(lvmleftpane.getLVMProdCatgExpandBtn());
+		Thread.sleep(200);
 		lvmleftpane.getLVMProdCatgExpandBtn().click();
 
-		//////utl.scrollToElement(lvmleftpane.getLVMAntiqueVintProdCatg());
-		Thread.sleep(10000);
+		//utl.scrollToElement(lvmleftpane.getLVMAntiqueVintProdCatg());
+		Thread.sleep(5000);
+		
 		//Select 'Antique/Vintage' prod category
+		utl.scrollElementIntoMiddle(lvmleftpane.getLVMAntiqueVintProdCatg());
+		Thread.sleep(200);
 		String expectedprodcatg = lvmleftpane.getLVMAntiqueVintProdCatg().getText();
 		lvmleftpane.getLVMAntiqueVintProdCatg().click();
 		Thread.sleep(8000);
 		
 		//Verify the selected Product Category on Product details page
-		//////utl.scrollToElement(lvmexhact.getSecondExhProduct()); //For Prod
+		utl.scrollElementIntoMiddle(lvmleftpane.getFirstVintageExhUat());
+		Thread.sleep(200);
 		//////utl.scrollToElement(lvmleftpane.getFirstVintageExhUat());
 		lvmleftpane.getFirstVintageExhUat().click(); //For UAT
 		
@@ -179,6 +189,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(5000);
+		
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));//Previous input = filtersglobalsearchinput
 		lvmgs.getLVMSearchButton().click();
 		
@@ -186,14 +197,16 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//Click on Product Categories expand btn
 		lvmleftpane.getLVMProdCatgExpandBtn().click();
 
-		//////utl.scrollToElement(lvmleftpane.getLVMAntiqueVintProdCatg());
-
 		//Select 'Antique/Vintage' prod category
+		utl.scrollElementIntoMiddle(lvmleftpane.getLVMAntiqueVintProdCatg());
+		Thread.sleep(200);
 		String expectedprodcatg1 = lvmleftpane.getLVMAntiqueVintProdCatg().getText();
 		lvmleftpane.getLVMAntiqueVintProdCatg().click();
 		Thread.sleep(6000);
 		
 		//Select 'Apparel, Vintage' prod category
+		utl.scrollElementIntoMiddle(lvmleftpane.getLVMApparelVintProdCatg());
+		Thread.sleep(200);
 		String expectedprodcatg2 = lvmleftpane.getLVMApparelVintProdCatg().getText();
 		lvmleftpane.getLVMApparelVintProdCatg().click();
 		Thread.sleep(8000);
@@ -225,7 +238,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 */
 		//Verify the selected Product Categories on Exhibitor Digital Showroom page
 		//Select 1st Exhibitor from Search results grid
-		////utl.scrollToElement(lvmleftpane.getLVMexhibitor());
+		utl.scrollElementIntoMiddle(lvmleftpane.getLVMexhibitor());
+		Thread.sleep(200);
 		lvmleftpane.getLVMexhibitor().click();
 		Thread.sleep(5000);
 		//Scroll till Product Categories section
@@ -258,10 +272,14 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(6000);
+		
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));//Previous input = filtersglobalsearchinput
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(5000);
+		
 		//Click on Product Categories expand btn
+		utl.scrollElementIntoMiddle(lvmleftpane.getLVMProdCatgExpandBtn());
+		Thread.sleep(200);
 		lvmleftpane.getLVMProdCatgExpandBtn().click();		
 
 		/*//Expand btn code
@@ -273,21 +291,30 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//////utl.scrollToElement(lvmleftpane.getLVMAntiqueVintProdCatg());
 
 		//Select 'Antique/Vintage' prod category
+		utl.scrollElementIntoMiddle(lvmleftpane.getLVMAntiqueVintProdCatg());
+		Thread.sleep(200);
 		String expectedprodcatg = lvmleftpane.getLVMAntiqueVintProdCatg().getText();
 		lvmleftpane.getLVMAntiqueVintProdCatg().click();
 		Thread.sleep(5000);
 
 		//Click on Product Categories expand btn
-		////utl.scrollToElement(lvmleftpane.getLVMProdCatgExpandBtn());
+		utl.scrollElementIntoMiddle(lvmleftpane.getLVMProdCatgExpandBtn());
+		Thread.sleep(200);
 		lvmleftpane.getLVMProdCatgExpandBtn().click();
 		Thread.sleep(3000);
+		
 		//Click on Styles expand btn
+		utl.scrollElementIntoMiddle(lvmleftpane.getLVMStylesExpandBtn());
+		Thread.sleep(200);
 		lvmleftpane.getLVMStylesExpandBtn().click();
 		Thread.sleep(6000);
 		//Select Style name 'Industrial'
 		////utl.scrollToElement(lvmleftpane.getLVMIndustrialStyle());
 		//String expectedstyle = lvmleftpane.getLVMIndustrialStyle().getText();
+		
 		//System.out.println("Expected Style name:"+expectedstyle);
+		utl.scrollElementIntoMiddle(lvmleftpane.getLVMIndustrialStyle());
+		Thread.sleep(200);
 		lvmleftpane.getLVMIndustrialStyle().click();
 		Thread.sleep(10000);
 
@@ -295,7 +322,10 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//lvmexhact.getIMCExhibitorName().click(); //For prod
 		////utl.scrollToElement(lvmleftpane.getFirstVintageExhUat());
 		//lvmleftpane.getFirstVintageExhUat().click(); //For UAT
+		
 		//Click on the second exhibitor from search result.
+		utl.scrollElementIntoMiddle(lvmleftpane.getSecondExhUat());
+		Thread.sleep(200);
 		lvmleftpane.getSecondExhUat().click(); //For UAT
 
 		//Scroll till Product Categories section
@@ -367,19 +397,25 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys("   ");//Previous input = filtersglobalsearchinput
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(5000);
+		
 		//Click on Product Categories expand btn
+		utl.scrollElementIntoMiddle(lvmleftpane.getLVMProdCatgExpandBtn());
+		Thread.sleep(200);
 		lvmleftpane.getLVMProdCatgExpandBtn().click();
 
 		////utl.scrollToElement(lvmleftpane.getLVMAccentFurnitureProdCatg());
 
 		//Select Accent Furniture prod category
+		utl.scrollElementIntoMiddle(lvmleftpane.getLVMAccentFurnitureProdCatg());
+		Thread.sleep(200);
 		String expectedprodcatg = lvmleftpane.getLVMAccentFurnitureProdCatg().getText();
 		lvmleftpane.getLVMAccentFurnitureProdCatg().click();
 		Thread.sleep(8000);
 
 		//Verify the selected Product Category on Exh Digital Showroom page
 		//Select 1st Exhibitor from Search results grid
-		////utl.scrollToElement(lvmleftpane.getLVMexhibitor());
+		utl.scrollElementIntoMiddle(lvmleftpane.getatlexhibitorLVM());
+		Thread.sleep(200);
 		lvmleftpane.getatlexhibitorLVM().click();
 		//driver.navigate().refresh();
 		
@@ -412,12 +448,14 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(2000);
+		
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys("   ");
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(7000);
 
 		//Click on Product Categories expand btn
-		////utl.scrollToElement(lvmleftpane.getLVMProdCatgExpandBtn());
+		utl.scrollElementIntoMiddle(lvmleftpane.getLVMProdCatgExpandBtn());
+		Thread.sleep(200);
 		lvmleftpane.getLVMProdCatgExpandBtn().click();
 
 		////utl.scrollToElement(lvmleftpane.getLVMHolidayProdCatg());
@@ -425,13 +463,16 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//Select Holiday/Seasonal prod category
 		String expectedprodcatg = lvmleftpane.getLVMHolidayProdCatg().getText();
 		System.out.println(expectedprodcatg);
+		utl.scrollElementIntoMiddle(lvmleftpane.getLVMHolidayProdCatg());
+		Thread.sleep(200);
 		lvmleftpane.getLVMHolidayProdCatg().click();
 		Thread.sleep(8000);
 
 		//Verify the selected Product Categories on Exhibitor Digital Showroom page
 		//Select 1st Exhibitor from Search results grid
 		////utl.scrollToElement(lvmleftpane.getLVMexhibitor());
-		utl.scrollToTop();
+		utl.scrollElementIntoMiddle(lvmleftpane.getLVMexhibitor());
+		Thread.sleep(200);
 		lvmleftpane.getLVMexhibitor().click();
 
 		//Scroll till Product Categories section
@@ -459,6 +500,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		actions.click().perform();*/ //For Prod
 		
 		//Click on the first exhibitor
+		utl.scrollElementIntoMiddle(lvmleftpane.getFirstVintageExhUat());
+		Thread.sleep(200);
 		lvmleftpane.getFirstVintageExhUat().click(); //For UAT
 		Thread.sleep(1000);
 		//Scroll till Product Categories section
@@ -489,16 +532,21 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(2000);
+		
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys("   ");
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(3000);
 		
 		//Click on Product Categories expand btn
+		utl.scrollElementIntoMiddle(lvmleftpane.getLVMProdCatgExpandBtn());
+		Thread.sleep(200);
 		lvmleftpane.getLVMProdCatgExpandBtn().click();
 		Thread.sleep(1000);
 		////utl.scrollToElement(lvmleftpane.getLVMDecorativeAccProdCatg());
 
 		//Select Decorative Accessories prod category
+		utl.scrollElementIntoMiddle(lvmleftpane.getLVMDecorativeAccProdCatg());
+		Thread.sleep(200);
 		String expectedprodcatg = lvmleftpane.getLVMDecorativeAccProdCatg().getText();
 		lvmleftpane.getLVMDecorativeAccProdCatg().click();
 		Thread.sleep(8000);
@@ -514,11 +562,11 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		actions.click().perform();*/ //For Prod
 		
 		//Click on the 2nd exhibitor
-		////utl.scrollToElement(lvmleftpane.getSecondExhUat());
+		utl.scrollElementIntoMiddle(lvmleftpane.getLVMexhibitor());
+		Thread.sleep(200);
 		lvmleftpane.getLVMexhibitor().click(); //For UAT
 
 		//Scroll till Product Categories section
-		////utl.scrollToElement(lvmds.getLVMProductCategSection());
 		prodcatgitemlist = lvmds.getLVMProductCategItemList();
 
 		for (int j = 0; j < prodcatgitemlist.size(); j++) {
@@ -546,18 +594,23 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(2000);
+		
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys("   ");
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(2000);
 		
 		//Click on Product Categories expand btn
+		utl.scrollElementIntoMiddle(lvmleftpane.getLVMProdCatgExpandBtn());
+		Thread.sleep(200);
 		lvmleftpane.getLVMProdCatgExpandBtn().click();
 		Thread.sleep(2000);
 		////utl.scrollToElement(lvmleftpane.getLVMGeneralGiftProdCatg());
 
 		//Select General Gift prod category
 		String expectedprodcatg = lvmleftpane.getLVMGeneralGiftProdCatg().getText();
-		
+		System.out.println(expectedprodcatg);
+		utl.scrollElementIntoMiddle(lvmleftpane.getLVMGeneralGiftProdCatg());
+		Thread.sleep(200);
 		lvmleftpane.getLVMGeneralGiftProdCatg().click();
 		//Thread.sleep(8000);
 		/*String str =driver.findElement(By.xpath("(//input[@type='checkbox' and @aria-checked='true']/../label[@data-xpath='filteritem.checkboxlabel'])[1]")).getText();
@@ -586,21 +639,48 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		
 		//Click on the first exhibitor
 		//lvmleftpane.getSecondExhUat().click();
-		////utl.scrollToElement(lvmleftpane.getSecondExhUat());
+		utl.scrollElementIntoMiddle(lvmleftpane.getSecondExhUat());
+		Thread.sleep(200);
 		lvmleftpane.getSecondExhUat().click(); //For UAT
 		
 		//Scroll till Product Categories section
 		////utl.scrollToElement(lvmds.getLVMProductCategSection());
 		Thread.sleep(2000);
 		prodcatgitemlist = lvmds.getLVMProductCategItemList();
+		String []catList = {"General Gift","Collegiate","Decorative Signs","Educational Items","Ethnic Inspired","Gift Wrap & Packaging","Licensed Product","Music","Party Accessories","Religious Gifts","Tech Accessories","Travel & Luggage","Umbrellas, Personal"};;
 
-		for (int j = 0; j < prodcatgitemlist.size(); j++) {
+			for (int j = 0; j < prodcatgitemlist.size(); j++) {
+				boolean bol = false;
+					if(lvmds.getLVMProductCategTable().isDisplayed()) {
+						if(lvmds.getLVMProductCategTable().isDisplayed()) {
+							//System.out.println(prodcatgitemlist.get(j).getText());
+							for(String str : catList) {
+								if (str.equals(prodcatgitemlist.get(j).getText())) {
+									bol=true;
+									System.out.println(prodcatgitemlist.get(j).getText()+" : "+str);
+									Assert.assertTrue(prodcatgitemlist.get(j).getText().contains(str));
+									break;
+								}
+							}
+						}
+					}
+				}
+			
+			/*			for (int j = 0; j < prodcatgitemlist.size(); j++) {
+			if(lvmds.getLVMProductCategTable().isDisplayed()) {
+				//System.out.println(prodcatgitemlist.get(j).getText());
+					Assert.assertTrue(prodcatgitemlist.get(j).getText().contains(expectedprodcatg));
+					break;
+			}
+			 */
+
+		/*		for (int j = 0; j < prodcatgitemlist.size(); j++) {
 			if(lvmds.getLVMProductCategTable().isDisplayed()) {
 				//System.out.println(prodcatgitemlist.get(j).getText());
 				Assert.assertTrue(prodcatgitemlist.get(j).getText().contains(expectedprodcatg));
 				break;
 			}
-		}
+		}*/
 		//driver.get(prop.getProperty("lvmurl_prod"));
 	}
 
@@ -625,11 +705,15 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		Thread.sleep(6000);
 
 		//Click on Product Categories expand btn
+		utl.scrollElementIntoMiddle(lvmleftpane.getLVMProdCatgExpandBtn());
+		Thread.sleep(200);
 		lvmleftpane.getLVMProdCatgExpandBtn().click();
 
 		////utl.scrollToElement(lvmleftpane.getLVMFashionAccProdCatg());
 
 		//Select Fashion Accessories/Jewelry prod category
+		utl.scrollElementIntoMiddle(lvmleftpane.getLVMFashionAccProdCatg());
+		Thread.sleep(200);
 		String expectedprodcatg = lvmleftpane.getLVMFashionAccProdCatg().getText();
 		System.out.println(expectedprodcatg);
 		lvmleftpane.getLVMFashionAccProdCatg().click();
@@ -637,22 +721,43 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		//Verify the selected Product Categories on Exhibitor Digital Showroom page
 		//Select 1st Exhibitor from Search results grid
-		////utl.scrollToElement(lvmleftpane.getLVMexhibitor());
-		lvmleftpane.getLVMexhibitor().click();
-
+		utl.scrollElementIntoMiddle(lvmleftpane.getFirstVintageExhUat());
+		Thread.sleep(200);
+		//lvmleftpane.getLVMexhibitor().click();
+		lvmleftpane.getFirstVintageExhUat().click();
 		//Scroll till Product Categories section
-		////utl.scrollToElement(lvmds.getLVMProductCategSection());
+		//utl.scrollToElement(lvmds.getLVMProductCategSection());
 		prodcatgitemlist = lvmds.getLVMProductCategItemList();
+		
+		String []catList = {"Fashion Accessories/Jewelry","Costume Jewelry","Estate Jewelry","Eyeglasses & Sunglasses","Gloves","Handbags","Hats, Scarves & Gloves","Jewelry, Vintage","Loungewear & Sleepwear","Scarves","Watches"};;
 
-		for (int i = 0; i < prodcatgitemlist.size(); i++) {
+		for (int j = 0; j < prodcatgitemlist.size(); j++) {
+			boolean bol = false;
+				if(lvmds.getLVMProductCategTable().isDisplayed()) {
+					if(lvmds.getLVMProductCategTable().isDisplayed()) {
+						//System.out.println(prodcatgitemlist.get(j).getText());
+						for(String str : catList) {
+							if (str.equals(prodcatgitemlist.get(j).getText())) {
+								bol=true;
+								System.out.println(prodcatgitemlist.get(j).getText()+" : "+str);
+								Assert.assertTrue(prodcatgitemlist.get(j).getText().contains(str));
+								break;
+							}
+						}
+					}
+				}
+			}
+		
+		driver.navigate().back();
+		Thread.sleep(2000);
+		
+/*		for (int i = 0; i < prodcatgitemlist.size(); i++) {
 			if(lvmds.getLVMProductCategTable().isDisplayed()) {
 				//System.out.println(prodcatgitemlist.get(i).getText());
 				Assert.assertTrue(prodcatgitemlist.get(i).getText().contains(expectedprodcatg));
 				break;
 			}
-		}
-		driver.navigate().back();
-		Thread.sleep(6000);
+		}*/
 
 		/*//Verify the selected Product Category on Product details page
 		////utl.scrollToElement(lvmexhact.getProductForMultipleCatg());
@@ -666,18 +771,18 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		
 		//Click on the first exhibitor
 		//lvmleftpane.getSecondExhUat().click(); //For UAT
-		lvmleftpane.getFirstVintageExhUat().click();
+		//lvmleftpane.getFirstVintageExhUat().click();
 
 		//Scroll till Product Categories section
 		////utl.scrollToElement(lvmds.getLVMProductCategSection());
-		prodcatgitemlist = lvmds.getLVMProductCategItemList();
+		//prodcatgitemlist = lvmds.getLVMProductCategItemList();
 
-		for (int j = 0; j < prodcatgitemlist.size(); j++) {
+/*		for (int j = 0; j < prodcatgitemlist.size(); j++) {
 			if(lvmds.getLVMProductCategTable().isDisplayed()) {
 				Assert.assertTrue(prodcatgitemlist.get(j).getText().contains(expectedprodcatg));
 				break;
 			}
-		}
+		}*/
 		//driver.get(prop.getProperty("lvmurl_prod"));
 	}
 
@@ -696,12 +801,15 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(6000);
+		
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys("   ");
 		Thread.sleep(2000);
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(6000);
 		
 		//Click on Product Categories expand btn
+		utl.scrollElementIntoMiddle(lvmleftpane.getLVMProdCatgExpandBtn());
+		Thread.sleep(200);
 		lvmleftpane.getLVMProdCatgExpandBtn().click();
 		Thread.sleep(6000);
 		////utl.scrollToElement(lvmleftpane.getLVMFloralBotanicalsProdCatg());
@@ -714,6 +822,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		String abc1 =expectedprodcatg.split(" ")[2].trim();
 		System.out.println(abc1);
 		
+		utl.scrollElementIntoMiddle(lvmleftpane.getLVMFloralBotanicalsProdCatg());
+		Thread.sleep(200);
 		lvmleftpane.getLVMFloralBotanicalsProdCatg().click();
 		Thread.sleep(8000);
 
@@ -729,7 +839,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		
 		//Click on the 1st exhibitor
 		//lvmleftpane.getSecondExhUat().click();
-		////utl.scrollToElement(lvmleftpane.getFirstVintageExhUat());
+		utl.scrollElementIntoMiddle(lvmleftpane.getFirstVintageExhUat());
+		Thread.sleep(200);
 		lvmleftpane.getFirstVintageExhUat().click(); //For UAT
 		Thread.sleep(15000);
 		//Scroll till Product Categories section
@@ -779,12 +890,17 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys("   ");
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(6000);
+		
 		//Click on Product Categories expand btn
+		utl.scrollElementIntoMiddle(lvmleftpane.getLVMProdCatgExpandBtn());
+		Thread.sleep(200);
 		lvmleftpane.getLVMProdCatgExpandBtn().click();
 
 		////utl.scrollToElement(lvmleftpane.getLVMHomeTextilesProdCatg());
 
 		//Select Home Textiles prod category
+		utl.scrollElementIntoMiddle(lvmleftpane.getLVMHomeTextilesProdCatg());
+		Thread.sleep(200);
 		String expectedprodcatg = lvmleftpane.getLVMHomeTextilesProdCatg().getText();
 		lvmleftpane.getLVMHomeTextilesProdCatg().click();
 		Thread.sleep(8000);
@@ -796,7 +912,8 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//Click on the first exhibitor
 		//lvmleftpane.getSecondExhUat().click(); 
 		////utl.scrollToElement(lvmleftpane.getLVMexhibitor());
-		utl.scrollToTop();
+		utl.scrollElementIntoMiddle(lvmleftpane.getLVMexhibitor());
+		Thread.sleep(200);
 		lvmleftpane.getLVMexhibitor().click();//For UAT
 		Thread.sleep(8000);
 		

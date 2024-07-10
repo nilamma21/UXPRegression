@@ -110,14 +110,21 @@ public class GlobalSearch_SearchFor extends base {
 		
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(2000);
 		utl.ClearGlobalSearch();
+		
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(8000);
 
 		// Click on Info link
+		utl.scrollElementIntoMiddle(atlgs.getATLsearchresultInfoLink());
+		Thread.sleep(200);
 		atlgs.getATLsearchresultInfoLink().click();
 		Thread.sleep(8000);
+		
+		utl.scrollElementIntoMiddle(atlgs.getATLInfosearchtxtbxClr());
+		Thread.sleep(200);
 		String FirstInfoName=atlgs.getFirstInfoName().getText();
 		atlgs.getATLInfosearchtxtbxClr().click();
 		Thread.sleep(2000);
@@ -135,6 +142,7 @@ public class GlobalSearch_SearchFor extends base {
 		String seeMoreDetailsURL=atlgs.getatlInfoSearchMoreInfoBtn().getAttribute("href");
 		// Click on See More details Btn from result
 		utl.scrollElementIntoMiddle(atlgs.getatlInfoSearchMoreInfoBtn());
+		Thread.sleep(200);
 		atlgs.getatlInfoSearchMoreInfoBtn().click();
 		Thread.sleep(5000);
 		System.out.println("First Info Name: "+FirstInfoName);
@@ -351,11 +359,14 @@ public class GlobalSearch_SearchFor extends base {
 		Thread.sleep(8000);
 
 		// Click on Article link
+		utl.scrollElementIntoMiddle(atlgs.getATLsearchresultArticlesLink());
+		Thread.sleep(200);
 		atlgs.getATLsearchresultArticlesLink().click();
 		Thread.sleep(3000);
 		Assert.assertTrue(atlgs.getATLSearchResult().getText().contains(prop.getProperty("searchforArticlesInput2")));
 		String filterResultTitle = atlgs.getATLArticleName().getText();
 		System.out.println("Article Title on Search Page: "+filterResultTitle);
+		
 		utl.scrollToElement(atlgs.getATLArticleSeeMoreBtn());
 		Thread.sleep(200);
 		atlgs.getATLArticleSeeMoreBtn().click();
@@ -363,6 +374,7 @@ public class GlobalSearch_SearchFor extends base {
 		String articleTitle =atlgs.getATLArticleHeader().getText();
 		System.out.println("Article Title on Details Page: "+articleTitle);
 		Assert.assertTrue(filterResultTitle.contains(articleTitle));
+		
 		utl.scrollToElement(atlgs.getATLArticleTag());
 		Thread.sleep(200);
 		boolean temp = false;
@@ -399,6 +411,8 @@ public class GlobalSearch_SearchFor extends base {
 		Thread.sleep(5000);
 
 		// Click on Articles link
+		utl.scrollElementIntoMiddle(atlgs.getATLsearchresultArticlesLink());
+		Thread.sleep(200);
 		atlgs.getATLsearchresultArticlesLink().click();
 		Thread.sleep(500);
 		// click on Topics filter
@@ -430,6 +444,7 @@ public class GlobalSearch_SearchFor extends base {
 						Assert.assertTrue(filterResultTitleNew.contains(driver.getTitle()));
 					}
 					utl.scrollElementIntoMiddle(atlgs.getATLArticleTag());
+					Thread.sleep(200);
 					boolean temp = false;
 					tagBlogPost = driver.findElements(By.xpath("//span[@class='imc-blog-tag-module__tag']"));
 					for (WebElement blogPost : tagBlogPost) {
@@ -459,10 +474,13 @@ public class GlobalSearch_SearchFor extends base {
 					driver.navigate().refresh();
 
 					String filterResultTitle1 = atlgs.getATLArticleName().getText();
+					utl.scrollElementIntoMiddle(atlgs.getATLArticleSeeMoreBtn());
+					Thread.sleep(200);
 					atlgs.getATLArticleSeeMoreBtn().click();
 					Thread.sleep(500);
 					Assert.assertTrue(filterResultTitle1.contains(atlgs.getATLArticleHeader().getText()));
 					utl.scrollElementIntoMiddle(atlgs.getATLArticleTag());
+					Thread.sleep(200);
 					boolean temp1 = false;
 					tagBlogPost = driver.findElements(By.xpath("//span[@class='imc-blog-tag-module__tag']"));
 					for (WebElement blogPost : tagBlogPost) {
@@ -679,7 +697,10 @@ public class GlobalSearch_SearchFor extends base {
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(5000);
+		
 		// Click on Info link
+		utl.scrollElementIntoMiddle(atlgs.getATLsearchresultArticlesLink());
+		Thread.sleep(200);
 		atlgs.getATLsearchresultArticlesLink().click();
 		Thread.sleep(500);
 		atlgs.getATLInfosearchtxtbxClr();

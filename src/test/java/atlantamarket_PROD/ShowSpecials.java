@@ -99,15 +99,17 @@ public class ShowSpecials extends base  {
 		atlgs.getatlShowSpecialsLink().click();
 		Thread.sleep(5000);
 		
-		utl.scrollToElement(atlgs.getatlShowSpecialsTitle());
-		
+		utl.scrollElementIntoMiddle(atlgs.getatlShowSpecialsTitle());
+		Thread.sleep(200);
 		//Store the name of Show Special Exhibitor
 		String inbox = atlgs.getatlShowSpecialsExhNamePROD().getText();
 		System.out.println(inbox);
 		String[] data = inbox.split("Shown By ");
 		String showSpecialExhName = data[0];
 		System.out.println(showSpecialExhName);
-		utl.scrollToElement(atlgs.getViewBrandDetailsLink());
+		
+		utl.scrollElementIntoMiddle(atlgs.getViewBrandDetailsLink());
+		Thread.sleep(200);
 		//Click on View Brand Details link
 		atlgs.getViewBrandDetailsLink().click();
 		Thread.sleep(2000);
@@ -146,13 +148,16 @@ public class ShowSpecials extends base  {
 		atlgs.getatlShowSpecialsLink().click();
 		Thread.sleep(5000);
 		
-		utl.scrollToElement(atlgs.getatlShowSpecialsTitle());
+		utl.scrollElementIntoMiddle(atlgs.getatlShowSpecialsTitle());
+		Thread.sleep(200);
 		
 		//Click on Show Special Exhibitor
 		String showroomName=atlgs.getatlShowroomLink().getText();
 		String url=atlgs.getatlShowroomLink().getAttribute("href");
 		System.out.println(showroomName);
 		
+		utl.scrollElementIntoMiddle(atlgs.getatlShowroomLink());
+		Thread.sleep(200);
 		atlgs.getatlShowroomLink().click();
 		Thread.sleep(5000);
 		System.out.println(driver.getCurrentUrl());
