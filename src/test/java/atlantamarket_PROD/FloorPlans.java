@@ -100,6 +100,7 @@ public class FloorPlans extends base {
 		System.out.println(locationlink);
 		
 		utl.scrollElementIntoMiddle(atlflpp.getATLBuildingFloor());
+		Thread.sleep(200);
 		atlflpp.getATLBuildingFloor().click();
 		Thread.sleep(2000);
 
@@ -107,21 +108,25 @@ public class FloorPlans extends base {
 		Assert.assertTrue(locationlink.equals(driver.getCurrentUrl()));
 		String check = atlflpp.getATLFloorName().getText();
 		System.out.println(check);
+		
 		//Verify selected floor name
 		Assert.assertTrue(atlflpp.getATLFloorName().getText().contains(floorName));
 		
 		String actualNextFloorNumber=atlflpp.getATLNextFloorBtn().getText();
 		System.out.println("Actual Next Floor Number: " +actualNextFloorNumber);
 		utl.scrollElementIntoMiddle(atlflpp.getATLNextFloorBtn());
+		Thread.sleep(200);
 		atlflpp.getATLNextFloorBtn().click();
 		Thread.sleep(5000);
 		String exptectedFloorNumber=atlflpp.getATLExpectedFloorNumber().getText();
 		System.out.println("Exptected Floor Number: " +exptectedFloorNumber);
+		
 		//Verify Next Floor
 		Assert.assertTrue(exptectedFloorNumber.contains(actualNextFloorNumber));
 		Thread.sleep(3000);
 		//Previous floor Btn
 		utl.scrollElementIntoMiddle(atlflpp.getATLPreviousFloorBtn());
+		Thread.sleep(200);
 		String actualPreviousFloorNumber=atlflpp.getATLPreviousFloorBtn().getText();
 		System.out.println("Actual Previous Floor Number: " +actualPreviousFloorNumber);
 		atlflpp.getATLPreviousFloorBtn().click();
@@ -145,19 +150,22 @@ public class FloorPlans extends base {
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(2000);
+		
 		// Click on Exh And Product Tab
 		//utl.scrollElementIntoMiddle(atlflpp.getATLExhibitorsAndProductTab());
 		atlflpp.getATLExhibitorsAndProductTab().click();
-		Thread.sleep(1500);
+		Thread.sleep(1000);
 		//click on Floor plans link
 		atlflpp.getATLFloorPlansLink().click();
-		Thread.sleep(1500);
+		Thread.sleep(2000);
+		
 		//click on Floor whose not having an Exhibitors
 		String floorName=atlflpp.getATLBuildingFloor().getText();
 		System.out.println("Floor Name : " +floorName);
 
 		//click on No Exhibitor floor
 		utl.scrollElementIntoMiddle(atlflpp.getATLNoExhibitorFloor());
+		Thread.sleep(200);
 		atlflpp.getATLNoExhibitorFloor().click();
 		Thread.sleep(2000);
 		//Verify that Loading Exhibitors msg should be displayed
@@ -249,19 +257,25 @@ public class FloorPlans extends base {
 		//click on Floor plans link
 		atlflpp.getATLFloorPlansLink().click();
 		Thread.sleep(2000);
+		
 		//click on any floor
-		//utl.scrollElementIntoMiddle(atlflpp.getATLBuildingFloor());
+		utl.scrollElementIntoMiddle(atlflpp.getATLBuildingFloor());
+		Thread.sleep(200);
 		atlflpp.getATLBuildingFloor().click();
 		Thread.sleep(1500);
+		
 		//Click on Vending Machine icon on Map image
-		//utl.scrollElementIntoMiddle(atlflpp.getVendingMachineIconOnMap());
+		utl.scrollElementIntoMiddle(atlflpp.getVendingMachineIconOnMap());
+		Thread.sleep(200);
 		atlflpp.getVendingMachineIconOnMap().click();
 		Thread.sleep(1500);
+		
 		//Verify that Vending Machine Overlay should appeared on Map
 		Assert.assertTrue(atlflpp.getVendingMachineOverlayOnMap().isDisplayed());
 
 		//Click on Elevator icon on Map image
-		//utl.scrollElementIntoMiddle(atlflpp.getElevatorIconOnMap());
+		utl.scrollElementIntoMiddle(atlflpp.getElevatorIconOnMap());
+		Thread.sleep(200);
 		atlflpp.getElevatorIconOnMap().click();
 		Thread.sleep(1000);
 		//Verify that Elevator Overlay should appeared on Map
