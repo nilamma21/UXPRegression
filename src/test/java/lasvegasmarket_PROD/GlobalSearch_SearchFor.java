@@ -67,8 +67,14 @@ public class GlobalSearch_SearchFor extends base{
 		//driver.get(prop.getProperty("lvmurl_uat"));
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		lap.getIUnderstandBtn().click();
-		Thread.sleep(5000);
+		try {
+			
+			lap.getIUnderstandBtn().click();
+			Thread.sleep(5000);
+		}catch (Exception e) {
+			// TODO: handle exception
+		
+		}
 		// lap.getCloseMarktAdBtn().click();
 	}
 	
@@ -1350,5 +1356,6 @@ public class GlobalSearch_SearchFor extends base{
     	{
     		driver.quit();
     	}
+	
 
 }
