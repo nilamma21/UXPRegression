@@ -53,7 +53,8 @@ public class ShowSpecials extends base{
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("lvmurl_prod"));
-		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(2000);
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(5000);
 		utl.CloseATLPopup();
@@ -103,12 +104,14 @@ public class ShowSpecials extends base{
 		String abc =ename.split(" ")[0].trim();
 		
 		//Click on Show Special Exhibitor
+		utl.scrollElementIntoMiddle(lvmgs.getFirstShowSpecialViewBrandDetailsBtn());
+		Thread.sleep(200);
 		lvmgs.getFirstShowSpecialViewBrandDetailsBtn().click();
 		Thread.sleep(5000);
 		
 		//Verify Show Special Exh Page 
 		Assert.assertTrue(lvmgs.getlvmShowSpecialsTitle().getText().contains(abc));
-		driver.get(prop.getProperty("lvmurl_prod"));
+		//driver.get(prop.getProperty("lvmurl_prod"));
 		
 	}
 	@Test(priority = 2)
@@ -126,26 +129,32 @@ public class ShowSpecials extends base{
 		lvmmpp = new LVMMarketPlannerPage(driver);
 		genData = new GenerateData();
 
+		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(3000);
+		
 		//click on Exhibitors And Product Tab
 		lvmgs.getlvmExhibitorsAndProductTab().click();
 		Thread.sleep(5000);
+		
 		//Click on Show Specials 
 		lvmgs.getlvmShowSpecialsLink().click();
 		Thread.sleep(5000);
+		
 		utl.scrollToElement(lvmgs.getlvmShowSpecialsTitle());
 		//verify Show special Page
 		Assert.assertTrue(lvmgs.getlvmShowSpecialsTitle().getText().contains(prop.getProperty("showSpecialTitle")));
+		
 		//Click on Show Special Exhibitor
 		String showroomName=lvmgs.getlvmShowroomLink().getText();
 		String url=lvmgs.getlvmShowroomLink().getAttribute("href");
 		System.out.println(showroomName);
 		lvmgs.getlvmShowroomLink().click();
 		Thread.sleep(5000);
+		
 		//Verify Show Special Exh Page 
 		Assert.assertTrue(driver.getCurrentUrl().contains(url));
 		driver.get(prop.getProperty("lvmurl_prod"));
-		
 	}
 
 	@AfterClass

@@ -70,11 +70,11 @@ public class ExhibitorDigitalShowroom extends base {
 
     // driver.get(prop.getProperty("lvmurl_prod"));
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    Thread.sleep(2000);
+    Thread.sleep(3000);
 
     // lap.getCloseMarktAdBtn().click();
     lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
-    Thread.sleep(3000);
+    Thread.sleep(500);
     lvmgs.getLVMSearchButton().click();
     Thread.sleep(15000);
 
@@ -460,7 +460,7 @@ public class ExhibitorDigitalShowroom extends base {
     driver.get(prop.getProperty("lvmurl_prod"));
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     Thread.sleep(2000);
-    lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));
+    lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("leftpanefilterinput3")));
     // Thread.sleep(5000);
     lvmgs.getLVMSearchButton().click();
     Thread.sleep(15000);
@@ -471,7 +471,14 @@ public class ExhibitorDigitalShowroom extends base {
     lvmds.getExhibitorName().click();
     Thread.sleep(5000);
     String visitURL = lvmds.getHeroComponentVisitPROD().getAttribute("href");
-    System.out.println("1st URL: "+visitURL);
+    String newURL;
+    if (visitURL.contains("http://")) {
+    	String regex = "http://";
+    	 newURL = visitURL.replaceAll(regex, "");
+	} else {
+		 newURL = visitURL;
+	}
+    System.out.println("1st URL: "+newURL);
     Thread.sleep(2000);
     // Click on Hero Component Visit
     String currentWindowID = driver.getWindowHandle();
@@ -482,8 +489,9 @@ public class ExhibitorDigitalShowroom extends base {
 
     Thread.sleep(7000);
     String URL = driver.getCurrentUrl();
-    System.out.println(URL);
-    Assert.assertTrue(URL.contains(visitURL));
+    System.out.println("Current URL: "+URL);
+    Thread.sleep(500);
+    Assert.assertTrue(URL.contains(newURL));
     driver.close();
     driver.switchTo().window(currentWindowID);
     System.out
@@ -639,12 +647,12 @@ public class ExhibitorDigitalShowroom extends base {
 
     driver.get(prop.getProperty("lvmurl_prod"));
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    Thread.sleep(2000);
+    Thread.sleep(3000);
    // lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor14")));
     
     //click on Exhibitors And Product Tab
     lvmgs.getlvmExhibitorsAndProductTab().click();
-    
+    Thread.sleep(200);
     //Click on Show Specials 
     lvmgs.getlvmShowSpecialsLink().click();
     Thread.sleep(5000);

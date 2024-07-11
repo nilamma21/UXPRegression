@@ -132,7 +132,7 @@ public class GlobalSearch_SuggestionList extends base {
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//lap.getCloseMarktAdBtn().click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestproduct_lvm")));
 		Thread.sleep(2000);
 		WebDriverWait wait = new WebDriverWait(driver, 30);
@@ -145,6 +145,7 @@ public class GlobalSearch_SuggestionList extends base {
 			//System.out.println(prodlist.get(i).getText());			
 			if (prodlist.get(i).getText().contains(prop.getProperty("autosuggestproduct_lvm"))
 					&& prodlist.get(i).getText().contains("Product")) {	
+				Thread.sleep(200);
 				prodlist.get(i).click();
 				break;
 			}
