@@ -43,6 +43,8 @@ public class ATLEventsAndWebinarPage {
 	By atlListOfAllEventsSeeDetailsLink = By.xpath("//a[@class='imc-link--caret-after imc-type--body-1-link']"); //Locator for list of all Events
 	By atlEventNameOnDetailsPage = By.xpath("//div[contains(@class,'imc-eventdetail--header')]/h1"); //Locator for list of all Events
 	By atlEventLocationLink = By.xpath("//div[@class='imc-eventdetail--location']/a/span"); //Locator for Event location link
+	By atlEventLocationLinkLVMPROD = By.xpath("//div[@class='imc-eventdetail--location']/p/span[1]"); //Locator for Event location link
+	
 	By atlEventType = By.xpath("//p[@class='imc-eventdetail--event-type']"); //Locator for Event Type
 	By atlFavIcon = By.xpath("//div[@class='imc-eventdetail--actions-bar']//ul/li/div/button"); //Locator for Fav Icon
 	By atlListIcon = By.xpath("//ul[@class='imc-eventcard--add--links']/li[2]/button[1]"); //Locator for List Icon
@@ -56,6 +58,13 @@ public class ATLEventsAndWebinarPage {
 	public ATLEventsAndWebinarPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
+	}
+	public WebElement getatlEventLocationLinkLVMPROD() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlEventLocationLinkLVMPROD));
+		
+		return driver.findElement(atlEventLocationLinkLVMPROD);
+		
 	}
 	public WebElement getatlEventSearchIconUAT() {
 		wait = new WebDriverWait (driver,30);

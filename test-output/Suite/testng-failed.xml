@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
-      <class name="lasvegasmarket_PROD.EvenntsAndWebinar">
+      <class name="lasvegasmarket_PROD.ExhibitorDigitalShowroom">
         <methods>
-          <include name="TS007_VerifyExhibitorEventsCalendarViewTest"/>
           <include name="tearDown"/>
           <include name="initialize"/>
+          <include name="TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest"/>
         </methods>
-      </class> <!-- lasvegasmarket_PROD.EvenntsAndWebinar -->
+      </class> <!-- lasvegasmarket_PROD.ExhibitorDigitalShowroom -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -4,7 +4,7 @@
   <test name="Test">
   
     <classes>
-    	<!-- 	<class name="lasvegasmarket_PROD.ExhibitorDigitalShowroom" /> 
+    		<!-- <class name="lasvegasmarket_PROD.ExhibitorDigitalShowroom" /> 
     		<class name="lasvegasmarket_PROD.FloorPlans" />
     		<class name="lasvegasmarket_PROD.GlobalSearch_ExhibitorActions" />
     		<class name="lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters" />
@@ -16,14 +16,12 @@
     		<class name="lasvegasmarket_PROD.GlobalSearch_SearchFor" />
     		<class name="lasvegasmarket_PROD.LineDigitalShowroom" />
     		<class name="lasvegasmarket_PROD.ShowSpecials" /> -->
-    		<class name="lasvegasmarket_PROD.EvenntsAndWebinar" />
-			<!--   <methods>
-			<include name="TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest">
-			</include>  -->
-			<!-- <include name="TS008_VerifyExhibitorEventsListTest">
+    		
+    		<class name="lasvegasmarket_PROD.ExhibitorDigitalShowroom" />
+			 <!-- <methods>
+			<include name="TS012_VerifyExhibitorDigitalEventsComponentTest" >
 			</include> 
-			 
-			</methods>  -->
+			</methods>   -->
 		</classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
