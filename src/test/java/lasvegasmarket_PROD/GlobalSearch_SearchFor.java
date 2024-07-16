@@ -378,7 +378,7 @@ public class GlobalSearch_SearchFor extends base{
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(5000);
 		//click on 1st Exhibitor
-		////utl.scrollToElement(lvmgs.getlvm1STExhiName());
+		utl.scrollToTop();
 		lvmgs.getlvm1STExhiNamePROD().click();
 		Thread.sleep(7000);
 		//Scroll to Catalog Section
@@ -1354,7 +1354,7 @@ public class GlobalSearch_SearchFor extends base{
     	@AfterClass
     	public void tearDown()
     	{
-    		driver.quit();
+    		//driver.quit();
     	}
 	
 

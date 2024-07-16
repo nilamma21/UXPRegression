@@ -1,14 +1,13 @@
 package lasvegasmarket_PROD;
-
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -24,18 +23,12 @@ import pageObjects.AtlantaMarket.ATLLandingPage;
 import pageObjects.AtlantaMarket.ATLLoginPage;
 import pageObjects.AtlantaMarket.ATLMarketPlannerPage;
 import pageObjects.AtlantaMarket.ATLProductDetailsPage;
-import pageObjects.LasVegasMarket.LVMEventsAndWebinarPage;
-import pageObjects.LasVegasMarket.LVMFloorPlansPage;
-import pageObjects.LasVegasMarket.LVMGlobalSearchPage;
-import pageObjects.LasVegasMarket.LVMLandingPage;
-import pageObjects.LasVegasMarket.LVMLoginPage;
-import pageObjects.LasVegasMarket.LVMMarketPlannerPage;
 import resources.GenerateData;
 import resources.Utility;
 import resources.base;
 
-public class EvenntsAndWebinar extends base{
-	
+public class TestEventModule extends base {
+
 	public WebDriverWait wait;
 	public GenerateData genData;
 	public Utility utl;
@@ -52,7 +45,7 @@ public class EvenntsAndWebinar extends base{
 	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns, allnoteslist,favlist, searchlinetypelist;
 
 
-	@BeforeClass
+	@BeforeClass(alwaysRun=true)
 	public void initialize() throws IOException, InterruptedException {
 		driver = initializeDriver(); // requires for Parallel text execution
 		utl = new Utility(driver);
@@ -67,7 +60,8 @@ public class EvenntsAndWebinar extends base{
 
 		//		lap.getCloseMarktAdBtn().click();
 	}
-
+	
+	
 	@Test(priority = 1)//groups="Non_MP"
 	public void TS001_VerifyEventsAndWebinarsOverviewTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -1378,8 +1372,4 @@ public class EvenntsAndWebinar extends base{
       	   // driver.quit();
       }
 
-
 }
-
-
-

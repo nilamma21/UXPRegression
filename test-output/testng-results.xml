@@ -1,74 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<testng-results skipped="0" failed="1" total="9" passed="8">
+<testng-results skipped="0" failed="1" total="15" passed="14">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="2001964" started-at="2024-07-11T05:46:27Z" finished-at="2024-07-11T06:19:49Z">
+  <suite name="Suite" duration-ms="681690" started-at="2024-07-16T06:21:37Z" finished-at="2024-07-16T06:32:59Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="2001964" started-at="2024-07-11T05:46:27Z" finished-at="2024-07-11T06:19:49Z">
-      <class name="lasvegasmarket_PROD.EvenntsAndWebinar">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@5594a1b5]" name="initialize" is-config="true" duration-ms="68959" started-at="2024-07-11T11:16:27Z" finished-at="2024-07-11T11:17:36Z">
+    <test name="Test" duration-ms="681690" started-at="2024-07-16T06:21:37Z" finished-at="2024-07-16T06:32:59Z">
+      <class name="lasvegasmarket_PROD.ExhibitorDigitalShowroom">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@1e643faf]" name="initialize" is-config="true" duration-ms="23067" started-at="2024-07-16T11:51:37Z" finished-at="2024-07-16T11:52:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyEventsAndWebinarsOverviewTest()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@5594a1b5]" name="TS001_VerifyEventsAndWebinarsOverviewTest" duration-ms="9824" started-at="2024-07-11T11:17:36Z" finished-at="2024-07-11T11:17:46Z">
+        <test-method status="PASS" signature="TS001_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest()[pri:0, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@1e643faf]" name="TS001_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest" duration-ms="34924" started-at="2024-07-16T11:52:00Z" finished-at="2024-07-16T11:52:35Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS001_VerifyEventsAndWebinarsOverviewTest -->
-        <test-method status="PASS" signature="TS002_VerifyIMCEventsSearchbarTest()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@5594a1b5]" name="TS002_VerifyIMCEventsSearchbarTest" duration-ms="13570" started-at="2024-07-11T11:17:46Z" finished-at="2024-07-11T11:17:59Z">
+        </test-method> <!-- TS001_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest -->
+        <test-method status="PASS" signature="TS002_VerifyClickOnTotalLinesSeeAllLinesForExhibitorTest()[pri:0, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@1e643faf]" name="TS002_VerifyClickOnTotalLinesSeeAllLinesForExhibitorTest" duration-ms="74468" started-at="2024-07-16T11:52:35Z" finished-at="2024-07-16T11:53:50Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS002_VerifyIMCEventsSearchbarTest -->
-        <test-method status="PASS" signature="TS003_VerifyIMCEventsCalendarViewTest()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@5594a1b5]" name="TS003_VerifyIMCEventsCalendarViewTest" duration-ms="63551" started-at="2024-07-11T11:17:59Z" finished-at="2024-07-11T11:19:03Z">
+        </test-method> <!-- TS002_VerifyClickOnTotalLinesSeeAllLinesForExhibitorTest -->
+        <test-method status="PASS" signature="TS003_VerifyClickOnProductShownLinkForExhibitorTest()[pri:0, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@1e643faf]" name="TS003_VerifyClickOnProductShownLinkForExhibitorTest" duration-ms="55917" started-at="2024-07-16T11:53:50Z" finished-at="2024-07-16T11:54:46Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS003_VerifyIMCEventsCalendarViewTest -->
-        <test-method status="PASS" signature="TS004_VerifyIMCEventsEventsListTest()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@5594a1b5]" name="TS004_VerifyIMCEventsEventsListTest" duration-ms="905559" started-at="2024-07-11T11:19:03Z" finished-at="2024-07-11T11:34:08Z">
+        </test-method> <!-- TS003_VerifyClickOnProductShownLinkForExhibitorTest -->
+        <test-method status="PASS" signature="TS004_VerifyClickOnLineFiltersForExhibitorTest()[pri:0, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@1e643faf]" name="TS004_VerifyClickOnLineFiltersForExhibitorTest" duration-ms="33931" started-at="2024-07-16T11:54:46Z" finished-at="2024-07-16T11:55:20Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS004_VerifyIMCEventsEventsListTest -->
-        <test-method status="PASS" signature="TS005_VerifyIMCEventsEventDetailstTest()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@5594a1b5]" name="TS005_VerifyIMCEventsEventDetailstTest" duration-ms="37307" started-at="2024-07-11T11:34:08Z" finished-at="2024-07-11T11:34:46Z">
+        </test-method> <!-- TS004_VerifyClickOnLineFiltersForExhibitorTest -->
+        <test-method status="PASS" signature="TS005_VerifyClickOnLineSearchForExhibitorTest()[pri:0, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@1e643faf]" name="TS005_VerifyClickOnLineSearchForExhibitorTest" duration-ms="37342" started-at="2024-07-16T11:55:20Z" finished-at="2024-07-16T11:55:57Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS005_VerifyIMCEventsEventDetailstTest -->
-        <test-method status="PASS" signature="TS006_VerifyExhibitorEventsSearchbarTest()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@5594a1b5]" name="TS006_VerifyExhibitorEventsSearchbarTest" duration-ms="18271" started-at="2024-07-11T11:34:46Z" finished-at="2024-07-11T11:35:04Z">
+        </test-method> <!-- TS005_VerifyClickOnLineSearchForExhibitorTest -->
+        <test-method status="PASS" signature="TS006_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest()[pri:0, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@1e643faf]" name="TS006_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest" duration-ms="32303" started-at="2024-07-16T11:55:57Z" finished-at="2024-07-16T11:56:29Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS006_VerifyExhibitorEventsSearchbarTest -->
-        <test-method status="FAIL" signature="TS007_VerifyExhibitorEventsCalendarViewTest()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@5594a1b5]" name="TS007_VerifyExhibitorEventsCalendarViewTest" duration-ms="4253" started-at="2024-07-11T11:35:04Z" finished-at="2024-07-11T11:35:08Z">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+        </test-method> <!-- TS006_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest -->
+        <test-method status="PASS" signature="TS007_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest()[pri:0, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@1e643faf]" name="TS007_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest" duration-ms="39167" started-at="2024-07-16T11:56:29Z" finished-at="2024-07-16T11:57:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest -->
+        <test-method status="PASS" signature="TS008_VerifySeeInOtherMarketsForExhibitorTest()[pri:0, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@1e643faf]" name="TS008_VerifySeeInOtherMarketsForExhibitorTest" duration-ms="48334" started-at="2024-07-16T11:57:08Z" finished-at="2024-07-16T11:57:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS008_VerifySeeInOtherMarketsForExhibitorTest -->
+        <test-method status="PASS" signature="TS009_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest()[pri:0, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@1e643faf]" name="TS009_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest" duration-ms="35088" started-at="2024-07-16T11:57:57Z" finished-at="2024-07-16T11:58:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest -->
+        <test-method status="PASS" signature="TS010_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest()[pri:0, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@1e643faf]" name="TS010_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest" duration-ms="34396" started-at="2024-07-16T11:58:32Z" finished-at="2024-07-16T11:59:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS010_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest -->
+        <test-method status="PASS" signature="TS011_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest()[pri:0, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@1e643faf]" name="TS011_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest" duration-ms="35196" started-at="2024-07-16T11:59:06Z" finished-at="2024-07-16T11:59:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS011_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest -->
+        <test-method status="PASS" signature="TS012_VerifyExhibitorDigitalEventsComponentTest()[pri:0, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@1e643faf]" name="TS012_VerifyExhibitorDigitalEventsComponentTest" duration-ms="54364" started-at="2024-07-16T11:59:41Z" finished-at="2024-07-16T12:00:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS012_VerifyExhibitorDigitalEventsComponentTest -->
+        <test-method status="PASS" signature="TS013_VerifyCatalogsSectionForExhibitorTest()[pri:0, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@1e643faf]" name="TS013_VerifyCatalogsSectionForExhibitorTest" duration-ms="76798" started-at="2024-07-16T12:00:36Z" finished-at="2024-07-16T12:01:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS013_VerifyCatalogsSectionForExhibitorTest -->
+        <test-method status="FAIL" signature="TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest()[pri:0, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@1e643faf]" name="TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest" duration-ms="39486" started-at="2024-07-16T12:01:53Z" finished-at="2024-07-16T12:02:32Z">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[element click intercepted: Element <a href="/" class="imc-navigation__tier1Link" aria-expanded="false" aria-controls="navigation-tier2-" data-xpath="navigation.tier1Link" target="_self">...</a> is not clickable at point (621, 87). Other element would receive the click: <div class="imc-header__utilities  imc-breakpoint-display--hide-mobile">...</div>
-  (Session info: chrome=126.0.6478.127)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'EON-SWAPNILI', ip: '172.22.90.18', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_311'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64771}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 86345581a49955df3a3b204262158c65]]>
+              <![CDATA[expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a href="/" class="imc-navigation__tier1Link" aria-expanded="false" aria-controls="navigation-tier2-" data-xpath="navigation.tier1Link" target="_self">...</a> is not clickable at point (621, 87). Other element would receive the click: <div class="imc-header__utilities  imc-breakpoint-display--hide-mobile">...</div>
-  (Session info: chrome=126.0.6478.127)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'EON-SWAPNILI', ip: '172.22.90.18', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_311'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64771}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 86345581a49955df3a3b204262158c65
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at resources.Utility.clickOnEventLinkOfChannelLVM(Utility.java:649)
-	at lasvegasmarket_PROD.EvenntsAndWebinar.TS007_VerifyExhibitorEventsCalendarViewTest(EvenntsAndWebinar.java:867)
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at lasvegasmarket_PROD.ExhibitorDigitalShowroom.TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest(ExhibitorDigitalShowroom.java:694)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -95,52 +101,19 @@ Session ID: 86345581a49955df3a3b204262158c65
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS007_VerifyExhibitorEventsCalendarViewTest -->
-        <test-method status="PASS" signature="TS008_VerifyExhibitorEventsListTest()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@5594a1b5]" name="TS008_VerifyExhibitorEventsListTest" duration-ms="833792" started-at="2024-07-11T11:35:08Z" finished-at="2024-07-11T11:49:02Z">
+        </test-method> <!-- TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest -->
+        <test-method status="PASS" signature="TS015_VerifyExhibitorDigitalShowroomHeroComponentContactExhibitorTest()[pri:0, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@1e643faf]" name="TS015_VerifyExhibitorDigitalShowroomHeroComponentContactExhibitorTest" duration-ms="24779" started-at="2024-07-16T12:02:32Z" finished-at="2024-07-16T12:02:57Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS008_VerifyExhibitorEventsListTest -->
-        <test-method status="PASS" signature="TS009_VerifyExhibitorEventsDetailstTest()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@5594a1b5]" name="TS009_VerifyExhibitorEventsDetailstTest" duration-ms="46868" started-at="2024-07-11T11:49:02Z" finished-at="2024-07-11T11:49:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS009_VerifyExhibitorEventsDetailstTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@5594a1b5]" name="tearDown" is-config="true" duration-ms="0" started-at="2024-07-11T11:49:49Z" finished-at="2024-07-11T11:49:49Z">
+        </test-method> <!-- TS015_VerifyExhibitorDigitalShowroomHeroComponentContactExhibitorTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@1e643faf]" name="tearDown" is-config="true" duration-ms="2000" started-at="2024-07-16T12:02:57Z" finished-at="2024-07-16T12:02:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- lasvegasmarket_PROD.EvenntsAndWebinar -->
+      </class> <!-- lasvegasmarket_PROD.ExhibitorDigitalShowroom -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
-
-<testng-results skipped="0" failed="0" ignored="1" total="3" passed="2">
-  <reporter-output>
-  </reporter-output>
-  <suite name="LVM_RegressionTestSuite" duration-ms="113100" started-at="2024-07-10T11:10:59Z" finished-at="2024-07-10T11:12:52Z">
-    <groups>
-    </groups>
-    <test name="RegressionTest" duration-ms="113100" started-at="2024-07-10T11:10:59Z" finished-at="2024-07-10T11:12:52Z">
-      <class name="atlantamarket_PROD.ShowSpecials">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:atlantamarket_PROD.ShowSpecials@6ab7a896]" name="initialize" is-config="true" duration-ms="49993" started-at="2024-07-10T11:10:59Z" finished-at="2024-07-10T11:11:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest()[pri:1, instance:atlantamarket_PROD.ShowSpecials@6ab7a896]" name="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest" duration-ms="42287" started-at="2024-07-10T11:11:49Z" finished-at="2024-07-10T11:12:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest -->
-        <test-method status="PASS" signature="TS002_VerifyLocationLinksForShowSpecialsTest()[pri:2, instance:atlantamarket_PROD.ShowSpecials@6ab7a896]" name="TS002_VerifyLocationLinksForShowSpecialsTest" duration-ms="20786" started-at="2024-07-10T11:12:31Z" finished-at="2024-07-10T11:12:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS002_VerifyLocationLinksForShowSpecialsTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:atlantamarket_PROD.ShowSpecials@6ab7a896]" name="tearDown" is-config="true" duration-ms="1" started-at="2024-07-10T11:12:52Z" finished-at="2024-07-10T11:12:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- atlantamarket_PROD.ShowSpecials -->
-    </test> <!-- RegressionTest -->
-  </suite> <!-- LVM_RegressionTestSuite -->
-
 </testng-results>
