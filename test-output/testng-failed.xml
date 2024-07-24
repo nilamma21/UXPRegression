@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [LVM_RegressionTestSuite]">
-  <listeners>
-    <listener class-name="atlantamarket_PROD.TestListeners"/>
-  </listeners>
-  <test thread-count="1" name="RegressionTest(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="atlantamarket_PROD.GlobalSearch_SearchFor">
+      <class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters">
         <methods>
-          <include name="TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest"/>
           <include name="initialize"/>
-          <include name="TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest"/>
+          <include name="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_LeftPaneFilters -->
     </classes>
-  </test> <!-- RegressionTest(failed) -->
-</suite> <!-- Failed suite [LVM_RegressionTestSuite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

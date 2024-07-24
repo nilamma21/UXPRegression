@@ -21,7 +21,7 @@ public class ATLLeftPaneFilters {
 	By stylesexpandbtn = By.xpath("//a[@aria-label='Styles']"); ////Locator for Styles expand btn
 	By industrialstyle = By.xpath("//label[contains(text(),'Industrial')]"); //Locator for Industrial Styles
 	By expexhdropdown = By.xpath("//div[contains(@class,'DropDown_dropdown')]"); //Locator for Exhibitor association drop down in EXP
-	By imcexhnameinexp = By.xpath("//span[contains(text(),'IMC test company')]"); //Locator for IMC Test Company exhibitor in EXP
+	By imcexhnameinexp = By.xpath("//a[contains(text(),'IMC test company')]"); //Locator for IMC Test Company exhibitor in EXP
 	By expdidgitalshowroomtab  = By.xpath("//span[contains(text(),'Your Digital Showroom')]"); //Locator for EXP Digi Showroom tab
 	By expprofileinfomenu = By.xpath("//a[contains(text(),'Profile Info')]"); //Locator for EXP Profile Info menu
 	By expproductcategsectn = By.xpath("//h3[contains(text(),'Product Categories')]"); //Locator for Products Categories section title in EXP
@@ -35,7 +35,9 @@ public class ATLLeftPaneFilters {
 	By hometextilesprodcatg = By.xpath("//label[contains(text(),'Home Textiles')]"); //Locator for name of Home Textiles Categ.
 	By secondexhibitor = By.xpath("//div[@class='imc-vr--xxlarge']/div[2]/div[1]/div[1]/div[1]//a[1]/h2[1]");//Locator for 2nd Exhibitor
 	By expindustrialstyleonprofile = By.xpath("//span[contains(@class,'EPUpdateExhibitorProfile_categoriesList') and text()='Industrial']"); //Locator for Industrial Style on Profile
-
+	By leftPaneFilterExhibitor = By.xpath("//a[contains(text(),'Garden Iron & More')]"); //Select exhibitor Garden Iron & More for EXP
+	By currentSelectedExhibitor = By.xpath("//span[@class='EPHeader_username__2NOKO']"); //Locator to check currently selected exhibitor in EXP
+	
 	public ATLLeftPaneFilters(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
@@ -154,4 +156,15 @@ public class ATLLeftPaneFilters {
       wait.until(ExpectedConditions.visibilityOfElementLocated(expindustrialstyleonprofile));
 		return driver.findElement(expindustrialstyleonprofile);
 	}
+	public WebElement getleftPaneFilterExhibitor() {
+		  wait = new WebDriverWait (driver,30);
+	      wait.until(ExpectedConditions.visibilityOfElementLocated(leftPaneFilterExhibitor));
+			return driver.findElement(leftPaneFilterExhibitor);
+		}
+	public WebElement getcurrentSelectedExhibitor() {
+		  wait = new WebDriverWait (driver,30);
+	      wait.until(ExpectedConditions.visibilityOfElementLocated(currentSelectedExhibitor));
+			return driver.findElement(currentSelectedExhibitor);
+		}
+	
 }
