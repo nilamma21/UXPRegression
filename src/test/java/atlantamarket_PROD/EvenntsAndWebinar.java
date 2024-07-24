@@ -573,6 +573,7 @@ public class EvenntsAndWebinar extends base{
 		LocalDate localDate = LocalDate.now();
 		String d = dtf.format(localDate);
 		System.out.println("Current Date ::" + dtf.format(localDate));
+		Thread.sleep(200);
 		try {
 			Assert.assertTrue(d.contains(atlevents.getatlTodaysDate().getText()));
 			System.out.println("Current Date "+atlevents.getatlTodaysDate().getText()+" is Heighlighted");
@@ -835,17 +836,17 @@ public class EvenntsAndWebinar extends base{
 		Thread.sleep(200);
 		String locationURL=atlevents.getatlEventLocationLink().getAttribute("href");
 		System.out.println("Location URL: "+locationURL);
-		String currentWindowID = driver.getWindowHandle();
+		//String currentWindowID = driver.getWindowHandle();
 		atlevents.getatlEventLocationLink().click();
-		for (String windowHandleID : driver.getWindowHandles()) {
+		/*for (String windowHandleID : driver.getWindowHandles()) {
 			driver.switchTo().window(windowHandleID);
-		}
+		}*/
 		Thread.sleep(5000);
 		// Verify Location floor plan page
 		System.out.println("Current URL: "+driver.getCurrentUrl());
 		//Assert.assertTrue(driver.getCurrentUrl().contains(locationURL));
-		driver.close();
-		driver.switchTo().window(currentWindowID);
+		/*driver.close();
+		driver.switchTo().window(currentWindowID);*/
 		driver.navigate().back();
 
 /*		  //Click on Tags String

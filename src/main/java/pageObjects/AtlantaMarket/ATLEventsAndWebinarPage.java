@@ -74,7 +74,7 @@ public class ATLEventsAndWebinarPage {
 		
 	}
 	public WebElement getatlTodaysDatePROD() {
-		wait = new WebDriverWait (driver,30);
+		wait = new WebDriverWait (driver,40);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlTodaysDatePROD));
 		
 		return driver.findElement(atlTodaysDatePROD);

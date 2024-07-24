@@ -1,5 +1,7 @@
 package atlantamarket_PROD;
 
+import static org.testng.Assert.assertTrue;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -285,7 +287,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
@@ -343,19 +345,19 @@ public class GlobalSearch_LeftPaneFilters extends base {
 				break;
 			}
 		}
-
-		driver.navigate().back();
+		
+		//driver.navigate().back();
 
 		//Open Exhibitor Portal in new tab
 		((JavascriptExecutor)driver).executeScript("window.open()");
 		ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(tabs.get(1));
-		driver.get("https://exhibitors.imcenters.com/");
-
+		driver.get("https://exhibitors.andmore.com/");
+		Thread.sleep(1000);
 		//Login to EXP
-		lp.getEmailAddress().sendKeys((prop.getProperty("usernameSwapnil")));
-		lp.getPassword().sendKeys((prop.getProperty("passwordSwapnil")));
-
+		lp.getEmailAddress().sendKeys((prop.getProperty("emailreceiver1")));
+		lp.getPassword().sendKeys((prop.getProperty("mppassword")));
+		Thread.sleep(200);
 		lp.getSignInBtn().click();
 		Thread.sleep(15000);
 
@@ -363,7 +365,18 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		atlleftpane.getEXPExhDropDown().click();
 
 		//Select IMC Test Company exhibitor
-		atlleftpane.getIMCExhNameInEXP().click();
+		//atlleftpane.getIMCExhNameInEXP().click();
+		
+		String exhibitorName = atlleftpane.getcurrentSelectedExhibitor().getText();
+		
+		//Check currently selected exhibitor is Garden Iron & More
+		if(exhibitorName.contains("Garden Iron & More")) {
+			System.out.println("Current selected exhibitor in EXP is: "+exhibitorName);
+		}else {
+			//Select the Exhibitor - Garden Iron & More
+			atlleftpane.getleftPaneFilterExhibitor().click();
+			System.out.println("Exhibitor Garden Iron & More is selected");
+		}
 
 		//Click on Digital Showroom tab
 		atlleftpane.getEXPDigiShowroomTab().click();
@@ -396,13 +409,13 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
 		Thread.sleep(5000);
 		//Click on Product Categories expand btn
 		atlleftpane.getATLProdCatgExpandBtn().click();
-
+		Thread.sleep(200);
 		utl.scrollElementIntoMiddle(atlleftpane.getATLAccentFurnitureProdCatg());
 		Thread.sleep(200);
 		//Select Accent Furniture prod category
@@ -413,7 +426,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		//Verify the selected Product Category on Exh Digital Showroom page
 		//Select 1st Exhibitor from Search results grid
 		atlleftpane.getATLexhibitor().click();
-
+		Thread.sleep(2000);
 		//Scroll till Product Categories section
 		utl.scrollElementIntoMiddle(atlexhdgshw.getATLProductCategSection());
 		Thread.sleep(200);

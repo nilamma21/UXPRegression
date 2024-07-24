@@ -8,9 +8,8 @@
     <classes>
       <class name="atlantamarket_PROD.GlobalSearch_SearchFor">
         <methods>
-          <include name="TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest"/>
+          <include name="TS011_VerifyEventsOverviewInGlobalSearchTest"/>
           <include name="initialize"/>
-          <include name="TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- atlantamarket_PROD.GlobalSearch_SearchFor -->

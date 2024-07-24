@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test name="Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="lasvegasmarket_PROD.ExhibitorDigitalShowroom">
+      <class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters">
         <methods>
+          <include name="initialize"/>
+          <include name="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest"/>
           <include name="tearDown"/>
           <include name="initialize"/>
           <include name="TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest"/>
         </methods>
-      </class> <!-- lasvegasmarket_PROD.ExhibitorDigitalShowroom -->
+      </class> <!-- atlantamarket_PROD.GlobalSearch_LeftPaneFilters -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
