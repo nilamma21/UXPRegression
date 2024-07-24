@@ -86,7 +86,7 @@ public class LVMGlobalSearchPage {
 	By lvmAddToFavBtn = By.xpath("//div[@class='imc-searchform--bar--dropdown open']/div[2]/button[1]");  //Locator for Add To Fav Btn
 	By lvm1STExhiName = By.xpath("(//div[@class='imc-exhibitorcard-title-row']/div[1]/a[1]/h2[1])[1]");  //Locator for Exh Name 
 	By lvmAddToExistingList = By.xpath("//div[@class='imc-searchform--bar--dropdown open']/div[3]/button[1]");  //Locator for Add Existing list Btn
-	By lvm1STExhiNamePROD = By.xpath("(//div[@class='imc-exhibitorcard-title-row ']/div[1]/a[1])[1]");  //Locator for Add Existing list Btn
+	By lvm1STExhiNamePROD = By.xpath("(//div[@class='imc-exhibitorcard-title-row '])[1]/div[1]/a/h2");  //Locator for Add Existing list Btn
 	
 	By lvmExistingList = By.xpath("//div[@class='imc-vr--xlarge']/div[2]/label[1]");  //Locator for  Existing list
 	By lvmAddToSelectBtn = By.xpath("//div[@class='imc-button--justify-right']/input[1]");  //Locator for Add To list Btn

@@ -8,6 +8,8 @@
           <include name="initialize"/>
           <include name="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest"/>
           <include name="tearDown"/>
+          <include name="initialize"/>
+          <include name="TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest"/>
         </methods>
       </class> <!-- atlantamarket_PROD.GlobalSearch_LeftPaneFilters -->
     </classes>

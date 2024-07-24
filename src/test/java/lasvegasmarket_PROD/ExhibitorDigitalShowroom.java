@@ -552,19 +552,22 @@ public class ExhibitorDigitalShowroom extends base {
     Thread.sleep(3000);
     String abc = utl.LVMExhibitorWithEvent();
     //utl.scrollToElement(lvmgs.getLVMGlobalSearchTextBox());
-    lvmgs.getLVMGlobalSearchTextBox().sendKeys(abc);
+   /* lvmgs.getLVMGlobalSearchTextBox().sendKeys(abc);
     // Thread.sleep(5000);
-    lvmgs.getLVMSearchButton().click();
+    lvmgs.getLVMSearchButton().click();*/
     Thread.sleep(10000);
    // utl.scrollToElement(lvmexhact.geteventFirstExNameLVM());
     // Store the 1st Exhibitor name in String variable
     exhname = lvmexhact.geteventFirstExNameLVM().getText();
     System.out.println("Exhibitor name: " + exhname);
-
-    lvmexhact.geteventFirstExNameLVM().click();
+    lvmgs.getLVMGlobalSearchTextBox().sendKeys(exhname);
+    Thread.sleep(5000);
+    lvmgs.getLVMSearchButton().click();
+    Thread.sleep(10000);
+    lvmds.getExhibitorName().click();
     Thread.sleep(5000);
     // Scroll to Line Section
-    utl.scrollToElement(lvmds.getEventsSection());
+    //utl.scrollToElement(lvmds.getEventsSection());
     // Click on See All Events Btn
 
     lvmds.getSeeAllEventsBtn().click();
@@ -1029,7 +1032,7 @@ public class ExhibitorDigitalShowroom extends base {
   @AfterClass
   public void tearDown() throws InterruptedException {
     Thread.sleep(2000);
-    driver.quit();
+    //driver.quit();
   }
 
 }
