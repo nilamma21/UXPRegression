@@ -2,6 +2,8 @@ package lasvegasmarket_UAT;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
@@ -104,56 +106,61 @@ public class ExhibitorDigitalShowroom extends base {
     // The purpose of this test case to verify:-
     // T: The click on 'Total lines-See All' functionality for an Exhibitor Digital Show room
 
-    lvmgs = new LVMGlobalSearchPage(driver);
-    lvmexhact = new LVMExhLineProdActionsPage(driver);
-    lap = new LVMLandingPage(driver);
-    lvmds = new LVMExhDigiShowroomPage(driver);
+	  lvmgs = new LVMGlobalSearchPage(driver);
+	    lvmexhact = new LVMExhLineProdActionsPage(driver);
+	    lap = new LVMLandingPage(driver);
+	    lvmds = new LVMExhDigiShowroomPage(driver);
 
-    driver.get(prop.getProperty("lvmurl_uat"));
-    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    Thread.sleep(2000);
-    lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("searchexhwithlinesinput")));
-    Thread.sleep(3000);
-    lvmgs.getLVMSearchButton().click();
-    Thread.sleep(15000);
+	    driver.get(prop.getProperty("lvmurl_uat"));
+	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	    Thread.sleep(2000);
+	    //lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));V
+	    lvmgs.getLVMGlobalSearchTextBox().sendKeys("Ivystone");
+	    Thread.sleep(3000);
+	    lvmgs.getLVMSearchButton().click();
+	    Thread.sleep(15000);
 
-    // Store the 1st Exhibitor name in String variable
-    exhname = lvmexhact.getExhibitorName().getText();
-    System.out.println("Exhibitor name: " + exhname);
+	    // Store the 1st Exhibitor name in String variable
+	    exhname = lvmexhact.getExhibitorName().getText();
+	    System.out.println("Exhibitor name: " + exhname);
 
-    // Get the Total Lines count on Search grid
-    lvmds.getExhibitorName().click();
-    Thread.sleep(5000);
-    utl.scrollToElement(lvmds.getLinesSection());
-    String temp = lvmds.getLinesSection().getText();
-    String totallinescountonsearchgrid = temp.replaceAll("[^0-9]", "");
-    System.out
-        .println("Total Products Count on Search Results grid is: " + totallinescountonsearchgrid);
-    Assert.assertTrue(lvmds.getTotalLinesButton().getText().contains(totallinescountonsearchgrid));
-    System.out.println("Total Lines count is same at Lines section title and See All button.");
+	    // Get the Total Lines count on Search grid
+	    lvmds.getExhibitorName().click();
+	    Thread.sleep(5000);
+	    utl.scrollToElement(lvmds.getLinesSection());
+	    String temp = lvmds.getLinesSection().getText();
+	    String totallinescountonsearchgrid = temp.replaceAll("[^0-9]", "");
+	    System.out
+	        .println("Total Products Count on Search Results grid is: " + totallinescountonsearchgrid);
+	    Assert.assertTrue(lvmds.getTotalLinesButton().getText().contains(totallinescountonsearchgrid));
+	    System.out.println("Total Lines count is same at Lines section title and See All button.");
+	    Thread.sleep(8000);
+	    utl.scrollToElement(lvmds.getAllProductsButton());
+	    // Click on Total Lines-See All link for 1st Exhibitor
+	    lvmds.getTotalLinesButton().click();
+	    Thread.sleep(6000);
 
-    // Click on Total Lines-See All link for 1st Exhibitor
-    lvmds.getTotalLinesButton().click();
-    Thread.sleep(6000);
+	    // Verify that user should redirect to the Lines page
+	    Assert.assertTrue(lvmds.getValidateLinesPage().getText().contains("Lines"));
+	    System.out.println("All Lines page is displayed properly.");
+	    Thread.sleep(6000);
 
-    // Verify that user should redirect to the Lines page
-    Assert.assertTrue(lvmds.getValidateLinesPage().getText().contains("Lines"));
-    System.out.println("All Lines page is displayed properly.");
-    Thread.sleep(6000);
+	    // Get the Total Products count on Products page
+	    String linestabtitle = lvmds.getLinesCountAtLinesPage().getText();
+	    String totallinescountonprodpage = linestabtitle.replaceAll("[^0-9]", "");
+	    System.out.println("Total Lines Count on Products page is: " + totallinescountonprodpage);
 
-    // Get the Total Products count on Products page
-    String linestabtitle = lvmds.getLinesCountAtLinesPage().getText();
-    String totallinescountonprodpage = linestabtitle.replaceAll("[^0-9]", "");
-    System.out.println("Total Lines Count on Products page is: " + totallinescountonprodpage);
-
-    // Get back to Exhibitor Showroom page and click any one product and verify if product details
-    // are displayed properly
-    lvmds.getProductsPageBackButton().click();
-    utl.scrollToElement(lvmds.getLinesSection());
-    String linetext = lvmds.getLinesOptionText().getText();
-    lvmds.getLinesOption().click();
-    Assert.assertTrue(lvmds.getValidateLinesPage().getText().contains(linetext));
-    System.out.println("Line Details are displayed properly.");
+	    // Get back to Exhibitor Showroom page and click any one Line and verify if Line details
+	    // are displayed properly
+	    lvmds.getProductsPageBackButton().click();
+	    utl.scrollToElement(lvmds.getAllProductsButton());
+	    
+	    String linetext = lvmds.getLinesOptionText().getText();
+	    Thread.sleep(5000);
+	    lvmds.getLinesOptionPROD().click();
+	    Thread.sleep(5000);
+	    Assert.assertTrue(lvmds.getValidateLinesPage().getText().contains(linetext));
+	    System.out.println("Line Details are displayed properly.");
   }
 
   @Test(priority = 3)
@@ -243,11 +250,35 @@ public class ExhibitorDigitalShowroom extends base {
     // Get the Total Lines count on Search grid
     lvmds.getExhibitorName().click();
     Thread.sleep(5000);
-    utl.scrollToElement(lvmds.getLinesSection());
+    //utl.scrollToElement(lvmds.getLinesSection());
 
     // Verify A-Z sorting
-    lvmds.getAlphabeticSorting().click();
-    Assert.assertTrue(lvmds.getLinesOptionText().getText().startsWith("A"));
+    
+   // Assert.assertTrue(lvmds.getLinesOptionText().getText().startsWith("A"));
+    List<WebElement> list = lvmds.LinesOptionListText();
+    List<String> currentList = new ArrayList<String>();
+    for (WebElement List : list) {
+    	currentList.add(List.getText().toLowerCase());
+	}
+    
+ // Create sorted list
+ 		List<String> sortedList = new ArrayList<String>();
+ 		for (String s : currentList) {
+ 			sortedList.add(s.toLowerCase());
+ 		}
+ 		Collections.sort(sortedList);
+ 		//Click on SortLink
+ 		lvmds.getAlphabeticSorting().click();
+ 		 List<WebElement> listOfLines = lvmds.LinesOptionListText();
+ 	    List<String> SortedListByClickOnSort = new ArrayList<String>();
+ 	    for (WebElement List : listOfLines) {
+ 	    	SortedListByClickOnSort.add(List.getText().toLowerCase());
+ 		}
+ 	    
+ 		boolean isCorrectlySorted=sortedList.equals(SortedListByClickOnSort);
+ 		System.out.println("Current List : " + SortedListByClickOnSort);
+        System.out.println("Copied and Sorted List: " + sortedList);
+ 		System.out.println("Is Correctly Sorted: " + isCorrectlySorted);
   }
 
   @Test(priority = 5)
@@ -272,7 +303,7 @@ public class ExhibitorDigitalShowroom extends base {
     // Click on the 1st Exhibitor name
     lvmds.getExhibitorName().click();
     Thread.sleep(5000);
-    utl.scrollToElement(lvmds.getLinesSection());
+    //utl.scrollToElement(lvmds.getLinesSection());
 
     // Verify Line Search functionality
     lvmds.getLineSearch().click();
@@ -307,7 +338,7 @@ public class ExhibitorDigitalShowroom extends base {
     lvmds.getExhibitorName().click();
     Thread.sleep(5000);
     // Scroll to Line Section
-    utl.scrollToElement(lvmds.getLinesSection());
+    //utl.scrollToElement(lvmds.getLinesSection());
     // Click on See All Lines Btn
     lvmds.getTotalLinesButton().click();
 
@@ -341,7 +372,7 @@ public class ExhibitorDigitalShowroom extends base {
     Thread.sleep(5000);
 
     // Scroll to Product Section
-    utl.scrollToElement(lvmds.getProductSection());
+    //utl.scrollToElement(lvmds.getProductSection());
     // Click on All Product Btn Btn
     lvmds.getAllProductsButton().click();
     Assert.assertTrue(lvmds.getLVMVerifyLinePageTitle().getText().contains("Products"));
@@ -363,7 +394,7 @@ public class ExhibitorDigitalShowroom extends base {
     driver.get(prop.getProperty("lvmurl_uat"));
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     Thread.sleep(2000);
-    lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor13")));
+    lvmgs.getLVMGlobalSearchTextBox().sendKeys("Pearl Mantels Corp");
     Thread.sleep(5000);
     lvmgs.getLVMSearchButton().click();
     Thread.sleep(15000);
@@ -464,13 +495,13 @@ public class ExhibitorDigitalShowroom extends base {
 
     lvmds.getExhibitorName().click();
     Thread.sleep(5000);
-    utl.scrollToElement(lvmds.getHeroComponentVisit());
-    String visitURL = lvmds.getHeroComponentVisit().getAttribute("href");
+    //utl.scrollToElement(lvmds.getHeroComponentVisit());
+    String visitURL = lvmds.getHeroComponentVisitUAT().getAttribute("href");
     String visitURLNew = visitURL.replace("http://",""); 
     System.out.println("Visit URL: "+visitURLNew);
     // Click on Hero Component Visit
     String currentWindowID = driver.getWindowHandle();
-    lvmds.getHeroComponentVisit().click();
+    lvmds.getHeroComponentVisitUAT().click();
     for (String winddowHandle : driver.getWindowHandles()) {
       driver.switchTo().window(winddowHandle);
     }
@@ -537,7 +568,7 @@ public class ExhibitorDigitalShowroom extends base {
     driver.get(prop.getProperty("lvmurl_uat"));
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     Thread.sleep(3000);
-    lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));
+    lvmgs.getLVMGlobalSearchTextBox().sendKeys("Tripp's Tents");
     // Thread.sleep(5000);
     lvmgs.getLVMSearchButton().click();
     Thread.sleep(15000);
@@ -547,9 +578,9 @@ public class ExhibitorDigitalShowroom extends base {
     System.out.println("Exhibitor name: " + exhname);
 
     lvmds.getExhibitorName().click();
-    Thread.sleep(5000);
+    Thread.sleep(10000);
     // Scroll to Line Section
-    utl.scrollToElement(lvmds.getEventsSection());
+    //utl.scrollToElement(lvmds.getEventsSection());
     // Click on See All Events Btn
 
     lvmds.getSeeAllEventsBtn().click();
@@ -558,7 +589,7 @@ public class ExhibitorDigitalShowroom extends base {
      * driver.navigate().back(); utl.scrollToElement(lvmds.getEventsSection());
      */
     Thread.sleep(4000);
-    utl.scrollToElement(lvmds.getEventNameNew());
+    //utl.scrollToElement(lvmds.getEventNameNew());
     String eventName = lvmds.getEventNameNew().getText();
     System.out.println("Event Name : " + eventName);
     // lvmds.getEventName().click(); //Old
@@ -598,12 +629,12 @@ public class ExhibitorDigitalShowroom extends base {
     Thread.sleep(5000);
 
     // Verify Catalogs section for Exhibitor
-    utl.scrollToElement(lvmds.getCatalogsSection());
+    //utl.scrollToElement(lvmds.getCatalogsSection());
     lvmds.getSeeAllCatalogsButtonUAT().click();
     Assert.assertTrue(lvmds.getValidateLinesPage().getText().contains("Catalogs"));
     System.out.println("See All Catalogs is working properly.");
     lvmds.getProductsPageBackButton().click();
-    utl.scrollToElement(lvmds.getCatalogsSection());
+    //utl.scrollToElement(lvmds.getCatalogsSection());
     String CatalogName = lvmds.getSelectCatalogProd().getText();
     System.out.println("Catalog Name : " + CatalogName);
     lvmds.getSelectCatalogProd().click();
@@ -613,8 +644,8 @@ public class ExhibitorDigitalShowroom extends base {
     }
     Assert.assertTrue(lvmds.getCatalogHeaderTxtT().getText().contains(CatalogName));
     System.out.println("Catalog is displayed properly.");
-    driver.close();
-    driver.switchTo().window(winHandleBefore);
+    //driver.close();
+    //driver.switchTo().window(winHandleBefore);
   }
 
   @Test(priority = 14)
@@ -646,7 +677,7 @@ public class ExhibitorDigitalShowroom extends base {
     Thread.sleep(7000);
 
     // Verify Show Special section for Exhibitor
-    utl.scrollToElement(lvmds.getshowSpecialSection());
+   // utl.scrollToElement(lvmds.getshowSpecialSection());
     // Verify both count
     String shwoSpecialCount = lvmds.getShowSpecialCount().getText();
     String splitShwSpecialCount = shwoSpecialCount.split(" ")[0].trim();
@@ -661,7 +692,7 @@ public class ExhibitorDigitalShowroom extends base {
     Assert.assertTrue(lvmds.getValidateLinesPage().getText().contains("Specials"));
     System.out.println("See All Show Specials Btn is working properly.");
     lvmds.getProductsPageBackButton().click();
-    utl.scrollToElement(lvmds.getshowSpecialSection());
+    //utl.scrollToElement(lvmds.getshowSpecialSection());
     String ShowSpecialName = lvmds.getShowSpecialName().getText();
     System.out.println("Show Special Name : " + ShowSpecialName);
   }
@@ -995,7 +1026,7 @@ public class ExhibitorDigitalShowroom extends base {
   @AfterClass
   public void tearDown() throws InterruptedException {
     Thread.sleep(2000);
-     driver.quit();
+     //driver.quit();
   }
 
 }

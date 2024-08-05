@@ -126,12 +126,17 @@ public class ATLGlobalSearchPage {
 	By atlInfoNameList= By.xpath("//h2[@class='imc-informationcard__title']");
 	By atlShowSpecialsLineNamePROD = By.xpath("(//div[@class='imc-showSpecial--tableContainer'])[1]/p[1]");  //Locator for Show Secials Name Line
 	
-	
+	By atlproductlNameList= By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li/span/span/span[contains(text(),'Product')]"); //Locator for Product suggestion search list
 	
 	public ATLGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 		PageFactory.initElements(driver, this);
+	}
+	public List<WebElement> getatlproductlNameList() {
+		wait = new WebDriverWait (driver,40);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlproductlNameList));
+		return driver.findElements(atlproductlNameList);
 	}
 	public List<WebElement> getatlInfoNameList() {
 		wait = new WebDriverWait (driver,40);

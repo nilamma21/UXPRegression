@@ -71,7 +71,7 @@ public class GlobalSearch_MatchingResults extends base {
 
   }
   
-  @Test(priority = 1)
+  @Test(priority = 2)
   public void TS001_VerifyGlobalSearchContainsAndStartsWithTest() throws InterruptedException, IOException {
       // The purpose of this test case to verify:-
       // T814: Verify Global Search: Contains and Starts With
@@ -85,14 +85,14 @@ public class GlobalSearch_MatchingResults extends base {
       lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor5"));//containsStartWithInput
       Thread.sleep(1000);
       lvmgs.getLVMSearchButton().click();
-      Thread.sleep(4000);
+      Thread.sleep(8000);
       
       Assert.assertTrue(lvmgs.getLVMSearchResult().getText().contains(prop.getProperty("exhibitor5")));
       System.out.println("Displayed All Products Name Start with :: " + prop.getProperty("exhibitor5"));
       driver.get(prop.getProperty("lvmurl_uat"));
   }
   
-  @Test(priority = 2)
+  @Test(priority = 3)
   public void TS002_VerifyGlobalSearchMatchingResultsSortWithinTest() throws InterruptedException, IOException {
       // The purpose of this test case to verify:-
       // T673: Global Search: Matching results- Sort- Search Within
@@ -107,11 +107,16 @@ public class GlobalSearch_MatchingResults extends base {
           lvmgs.getlvmGlobalSearchClearTxt().click();
       }*/
       Thread.sleep(5000);
-      lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor5"));//filtersglobalsearchinput
+      lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));//filtersglobalsearchinput
       lvmgs.getLVMSearchButton().click();
       Thread.sleep(5000);
       // Click on Sort Btn
+      try {
       lvmgs.getlvmGlobalSearchSortBtn().click();
+      }catch (Exception e) {
+    	  lvmgs.getlvmGlobalSearchSortBtnUAT().click();
+    	  
+	}
       
       // Select Exhibitor Info Only
       Select selectAMC = new Select(lvmgs.getlvmGlobalSearch_SearchWithinDropdwn());
@@ -206,7 +211,7 @@ public class GlobalSearch_MatchingResults extends base {
       driver.get(prop.getProperty("lvmurl_uat"));
   }
   
-  @Test(priority = 3)
+  @Test(priority = 4)
   public void TS003_VerifyGlobalSearchMatchingResultsSortSortByTest() throws InterruptedException, IOException {
       // The purpose of this test case to verify:-
       // T676: Global Search: Matching results-Sort- Sort By
@@ -219,15 +224,20 @@ public class GlobalSearch_MatchingResults extends base {
 
       driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
       
-      if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
+      /*if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
           lvmgs.getlvmGlobalSearchClearTxt().click();
-      }
-      lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearch_input"));//sortByInput
+      }*/
+      lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));//sortByInput
       Thread.sleep(2000);
       lvmgs.getLVMSearchButton().click();
       Thread.sleep(5000);
       // Click on Sort Btn
-      lvmgs.getlvmGlobalSearchSortBtn().click();
+      try {
+          lvmgs.getlvmGlobalSearchSortBtn().click();
+          }catch (Exception e) {
+        	  lvmgs.getlvmGlobalSearchSortBtnUAT().click();
+        	  
+    	}
 
       // Select Exhibitor Sort By Relevance
       Select selectAMC = new Select(lvmgs.getlvmGlobalSearch_SearchSortByDropdwn());
@@ -255,7 +265,7 @@ public class GlobalSearch_MatchingResults extends base {
       driver.get(prop.getProperty("lvmurl_uat"));
   }
   
-  @Test(priority = 4)
+  @Test(priority = 1)
   public void TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest() throws InterruptedException, IOException {
       // The purpose of this test case to verify:-
       // T677: Global Search: Matching results- Sort- Filter By Name
@@ -266,20 +276,25 @@ public class GlobalSearch_MatchingResults extends base {
       utl = new Utility(driver);
 
       driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-      if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
+      /*if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
           lvmgs.getlvmGlobalSearchClearTxt().click();
-      }
-      lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearch_input"));//filterByInput
+      }*/
+      lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));//filterByInput
       lvmgs.getLVMSearchButton().click();
       Thread.sleep(5000);
       // Click on Sort Btn
-      utl.scrollToElement(lvmgs.getlvmGlobalSearchSortBtn());
-      lvmgs.getlvmGlobalSearchSortBtn().click();
-
+      try {
+          lvmgs.getlvmGlobalSearchSortBtn().click();
+          }catch (Exception e) {
+        	  lvmgs.getlvmGlobalSearchSortBtnUAT().click();
+        	  
+    	}
       // Select Character from Sort By Filter Name
       Select selectLetter = new Select(lvmgs.getlvmFilterByNameDropDown());
-      selectLetter.selectByVisibleText("P");
+      selectLetter.selectByVisibleText("K");
       Thread.sleep(10000);
+      
+      try {
       for (WebElement filterExhNames : lvmgs.getlvmExhiNameForFilterByNameNew()) {
           //Assert.assertTrue(filterExhNames.isDisplayed());
           
@@ -289,8 +304,21 @@ public class GlobalSearch_MatchingResults extends base {
           char fChar=expName.charAt(0);
           String s=""+fChar;
           System.out.println(s);
-          Assert.assertTrue(s.contains("P"));
+          Assert.assertTrue(s.contains("K"));
       }
+      }catch (Exception e) {
+    	  for (WebElement filterExhNames : lvmgs.getlvmExhiNameForFilterByNameNewUAT()) {
+    		  
+              String expName=filterExhNames.getText();
+              System.out.println(expName);
+              boolean flag=false;
+              char fChar=expName.charAt(0);
+              String s=""+fChar;
+              System.out.println(s);
+              Thread.sleep(4000);
+              Assert.assertTrue(s.contains("K"));
+		}
+	}
       System.out.println("Displayed All Relevance ");
       driver.get(prop.getProperty("lvmurl_uat"));
   }
@@ -580,7 +608,7 @@ public class GlobalSearch_MatchingResults extends base {
   @AfterClass
   public void quit() throws InterruptedException {
       Thread.sleep(1000);
-      driver.quit();
+      //driver.quit();
   }
   
 }
