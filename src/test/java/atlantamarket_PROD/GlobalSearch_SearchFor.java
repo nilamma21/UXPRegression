@@ -414,10 +414,10 @@ public class GlobalSearch_SearchFor extends base {
 		utl.scrollElementIntoMiddle(atlgs.getATLsearchresultArticlesLink());
 		Thread.sleep(200);
 		atlgs.getATLsearchresultArticlesLink().click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		// click on Topics filter
 		atlgs.getATLInfoSearchTopicsFilter().click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		infoFilterList = driver.findElements(By.xpath("//div[@class='imc-filteritem__option']"));
 
 		for (int i = 0; i < infoFilterList.size(); i++) {
@@ -444,7 +444,7 @@ public class GlobalSearch_SearchFor extends base {
 						Assert.assertTrue(filterResultTitleNew.contains(driver.getTitle()));
 					}
 					utl.scrollElementIntoMiddle(atlgs.getATLArticleTag());
-					Thread.sleep(200);
+					Thread.sleep(500);
 					boolean temp = false;
 					tagBlogPost = driver.findElements(By.xpath("//span[@class='imc-blog-tag-module__tag']"));
 					for (WebElement blogPost : tagBlogPost) {
@@ -458,11 +458,12 @@ public class GlobalSearch_SearchFor extends base {
 					Thread.sleep(5000);
 					try {
 						infoFilterList.get(i).click();
-						Thread.sleep(500);
+						Thread.sleep(2000);
 					} catch (StaleElementReferenceException e) {
 						infoFilterList = driver.findElements(By.xpath("//div[@class='imc-filteritem__option']"));
-						Thread.sleep(100);
+						Thread.sleep(200);
 						infoFilterList.get(i).click();
+						Thread.sleep(100);
 						atlgs.getATLInfoSearchTopicsFilter().click();
 						Thread.sleep(500);
 					}
@@ -472,7 +473,7 @@ public class GlobalSearch_SearchFor extends base {
 					infoFilterList.get(i).click();
 					Thread.sleep(5000);
 					driver.navigate().refresh();
-
+					Thread.sleep(1000);
 					String filterResultTitle1 = atlgs.getATLArticleName().getText();
 					utl.scrollElementIntoMiddle(atlgs.getATLArticleSeeMoreBtn());
 					Thread.sleep(200);
@@ -562,7 +563,7 @@ public class GlobalSearch_SearchFor extends base {
 					} catch (StaleElementReferenceException e) {
 						infoFilterList = driver.findElements(By.xpath("//div[@class='imc-filteritem__option']"));
 						infoFilterList.get(i).click();
-						Thread.sleep(500);
+						Thread.sleep(1000);
 						atlgs.getATLInfoSearchTopicsFilter().click();
 						Thread.sleep(500);
 					}
@@ -577,7 +578,7 @@ public class GlobalSearch_SearchFor extends base {
 					utl.scrollElementIntoMiddle(atlgs.getATLArticleSeeMoreBtn());
 					Thread.sleep(200);
 					atlgs.getATLArticleSeeMoreBtn().click();
-					Thread.sleep(500);
+					Thread.sleep(1000);
 					Assert.assertTrue(filterResultTitle4.contains(atlgs.getATLArticleHeader().getText()));
 					utl.scrollElementIntoMiddle(atlgs.getATLArticleTag());
 					boolean temp4 = false;
@@ -611,7 +612,7 @@ public class GlobalSearch_SearchFor extends base {
 					Thread.sleep(500);
 					Assert.assertTrue(filterResultTitle5.contains(atlgs.getATLArticleHeader().getText()));
 					utl.scrollElementIntoMiddle(atlgs.getATLArticleTag());
-					Thread.sleep(200);
+					Thread.sleep(500);
 					boolean temp5 = false;
 					tagBlogPost = driver.findElements(By.xpath("//span[@class='imc-blog-tag-module__tag']"));
 					for (WebElement blogPost : tagBlogPost) {
@@ -629,7 +630,7 @@ public class GlobalSearch_SearchFor extends base {
 					} catch (StaleElementReferenceException e) {
 						infoFilterList = driver.findElements(By.xpath("//div[@class='imc-filteritem__option']"));
 						infoFilterList.get(i).click();
-						Thread.sleep(500);
+						Thread.sleep(1000);
 						atlgs.getATLInfoSearchTopicsFilter().click();
 						Thread.sleep(500);
 					}
@@ -702,7 +703,7 @@ public class GlobalSearch_SearchFor extends base {
 		utl.scrollElementIntoMiddle(atlgs.getATLsearchresultArticlesLink());
 		Thread.sleep(200);
 		atlgs.getATLsearchresultArticlesLink().click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		atlgs.getATLInfosearchtxtbxClr();
 		atlgs.getATLInfosearchtxtbx().sendKeys(prop.getProperty("searchforArticlesInput2"));
 		atlgs.getATLInfosearchbtn().click();

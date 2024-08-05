@@ -3,13 +3,24 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
+
       <class name="lasvegasmarket_UAT.GlobalSearch_LineActions">
         <methods>
           <include name="tearDown"/>
           <include name="TS004_VerifyClickOnTotalProductsSeeAllLinkForLineTest"/>
+
+      <class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters">
+        <methods>
+
           <include name="initialize"/>
+          <include name="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest"/>
+          <include name="tearDown"/>
         </methods>
+
       </class> <!-- lasvegasmarket_UAT.GlobalSearch_LineActions -->
+
+      </class> <!-- atlantamarket_PROD.GlobalSearch_LeftPaneFilters -->
+
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

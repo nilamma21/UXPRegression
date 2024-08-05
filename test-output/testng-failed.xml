@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test name="Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
+
       <class name="lasvegasmarket_UAT.ShowSpecials">
         <methods>
           <include name="tearDown"/>
@@ -18,10 +19,16 @@
         </methods>
       </class> <!-- lasvegasmarket_UAT.GlobalSearch_ProductActions -->
       <class name="lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters">
+
+      <class name="atlantamarket_PROD.GlobalSearch_LeftPaneFilters">
+
         <methods>
+          <include name="initialize"/>
+          <include name="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest"/>
           <include name="tearDown"/>
           <include name="initialize"/>
         </methods>
+
       </class> <!-- lasvegasmarket_UAT.GlobalSearch_LeftPaneFilters -->
       <class name="lasvegasmarket_UAT.ExhibitorDigitalShowroom">
         <methods>
@@ -86,6 +93,9 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- lasvegasmarket_UAT.LineDigitalShowroom -->
+
+      </class> <!-- atlantamarket_PROD.GlobalSearch_LeftPaneFilters -->
+
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

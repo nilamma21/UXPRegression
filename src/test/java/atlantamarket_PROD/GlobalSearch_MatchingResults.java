@@ -239,11 +239,10 @@ public class GlobalSearch_MatchingResults extends base {
 		 utl.Sorting(atlgs.getatlExhNames(),atlgs.getatlGlobalSearch_SearchSortByDropdwn(),"Sort by Name Ascending");
 		 ///Select filter Sort by Name Descending
 		 utl.Sorting(atlgs.getatlExhNames(),atlgs.getatlGlobalSearch_SearchSortByDropdwn(),"Sort by Name Descending");
-		
+		//Select filter Sort by Matching Product Count Ascending
+		utl.Sorting(atlgs.getatlMachingProductCount(), atlgs.getatlGlobalSearch_SearchSortByDropdwn(),"Sort By Matching Product Count Ascending");
 		//Select filter Sort by Matching Product Count Descending
-		utl.Sorting(atlgs.getatlMachingProductCount(), atlgs.getatlGlobalSearch_SearchSortByDropdwn(),
-				"Sort By Matching Product Count Descending");
-
+		utl.Sorting(atlgs.getatlMachingProductCount(), atlgs.getatlGlobalSearch_SearchSortByDropdwn(),"Sort By Matching Product Count Descending");
 	}
 
 	@Test(priority = 4)//groups=\"Non_MP"

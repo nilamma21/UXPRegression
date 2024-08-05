@@ -341,11 +341,12 @@ public class FloorPlans extends base {
 		Thread.sleep(2000);
 		//Click on Building floor
 		utl.scrollElementIntoMiddle(atlflpp.getATLBuildingFloorForFilter());
+		Thread.sleep(200);
 		atlflpp.getATLBuildingFloorNumber().click();
 		Thread.sleep(2000);
 		//Scroll Down to Exhibitor list
 		utl.scrollElementIntoMiddle(atlflpp.getATLSelectBox());
-
+		Thread.sleep(200);
 		//Create current Exhibitor list without sort
 		List<String> currentList=new ArrayList<String>();
 		List<WebElement> elementList= driver.findElements(By.xpath("//a[@class='imc-type--title-5-link']"));
@@ -416,11 +417,12 @@ public class FloorPlans extends base {
 		Thread.sleep(2000);
 		//Click on Building floor
 		utl.scrollElementIntoMiddle(atlflpp.getATLBuildingFloor());
+		Thread.sleep(200);
 		atlflpp.getATLBuildingFloor().click();
 		Thread.sleep(3000);
 		//Scroll Down to Exhibitor list
 		utl.scrollElementIntoMiddle(atlflpp.getATLNextFloorBtn());
-
+		Thread.sleep(200);
 		String actualNextFloorNumber=atlflpp.getATLNextFloorBtn().getText();
 		System.out.println("Actual Next Floor Number: " +actualNextFloorNumber);
 		atlflpp.getATLNextFloorBtn().click();
@@ -432,6 +434,7 @@ public class FloorPlans extends base {
 		Thread.sleep(3000);
 		//Previous floor Btn
 		utl.scrollElementIntoMiddle(atlflpp.getATLPreviousFloorBtn());
+		Thread.sleep(200);
 		String actualPreviousFloorNumber=atlflpp.getATLPreviousFloorBtn().getText();
 		System.out.println("Actual Previous Floor Number: " +actualPreviousFloorNumber);
 		atlflpp.getATLPreviousFloorBtn().click();
@@ -458,6 +461,7 @@ public class FloorPlans extends base {
 		Thread.sleep(2000);
 		// Click on Exh And Product Tab
 		utl.scrollElementIntoMiddle(atlflpp.getATLExhibitorsAndProductTab());
+		Thread.sleep(200);
 		atlflpp.getATLExhibitorsAndProductTab().click();
 		Thread.sleep(2000);
 		//click on Floor plans link
@@ -465,6 +469,7 @@ public class FloorPlans extends base {
 		Thread.sleep(2000);
 		//Click on Building floor
 		utl.scrollElementIntoMiddle(atlflpp.getATLBuilding1Floor3());
+		Thread.sleep(200);
 		atlflpp.getATLBuilding1Floor3().click();
 
 		Thread.sleep(8000);
@@ -478,7 +483,6 @@ public class FloorPlans extends base {
 		
 		//Click on 1st Exhibitor
 		atlflpp.getatlExhibitorNamePROD().click();
-
 		Thread.sleep(12000);
 		// Verify that Selected Exhibitor Digital Showroom page should be opened
 		try {
@@ -547,6 +551,7 @@ public class FloorPlans extends base {
 		Thread.sleep(2000);
 		// Click on Exh And Product Tab
 		utl.scrollElementIntoMiddle(atlflpp.getATLExhibitorsAndProductTab());
+		Thread.sleep(200);
 		atlflpp.getATLExhibitorsAndProductTab().click();
 		Thread.sleep(1000);
 		//click on Floor plans link
@@ -554,12 +559,14 @@ public class FloorPlans extends base {
 		Thread.sleep(2000);
 		//Click on building floor
 		utl.scrollElementIntoMiddle(atlflpp.getATLBuildingFloor());
+		Thread.sleep(200);
 		atlflpp.getATLBuildingFloor().click();
 		Thread.sleep(2000);
 		utl.scrollElementIntoMiddle(atlflpp.getscrollexhibitorsection());
-		Thread.sleep(3000);
+		Thread.sleep(200);
 		Assert.assertTrue(atlflpp.getatlexhibitorsection().isDisplayed());
 		utl.scrollElementIntoMiddle(atlflpp.getatlexhibitorsearch());
+		Thread.sleep(200);
 		atlflpp.getatlexhibitorsearch().click();
 		Thread.sleep(4000);
 		atlflpp.getatlexhibitorsearch().sendKeys(prop.getProperty("atlFloorPlanExhibitorSearch"));
