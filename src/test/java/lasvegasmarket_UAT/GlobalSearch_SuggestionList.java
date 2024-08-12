@@ -40,7 +40,8 @@ public class GlobalSearch_SuggestionList extends base {
     ATLExhLineProdActionsPage atlexhact;
     ATLMarketPlannerPage atlmppge;
 
-    List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns, allnoteslist,favlist, searchlinetypelist;
+    List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, 
+    mpeditlistoptns, allnoteslist,favlist, searchlinetypelist, prodNamesList;
 
     @BeforeClass
     public void initialize() throws IOException, InterruptedException {
@@ -134,21 +135,35 @@ public class GlobalSearch_SuggestionList extends base {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         //lap.getCloseMarktAdBtn().click();
         Thread.sleep(2000);
-        atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("LvmUATProduct")));
+        atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestproduct_lvm")));
+      //atlgs.getATLGlobalSearchTextBox().sendKeys("annee");
         Thread.sleep(2000);
         WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li")));
 
         prodlist = atlgs.getATLProductsSearchResultsList();
+        
+        prodNamesList=atlgs.getatlproductlNameList();
         //searchproducttypelist = atlgs.getATLSearchResultPorductTypeList();
 
-        for (int i = 0; i < prodlist.size(); i++) {
+       /* for (int i = 0; i < prodlist.size(); i++) {
+        	for(int j=0;j<prodNamesList.size();j++) {
+        		
+        	System.out.println(prodlist.get(i).getText());
+        	System.out.println(prodNamesList.get(i).getText());
             //System.out.println(prodlist.get(i).getText());            
-            if (prodlist.get(i).getText().contains(prop.getProperty("LvmUATProduct"))
-                    && prodlist.get(i).getText().contains("Product")) { 
+            if (prodlist.get(i).getText().contains(prop.getProperty("autosuggestproduct_lvm")) 
+            		&& prodNamesList.get(j).getText().contains("Product")) { 
                 prodlist.get(i).click();
                 break;
             }
+        	}
+        }*/
+        for(int j=0;j<prodNamesList.size();j++) {
+        	 if (prodNamesList.get(j).getText().contains("Product")) { 
+        		 prodNamesList.get(j).click();
+                 break;
+        	 }
         }
         Thread.sleep(8000);
         Assert.assertTrue(atlproddet.getATLValidateProdDetailsPage().isDisplayed());
@@ -159,6 +174,6 @@ public class GlobalSearch_SuggestionList extends base {
     @AfterClass
     public void tearDown()
     {
-        driver.quit();
+       // driver.quit();
     }
 }

@@ -80,6 +80,8 @@ public class LVMExhDigiShowroomPage {
 	By CatalogSeeAllBtn = By.xpath("(//span[contains(text(),'Catalogs')])[1]/../../div[3]/div/a/span[contains(text(),'See All') and @class='imc-breakpoint-display--hide-mobile']"); //Locator for Catalog see All Btn
 	By HeroComponentVisit = By.xpath("//span[contains(text(),'Visit')]/.."); //Locator for Hero Component Visit Btn
 	By HeroComponentVisitPROD = By.xpath("//span[@class='imc-breakpoint-display--hide-desktop']/../span[contains(text(),'Visit')]/.."); //Locator for Hero Component Visit Btn
+	By HeroComponentVisitUAT = By.xpath("//span[contains(text(),'Visit')]/../../a"); //Locator for Hero Component Visit Btn
+	
 	
 	By showroomHeader3D = By.xpath("//div[@class='imc-content--display-flex imc-content--display-flex--center']/span[1]"); //Locator for 3D showroom Header
 	By View3DshowroomBtn = By.xpath("//span[contains(text(),'View 3D Showroom')]"); //Locator for 3D showroom Header
@@ -114,10 +116,29 @@ public class LVMExhDigiShowroomPage {
 	By ContactPopUp = By.xpath("//h2[@class=\"imc-heading--box-modal\"]");
 	By ContactPopUpClose = By.xpath("//button[@class='imc-modal--close imc-button--modal-close imc-button--round']");
 	
+	By LinesOptionListText = By.xpath("//div[@class = 'imc-manufacturing-line']/div[2]/a[1]"); //Locator for Lines option text
+	By catalogNameTitle = By.xpath("//div[@class='imc-pdfview--display']/div/h1[1]"); //Locator for Catalog name text
+	
 	public LVMExhDigiShowroomPage(WebDriver driver) {
 		this.driver = driver;
 	}
 	
+	public WebElement getcatalogNameTitle() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(catalogNameTitle));
+		return driver.findElement(catalogNameTitle);
+	}
+	public WebElement getHeroComponentVisitUAT() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(HeroComponentVisitUAT));
+		return driver.findElement(HeroComponentVisitUAT);
+	}
+	
+	public List <WebElement> LinesOptionListText() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(LinesOptionListText));
+		return driver.findElements(LinesOptionListText);
+	}
 	public WebElement getlvmexhibitornameonexhdirectimg_PROD() {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmexhibitornameonexhdirectimg_PROD));
