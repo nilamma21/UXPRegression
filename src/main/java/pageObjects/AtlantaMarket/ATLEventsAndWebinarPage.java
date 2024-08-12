@@ -55,6 +55,8 @@ public class ATLEventsAndWebinarPage {
 	By atlSearchResultsTitle = By.xpath("//div[@class='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[2]/a[1]"); //Locator for Tag Icon
 	By atladdtoseselectedbtn = By.xpath("//input[@data-xpath='quickAdd.saveList']"); //Locator for Add to Selected button
 	
+	By atlEventCardExhibitorName = By.xpath("(//a[@class='event-card--exhibitor-name'])[1]");
+	
 	public ATLEventsAndWebinarPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
@@ -258,10 +260,16 @@ public class ATLEventsAndWebinarPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlAttendTab));
 		return driver.findElement(atlAttendTab);
 	}
-
+	
 	public WebElement getatlEventsLink() {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.elementToBeClickable(atlEventsLink));
 		return driver.findElement(atlEventsLink);
+	}
+	
+	public WebElement getatlEventCardExhibitorName() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.elementToBeClickable(atlEventCardExhibitorName));
+		return driver.findElement(atlEventCardExhibitorName);
 	}
 }

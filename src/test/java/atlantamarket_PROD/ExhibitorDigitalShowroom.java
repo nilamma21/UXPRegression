@@ -538,8 +538,25 @@ public class ExhibitorDigitalShowroom extends base {
 		
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(3000);
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputforShowSpecials4")));
+		Thread.sleep(2000);
+		
+		//Go to the event page
+		utl.clickOnEventLinkOfChannel();  
+		Thread.sleep(2000);
+		
+		//Click on Exhibitor Event Tab
+		utl.scrollElementIntoMiddle(atlevents.getatlExhibitorsEventsTab());
+		Thread.sleep(200);
+		atlevents.getatlExhibitorsEventsTab().click();
+		Thread.sleep(1000);
+		
+		//Get event title 
+		String eventTitle=atlevents.getatlEventCardExhibitorName().getText();
+		System.out.println("Title of Event card: "+eventTitle);
+
+		utl.scrollToTop();
+		Thread.sleep(200);
+		atlgs.getATLGlobalSearchTextBox().sendKeys(eventTitle);
 		atlgs.getATLSearchButton().click();
 
 		Thread.sleep(7000);
@@ -687,13 +704,15 @@ public class ExhibitorDigitalShowroom extends base {
 
 	    driver.get(prop.getProperty("lvmurl_prod"));
 	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	    Thread.sleep(2000);
+	    Thread.sleep(5000);
 	    atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 	    Thread.sleep(2000);
 	    atlgs.getATLSearchButton().click();
 	    Thread.sleep(10000);
 
 	    // Store the 1st Exhibitor name in String variable
+	    utl.scrollElementIntoMiddle( atlexhact.getExhibitorName());
+	    Thread.sleep(200);
 	    exhname = atlexhact.getExhibitorName().getText();
 	    System.out.println("Exhibitor name: " + exhname);
 

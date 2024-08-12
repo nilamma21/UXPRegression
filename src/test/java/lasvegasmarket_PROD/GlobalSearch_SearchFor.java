@@ -385,6 +385,8 @@ public class GlobalSearch_SearchFor extends base{
 		utl.scrollElementIntoMiddle(lvmds.getSeeAllCatalogsButton());
 		Thread.sleep(300);
 		//Click on All Catalog Btn Btn
+		utl.scrollElementIntoMiddle(lvmds.getSeeAllCatalogsButton());
+		Thread.sleep(200);
 		lvmds.getSeeAllCatalogsButton().click();
 		Thread.sleep(2000);
 		Assert.assertTrue(lvmds.getLVMVerifyLinePageTitle().getText().contains("Catalogs"));

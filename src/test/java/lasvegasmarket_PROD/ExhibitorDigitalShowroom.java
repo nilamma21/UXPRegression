@@ -688,7 +688,7 @@ public class ExhibitorDigitalShowroom extends base {
     String splitShwSpecialCount = shwoSpecialCount.split(" ")[0].trim();
     System.out.println(splitShwSpecialCount);
     String SeeAllBtnCount = lvmds.getSeeAllshowSpecialBtn().getText();
-    String splitSeeAllBtnCount = SeeAllBtnCount.split(" ")[1].trim();
+    String splitSeeAllBtnCount = SeeAllBtnCount.split(" ")[2].trim();
     System.out.println(splitSeeAllBtnCount);
 
     Assert.assertTrue(splitShwSpecialCount.contains(splitSeeAllBtnCount));

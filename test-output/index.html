@@ -2,9 +2,10 @@
 
 <html>
   <head>
+  <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
     <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -23,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -48,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\anuppa\AppData\Local\Temp\testng-eclipse--605605625\testng-customsuite.xml</span>
+                    <span>C:\Users\anuppa\AppData\Local\Temp\testng-eclipse-1290541599\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -101,7 +102,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="atlantamarket_PROD.GlobalSearch_SearchFor" hash-for-method="TS005_VerifyArticlesOverviewInGlobalSearchTest">TS005_VerifyArticlesOverviewInGlobalSearchTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="lasvegasmarket_PROD.GlobalSearch_MatchingResults" hash-for-method="TS003_VerifyGlobalSearchMatchingResultsSortSortByTest">TS003_VerifyGlobalSearchMatchingResultsSortSortByTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -119,14 +120,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">atlantamarket_PROD.GlobalSearch_SearchFor</span>
+              <span class="class-name">lasvegasmarket_PROD.GlobalSearch_MatchingResults</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TS005_VerifyArticlesOverviewInGlobalSearchTest">
-                  </a> <!-- TS005_VerifyArticlesOverviewInGlobalSearchTest -->
-                  <span class="method-name">TS005_VerifyArticlesOverviewInGlobalSearchTest</span>
+                  <a name="TS003_VerifyGlobalSearchMatchingResultsSortSortByTest">
+                  </a> <!-- TS003_VerifyGlobalSearchMatchingResultsSortSortByTest -->
+                  <span class="method-name">TS003_VerifyGlobalSearchMatchingResultsSortSortByTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -134,7 +135,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\anuppa\AppData\Local\Temp\testng-eclipse--605605625\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\anuppa\AppData\Local\Temp\testng-eclipse-1290541599\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -143,11 +144,11 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;atlantamarket_PROD.GlobalSearch_SearchFor&quot;&gt;
+      &lt;class name=&quot;lasvegasmarket_PROD.GlobalSearch_MatchingResults&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;TS005_VerifyArticlesOverviewInGlobalSearchTest&quot;/&gt;
+          &lt;include name=&quot;TS003_VerifyGlobalSearchMatchingResultsSortSortByTest&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- atlantamarket_PROD.GlobalSearch_SearchFor --&gt;
+      &lt;/class&gt; &lt;!-- lasvegasmarket_PROD.GlobalSearch_MatchingResults --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -189,9 +190,9 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TS005_VerifyArticlesOverviewInGlobalSearchTest')
-data.setCell(0, 2, 'atlantamarket_PROD.GlobalSearch_SearchFor')
-data.setCell(0, 3, 67707);
+data.setCell(0, 1, 'TS003_VerifyGlobalSearchMatchingResultsSortSortByTest')
+data.setCell(0, 2, 'lasvegasmarket_PROD.GlobalSearch_MatchingResults')
+data.setCell(0, 3, 62290);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -211,33 +212,27 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">11 ignored methods</span>
+            <span class="header-content">8 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">atlantamarket_PROD.GlobalSearch_SearchFor</span>
+              <span class="ignored-class-name">lasvegasmarket_PROD.GlobalSearch_MatchingResults</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest</span>
+                <span class="ignored-method-name">TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest</span>
                 <br/>
-                <span class="ignored-method-name">TS006_VerifyArticlesFiltersFunctionalityInGlobalSearchTest</span>
+                <span class="ignored-method-name">TS008_VerifyGlobalSearchMatchingResultsUsePreviousSavedSearchTest</span>
                 <br/>
-                <span class="ignored-method-name">TS011_VerifyEventsOverviewInGlobalSearchTest</span>
+                <span class="ignored-method-name">TS007_VerifyGlobalSearchMatchingResultsSelectAddToNewlyCreatedListTest</span>
                 <br/>
-                <span class="ignored-method-name">TS004_VerifyCatalogsOverviewInGlobalSearchTest</span>
+                <span class="ignored-method-name">TS005_VerifyGlobalSearchMatchingResultsSelectAddToFavoritesTest</span>
                 <br/>
-                <span class="ignored-method-name">TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest</span>
+                <span class="ignored-method-name">TS002_VerifyGlobalSearchMatchingResultsSortWithinTest</span>
                 <br/>
-                <span class="ignored-method-name">TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest</span>
+                <span class="ignored-method-name">TS001_VerifyGlobalSearchContainsAndStartsWithTest</span>
                 <br/>
-                <span class="ignored-method-name">verifyMPLoginFunctionality</span>
+                <span class="ignored-method-name">TS006_VerifyGlobalSearchMatchingResultsSelectAddToExistingListTest</span>
                 <br/>
-                <span class="ignored-method-name">TS010_VerifyShowSpecialsOverviewInGlobalSearchTest</span>
-                <br/>
-                <span class="ignored-method-name">TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest</span>
-                <br/>
-                <span class="ignored-method-name">TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest</span>
-                <br/>
-                <span class="ignored-method-name">TS001_VerifyInformationTabInGlobalSearchTest</span>
+                <span class="ignored-method-name">TS009_VerifyGlobalSearchMatchingResultsSavedSearchesTest</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -249,18 +244,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">atlantamarket_PROD.GlobalSearch_SearchFor</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">lasvegasmarket_PROD.GlobalSearch_MatchingResults</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">initialize</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">TS005_VerifyArticlesOverviewInGlobalSearchTest</span>
-                <span class="method-start">49797 ms</span>
+                <span class="method-name">TS003_VerifyGlobalSearchMatchingResultsSortSortByTest</span>
+                <span class="method-start">87641 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">117511 ms</span>
+                <span class="method-name">quit</span>
+                <span class="method-start">149933 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

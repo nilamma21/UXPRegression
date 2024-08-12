@@ -25,7 +25,7 @@ public class ATLFloorPlansPage {
 	By atlNoExhibitorFloor = By.xpath("//div[@class='imc-campus-view']/div[1]/div[18]/div[3]/a[1]"); //Locator for No Exhibitor
 	By lvmNoExhibitorFloor_uat = By.xpath("//div[@class='imc-campus-view']/div[2]/div[3]/div[2]/a[1]"); //Locator for No Exhibitor
 	By atlnoexhibitorsmsg = By.xpath("//p[contains(text(),'No Exhibitors on This Floor')]"); //Locator for No exhibitor msg
-	
+	By atlNoExhibitorFloorATL = By.xpath("//a[contains(text(),'Buying Groups / Meeting Rooms')]"); //ATL No exhibitor floor
 	By atlloadingexhmsg = By.xpath("//p[contains(text(),'Loading Exhibitors Please Wait ...')]"); //Locator for Loading Exhibitors msg
 	By atlExhibitorFloorZoomIn = By.xpath("//div[@class='meridian-zoom-controls meridian--private--1qg3nfg']/button[1]"); //Locator for Zoom In Exhibitor
 	By atlExhibitorFloorZoomOut = By.xpath("//div[@class='meridian-zoom-controls meridian--private--1qg3nfg']/button[2]"); //Locator for Zoom In Exhibitor
@@ -43,7 +43,7 @@ public class ATLFloorPlansPage {
 	By waterfountainoverlay = By.xpath("//div[contains(@style, 'water_fountain')]"); //Locator for Water Fountain overlay on Map
 	By phoneicononmap = By.xpath("(//button[contains(@class, 'phone')])[position()=2]"); //Locator for Phone icon on Map image
 	By phoneoverlay = By.xpath("//div[contains(@style, 'phone')]"); //Locator for Phone overlay on Map
-	By locationpinicononmap = By.xpath("//div[contains(@class,'imc-floor-plan')]//div[25]/button"); //Locator for location pin on map
+	By locationpinicononmap = By.xpath("//div[contains(@class,'imc-floor-plan')]//div[34]/button"); //Locator for location pin on map
 	By exhibitordetailsmodal = By.xpath("//div[@class='imc-content--padded-medium-desktop']"); //Locator for Exhibitor Details Modal
 	By exhnameonexhdetailsmodal = By.xpath("//div[@class='imc-content--padded-medium-desktop']/div/div/h5"); //Locator for Exhibitor name on Exh Details Modal
 	By overlayclosebtn = By.xpath("//button[@data-testid='meridian--private--close-overlay']"); //Locator for Overlay close btn
@@ -373,6 +373,11 @@ public class ATLFloorPlansPage {
 		wait = new WebDriverWait (driver,30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(resultsforjuniperlinesmsg));
 		return driver.findElement(resultsforjuniperlinesmsg);
+	}
+	public WebElement getatlNoExhibitorFloorATL() {
+		wait = new WebDriverWait (driver,30);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(atlNoExhibitorFloorATL));
+		return driver.findElement(atlNoExhibitorFloorATL);
 	}
 }
 
