@@ -164,15 +164,16 @@ public class FloorPlans extends base {
 		System.out.println("Floor Name : " +floorName);
 
 		//click on No Exhibitor floor
-		utl.scrollElementIntoMiddle(atlflpp.getATLNoExhibitorFloor());
+		utl.scrollElementIntoMiddle(atlflpp.getatlNoExhibitorFloorATL());
 		Thread.sleep(200);
-		atlflpp.getATLNoExhibitorFloor().click();
+		atlflpp.getatlNoExhibitorFloorATL().click();
 		Thread.sleep(2000);
 		//Verify that Loading Exhibitors msg should be displayed
 		//Assert.assertTrue(atlflpp.getATLLoadingExhMsg().isDisplayed());
 
 		//Verify that No Exhibitor msg should be displayed
-		//Assert.assertTrue(atlflpp.getatlLoadingNoExhiMsg().isDisplayed());
+		utl.scrollElementIntoMiddle(atlflpp.getatlLoadingNoExhiMsg());
+		Thread.sleep(200);
 		Assert.assertTrue(atlflpp.getatlLoadingNoExhiMsg().isDisplayed());
 	}
 

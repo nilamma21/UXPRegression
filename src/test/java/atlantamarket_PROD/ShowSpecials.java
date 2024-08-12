@@ -93,7 +93,7 @@ public class ShowSpecials extends base  {
 		Thread.sleep(5000);*/
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(1000);
+		Thread.sleep(15000);
 		
 		//click on Exhibitors And Product Tab
 		atlgs.getatlExhibitorsAndProductTab().click();
@@ -101,7 +101,7 @@ public class ShowSpecials extends base  {
 		
 		//Click on Show Specials sub-menu
 		atlgs.getatlShowSpecialsLink().click();
-		Thread.sleep(5000);
+		Thread.sleep(15000);
 		
 		utl.scrollElementIntoMiddle(atlgs.getatlShowSpecialsTitle());
 		Thread.sleep(200);
@@ -151,7 +151,7 @@ public class ShowSpecials extends base  {
 		
 		//Click on Show Specials menu
 		atlgs.getatlShowSpecialsLink().click();
-		Thread.sleep(5000);
+		Thread.sleep(15000);
 		
 		utl.scrollElementIntoMiddle(atlgs.getatlShowSpecialsTitle());
 		Thread.sleep(200);

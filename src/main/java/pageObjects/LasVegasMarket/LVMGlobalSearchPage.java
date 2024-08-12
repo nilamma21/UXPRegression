@@ -67,9 +67,7 @@ public class LVMGlobalSearchPage {
 	By TitleOfArticle = By.xpath("//div[@class='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[2]/a[1]"); //Locator for List of all articles
 	By lvmseealllineslinkUAT = By.xpath("//div[@class = 'imc-exhibitorcard-button-wrapper']/div[1]/div[1]/p[2]"); //Locator for Sell All lines link
 	By fourthbreadcrumbtxtUAT = By.xpath("//ul[@class='imc-breadcrumb']/li[4]/a[1]"); //Locator for 4th Breadcrumb text in app
-	By lvmGlobalSearchSortBtn = By.xpath("//button[@class='imc-searchform--bar--button open ' and text()='Sort']"); //Locator for Global Search Sort Btn
-	
-	
+	By lvmGlobalSearchSortBtn = By.xpath("//button[@class='imc-searchform--bar--button  ' and text()='Sort']"); //Locator for Global Search Sort Btn
 	By lvmGlobalSearch_SearchWithinDropdwn = By.xpath("//select[@name='Search Type']"); //Locator for Global Search SearchWithhn Dropdown
 	By lvmListOfAllExh = By.xpath("//div[@class='imc-exhibitorcard-title-row ']"); //Locator for All Exhibitors
 	By lvmListOfAllExhLocation = By.xpath("//div[@class='imc-exhibitorcard-title-row ']/div[2]"); //Locator for All Exhibitors Location

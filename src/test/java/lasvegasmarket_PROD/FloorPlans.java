@@ -144,14 +144,16 @@ public class FloorPlans extends base {
 		utl = new Utility(driver);
 		lvmflpp=new LVMFloorPlansPage(driver);
 
+		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(2000);
 
 		// Click on Exh And Product Tab
 		lvmflpp.getLVMExhibitorsAndProductTab().click();
 
 		//click on Floor plans link
 		lvmflpp.getLVMFloorPlansLink().click();
-		//utl.scrollToElement(lvmflpp.getLVMBuildingFloor());
+		Thread.sleep(1000);
 		
 		//click on any floor
 		utl.scrollElementIntoMiddle(lvmflpp.getLVMBuildingFloor());
@@ -202,7 +204,7 @@ System.out.println("x2 "+x2);
 
 		//click on Floor plans link
 		lvmflpp.getLVMFloorPlansLink().click();
-
+		Thread.sleep(3000);
 		//click on any floor
 		utl.scrollElementIntoMiddle(lvmflpp.getLVMBuildingFloor());
 		Thread.sleep(200);
@@ -212,7 +214,7 @@ System.out.println("x2 "+x2);
 		Thread.sleep(5000);
 		//utl.scrollToElement(lvmflpp.getlvmflooricononmap_lvmUAT());
 		lvmflpp.getlvmflooricononmap_lvmUAT().click();
-
+		Thread.sleep(1000);
 		//Verify that Vending Machine Overlay should appeared on Map
 		Assert.assertTrue(lvmflpp.getlvmflooriconoverlay_lvmUAT().isDisplayed());
 
@@ -359,16 +361,18 @@ System.out.println("x2 "+x2);
 
 		//click on Floor plans link
 		lvmflpp.getLVMFloorPlansLink().click();
+		Thread.sleep(2000);
 
 		//Click on Building floor
 		utl.scrollElementIntoMiddle(lvmflpp.getLVMBuildingFloor());
 		Thread.sleep(200);
 		lvmflpp.getLVMBuildingFloor().click();
-
+		Thread.sleep(2000);
 		//Scroll Down to Exhibitor list
 		//utl.scrollToElement(lvmflpp.getLVMNextFloorBtn());
 
-		//utl.scrollToElement(lvmflpp.getLVMNextFloorBtn());
+		utl.scrollElementIntoMiddle(lvmflpp.getLVMNextFloorBtn());
+		Thread.sleep(200);
 		String actualNextFloorNumber=lvmflpp.getLVMNextFloorBtn().getText();
 		System.out.println(actualNextFloorNumber);
 		lvmflpp.getLVMNextFloorBtn().click();
@@ -377,9 +381,10 @@ System.out.println("x2 "+x2);
 		System.out.println(exptectedFloorNumber);
 		//Verify Next Floor
 		Assert.assertTrue(exptectedFloorNumber.contains(actualNextFloorNumber));
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		//Previous floor Btn
-		//utl.scrollToElement(lvmflpp.getLVMPreviousFloorBtn());
+		utl.scrollElementIntoMiddle(lvmflpp.getLVMPreviousFloorBtn());
+		Thread.sleep(500);
 		String actualPreviousFloorNumber=lvmflpp.getLVMPreviousFloorBtn().getText();
 		System.out.println(actualPreviousFloorNumber);
 		lvmflpp.getLVMPreviousFloorBtn().click();
@@ -537,7 +542,7 @@ System.out.println("x2 "+x2);
 		lvmflpp.getLVMBuildingFloorsix().click(); //6th floor
 		Thread.sleep(12000);
 		// Scroll Down to Exhibitor list
-		utl.scrollToElement(lvmflpp.getLVMSelectBox());
+		utl.scrollElementIntoMiddle(lvmflpp.getLVMSelectBox());
 		Thread.sleep(15000);
 
 		// 1st Exhibitor Name
@@ -605,7 +610,7 @@ System.out.println("x2 "+x2);
 		lvmflpp.getLVMBuildingFloor().click();
 		// Scroll Down to Exhibitor list
 		Thread.sleep(4000);
-		utl.scrollToElement(lvmflpp.getLVMSelectBox());
+		utl.scrollElementIntoMiddle(lvmflpp.getLVMSelectBox());
 		// 1st Exhibitor Name
 		String exhibitorName = lvmflpp.getLVMExhibitorName().getText();
 		System.out.println("Exhibitor Name : " + exhibitorName);
@@ -672,7 +677,7 @@ System.out.println("x2 "+x2);
 		lvmflpp.getbuildingFloor_lvmUAT().click();
 		Thread.sleep(5000);
 		// Scroll Down to Exhibitor list
-		utl.scrollToElement(lvmflpp.getLVMSelectBox());
+		utl.scrollElementIntoMiddle(lvmflpp.getLVMSelectBox());
 		Thread.sleep(6000);
 		// 1st Exhibitor Name
 		String exhibitorName = lvmflpp.getLVMExhibitorName().getText();
@@ -721,7 +726,7 @@ System.out.println("x2 "+x2);
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 
 }

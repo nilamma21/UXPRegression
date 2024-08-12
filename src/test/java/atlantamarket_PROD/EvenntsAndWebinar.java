@@ -393,10 +393,12 @@ public class EvenntsAndWebinar extends base{
 		Thread.sleep(5000);
 		//Click on IMC Event Tab
 		utl.scrollElementIntoMiddle(atlevents.getatlExhibitorsEventsTab());
+		Thread.sleep(200);
 		atlevents.getatlImcEventsTab().click();
 		Thread.sleep(500);
 		//Click on Any Event title
 		utl.scrollElementIntoMiddle(atlevents.getatlClickOnEvent());
+		Thread.sleep(200);
 		atlevents.getatlClickOnEvent().click();
 		Thread.sleep(500);
 		Assert.assertTrue(eventTitle.contains(atlevents.getatlEventNameOnDetailsPage().getText()));
