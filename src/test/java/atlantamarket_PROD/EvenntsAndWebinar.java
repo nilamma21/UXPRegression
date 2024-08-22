@@ -556,6 +556,7 @@ public class EvenntsAndWebinar extends base{
 		//Event Month and Year
 		String eventDateAndMonth=atlevents.getatlEventDateAndMonth().getText();
 		String trimDate=eventDateAndMonth.split(" ")[2].trim();
+		
 		//System.out.println(trimDate);
 		Thread.sleep(2000);
 		String date=trimDate.replaceAll("[,]", "");
@@ -590,8 +591,7 @@ public class EvenntsAndWebinar extends base{
 				
 		String m = month.format(localMonth);//current month
 		String mm = month.format(prevMonth);//previous month
-		
-	
+
 		System.out.println("Current Month ::" +m );
 		System.out.println("Previous Month ::" +mm );
 		

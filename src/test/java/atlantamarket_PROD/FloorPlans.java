@@ -250,7 +250,7 @@ public class FloorPlans extends base {
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(2000);
+		Thread.sleep(7000);
 		// Click on Exh And Product Tab
 		//utl.scrollElementIntoMiddle(atlflpp.getATLExhibitorsAndProductTab());
 		atlflpp.getATLExhibitorsAndProductTab().click();
@@ -261,24 +261,21 @@ public class FloorPlans extends base {
 		
 		//click on any floor
 		utl.scrollElementIntoMiddle(atlflpp.getATLBuildingFloor());
-		Thread.sleep(200);
 		atlflpp.getATLBuildingFloor().click();
-		Thread.sleep(1500);
+		Thread.sleep(4000);
 		
 		//Click on Vending Machine icon on Map image
 		utl.scrollElementIntoMiddle(atlflpp.getVendingMachineIconOnMap());
-		Thread.sleep(200);
 		atlflpp.getVendingMachineIconOnMap().click();
-		Thread.sleep(1500);
+		Thread.sleep(4000);
 		
 		//Verify that Vending Machine Overlay should appeared on Map
 		Assert.assertTrue(atlflpp.getVendingMachineOverlayOnMap().isDisplayed());
 
 		//Click on Elevator icon on Map image
 		utl.scrollElementIntoMiddle(atlflpp.getElevatorIconOnMap());
-		Thread.sleep(200);
 		atlflpp.getElevatorIconOnMap().click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		//Verify that Elevator Overlay should appeared on Map
 		Assert.assertTrue(atlflpp.getElevatorOverlayOnMap().isDisplayed());
 
@@ -302,7 +299,7 @@ public class FloorPlans extends base {
 		//Click on Location pin of any Exhibitor on Map
 		//utl.scrollElementIntoMiddle(atlflpp.getLocationPinIconOnMap());
 		atlflpp.getLocationPinIconOnMap().click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		//Verify that select Exhibitor's location details should be displayed in popup
 		Assert.assertTrue(atlflpp.getExhibitorDetailsModal().isDisplayed());
 
@@ -312,7 +309,8 @@ public class FloorPlans extends base {
 		//Click on 'View Digital Showroom' button
 		//utl.scrollElementIntoMiddle(atlflpp.getViewDGShowroombtn());
 		atlflpp.getViewDGShowroombtn().click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
+		
 		//Verify that user should redirected to Exh Digital Showroom page
 		Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
 

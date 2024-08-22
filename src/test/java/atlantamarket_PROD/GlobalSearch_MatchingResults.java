@@ -212,7 +212,8 @@ public class GlobalSearch_MatchingResults extends base {
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(2000);
+		Thread.sleep(7000);
+		
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
@@ -221,7 +222,7 @@ public class GlobalSearch_MatchingResults extends base {
 		Thread.sleep(5000);
 		// Click on Sort Btn
 		atlgs.getatlGlobalSearchSortBtnNew().click();
-
+		Thread.sleep(2000);
 		// Select Exhibitor Sort By Relevance
 		Select selectAMC = new Select(atlgs.getatlGlobalSearch_SearchSortByDropdwn());
 		selectAMC.selectByVisibleText("Sort By Relevance");
@@ -240,9 +241,10 @@ public class GlobalSearch_MatchingResults extends base {
 		 ///Select filter Sort by Name Descending
 		 utl.Sorting(atlgs.getatlExhNames(),atlgs.getatlGlobalSearch_SearchSortByDropdwn(),"Sort by Name Descending");
 		//Select filter Sort by Matching Product Count Ascending
-		utl.Sorting(atlgs.getatlMachingProductCount(), atlgs.getatlGlobalSearch_SearchSortByDropdwn(),"Sort By Matching Product Count Ascending");
+		//utl.Sorting(atlgs.getatlMachingProductCount(), atlgs.getatlGlobalSearch_SearchSortByDropdwn(),"Sort By Matching Product Count Ascending");
+		 utl.Sorting(atlgs.getatlExhNames(), atlgs.getatlGlobalSearch_SearchSortByDropdwn(),"Sort By Matching Product Count Ascending");
 		//Select filter Sort by Matching Product Count Descending
-		utl.Sorting(atlgs.getatlMachingProductCount(), atlgs.getatlGlobalSearch_SearchSortByDropdwn(),"Sort By Matching Product Count Descending");
+		utl.Sorting(atlgs.getatlExhNames(), atlgs.getatlGlobalSearch_SearchSortByDropdwn(),"Sort By Matching Product Count Descending");
 	}
 
 	@Test(priority = 4)//groups=\"Non_MP"

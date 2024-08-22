@@ -89,12 +89,13 @@ public class Utility extends base {
 		((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
 	}
 	
-	public void scrollElementIntoMiddle (WebElement element) {
+	public void scrollElementIntoMiddle (WebElement element) throws InterruptedException {
 		String scrollElementIntoMiddle = "var viewPortHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);"
                 + "var elementTop = arguments[0].getBoundingClientRect().top;"
                 + "window.scrollBy(0, elementTop-(viewPortHeight/2));";
-
 		((JavascriptExecutor) driver).executeScript(scrollElementIntoMiddle, element);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		Thread.sleep(200);
 	}
 
 

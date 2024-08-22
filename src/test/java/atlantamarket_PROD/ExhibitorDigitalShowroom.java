@@ -61,9 +61,10 @@ public class ExhibitorDigitalShowroom extends base {
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("atlmrkturl_prod"));
+		Thread.sleep(5000);
 		lap.getIUnderstandBtn().click();
-		Thread.sleep(3000);
-
+		Thread.sleep(5000);
+		utl.CloseATLPopup();
 		//utl.verifyMPLoginFunctionality();
 /*		Thread.sleep(2000);
 		driver.get(prop.getProperty("atlmrkturl_prod"));;
@@ -174,7 +175,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(6000);
+		Thread.sleep(8000);
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput"))); 
 		atlgs.getATLSearchButton().click();
@@ -188,13 +189,13 @@ public class ExhibitorDigitalShowroom extends base {
 		atlexhdgshw.getExhibitorName().click();
 		Thread.sleep(7000);
 		utl.scrollElementIntoMiddle(atlexhdgshw.getProductSection());
-		Thread.sleep(200);
 		String temp = atlexhdgshw.getProductSection().getText();
 		String totalprodcountonexhdgshowroom = temp.replaceAll("[^0-9]", "");
 		System.out.println("Total Products Count on Exh DG Showroom is: " + totalprodcountonexhdgshowroom);
 		Assert.assertTrue(atlexhdgshw.getAllProductsButton().getText().contains(totalprodcountonexhdgshowroom));
 
 		// Click on Total Products-See All link for 1st Exhibitor
+		utl.scrollElementIntoMiddle(atlexhdgshw.getAllProductsButton());
 		atlexhdgshw.getAllProductsButton().click();
 		Thread.sleep(6000);
 
@@ -702,9 +703,10 @@ public class ExhibitorDigitalShowroom extends base {
 	    lap = new ATLLandingPage(driver);
 	    atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 
-	    driver.get(prop.getProperty("lvmurl_prod"));
+	    driver.get(prop.getProperty("atlmrkturl_prod"));
 	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	    Thread.sleep(5000);
+	    Thread.sleep(8000);
+	    
 	    atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 	    Thread.sleep(2000);
 	    atlgs.getATLSearchButton().click();
@@ -712,10 +714,10 @@ public class ExhibitorDigitalShowroom extends base {
 
 	    // Store the 1st Exhibitor name in String variable
 	    utl.scrollElementIntoMiddle( atlexhact.getExhibitorName());
-	    Thread.sleep(200);
 	    exhname = atlexhact.getExhibitorName().getText();
 	    System.out.println("Exhibitor name: " + exhname);
 
+	    utl.scrollElementIntoMiddle(atlexhdgshw.getExhibitorName());
 	    atlexhdgshw.getExhibitorName().click();
 	    Thread.sleep(2000);
 

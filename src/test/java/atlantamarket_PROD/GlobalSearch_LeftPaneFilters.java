@@ -294,7 +294,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		Thread.sleep(5000);
 		//Click on Product Categories expand btn
 		atlleftpane.getATLProdCatgExpandBtn().click();		
-
+		Thread.sleep(3000);
 		/*//Expand btn code
 		WebElement pseudoEle = driver.findElement(By.xpath("//label[contains(text(),'Accent Furniture')]"));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -302,7 +302,6 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		System.out.println(display);*/
 
 		utl.scrollElementIntoMiddle(atlleftpane.getATLAntiqueVintProdCatg());
-		Thread.sleep(200);
 		//Select 'Antique/Vintage' prod category
 		String expectedprodcatg = atlleftpane.getATLAntiqueVintProdCatg().getText();
 		atlleftpane.getATLAntiqueVintProdCatg().click();
@@ -310,19 +309,20 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		//Click on Product Categories expand btn
 		utl.scrollElementIntoMiddle(atlleftpane.getATLProdCatgExpandBtn());
-		Thread.sleep(200);
 		atlleftpane.getATLProdCatgExpandBtn().click();
+		Thread.sleep(2000);
 
 		//Click on Styles expand btn
+		utl.scrollElementIntoMiddle(atlleftpane.getATLStylesExpandBtn());
 		atlleftpane.getATLStylesExpandBtn().click();
-
+		Thread.sleep(7000);
+		
 		//Select Style name 'Industrial'
 		utl.scrollElementIntoMiddle(atlleftpane.getATLIndustrialStyle());
-		Thread.sleep(200);
 		String expectedstyle = atlleftpane.getATLIndustrialStyle().getText();
 		//System.out.println("Expected Style name:"+expectedstyle);
 		atlleftpane.getATLIndustrialStyle().click();
-		Thread.sleep(10000);
+		Thread.sleep(12000);
 
 		//Click on IMC Test Exhibitor name in list
 		//utl.scrollElementIntoMiddle(atlexhact.getIMCExhibitorName());
@@ -330,12 +330,11 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		
 		//Click on first exhibitor name
 		utl.scrollElementIntoMiddle(atlleftpane.getATLexhibitor());
-		Thread.sleep(200);
         atlleftpane.getATLexhibitor().click();
+        Thread.sleep(5000);
 
 		//Scroll till Product Categories section
 		utl.scrollElementIntoMiddle(atlexhdgshw.getATLProductCategSection());
-		Thread.sleep(200);
 		prodcatgitemlist = atlexhdgshw.getATLProductCategItemList();
 
 		for (int i = 0; i < prodcatgitemlist.size(); i++) {
@@ -345,19 +344,17 @@ public class GlobalSearch_LeftPaneFilters extends base {
 				break;
 			}
 		}
-		
-		//driver.navigate().back();
 
 		//Open Exhibitor Portal in new tab
 		((JavascriptExecutor)driver).executeScript("window.open()");
 		ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(tabs.get(1));
 		driver.get("https://exhibitors.andmore.com/");
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		//Login to EXP
 		lp.getEmailAddress().sendKeys((prop.getProperty("emailreceiver1")));
 		lp.getPassword().sendKeys((prop.getProperty("mppassword")));
-		Thread.sleep(200);
+		Thread.sleep(500);
 		lp.getSignInBtn().click();
 		Thread.sleep(15000);
 
@@ -387,7 +384,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		//Scroll till Product Categories section
 		utl.scrollElementIntoMiddle(atlleftpane.getEXPProductCategSection());
-		Thread.sleep(200);
+		Thread.sleep(500);
 		//Verify that expected Style should be displayed on profile
 		Assert.assertTrue(atlleftpane.getEXPIndustrialStyleOnProfile().isDisplayed());
 		driver.close();

@@ -63,7 +63,7 @@ public class ShowSpecials extends base  {
 		driver.get(prop.getProperty("atlmrkturl_prod"));
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         lap.getIUnderstandBtn().click();
-        Thread.sleep(5000);
+        Thread.sleep(8000);
 		//Add new Show Special from EXP
 		//utl.addNewShowSpecialFrmExp_PROD(); //Add show special for test.
 	}
@@ -92,19 +92,19 @@ public class ShowSpecials extends base  {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(5000);*/
 		
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Thread.sleep(15000);
+		Thread.sleep(5000);
 		
 		//click on Exhibitors And Product Tab
 		atlgs.getatlExhibitorsAndProductTab().click();
-		Thread.sleep(500);
+		Thread.sleep(2000);
 		
 		//Click on Show Specials sub-menu
 		atlgs.getatlShowSpecialsLink().click();
-		Thread.sleep(15000);
+		Thread.sleep(10000);
 		
 		utl.scrollElementIntoMiddle(atlgs.getatlShowSpecialsTitle());
-		Thread.sleep(200);
 		//Store the name of Show Special Exhibitor
 		String inbox = atlgs.getatlShowSpecialsExhNamePROD().getText();
 		System.out.println(inbox);
@@ -113,10 +113,9 @@ public class ShowSpecials extends base  {
 		System.out.println(showSpecialExhName);
 		
 		utl.scrollElementIntoMiddle(atlgs.getViewBrandDetailsLink());
-		Thread.sleep(200);
 		//Click on View Brand Details link
 		atlgs.getViewBrandDetailsLink().click();
-		Thread.sleep(2000);
+		Thread.sleep(6000);
 		try {
 		  System.out.println(atlexhdgshw.getExhNameOnExhDirectImg().getText());
 	        //Verify the Show special exhibitor page
@@ -145,24 +144,21 @@ public class ShowSpecials extends base  {
 		driver.get(prop.getProperty("atlmrkturl_prod"));
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(4000);
+		
 		//click on Exhibitors And Product Tab
 		atlgs.getatlExhibitorsAndProductTab().click();
 		Thread.sleep(500);
-		
 		//Click on Show Specials menu
 		atlgs.getatlShowSpecialsLink().click();
 		Thread.sleep(15000);
 		
 		utl.scrollElementIntoMiddle(atlgs.getatlShowSpecialsTitle());
-		Thread.sleep(200);
-		
 		//Click on Show Special Exhibitor
 		String showroomName=atlgs.getatlShowroomLink().getText();
 		String url=atlgs.getatlShowroomLink().getAttribute("href");
 		System.out.println(showroomName);
 		
 		utl.scrollElementIntoMiddle(atlgs.getatlShowroomLink());
-		Thread.sleep(200);
 		atlgs.getatlShowroomLink().click();
 		Thread.sleep(5000);
 		System.out.println(driver.getCurrentUrl());
@@ -170,7 +166,6 @@ public class ShowSpecials extends base  {
 		Assert.assertTrue(driver.getCurrentUrl().contains(url));
 	}
 	
-    
     @Test(enabled=false)
     public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
 
