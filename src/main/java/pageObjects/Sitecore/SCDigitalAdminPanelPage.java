@@ -1,5 +1,6 @@
 package pageObjects.Sitecore;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -49,149 +50,149 @@ public class SCDigitalAdminPanelPage {
 		this.driver = driver;
 	}
 	public WebElement getdigitalAdminPanelHomePageAssociatedExhibitors() throws InterruptedException {
-		wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(digitalAdminPanelHomePageAssociatedExhibitors));
 		return driver.findElement(digitalAdminPanelHomePageAssociatedExhibitors);
 	}
 	public WebElement getSCLaunchPad() throws InterruptedException {
-		wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(SCLaunchPad));
 		return driver.findElement(SCLaunchPad);
 	}
 	public WebElement getdigitalAdminPanelHomePageIsActiveStatus() throws InterruptedException {
-		wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(digitalAdminPanelHomePageIsActiveStatus));
 		return driver.findElement(digitalAdminPanelHomePageIsActiveStatus);
 	}
 
 	public WebElement getdigitalAdminPanelHomePageFirstCheckbox() throws InterruptedException {
-		wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(digitalAdminPanelHomePageFirstCheckbox));
 		return driver.findElement(digitalAdminPanelHomePageFirstCheckbox);
 	}
 	public WebElement getdigitalAdminPanelHomePageHeader() throws InterruptedException {
-		wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(digitalAdminPanelHomePageHeader));
 		return driver.findElement(digitalAdminPanelHomePageHeader);
 	}
 	public WebElement getdigitalAdminPanelCreateUserSendBtnErrorMsg() throws InterruptedException {
-		wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(digitalAdminPanelCreateUserSendBtnErrorMsg));
 		return driver.findElement(digitalAdminPanelCreateUserSendBtnErrorMsg);
 	}
 	public WebElement getdigitalAdminPanelUserProfile() throws InterruptedException {
-		wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(digitalAdminPanelUserProfile));
 		return driver.findElement(digitalAdminPanelUserProfile);
 	}
 	public WebElement getdigitalAdminPanelCreateUserSend() throws InterruptedException {
-		wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(digitalAdminPanelCreateUserSend));
 		return driver.findElement(digitalAdminPanelCreateUserSend);
 	}
 	public WebElement getdigitalAdminPanelCreateUserCancel() throws InterruptedException {
-		wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(digitalAdminPanelCreateUserCancel));
 		return driver.findElement(digitalAdminPanelCreateUserCancel);
 	}
 	public WebElement getdigitalAdminPanelCreateUserFirstName() throws InterruptedException {
-		wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(digitalAdminPanelCreateUserFirstName));
 		return driver.findElement(digitalAdminPanelCreateUserFirstName);
 	}
 	public WebElement getdigitalAdminPanelCreateUserEmail() throws InterruptedException {
-		wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(digitalAdminPanelCreateUserEmail));
 		return driver.findElement(digitalAdminPanelCreateUserEmail);
 	}
 	public WebElement getdigitalAdminPanelCreateUserLastName() throws InterruptedException {
-		wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(digitalAdminPanelCreateUserLastName));
 		return driver.findElement(digitalAdminPanelCreateUserLastName);
 	}
 	public WebElement getdigitalAdminPanelCreateUserPopup() throws InterruptedException {
-		wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(digitalAdminPanelCreateUserPopup));
 		return driver.findElement(digitalAdminPanelCreateUserPopup);
 	}
 	public WebElement getdigitalAdminPanelCreateUserButton() throws InterruptedException {
-		wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(digitalAdminPanelCreateUserButton));
 		return driver.findElement(digitalAdminPanelCreateUserButton);
 	}
 	public List <WebElement> getdigitalAdminPanelListOfActionOptions() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(digitalAdminPanelListOfActionOptions));
 		return driver.findElements(digitalAdminPanelListOfActionOptions);
 	}
 	public WebElement getdigitalAdminPanelActionDelete() throws InterruptedException {
-		wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(digitalAdminPanelActionDelete));
 		return driver.findElement(digitalAdminPanelActionDelete);
 	}
 	public WebElement getdigitalAdminPanelActionEnable() throws InterruptedException {
-		wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(digitalAdminPanelActionEnable));
 		return driver.findElement(digitalAdminPanelActionEnable);
 	}
 	public WebElement getdigitalAdminPanelActionDisable() throws InterruptedException {
-		wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(digitalAdminPanelActionDisable));
 		return driver.findElement(digitalAdminPanelActionDisable);
 	}
 	
 	public WebElement getdigitalAdminPanelActionButton() throws InterruptedException {
-		wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(digitalAdminPanelActionButton));
 		return driver.findElement(digitalAdminPanelActionButton);
 	}
 	public List <WebElement> getdigitalAdminPanelAssociatedExhibitorList() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(digitalAdminPanelAssociatedExhibitorList));
 		return driver.findElements(digitalAdminPanelAssociatedExhibitorList);
 	}
 	public WebElement getdigitalAdminPanelFilterByButton() throws InterruptedException {
-		wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(digitalAdminPanelFilterByButton));
 		return driver.findElement(digitalAdminPanelFilterByButton);
 	}
 	public List <WebElement> getdigitalAdminPanelLastNameList() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(digitalAdminPanelLastNameList));
 		return driver.findElements(digitalAdminPanelLastNameList);
 	}
 	public List <WebElement> getdigitalAdminPanelResultList() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(digitalAdminPanelResultList));
 		return driver.findElements(digitalAdminPanelResultList);
 	}
 	public List <WebElement> getdigitalAdminPanelListSortByOptions() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(digitalAdminPanelListSortByOptions));
 		return driver.findElements(digitalAdminPanelListSortByOptions);
 	}
 	public WebElement getdigitalAdminPanelSortByButton() throws InterruptedException {
-		wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(digitalAdminPanelSortByButton));
 		return driver.findElement(digitalAdminPanelSortByButton);
 	}
 	public WebElement getdigitalAdminPanelSearchButton() throws InterruptedException {
-		wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(digitalAdminPanelSearchButton));
 		return driver.findElement(digitalAdminPanelSearchButton);
 	}
 	public WebElement getdigitalAdminPanelSearchBox() throws InterruptedException {
-		wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(digitalAdminPanelSearchBox));
 		return driver.findElement(digitalAdminPanelSearchBox);
 	}
 	public WebElement getdigitalAdminPanelSearch1stEmail() throws InterruptedException {
-		wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(digitalAdminPanelSearch1stEmail));
 		return driver.findElement(digitalAdminPanelSearch1stEmail);
 	}
 	public WebElement getDigitalAdminPanel() throws InterruptedException {
-		wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(digitalAdminPanel));
 		return driver.findElement(digitalAdminPanel);
 	}

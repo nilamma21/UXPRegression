@@ -1,6 +1,7 @@
 package atlantamarket_UAT;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -105,7 +106,7 @@ public class FloorPlans extends base {
 		utl = new Utility(driver);
 		atlflpp=new ATLFloorPlansPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		// Click on Exh And Product Tab
 		atlflpp.getATLExhibitorsAndProductTab().click();
@@ -166,7 +167,7 @@ public class FloorPlans extends base {
 		utl = new Utility(driver);
 		atlflpp=new ATLFloorPlansPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		// Click on Exh And Product Tab
 		utl.scrollToElement(atlflpp.getATLExhibitorsAndProductTab());
@@ -200,7 +201,7 @@ public class FloorPlans extends base {
 		utl = new Utility(driver);
 		atlflpp=new ATLFloorPlansPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(3000);
 		// Click on Exh And Product Tab
 		atlflpp.getATLExhibitorsAndProductTab().click();
@@ -258,7 +259,7 @@ public class FloorPlans extends base {
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 		atlgs = new ATLGlobalSearchPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		// Click on Exh And Product Tab
 		utl.scrollToElement(atlflpp.getATLExhibitorsAndProductTab());
@@ -328,7 +329,7 @@ public class FloorPlans extends base {
 		utl = new Utility(driver);
 		atlflpp=new ATLFloorPlansPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		// Click on Exh And Product Tab
 		atlflpp.getATLExhibitorsAndProductTab().click();
@@ -402,7 +403,7 @@ public class FloorPlans extends base {
 		atlflpp=new ATLFloorPlansPage(driver);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(1000);
 		// Click on Exh And Product Tab
 		atlflpp.getATLExhibitorsAndProductTab().click();
@@ -449,7 +450,7 @@ public class FloorPlans extends base {
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		// Click on Exh And Product Tab
 		utl.scrollToElement(atlflpp.getATLExhibitorsAndProductTab());
@@ -498,7 +499,7 @@ public class FloorPlans extends base {
 		utl = new Utility(driver);
 		atlflpp=new ATLFloorPlansPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		// Click on Exh And Product Tab
 		atlflpp.getATLExhibitorsAndProductTab().click();
@@ -531,7 +532,7 @@ public class FloorPlans extends base {
 		utl = new Utility(driver);
 		atlflpp=new ATLFloorPlansPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		// Click on Exh And Product Tab
 		utl.scrollToElement(atlflpp.getATLExhibitorsAndProductTab());
@@ -567,7 +568,7 @@ public class FloorPlans extends base {
 		atlflpp = new ATLFloorPlansPage(driver);
 		//atlmppge = new ATLMarketPlannerPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		// Click on Exh And Product Tab
 		atlflpp.getATLExhibitorsAndProductTab().click();
@@ -638,7 +639,7 @@ public class FloorPlans extends base {
 		genData = new GenerateData();
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		// Click on Exh And Product Tab
 		atlflpp.getATLExhibitorsAndProductTab().click();
@@ -712,7 +713,7 @@ public class FloorPlans extends base {
 		atlflpp = new ATLFloorPlansPage(driver);
 		//atlmppge = new ATLMarketPlannerPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		// Click on Exh And Product Tab
 		atlflpp.getATLExhibitorsAndProductTab().click();

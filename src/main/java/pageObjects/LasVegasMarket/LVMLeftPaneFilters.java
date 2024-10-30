@@ -1,5 +1,6 @@
 package pageObjects.LasVegasMarket;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -49,39 +50,39 @@ public class LVMLeftPaneFilters {
 	} 
 
 	public WebElement getatlexhibitorLVM(){
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlexhibitorLVM));
 		return driver.findElement(atlexhibitorLVM);
 	}
 	public List<WebElement> getListLFsubMenus() {
-		wait = new WebDriverWait (driver,40);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(ListLFsubMenus));
 		return driver.findElements(ListLFsubMenus);
 	}
 	
 	public WebElement getLVMProdCatgExpandBtn(){
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(prodcatgexpandbtn));
 		return driver.findElement(prodcatgexpandbtn);
 	}
 	public WebElement getAccentFurnExpandBtn(){
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(accentfurnexpandbtn));
 		return driver.findElement(accentfurnexpandbtn);
 	}
 	public WebElement getLVMAntiqueReprodAccbtn(){
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlAntiqueReprodAccbtn));
 		return driver.findElement(atlAntiqueReprodAccbtn);
 	}
 
 	public WebElement getLVMexhibitor(){
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlexhibitor));
 		return driver.findElement(atlexhibitor);
 	}
 	public WebElement getLVMStylesFilterbtn(){
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(stylesFilterbtn));
 		return driver.findElement(stylesFilterbtn);
 	}
@@ -89,12 +90,12 @@ public class LVMLeftPaneFilters {
 		return driver.findElement(apparelvintprodcatg);
 	}
 	public WebElement getLVMAntiqueVintProdCatg(){
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(antiquevintprodcatg));
 		return driver.findElement(antiquevintprodcatg);
 	}
 	public WebElement getLVMStylesExpandBtn(){
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(stylesexpandbtn));
 		return driver.findElement(stylesexpandbtn);
 	}
@@ -102,28 +103,28 @@ public class LVMLeftPaneFilters {
 		return driver.findElement(coastalstyle);
 	}
 	public WebElement getEXPExhDropDown(){
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(expexhdropdown));
 		return driver.findElement(expexhdropdown);
 	}
 	public WebElement getTrippExhNameInEXP(){
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(trippexhnameinexp));
 		return driver.findElement(trippexhnameinexp);
 	}
 	public WebElement getEXPDigiShowroomTab(){
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(expdidgitalshowroomtab));
 		return driver.findElement(expdidgitalshowroomtab);
 	}
 	
 	public WebElement getEXPProfileInfoMenu(){
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(expprofileinfomenu));
 		return driver.findElement(expprofileinfomenu);
 	}
 	public WebElement getEXPProductCategSection() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(expproductcategsectn));
 		return driver.findElement(expproductcategsectn);
 	}
@@ -152,27 +153,27 @@ public class LVMLeftPaneFilters {
 		return driver.findElement(hometextilesprodcatg);
 	}
 	public WebElement getLVMSecondExhibitor(){
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(secondexhibitor));
 		return driver.findElement(secondexhibitor);
 	}
 	public WebElement getFirstVintageExhUat() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(firstVintageExhUat));
 		return driver.findElement(firstVintageExhUat);
 	}
 	public WebElement getSecondExhUat() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(SecondExhUat));
 		return driver.findElement(SecondExhUat);
 	}
 	public WebElement getLVMIndustrialStyle(){
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(industrialstyle));
 		return driver.findElement(industrialstyle);
 	}
 	public WebElement getEXPIndustrialStyleOnProfile() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(expindustrialstyleonprofile));
 		return driver.findElement(expindustrialstyleonprofile);
 	}

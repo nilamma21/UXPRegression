@@ -1,6 +1,7 @@
 package lasvegasmarket_PROD;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -55,7 +56,7 @@ public class LineDigitalShowroom extends base{
 		// Navigate to Las Vegas Market site
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		/*utl.verifyMPLoginFunctionality();
 		Thread.sleep(2000);
 		utl.loginCheckLVM();*/
@@ -79,7 +80,7 @@ public class LineDigitalShowroom extends base{
 		genData = new GenerateData();
 		lvmdigish=new LVMLineDigitalShowroomPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		//click on Global Search Input filed
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("HeroComponentExhName"));
 		Thread.sleep(2000);
@@ -113,7 +114,7 @@ public class LineDigitalShowroom extends base{
 		genData = new GenerateData();
 		lvmdigish = new LVMLineDigitalShowroomPage(driver);
 		driver.navigate().refresh();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			lvmgs.getlvmGlobalSearchClearTxt().click();
 		}
@@ -162,7 +163,7 @@ public class LineDigitalShowroom extends base{
 		genData = new GenerateData();
 		lvmdigish = new LVMLineDigitalShowroomPage(driver);
 		Thread.sleep(4000);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			lvmgs.getlvmGlobalSearchClearTxt().click();
 		}
@@ -225,7 +226,7 @@ public class LineDigitalShowroom extends base{
 		genData = new GenerateData();
 		lvmdigish=new LVMLineDigitalShowroomPage(driver);
 		Thread.sleep(4000);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			lvmgs.getlvmGlobalSearchClearTxt().click();
 		}
@@ -291,7 +292,7 @@ public class LineDigitalShowroom extends base{
 		genData = new GenerateData();
 		lvmdigish=new LVMLineDigitalShowroomPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(1000);
 		if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			lvmgs.getlvmGlobalSearchClearTxt().click();
@@ -377,7 +378,7 @@ public class LineDigitalShowroom extends base{
 		genData = new GenerateData();
 		lvmdigish=new LVMLineDigitalShowroomPage(driver);
 		driver.navigate().refresh();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(4000);
 		if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			lvmgs.getlvmGlobalSearchClearTxt().click();
@@ -428,7 +429,7 @@ public class LineDigitalShowroom extends base{
 		lvmdigish=new LVMLineDigitalShowroomPage(driver);
 		
 		driver.navigate().refresh();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(4000);
 		if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			lvmgs.getlvmGlobalSearchClearTxt().click();
@@ -474,13 +475,13 @@ public class LineDigitalShowroom extends base{
 		lvmmpp = new LVMMarketPlannerPage(driver);
 		genData = new GenerateData();
 		lvmdigish=new LVMLineDigitalShowroomPage(driver);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(1000);
 		if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			lvmgs.getlvmGlobalSearchClearTxt().click();
 		}
 		driver.navigate().refresh();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		//click on Global Search Input filed
 		Thread.sleep(2000);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("HeroComponentExhName"));
@@ -536,7 +537,7 @@ public class LineDigitalShowroom extends base{
 		lvmdigish=new LVMLineDigitalShowroomPage(driver);
 		
 		driver.navigate().refresh();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			lvmgs.getlvmGlobalSearchClearTxt().click();
@@ -588,7 +589,7 @@ public class LineDigitalShowroom extends base{
 		genData = new GenerateData();
 		lvmdigish=new LVMLineDigitalShowroomPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(4000);
 		if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			lvmgs.getlvmGlobalSearchClearTxt().click();
@@ -599,7 +600,7 @@ public class LineDigitalShowroom extends base{
 		Thread.sleep(3000);
 		//Click on 1st Suggetions
 		lvmdigish.getsuggetionList().click();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		//Thread.sleep(5000);
 		//Scroll to Product section
 		utl.scrollToElement(lvmdigish.getproductTitle());
@@ -624,7 +625,7 @@ public class LineDigitalShowroom extends base{
 		genData = new GenerateData();
 		lvmdigish=new LVMLineDigitalShowroomPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		//Thread.sleep(3000);
 		if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			lvmgs.getlvmGlobalSearchClearTxt().click();

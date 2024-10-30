@@ -1,6 +1,7 @@
 package atlantamarket_UAT;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -79,7 +80,7 @@ public class ExhibitorDigitalShowroom extends base {
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 		
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
@@ -113,7 +114,7 @@ public class ExhibitorDigitalShowroom extends base {
 		lap = new ATLLandingPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestexhibitor")));
 		atlgs.getATLSearchButton().click();
@@ -164,7 +165,7 @@ public class ExhibitorDigitalShowroom extends base {
 		lap = new ATLLandingPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestexhibitor")));
 		Thread.sleep(2000);
@@ -225,7 +226,7 @@ public class ExhibitorDigitalShowroom extends base {
 		lap = new ATLLandingPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestexhibitor")));
 		atlgs.getATLSearchButton().click();
@@ -258,7 +259,7 @@ public class ExhibitorDigitalShowroom extends base {
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 		
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(5000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestexhibitor")));
 		atlgs.getATLSearchButton().click();
@@ -288,7 +289,7 @@ public class ExhibitorDigitalShowroom extends base {
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(5000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestexhibitor")));
 		atlgs.getATLSearchButton().click();
@@ -322,7 +323,7 @@ public class ExhibitorDigitalShowroom extends base {
 		lap = new ATLLandingPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestexhibitor")));
 		atlgs.getATLSearchButton().click();
@@ -357,7 +358,7 @@ public class ExhibitorDigitalShowroom extends base {
 		lap = new ATLLandingPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 		atlgs.getATLSearchButton().click();
@@ -411,7 +412,7 @@ public class ExhibitorDigitalShowroom extends base {
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 		
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         Thread.sleep(5000);
 		
         atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));//globalsearchinputforInformation
@@ -448,7 +449,7 @@ public class ExhibitorDigitalShowroom extends base {
 		lap = new ATLLandingPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor14")));
 		atlgs.getATLSearchButton().click();
@@ -489,7 +490,7 @@ public class ExhibitorDigitalShowroom extends base {
 		lap = new ATLLandingPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor14")));
 		atlgs.getATLSearchButton().click();
@@ -530,7 +531,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 		atlevents=new ATLEventsAndWebinarPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor14")));
 		atlgs.getATLSearchButton().click();
@@ -568,7 +569,7 @@ public class ExhibitorDigitalShowroom extends base {
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 
 		atlevents=new ATLEventsAndWebinarPage(driver);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));//searchforCatalogsInputUAT
 		atlgs.getATLSearchButton().click();
@@ -614,7 +615,7 @@ public class ExhibitorDigitalShowroom extends base {
 		atlevents=new ATLEventsAndWebinarPage(driver);
 		
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor14")));//globalsearchinputforShowSpecials
 		atlgs.getATLSearchButton().click();
@@ -664,7 +665,7 @@ public class ExhibitorDigitalShowroom extends base {
 	    atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 
 	    driver.get(prop.getProperty("atlmrkturl_uat"));
-	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	    Thread.sleep(2000);
 	    atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
 	    Thread.sleep(2000);
@@ -730,7 +731,7 @@ public class ExhibitorDigitalShowroom extends base {
 	        atlmppge = new ATLMarketPlannerPage(driver);
 	        atlexhact = new ATLExhLineProdActionsPage(driver);
 
-	        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	        //driver.get(prop.getProperty("atlmrkturl_uat"));
 	        utl.loginCheckATL();
 	        //Search Exhibitor in global search option
@@ -806,7 +807,7 @@ public class ExhibitorDigitalShowroom extends base {
 	        lap = new ATLLandingPage(driver);
 	        atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 
-	        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 	        atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor1")));
 	        atlgs.getATLSearchButton().click();
@@ -882,7 +883,7 @@ public class ExhibitorDigitalShowroom extends base {
 	        lp = new ATLLoginPage(driver);
 	        genData = new GenerateData();
 
-	        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	        //lap.getIUnderstandBtn().click();
 	        Thread.sleep(10000);
 	        atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor1")));
@@ -931,7 +932,7 @@ public class ExhibitorDigitalShowroom extends base {
 	        lap = new ATLLandingPage(driver);
 	        atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 
-	        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 	        atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor13")));
 	        atlgs.getATLSearchButton().click();
@@ -974,7 +975,7 @@ public class ExhibitorDigitalShowroom extends base {
 	        lap = new ATLLandingPage(driver);
 	        atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 
-	        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 	        atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputforInformation")));
 	        atlgs.getATLSearchButton().click();
@@ -1011,7 +1012,7 @@ public class ExhibitorDigitalShowroom extends base {
 	        atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 
 	        atlevents=new ATLEventsAndWebinarPage(driver);
-	        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 	        atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor13")));
 	        atlgs.getATLSearchButton().click();

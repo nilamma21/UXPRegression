@@ -1,6 +1,7 @@
 package atlantamarket_UAT;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -70,7 +71,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 
 		// Click on Login button from Landing Page
 		lap.getLogin().click();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		// Enter the credentials on Login Page and click
 		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
 
@@ -100,7 +101,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		utl.loginCheckATL();
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
@@ -147,7 +148,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("searchexhwithlinesinput")));
@@ -204,7 +205,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
@@ -282,7 +283,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		lp = new ATLLoginPage(driver);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		Thread.sleep(2000);
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
@@ -389,7 +390,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
 		atlgs.getATLSearchButton().click();
@@ -435,7 +436,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		Thread.sleep(2000);
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearch_input"));
@@ -515,7 +516,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		Thread.sleep(2000);
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
@@ -568,7 +569,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		Thread.sleep(2000);
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys("Anne");
@@ -621,7 +622,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		Thread.sleep(2000);
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));
@@ -694,7 +695,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		Thread.sleep(2000);
 
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
@@ -748,7 +749,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		Thread.sleep(1000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor8")));
 		atlgs.getATLSearchButton().click();

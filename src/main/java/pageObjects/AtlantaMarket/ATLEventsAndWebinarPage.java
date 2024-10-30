@@ -1,5 +1,6 @@
 package pageObjects.AtlantaMarket;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -62,213 +63,213 @@ public class ATLEventsAndWebinarPage {
 		this.driver = driver; 			
 	}
 	public WebElement getatlEventLocationLinkLVMPROD() {
-		wait = new WebDriverWait (driver,30);
+		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlEventLocationLinkLVMPROD));
 		
 		return driver.findElement(atlEventLocationLinkLVMPROD);
 		
 	}
 	public WebElement getatlEventSearchIconUAT() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlEventSearchIconUAT));
 		
 		return driver.findElement(atlEventSearchIconUAT);
 		
 	}
 	public WebElement getatlTodaysDatePROD() {
-		wait = new WebDriverWait (driver,40);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlTodaysDatePROD));
 		
 		return driver.findElement(atlTodaysDatePROD);
 		
 	}
 	public WebElement getatladdtoseselectedbtn() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atladdtoseselectedbtn));
 		
 		return driver.findElement(atladdtoseselectedbtn);
 		
 	}
 	public WebElement getatlClickOnEvent() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlClickOnEvent));
 		return driver.findElement(atlClickOnEvent);
 	}
 	public WebElement getatlSearchResultsTitle() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlSearchResultsTitle));
 		return driver.findElement(atlSearchResultsTitle);
 	}
 	public WebElement getatlEventsTag() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlEventsTag));
 		return driver.findElement(atlEventsTag);
 	}
 	public WebElement getatlTagIcon() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlTagIcon));
 		return driver.findElement(atlTagIcon);
 	}
 	public WebElement getatlCalendarIcon() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlCalendarIcon));
 		return driver.findElement(atlCalendarIcon);
 	}
 	public WebElement getatlNoteIcon() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlNoteIcon));
 		return driver.findElement(atlNoteIcon);
 	}
 	public WebElement getatlListIcon() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlListIcon));
 		return driver.findElement(atlListIcon);
 	}
 	public WebElement getatlFavIcon() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlFavIcon));
 		return driver.findElement(atlFavIcon);
 	}
 	public WebElement getatlEventType() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlEventType));
 		return driver.findElement(atlEventType);
 	}
 	public WebElement getatlEventLocationLink() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlEventLocationLink));
 		return driver.findElement(atlEventLocationLink);
 	}
 	public WebElement getatlEventNameOnDetailsPage() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlEventNameOnDetailsPage));
 		return driver.findElement(atlEventNameOnDetailsPage);
 	}
 	public List <WebElement> atlatlListOfAllEventsSeeDetailsLink() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlListOfAllEventsSeeDetailsLink));
 		return driver.findElements(atlListOfAllEventsSeeDetailsLink);
 	}
 	public List <WebElement> atlListOfAllEventsImages() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlListOfAllEventsImages));
 		return driver.findElements(atlListOfAllEventsImages);
 	}
 	public List <WebElement> getatlListOfAllEventsLocations() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlListOfAllEventsLocations));
 		return driver.findElements(atlListOfAllEventsLocations);
 	}
 	public List <WebElement> getatlListOfAllEventsTime() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlListOfAllEventsTime));
 		return driver.findElements(atlListOfAllEventsTime);
 	}
 	public List <WebElement> getatlListOfAllEventsType() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlListOfAllEventsType));
 		return driver.findElements(atlListOfAllEventsType);
 	}
 	public List <WebElement> getatlListOfAllEvents() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlListOfAllEvents));
 		return driver.findElements(atlListOfAllEvents);
 	}
 	public List <WebElement> getatlListOfEventTitles() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlListOfEventTitles));
 		return driver.findElements(atlListOfEventTitles);
 	}
 	public WebElement getatlExploreMarketTab() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlExploreMarketTab));
 		return driver.findElement(atlExploreMarketTab);
 	}
 	public WebElement getatlResetBtn() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlResetBtn));
 		return driver.findElement(atlResetBtn);
 	}
 	public List <WebElement> getatlListOfatlSelectAnyDate() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlSelectAnyDate));
 		return driver.findElements(atlSelectAnyDate);
 	}
 	public WebElement getatlCalendarPrevMonth() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlCalendarPrevMonth));
 		return driver.findElement(atlCalendarPrevMonth);
 	}
 	public WebElement getatlTodaysDate() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlTodaysDate));
 		return driver.findElement(atlTodaysDate);
 	}
 	public WebElement getatlSelectMonth() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlSelectMonth));
 		return driver.findElement(atlSelectMonth);
 	}
 	public List <WebElement> getatlListOfEventDate() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlListOfEventDate));
 		return driver.findElements(atlListOfEventDate);
 	}
 	public WebElement getatlCalendarNextMonthBtn() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlCalendarNextMonthBtn));
 		return driver.findElement(atlCalendarNextMonthBtn);
 	}
 	public WebElement getatlEventDateAndMonth() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlEventDateAndMonth));
 		return driver.findElement(atlEventDateAndMonth);
 	}
 	public WebElement getatlEventSearchIcon() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlEventSearchIcon));
 		return driver.findElement(atlEventSearchIcon);
 	}
 	public WebElement getatlEventName() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlEventName));
 		return driver.findElement(atlEventName);
 	}
 	public WebElement getatlEventsSearchBar() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlEventsSearchBar));
 		return driver.findElement(atlEventsSearchBar);
 	}
 	public WebElement getatlEventsCalendar() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlEventsCalendar));
 		return driver.findElement(atlEventsCalendar);
 	}
 	public WebElement getatlImcEventsTab() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlImcEventsTab));
 		return driver.findElement(atlImcEventsTab);
 	}
 
 	public WebElement getatlExhibitorsEventsTab() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.elementToBeClickable(atlExhibitorsEventsTab));
 		return driver.findElement(atlExhibitorsEventsTab);
 	}
 	public WebElement getatlAttendTab() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlAttendTab));
 		return driver.findElement(atlAttendTab);
 	}
 	
 	public WebElement getatlEventsLink() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.elementToBeClickable(atlEventsLink));
 		return driver.findElement(atlEventsLink);
 	}
 	
 	public WebElement getatlEventCardExhibitorName() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.elementToBeClickable(atlEventCardExhibitorName));
 		return driver.findElement(atlEventCardExhibitorName);
 	}

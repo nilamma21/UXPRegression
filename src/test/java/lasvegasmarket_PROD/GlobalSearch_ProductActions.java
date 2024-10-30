@@ -1,6 +1,7 @@
 package lasvegasmarket_PROD;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -74,7 +75,7 @@ public class GlobalSearch_ProductActions extends base {
 		atlproddet = new ATLProductDetailsPage(driver);
 		lap = new ATLLandingPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(5000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor4")));
 		Thread.sleep(5000);
@@ -120,7 +121,7 @@ public class GlobalSearch_ProductActions extends base {
 	        atlproddet = new ATLProductDetailsPage(driver);
 
 	        driver.get(prop.getProperty("lvmurl_prod"));
-	        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	        Thread.sleep(6000);
 	        //lap.getCloseMarktAdBtn().click();
 
@@ -175,7 +176,7 @@ public class GlobalSearch_ProductActions extends base {
 		lap = new ATLLandingPage(driver);
 		genData = new GenerateData();
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
@@ -256,7 +257,7 @@ public class GlobalSearch_ProductActions extends base {
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 		atlproddet = new ATLProductDetailsPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
@@ -352,7 +353,7 @@ public class GlobalSearch_ProductActions extends base {
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 		atlproddet = new ATLProductDetailsPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
@@ -434,7 +435,7 @@ public class GlobalSearch_ProductActions extends base {
 		atlproddet = new ATLProductDetailsPage(driver);
 		genData = new GenerateData();
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
@@ -513,7 +514,7 @@ public class GlobalSearch_ProductActions extends base {
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 		atlproddet = new ATLProductDetailsPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
@@ -604,7 +605,7 @@ public class GlobalSearch_ProductActions extends base {
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 		atlproddet = new ATLProductDetailsPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
@@ -659,7 +660,7 @@ public class GlobalSearch_ProductActions extends base {
 		lap = new ATLLandingPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
@@ -726,7 +727,7 @@ public class GlobalSearch_ProductActions extends base {
 		lap = new ATLLandingPage(driver);
 		genData = new GenerateData();
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);

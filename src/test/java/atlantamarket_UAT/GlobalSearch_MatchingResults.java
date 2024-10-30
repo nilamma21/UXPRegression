@@ -1,6 +1,7 @@
 package atlantamarket_UAT;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -75,7 +76,7 @@ public class GlobalSearch_MatchingResults extends base {
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		//driver.get(prop.getProperty("atlmrkturl_uat"));
 		//utl.loginCheckATL();
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("containsStartWithInput"));
@@ -100,7 +101,7 @@ public class GlobalSearch_MatchingResults extends base {
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
@@ -214,7 +215,7 @@ public class GlobalSearch_MatchingResults extends base {
 		utl = new Utility(driver);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
@@ -271,7 +272,7 @@ public class GlobalSearch_MatchingResults extends base {
 		utl = new Utility(driver);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
@@ -311,7 +312,7 @@ public class GlobalSearch_MatchingResults extends base {
 
 	        // Click on Login button from Landing Page
 	        lap.getLogin().click();
-	        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	        // Enter the credentials on Login Page and click
 	        lp.getEmailAddress().sendKeys((prop.getProperty("username")));
 
@@ -341,7 +342,7 @@ public class GlobalSearch_MatchingResults extends base {
 		lp = new ATLLoginPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
@@ -393,7 +394,7 @@ public class GlobalSearch_MatchingResults extends base {
 		lp = new ATLLoginPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//utl.verifyMPLoginFunctionality();
 		utl.loginCheckATL();
@@ -454,7 +455,7 @@ public class GlobalSearch_MatchingResults extends base {
 		atlmppge = new ATLMarketPlannerPage(driver);
 		genData = new GenerateData();
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 	//	//utl.verifyMPLoginFunctionality();
 		utl.CloseATLPopup();
@@ -519,7 +520,7 @@ public class GlobalSearch_MatchingResults extends base {
 		atlmppge = new ATLMarketPlannerPage(driver);
 		genData = new GenerateData();
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
@@ -597,7 +598,7 @@ public class GlobalSearch_MatchingResults extends base {
 		atlmppge = new ATLMarketPlannerPage(driver);
 		genData = new GenerateData();
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();

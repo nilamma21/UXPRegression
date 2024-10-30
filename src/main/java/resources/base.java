@@ -69,28 +69,28 @@ public class base {
 
 			//Checks for the latest browser version
 			//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/Drivers/chromedriver_102.exe");
-			WebDriverManager.chromedriver().setup();
+			//WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 		}
 		else if (browserName.equals("firefox"))
 		{
 			//System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/Drivers/geckodriver.exe");
-			WebDriverManager.firefoxdriver().setup();
+			//WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 			driver.manage().window().maximize();
 		}
 		else if (browserName.equals("edge")) 
 		{
 			//System.setProperty("webdriver.edge.driver",System.getProperty("user.dir") + "/Drivers/msedgedriver.exe");
-			WebDriverManager.edgedriver().setup();
+			//WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 			driver.manage().window().maximize();
 		}
 		else if (browserName.equals("IE")) 
 		{
-			//System.setProperty("webdriver.ie.driver",System.getProperty("user.dir") + "/Drivers/IEDriverServer.exe");
-			WebDriverManager.iedriver().setup();
+			///System.setProperty("webdriver.ie.driver",System.getProperty("user.dir") + "/Drivers/IEDriverServer.exe");
+			//WebDriverManager.iedriver().setup();
 			driver = new InternetExplorerDriver();
 			driver.manage().window().maximize();
 		}

@@ -1,6 +1,7 @@
 package atlantamarket_UAT;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -75,7 +76,7 @@ public class GlobalSearch_ProductActions extends base {
 
 		// Click on Login button from Landing Page
 		lap.getLogin().click();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		// Enter the credentials on Login Page and click
 		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
 
@@ -104,7 +105,7 @@ public class GlobalSearch_ProductActions extends base {
 		atlproddet = new ATLProductDetailsPage(driver);
 		lap = new ATLLandingPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		//driver.get(prop.getProperty("atlmrkturl_uat"));
 		utl.loginCheckATL();
 		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
@@ -149,7 +150,7 @@ public class GlobalSearch_ProductActions extends base {
 		lap = new ATLLandingPage(driver);
 		genData = new GenerateData();
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 		Thread.sleep(6000);
@@ -244,7 +245,7 @@ public class GlobalSearch_ProductActions extends base {
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 		atlproddet = new ATLProductDetailsPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 		Thread.sleep(6000);
@@ -343,7 +344,7 @@ public class GlobalSearch_ProductActions extends base {
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 		atlproddet = new ATLProductDetailsPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 		Thread.sleep(6000);
@@ -412,7 +413,7 @@ public class GlobalSearch_ProductActions extends base {
 		atlproddet = new ATLProductDetailsPage(driver);
 		genData = new GenerateData();
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 		Thread.sleep(6000);
@@ -490,7 +491,7 @@ public class GlobalSearch_ProductActions extends base {
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 		atlproddet = new ATLProductDetailsPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 		Thread.sleep(6000);
@@ -590,7 +591,7 @@ public class GlobalSearch_ProductActions extends base {
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 		atlproddet = new ATLProductDetailsPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 		Thread.sleep(6000);
@@ -654,7 +655,7 @@ public class GlobalSearch_ProductActions extends base {
 		lap = new ATLLandingPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 		Thread.sleep(6000);
@@ -722,7 +723,7 @@ public class GlobalSearch_ProductActions extends base {
 		lap = new ATLLandingPage(driver);
 		genData = new GenerateData();
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 		Thread.sleep(6000);

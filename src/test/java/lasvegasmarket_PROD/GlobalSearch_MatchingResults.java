@@ -1,6 +1,7 @@
 package lasvegasmarket_PROD;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebElement;
@@ -48,7 +49,7 @@ public class GlobalSearch_MatchingResults extends base {
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("lvmurl_prod"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(5000);
 		utl.CloseATLPopup();
@@ -69,7 +70,7 @@ public class GlobalSearch_MatchingResults extends base {
 	      lvmds = new LVMExhDigiShowroomPage(driver);
 	      lvmexhact = new LVMExhLineProdActionsPage(driver);
 	      
-	      driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	      lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor5"));//containsStartWithInput
 	      Thread.sleep(1000);
 	      lvmgs.getLVMSearchButton().click();
@@ -89,7 +90,7 @@ public class GlobalSearch_MatchingResults extends base {
 	      lvmds = new LVMExhDigiShowroomPage(driver);
 	      lvmexhact = new LVMExhLineProdActionsPage(driver);
 
-	      driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	      
 	  /*  if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 	          lvmgs.getlvmGlobalSearchClearTxt().click();
@@ -210,7 +211,7 @@ public class GlobalSearch_MatchingResults extends base {
 	      lvmexhact = new LVMExhLineProdActionsPage(driver);
 	      utl = new Utility(driver);
 
-	      driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	      
 	      /*if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 	          lvmgs.getlvmGlobalSearchClearTxt().click();
@@ -236,7 +237,7 @@ public class GlobalSearch_MatchingResults extends base {
 	      Thread.sleep(7000);
 	      //Location Filters
 	      ///Select filter Sort by Name Descending
-	      driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	       //Select filter Sort by Name Ascending
 	       utl.Sorting(lvmgs.getlvmExhNames(),lvmgs.getlvmGlobalSearch_SearchSortByDropdwn(),"Sort by Name Ascending");
 	       Thread.sleep(2000);
@@ -263,7 +264,7 @@ public class GlobalSearch_MatchingResults extends base {
 	      lvmexhact = new LVMExhLineProdActionsPage(driver);
 	      utl = new Utility(driver);
 
-	      driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	      /*if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 	          lvmgs.getlvmGlobalSearchClearTxt().click();
 	      }*/
@@ -324,7 +325,7 @@ public class GlobalSearch_MatchingResults extends base {
 		lp = new LVMLoginPage(driver);
 		lvmmpp = new LVMMarketPlannerPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			lvmgs.getlvmGlobalSearchClearTxt().click();
 		}
@@ -375,7 +376,7 @@ public class GlobalSearch_MatchingResults extends base {
 		lp = new LVMLoginPage(driver);
 		lvmmpp = new LVMMarketPlannerPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//utl.verifyMPLoginFunctionality();
 		utl.CloseATLPopup();
@@ -435,7 +436,7 @@ public class GlobalSearch_MatchingResults extends base {
 		lvmmpp = new LVMMarketPlannerPage(driver);
 		genData = new GenerateData();
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		//utl.verifyMPLoginFunctionality();
 		utl.CloseATLPopup();
@@ -492,7 +493,7 @@ public class GlobalSearch_MatchingResults extends base {
 		utl = new Utility(driver);
 		genData = new GenerateData();
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			lvmgs.getlvmGlobalSearchClearTxt().click();
@@ -566,7 +567,7 @@ public class GlobalSearch_MatchingResults extends base {
 		lvmmpp = new LVMMarketPlannerPage(driver);
 		genData = new GenerateData();
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			lvmgs.getlvmGlobalSearchClearTxt().click();

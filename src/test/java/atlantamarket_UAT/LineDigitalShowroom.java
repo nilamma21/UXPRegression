@@ -1,6 +1,7 @@
 package atlantamarket_UAT;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
@@ -83,7 +84,7 @@ public class LineDigitalShowroom extends base {
 		genData = new GenerateData();
 		atldigish=new ATLLineDigitalShowroomPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		//driver.get(prop.getProperty("atlmrkturl_uat"));
 		//utl.loginCheckATL();
@@ -117,7 +118,7 @@ public class LineDigitalShowroom extends base {
 		atldigish=new ATLLineDigitalShowroomPage(driver);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
@@ -170,7 +171,7 @@ public class LineDigitalShowroom extends base {
 		atldigish=new ATLLineDigitalShowroomPage(driver);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
@@ -222,12 +223,12 @@ public class LineDigitalShowroom extends base {
 		atldigish=new ATLLineDigitalShowroomPage(driver);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		//click on Global Search Input filed
 		Thread.sleep(2000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("line3"));
@@ -283,7 +284,7 @@ public class LineDigitalShowroom extends base {
 		atldigish=new ATLLineDigitalShowroomPage(driver);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
@@ -321,12 +322,12 @@ public class LineDigitalShowroom extends base {
 		atldigish=new ATLLineDigitalShowroomPage(driver);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
-		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		//click on Global Search Input filed
 		Thread.sleep(4000);
 		atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("line3"));
@@ -372,7 +373,7 @@ public class LineDigitalShowroom extends base {
 
         // Click on Login button from Landing Page
         lap.getLogin().click();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         // Enter the credentials on Login Page and click
         lp.getEmailAddress().sendKeys((prop.getProperty("username")));
 
@@ -403,7 +404,7 @@ public class LineDigitalShowroom extends base {
         genData = new GenerateData();
         atldigish=new ATLLineDigitalShowroomPage(driver);
 
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
         if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
             atlgs.getatlGlobalSearchClearTxt().click();
@@ -482,7 +483,7 @@ public class LineDigitalShowroom extends base {
         genData = new GenerateData();
         atldigish=new ATLLineDigitalShowroomPage(driver);
 
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
         if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
             atlgs.getatlGlobalSearchClearTxt().click();
@@ -589,7 +590,7 @@ public class LineDigitalShowroom extends base {
         genData = new GenerateData();
         atldigish=new ATLLineDigitalShowroomPage(driver);
 
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
         if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
             atlgs.getatlGlobalSearchClearTxt().click();
@@ -678,7 +679,7 @@ public class LineDigitalShowroom extends base {
         genData = new GenerateData();
         atldigish=new ATLLineDigitalShowroomPage(driver);
 
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
         if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
             atlgs.getatlGlobalSearchClearTxt().click();
@@ -732,7 +733,7 @@ public class LineDigitalShowroom extends base {
         atldigish=new ATLLineDigitalShowroomPage(driver);
 
 
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         if(!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
             atlgs.getatlGlobalSearchClearTxt().click();
         }
@@ -742,7 +743,7 @@ public class LineDigitalShowroom extends base {
         Thread.sleep(5000);
         //Click on 1st Suggetions
         atldigish.getsuggetionList().click();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         //Thread.sleep(5000);
 
         //click on Global Search Input filed

@@ -1,5 +1,7 @@
 package pageObjects.AtlantaMarket;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -26,49 +28,49 @@ public class ATLLandingPage {
 	} 
 	
 	public WebElement getLogin() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.elementToBeClickable(loginbtn));
 		return driver.findElement(loginbtn);		
 	}
 	
 	public WebElement getMPLinkText() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(marketplannerlinktext));
 		return driver.findElement(marketplannerlinktext);		
 	}	
 	
 	public WebElement getIUnderstandBtn() throws InterruptedException {
 		Thread.sleep(8000);
-		wait = new WebDriverWait (driver,40);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.elementToBeClickable(iunderstandbtn));
 		return driver.findElement(iunderstandbtn);		
 	}
 	
 	public WebElement getMPSignOutBtn() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(mpsignoutbtn));
 		return driver.findElement(mpsignoutbtn);		
 	}	
 	public WebElement getCloseMarktAdBtn() throws InterruptedException{
 		Thread.sleep(7000);
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         wait.until(ExpectedConditions.visibilityOfElementLocated(closemrktadbtn));
 		return driver.findElement(closemrktadbtn);		
 	}
 	public WebElement getWelcomeMsg() throws InterruptedException{
 		Thread.sleep(7000);
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         wait.until(ExpectedConditions.visibilityOfElementLocated(welcomeMsg));
 		return driver.findElement(welcomeMsg);		
 	}
 	public WebElement getSignOut() throws InterruptedException{
 		Thread.sleep(7000);
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         wait.until(ExpectedConditions.visibilityOfElementLocated(signOut));
 		return driver.findElement(signOut);		
 	}
 	public WebElement getmarketplannerlinktext1() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.elementToBeClickable(marketplannerlinktext1));
 		return driver.findElement(marketplannerlinktext1);		
 	}

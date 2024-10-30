@@ -1,6 +1,7 @@
 package atlantamarket_UAT;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -57,7 +58,7 @@ public class ShowSpecials extends base  {
 		atlgs=new ATLGlobalSearchPage(driver);
 		
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         lap.getIUnderstandBtn().click();
         Thread.sleep(5000);
 		//Add new Show Special from EXP
@@ -85,7 +86,7 @@ public class ShowSpecials extends base  {
 		tabs = new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(tabs.get(2));*/
 /*		driver.get(prop.getProperty("atlmrkturl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(5000);*/
 		
 		//click on Exhibitors And Product Tab
@@ -131,7 +132,7 @@ public class ShowSpecials extends base  {
 		genData = new GenerateData();
 		
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(4000);
 		//click on Exhibitors And Product Tab
 		atlgs.getatlExhibitorsAndProductTab().click();
@@ -166,7 +167,7 @@ public class ShowSpecials extends base  {
 
         // Click on Login button from Landing Page
         lap.getLogin().click();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         // Enter the credentials on Login Page and click
         lp.getEmailAddress().sendKeys((prop.getProperty("username")));
 
