@@ -1,9 +1,10 @@
 package lasvegasmarket_PROD;
 
-import static org.junit.Assert.assertTrue;
+
 
 import java.io.IOException;
 import java.lang.reflect.Array;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -58,7 +59,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		// Navigate to Las Vegas Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("lvmurl_prod"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(4000);
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(7000);
@@ -76,7 +77,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		lvmleftpane = new LVMLeftPaneFilters(driver);
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinputforInfoTab")));//Previous input = filtersglobalsearchinput
 		lvmgs.getLVMSearchButton().click();
 		
@@ -126,7 +127,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 
 		driver.get(prop.getProperty("lvmurl_prod"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(10000);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor6")));
 		lvmgs.getLVMSearchButton().click();
@@ -187,7 +188,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 
 		driver.get(prop.getProperty("lvmurl_prod"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(5000);
 		
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));//Previous input = filtersglobalsearchinput
@@ -270,7 +271,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		lp = new LVMLoginPage(driver);
 
 		driver.get(prop.getProperty("lvmurl_prod"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(6000);
 		
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("filtersglobalsearchinput")));//Previous input = filtersglobalsearchinput
@@ -391,7 +392,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 
 		driver.get(prop.getProperty("lvmurl_prod"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys("   ");//Previous input = filtersglobalsearchinput
@@ -446,7 +447,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 
 		driver.get(prop.getProperty("lvmurl_prod"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys("   ");
@@ -530,7 +531,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 
 		driver.get(prop.getProperty("lvmurl_prod"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys("   ");
@@ -592,7 +593,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 		
 		driver.get(prop.getProperty("lvmurl_prod"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys("   ");
@@ -697,7 +698,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 
 		driver.get(prop.getProperty("lvmurl_prod"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		Thread.sleep(6000);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys("   ");
@@ -799,7 +800,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 
 		driver.get(prop.getProperty("lvmurl_prod"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(6000);
 		
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys("   ");
@@ -852,18 +853,21 @@ public class GlobalSearch_LeftPaneFilters extends base {
 				//System.out.println(prodcatgitemlist.get(j).getText());
 				if(prodcatgitemlist.get(j).getText().contains(abc)) {
 					//flag=true;
-					assertTrue(true);
+					//assertTrue(true);
+					Assert.assertTrue(true);
 					System.out.println("Present1");
 					break;
 				}else if(prodcatgitemlist.get(j).getText().contains(abc1)){
-					assertTrue(true);
+					//assertTrue(true);
+					Assert.assertTrue(true);
 					System.out.println("Present2");
 					break;
 				
 				}
 				else {
 					System.out.println("Failed");
-					assertTrue(false);
+					//assertTrue(false);
+					Assert.assertTrue(false);
 					
 				}
 			}
@@ -884,7 +888,7 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		utl = new Utility(driver);
 		
 		driver.get(prop.getProperty("lvmurl_prod"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		Thread.sleep(8000);
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys("   ");

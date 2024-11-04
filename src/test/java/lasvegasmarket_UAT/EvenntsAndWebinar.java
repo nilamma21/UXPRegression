@@ -1,6 +1,7 @@
 package lasvegasmarket_UAT;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -60,7 +61,7 @@ public class EvenntsAndWebinar extends base{
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("lvmurl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(7000);
 
@@ -78,7 +79,7 @@ public class EvenntsAndWebinar extends base{
 			atlevents=new ATLEventsAndWebinarPage(driver);
 			atlgs = new ATLGlobalSearchPage(driver);
 
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			Thread.sleep(5000);
 			//driver.get(prop.getProperty("lvmurl_uat"));
 			//utl.loginCheckATL();
@@ -131,7 +132,7 @@ public class EvenntsAndWebinar extends base{
 			atlgs = new ATLGlobalSearchPage(driver);
 
 			driver.get(prop.getProperty("lvmurl_uat"));
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			Thread.sleep(5000);
 			utl.clickOnEventLinkOfChannel();
 			/*// Click on Attend Tab
@@ -173,7 +174,7 @@ public class EvenntsAndWebinar extends base{
 			driver.get(prop.getProperty("lvmurl_uat"));
 			Thread.sleep(5000);
 	        utl.clickOnEventLinkOfChannel();    
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 			//Click on IMC Event Tab
 			utl.scrollElementIntoMiddle(atlevents.getatlExhibitorsEventsTab());
@@ -277,7 +278,7 @@ public class EvenntsAndWebinar extends base{
 			driver.get(prop.getProperty("lvmurl_uat"));
 			Thread.sleep(5000);
 			utl.clickOnEventLinkOfChannel();	
-	        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 			//Click on IMC Event Tab
 	        utl.scrollElementIntoMiddle(atlevents.getatlExhibitorsEventsTab());
@@ -394,7 +395,7 @@ public class EvenntsAndWebinar extends base{
 		driver.get(prop.getProperty("lvmurl_uat"));
 		Thread.sleep(3000);
 		utl.clickOnEventLinkOfChannel();	
-      driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		String eventTitle=atlevents.getatlClickOnEvent().getText();
 		Thread.sleep(5000);
@@ -507,7 +508,7 @@ public class EvenntsAndWebinar extends base{
       lvmmpp = new LVMMarketPlannerPage(driver);
       atlmppge = new ATLMarketPlannerPage(driver);
 
-      driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
       
       //Login to MP
       //utl.verifyMPLoginFunctionality();
@@ -576,7 +577,7 @@ public class EvenntsAndWebinar extends base{
               utl.verifyMPLoginFunctionality();
               Thread.sleep(5000);
       utl.clickOnEventLinkOfChannel();
-      driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
       String eventTitle = lvmevents.getlvmClickOnEvent().getText();
 
       // Click on IMC Event Tab
@@ -651,7 +652,7 @@ public class EvenntsAndWebinar extends base{
               driver.get(prop.getProperty("lvmurl_uat"));
               Thread.sleep(5000);
               utl.clickOnEventLinkOfChannel();
-              driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+              driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
               String eventTitle = lvmevents.getlvmClickOnEvent().getText();
 
               // Click on IMC Event Tab
@@ -751,7 +752,7 @@ public class EvenntsAndWebinar extends base{
        * utl.verifyMPLoginFunctionality(); Thread.sleep(5000);
        
       utl.clickOnEventLinkOfChannel();
-      driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
       Thread.sleep(5000);
       String eventTitle = lvmevents.getlvmClickOnEvent().getText();
 
@@ -828,7 +829,7 @@ public class EvenntsAndWebinar extends base{
 			driver.get(prop.getProperty("lvmurl_uat"));
 	        Thread.sleep(5000);
 			utl.clickOnEventLinkOfChannel();
-	        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			
 			/*// Click on Attend Tab
 			atlevents.getatlAttendTab().click();
@@ -868,7 +869,7 @@ public class EvenntsAndWebinar extends base{
 			driver.get(prop.getProperty("lvmurl_uat"));
 	        Thread.sleep(5000);
 			utl.clickOnEventLinkOfChannel();
-	        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			
 			/*// Click on Attend Tab
 			atlevents.getatlAttendTab().click();
@@ -909,7 +910,7 @@ public class EvenntsAndWebinar extends base{
 
 		driver.get(prop.getProperty("lvmurl_uat"));
 		Thread.sleep(5000);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		utl.clickOnEventLinkOfChannel();  
 		
 		//Click on Exh Event Tab
@@ -994,7 +995,7 @@ public class EvenntsAndWebinar extends base{
 		int allEventSeeDetailsLinkCount1 = 0;
 		for( int i=0;i < atlevents.getatlListOfEventTitles().size(); i++) {
 			allEventSeeDetailsLinkCount1++;
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			//Thread.sleep(5000);
 			WebElement eventTitleLink = atlevents.getatlListOfEventTitles().get(i);
 			String eventTitle=eventTitleLink.getText();
@@ -1018,7 +1019,7 @@ public class EvenntsAndWebinar extends base{
 			Thread.sleep(500);
 			atlevents.getatlExhibitorsEventsTab().click();
 			Thread.sleep(2000);
-			//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		}
 		
 		System.out.println(allEventSeeDetailsLinkCount + " Events Details Page displayed");
@@ -1038,7 +1039,7 @@ public class EvenntsAndWebinar extends base{
 	atlmppge = new ATLMarketPlannerPage(driver);
 
 	driver.get(prop.getProperty("lvmurl_uat"));
-	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	Thread.sleep(5000);
 	utl.clickOnEventLinkOfChannel();  
 	Thread.sleep(2000);
@@ -1171,7 +1172,7 @@ public class EvenntsAndWebinar extends base{
               //Login to MP
               //utl.verifyMPLoginFunctionality();
               utl.clickOnEventLinkOfChannel();
-              driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+              driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
               
 
               // Click on IMC Event Tab
@@ -1236,7 +1237,7 @@ public class EvenntsAndWebinar extends base{
       Thread.sleep(5000);
   
       utl.clickOnEventLinkOfChannel();
-      driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
       
       //Click on Exh Event Tab
       lvmevents.getlvmExhibitorsEventsTab().click();
@@ -1322,7 +1323,7 @@ public class EvenntsAndWebinar extends base{
       // Login to MP
       
       //utl.verifyMPLoginFunctionality(); Thread.sleep(5000);
-      driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
       Thread.sleep(5000); 
       utl.clickOnEventLinkOfChannel();
       String eventTitle = lvmevents.getlvmClickOnEvent().getText();

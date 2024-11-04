@@ -1,6 +1,7 @@
 package atlantamarket_UAT;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.testng.annotations.AfterTest;
@@ -31,10 +32,10 @@ public class ATL_LoginPage extends base{
 	public void loginTest() throws InterruptedException {
 		driver.get(prop.getProperty("atlmrkturl_uat"));
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		lp.getLogin().click();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		logp.getEmailAddress().sendKeys(prop.getProperty("username"));
 		Thread.sleep(2000);

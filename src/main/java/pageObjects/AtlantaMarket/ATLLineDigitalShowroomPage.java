@@ -1,5 +1,6 @@
 package pageObjects.AtlantaMarket;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -7,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 public class ATLLineDigitalShowroomPage {
 	public WebDriver driver;
@@ -41,118 +43,118 @@ public class ATLLineDigitalShowroomPage {
 		this.driver = driver; 			
 	}
 	public WebElement getdigiShowroomExhNameUAT() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(digiShowroomExhNameUAT));
 		return driver.findElement(digiShowroomExhNameUAT);
 	}
 
 	public WebElement getproductName1() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productName1));
 		return driver.findElement(productName1);
 	}
 	public WebElement getproductHeader() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productHeader));
 		return driver.findElement(productHeader);
 	}
 	public WebElement getproductName() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productName));
 		return driver.findElement(productName);
 	}
 	public WebElement getSeeAllprodctCountBottomBtn() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(seeAllprodctCountBottomBtn));
 		return driver.findElement(seeAllprodctCountBottomBtn);
 	}
 	public WebElement getprodctCountBottomBtn() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(prodctCountBottomBtn));
 		return driver.findElement(prodctCountBottomBtn);
 	}
 	public WebElement getorderOnJuniperBtnLink() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(orderOnJuniperBtnLink));
 		return driver.findElement(orderOnJuniperBtnLink);
 	}
 	public List <WebElement> gelistOfproductTile() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfproductTile));
 		return driver.findElements(listOfproductTile);
 	}
 	public WebElement getproductTitleAndCount() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productTitleAndCount));
 		return driver.findElement(productTitleAndCount);
 	}
 	public WebElement getproductCount() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productCount));
 		return driver.findElement(productCount);
 	}
 	public WebElement getproductTitle() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productTitle));
 		return driver.findElement(productTitle);
 	}
 	public WebElement getseeAllProductBtn() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(seeAllProductBtn));
 		return driver.findElement(seeAllProductBtn);
 	}
 	public WebElement getorderOnJuniperBtn() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(orderOnJuniperBtn));
 		return driver.findElement(orderOnJuniperBtn);
 	}
 	public WebElement getaddNoteIcon() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(addNoteIcon));
 		return driver.findElement(addNoteIcon);
 	}
 	public WebElement getatl1stListName() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atl1stListName));
 		return driver.findElement(atl1stListName);
 	}
 	public WebElement getaddToListIcon() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(addToListIcon));
 		return driver.findElement(addToListIcon);
 	}
 	public WebElement getfavIconDigiShowroom() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(favIconDigiShowroom));
 		return driver.findElement(favIconDigiShowroom);
 	}
 	public WebElement getlocationLink() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(locationLink));
 		return driver.findElement(locationLink);
 	}
 	public WebElement getsuggetionList() {
-		wait = new WebDriverWait (driver,40);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(suggetionList));
 		return driver.findElement(suggetionList);
 	}
 	public WebElement getdigiShowroomExhName() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(digiShowroomExhName));
 		return driver.findElement(digiShowroomExhName);
 	}
 	public WebElement getAtlLineDigiShowroomPageTitle() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlLineDigiShowroomPageTitle));
 		return driver.findElement(atlLineDigiShowroomPageTitle);
 	}
     public WebElement getsuggetionListUAT() {
-      wait = new WebDriverWait (driver,30);
+      WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
       wait.until(ExpectedConditions.visibilityOfElementLocated(suggetionListUAT));
       return driver.findElement(suggetionListUAT);
   }
 	public WebElement getdigiShowroomExhName1() {
-      wait = new WebDriverWait (driver,30);
+      WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
       wait.until(ExpectedConditions.visibilityOfElementLocated(digiShowroomExhName1));
       return driver.findElement(digiShowroomExhName1);
 	}

@@ -1,6 +1,7 @@
 package lasvegasmarket_UAT;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -74,7 +75,7 @@ public class ShowSpecials extends base{
       lvmmpp = new LVMMarketPlannerPage(driver);
       genData = new GenerateData();
 
-      driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
       
       //click on Exhibitors And Product Tab
       lvmgs.getlvmExhibitorsAndProductTab().click();
@@ -130,7 +131,7 @@ public class ShowSpecials extends base{
       lvmmpp = new LVMMarketPlannerPage(driver);
       genData = new GenerateData();
 
-      driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
       //click on Exhibitors And Product Tab
       lvmgs.getlvmExhibitorsAndProductTab().click();
       //Click on Show Specials 

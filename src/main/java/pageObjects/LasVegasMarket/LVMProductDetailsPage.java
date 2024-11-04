@@ -1,5 +1,6 @@
 package pageObjects.LasVegasMarket;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -43,133 +44,133 @@ public class LVMProductDetailsPage {
 	} 
 	
 	public WebElement getLVMValidateProdDetailsPage() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmvalidateproddetailspage));
 		return driver.findElement(lvmvalidateproddetailspage);
 	}
 	
 	public WebElement getProductNameOnProductDetails() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productnameonproddetails));
 		return driver.findElement(productnameonproddetails);
 	}
 	
 	public WebElement getAddToList() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(addToList));
 		return driver.findElement(addToList);
 	}
 	
 	public WebElement getListName() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(listName));
 		return driver.findElement(listName);
 	}
 	
 	public WebElement getGoToMPBtn() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(goToMPBtn));
 		return driver.findElement(goToMPBtn);
 	}
 	
 	public WebElement getList() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(list));
 		return driver.findElement(list);
 	}
 	
 	public WebElement getListLeftPanel() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(listLeftPanel));
 		return driver.findElement(listLeftPanel);
 	}
 	public WebElement getnewListName() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(newListName));
 		return driver.findElement(newListName);
 	}
 	
 	public WebElement getAllListNames() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(allListNames));
 		return driver.findElement(allListNames);
 	}
 	public WebElement getAddToSelectedBtn() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(addToSelectedBtn));
 		return driver.findElement(addToSelectedBtn);
 	}
 	public WebElement getProductNameFromList() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productNameFromList));
 		return driver.findElement(productNameFromList);
 	}
 	public WebElement getProductAddToFavIcon() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productaddtofavicon));
 		return driver.findElement(productaddtofavicon);
 	}
 
 	public WebElement getProductAddNoteIcon() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productAddNote));
 		return driver.findElement(productAddNote);
 	}
 	public WebElement getAddNotePopup() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(addNotePopup));
 		return driver.findElement(addNotePopup);
 	}
 	public WebElement getAddNoteTitleTextbox() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(addNoteTitleTextbox));
 		return driver.findElement(addNoteTitleTextbox);
 	}
 	public WebElement getAddNoteContainsTextArea() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(addNoteContainsTextArea));
 		return driver.findElement(addNoteContainsTextArea);
 	}
 	public WebElement getAddNoteSaveBtn() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		//wait.until(ExpectedConditions.visibilityOfElementLocated(addNoteSaveBtn));
 		wait.until(ExpectedConditions.elementToBeClickable(addNoteSaveBtn));
 		return driver.findElement(addNoteSaveBtn);
 	}
 	public WebElement getViewAllNotes() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(viewAllNotes));
 		return driver.findElement(viewAllNotes);
 	}
 	public WebElement getViewAllNotesPopupHeader() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(viewAllNotesPopupHeader));
 		return driver.findElement(viewAllNotesPopupHeader);
 	}
 	
 	public List <WebElement> getAllNotesList() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(allNotesList));
 		return driver.findElements(allNotesList);
 	}
 	public WebElement getVerifyNoteTitle() {
-			wait = new WebDriverWait (driver,30);
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 			wait.until(ExpectedConditions.visibilityOfElementLocated(verifyNoteTitle));
 			return driver.findElement(verifyNoteTitle);
 	}
 
 	public WebElement getProductFullScreenViewerBtn() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productfullscreenviewerbtn));
 		return driver.findElement(productfullscreenviewerbtn);
 	}
 	public WebElement getProductFullScreenViewer() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(productfullscreenviewer));
 		return driver.findElement(productfullscreenviewer);
 	}
 	public WebElement getProductFullScreenViewerTitle() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(prodfullscreenviewertitle));
 		return driver.findElement(prodfullscreenviewertitle);
 	}

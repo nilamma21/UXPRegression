@@ -1,6 +1,7 @@
 package lasvegasmarket_PROD;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -50,7 +51,7 @@ public class FloorPlans extends base {
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("lvmurl_prod"));
 		lap.getIUnderstandBtn().click();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(7000);
 		//lap.getCloseMarktAdBtn().click();
 
@@ -70,7 +71,7 @@ public class FloorPlans extends base {
 		utl = new Utility(driver);
 		lvmflpp= new LVMFloorPlansPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(5000);
 		// Click on Exh And Product Tab
 		lvmflpp.getLVMExhibitorsAndProductTab().click();
@@ -113,7 +114,7 @@ public class FloorPlans extends base {
 		utl = new Utility(driver);
 		lvmflpp= new LVMFloorPlansPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		// Click on Exh And Product Tab
 		lvmflpp.getLVMExhibitorsAndProductTab().click();
@@ -145,7 +146,7 @@ public class FloorPlans extends base {
 		lvmflpp=new LVMFloorPlansPage(driver);
 
 		driver.get(prop.getProperty("lvmurl_prod"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 
 		// Click on Exh And Product Tab
@@ -197,7 +198,7 @@ System.out.println("x2 "+x2);
 		lvmflpp=new LVMFloorPlansPage(driver);
 
 		driver.get(prop.getProperty("lvmurl_prod"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		// Click on Exh And Product Tab
 		lvmflpp.getLVMExhibitorsAndProductTab().click();
@@ -272,7 +273,7 @@ System.out.println("x2 "+x2);
         lvmflpp=new LVMFloorPlansPage(driver);
         
         driver.get(prop.getProperty("lvmurl_prod"));
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         Thread.sleep(2000);
         
         // Click on Exh And Product Tab
@@ -354,7 +355,7 @@ System.out.println("x2 "+x2);
 		lvmflpp=new LVMFloorPlansPage(driver);
 
 		driver.get(prop.getProperty("lvmurl_prod"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		// Click on Exh And Product Tab
 		lvmflpp.getLVMExhibitorsAndProductTab().click();
@@ -405,7 +406,7 @@ System.out.println("x2 "+x2);
 		lvmexhdgshw = new LVMExhDigiShowroomPage(driver);
 
 		driver.get(prop.getProperty("lvmurl_prod"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 
 		// Click on Exh And Product Tab
@@ -450,7 +451,7 @@ System.out.println("x2 "+x2);
 		lvmflpp=new LVMFloorPlansPage(driver);
 
 		driver.get(prop.getProperty("lvmurl_prod"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 
 		// Click on Exh And Product Tab
@@ -482,7 +483,7 @@ System.out.println("x2 "+x2);
 		lvmflpp=new LVMFloorPlansPage(driver);
 
 		driver.get(prop.getProperty("lvmurl_prod"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		
 		// Click on Exh And Product Tab
@@ -529,7 +530,7 @@ System.out.println("x2 "+x2);
 		lvmmppge = new LVMMarketPlannerPage(driver);
 		
 		driver.navigate().refresh();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		// Click on Exh And Product Tab
 		Thread.sleep(3000);
 		lvmflpp.getLVMExhibitorsAndProductTab().click();
@@ -599,7 +600,7 @@ System.out.println("x2 "+x2);
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		genData = new GenerateData();
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		// Click on Exh And Product Tab
 		lvmflpp.getLVMExhibitorsAndProductTab().click();
@@ -666,7 +667,7 @@ System.out.println("x2 "+x2);
 		lvmmppge = new LVMMarketPlannerPage(driver);
 		lap = new LVMLandingPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		// Click on Exh And Product Tab
 		lvmflpp.getLVMExhibitorsAndProductTab().click();

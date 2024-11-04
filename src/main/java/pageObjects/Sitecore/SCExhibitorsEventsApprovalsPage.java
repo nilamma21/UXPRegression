@@ -1,5 +1,6 @@
 package pageObjects.Sitecore;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -24,12 +25,12 @@ public class SCExhibitorsEventsApprovalsPage {
 	}
 
 	public WebElement getdigitalAdminPanelSearch1stEmail() throws InterruptedException {
-		wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(digitalAdminPanelSearch1stEmail));
 		return driver.findElement(digitalAdminPanelSearch1stEmail);
 	}
 	public WebElement geteventsApprovePageSeeMoreCTA() throws InterruptedException {
-		wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(eventsApprovePageSeeMoreCTA));
 		return driver.findElement(eventsApprovePageSeeMoreCTA);
 	}

@@ -1,5 +1,6 @@
 package pageObjects.LasVegasMarket;
 
+import java.time.Duration;
 import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -76,276 +77,276 @@ public class LVMEventsAndWebinarPage {
 		this.driver = driver; 			
 	}
 	public WebElement getlvmEventsDetailsPageDetailsSection() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventsDetailsPageDetailsSection));
 		return driver.findElement(lvmEventsDetailsPageDetailsSection);
 	}
 	public WebElement getlvmEventsDetailsPageCalendarLink() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventsDetailsPageCalendarLink));
 		return driver.findElement(lvmEventsDetailsPageCalendarLink);
 	}
 	public WebElement getlvmEventsDetailsPageTime() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventsDetailsPageTime));
 		return driver.findElement(lvmEventsDetailsPageTime);
 	}
 	public WebElement getlvmEventsDetailsPageDayMonthYear() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventsDetailsPageDayMonthYear));
 		return driver.findElement(lvmEventsDetailsPageDayMonthYear);
 	}
 	public WebElement getlvmEventsRegisterBtn() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventsRegisterBtn));
 		return driver.findElement(lvmEventsRegisterBtn);
 	}
 	public WebElement getlvmEventTypePROD() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventTypePROD));
 		return driver.findElement(lvmEventTypePROD);
 	}
 	public WebElement getlvmEventLocationLinkPROD() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventLocationLinkPROD));
 		return driver.findElement(lvmEventLocationLinkPROD);
 	}
 	public WebElement getlvmCurrentDate() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmCurrentDate));
 		return driver.findElement(lvmCurrentDate);
 	}
 	public WebElement getlvmListOfAllEventsDay() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmListOfAllEventsDay));
 		return driver.findElement(lvmListOfAllEventsDay);
 	}
 	public List <WebElement> getlvmListOfAllEventsDays() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmListOfAllEventsDay));
 		return driver.findElements(lvmListOfAllEventsDay);
 	}
 	public List <WebElement> getlvmListOfAllWeekDay() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmListOfAllWeekDay));
 		return driver.findElements(lvmListOfAllWeekDay);
 	}
 	public List <WebElement> getlvmListOfCalendarDates() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmListOfCalendarDates));
 		return driver.findElements(lvmListOfCalendarDates);
 	}
 
 	public WebElement getlvmCalendarIconUAT() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmCalendarIconUAT));
 		return driver.findElement(lvmCalendarIconUAT);
 	}
 	public WebElement getlvmEventTypeUAT() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventTypeUAT));
 		return driver.findElement(lvmEventTypeUAT);
 	}
 	public WebElement getlvmEventLocationLinkUAT() {
-		wait = new WebDriverWait (driver,40);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventLocationLinkUAT));
 		return driver.findElement(lvmEventLocationLinkUAT);
 	}
 	public WebElement getlvmEventNameOnDetailsPageUAT() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventNameOnDetailsPageUAT));
 		return driver.findElement(lvmEventNameOnDetailsPageUAT);
 	}
 	public WebElement getlvmaddtoseselectedbtn() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmaddtoseselectedbtn));
 		return driver.findElement(lvmaddtoseselectedbtn);
 	}
 	public WebElement getlvmClickOnEvent() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmClickOnEvent));
 		return driver.findElement(lvmClickOnEvent);
 	}
 	public WebElement getlvmSearchResultsTitle() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmSearchResultsTitle));
 		return driver.findElement(lvmSearchResultsTitle);
 	}
 	public WebElement getlvmEventsTag() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventsTag));
 		return driver.findElement(lvmEventsTag);
 	}
 	public WebElement getlvmTagIcon() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmTagIcon));
 		return driver.findElement(lvmTagIcon);
 	}
 	public WebElement getlvmCalendarIcon() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmCalendarIcon));
 		return driver.findElement(lvmCalendarIcon);
 	}
 	public WebElement getlvmNoteIcon() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmNoteIcon));
 		return driver.findElement(lvmNoteIcon);
 	}
 	public WebElement getlvmListIcon() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmListIcon));
 		return driver.findElement(lvmListIcon);
 	}
 	public WebElement getlvmFavIcon() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmFavIcon));
 		return driver.findElement(lvmFavIcon);
 	}
 	public WebElement getlvmEventType() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventType));
 		return driver.findElement(lvmEventType);
 	}
 	public WebElement getlvmEventLocationLink() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventLocationLink));
 		return driver.findElement(lvmEventLocationLink);
 	}
 	public WebElement getlvmEventNameOnDetailsPage() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventNameOnDetailsPage));
 		return driver.findElement(lvmEventNameOnDetailsPage);
 	}
 	public List <WebElement> lvmlvmListOfAllEventsSeeDetailsLink() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmListOfAllEventsSeeDetailsLink));
 		return driver.findElements(lvmListOfAllEventsSeeDetailsLink);
 	}
 	public List <WebElement> lvmListOfAllEventsImages() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmListOfAllEventsImages));
 		return driver.findElements(lvmListOfAllEventsImages);
 	}
 	public List <WebElement> getlvmListOfAllEventsLocations() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmListOfAllEventsLocations));
 		return driver.findElements(lvmListOfAllEventsLocations);
 	}
 	public List <WebElement> getlvmListOfAllEventsTime() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmListOfAllEventsTime));
 		return driver.findElements(lvmListOfAllEventsTime);
 	}
 	public List <WebElement> getlvmListOfAllEventsType() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmListOfAllEventsType));
 		return driver.findElements(lvmListOfAllEventsType);
 	}
 	public List <WebElement> getlvmListOfAllEvents() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmListOfAllEvents));
 		return driver.findElements(lvmListOfAllEvents);
 	}
 	public List <WebElement> getlvmListOfEventTitles() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmListOfEventTitles));
 		return driver.findElements(lvmListOfEventTitles);
 	}
 	public WebElement getlvmExploreMarketTab() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmExploreMarketTab));
 		return driver.findElement(lvmExploreMarketTab);
 	}
 	public WebElement getlvmResetBtn() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmResetBtn));
 		return driver.findElement(lvmResetBtn);
 	}
 	public List <WebElement> getlvmListOflvmSelectAnyDate() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmSelectAnyDate));
 		return driver.findElements(lvmSelectAnyDate);
 	}
 	public WebElement getlvmCalendarPrevMonth() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmCalendarPrevMonth));
 		return driver.findElement(lvmCalendarPrevMonth);
 	}
 	public WebElement getlvmTodaysDate() throws InterruptedException {
 	  Thread.sleep(2000);
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmTodaysDate));
 		return driver.findElement(lvmTodaysDate);
 	}
 	public WebElement getlvmSelectMonth() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmSelectMonth));
 		return driver.findElement(lvmSelectMonth);
 	}
 	public List <WebElement> getlvmListOfEventDate() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmListOfEventDate));
 		return driver.findElements(lvmListOfEventDate);
 	}
 	public WebElement getlvmCalendarNextMonthBtn() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmCalendarNextMonthBtn));
 		return driver.findElement(lvmCalendarNextMonthBtn);
 	}
 	public WebElement getlvmEventDateAndMonth() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventDateAndMonth));
 		return driver.findElement(lvmEventDateAndMonth);
 	}
 	public WebElement getlvmEventSearchIcon() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventSearchIcon));
 		return driver.findElement(lvmEventSearchIcon);
 	}
 	public WebElement getlvmEventName() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventName));
 		return driver.findElement(lvmEventName);
 	}
 	public WebElement getlvmEventsSearchBar() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventsSearchBar));
 		return driver.findElement(lvmEventsSearchBar);
 	}
 	public WebElement getlvmEventsCalendar() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventsCalendar));
 		return driver.findElement(lvmEventsCalendar);
 	}
 	public WebElement getlvmImcEventsTab() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmImcEventsTab));
 		return driver.findElement(lvmImcEventsTab);
 	}
 
 	public WebElement getlvmExhibitorsEventsTab() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(lvmExhibitorsEventsTab));
 		return driver.findElement(lvmExhibitorsEventsTab);
 	}
 	public WebElement getlvmAttendTab() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmAttendTab));
 		return driver.findElement(lvmAttendTab);
 	}
 
 	public WebElement getlvmEventsLink() {
-		wait = new WebDriverWait (driver,30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(lvmEventsLink));
 		return driver.findElement(lvmEventsLink);
 	}
     public WebElement getlvmEventDateAndMonthFromCard() {
-      wait = new WebDriverWait (driver,30);
+      WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
       wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventDateAndMonthFromCard));
       return driver.findElement(lvmEventDateAndMonthFromCard);
   }
     public WebElement getlvmEventCardFirstExhName() {
-      wait = new WebDriverWait (driver,30);
+      WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
       wait.until(ExpectedConditions.visibilityOfElementLocated(lvmEventCardFirstExhName));
       return driver.findElement(lvmEventCardFirstExhName);
   }

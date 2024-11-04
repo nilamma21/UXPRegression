@@ -1,6 +1,7 @@
 package lasvegasmarket_UAT;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -61,7 +62,7 @@ public class FloorPlans extends base {
         driver.manage().window().maximize();
         driver.get(prop.getProperty("lvmurl_uat"));
         lap.getIUnderstandBtn().click();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         Thread.sleep(7000);
 
   }
@@ -74,7 +75,7 @@ public class FloorPlans extends base {
 		utl = new Utility(driver);
 		lvmflpp= new LVMFloorPlansPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(5000);
 		// Click on Exh And Product Tab
 		lvmflpp.getLVMExhibitorsAndProductTab().click();
@@ -117,7 +118,7 @@ public class FloorPlans extends base {
 		utl = new Utility(driver);
 		lvmflpp= new LVMFloorPlansPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		// Click on Exh And Product Tab
 		lvmflpp.getLVMExhibitorsAndProductTab().click();
@@ -148,7 +149,7 @@ public class FloorPlans extends base {
 		utl = new Utility(driver);
 		lvmflpp=new LVMFloorPlansPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		// Click on Exh And Product Tab
 		lvmflpp.getLVMExhibitorsAndProductTab().click();
@@ -199,7 +200,7 @@ System.out.println("x2 "+x2);
 		lvmflpp=new LVMFloorPlansPage(driver);
 
 		driver.get(prop.getProperty("lvmurl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		// Click on Exh And Product Tab
 		lvmflpp.getLVMExhibitorsAndProductTab().click();
@@ -276,7 +277,7 @@ System.out.println("x2 "+x2);
 		lvmflpp=new LVMFloorPlansPage(driver);
 
 		driver.get(prop.getProperty("lvmurl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		// Click on Exh And Product Tab
 		lvmflpp.getLVMExhibitorsAndProductTab().click();
@@ -324,7 +325,7 @@ System.out.println("x2 "+x2);
 		lvmexhdgshw = new LVMExhDigiShowroomPage(driver);
 
 		driver.get(prop.getProperty("lvmurl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 
 		// Click on Exh And Product Tab
@@ -369,7 +370,7 @@ System.out.println("x2 "+x2);
 		lvmflpp=new LVMFloorPlansPage(driver);
 
 		driver.get(prop.getProperty("lvmurl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 
 		// Click on Exh And Product Tab
@@ -401,7 +402,7 @@ System.out.println("x2 "+x2);
 		lvmflpp=new LVMFloorPlansPage(driver);
 
 		driver.get(prop.getProperty("lvmurl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		
 		// Click on Exh And Product Tab
@@ -449,7 +450,7 @@ System.out.println("x2 "+x2);
         atlflpp = new ATLFloorPlansPage(driver);
         atlmppge = new ATLMarketPlannerPage(driver);
         driver.navigate().refresh();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         // Click on Exh And Product Tab
         Thread.sleep(3000);
         atlflpp.getATLExhibitorsAndProductTab().click();
@@ -520,7 +521,7 @@ System.out.println("x2 "+x2);
         genData = new GenerateData();
         atlexhact = new ATLExhLineProdActionsPage(driver);
 
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         Thread.sleep(2000);
         // Click on Exh And Product Tab
         atlflpp.getATLExhibitorsAndProductTab().click();
@@ -587,7 +588,7 @@ System.out.println("x2 "+x2);
         atlflpp = new ATLFloorPlansPage(driver);
         atlmppge = new ATLMarketPlannerPage(driver);
 
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         Thread.sleep(2000);
         // Click on Exh And Product Tab
         atlflpp.getATLExhibitorsAndProductTab().click();
@@ -652,7 +653,7 @@ System.out.println("x2 "+x2);
         utl = new Utility(driver);
         lvmflpp=new LVMFloorPlansPage(driver);
         
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         // Click on Exh And Product Tab
         lvmflpp.getLVMExhibitorsAndProductTab().click();
         Thread.sleep(2000);

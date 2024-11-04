@@ -1,5 +1,7 @@
 package pageObjects.Sitecore;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -32,74 +34,74 @@ public class SCDashboard {
 		this.driver = driver;
 	}
 	public WebElement getSC_ContentEditorIMCLVMHomeEventsLastPage() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(SC_ContentEditorIMCLVMHomeEventsLastPage));
 		return driver.findElement(SC_ContentEditorIMCLVMHomeEventsLastPage);
 	}
 	public WebElement getSC_ContentEditorIMCLVMHomeEventsFirstFolderSubFolder2() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(SC_ContentEditorIMCLVMHomeEventsFirstFolderSubFolder2));
 		return driver.findElement(SC_ContentEditorIMCLVMHomeEventsFirstFolderSubFolder2);
 	}
 	public WebElement getSC_ContentEditorIMCLVMHomeEventsFirstFolderSubFolder1() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(SC_ContentEditorIMCLVMHomeEventsFirstFolderSubFolder1));
 		return driver.findElement(SC_ContentEditorIMCLVMHomeEventsFirstFolderSubFolder1);
 	}
 	public WebElement getSC_ContentEditorIMCLVMHomeEventsFirstFolderSubFolder() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(SC_ContentEditorIMCLVMHomeEventsFirstFolderSubFolder));
 		return driver.findElement(SC_ContentEditorIMCLVMHomeEventsFirstFolderSubFolder);
 	}
 	public WebElement getSC_ContentEditorIMCLVMHomeEventsFirstFolder() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(SC_ContentEditorIMCLVMHomeEventsFirstFolder));
 		return driver.findElement(SC_ContentEditorIMCLVMHomeEventsFirstFolder);
 	}
 	public WebElement getSC_ContentEditorIMCLVMHomeEventYearFolder() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(SC_ContentEditorIMCLVMHomeEventYearFolder));
 		return driver.findElement(SC_ContentEditorIMCLVMHomeEventYearFolder);
 	}
 	
 	public WebElement getSC_ContentEditorIMCLVMHome() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(SC_ContentEditorIMCLVMHome));
 		return driver.findElement(SC_ContentEditorIMCLVMHome);
 	}
 	
 	public WebElement getSC_ContentEditorIMCLVMHomeEvents() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(SC_ContentEditorIMCLVMHomeEvents));
 		return driver.findElement(SC_ContentEditorIMCLVMHomeEvents);
 	}
 	public WebElement getSC_ContentEditorIMCLVM() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(SC_ContentEditorIMCLVM));
 		return driver.findElement(SC_ContentEditorIMCLVM);
 	}
 	public WebElement getSC_ContentEditorIMCDropdown() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(SC_ContentEditorIMCDropdown));
 		return driver.findElement(SC_ContentEditorIMCDropdown);
 	}
 	public WebElement getSC_ContentEditor() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(SC_ContentEditor));
 		return driver.findElement(SC_ContentEditor);
 	}
 	public WebElement getSC_DashboardCTA() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(SC_DashboardCTA));
 		return driver.findElement(SC_DashboardCTA);
 	}
 	public WebElement getShowSpecialApprovals() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(showspecialapprovalsmenu));
 		return driver.findElement(showspecialapprovalsmenu);
 	}
 	public WebElement getExhEventsApprovals() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(exheventsapprovalmenu));
 		return driver.findElement(exheventsapprovalmenu);
 	}

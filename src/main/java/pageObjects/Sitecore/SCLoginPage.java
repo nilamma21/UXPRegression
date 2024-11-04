@@ -1,5 +1,7 @@
 package pageObjects.Sitecore;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -21,18 +23,18 @@ public class SCLoginPage {
 	}
 
 	public WebElement getSCUsername() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(scusername));
 		return driver.findElement(scusername);
 	}
 	
 	public WebElement getSCPassword() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(scpassword));
 		return driver.findElement(scpassword);
 	}
 	public WebElement getSCLoginbtn() throws InterruptedException {
-		wait = new WebDriverWait (driver,20);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(scloginbtn));
 		return driver.findElement(scloginbtn);
 

@@ -1,6 +1,7 @@
 package atlantamarket_UAT;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -77,7 +78,7 @@ public class GlobalSearch_LineActions extends base {
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 		
@@ -108,7 +109,7 @@ public class GlobalSearch_LineActions extends base {
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 		
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
@@ -140,7 +141,7 @@ public class GlobalSearch_LineActions extends base {
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 		
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
@@ -191,7 +192,7 @@ public class GlobalSearch_LineActions extends base {
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 		
 		driver.get(prop.getProperty("atlmrkturl_uat"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
@@ -240,7 +241,7 @@ public class GlobalSearch_LineActions extends base {
 
         // Click on Login button from Landing Page
         lap.getLogin().click();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         // Enter the credentials on Login Page and click
         lp.getEmailAddress().sendKeys((prop.getProperty("username")));
 
@@ -269,7 +270,7 @@ public class GlobalSearch_LineActions extends base {
         lap = new ATLLandingPage(driver);
 
         //driver.get(prop.getProperty("atlmrkturl_uat"));
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         utl.loginCheckATL();
         //Thread.sleep(6000);
         //lap.getCloseMarktAdBtn().click();
@@ -334,7 +335,7 @@ public class GlobalSearch_LineActions extends base {
         lap = new ATLLandingPage(driver);
         
         driver.get(prop.getProperty("atlmrkturl_uat"));
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         Thread.sleep(6000);
         //lap.getCloseMarktAdBtn().click();
 
@@ -379,7 +380,7 @@ public class GlobalSearch_LineActions extends base {
         lap = new ATLLandingPage(driver);
 
         driver.get(prop.getProperty("atlmrkturl_uat"));
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         Thread.sleep(6000);
         //lap.getCloseMarktAdBtn().click();
         
@@ -441,7 +442,7 @@ public class GlobalSearch_LineActions extends base {
         lap = new ATLLandingPage(driver);
         
         driver.get(prop.getProperty("atlmrkturl_uat"));
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         Thread.sleep(6000);
         //lap.getCloseMarktAdBtn().click();
 

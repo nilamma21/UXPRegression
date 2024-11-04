@@ -2,6 +2,7 @@ package lasvegasmarket_UAT;
 
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -85,7 +86,7 @@ public class GlobalSearch_LineActions extends base {
 		lvmmppge = new LVMMarketPlannerPage(driver);
 		utl = new Utility(driver);
 		lvmexhdgshw = new LVMExhDigiShowroomPage(driver);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		driver.get(prop.getProperty("lvmurl_uat"));;
 		Thread.sleep(6000);
@@ -117,7 +118,7 @@ public class GlobalSearch_LineActions extends base {
 		lvmmppge = new LVMMarketPlannerPage(driver);
 		utl = new Utility(driver);
 		
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		driver.get(prop.getProperty("lvmurl_uat"));;
 		Thread.sleep(6000);
@@ -149,7 +150,7 @@ public class GlobalSearch_LineActions extends base {
 		lvmmppge = new LVMMarketPlannerPage(driver);
 		utl = new Utility(driver);
 		
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		driver.get(prop.getProperty("lvmurl_uat"));;
 		Thread.sleep(6000);
@@ -199,7 +200,7 @@ public class GlobalSearch_LineActions extends base {
 		lvmmppge = new LVMMarketPlannerPage(driver);
 		utl = new Utility(driver);
 		
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		driver.get(prop.getProperty("lvmurl_uat"));;
 		Thread.sleep(6000);
@@ -253,7 +254,7 @@ public class GlobalSearch_LineActions extends base {
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		lap = new LVMLandingPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearchlineinput"));
 		lvmgs.getLVMSearchButton().click();
@@ -293,7 +294,7 @@ public class GlobalSearch_LineActions extends base {
 		lvmmppge = new LVMMarketPlannerPage(driver);
 		lap = new LVMLandingPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		driver.get(prop.getProperty("lvmurl_uat"));;
 		Thread.sleep(6000);
@@ -360,7 +361,7 @@ public class GlobalSearch_LineActions extends base {
 		lvmmppge = new LVMMarketPlannerPage(driver);
 		lap = new LVMLandingPage(driver);
 		
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		driver.get(prop.getProperty("lvmurl_uat"));;
 		Thread.sleep(6000);
@@ -404,7 +405,7 @@ public class GlobalSearch_LineActions extends base {
 		genData = new GenerateData();
 		lap = new LVMLandingPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		driver.get(prop.getProperty("lvmurl_uat"));;
 		Thread.sleep(6000);
@@ -467,7 +468,7 @@ public class GlobalSearch_LineActions extends base {
 		lvmmppge = new LVMMarketPlannerPage(driver);
 		lap = new LVMLandingPage(driver);
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		driver.get(prop.getProperty("lvmurl_uat"));;
 		Thread.sleep(6000);

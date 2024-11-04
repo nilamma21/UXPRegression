@@ -1,6 +1,7 @@
 package lasvegasmarket_PROD;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -57,7 +58,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("lvmurl_prod"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(7000);
 		//lap.getCloseMarktAdBtn().click();
@@ -81,7 +82,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		lvmdigish=new LVMLineDigitalShowroomPage(driver);
 
 		//driver.get(prop.getProperty("lvmurl_prod"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		//lap.getCloseMarktAdBtn().click();
 
@@ -125,7 +126,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		lap = new LVMLandingPage(driver);
 
 		driver.get(prop.getProperty("lvmurl_prod"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
@@ -154,7 +155,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		lap = new LVMLandingPage(driver);
 
 		driver.get(prop.getProperty("lvmurl_prod"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
@@ -188,7 +189,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		lap = new LVMLandingPage(driver);
 
 		driver.get(prop.getProperty("lvmurl_prod"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 		
@@ -237,7 +238,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		lap = new LVMLandingPage(driver);
 		
 		driver.get(prop.getProperty("lvmurl_prod"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
@@ -283,7 +284,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		lap = new LVMLandingPage(driver);
 
 		driver.get(prop.getProperty("lvmurl_prod"));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(6000);
 		//lap.getCloseMarktAdBtn().click();
 
@@ -323,7 +324,7 @@ public class GlobalSearch_ExhibitorActions extends base {
         lap = new LVMLandingPage(driver);
         atlmppge = new ATLMarketPlannerPage(driver);
 
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
         atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
         atlgs.getATLSearchButton().click();
@@ -373,7 +374,7 @@ public class GlobalSearch_ExhibitorActions extends base {
         genData = new GenerateData();
         
         driver.get(prop.getProperty("lvmurl_prod"));
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         
         Thread.sleep(6000);
         //lap.getCloseMarktAdBtn().click();
@@ -433,7 +434,7 @@ public class GlobalSearch_ExhibitorActions extends base {
         
         driver.navigate().refresh();
         driver.get(prop.getProperty("lvmurl_prod"));
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         Thread.sleep(6000);
         //lap.getCloseMarktAdBtn().click();
         
@@ -510,7 +511,7 @@ public class GlobalSearch_ExhibitorActions extends base {
         genData = new GenerateData();
         
         driver.get(prop.getProperty("lvmurl_prod"));
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         Thread.sleep(6000);
         //lap.getCloseMarktAdBtn().click();
 
@@ -529,7 +530,7 @@ public class GlobalSearch_ExhibitorActions extends base {
         atlexhact.getMatchingProdAddNoteIcon().click();
 
         // Verify that Add note for selected exhibitor modal should be displayed
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         WebElement addnotemodaltitle = driver
                 .findElement(By.xpath("//h4[contains(text(),'Add a Note For " + exhname + "')]"));
         Assert.assertTrue(addnotemodaltitle.isDisplayed());
