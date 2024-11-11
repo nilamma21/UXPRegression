@@ -89,12 +89,25 @@ public class LVMExhLineProdActionsPage {
 	By CatalogitemPROD = By.xpath("(//div[@class='imc-catalog__item_title multiSelectItem']/div)[1]");
 	By eventdetailsheaderLVM = By.xpath("//div[@class='imc-eventdetail--header']/div[2]/section[1]/div[1]/h1[1]");
 	By eventFirstExNameLVM = By.xpath("(//div[@class='event-card--multi-card-container'])[1]/div[1]/div[1]/div[1]/div[1]/a[1]");
+	By digiShowroomFilterLVM = By.xpath("//h4[text()='Digital Showroom']");
+	By digiShowroomFilterCatalogsLVM = By.xpath("//label[@for='filteritem638']");
+	
+	
 	
 	public LVMExhLineProdActionsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 	}
-	
+	public WebElement getdigiShowroomFilterCatalogsLVM() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(digiShowroomFilterCatalogsLVM));
+		return driver.findElement(digiShowroomFilterCatalogsLVM);
+	}
+	public WebElement getdigiShowroomFilterLVM() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(digiShowroomFilterLVM));
+		return driver.findElement(digiShowroomFilterLVM);
+	}
 	public WebElement getcatalogitemLVMPROD() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(catalogitemLVMPROD));

@@ -137,10 +137,45 @@ public class LVMGlobalSearchPage {
 	
 	By lvmGlobalSearchEventTypeFilterResult = By.xpath("//h4[contains(text(),'Event Types')]/following::label[1]"); //Locator for Global Search Sort Btn
 	
+	By GlobalSearchTextBoxNew = By.xpath("//button[@class='imc-button imc-button--search imc-button--transparent-mobile-header imc-button--transparent juniper-search-v3 ']"); // Locator for Global Search field 
+	By SearchButtonNew = By.xpath("(//div[@class = 'imc-searchform--button--search'])[2]"); //Locator for Seach button for global search
+	
+	By VerifyGlobalSeacrhNew = By.xpath("//section[@class = 'imc-searchform--section  ']/span[1]/div[1]"); // Locator for global search verification
+	
+	By GlobalSearchEnterText = By.xpath("//div[@class='top-nav-dropdown-grid imc-content--relative']/div/div/section/div/form/div/input"); // Locator for Global Search field
+	
+	
+	
+	
+	
 	public LVMGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 		PageFactory.initElements(driver, this);
+	}
+	public WebElement getGlobalSearchEnterText() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(GlobalSearchEnterText));
+		return driver.findElement(GlobalSearchEnterText);
+
+	}
+
+	public WebElement getVerifyGlobalSeacrhNew() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(VerifyGlobalSeacrhNew));
+		return driver.findElement(VerifyGlobalSeacrhNew);
+
+	}
+	public WebElement getSearchButtonNew() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(SearchButtonNew));
+		return driver.findElement(SearchButtonNew);
+
+	}
+	public WebElement getGlobalSearchTextBoxNew() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(GlobalSearchTextBoxNew));
+		return driver.findElement(GlobalSearchTextBoxNew);
 	}
 	public WebElement lvmGlobalSearchEventTypeFilterResult() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
