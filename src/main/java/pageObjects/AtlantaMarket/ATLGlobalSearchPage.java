@@ -129,6 +129,9 @@ public class ATLGlobalSearchPage {
 	
 	By atlproductlNameList= By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li/span/span/span[contains(text(),'Product')]"); //Locator for Product suggestion search list
 	
+	
+	
+	
 	public ATLGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			

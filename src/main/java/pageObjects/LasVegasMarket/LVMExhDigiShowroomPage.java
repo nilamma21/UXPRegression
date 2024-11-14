@@ -119,11 +119,24 @@ public class LVMExhDigiShowroomPage {
 	
 	By LinesOptionListText = By.xpath("//div[@class = 'imc-manufacturing-line']/div[2]/a[1]"); //Locator for Lines option text
 	By catalogNameTitle = By.xpath("//div[@class='imc-pdfview--display']/div/h1[1]"); //Locator for Catalog name text
+	By locationLinkNew = By.xpath("//section[@class='imc-site-wrapper']/div[2]/div[1]/div[3]/div/div/div[2]/div/span[2]/a"); //Locator for Catalog name text
+	By lineSearchButtonNew = By.xpath("(//div[@class = 'imc-searchform--button--search']/button[@type='submit'])[3]"); //Locator for Catalog name text
+	
+	
 	
 	public LVMExhDigiShowroomPage(WebDriver driver) {
 		this.driver = driver;
 	}
-	
+	public WebElement getlineSearchButtonNew() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lineSearchButtonNew));
+		return driver.findElement(lineSearchButtonNew);
+	}
+	public WebElement getlocationLinkNew() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(locationLinkNew));
+		return driver.findElement(locationLinkNew);
+	}
 	public WebElement getcatalogNameTitle() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(catalogNameTitle));
