@@ -71,17 +71,17 @@ public class ExhibitorDigitalShowroom extends base {
 
 		// driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Thread.sleep(3000);
+		Thread.sleep(8000);
 
 		// lap.getCloseMarktAdBtn().click();
 		lvmgs.getGlobalSearchTextBoxNew().click();
 		lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("globalsearchinput")));
 		Thread.sleep(1000);
 		lvmgs.getSearchButtonNew().click();
-		Thread.sleep(15000);
+		//Thread.sleep(15000);
 
 		// Click on any of the Location link present in Exhibitor card and verify result
-		lvmds.getExhibitorName().click();
+		lvmds.getExhibitorNameNew().click();
 		Thread.sleep(5000);
 		String locationlink = lvmds.getlocationLinkNew().getAttribute("href");
 		System.out.println("Location link is: " + locationlink);
@@ -121,12 +121,13 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmgs.getSearchButtonNew().click();
 		Thread.sleep(15000);
 
+		
 		// Store the 1st Exhibitor name in String variable
-		exhname = lvmexhact.getExhibitorName().getText();
+		exhname = lvmds.getExhibitorNameNew().getText();
 		System.out.println("Exhibitor name: " + exhname);
 
 		// Get the Total Lines count on Search grid
-		lvmds.getExhibitorName().click();
+		lvmds.getExhibitorNameNew().click();
 		Thread.sleep(5000);
 		utl.scrollToElement(lvmds.getLinesSection());
 		String temp = lvmds.getLinesSection().getText();
@@ -153,7 +154,8 @@ public class ExhibitorDigitalShowroom extends base {
 		// Get back to Exhibitor Showroom page and click any one Line and verify if Line
 		// details
 		// are displayed properly
-		lvmds.getProductsPageBackButton().click();
+		//lvmds.getProductsPageBackButton().click();
+		driver.navigate().back();
 		utl.scrollToElement(lvmds.getAllProductsButton());
 
 		String linetext = lvmds.getLinesOptionText().getText();
@@ -185,11 +187,11 @@ public class ExhibitorDigitalShowroom extends base {
 		Thread.sleep(15000);
 
 		// Store the 1st Exhibitor name in String variable
-		exhname = lvmexhact.getExhibitorName().getText();
+		exhname = lvmds.getExhibitorNameNew().getText();
 		System.out.println("Exhibitor name: " + exhname);
 
 		// Get the Total Products count on Search grid
-		lvmds.getExhibitorName().click();
+		lvmds.getExhibitorNameNew().click();
 		Thread.sleep(7000);
 		utl.scrollToElement(lvmds.getProductSection());
 		String temp = lvmds.getProductSection().getText();
@@ -215,7 +217,8 @@ public class ExhibitorDigitalShowroom extends base {
 		// Get back to Exhibitor Showroom page and click any one product and verify if
 		// product details
 		// are displayed properly
-		lvmds.getProductsPageBackButton().click();
+		//lvmds.getProductsPageBackButton().click();
+		driver.navigate().back();
 		utl.scrollToElement(lvmds.getProductSection());
 		String producttext = lvmds.getProductText().getText();
 		System.out.println(producttext);
@@ -246,11 +249,11 @@ public class ExhibitorDigitalShowroom extends base {
 		Thread.sleep(15000);
 
 		// Store the 1st Exhibitor name in String variable
-		exhname = lvmexhact.getExhibitorName().getText();
+		exhname = lvmds.getExhibitorNameNew().getText();
 		System.out.println("Exhibitor name: " + exhname);
 
 		// Get the Total Lines count on Search grid
-		lvmds.getExhibitorName().click();
+		lvmds.getExhibitorNameNew().click();
 		Thread.sleep(5000);
 		utl.scrollToElement(lvmds.getProductSection());
 
@@ -286,7 +289,7 @@ public class ExhibitorDigitalShowroom extends base {
 		Thread.sleep(15000);
 
 		// Click on the 1st Exhibitor name
-		lvmds.getExhibitorName().click();
+		lvmds.getExhibitorNameNew().click();
 		Thread.sleep(5000);
 		// utl.scrollToElement(lvmds.getLinesSection());
 		utl.scrollToElement(lvmds.getProductSection());
@@ -295,9 +298,9 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmds.getLineSearch().click();
 		lvmds.getLineSearch().sendKeys(prop.getProperty("line2"));
 		// lvmds.getLineSearchButton().click();
-		lvmds.getlineSearchButtonNew().click();
+		lvmds.getlineSearchButtonNewPROD().click();
 		Thread.sleep(5000);
-		Assert.assertTrue(lvmds.getVerifyLineSearch().getText().contains(prop.getProperty("line2")));
+		Assert.assertTrue(lvmds.getVerifyLineSearchNew().getText().contains(prop.getProperty("line2")));
 	}
 
 	@Test(priority = 6)
@@ -326,10 +329,11 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmgs.getSearchButtonNew().click();
 		Thread.sleep(15000);
 		// Store the 1st Exhibitor name in String variable
-		exhname = lvmexhact.getExhibitorName().getText();
+		exhname = lvmds.getExhibitorNameNew().getText();
 		System.out.println("Exhibitor name: " + exhname);
 		// Get the Total Lines count on Search grid
-		lvmds.getExhibitorName().click();
+		lvmds.getExhibitorNameNew().click();
+		//lvmds.getExhibitorName().click();
 		Thread.sleep(5000);
 		// Scroll to Line Section
 		utl.scrollToElement(lvmds.getProductSection());
@@ -366,9 +370,10 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmgs.getSearchButtonNew().click();
 		Thread.sleep(15000);
 		// Store the 1st Exhibitor name in String variable
-		exhname = lvmexhact.getExhibitorName().getText();
+		
+		exhname = lvmds.getExhibitorNameNew().getText();
 		System.out.println("Exhibitor name: " + exhname);
-		lvmds.getExhibitorName().click();
+		lvmds.getExhibitorNameNew().click();
 		Thread.sleep(5000);
 
 		// Scroll to Product Section
@@ -406,11 +411,11 @@ public class ExhibitorDigitalShowroom extends base {
 		Thread.sleep(15000);
 
 		// Store the 1st Exhibitor name in String variable
-		exhname = lvmexhact.getExhibitorName().getText();
+		exhname = lvmds.getExhibitorNameNew().getText();
 		System.out.println("Exhibitor name: " + exhname);
-
+		
 		// Get the Total Lines count on Search grid
-		lvmds.getExhibitorName().click();
+		lvmds.getExhibitorNameNew().click();
 		Thread.sleep(8000);
 
 		// Click See in Other Market button and verify if the page opens
@@ -459,23 +464,35 @@ public class ExhibitorDigitalShowroom extends base {
 		 * lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));
 		 * Thread.sleep(5000); lvmgs.getLVMSearchButton().click(); Thread.sleep(15000);
 		 */
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 
 		lvmgs.getGlobalSearchTextBoxNew().click();
 		lvmgs.getGlobalSearchEnterText().sendKeys("   ");
 		Thread.sleep(1000);
 		lvmgs.getSearchButtonNew().click();
+		Thread.sleep(20000);
+
+		
+		//utl.scrollToElement(lvmexhact.getdigiShowroomFilterLVMNew());
+		Thread.sleep(3000);
+		lvmexhact.getdigiShowroomFilterLVMNew().click();
+		Thread.sleep(3000);
+		lvmexhact.getleftPaneFilterDGShowroomCatalogNew().click();
 		Thread.sleep(15000);
 
-		lvmexhact.getdigiShowroomFilterLVM().click();
-		lvmexhact.getleftPaneFilterDGShowroomCatalog().click();
-		Thread.sleep(5000);
-
 		// Store the 1st Exhibitor name in String variable
-		exhname = lvmexhact.getExhibitorName().getText();
+		/*
+		 * exhname = lvmexhact.getExhibitorName().getText();
+		 * System.out.println("Exhibitor name: " + exhname);
+		 * lvmds.getExhibitorName().click(); Thread.sleep(5000);
+		 */
+		exhname = lvmds.getExhibitorNameNew().getText();
 		System.out.println("Exhibitor name: " + exhname);
-		lvmds.getExhibitorName().click();
-		Thread.sleep(5000);
+		
+		// Get the Total Lines count on Search grid
+		lvmds.getExhibitorNameNew().click();
+		Thread.sleep(8000);
+
 
 		// Scroll to Catalog Section
 		// utl.scrollToElement(lvmds.getLVMCatalogSection());
@@ -514,12 +531,19 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmgs.getSearchButtonNew().click();
 		Thread.sleep(15000);
 
-		// Store the 1st Exhibitor name in String variable
-		exhname = lvmexhact.getExhibitorName().getText();
+		/*
+		 * // Store the 1st Exhibitor name in String variable exhname =
+		 * lvmexhact.getExhibitorName().getText(); System.out.println("Exhibitor name: "
+		 * + exhname);
+		 * 
+		 * lvmds.getExhibitorName().click(); Thread.sleep(5000);
+		 */
+		
+		exhname = lvmds.getExhibitorNameNew().getText();
 		System.out.println("Exhibitor name: " + exhname);
-
-		lvmds.getExhibitorName().click();
-		Thread.sleep(5000);
+		
+		lvmds.getExhibitorNameNew().click();
+		Thread.sleep(8000);
 		String visitURL = lvmds.getHeroComponentVisitPROD().getAttribute("href");
 		String newURL;
 		if (visitURL.contains("http://")) {
@@ -573,12 +597,18 @@ public class ExhibitorDigitalShowroom extends base {
 		Thread.sleep(1000);
 		lvmgs.getSearchButtonNew().click();
 		Thread.sleep(15000);
-		// Store the 1st Exhibitor name in String variable
-		exhname = lvmexhact.getExhibitorName().getText();
+		/*
+		 * // Store the 1st Exhibitor name in String variable exhname =
+		 * lvmexhact.getExhibitorName().getText(); System.out.println("Exhibitor name: "
+		 * + exhname);
+		 * 
+		 * lvmds.getExhibitorName().click(); Thread.sleep(5000);
+		 */
+		exhname = lvmds.getExhibitorNameNew().getText();
 		System.out.println("Exhibitor name: " + exhname);
-
-		lvmds.getExhibitorName().click();
-		Thread.sleep(5000);
+		
+		lvmds.getExhibitorNameNew().click();
+		Thread.sleep(8000);
 
 		// Click on Hero Component Visit
 		lvmds.getView3DshowroomBtn().click();
@@ -603,34 +633,60 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmevents = new LVMEventsAndWebinarPage(driver);
 
 		driver.get(prop.getProperty("lvmurl_prod"));
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		/*
 		 * Thread.sleep(3000); String abc = utl.LVMExhibitorWithEvent();
 		 * //utl.scrollToElement(lvmgs.getLVMGlobalSearchTextBox());
 		 * lvmgs.getLVMGlobalSearchTextBox().sendKeys(abc); // Thread.sleep(5000);
 		 * lvmgs.getLVMSearchButton().click(); Thread.sleep(10000);
 		 */
+		Thread.sleep(10000);
+		//click on Discover tab
+		lvmgs.getLvmDiscoverTab().click();
+		//Click on Events menu
+		lvmgs.getLvmEventsMenu().click();
+		Thread.sleep(5000);
+		//Click on Exhibitor events
+		lvmgs.getLvmExhibitorEvents().click();
+		Thread.sleep(3000);
+		//copy exhibitor name
+		String exhbName=lvmgs.getLvmEventExhibitorName().getText();
+		
 		Thread.sleep(3000);
 	    lvmgs.getGlobalSearchTextBoxNew().click();
-	    lvmgs.getGlobalSearchEnterText().sendKeys(prop.getProperty("exhibitor11"));
-		Thread.sleep(1000);
-		lvmgs.getSearchButtonNew().click();
-	    Thread.sleep(15000);
-		// utl.scrollToElement(lvmexhact.geteventFirstExNameLVM());
-		// Store the 1st Exhibitor name in String variable
-		exhname = lvmexhact.geteventFirstExNameLVM().getText();
+	    lvmgs.getGlobalSearchEnterText().sendKeys(exhbName);
+	    lvmgs.getSearchButtonNew().click();
+		Thread.sleep(20000);
+		/*
+		 * // Store the 1st Exhibitor name in String variable exhname =
+		 * lvmexhact.getExhibitorName().getText(); System.out.println("Exhibitor name: "
+		 * + exhname);
+		 * 
+		 * lvmds.getExhibitorName().click(); Thread.sleep(5000);
+		 */
+		exhname = lvmds.getExhibitorNameNew().getText();
 		System.out.println("Exhibitor name: " + exhname);
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys(exhname);
-		Thread.sleep(5000);
-		lvmgs.getLVMSearchButton().click();
+		
+		lvmds.getExhibitorNameNew().click();
 		Thread.sleep(10000);
-		lvmds.getExhibitorName().click();
-		Thread.sleep(5000);
+		/*
+		 * lvmgs.getSearchButtonNew().click(); Thread.sleep(15000); //
+		 * utl.scrollToElement(lvmexhact.geteventFirstExNameLVM()); // Store the 1st
+		 * Exhibitor name in String variable exhname =
+		 * lvmexhact.geteventFirstExNameLVM().getText();
+		 * System.out.println("Exhibitor name: " + exhname);
+		 * lvmgs.getLVMGlobalSearchTextBox().sendKeys(exhname); Thread.sleep(5000);
+		 * lvmgs.getLVMSearchButton().click(); Thread.sleep(10000);
+		 * lvmds.getExhibitorName().click(); Thread.sleep(5000);
+		 */
 		// Scroll to Line Section
 		// utl.scrollToElement(lvmds.getEventsSection());
 		// Click on See All Events Btn
 
-		lvmds.getSeeAllEventsBtn().click();
+		//utl.scrollToElement(lvmds.getEventsSection());
+		Thread.sleep(8000);
+		lvmds.getseeAllEventButton().click();
+		//lvmds.getseeAllEventButton().click();
 		Thread.sleep(2000);
 		/*
 		 * Assert.assertTrue(lvmds.getLVMVerifyLinePageTitle().getText().contains(
@@ -642,7 +698,7 @@ public class ExhibitorDigitalShowroom extends base {
 		System.out.println("Event Name : " + eventName);
 		// lvmds.getEventName().click(); //Old
 		// utl.scrollToElement(lvmds.getEventNameNew());
-		lvmds.getEventNameNew().click(); // New
+		lvmds.getEventNamePROD().click(); // New
 		Thread.sleep(3000);
 		Assert.assertTrue(lvmevents.getlvmEventNameOnDetailsPageUAT().getText().contains(eventName));
 		System.out.println("Events Component functionality is working properly.");
@@ -660,7 +716,7 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmevents = new LVMEventsAndWebinarPage(driver);
 
 		driver.get(prop.getProperty("lvmurl_prod"));
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		/*
 		 * Thread.sleep(2000);
 		 * lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty(
@@ -669,25 +725,37 @@ public class ExhibitorDigitalShowroom extends base {
 		 */
 		Thread.sleep(3000);
 	    lvmgs.getGlobalSearchTextBoxNew().click();
-	    lvmgs.getGlobalSearchEnterText().sendKeys(prop.getProperty("globalsearchinputforShowSpecials3"));
+	    lvmgs.getGlobalSearchEnterText().sendKeys("   ");
 		Thread.sleep(1000);
 		lvmgs.getSearchButtonNew().click();
-	    Thread.sleep(15000);
-
-		// Store the 1st Exhibitor name in String variable
-		exhname = lvmexhact.getExhibitorName().getText();
+		/*
+		 * Thread.sleep(15000); Thread.sleep(3000);
+		 */
+		lvmexhact.getdigiShowroomFilterLVMNew().click();
+		Thread.sleep(3000);
+		lvmexhact.getleftPaneFilterDGShowroomCatalogNew().click();
+		Thread.sleep(20000);
+		/*
+		 * // Store the 1st Exhibitor name in String variable exhname =
+		 * lvmexhact.getExhibitorName().getText(); System.out.println("Exhibitor name: "
+		 * + exhname);
+		 * 
+		 * // Get the Total Lines count on Search grid lvmds.getExhibitorName().click();
+		 * Thread.sleep(5000);
+		 */
+	    exhname = lvmds.getExhibitorNameNew().getText();
 		System.out.println("Exhibitor name: " + exhname);
-
-		// Get the Total Lines count on Search grid
-		lvmds.getExhibitorName().click();
-		Thread.sleep(5000);
-
+		
+		lvmds.getExhibitorNameNew().click();
+		Thread.sleep(10000);
+		
 		// Verify Catalogs section for Exhibitor
 		utl.scrollToElement(lvmds.getCatalogsSection());
 		lvmds.getSeeAllCatalogsButtonUAT().click();
 		Assert.assertTrue(lvmds.getValidateLinesPage().getText().contains("Catalogs"));
 		System.out.println("See All Catalogs is working properly.");
-		lvmds.getProductsPageBackButton().click();
+		//lvmds.getProductsPageBackButton().click();
+		driver.navigate().back();
 		utl.scrollToElement(lvmds.getCatalogsSection());
 		String CatalogName = lvmds.getSelectCatalogProd().getText();
 		System.out.println("Catalog Name : " + CatalogName);
@@ -789,20 +857,33 @@ public class ExhibitorDigitalShowroom extends base {
 		 * lvmgs.getLVMSearchButton().click(); Thread.sleep(10000);
 		 */
 
-		Thread.sleep(3000);
+		/*
+		 * Thread.sleep(3000); lvmgs.getGlobalSearchTextBoxNew().click();
+		 * lvmgs.getGlobalSearchEnterText().sendKeys(prop.getProperty(
+		 * "globalsearchinput")); Thread.sleep(1000);
+		 * lvmgs.getSearchButtonNew().click(); Thread.sleep(15000);
+		 */
+	    Thread.sleep(3000);
 	    lvmgs.getGlobalSearchTextBoxNew().click();
 	    lvmgs.getGlobalSearchEnterText().sendKeys(prop.getProperty("globalsearchinput"));
 		Thread.sleep(1000);
 		lvmgs.getSearchButtonNew().click();
-	    Thread.sleep(15000);
-
 		// Store the 1st Exhibitor name in String variable
-		exhname = lvmexhact.getExhibitorName().getText();
-		System.out.println("Exhibitor name: " + exhname);
-
-		lvmds.getExhibitorName().click();
-		Thread.sleep(2000);
-
+		/*
+		 * exhname = lvmexhact.getExhibitorName().getText();
+		 * System.out.println("Exhibitor name: " + exhname);
+		 * 
+		 * lvmds.getExhibitorName().click(); Thread.sleep(2000);
+		 * 
+		 */
+		 exhname = lvmds.getExhibitorNameNew().getText();
+			System.out.println("Exhibitor name: " + exhname);
+			
+			lvmds.getExhibitorNameNew().click();
+			Thread.sleep(10000);
+			
+		
+		
 		// Click on Hero component Contact Exhibitor
 		lvmds.getContactExhibitorHero().click();
 		Thread.sleep(2000);

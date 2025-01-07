@@ -91,12 +91,22 @@ public class LVMExhLineProdActionsPage {
 	By eventFirstExNameLVM = By.xpath("(//div[@class='event-card--multi-card-container'])[1]/div[1]/div[1]/div[1]/div[1]/a[1]");
 	By digiShowroomFilterLVM = By.xpath("//h4[text()='Digital Showroom']");
 	By digiShowroomFilterCatalogsLVM = By.xpath("//label[@for='filteritem638']");
-	
-	
+	By digiShowroomFilterLVMNew = By.xpath("//h4[contains(text(),'Digital Showroom')]");
+	By leftPaneFilterDGShowroomCatalogNew = By.xpath("//h4[contains(text(),'Digital Showroom')]/../../.././../../div[2]/div[1]/div[1]/div[3]"); //Locator for DG showroom Filter Catalog
 	
 	public LVMExhLineProdActionsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
+	}
+	public WebElement getleftPaneFilterDGShowroomCatalogNew() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(leftPaneFilterDGShowroomCatalogNew));
+		return driver.findElement(leftPaneFilterDGShowroomCatalogNew);
+	}
+	public WebElement getdigiShowroomFilterLVMNew() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(80));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(digiShowroomFilterLVMNew));
+		return driver.findElement(digiShowroomFilterLVMNew);
 	}
 	public WebElement getdigiShowroomFilterCatalogsLVM() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));

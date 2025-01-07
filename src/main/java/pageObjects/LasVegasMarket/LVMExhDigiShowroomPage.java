@@ -121,11 +121,42 @@ public class LVMExhDigiShowroomPage {
 	By catalogNameTitle = By.xpath("//div[@class='imc-pdfview--display']/div/h1[1]"); //Locator for Catalog name text
 	By locationLinkNew = By.xpath("//section[@class='imc-site-wrapper']/div[2]/div[1]/div[3]/div/div/div[2]/div/span[2]/a"); //Locator for Catalog name text
 	By lineSearchButtonNew = By.xpath("(//div[@class = 'imc-searchform--button--search']/button[@type='submit'])[3]"); //Locator for Catalog name text
+	By lineSearchButtonNewPROD = By.xpath("//div[@class='imc-searchform--row imc-content--display-flex-stretch imc-content--display-flex-gap-small  active']/form/div/button");
 	
+	By ExhibitorNameNew = By.xpath("(//div[@class = 'imc-gallery__item']/div/div[1]/div/div/div/div/a[1]/h2[1])[1]");
+	By VerifyLineSearchNew = By.xpath("//div[@class = 'imc-manufacturing-line-image-wrapper']/../div[2]/a"); //Locator for verify line search
 	
+	By seeAllEventButton = By.xpath("//div[@class='imc-content--display-flex-wrap']/span[contains(text(),'Events Shown')]/../../div[3]/div/a"); //Locator for verify line search
+	
+	By EventNamePROD= By.xpath("(//div[contains(@class,'imc-content--display-flex-grow-1 imc-content--display-flex imc-content--display-flex-column imc-content--display-flex-gap-xsmall')]/a/p)[1]"); //Locator for verify line search
 	
 	public LVMExhDigiShowroomPage(WebDriver driver) {
 		this.driver = driver;
+	}
+	public WebElement getEventNamePROD() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(90));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(EventNamePROD));
+		return driver.findElement(EventNamePROD);
+	}
+	public WebElement getseeAllEventButton() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(90));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(seeAllEventButton));
+		return driver.findElement(seeAllEventButton);
+	}
+	public WebElement getVerifyLineSearchNew() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(VerifyLineSearchNew));
+		return driver.findElement(VerifyLineSearchNew);
+	}
+	public WebElement getlineSearchButtonNewPROD() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lineSearchButtonNewPROD));
+		return driver.findElement(lineSearchButtonNewPROD);
+	}
+	public WebElement getExhibitorNameNew() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ExhibitorNameNew));
+		return driver.findElement(ExhibitorNameNew);
 	}
 	public WebElement getlineSearchButtonNew() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));

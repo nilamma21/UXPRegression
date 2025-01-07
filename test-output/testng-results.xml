@@ -1,78 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="6" total="21" passed="12" failed="3" skipped="0">
+<testng-results ignored="5" total="6" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-11T17:00:51 IST" name="Default suite" finished-at="2024-11-11T17:14:18 IST" duration-ms="806303">
+  <suite started-at="2025-01-07T16:29:28 IST" name="Default suite" finished-at="2025-01-07T16:33:17 IST" duration-ms="229047">
     <groups>
     </groups>
-    <test started-at="2024-11-11T17:00:51 IST" name="Default test" finished-at="2024-11-11T17:14:18 IST" duration-ms="806303">
-      <class name="lasvegasmarket_PROD.ExhibitorDigitalShowroom">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@53aac487]" started-at="2024-11-11T17:00:51 IST" name="initialize" finished-at="2024-11-11T17:01:41 IST" duration-ms="49435" status="PASS">
+    <test started-at="2025-01-07T16:29:28 IST" name="Default test" finished-at="2025-01-07T16:33:17 IST" duration-ms="229047">
+      <class name="lasvegasmarket_PROD.LineDigitalShowroom">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:lasvegasmarket_PROD.LineDigitalShowroom@2e3967ea]" started-at="2025-01-07T16:29:28 IST" name="initialize" finished-at="2025-01-07T16:33:16 IST" duration-ms="228149" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[java.util.concurrent.TimeoutException
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8a88b41e3fc2f00fe3f9703a76b717f4, get {url=https://www.lasvegasmarket.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64850}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64850/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8a88b41e3fc2f00fe3f9703a76b717f4]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8a88b41e3fc2f00fe3f9703a76b717f4, get {url=https://www.lasvegasmarket.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64850}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64850/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8a88b41e3fc2f00fe3f9703a76b717f4
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:418)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:374)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:313)
+at lasvegasmarket_PROD.LineDigitalShowroom.initialize(LineDigitalShowroom.java:57)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: java.util.concurrent.TimeoutException
+at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:401)
+... 33 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="TS001_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest()[pri:1, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@53aac487]" started-at="2024-11-11T17:01:41 IST" name="TS001_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest" finished-at="2024-11-11T17:02:16 IST" duration-ms="35123" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS001_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest -->
-        <test-method signature="TS002_VerifyClickOnTotalLinesSeeAllLinesForExhibitorTest()[pri:2, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@53aac487]" started-at="2024-11-11T17:02:16 IST" name="TS002_VerifyClickOnTotalLinesSeeAllLinesForExhibitorTest" finished-at="2024-11-11T17:03:55 IST" duration-ms="98853" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS002_VerifyClickOnTotalLinesSeeAllLinesForExhibitorTest -->
-        <test-method signature="TS003_VerifyClickOnProductShownLinkForExhibitorTest()[pri:3, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@53aac487]" started-at="2024-11-11T17:03:55 IST" name="TS003_VerifyClickOnProductShownLinkForExhibitorTest" finished-at="2024-11-11T17:04:52 IST" duration-ms="57096" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS003_VerifyClickOnProductShownLinkForExhibitorTest -->
-        <test-method signature="TS004_VerifyClickOnLineFiltersForExhibitorTest()[pri:4, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@53aac487]" started-at="2024-11-11T17:04:52 IST" name="TS004_VerifyClickOnLineFiltersForExhibitorTest" finished-at="2024-11-11T17:05:23 IST" duration-ms="31330" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS004_VerifyClickOnLineFiltersForExhibitorTest -->
-        <test-method signature="TS005_VerifyClickOnLineSearchForExhibitorTest()[pri:5, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@53aac487]" started-at="2024-11-11T17:05:23 IST" name="TS005_VerifyClickOnLineSearchForExhibitorTest" finished-at="2024-11-11T17:06:03 IST" duration-ms="39815" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS005_VerifyClickOnLineSearchForExhibitorTest -->
-        <test-method signature="TS006_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest()[pri:6, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@53aac487]" started-at="2024-11-11T17:06:03 IST" name="TS006_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest" finished-at="2024-11-11T17:06:37 IST" duration-ms="34091" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS006_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest -->
-        <test-method signature="TS007_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest()[pri:7, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@53aac487]" started-at="2024-11-11T17:06:37 IST" name="TS007_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest" finished-at="2024-11-11T17:07:13 IST" duration-ms="36430" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS007_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest -->
-        <test-method signature="TS008_VerifySeeInOtherMarketsForExhibitorTest()[pri:8, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@53aac487]" started-at="2024-11-11T17:07:13 IST" name="TS008_VerifySeeInOtherMarketsForExhibitorTest" finished-at="2024-11-11T17:08:47 IST" duration-ms="93408" status="FAIL">
+        <test-method signature="TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest()[pri:7, instance:lasvegasmarket_PROD.LineDigitalShowroom@2e3967ea]" started-at="2025-01-07T16:33:17 IST" name="TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest" finished-at="2025-01-07T16:33:17 IST" duration-ms="0" status="SKIP">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //button[@class = 'imc-button imc-button--full-bleed-mobile imc-button--primary-inverted imc-margin--all--none'] (tried for 40 second(s) with 500 milliseconds interval)
+              <![CDATA[java.util.concurrent.TimeoutException
 Build info: version: '4.25.0', revision: '8a8aea2337'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.92, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50416}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50416/devtoo..., se:cdpVersion: 130.0.6723.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f66488e8c332b3132fa29fe38dc9e655]]>
+Command: [8a88b41e3fc2f00fe3f9703a76b717f4, get {url=https://www.lasvegasmarket.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64850}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64850/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8a88b41e3fc2f00fe3f9703a76b717f4]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //button[@class = 'imc-button imc-button--full-bleed-mobile imc-button--primary-inverted imc-margin--all--none'] (tried for 40 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
 Build info: version: '4.25.0', revision: '8a8aea2337'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.2'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.92, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50416}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50416/devtoo..., se:cdpVersion: 130.0.6723.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f66488e8c332b3132fa29fe38dc9e655
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at pageObjects.LasVegasMarket.LVMExhDigiShowroomPage.getSeeInOtherMarket(LVMExhDigiShowroomPage.java:529)
-at lasvegasmarket_PROD.ExhibitorDigitalShowroom.TS008_VerifySeeInOtherMarketsForExhibitorTest(ExhibitorDigitalShowroom.java:418)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+Command: [8a88b41e3fc2f00fe3f9703a76b717f4, get {url=https://www.lasvegasmarket.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64850}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64850/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8a88b41e3fc2f00fe3f9703a76b717f4
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:418)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:374)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:313)
+at lasvegasmarket_PROD.LineDigitalShowroom.initialize(LineDigitalShowroom.java:57)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 at org.testng.TestRunner.privateRun(TestRunner.java:794)
 at org.testng.TestRunner.run(TestRunner.java:596)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
@@ -88,147 +124,22 @@ at org.testng.TestNG.run(TestNG.java:1031)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: java.util.concurrent.TimeoutException
+at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:401)
+... 33 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS008_VerifySeeInOtherMarketsForExhibitorTest -->
-        <test-method signature="TS009_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest()[pri:9, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@53aac487]" started-at="2024-11-11T17:08:47 IST" name="TS009_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest" finished-at="2024-11-11T17:09:27 IST" duration-ms="40292" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS009_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest -->
-        <test-method signature="TS010_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest()[pri:10, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@53aac487]" started-at="2024-11-11T17:09:27 IST" name="TS010_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest" finished-at="2024-11-11T17:10:05 IST" duration-ms="37411" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS010_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest -->
-        <test-method signature="TS011_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest()[pri:11, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@53aac487]" started-at="2024-11-11T17:10:05 IST" name="TS011_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest" finished-at="2024-11-11T17:10:37 IST" duration-ms="32319" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS011_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest -->
-        <test-method signature="TS012_VerifyExhibitorDigitalEventsComponentTest()[pri:12, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@53aac487]" started-at="2024-11-11T17:10:37 IST" name="TS012_VerifyExhibitorDigitalEventsComponentTest" finished-at="2024-11-11T17:12:01 IST" duration-ms="84240" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: (//div[@class='event-card--multi-card-container'])[1]/div[1]/div[1]/div[1]/div[1]/a[1] (tried for 40 second(s) with 500 milliseconds interval)
-Build info: version: '4.25.0', revision: '8a8aea2337'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.92, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50416}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50416/devtoo..., se:cdpVersion: 130.0.6723.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f66488e8c332b3132fa29fe38dc9e655]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//div[@class='event-card--multi-card-container'])[1]/div[1]/div[1]/div[1]/div[1]/a[1] (tried for 40 second(s) with 500 milliseconds interval)
-Build info: version: '4.25.0', revision: '8a8aea2337'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.92, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50416}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50416/devtoo..., se:cdpVersion: 130.0.6723.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f66488e8c332b3132fa29fe38dc9e655
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at pageObjects.LasVegasMarket.LVMExhLineProdActionsPage.geteventFirstExNameLVM(LVMExhLineProdActionsPage.java:118)
-at lasvegasmarket_PROD.ExhibitorDigitalShowroom.TS012_VerifyExhibitorDigitalEventsComponentTest(ExhibitorDigitalShowroom.java:621)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS012_VerifyExhibitorDigitalEventsComponentTest -->
-        <test-method signature="TS013_VerifyCatalogsSectionForExhibitorTest()[pri:13, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@53aac487]" started-at="2024-11-11T17:12:01 IST" name="TS013_VerifyCatalogsSectionForExhibitorTest" finished-at="2024-11-11T17:12:43 IST" duration-ms="41446" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS013_VerifyCatalogsSectionForExhibitorTest -->
-        <test-method signature="TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest()[pri:14, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@53aac487]" started-at="2024-11-11T17:12:43 IST" name="TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest" finished-at="2024-11-11T17:13:48 IST" duration-ms="65610" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class='imc-navigation imc-breakpoint-display--hide-mobile']/div[2] (tried for 40 second(s) with 500 milliseconds interval)
-Build info: version: '4.25.0', revision: '8a8aea2337'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.92, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50416}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50416/devtoo..., se:cdpVersion: 130.0.6723.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f66488e8c332b3132fa29fe38dc9e655]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class='imc-navigation imc-breakpoint-display--hide-mobile']/div[2] (tried for 40 second(s) with 500 milliseconds interval)
-Build info: version: '4.25.0', revision: '8a8aea2337'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.92, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50416}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50416/devtoo..., se:cdpVersion: 130.0.6723.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f66488e8c332b3132fa29fe38dc9e655
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at pageObjects.LasVegasMarket.LVMGlobalSearchPage.getlvmExhibitorsAndProductTab(LVMGlobalSearchPage.java:302)
-at lasvegasmarket_PROD.ExhibitorDigitalShowroom.TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest(ExhibitorDigitalShowroom.java:723)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest -->
-        <test-method signature="TS015_VerifyExhibitorDigitalShowroomHeroComponentContactExhibitorTest()[pri:15, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@53aac487]" started-at="2024-11-11T17:13:49 IST" name="TS015_VerifyExhibitorDigitalShowroomHeroComponentContactExhibitorTest" finished-at="2024-11-11T17:14:15 IST" duration-ms="26759" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TS015_VerifyExhibitorDigitalShowroomHeroComponentContactExhibitorTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:lasvegasmarket_PROD.ExhibitorDigitalShowroom@53aac487]" started-at="2024-11-11T17:14:15 IST" name="tearDown" finished-at="2024-11-11T17:14:18 IST" duration-ms="2009" status="PASS">
+        </test-method> <!-- TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:lasvegasmarket_PROD.LineDigitalShowroom@2e3967ea]" started-at="2025-01-07T16:33:17 IST" name="tearDown" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1736247797411" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- lasvegasmarket_PROD.ExhibitorDigitalShowroom -->
+      </class> <!-- lasvegasmarket_PROD.LineDigitalShowroom -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
