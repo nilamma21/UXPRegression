@@ -138,13 +138,15 @@ public class LVMGlobalSearchPage {
 	By lvmGlobalSearchEventTypeFilterResult = By.xpath("//h4[contains(text(),'Event Types')]/following::label[1]"); //Locator for Global Search Sort Btn
 	
 	By GlobalSearchTextBoxNew = By.xpath("//button[@class='imc-button imc-button--search imc-button--transparent-mobile-header imc-button--transparent juniper-search-v3 ']"); // Locator for Global Search field 
-	By SearchButtonNew = By.xpath("(//div[@class = 'imc-searchform--button--search'])[2]"); //Locator for Seach button for global search
+	By SearchButtonNew = By.xpath("(//div[@class = 'imc-searchform--button--search'])[3]"); //Locator for Seach button for global search
 	
 	By VerifyGlobalSeacrhNew = By.xpath("//section[@class = 'imc-searchform--section  ']/span[1]/div[1]"); // Locator for global search verification
 	
 	By GlobalSearchEnterText = By.xpath("//div[@class='top-nav-dropdown-grid imc-content--relative']/div/div/section/div/form/div/input"); // Locator for Global Search field
-	
-	
+	By LvmDiscoverTab = By.xpath("//button[@class='imc-button imc-navigation--block mobile-menu-2 imc-button imc-section--padded-xlarge imc-section--padded-left-xlarge imc-section--padded-right-xlarge imc-content--gamma imc-content--bold imc-content--height-fit-content imc-content--min-height-100 null ']"); // Locator for Discover tab
+	By LvmEventsMenu = By.xpath("(//a[contains(text(),'Events')])[1]"); // Locator for Events Menu
+	By LvmExhibitorEvents = By.xpath("//div[@class='event-card--tab']/p[3]"); // Locator for Events Menu
+	By LvmEventExhibitorName = By.xpath("(//div[@class='event-card--cal-card-container imc-content--display-flex imc-content--display-flex-gap-xlarge imc-content--relative']/div[2]/div[1]/div/div/div/div/div/div/div/div/div/div[1]/a[1])[1]"); // Locator for 1st event exhibitor name
 	
 	
 	
@@ -152,6 +154,30 @@ public class LVMGlobalSearchPage {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 		PageFactory.initElements(driver, this);
+	}
+	public WebElement getLvmEventExhibitorName() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(LvmEventExhibitorName));
+		return driver.findElement(LvmEventExhibitorName);
+
+	}
+	public WebElement getLvmExhibitorEvents() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+		wait.until(ExpectedConditions.elementToBeClickable(LvmExhibitorEvents));
+		return driver.findElement(LvmExhibitorEvents);
+
+	}
+	public WebElement getLvmEventsMenu() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(LvmEventsMenu));
+		return driver.findElement(LvmEventsMenu);
+
+	}
+	public WebElement getLvmDiscoverTab() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(LvmDiscoverTab));
+		return driver.findElement(LvmDiscoverTab);
+
 	}
 	public WebElement getGlobalSearchEnterText() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
