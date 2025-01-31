@@ -1,113 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="5" total="6" passed="0" failed="0" skipped="1">
+<testng-results ignored="0" total="11" passed="8" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-07T16:29:28 IST" name="Default suite" finished-at="2025-01-07T16:33:17 IST" duration-ms="229047">
+  <suite started-at="2025-01-31T17:01:21 IST" name="Default suite" finished-at="2025-01-31T17:13:46 IST" duration-ms="744703">
     <groups>
     </groups>
-    <test started-at="2025-01-07T16:29:28 IST" name="Default test" finished-at="2025-01-07T16:33:17 IST" duration-ms="229047">
-      <class name="lasvegasmarket_PROD.LineDigitalShowroom">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:lasvegasmarket_PROD.LineDigitalShowroom@2e3967ea]" started-at="2025-01-07T16:29:28 IST" name="initialize" finished-at="2025-01-07T16:33:16 IST" duration-ms="228149" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[java.util.concurrent.TimeoutException
-Build info: version: '4.25.0', revision: '8a8aea2337'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8a88b41e3fc2f00fe3f9703a76b717f4, get {url=https://www.lasvegasmarket.com/}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64850}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64850/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8a88b41e3fc2f00fe3f9703a76b717f4]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
-Build info: version: '4.25.0', revision: '8a8aea2337'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8a88b41e3fc2f00fe3f9703a76b717f4, get {url=https://www.lasvegasmarket.com/}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64850}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64850/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8a88b41e3fc2f00fe3f9703a76b717f4
-at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:418)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
-at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:374)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:313)
-at lasvegasmarket_PROD.LineDigitalShowroom.initialize(LineDigitalShowroom.java:57)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.util.concurrent.TimeoutException
-at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
-at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
-at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:401)
-... 33 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+    <test started-at="2025-01-31T17:01:21 IST" name="Default test" finished-at="2025-01-31T17:13:46 IST" duration-ms="744703">
+      <class name="lasvegasmarket_PROD.GlobalSearch_SearchFor">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_SearchFor@2e6a8155]" started-at="2025-01-31T17:01:21 IST" name="initialize" finished-at="2025-01-31T17:01:53 IST" duration-ms="32031" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest()[pri:7, instance:lasvegasmarket_PROD.LineDigitalShowroom@2e3967ea]" started-at="2025-01-07T16:33:17 IST" name="TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest" finished-at="2025-01-07T16:33:17 IST" duration-ms="0" status="SKIP">
+        <test-method signature="TS001_VerifyInformationTabInGlobalSearchTest()[pri:1, instance:lasvegasmarket_PROD.GlobalSearch_SearchFor@2e6a8155]" started-at="2025-01-31T17:01:53 IST" name="TS001_VerifyInformationTabInGlobalSearchTest" finished-at="2025-01-31T17:02:15 IST" duration-ms="21624" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS001_VerifyInformationTabInGlobalSearchTest -->
+        <test-method signature="TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest()[pri:2, instance:lasvegasmarket_PROD.GlobalSearch_SearchFor@2e6a8155]" started-at="2025-01-31T17:02:15 IST" name="TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest" finished-at="2025-01-31T17:02:51 IST" duration-ms="36304" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest -->
+        <test-method signature="TS004_VerifyCatalogsOverviewInGlobalSearchTest()[pri:4, instance:lasvegasmarket_PROD.GlobalSearch_SearchFor@2e6a8155]" started-at="2025-01-31T17:02:51 IST" name="TS004_VerifyCatalogsOverviewInGlobalSearchTest" finished-at="2025-01-31T17:04:13 IST" duration-ms="82201" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS004_VerifyCatalogsOverviewInGlobalSearchTest -->
+        <test-method signature="TS005_VerifyArticlesOverviewInGlobalSearchTest()[pri:5, instance:lasvegasmarket_PROD.GlobalSearch_SearchFor@2e6a8155]" started-at="2025-01-31T17:04:13 IST" name="TS005_VerifyArticlesOverviewInGlobalSearchTest" finished-at="2025-01-31T17:04:57 IST" duration-ms="43249" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifyArticlesOverviewInGlobalSearchTest -->
+        <test-method signature="TS005_VerifyArticlesFiltersGlobalSearchTest()[pri:6, instance:lasvegasmarket_PROD.GlobalSearch_SearchFor@2e6a8155]" started-at="2025-01-31T17:04:57 IST" name="TS005_VerifyArticlesFiltersGlobalSearchTest" finished-at="2025-01-31T17:07:13 IST" duration-ms="136504" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS005_VerifyArticlesFiltersGlobalSearchTest -->
+        <test-method signature="TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest()[pri:7, instance:lasvegasmarket_PROD.GlobalSearch_SearchFor@2e6a8155]" started-at="2025-01-31T17:07:13 IST" name="TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest" finished-at="2025-01-31T17:08:06 IST" duration-ms="52774" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest -->
+        <test-method signature="TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest()[pri:8, instance:lasvegasmarket_PROD.GlobalSearch_SearchFor@2e6a8155]" started-at="2025-01-31T17:08:06 IST" name="TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest" finished-at="2025-01-31T17:09:35 IST" duration-ms="88502" status="FAIL">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[java.util.concurrent.TimeoutException
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='imc-vr--xxlarge imc-margin--top--large--mobile']/div[1]/div[1]/span[1] (tried for 40 second(s) with 500 milliseconds interval)
 Build info: version: '4.25.0', revision: '8a8aea2337'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8a88b41e3fc2f00fe3f9703a76b717f4, get {url=https://www.lasvegasmarket.com/}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64850}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64850/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8a88b41e3fc2f00fe3f9703a76b717f4]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56682}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56682/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ea598ce801e7821c72f8eb82bffbf8d]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class='imc-vr--xxlarge imc-margin--top--large--mobile']/div[1]/div[1]/span[1] (tried for 40 second(s) with 500 milliseconds interval)
 Build info: version: '4.25.0', revision: '8a8aea2337'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8a88b41e3fc2f00fe3f9703a76b717f4, get {url=https://www.lasvegasmarket.com/}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64850}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64850/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8a88b41e3fc2f00fe3f9703a76b717f4
-at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:418)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
-at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:374)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:313)
-at lasvegasmarket_PROD.LineDigitalShowroom.initialize(LineDigitalShowroom.java:57)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56682}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56682/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ea598ce801e7821c72f8eb82bffbf8d
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at pageObjects.LasVegasMarket.LVMGlobalSearchPage.getLVMFirstEventName(LVMGlobalSearchPage.java:398)
+at lasvegasmarket_PROD.GlobalSearch_SearchFor.TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest(GlobalSearch_SearchFor.java:687)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
 at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 at org.testng.TestRunner.privateRun(TestRunner.java:794)
 at org.testng.TestRunner.run(TestRunner.java:596)
@@ -124,22 +82,132 @@ at org.testng.TestNG.run(TestNG.java:1031)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.util.concurrent.TimeoutException
-at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
-at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
-at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:401)
-... 33 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:lasvegasmarket_PROD.LineDigitalShowroom@2e3967ea]" started-at="2025-01-07T16:33:17 IST" name="tearDown" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1736247797411" status="SKIP">
+        </test-method> <!-- TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest -->
+        <test-method signature="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest()[pri:9, instance:lasvegasmarket_PROD.GlobalSearch_SearchFor@2e6a8155]" started-at="2025-01-31T17:09:35 IST" name="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest" finished-at="2025-01-31T17:10:22 IST" duration-ms="47331" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id='input-1'] (tried for 40 second(s) with 500 milliseconds interval)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56682}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56682/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ea598ce801e7821c72f8eb82bffbf8d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id='input-1'] (tried for 40 second(s) with 500 milliseconds interval)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56682}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56682/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ea598ce801e7821c72f8eb82bffbf8d
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at pageObjects.LasVegasMarket.LVMGlobalSearchPage.getLVMGlobalSearchTextBox(LVMGlobalSearchPage.java:626)
+at lasvegasmarket_PROD.GlobalSearch_SearchFor.TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest(GlobalSearch_SearchFor.java:720)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest -->
+        <test-method signature="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest()[pri:10, instance:lasvegasmarket_PROD.GlobalSearch_SearchFor@2e6a8155]" started-at="2025-01-31T17:10:22 IST" name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest" finished-at="2025-01-31T17:11:13 IST" duration-ms="50780" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS010_VerifyShowSpecialsOverviewInGlobalSearchTest -->
+        <test-method signature="TS011_VerifyEventsOverviewInGlobalSearchTest()[pri:11, instance:lasvegasmarket_PROD.GlobalSearch_SearchFor@2e6a8155]" started-at="2025-01-31T17:11:13 IST" name="TS011_VerifyEventsOverviewInGlobalSearchTest" finished-at="2025-01-31T17:11:52 IST" duration-ms="38300" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id='input-1'] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56682}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56682/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ea598ce801e7821c72f8eb82bffbf8d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //input[@id='input-1'] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56682}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56682/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ea598ce801e7821c72f8eb82bffbf8d
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at pageObjects.AtlantaMarket.ATLGlobalSearchPage.getATLGlobalSearchTextBox(ATLGlobalSearchPage.java:423)
+at resources.Utility.ClearGlobalSearch(Utility.java:595)
+at lasvegasmarket_PROD.GlobalSearch_SearchFor.TS011_VerifyEventsOverviewInGlobalSearchTest(GlobalSearch_SearchFor.java:868)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS011_VerifyEventsOverviewInGlobalSearchTest -->
+        <test-method signature="TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest()[pri:12, instance:lasvegasmarket_PROD.GlobalSearch_SearchFor@2e6a8155]" started-at="2025-01-31T17:11:52 IST" name="TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest" finished-at="2025-01-31T17:13:46 IST" duration-ms="113884" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_SearchFor@2e6a8155]" started-at="2025-01-31T17:13:46 IST" name="tearDown" finished-at="2025-01-31T17:13:46 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- lasvegasmarket_PROD.LineDigitalShowroom -->
+      </class> <!-- lasvegasmarket_PROD.GlobalSearch_SearchFor -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

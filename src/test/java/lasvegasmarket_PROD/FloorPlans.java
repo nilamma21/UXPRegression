@@ -73,11 +73,11 @@ public class FloorPlans extends base {
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(5000);
-		// Click on Exh And Product Tab
-		lvmflpp.getLVMExhibitorsAndProductTab().click();
+		// Click on Discover Tab
+		lvmflpp.getlvmDiscoverBtn().click();
 
 		//click on Floor plans link
-		lvmflpp.getLVMFloorPlansLink().click();
+		lvmflpp.getlvmFloorPlansLinkPROD().click();
 		Thread.sleep(5000);
 
 		//Verify that user should redirect to Floor plans page
@@ -116,11 +116,18 @@ public class FloorPlans extends base {
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
-		// Click on Exh And Product Tab
-		lvmflpp.getLVMExhibitorsAndProductTab().click();
+		/*
+		 * // Click on Exh And Product Tab
+		 * lvmflpp.getLVMExhibitorsAndProductTab().click();
+		 * 
+		 * //click on Floor plans link lvmflpp.getLVMFloorPlansLink().click();
+		 */
+		// Click on Discover Tab
+		lvmflpp.getlvmDiscoverBtn().click();
 
-		//click on Floor plans link
-		lvmflpp.getLVMFloorPlansLink().click();
+		// click on Floor plans link
+		lvmflpp.getlvmFloorPlansLinkPROD().click();
+		Thread.sleep(5000);
 
 		//click on Floor whose not having an Exhibitors
 		String floorName=lvmflpp.getLVMBuildingFloor().getText();
@@ -149,12 +156,13 @@ public class FloorPlans extends base {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 
-		// Click on Exh And Product Tab
-		lvmflpp.getLVMExhibitorsAndProductTab().click();
+		// Click on Discover Tab
+		lvmflpp.getlvmDiscoverBtn().click();
 
-		//click on Floor plans link
-		lvmflpp.getLVMFloorPlansLink().click();
-		Thread.sleep(1000);
+		// click on Floor plans link
+		lvmflpp.getlvmFloorPlansLinkPROD().click();
+		Thread.sleep(5000);
+
 		
 		//click on any floor
 		utl.scrollElementIntoMiddle(lvmflpp.getLVMBuildingFloor());
@@ -184,7 +192,7 @@ System.out.println("x2 "+x2);
 		lvmflpp.getLVMExhibitorFloorZoomOut().click();
 		//Stored Zoom out Attribute
 		String out=lvmflpp.getLVMFloorPlanMapIamge().getAttribute("style");
-
+		Thread.sleep(5000);
 		//Verify Zoom Out functionality
 		Assert.assertNotEquals(x1, out);
 	}
@@ -200,19 +208,19 @@ System.out.println("x2 "+x2);
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
-		// Click on Exh And Product Tab
-		lvmflpp.getLVMExhibitorsAndProductTab().click();
+		// Click on Discover Tab
+		lvmflpp.getlvmDiscoverBtn().click();
 
-		//click on Floor plans link
-		lvmflpp.getLVMFloorPlansLink().click();
-		Thread.sleep(3000);
+		// click on Floor plans link
+		lvmflpp.getlvmFloorPlansLinkPROD().click();
+		Thread.sleep(5000);
 		//click on any floor
 		utl.scrollElementIntoMiddle(lvmflpp.getLVMBuildingFloor());
 		Thread.sleep(200);
 		lvmflpp.getLVMBuildingFloor().click();
 
 		//Click on Vending Machine icon on Map image
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 		//utl.scrollToElement(lvmflpp.getlvmflooricononmap_lvmUAT());
 		lvmflpp.getlvmflooricononmap_lvmUAT().click();
 		Thread.sleep(1000);
@@ -276,13 +284,12 @@ System.out.println("x2 "+x2);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         Thread.sleep(2000);
         
-        // Click on Exh And Product Tab
-        lvmflpp.getLVMExhibitorsAndProductTab().click();
-        Thread.sleep(2000);
-        //click on Floor plans link
-        lvmflpp.getLVMFloorPlansLink().click();
-        Thread.sleep(2000);
-        
+		// Click on Discover Tab
+		lvmflpp.getlvmDiscoverBtn().click();
+
+		// click on Floor plans link
+		lvmflpp.getlvmFloorPlansLinkPROD().click();
+		Thread.sleep(5000);       
         //Click on Building floor
         utl.scrollElementIntoMiddle(  lvmflpp.getLVMBuildingFloorForFilter());
         Thread.sleep(200);
@@ -357,12 +364,12 @@ System.out.println("x2 "+x2);
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
-		// Click on Exh And Product Tab
-		lvmflpp.getLVMExhibitorsAndProductTab().click();
+		// Click on Discover Tab
+				lvmflpp.getlvmDiscoverBtn().click();
 
-		//click on Floor plans link
-		lvmflpp.getLVMFloorPlansLink().click();
-		Thread.sleep(2000);
+				// click on Floor plans link
+				lvmflpp.getlvmFloorPlansLinkPROD().click();
+				Thread.sleep(5000);
 
 		//Click on Building floor
 		utl.scrollElementIntoMiddle(lvmflpp.getLVMBuildingFloor());
@@ -409,12 +416,12 @@ System.out.println("x2 "+x2);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 
-		// Click on Exh And Product Tab
-		lvmflpp.getLVMExhibitorsAndProductTab().click();
+		// Click on Discover Tab
+		lvmflpp.getlvmDiscoverBtn().click();
 
-		//click on Floor plans link
-		lvmflpp.getLVMFloorPlansLink().click();
-
+		// click on Floor plans link
+		lvmflpp.getlvmFloorPlansLinkPROD().click();
+		Thread.sleep(5000);
 		//Click on Building floor
 		utl.scrollElementIntoMiddle(lvmflpp.getLVMBuildingFloor());
 		Thread.sleep(200);
@@ -425,21 +432,21 @@ System.out.println("x2 "+x2);
 		//utl.scrollToElement(lvmflpp.getLVMExhibitorName());
 		//Thread.sleep(2000);
 		//Stored 1st Exhibitor Name
-		String exhibitorName=lvmflpp.getLVMExhibitorName().getText();
+		String exhibitorName=lvmflpp.getlvmFloorPlansFirstExhName().getText();
 		System.out.println("Exhi Name: "+exhibitorName);
 		Thread.sleep(5000);
 		
 		//Click on 1st Exhibitor
-		utl.scrollElementIntoMiddle(lvmflpp.getLVMExhibitorName());
+		utl.scrollElementIntoMiddle(lvmflpp.getlvmFloorPlansFirstExhName());
 		Thread.sleep(200);
-		lvmflpp.getLVMExhibitorName().click();
+		lvmflpp.getlvmFloorPlansFirstExhName().click();
 
 		Thread.sleep(12000);
 		// Verify that Selected Exhibitor Digital Showroom page should be opened
 		Assert.assertTrue(lvmexhdgshw.getlvmvalidateexhdigishowpage_uat().isDisplayed());
 		Thread.sleep(5000);
 		//Assert.assertTrue(driver.getTitle().contains(""+exhibitorName+" at Atlanta Market"));
-		Assert.assertTrue(lvmexhdgshw.getlvmexhibitornameonexhdirectimg_PROD().getText().contains(exhibitorName));
+		Assert.assertTrue(lvmexhdgshw.getexhNamePROD().getText().contains(exhibitorName));
 	}
 
 	@Test(priority = 8)
@@ -454,12 +461,13 @@ System.out.println("x2 "+x2);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 
-		// Click on Exh And Product Tab
-		lvmflpp.getLVMExhibitorsAndProductTab().click();
+		// Click on Discover Tab
+		lvmflpp.getlvmDiscoverBtn().click();
 
-		//click on Floor plans link
-		lvmflpp.getLVMFloorPlansLink().click();
-
+		// click on Floor plans link
+		lvmflpp.getlvmFloorPlansLinkPROD().click();
+		Thread.sleep(5000);
+		
 		//Click on Building floor
 		utl.scrollElementIntoMiddle(lvmflpp.getLVMBuildingFloor());
 		Thread.sleep(200);
@@ -486,12 +494,12 @@ System.out.println("x2 "+x2);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		
-		// Click on Exh And Product Tab
-		lvmflpp.getLVMExhibitorsAndProductTab().click();
+		// Click on Discover Tab
+		lvmflpp.getlvmDiscoverBtn().click();
 
-		//click on Floor plans link
-		lvmflpp.getLVMFloorPlansLink().click();
-		Thread.sleep(1000);
+		// click on Floor plans link
+		lvmflpp.getlvmFloorPlansLinkPROD().click();
+		Thread.sleep(5000);
 		
 		//Click on building floor
 		utl.scrollElementIntoMiddle(lvmflpp.getLVMBuildingFloor());
@@ -506,12 +514,12 @@ System.out.println("x2 "+x2);
 		Thread.sleep(200);
 		lvmflpp.getlvmexhibitorsearch().click();
 		
-		String exhibitorName=lvmflpp.getLVMExhibitorName().getText();
+		String exhibitorName=lvmflpp.getlvmFloorPlansFirstExhName().getText();
 		System.out.println("Exhi Name: "+exhibitorName);
 		
 		lvmflpp.getlvmexhibitorsearch().sendKeys(exhibitorName);
 
-		lvmflpp.getlvmserachexhibitorbtnPROD().click();
+		lvmflpp.getlvmFloorPlansSearchButton().click();
 		driver.navigate().refresh();
 		Thread.sleep(5000);
 		Assert.assertTrue(lvmflpp.getverifyexhibitor().getText().contains(exhibitorName));
