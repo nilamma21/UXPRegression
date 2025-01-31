@@ -123,15 +123,23 @@ public class LVMExhDigiShowroomPage {
 	By lineSearchButtonNew = By.xpath("(//div[@class = 'imc-searchform--button--search']/button[@type='submit'])[3]"); //Locator for Catalog name text
 	By lineSearchButtonNewPROD = By.xpath("//div[@class='imc-searchform--row imc-content--display-flex-stretch imc-content--display-flex-gap-small  active']/form/div/button");
 	
-	By ExhibitorNameNew = By.xpath("(//div[@class = 'imc-gallery__item']/div/div[1]/div/div/div/div/a[1]/h2[1])[1]");
+	By ExhibitorNameNew = By.xpath("(//div[@class = 'imc-gallery__item']/div/div[1]/div/div/div/div/a[1])[1]");
 	By VerifyLineSearchNew = By.xpath("//div[@class = 'imc-manufacturing-line-image-wrapper']/../div[2]/a"); //Locator for verify line search
 	
 	By seeAllEventButton = By.xpath("//div[@class='imc-content--display-flex-wrap']/span[contains(text(),'Events Shown')]/../../div[3]/div/a"); //Locator for verify line search
 	
 	By EventNamePROD= By.xpath("(//div[contains(@class,'imc-content--display-flex-grow-1 imc-content--display-flex imc-content--display-flex-column imc-content--display-flex-gap-xsmall')]/a/p)[1]"); //Locator for verify line search
+	By exhNamePROD= By.xpath("//div[@class='imc-exhibitors--info-block imc-section--padded-top-xlarge imc-section--padded-bottom-xlarge imc-section ']/div/div/div/h1"); //Locator for exh name
+	
+	
 	
 	public LVMExhDigiShowroomPage(WebDriver driver) {
 		this.driver = driver;
+	}
+	public WebElement getexhNamePROD() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(90));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(exhNamePROD));
+		return driver.findElement(exhNamePROD);
 	}
 	public WebElement getEventNamePROD() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(90));

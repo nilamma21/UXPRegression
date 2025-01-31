@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="lasvegasmarket_PROD.LineDigitalShowroom">
+      <class name="lasvegasmarket_PROD.GlobalSearch_SearchFor">
         <methods>
-          <include name="TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest"/>
-          <include name="tearDown"/>
           <include name="initialize"/>
+          <include name="TS011_VerifyEventsOverviewInGlobalSearchTest"/>
+          <include name="tearDown"/>
+          <include name="TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest"/>
+          <include name="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest"/>
         </methods>
-      </class> <!-- lasvegasmarket_PROD.LineDigitalShowroom -->
+      </class> <!-- lasvegasmarket_PROD.GlobalSearch_SearchFor -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

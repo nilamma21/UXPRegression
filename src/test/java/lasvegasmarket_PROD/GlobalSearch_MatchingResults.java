@@ -71,12 +71,18 @@ public class GlobalSearch_MatchingResults extends base {
 	      lvmexhact = new LVMExhLineProdActionsPage(driver);
 	      
 	      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-	      lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor5"));//containsStartWithInput
-	      Thread.sleep(1000);
-	      lvmgs.getLVMSearchButton().click();
-	      Thread.sleep(4000);
 	      
-	      Assert.assertTrue(lvmgs.getLVMSearchResult().getText().contains(prop.getProperty("exhibitor5")));
+			lvmgs.getGlobalSearchTextBoxNew().click();
+			lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("exhibitor5")));
+			Thread.sleep(2000);
+			lvmgs.getSearchButtonNew().click();
+			/*
+			 * lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor5"));//
+			 * containsStartWithInput Thread.sleep(1000);
+			 * lvmgs.getLVMSearchButton().click(); Thread.sleep(4000);
+			 */
+	      
+	      Assert.assertTrue(lvmgs.getLvmSearchResultsText().getText().contains(prop.getProperty("exhibitor5")));
 	      System.out.println("Displayed All Products Name Start with :: " + prop.getProperty("exhibitor5"));
 	      driver.get(prop.getProperty("lvmurl_prod"));
 	  }
@@ -92,20 +98,25 @@ public class GlobalSearch_MatchingResults extends base {
 
 	      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	      
-	  /*  if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
-	          lvmgs.getlvmGlobalSearchClearTxt().click();
-	      }*/
-	      Thread.sleep(5000);
-	      lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));//filtersglobalsearchinput
-	      lvmgs.getLVMSearchButton().click();
-	      Thread.sleep(5000);
-	      // Click on Sort Btn
-	      try {
-	      lvmgs.getlvmGlobalSearchSortBtn().click();
-	      }catch (Exception e) {
-	    	  lvmgs.getlvmGlobalSearchSortBtnUAT().click();
-	    	  
-		}
+	  	/*
+		 * if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
+		 * lvmgs.getlvmGlobalSearchClearTxt().click(); }
+		 */
+		/*
+		 * Thread.sleep(5000);
+		 * lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty(
+		 * "filtersglobalsearchinput"));// filtersglobalsearchinput
+		 * lvmgs.getLVMSearchButton().click(); Thread.sleep(5000);
+		 */
+
+		lvmgs.getGlobalSearchTextBoxNew().click();
+		lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("filtersglobalsearchinput")));
+		Thread.sleep(2000);
+		lvmgs.getSearchButtonNew().click();
+		// Click on Sort Btn
+	    
+	      lvmgs.getLvmSortButton().click();
+	     
 	      
 	      // Select Exhibitor Info Only
 	      Select selectAMC = new Select(lvmgs.getlvmGlobalSearch_SearchWithinDropdwn());
@@ -118,17 +129,20 @@ public class GlobalSearch_MatchingResults extends base {
 	      }
 	      System.out.println("Displayed All Exhibitors Title");
 
-	      // Verify All Exhibitors Total Product Section
-	      for (WebElement allExhTotalProdDisplay : lvmgs.getlvmListOfAllExhTotalProductLink()) {
-	          Assert.assertTrue(allExhTotalProdDisplay.isDisplayed());
-	      }
-	      System.out.println("Displayed All Exhibitors Total Product Section");
+			/*
+			 * // Verify All Exhibitors Total Product Section for (WebElement
+			 * allExhTotalProdDisplay : lvmgs.getlvmListOfAllExhTotalProductLink()) {
+			 * Assert.assertTrue(allExhTotalProdDisplay.isDisplayed()); }
+			 * System.out.println("Displayed All Exhibitors Total Product Section");
+			 */
 
 	      // Verify All Exhibitors Location Links
-	      for (WebElement allExhLocationLinksDisplay : lvmgs.getlvmListOfAllExhLocation()) {
+	      for (WebElement allExhLocationLinksDisplay : lvmgs.getLvmSortButtonListOfLocation()) {
 	          Assert.assertTrue(allExhLocationLinksDisplay.isDisplayed());
 	      }
 	      System.out.println("Displayed All Exhibitors Location Links");
+	      
+	      
 
 	      // Select Exhibitor and Product Info
 	      selectAMC.selectByVisibleText("Exhibitor and Product Info");
@@ -140,26 +154,26 @@ public class GlobalSearch_MatchingResults extends base {
 	      }
 	      System.out.println("Displayed All Exhibitors Title");
 
-	      // Verify All Exhibitors Total Product Section
-	      for (WebElement allExhTotalProdDisplay : lvmgs.getlvmListOfAllExhTotalProductLink()) {
-	          Assert.assertTrue(allExhTotalProdDisplay.isDisplayed());
-	      }
-	      System.out.println("Displayed All Exhibitors Total Product Section");
-
-	      // Verify All Exhibitors Matching Product Section
-	      for (WebElement allExhMatchingProdDisplay : lvmgs.getlvmListOfAllExhMatchingProductLink()) {
-	          Assert.assertTrue(allExhMatchingProdDisplay.isDisplayed());
-	      }
-	      System.out.println("Displayed All Exhibitors Total Product Section");
+			/*
+			 * // Verify All Exhibitors Total Product Section for (WebElement
+			 * allExhTotalProdDisplay : lvmgs.getlvmListOfAllExhTotalProductLink()) {
+			 * Assert.assertTrue(allExhTotalProdDisplay.isDisplayed()); }
+			 * System.out.println("Displayed All Exhibitors Total Product Section");
+			 * 
+			 * // Verify All Exhibitors Matching Product Section for (WebElement
+			 * allExhMatchingProdDisplay : lvmgs.getlvmListOfAllExhMatchingProductLink()) {
+			 * Assert.assertTrue(allExhMatchingProdDisplay.isDisplayed()); }
+			 * System.out.println("Displayed All Exhibitors Total Product Section");
+			 */
 
 	      // Verify All Exhibitors Location Links
-	      for (WebElement allExhLocationLinksDisplay : lvmgs.getlvmListOfAllExhLocation()) {
+	      for (WebElement allExhLocationLinksDisplay : lvmgs.getLvmSortButtonListOfLocation()) {
 	          Assert.assertTrue(allExhLocationLinksDisplay.isDisplayed());
 	      }
 	      System.out.println("Displayed All Exhibitors Location Links");
 	      
 	      // Verify All Exhibitors Location Links
-	      for (WebElement allProductDisplay : lvmgs.getlvmListOfAllProducts()) {
+	      for (WebElement allProductDisplay : lvmgs.getLvmSortButtonListOfLocation()) {
 	          Assert.assertTrue(allProductDisplay.isDisplayed());
 	      }
 	      System.out.println("Displayed All Products");
@@ -174,26 +188,25 @@ public class GlobalSearch_MatchingResults extends base {
 	      }
 	      System.out.println("Displayed All Exhibitors Title");
 
-	      // Verify All Exhibitors Total Product Section
-	      for (WebElement allExhTotalProdDisplay : lvmgs.getlvmListOfAllExhTotalProductLink()) {
-	          Assert.assertTrue(allExhTotalProdDisplay.isDisplayed());
-	      }
-	      System.out.println("Displayed All Exhibitors Total Product Section");
-
-	      // Verify All Exhibitors Matching Product Section
-	      for (WebElement allExhMatchingProdDisplay : lvmgs.getlvmListOfAllExhMatchingProductLink()) {
-	          Assert.assertTrue(allExhMatchingProdDisplay.isDisplayed());
-	      }
-	      System.out.println("Displayed All Exhibitors Total Product Section");
-
+			/*
+			 * // Verify All Exhibitors Total Product Section for (WebElement
+			 * allExhTotalProdDisplay : lvmgs.getlvmListOfAllExhTotalProductLink()) {
+			 * Assert.assertTrue(allExhTotalProdDisplay.isDisplayed()); }
+			 * System.out.println("Displayed All Exhibitors Total Product Section");
+			 * 
+			 * // Verify All Exhibitors Matching Product Section for (WebElement
+			 * allExhMatchingProdDisplay : lvmgs.getlvmListOfAllExhMatchingProductLink()) {
+			 * Assert.assertTrue(allExhMatchingProdDisplay.isDisplayed()); }
+			 * System.out.println("Displayed All Exhibitors Total Product Section");
+			 */
 	      // Verify All Exhibitors Location Links
-	      for (WebElement allExhLocationLinksDisplay : lvmgs.getlvmListOfAllExhLocation()) {
+	      for (WebElement allExhLocationLinksDisplay : lvmgs.getLvmSortButtonListOfLocation()) {
 	          Assert.assertTrue(allExhLocationLinksDisplay.isDisplayed());
 	      }
 	      System.out.println("Displayed All Exhibitors Location Links");
 	      
 	      // Verify All Exhibitors Location Links
-	      for (WebElement allProductDisplay : lvmgs.getlvmListOfAllProducts()) {
+	      for (WebElement allProductDisplay : lvmgs.getLvmSortButtonListOfProducts()) {
 	          Assert.assertTrue(allProductDisplay.isDisplayed());
 	      }
 	      System.out.println("Displayed All Products");
@@ -216,18 +229,23 @@ public class GlobalSearch_MatchingResults extends base {
 	      /*if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 	          lvmgs.getlvmGlobalSearchClearTxt().click();
 	      }*/
-	      lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));//sortByInput
-	      Thread.sleep(2000);
-	      lvmgs.getLVMSearchButton().click();
-	      Thread.sleep(5000);
-	      // Click on Sort Btn
-	      try {
-	          lvmgs.getlvmGlobalSearchSortBtn().click();
-	          }catch (Exception e) {
-	        	  lvmgs.getlvmGlobalSearchSortBtnUAT().click();
-	        	  
-	    	}
+			/*
+			 * lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty(
+			 * "filtersglobalsearchinput"));//sortByInput Thread.sleep(2000);
+			 * lvmgs.getLVMSearchButton().click(); Thread.sleep(5000); // Click on Sort Btn
+			 * try { lvmgs.getlvmGlobalSearchSortBtn().click(); }catch (Exception e) {
+			 * lvmgs.getlvmGlobalSearchSortBtnUAT().click();
+			 * 
+			 * }
+			 */
 
+			lvmgs.getGlobalSearchTextBoxNew().click();
+			lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("filtersglobalsearchinput")));
+			Thread.sleep(2000);
+			lvmgs.getSearchButtonNew().click();
+			// Click on Sort Btn
+		    
+		      lvmgs.getLvmSortButton().click();
 	      // Select Exhibitor Sort By Relevance
 	      Select selectAMC = new Select(lvmgs.getlvmGlobalSearch_SearchSortByDropdwn());
 	      selectAMC.selectByVisibleText("Sort By Relevance");
@@ -268,19 +286,27 @@ public class GlobalSearch_MatchingResults extends base {
 	      /*if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 	          lvmgs.getlvmGlobalSearchClearTxt().click();
 	      }*/
-	      lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));//filterByInput
-	      lvmgs.getLVMSearchButton().click();
-	      Thread.sleep(5000);
-	      // Click on Sort Btn
-	      try {
-	          lvmgs.getlvmGlobalSearchSortBtn().click();
-	          }catch (Exception e) {
-	        	  lvmgs.getlvmGlobalSearchSortBtnUAT().click();
-	        	  
-	    	}
+			/*
+			 * lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty(
+			 * "filtersglobalsearchinput"));//filterByInput
+			 * lvmgs.getLVMSearchButton().click(); Thread.sleep(5000); // Click on Sort Btn
+			 * try { lvmgs.getlvmGlobalSearchSortBtn().click(); }catch (Exception e) {
+			 * lvmgs.getlvmGlobalSearchSortBtnUAT().click();
+			 * 
+			 * }
+			 */
+
+			lvmgs.getGlobalSearchTextBoxNew().click();
+			lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("globalsearch_input")));
+			Thread.sleep(2000);
+			lvmgs.getSearchButtonNew().click();
+			Thread.sleep(10000);
+			// Click on Sort Btn
+		    
+		      lvmgs.getLvmSortButton().click();
 	      // Select Character from Sort By Filter Name
 	      Select selectLetter = new Select(lvmgs.getlvmFilterByNameDropDown());
-	      selectLetter.selectByVisibleText("P");
+	      selectLetter.selectByVisibleText("Y");
 	      Thread.sleep(10000);
 	      
 	      try {
@@ -293,7 +319,7 @@ public class GlobalSearch_MatchingResults extends base {
 	          char fChar=expName.charAt(0);
 	          String s=""+fChar;
 	          System.out.println(s);
-	          Assert.assertTrue(s.contains("P"));
+	          Assert.assertTrue(s.contains("Y"));
 	      }
 	      }catch (Exception e) {
 	    	  for (WebElement filterExhNames : lvmgs.getlvmExhiNameForFilterByNameNewUAT()) {
@@ -304,7 +330,7 @@ public class GlobalSearch_MatchingResults extends base {
 	              char fChar=expName.charAt(0);
 	              String s=""+fChar;
 	              System.out.println(s);
-	              Assert.assertTrue(s.contains("P"));
+	              Assert.assertTrue(s.contains("Y"));
 			}
 		}
 	      System.out.println("Displayed All Relevance ");

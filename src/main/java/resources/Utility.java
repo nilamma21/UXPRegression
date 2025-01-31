@@ -33,6 +33,7 @@ import pageObjects.AtlantaMarket.ATLMarketPlannerPage;
 import pageObjects.AtlantaMarket.ATLProductDetailsPage;
 import pageObjects.ExhibitorPortal.EXPMarketsPage;
 import pageObjects.LasVegasMarket.LVMEventsAndWebinarPage;
+import pageObjects.LasVegasMarket.LVMGlobalSearchPage;
 import pageObjects.LasVegasMarket.LVMMarketPlannerPage;
 import pageObjects.Sitecore.SCDashboard;
 import pageObjects.Sitecore.SCDigitalAdminPanelPage;
@@ -60,9 +61,12 @@ public class Utility extends base {
 	SCDashboard scdash;
 	SCShowSpecials scshow;
 	SCDigitalAdminPanelPage digiAdmin;
+	LVMGlobalSearchPage lvmgs;
 	
 	ArrayList<String> tabs;
-	List<WebElement> showspecialslist, exheventslist, exheventnameslist, exheventdeletebtnlist;
+	List<WebElement> showspecialslist, exheventslist, exheventnameslist, exheventdeletebtnlist,infoFilterList;
+	
+	
 	public String seeMoreBtnURL;
 
 	@SuppressWarnings("static-access")
@@ -1307,4 +1311,69 @@ public class Utility extends base {
 			}
 		}
 	}
+	
+	@SuppressWarnings("unlikely-arg-type")
+	public void handleFilterSelection(WebElement filterName) throws InterruptedException {
+		lvmgs = new LVMGlobalSearchPage(driver);
+		
+		
+		infoFilterList = driver.findElements(By.xpath("//div[@class='imc-filteritem__option']"));
+		
+		
+	   
+	    	
+	        if (infoFilterList.equals(filterName.getText())) {
+	            // Click on the checkbox
+	        	filterName.click();
+
+	            // Wait for results to load
+	            Thread.sleep(5000);
+
+	            // Get the first article name
+	            String articleName = lvmgs.getarticleName1st().getText();
+
+	            // Click on the "Learn More" link for the first article
+	            lvmgs.getlearnMoreLinkArticle().click();
+
+	            // Wait for the new page to load
+	            Thread.sleep(15000);
+	            String pageTitle = driver.getTitle();
+
+	            // Verify if the article name is part of the page title
+	            Assert.assertTrue(
+	                articleName.contains(pageTitle),
+	                "The article name does not match the page title."
+	            );
+
+	            // Validate if the selected filter name is present in the tags
+	            boolean isFilterNamePresent = lvmgs.getlistOfAllTags().stream()
+	                .anyMatch(tag -> tag.getText().contains(filterName.getText()));
+
+	            // Assert if the filter name is found in the tags
+	            Assert.assertTrue(
+	                isFilterNamePresent,
+	                "The selected filter name is not present in the tags."
+	            );
+
+	            // Navigate back to the filter list
+	            driver.navigate().back();
+	            Thread.sleep(8000);
+
+	            // Re-locate the checkbox before clicking it again
+	            List<WebElement> infoFilterListNew = driver.findElements(By.xpath("//div[@class='imc-filteritem__option']"));
+
+	            for (WebElement filter : infoFilterListNew) {
+	                if (filter.getText().contains(filterName.getText())) {
+	                    filter.click();
+	                    break;
+	                }
+	            }
+
+	            // Wait for the page to load before continuing
+	            Thread.sleep(5000);
+	            
+	        }
+	    }
+	
+
 }

@@ -147,13 +147,138 @@ public class LVMGlobalSearchPage {
 	By LvmEventsMenu = By.xpath("(//a[contains(text(),'Events')])[1]"); // Locator for Events Menu
 	By LvmExhibitorEvents = By.xpath("//div[@class='event-card--tab']/p[3]"); // Locator for Events Menu
 	By LvmEventExhibitorName = By.xpath("(//div[@class='event-card--cal-card-container imc-content--display-flex imc-content--display-flex-gap-xlarge imc-content--relative']/div[2]/div[1]/div/div/div/div/div/div/div/div/div/div[1]/a[1])[1]"); // Locator for 1st event exhibitor name
+	By LvmSortButton = By.xpath("//div[@class='imc-searchform--bar--button--wrapper']"); // Locator for 1st event exhibitor name
+	By LvmSortButtonListOfLocation = By.xpath("//div[@class='imc-exhibitorcard--text-wrapper imc-content--display-flex-wrap']/div/a"); // Locator for 1st event exhibitor name
 	
+	By LvmSortButtonListOfProducts = By.xpath("//div[@class='imc-exhibitorcard-products-row imc-content--relative']"); // Locator for 1st event exhibitor name
+	By LvmInfoTitleProd = By.xpath("//div[@class='imc-gallery__item imc-content--left']/div/div[1]/div/div/a/p"); // Locator for info title
+	By LvmSearchResultsText = By.xpath("//div[@class='imc-gallery__item imc-content--full-width']/div[1]/section/span[2]/div"); // Locator for info title
 	
+	By LvmInfoLearnMoreLink = By.xpath("(//a[contains(text(),'Learn More')])[1]"); // Locator for info title
+	
+	By lvmInfosearchtxtbxPROD = By.xpath("(//input[@id='input-1'])[4]"); // Locator for Information Search field
+	By lvmInfosearchbtnPROD = By.xpath("(//div[@class = 'imc-searchform--button--search'])[4]"); //Locator for Seach button for global search
+	By lvmFirstCatalogPROD = By.xpath("//div[@class='imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/div/div[2]/div/div[1]"); //Locator for Seach button for global search
+	By listOfAllCatalogExhibitorNames = By.xpath("//h2[@class='imc-exhibitorcard__exhibitorname imc-exhibitorcard--title-hover']"); //Locator for Seach button for global search
+	By CatalogExhibitorNames1st = By.xpath("(//h2[@class='imc-exhibitorcard__exhibitorname imc-exhibitorcard--title-hover'])[1]"); //Locator for Seach button for global search
+	By ArticleName = By.xpath("(//p[@class='event-card--title imc-link--hover-underline normal-line-height'])[1]"); //Locator for Seach button for global search
+	By learnMoreLinkArticle = By.xpath("(//a[contains(text(),'Learn More')])[1]"); 
+	
+	By listOfAllTags = By.xpath("//span[@class='imc-blog-tag-module__tag']");
+	
+	By articleName1st = By.xpath("(//p[@class='event-card--title imc-link--hover-underline normal-line-height'])[1]");
+	By ArticleNameURL = By.xpath("(//div[@class='imc-gallery__item imc-content--left'])[1]/div/div/div/div/a"); 
+	By showSpecialsLink = By.xpath("//a[contains(@href,'Show-Specials')]"); 
+	By showSpecialsDetailsFromShowSpecialsPage = By.xpath("//div[@class='ag-center-cols-container']/div[1]/div[3]"); 
 	
 	public LVMGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 		PageFactory.initElements(driver, this);
+	}
+	public WebElement getshowSpecialsDetailsFromShowSpecialsPage() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(showSpecialsDetailsFromShowSpecialsPage));
+		return driver.findElement(showSpecialsDetailsFromShowSpecialsPage);
+
+	}
+	public WebElement getshowSpecialsLink() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(showSpecialsLink));
+		return driver.findElement(showSpecialsLink);
+
+	}
+	public WebElement getArticleNameURL() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(ArticleNameURL));
+		return driver.findElement(ArticleNameURL);
+
+	}
+	public WebElement getarticleName1st() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(articleName1st));
+		return driver.findElement(articleName1st);
+
+	}
+	public List<WebElement>getlistOfAllTags() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllTags));
+		return driver.findElements(listOfAllTags);
+	}
+	public WebElement getlearnMoreLinkArticle() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(learnMoreLinkArticle));
+		return driver.findElement(learnMoreLinkArticle);
+
+	}
+	public WebElement getArticleName() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(ArticleName));
+		return driver.findElement(ArticleName);
+
+	}
+	public WebElement getCatalogExhibitorNames1st() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(CatalogExhibitorNames1st));
+		return driver.findElement(CatalogExhibitorNames1st);
+
+	}
+	public List<WebElement>getlistOfAllCatalogExhibitorNames() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllCatalogExhibitorNames));
+		return driver.findElements(listOfAllCatalogExhibitorNames);
+	}
+	public WebElement getlvmFirstCatalogPROD() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(lvmFirstCatalogPROD));
+		return driver.findElement(lvmFirstCatalogPROD);
+
+	}
+	public WebElement getlvmInfosearchbtnPROD() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(lvmInfosearchbtnPROD));
+		return driver.findElement(lvmInfosearchbtnPROD);
+
+	}
+	public WebElement getlvmInfosearchtxtbxPROD() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(lvmInfosearchtxtbxPROD));
+		return driver.findElement(lvmInfosearchtxtbxPROD);
+
+	}
+	public WebElement getLvmInfoLearnMoreLink() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(LvmInfoLearnMoreLink));
+		return driver.findElement(LvmInfoLearnMoreLink);
+
+	}
+	public WebElement getLvmSearchResultsText() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(LvmSearchResultsText));
+		return driver.findElement(LvmSearchResultsText);
+
+	}
+	public WebElement getLvmInfoTitleProd() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(LvmInfoTitleProd));
+		return driver.findElement(LvmInfoTitleProd);
+
+	}
+	public List<WebElement>getLvmSortButtonListOfProducts() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(LvmSortButtonListOfProducts));
+		return driver.findElements(LvmSortButtonListOfProducts);
+	}
+	public List<WebElement>getLvmSortButtonListOfLocation() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(LvmSortButtonListOfLocation));
+		return driver.findElements(LvmSortButtonListOfLocation);
+	}
+	public WebElement getLvmSortButton() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(LvmSortButton));
+		return driver.findElement(LvmSortButton);
+
 	}
 	public WebElement getLvmEventExhibitorName() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));

@@ -48,7 +48,7 @@ public class ExhibitorDigitalShowroom extends base {
 		lap = new LVMLandingPage(driver);
 
 		driver.manage().window().maximize();
-		driver.get(prop.getProperty("lvmurl_prod"));
+		driver.get(prop.getProperty("atlmrkturl_prod"));
 		System.out.println("Las Vegas Market site is started");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		lap.getIUnderstandBtn().click(); // Click on understand button
@@ -459,11 +459,7 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		/*
-		 * Thread.sleep(2000);
-		 * lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor5")));
-		 * Thread.sleep(5000); lvmgs.getLVMSearchButton().click(); Thread.sleep(15000);
-		 */
+
 		Thread.sleep(5000);
 
 		lvmgs.getGlobalSearchTextBoxNew().click();
@@ -480,12 +476,6 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmexhact.getleftPaneFilterDGShowroomCatalogNew().click();
 		Thread.sleep(15000);
 
-		// Store the 1st Exhibitor name in String variable
-		/*
-		 * exhname = lvmexhact.getExhibitorName().getText();
-		 * System.out.println("Exhibitor name: " + exhname);
-		 * lvmds.getExhibitorName().click(); Thread.sleep(5000);
-		 */
 		exhname = lvmds.getExhibitorNameNew().getText();
 		System.out.println("Exhibitor name: " + exhname);
 		
