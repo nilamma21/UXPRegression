@@ -102,12 +102,17 @@ public class ATLExhLineProdActionsPage extends base{
 	By lvmMatchingProductLinkForLines1 = By.xpath("(//span[contains(text(),'Matching Products') and //p[contains(text(),'Shown By')]])[1]"); //Locator for location
 	By lvmTotalProductLinkForLines1 = By.xpath("(//span[contains(text(),'Total Products') and //p[contains(text(),'Shown By')]])[1]");
 	By lvmTotalProductLinkForLines = By.xpath("(//p[contains(text(), 'Shown By')]//following::span[contains(text(), 'Total Products')])[1]"); //Locator for location
-	
+	By lvmProductLinkForExh = By.xpath("(//div[@class='undefined imc-content--display-flex imc-content--display-flex-center imc-content--display-flex-column searchItemThumb--container'])[1]/p/span");
 	
 	public ATLExhLineProdActionsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 
+	}
+	public WebElement getlvmProductLinkForExh() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(80));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmProductLinkForExh));
+		return driver.findElement(lvmProductLinkForExh);
 	}
 	public WebElement getlvmTotalProductLinkForLines() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));

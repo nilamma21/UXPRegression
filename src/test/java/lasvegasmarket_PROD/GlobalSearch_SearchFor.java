@@ -438,7 +438,7 @@ public class GlobalSearch_SearchFor extends base{
 		utl.scrollElementIntoMiddle(lvmgs.getLVMsearchresultArticlesLink());
 		Thread.sleep(200);
 		lvmgs.getLVMsearchresultArticlesLink().click();
-		Thread.sleep(3000);
+		Thread.sleep(8000);
 		String filterResultTitle = lvmgs.getArticleName().getText();
 		
 		

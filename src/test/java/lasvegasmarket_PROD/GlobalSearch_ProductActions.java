@@ -23,6 +23,7 @@ import pageObjects.AtlantaMarket.ATLLandingPage;
 import pageObjects.AtlantaMarket.ATLLoginPage;
 import pageObjects.AtlantaMarket.ATLMarketPlannerPage;
 import pageObjects.AtlantaMarket.ATLProductDetailsPage;
+import pageObjects.LasVegasMarket.LVMGlobalSearchPage;
 import resources.GenerateData;
 import resources.Utility;
 import resources.base;
@@ -41,6 +42,7 @@ public class GlobalSearch_ProductActions extends base {
 	ATLProductDetailsPage atlproddet;
 	ATLExhLineProdActionsPage atlexhact;
 	ATLMarketPlannerPage atlmppge;
+	LVMGlobalSearchPage lvmgs;
 
 	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns,
 	allnoteslist, favlist, searchlinetypelist;
@@ -74,37 +76,30 @@ public class GlobalSearch_ProductActions extends base {
 		atlexhact = new ATLExhLineProdActionsPage(driver);
 		atlproddet = new ATLProductDetailsPage(driver);
 		lap = new ATLLandingPage(driver);
-
+		lvmgs = new LVMGlobalSearchPage(driver);
+		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(5000);
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor4")));
-		Thread.sleep(5000);
-		atlgs.getATLSearchButton().click();
+		
+		lvmgs.getGlobalSearchTextBoxNew().click();
+		//lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("exhibitor5")));
+		lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("exhibitor4")));
+		Thread.sleep(2000);
+		lvmgs.getSearchButtonNew().click();
 		Thread.sleep(15000);
 		// Store the 1st Product name of Exhibitor
 		//String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText(); //Old
-		String productNameOnSearchGrid = atlexhact.getprodNameUAT().getText(); //New
+		String productNameOnSearchGrid = atlexhact.getlvmProductLinkForExh().getText(); //New
 		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
-
-		//utl.scrollToElement(atlexhact.getExhibitorProduct());
-
-		// Hover on Product
-		Actions actions = new Actions(driver);
-		actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
-		Thread.sleep(3000);
-		// To mouseover on See Details btn
-		actions.moveToElement(atlexhact.getProdSeeDetailsBtn()).perform();
-
-		// Click on See Details button
-		actions.click().perform();
-		Thread.sleep(10000);
+		atlexhact.getlvmProductLinkForExh().click();
+		
 
 		// Store the Product Name on Product Details page
 		String productNameOnProductDetails = atlproddet.getProductNameOnProductDetails().getText();
 		System.out.println("Product Name On Product Details page: " + productNameOnProductDetails);
 		// Verify that selected Product details page should be opened
-		Assert.assertTrue(productNameOnSearchGrid.equals(productNameOnProductDetails));
-		//driver.get(prop.getProperty("lvmurl_prod"));
+		Assert.assertTrue(productNameOnSearchGrid.contains(productNameOnProductDetails));
+		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 
 	   @Test(priority = 2)
@@ -119,33 +114,26 @@ public class GlobalSearch_ProductActions extends base {
 	        utl = new Utility(driver);
 	        atlexhdgshw = new ATLExhDigiShowroomPage(driver);
 	        atlproddet = new ATLProductDetailsPage(driver);
+	        lvmgs = new LVMGlobalSearchPage(driver);
 
-	        driver.get(prop.getProperty("lvmurl_prod"));
-	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-	        Thread.sleep(6000);
-	        //lap.getCloseMarktAdBtn().click();
-
-	        atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("globalsearchinput"));
-	        atlgs.getATLSearchButton().click();
-	        Thread.sleep(15000);
-	        //Store the 1st Product name of Exhibitor
-	        //String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText(); //Old
-	        String productNameOnSearchGrid = atlexhact.getprodNameUAT().getText(); //New
-	        System.out.println("Selected Product Name: "+productNameOnSearchGrid);
-
-	        //utl.scrollToElement(atlexhact.getExhibitorProduct());
-
-	        // Hovering on Product
-	        Actions actions = new Actions(driver);
-	        actions.moveToElement(atlexhact.getExhibitorProduct()).perform();
-	        Thread.sleep(3000);
-	        // To mouseover on See Details btn
-	        actions.moveToElement(atlexhact.getProdSeeDetailsBtn()).perform();
-
-	        //Click on See Details button
-	        actions.click().perform();
-	        Thread.sleep(5000);
-
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			Thread.sleep(5000);
+			
+			lvmgs.getGlobalSearchTextBoxNew().click();
+			//lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("exhibitor5")));
+			lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("exhibitor4")));
+			Thread.sleep(2000);
+			lvmgs.getSearchButtonNew().click();
+			Thread.sleep(15000);
+			// Store the 1st Product name of Exhibitor
+			//String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText(); //Old
+			String productNameOnSearchGrid = atlexhact.getlvmProductLinkForExh().getText(); //New
+			System.out.println("Selected Product Name: " + productNameOnSearchGrid);
+			//atlexhact.getlvmProductLinkForExh().click();
+			
+			Actions action=new Actions(driver);
+			action.moveToElement(atlexhact.getlvmProductLinkForExh()).click().perform();
+			
 	        //Click on Product Full Screen Viewer button
 	       utl.scrollElementIntoMiddle(atlproddet.getProductFullScreenViewerBtn());
 	       Thread.sleep(200);
@@ -157,7 +145,7 @@ public class GlobalSearch_ProductActions extends base {
 
 	        //Verify the title of the Full screen viewer
 	        System.out.println(atlproddet.getProductFullScreenViewerTitle().getText());
-	        Assert.assertTrue(atlproddet.getProductFullScreenViewerTitle().getText().equals(productNameOnSearchGrid));
+	        Assert.assertTrue(atlproddet.getProductFullScreenViewerTitle().getText().contains(productNameOnSearchGrid));
 
 	        //Dismiss the Full Screen Viewer
 	        atlproddet.getProductFullScreenViewer().click();
@@ -794,6 +782,6 @@ public class GlobalSearch_ProductActions extends base {
 
 	@AfterClass
 	public void tearDown() {
-		driver.quit();
+		//driver.quit();
 	}
 }

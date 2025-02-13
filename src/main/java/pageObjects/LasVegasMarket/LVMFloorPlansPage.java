@@ -72,6 +72,8 @@ public class LVMFloorPlansPage {
 	By lvmFloorPlansLinkPROD = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/div[1]/div/a[contains(text(),'Floor Plans')]"); //Locator for floor plans Link
 	By lvmFloorPlansFirstExhName = By.xpath("//div[@class='imc-content--padded-top-bottom']/div/div[1]/div/div[2]/a"); //Locator for floor plans 1st exh
 	By lvmFloorPlansSearchButton = By.xpath("//div[@class='imc-content--display-flex imc-content--display-flex-space-between imc-lines-overview-actions']/div/section/div/form/div[2]/button"); //Locator for floor plans Search btn
+
+	
 	
 	
 	public LVMFloorPlansPage(WebDriver driver) {

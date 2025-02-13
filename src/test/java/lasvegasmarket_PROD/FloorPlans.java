@@ -171,16 +171,21 @@ public class FloorPlans extends base {
 
 		//utl.scrollToElement(lvmflpp.getLVMExhibitorFloorZoomIn());
 		//Click on Zoom In icon
-		lvmflpp.getLVMExhibitorFloorZoomIn().click();
+		//lvmflpp.getLVMExhibitorFloorZoomIn().click();
+		Actions action= new Actions(driver);
+		action.moveToElement(lvmflpp.getLVMExhibitorFloorZoomIn()).click().perform();
+		
 		//Store Zoom in Attribute
 		String x1= lvmflpp.getLVMFloorPlanMapIamge().getAttribute("style");
 
-		lvmflpp.getLVMExhibitorFloorZoomIn().click();
+		//lvmflpp.getLVMExhibitorFloorZoomIn().click();
+		action.moveToElement(lvmflpp.getLVMExhibitorFloorZoomIn()).click().perform();
 		//Stored Zoom in Attribute
 		String x2=lvmflpp.getLVMFloorPlanMapIamge().getAttribute("style");
 System.out.println("x2 "+x2);
 		//Store Zoom in Attribute
-		lvmflpp.getLVMExhibitorFloorZoomIn().click();
+		//lvmflpp.getLVMExhibitorFloorZoomIn().click();
+		action.moveToElement(lvmflpp.getLVMExhibitorFloorZoomIn()).click().perform();
 		String x3=lvmflpp.getLVMFloorPlanMapIamge().getAttribute("style");
 		System.out.println("x3 "+x3);
 		//Verify Zoom In functionality
@@ -188,8 +193,10 @@ System.out.println("x2 "+x2);
 		Thread.sleep(5000);
 
 		//Click on Zoom Out icon
-		lvmflpp.getLVMExhibitorFloorZoomOut().click();
-		lvmflpp.getLVMExhibitorFloorZoomOut().click();
+		//lvmflpp.getLVMExhibitorFloorZoomOut().click();
+		action.moveToElement(lvmflpp.getLVMExhibitorFloorZoomOut()).click().perform();
+		//lvmflpp.getLVMExhibitorFloorZoomOut().click();
+		action.moveToElement(lvmflpp.getLVMExhibitorFloorZoomOut()).click().perform();
 		//Stored Zoom out Attribute
 		String out=lvmflpp.getLVMFloorPlanMapIamge().getAttribute("style");
 		Thread.sleep(5000);
