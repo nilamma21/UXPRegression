@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -22,6 +23,7 @@ import pageObjects.AtlantaMarket.ATLLandingPage;
 import pageObjects.AtlantaMarket.ATLLoginPage;
 import pageObjects.AtlantaMarket.ATLMarketPlannerPage;
 import pageObjects.AtlantaMarket.ATLProductDetailsPage;
+import pageObjects.LasVegasMarket.LVMGlobalSearchPage;
 import resources.GenerateData;
 import resources.Utility;
 import resources.base;
@@ -40,6 +42,7 @@ public class GlobalSearch_SuggestionList extends base {
 	ATLProductDetailsPage atlproddet;
 	ATLExhLineProdActionsPage atlexhact;
 	ATLMarketPlannerPage atlmppge;
+	LVMGlobalSearchPage lvmgs;
 
 	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns, allnoteslist,favlist, searchlinetypelist;
 
@@ -65,29 +68,32 @@ public class GlobalSearch_SuggestionList extends base {
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
-		
+		lvmgs = new LVMGlobalSearchPage(driver);
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		Thread.sleep(8000);
+
+		lvmgs.getGlobalSearchTextBoxNew().click();
+		lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("autosuggestexhibitor")));
 		Thread.sleep(2000);
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestexhibitor")));
-		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));;
-		wait.until(ExpectedConditions
-				.visibilityOfAllElementsLocatedBy(By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li")));
 
 		exhlist = atlgs.getATLSearchResultsList();
-		//searchexhtypelist = atlgs.getATLSearchResultExhTypeList();
-
-		for (int i = 0; i < exhlist.size(); i++) {
-			//System.out.println(exhlist.get(i).getText());
-			if (exhlist.get(i).getText().contains(prop.getProperty("autosuggestexhibitor"))
-					&& exhlist.get(i).getText().contains("Exhibitor")) {
-				exhlist.get(i).click();
-				break;
-			}
+		
+		for (WebElement suggestion : exhlist) {
+	        if (suggestion.getText().contains(prop.getProperty("autosuggestexhibitor"))&& atlgs.getlExhibitorTitle().getText().contains("Exhibitor")) {
+	        	String suggetionName=suggestion.getText();
+	        	System.out.println(suggetionName);
+	        	Thread.sleep(5000);
+	        	Actions ac=new Actions(driver);
+	            ac.moveToElement(suggestion).click().build().perform();
+	        	
+	            break;
+	            
+	        }
 		}
 		Thread.sleep(8000);
-		Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
+		Assert.assertTrue(atlexhdgshw.getLineExhName().getText().contains((prop.getProperty("autosuggestexhibitor"))));
+		
 	}
 
 	@Test(priority = 2)
@@ -97,29 +103,32 @@ public class GlobalSearch_SuggestionList extends base {
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
-
+		lvmgs = new LVMGlobalSearchPage(driver);
+		
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		//lap.getCloseMarktAdBtn().click();
+		Thread.sleep(8000);
+
+		lvmgs.getGlobalSearchTextBoxNew().click();
+		lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("lineActionInput")));
 		Thread.sleep(2000);
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestline")));
 
-		WebDriverWait wait =  new WebDriverWait(driver, Duration.ofSeconds(30));;
-		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li")));
-
-		linelist = atlgs.getATLSearchResultsList();
-		//searchlinetypelist = atlgs.getATLSearchResultTypeLineList();
-
-		for (int i = 0; i < 10; i++) {
-			// System.out.println(list.get(i).getText());
-			if (linelist.get(i).getText().contains(prop.getProperty("autosuggestline"))
-					&& linelist.get(i).getText().contains("Line")) {
-				linelist.get(i).click();
-				break;
-			}
+		exhlist = atlgs.getATLSearchResultsList();
+		
+		for (WebElement suggestion : exhlist) {
+	        if (suggestion.getText().contains(prop.getProperty("lineActionInput"))&& atlgs.getlExhibitorTitle().getText().contains("Line")) {
+	        	String suggetionName=suggestion.getText();
+	        	System.out.println(suggetionName);
+	        	Thread.sleep(5000);
+	        	Actions ac=new Actions(driver);
+	            ac.moveToElement(suggestion).click().build().perform();
+	        	//suggestion.click();
+	            break;
+	            
+	        }
 		}
 		Thread.sleep(8000);
-		Assert.assertTrue(atlexhdgshw.getATLValidateExhDigiShowPage().isDisplayed());
+		Assert.assertTrue(atlexhdgshw.getLineExhName().getText().contains((prop.getProperty("lineActionInput"))));
 	}
 
 	@Test(priority = 3)
@@ -129,37 +138,39 @@ public class GlobalSearch_SuggestionList extends base {
 
 		atlgs = new ATLGlobalSearchPage(driver);
 		atlproddet = new ATLProductDetailsPage(driver);
-
+		lvmgs = new LVMGlobalSearchPage(driver);
+		atlexhdgshw = new ATLExhDigiShowroomPage(driver);
+		
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		//lap.getCloseMarktAdBtn().click();
-		Thread.sleep(3000);
-		atlgs.getATLGlobalSearchTextBox().sendKeys((prop.getProperty("autosuggestproduct_lvm")));
+		Thread.sleep(8000);
+
+		lvmgs.getGlobalSearchTextBoxNew().click();
+		lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("autosuggestproduct_lvm")));
 		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));;
-		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li")));
 
-		prodlist = atlgs.getATLProductsSearchResultsList();
-		//searchproducttypelist = atlgs.getATLSearchResultPorductTypeList();
-
-		for (int i = 0; i < prodlist.size(); i++) {
-			//System.out.println(prodlist.get(i).getText());			
-			if (prodlist.get(i).getText().contains(prop.getProperty("autosuggestproduct_lvm"))
-					&& prodlist.get(i).getText().contains("Product")) {	
-				Thread.sleep(200);
-				prodlist.get(i).click();
-				break;
-			}
+		exhlist = atlgs.getATLSearchResultsList();
+		
+		for (WebElement suggestion : exhlist) {
+	        if (suggestion.getText().contains(prop.getProperty("autosuggestproduct_lvm"))) {
+	        	String suggetionName=suggestion.getText();
+	        	System.out.println(suggetionName);
+	        	Thread.sleep(5000);
+	        	Actions ac=new Actions(driver);
+	            ac.moveToElement(suggestion).click().build().perform();
+	        	//suggestion.click();
+	            break;
+	            
+	        }
 		}
 		Thread.sleep(8000);
-		Assert.assertTrue(atlproddet.getATLValidateProdDetailsPage().isDisplayed());
-		driver.get(prop.getProperty("lvmurl_prod"));
-		//lap.getCloseMarktAdBtn().click();
+		Assert.assertTrue(atlexhdgshw.getLineExhName().getText().contains((prop.getProperty("autosuggestproduct_lvm"))));
 	}
+	
 	
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 }

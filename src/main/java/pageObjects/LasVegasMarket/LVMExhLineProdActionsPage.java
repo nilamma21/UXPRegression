@@ -97,6 +97,8 @@ public class LVMExhLineProdActionsPage {
 	By mp = By.xpath("//h2[contains(text(),'Paseo Road')]/../../../../../../../../../../div[2]/div/a/span");
 	By catalogitemPROD_NewLVM = By.xpath("(//div[@class='searchItemThumb--image-container'])[1]"); //Locator for Catalog item
 	
+	
+	
 	public LVMExhLineProdActionsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			

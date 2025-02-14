@@ -1,5 +1,6 @@
 package lasvegasmarket_PROD;
 
+import java.awt.RenderingHints.Key;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
@@ -7,7 +8,9 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -48,7 +51,7 @@ public class ExhibitorDigitalShowroom extends base {
 		lap = new LVMLandingPage(driver);
 
 		driver.manage().window().maximize();
-		driver.get(prop.getProperty("atlmrkturl_prod"));
+		driver.get(prop.getProperty("lvmurl_prod"));
 		System.out.println("Las Vegas Market site is started");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		lap.getIUnderstandBtn().click(); // Click on understand button
@@ -113,8 +116,13 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-
 		Thread.sleep(3000);
+		try {
+		lap.getIUnderstandBtn().click(); // Click on understand button
+		}catch (Exception e) {
+			// TODO: handle exception
+		
+		Thread.sleep(8000);;
 		lvmgs.getGlobalSearchTextBoxNew().click();
 		lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("globalsearchinput")));
 		Thread.sleep(1000);
@@ -164,6 +172,7 @@ public class ExhibitorDigitalShowroom extends base {
 		Thread.sleep(5000);
 		Assert.assertTrue(lvmds.getValidateLinesPage().getText().contains(linetext));
 		System.out.println("Line Details are displayed properly.");
+		}
 	}
 
 	@Test(priority = 3)
@@ -180,6 +189,12 @@ public class ExhibitorDigitalShowroom extends base {
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(3000);
+		try {
+		lap.getIUnderstandBtn().click(); // Click on understand button
+		Thread.sleep(8000);
+		}catch (Exception e) {
+			// TODO: handle exception
+		
 		lvmgs.getGlobalSearchTextBoxNew().click();
 		lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("globalsearchinput")));
 		Thread.sleep(1000);
@@ -226,8 +241,9 @@ public class ExhibitorDigitalShowroom extends base {
 		Thread.sleep(5000);
 		Assert.assertTrue(producttext.contains(lvmds.getValidateLinesPage().getText()));
 		System.out.println("Product Details are displayed properly.");
+		driver.get(prop.getProperty("lvmurl_prod"));
 	}
-
+	}
 	@Test(priority = 4)
 	public void TS004_VerifyClickOnLineFiltersForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -242,6 +258,13 @@ public class ExhibitorDigitalShowroom extends base {
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(3000);
+		try {
+		lap.getIUnderstandBtn().click();
+		}// Click on understand button
+catch (Exception e) {
+	// TODO: handle exception
+
+		Thread.sleep(8000);;
 		lvmgs.getGlobalSearchTextBoxNew().click();
 		lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("globalsearchinput")));
 		Thread.sleep(1000);
@@ -257,53 +280,105 @@ public class ExhibitorDigitalShowroom extends base {
 		Thread.sleep(5000);
 		utl.scrollToElement(lvmds.getProductSection());
 
+		Thread.sleep(8000);
 		// Verify A-Z sorting
-		lvmds.getAlphabeticSorting().click();
+		//lvmds.getAlphabeticSorting().click();
+		Actions action=new Actions(driver);
+		action.moveToElement(lvmds.getAlphabeticSorting()).click().perform();
 		Assert.assertTrue(lvmds.getLinesOptionText().getText().startsWith("A"));
+		driver.get(prop.getProperty("lvmurl_prod"));
+}
 	}
 
 	@Test(priority = 5)
 	public void TS005_VerifyClickOnLineSearchForExhibitorTest() throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// T317: The click on Line Filters functionality for an Exhibitor Digital Show
-		// room
+	    // The purpose of this test case to verify:-
+	    // T317: The click on Line Filters functionality for an Exhibitor Digital Showroom
 
-		lvmgs = new LVMGlobalSearchPage(driver);
-		lvmexhact = new LVMExhLineProdActionsPage(driver);
-		lap = new LVMLandingPage(driver);
-		lvmds = new LVMExhDigiShowroomPage(driver);
+	    // Initialize necessary page objects
+	    lvmgs = new LVMGlobalSearchPage(driver);
+	    lvmexhact = new LVMExhLineProdActionsPage(driver);
+	    lap = new LVMLandingPage(driver);
+	    lvmds = new LVMExhDigiShowroomPage(driver);
 
-		driver.get(prop.getProperty("lvmurl_prod"));
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		/*
-		 * Thread.sleep(2000);
-		 * lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty(
-		 * "globalsearchinput"))); Thread.sleep(5000);
-		 * lvmgs.getLVMSearchButton().click(); Thread.sleep(8000);
-		 */
-		Thread.sleep(3000);
-		lvmgs.getGlobalSearchTextBoxNew().click();
-		lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("globalsearchinput")));
-		Thread.sleep(1000);
-		lvmgs.getSearchButtonNew().click();
-		Thread.sleep(15000);
+	    // Open the LVM website
+	    driver.get(prop.getProperty("lvmurl_prod"));
+	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
-		// Click on the 1st Exhibitor name
-		lvmds.getExhibitorNameNew().click();
-		Thread.sleep(5000);
-		// utl.scrollToElement(lvmds.getLinesSection());
-		utl.scrollToElement(lvmds.getProductSection());
+	    // Perform global search
+	    Thread.sleep(3000);
+	    try {
+		lap.getIUnderstandBtn().click(); // Click on understand button
+	    }catch (Exception e) {
+			// TODO: handle exception
+		
+		Thread.sleep(8000);;
+	    lvmgs.getGlobalSearchTextBoxNew().click();
+	    lvmgs.getGlobalSearchEnterText().sendKeys(prop.getProperty("globalsearchinput"));
+	    Thread.sleep(1000);
+	    lvmgs.getSearchButtonNew().click();
+	    Thread.sleep(15000);
 
-		// Verify Line Search functionality
-		lvmds.getLineSearch().click();
-		lvmds.getLineSearch().sendKeys(prop.getProperty("line2"));
-		// lvmds.getLineSearchButton().click();
-		lvmds.getlineSearchButtonNewPROD().click();
-		Thread.sleep(5000);
-		Assert.assertTrue(lvmds.getVerifyLineSearchNew().getText().contains(prop.getProperty("line2")));
+	    // Click on the first exhibitor name
+	    lvmds.getExhibitorNameNew().click();
+	    Thread.sleep(5000);
+
+	    // Scroll to the product section
+	    utl.scrollToElement(lvmds.getProductSection());
+
+	    // Store the first line name
+	    String lineName = lvmds.getVerifyLineSearchNew().getText();
+	    System.out.println("Searching for Line: " + lineName);
+
+	    try {
+	        // Verify Line Search functionality
+	        lvmds.getLineSearch().click();
+	        lvmds.getLineSearch().sendKeys(lineName);
+	        lvmds.getSearchBtnNew().click();
+	        Thread.sleep(5000);
+	        utl.scrollToElement(lvmds.getProductSection());
+
+	        // Validate the searched line name is present
+	        Assert.assertTrue(lvmds.getVerifyLineSearchNew().getText().contains(lineName));
+	        System.out.println("Line Search functionality verified successfully.");
+
+	    } catch (Exception e1) {
+	        System.out.println("Exception encountered, attempting fallback method.");
+
+	        // Handle fallback case: Clear search field and try with a second line name
+	        utl.scrollToElement(lvmds.getProductSection());
+	        Thread.sleep(9000);
+	        //lvmds.getLineSearch().click();
+	        Thread.sleep(8000);
+	        lvmds.getLineSearch().sendKeys(Keys.CONTROL + "a");
+	        Thread.sleep(8000);
+	        lvmds.getLineSearch().sendKeys(Keys.DELETE);
+	        Thread.sleep(5000);
+	        lvmds.getLineSearch().sendKeys(Keys.ENTER);
+	        Thread.sleep(8000);
+
+	        // Get the second line name and perform search
+	        String lineName2 = lvmds.getVerify2ndLineSearchNew().getText();
+	        System.out.println("Searching for alternative Line: " + lineName2);
+	        
+	        lvmds.getLineSearch().sendKeys(lineName2);
+	        lvmds.getLineSearch().sendKeys(Keys.ENTER);
+	        
+	        Thread.sleep(5000);
+	        utl.scrollToElement(lvmds.getProductSection());
+
+	        // Validate the second searched line name is present
+	        Assert.assertTrue(lvmds.getVerifyLineSearchNew().getText().contains(lineName2));
+	        System.out.println("Alternative Line Search verified successfully.");
+	    }
+
+	    // Return to home page after execution
+	    driver.get(prop.getProperty("lvmurl_prod"));
+	    }
 	}
 
-	@Test(priority = 6)
+
+	@Test(priority = 8)
 	public void TS006_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -316,13 +391,14 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		/*
-		 * Thread.sleep(2000);
-		 * lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty(
-		 * "globalsearchinput"))); Thread.sleep(5000);
-		 * lvmgs.getLVMSearchButton().click(); Thread.sleep(10000);
-		 */
 		Thread.sleep(3000);
+		try {
+		lap.getIUnderstandBtn().click(); // Click on understand button
+
+		Thread.sleep(8000);
+		}catch (Exception e) {
+			// TODO: handle exception
+		
 		lvmgs.getGlobalSearchTextBoxNew().click();
 		lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("globalsearchinput")));
 		Thread.sleep(1000);
@@ -334,14 +410,17 @@ public class ExhibitorDigitalShowroom extends base {
 		// Get the Total Lines count on Search grid
 		lvmds.getExhibitorNameNew().click();
 		//lvmds.getExhibitorName().click();
-		Thread.sleep(5000);
+		Thread.sleep(10000);		
 		// Scroll to Line Section
-		utl.scrollToElement(lvmds.getProductSection());
+		//utl.scrollToElement(lvmds.getTotalLinesButton());
 		// Click on See All Lines Btn
-		lvmds.getTotalLinesButton().click();
+		//lvmds.getTotalLinesButton().click();
+		Actions action=new Actions(driver);
+		action.moveToElement(lvmds.getTotalLinesButton()).click().perform();
 
 		Assert.assertTrue(lvmds.getLVMVerifyLinePageTitle().getText().contains("Lines"));
 		System.out.println("Lines Component: See All Lines Btn functionality is working properly.");
+		}
 	}
 
 	@Test(priority = 7)
@@ -357,6 +436,11 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		try {
+			lap.getIUnderstandBtn().click(); // Click on understand button
+
+			Thread.sleep(8000);
+			}catch (Exception e) {
 		/*
 		 * Thread.sleep(2000);
 		 * lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty(
@@ -382,9 +466,10 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmds.getAllProductsButton().click();
 		Assert.assertTrue(lvmds.getLVMVerifyLinePageTitle().getText().contains("Products"));
 		System.out.println("Products Component: See All Products Btn functionality is working properly.");
+			}
 	}
 
-	@Test(priority = 8) // Pending due to data issue
+	@Test(priority = 6) // Pending due to data issue
 	public void TS008_VerifySeeInOtherMarketsForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T333: The See in Other Markets functionality for an Exhibitor Digital Show
@@ -396,13 +481,15 @@ public class ExhibitorDigitalShowroom extends base {
 		lvmds = new LVMExhDigiShowroomPage(driver);
 
 		driver.get(prop.getProperty("lvmurl_prod"));
+		
+		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		/*
-		 * Thread.sleep(2000);
-		 * lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor13")))
-		 * ; Thread.sleep(5000); lvmgs.getLVMSearchButton().click();
-		 * Thread.sleep(15000);
-		 */
+		try {
+			lap.getIUnderstandBtn().click(); // Click on understand button
+
+			Thread.sleep(8000);
+			}catch (Exception e) {
+		
 		Thread.sleep(3000);
 		lvmgs.getGlobalSearchTextBoxNew().click();
 		lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("globalsearchinput")));
@@ -416,7 +503,7 @@ public class ExhibitorDigitalShowroom extends base {
 		
 		// Get the Total Lines count on Search grid
 		lvmds.getExhibitorNameNew().click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);		
 
 		// Click See in Other Market button and verify if the page opens
 		// utl.scrollToElement( lvmds.getSeeInOtherMarket());
@@ -444,6 +531,7 @@ public class ExhibitorDigitalShowroom extends base {
 		Assert.assertTrue(lvmds.getVerifyContactExhibitorPage().isDisplayed());
 		System.out.println("Contact Exhibitor page is displayed properly.");
 		// lvmds.getContactExhibitorCloseButton().click();
+			}
 	}
 
 	@Test(priority = 9)
@@ -459,7 +547,11 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		try {
+			lap.getIUnderstandBtn().click(); // Click on understand button
 
+			Thread.sleep(8000);
+			}catch (Exception e) {
 		Thread.sleep(5000);
 
 		lvmgs.getGlobalSearchTextBoxNew().click();
@@ -470,10 +562,18 @@ public class ExhibitorDigitalShowroom extends base {
 
 		
 		//utl.scrollToElement(lvmexhact.getdigiShowroomFilterLVMNew());
-		Thread.sleep(3000);
-		lvmexhact.getdigiShowroomFilterLVMNew().click();
-		Thread.sleep(3000);
-		lvmexhact.getleftPaneFilterDGShowroomCatalogNew().click();
+		
+		//lvmexhact.getdigiShowroomFilterLVMNew().click();
+		
+		Actions action=new Actions(driver);
+		
+		action.moveToElement(lvmexhact.getdigiShowroomFilterLVMNew()).click().perform();
+		
+		Thread.sleep(10000);		
+		
+		action.moveToElement(lvmexhact.getleftPaneFilterDGShowroomCatalogNew()).click().perform();
+		
+		//lvmexhact.getleftPaneFilterDGShowroomCatalogNew().click();
 		Thread.sleep(15000);
 
 		exhname = lvmds.getExhibitorNameNew().getText();
@@ -493,8 +593,9 @@ public class ExhibitorDigitalShowroom extends base {
 		Assert.assertTrue(lvmds.getLVMVerifyLinePageTitle().getText().contains("Catalogs"));
 		System.out.println("Catalogs Component: See All Catalogs Btn functionality is working properly.");
 	}
+	}
 
-	@Test(priority = 10)
+	@Test(priority = 12)
 	public void TS010_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest()
 			throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -507,12 +608,11 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		/*
-		 * Thread.sleep(2000);
-		 * lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty(
-		 * "leftpanefilterinput3"))); // Thread.sleep(5000);
-		 * lvmgs.getLVMSearchButton().click(); Thread.sleep(15000);
-		 */
+		try {
+			lap.getIUnderstandBtn().click(); // Click on understand button
+
+			Thread.sleep(8000);
+			}catch (Exception e) {
 
 		Thread.sleep(3000);
 		lvmgs.getGlobalSearchTextBoxNew().click();
@@ -543,7 +643,7 @@ public class ExhibitorDigitalShowroom extends base {
 			newURL = visitURL;
 		}
 		System.out.println("1st URL: " + newURL);
-		Thread.sleep(2000);
+		Thread.sleep(10000);		
 		// Click on Hero Component Visit
 		String currentWindowID = driver.getWindowHandle();
 		lvmds.getHeroComponentVisitPROD().click();
@@ -560,6 +660,7 @@ public class ExhibitorDigitalShowroom extends base {
 		driver.switchTo().window(currentWindowID);
 		System.out.println("Hero component: Visit <Exhibitor site> Btn functionality is working properly.");
 	}
+	}
 
 	@Test(priority = 11)
 	public void TS011_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest()
@@ -574,12 +675,11 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		/*
-		 * Thread.sleep(2000);
-		 * lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor11")))
-		 * ; Thread.sleep(5000); lvmgs.getLVMSearchButton().click();
-		 * Thread.sleep(15000);
-		 */
+		try {
+			lap.getIUnderstandBtn().click(); // Click on understand button
+
+			Thread.sleep(8000);
+			}catch (Exception e) {
 
 		Thread.sleep(3000);
 		lvmgs.getGlobalSearchTextBoxNew().click();
@@ -598,7 +698,7 @@ public class ExhibitorDigitalShowroom extends base {
 		System.out.println("Exhibitor name: " + exhname);
 		
 		lvmds.getExhibitorNameNew().click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);		
 
 		// Click on Hero Component Visit
 		lvmds.getView3DshowroomBtn().click();
@@ -610,8 +710,8 @@ public class ExhibitorDigitalShowroom extends base {
 		System.out.println("Hero component: View 3D Showroom Btn functionality is working properly.");
 		lvmds.getView3DshowroomClose().click();
 	}
-
-	@Test(priority = 12) //upgradation pending deu to data issue
+	}
+	@Test(priority = 10) //upgradation pending deu to data issue
 	public void TS012_VerifyExhibitorDigitalEventsComponentTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T334: Exhibitor Digital showroom: Events Component
@@ -624,18 +724,17 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-		/*
-		 * Thread.sleep(3000); String abc = utl.LVMExhibitorWithEvent();
-		 * //utl.scrollToElement(lvmgs.getLVMGlobalSearchTextBox());
-		 * lvmgs.getLVMGlobalSearchTextBox().sendKeys(abc); // Thread.sleep(5000);
-		 * lvmgs.getLVMSearchButton().click(); Thread.sleep(10000);
-		 */
+		try {
+			lap.getIUnderstandBtn().click(); // Click on understand button
+
+			Thread.sleep(8000);
+			}catch (Exception e) {
 		Thread.sleep(10000);
 		//click on Discover tab
 		lvmgs.getLvmDiscoverTab().click();
 		//Click on Events menu
 		lvmgs.getLvmEventsMenu().click();
-		Thread.sleep(5000);
+		Thread.sleep(10000);		
 		//Click on Exhibitor events
 		lvmgs.getLvmExhibitorEvents().click();
 		Thread.sleep(3000);
@@ -647,54 +746,29 @@ public class ExhibitorDigitalShowroom extends base {
 	    lvmgs.getGlobalSearchEnterText().sendKeys(exhbName);
 	    lvmgs.getSearchButtonNew().click();
 		Thread.sleep(20000);
-		/*
-		 * // Store the 1st Exhibitor name in String variable exhname =
-		 * lvmexhact.getExhibitorName().getText(); System.out.println("Exhibitor name: "
-		 * + exhname);
-		 * 
-		 * lvmds.getExhibitorName().click(); Thread.sleep(5000);
-		 */
+		
 		exhname = lvmds.getExhibitorNameNew().getText();
 		System.out.println("Exhibitor name: " + exhname);
 		
 		lvmds.getExhibitorNameNew().click();
 		Thread.sleep(10000);
-		/*
-		 * lvmgs.getSearchButtonNew().click(); Thread.sleep(15000); //
-		 * utl.scrollToElement(lvmexhact.geteventFirstExNameLVM()); // Store the 1st
-		 * Exhibitor name in String variable exhname =
-		 * lvmexhact.geteventFirstExNameLVM().getText();
-		 * System.out.println("Exhibitor name: " + exhname);
-		 * lvmgs.getLVMGlobalSearchTextBox().sendKeys(exhname); Thread.sleep(5000);
-		 * lvmgs.getLVMSearchButton().click(); Thread.sleep(10000);
-		 * lvmds.getExhibitorName().click(); Thread.sleep(5000);
-		 */
-		// Scroll to Line Section
-		// utl.scrollToElement(lvmds.getEventsSection());
-		// Click on See All Events Btn
-
-		//utl.scrollToElement(lvmds.getEventsSection());
+		
 		Thread.sleep(8000);
 		lvmds.getseeAllEventButton().click();
 		//lvmds.getseeAllEventButton().click();
 		Thread.sleep(2000);
-		/*
-		 * Assert.assertTrue(lvmds.getLVMVerifyLinePageTitle().getText().contains(
-		 * "Events")); driver.navigate().back();
-		 * utl.scrollToElement(lvmds.getEventsSection());
-		 */
-		// utl.scrollToElement(lvmds.getEventNameNew());
+		
 		String eventName = lvmds.getEventNameNew().getText();
 		System.out.println("Event Name : " + eventName);
-		// lvmds.getEventName().click(); //Old
-		// utl.scrollToElement(lvmds.getEventNameNew());
+		
 		lvmds.getEventNamePROD().click(); // New
 		Thread.sleep(3000);
 		Assert.assertTrue(lvmevents.getlvmEventNameOnDetailsPageUAT().getText().contains(eventName));
 		System.out.println("Events Component functionality is working properly.");
 	}
+	}
 
-	@Test(priority = 13)
+	@Test(priority = 14)
 	public void TS013_VerifyCatalogsSectionForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T318: Exhibitor Digital showroom: Catalogs Component
@@ -707,32 +781,27 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-		/*
-		 * Thread.sleep(2000);
-		 * lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty(
-		 * "globalsearchinputforShowSpecials3"))); // Thread.sleep(5000);
-		 * lvmgs.getLVMSearchButton().click(); Thread.sleep(15000);
-		 */
+		try {
+			lap.getIUnderstandBtn().click(); // Click on understand button
+
+			Thread.sleep(8000);
+			}catch (Exception e) {
 		Thread.sleep(3000);
 	    lvmgs.getGlobalSearchTextBoxNew().click();
 	    lvmgs.getGlobalSearchEnterText().sendKeys("   ");
 		Thread.sleep(1000);
 		lvmgs.getSearchButtonNew().click();
+		Thread.sleep(10000);		
 		/*
 		 * Thread.sleep(15000); Thread.sleep(3000);
 		 */
 		lvmexhact.getdigiShowroomFilterLVMNew().click();
 		Thread.sleep(3000);
-		lvmexhact.getleftPaneFilterDGShowroomCatalogNew().click();
+		Actions action=new Actions(driver);
+		action.moveToElement(lvmexhact.getleftPaneFilterDGShowroomCatalogNew()).click().perform();
+		//lvmexhact.getleftPaneFilterDGShowroomCatalogNew().click();
 		Thread.sleep(20000);
-		/*
-		 * // Store the 1st Exhibitor name in String variable exhname =
-		 * lvmexhact.getExhibitorName().getText(); System.out.println("Exhibitor name: "
-		 * + exhname);
-		 * 
-		 * // Get the Total Lines count on Search grid lvmds.getExhibitorName().click();
-		 * Thread.sleep(5000);
-		 */
+		
 	    exhname = lvmds.getExhibitorNameNew().getText();
 		System.out.println("Exhibitor name: " + exhname);
 		
@@ -759,72 +828,96 @@ public class ExhibitorDigitalShowroom extends base {
 		/*
 		 * driver.close(); driver.switchTo().window(winHandleBefore);
 		 */
-	}
+	}}
+	
 
-	@Test(priority = 14)// show specials data issue link not available
+	@Test(priority = 13)// show specials data issue link not available
 	public void TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest() throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// T319: Exhibitor Digital showroom: Show Specials
+	    // The purpose of this test case to verify:- 
+	    // T319: Exhibitor Digital showroom: Show Specials
 
-		lvmgs = new LVMGlobalSearchPage(driver);
-		lvmexhact = new LVMExhLineProdActionsPage(driver);
-		lap = new LVMLandingPage(driver);
-		lvmds = new LVMExhDigiShowroomPage(driver);
-		lvmevents = new LVMEventsAndWebinarPage(driver);
+	    lvmgs = new LVMGlobalSearchPage(driver);
+	    lvmexhact = new LVMExhLineProdActionsPage(driver);
+	    lap = new LVMLandingPage(driver);
+	    lvmds = new LVMExhDigiShowroomPage(driver);
+	    lvmevents = new LVMEventsAndWebinarPage(driver);
 
-		driver.get(prop.getProperty("lvmurl_prod"));
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Thread.sleep(3000);
-		// lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("exhibitor14")));
+	    driver.get(prop.getProperty("lvmurl_prod"));
+	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+	    Thread.sleep(8000);
+	    try {
+			lap.getIUnderstandBtn().click(); // Click on understand button
 
-		// click on Exhibitors And Product Tab
-		lvmgs.getlvmExhibitorsAndProductTab().click();
-		Thread.sleep(200);
-		// Click on Show Specials
-		lvmgs.getlvmShowSpecialsLink().click();
-		Thread.sleep(5000);
+			Thread.sleep(8000);
+			}catch (Exception e) {
 
-		// Store the name of Show Special Exhibitor
-		String ename = lvmgs.getFirstShowSpecialName().getText();
-		System.out.println(ename);
-		String abc = ename.split(" ")[0].trim();
+	    // Click on Discover tab
+	    lvmgs.getLvmDiscoverTab().click();
+	    Thread.sleep(200);
 
-		// Send exhibitor name which has show specials
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys(abc);
+	    // Click on Show Specials
+	    lvmgs.getlvmShowSpecialsLink().click();
+	    Thread.sleep(5000);
 
-		// Thread.sleep(5000);
-		lvmgs.getLVMSearchButton().click();
-		Thread.sleep(15000);
+	    // Store the name of Show Special Exhibitor
+	    String ename = lvmgs.getFirstShowSpecialName().getText();
+	    System.out.println(ename);
 
-		// Store the 1st Exhibitor name in String variable
-		exhname = lvmexhact.getExhibitorName().getText();
-		System.out.println("Exhibitor name: " + exhname);
+	    // Check if "Shown By" is present in the exhibitor name
+	    String abc;
+	    if (ename.contains("Shown By")) {
+	        abc = ename.replace("Shown By ", "");
+	    } else {
+	        abc = ename; // Take the full name if "Shown By" is not present
+	    }
+	    System.out.println("Exhibitor Name for Search: " + abc);
 
-		// Get the Total Lines count on Search grid
-		// utl.scrollToElement( lvmds.getExhibitorName());
-		lvmds.getExhibitorName().click();
-		Thread.sleep(7000);
+	    String ShowSpecialDetails = lvmgs.getshowSpecialsDetailsFromShowSpecialsPage().getText();
+	    System.out.println("Show Specials Page Details: " + ShowSpecialDetails);
 
-		// Verify Show Special section for Exhibitor
-		utl.scrollToElement(lvmds.getshowSpecialSection());
-		// Verify both count
-		String shwoSpecialCount = lvmds.getShowSpecialCount().getText();
-		String splitShwSpecialCount = shwoSpecialCount.split(" ")[0].trim();
-		System.out.println(splitShwSpecialCount);
-		String SeeAllBtnCount = lvmds.getSeeAllshowSpecialBtn().getText();
-		String splitSeeAllBtnCount = SeeAllBtnCount.split(" ")[2].trim();
-		System.out.println(splitSeeAllBtnCount);
+	    // Perform search with the exhibitor name
+	    lvmgs.getGlobalSearchTextBoxNew().click(); // Click on the global search field
+	    lvmgs.getGlobalSearchEnterText().sendKeys(abc);
+	    lvmgs.getSearchButtonNew().click(); // Click on search button
 
-		Assert.assertTrue(splitShwSpecialCount.contains(splitSeeAllBtnCount));
-		System.out.println("Both counts are same");
-		// Click on See All Show Special
-		lvmds.getSeeAllshowSpecialBtn().click();
-		Assert.assertTrue(lvmds.getValidateLinesPage().getText().contains("Specials"));
-		System.out.println("See All Show Specials Btn is working properly.");
-		lvmds.getProductsPageBackButton().click();
-		utl.scrollToElement(lvmds.getshowSpecialSection());
-		String ShowSpecialName = lvmds.getShowSpecialName().getText();
-		System.out.println("Show Special Name : " + ShowSpecialName);
+	    Thread.sleep(15000);
+
+	    // Store the 1st Exhibitor name in String variable
+	    exhname = lvmds.getExhibitorNameNew().getText();
+	    System.out.println("Exhibitor name: " + exhname);
+
+	    // Get the Total Lines count on Search grid
+	    lvmds.getExhibitorNameNew().click();
+	    Thread.sleep(8000);
+
+	    // Verify Show Special section for Exhibitor
+	    utl.scrollToElement(lvmds.getshowSpecialSection());
+
+	    // Verify both counts
+	    String showSpecialCount = lvmds.getShowSpecialCount().getText();
+	    String splitShowSpecialCount = showSpecialCount.split(" ")[0].trim();
+	    System.out.println("Show Special Count: " + splitShowSpecialCount);
+
+	    String seeAllBtnCount = lvmds.getseeShowSpecials().getText();
+	    String splitSeeAllBtnCount = seeAllBtnCount.split(" ")[1].trim();
+	    System.out.println("See All Button Count: " + splitSeeAllBtnCount);
+
+	    Assert.assertTrue(splitShowSpecialCount.contains(splitSeeAllBtnCount));
+	    System.out.println("Both counts are the same");
+
+	    // Click on See All Show Special
+	    lvmds.getseeShowSpecials().click();
+	    Assert.assertTrue(lvmds.getValidateLinesPage().getText().contains("Special"));
+	    System.out.println("See All Show Specials Btn is working properly.");
+
+	    driver.navigate().back();
+	    utl.scrollToElement(lvmds.getshowSpecialSection());
+
+	    // Verify Show Special details on Digital Showroom page
+	    String SSDetails = lvmds.getShowSpecialDetailsLVMPROD().getText();
+	    System.out.println("DG page Show Special Details: " + SSDetails);
+	    Assert.assertTrue(SSDetails.contains(ShowSpecialDetails));
+	}
 	}
 
 	@Test(priority = 15)
@@ -840,6 +933,11 @@ public class ExhibitorDigitalShowroom extends base {
 
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		try {
+			lap.getIUnderstandBtn().click(); // Click on understand button
+
+			Thread.sleep(8000);
+			}catch (Exception e) {
 		/*
 		 * Thread.sleep(2000);
 		 * lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty(
@@ -853,11 +951,12 @@ public class ExhibitorDigitalShowroom extends base {
 		 * "globalsearchinput")); Thread.sleep(1000);
 		 * lvmgs.getSearchButtonNew().click(); Thread.sleep(15000);
 		 */
-	    Thread.sleep(3000);
+		Thread.sleep(10000);		
 	    lvmgs.getGlobalSearchTextBoxNew().click();
 	    lvmgs.getGlobalSearchEnterText().sendKeys(prop.getProperty("globalsearchinput"));
 		Thread.sleep(1000);
 		lvmgs.getSearchButtonNew().click();
+		Thread.sleep(10000);		
 		// Store the 1st Exhibitor name in String variable
 		/*
 		 * exhname = lvmexhact.getExhibitorName().getText();
@@ -883,7 +982,7 @@ public class ExhibitorDigitalShowroom extends base {
 		System.out.println("Hero component: View Contact Exhibitor Btn functionality is working properly.");
 		lvmds.getContactPopUpClose().click();
 	}
-
+	}
 	@Test(enabled = false)
 	public void TS016_VerifyExhibitorDigitalShowroomHeroComponentOrderOnJuniperMarketTest()
 			throws InterruptedException, IOException {

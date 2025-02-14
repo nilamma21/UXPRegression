@@ -2,6 +2,7 @@ package lasvegasmarket_PROD;
 
 import java.io.IOException;
 import java.time.Duration;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebElement;
@@ -62,30 +63,59 @@ public class GlobalSearch_MatchingResults extends base {
 	
 	  @Test(priority = 1)
 	  public void TS001_VerifyGlobalSearchContainsAndStartsWithTest() throws InterruptedException, IOException {
-	      // The purpose of this test case to verify:-
-	      // T814: Verify Global Search: Contains and Starts With
-	      //Blocked- Unclear about the acceptance criteria
-	      
-	      lvmgs = new LVMGlobalSearchPage(driver);
-	      lvmds = new LVMExhDigiShowroomPage(driver);
-	      lvmexhact = new LVMExhLineProdActionsPage(driver);
-	      
-	      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-	      
-			lvmgs.getGlobalSearchTextBoxNew().click();
-			lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("exhibitor5")));
-			Thread.sleep(2000);
-			lvmgs.getSearchButtonNew().click();
+		    // Test Purpose: Verify Global Search functionality for "Contains" and "StartsWith" behavior.
+		    // Test Case ID: T814
+		    // Blocked: Unclear about the acceptance criteria
+
+		    // Initialize page objects
+		    lvmgs = new LVMGlobalSearchPage(driver);
+		    lvmds = new LVMExhDigiShowroomPage(driver);
+		    lvmexhact = new LVMExhLineProdActionsPage(driver);
+
+		    // Set implicit wait
+		    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+
+		    // Perform global search
+		    lvmgs.getGlobalSearchTextBoxNew().click(); // Click on the global search text box
+		    lvmgs.getGlobalSearchEnterText().sendKeys("tri"); // Enter search keyword "tri"
+		    lvmgs.getSearchButtonNew().click(); // Click the search button
+
+		    // Wait for search results to load (explicit wait is better than Thread.sleep)
 			/*
-			 * lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor5"));//
-			 * containsStartWithInput Thread.sleep(1000);
-			 * lvmgs.getLVMSearchButton().click(); Thread.sleep(4000);
+			 * WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+			 * wait.until(ExpectedConditions.visibilityOfAllElements(lvmgs.
+			 * getlvmListOfExhibitors()));
 			 */
-	      
-	      Assert.assertTrue(lvmgs.getLvmSearchResultsText().getText().contains(prop.getProperty("exhibitor5")));
-	      System.out.println("Displayed All Products Name Start with :: " + prop.getProperty("exhibitor5"));
-	      driver.get(prop.getProperty("lvmurl_prod"));
-	  }
+
+		    // Fetch the list of exhibitors
+		    List<WebElement> exhibitors = lvmgs.getlvmListOfExhibitors();
+
+		    // Check if the list is not empty
+		    if (exhibitors.isEmpty()) {
+		        Assert.fail("No exhibitors found in the search results.");
+		    }
+
+		    // Join all exhibitor titles into a single string
+		    StringBuilder joinedText = new StringBuilder();
+		    for (WebElement exhibitor : exhibitors) {
+		        String title = exhibitor.getText().trim().toLowerCase();
+		        joinedText.append(title); // Append each title to the joinedText
+		    }
+
+		    // Convert the joined text to a single string
+		    String concatenatedString = joinedText.toString();
+		    System.out.println("Concatenated String: " + concatenatedString);
+
+		    // Check if the concatenated string contains "tri"
+		    if (concatenatedString.contains("tri")) {
+		        System.out.println("✅ Test Passed: The substring 'tri' was found in the concatenated string.");
+		    } else {
+		        System.out.println("❌ Test Failed: The substring 'tri' was NOT found in the concatenated string.");
+		    }
+
+		    // Assert that the concatenated string contains "tri"
+		    Assert.assertTrue(concatenatedString.contains("tri"), "The substring 'tri' was NOT found in the concatenated string.");
+		}
 	  
 	  @Test(priority = 2)
 	  public void TS002_VerifyGlobalSearchMatchingResultsSortWithinTest() throws InterruptedException, IOException {

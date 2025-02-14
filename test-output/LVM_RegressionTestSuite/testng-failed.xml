@@ -6,14 +6,47 @@
   </listeners>
   <test thread-count="1" name="RegressionTest(failed)">
     <classes>
-      <class name="lasvegasmarket_PROD.ShowSpecials">
+      <class name="lasvegasmarket_PROD.GlobalSearch_MatchingResults">
         <methods>
-          <include name="TS002_VerifyShowroomLinkForShowSpecialsTest"/>
-          <include name="TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest"/>
-          <include name="tearDown"/>
           <include name="initialize"/>
+          <include name="TS003_VerifyGlobalSearchMatchingResultsSortSortByTest"/>
+          <include name="quit"/>
         </methods>
-      </class> <!-- lasvegasmarket_PROD.ShowSpecials -->
+      </class> <!-- lasvegasmarket_PROD.GlobalSearch_MatchingResults -->
+      <class name="lasvegasmarket_PROD.ExhibitorDigitalShowroom">
+        <methods>
+          <include name="initialize"/>
+          <include name="TS012_VerifyExhibitorDigitalEventsComponentTest"/>
+          <include name="TS013_VerifyCatalogsSectionForExhibitorTest"/>
+          <include name="tearDown"/>
+          <include name="TS008_VerifySeeInOtherMarketsForExhibitorTest"/>
+        </methods>
+      </class> <!-- lasvegasmarket_PROD.ExhibitorDigitalShowroom -->
+      <class name="lasvegasmarket_PROD.GlobalSearch_SearchFor">
+        <methods>
+          <include name="initialize"/>
+          <include name="TS011_VerifyEventsOverviewInGlobalSearchTest"/>
+          <include name="tearDown"/>
+          <include name="TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest"/>
+          <include name="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest"/>
+        </methods>
+      </class> <!-- lasvegasmarket_PROD.GlobalSearch_SearchFor -->
+      <class name="lasvegasmarket_PROD.GlobalSearch_LineActions">
+        <methods>
+          <include name="initialize"/>
+          <include name="tearDown"/>
+          <include name="TS003_VerifyClickOnMatchingProductsSeeAllLinkForLineTest"/>
+          <include name="TS004_VerifyClickOnTotalProductsSeeAllLinkForLineTest"/>
+        </methods>
+      </class> <!-- lasvegasmarket_PROD.GlobalSearch_LineActions -->
+      <class name="lasvegasmarket_PROD.GlobalSearch_ExhibitorActions">
+        <methods>
+          <include name="TS004_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest"/>
+          <include name="TS005_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest"/>
+          <include name="initialize"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- lasvegasmarket_PROD.GlobalSearch_ExhibitorActions -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->

@@ -99,7 +99,7 @@ public class LVMGlobalSearchPage {
 	By lvmSavedSearchesBtnForNewSaved = By.xpath("//input[@type='submit']");  //Locator for Saved Searches input box
 	By lvmListOfAllSavedSearches = By.xpath("//div[@class='imc-searchform--bar--dropdown open']/div[1]/div[1]/div[1]/div[1]/select[1]/option");  //Locator for Saved Searches input box
 	By lvmExhibitorsAndProductTab = By.xpath("//div[@class='imc-navigation imc-breakpoint-display--hide-mobile']/div[2]");  //Locator for Exhibitors And Product Tab
-	By lvmShowSpecialsLink = By.xpath("//a[contains(text(),'Show Specials')]");  //Locator for Show Secials
+	By lvmShowSpecialsLink = By.xpath("//span[contains(text(),'Show Specials')]");  //Locator for Show Secials
 	By lvmShowSpecialsTitle = By.xpath("//div[@class='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[3]/a[1]");  //Locator for Show Secials Title
 	By lvmShowSpecialsExhName = By.xpath("//div[@class='imc-gallery imc-gallery--align-flex-start imc-gallery--1-4 imc-vr--collosal imc-fprod-cont imc-specials-list']/div[1]/div[1]/a[1]");  //Locator for Show Secials Name
 	By lvmShowroomLink = By.xpath("//div[@class='ag-center-cols-container']/div[1]/div[2]/a");  //Locator for Showroom Name
@@ -171,10 +171,20 @@ public class LVMGlobalSearchPage {
 	By showSpecialsLink = By.xpath("//a[contains(@href,'Show-Specials')]"); 
 	By showSpecialsDetailsFromShowSpecialsPage = By.xpath("//div[@class='ag-center-cols-container']/div[1]/div[3]"); 
 	
+	By lvmListOfExhibitors = By.xpath("//h2[@class='imc-exhibitorcard__exhibitorname imc-exhibitorcard--title-hover']"); 
+	
+	
+	
 	public LVMGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 		PageFactory.initElements(driver, this);
+	}
+	
+	public List<WebElement>getlvmListOfExhibitors() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmListOfExhibitors));
+		return driver.findElements(lvmListOfExhibitors);
 	}
 	public WebElement getshowSpecialsDetailsFromShowSpecialsPage() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
