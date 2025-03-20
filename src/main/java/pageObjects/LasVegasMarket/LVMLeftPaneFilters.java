@@ -39,16 +39,103 @@ public class LVMLeftPaneFilters {
 	By secondexhibitor = By.xpath("//div[@class='imc-vr--xxlarge']/div[2]/div[1]/div[1]/div[1]//a[1]/h2[1]");//Locator for 2nd Exhibitor
 	By firstVintageExhUat = By.xpath("(//div[contains(@class,'imc-exhibitorcard-title-row')]/div/a/h2)[1]");
 	By SecondExhUat = By.xpath("(//div[contains(@class,'imc-exhibitorcard-title-row')]/div/a/h2)[2]");
-	By industrialstyle = By.xpath("//label[contains(text(),'Industrial')]"); //Locator for Industrial Styles
+	By industrialstyle = By.xpath("//label[contains(text(),'Contemporary')]"); //Locator for Industrial Styles
 	By expindustrialstyleonprofile = By.xpath("//span[contains(@class,'EPUpdateExhibitorProfile_categoriesList') and text()='Industrial']"); //Locator for Industrial Style on Profile
 	By ListLFsubMenus = By.xpath("//input[@type='checkbox' and @aria-checked='true']/../label[@class='imc-checkbox--label imc-filteritem--label-width imc-type--title-2-ui']"); //Locator for Industrial Style on Profile
+	By listOfAllHolidayAndSeasonialFilterOptions = By.xpath("//label[contains(text(),'Holiday/Seasonal')]/../../../../../../div[2]/div/div/div/label");
+	
+	By HolidayAndSeasonialFilterExpandButton = By.xpath("//label[contains(text(),'Holiday/Seasonal')]/../../../../../../div[contains(@class, 'imc-expand-collapse__heading')]");
+	
+	By listOfAllDecorativeAccessoriesFilterOptions = By.xpath("//label[contains(text(),'Decorative Accessories')]/../../../../../../div[2]/div/div/div/label");
+	By listOfAllGeneralGiftFilterOptions = By.xpath("//label[contains(text(),'General Gift')]/../../../../../../div[2]/div/div/div/label");
+	By listOfAllFashionAccessoriesJewelryFilterOptions = By.xpath("//label[contains(text(),'Fashion Accessories/Jewelry')]/../../../../../../div[2]/div/div/div/label");
+	By listOfAllFloralBotanicalsFilterOptions = By.xpath("//label[contains(text(),'Floral / Botanicals')]/../../../../../../div[2]/div/div/div/label");
+	By listOfAllHomeTextilesFilterOptions = By.xpath("//label[contains(text(),'Home Textiles')]/../../../../../../div[2]/div/div/div/label");
+	By listOfAllExhibitors = By.xpath("//div[@class='imc-exhibitorcard-title-row ']/div/div/div/div/div/a/h2");
+	By isProductCategorySectionNotAvailable = By.xpath("//span[contains(text(),'Product Categories not available')]");
+	By leftPaneFilterNewExhibitor = By.xpath("(//div[@class='imc-expand-collapse__content '])[1]/div/div/div[1]");
+	By leftPaneFilterHasShowSpecials = By.xpath("(//div[@class='imc-expand-collapse__content '])[1]/div/div/div[2]");
+	By leftPaneFilterTemporary = By.xpath("(//div[@class='imc-expand-collapse__content '])[1]/div/div/div[3]");
+	By listOfAllExhibitorsHavingShowSpecialTag = By.xpath("//div[@class='imc-content--full-width']/div/div/a");
+	By listOfExhibitors = By.xpath("//div[@class='imc-content--full-width']/div/div/div/a/h2");		
 	
 	
 	public LVMLeftPaneFilters(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
-	} 
-
+	}
+	public List<WebElement> getlistOfExhibitors() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfExhibitors));
+		return driver.findElements(listOfExhibitors);
+	}
+	public List<WebElement> getlistOfAllExhibitorsHavingShowSpecialTag() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllExhibitorsHavingShowSpecialTag));
+		return driver.findElements(listOfAllExhibitorsHavingShowSpecialTag);
+	}
+	public WebElement getleftPaneFilterTemporary(){
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(leftPaneFilterTemporary));
+		return driver.findElement(leftPaneFilterTemporary);
+	}
+	public WebElement getleftPaneFilterHasShowSpecials(){
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(leftPaneFilterHasShowSpecials));
+		return driver.findElement(leftPaneFilterHasShowSpecials);
+	}
+	public WebElement getleftPaneFilterNewExhibitor(){
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(leftPaneFilterNewExhibitor));
+		return driver.findElement(leftPaneFilterNewExhibitor);
+	}
+	public WebElement getisProductCategorySectionNotAvailable(){
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(isProductCategorySectionNotAvailable));
+		return driver.findElement(isProductCategorySectionNotAvailable);
+	}
+	public List<WebElement> getlistOfAllExhibitors() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllExhibitors));
+		return driver.findElements(listOfAllExhibitors);
+	}
+	public List<WebElement> getlistOfAllHomeTextilesFilterOptions() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllHomeTextilesFilterOptions));
+		return driver.findElements(listOfAllHomeTextilesFilterOptions);
+	}
+	public List<WebElement> getlistOfAllFloralBotanicalsFilterOptions() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllFloralBotanicalsFilterOptions));
+		return driver.findElements(listOfAllFloralBotanicalsFilterOptions);
+	}
+	public List<WebElement> getlistOfAllFashionAccessoriesJewelryFilterOptions() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllFashionAccessoriesJewelryFilterOptions));
+		return driver.findElements(listOfAllFashionAccessoriesJewelryFilterOptions);
+	}
+	public List<WebElement> getlistOfAllGeneralGiftFilterOptions() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllGeneralGiftFilterOptions));
+		return driver.findElements(listOfAllGeneralGiftFilterOptions);
+	}
+	public List<WebElement> getlistOfAllDecorativeAccessoriesFilterOptions() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllDecorativeAccessoriesFilterOptions));
+		return driver.findElements(listOfAllDecorativeAccessoriesFilterOptions);
+	}
+	public List<WebElement> getlistOfAllHolidayAndSeasonialFilterOptions() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllHolidayAndSeasonialFilterOptions));
+		return driver.findElements(listOfAllHolidayAndSeasonialFilterOptions);
+	}
+	
+	public WebElement getHolidayAndSeasonialFilterExpandButton(){
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(HolidayAndSeasonialFilterExpandButton));
+		return driver.findElement(HolidayAndSeasonialFilterExpandButton);
+	}
+	
 	public WebElement getatlexhibitorLVM(){
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(atlexhibitorLVM));
@@ -87,6 +174,8 @@ public class LVMLeftPaneFilters {
 		return driver.findElement(stylesFilterbtn);
 	}
 	public WebElement getLVMApparelVintProdCatg(){
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(apparelvintprodcatg));
 		return driver.findElement(apparelvintprodcatg);
 	}
 	public WebElement getLVMAntiqueVintProdCatg(){
@@ -100,6 +189,8 @@ public class LVMLeftPaneFilters {
 		return driver.findElement(stylesexpandbtn);
 	}
 	public WebElement getLVMCoastalStyle(){
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(coastalstyle));
 		return driver.findElement(coastalstyle);
 	}
 	public WebElement getEXPExhDropDown(){

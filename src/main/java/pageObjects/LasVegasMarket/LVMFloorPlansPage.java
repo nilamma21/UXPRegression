@@ -68,11 +68,37 @@ public class LVMFloorPlansPage {
 	By noresultsforjuniperlinesmsg = By.xpath("//p[contains(text(),'Sorry, no results found.')]"); //Locator for No results found msg for Lines on Junipermarket filter
 	By exhibitedonfloormsg = By.xpath("//span[contains(text(),'Exhibitors on This Floor')]");
 	By lvmBuildingFloorsix = By.xpath("//div[@class='imc-campus-view']/div[3]/div[13]/div[3]/a[1]"); //Locator for Building floor
+	By lvmDiscoverBtn = By.xpath("//div[@class='imc-content--display-flex imc-content--display-flex-gap-small imc-content--display-flex-justify-center imc-content--full-height']/div[3]"); //Locator for Building floor
+	By lvmFloorPlansLinkPROD = By.xpath("//div[@class='imc-content--top-0 imc-content--absolute imc-navigation--wrapper-menu active']/div[1]/div/a[contains(text(),'Floor Plans')]"); //Locator for floor plans Link
+	By lvmFloorPlansFirstExhName = By.xpath("//div[@class='imc-content--padded-top-bottom']/div/div[1]/div/div[2]/a"); //Locator for floor plans 1st exh
+	By lvmFloorPlansSearchButton = By.xpath("//div[@class='imc-content--display-flex imc-content--display-flex-space-between imc-lines-overview-actions']/div/section/div/form/div[2]/button"); //Locator for floor plans Search btn
 
+	
+	
 	
 	public LVMFloorPlansPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
+	}
+	public WebElement getlvmFloorPlansSearchButton() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmFloorPlansSearchButton));
+		return driver.findElement(lvmFloorPlansSearchButton);
+	}
+	public WebElement getlvmFloorPlansFirstExhName() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmFloorPlansFirstExhName));
+		return driver.findElement(lvmFloorPlansFirstExhName);
+	}
+	public WebElement getlvmFloorPlansLinkPROD() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmFloorPlansLinkPROD));
+		return driver.findElement(lvmFloorPlansLinkPROD);
+	}
+	public WebElement getlvmDiscoverBtn() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmDiscoverBtn));
+		return driver.findElement(lvmDiscoverBtn);
 	}
 	public WebElement getlvmserachexhibitorbtnPROD() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));

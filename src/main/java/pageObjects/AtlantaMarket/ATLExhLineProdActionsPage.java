@@ -93,13 +93,72 @@ public class ATLExhLineProdActionsPage extends base{
 	By contactExhibitorHeroComponent = By.xpath("//div[@class='contact-exhibitor-wrapper']/button/span[1]"); //Locator for Contact Exhibitor icon of 1st Exhibitor
 	By catalogitemName = By.xpath("(//div[@class='imc-gallery imc-vr--collosal imc-gallery--justify-left imc-catalog']//descendant::a)[2]/div/div"); //Locator for Catalog item
 	By lineName = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]"); //Locator for 1st Line Name
-	
+	By exhLocationPROD = By.xpath("//div[@class='imc-gallery__item imc-content--full-width']/div[2]/div[1]/div[1]/div[1]/div/div/div/div[1]/div[2]/div[2]/div/a"); //Locator for location
+	By lvmSeeAllLines = By.xpath("//div[@class='imc-gallery__item imc-content--full-width']/div[2]/div[1]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div/div/a"); //Locator for location
+	By lvmTotalProductLink = By.xpath("//div[@class='imc-gallery__item imc-content--full-width']/div[2]/div[1]/div[1]/div[2]/div/span/a/span"); //Locator for location
+	By lvmMatchingProductLink = By.xpath("//div[@class='imc-gallery__item imc-content--full-width']/div[2]/div[1]/div[1]/div[2]/div/a/span"); //Locator for location
+	By lvmMatchingProductLinkForLines = By.xpath("(//p[contains(text(), 'Shown By')]//following::span[contains(text(), 'Matching Products')])[1]"); //Locator for location
+	By lvmMatchingProductLinkForLineName = By.xpath("(//p[contains(text(), 'Shown By')]//following::span[contains(text(), 'Matching Products')])[1]/../../../..//h2[@class='imc-exhibitorcard__exhibitorname imc-exhibitorcard--title-hover']"); //Locator for location
+	By lvmMatchingProductLinkForLines1 = By.xpath("(//span[contains(text(),'Matching Products') and //p[contains(text(),'Shown By')]])[1]"); //Locator for location
+	By lvmTotalProductLinkForLines1 = By.xpath("(//span[contains(text(),'Total Products') and //p[contains(text(),'Shown By')]])[1]");
+	By lvmTotalProductLinkForLines = By.xpath("(//p[contains(text(), 'Shown By')]//following::span[contains(text(), 'Total Products')])[1]"); //Locator for location
+	By lvmProductLinkForExh = By.xpath("(//div[@class='undefined imc-content--display-flex imc-content--display-flex-center imc-content--display-flex-column searchItemThumb--container'])[1]/p/span");
 	
 	public ATLExhLineProdActionsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 
-	} 
+	}
+	public WebElement getlvmProductLinkForExh() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(80));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmProductLinkForExh));
+		return driver.findElement(lvmProductLinkForExh);
+	}
+	public WebElement getlvmTotalProductLinkForLines() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmTotalProductLinkForLines));
+		return driver.findElement(lvmTotalProductLinkForLines);
+	}
+	public WebElement getlvmTotalProductLinkForLines1() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmTotalProductLinkForLines1));
+		return driver.findElement(lvmTotalProductLinkForLines1);
+	}
+	public WebElement getlvmMatchingProductLinkForLines1() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmMatchingProductLinkForLines1));
+		return driver.findElement(lvmMatchingProductLinkForLines1);
+	}
+	public WebElement getlvmMatchingProductLinkForLineName() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmMatchingProductLinkForLineName));
+		return driver.findElement(lvmMatchingProductLinkForLineName);
+	}
+	public WebElement getlvmMatchingProductLinkForLines() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmMatchingProductLinkForLines));
+		return driver.findElement(lvmMatchingProductLinkForLines);
+	}
+	public WebElement getlvmMatchingProductLink() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmMatchingProductLink));
+		return driver.findElement(lvmMatchingProductLink);
+	}
+	public WebElement getlvmTotalProductBtn() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmTotalProductLink));
+		return driver.findElement(lvmTotalProductLink);
+	}
+	public WebElement getlvmSeeAllLines() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmSeeAllLines));
+		return driver.findElement(lvmSeeAllLines);
+	}
+	public WebElement getexhLocationPROD() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(exhLocationPROD));
+		return driver.findElement(exhLocationPROD);
+	}
 	public WebElement getlineName() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lineName));

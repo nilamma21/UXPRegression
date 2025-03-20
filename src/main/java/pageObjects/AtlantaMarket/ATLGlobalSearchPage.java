@@ -23,7 +23,7 @@ public class ATLGlobalSearchPage {
 	By atlsearchbtn = By.xpath("//div[@class = 'imc-searchform--button--search']"); //Locator for Seach button for global search
 	By lvmSearchBtnUAT = By.xpath("(//div[@class='imc-searchform--row'])[1]/form[1]/button[2]"); //Locator for Seach button for global search
 	By atlverifyglobalseacrh = By.xpath("//div[@class = 'imc-gallery__item']/div[1]/section[1]/span[1]/div[1]"); // Locator for global search verification
-	By atlsearchresultslist = By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li/span/span"); //Locator for Search results list
+	By atlsearchresultslist = By.xpath("//a[@class='imc-link--hover-underline imc-content--delta imc-content--pointer']"); //Locator for Search results list
 	By atlsearchresultexhtypelist = By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li/span/span/span[2]"); //Locator for list of search results types
 	By atlsearchresultlinetypelist = By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li/span/span/span[2]"); //Locator for list of search result Line type
 	By atlproductsearchresultlist = By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li/span/span"); //Locator for Product suggestion search list
@@ -128,14 +128,26 @@ public class ATLGlobalSearchPage {
 	By atlShowSpecialsLineNamePROD = By.xpath("(//div[@class='imc-showSpecial--tableContainer'])[1]/p[1]");  //Locator for Show Secials Name Line
 	
 	By atlproductlNameList= By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li/span/span/span[contains(text(),'Product')]"); //Locator for Product suggestion search list
-	
-	
+	By lvmSuggetionList1stName= By.xpath("(//div[@class='imc-searchform--drawer--suggestions']/ul/li)[1]"); 
+	By ExhibitorTitle= By.xpath("//a[@class='imc-link--hover-underline imc-content--delta imc-content--pointer']/../../../div/h4"); 
 	
 	
 	public ATLGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 		PageFactory.initElements(driver, this);
+	}
+	
+	public WebElement getlExhibitorTitle() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ExhibitorTitle));
+		return driver.findElement(ExhibitorTitle);
+	}
+	
+	public WebElement getlvmSuggetionList1stName() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmSuggetionList1stName));
+		return driver.findElement(lvmSuggetionList1stName);
 	}
 	public List<WebElement> getatlproductlNameList() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));

@@ -8,12 +8,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
+import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
 import pageObjects.LasVegasMarket.LVMExhDigiShowroomPage;
 import pageObjects.LasVegasMarket.LVMExhLineProdActionsPage;
 import pageObjects.LasVegasMarket.LVMGlobalSearchPage;
@@ -37,8 +40,11 @@ public class GlobalSearch_LineActions extends base {
 	LVMExhDigiShowroomPage lvmexhdgshw;
 	LVMExhLineProdActionsPage lvmexhact;
 	LVMMarketPlannerPage lvmmppge;
-	
-	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns, allnoteslist,favlist, searchlinetypelist;
+	LVMExhDigiShowroomPage lvmds;
+	ATLExhLineProdActionsPage atlexhact;
+
+	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns,
+			allnoteslist, favlist, searchlinetypelist;
 
 	@BeforeClass
 	public void initialize() throws IOException, InterruptedException {
@@ -51,13 +57,13 @@ public class GlobalSearch_LineActions extends base {
 		driver.get(prop.getProperty("lvmurl_prod"));
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(7000);
-		//lap.getCloseMarktAdBtn().click();
-		
-		//Login to Market Planner
-		//utl.verifyMPLoginFunctionality();
-		//utl.loginCheckLVM();
-		//Thread.sleep(8000);
-		//lap.getCloseMarktAdBtn().click();
+		// lap.getCloseMarktAdBtn().click();
+
+		// Login to Market Planner
+		// utl.verifyMPLoginFunctionality();
+		// utl.loginCheckLVM();
+		// Thread.sleep(8000);
+		// lap.getCloseMarktAdBtn().click();
 	}
 
 	@Test(priority = 1)
@@ -69,21 +75,25 @@ public class GlobalSearch_LineActions extends base {
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		lap = new LVMLandingPage(driver);
 		lvmmppge = new LVMMarketPlannerPage(driver);
+		lvmds = new LVMExhDigiShowroomPage(driver);
 		utl = new Utility(driver);
 		lvmexhdgshw = new LVMExhDigiShowroomPage(driver);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
-		//lap.getCloseMarktAdBtn().click();
-		
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
-		lvmgs.getLVMSearchButton().click();
+		// lap.getCloseMarktAdBtn().click();
 
-		Thread.sleep(15000);
-		// Store the 1st Exhibitor name in String variable
-		String exhname = lvmexhact.getExhibitorName().getText();
-		System.out.println("Line name: " + exhname);
+		lvmgs.getGlobalSearchTextBoxNew().click();
+		lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("lineActionInput")));
+		Thread.sleep(2000);
+		lvmgs.getSearchButtonNew().click();
+
+		Thread.sleep(10000);
+		// Click on 1st Suggetions
+		
+		exhname = lvmds.getExhibitorNameNew().getText();
+		System.out.println("Exhibitor name: " + exhname);
 		// Click on ExhibitorName
 		lvmexhact.getExhibitorNameLink().click();
 		// Verify DG showroom page
@@ -102,25 +112,33 @@ public class GlobalSearch_LineActions extends base {
 		lap = new LVMLandingPage(driver);
 		lvmmppge = new LVMMarketPlannerPage(driver);
 		utl = new Utility(driver);
-		
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lvmds = new LVMExhDigiShowroomPage(driver);
+
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		
+
 		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
-		//lap.getCloseMarktAdBtn().click();
+		// lap.getCloseMarktAdBtn().click();
 
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchlineinput")));
-		lvmgs.getLVMSearchButton().click();
+		lvmgs.getGlobalSearchTextBoxNew().click();
+		lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("lineActionInput")));
+		Thread.sleep(2000);
+		lvmgs.getSearchButtonNew().click();
 
-		Thread.sleep(15000);
-		// Store the 1st Exhibitor name in String variable
-		String exhname = lvmexhact.getExhibitorName().getText();
+		Thread.sleep(10000);
+		// Click on 1st Suggetions
+		
+		exhname = lvmds.getExhibitorNameNew().getText();
 		System.out.println("Line name: " + exhname);
-		String locationLink = lvmexhact.getLineLocationLink().getAttribute("href");
-		// Click on Location Icon
-		lvmexhact.getLineLocationLink().click();
-		// Verify Location page
-		Assert.assertTrue(locationLink.equals(driver.getCurrentUrl()));
+		
+		String locationlink = atlexhact.getexhLocationPROD().getAttribute("href");
+		atlexhact.getexhLocationPROD().click();
+		Thread.sleep(5000);
+
+		// Verify that selected building-floor plan page should be opened
+		Assert.assertTrue(locationlink.equals(driver.getCurrentUrl()));
+		//driver.get(prop.getProperty("lvmurl_prod"));
 	}
 
 	@Test(priority = 3)
@@ -134,43 +152,67 @@ public class GlobalSearch_LineActions extends base {
 		lap = new LVMLandingPage(driver);
 		lvmmppge = new LVMMarketPlannerPage(driver);
 		utl = new Utility(driver);
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lvmds = new LVMExhDigiShowroomPage(driver);
+		
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		
+
 		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
-		//lap.getCloseMarktAdBtn().click();
+		// lap.getCloseMarktAdBtn().click();
 
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
-		lvmgs.getLVMSearchButton().click();
+		lvmgs.getGlobalSearchTextBoxNew().click();
+		lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("filtersglobalsearchinput")));
+		Thread.sleep(2000);
+		lvmgs.getSearchButtonNew().click();
 
-		Thread.sleep(15000);
-		// Store the 1st Exhibitor name in String variable
-		String linename = lvmexhact.getExhibitorName().getText();
-		System.out.println("Line name: " +linename);
-
-		// Get the Matching Products count on Search grid
-		String temp = lvmexhact.getMatchingProdCountOnSearchGrid().getText();
-		String matchingprodcountonsearchgrid = temp.replaceAll("[^0-9]", "");
-		System.out.println("Matching Products Count on Search Results grid is: " + matchingprodcountonsearchgrid);
-
-		// Click on See All link
-		lvmexhact.getMatchingProdSeeAllLink().click();
-		Thread.sleep(15000);
-
-		// Verify that user should redirect to the Matching Products page
-		Assert.assertTrue(lvmexhact.getValidateProductsPage().isDisplayed());
+		Thread.sleep(10000);
+		// Click on 1st Suggetions
+	
+		exhname = atlexhact.getlvmMatchingProductLinkForLineName().getText();
+		System.out.println("Line name: " + exhname);
+		
+		WebElement matchingProductLink=driver.findElement(By.xpath("//h2[contains(text(),'"+exhname+"')]/../../../../../../../../../../div[2]/div/a/span"));
+		
+		Actions action=new Actions(driver);
+		action.moveToElement(matchingProductLink).click().perform();
+		
+		//lvmexhact.getmp().click();
+		
+		//atlexhact.getlvmMatchingProductLinkForLines1().click();
+		Thread.sleep(10000);
+		
+		Assert.assertTrue(atlexhact.getValidateProductsPage().isDisplayed());
+		//Thread.sleep(5000);
+		String titile=driver.getTitle();
 		Thread.sleep(5000);
-		//Assert.assertTrue(driver.getTitle().contains("Products for "+linename+""));
-		Assert.assertTrue(driver.getTitle().contains(linename));
+		Assert.assertTrue(titile.contains("" +"Products for " + exhname));
 
 		// Get the Matching Products count on Products page
-		String producttabtitle = lvmexhact.getValidateProductsPage().getText();
+		String producttabtitle = atlexhact.getValidateProductsPage().getText();
 		String matchingprodcountonprodpage = producttabtitle.replaceAll("[^0-9]", "");
 		System.out.println("Matching Products Count on Products page is: " + matchingprodcountonprodpage);
+		
+		driver.navigate().back();
+		//atlexhact.getlvmMatchingProductLinkForLines().click();
+		// Get the Matching Products count on Search grid
+		String temp = atlexhact.getlvmMatchingProductLinkForLines().getText();
+		String matchingprodcountonsearchgrid = temp.replaceAll("[^0-9]", "");
+		System.out.println("Matching Products Count on Search Results grid is: " + matchingprodcountonsearchgrid);
+		Thread.sleep(4000);
+		//utl.scrollToElement(atlexhact.getlvmMatchingProductLinkForLines());
+		//Thread.sleep(8000);
+		// Click on Matching Products-See All link for 1st Exhibitor
+		//atlexhact.getlvmMatchingProductLinkForLines().click();
+
+		//Thread.sleep(10000);
+		// Verify that user should redirect to the Matching Products page
+		
 
 		// Verify Matching Products count on Search grid should match with Products page
 		Assert.assertEquals(matchingprodcountonsearchgrid, matchingprodcountonprodpage);
+		// driver.get(prop.getProperty("lvmurl_prod"));
 	}
 
 	@Test(priority = 4)
@@ -184,53 +226,64 @@ public class GlobalSearch_LineActions extends base {
 		lap = new LVMLandingPage(driver);
 		lvmmppge = new LVMMarketPlannerPage(driver);
 		utl = new Utility(driver);
-		
+		atlexhact = new ATLExhLineProdActionsPage(driver);
+		lvmds = new LVMExhDigiShowroomPage(driver);
+
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		
+
 		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
-		//lap.getCloseMarktAdBtn().click();
+		// lap.getCloseMarktAdBtn().click();
 
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchinput")));
-		lvmgs.getLVMSearchButton().click();
+		lvmgs.getGlobalSearchTextBoxNew().click();
+		lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("filtersglobalsearchinput")));
+		Thread.sleep(2000);
+		lvmgs.getSearchButtonNew().click();
 
-		Thread.sleep(15000);
-		// Store the 1st Line name in String variable
-		String linename = lvmexhact.getExhibitorName().getText();
-		System.out.println("Line name: " +linename);
+		Thread.sleep(10000);
 
 		// Get the Matching Products count on Search grid
-		String temp = lvmexhact.getMatchingProdCountOnSearchGrid().getText();
-		String matchingprodcountonsearchgrid = temp.replaceAll("[^0-9]", "");
-		System.out.println("Total Products Count on Search Results grid is: " + matchingprodcountonsearchgrid);
-		Thread.sleep(2000);
-		// Click on Total Product See All link
-		utl.scrollToElement(lvmexhact.getTotalProdSeeAllLink());
-		lvmexhact.getTotalProdSeeAllLink().click();
-
-		Thread.sleep(15000);
-		// Verify that user should redirect to the Matching Products page
-		Assert.assertTrue(lvmexhact.getValidateProductsPage().isDisplayed());
-		/*String t=driver.getTitle();
-		System.out.println(t);*/
+		exhname = atlexhact.getlvmMatchingProductLinkForLineName().getText();
+		System.out.println("Line name: " + exhname);
+		
+		WebElement totalProd= driver.findElement(By.xpath("//h2[contains(text(),'"+exhname+"')]/../../../../../../../../../../div[2]/div/span/a/span"));
+		Actions action=new Actions(driver);
+		action.moveToElement(totalProd).click().perform();
+		
+		//atlexhact.getlvmTotalProductLinkForLines1().click();
+		Thread.sleep(10000);
+		Assert.assertTrue(atlexhact.getValidateProductsPage().isDisplayed());
+		String titile=driver.getTitle();
 		Thread.sleep(5000);
-		System.out.println(driver.getTitle());
-		//Assert.assertTrue(driver.getTitle().contains("Products for "+linename+""));
-		Assert.assertTrue(driver.getTitle().contains(linename));
+		Assert.assertTrue(titile.contains("" +"Products for " + exhname));
 
 		// Get the Matching Products count on Products page
-		String producttabtitle = lvmexhact.getValidateProductsPage().getText();
-		String matchingprodcountonprodpage = producttabtitle.replaceAll("[^0-9]", "");
-		System.out.println("Total Products Count on Products page is: " + matchingprodcountonprodpage);
-
-		// Verify Total Products count on Search grid should match with Products page
-		Assert.assertEquals(matchingprodcountonsearchgrid, matchingprodcountonprodpage);
+		String producttabtitle = atlexhact.getValidateProductsPage().getText();
+		String totalprodcountonprodpage = producttabtitle.replaceAll("[^0-9]", "");
+		System.out.println("Matching Products Count on Products page is: " + totalprodcountonprodpage);
 		
-		driver.get(prop.getProperty("lvmurl_prod"));
-		//lap.getCloseMarktAdBtn().click();
+		driver.navigate().back();
+		//atlexhact.getlvmMatchingProductLinkForLines().click();
+		// Get the Matching Products count on Search grid
+		String temp = atlexhact.getlvmTotalProductLinkForLines().getText();
+		String totalprodcountonsearchgrid = temp.replaceAll("[^0-9]", "");
+		System.out.println("Matching Products Count on Search Results grid is: " + totalprodcountonsearchgrid);
+		Thread.sleep(4000);
+		//utl.scrollToElement(atlexhact.getlvmMatchingProductLinkForLines());
+		//Thread.sleep(8000);
+		// Click on Matching Products-See All link for 1st Exhibitor
+		//atlexhact.getlvmMatchingProductLinkForLines().click();
+
+		//Thread.sleep(10000);
+		// Verify that user should redirect to the Matching Products page
+		
+
+		// Verify Matching Products count on Search grid should match with Products page
+		Assert.assertEquals(totalprodcountonprodpage, totalprodcountonsearchgrid);
+		// driver.get(prop.getProperty("lvmurl_prod"));
 	}
-	
-	@Test(enabled=false)
+
+	@Test(enabled = false)
 	public void TS005_VerifyClickOnContactExhIconForLineTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T361: The click on 'Contact Exhibitor' functionality for a Line
@@ -269,7 +322,7 @@ public class GlobalSearch_LineActions extends base {
 		lvmexhact.getPopUpCloseBtn().click();
 	}
 
-	@Test(enabled=false)
+	@Test(enabled = false)
 	public void TS006_VerifyAddToFavoriteForLineTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T360: The Add to Favorite functionality for a Line
@@ -280,10 +333,10 @@ public class GlobalSearch_LineActions extends base {
 		lap = new LVMLandingPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		
+
 		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
-		//lap.getCloseMarktAdBtn().click();
+		// lap.getCloseMarktAdBtn().click();
 
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchInputForLines")));
 		lvmgs.getLVMSearchButton().click();
@@ -294,7 +347,7 @@ public class GlobalSearch_LineActions extends base {
 		System.out.println("Exhibitor name: " + exhname);
 
 		// Click on Favorite icon of 1st exhibitor
-		//lvmexhact.getaddfaviconLVM_UAT().click();
+		// lvmexhact.getaddfaviconLVM_UAT().click();
 		Thread.sleep(8000);
 		// Click on Market Planner link
 		lap.getMPLinkText().click();
@@ -303,40 +356,45 @@ public class GlobalSearch_LineActions extends base {
 		lvmmppge.getMPHomeListsTab().click();
 		lvmmppge.getLVMMPListsPageFavoritesMenu().click();
 		Thread.sleep(5000);
-		// Verify that the added favorites exhibitor should be displayed in to Favorites list
-		//Assert.assertTrue(lvmmppge.getLVMSavedExhNameInList().getText().contains(exhname));
+		// Verify that the added favorites exhibitor should be displayed in to Favorites
+		// list
+		// Assert.assertTrue(lvmmppge.getLVMSavedExhNameInList().getText().contains(exhname));
 		favlist = lvmmppge.getFavExhList();
 		for (int i = 0; i < favlist.size(); i++) {
 			String exhName = favlist.get(i).getText();
-			if(exhName.equals(exhname)) {
+			if (exhName.equals(exhname)) {
 				WebElement editOpt = favlist.get(i).findElement(By.xpath("./../../div[4]/div/button"));
-				 new Actions(driver).clickAndHold(editOpt).perform();
+				new Actions(driver).clickAndHold(editOpt).perform();
 				favlist.get(i).findElement(By.xpath("./../../div[4]/div/button/./../div/span[3]")).click();
 				break;
-			}			
+			}
 		}
 
 		// Delete that favorites exhibitor from list
-	/*	lvmmppge.getLVMEditListItemMoreBtn().click();
-		lvmmppge.getLVMEditListItemDeleteOptn().click();
-		Thread.sleep(6000)*/;
-		//utl.scrollToElement(lvmmppge.getSavedProductNameInList());
-		/*Thread.sleep(3000);
-		lvmmppge.getMoreBtnDeleteOptnExistingList_ATLPROD().click();
-		Thread.sleep(3000);
-		lvmmppge.getLVMEditListItemDeleteOptn().click();
-		Thread.sleep(8000);*/
-		//favlist = driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
+		/*
+		 * lvmmppge.getLVMEditListItemMoreBtn().click();
+		 * lvmmppge.getLVMEditListItemDeleteOptn().click(); Thread.sleep(6000)
+		 */;
+		// utl.scrollToElement(lvmmppge.getSavedProductNameInList());
+		/*
+		 * Thread.sleep(3000);
+		 * lvmmppge.getMoreBtnDeleteOptnExistingList_ATLPROD().click();
+		 * Thread.sleep(3000); lvmmppge.getLVMEditListItemDeleteOptn().click();
+		 * Thread.sleep(8000);
+		 */
+		// favlist =
+		// driver.findElements(By.xpath("//li[@class='imc-list-edit--draggable']/div/div/div/a"));
 
-		//Verify that the added product should be removed from Favorites list
-		for(int i=1; i< favlist.size(); i++){
-			Assert.assertFalse(favlist.get(i).getText().contains(exhname)); 
+		// Verify that the added product should be removed from Favorites list
+		for (int i = 1; i < favlist.size(); i++) {
+			Assert.assertFalse(favlist.get(i).getText().contains(exhname));
 		}
-		// Verify that the added favorites exhibitor should be removed from Favorites list
-		//Assert.assertFalse(lvmmppge.getLVMSavedExhNameInList().getText().contains(exhname));
+		// Verify that the added favorites exhibitor should be removed from Favorites
+		// list
+		// Assert.assertFalse(lvmmppge.getLVMSavedExhNameInList().getText().contains(exhname));
 	}
 
-	@Test(enabled=false)
+	@Test(enabled = false)
 	public void TS007_VerifyClickOnOrderOnJuniperMarketBtnForLineTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T376: The click on 'Order On JuniperMarket' button functionality for a Line
@@ -345,12 +403,12 @@ public class GlobalSearch_LineActions extends base {
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		lvmmppge = new LVMMarketPlannerPage(driver);
 		lap = new LVMLandingPage(driver);
-		
+
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		
+
 		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
-		//lap.getCloseMarktAdBtn().click();
+		// lap.getCloseMarktAdBtn().click();
 
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor6"));
 		lvmgs.getLVMSearchButton().click();
@@ -379,7 +437,7 @@ public class GlobalSearch_LineActions extends base {
 		driver.switchTo().window(winHandleBefore);
 	}
 
-	@Test(enabled=false)
+	@Test(enabled = false)
 	public void TS008_VerifyAddToNewListForLineTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T423: The Add to Newly created list functionality for Line
@@ -394,8 +452,8 @@ public class GlobalSearch_LineActions extends base {
 
 		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
-		//lap.getCloseMarktAdBtn().click();
-		
+		// lap.getCloseMarktAdBtn().click();
+
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchInputForLines")));
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(15000);
@@ -410,8 +468,8 @@ public class GlobalSearch_LineActions extends base {
 		lvmexhact.getAddToListOptn().click();
 		utl.scrollToElement(lvmmppge.getCreateNewListNameTxtbx());
 
-		//Enter new list name
-		String newlistname = "Cyb"+ genData.generateRandomString(5);
+		// Enter new list name
+		String newlistname = "Cyb" + genData.generateRandomString(5);
 		lvmmppge.getCreateNewListNameTxtbx().sendKeys(newlistname);
 		System.out.println("Newly created list is: " + newlistname);
 
@@ -432,7 +490,7 @@ public class GlobalSearch_LineActions extends base {
 		mpeditlistoptns = lvmmppge.getLVMMPEditListOptns();
 
 		for (int i = 0; i < mplists.size(); i++) {
-			//System.out.println(mplists.get(i).getText());
+			// System.out.println(mplists.get(i).getText());
 			// System.out.println(mpeditlistoptns.get(i).getText());
 			if (mplists.get(i).getText().equals(newlistname)) {
 				mpeditlistoptns.get(i).click();
@@ -443,7 +501,7 @@ public class GlobalSearch_LineActions extends base {
 		Assert.assertTrue(lvmmppge.getLVMSavedExhNameInList().getText().contains(exhname));
 	}
 
-	@Test(enabled=false)
+	@Test(enabled = false)
 	public void TS009_VerifyAddToExistingListForLineTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T362: The Add to Newly created list functionality for a Line
@@ -454,15 +512,15 @@ public class GlobalSearch_LineActions extends base {
 		lap = new LVMLandingPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		
+
 		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(6000);
-		//lap.getCloseMarktAdBtn().click();
+		// lap.getCloseMarktAdBtn().click();
 
 		lvmgs.getLVMGlobalSearchTextBox().sendKeys((prop.getProperty("globalsearchInputForLines")));
 		lvmgs.getLVMSearchButton().click();
 		Thread.sleep(15000);
-		//lvmexhact.getseealllink().click();
+		// lvmexhact.getseealllink().click();
 
 		// Store the 1st Exhibitor name in String variable
 		String exhname = lvmexhact.getExhibitorName().getText();
@@ -495,7 +553,7 @@ public class GlobalSearch_LineActions extends base {
 		mpeditlistoptns = lvmmppge.getLVMMPEditListOptns();
 
 		for (int i = 0; i < mplists.size(); i++) {
-			//System.out.println(mplists.get(i).getText());
+			// System.out.println(mplists.get(i).getText());
 			// System.out.println(mpeditlistoptns.get(i).getText());
 			if (mplists.get(i).getText().equals(existinglistname)) {
 				mpeditlistoptns.get(i).click();
@@ -505,17 +563,17 @@ public class GlobalSearch_LineActions extends base {
 		Thread.sleep(5000);
 		Assert.assertTrue(lvmmppge.getLVMSavedExhNameInList().getText().contains(exhname));
 
-/*		// Delete that added line from list
-		//lvmmppge.getLVMEditListItemMoreBtn().click(); //Old 
-		lvmmppge.getLVMEditListItemMoreBtnNew().click();
-		// Hover on MoreOptions
-				Actions actions = new Actions(driver);
-				actions.moveToElement(lvmmppge.getLVMEditListItemMoreBtnNew()).perform();
-				// To mouseover on See Details btn
-				actions.moveToElement(lvmmppge.getLVMEditListItemDeleteOptn()).perform();
-
-				// Click on See Details button
-				actions.click().perform();*/
+		/*
+		 * // Delete that added line from list
+		 * //lvmmppge.getLVMEditListItemMoreBtn().click(); //Old
+		 * lvmmppge.getLVMEditListItemMoreBtnNew().click(); // Hover on MoreOptions
+		 * Actions actions = new Actions(driver);
+		 * actions.moveToElement(lvmmppge.getLVMEditListItemMoreBtnNew()).perform(); //
+		 * To mouseover on See Details btn
+		 * actions.moveToElement(lvmmppge.getLVMEditListItemDeleteOptn()).perform();
+		 * 
+		 * // Click on See Details button actions.click().perform();
+		 */
 		Thread.sleep(3000);
 		utl.scrollToElement(lvmmppge.getLVMSavedExhNameInList());
 		lvmmppge.getMoreBtnDeleteOptnExistingList_LVMPROD().click();
@@ -525,10 +583,9 @@ public class GlobalSearch_LineActions extends base {
 		Assert.assertFalse(lvmmppge.getLVMSavedExhNameInList().getText().contains(exhname));
 		driver.get(prop.getProperty("lvmurl_prod"));
 	}
-	
+
 	@AfterClass
-	public void tearDown()
-	{
-		driver.quit();
+	public void tearDown() {
+		//driver.quit();
 	}
 }

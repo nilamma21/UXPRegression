@@ -106,10 +106,18 @@ public class ATLExhDigiShowroomPage {
 	By ContactPopUpClose = By.xpath("//button[@class='imc-modal--close imc-button--modal-close imc-button--round']");
 	By exhdigishowroompagenew = By.xpath("//div[@class='imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1 imc-section--divided-bottom imc-section--padded-bottom-none']");
 	By ShownByTextValidate = By.xpath("//div[@class='imc-content imc-type--title-6 imc-type--color-neutral-heavy-medium imc-vr--small imc-content--inline-block imc-margin--left--small']"); //Shown By Text to validate the line digital showroom page with no image
+	By LineExhName = By.xpath("//h1[@class='imc-heading--h4']"); //Shown By Text to validate the line digital showroom page with no image
+	
+	
 	
 	public ATLExhDigiShowroomPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver;
+	}
+	public WebElement getLineExhName() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(LineExhName));
+		return driver.findElement(LineExhName);
 	}
 	public WebElement getEventNamePROD() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));

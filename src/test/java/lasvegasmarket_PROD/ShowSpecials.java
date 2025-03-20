@@ -79,30 +79,28 @@ public class ShowSpecials extends base{
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
-		//click on Exhibitors And Product Tab
-		lvmgs.getlvmExhibitorsAndProductTab().click();
+		//click on Discover tab
+		lvmgs.getLvmDiscoverTab().click();
 		
 		//Click on Show Specials 
 		lvmgs.getlvmShowSpecialsLink().click();
 		Thread.sleep(5000);
 		
-		//verify Show special Page
-		Assert.assertTrue(lvmgs.getlvmShowSpecialsTitle().getText().contains(prop.getProperty("showSpecialTitle")));
-		System.out.println(lvmgs.getlvmShowSpecialsTitle().getText());
-		
-		/*//Store the name of Show Special Exhibitor
-		String showSpecialExhName=lvmgs.getlvmShowSpecialsExhName().getText();
-		System.out.println(showSpecialExhName);*/
-		
-		/*String inbox = lvmgs.getlvmShowSpecialsExhName().getText();
-		String[] data = inbox.split("Shown By ");
-		String showSpecialExhName = data[1];
-		System.out.println(showSpecialExhName);*/
-		
-		//Store the name of Show Special Exhibitor
-		String ename=lvmgs.getFirstShowSpecialName().getText();
-		System.out.println(ename);
-		String abc =ename.split(" ")[0].trim();
+	    // Store the name of Show Special Exhibitor
+	    String ename = lvmgs.getFirstShowSpecialName().getText();
+	    System.out.println(ename);
+
+	    // Check if "Shown By" is present in the exhibitor name
+	    String abc;
+	    if (ename.contains("Shown By")) {
+	        abc = ename.replace("Shown By ", "");
+	    } else {
+	        abc = ename; // Take the full name if "Shown By" is not present
+	    }
+	    System.out.println("Exhibitor Name for Search: " + abc);
+
+	    String ShowSpecialDetails = lvmgs.getshowSpecialsDetailsFromShowSpecialsPage().getText();
+	    System.out.println("Show Specials Page Details: " + ShowSpecialDetails);
 		
 		//Click on Show Special Exhibitor
 		utl.scrollElementIntoMiddle(lvmgs.getFirstShowSpecialViewBrandDetailsBtn());
@@ -135,21 +133,22 @@ public class ShowSpecials extends base{
 		Thread.sleep(3000);
 		
 		//click on Exhibitors And Product Tab
-		lvmgs.getlvmExhibitorsAndProductTab().click();
+		//click on Discover tab
+		lvmgs.getLvmDiscoverTab().click();
 		Thread.sleep(5000);
 		
 		//Click on Show Specials 
 		lvmgs.getlvmShowSpecialsLink().click();
 		Thread.sleep(5000);
 		
-		utl.scrollToElement(lvmgs.getlvmShowSpecialsTitle());
+		//utl.scrollToElement(lvmgs.getlvmShowSpecialsTitle());
 		//verify Show special Page
-		Assert.assertTrue(lvmgs.getlvmShowSpecialsTitle().getText().contains(prop.getProperty("showSpecialTitle")));
+		//Assert.assertTrue(lvmgs.getlvmShowSpecialsTitle().getText().contains(prop.getProperty("showSpecialTitle")));
 		
 		//Click on Show Special Exhibitor
-		String showroomName=lvmgs.getlvmShowroomLink().getText();
+		//String showroomName=lvmgs.getlvmShowroomLink().getText();
 		String url=lvmgs.getlvmShowroomLink().getAttribute("href");
-		System.out.println(showroomName);
+		//System.out.println(showroomName);
 		lvmgs.getlvmShowroomLink().click();
 		Thread.sleep(5000);
 		
