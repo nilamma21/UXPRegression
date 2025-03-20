@@ -4,6 +4,7 @@ package resources;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
@@ -18,7 +19,9 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 //import atlantamarket_UAT.MarketPlanner;
@@ -33,10 +36,17 @@ import pageObjects.AtlantaMarket.ATLMarketPlannerPage;
 import pageObjects.AtlantaMarket.ATLProductDetailsPage;
 import pageObjects.ExhibitorPortal.EXPMarketsPage;
 import pageObjects.LasVegasMarket.LVMEventsAndWebinarPage;
+import pageObjects.LasVegasMarket.LVMExhDigiShowroomPage;
+import pageObjects.LasVegasMarket.LVMExhLineProdActionsPage;
 import pageObjects.LasVegasMarket.LVMGlobalSearchPage;
+import pageObjects.LasVegasMarket.LVMLandingPage;
+import pageObjects.LasVegasMarket.LVMLeftPaneFilters;
+import pageObjects.LasVegasMarket.LVMLineDigitalShowroomPage;
+import pageObjects.LasVegasMarket.LVMLoginPage;
 import pageObjects.LasVegasMarket.LVMMarketPlannerPage;
 import pageObjects.Sitecore.SCDashboard;
 import pageObjects.Sitecore.SCDigitalAdminPanelPage;
+import pageObjects.Sitecore.SCDigitalAdminPanelUserProfilePage;
 import pageObjects.Sitecore.SCLoginPage;
 import pageObjects.Sitecore.SCShowSpecials;
 
@@ -62,12 +72,19 @@ public class Utility extends base {
 	SCShowSpecials scshow;
 	SCDigitalAdminPanelPage digiAdmin;
 	LVMGlobalSearchPage lvmgs;
-	
+	LVMLineDigitalShowroomPage lvmdigish;
+	LVMExhDigiShowroomPage lvmds;
 	ArrayList<String> tabs;
-	List<WebElement> showspecialslist, exheventslist, exheventnameslist, exheventdeletebtnlist,infoFilterList;
-	
-	
+	LVMLeftPaneFilters lvmleftpane;
+	LVMLoginPage lpp;
+	LVMLandingPage lapp;
+	SCDigitalAdminPanelUserProfilePage digiAdminUserProf;
+	LVMExhLineProdActionsPage lvmexhact;
+
+	List<WebElement> showspecialslist, exheventslist, exheventnameslist, exheventdeletebtnlist, infoFilterList;
+
 	public String seeMoreBtnURL;
+	public String exhname;
 
 	@SuppressWarnings("static-access")
 	public Utility(WebDriver driver) {
@@ -81,27 +98,25 @@ public class Utility extends base {
 		Thread.sleep(4000);
 		return element;
 	}
-	
+
 	public void scrollToTop() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollTo(0, -document.body.scrollHeight)");
 		Thread.sleep(4000);
 	}
-	
-	public void scrollIntoView(WebElement element)
-	{
-		((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
+
+	public void scrollIntoView(WebElement element) {
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
 	}
-	
-	public void scrollElementIntoMiddle (WebElement element) throws InterruptedException {
+
+	public void scrollElementIntoMiddle(WebElement element) throws InterruptedException {
 		String scrollElementIntoMiddle = "var viewPortHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);"
-                + "var elementTop = arguments[0].getBoundingClientRect().top;"
-                + "window.scrollBy(0, elementTop-(viewPortHeight/2));";
+				+ "var elementTop = arguments[0].getBoundingClientRect().top;"
+				+ "window.scrollBy(0, elementTop-(viewPortHeight/2));";
 		((JavascriptExecutor) driver).executeScript(scrollElementIntoMiddle, element);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(200);
 	}
-
 
 	public void verifyMPLoginFunctionality() throws IOException, InterruptedException {
 
@@ -123,6 +138,7 @@ public class Utility extends base {
 		lp.getSignInBtn().click();
 		Thread.sleep(15000);
 	}
+
 	public String[] verifyMPLoginFunctionality_Test() throws IOException, InterruptedException {
 
 		// The purpose of this test case to verify:-
@@ -133,23 +149,24 @@ public class Utility extends base {
 
 		// Click on Login button from Landing Page
 		try {
-		lap.getLogin().click();
-		}catch (Exception e) {
+			lap.getLogin().click();
+		} catch (Exception e) {
 			// TODO: handle exception
-		
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		// Enter the credentials on Login Page and click
-		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
 
-		lp.getPassword().sendKeys((prop.getProperty("password")));
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			// Enter the credentials on Login Page and click
+			lp.getEmailAddress().sendKeys((prop.getProperty("username")));
 
+			lp.getPassword().sendKeys((prop.getProperty("password")));
 
-		Thread.sleep(1000);
-		/*lp.getPassword().sendKeys((prop.getProperty("password")));
-		Thread.sleep(1000);*/
+			Thread.sleep(1000);
+			/*
+			 * lp.getPassword().sendKeys((prop.getProperty("password")));
+			 * Thread.sleep(1000);
+			 */
 
-		lp.getSignInBtn().click();
-		Thread.sleep(15000);
+			lp.getSignInBtn().click();
+			Thread.sleep(15000);
 		}
 		return null;
 
@@ -241,7 +258,7 @@ public class Utility extends base {
 			}
 		}
 		if (flagLines == true) {
-			System.out.println(filterName +" Present");
+			System.out.println(filterName + " Present");
 			Assert.assertTrue(flagLines = true);
 		} else {
 			System.out.println(filterName + "s Not Present");
@@ -277,12 +294,11 @@ public class Utility extends base {
 
 		boolean flag = false;
 		for (WebElement listExhibitor : list) {
-			if (listExhibitor.getText().equals(filterName))
-			{
+			if (listExhibitor.getText().equals(filterName)) {
 				Thread.sleep(5000);
 				listExhibitor.click();
-				
-				//listExhibitor.click();
+
+				// listExhibitor.click();
 				flag = true;
 				break;
 			}
@@ -290,7 +306,7 @@ public class Utility extends base {
 		if (flag == true) {
 			System.out.println(filterName + " Selected");
 			Assert.assertTrue(flag = true);
-			
+
 		} else {
 			System.out.println(filterName + " Not Selected");
 			Assert.assertTrue(flag = false);
@@ -360,6 +376,7 @@ public class Utility extends base {
 		}
 
 	}
+
 	public void ClickOnSeeMoreBtnAnyName(List<WebElement> list, String InfoName)
 			throws IOException, InterruptedException {
 
@@ -371,10 +388,11 @@ public class Utility extends base {
 		for (WebElement selectListName : list) {
 			if (selectListName.getText().equals(InfoName)) {
 				scrollToElement(selectListName);
-				WebElement seeMoreDetailsBtn = driver.findElement(By.xpath("//h2[text()='" + InfoName + "']/../div/div[1]/div[1]/a[1]"));
+				WebElement seeMoreDetailsBtn = driver
+						.findElement(By.xpath("//h2[text()='" + InfoName + "']/../div/div[1]/div[1]/a[1]"));
 				// click on Edit btn
 				Thread.sleep(2000);
-				seeMoreBtnURL=seeMoreDetailsBtn.getAttribute("href");
+				seeMoreBtnURL = seeMoreDetailsBtn.getAttribute("href");
 				seeMoreDetailsBtn.click();
 				System.out.println("Click on See More Btn");
 				Thread.sleep(5000);
@@ -390,6 +408,7 @@ public class Utility extends base {
 		}
 
 	}
+
 	public void ClickOnListSelectBtn(List<WebElement> list, String listName) throws IOException, InterruptedException {
 
 		lap = new ATLLandingPage(driver);
@@ -515,13 +534,15 @@ public class Utility extends base {
 		// Thread.sleep(25000);
 		System.out.println("Expected sorted Exhibitor List : " + expectedSortedList);
 		// Verify Exhibitor List is Sorted or not
-		//Assert.assertEquals(sortedList, expectedSortedList, " List Should be sorted");
+		// Assert.assertEquals(sortedList, expectedSortedList, " List Should be
+		// sorted");
 
 		System.out.println("Displayed " + filterName);
 
 	}
-	public void SortByDigitalIdentity(List<WebElement> listOfSearchResults,List<WebElement> sortByOptions, String optionName )
-			throws IOException, InterruptedException {
+
+	public void SortByDigitalIdentity(List<WebElement> listOfSearchResults, List<WebElement> sortByOptions,
+			String optionName) throws IOException, InterruptedException {
 
 		// Store Current list
 		List<String> currentList = new ArrayList<String>();
@@ -534,25 +555,27 @@ public class Utility extends base {
 		for (String s : currentList) {
 			sortedList.add(s.toLowerCase());
 		}
-		//Sorting the list
+		// Sorting the list
 		Collections.sort(sortedList);
 		System.out.println("Sorted List : " + sortedList);
-		//Click on Option
+		// Click on Option
 		selectFilters(sortByOptions, optionName);
 		Thread.sleep(5000);
-		//Verify sorted list
+		// Verify sorted list
 		List<String> expectedSortedList = new ArrayList<String>();
-		List<WebElement>listOfSearchResults1=driver.findElements(By.xpath("//table[@class='table table-bordered']/tbody/tr/td[2]"));
+		List<WebElement> listOfSearchResults1 = driver
+				.findElements(By.xpath("//table[@class='table table-bordered']/tbody/tr/td[2]"));
 		for (WebElement sortedListAfterClickOnOptions : listOfSearchResults1) {
 			expectedSortedList.add(sortedListAfterClickOnOptions.getText().toLowerCase());
 		}
 		System.out.println("Expected sorted Exhibitor List : " + expectedSortedList);
-	    System.out.println("Current List : " + currentList);
+		System.out.println("Current List : " + currentList);
 		// Verify List is Sorted or not
 		Assert.assertEquals(sortedList, expectedSortedList, " List Should be sorted");
 
 	}
-	public void SortByLastName(List<WebElement> listOfSearchResults,List<WebElement> sortByOptions, String optionName )
+
+	public void SortByLastName(List<WebElement> listOfSearchResults, List<WebElement> sortByOptions, String optionName)
 			throws IOException, InterruptedException {
 
 		// Store Current list
@@ -566,20 +589,21 @@ public class Utility extends base {
 		for (String s : currentList) {
 			sortedList.add(s.toLowerCase());
 		}
-		//Sorting the list
+		// Sorting the list
 		Collections.sort(sortedList);
 		System.out.println("Sorted List : " + sortedList);
-		//Click on Option
+		// Click on Option
 		selectFilters(sortByOptions, optionName);
 		Thread.sleep(5000);
-		//Verify sorted list
+		// Verify sorted list
 		List<String> expectedSortedList = new ArrayList<String>();
-		List<WebElement>listOfSearchResults1=driver.findElements(By.xpath("//table[@class='table table-bordered']/tbody/tr/td[4]"));
+		List<WebElement> listOfSearchResults1 = driver
+				.findElements(By.xpath("//table[@class='table table-bordered']/tbody/tr/td[4]"));
 		for (WebElement sortedListAfterClickOnOptions : listOfSearchResults1) {
 			expectedSortedList.add(sortedListAfterClickOnOptions.getText().toLowerCase());
 		}
 		System.out.println("Expected sorted Exhibitor List : " + expectedSortedList);
-	    System.out.println("Current List : " + currentList);
+		System.out.println("Current List : " + currentList);
 		// Verify List is Sorted or not
 		Assert.assertEquals(sortedList, expectedSortedList, " List Should be sorted");
 
@@ -589,7 +613,7 @@ public class Utility extends base {
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
-		atlgs=new ATLGlobalSearchPage(driver);
+		atlgs = new ATLGlobalSearchPage(driver);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Thread.sleep(2000);
 		if (!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
@@ -597,42 +621,42 @@ public class Utility extends base {
 			atlgs.getatlGlobalSearchClearTxt().click();
 		}
 	}
+
 	public void CloseATLPopup() throws IOException, InterruptedException {
 		lap = new ATLLandingPage(driver);
 
 		try {
 			Thread.sleep(1000);
 			lap.getCloseMarktAdBtn().click();
-		}catch(Exception e)
-		{
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
 	}
-	public void clickOnEventLinkOfChannel() throws InterruptedException {
 
+	public void clickOnEventLinkOfChannel() throws InterruptedException {
 
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
-		atlevents=new ATLEventsAndWebinarPage(driver);
+		atlevents = new ATLEventsAndWebinarPage(driver);
 
-		if(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_prod")) || driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_uat")) ) {
+		if (driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_prod"))
+				|| driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_uat"))) {
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			// Click on Attend Tab
 			Thread.sleep(2000);
 			atlevents.getatlAttendTab().click();
 			Thread.sleep(2000);
-			//click on Events Link
+			// click on Events Link
 			atlevents.getatlEventsLink().click();
 			Thread.sleep(5000);
-		}
-		else {
+		} else {
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			Thread.sleep(2000);
-			atlevents.getatlExploreMarketTab().click();  //For LVM Events
+			atlevents.getatlExploreMarketTab().click(); // For LVM Events
 			Thread.sleep(2000);
-			//click on Events Link
+			// click on Events Link
 			atlevents.getatlEventsLink().click();
 			Thread.sleep(5000);
 		}
@@ -645,33 +669,32 @@ public class Utility extends base {
 		lp = new ATLLoginPage(driver);
 
 		lvmmpp = new LVMMarketPlannerPage(driver);
-		lvmevents=new LVMEventsAndWebinarPage(driver);
+		lvmevents = new LVMEventsAndWebinarPage(driver);
 
-		if(driver.getCurrentUrl().contains(prop.getProperty("lvmurl_prod"))) {
+		if (driver.getCurrentUrl().contains(prop.getProperty("lvmurl_prod"))) {
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			// Click on Attend Tab
 			Thread.sleep(3000);
 			lvmevents.getlvmExploreMarketTab().click();
 			Thread.sleep(2000);
-			//click on Events Link
+			// click on Events Link
 			lvmevents.getlvmEventsLink().click();
 			Thread.sleep(1000);
+		} else {
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			Thread.sleep(1000);
+			lvmevents.getlvmAttendTab().click(); // For LVM Events
+			Thread.sleep(3000);
+			// click on Events Link
+			lvmevents.getlvmEventsLink().click();
+
+			atlevents.getatlExploreMarketTab().click(); // For LVM Events
+			Thread.sleep(2000);
+			// click on Events Link
+			atlevents.getatlEventsLink().click();
+
+			Thread.sleep(3000);
 		}
-			else {
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-				Thread.sleep(1000);
-				lvmevents.getlvmAttendTab().click();  //For LVM Events  
-				Thread.sleep(3000);
-				//click on Events Link
-				lvmevents.getlvmEventsLink().click();
-
-				atlevents.getatlExploreMarketTab().click();  //For LVM Events
-				Thread.sleep(2000);
-				//click on Events Link
-				atlevents.getatlEventsLink().click();
-
-				Thread.sleep(3000);
-			}
 	}
 
 	public void clickOnEventLinkOfChannel_UAT() throws InterruptedException {
@@ -680,41 +703,40 @@ public class Utility extends base {
 		lp = new ATLLoginPage(driver);
 
 		lvmmpp = new LVMMarketPlannerPage(driver);
-		lvmevents=new LVMEventsAndWebinarPage(driver);
+		lvmevents = new LVMEventsAndWebinarPage(driver);
 
-		if(driver.getCurrentUrl().contains(prop.getProperty("lvmurl_uat"))) {
+		if (driver.getCurrentUrl().contains(prop.getProperty("lvmurl_uat"))) {
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			// Click on Attend Tab
 			Thread.sleep(2000);
 			lvmevents.getlvmExploreMarketTab().click();
 			Thread.sleep(2000);
-			//click on Events Link
+			// click on Events Link
 			lvmevents.getlvmEventsLink().click();
 
 			atlmppge = new ATLMarketPlannerPage(driver);
-			atlevents=new ATLEventsAndWebinarPage(driver);
+			atlevents = new ATLEventsAndWebinarPage(driver);
 
-			if(driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_uat"))) {
+			if (driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_uat"))) {
 				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 				// Click on Attend Tab
 				atlevents.getatlAttendTab().click();
 				Thread.sleep(2000);
-				//click on Events Link
+				// click on Events Link
 				atlevents.getatlEventsLink().click();
 
 				Thread.sleep(3000);
-			}
-			else {
+			} else {
 				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-				lvmevents.getlvmAttendTab().click();  //For LVM Events  
+				lvmevents.getlvmAttendTab().click(); // For LVM Events
 				Thread.sleep(2000);
-				//click on Events Link
+				// click on Events Link
 				lvmevents.getlvmEventsLink().click();
 
-				atlevents.getatlExploreMarketTab().click();  //For LVM Events
+				atlevents.getatlExploreMarketTab().click(); // For LVM Events
 				Thread.sleep(2000);
-				//click on Events Link
+				// click on Events Link
 				atlevents.getatlEventsLink().click();
 
 				Thread.sleep(3000);
@@ -736,11 +758,11 @@ public class Utility extends base {
 		scshow = new SCShowSpecials(driver);
 		genData = new GenerateData();
 
-		//Open Exhibitor Portal in new tab
+		// Open Exhibitor Portal in new tab
 		driver.get(prop.getProperty("expurl_uat"));
 		Thread.sleep(5000);
 
-		//Login to EXP
+		// Login to EXP
 		lp.getEmailAddress().sendKeys((prop.getProperty("usernameSwapnil")));
 		lp.getPassword().sendKeys((prop.getProperty("passwordSwapnil")));
 
@@ -750,37 +772,37 @@ public class Utility extends base {
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(5000);
 
-		//In EXP click on Exhibitor association drop down
+		// In EXP click on Exhibitor association drop down
 		atlleftpane.getEXPExhDropDown().click();
 
-		//Select IMC Test Company exhibitor
+		// Select IMC Test Company exhibitor
 		atlleftpane.getIMCExhNameInEXP().click();
 
-		//Click on Markets tab
+		// Click on Markets tab
 		expmrkttab.getEXPMarketTab().click();
 
-		if(expmrkttab.getATLMarket().getText().contains("Atlanta Market")) {
+		if (expmrkttab.getATLMarket().getText().contains("Atlanta Market")) {
 			expmrkttab.getATLWinterMarket().click();
 		}
 
-		//Click on Add show specials menu
+		// Click on Add show specials menu
 		expmrkttab.getAddShowSpecialMenu().click();
 
-		//Click on Add show special btn
+		// Click on Add show special btn
 		expmrkttab.getAddShowSpecialBtn().click();
 
-		String showspecialname = "CybShowSpecial_"+genData.generateRandomString(3);
-		//Enter show special name
+		String showspecialname = "CybShowSpecial_" + genData.generateRandomString(3);
+		// Enter show special name
 		expmrkttab.getShowSpecialTxtBx().sendKeys(showspecialname);
 
-		//Click on Submit btn
+		// Click on Submit btn
 		expmrkttab.getShowSpecialSubmitBtn().click();
 
 		Thread.sleep(4000);
 		System.out.println(expmrkttab.getShowSpecialSuccessMsg().getText());
 		Assert.assertTrue(expmrkttab.getShowSpecialSuccessMsg().getText().contains(showspecialname));
 
-		//Dismiss the pop-up by click on Okay btn
+		// Dismiss the pop-up by click on Okay btn
 		expmrkttab.getDismissSuccessModal().click();
 		Thread.sleep(6000);
 		showspecialslist = driver.findElements(By.xpath("//div[@col-id='showSpecial']"));
@@ -790,31 +812,32 @@ public class Utility extends base {
 			break;
 		}
 
-		//Open Sitecore in new tab
-		((JavascriptExecutor)driver).executeScript("window.open()");
+		// Open Sitecore in new tab
+		((JavascriptExecutor) driver).executeScript("window.open()");
 		tabs = new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(tabs.get(1));
 		driver.get(prop.getProperty("sitecoreurl_uat"));
 		Thread.sleep(5000);
 
-		//Login to Sitecore
+		// Login to Sitecore
 		sclogin.getSCUsername().sendKeys(prop.getProperty("scusername_uat"));
 		sclogin.getSCPassword().sendKeys(prop.getProperty("scpassword_uat"));
 		sclogin.getSCLoginbtn().click();
 
-		//Click on Show special Approvals menu
+		// Click on Show special Approvals menu
 		scdash.getShowSpecialApprovals().click();
 
-		//Select Sort By dropdown
+		// Select Sort By dropdown
 		scshow.getSSSortByOptn().click();
 
-		//Click on Date added Desc optn
+		// Click on Date added Desc optn
 		scshow.getDateAddedDesc().click();
 
 		Thread.sleep(6000);
-		WebElement approvebtn = driver.findElement(By.xpath("//a[@data-special='"+showspecialname+"' and text()='Approve']"));
+		WebElement approvebtn = driver
+				.findElement(By.xpath("//a[@data-special='" + showspecialname + "' and text()='Approve']"));
 
-		//Click on Approve btn
+		// Click on Approve btn
 		approvebtn.click();
 		Thread.sleep(6000);
 	}
@@ -833,11 +856,11 @@ public class Utility extends base {
 		scshow = new SCShowSpecials(driver);
 		genData = new GenerateData();
 
-		//Open Exhibitor Portal in new tab
+		// Open Exhibitor Portal in new tab
 		driver.get(prop.getProperty("expurl_prod"));
 		Thread.sleep(5000);
 
-		//Login to EXP
+		// Login to EXP
 		lp.getEmailAddress().sendKeys((prop.getProperty("usernameSwapnil")));
 		lp.getPassword().sendKeys((prop.getProperty("passwordSwapnil")));
 
@@ -847,37 +870,37 @@ public class Utility extends base {
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(5000);
 
-		//In EXP click on Exhibitor association drop down
+		// In EXP click on Exhibitor association drop down
 		atlleftpane.getEXPExhDropDown().click();
 
-		//Select IMC Test Company exhibitor
+		// Select IMC Test Company exhibitor
 		atlleftpane.getIMCExhNameInEXP().click();
 
-		//Click on Markets tab
+		// Click on Markets tab
 		expmrkttab.getEXPMarketTab().click();
 
-		if(expmrkttab.getATLMarket().getText().contains("Atlanta Market")) {
+		if (expmrkttab.getATLMarket().getText().contains("Atlanta Market")) {
 			expmrkttab.getATLWinterMarket().click();
 		}
 
-		//Click on Manage show specials menu
+		// Click on Manage show specials menu
 		expmrkttab.getManageShowSpecialMenu().click();
 
-		//Click on Add show special btn
+		// Click on Add show special btn
 		expmrkttab.getAddShowSpecialBtn().click();
 
-		String showspecialname = "CybShowSpecial_"+genData.generateRandomString(3);
-		//Enter show special name
+		String showspecialname = "CybShowSpecial_" + genData.generateRandomString(3);
+		// Enter show special name
 		expmrkttab.getShowSpecialTxtBx().sendKeys(showspecialname);
 
-		//Click on Submit btn
+		// Click on Submit btn
 		expmrkttab.getShowSpecialSubmitBtn().click();
 
 		Thread.sleep(4000);
 		System.out.println(expmrkttab.getShowSpecialSuccessMsg().getText());
 		Assert.assertTrue(expmrkttab.getShowSpecialSuccessMsg().getText().contains(showspecialname));
 
-		//Dismiss the pop-up by click on Okay btn
+		// Dismiss the pop-up by click on Okay btn
 		expmrkttab.getDismissSuccessModal().click();
 		Thread.sleep(6000);
 		showspecialslist = driver.findElements(By.xpath("//div[@col-id='showSpecial']"));
@@ -887,34 +910,35 @@ public class Utility extends base {
 			break;
 		}
 
-		//Open Sitecore in new tab
-		((JavascriptExecutor)driver).executeScript("window.open()");
+		// Open Sitecore in new tab
+		((JavascriptExecutor) driver).executeScript("window.open()");
 		tabs = new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(tabs.get(1));
 		driver.get(prop.getProperty("sitecoreurl_prod"));
 		Thread.sleep(5000);
 
-		//Login to Sitecore
+		// Login to Sitecore
 		sclogin.getSCUsername().sendKeys(prop.getProperty("scusername_prod"));
 		sclogin.getSCPassword().sendKeys(prop.getProperty("scpassword_prod"));
 		sclogin.getSCLoginbtn().click();
 		Thread.sleep(5000);
 		driver.get(prop.getProperty("sitecoreurl_prod"));
 
-		//Click on Show special Approvals menu
+		// Click on Show special Approvals menu
 		scdash.getShowSpecialApprovals().click();
 
-		//Select Sort By dropdown
+		// Select Sort By dropdown
 		Thread.sleep(4000);
 		scshow.getSSSortByOptn().click();
 
-		//Click on Date added Desc optn
+		// Click on Date added Desc optn
 		scshow.getDateAddedDesc().click();
 
 		Thread.sleep(6000);
-		WebElement approvebtn = driver.findElement(By.xpath("//a[@data-special='"+showspecialname+"' and text()='Approve']"));
+		WebElement approvebtn = driver
+				.findElement(By.xpath("//a[@data-special='" + showspecialname + "' and text()='Approve']"));
 
-		//Click on Approve btn
+		// Click on Approve btn
 		approvebtn.click();
 		Thread.sleep(6000);
 	}
@@ -923,15 +947,14 @@ public class Utility extends base {
 
 		expmrkttab = new EXPMarketsPage(driver);
 
-		((JavascriptExecutor)driver).executeScript("window.open()");
+		((JavascriptExecutor) driver).executeScript("window.open()");
 		tabs = new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(tabs.get(0));
 
-		//Delete newly created Show special
+		// Delete newly created Show special
 		expmrkttab.getDeleteShowSpecialBtn().click();
 		Thread.sleep(5000);
 	}
-
 
 	public void addNewExhibitorEventsFrmExp_UAT() throws InterruptedException {
 
@@ -947,11 +970,11 @@ public class Utility extends base {
 		scshow = new SCShowSpecials(driver);
 		genData = new GenerateData();
 
-		//Open Exhibitor Portal in new tab
+		// Open Exhibitor Portal in new tab
 		driver.get(prop.getProperty("expurl_uat"));
 		Thread.sleep(5000);
 
-		//Login to EXP
+		// Login to EXP
 		lp.getEmailAddress().sendKeys((prop.getProperty("usernameSwapnil")));
 		lp.getPassword().sendKeys((prop.getProperty("passwordSwapnil")));
 
@@ -961,326 +984,336 @@ public class Utility extends base {
 		lap.getIUnderstandBtn().click();
 		Thread.sleep(5000);
 
-		//In EXP click on Exhibitor association drop down
+		// In EXP click on Exhibitor association drop down
 		atlleftpane.getEXPExhDropDown().click();
 
-		//Select IMC Test Company exhibitor
+		// Select IMC Test Company exhibitor
 		atlleftpane.getIMCExhNameInEXP().click();
 
-		//Click on Markets tab
+		// Click on Markets tab
 		expmrkttab.getEXPMarketTab().click();
 
-		if(expmrkttab.getATLMarket().getText().contains("Atlanta Market")) {
+		if (expmrkttab.getATLMarket().getText().contains("Atlanta Market")) {
 			expmrkttab.getATLWinterMarket().click();
 		}
 
-		//Click on Add Event btn
+		// Click on Add Event btn
 		expmrkttab.getAddEventsBtn().click();
 
-		//Click on Add Event btn on Events page
+		// Click on Add Event btn on Events page
 		expmrkttab.getAddEventsBtn().click();
 
-		//On Add Event form, fill all the required details
-		//Click on Event Type drop down
+		// On Add Event form, fill all the required details
+		// Click on Event Type drop down
 		expmrkttab.getEventTypeDD().click();
 
-		//Select 'Demo' Event type
+		// Select 'Demo' Event type
 		expmrkttab.getDemoEventType().click();
 
-		neweventname = "CybEvent_"+genData.generateRandomString(3);
-		//Enter the Event name
+		neweventname = "CybEvent_" + genData.generateRandomString(3);
+		// Enter the Event name
 		expmrkttab.getEventNameTxtBox().sendKeys(neweventname);
 
-		//Enter the event description
+		// Enter the event description
 		expmrkttab.getEventDescptnTxtBox().sendKeys("Events testing");
 
-		//Click on Choose location drop down
+		// Click on Choose location drop down
 		expmrkttab.getChooseLocationDD().click();
 
-		//Select any location
+		// Select any location
 		expmrkttab.getLocationValue().click();
 
-		//Click on Event Start Date text field
+		// Click on Event Start Date text field
 		expmrkttab.getEventStartDateTxtBx().click();
 
 		DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
 
-		//get current date time with Date()
+		// get current date time with Date()
 		Date date = new Date();
 
 		// Now format the date
-		String date1= dateFormat.format(date);
+		String date1 = dateFormat.format(date);
 
 		// Print the Date
-		System.out.println("Current date is " +date1);
+		System.out.println("Current date is " + date1);
 
-		//Enter Event Start date
+		// Enter Event Start date
 		expmrkttab.getEventStartDateTxtBx().sendKeys(date1);
 
-		//Click on Event End Date text field
+		// Click on Event End Date text field
 		expmrkttab.getEventEndDateTxtBx().click();
 
 		Calendar calendar = Calendar.getInstance();
 		calendar.add(Calendar.DATE, 10);
 		String futureDate = dateFormat.format(calendar.getTime());
-		System.out.println("Future date: "+futureDate);
+		System.out.println("Future date: " + futureDate);
 
-		//Enter Event End date
+		// Enter Event End date
 		expmrkttab.getEventEndDateTxtBx().sendKeys(futureDate);
 
-		//Click on Event Start time Drop down
+		// Click on Event Start time Drop down
 		expmrkttab.getEventStartTimeDD().click();
 
-		//Select Event Start time
+		// Select Event Start time
 		expmrkttab.getEventStartTimeValue().click();
 
-		//Click on Event End time Drop down
+		// Click on Event End time Drop down
 		expmrkttab.getEventEndTimeDD().click();
 
-		//Select Event End time
+		// Select Event End time
 		expmrkttab.getEventEndTimeValue().click();
 
-		//Select Open to Everyone Checkbox
+		// Select Open to Everyone Checkbox
 		expmrkttab.getOpenToEveryoneChckBx().click();
 
-		//Click on Save button
+		// Click on Save button
 		expmrkttab.getEventSaveBtn().click();
 		Thread.sleep(4000);
 
-		//Verify that Success msg should appeared
+		// Verify that Success msg should appeared
 		Assert.assertTrue(expmrkttab.getShowSpecialSuccessMsg().isDisplayed());
 
-		//Dismiss the pop-up by click on Okay btn
+		// Dismiss the pop-up by click on Okay btn
 		expmrkttab.getDismissSuccessModal().click();
 		Thread.sleep(6000);
-		int i = 0; 
-		exheventslist = driver.findElements(By.xpath("//ul[contains(@class,'EPManageEventsForMarket_eventsList')]/li["+i+"]/span[1]"));
+		int i = 0;
+		exheventslist = driver.findElements(
+				By.xpath("//ul[contains(@class,'EPManageEventsForMarket_eventsList')]/li[" + i + "]/span[1]"));
 
 		for (i = 1; i < exheventslist.size(); i++) {
 			Assert.assertTrue(exheventslist.get(i).getText().contains(neweventname));
 			break;
 		}
 
-		//Open Sitecore in new tab
-		((JavascriptExecutor)driver).executeScript("window.open()");
+		// Open Sitecore in new tab
+		((JavascriptExecutor) driver).executeScript("window.open()");
 		tabs = new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(tabs.get(1));
 		driver.get(prop.getProperty("sitecoreurl_uat"));
 		Thread.sleep(5000);
 
-		//Login to Sitecore
+		// Login to Sitecore
 		sclogin.getSCUsername().sendKeys(prop.getProperty("scusername_uat"));
 		sclogin.getSCPassword().sendKeys(prop.getProperty("scpassword_uat"));
 		sclogin.getSCLoginbtn().click();
 
-		//Click on Exhibitor Events Approvals menu
+		// Click on Exhibitor Events Approvals menu
 		scdash.getExhEventsApprovals().click();
 
-		//Select Sort By dropdown
+		// Select Sort By dropdown
 		scshow.getSSSortByOptn().click();
 
-		//Click on Date added Desc optn
+		// Click on Date added Desc optn
 		scshow.getDateAddedDesc().click();
 
 		Thread.sleep(6000);
-		WebElement approvebtn = driver.findElement(By.xpath("//a[@data-eventname='"+neweventname+"' and text()='Approve']"));
+		WebElement approvebtn = driver
+				.findElement(By.xpath("//a[@data-eventname='" + neweventname + "' and text()='Approve']"));
 
-		//Click on Approve btn
+		// Click on Approve btn
 		approvebtn.click();
 		Thread.sleep(6000);
 	}
-
 
 	public void deleteExhEventFrmExp() throws InterruptedException {
 
 		expmrkttab = new EXPMarketsPage(driver);
 
 		System.out.println("In delete Exh event function");
-		
-		((JavascriptExecutor)driver).executeScript("window.open()");
+
+		((JavascriptExecutor) driver).executeScript("window.open()");
 		tabs = new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(tabs.get(0));
 
 		System.out.println(neweventname);
-		
-		//Delete newly created Exhibitor Event
+
+		// Delete newly created Exhibitor Event
 		int i = 0;
-		exheventnameslist = driver.findElements(By.xpath("//li[contains(@class,'EPManageEventsForMarket_eventItem')]["+i+"]/span[1]"));
-		exheventdeletebtnlist = driver.findElements(By.xpath("//li[contains(@class,'EPManageEventsForMarket_eventItem')]["+i+"]/div[3]/div[3]/span"));
-		
+		exheventnameslist = driver.findElements(
+				By.xpath("//li[contains(@class,'EPManageEventsForMarket_eventItem')][" + i + "]/span[1]"));
+		exheventdeletebtnlist = driver.findElements(
+				By.xpath("//li[contains(@class,'EPManageEventsForMarket_eventItem')][" + i + "]/div[3]/div[3]/span"));
+
 		for (i = 1; i < exheventnameslist.size(); i++) {
-			
+
 			scrollToElement(exheventnameslist.get(i));
-			
+
 			System.out.println(exheventnameslist.get(i).getText());
-			if(exheventnameslist.get(i).getText().contains(neweventname)) {
+			if (exheventnameslist.get(i).getText().contains(neweventname)) {
 				exheventdeletebtnlist.get(i).click();
 				break;
 			}
 		}
 	}
-	
+
 	public void loginCheckATL() throws IOException, InterruptedException {
 		String currentURL = driver.getCurrentUrl();
 		String expectedURL = "https://www.atlantamarket.com/";
-		if(currentURL.equals(expectedURL)) {
+		if (currentURL.equals(expectedURL)) {
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		}
-		else {
+		} else {
 			driver.get(prop.getProperty("atlmrkturl_prod"));
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		}
 	}
-	
+
 	public void loginCheckLVM() throws IOException, InterruptedException {
 		String currentURL = driver.getCurrentUrl();
 		String expectedURL = "https://www.lasvegasmarket.com/";
-		if(currentURL.equals(expectedURL)) {
+		if (currentURL.equals(expectedURL)) {
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		}
-		else {
+		} else {
 			driver.get(prop.getProperty("lvmurl_prod"));
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		}
 	}
-	
+
 	public String LVMExhibitorWithEvent() throws InterruptedException, IOException {
-      lap = new ATLLandingPage(driver);
-      lp = new ATLLoginPage(driver);
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
 		sclogin = new SCLoginPage(driver);
 		scdash = new SCDashboard(driver);
 		scshow = new SCShowSpecials(driver);
 
-      lvmmpp = new LVMMarketPlannerPage(driver);
-      lvmevents=new LVMEventsAndWebinarPage(driver);
+		lvmmpp = new LVMMarketPlannerPage(driver);
+		lvmevents = new LVMEventsAndWebinarPage(driver);
 
-      if(driver.getCurrentUrl().contains(prop.getProperty("lvmurl_prod"))) {
-          driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-          // Click on Attend Tab
-          Thread.sleep(2000);
-          lvmevents.getlvmExploreMarketTab().click();
-          Thread.sleep(2000);
-          //click on Events Link
-          lvmevents.getlvmEventsLink().click();
-      }
-          else {
-              driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-              lvmevents.getlvmAttendTab().click();  //For LVM Events  
-              Thread.sleep(2000);
-              //click on Events Link
-              lvmevents.getlvmEventsLink().click();
-              atlevents.getatlExploreMarketTab().click();  //For LVM Events
-              Thread.sleep(2000);
-              //click on Events Link
-              atlevents.getatlEventsLink().click();
-              Thread.sleep(3000);
-          }
-      //Click on Exh Event Tab
-      lvmevents.getlvmExhibitorsEventsTab().click();
-      /*try {
-      scrollToElement(lvmevents.getlvmEventCardFirstExhName());
-      //Get Exhibitor name fron from first event card.
-     String exhName = lvmevents.getlvmEventCardFirstExhName().getText();
-	  return exhName;
-      }catch (Exception e) {
-    	
-    	  siteCoreLoginUAT();//login to siteCore
-    	  scdash.getSC_DashboardCTA().click(); //Click on Dashboard
-    	  scdash.getSC_ContentEditor().click(); //CLick on COntent Editor
-    	 scdash.getSC_ContentEditorIMCDropdown().click();//Click on IMC
-    	 scdash.getSC_ContentEditorIMCLVM().click();//Click on LVM
-    	 scdash.getSC_ContentEditorIMCLVMHome().click();//Click on Home
-    	 scdash.getSC_ContentEditorIMCLVMHomeEvents().click();//Click on LVM
-    	 scdash.getSC_ContentEditorIMCLVMHomeEventYearFolder().click();//click on Event folder
-    	 scdash.getSC_ContentEditorIMCLVMHomeEventsFirstFolder().click();//click on Event folder
-    	 scdash.getSC_ContentEditorIMCLVMHomeEventsFirstFolderSubFolder().click();//click on Event Sub folder
-    	 scdash.getSC_ContentEditorIMCLVMHomeEventsFirstFolderSubFolder1().click();//click on Event Sub folder
-    	 scdash.getSC_ContentEditorIMCLVMHomeEventsFirstFolderSubFolder2().click();//click on Event Sub folder
-    	 scdash.getSC_ContentEditorIMCLVMHomeEventsLastPage().click();//click on Event Sub folder
-    	 
-	}*/
-	return neweventname;
+		if (driver.getCurrentUrl().contains(prop.getProperty("lvmurl_prod"))) {
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			// Click on Attend Tab
+			Thread.sleep(2000);
+			lvmevents.getlvmExploreMarketTab().click();
+			Thread.sleep(2000);
+			// click on Events Link
+			lvmevents.getlvmEventsLink().click();
+		} else {
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			lvmevents.getlvmAttendTab().click(); // For LVM Events
+			Thread.sleep(2000);
+			// click on Events Link
+			lvmevents.getlvmEventsLink().click();
+			atlevents.getatlExploreMarketTab().click(); // For LVM Events
+			Thread.sleep(2000);
+			// click on Events Link
+			atlevents.getatlEventsLink().click();
+			Thread.sleep(3000);
+		}
+		// Click on Exh Event Tab
+		lvmevents.getlvmExhibitorsEventsTab().click();
+		/*
+		 * try { scrollToElement(lvmevents.getlvmEventCardFirstExhName()); //Get
+		 * Exhibitor name fron from first event card. String exhName =
+		 * lvmevents.getlvmEventCardFirstExhName().getText(); return exhName; }catch
+		 * (Exception e) {
+		 * 
+		 * siteCoreLoginUAT();//login to siteCore scdash.getSC_DashboardCTA().click();
+		 * //Click on Dashboard scdash.getSC_ContentEditor().click(); //CLick on COntent
+		 * Editor scdash.getSC_ContentEditorIMCDropdown().click();//Click on IMC
+		 * scdash.getSC_ContentEditorIMCLVM().click();//Click on LVM
+		 * scdash.getSC_ContentEditorIMCLVMHome().click();//Click on Home
+		 * scdash.getSC_ContentEditorIMCLVMHomeEvents().click();//Click on LVM
+		 * scdash.getSC_ContentEditorIMCLVMHomeEventYearFolder().click();//click on
+		 * Event folder
+		 * scdash.getSC_ContentEditorIMCLVMHomeEventsFirstFolder().click();//click on
+		 * Event folder
+		 * scdash.getSC_ContentEditorIMCLVMHomeEventsFirstFolderSubFolder().click();//
+		 * click on Event Sub folder
+		 * scdash.getSC_ContentEditorIMCLVMHomeEventsFirstFolderSubFolder1().click();//
+		 * click on Event Sub folder
+		 * scdash.getSC_ContentEditorIMCLVMHomeEventsFirstFolderSubFolder2().click();//
+		 * click on Event Sub folder
+		 * scdash.getSC_ContentEditorIMCLVMHomeEventsLastPage().click();//click on Event
+		 * Sub folder
+		 * 
+		 * }
+		 */
+		return neweventname;
 	}
+
 	public void SC_selectAnyDropdown(String dropDownName) throws IOException, InterruptedException {
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
-		
-		By.xpath("//span[contains(text(),'"+ dropDownName +"')]/../../img");
+
+		By.xpath("//span[contains(text(),'" + dropDownName + "')]/../../img");
 		Thread.sleep(3000);
-	
+
 	}
+
 	public void siteCoreLogin() throws InterruptedException {
-		
+
 		sclogin = new SCLoginPage(driver);
 		scdash = new SCDashboard(driver);
 		scshow = new SCShowSpecials(driver);
-		
+
 		driver.get(prop.getProperty("sitecoreurl_prod"));
 		Thread.sleep(5000);
-		//Login to Sitecore
+		// Login to Sitecore
 		sclogin.getSCUsername().sendKeys(prop.getProperty("scusername_prod"));
 		sclogin.getSCPassword().sendKeys(prop.getProperty("scpassword_prod"));
 		sclogin.getSCLoginbtn().click();
-		
+
 	}
+
 	public void siteCoreLoginUAT() throws InterruptedException {
-		
+
 		sclogin = new SCLoginPage(driver);
 		scdash = new SCDashboard(driver);
 		scshow = new SCShowSpecials(driver);
-		
+
 		driver.get(prop.getProperty("sitecoreurl_uat"));
 		Thread.sleep(5000);
-		//Login to Sitecore
+		// Login to Sitecore
 		sclogin.getSCUsername().sendKeys(prop.getProperty("sitecoreusername"));
 		sclogin.getSCPassword().sendKeys(prop.getProperty("sitecorepassword"));
 		sclogin.getSCLoginbtn().click();
-		
+
 	}
-	
-	public void siteCoreFiterByNoAssociation(List<WebElement>associationColList) {
-		
-		boolean flag=true;
-		List<String>allNotAssociated=new ArrayList<>();
+
+	public void siteCoreFiterByNoAssociation(List<WebElement> associationColList) {
+
+		boolean flag = true;
+		List<String> allNotAssociated = new ArrayList<>();
 		for (WebElement notAss : associationColList) {
-		    String text = notAss.getText().toLowerCase();
-		    if (!text.trim().isEmpty()) { // Ignore elements that are empty or contain only whitespace
-		        allNotAssociated.add(text);
-		        flag=true;
-		    }
+			String text = notAss.getText().toLowerCase();
+			if (!text.trim().isEmpty()) { // Ignore elements that are empty or contain only whitespace
+				allNotAssociated.add(text);
+				flag = true;
+			}
 		}
 		System.out.println(allNotAssociated);
-		if(allNotAssociated.isEmpty()) {
+		if (allNotAssociated.isEmpty()) {
 			System.out.println("No Associations is working as expeced");
-			Assert.assertTrue(flag = true);	
+			Assert.assertTrue(flag = true);
 
-		}else{
+		} else {
 			System.out.println("No Associations is not working as expeced");
 			Assert.assertTrue(flag = false);
 		}
 	}
-	public void siteCoreFiterByExhibitor(List<WebElement>associationColList) {
-		
-		boolean flag=true;
-		List<String>allNotAssociated=new ArrayList<>();
+
+	public void siteCoreFiterByExhibitor(List<WebElement> associationColList) {
+
+		boolean flag = true;
+		List<String> allNotAssociated = new ArrayList<>();
 		for (WebElement notAss : associationColList) {
-		    String text = notAss.getText().toLowerCase();
-		    if (!text.trim().isEmpty()) { // Ignore elements that are empty or contain only whitespace
-		        allNotAssociated.add(text);
-		        flag=true;
-		    }
+			String text = notAss.getText().toLowerCase();
+			if (!text.trim().isEmpty()) { // Ignore elements that are empty or contain only whitespace
+				allNotAssociated.add(text);
+				flag = true;
+			}
 		}
 		System.out.println(allNotAssociated);
-		if(!allNotAssociated.isEmpty()) {
+		if (!allNotAssociated.isEmpty()) {
 			System.out.println("Exhibitor is working as expeced");
-			Assert.assertTrue(flag = true);	
+			Assert.assertTrue(flag = true);
 
-		}else{
+		} else {
 			System.out.println("Exhibitor is not working as expeced");
 			Assert.assertTrue(flag = false);
 		}
 	}
+
 	public void checkSiteCoreFilterByAssociation(List<WebElement> associationColList, boolean expectAssociations) {
 		List<String> allAssociations = new ArrayList<>();
 		for (WebElement element : associationColList) {
@@ -1311,69 +1344,445 @@ public class Utility extends base {
 			}
 		}
 	}
-	
+
 	@SuppressWarnings("unlikely-arg-type")
 	public void handleFilterSelection(WebElement filterName) throws InterruptedException {
 		lvmgs = new LVMGlobalSearchPage(driver);
-		
-		
+
 		infoFilterList = driver.findElements(By.xpath("//div[@class='imc-filteritem__option']"));
-		
-		
-	   
-	    	
-	        if (infoFilterList.equals(filterName.getText())) {
-	            // Click on the checkbox
-	        	filterName.click();
 
-	            // Wait for results to load
-	            Thread.sleep(5000);
+		if (infoFilterList.equals(filterName.getText())) {
+			// Click on the checkbox
+			filterName.click();
 
-	            // Get the first article name
-	            String articleName = lvmgs.getarticleName1st().getText();
+			// Wait for results to load
+			Thread.sleep(5000);
 
-	            // Click on the "Learn More" link for the first article
-	            lvmgs.getlearnMoreLinkArticle().click();
+			// Get the first article name
+			String articleName = lvmgs.getarticleName1st().getText();
 
-	            // Wait for the new page to load
-	            Thread.sleep(15000);
-	            String pageTitle = driver.getTitle();
+			// Click on the "Learn More" link for the first article
+			lvmgs.getlearnMoreLinkArticle().click();
 
-	            // Verify if the article name is part of the page title
-	            Assert.assertTrue(
-	                articleName.contains(pageTitle),
-	                "The article name does not match the page title."
-	            );
+			// Wait for the new page to load
+			Thread.sleep(15000);
+			String pageTitle = driver.getTitle();
 
-	            // Validate if the selected filter name is present in the tags
-	            boolean isFilterNamePresent = lvmgs.getlistOfAllTags().stream()
-	                .anyMatch(tag -> tag.getText().contains(filterName.getText()));
+			// Verify if the article name is part of the page title
+			Assert.assertTrue(articleName.contains(pageTitle), "The article name does not match the page title.");
 
-	            // Assert if the filter name is found in the tags
-	            Assert.assertTrue(
-	                isFilterNamePresent,
-	                "The selected filter name is not present in the tags."
-	            );
+			// Validate if the selected filter name is present in the tags
+			boolean isFilterNamePresent = lvmgs.getlistOfAllTags().stream()
+					.anyMatch(tag -> tag.getText().contains(filterName.getText()));
 
-	            // Navigate back to the filter list
-	            driver.navigate().back();
-	            Thread.sleep(8000);
+			// Assert if the filter name is found in the tags
+			Assert.assertTrue(isFilterNamePresent, "The selected filter name is not present in the tags.");
 
-	            // Re-locate the checkbox before clicking it again
-	            List<WebElement> infoFilterListNew = driver.findElements(By.xpath("//div[@class='imc-filteritem__option']"));
+			// Navigate back to the filter list
+			driver.navigate().back();
+			Thread.sleep(8000);
 
-	            for (WebElement filter : infoFilterListNew) {
-	                if (filter.getText().contains(filterName.getText())) {
-	                    filter.click();
-	                    break;
-	                }
-	            }
+			// Re-locate the checkbox before clicking it again
+			List<WebElement> infoFilterListNew = driver
+					.findElements(By.xpath("//div[@class='imc-filteritem__option']"));
 
-	            // Wait for the page to load before continuing
-	            Thread.sleep(5000);
-	            
-	        }
-	    }
-	
+			for (WebElement filter : infoFilterListNew) {
+				if (filter.getText().contains(filterName.getText())) {
+					filter.click();
+					break;
+				}
+			}
 
+			// Wait for the page to load before continuing
+			Thread.sleep(5000);
+
+		}
+	}
+
+	public void commonMethodForLineDGShowroom(String globalsearch_input) throws InterruptedException {
+
+		lvmgs = new LVMGlobalSearchPage(driver);
+		lvmds = new LVMExhDigiShowroomPage(driver);
+		lvmdigish = new LVMLineDigitalShowroomPage(driver);
+
+		Thread.sleep(8000);
+		lvmgs.getGlobalSearchTextBoxNew().click(); // Click on the global search field
+		lvmgs.getGlobalSearchEnterText().sendKeys(globalsearch_input); // Enter search text "Anne"
+		lvmgs.getSearchButtonNew().click(); // Click on search button
+		String exhName = null;
+		// Shown By text
+		List<WebElement> exhibitors = lvmds.getlistOfShownByText();
+
+		for (WebElement webElement : exhibitors) {
+			exhName = webElement.getText();
+			System.out.println(exhName);
+			webElement.click();
+			break;
+		}
+
+		Assert.assertTrue(lvmdigish.getLVMLineDigiShowroomPageTitle().getText().contains(exhName),
+				"Digital Showroom Page Title mismatch"); // Verify page title contains exhibitor name
+
+	}
+
+	public void commonMethodForExhibotrDGShowroomm(String globalsearch_input) throws InterruptedException {
+
+		lvmgs = new LVMGlobalSearchPage(driver);
+		lvmds = new LVMExhDigiShowroomPage(driver);
+		lvmdigish = new LVMLineDigitalShowroomPage(driver);
+
+		Thread.sleep(8000);
+		lvmgs.getGlobalSearchTextBoxNew().click(); // Click on the global search field
+		lvmgs.getGlobalSearchEnterText().sendKeys(globalsearch_input); // Enter search text "Anne"
+		lvmgs.getSearchButtonNew().click(); // Click on search button
+		Thread.sleep(8000);
+		String exhName = null;
+		// Shown By text
+		List<WebElement> exhibitors = lvmds.getlistOfAllExhibitors();
+
+		for (WebElement webElement : exhibitors) {
+			exhName = webElement.getText();
+			System.out.println(exhName);
+			webElement.click();
+			break;
+		}
+
+		/*
+		 * Assert.assertTrue(lvmdigish.getLVMLineDigiShowroomPageTitle().getText().
+		 * contains(exhName), "Digital Showroom Page Title mismatch"); // Verify page
+		 * title contains exhibitor name
+		 */
+	}
+
+	public void verifyProductCategorySelection(String searchInput, WebElement productCategoryElement)
+			throws InterruptedException {
+
+		lvmleftpane = new LVMLeftPaneFilters(driver);
+
+		Thread.sleep(8000);
+
+		lvmleftpane.getLVMProdCatgExpandBtn().click();
+		Thread.sleep(8000);
+
+		scrollElementIntoMiddle(productCategoryElement);
+		String expectedprodcatg = productCategoryElement.getText();
+		productCategoryElement.click();
+		Thread.sleep(8000);
+
+		String exhname = lvmds.getExhibitorNameNew().getText();
+		lvmds.getExhibitorNameNew().click();
+		Thread.sleep(10000);
+
+		List<WebElement> prodcatgitemlist = lvmds.getLVMProductCategItemList();
+		for (WebElement item : prodcatgitemlist) {
+			if (lvmds.getLVMProductCategTable().isDisplayed()) {
+				Assert.assertTrue(item.getText().contains(expectedprodcatg));
+				break;
+			}
+		}
+	}
+
+	public void globleSearchInput(String input) throws InterruptedException {
+		lvmgs = new LVMGlobalSearchPage(driver);
+		lvmds = new LVMExhDigiShowroomPage(driver);
+		lvmdigish = new LVMLineDigitalShowroomPage(driver);
+		Thread.sleep(8000);
+		lvmgs.getGlobalSearchTextBoxNew().click();
+		lvmgs.getGlobalSearchEnterText().sendKeys(input);
+		lvmgs.getSearchButtonNew().click();
+		Thread.sleep(20000);
+
+	}
+
+	public void commonMethodLeftPaneFilterExpandButton(WebElement expandButton) throws InterruptedException {
+		lvmgs = new LVMGlobalSearchPage(driver);
+		lvmleftpane = new LVMLeftPaneFilters(driver);
+
+		// Click on Product Categories expand btn
+		expandButton.click();
+		Thread.sleep(2000);
+
+	}
+
+	String expectedStylecatg = null;
+
+	public void clickOnLeftPaneStyleFilter(WebElement filterName) throws InterruptedException {
+
+		lvmgs = new LVMGlobalSearchPage(driver);
+		lvmds = new LVMExhDigiShowroomPage(driver);
+		lvmmpp = new LVMMarketPlannerPage(driver);
+		lvmleftpane = new LVMLeftPaneFilters(driver);
+
+		scrollElementIntoMiddle(filterName);
+
+		expectedStylecatg = filterName.getText();
+
+		Thread.sleep(8000);
+		System.out.println("Product category name::" + expectedStylecatg);
+		filterName.click();
+		Thread.sleep(8000);
+
+	}
+
+	String expectedprodcatg = " ";
+
+	public void clickOnLeftPaneFilter(WebElement filterName) throws InterruptedException {
+
+		lvmgs = new LVMGlobalSearchPage(driver);
+		lvmds = new LVMExhDigiShowroomPage(driver);
+		lvmmpp = new LVMMarketPlannerPage(driver);
+		lvmleftpane = new LVMLeftPaneFilters(driver);
+
+		scrollElementIntoMiddle(filterName);
+
+		expectedprodcatg = filterName.getText();
+
+		Thread.sleep(8000);
+		System.out.println("Product category name::" + expectedprodcatg);
+		filterName.click();
+		Thread.sleep(8000);
+
+	}
+
+	public String exhibitorNameText = null;
+
+	public void commomMethodForFindoutProductCategory() throws InterruptedException {
+
+		lvmgs = new LVMGlobalSearchPage(driver);
+		lvmds = new LVMExhDigiShowroomPage(driver);
+		lvmmpp = new LVMMarketPlannerPage(driver);
+		lvmleftpane = new LVMLeftPaneFilters(driver);
+
+		// Store the exhibitor list
+		List<WebElement> listOfExhibitors = lvmleftpane.getlistOfAllExhibitors();
+		int checkedExhibitors = 0;
+
+		Actions actions = new Actions(driver);
+
+		boolean isExhibitorFound = false; // Track if exhibitor is found
+
+		outer: for (int i = 0; i < listOfExhibitors.size(); i++) {
+			if (checkedExhibitors >= 3) {
+				break; // Stop after checking 3 exhibitors
+			}
+
+			// Re-fetch the exhibitor list to avoid stale elements
+			listOfExhibitors = lvmleftpane.getlistOfAllExhibitors();
+
+			WebElement exhibitorName = listOfExhibitors.get(i);
+			exhibitorNameText = exhibitorName.getText();
+			System.out.println("Checking for Exhibitor: " + exhibitorNameText);
+			Thread.sleep(5000);
+			scrollToTop();
+			scrollElementIntoMiddle(exhibitorName);
+			actions.moveToElement(exhibitorName).perform();
+			exhibitorName.click();
+			Thread.sleep(10000);
+			checkedExhibitors++; // Increment counter
+			try {
+				if (lvmleftpane.getisProductCategorySectionNotAvailable().isDisplayed()) {
+					System.out.println("in If/Try block");
+					System.out.println("Product Categories list not available, going back to exhibitor list...");
+					driver.navigate().back();
+					Thread.sleep(5000);
+					continue; // Continue with the next iteration
+				}
+			} catch (Exception e) {
+				System.out.println("in catch block");
+				scrollToElement(lvmds.getproductCateShownText());
+				Thread.sleep(5000);
+				List<WebElement> prodcatgitemlist = lvmds.getLVMProductCategItemList();
+				Thread.sleep(5000);
+				for (int j = 0; j < prodcatgitemlist.size(); j++) {
+					String proCatName = prodcatgitemlist.get(j).getText();
+					System.out.println(proCatName);
+					System.out.println("Comparing: '" + proCatName + "' with '" + expectedprodcatg + "'");
+
+					if (proCatName.toLowerCase().contains(expectedprodcatg.toLowerCase())) {
+						Assert.assertTrue(true, "Product category name found in category list.");
+						isExhibitorFound = true;
+						System.out.println("Product category found in: " + exhibitorNameText);
+						break; // Exit loop when found
+					}
+				}
+
+				// If exhibitor is found, exit all loops
+				if (isExhibitorFound) {
+					break outer;
+				} else {
+					driver.navigate().back();
+					Thread.sleep(5000);
+				}
+			}
+		}
+
+	}
+
+	public boolean checkAndSelectExhibitor() throws InterruptedException {
+		lapp = new LVMLandingPage(driver);
+		lpp = new LVMLoginPage(driver);
+		atlleftpane = new ATLLeftPaneFilters(driver);
+		genData = new GenerateData();
+		digiAdmin = new SCDigitalAdminPanelPage(driver);
+		digiAdminUserProf = new SCDigitalAdminPanelUserProfilePage(driver);
+
+		Thread.sleep(8000);
+		atlleftpane.getEXPExhDropDown().click();
+		Thread.sleep(3000);
+		List<WebElement> allDropDownExhibitos = lpp.getlistOfAllExhibitors();
+		for (WebElement exhibitor : allDropDownExhibitos) {
+			String ex = exhibitor.getText().replaceAll("[^a-zA-Z ]", "").trim();
+			if (ex.contains(exhibitorNameText.replaceAll("[^a-zA-Z ]", "").trim())
+					|| exhibitorNameText.replaceAll("[^a-zA-Z ]", "").trim().contains(ex)) {
+				exhibitor.click();
+				Thread.sleep(8000);
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public void addExhibitorFromSiteCore() throws InterruptedException {
+
+		lapp = new LVMLandingPage(driver);
+		lpp = new LVMLoginPage(driver);
+		atlleftpane = new ATLLeftPaneFilters(driver);
+		genData = new GenerateData();
+		digiAdmin = new SCDigitalAdminPanelPage(driver);
+		digiAdminUserProf = new SCDigitalAdminPanelUserProfilePage(driver);
+
+		// Open a new tab using JavaScript
+		((JavascriptExecutor) driver).executeScript("window.open('about:blank','_blank');");
+
+		// Switch to the new tab
+		ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+		driver.switchTo().window(tabs.get(1));
+
+		// Perform login and actions in the new tab
+		siteCoreLogin();
+
+		// Click on Digital Admin Panel
+		lpp.getSCDigitalAdminPanel().click();
+		Thread.sleep(10000);
+		lpp.getSCDigitalAdminPanelSearchField().sendKeys("swapnili@cybage.com");
+		lpp.getSCDigitalAdminPanelSearchButton().click();
+		Thread.sleep(10000);
+
+		// Perform double-click action
+		Actions actions = new Actions(driver);
+		actions.doubleClick(lpp.getSCDigitalAdminPanelOpenUserProf()).perform();
+		Thread.sleep(5000);
+
+		scrollToElement(lpp.getSCDigitalAdminPanelUserProfAddButton());
+		lpp.getSCDigitalAdminPanelUserProfAddButton().click();
+
+		// Enter exhibitor into text field
+		digiAdminUserProf.getdigitalAdminPanelAddPopupExhibitoName().sendKeys(exhibitorNameText);
+		Thread.sleep(3000);
+
+		// Select 1st exhibitor from suggestion list
+		digiAdminUserProf.getdigitalAdminPanelAddPopupSelectExhibitoName().click();
+
+		// Click on Admin Radio Button
+		digiAdminUserProf.getdigitalAdminPanelAddPopupSelectAdminRadio().click();
+
+		// Click on Add CTA
+		digiAdminUserProf.getdigitalAdminPanelAddPopupAdd().click();
+		Thread.sleep(10000);
+
+		// Close the new tab and switch back to the original tab
+		driver.close();
+		driver.switchTo().window(tabs.get(0)); // Switch back to the first tab
+	}
+
+	public void checkStyleProperties() throws InterruptedException {
+		lapp = new LVMLandingPage(driver);
+		lpp = new LVMLoginPage(driver);
+		atlleftpane = new ATLLeftPaneFilters(driver);
+		genData = new GenerateData();
+		digiAdmin = new SCDigitalAdminPanelPage(driver);
+		digiAdminUserProf = new SCDigitalAdminPanelUserProfilePage(driver);
+		// Click on Your DG showroom tab
+		lpp.getEXPYourDigiShowroom().click();
+
+		// Click on Exhibitor profile info link
+		lpp.getEXPProfileInfo().click();
+
+		List<WebElement> StyleProperty = lpp.getEXPProfileInfoStyleElement();
+		boolean styleMatched = false;
+		for (WebElement style : StyleProperty) {
+			if (style.getText().contains("Coastal")) {
+				styleMatched = true;
+				break;
+			}
+		}
+		Assert.assertTrue(styleMatched, "Failed - Properties not match in Style");
+	}
+
+	public void ClickOnSubFilterPlusButton(String filterName) throws InterruptedException {
+
+		lvmgs = new LVMGlobalSearchPage(driver);
+		lvmds = new LVMExhDigiShowroomPage(driver);
+		lvmmpp = new LVMMarketPlannerPage(driver);
+		lvmleftpane = new LVMLeftPaneFilters(driver);
+		lvmexhact = new LVMExhLineProdActionsPage(driver);
+
+		WebElement parentElement = driver.findElement(By.xpath("//label[contains(text(),'" + filterName
+				+ "')]/../../../../../../div[@class='imc-expand-collapse__heading imc-filteritem__parent imc-filteritem__parent--tier2 ']"));
+
+		// Move & Click using Actions
+		Actions actions = new Actions(driver);
+
+		// Hover over the parent element Actions actions = new Actions(driver);
+		actions.moveToElement(parentElement, 10, 10).click().perform();
+	}
+
+	public void subFilterCategories(List<WebElement> listOfSubCategories) throws InterruptedException {
+		// Fetching Filtered Options (List 1)
+		lvmgs = new LVMGlobalSearchPage(driver);
+		lvmds = new LVMExhDigiShowroomPage(driver);
+		lvmmpp = new LVMMarketPlannerPage(driver);
+		lvmleftpane = new LVMLeftPaneFilters(driver);
+		lvmexhact = new LVMExhLineProdActionsPage(driver);
+
+		List<WebElement> holidayAndSeasonalFilterOptions = listOfSubCategories;
+		List<String> filterList1 = new ArrayList<>();
+
+		for (WebElement item : holidayAndSeasonalFilterOptions) {
+			String text = item.getText().trim();
+			filterList1.add(text);
+			System.out.println("List 1 Item: " + text);
+		}
+
+		// Move to the next page
+		scrollToTop();
+		exhname = lvmds.getExhibitorNameNew().getText();
+		lvmds.getExhibitorNameNew().click();
+		Thread.sleep(10000);
+
+		// Fetch Product Categories on the new page (List 2)
+		List<WebElement> prodCatgItemList = lvmds.getLVMProductCategItemList();
+		List<String> filterList2 = new ArrayList<>();
+
+		for (WebElement item : prodCatgItemList) {
+			String text = item.getText().trim();
+			filterList2.add(text);
+			System.out.println("List 2 Item: " + text);
+		}
+
+		// Verify that at least one element from List 1 exists in List 2
+		boolean atLeastOneMatch = false;
+
+		for (String option : filterList1) {
+			if (filterList2.contains(option)) {
+				System.out.println("Match found: " + option);
+				atLeastOneMatch = true;
+				break; // Exit loop once a match is found
+			}
+		}
+
+		// Assert that at least one List 1 element exists in List 2
+		Assert.assertTrue(atLeastOneMatch, "No matching elements found between List 1 and List 2.");
+		driver.get(prop.getProperty("lvmurl_prod"));
+	}
 }

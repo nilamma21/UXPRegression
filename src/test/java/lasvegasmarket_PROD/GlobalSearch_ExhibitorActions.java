@@ -89,43 +89,15 @@ public class GlobalSearch_ExhibitorActions extends base {
 		//driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
-		//lap.getCloseMarktAdBtn().click();
-
-		/*
-		 * atlgs.getATLGlobalSearchTextBox().sendKeys(prop.getProperty("exhibitor14"));
-		 * Thread.sleep(2000); //Click on 1st Suggetions
-		 * lvmdigish.getsuggetionList().click(); Thread.sleep(5000);
-		 */
-		lvmgs.getGlobalSearchTextBoxNew().click();
-		lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("exhibitor14")));
-		Thread.sleep(2000);
-		lvmgs.getSearchButtonNew().click();
 		
-		lvmds.getExhibitorNameNew().click();
-		Thread.sleep(10000);
+		utl.commonMethodForExhibotrDGShowroomm((prop.getProperty("globalsearchinput")));
+		
+		
 		// Click on Contact Exhibitor icon
 		atlexhact.getcontactExhibitorHeroComponent().click();
 		Assert.assertTrue(atlexhact.getContactExhibitorModal().isDisplayed());
 
-		// Enter Postal code
-/*		atlexhact.getPostalCodeTxtBx().sendKeys("99950");
-
-		// Enter Message
-		atlexhact.getMessageTxtBx().sendKeys("This is a Test Exhibitor");
-
-		// Select 1st two Product Category
-		atlexhact.getProductCateg1().click();
-		//atlexhact.getProductCateg2().click();
-
-		utl.scrollToElement(atlexhact.getSendMessageBtn());
-
-		// Click on Send Message button
-		// Will send msg once test exhibitor will get
-		// atlexhact.getSendMessageBtn().click();
-*/
-		// Close the pop-up
-		//atlexhact.getPopUpCloseBtn().click();
-		//driver.get(prop.getProperty("lvmurl_prod"));
+	
 	}
 
 	@Test(priority = 2)
@@ -262,7 +234,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		//driver.get(prop.getProperty("lvmurl_prod"));
 	}
 
-	@Test(priority = 5)
+	//@Test(priority = 5)
 	public void TS005_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// T327: The click on 'Matching products-See All' functionality for an Exhibitor

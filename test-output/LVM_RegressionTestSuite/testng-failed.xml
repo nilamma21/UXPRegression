@@ -11,12 +11,28 @@
           <include name="initialize"/>
           <include name="TS003_VerifyGlobalSearchMatchingResultsSortSortByTest"/>
           <include name="quit"/>
+          <include name="TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest"/>
         </methods>
       </class> <!-- lasvegasmarket_PROD.GlobalSearch_MatchingResults -->
+      <class name="lasvegasmarket_PROD.ShowSpecials">
+        <methods>
+          <include name="TS002_VerifyShowroomLinkForShowSpecialsTest"/>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- lasvegasmarket_PROD.ShowSpecials -->
+      <class name="lasvegasmarket_PROD.FloorPlans">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initialize"/>
+          <include name="TS004_VerifyIconsOnFloorPlansPageTest"/>
+        </methods>
+      </class> <!-- lasvegasmarket_PROD.FloorPlans -->
       <class name="lasvegasmarket_PROD.ExhibitorDigitalShowroom">
         <methods>
           <include name="initialize"/>
           <include name="TS012_VerifyExhibitorDigitalEventsComponentTest"/>
+          <include name="TS009_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest"/>
           <include name="TS013_VerifyCatalogsSectionForExhibitorTest"/>
           <include name="tearDown"/>
           <include name="TS008_VerifySeeInOtherMarketsForExhibitorTest"/>
@@ -24,13 +40,24 @@
       </class> <!-- lasvegasmarket_PROD.ExhibitorDigitalShowroom -->
       <class name="lasvegasmarket_PROD.GlobalSearch_SearchFor">
         <methods>
+          <include name="TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest"/>
+          <include name="TS005_VerifyArticlesFiltersGlobalSearchTest"/>
           <include name="initialize"/>
           <include name="TS011_VerifyEventsOverviewInGlobalSearchTest"/>
+          <include name="TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest"/>
           <include name="tearDown"/>
           <include name="TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest"/>
+          <include name="TS005_VerifyArticlesOverviewInGlobalSearchTest"/>
           <include name="TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest"/>
         </methods>
       </class> <!-- lasvegasmarket_PROD.GlobalSearch_SearchFor -->
+      <class name="lasvegasmarket_PROD.GlobalSearch_ProductActions">
+        <methods>
+          <include name="TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest"/>
+          <include name="initialize"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- lasvegasmarket_PROD.GlobalSearch_ProductActions -->
       <class name="lasvegasmarket_PROD.GlobalSearch_LineActions">
         <methods>
           <include name="initialize"/>
@@ -41,7 +68,7 @@
       </class> <!-- lasvegasmarket_PROD.GlobalSearch_LineActions -->
       <class name="lasvegasmarket_PROD.GlobalSearch_ExhibitorActions">
         <methods>
-          <include name="TS004_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest"/>
+          <include name="TS006_VerifySelectionOfExhibitorFromSearchResultsTest"/>
           <include name="TS005_VerifyClickOnMatchingProductsSeeAllLinkForExhibitorTest"/>
           <include name="initialize"/>
           <include name="tearDown"/>

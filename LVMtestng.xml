@@ -31,7 +31,7 @@
             <class name="lasvegasmarket_PROD.GlobalSearch_SearchFor" />
             <class name="lasvegasmarket_PROD.GlobalSearch_SuggestionList" />
             <class name="lasvegasmarket_PROD.LineDigitalShowroom" />
-
+			<class name="lasvegasmarket_PROD.ShowSpecials" />
             
             <!--<methods>
                    

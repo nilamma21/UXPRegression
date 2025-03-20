@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="lasvegasmarket_PROD.GlobalSearch_SuggestionList">
+      <class name="lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters">
         <methods>
-          <include name="TS003_VerifySelectionOfProductFromAutoSuggestionListTest"/>
-          <include name="tearDown"/>
           <include name="initialize"/>
+          <include name="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- lasvegasmarket_PROD.GlobalSearch_SuggestionList -->
+      </class> <!-- lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
