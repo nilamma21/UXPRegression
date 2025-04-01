@@ -40,10 +40,24 @@ public class LVMLineDigitalShowroomPage {
 	By favIconDigiShowroomUat = By.xpath("//button[@class='imc-selectableicon ']/label"); //Locator for Exhibitor name on Exhibitor Directory image
 	By seeAllProductBtnUat = By.xpath("(//span[contains(text(),'See All')])[1]"); //Locator for See All Product Count Btn
 	By productName1PROD= By.xpath("//div[@class='imc-products-overview--gallery']/div[1]/div[1]/a[1]/div[1]/div[1]"); //Locator for Product name
+	By digiShowroomExhNamePROD = By.xpath("//a[@class='imc-link imc-type--title-6-link imc-type--color-neutral-heaviest']");
+	By locationLinkPROD = By.xpath("//a[@class='imc-exhibitorcard--link imc-link--hover-underline']"); //Locator for Location liks
+	
+	
 	
 	public LVMLineDigitalShowroomPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
+	}
+	public WebElement getlocationLinkPROD() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(locationLinkPROD));
+		return driver.findElement(locationLinkPROD);
+	}
+	public WebElement getdigiShowroomExhNamePROD() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(digiShowroomExhNamePROD));
+		return driver.findElement(digiShowroomExhNamePROD);
 	}
 	public WebElement getproductName1PROD() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
