@@ -88,7 +88,11 @@ public class GlobalSearch_LeftPaneFilters extends base {
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(4000);
-		lap.getIUnderstandBtn().click();
+		try {
+			lap.getIUnderstandBtn().click();
+			}catch (Exception e) {
+				// TODO: handle exception
+			}
 		Thread.sleep(7000);
 		driver.navigate().refresh();
 	}

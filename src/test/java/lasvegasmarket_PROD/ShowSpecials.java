@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -56,7 +57,11 @@ public class ShowSpecials extends base{
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
+		try {
 		lap.getIUnderstandBtn().click();
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
 		Thread.sleep(5000);
 		utl.CloseATLPopup();
 		
@@ -78,10 +83,10 @@ public class ShowSpecials extends base{
 		genData = new GenerateData();
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		
+		Thread.sleep(9000);
 		//click on Discover tab
-		lvmgs.getLvmDiscoverTab().click();
-		
+		Actions ac=new Actions(driver);
+		ac.moveToElement(lvmgs.getLvmDiscoverTab()).click().perform();
 		//Click on Show Specials 
 		lvmgs.getlvmShowSpecialsLink().click();
 		Thread.sleep(5000);
@@ -134,8 +139,8 @@ public class ShowSpecials extends base{
 		
 		//click on Exhibitors And Product Tab
 		//click on Discover tab
-		lvmgs.getLvmDiscoverTab().click();
-		Thread.sleep(5000);
+		Actions ac=new Actions(driver);
+		ac.moveToElement(lvmgs.getLvmDiscoverTab()).click().perform();
 		
 		//Click on Show Specials 
 		lvmgs.getlvmShowSpecialsLink().click();
@@ -149,7 +154,8 @@ public class ShowSpecials extends base{
 		//String showroomName=lvmgs.getlvmShowroomLink().getText();
 		String url=lvmgs.getlvmShowroomLink().getAttribute("href");
 		//System.out.println(showroomName);
-		lvmgs.getlvmShowroomLink().click();
+		ac.moveToElement(lvmgs.getlvmShowroomLink()).click().perform();
+		
 		Thread.sleep(5000);
 		
 		//Verify Show Special Exh Page 
@@ -159,7 +165,7 @@ public class ShowSpecials extends base{
 
 	@AfterClass
 	public void tearDown() {
-		driver.quit();
+		//driver.quit();
 	}
 
 }

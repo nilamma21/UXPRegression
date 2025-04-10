@@ -54,7 +54,11 @@ public class LineDigitalShowroom extends base {
 		driver.get(prop.getProperty("lvmurl_prod")); // Navigate to the LVM URL
 		driver.manage().window().maximize(); // Maximize browser window
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30)); // Set implicit wait
+		try {
 		lap.getIUnderstandBtn().click(); // Accept cookies/understand popup
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
 		Thread.sleep(5000); // Wait for elements to load
 		//utl.CloseATLPopup(); // Close any popups if present
 	}

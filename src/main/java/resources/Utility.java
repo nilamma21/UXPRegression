@@ -640,10 +640,26 @@ public class Utility extends base {
 		lp = new ATLLoginPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
 		atlevents = new ATLEventsAndWebinarPage(driver);
+		lvmgs = new LVMGlobalSearchPage(driver);
+
+		Actions ac = new Actions(driver);
+		ac.moveToElement(lvmgs.getLvmDiscoverTab()).click().perform();
+
+		// Click on Show Specials
+		lvmgs.getEventsLink().click();
+		Thread.sleep(5000);
+		
+	}
+	public void clickOnEventLinkOfChannel_Old() throws InterruptedException {
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		atlevents = new ATLEventsAndWebinarPage(driver);
 
 		if (driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_prod"))
 				|| driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_uat"))) {
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			
 			// Click on Attend Tab
 			Thread.sleep(2000);
 			atlevents.getatlAttendTab().click();
@@ -652,7 +668,7 @@ public class Utility extends base {
 			atlevents.getatlEventsLink().click();
 			Thread.sleep(5000);
 		} else {
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			
 			Thread.sleep(2000);
 			atlevents.getatlExploreMarketTab().click(); // For LVM Events
 			Thread.sleep(2000);
@@ -1416,7 +1432,11 @@ public class Utility extends base {
 		for (WebElement webElement : exhibitors) {
 			exhName = webElement.getText();
 			System.out.println(exhName);
-			webElement.click();
+			//scrollIntoView(webElement);
+			Thread.sleep(5000);
+			Actions ac=new Actions(driver);
+			ac.moveToElement(webElement).click().perform();
+			//webElement.click();
 			break;
 		}
 
@@ -1425,34 +1445,36 @@ public class Utility extends base {
 
 	}
 
-	public void commonMethodForExhibotrDGShowroomm(String globalsearch_input) throws InterruptedException {
+	
+	    private String exhName; // Declare as an instance variable
 
-		lvmgs = new LVMGlobalSearchPage(driver);
-		lvmds = new LVMExhDigiShowroomPage(driver);
-		lvmdigish = new LVMLineDigitalShowroomPage(driver);
+	    public void commonMethodForExhibotrDGShowroomm(String globalsearch_input) throws InterruptedException {
+	        lvmgs = new LVMGlobalSearchPage(driver);
+	        lvmds = new LVMExhDigiShowroomPage(driver);
+	        lvmdigish = new LVMLineDigitalShowroomPage(driver);
 
-		Thread.sleep(8000);
-		lvmgs.getGlobalSearchTextBoxNew().click(); // Click on the global search field
-		lvmgs.getGlobalSearchEnterText().sendKeys(globalsearch_input); // Enter search text "Anne"
-		lvmgs.getSearchButtonNew().click(); // Click on search button
-		Thread.sleep(8000);
-		String exhName = null;
-		// Shown By text
-		List<WebElement> exhibitors = lvmds.getlistOfAllExhibitors();
+	        Thread.sleep(8000);
+	        lvmgs.getGlobalSearchTextBoxNew().click(); 
+	        lvmgs.getGlobalSearchEnterText().sendKeys(globalsearch_input); 
+	        lvmgs.getSearchButtonNew().click();
+	        Thread.sleep(8000);
+	        
+	        List<WebElement> exhibitors = lvmds.getlistOfAllExhibitors();
+	        
+	        for (WebElement webElement : exhibitors) {
+	            exhName = webElement.getText();  // Assign exhibitor name
+	            System.out.println(exhName);
+	            webElement.click();
+	            break;
+	        }
+	    }
 
-		for (WebElement webElement : exhibitors) {
-			exhName = webElement.getText();
-			System.out.println(exhName);
-			webElement.click();
-			break;
-		}
+	    // Getter method to access exhName in other classes
+	    public String getExhName() {
+	        return exhName;
+	    }
+	
 
-		/*
-		 * Assert.assertTrue(lvmdigish.getLVMLineDigiShowroomPageTitle().getText().
-		 * contains(exhName), "Digital Showroom Page Title mismatch"); // Verify page
-		 * title contains exhibitor name
-		 */
-	}
 
 	public void verifyProductCategorySelection(String searchInput, WebElement productCategoryElement)
 			throws InterruptedException {

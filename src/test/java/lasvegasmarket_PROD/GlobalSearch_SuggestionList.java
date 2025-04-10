@@ -56,7 +56,11 @@ public class GlobalSearch_SuggestionList extends base {
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("lvmurl_prod"));
+		try {
 		lap.getIUnderstandBtn().click();
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
 //		Thread.sleep(10000);
 //		lap.getCloseMarktAdBtn().click();
 	}

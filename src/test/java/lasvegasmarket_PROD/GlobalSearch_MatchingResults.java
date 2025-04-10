@@ -51,7 +51,11 @@ public class GlobalSearch_MatchingResults extends base {
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		lap.getIUnderstandBtn().click();
+		try {
+			lap.getIUnderstandBtn().click();
+			}catch (Exception e) {
+				// TODO: handle exception
+			}
 		Thread.sleep(5000);
 		utl.CloseATLPopup();
 		Thread.sleep(2000);
@@ -128,21 +132,9 @@ public class GlobalSearch_MatchingResults extends base {
 
 	      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	      
-	  	/*
-		 * if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
-		 * lvmgs.getlvmGlobalSearchClearTxt().click(); }
-		 */
-		/*
-		 * Thread.sleep(5000);
-		 * lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty(
-		 * "filtersglobalsearchinput"));// filtersglobalsearchinput
-		 * lvmgs.getLVMSearchButton().click(); Thread.sleep(5000);
-		 */
+	  	
 
-		lvmgs.getGlobalSearchTextBoxNew().click();
-		lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("filtersglobalsearchinput")));
-		Thread.sleep(2000);
-		lvmgs.getSearchButtonNew().click();
+	      utl.globleSearchInput((prop.getProperty("globalsearch_input")));
 		// Click on Sort Btn
 	    
 	      lvmgs.getLvmSortButton().click();
@@ -159,12 +151,7 @@ public class GlobalSearch_MatchingResults extends base {
 	      }
 	      System.out.println("Displayed All Exhibitors Title");
 
-			/*
-			 * // Verify All Exhibitors Total Product Section for (WebElement
-			 * allExhTotalProdDisplay : lvmgs.getlvmListOfAllExhTotalProductLink()) {
-			 * Assert.assertTrue(allExhTotalProdDisplay.isDisplayed()); }
-			 * System.out.println("Displayed All Exhibitors Total Product Section");
-			 */
+			
 
 	      // Verify All Exhibitors Location Links
 	      for (WebElement allExhLocationLinksDisplay : lvmgs.getLvmSortButtonListOfLocation()) {
@@ -179,22 +166,11 @@ public class GlobalSearch_MatchingResults extends base {
 	      Thread.sleep(8000);
 	      
 	      // Verify All Exhibitor Titles
-	      for (WebElement allExhDisply : lvmgs.getlvmListOfAllExh()) {
+	      for (WebElement allExhDisply : lvmgs.getlistOfAllExhibitorsAndProducts()) {
 	          Assert.assertTrue(allExhDisply.isDisplayed());
 	      }
 	      System.out.println("Displayed All Exhibitors Title");
 
-			/*
-			 * // Verify All Exhibitors Total Product Section for (WebElement
-			 * allExhTotalProdDisplay : lvmgs.getlvmListOfAllExhTotalProductLink()) {
-			 * Assert.assertTrue(allExhTotalProdDisplay.isDisplayed()); }
-			 * System.out.println("Displayed All Exhibitors Total Product Section");
-			 * 
-			 * // Verify All Exhibitors Matching Product Section for (WebElement
-			 * allExhMatchingProdDisplay : lvmgs.getlvmListOfAllExhMatchingProductLink()) {
-			 * Assert.assertTrue(allExhMatchingProdDisplay.isDisplayed()); }
-			 * System.out.println("Displayed All Exhibitors Total Product Section");
-			 */
 
 	      // Verify All Exhibitors Location Links
 	      for (WebElement allExhLocationLinksDisplay : lvmgs.getLvmSortButtonListOfLocation()) {
@@ -218,17 +194,7 @@ public class GlobalSearch_MatchingResults extends base {
 	      }
 	      System.out.println("Displayed All Exhibitors Title");
 
-			/*
-			 * // Verify All Exhibitors Total Product Section for (WebElement
-			 * allExhTotalProdDisplay : lvmgs.getlvmListOfAllExhTotalProductLink()) {
-			 * Assert.assertTrue(allExhTotalProdDisplay.isDisplayed()); }
-			 * System.out.println("Displayed All Exhibitors Total Product Section");
-			 * 
-			 * // Verify All Exhibitors Matching Product Section for (WebElement
-			 * allExhMatchingProdDisplay : lvmgs.getlvmListOfAllExhMatchingProductLink()) {
-			 * Assert.assertTrue(allExhMatchingProdDisplay.isDisplayed()); }
-			 * System.out.println("Displayed All Exhibitors Total Product Section");
-			 */
+			
 	      // Verify All Exhibitors Location Links
 	      for (WebElement allExhLocationLinksDisplay : lvmgs.getLvmSortButtonListOfLocation()) {
 	          Assert.assertTrue(allExhLocationLinksDisplay.isDisplayed());
@@ -256,23 +222,7 @@ public class GlobalSearch_MatchingResults extends base {
 
 	      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	      
-	      /*if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
-	          lvmgs.getlvmGlobalSearchClearTxt().click();
-	      }*/
-			/*
-			 * lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty(
-			 * "filtersglobalsearchinput"));//sortByInput Thread.sleep(2000);
-			 * lvmgs.getLVMSearchButton().click(); Thread.sleep(5000); // Click on Sort Btn
-			 * try { lvmgs.getlvmGlobalSearchSortBtn().click(); }catch (Exception e) {
-			 * lvmgs.getlvmGlobalSearchSortBtnUAT().click();
-			 * 
-			 * }
-			 */
-
-			lvmgs.getGlobalSearchTextBoxNew().click();
-			lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("filtersglobalsearchinput")));
-			Thread.sleep(2000);
-			lvmgs.getSearchButtonNew().click();
+	      utl.globleSearchInput((prop.getProperty("globalsearch_input")));
 			// Click on Sort Btn
 		    
 		      lvmgs.getLvmSortButton().click();
@@ -313,23 +263,7 @@ public class GlobalSearch_MatchingResults extends base {
 	      utl = new Utility(driver);
 
 	      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-	      /*if(!lvmgs.getLVMGlobalSearchTextBox().getAttribute("value").isEmpty()) {
-	          lvmgs.getlvmGlobalSearchClearTxt().click();
-	      }*/
-			/*
-			 * lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty(
-			 * "filtersglobalsearchinput"));//filterByInput
-			 * lvmgs.getLVMSearchButton().click(); Thread.sleep(5000); // Click on Sort Btn
-			 * try { lvmgs.getlvmGlobalSearchSortBtn().click(); }catch (Exception e) {
-			 * lvmgs.getlvmGlobalSearchSortBtnUAT().click();
-			 * 
-			 * }
-			 */
-
-			lvmgs.getGlobalSearchTextBoxNew().click();
-			lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("globalsearch_input")));
-			Thread.sleep(2000);
-			lvmgs.getSearchButtonNew().click();
+	      utl.globleSearchInput((prop.getProperty("globalsearch_input")));
 			Thread.sleep(10000);
 			// Click on Sort Btn
 		    

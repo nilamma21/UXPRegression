@@ -2,6 +2,7 @@ package sitecore_PROD;
 
 import java.io.IOException;
 import java.lang.reflect.Array;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -43,14 +44,15 @@ public class DigitalAdminPanel extends base {
 		//utl.siteCoreLogin();
 		utl.siteCoreLoginUAT();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		
 	}
 
 	@Test(priority = 8) 
 	public void TS001_VerifyDigitalAdminPanelSearchFunctionalityTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-Digital Admin Functionality
 		// UXP-T :
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		System.out.println("-----------------VerifyDigitalAdminPanelTest------------------------");
 		
 		digiAdmin=new SCDigitalAdminPanelPage(driver);
@@ -72,7 +74,7 @@ public class DigitalAdminPanel extends base {
 	public void TS002_VerifyDigitalAdminPanelSortByOptionsTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-Digital Admin SortBy Options
 		// UXP-T :
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		System.out.println("-----------------VerifyDigitalAdminPanelTest------------------------");
 		
 		digiAdmin=new SCDigitalAdminPanelPage(driver);
@@ -92,7 +94,7 @@ public class DigitalAdminPanel extends base {
 	public void TS003_VerifyDigitalAdminPanelSortByOptionsFunctinalityTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-Digital Admin SortBy Options Functinality
 		// UXP-T :
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		System.out.println("-----------------VerifyDigitalAdminPanelTest------------------------");
 		
 		digiAdmin=new SCDigitalAdminPanelPage(driver);
@@ -113,7 +115,7 @@ public class DigitalAdminPanel extends base {
 	public void TS004_VerifyDigitalAdminPanelFilterByOptionsTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-Digital Admin SortBy Options
 		// UXP-T :
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		System.out.println("-----------------VerifyDigitalAdminPanelTest------------------------");
 		
 		digiAdmin=new SCDigitalAdminPanelPage(driver);
@@ -135,7 +137,7 @@ public class DigitalAdminPanel extends base {
 	public void TS005_VerifyDigitalAdminPanelFilteByOptionsFunctinalityTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-Digital Admin SortBy Options Functinality
 		// UXP-T :
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		System.out.println("-----------------VerifyDigitalAdminPanelTest------------------------");
 
 		digiAdmin = new SCDigitalAdminPanelPage(driver);
@@ -196,7 +198,7 @@ digiAdmin.getSCLaunchPad().click();
 	public void TS006_VerifyDigitalAdminPanelActionsOptionsTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-Digital Admin Actions Options
 		// UXP-T :
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		System.out.println("-----------------VerifyDigitalAdminPanelTest------------------------");
 		
 		digiAdmin=new SCDigitalAdminPanelPage(driver);
@@ -218,7 +220,7 @@ digiAdmin.getSCLaunchPad().click();
 	public void TS007_VerifyDigitalAdminPanelActionsOptionsFunctinalityTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-Digital Admin Actions Options Functinality
 		// UXP-T :
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		System.out.println("-----------------VerifyDigitalAdminPanelTest------------------------");
 
 		digiAdmin = new SCDigitalAdminPanelPage(driver);
@@ -288,7 +290,7 @@ digiAdmin.getSCLaunchPad().click();
 	public void TS008_VerifyDigitalAdminPanelCreateUserTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-Digital Admin User Name Functinality
 		// UXP-T :
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		System.out.println("-----------------VerifyDigitalAdminPanelTest------------------------");
 
 		digiAdmin = new SCDigitalAdminPanelPage(driver);
@@ -333,7 +335,7 @@ digiAdmin.getSCLaunchPad().click();
 	public void TS009_VerifyDigitalAdminPanelCreateUserErrorMsgTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-Digital Admin User Profile Error msg
 		// UXP-T :
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		System.out.println("-----------------VerifyDigitalAdminPanelTest------------------------");
 
 		digiAdmin = new SCDigitalAdminPanelPage(driver);
@@ -416,7 +418,7 @@ digiAdmin.getSCLaunchPad().click();
 	public void TS0010_VerifyDigitalAdminPanelCreateUserCancelButtonTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-Digital Admin User Profile Cancel Functinality
 		// UXP-T :
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		System.out.println("-----------------VerifyDigitalAdminPanelTest------------------------");
 
 		digiAdmin = new SCDigitalAdminPanelPage(driver);
@@ -440,7 +442,7 @@ digiAdmin.getSCLaunchPad().click();
 	public void TS011_VerifyDigitalAdminPanelOpenUserProfileTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-Digital Admin User Profile create new user Functinality
 		// UXP-T :
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		System.out.println("-----------------VerifyDigitalAdminPanelTest------------------------");
 
 		digiAdmin = new SCDigitalAdminPanelPage(driver);
@@ -464,7 +466,7 @@ digiAdmin.getSCLaunchPad().click();
 	public void TS012_VerifyDigitalAdminPanelOpenUserProfileSendPasswordResetCTATest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-Digital Admin User Profile Send Password Reset CTA
 		// UXP-T822 :Sitecore : Digital Admin Panel - Send Password Reset CTA
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		System.out.println("-----------------VerifyDigitalAdminPanelTest------------------------");
 
 		digiAdmin = new SCDigitalAdminPanelPage(driver);
@@ -517,7 +519,7 @@ digiAdmin.getSCLaunchPad().click();
 	public void TS013_VerifyDigitalAdminPanelOpenUserProfileEditUserInfoPopup() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-Digital Admin User Profile Edit User Info popup
 		// UXP
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		System.out.println("-----------------VerifyDigitalAdminPanelTest------------------------");
 
 		digiAdmin = new SCDigitalAdminPanelPage(driver);
@@ -552,7 +554,7 @@ digiAdmin.getSCLaunchPad().click();
 	public void TS014_VerifyDigitalAdminPanelOpenUserProfileEditUserInfoPopupCancelCTA() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-Digital Admin User Profile Edit User Info popup Cancel CTA
 		// UXP
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		System.out.println("-----------------VerifyDigitalAdminPanelTest------------------------");
 
 		digiAdmin = new SCDigitalAdminPanelPage(driver);
@@ -591,7 +593,7 @@ digiAdmin.getSCLaunchPad().click();
 	public void TS015_VerifyDigitalAdminPanelOpenUserProfileEditUserInfoPopupSendCTAWitoutEnteringInfo() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-Digital Admin User Profile Edit User Info popup Send CTA without entering any info
 		// UXP
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		System.out.println("-----------------VerifyDigitalAdminPanelTest------------------------");
 
 		digiAdmin = new SCDigitalAdminPanelPage(driver);
@@ -631,7 +633,7 @@ digiAdmin.getSCLaunchPad().click();
 	public void TS016_VerifyDigitalAdminPanelOpenUserProfileEditUserInfoPopupSendCTAWithEnteringInfo() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-Digital Admin User Profile Edit User Info popup Send CTA without entering any info
 		// UXP
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		System.out.println("-----------------VerifyDigitalAdminPanelTest------------------------");
 
 		digiAdmin = new SCDigitalAdminPanelPage(driver);
@@ -704,7 +706,7 @@ digiAdmin.getSCLaunchPad().click();
 	public void TS017_VerifyDigitalAdminPanelOpenUserProfileAssociatedExhibitorDiscardCTA() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-Digital Admin User Profile Add popup and discard CTA
 		// UXP
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		System.out.println("-----------------VerifyDigitalAdminPanelTest------------------------");
 
 		digiAdmin = new SCDigitalAdminPanelPage(driver);
@@ -741,7 +743,7 @@ digiAdmin.getSCLaunchPad().click();
 	public void TS018_VerifyDigitalAdminPanelOpenUserProfileAssociatedExhibitorSelectExhibitorAdminRadio() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-Digital Admin User Profile Add popup and Add Exhibitor Admin CTA
 		// UXP
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		System.out.println("-----------------VerifyDigitalAdminPanelTest------------------------");
 
 		digiAdmin = new SCDigitalAdminPanelPage(driver);
@@ -830,7 +832,7 @@ digiAdmin.getSCLaunchPad().click();
 	public void TS019_VerifyDigitalAdminPanelOpenUserProfileAssociatedExhibitorSelectExhibitorEditorRadio() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-Digital Admin User Profile Add popup and Add Exhibitor Admin CTA
 				// UXP
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 				System.out.println("-----------------VerifyDigitalAdminPanelTest------------------------");
 
 				digiAdmin = new SCDigitalAdminPanelPage(driver);
@@ -919,7 +921,7 @@ digiAdmin.getSCLaunchPad().click();
 	public void TS020_VerifyDigitalAdminPanelOpenUserProfileAssociatedExhibitorEror() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-Digital Admin User Profile Add popup and Add same Exhibitor and check error 
 				// UXP
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 				System.out.println("-----------------VerifyDigitalAdminPanelTest------------------------");
 
 				digiAdmin = new SCDigitalAdminPanelPage(driver);
@@ -1005,7 +1007,7 @@ digiAdmin.getSCLaunchPad().click();
 	public void TS021_VerifyDigitalAdminPanelOpenUserProfileAssociatedCTA2() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-Digital Admin User Profile Add popup Doesn't Have Lease CTA
 				// UXP
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 				System.out.println("-----------------VerifyDigitalAdminPanelTest------------------------");
 
 				digiAdmin = new SCDigitalAdminPanelPage(driver);

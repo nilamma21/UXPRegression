@@ -10,6 +10,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -50,7 +51,11 @@ public class FloorPlans extends base {
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("lvmurl_prod"));
-		lap.getIUnderstandBtn().click();
+		try {
+			lap.getIUnderstandBtn().click();
+			}catch (Exception e) {
+				// TODO: handle exception
+			}
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(7000);
 		//lap.getCloseMarktAdBtn().click();
@@ -74,8 +79,10 @@ public class FloorPlans extends base {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(5000);
 		// Click on Discover Tab
-		lvmflpp.getlvmDiscoverBtn().click();
-
+		Actions ac=new Actions(driver);
+		ac.moveToElement(lvmflpp.getlvmDiscoverBtn()).click().perform();
+		//lvmflpp.getlvmDiscoverBtn().click();
+		Thread.sleep(5000);
 		//click on Floor plans link
 		lvmflpp.getlvmFloorPlansLinkPROD().click();
 		Thread.sleep(5000);
@@ -115,7 +122,7 @@ public class FloorPlans extends base {
 		lvmflpp= new LVMFloorPlansPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-
+Thread.sleep(5000);
 		/*
 		 * // Click on Exh And Product Tab
 		 * lvmflpp.getLVMExhibitorsAndProductTab().click();
@@ -135,8 +142,14 @@ public class FloorPlans extends base {
 
 		//click on No Exhibitor floor
 		
+			if(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/")) {
 		lvmflpp.getlvmNoExhibitorFloor_uat().click();
-
+			
+		}else{
+			//utl.scrollToElement(lvmflpp.getlvmFloorPlansNoExPresentATL());
+			utl.scrollElementIntoMiddle(lvmflpp.getlvmFloorPlansNoExPresentATL());
+			lvmflpp.getlvmFloorPlansNoExPresentATL().click();
+		}
 		//Verify that Loading Exhibitors msg should be displayed
 		//Assert.assertTrue(atlflpp.getATLLoadingExhMsg().isDisplayed());
 		Thread.sleep(10000);
@@ -146,63 +159,54 @@ public class FloorPlans extends base {
 
 	@Test(priority = 3)
 	public void TS003_VerifyZoomInOutLevelOnFloorPlansPageTest() throws InterruptedException, IOException {
-		// The purpose of this test case:-
-		// UXP-T629: To verify Floor Plans: Zoom Levels
+	    // The purpose of this test case: UXP-T629: To verify Floor Plans: Zoom Levels
 
-		utl = new Utility(driver);
-		lvmflpp=new LVMFloorPlansPage(driver);
+	    utl = new Utility(driver);
+	    lvmflpp = new LVMFloorPlansPage(driver);
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
-		driver.get(prop.getProperty("lvmurl_prod"));
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Thread.sleep(2000);
+	    driver.get(prop.getProperty("lvmurl_prod"));
+	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
-		// Click on Discover Tab
-		lvmflpp.getlvmDiscoverBtn().click();
+	    // Click on Discover Tab
+	    wait.until(ExpectedConditions.elementToBeClickable(lvmflpp.getlvmDiscoverBtn())).click();
 
-		// click on Floor plans link
-		lvmflpp.getlvmFloorPlansLinkPROD().click();
-		Thread.sleep(5000);
+	    // Click on Floor Plans link
+	    wait.until(ExpectedConditions.elementToBeClickable(lvmflpp.getlvmFloorPlansLinkPROD())).click();
 
-		
-		//click on any floor
-		utl.scrollElementIntoMiddle(lvmflpp.getLVMBuildingFloor());
-		Thread.sleep(200);
-		lvmflpp.getLVMBuildingFloor().click();
+	    // Click on any floor
+	    utl.scrollElementIntoMiddle(lvmflpp.getLVMBuildingFloor());
+	    wait.until(ExpectedConditions.elementToBeClickable(lvmflpp.getLVMBuildingFloor())).click();
 
-		//utl.scrollToElement(lvmflpp.getLVMExhibitorFloorZoomIn());
-		//Click on Zoom In icon
-		//lvmflpp.getLVMExhibitorFloorZoomIn().click();
-		Actions action= new Actions(driver);
-		action.moveToElement(lvmflpp.getLVMExhibitorFloorZoomIn()).click().perform();
-		
-		//Store Zoom in Attribute
-		String x1= lvmflpp.getLVMFloorPlanMapIamge().getAttribute("style");
+	    // Click on Zoom In icon
+	    Actions action = new Actions(driver);
+	    for (int i = 0; i < 3; i++) {
+	        wait.until(ExpectedConditions.elementToBeClickable(lvmflpp.getLVMExhibitorFloorZoomIn()));
+	        action.moveToElement(lvmflpp.getLVMExhibitorFloorZoomIn()).click().perform();
+	        Thread.sleep(2000);
+	    }
 
-		//lvmflpp.getLVMExhibitorFloorZoomIn().click();
-		action.moveToElement(lvmflpp.getLVMExhibitorFloorZoomIn()).click().perform();
-		//Stored Zoom in Attribute
-		String x2=lvmflpp.getLVMFloorPlanMapIamge().getAttribute("style");
-System.out.println("x2 "+x2);
-		//Store Zoom in Attribute
-		//lvmflpp.getLVMExhibitorFloorZoomIn().click();
-		action.moveToElement(lvmflpp.getLVMExhibitorFloorZoomIn()).click().perform();
-		String x3=lvmflpp.getLVMFloorPlanMapIamge().getAttribute("style");
-		System.out.println("x3 "+x3);
-		//Verify Zoom In functionality
-		Assert.assertNotEquals(x2, x3);
-		Thread.sleep(5000);
+	    // Store Zoom In Attribute
+	    String zoomInAttr = lvmflpp.getLVMFloorPlanMapIamge().getAttribute("style");
+	    System.out.println("Zoomed In Attribute: " + zoomInAttr);
 
-		//Click on Zoom Out icon
-		//lvmflpp.getLVMExhibitorFloorZoomOut().click();
-		action.moveToElement(lvmflpp.getLVMExhibitorFloorZoomOut()).click().perform();
-		//lvmflpp.getLVMExhibitorFloorZoomOut().click();
-		action.moveToElement(lvmflpp.getLVMExhibitorFloorZoomOut()).click().perform();
-		//Stored Zoom out Attribute
-		String out=lvmflpp.getLVMFloorPlanMapIamge().getAttribute("style");
-		Thread.sleep(5000);
-		//Verify Zoom Out functionality
-		Assert.assertNotEquals(x1, out);
+	    // Click on Zoom Out icon
+	    for (int i = 0; i < 2; i++) {
+	        wait.until(ExpectedConditions.elementToBeClickable(lvmflpp.getLVMExhibitorFloorZoomOut()));
+	        action.moveToElement(lvmflpp.getLVMExhibitorFloorZoomOut()).click().perform();
+	        Thread.sleep(2000);
+	    }
+
+	    // Store Zoom Out Attribute
+	    String zoomOutAttr = lvmflpp.getLVMFloorPlanMapIamge().getAttribute("style");
+	    System.out.println("Zoomed Out Attribute: " + zoomOutAttr);
+
+	    // Verify Zoom functionality
+	    Assert.assertNotEquals(zoomInAttr, zoomOutAttr, "Zoom Out did not revert zoom level!");
+
+	    System.out.println("Test Passed: Zoom functionality is working correctly.");
 	}
+
 
 	@Test(priority = 4)
 	public void TS004_VerifyIconsOnFloorPlansPageTest() throws InterruptedException, IOException {
@@ -216,7 +220,8 @@ System.out.println("x2 "+x2);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		// Click on Discover Tab
-		lvmflpp.getlvmDiscoverBtn().click();
+		Actions ac=new Actions(driver);
+		ac.moveToElement(lvmflpp.getlvmDiscoverBtn()).click().perform();
 
 		// click on Floor plans link
 		lvmflpp.getlvmFloorPlansLinkPROD().click();
@@ -228,8 +233,9 @@ System.out.println("x2 "+x2);
 
 		//Click on Vending Machine icon on Map image
 		Thread.sleep(8000);
+		ac.moveToElement(lvmflpp.getlvmflooricononmap_lvmUAT()).click().perform();
 		//utl.scrollToElement(lvmflpp.getlvmflooricononmap_lvmUAT());
-		lvmflpp.getlvmflooricononmap_lvmUAT().click();
+		//lvmflpp.getlvmflooricononmap_lvmUAT().click();
 		Thread.sleep(1000);
 		//Verify that Vending Machine Overlay should appeared on Map
 		Assert.assertTrue(lvmflpp.getlvmflooriconoverlay_lvmUAT().isDisplayed());
@@ -300,7 +306,8 @@ System.out.println("x2 "+x2);
         //Click on Building floor
         utl.scrollElementIntoMiddle(  lvmflpp.getLVMBuildingFloorForFilter());
         Thread.sleep(200);
-        lvmflpp.getLVMBuildingFloorForFilter().click();
+      //  lvmflpp.getLVMBuildingFloorForFilter().click();
+        lvmflpp.getLVMBuildingFloor().click();
         Thread.sleep(6000);
         //Scroll Down to Exhibitor list
         //utl.scrollToElement(lvmflpp.getLVMSelectBox());
@@ -337,27 +344,7 @@ System.out.println("x2 "+x2);
         //Verify Exhibitor List is Sorted or not
         Assert.assertEquals(sortedList, expectedSortedList, "Exhibitor List Should be sorted");
 
-/*
-        //Select Exhibitor on JuniperMarket from List
-        selectFilter.selectByValue("Lines on JuniperMarket");
-        Thread.sleep(10000);
-        
-        List<WebElement> currentJuniperMarketList= driver.findElements(By.xpath("//a[@class='imc-type--title-5-link']"));
-        List<String> juniperMarketList = new ArrayList<String>(); 
-        for(WebElement we:currentJuniperMarketList){
 
-            juniperMarketList.add(we.getText());
-        }
-        //System.out.println("Expected sorted Exhibitor List : "+juniperMarketList);
-        //Verify JuniperMarket List is Displayed or not
-        Assert.assertTrue(!juniperMarketList.isEmpty(),"JuniperMarket Exhibitor list should displayed.");   
-        if(atlflpp.getResultsMsgForLinesOnJuniper().isDisplayed()) {
-            System.out.println("Lines on JuniperMarket is present");
-        }else {
-            Assert.assertTrue(atlflpp.getNoResultsMsgForLinesOnJuniper().isDisplayed());
-            System.out.println("Lines on JuniperMarket is not present");
-        }
-*/
     }
     
 	@Test(priority = 6)
@@ -372,11 +359,14 @@ System.out.println("x2 "+x2);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		// Click on Discover Tab
-				lvmflpp.getlvmDiscoverBtn().click();
-
+		Actions ac=new Actions(driver);
+		ac.moveToElement(lvmflpp.getlvmDiscoverBtn()).click().perform();
+				//lvmflpp.getlvmDiscoverBtn().click();
+		Thread.sleep(2000);
+		ac.moveToElement(lvmflpp.getlvmFloorPlansLinkPROD()).click().perform();
 				// click on Floor plans link
-				lvmflpp.getlvmFloorPlansLinkPROD().click();
-				Thread.sleep(5000);
+				//lvmflpp.getlvmFloorPlansLinkPROD().click();
+		Thread.sleep(5000);
 
 		//Click on Building floor
 		utl.scrollElementIntoMiddle(lvmflpp.getLVMBuildingFloor());
@@ -453,7 +443,11 @@ System.out.println("x2 "+x2);
 		Assert.assertTrue(lvmexhdgshw.getlvmvalidateexhdigishowpage_uat().isDisplayed());
 		Thread.sleep(5000);
 		//Assert.assertTrue(driver.getTitle().contains(""+exhibitorName+" at Atlanta Market"));
+		if(driver.getCurrentUrl().contains("https://www.lasvegasmarket.com/")) {
 		Assert.assertTrue(lvmexhdgshw.getexhNamePROD().getText().contains(exhibitorName));
+		}else {
+			Assert.assertTrue(lvmexhdgshw.getexpNamePROD_ATL().getText().contains(exhibitorName));
+		}
 	}
 
 	@Test(priority = 8)

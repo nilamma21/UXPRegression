@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="1" name="LVM_RegressionTestSuite">
+<suite thread-count="3"  name="LVM_RegressionTestSuite">
     <listeners>
         <listener class-name="lasvegasmarket_PROD.TestListeners" />
     </listeners>
 
     <test name="RegressionTest">
         <classes>
-            <!-- 
-            <class name="lasvegasmarket_PROD.EvenntsAndWebinar" />
+            <!--class name="lasvegasmarket_PROD.EvenntsAndWebinar" />-->
             <class name="lasvegasmarket_PROD.ExhibitorDigitalShowroom"/>
             <class name="lasvegasmarket_PROD.FloorPlans" />
             <class name="lasvegasmarket_PROD.GlobalSearch_ExhibitorActions" />
@@ -17,30 +16,16 @@
             <class name="lasvegasmarket_PROD.GlobalSearch_MatchingResults" />
             <class name="lasvegasmarket_PROD.GlobalSearch_ProductActions" />
             <class name="lasvegasmarket_PROD.GlobalSearch_SearchFor" />
-            <class name="lasvegasmarket_PROD.GlobalSearch_SuggestionList" /> 
+            <class name="lasvegasmarket_PROD.GlobalSearch_SuggestionList" />
             <class name="lasvegasmarket_PROD.LineDigitalShowroom"/> 
             <class name="lasvegasmarket_PROD.ShowSpecials" />
-            -->
 
-            <class name="lasvegasmarket_PROD.ExhibitorDigitalShowroom" />
-            <class name="lasvegasmarket_PROD.FloorPlans" />
-            <class name="lasvegasmarket_PROD.GlobalSearch_ExhibitorActions" />
-            <class name="lasvegasmarket_PROD.GlobalSearch_LineActions" />
-            <class name="lasvegasmarket_PROD.GlobalSearch_MatchingResults" />
-            <class name="lasvegasmarket_PROD.GlobalSearch_ProductActions" />
-            <class name="lasvegasmarket_PROD.GlobalSearch_SearchFor" />
-            <class name="lasvegasmarket_PROD.GlobalSearch_SuggestionList" />
-            <class name="lasvegasmarket_PROD.LineDigitalShowroom" />
-			<class name="lasvegasmarket_PROD.ShowSpecials" />
-            
-            <!--<methods>
-                   
-                   <include name="TS004_VerifyClickOnLineFiltersForExhibitorTest"/>
-                   
-                   <include name="TS006_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest"/>
-                   <include name="TS009_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest"/>
-            </methods>-->
-            
+            <methods>
+                <!-- Uncomment and specify methods if you want to run only specific ones -->
+                <!-- <include name="TS004_VerifyClickOnLineFiltersForExhibitorTest"/> -->
+                <!-- <include name="TS006_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest"/> -->
+                <!-- <include name="TS009_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest"/> -->
+            </methods>
         </classes>
     </test>
 </suite>

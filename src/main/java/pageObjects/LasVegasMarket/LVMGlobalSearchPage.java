@@ -33,7 +33,7 @@ public class LVMGlobalSearchPage {
 	By CatalogHeaderName = By.xpath("//div[@class='imc-pdfview--display']/div[1]/h1[1]"); //Locator for Catalog header
 	By lvmsearchresultArticlesLink = By.xpath("//a[@id='Articles']"); //Locator for Article Link
 	By lvmsearchresultBlog = By.xpath("(//div[@class='imc-gallery__item'])[1]/section[1]/span[1]/div[1]"); //Locator for Article Link
-	By lvmsearchresult = By.xpath("//div[@class='alert-box  ']"); //Locator for Search result 
+	By lvmsearchresult = By.xpath("//div[@class='imc-gallery__item imc-content--full-width']/div/section/span[2]"); //Locator for Search result 
 	By lvmInfoSearchJuniperMarketBtn = By.xpath("//a[contains(text(),'See More Details')]"); //Locator for Juniper Market Btn
 	By lvmInfoSearchMoreInfoBtn = By.xpath("(//a[contains(text(),'See More Details')])[1]"); //Locator for Juniper Market Btn
 	By lvmInfoSearchTopicsFilter = By.xpath("//a[@aria-label='Topics']"); //Locator for Topics filter
@@ -60,9 +60,9 @@ public class LVMGlobalSearchPage {
 	By lvmeventstabinsearchUAT =  By.xpath("//a[@id='Events']"); //Locator for Events tab in Search
 	By lvmseemoredetailsbtn = By.xpath("//a[contains(text(),'See More Details')]"); //Locator for See More Details button
 	By eventslvmmkttopicsfilter = By.xpath("//label[contains(text(),'Las Vegas Market')]"); //Locator for Atlanta Market topics filter
-	By clearfiltersbtn = By.xpath("//a[@class='clear-filter active']"); //Locator for Clear Filters btn
+	By clearfiltersbtn = By.xpath("//button[contains(text(),'Clear Filters')]"); //Locator for Clear Filters btn
 	By eventtypesfilter = By.xpath("//h4[contains(text(),'Event Types')]"); //Locator for Event Types filter
-	By atmarketeventtypefilter = By.xpath("//label[contains(text(),'At Market')]"); //Locator for At Market Event Type
+	By atmarketeventtypefilter = By.xpath("//label[@for='filteritem651']"); //Locator for At Market Event Type
 	By buyingeventtypefilter = By.xpath("//label[contains(text(),'Buying Event')]"); //Locator for Buying Event Type
 	By listOfAllArticles = By.xpath("//div[@class='imc-articlecard__header']"); //Locator for List of all articles
 	By TitleOfArticle = By.xpath("//div[@class='imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[2]/a[1]"); //Locator for List of all articles
@@ -70,7 +70,7 @@ public class LVMGlobalSearchPage {
 	By fourthbreadcrumbtxtUAT = By.xpath("//ul[@class='imc-breadcrumb']/li[4]/a[1]"); //Locator for 4th Breadcrumb text in app
 	By lvmGlobalSearchSortBtn = By.xpath("//button[@class='imc-searchform--bar--button  ' and text()='Sort']"); //Locator for Global Search Sort Btn
 	By lvmGlobalSearch_SearchWithinDropdwn = By.xpath("//select[@name='Search Type']"); //Locator for Global Search SearchWithhn Dropdown
-	By lvmListOfAllExh = By.xpath("//div[@class='imc-exhibitorcard-title-row ']"); //Locator for All Exhibitors
+	By lvmListOfAllExh = By.xpath("//div[@class='imc-exhibitorcard-title-row no-border-bottom']"); //Locator for All Exhibitors
 	By lvmListOfAllExhLocation = By.xpath("//div[@class='imc-exhibitorcard-title-row ']/div[2]"); //Locator for All Exhibitors Location
 	By lvmListOfAllExhTotalProductLink = By.xpath("//div[@class='imc-exhibitorcard--prod-item-container']/p"); //Locator for All Exhibitors Total Product Links
 	By lvmListOfAllExhMatchingProductLink = By.xpath("//div[@class='imc-exhibitorcard--prod-item-container imc-exhibitorcard--prod-item-container--divider']/p"); //Locator for All Exhibitors Matching Product Links
@@ -108,7 +108,7 @@ public class LVMGlobalSearchPage {
 	By lvmSelectList = By.xpath("//select[@name='Saved Searches']");  //Locator for Show Secials Name
 	By lvmClosePopup = By.xpath("//div[@class=' contact-exit']");  //Locator for Show Secials Name
 	By FirstInfoName = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/h2[1]");  //Locator for Show Secials Name
-	By FirstEventName = By.xpath("//div[@class='imc-vr--xxlarge imc-margin--top--large--mobile']/div[1]/div[1]/span[1]");  //Locator for 1st name of Event
+	By FirstEventName = By.xpath("(//p[@class='event-card--title imc-link--hover-underline normal-line-height'])[1]");  //Locator for 1st name of Event
 	By seeAllLinkMatchingProduct = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[2]/div[1]/div[1]/p[2]");  //Locator for 1st name of Event
 	By FirstCatalogName = By.xpath("(//div[@class='imc-exhibitorcard-products-row imc-content--display-flex-space-between-mobile '])[1]/div[2]/p[1]");  //Locator for 1st name of Catalog
 	By lvmseemoredetailsbtnnew = By.xpath("(//a[contains(text(),'See More Details')])[1]"); //Locator for See More Details button
@@ -143,8 +143,8 @@ public class LVMGlobalSearchPage {
 	By VerifyGlobalSeacrhNew = By.xpath("//section[@class = 'imc-searchform--section  ']/span[1]/div[1]"); // Locator for global search verification
 	
 	By GlobalSearchEnterText = By.xpath("//div[@class='top-nav-dropdown-grid imc-content--relative']/div/div/section/div/form/div/input"); // Locator for Global Search field
-	By LvmDiscoverTab = By.xpath("//button[@class='imc-button imc-navigation--block mobile-menu-2 imc-button imc-section--padded-xlarge imc-section--padded-left-xlarge imc-section--padded-right-xlarge imc-content--gamma imc-content--bold imc-content--height-fit-content imc-content--min-height-100 null ']"); // Locator for Discover tab
-	By LvmEventsMenu = By.xpath("(//a[contains(text(),'Events')])[1]"); // Locator for Events Menu
+	By LvmDiscoverTab = By.xpath("//div[@class='imc-content--display-flex imc-content--display-flex-gap-small imc-content--display-flex-justify-center imc-content--full-height']/div[3]/button/span/span[1]"); // Locator for Discover tab
+	By LvmEventsMenu = By.xpath("(//a[contains(text(),'Events')])[2]"); // Locator for Events Menu
 	By LvmExhibitorEvents = By.xpath("//div[@class='event-card--tab']/p[3]"); // Locator for Events Menu
 	By LvmEventExhibitorName = By.xpath("(//div[@class='event-card--cal-card-container imc-content--display-flex imc-content--display-flex-gap-xlarge imc-content--relative']/div[2]/div[1]/div/div/div/div/div/div/div/div/div/div[1]/a[1])[1]"); // Locator for 1st event exhibitor name
 	By LvmSortButton = By.xpath("//div[@class='imc-searchform--bar--button--wrapper']"); // Locator for 1st event exhibitor name
@@ -172,15 +172,41 @@ public class LVMGlobalSearchPage {
 	By showSpecialsDetailsFromShowSpecialsPage = By.xpath("//div[@class='ag-center-cols-container']/div[1]/div[3]"); 
 	
 	By lvmListOfExhibitors = By.xpath("//h2[@class='imc-exhibitorcard__exhibitorname imc-exhibitorcard--title-hover']"); 
+	By listOfAllExhibitorsAndProducts = By.xpath("//div[@class='swiper-wrapper']/../../../../div[1]/div/div/div/div[1]/div[1]/div[1]/div/a/h2");
 	
-	
+	By lvmEventsAndSeminar = By.xpath("//a[contains(text(),' Events & Seminars')]"); 
+	By lvmEventsSearchNoTopicFilterText = By.xpath("//div[contains(text(),'No Topics Filters Selected')]"); 
+	By EventsLink = By.xpath("(//a[contains(@href,'Events')])[2]"); 
 	
 	public LVMGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 		PageFactory.initElements(driver, this);
 	}
+	public WebElement getEventsLink(){
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(EventsLink));
+		return driver.findElement(EventsLink);
+
+	}
+	public WebElement getlvmEventsSearchNoTopicFilterText(){
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(lvmEventsSearchNoTopicFilterText));
+		return driver.findElement(lvmEventsSearchNoTopicFilterText);
+
+	}
+	public WebElement getlvmEventsAndSeminar() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(lvmEventsAndSeminar));
+		return driver.findElement(lvmEventsAndSeminar);
+
+	}
 	
+	public List<WebElement>getlistOfAllExhibitorsAndProducts() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllExhibitorsAndProducts));
+		return driver.findElements(listOfAllExhibitorsAndProducts);
+	}
 	public List<WebElement>getlvmListOfExhibitors() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmListOfExhibitors));
