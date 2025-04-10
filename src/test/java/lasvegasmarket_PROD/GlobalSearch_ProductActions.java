@@ -56,7 +56,11 @@ public class GlobalSearch_ProductActions extends base {
 		// Navigate to Atlanta Market site
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("lvmurl_prod"));
-		lap.getIUnderstandBtn().click();
+		try {
+			lap.getIUnderstandBtn().click();
+			}catch (Exception e) {
+				// TODO: handle exception
+			}
 		Thread.sleep(7000);
 		//lap.getCloseMarktAdBtn().click();
 		//Login to Market Planner
@@ -81,17 +85,16 @@ public class GlobalSearch_ProductActions extends base {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(5000);
 		
-		lvmgs.getGlobalSearchTextBoxNew().click();
-		//lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("exhibitor5")));
-		lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("exhibitor4")));
-		Thread.sleep(2000);
-		lvmgs.getSearchButtonNew().click();
-		Thread.sleep(15000);
+		//Global Search input
+		utl.globleSearchInput((prop.getProperty("globalsearch_input")));
+		Thread.sleep(10000);
 		// Store the 1st Product name of Exhibitor
 		//String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText(); //Old
 		String productNameOnSearchGrid = atlexhact.getlvmProductLinkForExh().getText(); //New
 		System.out.println("Selected Product Name: " + productNameOnSearchGrid);
-		atlexhact.getlvmProductLinkForExh().click();
+		Actions as= new Actions(driver);
+		as.moveToElement(atlexhact.getlvmProductLinkForExh()).click().perform();
+		
 		
 
 		// Store the Product Name on Product Details page
@@ -119,17 +122,13 @@ public class GlobalSearch_ProductActions extends base {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			Thread.sleep(5000);
 			
-			lvmgs.getGlobalSearchTextBoxNew().click();
-			//lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("exhibitor5")));
-			lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("exhibitor4")));
-			Thread.sleep(2000);
-			lvmgs.getSearchButtonNew().click();
+			utl.globleSearchInput((prop.getProperty("globalsearch_input")));
 			Thread.sleep(15000);
 			// Store the 1st Product name of Exhibitor
-			//String productNameOnSearchGrid = atlexhact.getExhProductNameOnSearchGrid().getText(); //Old
+			
 			String productNameOnSearchGrid = atlexhact.getlvmProductLinkForExh().getText(); //New
 			System.out.println("Selected Product Name: " + productNameOnSearchGrid);
-			//atlexhact.getlvmProductLinkForExh().click();
+			
 			
 			Actions action=new Actions(driver);
 			action.moveToElement(atlexhact.getlvmProductLinkForExh()).click().perform();
@@ -149,7 +148,7 @@ public class GlobalSearch_ProductActions extends base {
 
 	        //Dismiss the Full Screen Viewer
 	        atlproddet.getProductFullScreenViewer().click();
-	        //driver.get(prop.getProperty("lvmurl_prod"));
+	        driver.get(prop.getProperty("lvmurl_prod"));
 	    }
 	
 	//@Test(priority = 3)

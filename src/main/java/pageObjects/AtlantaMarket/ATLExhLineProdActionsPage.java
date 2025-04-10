@@ -97,17 +97,26 @@ public class ATLExhLineProdActionsPage extends base{
 	By lvmSeeAllLines = By.xpath("//div[@class='imc-gallery__item imc-content--full-width']/div[2]/div[1]/div[1]/div[1]/div/div/div/div[1]/div[1]/div/div/div/div/a"); //Locator for location
 	By lvmTotalProductLink = By.xpath("//div[@class='imc-gallery__item imc-content--full-width']/div[2]/div[1]/div[1]/div[2]/div/span/a/span"); //Locator for location
 	By lvmMatchingProductLink = By.xpath("//div[@class='imc-gallery__item imc-content--full-width']/div[2]/div[1]/div[1]/div[2]/div/a/span"); //Locator for location
-	By lvmMatchingProductLinkForLines = By.xpath("(//p[contains(text(), 'Shown By')]//following::span[contains(text(), 'Matching Products')])[1]"); //Locator for location
+	By lvmMatchingProductLinkForLines = By.xpath("(//p[contains(text(), 'Shown By')]//following::span[contains(text(), 'Matching Products')]/../span)[1]"); //Locator for location
 	By lvmMatchingProductLinkForLineName = By.xpath("(//p[contains(text(), 'Shown By')]//following::span[contains(text(), 'Matching Products')])[1]/../../../..//h2[@class='imc-exhibitorcard__exhibitorname imc-exhibitorcard--title-hover']"); //Locator for location
 	By lvmMatchingProductLinkForLines1 = By.xpath("(//span[contains(text(),'Matching Products') and //p[contains(text(),'Shown By')]])[1]"); //Locator for location
 	By lvmTotalProductLinkForLines1 = By.xpath("(//span[contains(text(),'Total Products') and //p[contains(text(),'Shown By')]])[1]");
 	By lvmTotalProductLinkForLines = By.xpath("(//p[contains(text(), 'Shown By')]//following::span[contains(text(), 'Total Products')])[1]"); //Locator for location
 	By lvmProductLinkForExh = By.xpath("(//div[@class='undefined imc-content--display-flex imc-content--display-flex-center imc-content--display-flex-column searchItemThumb--container'])[1]/p/span");
 	
+	By searchLine = By.xpath("(//p[contains(text(), 'Shown By')]//following::span[contains(text(), 'Matching Products')])[1]/../../../../../../div[1]/div/div/div/div/div/div/div/a/h2[@class='imc-exhibitorcard__exhibitorname imc-exhibitorcard--title-hover']");
+	
+	
+	
 	public ATLExhLineProdActionsPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 
+	}
+	public WebElement getsearchLine() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(80));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(searchLine));
+		return driver.findElement(searchLine);
 	}
 	public WebElement getlvmProductLinkForExh() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(80));

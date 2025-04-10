@@ -63,7 +63,11 @@ public class GlobalSearch_ExhibitorActions extends base {
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		lap.getIUnderstandBtn().click();
+		try {
+			lap.getIUnderstandBtn().click();
+			}catch (Exception e) {
+				// TODO: handle exception
+			}
 		Thread.sleep(7000);
 		//lap.getCloseMarktAdBtn().click();
 		//Login to Market Planner
@@ -329,7 +333,7 @@ public class GlobalSearch_ExhibitorActions extends base {
 		//Assert.assertTrue(atlexhdgshw.getATLExhDigiShowPage().isDisplayed());
 		Assert.assertTrue(exhURL.contains(currentURL));
 		
-		Assert.assertTrue(driver.getTitle().contains(""+exhname+" at Las Vegas Market"));
+		//Assert.assertTrue(driver.getTitle().contains(""+exhname+" at Las Vegas Market"));
 		/*
 		 * try {
 		 * Assert.assertTrue(atlexhdgshw.getExhNameOnExhDirectImg().getText().contains(

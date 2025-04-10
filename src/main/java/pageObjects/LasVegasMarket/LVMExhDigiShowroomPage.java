@@ -70,7 +70,7 @@ public class LVMExhDigiShowroomPage {
 	By VerifyLineSearch = By.xpath("//div[@class = 'imc-manufacturing-line-title-wrapper']/a[1]"); //Locator for verify line search  
 	By VerifyLinePageTitle = By.xpath("//div[@class = 'imc-gallery imc-gallery--65-35 breadcrumbs__round']/div[1]/ul[1]/li[4]/a[1]"); //Locator for verify line page title
 	By LineSearchButton = By.xpath("(//div[@class = 'imc-searchform--button--search'])[2]"); //Locator for line search button 		
-	By SeeInOtherMarket = By.xpath("//button[@class = 'imc-button imc-button--full-bleed-mobile imc-button--primary-inverted imc-margin--all--none']"); //Locator for See In Other Markets button
+	By SeeInOtherMarket = By.xpath("//button[@class = 'imc-button imc-button--primary-inverted imc-button--full-bleed-mobile imc-button--small imc-content--inline-block']"); //Locator for See In Other Markets button
 	By VerifyOtherMarketsPage = By.xpath("//div[@class = 'ReactModal__Content ReactModal__Content--after-open imc-modal--box imc-modal--box-wide']"); //Locator for See In Other Markets page title
 	By ClickShowroom = By.xpath("//div[@class = 'imc-other-markets-goto']/a[1]"); //Locator for Go to Showroom link
 	By ValidateDigitalShowroomPage = By.xpath("//div[@class = 'imc-gallery__item imc-content--center-mobile']/span[1]"); //Locator for Exhibitor Digital Showroom page
@@ -138,10 +138,17 @@ public class LVMExhDigiShowroomPage {
 	By listOfShownByText = By.xpath("//div[@class='imc-content--display-flex imc-breakpoint-display--hide-mobile']/div/p[contains(text(),'Shown By')]/../../../a"); 
 	By listOfAllExhibitors = By.xpath("//div[@class='imc-exhibitorcard-title-row ']/div/div/div/div/div/a/h2");
 	By productCateShownText = By.xpath("//h5[contains(text(),'Product Categories Shown')]");
+	By expNamePROD_ATL = By.xpath("//div[@class='imc-exhibitors--info-block imc-section--padded-top-desktop-xlarge imc-inset-content-mobile imc-inset-content-jumbo-mobile imc-section--padded-bottom-xlarge imc-section ']/div/div/div/h1");
+	
 	
 	
 	public LVMExhDigiShowroomPage(WebDriver driver) {
 		this.driver = driver;
+	}
+	public WebElement getexpNamePROD_ATL() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(90));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(expNamePROD_ATL));
+		return driver.findElement(expNamePROD_ATL);
 	}
 	public WebElement getproductCateShownText() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(90));

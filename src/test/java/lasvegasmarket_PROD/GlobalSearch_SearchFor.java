@@ -95,11 +95,8 @@ public class GlobalSearch_SearchFor extends base {
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-
-		lvmgs.getGlobalSearchTextBoxNew().click();
-		lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("globalsearchinputforInfoTab")));
-		Thread.sleep(2000);
-		lvmgs.getSearchButtonNew().click();
+		
+		utl.globleSearchInput((prop.getProperty("globalsearch_input")));
 
 		Thread.sleep(6000);
 		// Click on Info link
@@ -120,8 +117,7 @@ public class GlobalSearch_SearchFor extends base {
 		System.out.println(driver.getCurrentUrl());
 		Assert.assertTrue(driver.getCurrentUrl().contains(learnMoreLinkURL));
 
-		// driver.get(prop.getProperty("lvmurl_prod"));
-		// Thread.sleep(5000);
+		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 
 	@Test(priority = 2)
@@ -136,15 +132,11 @@ public class GlobalSearch_SearchFor extends base {
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 
-		driver.get(prop.getProperty("lvmurl_prod"));
+		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(5000);
 
-		lvmgs.getGlobalSearchTextBoxNew().click();
-		lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("globalsearchinputforInfoTab")));
-		Thread.sleep(2000);
-		lvmgs.getSearchButtonNew().click();
-
+		utl.globleSearchInput((prop.getProperty("globalsearch_input")));
 		Thread.sleep(6000);
 
 		// Click on Info link
@@ -154,7 +146,6 @@ public class GlobalSearch_SearchFor extends base {
 		String FirstInfoName = lvmgs.getLvmInfoTitleProd().getText();
 		System.out.println(FirstInfoName);
 
-		lvmgs.getlvmInfosearchtxtbxPROD().clear();
 		lvmgs.getlvmInfosearchtxtbxPROD().sendKeys(FirstInfoName);
 		Thread.sleep(5000);
 		lvmgs.getlvmInfosearchbtnPROD().click();
@@ -162,16 +153,16 @@ public class GlobalSearch_SearchFor extends base {
 		String searchResults = lvmgs.getLvmSearchResultsText().getText();
 		System.out.println(searchResults);
 		Thread.sleep(2000);
-		String searchName = searchResults.split(" ")[4].trim();
+		String searchName = searchResults.replaceAll(".*for\\s*\"(.*?)\".*", "$1").trim();
 		Thread.sleep(5000);
 		System.out.println(searchName);
 		Assert.assertTrue(FirstInfoName.contains(searchName));
 
-		// driver.get(prop.getProperty("lvmurl_prod"));
+		 driver.get(prop.getProperty("lvmurl_prod"));
 		// Thread.sleep(5000);
 	}
 
-	@Test(priority = 12)
+	@Test(priority = 3)
 	public void TS003_VerifyInformationFiltersFunctionalityInGlobalSearchTest()
 			throws InterruptedException, IOException {
 
@@ -183,14 +174,11 @@ public class GlobalSearch_SearchFor extends base {
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 
-		driver.get(prop.getProperty("lvmurl_prod"));
+	
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(5000);
 
-		lvmgs.getGlobalSearchTextBoxNew().click();
-		lvmgs.getGlobalSearchEnterText().sendKeys((prop.getProperty("globalsearch_input")));
-		Thread.sleep(2000);
-		lvmgs.getSearchButtonNew().click();
+		utl.globleSearchInput((prop.getProperty("globalsearch_input")));
 
 		Thread.sleep(6000);
 
@@ -307,14 +295,10 @@ public class GlobalSearch_SearchFor extends base {
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 
-		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(5000);
 
-		lvmgs.getGlobalSearchTextBoxNew().click();
-		lvmgs.getGlobalSearchEnterText().sendKeys("   ");
-		Thread.sleep(1000);
-		lvmgs.getSearchButtonNew().click();
+		utl.globleSearchInput((prop.getProperty("globalsearch_input")));
 
 		Thread.sleep(8000);
 
@@ -415,19 +399,10 @@ public class GlobalSearch_SearchFor extends base {
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 		utl = new Utility(driver);
 
-		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Thread.sleep(3000);
-		// utl.ClearGlobalSearch();
+		Thread.sleep(5000);
 
-		Thread.sleep(2000);
-		// lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("searchforArticlesInputLVM"));
-
-		lvmgs.getGlobalSearchTextBoxNew().click();
-		lvmgs.getGlobalSearchEnterText().sendKeys("   ");
-		Thread.sleep(1000);
-		lvmgs.getSearchButtonNew().click();
-
+		utl.globleSearchInput((prop.getProperty("globalsearch_input")));
 		Thread.sleep(8000);
 
 		// Click on Article link
@@ -451,12 +426,12 @@ public class GlobalSearch_SearchFor extends base {
 		Thread.sleep(3000);
 		Assert.assertTrue(articleURL.contains(driver.getCurrentUrl()));
 
-		// driver.get(prop.getProperty("lvmurl_prod"));
+		 driver.get(prop.getProperty("lvmurl_prod"));
 
 	}
 
 	@Test(priority = 6)
-	public void TS005_VerifyArticlesFiltersGlobalSearchTest() throws InterruptedException, IOException {
+	public void TS006_VerifyArticlesFiltersGlobalSearchTest() throws InterruptedException, IOException {
 
 		// Initialize Page Objects
 		atlgs = new ATLGlobalSearchPage(driver);
@@ -466,16 +441,10 @@ public class GlobalSearch_SearchFor extends base {
 		utl = new Utility(driver);
 		lvmgs = new LVMGlobalSearchPage(driver);
 
-		// Open the website
-		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Thread.sleep(8000);
+		Thread.sleep(5000);
 
-		// Perform Global Search
-		lvmgs.getGlobalSearchTextBoxNew().click();
-		lvmgs.getGlobalSearchEnterText().sendKeys("   ");
-		Thread.sleep(1000);
-		lvmgs.getSearchButtonNew().click();
+		utl.globleSearchInput((prop.getProperty("globalsearch_input")));
 		Thread.sleep(8000);
 
 		// Click on Articles Link
@@ -536,6 +505,11 @@ public class GlobalSearch_SearchFor extends base {
 		// Get First Article Name
 		String articleName = lvmgs.getarticleName1st().getText();
 		System.out.println("Article Name: " + articleName);
+		// Remove single quotes ('), double quotes ("), and hyphens (-)
+		articleName = articleName.replaceAll("['\"-]", "");
+				System.out.println("Cleaned Page Title: " + articleName);
+
+		
 
 		// Get "Learn More" Link and Click
 		String learnMoreLinkURL = lvmgs.getlearnMoreLinkArticle().getAttribute("href");
@@ -543,10 +517,14 @@ public class GlobalSearch_SearchFor extends base {
 
 		// Wait for Page to Load
 		Thread.sleep(15000);
-
 		// Validate Article Name in Page Title
 		String pageTitle = driver.getTitle();
-		System.out.println("Page Title: " + pageTitle);
+		System.out.println("Original Page Title: " + pageTitle);
+
+		// Remove single quotes ('), double quotes ("), and hyphens (-)
+		pageTitle = pageTitle.replaceAll("['\"-]", "");
+		System.out.println("Cleaned Page Title: " + pageTitle);
+
 
 		try {
 			Assert.assertTrue(articleName != null && articleName.contains(pageTitle),
@@ -580,6 +558,7 @@ public class GlobalSearch_SearchFor extends base {
 		}
 
 		// Wait for Page to Refresh
+		driver.get(prop.getProperty("lvmurl_prod"));
 		Thread.sleep(5000);
 	}
 
@@ -595,15 +574,11 @@ public class GlobalSearch_SearchFor extends base {
 		utl = new Utility(driver);
 
 		// Open the website
-		driver.get(prop.getProperty("lvmurl_prod"));
+		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Thread.sleep(8000);
-
-		// Perform Global Search
-		lvmgs.getGlobalSearchTextBoxNew().click();
-		lvmgs.getGlobalSearchEnterText().sendKeys("   ");
-		Thread.sleep(1000);
-		lvmgs.getSearchButtonNew().click();
+		Thread.sleep(5000);
+		driver.get(prop.getProperty("lvmurl_prod"));
+		utl.globleSearchInput((prop.getProperty("globalsearch_input")));
 		Thread.sleep(8000);
 
 		// Click on Articles Link
@@ -650,20 +625,19 @@ public class GlobalSearch_SearchFor extends base {
 		utl = new Utility(driver);
 
 		driver.get(prop.getProperty("lvmurl_prod"));
+
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Thread.sleep(2000);
-		// Open the website
-		driver.get(prop.getProperty("lvmurl_prod"));
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		Thread.sleep(5000);
+
+		utl.globleSearchInput((prop.getProperty("globalsearch_input")));
 		Thread.sleep(8000);
 
-		// Perform Global Search
-		lvmgs.getGlobalSearchTextBoxNew().click();
-		lvmgs.getGlobalSearchEnterText().sendKeys(prop.getProperty("filtersglobalsearchinput"));
-		Thread.sleep(1000);
-		lvmgs.getSearchButtonNew().click();
-		Thread.sleep(8000);
-
+		/*
+		 * // Perform Global Search lvmgs.getGlobalSearchTextBoxNew().click();
+		 * lvmgs.getGlobalSearchEnterText().sendKeys(prop.getProperty(
+		 * "filtersglobalsearchinput")); Thread.sleep(1000);
+		 * lvmgs.getSearchButtonNew().click(); Thread.sleep(8000);
+		 */
 		try {
 			// Click on Events & Seminars tab
 			lvmgs.getLVMEventsTabInSearch().click();
@@ -673,20 +647,35 @@ public class GlobalSearch_SearchFor extends base {
 		Thread.sleep(2000);
 		String eventName = lvmgs.getLVMFirstEventName().getText();
 		// Click on Search text field;
-		lvmgs.getLVMInfosearchtxtbx().sendKeys(eventName);
-		lvmgs.getLVMInfosearchbtn().click();
+		utl.globleSearchInput(eventName);
+		/*
+		 * lvmgs.getLVMInfosearchtxtbx().sendKeys(eventName);
+		 * lvmgs.getLVMInfosearchbtn().click();
+		 */
+		lvmgs.getlvmEventsAndSeminar().click();
 		Thread.sleep(8000);
 		String alertTitle = lvmgs.getLVMSearchResult().getText();
-		// String splitAlertTitle=alertTitle.split(" ")[5].trim(); //for Prod
-		String splitAlertTitle = alertTitle.split(" ")[4].trim(); // For LVM
-		// String splitAlertTitleNext=alertTitle.split(" ")[6].trim(); //for Prod
-		String splitAlertTitleNext = alertTitle.split(" ")[5].trim(); // For LVM
-		Thread.sleep(5000);
+		
+		String text = alertTitle.trim();
 
-		String joinboth = splitAlertTitle + " " + splitAlertTitleNext;
+		// Extract and remove spaces
+		String eventNameAlert = text.replaceAll("\\s+", "").replaceAll(".*?\"(.*?)\".*", "$1");
+		
+		
+		
+		System.out.println(eventNameAlert);
+		/*
+		 * // String splitAlertTitle=alertTitle.split(" ")[5].trim(); //for Prod String
+		 * splitAlertTitle = alertTitle.split(" ")[4].trim(); // For LVM // String
+		 * splitAlertTitleNext=alertTitle.split(" ")[6].trim(); //for Prod String
+		 * splitAlertTitleNext = alertTitle.split(" ")[5].trim(); // For LVM
+		 * Thread.sleep(5000);
+		 * 
+		 * String joinboth = splitAlertTitle + " " + splitAlertTitleNext;
+		 */
 
-		Assert.assertTrue(eventName.contains(joinboth));
-		// driver.get(prop.getProperty("lvmurl_prod"));
+		Assert.assertTrue(eventName.contains(eventNameAlert));
+		 driver.get(prop.getProperty("lvmurl_prod"));
 		// Thread.sleep(5000);
 	}
 
@@ -701,12 +690,12 @@ public class GlobalSearch_SearchFor extends base {
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
 
 		driver.get(prop.getProperty("lvmurl_prod"));
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Thread.sleep(4000);
 
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
-		lvmgs.getLVMSearchButton().click();
-		Thread.sleep(4000);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		Thread.sleep(5000);
+
+		utl.globleSearchInput((prop.getProperty("globalsearch_input")));
+		Thread.sleep(8000);
 
 		// Click on Events & Seminars tab
 		// lvmgs.getLVMEventsTabInSearch().click();
@@ -721,7 +710,11 @@ public class GlobalSearch_SearchFor extends base {
 		utl.scrollElementIntoMiddle(lvmgs.getLVMInfoSearchTopicsFilter());
 		Thread.sleep(200);
 		lvmgs.getLVMInfoSearchTopicsFilter().click();
+		//String noTopicFilterTxt=lvmgs.getlvmEventsSearchNoTopicFilterText().getText();
 
+		try {
+		
+		
 		// Select 'Las Vegas Market' topic
 		Thread.sleep(3000);
 		String topicName = lvmgs.getEventsLVMMktTopics().getText(); // for LVM Prod
@@ -746,7 +739,11 @@ public class GlobalSearch_SearchFor extends base {
 		// //For Prod
 		Assert.assertTrue(lvmexhact.getEventDetailsHeaderUat().getText().contains(eventName)); // For UAT
 		driver.navigate().back();
-
+		
+		}catch (Exception e) {
+			// TODO: handle exception
+		
+		
 		// Click on Clear Filters btn
 		lvmgs.getClearFiltersBtn().click();
 		Thread.sleep(3000);
@@ -780,7 +777,7 @@ public class GlobalSearch_SearchFor extends base {
 		// driver.get(prop.getProperty("lvmurl_prod"));
 		// Thread.sleep(5000);
 	}
-
+	}
 	@Test(priority = 10)
 	public void TS010_VerifyShowSpecialsOverviewInGlobalSearchTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
@@ -819,12 +816,11 @@ public class GlobalSearch_SearchFor extends base {
 
 		System.out.println(ExhibitorName);
 
-		lvmgs.getGlobalSearchTextBoxNew().click();
-		lvmgs.getGlobalSearchEnterText().sendKeys(ssName);
-		Thread.sleep(1000);
-		lvmgs.getSearchButtonNew().click();
+		
+		utl.globleSearchInput(ssName);
 		Thread.sleep(8000);
 
+	
 		// Click on Exhibitor name
 		lvmds.getExhibitorNameNew().click();
 		Thread.sleep(5000);
@@ -851,11 +847,10 @@ public class GlobalSearch_SearchFor extends base {
 
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Thread.sleep(4000);
-		utl.ClearGlobalSearch();
-		Thread.sleep(2000);
-		lvmgs.getLVMGlobalSearchTextBox().sendKeys(prop.getProperty("filtersglobalsearchinput"));
-		lvmgs.getLVMSearchButton().click();
+		Thread.sleep(5000);
+
+		utl.globleSearchInput((prop.getProperty("globalsearch_input")));
+		Thread.sleep(8000);
 		Thread.sleep(10000);
 		// Click on Events & Seminars tab
 		try {

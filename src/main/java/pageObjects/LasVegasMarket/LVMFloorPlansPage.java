@@ -15,7 +15,7 @@ public class LVMFloorPlansPage {
 
 	By lvmExhibitorsAndProductTab = By.xpath("//a[contains(text(),'Exhibitors & Products')]"); // Locator for Exhibitor And Product tab 
 	By lvmFloorPlansLink = By.xpath("//a[contains(text(),'Floor Plans')]"); //Locator for floor plans Link
-	By lvmBuildingFloor = By.xpath("(//a[@href='/Market Map/building/Building B/floor/3'])[2]"); //Locator for Building floor
+	By lvmBuildingFloor = By.xpath("(//div[@class='imc-campus-view--clickeable imc-campus-view--building'])[2]/div[14]/div[3]/a"); //Locator for Building floor
 	By buildingFloor_lvmUAT = By.xpath("//div[@class='imc-campus-view']/div[3]/div[10]/div[3]/a[1]"); //Locator for Building floor 9th LVM UAT
 	By lvmBuildingFloorForFilter = By.xpath("//div[@class='imc-campus-view']/div[3]/div[4]/div[3]/a"); //Locator for Building floor
 	By lvmBuildingFloorNumber = By.xpath("//div[@class='imc-campus-view']/div[3]/div[10]/div[3]/a"); //Locator for Building floor number
@@ -73,12 +73,17 @@ public class LVMFloorPlansPage {
 	By lvmFloorPlansFirstExhName = By.xpath("//div[@class='imc-content--padded-top-bottom']/div/div[1]/div/div[2]/a"); //Locator for floor plans 1st exh
 	By lvmFloorPlansSearchButton = By.xpath("//div[@class='imc-content--display-flex imc-content--display-flex-space-between imc-lines-overview-actions']/div/section/div/form/div[2]/button"); //Locator for floor plans Search btn
 
-	
+	By lvmFloorPlansNoExPresentATL = By.xpath("//div[@class='imc-campus-view']/div[3]/div[8]/div[3]/a[1]");
 	
 	
 	public LVMFloorPlansPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
+	}
+	public WebElement getlvmFloorPlansNoExPresentATL() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmFloorPlansNoExPresentATL));
+		return driver.findElement(lvmFloorPlansNoExPresentATL);
 	}
 	public WebElement getlvmFloorPlansSearchButton() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));

@@ -17,25 +17,27 @@ public class ATLEventsAndWebinarPage {
 	By atlExploreMarketTab = By.xpath("(//a[contains(text(),'Explore Market')])[1]"); // Locator for Exhibitor And Product tab 
 	By atlEventsLink = By.xpath("(//a[contains(text(),'Events')])[1]"); //Locator for floor plans Link
 	By atlImcEventsTab = By.xpath("//div[@class='event-card--tab']/p[1]"); //Locator for IMC Events tab
-	By atlExhibitorsEventsTab = By.xpath("//div[@class='event-card--tab']/p[2]"); //Locator for Exhibitors Events tab
-	By atlEventsCalendar = By.xpath("//div[@class='calendar-container']"); //Locator for Calendar
+	By AllEventsTab = By.xpath("//div[@class='event-card--tab']/p[1]"); //Locator for IMC Events tab
+	By atlExhibitorsEventsTab = By.xpath("//div[@class='event-card--tab']/p[3]"); //Locator for Exhibitors Events tab
+	By MarketEventsTab = By.xpath("//div[@class='event-card--tab']/p[2]"); //Locator for Exhibitors Events tab
+	By atlEventsCalendar = By.xpath("//div[@class='imc-content--relative react-calendar--container-wrapper']"); //Locator for Calendar
 	By atlEventsSearchBar = By.xpath("//div[@class='event-card--cal-btn-container']/div[1]/input[1]"); //Locator for Events Search bar
-	By atlEventName = By.xpath("//div[@class='event-card--info']/div[1]/div[1]/a[1]/p[1]"); //Locator for 1st Event Name
+	By atlEventName = By.xpath("(//p[@class='event-card--title imc-link--hover-underline normal-line-height'])[1]"); //Locator for 1st Event Name
 	By atlClickOnEvent = By.xpath("(//div[@class='event-card--info']/div[1]/div[1]/a[1]/p[1])[1]"); //Locator for 1st Event Name
 	
 	By atlEventSearchIcon = By.xpath("//div[@class='event-card--cal-btn-container']/div[1]/button[1]"); //Locator for Search btn
 	By atlEventSearchIconUAT = By.xpath("//div[@class='event-card--cal-btn-container']/div[1]/button[1]"); //Locator for Search btn
-	By atlEventDateAndMonth = By.xpath("//div[@class='event-date--container']/p[1]"); //Locator for Events date and month
-	By atlCalendarNextMonthBtn = By.xpath("//div[@class='calendar-container']/div[2]/div[1]/button[4]"); //Locator for Calendar nxt month btn
+	By atlEventDateAndMonth = By.xpath("(//p[@class='event-date--item'])[1]"); //Locator for Events date and month
+	By atlCalendarNextMonthBtn = By.xpath("//button[@class='react-calendar__navigation__arrow react-calendar__navigation__next-button']"); //Locator for Calendar nxt month btn
 	By atlListOfEventDate = By.xpath("//div[@class='react-calendar__month-view__days']/button/abbr[1]"); //List for Event Date
 	By atlSelectMonth = By.xpath("//button[@class='react-calendar__navigation__label']/span[1]"); //List for Month
 	By atlTodaysDate = By.xpath("//button[@class='react-calendar__tile react-calendar__tile--now react-calendar__month-view__days__day react-calendar--no-event']/abbr[1]");//Locator for Todays Date
 	By atlTodaysDatePROD = By.xpath("//button[@class='react-calendar__tile react-calendar__tile--now react-calendar__month-view__days__day']/abbr");//Locator for Todays Date
 	
-	By atlCalendarPrevMonth = By.xpath("//div[@class='calendar-container']/div[2]/div[1]/button[2]"); //Locator for Calendar Prev month btn 
+	By atlCalendarPrevMonth = By.xpath("//button[@class='react-calendar__navigation__arrow react-calendar__navigation__prev-button']"); //Locator for Calendar Prev month btn 
 	By atlSelectAnyDate = By.xpath("//button[@class='react-calendar__tile react-calendar__month-view__days__day react-calendar--no-event']/abbr[1]"); //Locator for Any Date
 	By atlResetBtn = By.xpath("//div[@class='calendar-container']/div[1]/p[2]"); //Locator for Reset Btn
-	By atlListOfEventTitles = By.xpath("//p[@class='event-card--title']"); //Locator for list of all Events Title
+	By atlListOfEventTitles = By.xpath("//p[@class='event-card--title imc-link--hover-underline normal-line-height']"); //Locator for list of all Events Title
 	By atlListOfAllEvents = By.xpath("//div[@class='event-card--multi-card-container']/div"); //Locator for list of all Events 
 	By atlListOfAllEventsType = By.xpath("//p[@class='event-card--event-type']"); //Locator for list of all Events
 	By atlListOfAllEventsTime = By.xpath("//div[@class='event-card--info']/div[2]/p"); //Locator for list of all Events
@@ -57,10 +59,72 @@ public class ATLEventsAndWebinarPage {
 	By atladdtoseselectedbtn = By.xpath("//input[@data-xpath='quickAdd.saveList']"); //Locator for Add to Selected button
 	
 	By atlEventCardExhibitorName = By.xpath("(//a[@class='event-card--exhibitor-name'])[1]");
+	By SelectEventDate = By.xpath("//div[@class='imc-content--relative react-calendar--container-wrapper']/div/span");
+	By MarketFilter = By.xpath("//div[@class='calendar-container imc-content--relative}']/div[2]/span");
+	By EventTypeDropdown = By.xpath("//div[@class='imc-formfield imc-dropdown  imc-searchform--dropdown imc-searchform--dropdown--minwidth-auto ']/select");
+	
+	By currentDate = By.xpath("//button[@class='react-calendar__tile react-calendar__tile--now react-calendar__month-view__days__day react-calendar--no-event']");
+	By currentMonth = By.xpath("//button[@class='react-calendar__navigation__label']/span");
+	By heightedEventDates = By.xpath("//button[@class='react-calendar__tile react-calendar__month-view__days__day']/abbr");
+	
+	By allEventsDatesFromResults = By.xpath("//p[@class='event-date--item']");
 	
 	public ATLEventsAndWebinarPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
+	}
+	public List <WebElement> getallEventsDatesFromResults() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(allEventsDatesFromResults));
+		return driver.findElements(allEventsDatesFromResults);
+	}
+	public List <WebElement> getheightedEventDates() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(heightedEventDates));
+		return driver.findElements(heightedEventDates);
+	}
+	
+	public WebElement getcurrentMonth() {
+		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(currentMonth));
+		return driver.findElement(currentMonth);
+		
+	}
+	public WebElement getcurrentDate() {
+		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(currentDate));
+		return driver.findElement(currentDate);
+		
+	}
+	public WebElement getEventTypeDropdown() {
+		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(EventTypeDropdown));
+		return driver.findElement(EventTypeDropdown);
+		
+	}
+	public WebElement getMarketFilter() {
+		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MarketFilter));
+		return driver.findElement(MarketFilter);
+		
+	}
+	public WebElement getSelectEventDate() {
+		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(SelectEventDate));
+		return driver.findElement(SelectEventDate);
+		
+	}
+	public WebElement getAllEventsTab() {
+		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(AllEventsTab));
+		return driver.findElement(AllEventsTab);
+		
+	}
+	public WebElement getMarketEventsTab() {
+		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(MarketEventsTab));
+		return driver.findElement(MarketEventsTab);
+		
 	}
 	public WebElement getatlEventLocationLinkLVMPROD() {
 		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
