@@ -1,10 +1,16 @@
 package lasvegasmarket_PROD;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.time.LocalDate;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -14,6 +20,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -55,7 +63,7 @@ public class EvenntsAndWebinar extends base {
 	ATLFloorPlansPage atlflpp;
 	ATLEventsAndWebinarPage atlevents;
 	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns,
-			allnoteslist, favlist, searchlinetypelist;
+			allnoteslist, favlist, searchlinetypelist, exhibitors;
 
 	@BeforeClass
 	public void initialize() throws IOException, InterruptedException {
@@ -106,6 +114,7 @@ public class EvenntsAndWebinar extends base {
 		Assert.assertTrue(atlevents.getatlExhibitorsEventsTab().getText().equals("Exhibitor Events"));
 		System.out.println("Exhibitor Event Tab is Present");
 
+		utl.scrollElementIntoMiddle(atlevents.getAllEventsTab());
 		// Click on All EVents
 		atlevents.getAllEventsTab().click();
 
@@ -115,7 +124,6 @@ public class EvenntsAndWebinar extends base {
 			System.out.println("All Events list displayed");
 		} catch (Exception e) {
 			System.out.println("All Events list not displayed");
-			
 
 		}
 
@@ -138,7 +146,6 @@ public class EvenntsAndWebinar extends base {
 			System.out.println("Exhibitor Events list displayed");
 		} catch (Exception e) {
 			System.out.println("Exhibitor Events list not displayed");
-			
 
 		}
 		// Verify Events Search Bar
@@ -153,20 +160,20 @@ public class EvenntsAndWebinar extends base {
 		Assert.assertTrue(atlevents.getSelectEventDate().isDisplayed());
 		System.out.println("Select Event date is Present");
 
-		//Verify Market name filter
+		// Verify Market name filter
 		Assert.assertTrue(atlevents.getMarketFilter().isDisplayed());
-		System.out.println("Market Name Filter is Present");		
-		
-		//Verify Event Type dropdown
+		System.out.println("Market Name Filter is Present");
+
+		// Verify Event Type dropdown
 		Assert.assertTrue(atlevents.getEventTypeDropdown().isDisplayed());
-		System.out.println("Event Type drop down is Present");		
-		
+		System.out.println("Event Type drop down is Present");
+
 	}
 
 	@Test(priority = 2) // groups="Non_MP"
-	public void TS002_VerifyIMCEventsSearchbarTest() throws InterruptedException, IOException {
+	public void TS002_VerifyAllEventsSearchbarTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
-		// UXP-T284: IMC Events: Search bar
+		// UXP-T284: All Events: Search bar
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
 		utl = new Utility(driver);
@@ -179,36 +186,101 @@ public class EvenntsAndWebinar extends base {
 		Thread.sleep(5000);
 		utl.clickOnEventLinkOfChannel();
 
-		// Click on IMC Event Tab
+		// Click on All Events Event Tab
 		utl.scrollElementIntoMiddle(atlevents.getatlExhibitorsEventsTab());
+
 		atlevents.getAllEventsTab().click();
-		Thread.sleep(500);
+		Thread.sleep(3000);
+		// check events are available
+		WebElement eventDateElement = atlevents.getatlEventDateAndMonth();
+		eventDateElement.isDisplayed();
 
+		EventsSearchFuntionality(atlevents.getAllEventsTab());
+	}
+
+	@Test(priority = 3) // groups="Non_MP"
+	public void TS003_VerifyMarketEventsSearchbarTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP-T284: Market Events: Search bar
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlflpp = new ATLFloorPlansPage(driver);
+		atlevents = new ATLEventsAndWebinarPage(driver);
+		atlgs = new ATLGlobalSearchPage(driver);
+
+		driver.get(prop.getProperty("lvmurl_prod"));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+
+		Thread.sleep(5000);
+		utl.clickOnEventLinkOfChannel();
+		// Click on Exh Event Tab
+		utl.scrollElementIntoMiddle(atlevents.getatlExhibitorsEventsTab());
+
+		atlevents.getatlExploreMarketTab().click();
+		Thread.sleep(3000);
+		// check events are available
+		WebElement eventDateElement = atlevents.getatlEventDateAndMonth();
+		eventDateElement.isDisplayed();
+
+		EventsSearchFuntionality(atlevents.getatlExploreMarketTab());
+
+	}
+
+	@Test(priority = 4) // groups="Non_MP"
+	public void TS004_VerifyExhibitorsEventsSearchbarTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP-T284: Exhibitor Events: Search bar
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlflpp = new ATLFloorPlansPage(driver);
+		atlevents = new ATLEventsAndWebinarPage(driver);
+		atlgs = new ATLGlobalSearchPage(driver);
+
+		driver.get(prop.getProperty("lvmurl_prod"));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		Thread.sleep(5000);
+		utl.clickOnEventLinkOfChannel();
+
+		// Click on Exh Event Tab
+		utl.scrollElementIntoMiddle(atlevents.getatlExhibitorsEventsTab());
+
+		atlevents.getatlExhibitorsEventsTab().click();
+		Thread.sleep(3000);
+		// check events are available
+		WebElement eventDateElement = atlevents.getatlEventDateAndMonth();
+		eventDateElement.isDisplayed();
+
+		EventsSearchFuntionality(atlevents.getatlExhibitorsEventsTab());
+
+	}
+
+	private void EventsSearchFuntionality(WebElement TabName) throws IOException, InterruptedException {
+
+		TabName.click();
+		Thread.sleep(5000);
+
+		atlevents.getatlEventsSearchBar().sendKeys(Keys.CONTROL + "a");
+		atlevents.getatlEventsSearchBar().sendKeys(Keys.DELETE);
 		String eventName = atlevents.getatlEventName().getText();
-
 
 		// Enter Events Name into Search field
 		atlevents.getatlEventsSearchBar().sendKeys(eventName);
 		// Click on Search Icon
 		atlevents.getatlEventSearchIcon().click();
 		Thread.sleep(5000);
-		
 
-		// Enter Events Name into Search field
-		atlevents.getatlEventsSearchBar().sendKeys(eventName);
-		
-
-		// Enter Events Name into Search field
-		atlevents.getatlEventsSearchBar().sendKeys(Keys.ENTER);
-		
 		// Verify Searched event dispayed as search result
 		// Assert.assertEquals(atlevents.getatlEventName().getText(), eventName);
 		utl.checkItemPresentInListorNot(atlevents.getatlListOfEventTitles(), eventName);
+		System.out.println("The Event " + eventName + " From " + TabName.getText() + " tab is present");
 
 	}
 
-	@Test(priority = 3) // groups="Non_MP"
-	public void TS003_VerifyIMCEventsCalendarViewTest() throws InterruptedException, IOException {
+	@Test(priority = 5) // groups="Non_MP"
+	public void TS005_VerifyIMCEventsCalendarViewTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T288: IMC Events: Calendar View
 		lap = new ATLLandingPage(driver);
@@ -249,67 +321,68 @@ public class EvenntsAndWebinar extends base {
 			System.out.println("Year: " + year);
 		} else {
 			System.out.println("Date format not found!");
-		}	
-		
-		//Current date verification
-		
+		}
+
+		// Current date verification
+
 		// Get the current system date
-        LocalDate today = LocalDate.now();
-        String formattedDate = today.format(DateTimeFormatter.ofPattern("EEEE, MMMM dd, yyyy")); // Example: "Friday, April 04, 2025"
-        String dayOfMonth = String.valueOf(today.getDayOfMonth()); // Extract the day (e.g., "4")
+		LocalDate today = LocalDate.now();
+		String formattedDate = today.format(DateTimeFormatter.ofPattern("EEEE, MMMM dd, yyyy")); // Example: "Friday,
+																									// April 04, 2025"
+		String dayOfMonth = String.valueOf(today.getDayOfMonth()); // Extract the day (e.g., "4")
 
-     // Locate the current date element (header)
-        WebElement dateElement = atlevents.getcurrentDate();
-        System.out.println("Current Date on Page: " + dateElement.getText());
-        
-        // Locate the highlighted date in the calendar
-        WebElement highlightedDate = atlevents.getcurrentDate();
-        
-        // Get the text inside the highlighted date
-        String highlightedDateText = highlightedDate.getText();
-        
-        if (highlightedDateText.equals(dayOfMonth)) {
-            System.out.println("The current date (" + dayOfMonth + ") is highlighted in the calendar.");
-        } else {
-            System.out.println("The current date is NOT highlighted.");
-        }
+		// Locate the current date element (header)
+		WebElement dateElement = atlevents.getcurrentDate();
+		System.out.println("Current Date on Page: " + dateElement.getText());
 
-     // Click on Calendar Previous and Next Btn
-        
-        
-     // Get the current month-year text (e.g., "April 2025")
-        WebElement currentMonthElement = atlevents.getcurrentMonth();
-        String currentMonthText = currentMonthElement.getText();
-        System.out.println("Current Month: " + currentMonthText);
+		// Locate the highlighted date in the calendar
+		WebElement highlightedDate = atlevents.getcurrentDate();
 
-        // Click the NEXT month button
-        WebElement nextButton = atlevents.getatlCalendarNextMonthBtn();
-        nextButton.click();
+		// Get the text inside the highlighted date
+		String highlightedDateText = highlightedDate.getText();
 
-        Thread.sleep(1000); // wait for calendar to update
-        
-     // Get updated month-year
-        String nextMonthText = currentMonthElement.getText();
-        System.out.println("After clicking Next: " + nextMonthText);
-        
-        // Click the PREVIOUS month button
-        WebElement prevButton = atlevents.getatlCalendarPrevMonth();
-        prevButton.click();
+		if (highlightedDateText.equals(dayOfMonth)) {
+			System.out.println("The current date (" + dayOfMonth + ") is highlighted in the calendar.");
+		} else {
+			System.out.println("The current date is NOT highlighted.");
+		}
 
-        Thread.sleep(1000); // wait again
-        
-        // Get month again after going back
-        String backToOriginalText = currentMonthElement.getText();
-        System.out.println("After clicking Previous: " + backToOriginalText);
-        //Verify Next and Previous month
-        Assert.assertTrue(backToOriginalText.equals(currentMonthText));
-        System.out.println("Next and Previous month button working");
-  
+		// Click on Calendar Previous and Next Btn
+
+		// Get the current month-year text (e.g., "April 2025")
+		WebElement currentMonthElement = atlevents.getcurrentMonth();
+		String currentMonthText = currentMonthElement.getText();
+		System.out.println("Current Month: " + currentMonthText);
+
+		// Click the NEXT month button
+		WebElement nextButton = atlevents.getatlCalendarNextMonthBtn();
+		nextButton.click();
+
+		Thread.sleep(1000); // wait for calendar to update
+
+		// Get updated month-year
+		String nextMonthText = currentMonthElement.getText();
+		System.out.println("After clicking Next: " + nextMonthText);
+
+		// Click the PREVIOUS month button
+		WebElement prevButton = atlevents.getatlCalendarPrevMonth();
+		prevButton.click();
+
+		Thread.sleep(1000); // wait again
+
+		// Get month again after going back
+		String backToOriginalText = currentMonthElement.getText();
+		System.out.println("After clicking Previous: " + backToOriginalText);
+		// Verify Next and Previous month
+		Assert.assertTrue(backToOriginalText.equals(currentMonthText));
+		System.out.println("Next and Previous month button working");
+
 	}
-	@Test(priority = 4)
-	public void VerifySelectedCalendarEventDateAndSearchEventsTest() throws InterruptedException {
-		//Verify Selected calendar date date and search events date are same.
-		
+
+	@Test(priority = 6)
+	public void TS006_VerifySelectedCalendarEventDateAndSearchEventsTest() throws InterruptedException {
+		// Verify Selected calendar date date and search events date are same.
+
 		lap = new ATLLandingPage(driver);
 		lp = new ATLLoginPage(driver);
 		utl = new Utility(driver);
@@ -328,486 +401,670 @@ public class EvenntsAndWebinar extends base {
 		utl.scrollElementIntoMiddle(atlevents.getAllEventsTab());
 		// Click on All EVents
 		atlevents.getAllEventsTab().click();
-		
-		  String selectedDate = "";
 
-          // Step 1: Try to find the highlighted button (current selected date in calendar)
-          List<WebElement> highlighted = atlevents.getheightedEventDates();
+		String selectedDate = "";
 
-          if (highlighted != null && !highlighted.isEmpty()) {
-              // Highlighted date is visible in current calendar month
-              WebElement button = highlighted.get(0);
-              selectedDate = button.getAttribute("aria-label");
-              System.out.println("Selected Date::" +selectedDate);
-              Actions ac=new Actions(driver);
-              ac.moveToElement(button).doubleClick().click().perform();
-              
-          } else {
-              // If no highlighted date, extract date from first event result
-              WebElement eventDateElement = atlevents.getatlEventDateAndMonth();
+		// Step 1: Try to find the highlighted button (current selected date in
+		// calendar)
+		List<WebElement> highlighted = atlevents.getheightedEventDates();
 
-              String dateText = eventDateElement.getText();
-              String fullDate = dateText.split(" - ")[0].replaceAll("^[A-Za-z]+, ", "").trim();
-              String[] dateParts = fullDate.split(" "); // Format: April 08 2025
-              String month = dateParts[0];
-              String day = dateParts[1];
-              String year = dateParts[2];
+		if (highlighted != null && !highlighted.isEmpty()) {
+			// Highlighted date is visible in current calendar month
+			WebElement button = highlighted.get(0);
+			selectedDate = button.getAttribute("aria-label");
+			System.out.println("Selected Date::" + selectedDate);
+			Actions ac = new Actions(driver);
+			ac.moveToElement(button).doubleClick().click().perform();
 
-              // Navigate calendar to the correct month and year
-              while (true) {
-                  WebElement calendarLabel = atlevents.getcurrentMonth();
-                  if (calendarLabel.getText().trim().equals(month + " " + year)) {
-                      break;
-                  } else {
-                      atlevents.getatlCalendarNextMonthBtn().click();
-                      Thread.sleep(1000);
-                  }
-              }
+		} else {
+			// If no highlighted date, extract date from first event result
+			WebElement eventDateElement = atlevents.getatlEventDateAndMonth();
 
-              // Click the date in calendar
-              WebElement dayButton = driver.findElement(By.xpath("//abbr[contains(@aria-label,'" + month + " " + Integer.parseInt(day) + ", " + year + "')]"));
-              dayButton.click();
-              selectedDate = month + " " + Integer.parseInt(day) + ", " + year;
-              System.out.println("Selected date is::" +selectedDate);
-          }
+			String dateText = eventDateElement.getText();
+			String fullDate = dateText.split(" - ")[0].replaceAll("^[A-Za-z]+, ", "").trim();
+			String[] dateParts = fullDate.split(" "); // Format: April 08 2025
+			String month = dateParts[0];
+			String day = dateParts[1];
+			String year = dateParts[2];
 
-          // Step 2: Validate filtered events only match selected date
-          List<WebElement> filteredEvents = atlevents.getallEventsDatesFromResults();
-          boolean allMatch = true;
-          for (WebElement event : filteredEvents) {
-              String eventText = event.getText();
-              if (eventText.contains(selectedDate)) {
-                  allMatch = true;
-                  //System.out.println("❌ Mismatched event: " + eventText);
-              }
-          }
-
-          if (allMatch) {
-              System.out.println("✅ All events match the selected calendar date: " + selectedDate);
-          } else {
-              System.out.println("❌ Some events do not match selected calendar date.");
-          }
-		
-	}
-	
-	
-	@Test(priority = 4) // groups="Non_MP"
-	public void TS004_VerifyIMCEventsEventsListTest() throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// UXP-T292: IMC Events: Events List
-		
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-		atlflpp = new ATLFloorPlansPage(driver);
-		atlevents = new ATLEventsAndWebinarPage(driver);
-		atlgs = new ATLGlobalSearchPage(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-
-		driver.get(prop.getProperty("lvmurl_prod"));
-		Thread.sleep(5000);
-		utl.clickOnEventLinkOfChannel();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		
-		
-		// 1. Get all event date blocks
-        List<WebElement> eventDateBlocks = atlevents.getallEventsDatesFromResults();
-
-        String previousDate = "";
-        
-        for (WebElement dateBlock : eventDateBlocks) {
-            // Split the header into date and count
-            String fullText = dateBlock.getText();
-            String[] parts = fullText.split("\\|");
-            String dateText = parts[0].trim(); // e.g. Tuesday, April 08, 2025
-            String eventCountText = parts[1].trim(); // e.g. 2 Events
-
-            // ✅ Verify date is in increasing order
-            if (!previousDate.isEmpty()) {
-                if (isDateBefore(dateText, previousDate)) {
-                    System.out.println("❌ Dates are not in increasing order: " + dateText + " comes before " + previousDate);
-                }
-            }
-            previousDate = dateText;
-
-            // ✅ Extract and verify number of events
-            int expectedEventCount = Integer.parseInt(eventCountText.split(" ")[0]);
-            
-            List<WebElement> events = driver.findElements(
-            		By.xpath("//p[contains(text(),'"+fullText+"')]/../div"));
-            if (events.size() != expectedEventCount) {
-                System.out.println("❌ Event count mismatch for " + dateText);
-            }
-
-            // 2. Validate each event block under this date
-            for (WebElement event : events) {
-                // ✅ Event Name
-                WebElement eventName = event.findElement(By.cssSelector(".event-title"));
-                System.out.println("Event Name: " + eventName.getText());
-
-                // ✅ Exhibitor Name and Link
-                WebElement exhibitor = event.findElement(By.cssSelector(".event-exhibitor"));
-                WebElement exhibitorLink = exhibitor.findElement(By.tagName("a"));
-                System.out.println("Exhibitor Name: " + exhibitorLink.getText());
-                System.out.println("Exhibitor Link: " + exhibitorLink.getAttribute("href"));
-
-                // ✅ Date & Time
-                WebElement dateTime = event.findElement(By.cssSelector(".event-date-time"));
-                System.out.println("Date and Time: " + dateTime.getText());
-
-                // ✅ Location
-                WebElement location = event.findElement(By.cssSelector(".event-location"));
-                System.out.println("Location: " + location.getText());
-
-                // ✅ Learn More Link
-                WebElement learnMore = event.findElement(By.linkText("Learn More"));
-                System.out.println("Learn More Link: " + learnMore.getAttribute("href"));
-
-                // ✅ Event Type (Top right)
-                WebElement type = event.findElement(By.cssSelector(".event-type"));
-                System.out.println("Event Type: " + type.getText());
-
-                // ✅ Exhibitor Image
-                WebElement image = event.findElement(By.cssSelector("img"));
-                String imgSrc = image.getAttribute("src");
-                if (imgSrc == null || imgSrc.isEmpty()) {
-                    System.out.println("❌ Missing image for event: " + eventName.getText());
-                } else {
-                    System.out.println("Image found: " + imgSrc);
-                }
-
-                System.out.println("------------------------------");
-            }
-        }
-    }
-
-    // Helper to compare dates (format: Tuesday, April 08, 2025)
-    private boolean isDateBefore(String current, String previous) {
-        try {
-            java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat("EEEE, MMMM dd, yyyy");
-            return sdf.parse(current).before(sdf.parse(previous));
-        } catch (Exception e) {
-            System.out.println("Error parsing dates: " + e.getMessage());
-            return false;
-        }
-		
-		
-		
-		
-		
-		
-		
-		
-
-		//All Events Tab
-		
-		
-		//Verify Calendar Title
-		
-		
-		
-		//Verify Event Name
-		
-		
-		//Verify Exhibitor Name and is a link
-		
-		
-		//Verify Date 
-		
-		
-		//Verify Time
-		
-		
-		//Verify Location
-		
-		
-		//Verify Learn More Link
-		
-		
-		//Verify Event type [Right top corner]
-		
-		
-		//Verify Exhibitor image link
-        // 1. Get all date headers and events in order as a flat list
-        List<WebElement> allElements = driver.findElements(By.cssSelector(".date-or-event"));
-
-        String previousDate = "";
-        String currentDateText = "";
-        int expectedCount = 0;
-        List<WebElement> currentEventGroup = new ArrayList<>();
-
-        for (WebElement el : allElements) {
-            String className = el.getAttribute("class");
-
-            if (className.contains("event-date-block")) {
-                // ✅ We found a new date block – process previous if it exists
-                if (!currentDateText.isEmpty()) {
-                    validateEventGroup(currentDateText, expectedCount, currentEventGroup);
-                    currentEventGroup.clear();
-                }
-
-                // Set new date block
-                String[] parts = el.getText().split("\\|");
-                currentDateText = parts[0].trim();
-                expectedCount = Integer.parseInt(parts[1].trim().split(" ")[0]);
-
-                // Check order
-                if (!previousDate.isEmpty()) {
-                    if (isDateBefore(currentDateText, previousDate)) {
-                        System.out.println("❌ Dates not in increasing order: " + currentDateText + " before " + previousDate);
-                    }
-                }
-                previousDate = currentDateText;
-
-            } else if (className.contains("event-card")) {
-                currentEventGroup.add(el);
-            }
-        }
-
-        // Process last group
-        if (!currentEventGroup.isEmpty()) {
-            validateEventGroup(currentDateText, expectedCount, currentEventGroup);
-        }
-    }
-
-    // Validate all events in one date group
-    private void validateEventGroup(String dateText, int expectedCount, List<WebElement> eventCards) {
-        System.out.println("📅 Validating Events on: " + dateText + " | Expected: " + expectedCount + " Events");
-
-        if (eventCards.size() != expectedCount) {
-            System.out.println("❌ Event count mismatch: Found " + eventCards.size() + " but expected " + expectedCount);
-        }
-
-        for (WebElement event : eventCards) {
-            // ✅ Event Name
-            String eventName = event.findElement(By.cssSelector(".event-title")).getText();
-            System.out.println("Event Name: " + eventName);
-
-            // ✅ Exhibitor Name and Link
-            WebElement exhibitorLink = event.findElement(By.cssSelector(".event-exhibitor a"));
-            System.out.println("Exhibitor: " + exhibitorLink.getText() + " | Link: " + exhibitorLink.getAttribute("href"));
-
-            // ✅ Date and Time
-            System.out.println("Date & Time: " + event.findElement(By.cssSelector(".event-date-time")).getText());
-
-            // ✅ Location
-            System.out.println("Location: " + event.findElement(By.cssSelector(".event-location")).getText());
-
-            // ✅ Learn More link
-            WebElement learnMore = event.findElement(By.linkText("Learn More"));
-            System.out.println("Learn More: " + learnMore.getAttribute("href"));
-
-            // ✅ Event Type
-            System.out.println("Event Type: " + event.findElement(By.cssSelector(".event-type")).getText());
-
-            // ✅ Image check
-            WebElement image = event.findElement(By.cssSelector("img"));
-            String imgSrc = image.getAttribute("src");
-            System.out.println((imgSrc != null && !imgSrc.isEmpty()) ? "Image found ✅" : "❌ Image missing");
-
-            System.out.println("------------------------------");
-        }
-    }
-
-    // Date comparator
-    private boolean isDateBefore(String current, String previous) {
-        try {
-            SimpleDateFormat sdf = new SimpleDateFormat("EEEE, MMMM dd, yyyy", Locale.ENGLISH);
-            return sdf.parse(current).before(sdf.parse(previous));
-        } catch (Exception e) {
-            System.out.println("⚠️ Date parsing error: " + e.getMessage());
-            return false;
-        }	
-		
-		
-		
-		
-		
-		
-/*		
-		
-		// Click on IMC Event Tab
-		utl.scrollElementIntoMiddle(atlevents.getatlExhibitorsEventsTab());
-		atlevents.getatlImcEventsTab().click();
-		Thread.sleep(500);
-		// Verify Event Calendar title
-		Assert.assertTrue(atlevents.getatlEventDateAndMonth().isDisplayed());
-		System.out.println("Event Calendar title is displayed");
-
-		int allEventcount = 0;
-		for (WebElement allEvents : atlevents.getatlListOfAllEvents()) {
-			allEventcount++;
-			allEvents.isDisplayed();
-		}
-		System.out.println(allEventcount + " Events Present");
-
-		// Verify Events Titles
-		int allEventTitlesCount = 0;
-		for (WebElement eventTitles : atlevents.getatlListOfEventTitles()) {
-			allEventTitlesCount++;
-			Assert.assertTrue(eventTitles.isDisplayed());
-			String title = eventTitles.getText();
-			List<WebElement> SeeAllLinks = driver.findElements(By.linkText(title));
-			// Verify See Details HyperLinks
-			utl.checkItemPresentInListorNot(SeeAllLinks, title);
-		}
-		System.out.println(allEventTitlesCount + " Titles displayed");
-		Assert.assertEquals(allEventcount, allEventTitlesCount);
-
-		// Verify Events Type
-		int allEventTypeCount = 0;
-		for (WebElement eventType : atlevents.getatlListOfAllEventsType()) {
-			allEventTypeCount++;
-			Assert.assertTrue(eventType.isDisplayed());
-			System.out.println(allEventTypeCount + " Types displayed");
-		}
-		System.out.println(allEventTypeCount + " Types displayed");
-		Assert.assertEquals(allEventcount, allEventTypeCount);
-
-		// Verify Events Time
-		int allEventTimeCount = 0;
-		for (WebElement eventTime : atlevents.getatlListOfAllEventsTime()) {
-			allEventTimeCount++;
-			Assert.assertTrue(eventTime.isDisplayed());
-		}
-		System.out.println(allEventTimeCount + " Time displayed");
-		Assert.assertEquals(allEventcount, allEventTimeCount);
-
-		// Verify Events Location
-		int allEventLocationCount = 0;
-		for (WebElement eventLocation : atlevents.getatlListOfAllEventsLocations()) {
-
-			allEventLocationCount++;
-			Assert.assertTrue(eventLocation.isDisplayed());
-		}
-		System.out.println(allEventLocationCount + " Location displayed");
-
-		Assert.assertEquals(allEventcount, allEventLocationCount);
-
-		// Verify Events Image
-		int allEventImageCount = 0;
-		for (WebElement eventImage : atlevents.atlListOfAllEventsImages()) {
-			allEventImageCount++;
-			Assert.assertTrue(eventImage.isDisplayed());
-		}
-		System.out.println(allEventImageCount + "  Images displayed");
-		Assert.assertEquals(allEventcount, allEventImageCount);
-
-		// Verify Events See Details Link
-		int allEventSeeDetailsLinkCount = 0;
-		for (WebElement eventSeeDetailsLink : atlevents.atlatlListOfAllEventsSeeDetailsLink()) {
-			allEventSeeDetailsLinkCount++;
-			Assert.assertTrue(eventSeeDetailsLink.isDisplayed());
-		}
-		System.out.println(allEventSeeDetailsLinkCount + " See Details Link displayed");
-		Assert.assertEquals(allEventcount, allEventSeeDetailsLinkCount);
-
-		// Click on Event Title page
-		int allEventSeeDetailsLinkCount1 = 0;
-		for (int i = 0; i < atlevents.getatlListOfEventTitles().size(); i++) {
-			allEventSeeDetailsLinkCount1++;
-			WebElement eventTitleLink = atlevents.getatlListOfEventTitles().get(i);
-			String eventTitle = eventTitleLink.getText();
-			Assert.assertTrue(eventTitleLink.isDisplayed());
-			// eventSeeDetailsLink = atlevents.atlatlListOfAllEventsSeeDetailsLink().get(1);
-			utl.scrollElementIntoMiddle(eventTitleLink);
-			eventTitleLink.click();
-			Thread.sleep(500);
-			// Verify Event Details Page
-			Assert.assertTrue(eventTitle.contains(atlevents.getatlEventNameOnDetailsPage().getText()));
-			Thread.sleep(3000);
-			driver.navigate().back();
-			Thread.sleep(3000);
-		}
-
-		System.out.println(allEventSeeDetailsLinkCount + " Events Details Page displayed");
-		Assert.assertEquals(allEventcount, allEventSeeDetailsLinkCount1);
-*/
-	}
-
-	@Test(priority = 5) // groups="Non_MP"
-	public void TS005_VerifyIMCEventsEventDetailstTest() throws InterruptedException, IOException {
-		// The purpose of this test case to verify:-
-		// UXP-T295: IMC Events: Event Details
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		utl = new Utility(driver);
-		atlflpp = new ATLFloorPlansPage(driver);
-		atlevents = new ATLEventsAndWebinarPage(driver);
-		atlgs = new ATLGlobalSearchPage(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-
-		driver.get(prop.getProperty("lvmurl_prod"));
-		Thread.sleep(3000);
-		utl.clickOnEventLinkOfChannel();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-
-		String eventTitle = atlevents.getatlClickOnEvent().getText();
-		Thread.sleep(5000);
-		// Click on IMC Event Tab
-		utl.scrollElementIntoMiddle(atlevents.getatlExhibitorsEventsTab());
-		atlevents.getatlImcEventsTab().click();
-		Thread.sleep(500);
-		// Click on Any Event title
-		utl.scrollElementIntoMiddle(atlevents.getatlClickOnEvent());
-		atlevents.getatlClickOnEvent().click();
-		Thread.sleep(500);
-		Assert.assertTrue(eventTitle.contains(atlevents.getatlEventNameOnDetailsPage().getText()));
-
-		// Verify Location Link
-		Assert.assertTrue(atlevents.getatlEventLocationLinkLVMPROD().isDisplayed());
-		System.out.println("Events Location link displayed");
-		// Verify Event Type
-		Assert.assertTrue(atlevents.getatlEventType().isDisplayed());
-		System.out.println("Event Type displayed");
-
-		// Verify Add to Calendar
-		Assert.assertTrue(atlevents.getatlCalendarIcon().isDisplayed());
-		System.out.println("Calendar displayed");
-
-		driver.navigate().back();
-		int allEventSeeDetailsLinkCount1 = 0;
-		for (int i = 0; i < atlevents.getatlListOfEventTitles().size(); i++) {
-			allEventSeeDetailsLinkCount1++;
-			WebElement eventTitleLink = atlevents.getatlListOfEventTitles().get(i);
-			utl.scrollElementIntoMiddle(eventTitleLink);
-			Thread.sleep(500);
-			eventTitleLink.click();
-			// Verify Event Details Page
-
-			Thread.sleep(2000);
-			try {
-				if (atlevents.getatlEventsTag().isDisplayed()) {
-					String searchResultPageURL = atlevents.getatlEventsTag().getAttribute("href");
-					atlevents.getatlEventsTag().click();
-					Thread.sleep(500);
-					Assert.assertTrue(searchResultPageURL.contains(driver.getCurrentUrl()));
-					Assert.assertTrue(atlevents.getatlSearchResultsTitle().getText().contains("Search"));
-					System.out.println("Search Results page opened");
+			// Navigate calendar to the correct month and year
+			while (true) {
+				WebElement calendarLabel = atlevents.getcurrentMonth();
+				if (calendarLabel.getText().trim().equals(month + " " + year)) {
 					break;
-				}
-
-			} catch (Exception e) {
-				e.printStackTrace();
-				driver.navigate().back();
-				Thread.sleep(2000);
-				// Click on Exh Event Tab
-				// atlevents.getatlExhibitorsEventsTab().click();
-				/*
-				 * System.out.println(i);
-				 * System.out.println(atlevents.getatlListOfEventTitles().size());
-				 */
-				if (atlevents.getatlListOfEventTitles().size() == i + 1) {
-					System.out.println("Tags are not present");
-					// Assert.assertTrue(i== atlevents.getatlListOfEventTitles().size());
+				} else {
+					atlevents.getatlCalendarNextMonthBtn().click();
+					Thread.sleep(1000);
 				}
 			}
 
+			// Click the date in calendar
+			WebElement dayButton = driver.findElement(By.xpath(
+					"//abbr[contains(@aria-label,'" + month + " " + Integer.parseInt(day) + ", " + year + "')]"));
+			dayButton.click();
+			selectedDate = month + " " + Integer.parseInt(day) + ", " + year;
+			System.out.println("Selected date is::" + selectedDate);
+		}
+
+		// Step 2: Validate filtered events only match selected date
+		List<WebElement> filteredEvents = atlevents.getallEventsDatesFromResults();
+		boolean allMatch = true;
+		for (WebElement event : filteredEvents) {
+			String eventText = event.getText();
+			if (eventText.contains(selectedDate)) {
+				allMatch = true;
+				// System.out.println("❌ Mismatched event: " + eventText);
+			}
+		}
+
+		if (allMatch) {
+			System.out.println("✅ All events match the selected calendar date: " + selectedDate);
+		} else {
+			System.out.println("❌ Some events do not match selected calendar date.");
 		}
 
 	}
 
-	@Test(priority = 6) // groups="Non_MP"
+	@Test(priority = 7)
+	public void TS007_VerifyIMCEventsEventsListTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP-T292: IMC Events: Events List
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlflpp = new ATLFloorPlansPage(driver);
+		atlevents = new ATLEventsAndWebinarPage(driver);
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+
+		driver.get(prop.getProperty("lvmurl_prod"));
+		Thread.sleep(5000);
+
+		utl.clickOnEventLinkOfChannel();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+
+		// Click on IMC Event Tab
+		utl.scrollElementIntoMiddle(atlevents.getAllEventsTab());
+		atlevents.getAllEventsTab().click();
+		// public List<WebElement> exhibitors;
+		// Fetch all date block headers like "Friday, April 11, 2025 | 2 Events"
+		List<WebElement> dateBlocks = atlevents.getallEventsDatesFromResults();
+
+		// Get all event details using your provided XPaths
+		List<WebElement> eventNames = atlevents.getlistOfAllEventNames();
+		try {
+			exhibitors = atlevents.getlistOfAllExhibtorNamesUnserEvents();
+		} catch (Exception e) {
+			System.out.println("Exhibitor not present");
+		}
+		List<WebElement> dateAndTime = atlevents.getlistOfAllDay();
+		List<WebElement> locations = atlevents.getListOfAllLocations();
+		List<WebElement> learnMoreLinks = atlevents.getListOfAllLearnMoreLinks();
+		List<WebElement> eventTypes = atlevents.getListOfAllEventTypes();
+
+		int totalEvents = eventNames.size();
+
+		if (totalEvents != dateAndTime.size() || totalEvents != locations.size() || totalEvents != learnMoreLinks.size()
+				|| totalEvents != eventTypes.size()) {
+			System.out.println("❌ Mismatch in number of elements across event fields. Check your page structure.");
+			Assert.assertTrue(false);
+			// driver.quit();
+			return;
+		}
+
+		int currentIndex = 0;
+
+		for (WebElement block : dateBlocks) {
+			String blockTitle = block.getText().trim();
+
+			if (!blockTitle.contains("|") || !blockTitle.contains(",")) {
+				continue;
+			}
+
+			String[] parts = blockTitle.split("\\|");
+			String datePart = parts[0].trim(); // e.g., "Friday, April 11, 2025"
+			String countPart = parts[1].trim(); // e.g., "2 Events"
+
+			int expectedCount = Integer.parseInt(countPart.split(" ")[0]);
+
+			System.out.println("\n✅ Verifying block: " + blockTitle);
+
+			for (int i = 0; i < expectedCount; i++) {
+				try {
+					System.out.println("\n🔍 Verifying Event #" + (currentIndex + 1));
+
+					String name = eventNames.get(currentIndex).getText().trim();
+					assertNotEmpty(name, "Event Name");
+					System.out.println("✅ Event Name is present: " + name);
+
+					String exhibitor = exhibitors.get(currentIndex).getText().trim();
+					assertNotEmpty(exhibitor, "Exhibitor");
+					System.out.println("✅ Exhibitor is present: " + exhibitor);
+
+					assert dateAndTime.get(currentIndex).isDisplayed() : "Date & Time section is not visible.";
+					String dateTimeText = dateAndTime.get(currentIndex).getText().trim();
+					System.out.println("✅ Date & Time section is present: " + dateTimeText);
+
+					String[] partsDT = dateTimeText.split(" - ");
+					String start = partsDT[0].trim();
+					String end = (partsDT.length > 1) ? partsDT[1].trim() : "End time not available";
+
+					String dateOnly = start.replaceAll(",.*", "").trim();
+					String timeOnly = end.replaceAll(".*\\d{4}, ", "").trim();
+
+					System.out.println("📅 Date: " + dateOnly);
+					System.out.println("⏰ Time: " + timeOnly);
+
+					assert locations.get(currentIndex).isDisplayed() : "Location icon not visible.";
+					System.out.println("✅ Location icon is visible");
+
+					String link = learnMoreLinks.get(currentIndex).getAttribute("href");
+					assertNotEmpty(link, "Learn More link");
+					System.out.println("✅ Learn More link is present: " + link);
+
+					String type = eventTypes.get(currentIndex).getText().trim();
+					assertNotEmpty(type, "Event Type");
+					System.out.println("✅ Event Type is present: " + type);
+
+				} catch (Exception e) {
+					System.out.println("❌ Error verifying event #" + (currentIndex + 1) + ": " + e.getMessage());
+				}
+
+				currentIndex++;
+			}
+		}
+
+		// ✅ Additional: Verify Event Details Page
+		System.out.println("\n🎯 Navigating to event detail page for verification...");
+		int eventToVerifyIndex = 0; // You can randomize or change this index
+
+		String expectedEventName = eventNames.get(eventToVerifyIndex).getText().trim();
+		String expectedExhibitor = exhibitors.get(eventToVerifyIndex).getText().trim();
+		String expectedDateTime = dateAndTime.get(eventToVerifyIndex).getText().trim();
+		String expectedLocation = locations.get(eventToVerifyIndex).getText().trim();
+		String expectedEventType = eventTypes.get(eventToVerifyIndex).getText().trim();
+
+		// Click on event title
+		eventNames.get(eventToVerifyIndex).click();
+		Thread.sleep(3000); // Use WebDriverWait in actual framework
+
+		// On Event Details Page
+		String actualEventName = atlevents.getEventDetailEventTitle().getText().trim();
+		String actualExhibitor = atlevents.getEventDetailExhibitor().getText().trim();
+		String actualDateTime = atlevents.getEventDetailDateTime().getText().trim();
+		// String actualLocation = atlevents.getEventDetailLocation();
+		String actualEventType = atlevents.getEventDetailEventType().getText().trim();
+
+		// Compare
+		assert expectedEventName.equals(actualEventName) : "❌ Event Name mismatch!";
+		System.out.println("Event Name/ title displayed");
+		assert expectedExhibitor.equals(actualExhibitor) : "❌ Exhibitor mismatch!";
+		System.out.println("Exhibitor Name displayed");
+		assert actualDateTime.contains(expectedDateTime.split("-")[0].trim()) : "❌ Date/Time mismatch!";
+		System.out.println("Date time displayed");
+		atlevents.getEventDetailLocation().isDisplayed();
+		System.out.println("Location  displayed");
+		// assert expectedLocation.equals(actualLocation) : "❌ Location mismatch!";
+		assert expectedEventType.equals(actualEventType) : "❌ Event Type mismatch!";
+		System.out.println("Event type displayed");
+
+		System.out.println("✅ Event detail page matches list page data.");
+	}
+
+	// ========== Utility Method ==========
+
+	private static void assertNotEmpty(String value, String fieldName) {
+		if (value == null || value.trim().isEmpty()) {
+			throw new AssertionError(fieldName + " is missing or empty!");
+		}
+	}
+
+	@Test(priority = 8)
+	public void TS008_VerifyExhibitorEventsListTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP-T292: Exhibitor Events: Events List and Event Details
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlflpp = new ATLFloorPlansPage(driver);
+		atlevents = new ATLEventsAndWebinarPage(driver);
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+
+		driver.get(prop.getProperty("lvmurl_prod"));
+		Thread.sleep(5000);
+
+		utl.clickOnEventLinkOfChannel();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+
+		// Click on IMC Event Tab
+		utl.scrollElementIntoMiddle(atlevents.getatlExhibitorsEventsTab());
+		atlevents.getatlExhibitorsEventsTab().click();
+
+		// Fetch all date block headers like "Friday, April 11, 2025 | 2 Events"
+		List<WebElement> dateBlocks = atlevents.getallEventsDatesFromResults();
+
+		// Get all event details using your provided XPaths
+		List<WebElement> eventNames = atlevents.getlistOfAllEventNames();
+		List<WebElement> exhibitors = atlevents.getlistOfAllExhibtorNamesUnserEvents();
+		List<WebElement> dateAndTime = atlevents.getlistOfAllDay();
+		List<WebElement> locations = atlevents.getListOfAllLocations();
+		List<WebElement> learnMoreLinks = atlevents.getListOfAllLearnMoreLinks();
+		List<WebElement> eventTypes = atlevents.getListOfAllEventTypes();
+
+		int totalEvents = eventNames.size();
+		if (totalEvents != exhibitors.size() || totalEvents != dateAndTime.size() || totalEvents != locations.size()
+				|| totalEvents != learnMoreLinks.size() || totalEvents != eventTypes.size()) {
+			System.out.println("❌ Mismatch in number of elements across event fields. Check your page structure.");
+			driver.quit();
+			return;
+		}
+
+		int currentIndex = 0;
+
+		for (WebElement block : dateBlocks) {
+			String blockTitle = block.getText().trim();
+
+			if (!blockTitle.contains("|") || !blockTitle.contains(",")) {
+				continue;
+			}
+
+			String[] parts = blockTitle.split("\\|");
+			String datePart = parts[0].trim(); // e.g., "Friday, April 11, 2025"
+			String countPart = parts[1].trim(); // e.g., "2 Events"
+
+			int expectedCount = Integer.parseInt(countPart.split(" ")[0]);
+
+			System.out.println("\n✅ Verifying block: " + blockTitle);
+
+			for (int i = 0; i < expectedCount; i++) {
+				try {
+					System.out.println("\n🔍 Verifying Event #" + (currentIndex + 1));
+
+					String name = eventNames.get(currentIndex).getText().trim();
+					assertNotEmpty(name, "Event Name");
+					System.out.println("✅ Event Name is present: " + name);
+
+					String exhibitor = exhibitors.get(currentIndex).getText().trim();
+					assertNotEmpty(exhibitor, "Exhibitor");
+					System.out.println("✅ Exhibitor is present: " + exhibitor);
+
+					assert dateAndTime.get(currentIndex).isDisplayed() : "Date & Time section is not visible.";
+					String dateTimeText = dateAndTime.get(currentIndex).getText().trim();
+					System.out.println("✅ Date & Time section is present: " + dateTimeText);
+
+					String[] partsDT = dateTimeText.split(" - ");
+					String start = partsDT[0].trim();
+					String end = (partsDT.length > 1) ? partsDT[1].trim() : "End time not available";
+
+					String dateOnly = start.replaceAll(",.*", "").trim();
+					String timeOnly = end.replaceAll(".*\\d{4}, ", "").trim();
+
+					System.out.println("📅 Date: " + dateOnly);
+					System.out.println("⏰ Time: " + timeOnly);
+
+					assert locations.get(currentIndex).isDisplayed() : "Location icon not visible.";
+					System.out.println("✅ Location icon is visible");
+
+					String link = learnMoreLinks.get(currentIndex).getAttribute("href");
+					assertNotEmpty(link, "Learn More link");
+					System.out.println("✅ Learn More link is present: " + link);
+
+					String type = eventTypes.get(currentIndex).getText().trim();
+					assertNotEmpty(type, "Event Type");
+					System.out.println("✅ Event Type is present: " + type);
+
+				} catch (Exception e) {
+					System.out.println("❌ Error verifying event #" + (currentIndex + 1) + ": " + e.getMessage());
+				}
+
+				currentIndex++;
+			}
+		}
+
+		// ✅ Additional: Verify Event Details Page
+		System.out.println("\n🎯 Navigating to event detail page for verification...");
+		int eventToVerifyIndex = 0; // You can randomize or change this index
+
+		String expectedEventName = eventNames.get(eventToVerifyIndex).getText().trim();
+		String expectedExhibitor = exhibitors.get(eventToVerifyIndex).getText().trim();
+		String expectedDateTime = dateAndTime.get(eventToVerifyIndex).getText().trim();
+		String expectedLocation = locations.get(eventToVerifyIndex).getText().trim();
+		String expectedEventType = eventTypes.get(eventToVerifyIndex).getText().trim();
+
+		// Click on event title
+		eventNames.get(eventToVerifyIndex).click();
+		Thread.sleep(3000); // Use WebDriverWait in actual framework
+
+		// On Event Details Page
+		String actualEventName = atlevents.getEventDetailEventTitle().getText().trim();
+		String actualExhibitor = atlevents.getEventDetailExhibitor().getText().trim();
+		String actualDateTime = atlevents.getEventDetailDateTime().getText().trim();
+		// String actualLocation = atlevents.getEventDetailLocation();
+		String actualEventType = atlevents.getEventDetailEventType().getText().trim();
+
+		// Compare
+		assert expectedEventName.equals(actualEventName) : "❌ Event Name mismatch!";
+		System.out.println("Event Name/ title displayed");
+		assert expectedExhibitor.equals(actualExhibitor) : "❌ Exhibitor mismatch!";
+		System.out.println("Exhibitor Name displayed");
+		assert actualDateTime.contains(expectedDateTime.split("-")[0].trim()) : "❌ Date/Time mismatch!";
+		System.out.println("Date time displayed");
+		atlevents.getEventDetailLocation().isDisplayed();
+		System.out.println("Location  displayed");
+		// assert expectedLocation.equals(actualLocation) : "❌ Location mismatch!";
+		assert expectedEventType.equals(actualEventType) : "❌ Event Type mismatch!";
+		System.out.println("Event type displayed");
+
+		System.out.println("✅ Event detail page matches list page data.");
+	}
+
+	@Test(priority = 9)
+	public void TS009_VerifyEventTypeDropdownTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP-T292: IMC Events: Reset button
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlflpp = new ATLFloorPlansPage(driver);
+		atlevents = new ATLEventsAndWebinarPage(driver);
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+
+		driver.get(prop.getProperty("lvmurl_prod"));
+		Thread.sleep(5000);
+
+		utl.clickOnEventLinkOfChannel();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+
+		// Click on IMC Event Tab
+		utl.scrollElementIntoMiddle(atlevents.getAllEventsTab());
+		// Click on All EVents
+		atlevents.getAllEventsTab().click();
+
+		// Locate the dropdown
+		WebElement dropdown = atlevents.getEventTypeDropwdown();
+
+		Select select = new Select(dropdown);
+
+		// Get all options except the first (usually placeholder like "Event Type")
+		List<WebElement> allOptions = select.getOptions();
+		for (int i = 1; i < allOptions.size(); i++) {
+			String eventTypeToSelect = allOptions.get(i).getText().trim();
+			System.out.println("\n🔄 Selecting Event Type: " + eventTypeToSelect);
+
+			// Select from dropdown
+			select.selectByVisibleText(eventTypeToSelect);
+
+			// Wait for filtered results to load
+			Thread.sleep(2000); // Or use explicit wait on event container
+
+			// Locate all event type labels from the filtered results
+			List<WebElement> filteredTypes = atlevents.getListOfAllEventTypes();
+			if (filteredTypes.isEmpty()) {
+				System.out.println("⚠️ No events found for Event Type: " + eventTypeToSelect);
+				continue;
+			}
+
+			boolean allMatch = true;
+
+			for (WebElement type : filteredTypes) {
+				String resultType = type.getText().trim();
+				System.out.println("🔍 Found Event Type: " + resultType);
+
+				if (!resultType.equalsIgnoreCase(eventTypeToSelect)) {
+					System.out.println("❌ Mismatch found! Expected: " + eventTypeToSelect + " but got: " + resultType);
+					allMatch = false;
+				}
+			}
+
+			Assert.assertTrue(allMatch, "❌ Some events do not match selected Event Type: " + eventTypeToSelect);
+			System.out.println("✅ All results match the selected type: " + eventTypeToSelect);
+		}
+
+	}
+
+	@Test(priority = 10)
+	public void TS0010_VerifyEventDateRangeSearchBoxTest() throws InterruptedException, IOException, ParseException {
+		// The purpose of this test case to verify:
+		// UXP-T292: All Events :Event range date box
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlflpp = new ATLFloorPlansPage(driver);
+		atlevents = new ATLEventsAndWebinarPage(driver);
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+
+		driver.get(prop.getProperty("lvmurl_prod"));
+		Thread.sleep(5000);
+
+		utl.clickOnEventLinkOfChannel();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+
+		// Click on IMC Event Tab
+		utl.scrollElementIntoMiddle(atlevents.getAllEventsTab());
+		atlevents.getAllEventsTab().click();
+		WebElement eventDateElement = atlevents.getatlEventDateAndMonth();
+		eventDateElement.isDisplayed();
+		DateRangeBoxFunction();
+	}
+
+	@Test(priority = 11)
+	public void TS0011_VerifyMarketEventDateRangeSearchBoxTest()
+			throws InterruptedException, IOException, ParseException {
+		// The purpose of this test case to verify:
+		// UXP-T292: Market Events :Event range date box
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlflpp = new ATLFloorPlansPage(driver);
+		atlevents = new ATLEventsAndWebinarPage(driver);
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+
+		driver.get(prop.getProperty("lvmurl_prod"));
+		Thread.sleep(5000);
+
+		utl.clickOnEventLinkOfChannel();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+
+		// Click on IMC Event Tab
+		utl.scrollElementIntoMiddle(atlevents.getAllEventsTab());
+		atlevents.getMarketEventsTab().click();
+		WebElement eventDateElement = atlevents.getatlEventDateAndMonth();
+		eventDateElement.isDisplayed();
+		DateRangeBoxFunction();
+	}
+
+	@Test(priority = 12)
+	public void TS0012_VerifyExhibitorEventDateRangeSearchBoxTest()
+			throws InterruptedException, IOException, ParseException {
+		// The purpose of this test case to verify:
+		// UXP-T292: Exhibitor Events :Event range date box
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlflpp = new ATLFloorPlansPage(driver);
+		atlevents = new ATLEventsAndWebinarPage(driver);
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+
+		driver.get(prop.getProperty("lvmurl_prod"));
+		Thread.sleep(5000);
+
+		utl.clickOnEventLinkOfChannel();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+
+		// Click on IMC Event Tab
+		utl.scrollElementIntoMiddle(atlevents.getAllEventsTab());
+		atlevents.getatlExhibitorsEventsTab().click();
+		WebElement eventDateElement = atlevents.getatlEventDateAndMonth();
+		eventDateElement.isDisplayed();
+
+		DateRangeBoxFunction();
+
+	}
+
+	public void DateRangeBoxFunction() throws InterruptedException {
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlflpp = new ATLFloorPlansPage(driver);
+		atlevents = new ATLEventsAndWebinarPage(driver);
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+		// === 1. Dynamically get today's and future date ===
+		LocalDate today = LocalDate.now();
+		LocalDate futureDate = today.plusDays(15);
+
+		// Format for aria-labels in calendar (e.g., April 15, 2025)
+		DateTimeFormatter ariaFormatter = DateTimeFormatter.ofPattern("MMMM d, yyyy", Locale.ENGLISH);
+		String startLabel = today.format(ariaFormatter);
+		String endLabel = futureDate.format(ariaFormatter);
+
+		// Format for date input field (e.g., 4/15/2025)
+		DateTimeFormatter inputFormatter = DateTimeFormatter.ofPattern("M/d/yyyy");
+		String expectedStart = today.format(inputFormatter);
+		String expectedEnd = futureDate.format(inputFormatter);
+
+		System.out.println("Start Date:: " + expectedStart);
+		System.out.println("End Date:: " + expectedEnd);
+
+		// === 2. Select the start and end dates dynamically ===
+		WebElement startDate = driver.findElement(By.xpath("//abbr[@aria-label='" + startLabel + "']"));
+		utl.scrollElementIntoMiddle(startDate);
+		startDate.click();
+
+		WebElement endDate = driver.findElement(By.xpath("//abbr[@aria-label='" + endLabel + "']"));
+		endDate.click();
+		Thread.sleep(3000);
+
+		// === 3. Verify the selected date range in input field ===
+		List<WebElement> dateInputs = driver.findElements(By.cssSelector(".react-daterange-picker__inputGroup input"));
+		Assert.assertTrue(dateInputs.size() >= 6,
+				"❌ Could not locate all 6 date inputs (month/day/year for both fields).");
+
+		// Extract start date
+		String actualStartMonth = dateInputs.get(1).getAttribute("value");
+		String actualStartDay = dateInputs.get(2).getAttribute("value");
+		String actualStartYear = dateInputs.get(3).getAttribute("value");
+
+		// Extract end date
+		String actualEndMonth = dateInputs.get(5).getAttribute("value");
+		String actualEndDay = dateInputs.get(6).getAttribute("value");
+		String actualEndYear = dateInputs.get(3).getAttribute("value");
+
+		String actualStart = actualStartMonth + "/" + actualStartDay + "/" + actualStartYear;
+		String actualEnd = actualEndMonth + "/" + actualEndDay + "/" + actualEndYear;
+
+		System.out.println("Expected start: " + expectedStart + " | Actual start: " + actualStart);
+		System.out.println("Expected end: " + expectedEnd + " | Actual end: " + actualEnd);
+
+		Assert.assertEquals(actualStart, expectedStart, "❌ Start date in input field does not match expected.");
+		Assert.assertEquals(actualEnd, expectedEnd, "❌ End date in input field does not match expected.");
+
+		// === 4. Generate list of date numbers (only days) in the selected range ===
+		List<String> dateOnlyList = new ArrayList<>();
+		LocalDate pointer = today;
+		while (!pointer.isAfter(futureDate)) {
+			String dayOnly = String.valueOf(pointer.getDayOfMonth());
+			dateOnlyList.add(dayOnly);
+			pointer = pointer.plusDays(1);
+		}
+		System.out.println("Date range (day only): " + dateOnlyList);
+
+		WebElement eventDateElement = atlevents.getatlEventDateAndMonth();
+
+		String dateText = eventDateElement.getText();
+		String fullDate = dateText.split(" - ")[0].replaceAll("^[A-Za-z]+, ", "").trim();
+		String[] dateParts = fullDate.split(" "); // Format: April 08 2025
+		String month = dateParts[0];
+		String day = dateParts[1];
+		String year = dateParts[2];
+
+		// === 5. Check if extracted day is present in the selected date range list ===
+		String eventDay = day.replace(",", "").trim(); // Remove comma if any
+		// String eventDay = "11";
+		System.out.println("🎯 Event day from title: " + eventDay);
+
+		if (dateOnlyList.contains(eventDay)) {
+			System.out.println("✅ Event date is within the selected date range.");
+		} else {
+			Assert.fail("❌ Event date " + eventDay + " is NOT within the selected date range: " + dateOnlyList);
+		}
+
+	}
+
+	@Test(priority = 13)
+	public void TS0013_VerifyEventCalendarResetButtonTest() throws InterruptedException, IOException {
+		// The purpose of this test case to verify:-
+		// UXP-T292: IMC Events: Reset button
+
+		lap = new ATLLandingPage(driver);
+		lp = new ATLLoginPage(driver);
+		utl = new Utility(driver);
+		atlflpp = new ATLFloorPlansPage(driver);
+		atlevents = new ATLEventsAndWebinarPage(driver);
+		atlgs = new ATLGlobalSearchPage(driver);
+		atlmppge = new ATLMarketPlannerPage(driver);
+
+		driver.get(prop.getProperty("lvmurl_prod"));
+		Thread.sleep(5000);
+
+		utl.clickOnEventLinkOfChannel();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+
+		// Click on IMC Event Tab
+		utl.scrollElementIntoMiddle(atlevents.getAllEventsTab());
+		// Click on All EVents
+		atlevents.getAllEventsTab().click();
+
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+		// Step 1: Capture today's month (before doing anything)
+		String currentMonth = atlevents.getcurrentMonth().getText().trim();
+		System.out.println("📅 Current month: " + currentMonth);
+
+		// Step 2: Go to next month
+		atlevents.getatlCalendarNextMonthBtn().click();
+		Thread.sleep(1000); // use explicit wait if needed
+		String newMonth = atlevents.getcurrentMonth().getText().trim();
+		assert !newMonth.equals(currentMonth) : "Failed to navigate to next month";
+
+		System.out.println("➡️ Navigated to: " + newMonth);
+
+		// Step 3: Select any date
+		WebElement date = atlevents.getselectAnyDateFromCalendar();
+		String selectedDateText = date.getText();
+		Actions ac = new Actions(driver);
+		ac.doubleClick(date).perform();
+		// date.click();
+		Thread.sleep(500);
+		// assert driver.findElement(selectedDate).isDisplayed() : "Date not selected!";
+		System.out.println("📌 Selected date: " + selectedDateText);
+
+		// Step 4: Click Reset
+		atlevents.getatlResetBtn().click();
+		Thread.sleep(1000); // wait for reset to take effect
+
+		// Step 5: Verify calendar reset to current month
+		String resetMonth = atlevents.getcurrentMonth().getText().trim();
+		assert resetMonth.equals(currentMonth) : "Reset failed to return to current month";
+		System.out.println("✅ Calendar reset to: " + resetMonth);
+
+	}
+
+//old code starts		
+
+	// @Test(priority = 6) // groups="Non_MP"
 	public void TS006_VerifyExhibitorEventsSearchbarTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T304: Exhibitor Events: Search bar
@@ -846,7 +1103,7 @@ public class EvenntsAndWebinar extends base {
 		utl.checkItemPresentInListorNot(atlevents.getatlListOfEventTitles(), eventName);
 	}
 
-	@Test(priority = 7) // groups="Non_MP"
+	// @Test(priority = 7) // groups="Non_MP"
 	public void TS007_VerifyExhibitorEventsCalendarViewTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T305: Exhibitor Events: Calendar View
@@ -952,8 +1209,8 @@ public class EvenntsAndWebinar extends base {
 		Thread.sleep(5000);
 	}
 
-	@Test(priority = 8) // Previous priority = 11,groups="Non_MP"
-	public void TS008_VerifyExhibitorEventsListTest() throws InterruptedException, IOException {
+	// @Test(priority = 8) // Previous priority = 11,groups="Non_MP"
+	public void TS008_VerifyExhibitorEventsListTestOld() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T306: Exhibitor Events: Events List
 		lap = new ATLLandingPage(driver);
@@ -1081,7 +1338,7 @@ public class EvenntsAndWebinar extends base {
 		Assert.assertEquals(allEventcount, allEventSeeDetailsLinkCount1);
 	}
 
-	@Test(priority = 9) // groups="Non_MP"
+	// @Test(priority = 9) // groups="Non_MP"
 	public void TS009_VerifyExhibitorEventsDetailstTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-
 		// UXP-T307: Exhibitor Events: Event Details

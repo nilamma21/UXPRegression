@@ -7,7 +7,7 @@
 
     <test name="RegressionTest">
         <classes>
-            <!--class name="lasvegasmarket_PROD.EvenntsAndWebinar" />-->
+            <class name="lasvegasmarket_PROD.EvenntsAndWebinar" />
             <class name="lasvegasmarket_PROD.ExhibitorDigitalShowroom"/>
             <class name="lasvegasmarket_PROD.FloorPlans" />
             <class name="lasvegasmarket_PROD.GlobalSearch_ExhibitorActions" />

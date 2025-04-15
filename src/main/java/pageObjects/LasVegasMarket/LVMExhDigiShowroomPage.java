@@ -110,7 +110,7 @@ public class LVMExhDigiShowroomPage {
 	By OrderOnJuniperMarktBtnCatalog = By.xpath("//div[@class='imc-products-overview--cta-bar__item']/a");
 	By OrderOnJuniperMarktBtnProdURL = By.xpath("//div[@class='imc-section imc-section--width-100-percent']/div[1]/span[contains(text(),'Products')]/../../div[3]/div[1]/a[1]"); //URl for juniper markt prod btn
 	By OrderOnJuniperMarktBtnCatalogURL = By.xpath("//div[@class='imc-section imc-section--width-100-percent']/div[1]/span[contains(text(),'Catalogs')]/../../div[3]/div[1]/a[1]"); //URl for juniper markt catalog btn
-	By EventNameNew = By.xpath("//div[contains(@class,'event-card--title--container')]/a/p");
+	By EventNameNew = By.xpath("//p[contains(@class,'event-card--title imc-link--hover-underline normal-line-height')]");
 	By EventNameNewPROD = By.xpath("(//div[contains(@class,'event-card--title--container')])[1]/a/p");
 	By SelectCatalogProd = By.xpath("(//div[@class = 'imc-exhibitors--alternated-section imc-section--full-width-mobile imc-content--display-flex imc-content--display-flex-grow-1']/descendant::a/div/div)[1]");//First catalog in catalog section in Exhibitor Digital Showroom.
 	By ContactExhibitorHero = By.xpath("(//span[contains(text(),'Contact Exhibitor')])[1]");

@@ -23,7 +23,7 @@ public class ATLEventsAndWebinarPage {
 	By atlEventsCalendar = By.xpath("//div[@class='imc-content--relative react-calendar--container-wrapper']"); //Locator for Calendar
 	By atlEventsSearchBar = By.xpath("//div[@class='event-card--cal-btn-container']/div[1]/input[1]"); //Locator for Events Search bar
 	By atlEventName = By.xpath("(//p[@class='event-card--title imc-link--hover-underline normal-line-height'])[1]"); //Locator for 1st Event Name
-	By atlClickOnEvent = By.xpath("(//div[@class='event-card--info']/div[1]/div[1]/a[1]/p[1])[1]"); //Locator for 1st Event Name
+	By EventDetailTitle = By.xpath("(//p[@class='event-card--title imc-link--hover-underline normal-line-height'])[1]"); //Locator for 1st Event Name
 	
 	By atlEventSearchIcon = By.xpath("//div[@class='event-card--cal-btn-container']/div[1]/button[1]"); //Locator for Search btn
 	By atlEventSearchIconUAT = By.xpath("//div[@class='event-card--cal-btn-container']/div[1]/button[1]"); //Locator for Search btn
@@ -36,7 +36,7 @@ public class ATLEventsAndWebinarPage {
 	
 	By atlCalendarPrevMonth = By.xpath("//button[@class='react-calendar__navigation__arrow react-calendar__navigation__prev-button']"); //Locator for Calendar Prev month btn 
 	By atlSelectAnyDate = By.xpath("//button[@class='react-calendar__tile react-calendar__month-view__days__day react-calendar--no-event']/abbr[1]"); //Locator for Any Date
-	By atlResetBtn = By.xpath("//div[@class='calendar-container']/div[1]/p[2]"); //Locator for Reset Btn
+	By atlResetBtn = By.xpath("//button[@class='imc-filter--reset-button']"); //Locator for Reset Btn
 	By atlListOfEventTitles = By.xpath("//p[@class='event-card--title imc-link--hover-underline normal-line-height']"); //Locator for list of all Events Title
 	By atlListOfAllEvents = By.xpath("//div[@class='event-card--multi-card-container']/div"); //Locator for list of all Events 
 	By atlListOfAllEventsType = By.xpath("//p[@class='event-card--event-type']"); //Locator for list of all Events
@@ -63,15 +63,109 @@ public class ATLEventsAndWebinarPage {
 	By MarketFilter = By.xpath("//div[@class='calendar-container imc-content--relative}']/div[2]/span");
 	By EventTypeDropdown = By.xpath("//div[@class='imc-formfield imc-dropdown  imc-searchform--dropdown imc-searchform--dropdown--minwidth-auto ']/select");
 	
-	By currentDate = By.xpath("//button[@class='react-calendar__tile react-calendar__tile--now react-calendar__month-view__days__day react-calendar--no-event']");
+	By currentDate = By.xpath("//button[contains(@class, 'react-calendar__tile--now')]");
 	By currentMonth = By.xpath("//button[@class='react-calendar__navigation__label']/span");
 	By heightedEventDates = By.xpath("//button[@class='react-calendar__tile react-calendar__month-view__days__day']/abbr");
 	
 	By allEventsDatesFromResults = By.xpath("//p[@class='event-date--item']");
+	By listOfAllEventNames = By.xpath("//p[@class='event-card--title imc-link--hover-underline normal-line-height']");
+	By listOfAllExhibtorNamesUnserEvents = By.xpath("//div[@class='imc-type--title-2-uil  imc-content--delta']/a");
+	
+	By listOfAllLocations = By.xpath("//span[@class='imc-icon-Location imc-margin--right--xxsmall imc-icon--center event-card--location-icon']");
+	By listOfAllLearnMoreLinks = By.xpath("//div[@class='imc-content--display-flex-grow-1 imc-content--display-flex imc-content--display-flex-center']/a");
+	By listOfAllEventTypes = By.xpath("//p[@class='imc-type--title-2-ui']");
+	By listOfAllDay = By.xpath("//div[contains(text(),'day')]");
+	
+	By selectAnyDateFromCalendar = By.xpath("//button[@type='button']/abbr[contains(text(),'12')]");
+	By EventDetailExhibitor = By.xpath("//a[@class='imc-link imc-link--hover-underline']");
+	
+	By EventDetailDateTime = By.xpath("//p[@class='imc-section--padded-bottom-xlarge']/span[1]");
+	By EventDetailEventType = By.xpath("//p[@class='imc-eventdetail--event-type']");
+	By EventDetailLocation = By.xpath("//a[@class='imc-link imc-eventdetail--time imc-link--hover-underline']/span");
+	By EventDetailEventTitle = By.xpath("//h1[@class='imc-content--giga imc-content--bold']");
+	By EventTypeDropwdown = By.xpath("//select[@id='dropdown-sort-search']");
+	
 	
 	public ATLEventsAndWebinarPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
+	}
+	public WebElement getEventTypeDropwdown() {
+		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(EventTypeDropwdown));
+		return driver.findElement(EventTypeDropwdown);
+		
+	}
+	public WebElement getEventDetailEventTitle() {
+		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(EventDetailEventTitle));
+		return driver.findElement(EventDetailEventTitle);
+		
+	}
+	public WebElement getEventDetailLocation() {
+		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(EventDetailLocation));
+		return driver.findElement(EventDetailLocation);
+		
+	}
+	public WebElement getEventDetailEventType() {
+		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(EventDetailEventType));
+		return driver.findElement(EventDetailEventType);
+		
+	}
+	
+	public WebElement getEventDetailDateTime() {
+		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(EventDetailDateTime));
+		return driver.findElement(EventDetailDateTime);
+		
+	}
+	
+	public WebElement getEventDetailExhibitor() {
+		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(EventDetailExhibitor));
+		return driver.findElement(EventDetailExhibitor);
+		
+	}
+
+	public WebElement getselectAnyDateFromCalendar() {
+		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(selectAnyDateFromCalendar));
+		return driver.findElement(selectAnyDateFromCalendar);
+		
+	}
+	public List<WebElement> getlistOfAllDay() {
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllDay));
+	    return driver.findElements(listOfAllDay);
+	}
+	public List<WebElement> getListOfAllLocations() {
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllLocations));
+	    return driver.findElements(listOfAllLocations);
+	}
+
+	public List<WebElement> getListOfAllLearnMoreLinks() {
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllLearnMoreLinks));
+	    return driver.findElements(listOfAllLearnMoreLinks);
+	}
+
+	public List<WebElement> getListOfAllEventTypes() {
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllEventTypes));
+	    return driver.findElements(listOfAllEventTypes);
+	}
+	public List <WebElement> getlistOfAllExhibtorNamesUnserEvents() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllExhibtorNamesUnserEvents));
+		return driver.findElements(listOfAllExhibtorNamesUnserEvents);
+	}
+	public List <WebElement> getlistOfAllEventNames() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllEventNames));
+		return driver.findElements(listOfAllEventNames);
 	}
 	public List <WebElement> getallEventsDatesFromResults() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
@@ -156,8 +250,8 @@ public class ATLEventsAndWebinarPage {
 	}
 	public WebElement getatlClickOnEvent() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlClickOnEvent));
-		return driver.findElement(atlClickOnEvent);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(EventDetailTitle));
+		return driver.findElement(EventDetailTitle);
 	}
 	public WebElement getatlSearchResultsTitle() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));

@@ -5,7 +5,9 @@
     <classes>
       <class name="lasvegasmarket_PROD.EvenntsAndWebinar">
         <methods>
-          <include name="VerifySelectedCalendarEventDateAndSearchEventsTest"/>
+          <include name="TS0011_VerifyMarketEventDateRangeSearchBoxTest"/>
+          <include name="TS0013_VerifyEventCalendarResetButtonTest"/>
+          <include name="TS003_VerifyMarketEventsSearchbarTest"/>
           <include name="tearDown"/>
           <include name="initialize"/>
         </methods>
