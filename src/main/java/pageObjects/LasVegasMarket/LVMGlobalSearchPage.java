@@ -70,7 +70,7 @@ public class LVMGlobalSearchPage {
 	By fourthbreadcrumbtxtUAT = By.xpath("//ul[@class='imc-breadcrumb']/li[4]/a[1]"); //Locator for 4th Breadcrumb text in app
 	By lvmGlobalSearchSortBtn = By.xpath("//button[@class='imc-searchform--bar--button  ' and text()='Sort']"); //Locator for Global Search Sort Btn
 	By lvmGlobalSearch_SearchWithinDropdwn = By.xpath("//select[@name='Search Type']"); //Locator for Global Search SearchWithhn Dropdown
-	By lvmListOfAllExh = By.xpath("//div[@class='imc-exhibitorcard-title-row no-border-bottom']"); //Locator for All Exhibitors
+	By lvmListOfAllExh = By.xpath("//div[@class='imc-exhibitorcard-title-row ']"); //Locator for All Exhibitors
 	By lvmListOfAllExhLocation = By.xpath("//div[@class='imc-exhibitorcard-title-row ']/div[2]"); //Locator for All Exhibitors Location
 	By lvmListOfAllExhTotalProductLink = By.xpath("//div[@class='imc-exhibitorcard--prod-item-container']/p"); //Locator for All Exhibitors Total Product Links
 	By lvmListOfAllExhMatchingProductLink = By.xpath("//div[@class='imc-exhibitorcard--prod-item-container imc-exhibitorcard--prod-item-container--divider']/p"); //Locator for All Exhibitors Matching Product Links
@@ -177,11 +177,24 @@ public class LVMGlobalSearchPage {
 	By lvmEventsAndSeminar = By.xpath("//a[contains(text(),' Events & Seminars')]"); 
 	By lvmEventsSearchNoTopicFilterText = By.xpath("//div[contains(text(),'No Topics Filters Selected')]"); 
 	By EventsLink = By.xpath("(//a[contains(@href,'Events')])[2]"); 
+	By listOfAllExhibitorTitles = By.xpath("//h2[@class='imc-exhibitorcard__exhibitorname imc-exhibitorcard--title-hover']");
+	By listOfAllMatchingProducts = By.xpath("//span[contains(text(),'Matching Product')]/../span[1]");
+	
 	
 	public LVMGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 		PageFactory.initElements(driver, this);
+	}
+	public List<WebElement>getlistOfAllMatchingProducts() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllMatchingProducts));
+		return driver.findElements(listOfAllMatchingProducts);
+	}
+	public List<WebElement>getlistOfAllExhibitorTitles() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllExhibitorTitles));
+		return driver.findElements(listOfAllExhibitorTitles);
 	}
 	public WebElement getEventsLink(){
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));

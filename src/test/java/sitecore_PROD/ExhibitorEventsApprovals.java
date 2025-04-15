@@ -1,6 +1,7 @@
 package sitecore_PROD;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -33,13 +34,13 @@ public class ExhibitorEventsApprovals extends base {
 		//utl.siteCoreLogin();
 		utl.siteCoreLoginUAT();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	}
 	@Test(priority = 1) 
 	public void TS001_ExhibitorEventsApprovalsSortByOptionsTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-Digital Admin Functionality
 		// UXP-T :
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		System.out.println("-----------------VerifyDigitalAdminPanelTest------------------------");
 		
 		digiAdmin=new SCDigitalAdminPanelPage(driver);
@@ -64,7 +65,7 @@ public class ExhibitorEventsApprovals extends base {
 	public void TS002_VerifyExhibitorEventsApprovalsFunctinalityTest() throws InterruptedException, IOException {
 		// The purpose of this test case to verify:-Digital Admin SortBy Options Functinality
 		// UXP-T :
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		System.out.println("-----------------VerifyDigitalAdminPanelTest------------------------");
 		
 		digiAdmin=new SCDigitalAdminPanelPage(driver);

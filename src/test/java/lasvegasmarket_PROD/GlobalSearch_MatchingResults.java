@@ -2,6 +2,8 @@ package lasvegasmarket_PROD;
 
 import java.io.IOException;
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -210,49 +212,278 @@ public class GlobalSearch_MatchingResults extends base {
 	  }
 	  
 	  @Test(priority = 3)
-	  public void TS003_VerifyGlobalSearchMatchingResultsSortSortByTest() throws InterruptedException, IOException {
-	      // The purpose of this test case to verify:-
-	      // T676: Global Search: Matching results-Sort- Sort By
-	      //Open bug- UXP-1991
+	  public void TS003_VerifyGlobalSearchMatchingResultsSortSortByAscendingOrderTest() throws InterruptedException, IOException {
+		    // The purpose of this test case is to verify:
+		    // T676: Global Search: Matching results - Sort By
+		    // Open bug - UXP-1991
 
-	      lvmgs = new LVMGlobalSearchPage(driver);
-	      lvmds = new LVMExhDigiShowroomPage(driver);
-	      lvmexhact = new LVMExhLineProdActionsPage(driver);
-	      utl = new Utility(driver);
+		    lvmgs = new LVMGlobalSearchPage(driver);
+		    lvmds = new LVMExhDigiShowroomPage(driver);
+		    lvmexhact = new LVMExhLineProdActionsPage(driver);
+		    utl = new Utility(driver);
 
-	      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-	      
-	      utl.globleSearchInput((prop.getProperty("globalsearch_input")));
-			// Click on Sort Btn
-		    
-		      lvmgs.getLvmSortButton().click();
-	      // Select Exhibitor Sort By Relevance
-	      Select selectAMC = new Select(lvmgs.getlvmGlobalSearch_SearchSortByDropdwn());
-	      selectAMC.selectByVisibleText("Sort By Relevance");
-	      Thread.sleep(8000);
-	      // Verify All Exhibitor Titles
-	      System.out.println("Displayed All Relevance ");
-	      Thread.sleep(7000);
-	      //Location Filters
-	      ///Select filter Sort by Name Descending
-	      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-	       //Select filter Sort by Name Ascending
-	       utl.Sorting(lvmgs.getlvmExhNames(),lvmgs.getlvmGlobalSearch_SearchSortByDropdwn(),"Sort by Name Ascending");
-	       Thread.sleep(2000);
-	       utl.Sorting(lvmgs.getlvmExhNames(),lvmgs.getlvmGlobalSearch_SearchSortByDropdwn(),"Sort by Name Descending");
-	       Thread.sleep(5000);
-	       System.out.println("----Sort By Matching Product Count Ascending--");
-	     //Select filter Sort by Matching Product Count Ascending
-	       utl.Sorting(lvmgs.getlvmMachingProductCount(), lvmgs.getlvmGlobalSearch_SearchSortByDropdwn(),
-	               "Sort By Matching Product Count Ascending");
-	       System.out.println("----Sort By Matching Product Count Descending--");
-	      //Select filter Sort by Matching Product Count Descending
-	      utl.Sorting(lvmgs.getlvmMachingProductCount(), lvmgs.getlvmGlobalSearch_SearchSortByDropdwn(),
-	              "Sort By Matching Product Count Descending");
-	      driver.get(prop.getProperty("lvmurl_prod"));
-	  }
+		    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+
+		    utl.globleSearchInput((prop.getProperty("globalsearch_input")));
+		    // Click on Sort Btn
+		    lvmgs.getLvmSortButton().click();
+
+		    // Select Exhibitor Sort By Relevance
+		    Select selectAMC = new Select(lvmgs.getlvmGlobalSearch_SearchSortByDropdwn());
+		    selectAMC.selectByVisibleText("Sort By Relevance");
+		    Thread.sleep(8000);
+
+		    // Verify All Exhibitor Titles
+		    System.out.println("Displayed All Relevance ");
+		    Thread.sleep(7000);
+
+		    // Select "Sort by Name Ascending"
+		    selectAMC.selectByVisibleText("Sort by Name Ascending");
+
+		    // Wait for the sorted list to load
+		    Thread.sleep(10000); // Consider using WebDriverWait instead for stability
+
+		    // Fetch the updated exhibitor list
+		    List<WebElement> exhibitorElements = lvmgs.getlistOfAllExhibitorTitles();
+
+		    List<String> actualList = new ArrayList<>();
+		    for (WebElement el : exhibitorElements) {
+		        actualList.add(el.getText().trim());
+		    }
+
+		    // Create a sorted copy of the actual list
+		    List<String> sortedList = new ArrayList<>(actualList);
+		    Collections.sort(sortedList, String.CASE_INSENSITIVE_ORDER);
+
+		    // Print actual list
+		    System.out.println("Fetched Exhibitor List:");
+		    actualList.forEach(System.out::println);
+
+		    // Verify sorting
+		    boolean isSorted = true;
+		    for (int i = 0; i < actualList.size(); i++) {
+		        if (!actualList.get(i).equalsIgnoreCase(sortedList.get(i))) {
+		            System.out.println("\n❌ Sorting failed at index " + i);
+		            System.out.println("Expected: " + sortedList.get(i));
+		            System.out.println("Actual: " + actualList.get(i));
+		            isSorted = false;
+		            break;
+		        }
+		    }
+
+		    // Final Result
+		    if (isSorted) {
+		        System.out.println("\n✅ Exhibitors are correctly sorted in ascending order.");
+		    } else {
+		        System.out.println("\n❌ Exhibitors are NOT sorted in ascending order. Test case failed.");
+		        Assert.fail("Exhibitors are NOT sorted in ascending order."); // Assert fail if not sorted
+		    }
+		}
+	  @Test(priority = 4)
+	  public void TS003_VerifyGlobalSearchMatchingResultsSortSortByDscendingOrderTest() throws InterruptedException, IOException {
+		    // The purpose of this test case to verify:
+		    // T676: Global Search: Matching results - Sort By
+		    // Open bug - UXP-1991
+
+		    lvmgs = new LVMGlobalSearchPage(driver);
+		    lvmds = new LVMExhDigiShowroomPage(driver);
+		    lvmexhact = new LVMExhLineProdActionsPage(driver);
+		    utl = new Utility(driver);
+
+		    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+
+		    utl.globleSearchInput((prop.getProperty("globalsearch_input")));
+		    // Click on Sort Btn
+		    lvmgs.getLvmSortButton().click();
+
+		    // Select Exhibitor Sort By Relevance
+		    Select selectAMC = new Select(lvmgs.getlvmGlobalSearch_SearchSortByDropdwn());
+		    selectAMC.selectByVisibleText("Sort By Relevance");
+		    Thread.sleep(8000);
+
+		    // Verify All Exhibitor Titles
+		    System.out.println("Displayed All Relevance ");
+		    Thread.sleep(7000);
+
+		    // Select "Sort by Name Descending"
+		    selectAMC.selectByVisibleText("Sort by Name Descending");
+
+		    // Wait for the sorted list to load
+		    Thread.sleep(10000); // Prefer WebDriverWait for better practice
+
+		    // Fetch the updated exhibitor list
+		    List<WebElement> exhibitorElements = lvmgs.getlistOfAllExhibitorTitles();
+
+		    List<String> actualList = new ArrayList<>();
+		    for (WebElement el : exhibitorElements) {
+		        actualList.add(el.getText().trim());
+		    }
+
+		    // Create a sorted copy of the list and reverse it for descending order
+		    List<String> sortedList = new ArrayList<>(actualList);
+		    sortedList.sort(String.CASE_INSENSITIVE_ORDER);
+		    Collections.reverse(sortedList); // For descending
+
+		    // Print actual list
+		    System.out.println("Fetched Exhibitor List:");
+		    actualList.forEach(System.out::println);
+
+		    // Verify descending sort
+		    boolean isSorted = true;
+		    for (int i = 0; i < actualList.size(); i++) {
+		        if (!actualList.get(i).equalsIgnoreCase(sortedList.get(i))) {
+		            System.out.println("\n❌ Sorting failed at index " + i);
+		            System.out.println("Expected: " + sortedList.get(i));
+		            System.out.println("Actual: " + actualList.get(i));
+		            isSorted = false;
+		            break;
+		        }
+		    }
+
+		    // Final Result
+		    if (isSorted) {
+		        System.out.println("\n✅ Exhibitors are correctly sorted in descending order.");
+		    } else {
+		        System.out.println("\n❌ Exhibitors are NOT sorted in descending order. Test case failed.");
+		        Assert.fail("Exhibitors are NOT sorted in descending order."); // Assert fail if not sorted
+		    }
+		}
 	  
 	  @Test(priority = 4)
+	  public void TS003_VerifyGlobalSearchMatchingResultsSortSortByMatchingProductCountDescendingTest() throws InterruptedException, IOException {
+		    // The purpose of this test case is to verify:
+		    // T676: Global Search: Matching results - Sort by Matching Product Count Descending
+
+		    lvmgs = new LVMGlobalSearchPage(driver);
+		    lvmds = new LVMExhDigiShowroomPage(driver);
+		    lvmexhact = new LVMExhLineProdActionsPage(driver);
+		    utl = new Utility(driver);
+
+		    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+
+		    // Step 1: Perform global search
+		    utl.globleSearchInput((prop.getProperty("globalsearch_input")));
+
+		    // Step 2: Click Sort Button
+		    lvmgs.getLvmSortButton().click();
+
+		    // Step 3: Select "Sort By Matching Product Count Descending"
+		    Select selectAMC = new Select(lvmgs.getlvmGlobalSearch_SearchSortByDropdwn());
+		    selectAMC.selectByVisibleText("Sort By Matching Product Count Descending");
+
+		    // Step 4: Wait for sorted list to load
+		    Thread.sleep(10000);
+
+		    // Step 5: Get updated exhibitor product count elements
+		    List<WebElement> exhibitorElements = lvmgs.getlistOfAllMatchingProducts();
+
+		    List<Integer> actualList = new ArrayList<>();
+		    for (WebElement el : exhibitorElements) {
+		        try {
+		            // Extract the number from string (e.g., "23 Products" -> 23)
+		            String text = el.getText().trim().replaceAll("[^0-9]", "");
+		            if (!text.isEmpty()) {
+		                actualList.add(Integer.parseInt(text));
+		            }
+		        } catch (NumberFormatException e) {
+		            System.out.println("Skipping invalid number format: " + el.getText());
+		        }
+		    }
+
+		    // Step 6: Create a sorted (descending) copy
+		    List<Integer> sortedList = new ArrayList<>(actualList);
+		    sortedList.sort(Collections.reverseOrder());
+
+		    // Print actual list
+		    System.out.println("Fetched Matching Product Counts:");
+		    actualList.forEach(System.out::println);
+
+		    // Step 7: Assert that actual list is sorted in descending order
+		    Assert.assertEquals(actualList, sortedList, 
+		        "\n❌ Matching Product Counts are NOT sorted in descending order. Test case failed.\n");
+
+		    System.out.println("\n✅ Matching Product Counts are correctly sorted in descending order.");
+		}
+
+	  @Test(priority = 5)
+	  public void TS003_VerifyGlobalSearchMatchingResultsSortSortByMatchingProductCountAscendingTest() throws InterruptedException, IOException {
+		    // The purpose of this test case is to verify:
+		    // T676: Global Search: Matching results - Sort by Matching Product Count Ascending
+
+		    lvmgs = new LVMGlobalSearchPage(driver);
+		    lvmds = new LVMExhDigiShowroomPage(driver);
+		    lvmexhact = new LVMExhLineProdActionsPage(driver);
+		    utl = new Utility(driver);
+
+		    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+
+		    // Step 1: Perform a global search
+		    utl.globleSearchInput((prop.getProperty("globalsearch_input")));
+
+		    // Step 2: Click Sort Button
+		    lvmgs.getLvmSortButton().click();
+
+		    // Step 3: Select Sort By Relevance (optional, can be skipped)
+		    Select selectAMC = new Select(lvmgs.getlvmGlobalSearch_SearchSortByDropdwn());
+		    selectAMC.selectByVisibleText("Sort By Relevance");
+		    Thread.sleep(8000);
+
+		    System.out.println("Displayed All Relevance ");
+		    Thread.sleep(7000);
+
+		    // Step 4: Select "Sort By Matching Product Count Ascending"
+		    selectAMC.selectByVisibleText("Sort By Matching Product Count Ascending");
+
+		    // Step 5: Wait for the sorted results to load
+		    Thread.sleep(10000);
+
+		    // Step 6: Fetch the updated list of matching product counts
+		    List<WebElement> exhibitorElements = lvmgs.getlistOfAllMatchingProducts();
+
+		    List<Integer> actualList = new ArrayList<>();
+		    for (WebElement el : exhibitorElements) {
+		        try {
+		            // Extract number from string (e.g., "12 Products" -> 12)
+		            String text = el.getText().trim().replaceAll("[^0-9]", "");
+		            if (!text.isEmpty()) {
+		                actualList.add(Integer.parseInt(text));
+		            }
+		        } catch (NumberFormatException e) {
+		            System.out.println("Skipping invalid number format: " + el.getText());
+		        }
+		    }
+
+		    // Step 7: Sort the list for comparison
+		    List<Integer> sortedList = new ArrayList<>(actualList);
+		    Collections.sort(sortedList); // Ascending
+
+		    // Print actual list
+		    System.out.println("Fetched Matching Product Counts:");
+		    actualList.forEach(System.out::println);
+
+		    // Step 8: Compare
+		    boolean isSorted = true;
+		    for (int i = 0; i < actualList.size(); i++) {
+		        if (!actualList.get(i).equals(sortedList.get(i))) {
+		            System.out.println("\n❌ Sorting failed at index " + i);
+		            System.out.println("Expected: " + sortedList.get(i));
+		            System.out.println("Actual: " + actualList.get(i));
+		            isSorted = false;
+		            break;
+		        }
+		    }
+
+		    // Step 9: Final Result
+		    if (isSorted) {
+		        System.out.println("\n✅ Matching Product Counts are correctly sorted in ascending order.");
+		    } else {
+		        System.out.println("\n❌ Matching Product Counts are NOT sorted in ascending order. Test case failed.");
+		        Assert.fail("Matching Product Counts are NOT sorted in ascending order."); // Assert fail if not sorted
+		    }
+		}
+
+	  
+	  @Test(priority = 6)
 	  public void TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest() throws InterruptedException, IOException {
 	      // The purpose of this test case to verify:-
 	      // T677: Global Search: Matching results- Sort- Filter By Name
