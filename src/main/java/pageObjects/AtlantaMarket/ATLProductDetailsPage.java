@@ -42,146 +42,121 @@ public class ATLProductDetailsPage {
 	By prodfullscreenviewertitle = By.xpath("//div[@class='imc-modal--gallery--section']/h2"); //Locator for Product Full Screen Viewer title
 	
 
-	
-	public ATLProductDetailsPage(WebDriver driver) {
-		// TODO Auto-generated constructor stub
-		this.driver = driver; 			
-	} 
 
-	public WebElement getATLValidateProdDetailsPage() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlvalidateproddetailspage));
-		return driver.findElement(atlvalidateproddetailspage);
-	}
-	
-	
-	public WebElement getProductNameOnProductDetails() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(productnameonproddetails));
-		return driver.findElement(productnameonproddetails);
-	}
-	
-	public WebElement getAddToList() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(addToList));
-		return driver.findElement(addToList);
-	}
-	
-	public WebElement getListName() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(listName));
-		return driver.findElement(listName);
-	}
-	
-	public WebElement getGoToMPBtn() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(goToMPBtn));
-		return driver.findElement(goToMPBtn);
-	}
-	
-	public WebElement getList() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(list));
-		return driver.findElement(list);
-	}
-	
-	public WebElement getListLeftPanel() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(listLeftPanel));
-		return driver.findElement(listLeftPanel);
-	}
-	public WebElement getnewListName() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(newListName));
-		return driver.findElement(newListName);
-	}
-	
-	public WebElement getAllListNames() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(allListNames));
-		return driver.findElement(allListNames);
-	}
-	public WebElement getAddToSelectedBtn() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(addToSelectedBtn));
-		return driver.findElement(addToSelectedBtn);
-	}
-	public WebElement getProductNameFromList() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(productNameFromList));
-		return driver.findElement(productNameFromList);
-	}
-	public WebElement getProductAddToFavIcon() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(productaddtofavicon));
-		return driver.findElement(productaddtofavicon);
-	}
+    public ATLProductDetailsPage(WebDriver driver) {
+        this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+    }
 
-	public WebElement getProductAddNoteIcon() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(productAddNote));
-		return driver.findElement(productAddNote);
-	}
-	public WebElement getAddNotePopup() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(addNotePopup));
-		return driver.findElement(addNotePopup);
-	}
-	public WebElement getAddNoteTitleTextbox() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(addNoteTitleTextbox));
-		return driver.findElement(addNoteTitleTextbox);
-	}
-	public WebElement getAddNoteContainsTextArea() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(addNoteContainsTextArea));
-		return driver.findElement(addNoteContainsTextArea);
-	}
-	public WebElement getAddNoteSaveBtn() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		//wait.until(ExpectedConditions.visibilityOfElementLocated(addNoteSaveBtn));
-		wait.until(ExpectedConditions.elementToBeClickable(addNoteSaveBtn));
-		return driver.findElement(addNoteSaveBtn);
-	}
-	public WebElement getViewAllNotes() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(viewAllNotes));
-		return driver.findElement(viewAllNotes);
-	}
-	public WebElement getViewAllNotesPopupHeader() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(viewAllNotesPopupHeader));
-		return driver.findElement(viewAllNotesPopupHeader);
-	}
-	
-	public List <WebElement> getAllNotesList() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(allNotesList));
-		return driver.findElements(allNotesList);
-	}
-	public WebElement getVerifyNoteTitle() {
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-			wait.until(ExpectedConditions.visibilityOfElementLocated(verifyNoteTitle));
-			return driver.findElement(verifyNoteTitle);
-		}
+    // Generic element getter with smart waiting
+    private WebElement getElement(By locator) {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
 
-	public WebElement getProductFullScreenViewerBtn() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(productfullscreenviewerbtn));
-		return driver.findElement(productfullscreenviewerbtn);
-	}
-	public WebElement getProductFullScreenViewer() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(productfullscreenviewer));
-		return driver.findElement(productfullscreenviewer);
-	}
-	public WebElement getProductFullScreenViewerTitle() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(prodfullscreenviewertitle));
-		return driver.findElement(prodfullscreenviewertitle);
-	}
+    // Generic elements getter (for lists)
+    private List<WebElement> getElements(By locator) {
+        return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
+    }
 
+    // Page-specific methods
+    public WebElement getATLValidateProdDetailsPage() {
+        return getElement(atlvalidateproddetailspage);
+    }
+
+    public WebElement getProductNameOnProductDetails() {
+        return getElement(productnameonproddetails);
+    }
+
+    public WebElement getAddToList() {
+        return getElement(addToList);
+    }
+
+    public WebElement getListName() {
+        return getElement(listName);
+    }
+
+    public WebElement getGoToMPBtn() {
+        return getElement(goToMPBtn);
+    }
+
+    public WebElement getList() {
+        return getElement(list);
+    }
+
+    public WebElement getListLeftPanel() {
+        return getElement(listLeftPanel);
+    }
+
+    public WebElement getnewListName() {
+        return getElement(newListName);
+    }
+
+    public WebElement getAllListNames() {
+        return getElement(allListNames);
+    }
+
+    public WebElement getAddToSelectedBtn() {
+        return getElement(addToSelectedBtn);
+    }
+
+    public WebElement getProductNameFromList() {
+        return getElement(productNameFromList);
+    }
+
+    public WebElement getProductAddToFavIcon() {
+        return getElement(productaddtofavicon);
+    }
+
+    public WebElement getProductAddNoteIcon() {
+        return getElement(productAddNote);
+    }
+
+    public WebElement getAddNotePopup() {
+        return getElement(addNotePopup);
+    }
+
+    public WebElement getAddNoteTitleTextbox() {
+        return getElement(addNoteTitleTextbox);
+    }
+
+    public WebElement getAddNoteContainsTextArea() {
+        return getElement(addNoteContainsTextArea);
+    }
+
+    public WebElement getAddNoteSaveBtn() {
+        return wait.until(ExpectedConditions.elementToBeClickable(addNoteSaveBtn));
+    }
+
+    public WebElement getViewAllNotes() {
+        return getElement(viewAllNotes);
+    }
+
+    public WebElement getViewAllNotesPopupHeader() {
+        return getElement(viewAllNotesPopupHeader);
+    }
+
+    public List<WebElement> getAllNotesList() {
+        return getElements(allNotesList);
+    }
+
+    public WebElement getVerifyNoteTitle() {
+        return getElement(verifyNoteTitle);
+    }
+
+    public WebElement getProductFullScreenViewerBtn() {
+        return getElement(productfullscreenviewerbtn);
+    }
+
+    public WebElement getProductFullScreenViewer() {
+        return getElement(productfullscreenviewer);
+    }
+
+    public WebElement getProductFullScreenViewerTitle() {
+        return getElement(prodfullscreenviewertitle);
+    }
 }
+
+
 
 
 

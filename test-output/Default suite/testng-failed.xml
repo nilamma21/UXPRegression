@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="lasvegasmarket_PROD.EvenntsAndWebinar">
+      <class name="lasvegasmarket_PROD.FloorPlans">
         <methods>
-          <include name="TS0011_VerifyMarketEventDateRangeSearchBoxTest"/>
-          <include name="TS0013_VerifyEventCalendarResetButtonTest"/>
-          <include name="TS003_VerifyMarketEventsSearchbarTest"/>
           <include name="tearDown"/>
           <include name="initialize"/>
+          <include name="TS003_VerifyZoomInOutLevelOnFloorPlansPageTest"/>
         </methods>
-      </class> <!-- lasvegasmarket_PROD.EvenntsAndWebinar -->
+      </class> <!-- lasvegasmarket_PROD.FloorPlans -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
