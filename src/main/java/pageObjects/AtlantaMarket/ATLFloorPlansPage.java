@@ -1,6 +1,7 @@
 package pageObjects.AtlantaMarket;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -77,309 +78,199 @@ public class ATLFloorPlansPage {
 	By atlBuildingFloornew = By.xpath("//div[@class='imc-campus-view']/div[3]/div[10]/div[3]/a[1]"); //Locator for Building floor
 	
 	public ATLFloorPlansPage(WebDriver driver) {
-		// TODO Auto-generated constructor stub
-		this.driver = driver; 			
-	} 
+		this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+    }
+	 // Generic element getter with smart waiting
+    private WebElement getElement(By locator) {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+
+    // Generic elements getter (for lists)
+    private List<WebElement> getElements(By locator) {
+        return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
+    }
 	public WebElement getatlExhibitorNamePROD() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlExhibitorNamePROD));
-		return driver.findElement(atlExhibitorNamePROD);
+		 return getElement(atlExhibitorNamePROD);
 	}
 	public WebElement getatlLoadingNoExhiMsg() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlLoadingNoExhiMsg));
-		return driver.findElement(atlLoadingNoExhiMsg);
+		 return getElement(atlLoadingNoExhiMsg);
 	}
 	public WebElement getATLExhibitorsAndProductTab() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlExhibitorsAndProductTab));
-		return driver.findElement(atlExhibitorsAndProductTab);
+		 return getElement(atlExhibitorsAndProductTab);
 	}
 
 	public WebElement getATLFloorPlansLink() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.elementToBeClickable(atlFloorPlansLink));
-		return driver.findElement(atlFloorPlansLink);
+		 return getElement(atlFloorPlansLink);
 	}
 	public WebElement getATLBuildingFloor() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.elementToBeClickable(atlBuildingFloor));
-		return driver.findElement(atlBuildingFloor);
+		 return getElement(atlBuildingFloor);
 	}
 	public WebElement getATLBuilding1Floor3() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.elementToBeClickable(atlBuilding1Floor3));
-		return driver.findElement(atlBuilding1Floor3);
+		 return getElement(atlBuilding1Floor3);
 	}
 	public WebElement getATLBuildingFloorNumber() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.elementToBeClickable(atlBuildingFloorNumber));
-		return driver.findElement(atlBuildingFloorNumber);
+		 return getElement(atlBuildingFloorNumber);
 	}
 	public WebElement getATLFloorName() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlFloorName));
-		return driver.findElement(atlFloorName);
+		 return getElement(atlFloorName);
 	}
 	public WebElement getATLNoExpMsg() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlnoexhibitorsmsg));
-		return driver.findElement(atlnoexhibitorsmsg);
+		 return getElement(atlnoexhibitorsmsg);
 	}
 	public WebElement getATLNoExhibitorFloor() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlNoExhibitorFloor));
-		return driver.findElement(atlNoExhibitorFloor);
+		 return getElement(atlNoExhibitorFloor);
 	}
 
 	public WebElement getATLExhibitorFloorZoomIn() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlExhibitorFloorZoomIn));
-		return driver.findElement(atlExhibitorFloorZoomIn);
+		 return getElement(atlExhibitorFloorZoomIn);
 	}
 	public WebElement getATLExhibitorFloorZoomOut() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlExhibitorFloorZoomOut));
-		return driver.findElement(atlExhibitorFloorZoomOut);
+		 return getElement(atlExhibitorFloorZoomOut);
 	}
 	public WebElement getATLFloorPlanMapIamge() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlfloorplanmapimage));
-		return driver.findElement(atlfloorplanmapimage);
+		 return getElement(atlfloorplanmapimage);
 	}
 
 	public WebElement getATLSelectBox() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitedonfloormsg));
-		return driver.findElement(atlSelectBox);
+		 return getElement(atlSelectBox);
 	}
 
 	public WebElement getATLLoadingExhMsg() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlloadingexhmsg));
-		return driver.findElement(atlloadingexhmsg);
+		 return getElement(atlloadingexhmsg);
 	}
 	public WebElement getVendingMachineIconOnMap() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(vendingmchineicononmap));
-		return driver.findElement(vendingmchineicononmap);
+		 return getElement(vendingmchineicononmap);
 	}
 	public WebElement getVendingMachineOverlayOnMap() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(vendingmachineoverlay));
-		return driver.findElement(vendingmachineoverlay);
+		 return getElement(vendingmachineoverlay);
 	}
 	public WebElement getElevatorIconOnMap() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.elementToBeClickable(elevatoricononmap));
-		return driver.findElement(elevatoricononmap);
+		 return getElement(elevatoricononmap);
 	}
 	public WebElement getElevatorOverlayOnMap() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(elevatoroverlay));
-		return driver.findElement(elevatoroverlay);
+		 return getElement(elevatoroverlay);
 	}
 	public WebElement getWaterFountainIconOnMap() throws InterruptedException {
-		//Thread.sleep(4000);
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.elementToBeClickable(waterfountainicononmap));
-		return driver.findElement(waterfountainicononmap);
+		 return getElement(waterfountainicononmap);
 	}
 	public WebElement getWaterFountainOverlayOnMap() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(waterfountainoverlay));
-		return driver.findElement(waterfountainoverlay);
+		 return getElement(waterfountainoverlay);
 	}
 	public WebElement getPhoneIconOnMap() throws InterruptedException{
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.elementToBeClickable(phoneicononmap));
-		return driver.findElement(phoneicononmap);
+		 return getElement(phoneicononmap);
 	}
 	public WebElement getPhoneOverlayOnMap() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(phoneoverlay));
-		return driver.findElement(phoneoverlay);
+		 return getElement(phoneoverlay);
 	}
 	public WebElement getLocationPinIconOnMap() throws InterruptedException{
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.elementToBeClickable(locationpinicononmap));
-		return driver.findElement(locationpinicononmap);
+		 return getElement(locationpinicononmap);
 	}
 	public WebElement getExhibitorDetailsModal() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitordetailsmodal));
-		return driver.findElement(exhibitordetailsmodal);
+		 return getElement(exhibitordetailsmodal);
 	}
 	public WebElement getExhNameOnExhibitorDetailsModal() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(exhnameonexhdetailsmodal));
-		return driver.findElement(exhnameonexhdetailsmodal);
+		 return getElement(exhnameonexhdetailsmodal);
 	}
 	public WebElement getOverlayCloseBtn() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(overlayclosebtn));
-		return driver.findElement(overlayclosebtn);
+		 return getElement(overlayclosebtn);
 	}
 
 
 	public WebElement getATLNextFloorBtn() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlNextFloorBtn));
-		return driver.findElement(atlNextFloorBtn);
+		 return getElement(atlNextFloorBtn);
 	}
 	public WebElement getATLPreviousFloorBtn() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlPreviousFloorBtn));
-		return driver.findElement(atlPreviousFloorBtn);
+		 return getElement(atlPreviousFloorBtn);
 	}
 	public WebElement getATLExpectedFloorNumber() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlExpectedFloorNumber));
-		return driver.findElement(atlExpectedFloorNumber);
+		 return getElement(atlExpectedFloorNumber);
 	}
 
 	public WebElement getATLExhibitorName() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlExhibitorName));
-		return driver.findElement(atlExhibitorName);
+		 return getElement(atlExhibitorName);
 	}
 	public WebElement getATLExhibitorNameOnDGShowroomPage() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlExhibitorNameOnDGShowroomPage));
-		return driver.findElement(atlExhibitorNameOnDGShowroomPage);
+		return getElement(atlExhibitorNameOnDGShowroomPage);
 	}
 	public WebElement getATLReturnToBuildingList() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlReturnToBuildingList));
-		return driver.findElement(atlReturnToBuildingList);
+		return getElement(atlReturnToBuildingList);
 	}
 	public WebElement getatlexhibitorsection() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlexhibitorsection));
-		return driver.findElement(atlexhibitorsection);
+		return getElement(atlexhibitorsection);
 	}
 	public WebElement getatlexhibitorsearch() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitedonfloormsg));
-		return driver.findElement(atlexhibitorsearch);
+		return getElement(atlexhibitorsearch);
 	}
 	public WebElement getatlserachexhibitorbtn() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlserachexhibitorbtn));
-		return driver.findElement(atlserachexhibitorbtn);
+		return getElement(atlserachexhibitorbtn);
 	}
 	public WebElement getverifyexhibitor() throws InterruptedException {
-		Thread.sleep(8000);
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(verifyexhibitor));
-		return driver.findElement(verifyexhibitor);
+		return getElement(verifyexhibitor);
 	}
 	public WebElement getscrollexhibitorsection() throws InterruptedException {
-		Thread.sleep(10000);
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.elementToBeClickable(scrollexhibitorsection));
-		return driver.findElement(scrollexhibitorsection);
+		return getElement(scrollexhibitorsection);
 	}
 	public WebElement getViewDGShowroombtn() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.elementToBeClickable(viewdgshowroombtn));
-		return driver.findElement(viewdgshowroombtn);
+		return getElement(viewdgshowroombtn);
 	}
 	public WebElement getATLMoreOptions() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.elementToBeClickable(atlMoreOptions));
-		return driver.findElement(atlMoreOptions);
+		return getElement(atlMoreOptions);
 	}
 	public WebElement getATLAddToList() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.elementToBeClickable(atlAddToList));
-		return driver.findElement(atlAddToList);
+		return getElement(atlAddToList);
 	}
 	public WebElement getATLAddNote() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlAddNote));
-		return driver.findElement(atlAddNote);
+		return getElement(atlAddNote);
 	}
 	public WebElement getATLBuildingFloorForFilter() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlBuildingFloorForFilter));
-		return driver.findElement(atlBuildingFloorForFilter);
+		return getElement(atlBuildingFloorForFilter);
 	}
 
 	public WebElement getATLAddFev() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlAddFev));
-		return driver.findElement(atlAddFev);
+		return getElement(atlAddFev);
 	}
 	public WebElement getATLExhSearchField() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlExhSearchField));
-		return driver.findElement(atlExhSearchField);
+		return getElement(atlExhSearchField);
 	}
 	public WebElement getATLExhSearchFieldBtn() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlExhSearchFieldBtn));
-		return driver.findElement(atlExhSearchFieldBtn);
+		return getElement(atlExhSearchFieldBtn);
 	}
 	public WebElement getNoResultsMsgForLinesOnJuniper() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(noresultsforjuniperlinesmsg));
-		return driver.findElement(noresultsforjuniperlinesmsg);
+		return getElement(noresultsforjuniperlinesmsg);
 	}
 	public WebElement getlvmNoExhibitorFloor_uat() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmNoExhibitorFloor_uat));
-		return driver.findElement(lvmNoExhibitorFloor_uat);
+		return getElement(lvmNoExhibitorFloor_uat);
 	}
 	public WebElement getlvmflooricononmap_uat() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmflooricononmap_uat));
-		return driver.findElement(lvmflooricononmap_uat);
+		return getElement(lvmflooricononmap_uat);
 	}
 	public WebElement getbuildingFloor_lvmUAT() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(buildingFloor_lvmUAT));
-		return driver.findElement(buildingFloor_lvmUAT);
+		return getElement(buildingFloor_lvmUAT);
 	}
 	public WebElement getlvmflooricononmap_lvmUAT() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmflooricononmap_lvmUAT));
-		return driver.findElement(lvmflooricononmap_lvmUAT);
+		return getElement(lvmflooricononmap_lvmUAT);
 	}
 	public WebElement getlvmflooriconoverlay_lvmUAT() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(lvmflooriconoverlay_lvmUAT));
-		return driver.findElement(lvmflooriconoverlay_lvmUAT);
+		return getElement(lvmflooriconoverlay_lvmUAT);
 	}
 	public WebElement getExhibitedOnFloorMsg() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(exhibitedonfloormsg));
-		return driver.findElement(exhibitedonfloormsg);
+		return getElement(exhibitedonfloormsg);
 	}
 	public WebElement getLVMBuildingFloor() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.elementToBeClickable(lvmBuildingFloor));
-		return driver.findElement(lvmBuildingFloor);
+		return getElement(lvmBuildingFloor);
 	}
 	public WebElement getLVMBuildingFloorsix() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.elementToBeClickable(lvmBuildingFloorsix));
-		return driver.findElement(lvmBuildingFloorsix);
+		return getElement(lvmBuildingFloorsix);
 	}
 	public WebElement getATLBuildingFloorNew() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.elementToBeClickable(atlBuildingFloornew));
-		return driver.findElement(atlBuildingFloornew);
+		return getElement(atlBuildingFloornew);
 	}
 	public WebElement getResultsMsgForLinesOnJuniper() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(resultsforjuniperlinesmsg));
-		return driver.findElement(resultsforjuniperlinesmsg);
+		return getElement(resultsforjuniperlinesmsg);
 	}
 	public WebElement getatlNoExhibitorFloorATL() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(atlNoExhibitorFloorATL));
-		return driver.findElement(atlNoExhibitorFloorATL);
+		return getElement(atlNoExhibitorFloorATL);
 	}
 }
 

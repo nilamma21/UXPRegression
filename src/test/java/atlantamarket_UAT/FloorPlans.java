@@ -81,7 +81,7 @@ public class FloorPlans extends base {
 
 		// Click on Login button from Landing Page
 		lap.getLogin().click();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		
 		// Enter the credentials on Login Page and click
 		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
 

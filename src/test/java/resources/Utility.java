@@ -10,21 +10,15 @@ import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
-
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-//import atlantamarket_UAT.MarketPlanner;
 import pageObjects.AtlantaMarket.ATLEventsAndWebinarPage;
 import pageObjects.AtlantaMarket.ATLExhDigiShowroomPage;
 import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
@@ -114,7 +108,7 @@ public class Utility extends base {
 				+ "var elementTop = arguments[0].getBoundingClientRect().top;"
 				+ "window.scrollBy(0, elementTop-(viewPortHeight/2));";
 		((JavascriptExecutor) driver).executeScript(scrollElementIntoMiddle, element);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(200);
 	}
 
@@ -128,7 +122,7 @@ public class Utility extends base {
 
 		// Click on Login button from Landing Page
 		lap.getLogin().click();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		// Enter the credentials on Login Page and click
 		lp.getEmailAddress().sendKeys((prop.getProperty("username")));
@@ -153,7 +147,7 @@ public class Utility extends base {
 		} catch (Exception e) {
 			// TODO: handle exception
 
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			// Enter the credentials on Login Page and click
 			lp.getEmailAddress().sendKeys((prop.getProperty("username")));
 
@@ -614,7 +608,7 @@ public class Utility extends base {
 		lp = new ATLLoginPage(driver);
 		atlmppge = new ATLMarketPlannerPage(driver);
 		atlgs = new ATLGlobalSearchPage(driver);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		if (!atlgs.getATLGlobalSearchTextBox().getAttribute("value").isEmpty()) {
 			Thread.sleep(1000);
@@ -648,8 +642,9 @@ public class Utility extends base {
 		// Click on Show Specials
 		lvmgs.getEventsLink().click();
 		Thread.sleep(5000);
-		
+
 	}
+
 	public void clickOnEventLinkOfChannel_Old() throws InterruptedException {
 
 		lap = new ATLLandingPage(driver);
@@ -659,7 +654,7 @@ public class Utility extends base {
 
 		if (driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_prod"))
 				|| driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_uat"))) {
-			
+
 			// Click on Attend Tab
 			Thread.sleep(2000);
 			atlevents.getatlAttendTab().click();
@@ -668,7 +663,7 @@ public class Utility extends base {
 			atlevents.getatlEventsLink().click();
 			Thread.sleep(5000);
 		} else {
-			
+
 			Thread.sleep(2000);
 			atlevents.getatlExploreMarketTab().click(); // For LVM Events
 			Thread.sleep(2000);
@@ -688,7 +683,7 @@ public class Utility extends base {
 		lvmevents = new LVMEventsAndWebinarPage(driver);
 
 		if (driver.getCurrentUrl().contains(prop.getProperty("lvmurl_prod"))) {
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			// Click on Attend Tab
 			Thread.sleep(3000);
 			lvmevents.getlvmExploreMarketTab().click();
@@ -697,7 +692,7 @@ public class Utility extends base {
 			lvmevents.getlvmEventsLink().click();
 			Thread.sleep(1000);
 		} else {
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			Thread.sleep(1000);
 			lvmevents.getlvmAttendTab().click(); // For LVM Events
 			Thread.sleep(3000);
@@ -722,7 +717,7 @@ public class Utility extends base {
 		lvmevents = new LVMEventsAndWebinarPage(driver);
 
 		if (driver.getCurrentUrl().contains(prop.getProperty("lvmurl_uat"))) {
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			// Click on Attend Tab
 			Thread.sleep(2000);
 			lvmevents.getlvmExploreMarketTab().click();
@@ -734,7 +729,7 @@ public class Utility extends base {
 			atlevents = new ATLEventsAndWebinarPage(driver);
 
 			if (driver.getCurrentUrl().contains(prop.getProperty("atlmrkturl_uat"))) {
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 				// Click on Attend Tab
 				atlevents.getatlAttendTab().click();
 				Thread.sleep(2000);
@@ -743,7 +738,7 @@ public class Utility extends base {
 
 				Thread.sleep(3000);
 			} else {
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 				lvmevents.getlvmAttendTab().click(); // For LVM Events
 				Thread.sleep(2000);
@@ -1166,10 +1161,11 @@ public class Utility extends base {
 		String currentURL = driver.getCurrentUrl();
 		String expectedURL = "https://www.atlantamarket.com/";
 		if (currentURL.equals(expectedURL)) {
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+
 		} else {
 			driver.get(prop.getProperty("atlmrkturl_prod"));
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		}
 	}
 
@@ -1177,10 +1173,10 @@ public class Utility extends base {
 		String currentURL = driver.getCurrentUrl();
 		String expectedURL = "https://www.lasvegasmarket.com/";
 		if (currentURL.equals(expectedURL)) {
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		} else {
 			driver.get(prop.getProperty("lvmurl_prod"));
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		}
 	}
 
@@ -1195,7 +1191,7 @@ public class Utility extends base {
 		lvmevents = new LVMEventsAndWebinarPage(driver);
 
 		if (driver.getCurrentUrl().contains(prop.getProperty("lvmurl_prod"))) {
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			// Click on Attend Tab
 			Thread.sleep(2000);
 			lvmevents.getlvmExploreMarketTab().click();
@@ -1203,7 +1199,7 @@ public class Utility extends base {
 			// click on Events Link
 			lvmevents.getlvmEventsLink().click();
 		} else {
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			lvmevents.getlvmAttendTab().click(); // For LVM Events
 			Thread.sleep(2000);
 			// click on Events Link
@@ -1432,11 +1428,11 @@ public class Utility extends base {
 		for (WebElement webElement : exhibitors) {
 			exhName = webElement.getText();
 			System.out.println(exhName);
-			//scrollIntoView(webElement);
+			// scrollIntoView(webElement);
 			Thread.sleep(5000);
-			Actions ac=new Actions(driver);
+			Actions ac = new Actions(driver);
 			ac.moveToElement(webElement).click().perform();
-			//webElement.click();
+			// webElement.click();
 			break;
 		}
 
@@ -1445,36 +1441,33 @@ public class Utility extends base {
 
 	}
 
-	
-	    private String exhName; // Declare as an instance variable
+	private String exhName; // Declare as an instance variable
 
-	    public void commonMethodForExhibotrDGShowroomm(String globalsearch_input) throws InterruptedException {
-	        lvmgs = new LVMGlobalSearchPage(driver);
-	        lvmds = new LVMExhDigiShowroomPage(driver);
-	        lvmdigish = new LVMLineDigitalShowroomPage(driver);
+	public void commonMethodForExhibotrDGShowroomm(String globalsearch_input) throws InterruptedException {
+		lvmgs = new LVMGlobalSearchPage(driver);
+		lvmds = new LVMExhDigiShowroomPage(driver);
+		lvmdigish = new LVMLineDigitalShowroomPage(driver);
 
-	        Thread.sleep(8000);
-	        lvmgs.getGlobalSearchTextBoxNew().click(); 
-	        lvmgs.getGlobalSearchEnterText().sendKeys(globalsearch_input); 
-	        lvmgs.getSearchButtonNew().click();
-	        Thread.sleep(8000);
-	        
-	        List<WebElement> exhibitors = lvmds.getlistOfAllExhibitors();
-	        
-	        for (WebElement webElement : exhibitors) {
-	            exhName = webElement.getText();  // Assign exhibitor name
-	            System.out.println(exhName);
-	            webElement.click();
-	            break;
-	        }
-	    }
+		Thread.sleep(8000);
+		lvmgs.getGlobalSearchTextBoxNew().click();
+		lvmgs.getGlobalSearchEnterText().sendKeys(globalsearch_input);
+		lvmgs.getSearchButtonNew().click();
+		Thread.sleep(8000);
 
-	    // Getter method to access exhName in other classes
-	    public String getExhName() {
-	        return exhName;
-	    }
-	
+		List<WebElement> exhibitors = lvmds.getlistOfAllExhibitors();
 
+		for (WebElement webElement : exhibitors) {
+			exhName = webElement.getText(); // Assign exhibitor name
+			System.out.println(exhName);
+			webElement.click();
+			break;
+		}
+	}
+
+	// Getter method to access exhName in other classes
+	public String getExhName() {
+		return exhName;
+	}
 
 	public void verifyProductCategorySelection(String searchInput, WebElement productCategoryElement)
 			throws InterruptedException {
