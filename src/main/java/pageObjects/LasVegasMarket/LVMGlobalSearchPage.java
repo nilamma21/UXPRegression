@@ -357,6 +357,7 @@ public class LVMGlobalSearchPage {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.elementToBeClickable(GlobalSearchEnterText));
 		return driver.findElement(GlobalSearchEnterText);
+		
 
 	}
 
