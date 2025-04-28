@@ -84,11 +84,18 @@ public class ATLEventsAndWebinarPage {
 	By EventDetailLocation = By.xpath("//a[@class='imc-link imc-eventdetail--time imc-link--hover-underline']/span");
 	By EventDetailEventTitle = By.xpath("//h1[@class='imc-content--giga imc-content--bold']");
 	By EventTypeDropwdown = By.xpath("//select[@id='dropdown-sort-search']");
+	By AllEventText = By.xpath("//select[@id='dropdown-sort-search']");
 	
 	
 	public ATLEventsAndWebinarPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
+	}
+	public WebElement getAllEventText() {
+		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(AllEventText));
+		return driver.findElement(AllEventText);
+		
 	}
 	public WebElement getEventTypeDropwdown() {
 		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));

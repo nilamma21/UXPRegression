@@ -114,7 +114,7 @@ public class EvenntsAndWebinar extends base {
 		Assert.assertTrue(atlevents.getatlExhibitorsEventsTab().getText().equals("Exhibitor Events"));
 		System.out.println("Exhibitor Event Tab is Present");
 
-		utl.scrollElementIntoMiddle(atlevents.getAllEventsTab());
+		utl.scrollElementIntoMiddle(atlevents.getAllEventText());
 		// Click on All EVents
 		atlevents.getAllEventsTab().click();
 
@@ -187,7 +187,7 @@ public class EvenntsAndWebinar extends base {
 		utl.clickOnEventLinkOfChannel();
 
 		// Click on All Events Event Tab
-		utl.scrollElementIntoMiddle(atlevents.getatlExhibitorsEventsTab());
+		utl.scrollElementIntoMiddle(atlevents.getAllEventText());
 
 		atlevents.getAllEventsTab().click();
 		Thread.sleep(3000);
@@ -215,7 +215,7 @@ public class EvenntsAndWebinar extends base {
 		Thread.sleep(5000);
 		utl.clickOnEventLinkOfChannel();
 		// Click on Exh Event Tab
-		utl.scrollElementIntoMiddle(atlevents.getatlExhibitorsEventsTab());
+		utl.scrollElementIntoMiddle(atlevents.getAllEventText());
 
 		atlevents.getatlExploreMarketTab().click();
 		Thread.sleep(3000);
@@ -245,7 +245,7 @@ public class EvenntsAndWebinar extends base {
 		utl.clickOnEventLinkOfChannel();
 
 		// Click on Exh Event Tab
-		utl.scrollElementIntoMiddle(atlevents.getatlExhibitorsEventsTab());
+		utl.scrollElementIntoMiddle(atlevents.getAllEventText());
 
 		atlevents.getatlExhibitorsEventsTab().click();
 		Thread.sleep(3000);
@@ -298,7 +298,7 @@ public class EvenntsAndWebinar extends base {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		// Click on IMC Event Tab
-		utl.scrollElementIntoMiddle(atlevents.getAllEventsTab());
+		utl.scrollElementIntoMiddle(atlevents.getAllEventText());
 		// Click on All EVents
 		atlevents.getAllEventsTab().click();
 
@@ -398,7 +398,7 @@ public class EvenntsAndWebinar extends base {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		// Click on IMC Event Tab
-		utl.scrollElementIntoMiddle(atlevents.getAllEventsTab());
+		utl.scrollElementIntoMiddle(atlevents.getAllEventText());
 		// Click on All EVents
 		atlevents.getAllEventsTab().click();
 
@@ -485,7 +485,7 @@ public class EvenntsAndWebinar extends base {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		// Click on IMC Event Tab
-		utl.scrollElementIntoMiddle(atlevents.getAllEventsTab());
+		utl.scrollElementIntoMiddle(atlevents.getAllEventText());
 		atlevents.getAllEventsTab().click();
 		// public List<WebElement> exhibitors;
 		// Fetch all date block headers like "Friday, April 11, 2025 | 2 Events"
@@ -640,7 +640,7 @@ public class EvenntsAndWebinar extends base {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		// Click on IMC Event Tab
-		utl.scrollElementIntoMiddle(atlevents.getatlExhibitorsEventsTab());
+		utl.scrollElementIntoMiddle(atlevents.getAllEventText());
 		atlevents.getatlExhibitorsEventsTab().click();
 
 		// Fetch all date block headers like "Friday, April 11, 2025 | 2 Events"
@@ -781,7 +781,7 @@ public class EvenntsAndWebinar extends base {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		// Click on IMC Event Tab
-		utl.scrollElementIntoMiddle(atlevents.getAllEventsTab());
+		utl.scrollElementIntoMiddle(atlevents.getAllEventText());
 		// Click on All EVents
 		atlevents.getAllEventsTab().click();
 
@@ -847,7 +847,7 @@ public class EvenntsAndWebinar extends base {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		// Click on IMC Event Tab
-		utl.scrollElementIntoMiddle(atlevents.getAllEventsTab());
+		utl.scrollElementIntoMiddle(atlevents.getAllEventText());
 		atlevents.getAllEventsTab().click();
 		WebElement eventDateElement = atlevents.getatlEventDateAndMonth();
 		eventDateElement.isDisplayed();
@@ -875,7 +875,7 @@ public class EvenntsAndWebinar extends base {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		// Click on IMC Event Tab
-		utl.scrollElementIntoMiddle(atlevents.getAllEventsTab());
+		utl.scrollElementIntoMiddle(atlevents.getAllEventText());
 		atlevents.getMarketEventsTab().click();
 		WebElement eventDateElement = atlevents.getatlEventDateAndMonth();
 		eventDateElement.isDisplayed();
@@ -903,7 +903,7 @@ public class EvenntsAndWebinar extends base {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		// Click on IMC Event Tab
-		utl.scrollElementIntoMiddle(atlevents.getAllEventsTab());
+		utl.scrollElementIntoMiddle(atlevents.getAllEventText());
 		atlevents.getatlExhibitorsEventsTab().click();
 		WebElement eventDateElement = atlevents.getatlEventDateAndMonth();
 		eventDateElement.isDisplayed();
@@ -1023,7 +1023,7 @@ public class EvenntsAndWebinar extends base {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		// Click on IMC Event Tab
-		utl.scrollElementIntoMiddle(atlevents.getAllEventsTab());
+		utl.scrollElementIntoMiddle(atlevents.getAllEventText());
 		// Click on All EVents
 		atlevents.getAllEventsTab().click();
 

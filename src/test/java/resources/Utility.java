@@ -641,7 +641,7 @@ public class Utility extends base {
 
 		// Click on Show Specials
 		lvmgs.getEventsLink().click();
-		Thread.sleep(5000);
+		Thread.sleep(15000);
 
 	}
 
