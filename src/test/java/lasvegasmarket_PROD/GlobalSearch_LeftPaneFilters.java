@@ -454,7 +454,7 @@ public void TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest() throw
 		//Click on Holiday/seasonal prod cate
 		utl.clickOnLeftPaneFilter(lvmleftpane.getLVMHolidayProdCatg());
 		//Click on Plus button for sub filters
-		utl.ClickOnSubFilterPlusButton("Holiday/Seasonal");
+//		utl.ClickOnSubFilterPlusButton("Holiday/Seasonal");
 		//verify sub categs are present in exh prod categ
 		utl.subFilterCategories(lvmleftpane.getlistOfAllHolidayAndSeasonialFilterOptions());
 	
@@ -487,7 +487,7 @@ public void TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest() throw
 		utl.clickOnLeftPaneFilter(lvmleftpane.getLVMDecorativeAccProdCatg());
 
 		//Click on Plus button for sub filters
-		utl.ClickOnSubFilterPlusButton("Decorative Accessories");
+		//utl.ClickOnSubFilterPlusButton("Decorative Accessories");
 		//verify sub categs are present in exh prod categ
 		utl.subFilterCategories(lvmleftpane.getlistOfAllDecorativeAccessoriesFilterOptions());
 
@@ -518,7 +518,7 @@ public void TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest() throw
 		utl.clickOnLeftPaneFilter(lvmleftpane.getLVMGeneralGiftProdCatg());
 
 		//Click on Plus button for sub filters
-		utl.ClickOnSubFilterPlusButton("General Gift");
+		//utl.ClickOnSubFilterPlusButton("General Gift");
 		//verify sub categs are present in exh prod categ
 		utl.subFilterCategories(lvmleftpane.getlistOfAllGeneralGiftFilterOptions());
 
@@ -549,7 +549,7 @@ public void TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest() throw
 	    utl.scrollElementIntoMiddle(lvmleftpane.getLVMFashionAccProdCatg());
 	    
 		//Click on Plus button for sub filters
-	    utl.ClickOnSubFilterPlusButton("Fashion Accessories/Jewelry");
+	   // utl.ClickOnSubFilterPlusButton("Fashion Accessories/Jewelry");
 		//verify sub categs are present in exh prod categ
 		utl.subFilterCategories(lvmleftpane.getlistOfAllFashionAccessoriesJewelryFilterOptions());
 
@@ -579,7 +579,7 @@ public void TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest() throw
 		utl.scrollElementIntoMiddle(lvmleftpane.getLVMFashionAccProdCatg());
 
 		// Click on Plus button for sub filters
-		utl.ClickOnSubFilterPlusButton("Floral / Botanicals");
+		//utl.ClickOnSubFilterPlusButton("Floral / Botanicals");
 		// verify sub categs are present in exh prod categ
 		utl.subFilterCategories(lvmleftpane.getlistOfAllFloralBotanicalsFilterOptions());
 
@@ -606,7 +606,7 @@ public void TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest() throw
 		utl.scrollElementIntoMiddle(lvmleftpane.getLVMHomeTextilesProdCatg());
 
 		// Click on Plus button for sub filters
-		utl.ClickOnSubFilterPlusButton("Home Textiles");
+		//utl.ClickOnSubFilterPlusButton("Home Textiles");
 		// verify sub categs are present in exh prod categ
 		utl.subFilterCategories(lvmleftpane.getlistOfAllHomeTextilesFilterOptions());
 

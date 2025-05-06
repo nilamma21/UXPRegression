@@ -140,16 +140,21 @@ public class LineDigitalShowroom extends base {
 		utl.commonMethodForLineDGShowroom((prop.getProperty("globalsearch_input")));
 		Thread.sleep(5000);
 
-		String seeAllProdBtn = lvmdigish.getseeAllProductBtnUat().getText(); // For UAT
-		String seeAllProdCount = seeAllProdBtn.split(" ")[2].trim();
+		// Trim count from See All Product button
+		String seeAllProdBtn = lvmdigish.getprodctCountBottomBtn().getText();
+		String trimSeeAllProdCount = seeAllProdBtn.replaceAll("[^0-9]", ""); // e.g., "1"
+		System.out.println("Count"+trimSeeAllProdCount);
+
 		// lvmdigish.getseeAllProductBtn().click();//For Prod
 		lvmdigish.getseeAllProductBtnUat().click();// For UAT
-		Thread.sleep(5000);
-		String p = driver.findElement(By.xpath("//div[@id='Products']")).getText();
-		String count = p.replaceAll("[()]", "");
-		String trimCount = count.split(" ")[1].trim();
+		Thread.sleep(8000);
+
+		// Trim count from Product Section title
+		String prodCount = driver.findElement(By.xpath("//div[@id='Products']")).getText(); // e.g., "See 1 Product"
+		String trimProdCount = prodCount.replaceAll("[^0-9]", ""); // e.g., "1"
+		System.out.println("Count See button"+trimProdCount);
 		// verify both count
-		Assert.assertTrue(seeAllProdCount.equals(trimCount));
+		Assert.assertTrue(trimSeeAllProdCount.equals(trimProdCount));
 		driver.get(prop.getProperty("lvmurl_prod"));
 	}
 
@@ -186,14 +191,15 @@ public class LineDigitalShowroom extends base {
 		// Verify Bottom Product count Link CTA
 		Assert.assertTrue(lvmdigish.getprodctCountBottomBtn().isDisplayed());
 
-		// Trim count from See All Product btn
+		// Trim count from See All Product button
 		String seeAllProdBtn = lvmdigish.getprodctCountBottomBtn().getText();
-		String trimSeeAllProdCount = seeAllProdBtn.split(" ")[2].trim();
+		String trimSeeAllProdCount = seeAllProdBtn.replaceAll("[^0-9]", ""); // e.g., "1"
+		System.out.println("Count See button"+trimSeeAllProdCount);
 
-		// Trim count from Product Section titled
-		String prodCount = lvmdigish.getproductCount().getText();
-		String trimProdCount = prodCount.split(" ")[0].trim();
-
+		// Trim count from Product Section title
+		String prodCount = lvmdigish.getproductCount().getText(); // e.g., "See 1 Product"
+		String trimProdCount = prodCount.replaceAll("[^0-9]", ""); // e.g., "1"
+		System.out.println("Count See button"+trimProdCount);
 		// verify both count
 		// Assert.assertTrue(trimSeeAllProdCount.equals(trimProdCount));
 

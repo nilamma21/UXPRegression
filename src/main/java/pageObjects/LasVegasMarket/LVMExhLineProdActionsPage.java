@@ -87,7 +87,7 @@ public class LVMExhLineProdActionsPage {
 	
 	By listCatalogitemPROD = By.xpath("//div[@class='imc-catalog__item_title multiSelectItem']/div"); //Locator for Catalog item
 	By CatalogitemPROD = By.xpath("(//div[@class='imc-catalog__item_title multiSelectItem']/div)[1]");
-	By eventdetailsheaderLVM = By.xpath("//div[@class='imc-eventdetail--header']/div[2]/section[1]/div[1]/h1[1]");
+	By eventdetailsheaderLVM = By.xpath("//div[@class='imc-eventdetail--header']/div[3]/section[1]/div[1]/h1[1]");
 	By eventFirstExNameLVM = By.xpath("(//div[@class='event-card--multi-card-container'])[1]/div[1]/div[1]/div[1]/div[1]/a[1]");
 	By digiShowroomFilterLVM = By.xpath("//h4[text()='Digital Showroom']");
 	By digiShowroomFilterCatalogsLVM = By.xpath("//label[@for='filteritem638']");
