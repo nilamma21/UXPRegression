@@ -111,7 +111,7 @@ public class LVMGlobalSearchPage {
 	By FirstEventName = By.xpath("(//p[@class='event-card--title imc-link--hover-underline normal-line-height'])[1]");  //Locator for 1st name of Event
 	By seeAllLinkMatchingProduct = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[2]/div[1]/div[1]/p[2]");  //Locator for 1st name of Event
 	By FirstCatalogName = By.xpath("(//div[@class='imc-exhibitorcard-products-row imc-content--display-flex-space-between-mobile '])[1]/div[2]/p[1]");  //Locator for 1st name of Catalog
-	By lvmseemoredetailsbtnnew = By.xpath("(//a[contains(text(),'See More Details')])[1]"); //Locator for See More Details button
+	By lvmseemoredetailsbtnnew = By.xpath("(//a[contains(text(),'Learn More')])[1]"); //Locator for See More Details button
 	By FirstShowSpecialName = By.xpath("(//div[@class='imc-showSpecial--tableContainer']/p[1])[1]");  //Locator for 1st name of Catalog
 	By FirstShowSpecialViewBrandDetailsBtn = By.xpath("(//a[@class='imc-showSpecial--link'])[1]");  //Locator for 1st name of Catalog
 	By eventslvmmkttopicsfilterUat = By.xpath("//label[contains(text(),'Ahead of the Curve')]"); //Locator for Atlanta Market topics filter
@@ -180,11 +180,33 @@ public class LVMGlobalSearchPage {
 	By listOfAllExhibitorTitles = By.xpath("//h2[@class='imc-exhibitorcard__exhibitorname imc-exhibitorcard--title-hover']");
 	By listOfAllMatchingProducts = By.xpath("//span[contains(text(),'Matching Product')]/../span[1]");
 	
+	By eventtypeP = By.xpath("(//div[@class='imc-filteritem__tier2 imc-content--display-flex imc-content--display-flex-gap-medium imc-content--display-flex-column'])[2]/div[2]/label");
+	By eventtypeNameEventCard = By.xpath("//div[@class='imc-gallery__item imc-content--left']/div/div/div[1]/p");
+	By eventNameEventCard = By.xpath("(//div[@class='imc-gallery__item imc-content--left'])[1]/div/div/div[1]/div/a/p");
+	
 	
 	public LVMGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 		PageFactory.initElements(driver, this);
+	}
+	public WebElement geteventNameEventCard(){
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(eventNameEventCard));
+		return driver.findElement(eventNameEventCard);
+
+	}
+	public WebElement geteventtypeNameEventCard(){
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(eventtypeNameEventCard));
+		return driver.findElement(eventtypeNameEventCard);
+
+	}
+	public WebElement geteventtypeP(){
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(eventtypeP));
+		return driver.findElement(eventtypeP);
+
 	}
 	public List<WebElement>getlistOfAllMatchingProducts() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));

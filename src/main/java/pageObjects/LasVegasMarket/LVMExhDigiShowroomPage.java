@@ -141,7 +141,6 @@ public class LVMExhDigiShowroomPage {
 	By expNamePROD_ATL = By.xpath("//div[@class='imc-exhibitors--info-block imc-section--padded-top-desktop-xlarge imc-inset-content-mobile imc-inset-content-jumbo-mobile imc-section--padded-bottom-xlarge imc-section ']/div/div/div/h1");
 	
 	
-	
 	public LVMExhDigiShowroomPage(WebDriver driver) {
 		this.driver = driver;
 	}

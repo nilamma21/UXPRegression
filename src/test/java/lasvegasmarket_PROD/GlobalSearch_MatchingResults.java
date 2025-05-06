@@ -278,6 +278,7 @@ public class GlobalSearch_MatchingResults extends base {
 		        System.out.println("\n❌ Exhibitors are NOT sorted in ascending order. Test case failed.");
 		        Assert.fail("Exhibitors are NOT sorted in ascending order."); // Assert fail if not sorted
 		    }
+		    driver.get(prop.getProperty("lvmurl_prod"));
 		}
 	  @Test(priority = 4)
 	  public void TS003_VerifyGlobalSearchMatchingResultsSortSortByDscendingOrderTest() throws InterruptedException, IOException {
@@ -347,6 +348,7 @@ public class GlobalSearch_MatchingResults extends base {
 		        System.out.println("\n❌ Exhibitors are NOT sorted in descending order. Test case failed.");
 		        Assert.fail("Exhibitors are NOT sorted in descending order."); // Assert fail if not sorted
 		    }
+		    driver.get(prop.getProperty("lvmurl_prod"));
 		}
 	  
 	  @Test(priority = 4)
@@ -403,6 +405,7 @@ public class GlobalSearch_MatchingResults extends base {
 		        "\n❌ Matching Product Counts are NOT sorted in descending order. Test case failed.\n");
 
 		    System.out.println("\n✅ Matching Product Counts are correctly sorted in descending order.");
+		    driver.get(prop.getProperty("lvmurl_prod"));
 		}
 
 	  @Test(priority = 5)
@@ -480,6 +483,7 @@ public class GlobalSearch_MatchingResults extends base {
 		        System.out.println("\n❌ Matching Product Counts are NOT sorted in ascending order. Test case failed.");
 		        Assert.fail("Matching Product Counts are NOT sorted in ascending order."); // Assert fail if not sorted
 		    }
+		    driver.get(prop.getProperty("lvmurl_prod"));
 		}
 
 	  
@@ -770,6 +774,7 @@ public class GlobalSearch_MatchingResults extends base {
 			Assert.assertTrue(lvmgs.getLVMInfosearchtxtbx().getAttribute("value").contains(prop.getProperty("savedSearchesInput")));
 			Thread.sleep(5000);
 			Assert.assertTrue(lvmgs.getLVMVerifyGlobalSeacrh().getText().contains(prop.getProperty("savedSearchesInput")));
+			driver.get(prop.getProperty("lvmurl_prod"));
 		}
 
 	}

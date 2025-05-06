@@ -43,6 +43,7 @@ import pageObjects.Sitecore.SCDigitalAdminPanelPage;
 import pageObjects.Sitecore.SCDigitalAdminPanelUserProfilePage;
 import pageObjects.Sitecore.SCLoginPage;
 import pageObjects.Sitecore.SCShowSpecials;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Utility extends base {
 
@@ -74,6 +75,7 @@ public class Utility extends base {
 	LVMLandingPage lapp;
 	SCDigitalAdminPanelUserProfilePage digiAdminUserProf;
 	LVMExhLineProdActionsPage lvmexhact;
+	public WebDriverWait wait;
 
 	List<WebElement> showspecialslist, exheventslist, exheventnameslist, exheventdeletebtnlist, infoFilterList;
 
@@ -84,6 +86,33 @@ public class Utility extends base {
 	public Utility(WebDriver driver) {
 		this.driver = driver;
 	}
+
+	public void clickOnEventLinkOfChannel() throws InterruptedException {
+
+	
+		  lap = new ATLLandingPage(driver); 
+		  lp = new ATLLoginPage(driver);
+		  atlmppge =new ATLMarketPlannerPage(driver); 
+		  atlevents = new ATLEventsAndWebinarPage(driver); 
+		  lvmgs = new LVMGlobalSearchPage(driver);
+		  
+		  Actions ac = new Actions(driver);
+		  ac.moveToElement(lvmgs.getLvmDiscoverTab()).click().perform();
+		  
+		  // Click on Show Specials 
+		  lvmgs.getEventsLink().click(); 
+		  
+		  Thread.sleep(5000);
+
+	}
+
+	public void waitForPageToLoad() throws InterruptedException {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+        // Wait until the document readyState is 'complete'
+        wait.until(driver -> js.executeScript("return document.readyState").equals("complete"));
+        Thread.sleep(1000);
+    }
 
 	public WebElement scrollToElement(WebElement element) throws InterruptedException {
 		WebElement scrollText = element;
@@ -628,22 +657,7 @@ public class Utility extends base {
 
 	}
 
-	public void clickOnEventLinkOfChannel() throws InterruptedException {
-
-		lap = new ATLLandingPage(driver);
-		lp = new ATLLoginPage(driver);
-		atlmppge = new ATLMarketPlannerPage(driver);
-		atlevents = new ATLEventsAndWebinarPage(driver);
-		lvmgs = new LVMGlobalSearchPage(driver);
-
-		Actions ac = new Actions(driver);
-		ac.moveToElement(lvmgs.getLvmDiscoverTab()).click().perform();
-
-		// Click on Show Specials
-		lvmgs.getEventsLink().click();
-		Thread.sleep(15000);
-
-	}
+	
 
 	public void clickOnEventLinkOfChannel_Old() throws InterruptedException {
 

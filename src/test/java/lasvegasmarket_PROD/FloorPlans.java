@@ -165,14 +165,17 @@ Thread.sleep(5000);
 	    lvmflpp = new LVMFloorPlansPage(driver);
 	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
-	    driver.get(prop.getProperty("lvmurl_prod"));
+	  //  driver.get(prop.getProperty("lvmurl_prod"));
 	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 	    // Click on Discover Tab
 	    wait.until(ExpectedConditions.elementToBeClickable(lvmflpp.getlvmDiscoverBtn())).click();
+	    Thread.sleep(2000);
+	    Actions ac=new Actions(driver);
+	    ac.moveToElement(lvmflpp.getlvmFloorPlansLinkPROD()).click().perform();
 
 	    // Click on Floor Plans link
-	    wait.until(ExpectedConditions.elementToBeClickable(lvmflpp.getlvmFloorPlansLinkPROD())).click();
+	   // wait.until(ExpectedConditions.elementToBeClickable(lvmflpp.getlvmFloorPlansLinkPROD())).click();
 
 	    // Click on any floor
 	    utl.scrollElementIntoMiddle(lvmflpp.getLVMBuildingFloor());
@@ -293,7 +296,7 @@ Thread.sleep(5000);
         utl = new Utility(driver);
         lvmflpp=new LVMFloorPlansPage(driver);
         
-        driver.get(prop.getProperty("lvmurl_prod"));
+      //  driver.get(prop.getProperty("lvmurl_prod"));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         Thread.sleep(2000);
         
@@ -355,7 +358,7 @@ Thread.sleep(5000);
 		utl = new Utility(driver);
 		lvmflpp=new LVMFloorPlansPage(driver);
 
-		driver.get(prop.getProperty("lvmurl_prod"));
+		//driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		// Click on Discover Tab
@@ -409,7 +412,7 @@ Thread.sleep(5000);
 		lvmflpp=new LVMFloorPlansPage(driver);
 		lvmexhdgshw = new LVMExhDigiShowroomPage(driver);
 
-		driver.get(prop.getProperty("lvmurl_prod"));
+		//driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 
@@ -458,7 +461,7 @@ Thread.sleep(5000);
 		utl = new Utility(driver);
 		lvmflpp=new LVMFloorPlansPage(driver);
 
-		driver.get(prop.getProperty("lvmurl_prod"));
+		//driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 
@@ -473,7 +476,7 @@ Thread.sleep(5000);
 		utl.scrollElementIntoMiddle(lvmflpp.getLVMBuildingFloor());
 		Thread.sleep(200);
 		lvmflpp.getLVMBuildingFloor().click();
-
+		Thread.sleep(5000);
 		//Click on Return to Building Page link
 		lvmflpp.getLVMReturnToBuildingList().click();
 		Thread.sleep(5000);
@@ -491,7 +494,7 @@ Thread.sleep(5000);
 		utl = new Utility(driver);
 		lvmflpp=new LVMFloorPlansPage(driver);
 
-		driver.get(prop.getProperty("lvmurl_prod"));
+		//driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		

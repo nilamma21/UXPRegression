@@ -5,13 +5,8 @@
     <classes>
       <class name="lasvegasmarket_PROD.EvenntsAndWebinar">
         <methods>
-          <include name="TS007_VerifyIMCEventsEventsListTest"/>
-          <include name="TS0011_VerifyMarketEventDateRangeSearchBoxTest"/>
-          <include name="TS0013_VerifyEventCalendarResetButtonTest"/>
-          <include name="TS0010_VerifyEventDateRangeSearchBoxTest"/>
           <include name="TS003_VerifyMarketEventsSearchbarTest"/>
           <include name="tearDown"/>
-          <include name="TS0012_VerifyExhibitorEventDateRangeSearchBoxTest"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- lasvegasmarket_PROD.EvenntsAndWebinar -->
