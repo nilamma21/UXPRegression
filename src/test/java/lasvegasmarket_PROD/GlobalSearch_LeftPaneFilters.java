@@ -616,56 +616,59 @@ public void TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest() throw
 	}
 	@Test(priority =12)
 	public void TS012_VerifyNewExhibitorButtonFromLeftPaneFiltersTest() throws InterruptedException, IOException {
-	    // Initialize page objects
-	    lvmgs = new LVMGlobalSearchPage(driver);
-	    lvmds = new LVMExhDigiShowroomPage(driver);
-	    lvmmpp = new LVMMarketPlannerPage(driver);
-	    lvmleftpane = new LVMLeftPaneFilters(driver);
-	    lvmexhact = new LVMExhLineProdActionsPage(driver);
-	    utl = new Utility(driver);
+		// Initialize page objects
+		lvmgs = new LVMGlobalSearchPage(driver);
+		lvmds = new LVMExhDigiShowroomPage(driver);
+		lvmmpp = new LVMMarketPlannerPage(driver);
+		lvmleftpane = new LVMLeftPaneFilters(driver);
+		lvmexhact = new LVMExhLineProdActionsPage(driver);
+		utl = new Utility(driver);
 
-	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		Thread.sleep(2000);
 
 		utl.globleSearchInput((prop.getProperty("globalsearch_input")));
-		//Click on New Button
-	    lvmleftpane.getleftPaneFilterNewExhibitor().click();
+		// Click on New Button
+		lvmleftpane.getleftPaneFilterNewExhibitor().click();
 		Thread.sleep(5000);
-		
-		
+
 		// Get all exhibitor elements from the list
-				List<WebElement> allExhibitors = lvmleftpane.getlistOfExhibitors();
+		List<WebElement> allExhibitors = lvmleftpane.getlistOfExhibitors();
 
-				// Flag to track test status
-				boolean allHaveShowSpecials = true;
+		// Flag to track test status
+		boolean allHaveShowSpecials = true;
 
-				// Iterate through each exhibitor
-				for (WebElement exhibitor : allExhibitors) {
-					try {
-						String exName = exhibitor.getText();
-						System.out.println("Exhibitor Name::" + exName);
-						// Check if "Show Specials" tag is present for the exhibitor
-						WebElement NewTag = exhibitor.findElement(By.xpath(
-								"//div[@class='imc-content--full-width']/div/div[2]/div/span/../../../div/div/a/h2[contains(text(),'" + exName + "')]"));
-						
+		// Iterate through each exhibitor
+		for (WebElement exhibitor : allExhibitors) {
+			try {
+				String exName = exhibitor.getText();
+				System.out.println("Exhibitor Name: " + exName);
 
-						// If tag is found, print success message
-						System.out.println("New  found for exhibitor: " + exhibitor.getText());
-					} catch (NoSuchElementException e) {
-						// If no "Show Specials" tag found, test fails
-						System.out.println("Test Failed: New tag missing for exhibitor: " + exhibitor.getText());
-						allHaveShowSpecials = false;
-					}
-				}
+				// Escape exName to avoid XPath errors
+				String escapedExName = escapeXPathString(exName);
+				// Check if "Show Specials" tag is present for the exhibitor
+				WebElement NewTag = exhibitor.findElement(By.xpath(
+						"//div[@class='imc-content--full-width']/div/div[2]/div/span/../../../div/div/a/h2[contains(text(),"
+								+ escapedExName + ")]"));
 
-				// Final assertion
-				Assert.assertTrue(allHaveShowSpecials, "Test Failed: Not all exhibitors have New tag.");
-				System.out.println("Test Passed: All exhibitors have New tag.");
+				// If tag is found, print success message
+				System.out.println("New  found for exhibitor: " + exhibitor.getText());
+			} catch (NoSuchElementException e) {
+				// If no "Show Specials" tag found, test fails
+				System.out.println("Test Failed: New tag missing for exhibitor: " + exhibitor.getText());
+				allHaveShowSpecials = false;
+			}
+		}
 
-				driver.get(prop.getProperty("lvmurl_prod"));
-	
+		// Final assertion
+		Assert.assertTrue(allHaveShowSpecials, "Test Failed: Not all exhibitors have New tag.");
+		System.out.println("Test Passed: All exhibitors have New tag.");
+
+		driver.get(prop.getProperty("lvmurl_prod"));
+
 	}
-	@Test(priority =13)
+
+	@Test(priority = 13)
 	public void TS013_VerifyHasShowSpecialsFromLeftPaneFiltersTest() throws InterruptedException, IOException {
 		// Initialize page objects
 		lvmgs = new LVMGlobalSearchPage(driver);
@@ -680,7 +683,7 @@ public void TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest() throw
 
 		utl.globleSearchInput((prop.getProperty("globalsearch_input")));
 		// Click on Has show Special button
-		 lvmleftpane.getleftPaneFilterHasShowSpecials().click();
+		lvmleftpane.getleftPaneFilterHasShowSpecials().click();
 		Thread.sleep(5000);
 		// verify has show specials tag is present or not
 		// get all the exhibitors
@@ -695,42 +698,66 @@ public void TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest() throw
 		for (WebElement exhibitor : allExhibitors) {
 			try {
 				String exName = exhibitor.getText();
-				System.out.println("Exhibitor Name::" + exName);
+				System.out.println("Exhibitor Name: " + exName);
+
+				// Escape exName to avoid XPath errors
+				String escapedExName = escapeXPathString(exName);
+				System.out.println("ExName::"+escapedExName);
 				// Check if "Show Specials" tag is present for the exhibitor
-				WebElement showSpecialTag = exhibitor.findElement(By.xpath(
-						"//div[@class='imc-content--full-width']/div/div/a/span[2]/../../../div/div/a/h2[contains(text(),'" + exName + "')"));
+				WebElement showSpecial = exhibitor.findElement(By.xpath(
+						"//div[@class='imc-content--full-width']/div/div[2]/a/span[2]/../../../div/div/a/h2[contains(text(),"
+								+ escapedExName + ")]"));
 
 				// If tag is found, print success message
-				System.out.println("Show Specials tag found for exhibitor: " + exhibitor.getText());
+				System.out.println("Show Special tag found for exhibitor: " + exhibitor.getText());
 			} catch (NoSuchElementException e) {
 				// If no "Show Specials" tag found, test fails
-				System.out.println("Test Failed: Show Specials tag missing for exhibitor: " + exhibitor.getText());
+				System.out.println("Test Failed: Show Special tag missing for exhibitor: " + exhibitor.getText());
 				allHaveShowSpecials = false;
 			}
 		}
 
 		// Final assertion
-		Assert.assertTrue(allHaveShowSpecials, "Test Failed: Not all exhibitors have Show Specials tag.");
-		System.out.println("Test Passed: All exhibitors have Show Specials tag.");
+		Assert.assertTrue(allHaveShowSpecials, "Test Failed: Not all exhibitors have Show Special tag.");
+		System.out.println("Test Passed: All exhibitors have Show Special tag.");
 
-		driver.get(prop.getProperty("lvmurl_prod"));
+		
 
 	}
-	@Test(priority =14)
-	public void TS014_VerifyTemporaryButtonFromLeftPaneFiltersTest() throws InterruptedException, IOException {
-	    // Initialize page objects
-	    lvmgs = new LVMGlobalSearchPage(driver);
-	    lvmds = new LVMExhDigiShowroomPage(driver);
-	    lvmmpp = new LVMMarketPlannerPage(driver);
-	    lvmleftpane = new LVMLeftPaneFilters(driver);
-	    lvmexhact = new LVMExhLineProdActionsPage(driver);
-	    utl = new Utility(driver);
 
-	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-	    Thread.sleep(2000);
+	// Method to escape XPath string with apostrophe handling
+	public String escapeXPathString(String input) {
+		if (input.contains("'")) {
+			String[] parts = input.split("'");
+			StringBuilder xpathString = new StringBuilder("concat(");
+			for (int i = 0; i < parts.length; i++) {
+				xpathString.append("'").append(parts[i]).append("'");
+				if (i != parts.length - 1) {
+					xpathString.append(", \"'\", ");
+				}
+			}
+			xpathString.append(")");
+			return xpathString.toString();
+		} else {
+			return "'" + input + "'";
+		}
+	}
+
+	@Test(priority = 14)
+	public void TS014_VerifyTemporaryButtonFromLeftPaneFiltersTest() throws InterruptedException, IOException {
+		// Initialize page objects
+		lvmgs = new LVMGlobalSearchPage(driver);
+		lvmds = new LVMExhDigiShowroomPage(driver);
+		lvmmpp = new LVMMarketPlannerPage(driver);
+		lvmleftpane = new LVMLeftPaneFilters(driver);
+		lvmexhact = new LVMExhLineProdActionsPage(driver);
+		utl = new Utility(driver);
+
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		Thread.sleep(2000);
 
 		utl.globleSearchInput((prop.getProperty("globalsearch_input")));
-	
+
 	}
 	@AfterClass
 	public void tearDown()
