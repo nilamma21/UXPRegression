@@ -53,8 +53,8 @@ public class LVMLeftPaneFilters {
 	By listOfAllHomeTextilesFilterOptions = By.xpath("//label[contains(text(),'Home Textiles')]/../../../../../../div[2]/div/div/div/label");
 	By listOfAllExhibitors = By.xpath("//div[@class='imc-exhibitorcard-title-row ']/div/div/div/div/div/a/h2");
 	By isProductCategorySectionNotAvailable = By.xpath("//span[contains(text(),'Product Categories not available')]");
-	By leftPaneFilterNewExhibitor = By.xpath("(//div[@class='imc-expand-collapse__content '])[1]/div/div/div[1]");
-	By leftPaneFilterHasShowSpecials = By.xpath("(//div[@class='imc-expand-collapse__content '])[1]/div/div/div[2]");
+	By leftPaneFilterNewExhibitor = By.xpath("//label[contains(text(),'New Exhibitors')]");
+	By leftPaneFilterHasShowSpecials = By.xpath("//input[@id='filteritem8']/../label[contains(text(),'Has Show Specials')]");
 	By leftPaneFilterTemporary = By.xpath("(//div[@class='imc-expand-collapse__content '])[1]/div/div/div[3]");
 	By listOfAllExhibitorsHavingShowSpecialTag = By.xpath("//div[@class='imc-content--full-width']/div/div/a");
 	By listOfExhibitors = By.xpath("//div[@class='imc-content--full-width']/div/div/div/a/h2");		

@@ -9,45 +9,53 @@
       <class name="lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters">
         <methods>
           <include name="initialize"/>
-          <include name="TS013_VerifyHasShowSpecialsFromLeftPaneFiltersTest"/>
-          <include name="TS012_VerifyNewExhibitorButtonFromLeftPaneFiltersTest"/>
-          <include name="TS008_VerifySelectionOfGeneralGiftProdCatgFromLeftPaneFiltersTest"/>
-          <include name="TS010_VerifySelectionOfFloralBotanicalsProdCatgFromLeftPaneFiltersTest"/>
+          <include name="TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest"/>
+          <include name="TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest"/>
+          <include name="TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters -->
       <class name="lasvegasmarket_PROD.EvenntsAndWebinar">
         <methods>
-          <include name="TS003_VerifyMarketEventsSearchbarTest"/>
+          <include name="TS006_VerifySelectedCalendarEventDateAndSearchEventsTest"/>
+          <include name="TS007_VerifyIMCEventsEventsListTest"/>
+          <include name="TS001_VerifyEventsAndWebinarsOverviewTest"/>
+          <include name="TS008_VerifyExhibitorEventsListTest"/>
           <include name="tearDown"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- lasvegasmarket_PROD.EvenntsAndWebinar -->
-      <class name="lasvegasmarket_PROD.GlobalSearch_MatchingResults">
+      <class name="lasvegasmarket_PROD.ShowSpecials">
         <methods>
-          <include name="TS003_VerifyGlobalSearchMatchingResultsSortSortByMatchingProductCountAscendingTest"/>
-          <include name="TS003_VerifyGlobalSearchMatchingResultsSortSortByDscendingOrderTest"/>
-          <include name="TS003_VerifyGlobalSearchMatchingResultsSortSortByAscendingOrderTest"/>
-          <include name="TS003_VerifyGlobalSearchMatchingResultsSortSortByMatchingProductCountDescendingTest"/>
+          <include name="TS004_VerifyShowSpecialSortByDetailsTest"/>
+          <include name="TS05_VerifyShowSpecialSortByTest"/>
+          <include name="tearDown"/>
           <include name="initialize"/>
-          <include name="quit"/>
-          <include name="TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest"/>
         </methods>
-      </class> <!-- lasvegasmarket_PROD.GlobalSearch_MatchingResults -->
+      </class> <!-- lasvegasmarket_PROD.ShowSpecials -->
       <class name="lasvegasmarket_PROD.GlobalSearch_SearchFor">
         <methods>
-          <include name="TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest"/>
           <include name="initialize"/>
+          <include name="TS011_VerifyEventsOverviewInGlobalSearchTest"/>
+          <include name="TS006_VerifyArticlesFiltersGlobalSearchTest"/>
+          <include name="TS010_VerifyShowSpecialsOverviewInGlobalSearchTest"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- lasvegasmarket_PROD.GlobalSearch_SearchFor -->
-      <class name="lasvegasmarket_PROD.FloorPlans">
+      <class name="lasvegasmarket_PROD.GlobalSearch_LineActions">
         <methods>
-          <include name="tearDown"/>
           <include name="initialize"/>
-          <include name="TS008_VerifyClickOnReturnToBuildingListBtnTest"/>
+          <include name="tearDown"/>
+          <include name="TS003_VerifyClickOnMatchingProductsSeeAllLinkForLineTest"/>
         </methods>
-      </class> <!-- lasvegasmarket_PROD.FloorPlans -->
+      </class> <!-- lasvegasmarket_PROD.GlobalSearch_LineActions -->
+      <class name="lasvegasmarket_PROD.GlobalSearch_ExhibitorActions">
+        <methods>
+          <include name="TS004_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest"/>
+          <include name="initialize"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- lasvegasmarket_PROD.GlobalSearch_ExhibitorActions -->
     </classes>
   </test> <!-- RegressionTest(failed) -->
 </suite> <!-- Failed suite [LVM_RegressionTestSuite] -->

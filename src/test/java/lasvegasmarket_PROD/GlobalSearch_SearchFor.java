@@ -322,10 +322,10 @@ public class GlobalSearch_SearchFor extends base {
 			}
 
 			// Click on the second element if present
-			String secondExhibitorName = elements.get(1).getText();
+			String secondExhibitorName = elements.get(0).getText();
 			System.out.println(secondExhibitorName);
 			Actions actoin = new Actions(driver);
-			action.moveToElement(elements.get(1)).click().perform();
+			action.moveToElement(elements.get(0)).click().perform();
 			// elements.get(1).click(); // 2nd element, index 1
 
 		}

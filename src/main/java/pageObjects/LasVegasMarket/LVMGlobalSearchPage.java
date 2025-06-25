@@ -112,7 +112,7 @@ public class LVMGlobalSearchPage {
 	By seeAllLinkMatchingProduct = By.xpath("//div[@class='imc-vr--xxlarge']/div[1]/div[2]/div[2]/div[1]/div[1]/p[2]");  //Locator for 1st name of Event
 	By FirstCatalogName = By.xpath("(//div[@class='imc-exhibitorcard-products-row imc-content--display-flex-space-between-mobile '])[1]/div[2]/p[1]");  //Locator for 1st name of Catalog
 	By lvmseemoredetailsbtnnew = By.xpath("(//a[contains(text(),'Learn More')])[1]"); //Locator for See More Details button
-	By FirstShowSpecialName = By.xpath("(//div[@class='imc-showSpecial--tableContainer']/p[1])[1]");  //Locator for 1st name of Catalog
+	By FirstShowSpecialName = By.xpath("(//div[@class='imc-content--display-flex imc-content--display-flex-center imc-content--display-flex-gap-small']/a)[1]/../div/p/a/span");  //Locator for 1st name of Exh
 	By FirstShowSpecialViewBrandDetailsBtn = By.xpath("(//a[@class='imc-showSpecial--link'])[1]");  //Locator for 1st name of Catalog
 	By eventslvmmkttopicsfilterUat = By.xpath("//label[contains(text(),'Ahead of the Curve')]"); //Locator for Atlanta Market topics filter
 	By atmarketeventtypefilterUat = By.xpath("//label[contains(text(),'Buying Event')]"); //Locator for At Market Event Type
@@ -169,7 +169,7 @@ public class LVMGlobalSearchPage {
 	By articleName1st = By.xpath("(//p[@class='event-card--title imc-link--hover-underline normal-line-height'])[1]");
 	By ArticleNameURL = By.xpath("(//div[@class='imc-gallery__item imc-content--left'])[1]/div/div/div/div/a"); 
 	By showSpecialsLink = By.xpath("//a[contains(@href,'Show-Specials')]"); 
-	By showSpecialsDetailsFromShowSpecialsPage = By.xpath("//div[@class='ag-center-cols-container']/div[1]/div[3]"); 
+	By showSpecialsDetailsFromShowSpecialsPage = By.xpath("(//div[@class='imc-content--display-flex imc-content--display-flex-center imc-content--display-flex-gap-small']/a)[1]/../../../td[3]/div"); 
 	
 	By lvmListOfExhibitors = By.xpath("//h2[@class='imc-exhibitorcard__exhibitorname imc-exhibitorcard--title-hover']"); 
 	By listOfAllExhibitorsAndProducts = By.xpath("//div[@class='swiper-wrapper']/../../../../div[1]/div/div/div/div[1]/div[1]/div[1]/div/a/h2");
@@ -183,12 +183,66 @@ public class LVMGlobalSearchPage {
 	By eventtypeP = By.xpath("(//div[@class='imc-filteritem__tier2 imc-content--display-flex imc-content--display-flex-gap-medium imc-content--display-flex-column'])[2]/div[2]/label");
 	By eventtypeNameEventCard = By.xpath("//div[@class='imc-gallery__item imc-content--left']/div/div/div[1]/p");
 	By eventNameEventCard = By.xpath("(//div[@class='imc-gallery__item imc-content--left'])[1]/div/div/div[1]/div/a/p");
+	By showSpecialDescriptionDGShworoomPage = By.xpath("//div[@class='imc-content--display-flex-wrap']//span[contains(text(),'Show Specials')]/../../div[3]/span/span[1]");
+	By showSpecialsLoactionURL = By.xpath("(//td[@class='imc-breakpoint-display--hide-small-tablet'])[1]/div/a");
+	By showSpecialsSearchVendors = By.xpath("//div[@class='imc-content--flex-grow']/input");
+	By listOfAllshowSpecials = By.xpath("//div[@class='imc-content--display-flex imc-content--display-flex-center imc-content--display-flex-gap-small']/div");
 	
+	By showSpecialsSortByDropdown = By.xpath("//select[@id='dropdown-sort-search']");
+	By ListOfALlshowSpecialsLocations = By.xpath("//td[@class='imc-breakpoint-display--hide-small-tablet']/div/a");
+	By ListOfALLShowSpecialsDetails = By.xpath("//tr[@style='background-color: var(--basic-white); color: var(--neutral-heaviest);']/td[3]/div");
+	
+	By ShowSpecialsPageResetButton = By.xpath("//button[@class=' imc-searchform--bar--button']");
 	
 	public LVMGlobalSearchPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
 		PageFactory.initElements(driver, this);
+	}
+	public WebElement getShowSpecialsPageResetButton(){
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(ShowSpecialsPageResetButton));
+		return driver.findElement(ShowSpecialsPageResetButton);
+
+	}
+	public List<WebElement>getListOfALLShowSpecialsDetails() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ListOfALLShowSpecialsDetails));
+		return driver.findElements(ListOfALLShowSpecialsDetails);
+	}
+	public List<WebElement>getListOfALlshowSpecialsLocations() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ListOfALlshowSpecialsLocations));
+		return driver.findElements(ListOfALlshowSpecialsLocations);
+	}
+	public WebElement getshowSpecialsSortByDropdown(){
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(showSpecialsSortByDropdown));
+		return driver.findElement(showSpecialsSortByDropdown);
+
+	}
+	public List<WebElement>getlistOfAllshowSpecials() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(listOfAllshowSpecials));
+		return driver.findElements(listOfAllshowSpecials);
+	}
+	public WebElement getshowSpecialsSearchVendors(){
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(showSpecialsSearchVendors));
+		return driver.findElement(showSpecialsSearchVendors);
+
+	}
+	public WebElement getshowSpecialsLoactionURL(){
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(showSpecialsLoactionURL));
+		return driver.findElement(showSpecialsLoactionURL);
+
+	}
+	public WebElement getshowSpecialDescriptionDGShworoomPage(){
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(showSpecialDescriptionDGShworoomPage));
+		return driver.findElement(showSpecialDescriptionDGShworoomPage);
+
 	}
 	public WebElement geteventNameEventCard(){
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));

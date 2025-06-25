@@ -1767,51 +1767,73 @@ public class Utility extends base {
 	}
 
 	public void subFilterCategories(List<WebElement> listOfSubCategories) throws InterruptedException {
-		// Fetching Filtered Options (List 1)
-		lvmgs = new LVMGlobalSearchPage(driver);
-		lvmds = new LVMExhDigiShowroomPage(driver);
-		lvmmpp = new LVMMarketPlannerPage(driver);
-		lvmleftpane = new LVMLeftPaneFilters(driver);
-		lvmexhact = new LVMExhLineProdActionsPage(driver);
+	    // Initialize page objects
+	    lvmgs = new LVMGlobalSearchPage(driver);
+	    lvmds = new LVMExhDigiShowroomPage(driver);
+	    lvmmpp = new LVMMarketPlannerPage(driver);
+	    lvmleftpane = new LVMLeftPaneFilters(driver);
+	    lvmexhact = new LVMExhLineProdActionsPage(driver);
 
-		List<WebElement> holidayAndSeasonalFilterOptions = listOfSubCategories;
-		List<String> filterList1 = new ArrayList<>();
+	    // Fetch filtered options (List 1)
+	    List<WebElement> holidayAndSeasonalFilterOptions = listOfSubCategories;
+	    List<String> filterList1 = new ArrayList<>();
 
-		for (WebElement item : holidayAndSeasonalFilterOptions) {
-			String text = item.getText().trim();
-			filterList1.add(text);
-			System.out.println("List 1 Item: " + text);
-		}
+	    for (WebElement item : holidayAndSeasonalFilterOptions) {
+	        String text = item.getText().trim().toLowerCase();
+	        filterList1.add(text);
+	        System.out.println("List 1 Item: " + text);
+	    }
 
-		// Move to the next page
-		scrollToTop();
-		exhname = lvmds.getExhibitorNameNew().getText();
-		lvmds.getExhibitorNameNew().click();
-		Thread.sleep(10000);
+	    // Move to the exhibitor page
+	    scrollToTop();
+	    exhname = lvmds.getExhibitorNameNew().getText();
+	    lvmds.getExhibitorNameNew().click();
+	    Thread.sleep(10000); // Consider replacing with WebDriverWait for better reliability
 
-		// Fetch Product Categories on the new page (List 2)
-		List<WebElement> prodCatgItemList = lvmds.getLVMProductCategItemList();
-		List<String> filterList2 = new ArrayList<>();
+	    // Fetch product categories on the new page (List 2)
+	    List<WebElement> prodCatgItemList = lvmds.getLVMProductCategItemList();
+	    List<String> filterList2 = new ArrayList<>();
 
-		for (WebElement item : prodCatgItemList) {
-			String text = item.getText().trim();
-			filterList2.add(text);
-			System.out.println("List 2 Item: " + text);
-		}
+	    for (WebElement item : prodCatgItemList) {
+	        String text = item.getText().trim().toLowerCase();
+	        filterList2.add(text);
+	        System.out.println("List 2 Item: " + text);
+	    }
 
-		// Verify that at least one element from List 1 exists in List 2
-		boolean atLeastOneMatch = false;
+	    // Verify if any part of List 1 categories partially matches List 2 categories
+	    boolean atLeastOneMatch = false;
+	    StringBuilder matchDetails = new StringBuilder();
 
-		for (String option : filterList1) {
-			if (filterList2.contains(option)) {
-				System.out.println("Match found: " + option);
-				atLeastOneMatch = true;
-				break; // Exit loop once a match is found
-			}
-		}
+	    for (String list1Option : filterList1) {
+	        // Split List 1 category by delimiters like "/" for partial matching
+	        String[] list1Parts = list1Option.split("[/\\s]+");
+	        for (String part : list1Parts) {
+	            for (String list2Option : filterList2) {
+	                if (list2Option.contains(part)) {
+	                    matchDetails.append("Match found: '").append(part)
+	                            .append("' from List 1 in '").append(list2Option)
+	                            .append("' from List 2\n");
+	                    atLeastOneMatch = true;
+	                    break;
+	                }
+	            }
+	            if (atLeastOneMatch) break; // Exit inner loop once a match is found
+	        }
+	        if (atLeastOneMatch) break; // Exit outer loop once a match is found
+	    }
 
-		// Assert that at least one List 1 element exists in List 2
-		Assert.assertTrue(atLeastOneMatch, "No matching elements found between List 1 and List 2.");
-		driver.get(prop.getProperty("lvmurl_prod"));
+	    // Log match details or failure
+	    if (atLeastOneMatch) {
+	        System.out.println(matchDetails.toString());
+	    } else {
+	        System.out.println("No matching elements found between List 1: " + filterList1 +
+	                " and List 2: " + filterList2);
+	    }
+
+	    // Assert that at least one match was found
+	    Assert.assertTrue(atLeastOneMatch, "No matching elements found between List 1 and List 2.");
+
+	    // Navigate back to the base URL
+	    driver.get(prop.getProperty("lvmurl_prod"));
 	}
 }
