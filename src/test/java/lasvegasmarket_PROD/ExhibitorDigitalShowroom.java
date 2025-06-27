@@ -50,7 +50,7 @@ public class ExhibitorDigitalShowroom extends base {
 		utl = new Utility(driver);
 		lap = new LVMLandingPage(driver);
 
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 		driver.get(prop.getProperty("lvmurl_prod"));
 		System.out.println("Las Vegas Market site is started");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
