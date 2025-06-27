@@ -69,7 +69,7 @@ public class GlobalSearch_SearchFor extends base {
 		utl = new Utility(driver);
 		lap = new LVMLandingPage(driver);
 		// Navigate to LasVegas Market site
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 		// driver.get(prop.getProperty("lvmurl_uat"));
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
@@ -97,6 +97,7 @@ public class GlobalSearch_SearchFor extends base {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		utl.globleSearchInput((prop.getProperty("globalsearch_input")));
+		
 
 		Thread.sleep(6000);
 		// Click on Info link

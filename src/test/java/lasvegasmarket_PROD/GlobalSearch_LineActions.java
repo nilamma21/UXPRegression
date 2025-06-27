@@ -53,7 +53,7 @@ public class GlobalSearch_LineActions extends base {
 		lap = new LVMLandingPage(driver);
 
 		// Navigate to Las Vegas Market site
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 		driver.get(prop.getProperty("lvmurl_prod"));
 		try {
 			lap.getIUnderstandBtn().click();

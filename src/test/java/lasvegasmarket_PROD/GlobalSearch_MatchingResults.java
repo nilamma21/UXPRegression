@@ -50,7 +50,7 @@ public class GlobalSearch_MatchingResults extends base {
 		lvmgs=new LVMGlobalSearchPage(driver);
 		
 		// Navigate to Atlanta Market site
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 		driver.get(prop.getProperty("lvmurl_prod"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		try {

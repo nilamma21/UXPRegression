@@ -52,7 +52,7 @@ public class LineDigitalShowroom extends base {
 		lvmgs = new LVMGlobalSearchPage(driver); // Instantiate global search page
 
 		driver.get(prop.getProperty("lvmurl_prod")); // Navigate to the LVM URL
-		driver.manage().window().maximize(); // Maximize browser window
+		//driver.manage().window().maximize(); // Maximize browser window
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30)); // Set implicit wait
 		try {
 		lap.getIUnderstandBtn().click(); // Accept cookies/understand popup
