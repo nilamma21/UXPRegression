@@ -65,7 +65,7 @@ public class ATLEventsAndWebinarPage {
 	
 	By currentDate = By.xpath("//button[contains(@class, 'react-calendar__tile--now')]");
 	By currentMonth = By.xpath("//button[@class='react-calendar__navigation__label']/span");
-	By heightedEventDates = By.xpath("//button[@class='react-calendar__tile react-calendar__month-view__days__day']/abbr");
+	By heightedEventDates = By.xpath("//button[contains(@class,'react-calendar--market-date')]//abbr");
 	
 	By allEventsDatesFromResults = By.xpath("//p[@class='event-date--item']");
 	By listOfAllEventNames = By.xpath("//p[@class='event-card--title imc-link--hover-underline normal-line-height']");
@@ -79,9 +79,10 @@ public class ATLEventsAndWebinarPage {
 	By selectAnyDateFromCalendar = By.xpath("//button[@type='button']/abbr[contains(text(),'12')]");
 	By EventDetailExhibitor = By.xpath("//a[@class='imc-link imc-link--hover-underline']");
 	
-	By EventDetailDateTime = By.xpath("//p[@class='imc-section--padded-bottom-xlarge']/span[1]");
+	By EventDetailDateTime = By.xpath("//p[@class='imc-section--padded-bottom-xlarge']");
 	By EventDetailEventType = By.xpath("//p[@class='imc-eventdetail--event-type']");
 	By EventDetailLocation = By.xpath("//a[@class='imc-link imc-eventdetail--time imc-link--hover-underline']/span");
+	By EventDetailLocationNew =By.xpath("//div[@class='imc-eventdetail--location']/p/span");
 	By EventDetailEventTitle = By.xpath("//h1[@class='imc-content--giga imc-content--bold']");
 	By EventTypeDropwdown = By.xpath("//select[@id='dropdown-sort-search']");
 	By AllEventText = By.xpath("//select[@id='dropdown-sort-search']");
@@ -90,6 +91,12 @@ public class ATLEventsAndWebinarPage {
 	public ATLEventsAndWebinarPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver = driver; 			
+	}
+	public WebElement getEventDetailLocationNew() {
+		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(EventDetailLocationNew));
+		return driver.findElement(EventDetailLocationNew);
+		
 	}
 	public WebElement getAllEventText() {
 		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));

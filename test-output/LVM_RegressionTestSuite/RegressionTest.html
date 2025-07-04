@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>RegressionTest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>79/14/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>87/6/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jun 24 13:03:03 IST 2025</td>
+<td>Started on:</td><td>Fri Jul 04 14:42:51 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>5709 seconds (5709964 ms)</td>
+<tr><td>Total time:</td><td>5653 seconds (5653800 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,16 +75,16 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='lasvegasmarket_PROD.ShowSpecials.TS004_VerifyShowSpecialSortByDetailsTest()'><b>TS004_VerifyShowSpecialSortByDetailsTest</b><br>Test class: lasvegasmarket_PROD.ShowSpecials</td>
-<td><div><pre>java.lang.AssertionError: A-Z sorted details lists do not match! expected [true] but found [false]
-	at lasvegasmarket_PROD.ShowSpecials.TS004_VerifyShowSpecialSortByDetailsTest(ShowSpecials.java:297)
+<td title='lasvegasmarket_PROD.ShowSpecials.TS05_VerifyShowSpecialSortByTest()'><b>TS05_VerifyShowSpecialSortByTest</b><br>Test class: lasvegasmarket_PROD.ShowSpecials</td>
+<td><div><pre>java.lang.AssertionError: A-Z sorted lists do not match! expected [true] but found [false]
+	at lasvegasmarket_PROD.ShowSpecials.TS05_VerifyShowSpecialSortByTest(ShowSpecials.java:405)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace514744910", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace514744910'><pre>java.lang.AssertionError: A-Z sorted details lists do not match! expected [true] but found [false]
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace184560642", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace184560642'><pre>java.lang.AssertionError: A-Z sorted lists do not match! expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
 	at org.testng.Assert.assertTrue(Assert.java:45)
-	at lasvegasmarket_PROD.ShowSpecials.TS004_VerifyShowSpecialSortByDetailsTest(ShowSpecials.java:297)
+	at lasvegasmarket_PROD.ShowSpecials.TS05_VerifyShowSpecialSortByTest(ShowSpecials.java:405)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -112,154 +112,15 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>21</td>
+<td>31</td>
 <td>lasvegasmarket_PROD.ShowSpecials@289710d9</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest()'><b>TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //label[contains(text(),&apos;Antique/Vintage&apos;)] (tried for 40 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 137.0.7151.120, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57597}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57597/devtoo..., se:cdpVersion: 137.0.7151.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6710edde44486550deba85a606fe4c6f
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pageObjects.LasVegasMarket.LVMLeftPaneFilters.getLVMAntiqueVintProdCatg(LVMLeftPaneFilters.java:183)
-	at lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest(GlobalSearch_LeftPaneFilters.java:210)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1407705028", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1407705028'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //label[contains(text(),&apos;Antique/Vintage&apos;)] (tried for 40 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 137.0.7151.120, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57597}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57597/devtoo..., se:cdpVersion: 137.0.7151.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6710edde44486550deba85a606fe4c6f
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pageObjects.LasVegasMarket.LVMLeftPaneFilters.getLVMAntiqueVintProdCatg(LVMLeftPaneFilters.java:183)
-	at lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest(GlobalSearch_LeftPaneFilters.java:210)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>72</td>
-<td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@51acdf2e</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS006_VerifySelectedCalendarEventDateAndSearchEventsTest()'><b>TS006_VerifySelectedCalendarEventDateAndSearchEventsTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
-<td><div><pre>java.lang.NumberFormatException: For input string: &quot;26,&quot;
-	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
-	at java.base/java.lang.Integer.parseInt(Integer.java:662)
-	at java.base/java.lang.Integer.parseInt(Integer.java:778)
-	at lasvegasmarket_PROD.EvenntsAndWebinar.TS006_VerifySelectedCalendarEventDateAndSearchEventsTest(EvenntsAndWebinar.java:458)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1944370016", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1944370016'><pre>java.lang.NumberFormatException: For input string: &quot;26,&quot;
-	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
-	at java.base/java.lang.Integer.parseInt(Integer.java:662)
-	at java.base/java.lang.Integer.parseInt(Integer.java:778)
-	at lasvegasmarket_PROD.EvenntsAndWebinar.TS006_VerifySelectedCalendarEventDateAndSearchEventsTest(EvenntsAndWebinar.java:458)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>42</td>
-<td>lasvegasmarket_PROD.EvenntsAndWebinar@42bc14c1</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_LineActions.TS003_VerifyClickOnMatchingProductsSeeAllLinkForLineTest()'><b>TS003_VerifyClickOnMatchingProductsSeeAllLinkForLineTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LineActions</td>
-<td><div><pre>java.lang.AssertionError: expected [23895] but found [2660]
-	at lasvegasmarket_PROD.GlobalSearch_LineActions.TS003_VerifyClickOnMatchingProductsSeeAllLinkForLineTest(GlobalSearch_LineActions.java:223)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace692028763", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace692028763'><pre>java.lang.AssertionError: expected [23895] but found [2660]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-	at org.testng.Assert.assertEquals(Assert.java:122)
-	at org.testng.Assert.assertEquals(Assert.java:629)
-	at org.testng.Assert.assertEquals(Assert.java:639)
-	at lasvegasmarket_PROD.GlobalSearch_LineActions.TS003_VerifyClickOnMatchingProductsSeeAllLinkForLineTest(GlobalSearch_LineActions.java:223)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>47</td>
-<td>lasvegasmarket_PROD.GlobalSearch_LineActions@6a55299e</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.GlobalSearch_ExhibitorActions.TS004_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest()'><b>TS004_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_ExhibitorActions</td>
 <td><div><pre>java.lang.AssertionError: expected [36389] but found [153]
 	at lasvegasmarket_PROD.GlobalSearch_ExhibitorActions.TS004_VerifyClickOnTotalProductsSeeAllLinkForExhibitorTest(GlobalSearch_ExhibitorActions.java:237)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1374330626", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1374330626'><pre>java.lang.AssertionError: expected [36389] but found [153]
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace721533780", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace721533780'><pre>java.lang.AssertionError: expected [36389] but found [153]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
@@ -294,326 +155,22 @@ Session ID: 6710edde44486550deba85a606fe4c6f
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>39</td>
+<td>44</td>
 <td>lasvegasmarket_PROD.GlobalSearch_ExhibitorActions@79179359</td></tr>
 <tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest()'><b>TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[contains(@class,&apos;EPHeader_exTable__ZVkAP&apos;)]/table/tr/td/a (tried for 40 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 137.0.7151.120, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57597}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57597/devtoo..., se:cdpVersion: 137.0.7151.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6710edde44486550deba85a606fe4c6f
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pageObjects.LasVegasMarket.LVMLoginPage.getlistOfAllExhibitors(LVMLoginPage.java:78)
-	at resources.Utility.checkAndSelectExhibitor(Utility.java:1661)
-	at lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest(GlobalSearch_LeftPaneFilters.java:314)
+<td title='lasvegasmarket_PROD.GlobalSearch_LineActions.TS003_VerifyClickOnMatchingProductsSeeAllLinkForLineTest()'><b>TS003_VerifyClickOnMatchingProductsSeeAllLinkForLineTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LineActions</td>
+<td><div><pre>java.lang.AssertionError: expected [4789] but found [4790]
+	at lasvegasmarket_PROD.GlobalSearch_LineActions.TS003_VerifyClickOnMatchingProductsSeeAllLinkForLineTest(GlobalSearch_LineActions.java:223)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1356532503", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1356532503'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[contains(@class,&apos;EPHeader_exTable__ZVkAP&apos;)]/table/tr/td/a (tried for 40 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 137.0.7151.120, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57597}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57597/devtoo..., se:cdpVersion: 137.0.7151.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6710edde44486550deba85a606fe4c6f
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pageObjects.LasVegasMarket.LVMLoginPage.getlistOfAllExhibitors(LVMLoginPage.java:78)
-	at resources.Utility.checkAndSelectExhibitor(Utility.java:1661)
-	at lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest(GlobalSearch_LeftPaneFilters.java:314)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>600</td>
-<td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@51acdf2e</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_SearchFor.TS011_VerifyEventsOverviewInGlobalSearchTest()'><b>TS011_VerifyEventsOverviewInGlobalSearchTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SearchFor</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;imc-eventdetail--header&apos;]/div[3]/section[1]/div[1]/h1[1] (tried for 40 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 137.0.7151.120, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60518}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60518/devtoo..., se:cdpVersion: 137.0.7151.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b46fc091b6a66dd6a7c0e3df67bf8563
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pageObjects.LasVegasMarket.LVMExhLineProdActionsPage.geteventdetailsheaderLVM(LVMExhLineProdActionsPage.java:148)
-	at lasvegasmarket_PROD.GlobalSearch_SearchFor.TS011_VerifyEventsOverviewInGlobalSearchTest(GlobalSearch_SearchFor.java:791)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2139275181", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2139275181'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;imc-eventdetail--header&apos;]/div[3]/section[1]/div[1]/h1[1] (tried for 40 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 137.0.7151.120, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60518}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60518/devtoo..., se:cdpVersion: 137.0.7151.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b46fc091b6a66dd6a7c0e3df67bf8563
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pageObjects.LasVegasMarket.LVMExhLineProdActionsPage.geteventdetailsheaderLVM(LVMExhLineProdActionsPage.java:148)
-	at lasvegasmarket_PROD.GlobalSearch_SearchFor.TS011_VerifyEventsOverviewInGlobalSearchTest(GlobalSearch_SearchFor.java:791)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>118</td>
-<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@79517588</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS008_VerifyExhibitorEventsListTest()'><b>TS008_VerifyExhibitorEventsListTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
-<td><div><pre>java.lang.AssertionError: ❌ Date/Time mismatch!
-	at lasvegasmarket_PROD.EvenntsAndWebinar.TS008_VerifyExhibitorEventsListTest(EvenntsAndWebinar.java:780)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2027340356", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2027340356'><pre>java.lang.AssertionError: ❌ Date/Time mismatch!
-	at lasvegasmarket_PROD.EvenntsAndWebinar.TS008_VerifyExhibitorEventsListTest(EvenntsAndWebinar.java:780)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>18</td>
-<td>lasvegasmarket_PROD.EvenntsAndWebinar@42bc14c1</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_SearchFor.TS006_VerifyArticlesFiltersGlobalSearchTest()'><b>TS006_VerifyArticlesFiltersGlobalSearchTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SearchFor</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //span[@class=&apos;imc-blog-tag-module__tag&apos;] (tried for 40 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 137.0.7151.120, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60518}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60518/devtoo..., se:cdpVersion: 137.0.7151.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b46fc091b6a66dd6a7c0e3df67bf8563
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pageObjects.LasVegasMarket.LVMGlobalSearchPage.getlistOfAllTags(LVMGlobalSearchPage.java:330)
-	at lasvegasmarket_PROD.GlobalSearch_SearchFor.processFilter(GlobalSearch_SearchFor.java:542)
-	at lasvegasmarket_PROD.GlobalSearch_SearchFor.TS006_VerifyArticlesFiltersGlobalSearchTest(GlobalSearch_SearchFor.java:471)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1831041361", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1831041361'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //span[@class=&apos;imc-blog-tag-module__tag&apos;] (tried for 40 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 137.0.7151.120, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60518}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60518/devtoo..., se:cdpVersion: 137.0.7151.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b46fc091b6a66dd6a7c0e3df67bf8563
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pageObjects.LasVegasMarket.LVMGlobalSearchPage.getlistOfAllTags(LVMGlobalSearchPage.java:330)
-	at lasvegasmarket_PROD.GlobalSearch_SearchFor.processFilter(GlobalSearch_SearchFor.java:542)
-	at lasvegasmarket_PROD.GlobalSearch_SearchFor.TS006_VerifyArticlesFiltersGlobalSearchTest(GlobalSearch_SearchFor.java:471)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>136</td>
-<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@79517588</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest()'><b>TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;imc-exhibitorcard-title-row &apos;]/div/div/div/div/div/a/h2 (tried for 40 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 137.0.7151.120, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57597}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57597/devtoo..., se:cdpVersion: 137.0.7151.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6710edde44486550deba85a606fe4c6f
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pageObjects.LasVegasMarket.LVMLeftPaneFilters.getlistOfAllExhibitors(LVMLeftPaneFilters.java:99)
-	at resources.Utility.commomMethodForFindoutProductCategory(Utility.java:1599)
-	at lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest(GlobalSearch_LeftPaneFilters.java:185)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace571813280", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace571813280'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[@class=&apos;imc-exhibitorcard-title-row &apos;]/div/div/div/div/div/a/h2 (tried for 40 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 137.0.7151.120, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57597}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57597/devtoo..., se:cdpVersion: 137.0.7151.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6710edde44486550deba85a606fe4c6f
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pageObjects.LasVegasMarket.LVMLeftPaneFilters.getlistOfAllExhibitors(LVMLeftPaneFilters.java:99)
-	at resources.Utility.commomMethodForFindoutProductCategory(Utility.java:1599)
-	at lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest(GlobalSearch_LeftPaneFilters.java:185)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>212</td>
-<td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@51acdf2e</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS007_VerifyIMCEventsEventsListTest()'><b>TS007_VerifyIMCEventsEventsListTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
-<td><div><pre>java.lang.AssertionError: ❌ Date/Time mismatch!
-	at lasvegasmarket_PROD.EvenntsAndWebinar.TS007_VerifyIMCEventsEventsListTest(EvenntsAndWebinar.java:622)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1874962678", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1874962678'><pre>java.lang.AssertionError: ❌ Date/Time mismatch!
-	at lasvegasmarket_PROD.EvenntsAndWebinar.TS007_VerifyIMCEventsEventsListTest(EvenntsAndWebinar.java:622)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>19</td>
-<td>lasvegasmarket_PROD.EvenntsAndWebinar@42bc14c1</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS001_VerifyEventsAndWebinarsOverviewTest()'><b>TS001_VerifyEventsAndWebinarsOverviewTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: (//a[contains(@href,&apos;Events&apos;)])[2] (tried for 40 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 137.0.7151.120, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54955}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54955/devtoo..., se:cdpVersion: 137.0.7151.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5b2a9ae95b198667317c50126787d09f
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pageObjects.LasVegasMarket.LVMGlobalSearchPage.getEventsLink(LVMGlobalSearchPage.java:277)
-	at resources.Utility.clickOnEventLinkOfChannel(Utility.java:103)
-	at lasvegasmarket_PROD.EvenntsAndWebinar.TS001_VerifyEventsAndWebinarsOverviewTest(EvenntsAndWebinar.java:104)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace994584048", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace994584048'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: (//a[contains(@href,&apos;Events&apos;)])[2] (tried for 40 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 137.0.7151.120, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54955}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54955/devtoo..., se:cdpVersion: 137.0.7151.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5b2a9ae95b198667317c50126787d09f
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pageObjects.LasVegasMarket.LVMGlobalSearchPage.getEventsLink(LVMGlobalSearchPage.java:277)
-	at resources.Utility.clickOnEventLinkOfChannel(Utility.java:103)
-	at lasvegasmarket_PROD.EvenntsAndWebinar.TS001_VerifyEventsAndWebinarsOverviewTest(EvenntsAndWebinar.java:104)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1482873927", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1482873927'><pre>java.lang.AssertionError: expected [4789] but found [4790]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at lasvegasmarket_PROD.GlobalSearch_LineActions.TS003_VerifyClickOnMatchingProductsSeeAllLinkForLineTest(GlobalSearch_LineActions.java:223)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -642,55 +199,18 @@ Session ID: 5b2a9ae95b198667317c50126787d09f
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>50</td>
-<td>lasvegasmarket_PROD.EvenntsAndWebinar@42bc14c1</td></tr>
+<td>lasvegasmarket_PROD.GlobalSearch_LineActions@6a55299e</td></tr>
 <tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_SearchFor.TS010_VerifyShowSpecialsOverviewInGlobalSearchTest()'><b>TS010_VerifyShowSpecialsOverviewInGlobalSearchTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SearchFor</td>
-<td><div><pre>java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
-	at lasvegasmarket_PROD.GlobalSearch_SearchFor.TS010_VerifyShowSpecialsOverviewInGlobalSearchTest(GlobalSearch_SearchFor.java:733)
+<td title='lasvegasmarket_PROD.ShowSpecials.TS004_VerifyShowSpecialSortByDetailsTest()'><b>TS004_VerifyShowSpecialSortByDetailsTest</b><br>Test class: lasvegasmarket_PROD.ShowSpecials</td>
+<td><div><pre>java.lang.AssertionError: A-Z sorted details lists do not match! expected [true] but found [false]
+	at lasvegasmarket_PROD.ShowSpecials.TS004_VerifyShowSpecialSortByDetailsTest(ShowSpecials.java:297)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1329963164", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1329963164'><pre>java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
-	at lasvegasmarket_PROD.GlobalSearch_SearchFor.TS010_VerifyShowSpecialsOverviewInGlobalSearchTest(GlobalSearch_SearchFor.java:733)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>43</td>
-<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@79517588</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.ShowSpecials.TS05_VerifyShowSpecialSortByTest()'><b>TS05_VerifyShowSpecialSortByTest</b><br>Test class: lasvegasmarket_PROD.ShowSpecials</td>
-<td><div><pre>java.lang.AssertionError: A-Z sorted lists do not match! expected [true] but found [false]
-	at lasvegasmarket_PROD.ShowSpecials.TS05_VerifyShowSpecialSortByTest(ShowSpecials.java:405)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace837513872", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace837513872'><pre>java.lang.AssertionError: A-Z sorted lists do not match! expected [true] but found [false]
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1196160524", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1196160524'><pre>java.lang.AssertionError: A-Z sorted details lists do not match! expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
 	at org.testng.Assert.assertTrue(Assert.java:45)
-	at lasvegasmarket_PROD.ShowSpecials.TS05_VerifyShowSpecialSortByTest(ShowSpecials.java:405)
+	at lasvegasmarket_PROD.ShowSpecials.TS004_VerifyShowSpecialSortByDetailsTest(ShowSpecials.java:297)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -718,8 +238,139 @@ Session ID: 5b2a9ae95b198667317c50126787d09f
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>19</td>
+<td>27</td>
 <td>lasvegasmarket_PROD.ShowSpecials@289710d9</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.LineDigitalShowroom.TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest()'><b>TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest</b><br>Test class: lasvegasmarket_PROD.LineDigitalShowroom</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id=&apos;Products&apos;]&quot;}
+  (Session info: chrome=137.0.7151.122)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0d5f1414eabcb54a962a16b931ca4fd9, findElement {value=//div[@id=&apos;Products&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.122, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53167}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53167/devtoo..., se:cdpVersion: 137.0.7151.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0d5f1414eabcb54a962a16b931ca4fd9
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at lasvegasmarket_PROD.LineDigitalShowroom.TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest(LineDigitalShowroom.java:153)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2039575147", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2039575147'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id=&apos;Products&apos;]&quot;}
+  (Session info: chrome=137.0.7151.122)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0d5f1414eabcb54a962a16b931ca4fd9, findElement {value=//div[@id=&apos;Products&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.122, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53167}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53167/devtoo..., se:cdpVersion: 137.0.7151.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0d5f1414eabcb54a962a16b931ca4fd9
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at lasvegasmarket_PROD.LineDigitalShowroom.TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest(LineDigitalShowroom.java:153)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>65</td>
+<td>lasvegasmarket_PROD.LineDigitalShowroom@7ac0e420</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.GlobalSearch_SearchFor.TS004_VerifyCatalogsOverviewInGlobalSearchTest()'><b>TS004_VerifyCatalogsOverviewInGlobalSearchTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SearchFor</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//span[contains(text(),&apos;See&apos;) and contains(text(),&apos;Catalog&apos;)])[1] (tried for 40 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.122, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51834}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51834/devtoo..., se:cdpVersion: 137.0.7151.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 810a95c3c95fb3d58be52be03ebb232b
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pageObjects.LasVegasMarket.LVMExhDigiShowroomPage.getSeeAllCatalogsButton(LVMExhDigiShowroomPage.java:656)
+	at lasvegasmarket_PROD.GlobalSearch_SearchFor.TS004_VerifyCatalogsOverviewInGlobalSearchTest(GlobalSearch_SearchFor.java:370)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1297224092", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1297224092'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//span[contains(text(),&apos;See&apos;) and contains(text(),&apos;Catalog&apos;)])[1] (tried for 40 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.3&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.122, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\swapnili\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51834}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51834/devtoo..., se:cdpVersion: 137.0.7151.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 810a95c3c95fb3d58be52be03ebb232b
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pageObjects.LasVegasMarket.LVMExhDigiShowroomPage.getSeeAllCatalogsButton(LVMExhDigiShowroomPage.java:656)
+	at lasvegasmarket_PROD.GlobalSearch_SearchFor.TS004_VerifyCatalogsOverviewInGlobalSearchTest(GlobalSearch_SearchFor.java:370)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>164</td>
+<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@79517588</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -729,304 +380,124 @@ Session ID: 5b2a9ae95b198667317c50126787d09f
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='lasvegasmarket_PROD.ExhibitorDigitalShowroom.TS006_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest()'><b>TS006_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest</b><br>Test class: lasvegasmarket_PROD.ExhibitorDigitalShowroom</td>
+<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest()'><b>TS002_VerifySelectionOfAntiqueVintageProdCatgFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
 <td></td>
-<td>28</td>
-<td>lasvegasmarket_PROD.ExhibitorDigitalShowroom@40238dd0</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.FloorPlans.TS004_VerifyIconsOnFloorPlansPageTest()'><b>TS004_VerifyIconsOnFloorPlansPageTest</b><br>Test class: lasvegasmarket_PROD.FloorPlans</td>
-<td></td>
-<td>20</td>
-<td>lasvegasmarket_PROD.FloorPlans@7776ab</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.LineDigitalShowroom.TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest()'><b>TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest</b><br>Test class: lasvegasmarket_PROD.LineDigitalShowroom</td>
-<td></td>
-<td>100</td>
-<td>lasvegasmarket_PROD.LineDigitalShowroom@7ac0e420</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_SearchFor.TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest()'><b>TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SearchFor</td>
-<td></td>
-<td>55</td>
-<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@79517588</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS0012_VerifyExhibitorEventDateRangeSearchBoxTest()'><b>TS0012_VerifyExhibitorEventDateRangeSearchBoxTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
-<td></td>
-<td>76</td>
-<td>lasvegasmarket_PROD.EvenntsAndWebinar@42bc14c1</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_MatchingResults.TS001_VerifyGlobalSearchContainsAndStartsWithTest()'><b>TS001_VerifyGlobalSearchContainsAndStartsWithTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_MatchingResults</td>
-<td></td>
-<td>11</td>
-<td>lasvegasmarket_PROD.GlobalSearch_MatchingResults@2f1de2d6</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS007_VerifySelectionOfDecorativeAccessProdCatgFromLeftPaneFiltersTest()'><b>TS007_VerifySelectionOfDecorativeAccessProdCatgFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
-<td></td>
-<td>68</td>
+<td>282</td>
 <td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@51acdf2e</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_LineActions.TS001_VerifyClickOnShownByExhibitorNameLinkForLineTest()'><b>TS001_VerifyClickOnShownByExhibitorNameLinkForLineTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LineActions</td>
-<td></td>
-<td>24</td>
-<td>lasvegasmarket_PROD.GlobalSearch_LineActions@6a55299e</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS0013_VerifyEventCalendarResetButtonTest()'><b>TS0013_VerifyEventCalendarResetButtonTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
-<td></td>
-<td>16</td>
-<td>lasvegasmarket_PROD.EvenntsAndWebinar@42bc14c1</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS014_VerifyTemporaryButtonFromLeftPaneFiltersTest()'><b>TS014_VerifyTemporaryButtonFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
 <td></td>
-<td>31</td>
+<td>32</td>
 <td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@51acdf2e</td></tr>
 <tr>
-<td title='lasvegasmarket_PROD.LineDigitalShowroom.TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest()'><b>TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest</b><br>Test class: lasvegasmarket_PROD.LineDigitalShowroom</td>
+<td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS008_VerifyExhibitorEventsListTest()'><b>TS008_VerifyExhibitorEventsListTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
 <td></td>
-<td>35</td>
-<td>lasvegasmarket_PROD.LineDigitalShowroom@7ac0e420</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_MatchingResults.TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest()'><b>TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_MatchingResults</td>
-<td></td>
-<td>55</td>
-<td>lasvegasmarket_PROD.GlobalSearch_MatchingResults@2f1de2d6</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.FloorPlans.TS002_VerifyNoExhibitorsOnThisFloorMessageTest()'><b>TS002_VerifyNoExhibitorsOnThisFloorMessageTest</b><br>Test class: lasvegasmarket_PROD.FloorPlans</td>
-<td></td>
-<td>21</td>
-<td>lasvegasmarket_PROD.FloorPlans@7776ab</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.ExhibitorDigitalShowroom.TS007_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest()'><b>TS007_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest</b><br>Test class: lasvegasmarket_PROD.ExhibitorDigitalShowroom</td>
-<td></td>
-<td>33</td>
-<td>lasvegasmarket_PROD.ExhibitorDigitalShowroom@40238dd0</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_MatchingResults.TS003_VerifyGlobalSearchMatchingResultsSortSortByMatchingProductCountDescendingTest()'><b>TS003_VerifyGlobalSearchMatchingResultsSortSortByMatchingProductCountDescendingTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_MatchingResults</td>
-<td></td>
-<td>42</td>
-<td>lasvegasmarket_PROD.GlobalSearch_MatchingResults@2f1de2d6</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_SearchFor.TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest()'><b>TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SearchFor</td>
-<td></td>
-<td>66</td>
-<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@79517588</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.FloorPlans.TS001_VerifyNavigationToDifferentFloorBuildingsTest()'><b>TS001_VerifyNavigationToDifferentFloorBuildingsTest</b><br>Test class: lasvegasmarket_PROD.FloorPlans</td>
-<td></td>
-<td>26</td>
-<td>lasvegasmarket_PROD.FloorPlans@7776ab</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_SearchFor.TS004_VerifyCatalogsOverviewInGlobalSearchTest()'><b>TS004_VerifyCatalogsOverviewInGlobalSearchTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SearchFor</td>
-<td></td>
-<td>109</td>
-<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@79517588</td></tr>
+<td>20</td>
+<td>lasvegasmarket_PROD.EvenntsAndWebinar@42bc14c1</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS003_VerifyMarketEventsSearchbarTest()'><b>TS003_VerifyMarketEventsSearchbarTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
 <td></td>
-<td>27</td>
-<td>lasvegasmarket_PROD.EvenntsAndWebinar@42bc14c1</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS013_VerifyHasShowSpecialsFromLeftPaneFiltersTest()'><b>TS013_VerifyHasShowSpecialsFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
-<td></td>
-<td>38</td>
-<td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@51acdf2e</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.ShowSpecials.TS002_VerifyShowSpecialLocationLinkTest()'><b>TS002_VerifyShowSpecialLocationLinkTest</b><br>Test class: lasvegasmarket_PROD.ShowSpecials</td>
-<td></td>
-<td>14</td>
-<td>lasvegasmarket_PROD.ShowSpecials@289710d9</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_SuggestionList.TS002_VerifySelectionOfLineFromAutoSuggestionListTest()'><b>TS002_VerifySelectionOfLineFromAutoSuggestionListTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SuggestionList</td>
-<td></td>
-<td>26</td>
-<td>lasvegasmarket_PROD.GlobalSearch_SuggestionList@3a0baae5</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS002_VerifyAllEventsSearchbarTest()'><b>TS002_VerifyAllEventsSearchbarTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
-<td></td>
-<td>27</td>
-<td>lasvegasmarket_PROD.EvenntsAndWebinar@42bc14c1</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.ExhibitorDigitalShowroom.TS001_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest()'><b>TS001_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest</b><br>Test class: lasvegasmarket_PROD.ExhibitorDigitalShowroom</td>
-<td></td>
-<td>31</td>
-<td>lasvegasmarket_PROD.ExhibitorDigitalShowroom@40238dd0</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.LineDigitalShowroom.TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest()'><b>TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest</b><br>Test class: lasvegasmarket_PROD.LineDigitalShowroom</td>
-<td></td>
-<td>37</td>
-<td>lasvegasmarket_PROD.LineDigitalShowroom@7ac0e420</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.FloorPlans.TS006_VerifyPaginationOnFloorPlansPageTest()'><b>TS006_VerifyPaginationOnFloorPlansPageTest</b><br>Test class: lasvegasmarket_PROD.FloorPlans</td>
-<td></td>
-<td>27</td>
-<td>lasvegasmarket_PROD.FloorPlans@7776ab</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.LineDigitalShowroom.TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest()'><b>TS007_VerifyLineDigitalShowroomHeroComponentProductsComponentCountTest</b><br>Test class: lasvegasmarket_PROD.LineDigitalShowroom</td>
-<td></td>
-<td>40</td>
-<td>lasvegasmarket_PROD.LineDigitalShowroom@7ac0e420</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS009_VerifyEventTypeDropdownTest()'><b>TS009_VerifyEventTypeDropdownTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
-<td></td>
-<td>25</td>
-<td>lasvegasmarket_PROD.EvenntsAndWebinar@42bc14c1</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_SearchFor.TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest()'><b>TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SearchFor</td>
-<td></td>
-<td>80</td>
-<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@79517588</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.ShowSpecials.TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest()'><b>TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest</b><br>Test class: lasvegasmarket_PROD.ShowSpecials</td>
-<td></td>
-<td>22</td>
-<td>lasvegasmarket_PROD.ShowSpecials@289710d9</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_SuggestionList.TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest()'><b>TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SuggestionList</td>
-<td></td>
-<td>26</td>
-<td>lasvegasmarket_PROD.GlobalSearch_SuggestionList@3a0baae5</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.ShowSpecials.TS06_VerifyShowSpecialResetButtonTest()'><b>TS06_VerifyShowSpecialResetButtonTest</b><br>Test class: lasvegasmarket_PROD.ShowSpecials</td>
-<td></td>
-<td>22</td>
-<td>lasvegasmarket_PROD.ShowSpecials@289710d9</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS004_VerifyExhibitorsEventsSearchbarTest()'><b>TS004_VerifyExhibitorsEventsSearchbarTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
-<td></td>
-<td>28</td>
-<td>lasvegasmarket_PROD.EvenntsAndWebinar@42bc14c1</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.ExhibitorDigitalShowroom.TS015_VerifyExhibitorDigitalShowroomHeroComponentContactExhibitorTest()'><b>TS015_VerifyExhibitorDigitalShowroomHeroComponentContactExhibitorTest</b><br>Test class: lasvegasmarket_PROD.ExhibitorDigitalShowroom</td>
-<td></td>
 <td>29</td>
-<td>lasvegasmarket_PROD.ExhibitorDigitalShowroom@40238dd0</td></tr>
+<td>lasvegasmarket_PROD.EvenntsAndWebinar@42bc14c1</td></tr>
 <tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_ExhibitorActions.TS006_VerifySelectionOfExhibitorFromSearchResultsTest()'><b>TS006_VerifySelectionOfExhibitorFromSearchResultsTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_ExhibitorActions</td>
+<td title='lasvegasmarket_PROD.GlobalSearch_SearchFor.TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest()'><b>TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SearchFor</td>
 <td></td>
-<td>47</td>
-<td>lasvegasmarket_PROD.GlobalSearch_ExhibitorActions@79179359</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_ExhibitorActions.TS001_VerifyClickOnContactExhIconForExhibitorTest()'><b>TS001_VerifyClickOnContactExhIconForExhibitorTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_ExhibitorActions</td>
-<td></td>
-<td>21</td>
-<td>lasvegasmarket_PROD.GlobalSearch_ExhibitorActions@79179359</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.FloorPlans.TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest()'><b>TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest</b><br>Test class: lasvegasmarket_PROD.FloorPlans</td>
-<td></td>
-<td>72</td>
-<td>lasvegasmarket_PROD.FloorPlans@7776ab</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_SuggestionList.TS003_VerifySelectionOfProductFromAutoSuggestionListTest()'><b>TS003_VerifySelectionOfProductFromAutoSuggestionListTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SuggestionList</td>
-<td></td>
-<td>26</td>
-<td>lasvegasmarket_PROD.GlobalSearch_SuggestionList@3a0baae5</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.FloorPlans.TS003_VerifyZoomInOutLevelOnFloorPlansPageTest()'><b>TS003_VerifyZoomInOutLevelOnFloorPlansPageTest</b><br>Test class: lasvegasmarket_PROD.FloorPlans</td>
-<td></td>
-<td>16</td>
-<td>lasvegasmarket_PROD.FloorPlans@7776ab</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.LineDigitalShowroom.TS008_VerifyLineDigitalShowroomProductscomponentTest()'><b>TS008_VerifyLineDigitalShowroomProductscomponentTest</b><br>Test class: lasvegasmarket_PROD.LineDigitalShowroom</td>
-<td></td>
-<td>39</td>
-<td>lasvegasmarket_PROD.LineDigitalShowroom@7ac0e420</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.ExhibitorDigitalShowroom.TS010_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest()'><b>TS010_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest</b><br>Test class: lasvegasmarket_PROD.ExhibitorDigitalShowroom</td>
-<td></td>
-<td>55</td>
-<td>lasvegasmarket_PROD.ExhibitorDigitalShowroom@40238dd0</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS012_VerifyNewExhibitorButtonFromLeftPaneFiltersTest()'><b>TS012_VerifyNewExhibitorButtonFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
-<td></td>
-<td>39</td>
-<td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@51acdf2e</td></tr>
+<td>64</td>
+<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@79517588</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.FloorPlans.TS008_VerifyClickOnReturnToBuildingListBtnTest()'><b>TS008_VerifyClickOnReturnToBuildingListBtnTest</b><br>Test class: lasvegasmarket_PROD.FloorPlans</td>
 <td></td>
 <td>19</td>
 <td>lasvegasmarket_PROD.FloorPlans@7776ab</td></tr>
 <tr>
-<td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS0011_VerifyMarketEventDateRangeSearchBoxTest()'><b>TS0011_VerifyMarketEventDateRangeSearchBoxTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
+<td title='lasvegasmarket_PROD.ExhibitorDigitalShowroom.TS006_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest()'><b>TS006_VerifyExhibitorDigitalShowroomLinesComponentSeeAllLinesTest</b><br>Test class: lasvegasmarket_PROD.ExhibitorDigitalShowroom</td>
 <td></td>
-<td>77</td>
-<td>lasvegasmarket_PROD.EvenntsAndWebinar@42bc14c1</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_ExhibitorActions.TS003_VerifyClickOnLinesShownLinkForExhibitorTest()'><b>TS003_VerifyClickOnLinesShownLinkForExhibitorTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_ExhibitorActions</td>
-<td></td>
-<td>57</td>
-<td>lasvegasmarket_PROD.GlobalSearch_ExhibitorActions@79179359</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_ProductActions.TS002_VerifyFullScreenViewerOnProductDetailsPageTest()'><b>TS002_VerifyFullScreenViewerOnProductDetailsPageTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_ProductActions</td>
-<td></td>
-<td>60</td>
-<td>lasvegasmarket_PROD.GlobalSearch_ProductActions@4eb386df</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_MatchingResults.TS003_VerifyGlobalSearchMatchingResultsSortSortByAscendingOrderTest()'><b>TS003_VerifyGlobalSearchMatchingResultsSortSortByAscendingOrderTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_MatchingResults</td>
-<td></td>
-<td>59</td>
-<td>lasvegasmarket_PROD.GlobalSearch_MatchingResults@2f1de2d6</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.ExhibitorDigitalShowroom.TS003_VerifyClickOnProductShownLinkForExhibitorTest()'><b>TS003_VerifyClickOnProductShownLinkForExhibitorTest</b><br>Test class: lasvegasmarket_PROD.ExhibitorDigitalShowroom</td>
-<td></td>
-<td>53</td>
+<td>28</td>
 <td>lasvegasmarket_PROD.ExhibitorDigitalShowroom@40238dd0</td></tr>
 <tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_MatchingResults.TS003_VerifyGlobalSearchMatchingResultsSortSortByMatchingProductCountAscendingTest()'><b>TS003_VerifyGlobalSearchMatchingResultsSortSortByMatchingProductCountAscendingTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_MatchingResults</td>
-<td></td>
-<td>58</td>
-<td>lasvegasmarket_PROD.GlobalSearch_MatchingResults@2f1de2d6</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_SearchFor.TS005_VerifyArticlesOverviewInGlobalSearchTest()'><b>TS005_VerifyArticlesOverviewInGlobalSearchTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SearchFor</td>
-<td></td>
-<td>74</td>
-<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@79517588</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS005_VerifySelectionOfAccentFurnitureProdCatgFromLeftPaneFiltersTest()'><b>TS005_VerifySelectionOfAccentFurnitureProdCatgFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
-<td></td>
-<td>137</td>
-<td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@51acdf2e</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.LineDigitalShowroom.TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest()'><b>TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest</b><br>Test class: lasvegasmarket_PROD.LineDigitalShowroom</td>
-<td></td>
-<td>27</td>
-<td>lasvegasmarket_PROD.LineDigitalShowroom@7ac0e420</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_ExhibitorActions.TS002_VerifyClickOnLocationLinksForExhibitorTest()'><b>TS002_VerifyClickOnLocationLinksForExhibitorTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_ExhibitorActions</td>
+<td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS009_VerifyEventTypeDropdownTest()'><b>TS009_VerifyEventTypeDropdownTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
 <td></td>
 <td>29</td>
-<td>lasvegasmarket_PROD.GlobalSearch_ExhibitorActions@79179359</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS005_VerifyIMCEventsCalendarViewTest()'><b>TS005_VerifyIMCEventsCalendarViewTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
-<td></td>
-<td>22</td>
 <td>lasvegasmarket_PROD.EvenntsAndWebinar@42bc14c1</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.ExhibitorDigitalShowroom.TS002_VerifyClickOnTotalLinesSeeAllLinesForExhibitorTest()'><b>TS002_VerifyClickOnTotalLinesSeeAllLinesForExhibitorTest</b><br>Test class: lasvegasmarket_PROD.ExhibitorDigitalShowroom</td>
-<td></td>
-<td>73</td>
-<td>lasvegasmarket_PROD.ExhibitorDigitalShowroom@40238dd0</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest()'><b>TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
-<td></td>
-<td>68</td>
-<td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@51acdf2e</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS010_VerifySelectionOfFloralBotanicalsProdCatgFromLeftPaneFiltersTest()'><b>TS010_VerifySelectionOfFloralBotanicalsProdCatgFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
-<td></td>
-<td>72</td>
-<td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@51acdf2e</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.ShowSpecials.TS003_VerifyShowSpecialSearchBoxTest()'><b>TS003_VerifyShowSpecialSearchBoxTest</b><br>Test class: lasvegasmarket_PROD.ShowSpecials</td>
-<td></td>
-<td>12</td>
-<td>lasvegasmarket_PROD.ShowSpecials@289710d9</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.ExhibitorDigitalShowroom.TS011_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest()'><b>TS011_VerifyExhibitorDigitalShowroomHeroComponentView3DShowroomTest</b><br>Test class: lasvegasmarket_PROD.ExhibitorDigitalShowroom</td>
 <td></td>
 <td>33</td>
 <td>lasvegasmarket_PROD.ExhibitorDigitalShowroom@40238dd0</td></tr>
 <tr>
-<td title='lasvegasmarket_PROD.ExhibitorDigitalShowroom.TS009_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest()'><b>TS009_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest</b><br>Test class: lasvegasmarket_PROD.ExhibitorDigitalShowroom</td>
+<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS009_VerifySelectionOfFashionAccProdCatgFromLeftPaneFiltersTest()'><b>TS009_VerifySelectionOfFashionAccProdCatgFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
 <td></td>
-<td>75</td>
+<td>70</td>
+<td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@51acdf2e</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS004_VerifyExhibitorsEventsSearchbarTest()'><b>TS004_VerifyExhibitorsEventsSearchbarTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
+<td></td>
+<td>29</td>
+<td>lasvegasmarket_PROD.EvenntsAndWebinar@42bc14c1</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.ExhibitorDigitalShowroom.TS012_VerifyExhibitorDigitalEventsComponentTest()'><b>TS012_VerifyExhibitorDigitalEventsComponentTest</b><br>Test class: lasvegasmarket_PROD.ExhibitorDigitalShowroom</td>
+<td></td>
+<td>123</td>
+<td>lasvegasmarket_PROD.ExhibitorDigitalShowroom@40238dd0</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.GlobalSearch_SuggestionList.TS002_VerifySelectionOfLineFromAutoSuggestionListTest()'><b>TS002_VerifySelectionOfLineFromAutoSuggestionListTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SuggestionList</td>
+<td></td>
+<td>35</td>
+<td>lasvegasmarket_PROD.GlobalSearch_SuggestionList@3a0baae5</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.ShowSpecials.TS002_VerifyShowSpecialLocationLinkTest()'><b>TS002_VerifyShowSpecialLocationLinkTest</b><br>Test class: lasvegasmarket_PROD.ShowSpecials</td>
+<td></td>
+<td>19</td>
+<td>lasvegasmarket_PROD.ShowSpecials@289710d9</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.FloorPlans.TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest()'><b>TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest</b><br>Test class: lasvegasmarket_PROD.FloorPlans</td>
+<td></td>
+<td>40</td>
+<td>lasvegasmarket_PROD.FloorPlans@7776ab</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.ShowSpecials.TS06_VerifyShowSpecialResetButtonTest()'><b>TS06_VerifyShowSpecialResetButtonTest</b><br>Test class: lasvegasmarket_PROD.ShowSpecials</td>
+<td></td>
+<td>37</td>
+<td>lasvegasmarket_PROD.ShowSpecials@289710d9</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.ExhibitorDigitalShowroom.TS015_VerifyExhibitorDigitalShowroomHeroComponentContactExhibitorTest()'><b>TS015_VerifyExhibitorDigitalShowroomHeroComponentContactExhibitorTest</b><br>Test class: lasvegasmarket_PROD.ExhibitorDigitalShowroom</td>
+<td></td>
+<td>31</td>
+<td>lasvegasmarket_PROD.ExhibitorDigitalShowroom@40238dd0</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest()'><b>TS011_VerifySelectionOfHomeTextilesProdCatgFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
+<td></td>
+<td>70</td>
+<td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@51acdf2e</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.GlobalSearch_MatchingResults.TS003_VerifyGlobalSearchMatchingResultsSortSortByMatchingProductCountAscendingTest()'><b>TS003_VerifyGlobalSearchMatchingResultsSortSortByMatchingProductCountAscendingTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_MatchingResults</td>
+<td></td>
+<td>58</td>
+<td>lasvegasmarket_PROD.GlobalSearch_MatchingResults@2f1de2d6</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.GlobalSearch_ExhibitorActions.TS003_VerifyClickOnLinesShownLinkForExhibitorTest()'><b>TS003_VerifyClickOnLinesShownLinkForExhibitorTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_ExhibitorActions</td>
+<td></td>
+<td>39</td>
+<td>lasvegasmarket_PROD.GlobalSearch_ExhibitorActions@79179359</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS006_VerifySelectedCalendarEventDateAndSearchEventsTest()'><b>TS006_VerifySelectedCalendarEventDateAndSearchEventsTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
+<td></td>
+<td>13</td>
+<td>lasvegasmarket_PROD.EvenntsAndWebinar@42bc14c1</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.FloorPlans.TS004_VerifyIconsOnFloorPlansPageTest()'><b>TS004_VerifyIconsOnFloorPlansPageTest</b><br>Test class: lasvegasmarket_PROD.FloorPlans</td>
+<td></td>
+<td>20</td>
+<td>lasvegasmarket_PROD.FloorPlans@7776ab</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.GlobalSearch_MatchingResults.TS003_VerifyGlobalSearchMatchingResultsSortSortByDscendingOrderTest()'><b>TS003_VerifyGlobalSearchMatchingResultsSortSortByDscendingOrderTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_MatchingResults</td>
+<td></td>
+<td>58</td>
+<td>lasvegasmarket_PROD.GlobalSearch_MatchingResults@2f1de2d6</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.ExhibitorDigitalShowroom.TS003_VerifyClickOnProductShownLinkForExhibitorTest()'><b>TS003_VerifyClickOnProductShownLinkForExhibitorTest</b><br>Test class: lasvegasmarket_PROD.ExhibitorDigitalShowroom</td>
+<td></td>
+<td>56</td>
 <td>lasvegasmarket_PROD.ExhibitorDigitalShowroom@40238dd0</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.ExhibitorDigitalShowroom.TS013_VerifyCatalogsSectionForExhibitorTest()'><b>TS013_VerifyCatalogsSectionForExhibitorTest</b><br>Test class: lasvegasmarket_PROD.ExhibitorDigitalShowroom</td>
@@ -1034,95 +505,315 @@ Session ID: 5b2a9ae95b198667317c50126787d09f
 <td>73</td>
 <td>lasvegasmarket_PROD.ExhibitorDigitalShowroom@40238dd0</td></tr>
 <tr>
-<td title='lasvegasmarket_PROD.FloorPlans.TS009_VerifySearchFunctionalityForExhListOnFloorPlansPageTest()'><b>TS009_VerifySearchFunctionalityForExhListOnFloorPlansPageTest</b><br>Test class: lasvegasmarket_PROD.FloorPlans</td>
+<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS006_VerifySelectionOfHolidayProdCatgFromLeftPaneFiltersTest()'><b>TS006_VerifySelectionOfHolidayProdCatgFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
 <td></td>
-<td>54</td>
-<td>lasvegasmarket_PROD.FloorPlans@7776ab</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.ExhibitorDigitalShowroom.TS005_VerifyClickOnLineSearchForExhibitorTest()'><b>TS005_VerifyClickOnLineSearchForExhibitorTest</b><br>Test class: lasvegasmarket_PROD.ExhibitorDigitalShowroom</td>
-<td></td>
-<td>40</td>
-<td>lasvegasmarket_PROD.ExhibitorDigitalShowroom@40238dd0</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_SearchFor.TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest()'><b>TS009_VerifyEventsFiltersFunctionalityInGlobalSearchTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SearchFor</td>
-<td></td>
-<td>53</td>
-<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@79517588</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS009_VerifySelectionOfFashionAccProdCatgFromLeftPaneFiltersTest()'><b>TS009_VerifySelectionOfFashionAccProdCatgFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
-<td></td>
-<td>68</td>
+<td>71</td>
 <td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@51acdf2e</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.LineDigitalShowroom.TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest()'><b>TS002_VerifyLineDigitalShowroomHeroComponentLocationLinksTest</b><br>Test class: lasvegasmarket_PROD.LineDigitalShowroom</td>
+<td></td>
+<td>32</td>
+<td>lasvegasmarket_PROD.LineDigitalShowroom@7ac0e420</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.GlobalSearch_SearchFor.TS001_VerifyInformationTabInGlobalSearchTest()'><b>TS001_VerifyInformationTabInGlobalSearchTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SearchFor</td>
 <td></td>
-<td>47</td>
+<td>55</td>
 <td>lasvegasmarket_PROD.GlobalSearch_SearchFor@79517588</td></tr>
 <tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest()'><b>TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
+<td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS007_VerifyIMCEventsEventsListTest()'><b>TS007_VerifyIMCEventsEventsListTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
 <td></td>
-<td>53</td>
+<td>23</td>
+<td>lasvegasmarket_PROD.EvenntsAndWebinar@42bc14c1</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS005_VerifySelectionOfAccentFurnitureProdCatgFromLeftPaneFiltersTest()'><b>TS005_VerifySelectionOfAccentFurnitureProdCatgFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
+<td></td>
+<td>137</td>
 <td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@51acdf2e</td></tr>
 <tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_MatchingResults.TS003_VerifyGlobalSearchMatchingResultsSortSortByDscendingOrderTest()'><b>TS003_VerifyGlobalSearchMatchingResultsSortSortByDscendingOrderTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_MatchingResults</td>
+<td title='lasvegasmarket_PROD.FloorPlans.TS001_VerifyNavigationToDifferentFloorBuildingsTest()'><b>TS001_VerifyNavigationToDifferentFloorBuildingsTest</b><br>Test class: lasvegasmarket_PROD.FloorPlans</td>
 <td></td>
-<td>57</td>
-<td>lasvegasmarket_PROD.GlobalSearch_MatchingResults@2f1de2d6</td></tr>
+<td>27</td>
+<td>lasvegasmarket_PROD.FloorPlans@7776ab</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.GlobalSearch_SearchFor.TS010_VerifyShowSpecialsOverviewInGlobalSearchTest()'><b>TS010_VerifyShowSpecialsOverviewInGlobalSearchTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SearchFor</td>
+<td></td>
+<td>74</td>
+<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@79517588</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.GlobalSearch_SearchFor.TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest()'><b>TS002_VerifyInformationSearchFunctionalityInGlobalSearchTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SearchFor</td>
+<td></td>
+<td>68</td>
+<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@79517588</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.FloorPlans.TS006_VerifyPaginationOnFloorPlansPageTest()'><b>TS006_VerifyPaginationOnFloorPlansPageTest</b><br>Test class: lasvegasmarket_PROD.FloorPlans</td>
+<td></td>
+<td>27</td>
+<td>lasvegasmarket_PROD.FloorPlans@7776ab</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.ExhibitorDigitalShowroom.TS002_VerifyClickOnTotalLinesSeeAllLinesForExhibitorTest()'><b>TS002_VerifyClickOnTotalLinesSeeAllLinesForExhibitorTest</b><br>Test class: lasvegasmarket_PROD.ExhibitorDigitalShowroom</td>
+<td></td>
+<td>75</td>
+<td>lasvegasmarket_PROD.ExhibitorDigitalShowroom@40238dd0</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.GlobalSearch_ExhibitorActions.TS001_VerifyClickOnContactExhIconForExhibitorTest()'><b>TS001_VerifyClickOnContactExhIconForExhibitorTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_ExhibitorActions</td>
+<td></td>
+<td>22</td>
+<td>lasvegasmarket_PROD.GlobalSearch_ExhibitorActions@79179359</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.ExhibitorDigitalShowroom.TS005_VerifyClickOnLineSearchForExhibitorTest()'><b>TS005_VerifyClickOnLineSearchForExhibitorTest</b><br>Test class: lasvegasmarket_PROD.ExhibitorDigitalShowroom</td>
+<td></td>
+<td>42</td>
+<td>lasvegasmarket_PROD.ExhibitorDigitalShowroom@40238dd0</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.GlobalSearch_SuggestionList.TS003_VerifySelectionOfProductFromAutoSuggestionListTest()'><b>TS003_VerifySelectionOfProductFromAutoSuggestionListTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SuggestionList</td>
+<td></td>
+<td>33</td>
+<td>lasvegasmarket_PROD.GlobalSearch_SuggestionList@3a0baae5</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.LineDigitalShowroom.TS008_VerifyLineDigitalShowroomProductscomponentTest()'><b>TS008_VerifyLineDigitalShowroomProductscomponentTest</b><br>Test class: lasvegasmarket_PROD.LineDigitalShowroom</td>
+<td></td>
+<td>47</td>
+<td>lasvegasmarket_PROD.LineDigitalShowroom@7ac0e420</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.GlobalSearch_SearchFor.TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest()'><b>TS008_VerifyEventsSearchFunctionalityInGlobalSearchTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SearchFor</td>
+<td></td>
+<td>70</td>
+<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@79517588</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.GlobalSearch_ProductActions.TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest()'><b>TS001_VerifyClickOnProductSeeDetailsBtnOnSearchResultsGridTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_ProductActions</td>
 <td></td>
-<td>51</td>
+<td>48</td>
 <td>lasvegasmarket_PROD.GlobalSearch_ProductActions@4eb386df</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.ExhibitorDigitalShowroom.TS010_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest()'><b>TS010_VerifyExhibitorDigitalShowroomHeroComponentVisitExhibitorsiteTest</b><br>Test class: lasvegasmarket_PROD.ExhibitorDigitalShowroom</td>
+<td></td>
+<td>51</td>
+<td>lasvegasmarket_PROD.ExhibitorDigitalShowroom@40238dd0</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS0010_VerifyEventDateRangeSearchBoxTest()'><b>TS0010_VerifyEventDateRangeSearchBoxTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
+<td></td>
+<td>47</td>
+<td>lasvegasmarket_PROD.EvenntsAndWebinar@42bc14c1</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.FloorPlans.TS009_VerifySearchFunctionalityForExhListOnFloorPlansPageTest()'><b>TS009_VerifySearchFunctionalityForExhListOnFloorPlansPageTest</b><br>Test class: lasvegasmarket_PROD.FloorPlans</td>
+<td></td>
+<td>53</td>
+<td>lasvegasmarket_PROD.FloorPlans@7776ab</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.LineDigitalShowroom.TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest()'><b>TS010_VerifyLineDigitalShowroomProductscomponentSeeAllProductsTest</b><br>Test class: lasvegasmarket_PROD.LineDigitalShowroom</td>
+<td></td>
+<td>39</td>
+<td>lasvegasmarket_PROD.LineDigitalShowroom@7ac0e420</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS001_VerifyEventsAndWebinarsOverviewTest()'><b>TS001_VerifyEventsAndWebinarsOverviewTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
+<td></td>
+<td>15</td>
+<td>lasvegasmarket_PROD.EvenntsAndWebinar@42bc14c1</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest()'><b>TS003_VerifyCombinationWithinProdCatgFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
+<td></td>
+<td>64</td>
+<td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@51acdf2e</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.GlobalSearch_ExhibitorActions.TS002_VerifyClickOnLocationLinksForExhibitorTest()'><b>TS002_VerifyClickOnLocationLinksForExhibitorTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_ExhibitorActions</td>
+<td></td>
+<td>27</td>
+<td>lasvegasmarket_PROD.GlobalSearch_ExhibitorActions@79179359</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS0012_VerifyExhibitorEventDateRangeSearchBoxTest()'><b>TS0012_VerifyExhibitorEventDateRangeSearchBoxTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
+<td></td>
+<td>47</td>
+<td>lasvegasmarket_PROD.EvenntsAndWebinar@42bc14c1</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.FloorPlans.TS002_VerifyNoExhibitorsOnThisFloorMessageTest()'><b>TS002_VerifyNoExhibitorsOnThisFloorMessageTest</b><br>Test class: lasvegasmarket_PROD.FloorPlans</td>
+<td></td>
+<td>22</td>
+<td>lasvegasmarket_PROD.FloorPlans@7776ab</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.GlobalSearch_SearchFor.TS011_VerifyEventsOverviewInGlobalSearchTest()'><b>TS011_VerifyEventsOverviewInGlobalSearchTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SearchFor</td>
+<td></td>
+<td>59</td>
+<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@79517588</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.GlobalSearch_SuggestionList.TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest()'><b>TS001_VerifySelectionOfExhibitorFromAutoSuggestionListTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SuggestionList</td>
+<td></td>
+<td>31</td>
+<td>lasvegasmarket_PROD.GlobalSearch_SuggestionList@3a0baae5</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.GlobalSearch_ExhibitorActions.TS006_VerifySelectionOfExhibitorFromSearchResultsTest()'><b>TS006_VerifySelectionOfExhibitorFromSearchResultsTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_ExhibitorActions</td>
+<td></td>
+<td>50</td>
+<td>lasvegasmarket_PROD.GlobalSearch_ExhibitorActions@79179359</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.GlobalSearch_SearchFor.TS005_VerifyArticlesOverviewInGlobalSearchTest()'><b>TS005_VerifyArticlesOverviewInGlobalSearchTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SearchFor</td>
+<td></td>
+<td>85</td>
+<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@79517588</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.ShowSpecials.TS003_VerifyShowSpecialSearchBoxTest()'><b>TS003_VerifyShowSpecialSearchBoxTest</b><br>Test class: lasvegasmarket_PROD.ShowSpecials</td>
+<td></td>
+<td>31</td>
+<td>lasvegasmarket_PROD.ShowSpecials@289710d9</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.GlobalSearch_MatchingResults.TS003_VerifyGlobalSearchMatchingResultsSortSortByMatchingProductCountDescendingTest()'><b>TS003_VerifyGlobalSearchMatchingResultsSortSortByMatchingProductCountDescendingTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_MatchingResults</td>
+<td></td>
+<td>43</td>
+<td>lasvegasmarket_PROD.GlobalSearch_MatchingResults@2f1de2d6</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.ExhibitorDigitalShowroom.TS007_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest()'><b>TS007_VerifyExhibitorDigitalShowroomProductsComponentSeeAllProductsTest</b><br>Test class: lasvegasmarket_PROD.ExhibitorDigitalShowroom</td>
+<td></td>
+<td>32</td>
+<td>lasvegasmarket_PROD.ExhibitorDigitalShowroom@40238dd0</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS013_VerifyHasShowSpecialsFromLeftPaneFiltersTest()'><b>TS013_VerifyHasShowSpecialsFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
+<td></td>
+<td>39</td>
+<td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@51acdf2e</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.GlobalSearch_MatchingResults.TS003_VerifyGlobalSearchMatchingResultsSortSortByAscendingOrderTest()'><b>TS003_VerifyGlobalSearchMatchingResultsSortSortByAscendingOrderTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_MatchingResults</td>
+<td></td>
+<td>58</td>
+<td>lasvegasmarket_PROD.GlobalSearch_MatchingResults@2f1de2d6</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS010_VerifySelectionOfFloralBotanicalsProdCatgFromLeftPaneFiltersTest()'><b>TS010_VerifySelectionOfFloralBotanicalsProdCatgFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
+<td></td>
+<td>71</td>
+<td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@51acdf2e</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.ExhibitorDigitalShowroom.TS001_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest()'><b>TS001_VerifyClickOnLocationLinksForExhibitorDigitalShowroomTest</b><br>Test class: lasvegasmarket_PROD.ExhibitorDigitalShowroom</td>
+<td></td>
+<td>32</td>
+<td>lasvegasmarket_PROD.ExhibitorDigitalShowroom@40238dd0</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.LineDigitalShowroom.TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest()'><b>TS001_VerifyLineDigitalShowroomHeroComponentShownByExhibitorNamaeTest</b><br>Test class: lasvegasmarket_PROD.LineDigitalShowroom</td>
+<td></td>
+<td>36</td>
+<td>lasvegasmarket_PROD.LineDigitalShowroom@7ac0e420</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest()'><b>TS001_VerifySelectionOfApparelVintageProdCatgFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
+<td></td>
+<td>54</td>
+<td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@51acdf2e</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.ExhibitorDigitalShowroom.TS009_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest()'><b>TS009_VerifyExhibitorDigitalShowroomCatalogsComponentSeeAllCatalogsTest</b><br>Test class: lasvegasmarket_PROD.ExhibitorDigitalShowroom</td>
+<td></td>
+<td>78</td>
+<td>lasvegasmarket_PROD.ExhibitorDigitalShowroom@40238dd0</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.FloorPlans.TS003_VerifyZoomInOutLevelOnFloorPlansPageTest()'><b>TS003_VerifyZoomInOutLevelOnFloorPlansPageTest</b><br>Test class: lasvegasmarket_PROD.FloorPlans</td>
+<td></td>
+<td>17</td>
+<td>lasvegasmarket_PROD.FloorPlans@7776ab</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS008_VerifySelectionOfGeneralGiftProdCatgFromLeftPaneFiltersTest()'><b>TS008_VerifySelectionOfGeneralGiftProdCatgFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
 <td></td>
 <td>69</td>
 <td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@51acdf2e</td></tr>
 <tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_MatchingResults.TS002_VerifyGlobalSearchMatchingResultsSortWithinTest()'><b>TS002_VerifyGlobalSearchMatchingResultsSortWithinTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_MatchingResults</td>
+<td title='lasvegasmarket_PROD.GlobalSearch_LineActions.TS001_VerifyClickOnShownByExhibitorNameLinkForLineTest()'><b>TS001_VerifyClickOnShownByExhibitorNameLinkForLineTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LineActions</td>
 <td></td>
-<td>60</td>
-<td>lasvegasmarket_PROD.GlobalSearch_MatchingResults@2f1de2d6</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.FloorPlans.TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest()'><b>TS007_VerifySelectionOfExhibitorOnFloorPlansPageTest</b><br>Test class: lasvegasmarket_PROD.FloorPlans</td>
-<td></td>
-<td>42</td>
-<td>lasvegasmarket_PROD.FloorPlans@7776ab</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.ExhibitorDigitalShowroom.TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest()'><b>TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest</b><br>Test class: lasvegasmarket_PROD.ExhibitorDigitalShowroom</td>
-<td></td>
-<td>106</td>
-<td>lasvegasmarket_PROD.ExhibitorDigitalShowroom@40238dd0</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.ExhibitorDigitalShowroom.TS012_VerifyExhibitorDigitalEventsComponentTest()'><b>TS012_VerifyExhibitorDigitalEventsComponentTest</b><br>Test class: lasvegasmarket_PROD.ExhibitorDigitalShowroom</td>
-<td></td>
-<td>122</td>
-<td>lasvegasmarket_PROD.ExhibitorDigitalShowroom@40238dd0</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS006_VerifySelectionOfHolidayProdCatgFromLeftPaneFiltersTest()'><b>TS006_VerifySelectionOfHolidayProdCatgFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
-<td></td>
-<td>66</td>
-<td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@51acdf2e</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.ExhibitorDigitalShowroom.TS008_VerifySeeInOtherMarketsForExhibitorTest()'><b>TS008_VerifySeeInOtherMarketsForExhibitorTest</b><br>Test class: lasvegasmarket_PROD.ExhibitorDigitalShowroom</td>
-<td></td>
-<td>55</td>
-<td>lasvegasmarket_PROD.ExhibitorDigitalShowroom@40238dd0</td></tr>
-<tr>
-<td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS0010_VerifyEventDateRangeSearchBoxTest()'><b>TS0010_VerifyEventDateRangeSearchBoxTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
-<td></td>
-<td>76</td>
-<td>lasvegasmarket_PROD.EvenntsAndWebinar@42bc14c1</td></tr>
+<td>27</td>
+<td>lasvegasmarket_PROD.GlobalSearch_LineActions@6a55299e</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.GlobalSearch_LineActions.TS002_VerifyClickOnLocationLinkForLineTest()'><b>TS002_VerifyClickOnLocationLinkForLineTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LineActions</td>
 <td></td>
-<td>26</td>
+<td>28</td>
 <td>lasvegasmarket_PROD.GlobalSearch_LineActions@6a55299e</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.LineDigitalShowroom.TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest()'><b>TS011_VerifyLineDigitalShowroomProductscomponentSelectProductTest</b><br>Test class: lasvegasmarket_PROD.LineDigitalShowroom</td>
+<td></td>
+<td>101</td>
+<td>lasvegasmarket_PROD.LineDigitalShowroom@7ac0e420</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.ShowSpecials.TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest()'><b>TS001_VerifyViewBrandDetailsLinkForShowSpecialsTest</b><br>Test class: lasvegasmarket_PROD.ShowSpecials</td>
+<td></td>
+<td>27</td>
+<td>lasvegasmarket_PROD.ShowSpecials@289710d9</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS0013_VerifyEventCalendarResetButtonTest()'><b>TS0013_VerifyEventCalendarResetButtonTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
+<td></td>
+<td>17</td>
+<td>lasvegasmarket_PROD.EvenntsAndWebinar@42bc14c1</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS005_VerifyIMCEventsCalendarViewTest()'><b>TS005_VerifyIMCEventsCalendarViewTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
+<td></td>
+<td>23</td>
+<td>lasvegasmarket_PROD.EvenntsAndWebinar@42bc14c1</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS002_VerifyAllEventsSearchbarTest()'><b>TS002_VerifyAllEventsSearchbarTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
+<td></td>
+<td>28</td>
+<td>lasvegasmarket_PROD.EvenntsAndWebinar@42bc14c1</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.ExhibitorDigitalShowroom.TS008_VerifySeeInOtherMarketsForExhibitorTest()'><b>TS008_VerifySeeInOtherMarketsForExhibitorTest</b><br>Test class: lasvegasmarket_PROD.ExhibitorDigitalShowroom</td>
+<td></td>
+<td>41</td>
+<td>lasvegasmarket_PROD.ExhibitorDigitalShowroom@40238dd0</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS012_VerifyNewExhibitorButtonFromLeftPaneFiltersTest()'><b>TS012_VerifyNewExhibitorButtonFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
+<td></td>
+<td>41</td>
+<td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@51acdf2e</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.GlobalSearch_ProductActions.TS002_VerifyFullScreenViewerOnProductDetailsPageTest()'><b>TS002_VerifyFullScreenViewerOnProductDetailsPageTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_ProductActions</td>
+<td></td>
+<td>62</td>
+<td>lasvegasmarket_PROD.GlobalSearch_ProductActions@4eb386df</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.GlobalSearch_MatchingResults.TS001_VerifyGlobalSearchContainsAndStartsWithTest()'><b>TS001_VerifyGlobalSearchContainsAndStartsWithTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_MatchingResults</td>
+<td></td>
+<td>9</td>
+<td>lasvegasmarket_PROD.GlobalSearch_MatchingResults@2f1de2d6</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.GlobalSearch_MatchingResults.TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest()'><b>TS004_VerifyGlobalSearchMatchingResultsSortFilterByNameTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_MatchingResults</td>
+<td></td>
+<td>54</td>
+<td>lasvegasmarket_PROD.GlobalSearch_MatchingResults@2f1de2d6</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.GlobalSearch_SearchFor.TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest()'><b>TS007_VerifyArticlesSearchFunctionalityInGlobalSearchTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SearchFor</td>
+<td></td>
+<td>88</td>
+<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@79517588</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS007_VerifySelectionOfDecorativeAccessProdCatgFromLeftPaneFiltersTest()'><b>TS007_VerifySelectionOfDecorativeAccessProdCatgFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
+<td></td>
+<td>74</td>
+<td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@51acdf2e</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.EvenntsAndWebinar.TS0011_VerifyMarketEventDateRangeSearchBoxTest()'><b>TS0011_VerifyMarketEventDateRangeSearchBoxTest</b><br>Test class: lasvegasmarket_PROD.EvenntsAndWebinar</td>
+<td></td>
+<td>47</td>
+<td>lasvegasmarket_PROD.EvenntsAndWebinar@42bc14c1</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.ExhibitorDigitalShowroom.TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest()'><b>TS014_VerifyExhibitorDigitalShowroomShowSpecialsTest</b><br>Test class: lasvegasmarket_PROD.ExhibitorDigitalShowroom</td>
+<td></td>
+<td>107</td>
+<td>lasvegasmarket_PROD.ExhibitorDigitalShowroom@40238dd0</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.GlobalSearch_SearchFor.TS006_VerifyArticlesFiltersGlobalSearchTest()'><b>TS006_VerifyArticlesFiltersGlobalSearchTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_SearchFor</td>
+<td></td>
+<td>122</td>
+<td>lasvegasmarket_PROD.GlobalSearch_SearchFor@79517588</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.FloorPlans.TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest()'><b>TS005_VerifyFunctionalityOfFiltersOFloorPlansPageTest</b><br>Test class: lasvegasmarket_PROD.FloorPlans</td>
+<td></td>
+<td>72</td>
+<td>lasvegasmarket_PROD.FloorPlans@7776ab</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters.TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest()'><b>TS004_VerifyCombinationOfProdCatgWithStylesFromLeftPaneFiltersTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters</td>
+<td></td>
+<td>370</td>
+<td>lasvegasmarket_PROD.GlobalSearch_LeftPaneFilters@51acdf2e</td></tr>
 <tr>
 <td title='lasvegasmarket_PROD.ExhibitorDigitalShowroom.TS004_VerifyClickOnLineFiltersForExhibitorTest()'><b>TS004_VerifyClickOnLineFiltersForExhibitorTest</b><br>Test class: lasvegasmarket_PROD.ExhibitorDigitalShowroom</td>
 <td></td>
-<td>40</td>
+<td>42</td>
 <td>lasvegasmarket_PROD.ExhibitorDigitalShowroom@40238dd0</td></tr>
+<tr>
+<td title='lasvegasmarket_PROD.GlobalSearch_MatchingResults.TS002_VerifyGlobalSearchMatchingResultsSortWithinTest()'><b>TS002_VerifyGlobalSearchMatchingResultsSortWithinTest</b><br>Test class: lasvegasmarket_PROD.GlobalSearch_MatchingResults</td>
+<td></td>
+<td>62</td>
+<td>lasvegasmarket_PROD.GlobalSearch_MatchingResults@2f1de2d6</td></tr>
 </table><p>
 </body>
 </html>

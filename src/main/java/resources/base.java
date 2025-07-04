@@ -21,7 +21,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class base {
 
-    public WebDriver driver; // Non-static WebDriver instance
+    public static WebDriver driver; // Non-static WebDriver instance
     public static Properties prop;
 
     public static void chromeVersion() throws IOException {
@@ -50,12 +50,26 @@ public class base {
         System.out.println(browserName);
 
         if (browserName.equals("chrome")) {
-            ChromeOptions options = new ChromeOptions();
-            //options.addArguments("--headless"); // Uncomment for headless mode
-            options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+        	ChromeOptions options = new ChromeOptions();
+            
+            // Set window size via argument - works even if headless is off
+            options.addArguments("--window-size=1920,1080");
+            
+            // Set custom User-Agent if needed (optional)
+            options.addArguments("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/137 Safari/537.36");
+
+            // Optional: Disable extensions and infobars
+            options.addArguments("--disable-extensions");
+            options.addArguments("--disable-infobars");
+
+            // Optional: Ensure full control of window
+            options.addArguments("--start-maximized");
+            options.addArguments("--force-device-scale-factor=1");
+
             driver = new ChromeDriver(options);
+
+            // Extra check - sometimes helps
             driver.manage().window().setSize(new Dimension(1920, 1080));
-            //driver.manage().window().maximize();
         } else if (browserName.equals("firefox")) {
             driver = new FirefoxDriver();
             driver.manage().window().maximize();
@@ -77,7 +91,8 @@ public class base {
 
     // Non-static screenshot capture method
     public String capture(String testMethodName) throws IOException {
-        if (driver == null) {
+        
+    	if (driver == null) {
             throw new IllegalStateException("WebDriver is not initialized.");
         }
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);

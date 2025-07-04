@@ -17,6 +17,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import atlantamarket_PROD.TestListeners;
+import pageObjects.AtlantaMarket.ATLEventsAndWebinarPage;
 import pageObjects.AtlantaMarket.ATLExhDigiShowroomPage;
 import pageObjects.AtlantaMarket.ATLExhLineProdActionsPage;
 import pageObjects.AtlantaMarket.ATLGlobalSearchPage;
@@ -35,6 +36,7 @@ import pageObjects.LasVegasMarket.LVMProductDetailsPage;
 import resources.GenerateData;
 import resources.Utility;
 import resources.base;
+import pageObjects.AtlantaMarket.ATLEventsAndWebinarPage;
 
 @Listeners({ TestListeners.class })
 public class GlobalSearch_SearchFor extends base {
@@ -58,7 +60,8 @@ public class GlobalSearch_SearchFor extends base {
 	ATLMarketPlannerPage atlmppge;
 	LVMFloorPlansPage lvmflpp;
 	ATLLeftPaneFilters atlleftpane;
-
+	ATLEventsAndWebinarPage atlevents;
+	
 	List<WebElement> exhlist, linelist, prodlist, searchexhtypelist, searchproducttypelist, mplists, mpeditlistoptns,
 			allnoteslist, favlist, searchlinetypelist, tagBlogPost, taglist, infoFilterList, catlist, infoFilterListNew;
 
@@ -694,7 +697,7 @@ public class GlobalSearch_SearchFor extends base {
 		
 		String exEventTypeEventCard=lvmgs.geteventtypeNameEventCard().getText();
 		System.out.println(exEventTypeEventCard);
-		
+		Thread.sleep(3000);
 		Assert.assertTrue(exEventTypeEventCard.contains(eventTypeName));
 		//String topicName = lvmgs.getEventsLVMMktTopics().getText(); // for LVM Prod
 		// String topicName = lvmgs.getEventsLVMMktTopicsUat().getText(); //For UAT
@@ -724,7 +727,9 @@ public class GlobalSearch_SearchFor extends base {
 		// Click on Show Specials
 		lvmgs.getshowSpecialsLink().click();
 		Thread.sleep(5000);
-		List<WebElement> ss = driver.findElements(By.xpath("//div[@class='imc-showSpecial--tableContainer']/p[1]"));
+		List<WebElement> ss = 
+				//driver.findElements(By.xpath("//div[@class='imc-showSpecial--tableContainer']/p[1]"));
+		lvmgs.getlistOfAllshowSpecials();
 		String ssName = " ";
 		for (WebElement webElement : ss) {
 			ssName = webElement.getText();
@@ -744,11 +749,16 @@ public class GlobalSearch_SearchFor extends base {
 		utl.globleSearchInput(ssName);
 		Thread.sleep(8000);
 
-	
-		// Click on Exhibitor name
-		lvmds.getExhibitorNameNew().click();
-		Thread.sleep(5000);
-
+	List<WebElement>allExhibitorNames=lvmgs.getlistOfAllExhibitorTitles();
+	for (WebElement exhName : allExhibitorNames) {
+		
+		if(exhName.getText().contains(ssName)) {
+			utl.scrollElementIntoMiddle(exhName);
+			exhName.click();
+			break;
+		}
+		
+	}
 		Thread.sleep(5000);
 
 		String ShowSpecialsDetails = lvmgs.getlvmShowSpecialsDetails().getText();
@@ -767,6 +777,7 @@ public class GlobalSearch_SearchFor extends base {
 		lvmgs = new LVMGlobalSearchPage(driver);
 		lvmds = new LVMExhDigiShowroomPage(driver);
 		lvmexhact = new LVMExhLineProdActionsPage(driver);
+		atlevents = new ATLEventsAndWebinarPage(driver);
 		utl = new Utility(driver);
 
 		driver.get(prop.getProperty("lvmurl_prod"));
@@ -789,7 +800,8 @@ public class GlobalSearch_SearchFor extends base {
 		lvmgs.getLVMSeeMoreDetailsBtnNew().click();
 		Thread.sleep(2000);
 		// Verify that selected event's details page should be opened
-		Assert.assertTrue(lvmexhact.geteventdetailsheaderLVM().getText().contains(eventname));
+		
+		Assert.assertTrue(atlevents.getEventDetailEventTitle().getText().contains(eventname));
 		driver.navigate().back();
 		// driver.get(prop.getProperty("lvmurl_prod"));
 		// Thread.sleep(5000);
