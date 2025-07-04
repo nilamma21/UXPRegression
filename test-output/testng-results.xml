@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="19" total="20" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-27T17:55:47 IST" name="Default suite" finished-at="2025-06-27T17:57:12 IST" duration-ms="84875">
+  <suite started-at="2025-07-04T17:03:20 IST" name="Default suite" finished-at="2025-07-04T17:04:04 IST" duration-ms="44503">
     <groups>
     </groups>
-    <test started-at="2025-06-27T17:55:47 IST" name="Default test" finished-at="2025-06-27T17:57:12 IST" duration-ms="84875">
-      <class name="lasvegasmarket_PROD.GlobalSearch_ProductActions">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_ProductActions@534a5a98]" started-at="2025-06-27T17:55:47 IST" name="initialize" finished-at="2025-06-27T17:56:12 IST" duration-ms="25031" status="PASS">
+    <test started-at="2025-07-04T17:03:20 IST" name="Default test" finished-at="2025-07-04T17:04:04 IST" duration-ms="44503">
+      <class name="lasvegasmarket_PROD.EvenntsAndWebinar">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@229c6181]" started-at="2025-07-04T17:03:20 IST" name="initialize" finished-at="2025-07-04T17:03:49 IST" duration-ms="28848" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="TS002_VerifyFullScreenViewerOnProductDetailsPageTest()[pri:2, instance:lasvegasmarket_PROD.GlobalSearch_ProductActions@534a5a98]" started-at="2025-06-27T17:56:12 IST" name="TS002_VerifyFullScreenViewerOnProductDetailsPageTest" finished-at="2025-06-27T17:57:12 IST" duration-ms="59776" status="PASS">
+        <test-method signature="TS001_VerifyEventsAndWebinarsOverviewTest()[pri:1, instance:lasvegasmarket_PROD.EvenntsAndWebinar@229c6181]" started-at="2025-07-04T17:03:49 IST" name="TS001_VerifyEventsAndWebinarsOverviewTest" finished-at="2025-07-04T17:04:04 IST" duration-ms="15564" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TS002_VerifyFullScreenViewerOnProductDetailsPageTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:lasvegasmarket_PROD.GlobalSearch_ProductActions@534a5a98]" started-at="2025-06-27T17:57:12 IST" name="tearDown" finished-at="2025-06-27T17:57:12 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- TS001_VerifyEventsAndWebinarsOverviewTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:lasvegasmarket_PROD.EvenntsAndWebinar@229c6181]" started-at="2025-07-04T17:04:04 IST" name="tearDown" finished-at="2025-07-04T17:04:04 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- lasvegasmarket_PROD.GlobalSearch_ProductActions -->
+      </class> <!-- lasvegasmarket_PROD.EvenntsAndWebinar -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

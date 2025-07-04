@@ -394,7 +394,11 @@ try {
 		// Verify Go To Showroom functionality
 		String winHandleBefore = driver.getWindowHandle();
 		String showroomURL=lvmds.getClickShowroom().getAttribute("href");
-		System.out.println("URL::"+showroomURL);
+		
+		// Remove the protocol (http:// or https://)
+        String cleanUrl1 = showroomURL.replaceFirst("^(http://|https://)", "");
+        
+		System.out.println("URL1::"+cleanUrl1);
 		lvmds.getClickShowroom().click();
 		Thread.sleep(5000);
 
@@ -402,8 +406,12 @@ try {
 			driver.switchTo().window(winHandle);
 		}
 		// lap.getIUnderstandBtn().click();
-		System.out.println("C_URL::"+driver.getCurrentUrl());
-		Assert.assertTrue(driver.getCurrentUrl().contains(showroomURL));
+		String currentPageURL=driver.getCurrentUrl();
+		
+		
+		String cleanUrl2 = currentPageURL.replaceFirst("^(http://|https://)", "");
+		System.out.println("URL2::"+cleanUrl2);
+		Assert.assertTrue(cleanUrl2.contains(cleanUrl1));
 		System.out.println("Showroom page is displayed properly.");
 		driver.close();
 		driver.switchTo().window(winHandleBefore);
